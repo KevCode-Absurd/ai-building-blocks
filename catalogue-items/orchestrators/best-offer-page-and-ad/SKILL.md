@@ -1,6 +1,6 @@
 ---
 name: best-offer-page-and-ad
-description: Use when you want a new offer tested through a page and an ad that read like an article. It runs 4 skills in order, and checks each result before the next step starts.
+description: Use when you want a new offer tested through an article-style page and an ad, both clearly labelled as advertising and neither posing as a news outlet. It runs 4 skills in order, and checks each result before the next step starts.
 ---
 
 # Find your best offer and write the page and ad
@@ -9,7 +9,7 @@ Give it your brand file and live prices. Get an offer to try, an article-style p
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
-**When not to use:** you have no live deals to compare, or you already chose your offer. Use the Article-style landing page writer for the page, then the Landing page 30-point checker. To review a page you already have, use the Landing page conversion review.
+**When not to use:** you have no live deals to compare, you already chose your offer, or your live prices and terms are not verified (check them first, so the run does not put clashing or wrong terms into an ad). Use the Article-style landing page writer for the page, then the Landing page 30-point checker. To review a page you already have, use the Landing page conversion review.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -44,7 +44,7 @@ How to start:
 
 ## What you need
 - **Your brand file** (required). Used by every step: products, prices, guarantee, delivery, returns, the claims you may make and the voice. Step 1 reads the prices and deals, step 2 the facts and voice.
-- **Everything live now** (required for step 1). Every ad, pop-up, email and site offer, with where you saw each one. A screenshot of each is best, so clashes can be quoted.
+- **Everything live now** (required for step 1). Every ad, pop-up, email and site offer, with where you saw each one. A screenshot of each is best, so clashes can be quoted. Check that every price and term is current and true before you start. If deals clash or can't be verified, fix them first. No step runs on unverified terms.
 - **A short brief for the ad** (required for step 4). Who the offer is for and what you want the ad to say. If you have none, say so and the offer chosen in step 1 is the idea.
 - **Who the offer is for** (optional). One buyer narrows the offers in step 1 and the page in step 2.
 - **Your cost per order and anything you can't do** (optional). Step 1 uses them to show what each offer costs you.
@@ -64,7 +64,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 1. **Find the offer to try.** Use the skill `hidden-offer-finder` on your brand file and the list of what is live. It returns the live deals, the clashes between them, your stock, new offers and three to try first, each worded three ways. Save it as `outputs/step-01-hidden-offer-finder.md`. Pause here. Show the three offers and wait for the person to pick one before step 2. If they already named an offer, use it. If they say "go ahead" without picking, ask which of the three, and only then continue. Never pick for them.
 2. **Write the article-style page.** Use the skill `article-landing-page`. It reads the offer you picked from `outputs/step-01-hidden-offer-finder.md`, plus your brand file, the buyer and any ad or reviews. It returns the ten-section page, an image list and a MISSING list. Required: "Advertisement" sits above the headline in the first screen. If it doesn't, fix it before step 3. If it still doesn't, stop here.
 3. **Check the page in 30 points.** Use the skill `landing-page-30-point-checker` on the page in `outputs/step-02-article-landing-page.md`. Add your facts and the ad if you have them. It returns 30 yes-or-no checks with evidence, the five fixes to make first and a score out of 100. Also confirm the Advertisement label is still there. If a check shows it is missing, stop.
-4. **Write the article-style ad.** Use the skill `article-style-image-ad-writer`. It reads two things: the step 2 page with the five fixes from `outputs/step-03-landing-page-30-point-checker.md` applied, and your brief. Make the fixes to the page text first, and add no fact you were not given. Where a fix needs a fact you don't have, write `MISSING:` instead. Write the ad against that fixed page. It returns the image headline, main text, one claim, an image brief, the page notes and what the page must cover. Label the ad as advertising and do not make it look like a news or editorial story. Follow the ad platform's rules on misleading formats. Required: the fixed page's first screen makes the same claim as the ad headline, and it carries the Advertisement label. If either fails, stop and don't hand the ad back as ready.
+4. **Write the article-style ad.** Use the skill `article-style-image-ad-writer`. It reads two things: the step 2 page with the five fixes from `outputs/step-03-landing-page-30-point-checker.md` applied, and your brief. Make the fixes to the page text first, and add no fact you were not given. Where a fix needs a fact you don't have, write `MISSING:` instead. Write the ad against that fixed page. It returns the image headline, main text, one claim, an image brief, the page notes and what the page must cover. Label the ad as advertising: the sponsor name and an "Advertisement" or "Sponsored" label must show in the headline area of the ad itself, not only on the page. Do not use a news outlet's name, a byline, a dateline or a fake news-style layout. Before it runs, check the ad platform's current rules on misleading and deceptive formats and, in the US, the FTC's guidance on native advertising; other countries have their own rules. Required: the fixed page's first screen makes the same claim as the ad headline, and it carries the Advertisement label. If either fails, stop and don't hand the ad back as ready.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

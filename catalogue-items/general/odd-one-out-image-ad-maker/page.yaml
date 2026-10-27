@@ -37,7 +37,7 @@ how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your story ad underneath. The odd detail should be in the first two or three lines.
   - Say whether you want a few words on the picture. If you're not sure, ask for both versions.
-  - Paste the image prompt into your image tool and make one square picture.
+  - Paste the image prompt into your image tool and make one square picture (4:5 only if the ad runs only in the Feed). Image tools like ChatGPT, Gemini and Higgsfield may need a paid plan or credits.
   - Show it to someone who hasn't read the story. They should name the thing but not know why.
 output_sample:
   input:

@@ -55,8 +55,8 @@ tweaks:
     how: "Take the balance sheet date from the debt note, the payables note and the supplier finance disclosure. Use one currency and scale on every line."
   - what: "The supplier finance balance"
     how: "Change the supplier finance balance and have your AI recalculate. Keep the actual figures you supplied."
-  - what: Acceptance
-    how: Supplier balances are not already included in financing debt.
+  - what: Reported or adjusted
+    how: Ask for the reported and adjusted figures side by side, or for only the adjusted ones with the bridge steps.
 judge:
   - Supplier balances are not already included in financing debt.
   - Reclassification changes debt and operating payables consistently without changing total liabilities.
@@ -76,8 +76,8 @@ works_best_with:
     - name: Node.js 20 or later
       why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The balance sheet and the supplier finance note from the same annual report.
+    - The page that shows how the company classifies the supplier finance balance.
 terms:
   - term: Illustrative figures
     meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
@@ -86,6 +86,7 @@ terms:
 not_for:
   - "You need to recheck a loan net debt limit after earnings or cash change: use the Net leverage covenant checker."
   - "You want to see how much cash really went into working capital: use Noncash working-capital bridge."
+  - "You want to bridge one period's results to a trailing twelve-month figure: use the Trailing-period financial bridge. It does not handle supplier-finance balances."
   - "You want a ruling on how the accounts must classify these balances. Ask the auditor; this is a what-if view."
 output_sample:
   input:

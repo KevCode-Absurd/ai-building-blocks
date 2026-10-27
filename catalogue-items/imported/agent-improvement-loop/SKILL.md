@@ -14,7 +14,7 @@ dependencies: [a-evolve>=0.1.0, pyyaml>=6.0]
 
 A-Evolve is universal infrastructure for evolving any AI agent across any domain using any evolution algorithm with zero manual engineering. It represents all evolvable agent state as files (prompts, skills, memory, tools), runs iterative solve-observe-evolve cycles against benchmarks, and uses LLM-driven mutation to improve agent performance automatically.
 
-**Benchmark results** (Claude Opus 4.6):
+**Benchmark results** (the source authors' own reported figures with Claude Opus 4.6. AI Blocks has not checked them. Do not treat them as proven results for your agent):
 - MCP-Atlas: 79.4% (#1)
 - SWE-bench Verified: 76.8% (~#5)
 - Terminal-Bench 2.0: 76.5% (~#7)
@@ -57,7 +57,7 @@ results = evolver.run(cycles=10)
 print(f"Final score: {results.final_score}")
 ```
 
-This copies the built-in SWE seed workspace, runs 10 evolution cycles against SWE-bench Verified, and returns the optimized agent.
+This copies the built-in SWE seed workspace, runs 10 evolution cycles against SWE-bench Verified, and returns the optimized agent. It does not run your own agent. To run your own, point `agent=` at your agent folder, as in Workflow 1: `ae.Evolver(agent="./my-agent-workspace", benchmark=...)`.
 
 ## Core Concepts
 

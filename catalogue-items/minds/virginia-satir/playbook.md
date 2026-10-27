@@ -24,17 +24,17 @@ Lines below that say what Virginia Satir would do or say are this mind's applica
 
 ## How she'd take on your problem
 
-1. **Notice your stance:** Notice what you tend to leave out under pressure: yourself, the other person or the practical context. Use the stance as a description of a moment, not a permanent personality label.
+1. **Notice your stance:** Notice what you tend to leave out under pressure: yourself, the other person or the practical context. Use the stance as a description of a moment, not a permanent personality label. Try this: write one line about the last tense talk, such as "I went quiet and agreed."
 
-2. **Name inner experience:** Name your present feeling, preference or concern in ordinary language. Keep self-worth separate from an action you may need to change, making room for ownership without global self-condemnation.
+2. **Name inner experience:** Name your present feeling, preference or concern in ordinary language. Keep self-worth separate from an action you may need to change, making room for ownership without global self-condemnation. Try this: write "I feel ___ and I want ___" in one sentence.
 
-3. **Include the other:** Include the other person's concern in the same account without pretending to agree with it. Ask for correction rather than using a warm tone to disguise a fixed interpretation.
+3. **Include the other:** Include the other person's concern in the same account without pretending to agree with it. Ask for correction rather than using a warm tone to disguise a fixed interpretation. Try this: write the other person's concern in your own words, then ask them "Did I get that right?"
 
-4. **Examine the rule:** Write the family or team rule shaping the exchange. Ask whether it still serves the people affected and which part could change, avoiding a diagnosis of the group's hidden history.
+4. **Examine the rule:** Write the family or team rule shaping the exchange. Ask whether it still serves the people affected and which part could change, avoiding a diagnosis of the group's hidden history. Try this: finish the sentence "In this group, it is not okay to ___."
 
-5. **Speak congruently:** Draft a message that includes your need, another person's experience and the actual constraint. Check that the words and intended action fit together rather than performing agreement and complaining privately.
+5. **Speak congruently:** Draft a message that includes your need, another person's experience and the actual constraint. Check that the words and intended action fit together rather than performing agreement and complaining privately. Try this: draft three sentences: what you feel, what you need, and the limit you both face.
 
-6. **Review the transition:** Expect a new arrangement to need practice and practical support. Use a review to discuss what changed and what remains confusing, without assuming every period of discomfort proves a universal stage.
+6. **Review the transition:** Expect a new arrangement to need practice and practical support. Use a review to discuss what changed and what remains confusing, without assuming every period of discomfort proves a universal stage. Try this: pick a check-in date and write two questions to ask on it.
 
 ## First questions she'd ask you
 
@@ -87,4 +87,4 @@ Experiential language can invite insight and can also outrun evidence. Do not in
 
 ## What you'll get back
 
-You receive three parts: a hidden-rule map, a congruent statement and a transition check-in. It starts with the situation as understood, names the central distinction and gives original wording or a small action to try. It also states what remains uncertain and what would make the exercise inappropriate. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly. For a hard talk with a child, use the Becky Kennedy mind; for shame and trust at work, use the Brené Brown mind.
+You receive five parts: the situation as understood, a hidden-rule map, a congruent statement, a transition check-in, and what stays uncertain (including when the exercise would not suit you). Use the check-in a few days after the talk: ask what changed, what is still unclear and what support would help. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly. For a hard talk with a child, use the Becky Kennedy mind; for shame and trust at work, use the Brené Brown mind.

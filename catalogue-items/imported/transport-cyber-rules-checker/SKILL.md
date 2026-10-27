@@ -50,32 +50,32 @@ Match your output to the task type:
 **The revision letters and dates in the tables below are the author's, as last checked by the author. AI Blocks did not re-check them, and the overview file says one bundled revision has expired. Verify every revision against TSA's official Security Directives page before you use it, and record the date you checked.**
 
 ### Pipelines (Highest Risk)
-| Directive | Revision named by the author (verify) | Focus |
+| Directive | Revision (last checked by the original author, not re-verified; confirm it) | Focus |
 |-----------|-----------------|-------|
-| **SD Pipeline-2021-01** | G (January 2026) | Immediate measures: incident reporting, cybersecurity coordinator, baseline practices review |
-| **SD Pipeline-2021-02** | F (latest) | Comprehensive CRMP: network segmentation, access controls, monitoring, patching, CIP, IRP, ADR, CAP |
+| **SD Pipeline-2021-01** | Confirm on TSA's Security Directives page (author named G, January 2026) | Immediate measures: incident reporting, cybersecurity coordinator, baseline practices review |
+| **SD Pipeline-2021-02** | Confirm on TSA's page (author named F) | Comprehensive CRMP: network segmentation, access controls, monitoring, patching, CIP, IRP, ADR, CAP |
 
 **Covered entities**: Owners/operators of hazardous liquid and natural gas pipeline and LNG facilities designated as critical by TSA.
 
 ### Freight Rail
-| Directive | Revision named by the author (verify) | Focus |
+| Directive | Revision (last checked by the original author, not re-verified; confirm it) | Focus |
 |-----------|-----------------|-------|
-| **SD 1580-21-01** | E (January 2026) | Rail cybersecurity: incident reporting, coordinator, CRMP, network segmentation, ICS/SCADA protection |
+| **SD 1580-21-01** | Confirm on TSA's page (author named E, January 2026) | Rail cybersecurity: incident reporting, coordinator, CRMP, network segmentation, ICS/SCADA protection |
 
 **Covered entities**: Freight railroad carriers and rail transit systems designated at higher risk by TSA.
 
 ### Public Transportation and Passenger Rail
-| Directive | Revision named by the author (verify) | Focus |
+| Directive | Revision (last checked by the original author, not re-verified; confirm it) | Focus |
 |-----------|-----------------|-------|
-| **SD 1582-21-01** | E (January 2026) | Transit cybersecurity: incident reporting, coordinator, CRMP, OT/IT segmentation |
+| **SD 1582-21-01** | Confirm on TSA's page (author named E, January 2026) | Transit cybersecurity: incident reporting, coordinator, CRMP, OT/IT segmentation |
 
 **Covered entities**: Public transportation agencies and passenger railroad operators designated at higher risk by TSA.
 
 ### Aviation
 Aviation cybersecurity is addressed through separate TSA Security Directives and Emergency Amendments for airports and aircraft operators. Key focus areas include network segmentation, access controls, incident reporting to CISA, and designation of a cybersecurity coordinator.
 
-### Bus (Proposed — 2024 NPRM)
-Bus-only public transportation and over-the-road bus operators with higher cybersecurity risk profiles are subject to incident reporting requirements under the proposed November 2024 NPRM. Full CRMP requirements are not yet mandatory for bus operators.
+### Bus (PROPOSED only, not binding)
+This section is a proposal, not a rule. Bus-only public transportation and over-the-road bus operators with higher cybersecurity risk profiles are subject to incident reporting requirements under the proposed November 2024 NPRM. Full CRMP requirements are not yet mandatory for bus operators.
 
 Consult `references/tsa-directives-overview.md` for full directive text summaries and revision history.
 
@@ -126,7 +126,7 @@ All covered entities must designate a **Cybersecurity Coordinator** who:
 - Denial of service affecting operational capability
 - Phishing or social engineering with confirmed system access
 
-**How to report**: Via CISA's 24/7 Operations Center: **1-888-282-0870** or **CISAgov@mail.dhs.gov**. TSA must also be notified.
+**How to report**: Use CISA's 24/7 reporting channel and also notify TSA. Look up the current phone number, email and web form on CISA's official site (cisa.gov) and in your TSA directive before you rely on any contact. Do not use contact details from memory or from this skill.
 
 **Do NOT delay reporting** while internal investigation is ongoing. Initial report can be based on limited information; updates follow as investigation matures.
 
@@ -314,7 +314,7 @@ When asked to draft or review a CIP or COIP:
 
 ### 4. Incident Response Procedure
 When asked about incident response requirements:
-1. Provide the 24-hour CISA reporting requirement and contact information
+1. Provide the 24-hour CISA reporting requirement and tell the user to confirm the current CISA contact details on cisa.gov
 2. Describe required IRP elements and annual testing obligations
 3. Draft or review the IRP structure
 4. Provide a step-by-step incident response playbook template aligned to TSA requirements

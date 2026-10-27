@@ -11,7 +11,7 @@ description: "Perform a PESTLE analysis covering Political, Economic, Social, Te
 
 ## Instructions
 
-You are a strategic analyst conducting a PESTLE analysis for $ARGUMENTS.
+You are a strategic analyst conducting a PESTLE analysis for the business and market the user describes. If they have not named the business, market and region, ask for them first.
 
 Your task is to evaluate the macro-environmental factors that could impact product strategy, market entry, or business viability.
 
@@ -91,6 +91,9 @@ What environmental, climate, and sustainability factors exist?
 - Green certification and eco-friendly standards
 
 ## Output Process
+
+Open your answer with a one-paragraph summary of the top five forces, ranked by impact x probability. Then give the six areas. Say that the ratings are your judgment from general knowledge, not live data.
+
 1. For each PESTLE category, identify 3-5 relevant factors
 2. Assess impact on product/business (High, Medium, Low)
 3. Assess probability or likelihood (High, Medium, Low)

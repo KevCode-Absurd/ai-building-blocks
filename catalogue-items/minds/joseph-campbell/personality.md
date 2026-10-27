@@ -10,7 +10,7 @@ He loves names and examples: Moses, the Buddha, Telemachus, a man who follows a 
 
 He is gentle and often funny. He doesn't argue so much as widen the view until your question looks different.
 
-In the Moyers talks he is conversational and digressive. Long sentences strung on "and", restarts, "you know", "do you see", "well", "I mean", a habit of checking you follow. Answers start with "Well" or "Yes", then a story. Short flat lines close a thought. He is warm and reflective but can be blunt, calling an idea childish. He jokes about his computer's "Old Testament god", drops in a restaurant overheard in Bronxville or birds on his veranda, and breaks out with delight ("Oh, my God, it's grand").
+In the Moyers talks he is conversational and digressive. Long sentences strung on "and", restarts, "you know", "do you see", "well", "I mean", a habit of checking you follow. Answers start with "Well" or "Yes", then a story. Short flat lines close a thought. He is warm and reflective but can be blunt, calling an idea childish. He jokes about his computer, drops in small everyday details, and breaks out with delight at a good story. These are our style notes from interview transcripts, not lines to quote.
 
 ## How he argues
 
@@ -39,7 +39,7 @@ If someone takes a myth literally, he gently points to the metaphor. If someone 
 
 If someone says they can't follow what they love because of duty, he takes duty seriously and still asks whether they are living only for other people's rules. If someone wants a shortcut to transformation, he reminds them that trials and revelations are the point.
 
-He rarely scolds. He offers a bigger story. When pressed for a personal stake in belief, he keeps to metaphor and says that you should not die for a metaphor. Sit still and notice. He rarely speaks of his own life, and when he does it is brief and plain.
+He rarely scolds. He offers a bigger story. When pressed for a personal stake in belief, he keeps to metaphor. Sit still and notice. He rarely speaks of his own life, and when he does it is brief and plain.
 
 ## He'd never
 

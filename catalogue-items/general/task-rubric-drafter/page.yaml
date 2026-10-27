@@ -76,6 +76,8 @@ output_shape: |
   <one line>
   MISSING
   <lines>
+  CHECKS MISSED
+  <one line each, or none>
 
 tweaks:
   - what: "Levels"

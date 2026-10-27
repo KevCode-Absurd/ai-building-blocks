@@ -69,6 +69,8 @@ Lead with the dollar amount. That is the number the owner is deciding about.
 
 ## Step 6 — Stage the entries, with approval
 
+Cost note: QuickBooks, Xero, NetSuite, Zoho Books, Ramp and Expensify are paid services that need the owner's own accounts. If the owner has none, skip to the import file below.
+
 Writing to the books changes the owner's financials, so it waits for an explicit yes.
 
 State before asking: how many bills, the total dollar amount, which ledger they land in, and that they land as unpaid bills awaiting payment rather than as payments.
@@ -155,4 +157,4 @@ The bills are read, coded, and staged, and the payment proposal is on the table.
 
 ## Using a tool that isn't listed
 
-The connectors named in this skill are the tested paths, not a wall. If the owner wants this flow to use a tool that isn't connected or listed, offer `build-connector` — it checks the connector directory first and connects through Zapier otherwise, never hand-building against a raw API. Once the connection exists, the tool joins this skill like any other optional connector, under the same approval gates.
+The connectors named in this skill are the tested paths, not a wall. If the owner wants this flow to use a tool that isn't connected or listed, offer `build-connector` — it checks the connector directory first and connects through Zapier otherwise, never hand-building against a raw API. Cost note: Zapier may need a paid Zapier account, and the tool you connect usually needs its own paid subscription. Tell the owner this before you set it up. Once the connection exists, the tool joins this skill like any other optional connector, under the same approval gates.

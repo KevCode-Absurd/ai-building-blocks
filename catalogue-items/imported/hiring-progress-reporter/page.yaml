@@ -18,7 +18,7 @@ when:
 not_for:
   - "You only need a list of candidates from one day: use the report in your applicant tracking system (ATS)."
   - "You need to find or rank candidates: ask a recruiter or search tool, as this skill only reports on numbers you already have."
-  - "You want a branded PDF with your company logo: this skill needs your own brand file and a code tool, so use a design tool or add your own guide."
+  - "You want a branded PDF with your company logo: this copy makes a markdown report and a chart page only, so use a design tool. This copy has no PDF export or brand file."
 you_give:
   - Pipeline counts by stage, as plain text or CSV
   - The role title and the dates the report covers
@@ -32,12 +32,14 @@ you_get:
   - A simple chart page if you ask
   - Specific recommendations
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. Gather first: your stage-by-stage export with dates, reply numbers and blockers.
+  - "Open a chat in Claude, ChatGPT or Gemini. Paste in the text of SKILL.md, or upload the folder if your AI takes files. Gather first, from your applicant tracking system (ATS): the count of candidates at each stage, the dates the report covers, outreach and reply numbers, and your blockers. Never paste candidate names or contact details."
   - "Say which report you want: weekly update, market report, talent map or look back after the role is filled."
   - Paste your pipeline counts, reply numbers, blockers and notes. Say who will read the report.
+  - Check the data first. Flag any stage with a small sample, and ask your AI to say which numbers are estimates and where they came from.
   - Read the executive summary first. Check that every number matches your data and fix anything that does not.
+  - Send the executive summary to the hiring manager each week. When the role closes, run the look back report and keep it for the next search.
   - For a chart page, ask for an HTML dashboard. Open the file in any browser. Your AI needs to create files for this.
-  - PDF export and company branding are optional. PDF export needs Node, Puppeteer and Chrome, plus your own brand guide, so skip them to start. Every number in the report must come from your data. Ask the AI to label any estimate and name its source.
+  - This copy gives a markdown report and a chart page only. It has no PDF export or company branding. Every number in the report must come from your data. Ask the AI to label any estimate and name its source.
 output_sample:
   input:
     - Your pipeline counts by stage
@@ -47,7 +49,7 @@ output_sample:
     - Market or pay data (optional)
   prerequisites:
     - An AI chat is enough for the markdown report
-    - An AI that can run code, only if you want a chart page or PDF (optional)
+    - An AI that can create files, only if you want a chart page (optional)
   output:
     - name: Executive Summary
       contains: Three to five bullets with the key findings and what to do next.

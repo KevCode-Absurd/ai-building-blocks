@@ -33,11 +33,11 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill, or upload the skill folder if your AI takes files.
   - Name the company or the group to compare, the competitors, your market and who the deck is for.
-  - Answer the scope questions, then read the outline. Ask for changes until you approve it.
+  - Answer the scope questions, then read the outline. If your AI has no question tool, answer all the scope questions in one plain chat message. Ask for changes until you approve the outline.
   - Check that every number has a dated source and that all companies use the same period.
-  - Say yes to build the deck. This needs an AI that can make a PowerPoint file, or the PowerPoint add-in.
+  - Say yes to build the deck. A PowerPoint file needs an AI that can make files, or the PowerPoint add-in. Without one, ask for the slide text as tables and paste it into your own slides.
   - Open the deck and check titles, charts and tables before you share it. Any figure or scenario odds in the skill's templates are placeholders. Each number in your deck needs its own dated source, and you set any scenario odds.
-  - Before it goes out, refresh the numbers and the dates of the sources. A short written memo that goes with the deck helps people who read it without you.
+  - Before it goes out, have someone else check each sourced figure and its date. Then refresh the numbers and the dates of the sources. A short written memo that goes with the deck helps people who read it without you.
 output_sample:
   input:
     - The company you want to place among rivals, or the group to compare as equals

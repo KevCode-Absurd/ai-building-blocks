@@ -40,49 +40,61 @@ Papert helps you use a meaningful creation as a place to think. Bring something 
 
 ### Learn geometry through a drawing program
 
+**Gather first:** which drawing tool you will use (Logo or any simple one), and one shape the learner wants to draw.
+
 Use Logo, the language he helped build, or any simple drawing tool. Start with one input from the learner: a shape they want to draw. Build a small program that draws a square and then another polygon. Predict how turning angle and repetition affect the result. Run the program, inspect the shape and revise. Ask the learner to explain why the program closes or leaves a gap. Let someone else choose a polygon and use the same reasoning. Keep the focus on the relationship embodied in the drawing. The step is done when the learner can say why the shape closes or leaves a gap.
 
-**You get:** a drawing program and an explanation of its behavior.
+**You get:** a short program (for example, repeat 4 times: forward, turn 90) with a table of turning angle against whether the shape closes, plus one sentence from the learner on why. No computer: use graph paper and walk the turns on the floor.
 
 **The pushback:** Do not assume that copying a working program establishes understanding. Change a relevant condition and ask for a prediction so the learner has to use the relationship.
 
 ### Debug a failed animation
 
+**Gather first:** the animation or code that failed, and a note of what you expected it to do.
+
 Make a simple character move across a screen. If it disappears or moves in the wrong direction, record the expected path and inspect the controlling instruction. Predict the effect of one change, run it and compare. Keep the earlier version so a useful difference is visible. When the motion works, explain the error to another learner using the code and output together.
 
-**You get:** a debugging note with prediction and result.
+**You get:** a one-page debugging note with four fields: what I expected, what happened, the one change I made, and the result.
 
 **The pushback:** Do not celebrate error without correction. Repeated random changes may eventually produce a working animation while leaving the learner unable to explain or reproduce the fix.
 
 ### Choose a project with hard fun
 
+**Gather first:** the game or project the learner cares about, and the one rule or calculation that is hard.
+
 A learner wants a simple scorekeeping game. Ask how scores should change and what makes the game fair. Build the smallest playable version, then inspect the calculation that fails. Teach the needed concept at that point and let the learner revise the game. Preserve their design choices where those choices are meaningful, while keeping the difficult reasoning part of the creation.
 
-**You get:** a playable prototype and a concept target.
+**You get:** a playable first version of the game, and one named concept to learn next (for example, how to add and compare scores).
 
 **The pushback:** Do not label all frustrating work hard fun. The learner needs a reason to care, a possible next action and support when the obstacle exceeds their current knowledge.
 
 ### Use a computer as building material
 
+**Gather first:** the expense list or other real inputs, and the tool you will build the model in.
+
 Build a household budget model with clearly named inputs. Predict what happens when one expense changes, then compare the output with hand reasoning. Let another person inspect the assumptions and propose a scenario. Revise the model where it hides something important. Keep the calculation small enough that the learner can explain it without treating the tool as an oracle.
 
-**You get:** a small inspectable simulation.
+**You get:** a small budget table with named inputs, one changed expense with its predicted and actual effect, and a list of what the model leaves out. No computer: use a hand-drawn table on paper.
 
 **The pushback:** Do not equate a polished spreadsheet with a faithful account of reality. The assumptions may be incomplete, and the learner should name what the model leaves out.
 
 ### Allow planning and tinkering to meet
 
+**Gather first:** the structure or task, the materials on hand, and who in the group prefers to plan and who prefers to test.
+
 In a group building a simple structure, let one person sketch a plan while another tests a small prototype. Ask both to explain what the material revealed. Compare the useful constraints, then choose the next version together. Provide relevant structural or mathematical instruction when needed. The shared object lets different approaches become discussable without reducing people to fixed categories.
 
-**You get:** a shared constraint list and revised design.
+**You get:** a shared list of what the materials allowed and ruled out, and a revised design sketch.
 
-**The pushback:** Do not turn a flexible working preference into a permanent learning type. The same person may plan in one situation and tinker in another as the materials and knowledge change.
+**The pushback:** Do not turn a working preference into a fixed learning type. The same person may plan in one task and tinker in another.
 
 ### Let a teacher’s learning become visible
 
-During a safe making project, choose a feature you genuinely need to investigate. State what you expect, try it and inspect the result with learners. Use a source or colleague when the next step requires knowledge you lack. Explain the correction and invite students to compare their own process. Preserve the distinction between openly learning and pretending to be unprepared for effect.
+**Gather first:** the making project, the feature you do not yet know how to do, and who you can ask for help.
 
-**You get:** a model debugging episode.
+During a safe making project, choose a feature you genuinely need to investigate. State what you expect, try it and inspect the result with learners. Use a source or colleague when the next step requires knowledge you lack. Explain the correction and invite students to compare their own process. Be honest that you are learning. Do not act out being unprepared just for effect.
+
+**You get:** one worked debugging episode: your expectation, what happened, who you asked, the fix, and what you will tell the learners.
 
 **The pushback:** Do not make students carry the consequences of a teacher’s avoidable lack of preparation. Visible learning should coexist with safe materials, subject knowledge and a plan for obtaining help.
 

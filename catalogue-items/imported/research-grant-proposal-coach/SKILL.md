@@ -86,6 +86,7 @@ Strong proposals often include 1–3 figures (timelines, workflow diagrams, prel
 Use this only if the scientific-schematics skill is installed and the person agrees. Otherwise skip it and describe the figure in words. Illustrative optional integration from the original skill (CLI options checked; no paid generation tested). Run from the repository root of that other skill, with `OPENROUTER_API_KEY` set:
 
 ```bash
+# NOT INCLUDED in this folder: this script belongs to the separate scientific-schematics skill. Do not run it unless that skill is installed and the person agrees.
 python skills/scientific-schematics/scripts/generate_schematic.py "project timeline with Year 1-3 milestones" -o figures/timeline.png --doc-type grant
 ```
 
@@ -95,11 +96,13 @@ python skills/scientific-schematics/scripts/generate_schematic.py "project timel
 
 ## Agency-Specific Overview
 
+> **Verify before use (added by AI Blocks).** The limits, budget rules and policy versions below were last reviewed on 2026-10-01 (see `last-reviewed` above) and can change. Check each one against the funder's live notice or solicitation before you rely on it. Links beside each rule point to the funder's own page.
+
 ### NSF (National Science Foundation)
 **Mission**: Promote the progress of science and advance national health, prosperity, and welfare
 
 **Key Features**:
-- Use the [current PAPPG index](https://www.nsf.gov/policies/pappg), effective supplements and solicitation; as reviewed, NSF 24-1 is supplemented by NSF 26-200 and 26-202
+- Use the [current PAPPG index](https://www.nsf.gov/policies/pappg), effective supplements and solicitation; as reviewed on 2026-10-01 (check the live notice), NSF 24-1 is supplemented by NSF 26-200 and 26-202
 - Intellectual Merit + Broader Impacts both receive full consideration; no universal numerical weighting
 - 15-page project description limit (most programs; includes Results from Prior NSF Support, max 5 pages)
 - Education and societal benefit, with activities aligned to current NSF priorities and the solicitation
@@ -115,7 +118,7 @@ python skills/scientific-schematics/scripts/generate_schematic.py "project timel
 - Most RPGs use Importance, Rigor/Feasibility, and Expertise/Resources review factors; required narrative headings remain Significance, Innovation, Approach
 - Preliminary evidence normally supports R01 feasibility; follow the mechanism-specific instructions
 - Rigor and reproducibility; SciENcv Common Forms and NIH Supplement required under the 2026 implementation
-- For eligible applications, modular budgets use **$25,000 increments**, up to **$250,000 in direct costs per budget period**, excluding consortium F&A; verify the NOFO and organization eligibility. See [NIH budget guidance](https://grants.nih.gov/grants/developing_budget.htm).
+- For eligible applications, modular budgets use **$25,000 increments**, up to **$250,000 in direct costs per budget period**, excluding consortium F&A (as reviewed 2026-10-01; verify the NOFO and organization eligibility against the live notice). See [NIH budget guidance](https://grants.nih.gov/grants/developing_budget.htm).
 - NIH permits **one resubmission (A1)** of an unfunded application, within 37 months of the initial application due date when the NOFO permits resubmissions; see [resubmission policy](https://grants.nih.gov/grants-process/submit/submission-policies/resubmission-applications).
 
 ### DOE (Department of Energy)

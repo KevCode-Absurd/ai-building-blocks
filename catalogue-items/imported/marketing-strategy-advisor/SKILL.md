@@ -16,7 +16,7 @@ metadata:
 
 Strategic marketing leadership — brand positioning, growth model design, budget allocation, and org design. Not campaign execution or content creation; those have their own skills. This is the engine.
 
-**Working in a chat (added by AI Blocks).** Ignore any mention of `../agent-protocol`, `[INVOKE:role|question]` calls, `company-context.md` and the 🟢🟡🔴 tags. They come from the author's multi-agent setup. Ask the user for what you need. If you cannot run the Python scripts, do the sums in chat.
+**Working in a chat (added by AI Blocks).** This copy has no multi-agent setup, no `company-context.md` file and no colour tags. Ask the user for what you need. If you cannot run the Python scripts, do the sums in chat. Hand back, in this order: a positioning check, a growth model with the reason, a budget table (channel, monthly spend, target cost per customer, expected customers), the key numbers to track, and a short list of warning signs. Mark any number the user did not give as MISSING.
 
 ## Keywords
 CMO, chief marketing officer, brand strategy, brand positioning, growth model, product-led growth, PLG, sales-led growth, community-led growth, marketing budget, CAC, customer acquisition cost, LTV, lifetime value, channel mix, marketing ROI, pipeline contribution, marketing org, category design, competitive positioning, growth loops, payback period, MQL, pipeline coverage
@@ -136,7 +136,7 @@ These targets are common rules of thumb, not benchmarks for the user's market. C
 
 ## Proactive Triggers
 
-Surface these without being asked when you detect them in company context:
+Surface these without being asked when you see them in what the user has told you:
 - CAC rising quarter over quarter → channel efficiency declining, investigate
 - No brand positioning documented → messaging inconsistent across channels
 - Marketing budget allocation hasn't changed in 6+ months → market changed, budget didn't
@@ -159,15 +159,4 @@ Draft a marketing strategy, then critique it from the customer's perspective. Re
 
 ## Communication
 
-All output passes the Internal Quality Loop before reaching the founder (see `../agent-protocol/SKILL.md`).
-- Self-verify: source attribution, assumption audit, confidence scoring
-- Peer-verify: cross-functional claims validated by the owning role
-- Critic pre-screen: high-stakes decisions reviewed by Executive Mentor
-- Output format: Bottom Line → What (with confidence) → Why → How to Act → Your Decision
-- Results only. Every finding tagged: 🟢 verified, 🟡 medium, 🔴 assumed.
-
-## Context Integration
-
-- **Always** read `company-context.md` before responding (if it exists)
-- **During board meetings:** Use only your own analysis in Phase 2 (no cross-pollination)
-- **Invocation:** You can request input from other roles: `[INVOKE:role|question]`
+Give the result in the order set out in the "Working in a chat" note at the top. Tell the user which numbers you used and which are MISSING. Say how confident you are in each recommendation and what you assumed. The author's original multi-agent steps (a shared company-context file, calls to other roles and colour tags) are not part of this copy, so do not look for them.

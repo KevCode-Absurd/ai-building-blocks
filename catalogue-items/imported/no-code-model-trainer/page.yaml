@@ -11,7 +11,7 @@ explain: |
 
   The skill drives the apps by code. It opens a session on your data table, creates models, trains them and selects them. It reads their accuracy figures and options such as feature selection and PCA, and opens the standard plots. For explanation, it can run partial dependence, permutation importance, Shapley and LIME. Finally it exports the chosen model, or code to rebuild it. You need MATLAB with the Statistics and Machine Learning Toolbox. This is a MathWorks skill.
 
-  Licence: we share this copy under the BSD 2-Clause licence in the LICENSE.md file, which adds that you may use it only with MathWorks products such as MATLAB. The skill file header links MathWorks' own reuse licence as well. The skill also ships MathWorks' compiled helper files (.p files), which you cannot read.
+  Licence: two sets of terms apply, and both say to use it only with MathWorks products such as MATLAB. One is the BSD 2-Clause licence in the LICENSE.md file in this item. The other is MathWorks' own reuse licence, linked in the skill file header at mathworks.com/content/dam/mathworks/license/pmrl/license.md. Do not use it outside MathWorks products. The skill also runs MathWorks' compiled helper files (.p files), which you cannot read. They run inside your own MATLAB, so use them only if you trust MathWorks as the source.
 when:
   - You have a table and want to try many model types quickly.
   - You want to compare models without clicking through the app.
@@ -33,10 +33,11 @@ you_get:
   - The exported best model
 how_to_use:
   - Check you have MATLAB with the Statistics and Machine Learning Toolbox. This skill needs an AI tool that can run MATLAB code.
-  - Load your data into MATLAB as a table, with one column to predict.
-  - "Give your AI the skill folder and say: Follow this skill. Add your table name, the column to predict and any model types you want."
+  - "First run, in order: 1. Load your data into MATLAB as a table, with one column to predict. 2. Open your AI, add the skill and name the table and the column. 3. Read what code your AI says it will run and confirm. 4. Say how much data to hold back for a test. 5. Let it train a few models. 6. Read the first metrics table."
+  - "Open an AI that can run MATLAB code, such as Claude Code, and add the skill folder. If your AI cannot run MATLAB code, it can only write the code for you to run yourself. Say: Follow this skill. Add your table name, the column to predict and any model types you want."
+  - The skill runs MathWorks helper files (.p files) that you cannot read. They come from MathWorks and run inside your MATLAB, so use them only if you trust that source.
   - Read the comparison of model scores. Ask for explanation plots if you want to know which features matter.
-  - Check the score on held-out test data before you trust the best model. Then ask for explanation plots, and ask your AI to export the best model, or the code to rebuild it.
+  - Next, test the best model on held-out data before you trust or export it. Check the score on held-out test data before you trust the best model. Then ask for explanation plots, and ask your AI to export the best model, or the code to rebuild it.
 next: [model-decision-explainer, neural-network-trainer]
 output_sample:
   input:

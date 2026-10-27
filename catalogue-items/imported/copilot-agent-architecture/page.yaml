@@ -7,6 +7,8 @@ job: set-up-ai
 headline: AI agent architecture planner
 subhead: "Describe the AI agent you want, or share one you already have. It asks questions one at a time, then gives you a design, the limits the agent should run under and a PDF report with a diagram. It plans only and does not build the agent."
 explain: |
+  This is an imported skill from github/awesome-copilot (MIT licence). It works with 13 reference files that ship in its references folder, so use the whole folder, not only the SKILL.md file.
+
   Teams often add memory, extra tools or several agents before they know the job needs them. This AI agent architecture planner asks about the job first. It starts with the simplest option: plain automation, one AI call or a fixed workflow. It adds an agent loop only when you have a concrete reason.
 
   Each decision is marked as confirmed, your requirement, a proposal, an assumption or an open question. You can see what is fact and what is a guess. You get a first sketch early, then a fuller design as you answer.
@@ -35,10 +37,11 @@ you_get:
 how_to_use:
   - Have these ready if you can. A spec or notes for the agent, any limits you know (budget, time, who must approve actions), and the files or code of an existing agent if you want a review. If you have none of these, a few lines on the job are enough. The skill asks the rest.
   - Open your AI tool. Use one that can read files and make a PDF with a diagram if you want the report. If yours cannot, you get the report as text with the diagram source instead.
-  - "Paste the skill text or upload the skill folder, then say: Follow this skill."
+  - "Paste the skill text or upload the whole skill folder with its references, then say: Follow this skill. Give it your spec, the list of tools, and a few example runs if you have an existing agent."
   - "First paste a few lines on the job the agent must do, or paste your spec, or the setup of an agent you already have. The first reply is a short question, not a design."
   - Answer the questions one at a time. If you do not know, ask for a suggested option. It will be marked as an assumption.
   - Read the first design sketch and say what is wrong. Say when you have given enough, and you get the full design.
+  - The design is meant for a developer or a build tool to use. A developer should check the report before anything is built.
   - Check the PDF report and diagram. Read the open decisions and the limits on steps, time and cost first. Hand the design to a developer or a build tool to build, since this skill does not write code. Ask the developer to check the open decisions and the stopping limits first, and to test the agent against the checks the report lists before anyone relies on it.
 output_sample:
   input:

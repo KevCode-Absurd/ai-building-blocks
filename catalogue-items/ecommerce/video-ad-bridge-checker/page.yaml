@@ -6,7 +6,7 @@ thinking: high
 thinking_why: "It reads a whole script line by line and judges how the viewer's awareness changes, so a stronger model catches more."
 
 headline: "Video script bridge checker"
-subhead: Paste your video ad script and say who it is for. It finds the lines where the viewer first feels sold to, checks the bridge from hook to body and from body to call to action, and gives a bridge score out of 100 with a tighter script.
+subhead: Paste your video ad script and say who it is for. It finds the lines where the viewer first feels sold to, checks the bridge from hook to body and from body to call to action, and gives a bridge score out of 100 with a tighter script. It checks the flow between the hook and the call to action only. It does not score the hook itself or check the wording line by line.
 
 explain: |
   A strong hook means little if the next lines lose the viewer. The bridge is the move from the hook into teaching or problem talk. If the script pitches the product right after the hook, or jumps to the buy button with no reason, cold viewers leave. Some sources say to introduce the product as late as the script allows. That gives a smaller but better qualified viewer, and often better conversion.

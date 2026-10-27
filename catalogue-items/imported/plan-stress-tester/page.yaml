@@ -9,7 +9,7 @@ subhead: A tough round of questions on your plan or idea, each with a suggested 
 explain: |
   A tough round of questions on your plan or idea, each with a suggested answer, so you reach a shared and settled design fast. You mostly say yes or change a few answers.
 
-  The skill maps your plan as a tree of decisions, where each choice leads to others. It asks every question whose earlier choices are already settled, in one numbered round, and phrases each so a yes accepts its recommendation. After your answers it recomputes what can now be asked and runs the next round. Facts it can look up, such as files or tools, it finds itself and never asks you.
+  The skill maps your plan as a tree of decisions, where each choice leads to others. It asks every question whose earlier choices are already settled, in one numbered round, and phrases each so a yes accepts its recommendation. After your answers it recomputes what can now be asked and runs the next round. Where your AI has file or tool access, it looks up facts such as files or tools itself. In a plain chat it has no such access, so it asks you for those facts and says so. It should never claim to have looked something up when it did not.
 when:
   - You have a rough idea and need the gaps found.
   - You want to agree on a design before starting to build.
@@ -29,12 +29,12 @@ you_get:
   - A decision tree that narrows each round
   - A settled plan at the end
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. The lookup step only works in a tool that can read files or run helper agents, such as Claude Code. In a plain chat, your AI asks you for those facts instead.
   - Describe your plan or idea in a few lines. Add any limits you already know.
   - Read the first round. Answer yes to accept a suggestion, or type a change.
   - Send your answers. Your AI then asks the next round of questions.
   - Keep going until your AI says nothing is left to decide, then confirm the plan.
-  - Turn the settled plan into a task list or a short brief to start work.
+  - Turn the settled plan into a task list with the Task list keeper, or into build sessions with the Multi-session build plan writer. Paste the settled plan in as your starting brief.
 output_sample:
   input:
     - Your plan or idea, in a line or a few paragraphs

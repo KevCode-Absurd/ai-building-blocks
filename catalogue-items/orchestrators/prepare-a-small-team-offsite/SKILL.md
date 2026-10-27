@@ -26,9 +26,9 @@ How to start:
 - **A chat AI that reads files:** It reads earlier notes and the brief together. An AI that can run code does the cost sums for you.
 <!-- /needs -->
 
-## Before you start
+## What to gather first
 
-Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
+These replace the generic list above. Use what is attached or pasted first. Ask once, in one short message, for only the missing facts that change the result.
 
 **You need:**
 - The decision the offsite must reach, in one or two lines.
@@ -102,9 +102,9 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Access, travel and budget assumptions are visible.
 - End with `CHECKS MISSED:` and the checks that failed or could not run, or `none`.
 
-## After this
+## What to do with the result
 
-Offer one next step in a short question, and say the user can type their own:
+These fit an offsite better than the suggestions above. Offer one next step in a short question, and say the user can type their own:
 - **Send the pre-read request** to the team. You send it, not the AI.
 - **Run the register again** after the event with your notes.
 - **Set a regular meeting rhythm** for the team with the Company meeting rhythm designer.

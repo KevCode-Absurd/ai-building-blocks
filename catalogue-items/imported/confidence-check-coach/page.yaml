@@ -30,8 +30,8 @@ you_get:
   - A named pattern
   - Advice on what to do next
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the instructions from the skill file. No code, files or paid tools are needed.
-  - Tell your AI the topic or question and your study setting. Add earlier results if you have them (optional).
+  - Open Claude, ChatGPT or Gemini and paste in the instructions from the skill file. No code, files or paid tools are needed. The prompt was written for Claude and works the same in ChatGPT or Gemini. Before you paste, replace {{topic_or_question}} with your topic, {{context}} with your course or study setting, and {{prior_calibration_data}} with earlier results, or write "none".
+  - Pick a topic you can try to answer from memory, with no notes. Tell your AI the topic or question and your study setting. Add earlier results if you have them (optional).
   - Give a gut confidence rating from 0 to 100 before you answer.
   - Answer the question without notes, then read the feedback on your attempt.
   - Rate your confidence again, then read the pattern your AI names and the next step it suggests.

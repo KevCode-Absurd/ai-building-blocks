@@ -15,7 +15,7 @@ explain: |
 
   This is a copy of a skill by Romuald Czlonkowski (github.com/czlonkowski/n8n-skills), shared through sickn33's collection. It was not written for this catalogue.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header says MIT. Credit goes to Romuald Czlonkowski and sickn33.
+  The licence that applies to this copy is CC BY 4.0, as the LICENSE-CONTENT file in this item says. The MIT line in the skill file is the author's own header. Keep the credit to Romuald Czlonkowski and sickn33 if you reuse it.
 when:
   - You want an n8n agent that can search your docs and answer questions.
   - You are not sure whether to use an agent or a simple AI chain.
@@ -37,7 +37,7 @@ you_get:
   - Approval steps for risky actions
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill's instructions, or upload the skill folder if your AI accepts files.
-  - Describe the job your agent should do and the apps it needs to reach.
+  - "Have ready: your n8n version, the list of apps and tools the agent must reach, and whether the n8n MCP tools are connected. You also need a paid account and API key with a model provider, and one for embeddings or a vector store if you use your own documents. Describe the job your agent should do."
   - Say which n8n version you run. Checking each node against your live setup needs the n8n MCP tools. Without them, ask whoever runs your n8n to review the plan.
   - Read the node choice first. If a simple chain or classifier fits, build that instead.
   - Check the approval steps before you turn the workflow on. Add your keys only in n8n credentials, never in prompts.
@@ -54,6 +54,7 @@ output_sample:
   prerequisites:
     - An n8n setup you can reach
     - An AI that can use the n8n MCP tools, for live checks of node settings
+    - Accounts and API keys for the model, embedding and vector-store nodes you choose. These providers usually charge for use. Keep the keys only in n8n credentials.
   output:
     - name: Node choice
       contains: Whether you need an AI Agent, a Basic LLM Chain or a classifier, with the reasons.

@@ -31,8 +31,8 @@ you_get:
   - Approval needs
 how_to_use:
   - Gather the period end date, the invoice or contract, your chart of accounts, and who must approve entries of this size. Ask your finance lead if the approval limit is not written down.
-  - Open Claude, ChatGPT or Gemini and paste the skill text from this page, or upload the skill folder if your AI takes files.
-  - Describe the transaction in plain words. Add the amounts, and your chart of accounts if you have one.
+  - Open Claude, ChatGPT or Gemini and add the skill. Paste the SKILL.md text, or upload the skill folder if your AI takes files.
+  - "Write the request in this shape. Transaction: [WHAT HAPPENED]. Date and period: [DATES]. Amounts: [AMOUNTS AND CURRENCY]. Accounts: [YOUR CHART OF ACCOUNTS, OR SAY NONE]. Attach: [INVOICE, CONTRACT OR SCHEDULE]."
   - Check that debits equal credits, the period is right, and every account is one you really use. The balance check script needs an AI that can run code. No paid service or API key is needed.
   - Attach the source documents, get approval, then post the entry in your accounting system.
   - Next, add the entry to your month-end checklist. Use the Month-end close planner to see where it fits in the close.

@@ -6,7 +6,7 @@ Drawn from his letters to publishers, the prefaces and postscripts of his books 
 
 Practical, modest on the surface and fiercely proud underneath. In prefaces he often apologises: his writing is clumsy, he isn't used to words, please excuse any mistakes. Then he sets out exactly what he wants, down to the eyelids and the noses. He talks like a craftsman to other craftsmen: plain, specific, focused on the job in hand.
 
-He likes small, homely comparisons. The light ink should be the colour of clam soup. At the third cup of sake, the sake drinks the man. He is funny about himself and his age.
+He is funny about himself and his age.
 
 His signatures are self-mocking: he signs as a man mad about drawing, and sometimes as drunk. In letters to publishers he turns terse and businesslike, all about sums and who carries the money. He refuses a deal he finds insulting, even if it costs him, and says he would rather stay poor than be cheated.
 

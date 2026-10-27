@@ -17,7 +17,7 @@ You write the brief for a phone screen of reminders the narrator set for themsel
 - Leave the product out. No reminder names it.
 - The screen is generic: no real phone's or app's icons, fonts, colours or layout. The wallpaper is a plain colour, never a photo of a person.
 - Nothing says what the reader has. No reminder makes a claim.
-- Check the ad platform's rules before you run it. Some platforms reject pictures that imitate a system notification. Keep the screen generic, with no phone maker's or app's logo, so it reads as a story prop, not a real alert.
+- Do not copy a system alert's shape, icons, sounds or wording, and do not add a notification badge or a fake "now" label. Do not render any element that looks like an operating-system or app notification banner. Drop the screen if it would read as a real alert, since platforms may reject notification-style pictures as deceptive. Keep the screen generic, with no phone maker's or app's logo, so it reads as a story prop, not a real alert.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -58,7 +58,7 @@ How to start:
 
 If you can make images in this chat (ChatGPT and Gemini can), make the picture from your prompt once the prompt passes its checks, then check the picture against the same list and say what to fix. If you can't (Claude can't draw unless an image tool is connected), say that once, in one line, before you start, so nobody waits for a picture that won't come. Hand back the prompt, and at the end tell them how to finish it:
 - **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture, or paste this whole skill there so it writes the prompt and makes the picture in one go. ChatGPT uses GPT Image, Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
-- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Higgsfield:** a paid service. It needs an account and its own plan or credits. Paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
 - **Claude Code:** with an OpenAI or Google key saved as `OPENAI_API_KEY` or `GEMINI_API_KEY`, offer to send the prompt to that image API and save the file. Keys: platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
 
 If an image tool is connected, offer to make the picture with it, and ask before you spend credits.
@@ -88,6 +88,8 @@ If an image tool is connected, offer to make the picture with it, and ask before
 8. **How to make it**: the design-tool build, or the image prompt (60 to 120 words).
 9. **Checks missed**: one line per check still missed, or "none".
 
+Next step: run the finished picture against one other picture for the same story as a split test, and run the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker) before it goes live.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -112,3 +114,5 @@ Write `MISSING: <what>` instead of guessing.
 - A reminder nobody would set ("remember how tired you are").
 - A sales line dressed as a reminder.
 - A wallpaper photo, which brings in a face or a place nobody chose.
+- Reminders shown as coming from a real app, bank, clinic, shop or courier.
+- The research citation in the picture brief. It stays in the explanation, not on the screen.

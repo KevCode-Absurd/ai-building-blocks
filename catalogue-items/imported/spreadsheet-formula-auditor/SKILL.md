@@ -5,6 +5,12 @@ description: Audit a spreadsheet for formula accuracy, errors, and common mistak
 
 # Audit Spreadsheet
 
+## Gather first
+
+Before you start, ask the user for: the workbook file, the scope (selection, sheet or whole model), the model type (DCF, LBO, three-statement or merger) for a full model, and the currency and fiscal year. Do not guess any of these.
+
+Say how you read the file. If you can read formulas, check the formulas. If you can only read the saved (cached) values, say that you cannot see the formulas and that the formula checks are limited to what the values show.
+
 ## India
 
 This skill operates on **Indian markets**. Load **`india-market-conventions`**

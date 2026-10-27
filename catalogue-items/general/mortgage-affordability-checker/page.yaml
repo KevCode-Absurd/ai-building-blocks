@@ -97,6 +97,8 @@ tweaks:
     how: Use rates from real quotes. If you only have a guess, give two or three and read the spread.
   - what: The stress rate
     how: Pick a rate that would hurt. If the budget breaks there, you know how much room you have.
+  - what: Your safe margin
+    how: Say what share of take-home pay you want left after costs and the payment. Under it the verdict is tight. With none given, 10% is used as a default.
   - what: Your costs
     how: Include what you really spend, not what you hope to spend. A budget that is too neat gives a payment that is too big.
   - what: Loan length

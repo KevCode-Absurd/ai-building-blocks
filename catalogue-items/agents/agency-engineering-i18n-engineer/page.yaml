@@ -8,7 +8,7 @@ thinking_why: The role compares choices and checks evidence. Use a model that ca
 explain: |-
   Translating an app is more than swapping words. Word order changes between languages. English has two plural forms and Arabic has six. Dates, numbers and money are written in different ways. A sentence built from pieces cannot be translated at all. This agent finds those problems before translators start, so you avoid rounds of rework. The work is called internationalization, or i18n.
 
-  It looks for text typed straight into code, sentences glued together from parts, hand-made date and money formats, and layouts that assume English. It rewrites messages in ICU MessageFormat, a standard way to write plurals and choices. It also checks layouts for right-to-left scripts and for text that runs much longer, since German often runs about a third longer than English.
+  It looks for text typed straight into code, sentences glued together from parts, hand-made date and money formats, and layouts that assume English. It rewrites messages in ICU MessageFormat, a standard way to write plurals and choices. It also checks layouts for right-to-left scripts and for text that runs much longer, since some languages, such as German, often run longer than English.
 
   It reviews and plans. It does not translate your content, and machine-translated text still needs a native speaker. This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.
 when:

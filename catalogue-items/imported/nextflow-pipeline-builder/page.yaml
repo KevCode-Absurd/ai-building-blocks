@@ -11,7 +11,7 @@ explain: |
 
   Nextflow links tasks by their data, so you do not schedule anything by hand. The skill uses the modern DSL2 syntax with separate processes and modules. It can also run ready-made nf-core pipelines, set containers and resources, and write nf-test tests. To move between machines, you change a config profile, not the code. It pins software versions so results can be repeated. It is strongest in bioinformatics but suits any heavy data work. You need to be comfortable with a terminal, or have a developer set it up. The install step downloads a script from the web, so read it before you run it.
 
-  Licence: we share this copy under the MIT licence, as the LICENSE.md file says. The skill file header (K-Dense Inc.) says Apache-2.0. Credit goes to K-Dense Inc.
+  Licence: the MIT licence applies to this copy, as the LICENSE.md file in this item says. The skill file header (K-Dense Inc.) lists Apache-2.0, which is the author's own label, not the licence we use here. Credit goes to K-Dense Inc.
 when:
   - You need to run an nf-core pipeline on your own samples.
   - A run failed halfway and you want to resume it safely.
@@ -34,11 +34,11 @@ you_get:
 how_to_use:
   - Use an AI that can run terminal commands on your own computer, such as Claude Code. A plain chat window cannot install or run Nextflow.
   - "Gather first: your input files, the reference genome and annotation if you work with DNA data, a samplesheet (a table listing your samples and their files), and the Java and container versions on your machine."
-  - "First run, in order: install Java and Nextflow (read the installer script before you run it), install a container tool such as Docker, run the small test profile, check the output folder, then run on your real data."
+  - "First run, in order: install Java and Nextflow (use the conda route by default; only if you have no conda, download the installer script, read it, and run it only when you are happy with it), install a container tool such as Docker, run the small test profile, check the output folder, then run on your real data."
   - Add the skill to your AI, or paste it in. Then describe your data steps, your tools and your input files.
   - "Say where it will run: laptop, cluster or cloud. Paste the error log too if a run failed."
   - Read the pipeline and the config before you run it on real data. Try the small test run first and check the output.
-  - Ask your AI to add nf-test tests once the pipeline runs well.
+  - Once the small test run passes, ask your AI to add nf-test tests. If you build an nf-core style pipeline, run nf-core pipelines lint as well.
 output_sample:
   input:
     - The steps your data goes through
@@ -64,4 +64,4 @@ output_sample:
     - name: nf-test files
       contains: Tests for your modules, subworkflows or pipeline, with checks on what each one should produce.
     - name: Run diagnosis
-      contains: For a failed run, the cause found in the logs and the fix, with a safe way to resume.
+      contains: "For a failed run, four parts in order: the cause, the evidence from the log, the fix, and a safe command to resume."

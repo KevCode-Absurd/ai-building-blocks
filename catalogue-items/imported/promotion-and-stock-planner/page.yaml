@@ -17,6 +17,7 @@ when:
   - Your last promotion sold out early and you want to size the next one properly.
   - You need to tell production how much extra to build.
   - You want to compare deal types by return, not by habit.
+  - You have a set of past promotions plus normal weekly sales for the same product. Without that history, run one small test deal first.
 not_for:
   - You have no past promotions or no normal-sales baseline. Gather that first, or run one small test deal and measure it.
   - You want to clear old stock with a markdown. Use the clearance discount planner.

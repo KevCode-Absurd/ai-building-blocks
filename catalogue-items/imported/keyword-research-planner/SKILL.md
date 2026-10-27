@@ -42,6 +42,8 @@ Without browsing or a keyword tool, you cannot see competitor pages. In that cas
 
 ## Live search-intent research
 
+**Terms of use.** Looking at live search result pages and using keyword tools must follow each provider's terms of use. Use only the user's own browser session or their own keyword tool or account. Do not run automated scraping of search result pages. Ahrefs, SEMrush and Google Keyword Planner are optional tools, and Ahrefs and SEMrush are paid.
+
 Use both browser research and available search/keyword APIs when the environment supports them. Prefer APIs for repeatable data and browser inspection for actual result-page intent, related questions, snippets, and current wording. If only one is available, state which source was used. If neither is available, perform semantic research only and mark volume, difficulty, rankings, and SERP observations as unverified.
 
 For each important query, record:
@@ -117,6 +119,7 @@ The skill must always produce output in this exact format:
 **Location:** [location or "Global"]
 **Note:** All volume and difficulty figures are estimates.
 Validate with a live keyword tool before final decisions.
+When no browser or keyword API is connected, write "unverified estimate" in every Est. Volume, Difficulty and CPC cell. Do not show a bare number.
 
 ---
 
@@ -328,11 +331,10 @@ Do not fill the table with near-duplicates to reach ten. If fewer than five dist
 
 ---
 
-## Connected Skills
-- Receives output from: orchestrator workflow input
-- Feeds output to: `seo-aeo-content-cluster`,
-  `seo-aeo-landing-page-writer`, `seo-aeo-blog-writer`,
-  `seo-aeo-meta-description-generator`
+## What to do next
+- Take the Keyword → Content Map to the Content brief writer to turn each keyword into a brief.
+- Take a finished page to the On-page SEO tuner to tune it for its keyword.
+- To see where you rank today, use the SEO auditor.
 
 ## When to Use
 

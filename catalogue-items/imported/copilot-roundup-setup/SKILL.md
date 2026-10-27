@@ -192,6 +192,8 @@ After writing, give the user a clear, memorable summary of how to use roundup go
 >
 > **Your config is saved at:** `~/.config/roundup/config.md`
 
+Also tell the user the config file holds their pasted examples as plain text. They can open it, remove any names or private figures, or delete the file whenever they like.
+
 Keep this summary short and concrete. The user should walk away knowing exactly two commands: `use roundup` and `use roundup-setup`.
 
 ---

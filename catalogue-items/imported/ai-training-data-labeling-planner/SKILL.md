@@ -43,11 +43,11 @@ possible label count.
    adjudicated references where available; preserve meaningful disagreement,
    ambiguity, and abstention instead of forcing consensus.
 7. Review disagreement by item, label, slice, annotator, and guide version.
-   Adjudicate only with a stated rule and qualified authority. Feed confirmed
+   Adjudicate (settle a disagreement) only with a stated rule and a person qualified to decide. Feed confirmed
    guide defects back into training and re-review affected labels.
 8. Stop or continue based on marginal downstream value, coverage, quality,
    cost, and time. An item quota may stop spending but cannot by itself establish sufficient quality. Freeze the
-   manifest and hand off to data-engineering for storage/orchestration and
+   manifest (lock the list of records and labels so it stops changing, and give it a version) and hand off to data-engineering for storage/orchestration and
    ml-engineering for training use.
 
 ## Acquisition guardrails
@@ -56,7 +56,7 @@ Never let model confidence define the whole dataset. Sample a representative
 held-out audit independently of active-learning selection, and compare active
 batch outcomes against it. Track uncertainty method, model/version, seed,
 selection scores, slice quotas, and excluded items. If confidence is uncalibrated
-or the model is out of distribution, treat its ranking as a search heuristic and
+or the model is out of distribution (the records are unlike anything it was trained on), treat its ranking as a search heuristic and
 increase diversity, novelty, and human review.
 
 ## Human and quality guardrails

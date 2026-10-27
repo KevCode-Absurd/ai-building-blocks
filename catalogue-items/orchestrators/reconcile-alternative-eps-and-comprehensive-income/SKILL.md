@@ -26,9 +26,9 @@ Use what is attached or pasted first. If something is missing, say what you can 
 ## When not to use
 
 Say so and point to the better item when:
-- You only want reported basic and diluted EPS: use the Basic and diluted earnings per share checker.
-- You are updating a whole model after a new filing: use the Company filing earnings workbook updater.
-- Your OCI item is a pension remeasurement, which is not moved to profit: use the Pension funding, expense and remeasurement checker.
+- You only want reported basic and diluted EPS: use [Reconcile basic and diluted issuer EPS](https://useaiblocks.com/workflows/reconcile-basic-and-diluted-issuer-eps).
+- You are updating a whole model after a new filing: use [Prepare a filing-based earnings model update](https://useaiblocks.com/workflows/prepare-a-filing-based-earnings-model-update).
+- Your OCI item is a pension remeasurement, which is not moved to profit: use [Separate pension cost funding and remeasurement](https://useaiblocks.com/workflows/separate-pension-cost-funding-and-remeasurement).
 
 ## Governing scope
 
@@ -40,7 +40,9 @@ Read this file and each step's skill in full. If a step's skill is not added her
 
 1. **Purchased amortization EPS bridge** (`purchased-amortization-eps-bridge`). **Takes:** Reported ordinary income, amortization of purchased intangibles, the tax benefit recognized on it and diluted weighted shares. **Do:** Pick out purchased-intangible amortization from software, financing costs and internally built assets, and keep the statutory line. Subtract the tax benefit attributable to it to get the after-tax adjustment. Divide reported and adjusted income by the same diluted share count. Say that the add-back does not erase the purchase cost or the need to replace assets. Label adjusted EPS as an analytical measure. **Hands step 2:** the list of items already added back, with their amounts. **Gate before step 2:** The disclosed tax effect is used, not an assumption that all amortization is deductible, and reported and adjusted EPS share one denominator and one ownership basis. Save `outputs/step-1-purchased-amortization-eps-bridge.md` and any workbook. Stop this step when a tool or input is missing, and say what is needed.
 
-2. **OCI reclassification bridge** (`oci-reclassification-bridge`). **Takes:** Profit and OCI before the move, the signed after-tax amount recycled, and the source note on whether recycling is allowed. **Do:** Identify the reserve and whether the standard lets the item move to profit. Apply the same signed after-tax amount to profit and the opposite sign to OCI (reverse both for a loss). Show total comprehensive income before and after. Keep tax and owner transactions out of this proof. Give no recycling entry to items that cannot be recycled. Check that no item here was added back in step 1. **Hands to the hand back:** the equal and opposite entries and the proof, for the hand back. **Gate before the hand back:** Profit and OCI entries are equal and opposite, total comprehensive income reconciles, and no recycled item sits in both steps. Save `outputs/step-2-oci-reclassification-bridge.md` and any workbook. Stop this step when a tool or input is missing, and say what is needed.
+2. **OCI reclassification bridge** (`oci-reclassification-bridge`). **Takes:** Profit and OCI before the move, the signed after-tax amount recycled, and the source note on whether recycling is allowed. **Do:** Identify the reserve and whether the standard lets the item move to profit. Apply the same signed after-tax amount to profit and the opposite sign to OCI (reverse both for a loss). Show total comprehensive income before and after. Keep tax and owner transactions out of this proof. Give no recycling entry to items that cannot be recycled. Check that no item here was added back in step 1. **Hands to the hand-back section:** the equal and opposite entries and the proof. **Gate before hand-back:** Profit and OCI entries are equal and opposite, total comprehensive income reconciles, and no recycled item sits in both steps. Save `outputs/step-2-oci-reclassification-bridge.md` and any workbook. Stop this step when a tool or input is missing, and say what is needed.
+
+Before step 1 or step 2, check that the skill it names (`purchased-amortization-eps-bridge` or `oci-reclassification-bridge`) is in the pack. If it is not, fetch it from its useaiblocks.com page (https://useaiblocks.com/skills/<slug>) before you start that step.
 
 ## Workbook checks
 
@@ -79,5 +81,6 @@ Lead with reported and adjusted EPS and the OCI proof in the layout below. Label
 ## After this
 
 Suggest one next step in a short question, and say they can type their own:
-- **Update the whole model** with the [Company filing earnings workbook updater](https://useaiblocks.com/workflows/prepare-a-filing-based-earnings-model-update).
+- **Update the whole model** with the [Prepare a filing-based earnings model update](https://useaiblocks.com/workflows/prepare-a-filing-based-earnings-model-update) workflow.
+- **Check the share counts** with the [Reconcile basic and diluted issuer EPS](https://useaiblocks.com/workflows/reconcile-basic-and-diluted-issuer-eps) workflow if the diluted count is in doubt.
 If they pick one and it is not added here, give the link and say what to bring.

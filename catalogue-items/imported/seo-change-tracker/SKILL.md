@@ -40,7 +40,7 @@ Before capturing data:
 
 1. Confirm the site and the key URLs in scope. Prefer top organic landing pages, commercial pages, and any URLs affected by a recent release.
 2. Confirm baseline or compare mode. If no prior snapshot exists, use baseline mode and explain that there is nothing to compare yet.
-3. Ask where the snapshot should be stored. Use a local `seo-drift/` directory alongside the user's other audit reports only after confirming the intended project or reports location.
+3. Ask where the snapshot should be stored. If you cannot write files, print the whole snapshot in the chat and tell the user to save it, because the comparison needs it pasted back. Use a local `seo-drift/` directory alongside the user's other audit reports only after confirming the intended project or reports location.
 4. Prefer a connected Google Search Console source for query, page, position, impression, click, and indexation signals.
 5. Use a browser or web-fetch capability for current on-page values. Respect robots directives and avoid high-volume crawling.
 

@@ -147,7 +147,7 @@ improve:
 works_best_with:
   tools:
     - name: Claude Code
-      why: It can keep the page and post files between months and run on the second Monday.
+      why: It can keep the page and post files between months. You start the run on the second Monday. It does not run on a timer unless you set up a scheduled task.
     - name: Google Search Console
       why: Export queries and pages with clicks, impressions and position for the month.
   inputs:

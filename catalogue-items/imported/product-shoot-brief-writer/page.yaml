@@ -9,6 +9,8 @@ subhead: Give it your product and where the pictures will run. It writes a shot 
 explain: |
   A shot list for photos and video where every shot has a reason behind it. Instead of taste, the brief draws on research on what moves sales and willingness to pay. Each effect comes from one study, so treat it as a guide, not a promise.
 
+  The studies are: Roggeveen et al. 2015 (video and willingness to pay for enjoyment products), To and Patrick 2021 (model gaze, one sun hat A/B test), Luangrath et al. 2022 (a hand touching the product, 15 experiments), Sharma and Kumar 2022 (shine), Sevilla and Townsend 2016 (empty space between products), Maille et al. 2019 (which side the product sits), Radon et al. 2021 (props) and Hagtvedt and Brasel 2017 (colour saturation). A few shots, such as slow motion and several copies of a one-job product, have no study behind them and are marked as tips. The full list with each result is in reference.md.
+
   The skill collects, or states as an assumption, whether your product can be held and if it is premium, whether it has one main function, and who wears it. It then sets format choices, like stills versus video, plus gaze, the sense of touching the product, and composition details such as shine, spacing, side and props. Most shots cite a measured effect. A few are marked as practitioner tips. The brief is written to hand to a photographer.
 when:
   - You are briefing a photographer or video team.
@@ -34,7 +36,7 @@ how_to_use:
   - Have ready a product photo or spec sheet, the places the pictures will run, and which way your buyers read.
   - Tell your AI what the product is, how people use it and where the pictures will run.
   - Say who buys it and which way they read. Add candidate images if you have them (optional).
-  - Check the shot list. Treat shots marked with a dagger as tips, not measured findings.
+  - Check the shot list. Shots marked with a dagger are practitioner tips, not measured findings. The effect numbers come from single studies. Check them against reference.md before you quote them to a photographer or your team. If your product is both a treat and a tool, the skill gives a default: stills, one hand shot and one optional test video. Confirm the product type yourself.
   - Send the list to your photographer. Then use the Product page auditor or the Product description writer for the rest of the page.
 output_sample:
   input:

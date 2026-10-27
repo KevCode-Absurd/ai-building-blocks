@@ -21,11 +21,11 @@ Strategic AI leadership for startup CAIOs and founders without one. **Four decis
 3. **When do we switch from API to self-hosted, and at what cost?** — token economics with breakeven analysis
 4. **What AI role do we hire next?** — stage-to-role map (AI engineer ≠ ML engineer ≠ research scientist)
 
-This skill does **not** cover tactical AI/ML engineering. For RAG implementation, agent design, prompt engineering, eval infrastructure, model deployment, or cost optimization, see `engineering/rag-architect/`, `engineering/agent-designer/`, `engineering/prompt-governance/`, `engineering/self-eval/`, `engineering/llm-cost-optimizer/`.
+This skill does **not** cover tactical AI/ML engineering. For RAG implementation, agent design, prompt engineering, eval infrastructure, model deployment, or cost optimization, use a hands-on engineering guide or an AI engineer. The original author pointed to `engineering/` skills for these. They are not in this library, so do not go looking for them.
 
 ## Keywords
 
-CAIO, chief AI officer, AI strategy, model selection, foundation model, fine-tuning, RLHF, DPO, LoRA, QLoRA, build vs buy, AI build-vs-buy, model risk tier, EU AI Act, AI Act Article 6, Article 9, Article 10, Annex III, prohibited AI, high-risk AI, NIST AI RMF, AI risk management framework, NYC Local Law 144, Colorado SB 21-169, Illinois HB 53, model card, eval set, eval harness, hallucination rate, jailbreak risk, prompt injection, AI red team, AI safety, alignment, model lifecycle, model registry, API-to-self-hosted breakeven, GPU economics, A100, H100, inference cost, fine-tuning cost, AI team, AI engineer, ML engineer, research scientist, MLOps, AI platform
+CAIO, chief AI officer, AI strategy, model selection, foundation model, fine-tuning, RLHF, DPO, LoRA, QLoRA, build vs buy, AI build-vs-buy, model risk tier, EU AI Act, AI Act Article 6, Article 9, Article 10, Annex III, prohibited AI, high-risk AI, NIST AI RMF, AI risk management framework, NYC Local Law 144, Colorado AI Act, Illinois AI Video Interview Act, model card, eval set, eval harness, hallucination rate, jailbreak risk, prompt injection, AI red team, AI safety, alignment, model lifecycle, model registry, API-to-self-hosted breakeven, GPU economics, A100, H100, inference cost, fine-tuning cost, AI team, AI engineer, ML engineer, research scientist, MLOps, AI platform
 
 ## Quick Start
 
@@ -49,7 +49,7 @@ python scripts/ai_cost_economics.py path/to/workload.json
 - **What's the SLO on hallucination / error rate?** (Without one, "AI quality" is a vibe.)
 - **What happens when the model is wrong?** (Fallback behavior, human-in-the-loop, blast radius.)
 - **What's the risk tier under EU AI Act, and is conformity assessment required?** (Determines product launch timeline.)
-- **At what monthly token volume does self-hosting beat API?** (Almost never below 100M tokens/month at frontier quality.)
+- **At what monthly token volume does self-hosting beat API?** (The author's rough guess is that it is almost never worth it below 100M tokens a month. Unsourced, so check with the calculator.)
 - **Are we hiring an AI engineer or an ML research scientist?** (Different jobs; founders confuse them.)
 
 ## Core Responsibilities
@@ -78,7 +78,7 @@ The decision is not "use AI or not" — it's **API vs fine-tune vs in-house** fo
 
 The 2026 question every founder is facing: **does this AI use case trigger high-risk regulatory obligations?**
 
-**EU AI Act (in force 2026) tiers:**
+**EU AI Act (in force 2026) tiers.** *AI Blocks note: this table is the original author's summary. It is undated and was not checked against the Act's text. Check the tier of any real use case against the official text or with a lawyer. This is not legal advice.*
 
 | Tier | Examples | Obligations |
 |---|---|---|
@@ -89,13 +89,13 @@ The 2026 question every founder is facing: **does this AI use case trigger high-
 
 **Run** `ai_risk_classifier.py` to classify a use case and get the required-controls list.
 
-**US state patchwork (non-exhaustive).** *AI Blocks note: these entries come from the original author and were not checked against official sources or dated. Some look mislabelled. For example, the Illinois law on AI in video interviews is usually called the AI Video Interview Act, and Texas's biometric law is usually called CUBI (the Capture or Use of Biometric Identifier Act), not TCPA. Verify every law with its official text or a lawyer before you rely on it. This is not legal advice.*
+**US state patchwork (non-exhaustive).** *AI Blocks note: these entries come from the original author and were not checked against official sources or dated. The names below have been corrected where the original looked wrong. Verify every law with its official text or a lawyer before you rely on it, and give no risk class as settled. This is not legal advice.*
 
 - NYC LL 144 — Automated Employment Decision Tools (AEDTs) require annual bias audit + candidate notice
-- Colorado AI Act / SB 21-169 — AI in consumer decisions (credit, insurance, employment, housing)
-- Illinois HB 53 — AI in interview/hiring
+- Colorado AI Act (SB 24-205) — high-risk AI in consumer decisions such as credit, insurance, employment and housing. Colorado SB 21-169 is a separate law on insurers' use of outside data. Check the official text for dates.
+- Illinois Artificial Intelligence Video Interview Act — AI used to assess video job interviews
 - California SB 1001 — Bot disclosure
-- Texas TCPA — Biometric identifier capture
+- Texas CUBI (Capture or Use of Biometric Identifier Act) — biometric identifier capture
 - Federal NIST AI RMF — voluntary; increasingly referenced in contracts
 
 **Industry-specific overlays:**
@@ -112,12 +112,14 @@ See `references/ai_risk_governance.md` for the full regulatory landscape + gover
 
 **Key components:**
 
-- **API cost** — variable, per-token. *(The prices below were written by the original author, with no source or date. Check each provider's current price page before you use them.)* Frontier models 2026: Claude Sonnet 4.6 ~$3/$15 per M tokens (input/output), GPT-4o ~$2.50/$10, Gemini 2.5 ~$1.25/$5
-- **Self-hosted cost** — fixed (GPU commitment) + variable (electricity). H100 spot ~$2-5/hour, A100 spot ~$1-3/hour. Llama 3.1 70B / Qwen 2.5 72B: ~$0.50-2.00 per million output tokens at 70% utilization
+- **API cost** — variable, per-token. The original author listed 2026 prices here, with no source or date, so AI Blocks removed them. Do not quote prices from memory. Use each provider's own price page for the model you plan to use: input price [PRICE PER MILLION INPUT TOKENS] and output price [PRICE PER MILLION OUTPUT TOKENS].
+- **Self-hosted cost** — fixed (GPU commitment) + variable (electricity). The author's GPU rental and per-token figures were unsourced, so use current quotes from your GPU provider: [GPU PRICE PER HOUR] and [COST PER MILLION OUTPUT TOKENS AT YOUR UTILIZATION]
 - **Hidden costs of self-hosting** — ops on-call, monitoring, model updates, scaling overhead, idle time penalty
 - **Hidden costs of API** — rate limits requiring multi-vendor failover, vendor lock-in, capability drift between versions, data residency
 
-**Typical breakeven (frontier-quality):** 100M–500M tokens/month, depending on model size and acceptable quality tradeoff. Below this, API wins. Above this, run the calculator.
+**Typical breakeven (frontier-quality):** the author's rough guess is 100M–500M tokens/month, with no source and no date. Treat it as an idea to test, not a fact. Run the calculator with your own volumes and current prices.
+
+Before you run the calculator, ask the user for current numbers and put each into the workload file. Take the API input and output prices from the provider's own price page, and the GPU price per hour from a current quote. Fill in each bracketed placeholder above with those figures. The calculator needs monthly input and output tokens (in millions), the model size, the latency target and the expected GPU use. If a figure is missing, mark it MISSING. Never fill it with a remembered price.
 
 **Run** `ai_cost_economics.py` with workload characteristics for a breakeven point + sensitivity to GPU rates and model size.
 
@@ -212,6 +214,8 @@ python scripts/ai_cost_economics.py workload.json
 
 ## Adjacent Skills
 
+*AI Blocks note: the skills below are from the original author's own collection. They are not in this library. Treat the list as ideas for who to ask, not as pages you can open.*
+
 - `c-level-advisor/skills/chief-data-officer-advisor/` — Training data rights, data product strategy (chains directly to model decisions)
 - `c-level-advisor/skills/cto-advisor/` — Architecture capacity, scaling cliffs (esp. for self-hosted inference)
 - `c-level-advisor/skills/ciso-advisor/` — Threat modeling for AI (prompt injection, jailbreak, training data poisoning)
@@ -235,4 +239,4 @@ python scripts/ai_cost_economics.py workload.json
 
 **Version:** 1.0.0
 **Status:** Production Ready
-**Disclaimer:** AI regulation is evolving rapidly. This skill surfaces decisions and tradeoffs as of 2026 but cannot replace qualified AI counsel for binding compliance decisions, especially under EU AI Act conformity assessments.
+**Disclaimer:** Risk classes, laws and cost figures here are a first read, not facts to act on. Check them against official sources before any compliance or budget decision. AI regulation is evolving rapidly. This skill surfaces decisions and tradeoffs as of 2026 but cannot replace qualified AI counsel for binding compliance decisions, especially under EU AI Act conformity assessments.

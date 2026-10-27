@@ -32,11 +32,12 @@ you_get:
   - A list of community links to approach
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code, files or paid tools.
-  - Tell your AI the age group and the place you will work in. Add your time, local helpers and any known problem if you have them.
+  - "First run: paste the skill, give your AI the age group, the place and your time, then answer its questions. Run the Sense stage before Envision. Add local helpers and any known problem if you have them."
   - Before you plan, check the place is safe. Do a risk assessment and arrange adult supervision for any pond, stream or uneven ground.
   - Read each stage and change any activity that does not suit your group.
   - Use the plan to run the term. Let the Share stage feed the Sense stage of your next cycle.
-  - Pair it with the place-based-inquiry-anchor and reggio-documentation-protocol skills for more help on the place and on recording learning.
+  - Pair it with the Learning documentation planner for recording learning, and the Nature inquiry unit for shorter plans. The skill's own place-based-inquiry-anchor and reggio-documentation-protocol skills are not in this library.
+  - This is a practitioner framework, not a tested method. The author says so in the skill. Treat the claim that place-based learning improves engagement as one view, and use your own judgement.
 output_sample:
   input:
     - "Age group: early years or primary"

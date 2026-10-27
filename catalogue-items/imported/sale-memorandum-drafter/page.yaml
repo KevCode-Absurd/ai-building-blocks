@@ -10,6 +10,8 @@ explain: |
   The long document buyers read first when a company is for sale, drafted from your facts. It has to tell a clear story, and this gives it a set order and flow.
 
   You bring what you have: management slides, three to five years of accounts, forecasts, customer data and an org chart. The draft starts with a short summary and five to seven reasons to buy. Then it covers the company, its market, products, customers, operations, financials and the deal. It is set up for Indian deals, so it uses April to March years and lakh and crore units, and says where India has no equivalent.
+
+  This is a copy of the cim-builder skill from nighomni123/fsi-skills-india, under the Apache 2.0 licence (see the LICENSE file in this item). We edited only its India section so it works alone. The two companion India skills it was built with are not part of this item.
 when:
   - You are selling a company and need a first draft of the sale document.
   - You have scattered slides and spreadsheets and need one story.
@@ -31,8 +33,8 @@ you_get:
   - A list of missing facts to collect
 how_to_use:
   - "Gather first: three to five years of accounts as PDF or Excel with the year labels (FY, April to March), your latest forecast, management slides, and customer and org chart details if you have them."
-  - Before you paste anything, check your confidentiality and NDA terms. Remove or anonymise names of customers and staff before you share files with a general AI tool.
-  - "Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. The two companion India skills are not part of this item, so the rules are written into the skill: years run April to March, and amounts use lakh and crore. In Excel, never use a number format with trailing commas to show crore. It shows lakh under a crore label, a 100 times error. Divide by 10000000 in a formula instead."
+  - Before you paste anything, check your confidentiality and NDA terms. Send financial and customer data only to an AI tool your NDA allows, because a general consumer AI tool may breach those terms. Remove or anonymise names of customers and staff first.
+  - "Open Claude, ChatGPT or Gemini. Paste in the full skill text, the whole SKILL.md for this item, from this page. The two companion India skills are not part of this item, so the rules are written into the skill: years run April to March, and amounts use lakh and crore. In Excel, never use a number format with trailing commas to show crore. It shows lakh under a crore label, a 100 times error. Divide by 10000000 in a formula instead."
   - Add your slides, accounts, forecast and any customer or org chart details. Paste the text or upload the files.
   - Ask your AI to draft the memorandum. It will ask for anything missing.
   - Check each number and each year label. Indian years run April to March.

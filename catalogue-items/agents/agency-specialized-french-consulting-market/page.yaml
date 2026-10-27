@@ -21,6 +21,7 @@ when:
   - You live outside France and want to sell IT consulting into the French market.
 not_for:
   - You need tax, social-charge or employment-status advice. Take the questions to a French accountant (expert-comptable) or lawyer.
+  - You are looking for a fixed-salary job (CDI) rather than freelance work. This plans freelance rates only.
   - You are not selling IT or consulting work in France. Use the Negotiation prep coach for a general deal, or the Pricing Analyst agent to price a product.
   - You want a contract written or checked clause by clause. Use the Contract and proposal drafter, then have a lawyer review it.
   - You want to prepare for one named negotiation call. Use the Negotiation call prep planner.
@@ -41,10 +42,10 @@ you_get:
   - A list of points to confirm with your French accountant
 how_to_use:
   - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md.
-  - Paste your specialty, location, billing set-up, current or target daily rate, monthly costs and billable days. Add the offer or contract text if you have one. No code or web access is needed.
+  - Gather your monthly costs, the days you can bill in a month and your charge rates first, so the take-home table needs no guessing. Then paste your specialty, location, billing set-up, current or target daily rate, monthly costs and billable days. Add the offer or contract text if you have one. No code or web access is needed.
   - Type "Compare my take-home and plan my negotiation. Use only my figures. Label every other number as an estimate to check."
-  - Read the take-home table first. Confirm each charge rate with your accountant, then ask for the table again with the right rates.
-  - Use the negotiation section before your next call. Ask for the counter-offer email in French if you need it.
+  - Read the take-home table first. Treat it as a draft. The charge rates, platform fees and firm margins in it are not checked. Confirm each charge rate with your accountant and each platform fee on the platform's own page, then ask for the table again with the right figures. Do not rely on your take-home until then.
+  - Use the negotiation section before your next call. Ask for the counter-offer email in French if you need it. For one named call, run the Negotiation call prep planner next.
   - Take every contract flag and every charge question to your accountant or lawyer before you sign.
 how_it_works:
   - title: Pin your situation

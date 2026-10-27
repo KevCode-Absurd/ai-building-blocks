@@ -55,17 +55,19 @@ The steps follow ideas from his books and interviews [S1][S4][S8]. The "he'd" li
 
 ## Jobs, one by one
 
+Every "he'd" line below is inferred from his public work, not a stated opinion of his `[beyond the record]`. The brand examples are the ones he gives in his book and talks [S1][S11]; any view of a named brand is our reading.
+
 ### Your campaign
 
-He'd hold it up against the four conditions. Say your plan is a dry list of benefits. He'd ask why anyone would invite it into their living room. He'd point to Warburtons bread ads: funny scripts, high production values, and stars from Robert De Niro to the Muppets, playing on gangster films and old serials [S1]. He'd also praise an AA ad in which a little girl lip-syncs to a pop song while being rescued, for its music, human story and charm [S1]. He noted the agency dropped that campaign the following year [S1], so he'd warn you that good work is hard to keep going inside a company.
+He'd hold it up against the four conditions. Say your plan is a dry list of benefits. He'd ask why anyone would invite it into their living room. He uses Warburtons bread ads as an example: funny scripts, high production values, and stars from Robert De Niro to the Muppets, playing on gangster films and old serials [S1]. He also gives an AA ad as an example, in which a little girl lip-syncs to a pop song while being rescued, for its music, human story and charm [S1]. He noted the agency dropped that campaign the following year [S1], so he'd warn you that good work is hard to keep going inside a company.
 
 ### Your small brand with no big budget
 
-Think like a showman. He'd point to the PG Tips chimps and the meerkat: characters with drama and jokes, often nothing to do with the product, that stuck in memory and kept the brand ahead of cheaper rivals [S11]. Barnum's singer, Jenny Lind, was good but no miracle. What she had was a show: a big public arrival in New York, auctioned first tickets, a name, a hairstyle and merchandise, with the press keeping the story going [S1]. He'd say Barnum mostly did ordinary things with more energy. So he'd ask what your show is. It might be a character people grow fond of, a tune they can't shake, or a stunt the local paper wants to cover. Make it a pleasure to watch, give it a look people will tie to you, and give them a reason to talk about it. He'd admit that fame never comes automatically, and that mass reach costs money.
+Think like a showman. He gives the PG Tips chimps and the meerkat as examples: characters with drama and jokes, often nothing to do with the product, that stuck in memory and kept the brand ahead of cheaper rivals [S11]. Barnum's singer, Jenny Lind, was good but no miracle. What she had was a show: a big public arrival in New York, auctioned first tickets, a name, a hairstyle and merchandise, with the press keeping the story going [S1]. He'd say Barnum mostly did ordinary things with more energy. So he'd ask what your show is. It might be a character people grow fond of, a tune they can't shake, or a stunt the local paper wants to cover. Make it a pleasure to watch, give it a look people will tie to you, and give them a reason to talk about it. He'd admit that fame never comes automatically, and that mass reach costs money.
 
 ### Your logo, mascot or brand symbol
 
-He'd say the symbol may come before the meaning. Nike's Swoosh and Apple's logo were picked by instinct or chance, and meaning built up around them over years [S8]. So he'd ask whether your symbol is distinctive and whether you will keep it long enough for meaning to gather. He'd warn against a brand onion that tries to reduce it to a few words. He'd keep a mascot with a story people enjoy.
+Our reading: he'd say the symbol may come before the meaning. He gives Nike's Swoosh and Apple's logo as symbols picked by instinct or chance, with meaning built up around them over years [S8]. So he'd ask whether your symbol is distinctive and whether you will keep it long enough for meaning to gather. He'd warn against a brand onion that tries to reduce it to a few words. He'd keep a mascot with a story people enjoy.
 
 ### Your creative brief
 
@@ -73,7 +75,7 @@ He'd skip the form. At BMP, the researcher talked through the findings with the 
 
 ### Your process and approvals
 
-You tell him your work goes through six layers of sign-off and a data check. He'd say research is fine and the demand for certainty is the trouble. He's wary of procurement-style process and of the pull towards looking like a science. He'd ask where the energy and improvisation can still live, and he'd suggest keeping one small team free to try things. He'd also look at who owns the strategy (this point is our reading, beyond the record). In his view planners writing the brief can leave creatives and account teams feeling it is not theirs, and creatives can simply reject it, so bring them into the thinking early.
+You tell him your work goes through six layers of sign-off and a data check. Our reading `[beyond the record]`: he'd say research is fine and the demand for certainty is the trouble, and he'd be wary of procurement-style process and the pull towards looking like a science. He'd ask where the energy and improvisation can still live, and he'd suggest keeping one small team free to try things. He'd also look at who owns the strategy (this point is our reading, beyond the record). In his view planners writing the brief can leave creatives and account teams feeling it is not theirs, and creatives can simply reject it, so bring them into the thinking early.
 
 ### Outside his field: a market trader at a weekend stall
 
@@ -81,7 +83,7 @@ You tell him how you sell cheese on a Saturday. He'd ask the host question: woul
 
 ### Your life and career
 
-He left Oxford in 1974 and joined BMP, where he stayed over 30 years [S5], rising to head of account planning and later worldwide brand planning director at DDB. Since 2005 he has been a consultant, coach and author, and he wrote two books after his agency years. He'd tell you it's never too late to question what you were taught. He'd tell you to trace your ideas back to where they came from, as he did with advertising's history. He'd say to read widely and learn from odd places like medieval pedlars and nineteenth-century showmen. And he'd say selling and entertainment have always gone together, so don't be ashamed of enjoying your work.
+He left Oxford in 1974 and joined BMP, where he stayed over 30 years [S5], rising to head of account planning and later worldwide brand planning director at DDB [S5]. Since 2005 he has been a consultant, coach and author [S5]. In his book he traces advertising's ideas back through history, including medieval pedlars and nineteenth-century showmen [S1]. Our reading, not his advice: question what you were taught, read widely, and don't be ashamed of enjoying your work.
 
 ## What he'd push back on
 

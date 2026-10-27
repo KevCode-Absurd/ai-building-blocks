@@ -37,9 +37,9 @@ you_get:
 how_to_use:
   - "Check what you need first: an AI that can run code (Claude Code or a similar tool), Node.js 20.6 or newer, and a free Apify account. Say which sites you want to scan."
   - "Create an Apify API token in your Apify account. Save it in a .env file as APIFY_TOKEN=your_token. Never paste the token into a chat."
-  - "Install the Apify command line tool the skill names (mcpc), or let your AI do it. Open the skill and tell your AI your topic and sites."
+  - "Install the Apify command line tool the skill names (mcpc), or let your AI do it. Open the skill and tell your AI your topic and sites. Reading a scraper's settings with mcpc is optional. You can read them on the scraper's page on apify.com instead, so your token is never used in a command."
   - "Answer the two questions it asks: how to show the results and how many. Pick a quick answer in chat the first time to keep costs low."
-  - "Check the plan before it runs. Scrapers on Apify can use paid credits, so look at your Apify plan and usage, and tell your AI how much it may spend. Skip the Facebook groups and Marketplace scrapers unless the data is public and the site's terms allow it."
+  - "Check the plan before it runs. Scrapers on Apify can use paid credits, and the script has no spend limit of its own. Set a usage limit in your Apify account if your plan has one, keep the first run small, check the cost in Apify after each run, and tell your AI how much it may spend. Check each site's terms before you scan it, because scraping can break them. Skip the Facebook groups and Marketplace scrapers unless the data is public and the site's terms allow it."
   - "Read the summary. Check that it compares time periods and is not just a list of popular posts. Save the file for next month."
 how_it_works:
   - title: Pick the scraper

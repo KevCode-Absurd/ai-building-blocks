@@ -2,7 +2,7 @@ thinking: high
 thinking_why: It follows a set method with a few checks.
 new_slug: ai-training-data-labeling-planner
 name: AI training data labeling planner
-summary: Plan how to label data for your AI. Give it the task and sample records. You get label rules, reviewer guidance, quality checks and a sampling plan.
+summary: Plan how to label data for your AI. Share the task and sample records, with personal details removed, and get label rules and quality checks.
 job: teach-and-train
 headline: AI training data labeling planner
 subhead: Share the task your AI will learn, example records, and labeling limits. It defines labels, edge cases, reviewer guidance, and a fair way to sample records. You get a labeling plan and quality checks that preserve uncertainty and disagreements instead of forcing agreement.
@@ -11,9 +11,9 @@ explain: |
 
   The skill sets out what each label means, with clear examples and rules for odd cases. It plans how to pick fair samples and how to train and check your reviewers. It keeps real disagreement visible instead of hiding it. It also records where the data came from and what rights you have. You get a plan you can hand to reviewers.
 
-  Four terms. A held-out sample is a set of records you keep aside to check quality later. Adjudication is a named person settling a disagreement by a stated rule. Abstention is an "unsure" label reviewers may pick. Out-of-distribution means unlike the examples the AI has seen.
+  Four terms. A held-out sample is a set of records you keep aside to check quality later. Adjudication is a named person settling a disagreement by a stated rule. Abstention is an "unsure" label reviewers may pick. Out-of-distribution means unlike the examples the AI has seen. Freezing the manifest means locking the list of records and labels so it stops changing, and giving it a version.
 when:
-  - You are about to have people label examples to teach an AI a task.
+  - You are about to have people label examples to teach an AI a task. Remove names and personal details from any records first.
   - Your reviewers disagree and you do not know why.
   - You need a written record of where your data came from and what rights you have.
   - You want a plan you can hand to a team of reviewers.
@@ -39,9 +39,12 @@ works_best_with:
     - name: A chat AI that can read the bundled reference files
       why: Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
 how_to_use:
+  - Do these in order. 1) Gather the task, 10 to 20 example records, and the rights and reviewer details. 2) Check your rights. 3) Remove personal data. 4) Load the folder into your AI. 5) Ask for the four outputs, which are label rules, reviewer guidance, sampling and quality checks.
+  - What you get is an annotation plan, an annotation guide, a rights and provenance record, reviewer training, and a quality report.
   - Before you start, write down the task the AI will learn, 10 to 20 example records, where the data came from and what you may do with it, who will review, and your budget and deadline.
+  - Check your rights before you upload anything. Confirm you have consent or a licence to use these records, and that sharing them with a third-party AI tool is allowed under your data-protection rules. If you are not sure, ask a qualified person (your privacy lead or a lawyer) to sign off first.
   - Remove names, contact details and other personal fields from your example records before you paste them into any AI tool. Note which fields are sensitive.
-  - Add the downloaded folder to an AI that can read the included references and templates.
+  - Load the downloaded folder into your AI. You need an AI with file upload or a project folder feature, so it can read the reference files and templates. If yours cannot, paste in SKILL.md and the reference files one by one.
   - Give the task, example records, rights limits, reviewers, budget, and what a useful label means.
   - Ask for label rules, reviewer guidance, sampling, and quality checks. The label rules come as a table with these columns. Label, meaning, a good example, a bad example and a rule for edge cases.
   - Ask it to end with a short list headed "Open questions" that names each unresolved rights issue and each reviewer issue.

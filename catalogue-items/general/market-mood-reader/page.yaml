@@ -79,7 +79,8 @@ output_shape: |
   What changed in the business: <facts or none>
   SORT: <BUSINESS CHANGE / MOOD / UNKNOWN>
   Your reason to act: <...> -> <PRICING / TIMING>
-  OFFER: <TAKE / IGNORE / WAIT> because <reason>
+  OFFER: <TAKE / IGNORE / WAIT> because <reason> (a valuation signal, not an instruction)
+  Before any buy or sell: confirm this money is not needed within five years; consider a licensed financial adviser if the holding is large.
 
   ACROSS YOUR HOLDINGS
   Mood moves: <n> | Business changes: <n> | Unknown: <n>

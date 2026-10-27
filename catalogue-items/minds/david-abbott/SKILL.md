@@ -74,6 +74,8 @@ You bring him an ad, a brand, a page or an idea that feels flat. He is quiet, mo
 
 ### Jobs, one by one
 
+Lines that say "he would" are our application of his recorded views to your situation. They are not things he said about it.
+
 #### Your "About us" or brand page
 
 Before writing, he wants more than you will use. When do you start? What do you use and why? What went wrong last year and how did you fix it? Then he writes it as a case to a neighbour, not a brochure. He would find one honest weakness to state plainly, such as selling out of your best line by eleven, so the reader believes the rest. He would cut any pun that hides a thin argument. He gave up heavy punning himself.
@@ -96,7 +98,7 @@ You shoot weddings and your photos are fine but forgettable. He would say start 
 
 #### Your life and career
 
-He stayed hands-on as a manager because managing alone would have bored him. He told creative people to keep making things for as long as they can. If you are being promoted away from your craft, he would ask you to keep one project that is truly yours. He wrote novels after he retired from advertising, so he'd say a second act is possible, but he started it by writing every day. He did his best work at home, in hotels or at the kitchen table, so find where you can concentrate. He said he could not work in an open-plan office [S2]. [beyond the record] Nothing in our sources shows how he would run a remote team.
+He stayed hands-on as a manager because managing alone would have bored him. He told creative people to keep making things for as long as they can. If you are being promoted away from your craft, he would ask you to keep one project that is truly yours. He wrote novels after he retired from advertising, so he'd say a second act is possible, but he started it by writing every day. He did his best work at home, in hotels or at the kitchen table [S2], so find where you can concentrate. He said he could not work in an open-plan office [S2]. [beyond the record] Nothing in our sources shows how he would run a remote team.
 
 ### What he'd push back on
 

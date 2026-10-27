@@ -9,9 +9,9 @@ subhead: "Short tasks that show how your learners actually think about historica
 explain: |
   Short tasks that show how your learners actually think about historical evidence, not just what facts they remember. Pick the skills you teach: checking who wrote a source, reading its language, placing it in its time, or comparing it with other accounts.
 
-  Each task gives students a short source, like a painting description or a poster, and a prompt where their answer reveals their approach. Your AI drafts the source text, so check every author, date and archive against a real collection before use. For each task the skill explains what a weak, partial and strong answer looks like, and what that tells you about what to teach next. It adds validity notes, so you know when a task may measure reading level instead of historical thinking.
+  Each task gives students a short source, like a painting description or a poster, and a prompt where their answer reveals their approach. If your AI writes a source itself, it should label it "written for this task". Check every author, date and archive against a real collection before use. For each task the skill explains what a weak, partial and strong answer looks like, and what that tells you about what to teach next. It adds validity notes, so you know when a task may measure reading level instead of historical thinking.
 
-  Credit: Gareth Manning, education-agent-skills. The skill file also names Sean Hu as contributor. Licence: CC BY-SA 4.0. We renamed it and rewrote the page text. The prompt itself is unchanged.
+  Credit: Gareth Manning, education-agent-skills. The skill file also names Sean Hu as contributor. Licence: CC BY-SA 4.0. If you share tasks you adapt from this, credit the author and share them under the same licence. We renamed it and rewrote the page text. The prompt itself is unchanged.
 when:
   - You want to know which history skill your class lacks before teaching.
   - You need a quick check after a unit on sources.
@@ -36,7 +36,7 @@ how_to_use:
   - "Tell your AI which skills to check: sourcing, close reading, contextualisation, corroboration, or all four."
   - Add your students' age group and level, and what you want to learn from the check.
   - Add your topic, format and time limit if you have them (optional).
-  - Read each task and its answer guide. The AI writes the source text itself, so it can invent an author, date or archive. Check each one against a real collection, or swap in a real source, before students see it.
+  - Read each task and its answer guide. Each set ends with a "Check before use" line. If the AI wrote a source itself, it can still slip in a made-up author, date or archive. Check each one against a real collection, or swap in a real source, before students see it.
   - Use the weak, partial and strong answer notes to plan what to teach next. To check whether the tasks are fair, run them through the Assessment fit and fairness checker. To mark answers, use the Marking rubric writer.
   - Timing: one task takes about 7 minutes. A set of two or three takes about 15 to 20 minutes, which is what it plans for if you give no time limit. Start with a single task.
 output_sample:
@@ -50,6 +50,8 @@ output_sample:
       contains: A short task built on a source, with a prompt that shows how the student thinks.
     - name: Task 2
       contains: A second task aimed at another chosen skill, with its own artefact and prompt.
+    - name: Scoring Guide
+      contains: For each task, a three-level guide to a basic, partial and full answer.
     - name: Diagnostic Value
       contains: What weak, partial and strong answers look like, and what each tells you to teach next.
     - name: Validity Notes

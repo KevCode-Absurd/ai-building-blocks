@@ -2,7 +2,7 @@ thinking: high
 thinking_why: It plans trials, compares results and decides when to stop.
 new_slug: tuning-experiment-runner
 name: Tuning experiment runner
-summary: Tune settings with a small, tested search. Give it one score and your settings. You get a baseline, a trial log and a stop rule.
+summary: Tune settings with a small, controlled search. Give it one score and your settings. You get a baseline, a trial log and a stop rule.
 job: test-and-fix-code
 headline: Tuning experiment runner
 subhead: Give it one score to improve and the settings you can change. It runs a baseline, tries one change at a time and logs each trial. It stops when the budget ends or gains flatten.
@@ -11,7 +11,7 @@ explain: |
 
   You name one score to push up or down and list the settings with their ranges and defaults. The skill runs a baseline first, sets a budget in trials, time or money, and then tries one change at a time unless you allow parallel runs. It compares each trial to the best so far, writes down the result and the reason for the next step, and stops at the limit or when gains flatten. It works for model settings, prompts, inference options, simulations and control policies.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Optim-Agent) says MIT. Credit goes to Optim-Agent and sickn33.
+  Licence: the LICENSE-CONTENT file in this item says CC BY 4.0 for written content like this skill, and that is the licence shown for this copy. The author's own header (Optim-Agent) says MIT. Both are permissive and both need credit, so keep the credit to Optim-Agent and sickn33 if you share it.
 when:
   - You want to tune model settings with a small, fixed budget.
   - You need a record of what you tried and what each trial scored.
@@ -37,7 +37,8 @@ how_to_use:
   - Say the one score to improve, the settings with their ranges, and your current settings.
   - Set a cap on trials, time or money before the first run. Trials can use paid API calls or compute. Ask your AI for a cost estimate for one trial and for the whole budget, and say yes only if it is fine. Stop at the cap.
   - Let your AI run the baseline, then one trial at a time. Code running helps here. If it cannot run code, run each trial yourself and paste back the score.
-  - Read the trial log and the stop reason. Check the best settings on held-out data or a fresh run before you rely on them. Then save the winning settings to your config.
+  - Read the trial log and the stop reason. Check the best settings on held-out data or a fresh run before you rely on them. Then save the winning settings to your config, and record the baseline score, the best score, the trial count and the date next to them.
+  - Next, if the winning settings will run in a live product, test them against your current settings with the A/B test verdict maker before you switch everything over.
 output_sample:
   input:
     - The one score to improve, and whether higher or lower is better

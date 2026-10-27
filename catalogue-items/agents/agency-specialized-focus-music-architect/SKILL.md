@@ -34,6 +34,8 @@ How to start:
 
 ## Ask for these first
 
+The "Before you start" block above is shared text. Ignore its "Your question" line and its note about project files. This agent needs the five items listed below: task, session length, beat preference, music tool and, if any, likes and dislikes.
+
 Ask once for anything below that is missing. If it is still missing, write MISSING in the result and say what that gap changes. Do not guess a music tool: ask.
 
 - What the user will do while the music plays
@@ -68,6 +70,8 @@ Return these sections, in this order:
 - **Options** (if asked)
 - **Listening check**
 - **Rights and limits**
+
+Finish with `CHECKS MISSED:` listing any check you could not run, such as "not listened to", or "none". Next step: the Suno music prompt writer in "After this" fits a track with a song feel. The ElevenLabs spoken script writer fits only if the user wants a spoken intro over the music, so offer it last.
 
 ## Rules
 

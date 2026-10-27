@@ -49,7 +49,7 @@ output_sample:
     - Your store-wide purchase rate (optional)
   prerequisites:
     - Store events already flowing into GA4, such as add to cart and purchase
-    - A few hundred sessions per row for a firm read
+    - At least 300 sessions per row for a firm read
   output:
     - name: Channels
       contains: Each channel ranked by purchase rate, with its sessions, engaged share and a short note.
@@ -104,7 +104,7 @@ output_shape: |
 
 tweaks:
   - what: Date range and size
-    how: Use a long enough range that each row has a few hundred sessions. Rows with fewer are shown as too small to judge.
+    how: Use a long enough range that each row has at least 300 sessions. Rows with fewer are shown as too small to judge.
   - what: The purchase filter
     how: Always pick purchase as the key event. All key events together give a rate that is not a sales rate.
   - what: Device and browser split

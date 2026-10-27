@@ -216,7 +216,7 @@ Mobile Push Notifications,10000,massive,medium,m,Add push support
 Dark Mode,8000,medium,high,s,Dark theme option
 ```
 
-Use words for impact (`massive`, `high`, `medium`, `low`, `minimal`), confidence (`high`, `medium`, `low`) and effort (`xl`, `l`, `m`, `s`, `xs`, worth 13, 8, 5, 3 and 1 person-months). Reach is a number of users per quarter. The `assets/rice_input_template.csv` file uses plain numbers for impact, confidence and effort. The script does not read those as numbers and falls back to a default value, so copy the CSV format above instead. The first column is `name`.
+Use words for impact (`massive`, `high`, `medium`, `low`, `minimal`), confidence (`high`, `medium`, `low`) and effort (`xl`, `l`, `m`, `s`, `xs`, worth 13, 8, 5, 3 and 1 person-months). Reach is a number of users per quarter. The `assets/rice_input_template.csv` file uses the same labels and header. Replace each `[REACH PER QUARTER]` with a number before you run it. The header is exactly `name,reach,impact,confidence,effort,description`. If a row has a label the script does not know, it stops and names the row. It does not guess a default.
 
 **What it prints:** a ranked list (RICE score, then reach, impact, confidence, effort), a portfolio analysis (quick wins, big bets, total effort), a suggested roadmap by quarter that fits your capacity, and, with `--output json` or `--output csv`, the same ranking as a file.
 

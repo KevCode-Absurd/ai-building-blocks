@@ -26,7 +26,7 @@ steps:
   - {uses: theme-script-and-style-loader, note: "Only when blocking time or INP fails after the app check, and theme files are given."}
   - {uses: speed-fix-ranker, note: "Whenever anything fails or a new app was found: prices each fix in orders a month and ranks them."}
   - {uses: speed-budget-and-sale-check, note: "Only when a sale or big campaign is within 30 days: a speed budget and a pre-sale checklist."}
-schedule: "First week of every month, after 28 days of field data have built up"
+schedule: "Run by hand in the first week of every month, after 28 days of field data have built up. Skip a month only when last month said no work, nothing changed and no sale is due. Nothing starts on a timer unless you connect a scheduler."
 asks_before: [uninstalling or switching off an app, editing or publishing a theme, deleting theme code, changing hosting or a plan, turning off a store feature]
 origin: own
 version: 1.0.0

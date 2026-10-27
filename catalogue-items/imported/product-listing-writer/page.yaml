@@ -18,11 +18,12 @@ when:
 not_for:
   - "You sell on Amazon: use the Amazon listing optimization skill from Nexscope, made for Amazon's rules."
   - "You have no specs or proof for your claims: gather real facts first, or the listing will have gaps marked to confirm."
+  - "You have a brand-new product idea and no proof that anyone wants it: use the Category and trend risk checker first, then come back to write the listing."
   - "You want a full landing page for your own website: ask a copywriter, or write the page by hand and use this only for the product text."
 you_give:
-  - Product specs and features
+  - Product specs and features, with the proof papers for each claim
   - The platform you sell on
-  - Competitor listings or links (optional)
+  - One to three competitor listings, pasted as text or as links (optional)
   - Your current listing for optimising (optional)
 you_get:
   - A keyword-aware title
@@ -33,9 +34,12 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Pick one that can browse the web, or paste competitor text yourself. Paste by hand if a marketplace's terms do not allow automated page reading. The skill works from pasted text just as well.
   - Paste the skill text into the chat.
+  - "Gather first: your product specs, the proof for each claim (test reports, certificates), the platform, and one to three competitor listings pasted as text."
   - Tell it the platform, your product name, brand, features and specs. Add the tone you want.
   - Add competitor links, or your current listing if you want it improved (optional).
+  - The keyword scores are rough comparisons from the competitor text it saw. They are not search volume or market data.
   - Read the result. Check every number, certification and review claim against your real product papers. It must not state a claim you cannot prove. Fix any line marked [confirm].
+  - Check the title, bullets and tags against your platform's character limits. For Amazon sellers, use Nexscope's separate Amazon listing skill for Amazon's own rules.
   - Copy the title, bullets, description and tags into your platform's own listing editor.
   - After a few weeks of sales data, run the skill again in Optimize mode with your live listing.
 output_sample:
@@ -64,3 +68,4 @@ output_sample:
       contains: Competitor brand names found in their copy that were left out of your listing.
     - name: Keyword Gap Analysis
       contains: "When optimizing: keywords you have, keywords you miss, and before and after copy."
+next: [listing-completeness-scorer, marketplace-photo-rule-checker]

@@ -100,7 +100,7 @@ tweaks:
     how: Name the file format, audience and parts that must stay editable. State any
       page or slide limit.
   - what: The app used to check it
-    how: Say which Excel or PowerPoint version you will use. Your AI must name any
+    how: Say which PowerPoint version you will use. Your AI must name any
       check it cannot run.
 
 works_best_with:
@@ -133,12 +133,9 @@ test:
   - Reopen the saved result and compare it with the source. Keep any failed or
     unrun check in the report.
 improve:
-  - Add your confirmed field names, file rules and target app version to the
-    required-input section.
-  - Add a small test case with a known answer to the acceptance checks. Keep
-    made-up records separate from real work.
-  - Save the working rules with the file guide so the next run uses the same
-    meanings and checks.
+  - Tell it which changes you expect, so surprises stand out.
+  - Keep the last approved deck as your baseline for each new review.
+  - Save the change register next to the deck so the next review has a record.
 warnings:
   - Requires tools for the requested native file format. Checks requiring an
     unavailable native application must remain marked not run.

@@ -11,7 +11,7 @@ explain: |
 
   First it helps you decide whether to comment at all. Then it finds the gap in the post: what is missing, assumed or too general. Next it picks one of five shapes: a counterexample, an extension, a specific case, an honest disagreement about the idea, or a real question. It keeps the comment short and standalone, and removes any pitch. The same method works when you reply on someone else's thread. It never posts for you.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (prateeks367) says MIT. Credit goes to prateeks367 and sickn33.
+  Licence: the skill text in this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (prateeks367) says MIT, which covers the author's own code. The skill was written by prateeks367 (repo: voicemoat-skills) and we copied it from sickn33's agentic-awesome-skills library. Credit goes to both.
 when:
   - You want to get noticed by people you admire without sounding fake.
   - Your comments get no replies.
@@ -30,10 +30,10 @@ you_get:
   - A comment that adds something new
   - The gap it found in the post
   - A choice of comment shape
-  - A shorter version to paste
+  - A comment of two to four sentences, ready to paste
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tool are needed.
-  - Paste the full text of the LinkedIn post.
+  - Paste the full text of the LinkedIn post. The skill works from pasted text only, so a link or a screenshot will not do.
   - Add your own view or experience in a line or two. Add your role and a writing sample if you have them.
   - Read the gap it found. If it says skip, skip the post.
   - Check the comment is short, stands alone and has no pitch. Then post it yourself, as the skill never posts for you.

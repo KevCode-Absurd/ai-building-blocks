@@ -11,7 +11,7 @@ explain: |
 
   The skill uses assay, a command line tool. It serves your page locally, opens it in a real Chromium browser through Playwright, finds every control and drives each one. It then prints a result that says where the page does not do what it promises. You run it once at the end, after your last edit, on each page you changed. The skill reports the result and does not fix the page itself. It needs Python 3.10 or newer and a one-time pip install. The first run also downloads the Chromium browser that Playwright uses.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (awss1i) says MIT. Credit goes to awss1i and sickn33.
+  Licence: the LICENSE-CONTENT file in this item says CC BY 4.0 for written content like this skill, and that is the licence shown for this copy. The author's own header (awss1i) says MIT. Both are permissive and both need credit, so keep the credit to awss1i and sickn33 if you share it.
 when:
   - You just made an HTML page and want a quick check.
   - You changed a script or style file and worry something broke.
@@ -35,7 +35,7 @@ how_to_use:
   - Finish all your edits first. Run the check once at the end, on each page you changed.
   - Open an AI that can run code and use a browser, and give it this skill.
   - Tell it the page to check. Use the built page, such as dist/index.html, not a source file.
-  - Let it install assay once. This needs Python 3.10 or newer and a one-time pip install.
+  - Let it install assay once. This needs Python 3.10 or newer, a one-time pip install and network access. The first run also downloads the Chromium browser. The test itself makes no network calls. If the Chromium download fails because you are offline or behind a firewall, connect to an open network once, or ask your IT team to allow the download, then run it again.
   - Read the one line it prints. A flagged item is a place to look, not a proven bug.
   - Fix the page yourself or ask your AI to fix it. Then rerun the check after each fix.
 output_sample:

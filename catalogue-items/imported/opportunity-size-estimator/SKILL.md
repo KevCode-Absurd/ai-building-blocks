@@ -11,8 +11,8 @@ After an analytical finding surfaces a potential action, change, or opportunity.
 
 1. **Classify the impact type** — revenue growth, cost reduction, risk reduction, or efficiency gain. Each type has a different formula family (see `references/impact_quantification_framework.md`).
 2. **Gather inputs** — collect baseline metrics, affected population size, expected lift/reduction, time horizon, and confidence level.
-3. **Build the point estimate** — use `scripts/revenue_impact.py` for revenue/growth scenarios or `scripts/cost_savings.py` for cost/efficiency scenarios.
-4. **Add uncertainty bounds** — use `scripts/confidence_interval.py` to produce low/base/high estimates. Never deliver a single number without a range.
+3. **Build the point estimate** — paste the baseline, the lift and the time frame into the script call. If your AI cannot run scripts, work the formula by hand from `references/impact_quantification_framework.md` and show each step. Use `scripts/revenue_impact.py` for revenue/growth scenarios or `scripts/cost_savings.py` for cost/efficiency scenarios.
+4. **Add uncertainty bounds** — give the script your point estimate and your confidence level. If you cannot run it, set low and high by hand from your own best and worst cases, and say so. Use `scripts/confidence_interval.py` to produce low/base/high estimates. Never deliver a single number without a range.
 5. **Document assumptions** — fill in `references/assumption_documentation.md` for every input that is estimated rather than directly measured; note the sensitivity of the output to each.
 6. **Package the estimate** — complete `assets/impact_estimate_template.md` with the range, assumptions, confidence, and recommended action; optionally build the full `assets/business_case_template.md` for larger decisions.
 

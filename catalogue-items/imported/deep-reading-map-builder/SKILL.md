@@ -16,6 +16,8 @@ license_source: "https://github.com/xiehuan123/dsh-deepread/blob/main/LICENSE"
 
 # DeepRead
 
+(Added by AI Blocks. Licence of this copy: CC BY 4.0, per the LICENSE-CONTENT file. The MIT label in the header above is the original author's label.)
+
 ## Overview
 
 DeepRead turns long-form material into an evidence-first reading report. It separates claims, evidence, data, examples, assumptions, counterarguments, and limitations instead of producing an untraceable summary.
@@ -29,6 +31,8 @@ The workflow supports five modes: quick orientation, deep argument analysis, kno
 - Use when the user wants a mind map, concept map, comparison matrix, or structured study notes.
 - Use when the user wants to test understanding with plain-language explanations or recall questions.
 - Use when multiple documents need to be compared without collapsing disagreements into one answer.
+
+Not for: a quick skim (use quick mode or ask for a short summary), finding sources to read (gather them first), or a scanned PDF with no selectable text (run OCR first or paste the text).
 
 ## Choose a Mode
 

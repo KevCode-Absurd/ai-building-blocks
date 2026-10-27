@@ -35,11 +35,12 @@ you_get:
   - Cautions about what your data cannot show
 how_to_use:
   - Put your data in a table with clear column names. Write one line on what you want to know, such as "Did sign-ups change after the price rise?"
-  - Use an AI that can run code for a big file, such as Claude Code or ChatGPT with data analysis. For a small table, a plain chat can work.
+  - Use an AI that can run code for a big file, such as Claude Code or ChatGPT with data analysis. These may need a paid plan or an account. For a small table, a plain chat with no code tool can work.
   - Paste the skill, then your table or attach the file, then your question. Say what each column means.
   - Check the summary first. Make sure the number of rows, the date range and the groups match what you meant.
   - Ask your AI to explain any result you do not follow, in one sentence, as if to a colleague who dislikes statistics.
   - Do not remove outliers without checking them. Ask what each one might be, then look it up in your records.
+  - Next, use the Research test picker and reporter to write up a result, or the Regression and forecast modeller to find what drives it.
 how_it_works:
   - title: Describe the data
     text: It reports the middle, the spread and the shape, and shows mean and median side by side.

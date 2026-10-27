@@ -29,7 +29,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **The task** (required): its name, how often it runs and who does it.
+- **The task** (required): its name, how often it runs and who does it. This is what the "Your question" line above means here: paste these three items and your steps in one message.
 - **Your steps** (required): as you do them now, even if rough.
 - **What usually goes wrong** (optional).
 

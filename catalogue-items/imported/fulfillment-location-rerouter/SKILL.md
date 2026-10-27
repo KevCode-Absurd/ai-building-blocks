@@ -18,6 +18,7 @@ Queries open fulfillment orders assigned to a source location and moves them to 
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_orders,write_fulfillments`
 - API scopes: `read_orders`, `write_fulfillments`
 - Both source and destination locations must be active fulfillment locations in Shopify
+- Step 1 fetches open fulfillment orders and filters them by location in your code. The optional store-side search filter is unverified. Before the user types yes, they must check that the preview list matches the orders they expect to see at the source location in Shopify Admin. If the list looks wrong, stop.
 
 ## Parameters
 
@@ -36,14 +37,16 @@ Queries open fulfillment orders assigned to a source location and moves them to 
 
 ## Workflow Steps
 
+**Step 0: Verify the CLI command.** Before you sign in, run `shopify store auth --help` and check that the command and the scope names match what is written in Prerequisites. If the command differs, tell the user what the help output says and use that instead. Try it on a development or test store first if the user has one. Never run an unconfirmed auth command against a live store.
+
 **Confirm before moving.** Never set `dry_run` to false on your own. After the preview in step 1 and the stock check in step 2, show the user the list of orders and the destination, and wait for the user to type an explicit yes. Only then run step 3.
 
 1. **Preview (always first).** `fulfillmentOrders` — query
-   **Inputs:** the search string `status:open assigned_location_id:<numeric part of source_location_id>`, `first: 250`, pagination cursor
-   **Expected output:** List of open fulfillment orders; paginate until `hasNextPage: false`. If `order_filter` is set, keep only the orders whose name matches.
-   **If the store rejects this filter:** do not guess. Tell the user, and offer to fetch open fulfillment orders and keep only those whose `assignedLocation.location.id` equals the source. This query was not run against a live store when this page was written, which is why the preview comes first.
+   **Default method: fetch and filter.** Query with `query: "status:open"`, `first: 250` and a pagination cursor. Paginate until `hasNextPage: false`. Then keep only the fulfillment orders whose `assignedLocation.location.id` equals `source_location_id`. If `order_filter` is set, also keep only the orders whose name matches. This does not depend on a location search filter.
+   **Optional speed-up:** the search string `status:open assigned_location_id:<numeric part of source_location_id>` may do the filtering in the store. It was not run against a live store when this page was written. Use it only after you have tested it on a development store and the list matches the fetch-and-filter result. If the store rejects it, do not guess. Go back to the default method.
+   **Expected output:** the list of open fulfillment orders at the source location. Show it to the user as the preview.
 
-2. **Stock check (required).** Before the confirm prompt, ask the user to confirm that the destination holds stock for every item in the previewed orders. If you can read inventory levels with the user's access, list any item that is short. Do not go on to step 3 while a shortage is unresolved.
+2. **Stock check (required).** Before the confirm prompt, list each item in the previewed orders with its quantity. Ask the user to open Shopify Admin and check that the destination location holds at least that quantity of each item. If you can read inventory levels with the user's access, check them yourself and list any item that is short. If neither check can be made, say so, and do not go on to step 3. Do not go on to step 3 while a shortage is unresolved.
 
 3. **Move (only after an explicit yes).** `fulfillmentOrderMove` — mutation
    **Inputs:** `id: <fulfillment_order_id>`, `newLocationId: <destination_location_id>`
@@ -52,7 +55,7 @@ Queries open fulfillment orders assigned to a source location and moves them to 
 ## GraphQL Operations
 
 ```graphql
-# fulfillmentOrders:query — api_version 2025-01. The search filter was not run against a live store here, so check the preview.
+# fulfillmentOrders:query — api_version 2025-01. Pass "status:open" as $query and filter by assigned location in code. A location search filter was not run against a live store here, so always check the preview.
 query FulfillmentOrdersByLocation($query: String!, $after: String) {
   fulfillmentOrders(
     first: 250

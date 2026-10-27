@@ -303,9 +303,9 @@ Never ship filler. These are the tells that a page was generated rather than mad
 Safety rule: the made-up names, numbers and avatars below are for design drafts only. Before the page goes live, swap every one for the real brand name, real reviews, real customers and verified figures. Never invent proof (reviews, statistics, customer names or results) on a live page. It can mislead buyers and break ad rules. If the real fact is missing, mark it "NEEDED" instead of making it up.
 
 - **No Lorem Ipsum.** Write real draft copy.
-- **No "John Doe".** Use diverse, realistic names.
-- **No placeholder brands** like "Acme Corp", "Nexus", or "SmartFlow". Invent contextual, believable names.
-- **No round fake numbers** like `99.99%`, `50%`, `$100.00`. Use organic data: `47.2%`, `$99.00`, `+1 (312) 847-1928`.
+- **No "John Doe".** Use the real customer names the user gives you. If there are none, write [CUSTOMER NAME].
+- **No placeholder brands** like "Acme Corp", "Nexus", or "SmartFlow". Use the real brand name. If you do not have it, write [BRAND NAME].
+- **No made-up numbers.** Never write a round fake figure like `99.99%` or `$100.00`, and never write an invented but real-looking one. Use only the user's real figures, or a marked gap such as [STAT NEEDED], [PRICE], [PHONE NUMBER].
 - **No AI cliches.** Never "Elevate", "Seamless", "Unleash", "Next Gen", "Game changer", "Delve", "Tapestry", or "In the world of".
 - **Sentence case headers**, not Title Case On Everything.
 - **Active voice.** "We could not save your changes", not "Mistakes were made".

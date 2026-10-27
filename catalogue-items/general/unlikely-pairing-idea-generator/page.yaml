@@ -73,7 +73,7 @@ how_it_works:
   - title: Lets an accident in
     text: Moves one strong idea to a new order or format and sees what changes.
   - title: Runs the comfort check
-    text: Asks of each survivor whether it feels safe, and pushes it further if it does.
+    text: Asks of each survivor whether it feels comfortable and expected, and pushes it further if it does.
   - title: Shortlists
     text: Picks the few that hold together and says what each borrows from each field.
 
@@ -117,7 +117,7 @@ judge:
   - Ten or more pairings were written, with failures kept.
   - One limiting rule was set and applied.
   - No pairing was chosen to please an imagined crowd.
-  - Each survivor passes a not-safe check.
+  - Each survivor passes a comfort check.
   - The shortlist says what each pairing borrows from each field.
 
 test:
@@ -144,5 +144,5 @@ works_best_with:
 terms:
   - term: Pairing
     meaning: A combination of two fields, styles or tones that do not normally meet.
-  - term: Comfort check (the checks list calls it the not-safe check)
+  - term: Comfort check
     meaning: A test that asks whether an idea feels comfortable, and pushes it further out if it does.

@@ -35,9 +35,9 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Pick one that can show charts or save an HTML file.
   - Paste the skill text into the chat, or upload the skill folder.
   - "Type your trade: strategy, ticker, strikes, expiry, premium and quantity. Or add a broker screenshot."
-  - Check the strategy summary. Any value you did not give, such as premium, volatility, spot or days left, is a default guess. Replace it with your real number. Do not use the chart for a live trade while any guessed value is left.
+  - Check the strategy summary. Your AI must ask for premium and quantity. Any other value you did not give, such as volatility, spot or days left, is a default guess. Replace it with your real number. Do not use the chart for a live trade while any guessed value is left.
   - Drag the sliders to see how price, volatility and time change the lines.
-  - A live price quote needs Python with yfinance. It reads an unofficial feed from a third-party site that can change or block requests. Without it, type your spot price. Before you place or close any trade, take the break-even and max loss figures to your broker and check premium and volatility against live quotes. This is for learning, not advice.
+  - If you do not name the ticker, your AI asks you. It does not assume one. A live price quote needs a host that can run shell commands and Python with yfinance (for example Claude Code or another coding tool, not a plain chat window). The quote probe only runs for SPX, or for a ticker you ask for. For any other ticker, or without a shell, type your spot price yourself. It reads an unofficial feed from a third-party site that can change or block requests. Without it, type your spot price. Before you place or close any trade, take the break-even and max loss figures to your broker and check premium and volatility against live quotes. This is for learning, not advice. Then re-run the chart with the live premium and volatility from your broker before any decision.
 output_sample:
   input:
     - Your strategy type and underlying, typed or from a broker screenshot

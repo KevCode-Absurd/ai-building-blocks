@@ -47,7 +47,7 @@ Tell the owner to duplicate the theme first (Online Store, Themes, the three dot
 6. **Fix images.** Set width and height attributes, or use the CSS aspect-ratio property for responsive images. Use the rendered size shown in the browser inspector, not a guess.
 7. **Fix fonts.** Add `font-display: swap` and style the fallback font to the same size as the custom font.
 8. **Fix style clashes.** Remove contradicting CSS rules, or move a late style block into the head so it applies before first paint.
-9. **Handle lazy-loaded CSS.** For themes that load CSS late, build inline critical CSS for each template and test with the browser trace. Add rules wherever an element still moves.
+9. **Handle lazy-loaded CSS.** Only themes that load CSS late on purpose need this step. If your theme does not, skip it. For themes that do, build inline critical CSS for each template and test with the browser trace. Add rules wherever an element still moves.
 10. **Protect required widgets.** Cookie banners and consent tools are common offenders but are often legally required. Reserve space for them. Do not tell the owner to remove them.
 11. **Retest.** Run PageSpeed three times and average, on mobile and desktop. Say that Search Console and real-user data take about 28 days to catch up.
 
@@ -81,7 +81,7 @@ MISSING: <what>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Store website speed reviewer](https://useaiblocks.com/skills/speed-budget-and-sale-check). It takes the plan.
+- The [Speed budget and sale check](https://useaiblocks.com/skills/speed-budget-and-sale-check). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

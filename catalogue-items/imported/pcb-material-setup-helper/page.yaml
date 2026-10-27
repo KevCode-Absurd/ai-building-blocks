@@ -7,9 +7,13 @@ job: build-software
 headline: PCB material setup helper
 subhead: Pick your board material and walk away with a substrate, a metal and a layer stack that behave like the real thing, loss included. Every RF board design starts here, and wrong material numbers ruin every result after it.
 explain: |
+  This is an imported MathWorks skill, unchanged. Source: github.com/matlab/matlab-agentic-toolkit, folder skills-catalog/rf-and-mixed-signal/matlab-manage-pcb-material.
+
   Pick your board material and walk away with a substrate, a metal and a layer stack that behave like the real thing, loss included. Every RF board design starts here, and wrong material numbers ruin every result after it.
 
   The skill looks up common materials such as FR4 or Teflon from a built-in catalogue, or builds your own from dielectric constant, loss tangent and thickness. It sets conductors like copper or gold with real conductivity. For several layers it builds a stack with a thickness for each. For wide frequency ranges it adds a frequency-dependent loss model so results stay accurate. It runs in MATLAB with the RF PCB Toolbox.
+
+  Licence: LICENSE.md in this item applies (BSD 2-Clause), and you may use it only with MathWorks products such as MATLAB. The skill file links a different MathWorks licence page, which is MathWorks' own upstream terms and also says MathWorks products only.
 when:
   - You are starting an RF board design and need a substrate defined first.
   - Your datasheet gives dielectric constant and loss tangent, and you need a material from them.
@@ -31,8 +35,8 @@ you_get:
   - Material code you can pass to later designs
 how_to_use:
   - Check first that you have MATLAB and the RF PCB Toolbox. Both are paid tools, and the code will not run without them.
-  - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
-  - "Send a clear request, for example: FR4, 1.6 mm thick, copper conductor, 1 to 10 GHz."
+  - Open an AI that can write MATLAB code. Paste the body of SKILL.md (everything under the header block). Then send this first request, with your own values: "Using this skill, give me the substrate, conductor and layer stack code for FR4, 1.6 mm thick, copper conductor, 1 to 10 GHz. Follow the Pitfalls section."
+  - The skill names other MathWorks skills for the next step, such as matlab-assemble-pcb-layout. Most are not separate skills in this library. Use the PCB trace designer, PCB RF filter designer or PCB via modeler here instead. The layout-assembly skill is not in this library yet, so you will need to find it from MathWorks.
   - Read the MATLAB code it returns. Check that thickness is in meters and the loss model fits your range.
   - Check the permittivity, loss tangent and thickness it used against your material's datasheet before you run the code in a design.
   - Copy the code into MATLAB and run it. Then pass the substrate and conductor to your next design.

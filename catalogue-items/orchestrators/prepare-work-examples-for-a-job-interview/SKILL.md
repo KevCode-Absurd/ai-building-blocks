@@ -26,9 +26,9 @@ How to start:
 - **Any good chat AI that reads files, such as Claude, ChatGPT or Gemini:** It needs to read the job post and your notes together.
 <!-- /needs -->
 
-## Before you start
+## What to gather first
 
-Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never invent it. Ask once, in one short message, for only what you cannot work without.
+These three items replace the generic "Your question" and "Source text" lines above. The job description and your notes on your own work are the inputs that matter. Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never invent it. Ask once, in one short message, for only what you cannot work without.
 
 **What you need**
 - **The job description** (the user's): the full text of the post.
@@ -98,9 +98,9 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 Write `MISSING: <what>` next to the affected result. Carry on with work that does not depend on it. Stop the affected step when a source or check it needs is absent. Return the partial files and the exact input needed to carry on.
 
-## After this
+## What to do with the result
 
-Suggest the user say each answer out loud and note where they stumble. If they also need a resume for this role, suggest Tailor a job application to real evidence.
+Use this in place of the generic list above. Suggest the user say each answer out loud and note where they stumble. If they also need a resume for this role, suggest [Tailor a job application to real evidence](https://useaiblocks.com/workflows/tailor-a-job-application-to-real-evidence).
 
 ## Avoid
 

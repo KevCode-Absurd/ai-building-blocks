@@ -31,9 +31,10 @@ how_to_use:
   - Open your AI tool and paste in the skill instructions, or load the skill folder if your tool supports it.
   - Paste your text, or attach your file (.docx, .pdf or .txt).
   - Say who the text is for and name any words or style choices to keep (optional).
-  - For a file, say "Save updated version". Your AI needs to be able to read and save files for this.
+  - "For a file, say \"Save updated version\". Your AI needs to be able to read and save files for this. If it cannot, ask it to return the corrected text and the modifications list in the chat instead, and paste the text into your own document."
   - Read the modifications list. Reject any change that is not right.
   - Open the UPDATED_ copy and check it against your original before you send it.
+  - After you accept or reject the changes, paste the final text into your document. If you make big edits afterwards, run the proofread again on the new version.
 output_sample:
   input:
     - Your pasted text, or a .docx, .pdf or .txt file

@@ -30,12 +30,14 @@ you_get:
   - Effect sizes and FDR
   - Commands used
 how_to_use:
+  - This needs a bioinformatics setup. It fits lab researchers and bioinformaticians with a finished pooled CRISPR screen. If you do not have one, ask a colleague to run it.
   - Install MAGeCK 0.5.9.5 and Python on a computer your AI can use. Check that mageck --version works.
   - Put your guide library, count table or FASTQ files, and sample names in one folder.
   - Paste the skill into your AI. Say which samples are control and which are treated.
   - Ask your AI to run the count step first if you only have reads, then the QC step.
   - Read the QC flags before you trust any hits. Fix or explain weak replicates.
   - Run the test step, then check that several guides agree for your top genes.
+  - Next, pick the top genes whose guides agree and plan a follow-up check in the lab, such as a new guide set or a single-gene knockout. Treat the ranking as a shortlist, not proof.
 output_sample:
   input:
     - Your guide count table, or FASTQ read files
@@ -59,3 +61,14 @@ output_sample:
       contains: Results for each guide, so you can check that guides for a top gene agree.
     - name: Interpretation
       contains: A short note on which genes rise or fall, and whether the data can be trusted.
+terms:
+  - term: MAGeCK
+    meaning: Free software that ranks genes from pooled CRISPR screens.
+  - term: RRA
+    meaning: The method MAGeCK uses to rank genes from how their guides rank.
+  - term: FDR
+    meaning: The share of hits you would expect to be false alarms at that cut-off.
+  - term: Log2 fold change
+    meaning: How much a guide or gene count went up or down between conditions. Each step of 1 is a doubling or halving.
+  - term: Gini
+    meaning: A score for how unevenly the guides are represented. A high score means a few guides dominate.

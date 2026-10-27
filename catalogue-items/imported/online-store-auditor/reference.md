@@ -49,7 +49,7 @@ Peer-reviewed findings behind the `store-audit` procedure. Effects are as report
 **Rule.** A warranty far longer than the category norm signals quality; best for buyers who know the category but not the brand.
 **Effect.** People were 34.8% more likely to buy a hoodie with a 10-year warranty.
 **Why.** A long warranty is a costly, credible signal of product strength.
-**Source.** Study on extraordinary warranties as a quality signal for weakly familiar brands (2022). Overcoming the challenge of low familiarity: Can a weakly familiar brand signal quality with exceptionally strong warranty? *Journal of Business Research*. https://doi.org/10.1016/j.jbusres.2021.11.078
+**Source.** Authors and year not on file here, so check the DOI before you quote it. Title: Overcoming the challenge of low familiarity: Can a weakly familiar brand signal quality with exceptionally strong warranty? *Journal of Business Research*. https://doi.org/10.1016/j.jbusres.2021.11.078
 
 ## State real sustainability practices
 

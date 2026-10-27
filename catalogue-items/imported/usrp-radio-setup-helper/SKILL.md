@@ -247,7 +247,7 @@ To make persistent, add to `/etc/sysctl.conf` and configure the interface in `/e
 - Increase Receive Buffers to maximum (varies by adapter: Intel may support 2048+, Realtek often caps at 512)
 - Disable power saving: `Disable-NetAdapterPowerManagement -Name "<adapter>"`
 - Disable all protocols except TCP/IPv4 on the radio NIC
-- Disable Windows Firewall on the radio NIC interface only, never for all networks. Turn it back on once the connection test passes.
+- Windows Firewall may need to be off on the radio NIC interface only, never for all networks. This lowers the computer's security, so do not run the change yourself. Tell the user the exact command, ask them to run it in their own admin prompt, and remind them to turn the firewall back on as soon as the connection test passes.
 
 All Windows NIC configuration commands (`New-NetIPAddress`, `netsh`, `Set-NetAdapterAdvancedProperty`) require an elevated (Administrator) terminal. MATLAB `system()` calls cannot elevate — the user must run these from an admin prompt.
 
@@ -274,7 +274,7 @@ If any existing configuration matches the device (same IP, same model), **ask th
 
 **Option A: Programmatic (preferred when agent is driving)**
 
-Use the internal `DeviceStore` API to create a configuration without the GUI. It is not documented by MathWorks and may change between releases. If a call fails, stop and use Option B (the `radioSetupWizard` GUI) instead. **You MUST use the `getUsrp<Model>Params()` function matching the user's selected device** — do not copy example names blindly. **Read the `probesdru` output carefully before setting any fields** — do not assume values. Default params assume UBX-160 daughterboards; if `probesdru` reports a different board (e.g., OBX, TwinRX) or "Unknown", ask the user what is installed. For unsupported/unknown boards, configure as if UBX-160 — streaming still works but is untested. For TwinRX, skip transmit verification (RX-only board).
+This route is for experienced users only. Use the internal `DeviceStore` API to create a configuration without the GUI. It is not documented by MathWorks and may change between releases, and a bad write can corrupt the cached radio configuration. Before writing, run `radioConfigurations` and note which saved names already exist, and tell the user that the recovery steps are below. Write only the one configuration the user chose. If a call fails, stop and use Option B (the `radioSetupWizard` GUI) instead. **You MUST use the `getUsrp<Model>Params()` function matching the user's selected device** — do not copy example names blindly. **Read the `probesdru` output carefully before setting any fields** — do not assume values. Default params assume UBX-160 daughterboards; if `probesdru` reports a different board (e.g., OBX, TwinRX) or "Unknown", ask the user what is installed. For unsupported/unknown boards, configure as if UBX-160 — streaming still works but is untested. For TwinRX, skip transmit verification (RX-only board).
 
 ```matlab
 % Get default parameters — MUST match the selected radio's model:
@@ -374,6 +374,8 @@ Set `UseRadioBuffer=false` when:
 - Using X310 with TwinRX capturing on more than 2 antennas
 
 For dropped samples, `UseRadioBuffer=false` can help diagnose the source: compare drop counts with and without the buffer to isolate whether the issue is buffer-related or NIC-related. But it is not a fix — direct streaming is more demanding on the network, so fix the underlying NIC/MTU/buffer issues in Step 3.
+
+**What you get back after Step 5:** give the user four things: (1) the host check table from Step 1, (2) the discovery result from Step 2 (`findsdru` and `probesdru`), (3) the saved configuration name, and (4) the transceiver test result with the dropped-sample count.
 
 ### Step 6: Troubleshooting
 

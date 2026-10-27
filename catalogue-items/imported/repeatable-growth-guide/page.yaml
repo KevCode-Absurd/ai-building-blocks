@@ -32,7 +32,9 @@ you_get:
   - Growth forecast
 how_to_use:
   - Use an AI that can read and write files in a project folder, so it can save each document and resume later. Add the skill file to the folder.
-  - The guide names nine linked skills, one for each phase. Install them before the first run, or let your AI pull each one when its phase starts. If one is missing, the AI runs that phase from a short built-in brief and says so.
+  - "In the skill file, the related guides go by the author's names: create-business is the Idea to business guide, improve-business is the Business turnaround guide, and grow-app is the App stickiness guide."
+  - "The nine linked skills in the skill file, and the matching items in this library: one-page-marketing is the One-page marketing plan builder, predictable-revenue is the Outbound sales team planner, contagious is the Word of mouth planner, influence-psychology is the Honest persuasion advisor, crossing-the-chasm is the Beachhead market picker, cold-start-problem is the Network launch planner, lean-analytics is the Startup metrics picker, negotiation is the Negotiation prep coach. hundred-million-offers has no match here, so its phase runs from the skill's short built-in brief."
+  - You do not have to install anything. The skill offers a command that downloads third-party skills onto your computer. Only say yes after you have read those skills. Or let your AI run each phase from its short built-in brief, and it will say so.
   - Tell your AI your revenue, customer count, main sales channel and current offer and price. It asks a few more questions once, then saves a tracker file.
   - Answer each phase's questions and approve each document before it is saved.
   - The forecast uses only the figures you gave and the baselines and targets set in the metrics phase, and it shows the numbers it used. Treat it as a projection, not a promise.

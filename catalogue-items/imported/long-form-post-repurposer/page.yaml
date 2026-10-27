@@ -11,7 +11,7 @@ explain: |
 
   Give it an article, newsletter, transcript, video or draft. It first lists the two or three ideas that could each carry a post and lets you choose one, since a post can hold only a single idea. Then it writes the post so that idea stands alone: a strong first line, the point made in full, and a reason to care. The link, if any, is an extra rather than the payoff. It works for promoting something you published or for mining a recording for something postable.
 
-  Licence: this is a copy of prateeks367's skill, shared in sickn33's collection. We share it under CC BY 4.0, as the LICENSE-CONTENT file says. The skill file's own header says MIT. Credit goes to prateeks367 and sickn33.
+  Licence: this is a copy of prateeks367's skill, shared in sickn33's collection. The skill text in this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file says. The skill file's own header says MIT, which covers the author's own code. Credit goes to prateeks367 and sickn33.
 when:
   - You published an article and want a post that does not just say "new article, link below".
   - You have a podcast transcript and want a LinkedIn post from it.
@@ -33,10 +33,12 @@ you_get:
   - A natural place for the link
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code, files or paid tools are needed.
-  - Paste your article, transcript or draft. Say whether the post is for X or LinkedIn.
+  - Paste your article, transcript or draft. Say whether the post is for X or LinkedIn. A long transcript, such as a 40-minute recording, may be too long for your AI to take in one paste. If it is, split it into sections, run each one, and pick the best idea across them.
+  - Tell your AI the length limit of your account. A free X account allows short posts, and LinkedIn allows long ones. Say whether you want hashtags and whether the link goes in the post, in a reply or nowhere.
   - Add your link and a few of your past posts if you have them (optional).
   - Read the shortlist of ideas and pick one.
   - Check any number or quote in the post against your source. Then choose where the link goes.
+  - Note each post's date, reach, replies and link clicks in a simple list for a week, so you can see which idea works for your audience.
   - Ask for the other ideas as later posts, spaced over several days. Post them yourself. The skill does not publish for you unless you connect the paid VoiceMoat connector.
 output_sample:
   input:
@@ -53,5 +55,7 @@ output_sample:
       contains: One post for your chosen platform, with the sharpest detail from the source and a strong first line.
     - name: Link placement line
       contains: A one-line trade-off for no link, link in a reply or comment, or link in the post, so you choose.
+    - name: Length check
+      contains: The length of the post against your platform's limit, such as 280 characters for a free X account or about 3,000 for LinkedIn. Check the platform's current rule.
     - name: Other ideas offer
       contains: A reminder of the remaining claims, with an offer to space them out as later posts.

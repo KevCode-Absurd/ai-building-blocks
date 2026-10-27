@@ -6,7 +6,7 @@ argument-hint: "<change description>"
 
 # /change-request
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> No connected tools are needed. Everything works from text pasted into the chat. The tool names marked ~~ below (ticket system, project tracker, chat) are optional, and the original skill's CONNECTORS.md file is not part of this item.
 
 Create a structured change request with impact analysis, risk assessment, and rollback plan. If an earlier step gave you a plan for the change, use it to fill in the implementation plan, timeline and owners.
 
@@ -18,7 +18,16 @@ Create a structured change request with impact analysis, risk assessment, and ro
 
 ## Change Management Framework
 
-Apply the assess-plan-execute-sustain framework when building the request:
+Write the request in these steps:
+
+1. Say what is changing, who is affected and how big it is (Low, Medium or High).
+2. Write the impact analysis and risk assessment.
+3. Write the plan: communication, training, support and a timeline with dates.
+4. Write the rollback plan and who can trigger it.
+5. List approvers (for example the change advisory board, or CAB) with status Pending.
+6. Say how you will measure adoption after the change goes live.
+
+The assess-plan-execute-sustain framework below gives the questions for each step:
 
 ### 1. Assess
 - What is changing?
@@ -100,9 +109,11 @@ Apply the assess-plan-execute-sustain framework when building the request:
 | [Name] | [Role] | Pending |
 ```
 
-## If Connectors Available
+## If Connectors Available (optional)
 
-If **~~ITSM** is connected:
+If you have none of these, skip this section and paste the finished request into your own tool.
+
+If **~~ITSM** (your IT service ticket system) is connected:
 - Create the change request ticket automatically
 - Pull change advisory board schedule and approval workflows
 

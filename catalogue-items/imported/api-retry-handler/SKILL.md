@@ -12,6 +12,8 @@ tools: [claude, cursor, codex, gemini]
 license: "MIT"
 ---
 
+> **AI Blocks note (licence):** this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says. The `license:` line in the front matter above is the original author's own label (MIT). The LICENSE-CONTENT file governs here. Keep the credit to the author.
+
 # API Rate Limit Handler
 
 ## Overview
@@ -47,7 +49,8 @@ Always check upstream hints before computing your own delay.
 function getRetryDelay(
   response: Response,
   attempt: number,
-  maxDelayMs = 60_000
+  maxDelayMs = 60_000,
+  githubStyleReset = false // set true only for GitHub, which sends x-ratelimit-reset as epoch seconds
 ): number {
   // Prefer upstream hints
   const retryAfter = response.headers.get("Retry-After");
@@ -63,10 +66,10 @@ function getRetryDelay(
     }
   }
 
-  // GitHub documents x-ratelimit-reset as Unix epoch seconds.
+  // GitHub documents x-ratelimit-reset as Unix epoch seconds. Other providers differ, so this is opt-in.
   const resetHeader = response.headers.get("x-ratelimit-reset");
   const githubReset = resetHeader === null || resetHeader.trim() === "" ? NaN : Number(resetHeader);
-  if (Number.isFinite(githubReset)) {
+  if (githubStyleReset && Number.isFinite(githubReset)) {
     return Math.max(0, githubReset * 1000 - Date.now());
   }
 
@@ -90,7 +93,8 @@ async function fetchWithRetry(
   options: RequestInit,
   maxRetries = 3,
   maxElapsedMs = 120_000,
-  retryNonIdempotent = false
+  retryNonIdempotent = false,
+  requestTimeoutMs = 10_000
 ): Promise<Response> {
   const startedAt = Date.now();
   const method = (options.method ?? "GET").toUpperCase();
@@ -98,7 +102,8 @@ async function fetchWithRetry(
     || retryNonIdempotent;
 
   for (let attempt = 0; attempt <= maxRetries; attempt++) {
-    const response = await fetch(url, options);
+    // Per-call timeout: a hung call throws an error instead of stalling the loop.
+    const response = await fetch(url, { ...options, signal: AbortSignal.timeout(requestTimeoutMs) });
 
     if (response.ok) return response;
 
@@ -285,5 +290,5 @@ def fetch_with_retry(url: str, max_retries: int = 3, max_elapsed_s: float = 120,
 
 ## Related Skills
 
-- `@poka-yoke` - Mistake-proofing APIs so invalid requests never reach the retry path (not included in this item)
-- `@circuit-breaker` - When to stop retrying entirely and fail fast (not included in this item)
+- `@poka-yoke` - Mistake-proofing APIs so invalid requests never reach the retry path (not in this library; the author's own skill)
+- `@circuit-breaker` - When to stop retrying entirely and fail fast (not in this library; the author's own skill). For now, set a hard cap on attempts and total time, as this skill does.

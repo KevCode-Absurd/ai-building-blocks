@@ -73,7 +73,7 @@ how_it_works:
   - title: Sizes the gap
     text: Counts follow links from sites with authority 30 or more, averages your rivals, and subtracts yours.
   - title: Sets the quota
-    text: Spreads the gap over 24 months, and raises it to keep pace with rivals who keep gaining links.
+    text: Gap divided by 24 months. It raises the quota only if a rerun shows rivals pulling further ahead.
   - title: Splits the targets
     text: About 50 to 75 percent to the homepage and the rest to collections at positions 4 to 10 for the first 3 months.
   - title: Vets each site
@@ -142,8 +142,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Semrush", why: "Shows referring domains, authority filters, a backlink gap against rivals and lost links."}
-    - {name: "Ahrefs", why: "Shows referring domains and domain rating, and a free tool checks a site's authority."}
+    - {name: "Semrush", why: "A paid service. Shows referring domains, authority filters, a backlink gap against rivals and lost links. Check its current price."}
+    - {name: "Ahrefs", why: "A paid service. Shows referring domains and domain rating, and a free tool checks a site's authority. Check its current price."}
     - {name: "Google Search Console", why: "Free. Its Links report shows who links to you and which pages."}
     - {name: "Any good chat AI", why: "Drafts short, personal pitch emails from your data and angle."}
   inputs:

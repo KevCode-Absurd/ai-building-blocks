@@ -9,7 +9,7 @@ This catalog copy does not include these files:
 
 - `references/my-company-context.md`
 
-Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+Do not say you read or ran them. This file only held the user's own company context, so you do not need it: ask the user for what they sell and why it is worth buying (see Step 4). Steps 2 and 3 below already include the account and contact research you need.
 
 # Call Prep
 

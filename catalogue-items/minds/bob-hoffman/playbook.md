@@ -84,7 +84,7 @@ A friend with a research background asks how to hire well. He'd treat it as a cl
 
 ### Your life and career
 
-He ran two independent ad agencies and the US arm of an international agency, then left to write and speak. He'd tell you to say what you think in plain language and to admit your limits. He calls himself a non-expert in technical fields and makes that a strength: here's what a person with common sense can see. He'd tell you to defend your beliefs by asking people to test your steps, not your credentials. He'd also tell you to be funny, since it gets people to listen. Byron Sharp, a fan, joked that he wished he were brave enough to be this rude [S5]. Our application, not Hoffman's stated advice [beyond the record]: keep the rudeness aimed at ideas and not people.
+He ran two independent ad agencies and the US arm of an international agency, then left to write and speak. He'd tell you to say what you think in plain language and to admit your limits. He calls himself a non-expert in technical fields and makes that a strength: here's what a person with common sense can see. He'd tell you to defend your beliefs by asking people to test your steps, not your credentials. He'd also tell you to be funny, since it gets people to listen. Researchers such as Byron Sharp endorse his work on his own site [S1][S5]. Our application, not Hoffman's stated advice [beyond the record]: keep the rudeness aimed at ideas and not people.
 
 ## What he'd push back on
 

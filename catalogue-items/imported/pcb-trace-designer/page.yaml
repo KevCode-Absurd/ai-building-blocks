@@ -10,6 +10,12 @@ explain: |
   Trace widths and spacings that hit your impedance target, sized and checked in one pass. Ask for microstrip, stripline, coplanar or a differential pair and get the geometry plus crosstalk figures.
 
   The skill uses a 2D field solver by default, so loss, coupling and odd stacks come out accurate. It can auto-size a line for a target impedance at your frequency, extract resistance, inductance, capacitance and conductance per unit length from the cross-section, and model a differential pair with a nearby aggressor to read near-end and far-end crosstalk. It falls back to closed-form formulas only if you ask or the toolbox is missing. It runs in MATLAB with the RF PCB Toolbox.
+
+  This is for engineers who already run MATLAB with the RF PCB Toolbox. If you do not, your PCB tool's impedance calculator gives a quick width for a target impedance.
+
+  Licence: the LICENSE.md file in this item applies (BSD 2-Clause), and you may use it only with MathWorks products such as MATLAB. The skill file links a different MathWorks licence page, which is MathWorks' own upstream terms and also says MathWorks products only.
+
+  The skill text is MathWorks' original, copied unchanged. Its code is MATLAB code, so check the calls against your own RF PCB Toolbox release.
 when:
   - You need a 50 ohm microstrip on a given stackup.
   - You are routing a differential pair and want to know the crosstalk.
@@ -30,12 +36,13 @@ you_get:
   - Crosstalk figures for pairs
   - A mesh and memory check before the full solve
 how_to_use:
-  - Open an AI that can run MATLAB code. You need MATLAB and the RF PCB Toolbox, which are paid and need a licence.
+  - Before you start, gather your target impedance, frequency and stackup values (board material, layer heights, metal). Open an AI that can run MATLAB code. You need MATLAB and the RF PCB Toolbox, which are paid and need a licence.
   - Paste the skill into the chat, or load the skill folder if your AI supports files.
   - Give your target impedance, frequency, substrate, metal and line type. Add the aggressor spacing for crosstalk.
   - Check the mesh and memory estimate before you let it run the full solve.
   - Read the width, spacing and impedance first. Then check the crosstalk figures against your limit.
   - "Expect the result in this order: line design, impedance check, per-unit-length values, crosstalk in dB, mesh check."
+  - Next, check loss across your band with the PCB signal loss analyzer. Model any layer changes on the trace with the PCB via modeler.
 output_sample:
   input:
     - Your target impedance and frequency
@@ -59,4 +66,4 @@ output_sample:
       contains: Near-end and far-end crosstalk in dB for a differential pair with a nearby aggressor.
     - name: Mesh and memory check
       contains: An estimate of solver size, run before the full solve so it does not run out of memory.
-next: [pcb-power-network-checker]
+next: [pcb-signal-loss-analyzer]

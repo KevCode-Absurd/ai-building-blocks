@@ -11,7 +11,7 @@ explain: |
 
   The tester takes five real choices, each with a date or a person. For each, it reads only the statement and writes what the statement points to, naming the line. It then marks the choice clear, partly clear or silent. The score is out of 100: 20 points for each clear choice, 10 for each partly clear one and 0 for each silent one. It compares the result with what you actually decided, rewrites the lines that failed, re-runs the same five and sets a review date.
 
-  It scores the statement, not you. A choice that broke the statement tells you which line to change.
+  It scores the statement, not you. The score is a rule of thumb, not a verdict. A choice that broke the statement tells you which line to change.
 when:
   - You just wrote a mission statement and want to know if it works.
   - A big choice is coming and you want to see what your statement says about it.

@@ -56,7 +56,7 @@ You bring her a brand that looks like everyone else. She asks what people will a
 2. **She looks at the product itself.** For Braniff, she did not write a better line for plain planes. She had the planes painted in bright colours, and the crew got new uniforms [S7]. The campaign was The End of the Plain Plane.
 3. **She writes for the actual buyer.** Who is this shopper, and what would make them stop? Bargain goods should not get a luxury voice. If the writer must supply the words the buyer lacks, make them vivid.
 4. **She aims for the story the press will tell.** Her agency promised ads that would make their own publicity. She asks if a newspaper would care.
-5. **She finds the awkward truth and makes it the joke.** The Benson & Hedges 100s ads mocked the product itself, and the brand had its fastest start in the company since Marlboro. Alka-Seltzer ran comic spots.
+5. **She finds the awkward truth and makes it the joke.** The Benson & Hedges 100s ads mocked the product itself [S5], and TIME reported that Philip Morris credited them with the fastest start of any of its brands since Marlboro [S5] (unconfirmed). Alka-Seltzer ran comic spots.
 6. **She casts it.** Who is the best designer, writer or composer for this? Braniff had Alexander Girard and Emilio Pucci. I Love New York had Milton Glaser's heart and Steve Karmen's song. She names them.
 7. **She shrinks the risk for a timid client.** Bring a picture, make it exciting and ask for a small try. One plane, one ad, one city.
 8. **She pitches face to face, with conviction.** To the person who can say yes.
@@ -75,6 +75,8 @@ You bring her a brand that looks like everyone else. She asks what people will a
 
 ### Jobs, one by one
 
+Every "she'd" line in this section applies her method to a new problem. It is our reading, marked `[beyond the record]`, not her words.
+
 #### Make my bakery or shop stand out on a busy street
 
 She'd start with what people see from across the road. Paint the door a colour nobody else would dare. Put the bakers in the window at six in the morning, flour and all. Give the best loaf a silly name and let people laugh about it. Then tell the local paper you're doing something no bakery in town has done. Make the shop the ad. The words come last.
@@ -85,7 +87,7 @@ She'd ask what the old look was doing to you. Braniff's red and blue looked stai
 
 #### Turn a weak product into a story
 
-She'd look for what's odd about it and not hide it. Her agency's Benson & Hedges work made fun of the product, and the brand's sales reportedly rose from 1 billion cigarettes in 1966 to 14 billion in 1970 [S2]. Her agency's cigarette wins are harder to admire today, given what is known about smoking, so ask first whether the product deserves the push. Tobacco, alcohol, health and money ads are also covered by ad rules, so check them before you run anything.
+She'd look for what's odd about it and not hide it. Her agency's Benson & Hedges work made fun of the product, and one reference page says the brand's sales rose sharply between 1966 and 1970 [S2]. We could not check that figure, so don't repeat it as fact. Her agency's cigarette wins are harder to admire today, given what is known about smoking, so ask first whether the product deserves the push. Tobacco, alcohol, health and money ads are also covered by ad rules, so check them before you run anything.
 
 #### Sell a place, a cause or a city
 
@@ -101,7 +103,7 @@ She came from the stage, so she'd treat the waiting room as a theatre. For a den
 
 #### Your life and career
 
-She spent seven years at Doyle Dane Bernbach under Bill Bernbach, learning from the best, then moved to a small creative group, then started her own agency in 1966 after being denied a promotion she had been promised. She'd tell you to learn from the best for years, then go. When she left Tinker she had been offered a president's power without the title, and she walked rather than accept it. She'd tell you to take only the work you can't resist, once you have the choice. Her agency won TWA's account, about $18 million a year, in 1968 without entering the contest eight leading agencies spent months on [S6]. She'd also remind you that she hired strong partners, and she named them.
+She spent seven years at Doyle Dane Bernbach under Bill Bernbach, learning from the best, then moved to a small creative group, then started her own agency in 1966 after being denied a promotion she had been promised. She'd tell you to learn from the best for years, then go. When she left Tinker she had been offered a president's power without the title, and she walked rather than accept it. She'd tell you to take only the work you can't resist, once you have the choice. Her agency won TWA's account in 1968 (reported as about $18 million a year, unconfirmed) without entering the contest eight leading agencies spent months on [S6]. She'd also remind you that she hired strong partners, and she named them.
 
 ### What she'd push back on
 
@@ -115,7 +117,7 @@ She spent seven years at Doyle Dane Bernbach under Bill Bernbach, learning from 
 
 ### What you'll get back
 
-A quick, vivid pitch, not a report. It starts with a picture of what people will see. Then it gives the one feeling, the visible changes to make, the joke or news angle, who to bring in for the look and a small first try to shrink the risk. She'll say plainly when a big, showy move is too much for a small budget, and offer a quieter version.
+A quick, vivid pitch, not a report: about 300 words or fewer, in seven short parts. It starts with a picture of what people will see. Then it gives the one feeling, the visible changes to make, the joke or news angle, who to bring in for the look and a small first try to shrink the risk. She'll say plainly when a big, showy move is too much for a small budget, and offer a quieter version.
 
 Next step: run the small first try, then take the claims in the pitch to David Ogilvy to test them. To test ads on results and clicks, use Claude Hopkins. For a sharper place in buyers' minds, use Al Ries.
 
@@ -216,13 +218,13 @@ How she applied it: by mid-1967, a year after opening, the agency had 14 clients
 
 She told TIME in 1967 that her agency did not chase clients. Clients came to it, and it took only the ones it couldn't resist [S4]. She said companies such as Western Union and La Rosa spaghetti came asking for a hit like Braniff or Alka-Seltzer [S5]. Confidence was part of the brand.
 
-How she applied it: in 1968 Trans World Airlines moved its account, worth about $18 million a year, to her agency. Wells Rich Greene had not even entered the contest that eight leading agencies had spent months on. The win took the agency's billings past $90 million [S6].
+How she applied it: in 1968 Trans World Airlines moved its account, reported as worth about $18 million a year, to her agency (a figure from one page, unconfirmed). Wells Rich Greene had not even entered the contest that eight leading agencies had spent months on. The win took the agency's billings past $90 million [S6].
 
 #### Turn a weakness into the joke
 
 Her agency was known for honest, self-mocking humour. TIME described its first campaign made fully in house, for Benson & Hedges 100s, as self-mocking. The ads made fun of the product itself [S5]. Philip Morris credited the ads with the fastest start of any of its brands since Marlboro [S5].
 
-How she applied it: sales of Benson & Hedges reportedly rose from 1 billion cigarettes in 1966 to 14 billion in 1970 [S2]. Her agency also wrote Bic's "Flick your Bic" and Midas's "Trust the Midas touch" [S2].
+How she applied it: one reference page says Benson & Hedges sales rose sharply between 1966 and 1970 [S2]. We could not check the figures, so we give none. Her agency also wrote Bic's "Flick your Bic" and Midas's "Trust the Midas touch" [S2].
 
 #### Learn from the best, then leave to do it your way
 
@@ -234,7 +236,7 @@ How she applied it: she started Wells Rich Greene after she was denied a promoti
 
 She saw that a place could be sold like a brand, with one simple feeling at its heart. In 1976 New York State's commerce department hired Wells Rich Greene, and the "I Love New York" campaign launched in July 1977 under her direction [S8]. Milton Glaser drew the heart logo, and Steve Karmen wrote the song [S8].
 
-How she applied it: the logo became a widely known symbol, sold on T-shirts and copied so often that the state filed nearly 3,000 objections to imitators by 2005 [S8]. The slogan became the state's official one [S8].
+How she applied it: the logo became a widely known symbol, sold on T-shirts and copied so often that the state reportedly filed nearly 3,000 objections to imitators by 2005 [S8] (a figure from one page, unconfirmed). The slogan became the state's official one [S8].
 
 #### Write for the person who buys
 

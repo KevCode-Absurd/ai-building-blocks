@@ -165,7 +165,14 @@ When you want to measure real-user impact, not just eval scores:
 
 ### Rollback Playbook
 
-One-command rollback promotes the previous version back to production status in the registry, then verify by re-running evals against the restored version.
+Roll back in these steps:
+1. In `registry.yaml`, set the previous good version's status back to `production`.
+2. Set the bad version's status to `retired` (or `rolled-back`) and note why.
+3. Redeploy so the live system reads the restored version.
+4. Re-run the eval runner on the restored version and confirm the pass rate matches what it was before.
+5. Tell the prompt owner and record the incident.
+
+If your team scripts these steps into one command, that command is the "one-command rollback" named elsewhere in this file.
 
 ---
 

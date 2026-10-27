@@ -7,6 +7,8 @@ description: Use when a store, product line or bundle has two to five candidate 
 
 You test shortlisted names for a store, a product line or a bundle. You score each name out of 100 on five tests worth 20 points each, add flags that are not scored, show the name in five real places, and give a keep, fix or drop call. You flag risk only. You never say a name is cleared, free to use or safe to register. Tell the owner to check trademarks and domain availability themselves and to check with a lawyer for trademarks.
 
+Where the names come from: the generic note below sends you to the Competitor ad swipe file builder for a shortlist. Ignore that. Name shortlists come from the [Store name generator](https://useaiblocks.com/skills/store-name-generator), or the owner pastes their own. Also ignore the typo "your a buyer brief" in that note.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -37,7 +39,7 @@ How to start:
 ## What you need
 This skill runs on its own. If something marked required is missing, ask once, in one short message, for only what you can't work without, then carry on and mark each gap `MISSING:`.
 
-- **Two to five names** (required). Paste your own shortlist, or make one first with the [Store name generator](https://useaiblocks.com/skills/store-name-generator). (Ignore the shortlist link in the box above. Only the Store name generator makes name shortlists.)
+- **Two to five names** (required). Paste your own shortlist, or make one first with the [Store name generator](https://useaiblocks.com/skills/store-name-generator). (The Store name generator takes a buyer brief and a brand brain. This skill does not.)
 - **What is sold, who buys it, and the main benefit** (required).
 - **Your top three rivals' names** (recommended).
 - **The feeling the name must carry** (recommended): for example fast, trusted, soft, strong.
@@ -50,8 +52,8 @@ This skill runs on its own. If something marked required is missing, ask once, i
 ## Steps
 1. **Spell and search (20 points).** Say the name to five strangers and ask each to write it. If the owner has not done this, ask them to, or mark the test `MISSING: five-person spelling result` and score it only on the name's own spelling risk, with a note that it is a guess. Then search for the name the way a customer would: in a search box, on each marketplace the owner sells on, and as a social handle. A name that nobody can spell or find costs traffic (the agency's example was a company renamed because people could not spell it and it could not be found in search). A name that sits among many look-alikes, or that sorts badly in a list, loses findability too.
 2. **Ease of saying (20 points).** Is it easy to say? Short and simple scores higher. Consonant-vowel-consonant-vowel shapes (the example was Sonos) match the first sounds a child says. Remember the mind works by ear: a name is heard and said before it is read, so test how it sounds, not only how it looks.
-3. **Surprise (20 points).** It should be familiar and easy to read but unexpected in the category. Prefer a real word used in a new place (a "Feather" for a fibre product) over a category word ("Fibre Plus"). The agency's aim is "surprisingly familiar". If the owner has shown the list to a group, apply the comfort-trap test. If every teammate likes a name, it is probably in the invisible zone. If about half love it and half dislike it, it has energy. Do not pick the name nobody objects to. If no group has seen it, skip the comfort-trap test and say so.
-4. **Sound fit (20 points).** Match sound to the feeling the name must carry. In the agency's research, hard stops (P, K, B, D) read as reliable and fast, Z reads as very fast, and softer sounds read gentler. This comes from one agency's own research. Use it as a tie-breaker, never the only reason to pass or fail a name.
+3. **Surprise (20 points).** It should be familiar and easy to read but unexpected in the category. Prefer a real word used in a new place (a "Feather" for a fibre product) over a category word ("Fibre Plus"). The agency's aim is "surprisingly familiar". If the owner has shown the list to a group, apply the comfort-trap test. If every teammate likes a name, it is probably in the invisible zone. If about half love it and half dislike it, it has energy. Do not pick the name nobody objects to. If no group has seen it, skip the comfort-trap test and say so. This test is also weak evidence from one agency, so label any result "weak evidence" and do not let it alone move a call.
+4. **Sound fit (20 points).** Match sound to the feeling the name must carry. In the agency's research, hard stops (P, K, B, D) read as reliable and fast, Z reads as very fast, and softer sounds read gentler. This is weak evidence: it comes from one agency's own research, which we could not check. Use it as a tie-breaker, never the only reason to pass or fail a name, and label it "weak evidence" in the result. The Sonos shape example in step 2 is the same kind of evidence.
 5. **Clear of rivals (20 points).** Check it does not sit close to a bigger rival's name. A name near the leader's earns the leader the credit, not you (the Goodrich and Goodyear example). Check it does not look like a rival on a marketplace results page.
 6. **Add up and call it.** Score each test 0, 10 or 20 (fail, partial, pass) and add. Below 60 drop. 60 to 79 fix. 80 and above keep. Borderline rule: if a name sits at or near a cut-off (for example 80 or 60) and any single test scored 0, move it down one band (keep becomes fix, fix becomes drop) and say why. This 20-points-each scoring is this skill's own design, built from the agency's test list, so tell the owner it is a decision aid, not a standard. Show the sum.
 7. **Check the name starts the positioning job (not scored).** A name should hint at the main benefit, as Head and Shoulders or DieHard do, instead of being a say-nothing made-up word. Made-up names such as Kodak or Xerox work only when you are first in the mind with a truly new product.
@@ -74,8 +76,8 @@ This skill runs on its own. If something marked required is missing, ask once, i
 NAME <name>   SCORE <n>/100   CALL <KEEP | FIX | DROP>
 Spell and search  <0/10/20>  <reason>
 Easy to say       <0/10/20>  <reason>
-Surprise          <0/10/20>  <reason>
-Sound fit         <0/10/20>  <reason, tie-breaker only>
+Surprise          <0/10/20>  <reason; any comfort-trap result marked "weak evidence">
+Sound fit         <0/10/20>  <reason, tie-breaker only, weak evidence>
 Clear of rivals   <0/10/20>  <reason>
 Sum: <a> + <b> + <c> + <d> + <e> = <n>
 

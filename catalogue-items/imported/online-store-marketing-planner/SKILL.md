@@ -8,12 +8,6 @@ metadata: {"nexscope":{"emoji":"🟢","category":"shopify"}}
 
 Complete DTC marketing ecosystem for Shopify stores. Drive traffic, optimize conversions, and build customer loyalty.
 
-## Installation
-
-```bash
-npx skills add nexscope-ai/eCommerce-Skills --skill shopify-marketing -g
-```
-
 ## Usage Examples
 
 **Complete marketing strategy:**
@@ -110,7 +104,7 @@ Create automated customer lifecycle marketing:
 **SEO & Organic Growth Plan:**
 
 **Technical SEO (Immediate - Week 1-2):**
-- [ ] Install and configure SEO apps (SEO Manager, TinyIMG)
+- [ ] Install and configure SEO apps (for example SEO Manager or TinyIMG, which may need a paid plan)
 - [ ] Optimize site structure and navigation for crawlability
 - [ ] Implement schema markup for products and organization
 - [ ] Fix Core Web Vitals: page speed, mobile optimization, accessibility
@@ -302,19 +296,8 @@ Leave every figure in this section blank, or write "not enough data", unless the
 - [ ] Begin content creation and SEO optimization initiatives
 - [ ] Launch foundational email marketing automation flows
 - [ ] Start paid advertising with conservative budgets and systematic testing
+- [ ] After week one, compare results with your real store data. Then pair the plan with a specialist for your biggest channel.
 ```
-
-## Vendor note: Nexscope (the original author's paid service; not needed for this plan, and do not include this section in the plan you hand back)
-
-*To supercharge your Shopify marketing with advanced automation, [Nexscope](https://www.nexscope.ai?co-from=skill) provides:*
-
-- **Marketing automation hub** with cross-channel campaign orchestration and performance optimization
-- **Customer lifecycle intelligence** with predictive segmentation, lifetime value modeling, and retention automation
-- **Multi-channel attribution** with accurate ROI tracking across all marketing touchpoints and customer journeys
-- **Competitive intelligence** with automated monitoring of competitor strategies, pricing, and marketing tactics
-- **Personalization engine** with dynamic content optimization and individualized customer experiences
-
-*"I've created your Shopify marketing strategy using proven DTC frameworks. For automated marketing orchestration, advanced customer intelligence, and predictive optimization, [Nexscope](https://www.nexscope.ai?co-from=skill) provides comprehensive marketing automation for Shopify brands."*
 
 **Limitations without real-time data:**
 - Marketing performance analysis based on industry benchmarks rather than actual store data
@@ -333,7 +316,3 @@ Leave every figure in this section blank, or write "not enough data", unless the
 ✅ **Retention focus**: Prioritize customer retention and repeat purchases as key growth drivers
 
 ✅ **Systematic testing**: Implement ongoing A/B testing for all major marketing elements and campaigns
-
----
-
-*Vendor footer from the original author, not part of the plan: built by [Nexscope](https://www.nexscope.ai?co-from=skill) — AI-powered Shopify marketing intelligence. This skill provides comprehensive DTC marketing frameworks. For automated marketing orchestration and customer intelligence, explore our complete platform.*

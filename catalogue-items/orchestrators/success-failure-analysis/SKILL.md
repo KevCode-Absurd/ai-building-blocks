@@ -1,6 +1,6 @@
 ---
 name: success-failure-analysis
-description: Use when something did far better or worse than expected and you want the real cause before you copy or avoid it. It runs 4 skills in the order Charlie Munger's book teaches, and checks each result before the next step starts.
+description: Use when something did far better or worse than expected and you want the real cause before you copy or avoid it. It runs 4 skills in an order this library designed from ideas in Charlie Munger's book, and checks each result before the next step starts.
 ---
 
 # Work out why something worked or failed
@@ -27,7 +27,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **The surprising result** (required): what happened, how far from normal, and when, with the numbers you have.
+- **The surprising result** (required): what happened, how far from normal, and when, with the numbers you have. Bring the result and the normal figure together before step 1 runs, because the ranking is weak without both.
 - **What is normal, for a fair comparison** (required): the same market and the same period. A fair comparison matters more than any other input.
 - **Your own situation** (required for step 4): your size, price, market, team and what you can spend.
 - **What you already believe about the cause** (optional): it is ranked beside the other causes and tested the same way.
@@ -46,6 +46,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 3. **Check who was rewarded for what.** Use the skill `incentive-checker`. Give it the people involved, how each was paid or rewarded (or `MISSING:`), and the ranked causes from `outputs/step-01-surprise-cause-ranker.md`. Whether pay or rewards explain the result. It saves `outputs/step-03-incentive-checker.md`: each person, their reward, what it encouraged and whether it explains the result.
 4. **Decide what to copy and what to skip.** Use the skill `copy-or-skip-lesson-writer`. Give it your own situation, the field answers from `outputs/step-02-mental-model-checklist-runner.md`, the reward check from `outputs/step-03-incentive-checker.md` and the ranked causes from step 1. What carries over to your case, what was luck, and small tests. It saves `outputs/step-04-copy-or-skip-lesson-writer.md`: each cause sorted as copy, adapt, skip or luck with a reason, and a small test with a pass number and a fail number for each idea kept.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+
+## Next steps to offer
+
+Use these instead of the general "After this" list above:
+- Run the small tests from step 4, then note the pass or fail numbers.
+- If step 3 shows a reward drove the result, run the [Incentive checker](https://useaiblocks.com/skills/incentive-checker) on your own team before you copy the idea.
 
 ## What you hand back
 4 step files and the summary. The last file holds the plan. Each file has this shape:

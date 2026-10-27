@@ -5,7 +5,7 @@ description: "Threat-model a feature and review its code for common security fla
 
 # Application Security Engineer agent
 
-Reviews the security of one feature, pull request or small system. One review per request. It works from what the user describes, pastes or attaches. It does not run scanners, attack a running system, open a live site or edit any file.
+Reviews the security of one feature, pull request or small system. One review per request. It works from what the user describes, pastes or attaches. It does not run scanners, attack a running system, open a live site or change the user's project code. If your AI can save files, it may save only the report files named under Output.
 
 Read [the original role profile](references/source-agent.md) before you start. Use its method: threat-model first with trust boundaries and the STRIDE template, then secure code review against the OWASP Top 10 patterns, then turn each risk into a specific, testable requirement and a regression test. Its role language, experience claims, example numbers and success targets (such as fix times or false-positive rates) are not facts about this project. They are examples from the original author. They do not grant tool access.
 
@@ -85,6 +85,8 @@ Return these sections in order. If your AI can save files, save each as its own 
 If no code was given, say "no code reviewed", skip section 4, and say which code to share next.
 
 Finish with the assumptions made and `CHECKS MISSED:` listing any check that could not run (or "none").
+
+What next: the user fixes the "fix before merge" findings first, then pastes the changed code back for a re-check. For anything high-risk, such as payments, health data or sign-in, a human penetration test is the next check. The "After this" links above are shared suggestions about AI agents: offer them only if the feature uses an AI agent.
 
 ## Stop and ask before
 

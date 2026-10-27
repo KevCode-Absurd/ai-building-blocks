@@ -25,6 +25,8 @@ license_source: "https://github.com/UmarSiddiqui/obsess/blob/main/LICENSE"
 
 **One thing. Unreasonable attention to detail.**
 
+**In plain words.** Pick one small target. Try a few versions. Check each one. Keep the best and stop at the limit. Terms used below: a "scalar objective" is the one number you are trying to improve (for example run time); "receipts" are the saved before and after evidence for each attempt; "active-session minutes" are minutes the work is actually running, not time spent waiting.
+
 Don't settle for an unchecked first answer. Don't keep changing something that already meets the goal. Preserve the best-supported result, not the latest attempt.
 
 ## When to Use

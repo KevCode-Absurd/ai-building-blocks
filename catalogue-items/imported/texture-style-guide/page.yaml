@@ -11,7 +11,7 @@ explain: |
 
   You describe the product and its mood. The skill restates the design intent, then sets colors, type sizes, spacing and shadow depth before moving to parts such as buttons, cards and inputs. For each part it lists states, variants and how it behaves when touched. It adds accessibility rules, do and don't lists, plain-language writing tone, and ends with a checklist your team can use in code review.
 
-  Licence: MIT, as the LICENSE file in this item says. Credit goes to Bergside (typeui.sh).
+  Licence: MIT, as the LICENSE file in this item says. Credit goes to Bergside (typeui.sh). What we changed: we added a short section of rules specific to the real-world texture look (materials, shadow depths, pressed states, one light direction). The rest is the original skill.
 when:
   - You want an interface that feels physical and familiar.
   - Your team keeps making buttons and cards that do not match.
@@ -21,7 +21,7 @@ not_for:
   - "You want a flat or minimal look with no fake materials: use the Minimal style guide writer."
   - "You need finished screens or mockups: use a design tool such as Figma, since this only writes rules."
   - "You want a retro look instead: use the Retro style guide."
-  - "You want a raw, blunt look with no polish (hard edges, flat color): use the Raw brutalist style guide writer."
+  - "You want a raw, blunt look with no polish (hard edges, flat color): use the Raw brutalist style guide writer. This guide is the opposite. It is built on named materials, one light direction, shadow depths and pressed button states, which the raw guide has none of."
 you_give:
   - A description of your product (what it is, who uses it, and whether it is an app or a site)
   - The mood you want, such as playful or calm
@@ -33,13 +33,14 @@ you_get:
   - Accessibility requirements
   - A review checklist
 how_to_use:
-  - Have ready: what your product is and who uses it, the mood you want, your brand colors and fonts, and the parts you must cover (such as buttons, cards and inputs).
+  - "Have ready: what your product is and who uses it, the mood you want, your brand colors and fonts, and the parts you must cover (such as buttons, cards and inputs)."
   - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
   - Add this skill to your AI, or copy its instructions from this page and paste them into the chat.
-  - Describe your product and the mood you want. Add brand colors, fonts and the parts you must cover if you have them. If you add none, the guide uses placeholder colors and fonts built into the skill (an orange primary, Roboto). Swap in your own before you share it.
+  - Describe your product and the mood you want. Add brand colors, fonts and the parts you must cover if you have them. If you add none, the guide uses placeholder colors and fonts built into the skill (an orange primary, Roboto). Swap in your own before you share it. The orange primary (#FA3C00) gives about 3.7 to 1 contrast with white text, below the 4.5 to 1 the guide asks for. Use a darker shade for buttons and links that carry white text, or dark text on the orange.
   - Read the first section. Check that the design intent matches what you meant, and that the materials, shadow depths and pressed states fit your product.
   - Check the accessibility rules and the QA checklist. Ask your AI to fix any rule that sounds vague.
   - Share the guide with your designers and developers.
+  - Next, give the finished guide and your current screens to the design system auditor. It checks the screens against the new rules. If your screens break many rules, decide which to change first, or list the exceptions in the guide.
 output_sample:
   input:
     - A description of your product

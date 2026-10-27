@@ -5,7 +5,7 @@ description: Paste this above a story-style ad. It finds the moment the old way 
 
 # Story ad picture brief writer
 
-One honest picture for a story ad, chosen from the story itself, with a prompt you can paste into an image tool.
+One honest picture for a story ad, chosen from the story itself, with a prompt you can paste into an image tool. You always get the prompt. You only get the picture if your AI can draw (ChatGPT and Gemini can, Claude cannot unless an image tool is connected): see "Making the picture" below.
 
 **Not for:** a plain product or price ad with no story (use a direct product picture, or the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer) to fix the copy first), or a full check of every picture rule (use the [Image style picker for story ads](https://useaiblocks.com/skills/image-style-picker-for-story-ads)).
 
@@ -38,7 +38,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **Your story ad** (required): the approved text and who tells it. It needs a clear bad-day moment, where the old way stopped working. A product-only ad has none and will fail step 1, so say so and stop rather than force a quote.
+- **Your story ad** (required): the approved text (headline, body and offer, if it has them) and who tells it. It needs a clear bad-day moment, where the old way stopped working. A product-only ad has none and will fail step 1, so say so and stop rather than force a quote.
 - **The buyer** (optional): when the problem bites and what they tried.
 - **Things never to show** (optional): places, props and claims that are off limits.
 
@@ -61,7 +61,7 @@ If an image tool is connected, offer to make the picture with it, and ask before
 3. Pick a runner-up from a different kind of trace, to test against it.
 4. Write the picture prompt: phone-photo look, one clear subject, hands at true size if a person shows, real skin texture, no child, no logo, no price, no product. Words on the image are the story's own.
 5. Write what the picture makes people wonder, in one line. The picture never answers it.
-6. Write the line under the picture, 27 characters or fewer: a plain caption, a question about the thing, the buyer's own line, or the swap.
+6. Write the line under the picture, 27 characters or fewer (about the length Meta's ad guide suggests for a short headline; it is a guide, not a hard limit, so check the current specs before you run the ad): a plain caption, a question about the thing, the buyer's own line, or the swap.
 
 ## What you hand back
 The labelled parts below. Then give the next step: make the picture and the runner-up from the prompts, run both on the same story, and compare.

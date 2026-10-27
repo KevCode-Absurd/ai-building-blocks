@@ -20,6 +20,10 @@ Create polished demo videos by orchestrating browser rendering, text-to-speech, 
 
 ## Core Workflow
 
+### 0. What to gather first
+
+Ask for these before you plan anything: the screenshot files or a note for each scene, the one main message, the target length, and which of Playwright, edge-tts and ffmpeg you can reach. If one is missing, ask once, then use a clearly labelled default and say so.
+
 ### 1. Choose a rendering mode
 
 Before starting, verify available tools:
@@ -38,6 +42,7 @@ If none are available, produce HTML scene files + `scenes.json` manifest + narra
 
 **The Classic Demo (30-60s):**
 Hook (3s) -> Problem (5s) -> Magic Moment (5s) -> Proof (15s) -> Social Proof (4s) -> Invite (4s)
+Social Proof beat: use only real customer quotes, ratings or figures the user gives you. If they give none, leave this beat out and give its time to Proof. Never write a quote, customer name or number yourself.
 
 **The Problem-Solution (20-40s):**
 Before (6s) -> After (6s) -> How (10s) -> CTA (4s)
@@ -64,7 +69,7 @@ Every scene has exactly ONE primary focus:
 - One idea per scene. If you need "and" you need two scenes.
 - Lead with the verb. "Organize your tabs" not "Tab organization is provided."
 - No jargon. "Your tabs organize themselves" not "AI-powered tab categorization."
-- Use contrast. "24 tabs. One click. 5 groups."
+- Use contrast. "[NUMBER] tabs. One click. [NUMBER] groups." Use only numbers the user has given you.
 
 ## Output Artifacts
 
@@ -79,6 +84,10 @@ For each video, produce these files in a `demo-output/` directory:
    - `ffmpeg` concat with crossfade transitions → `output.mp4`
 
 If MCPs are unavailable, still produce items 1-3. Include the ffmpeg commands in `build.sh` for the user to run manually.
+
+## What next
+
+Use the finished MP4 or GIF on your launch page, in your README or in an email. If you only have narration files, record the voice yourself or run them through any text-to-speech tool, then join them with the scene images in a video editor.
 
 ## Scene Design System
 
@@ -99,7 +108,7 @@ See [references/scene-design-system.md](references/scene-design-system.md) for t
 |---|---|
 | **Slideshow pacing** — every scene same duration, no rhythm | Vary durations: hooks 3s, proof 8s, CTA 4s |
 | **Wall of text on screen** | Move info to narration, simplify visuals |
-| **Generic narration** — "This feature lets you..." | Use specific numbers and concrete verbs |
+| **Generic narration** — "This feature lets you..." | Use concrete verbs and specific facts the user has given you. Never invent numbers |
 | **No story arc** — just listing features | Use problem -> solution -> proof structure |
 | **Raw screenshots** | Always add rounded corners, shadows, dark background |
 | **Using `ease` or `linear` animations** | Use spring curve: `cubic-bezier(0.16, 1, 0.3, 1)` |

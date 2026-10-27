@@ -29,9 +29,9 @@ you_get:
   - Short plain-language lines per change
   - Flags for anything odd in the history
 how_to_use:
-  - Open your AI in a tool that can read your git repository, such as Claude Code, Cursor, Gemini CLI or Codex CLI.
+  - Open your AI in a tool that can read your git repository, such as Claude Code, Cursor, Gemini CLI or Codex CLI. Before you start, check that git is installed, that the repo has at least one version tag (or that you can name a range), and that your AI can read the repo.
   - Paste the skill, or tell your AI to follow it.
-  - Give it the commit range, branch or pull request number. If you give none, it uses the commits since the last version tag.
+  - Give it the commit range, branch or pull request number. If you give none, it uses the commits since the last version tag. With no tag, it asks you for a range.
   - Add the version number and date if you want a dated heading. Otherwise the heading says Unreleased.
   - Check each line against the real changes. The skill does not write to your file.
   - Paste the entry into CHANGELOG.md. If you publish a release on GitHub, use the same text as the release notes.

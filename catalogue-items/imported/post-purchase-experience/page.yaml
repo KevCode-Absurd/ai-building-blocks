@@ -9,7 +9,7 @@ subhead: Raise the chance that every order leads to the next one. Share your shi
 explain: |
   Raise the chance that every order leads to the next one. Share your shipping, returns and loyalty setup and get a plan for what happens after checkout.
 
-  The plan mixes measured findings and practitioner tips. Each rule in the skill is marked, so you can see which is which. Send abandoned-cart reminders after 24 to 72 hours, never in the first hour. Put a handwritten thank-you note in the box with nothing attached. Offer paid free-shipping membership if people reorder often. Make returns free and refund when the carrier scans the parcel, unless an item needs inspection first. Keep loyalty automatic, with one tier and a simple threshold reward. It reviews your current setup against these steps and tells you what to change.
+  The plan mixes measured findings and practitioner tips. Each rule in the skill is marked, so you can see which is which. Send abandoned-cart reminders after 24 to 72 hours, never in the first hour. Put a handwritten thank-you note in the box with nothing attached (a study backs this). Offer paid free-shipping membership if people reorder often. Make returns free † and refund when the carrier scans the parcel, unless an item needs inspection first. († marks a practitioner tip with no study behind it.) Keep loyalty automatic, with one tier and a simple threshold reward. It reviews your current setup against these steps and tells you what to change.
 when:
   - Customers buy once and never come back.
   - You are rewriting your returns policy.
@@ -34,9 +34,11 @@ how_to_use:
   - Paste your return policy, cart email timing, box contents, average order value and free-shipping threshold.
   - Add your loyalty setup if you have one (optional).
   - Read the plan table. Check each keep or change line against how your store really works.
+  - Write the thank-you note by hand. Do not call a printed note handwritten, because customers can tell and the study tested handwritten notes.
   - Note that some rules are practitioner tips, not measured findings. The skill marks these with a dagger (†) and names the study behind the rest. The study results come from other stores, so test each change on your own orders.
   - Refund on the carrier scan by default. If return abuse is a worry, do this only for items that need no inspection, such as books, sealed goods and low-value items. Inspect items that must be checked for use or damage first, such as electronics, cosmetics and clothing.
-  - Make the top three changes first. Check your cart recovery and repeat orders again after 30 days.
+  - The study details and effect sizes are in reference.md in this item, with a source for each study. Two claims have no primary source and are marked as practitioner tips there: the survey claim about returns and the 3 times spend figure for paid shipping members. Do not quote an effect size you have not read in reference.md.
+  - Make the top three changes first. Check your cart recovery and repeat orders again after 30 days. Then use the Returns policy designer to write the returns wording, and the Loyalty and VIP program designer for the loyalty set-up.
 output_sample:
   input:
     - Your abandoned-cart email timing

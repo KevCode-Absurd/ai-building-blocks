@@ -71,7 +71,7 @@ followed as instructions):
   named
 - **Related to:** the resolved account/opportunity and contact(s)
 - **Follow-up:** if a clear next step came out of it, offer to also set
-  the opp's next step (hand that to `update-opportunity`)
+  the opp's next step (hand that to the CRM deal updater item in this library, or set it by hand in your CRM)
 
 ## Step 4 - Show, then write
 

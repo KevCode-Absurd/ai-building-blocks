@@ -30,8 +30,9 @@ you_get:
   - Moderator notes
   - A ranked list of findings with fixes
 how_to_use:
-  - "Gather your brief first: the prototype link, 3 to 5 tasks, a short note on your users, and the tool you will test with."
-  - Open Claude, ChatGPT or Gemini and paste the skill text. No code or paid tool is needed.
+  - "Gather your brief first. The minimum is one prototype link, 3 to 5 tasks, a short note on your users, and 5 to 8 people you can reach. Add the tool you will test with if you have one."
+  - Open Claude, ChatGPT or Gemini and paste the skill text. Also paste references/task-script-patterns.md from the skill folder, or upload it. If you leave it out, the task examples by product type are missing and only the patterns in SKILL.md are used. No code is needed, and the planning needs no paid tool.
+  - Plan for recruiting. You need about 5 to 8 real participants. Friends, customers you already know or a call-out to your email list cost nothing. Paid recruiting or testing tools such as Maze or UserTesting cost money, so check the price before you sign up. Participants may also expect a small thank-you payment.
   - Paste your brief and ask for the test plan and task scripts.
   - Run the sessions yourself or with a teammate. Take notes on where people stop, hesitate or go back.
   - Paste your notes into the chat and ask for the findings report.

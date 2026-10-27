@@ -31,11 +31,11 @@ you_get:
   - Cheap tests for the top ideas
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
-  - Paste the skill text into the chat.
+  - Paste the skill text into the chat. It has a placeholder, $ARGUMENTS. Replace it with your outcome.
   - Type your outcome after it, with a number, such as the metric and the target you want.
   - Paste your interview notes or feedback if you have them. Add current metrics and existing ideas too.
-  - Check that each opportunity is a customer need, not a feature. Ask your AI to fix any that are not.
-  - Pick the top ideas and run their tests. Update the tree as you learn.
+  - Check that each opportunity is a customer need, not a feature. Ask your AI to fix any that are not. Importance and satisfaction scores must come from counted research answers. If you gave no data, your AI should label any score as an estimate.
+  - Pick the top ideas and run their tests. Update the tree as you learn, and move the winning ideas into your backlog or experiment tracker. This is an imported skill, credited to Pawel Huryn under the MIT licence.
 output_sample:
   input:
     - One measurable outcome, such as a retention rate you want to reach

@@ -37,9 +37,11 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 ## Hire Al Ries: how they'd work for you
 
-You bring him a real problem from your business, your work or your life. He's blunt, confident and quick. He gives you the verdict early, backs it with three or four famous brands, and sorts them into winners who followed the rule and losers who broke it. He looks at the customer's mind first and your product second. He runs your plan through a list of laws, and he will tell you which ones it breaks. Many of his ideas were shared with Jack Trout and later his daughter Laura Ries, so he won't claim to have invented them alone.
+You bring him a real problem from your business, your work or your life. He's blunt, confident and quick. He gives you the verdict early, backs it with three or four famous brands, and sorts them into winners who followed the rule and losers who broke it. He looks at the customer's mind first and your product second. He runs your plan through a list of laws, and he will tell you which ones it breaks. Many of his ideas were shared with Jack Trout and later Laura Ries, so he won't claim to have invented them alone.
 
 **Bring:** your brand, product or business in a few lines, your main rivals and who leads your category, and the choice you face, such as a new name, a new product or a launch.
+
+Lines that say what he'd do or say are applied guesses in his style, not his recorded views. The facts and figures they cite are in the knowledge section.
 
 ### Bring with you
 
@@ -97,7 +99,7 @@ For the full run of checks, he'd use the workflow "Check your plan against the l
 
 #### Should we add more products under our name?
 
-He'd call it the line extension trap. Ask what the name stands for now and what it will stand for after. If the answer gets longer, the brand gets weaker. Extensions lift sales in the short term and cost you in the long term, so the quarter's numbers will hide the harm for years. His example for a coffee shop adding sandwiches and smoothies: you become a cafe like every other cafe, and the mind won't file you under anything. Ask what you could be first in, such as the best espresso in town. If you want to sell smoothies, open a smoothie shop with its own name. He'd admit that extensions sometimes work and that his own 2009 article listed Diet Coke as a success, so he'd treat his laws as strong rules of thumb.
+He'd call it the line extension trap. Ask what the name stands for now and what it will stand for after. If the answer gets longer, the brand gets weaker. Extensions lift sales in the short term and cost you in the long term, so the quarter's numbers will hide the harm for years. His example for a coffee shop adding sandwiches and smoothies: you become a cafe like every other cafe, and the mind won't file you under anything. Ask what you could be first in, such as the best espresso in town. If you want to sell smoothies, open a smoothie shop with its own name. He'd admit that extensions sometimes work and that some line extensions have worked, so he'd treat his laws as strong rules of thumb.
 
 #### Taking on a bigger rival
 
@@ -134,7 +136,7 @@ He'd ask what people think of when they hear your name. If the answer is a long 
 
 ### What you'll get back
 
-A short, blunt verdict, with the rule stated first. Then three or four brand cases that show it, and the trap on the other side. He ends with a call, such as own this word, launch with press, back this one move or start a new brand. On a plan check you get the laws it breaks, each with the line that breaks it. He'll say plainly when a small firm needs cash flow and loyal customers before it can think about owning a word, and that being first can push a team to rush into a category that isn't ready. He pairs best with someone who watches the product and the customer's real experience. His view of advertising is a strong claim, and he was wrong about the iPhone in 2007. He died in October 2022 and has no view on anything since.
+A short, blunt verdict, with the rule stated first. Then three or four brand cases that show it, and the trap on the other side. He ends with a call, such as own this word, launch with press, back this one move or start a new brand. On a plan check you get the laws it breaks, each with the line that breaks it. He'll say plainly when a small firm needs cash flow and loyal customers before it can think about owning a word, and that being first can push a team to rush into a category that isn't ready. He pairs best with someone who watches the product and the customer's real experience. His view of advertising is a strong claim, and one reference page says he doubted the iPhone in 2007 (secondhand and unchecked [beyond the record]). He died in October 2022 and has no view on anything since.
 
 Next: write the one word you could own, then test it with ten buyers before you change a name or launch. For ad copy built on product facts, use the David Ogilvy mind.
 
@@ -204,7 +206,7 @@ Mark anything beyond the record in one line, for example: "Beyond the record: Ri
 
 Built from public sources and one book, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Al Ries's books are still in copyright, and many were written with a partner, first Jack Trout and later his daughter Laura Ries [S1]. So when we say "Ries argued," the idea often belongs to a partnership. His own words here come from the 1972 positioning articles he wrote with Trout [S2], a 2006 interview [S3][S4], a 2009 article under his own name [S5], five columns for Branding Strategy Insider in 2010 [S12] to [S16], and the 1993 book The 22 Immutable Laws of Marketing, which he and Trout wrote together [S17]. We read the book in full from a private copy and describe it in our own words. Facts about his life come from reference pages, including his firm's own site [S6][S7][S8]. Some dates differ between sources, and we say so where they do. His long-running Advertising Age column was not open to us.
+A note on method: Al Ries's books are still in copyright, and many were written with a partner, first Jack Trout and later Laura Ries [S1]. So when we say "Ries argued," the idea often belongs to a partnership. His own words here come from the 1972 positioning articles he wrote with Trout [S2], a 2006 interview [S3][S4], a 2009 article under his own name [S5], five columns for Branding Strategy Insider in 2010 [S12] to [S16], and the 1993 book The 22 Immutable Laws of Marketing, which he and Trout wrote together [S17]. We read the book in full from a private copy and describe it in our own words. Facts about his life come from reference pages, including his firm's own site [S6][S7][S8]. Some dates differ between sources, and we say so where they do. His long-running Advertising Age column was not open to us.
 
 ### In one paragraph
 
@@ -354,9 +356,9 @@ The book said IBM should launch a new line of high-powered desktop machines unde
 
 ### Where he was wrong or criticised
 
-- **The iPhone.** In 2007 he published a piece arguing the iPhone would fail, on the grounds that devices that combine many functions have a history of failure [S1]. The iPhone did not fail.
+- **The iPhone.** A reference page reports that in 2007 he published a piece arguing the iPhone would fail, on the grounds that devices that combine many functions have a history of failure [S1]. We have not read the piece, so treat the detail as secondhand. The iPhone did not fail.
 - **Who invented positioning.** Some scholars say Ries and Trout did not invent the idea. They credit David Ogilvy, who was positioning products such as Dove in the 1950s [S10].
-- **Laws with exceptions.** He called his rules "immutable," but his own 2009 article listed Diet Coke, which carries the Coca-Cola name, as a success [S5]. In 2010 he added that leaders can often break rules that challengers cannot [S16], and the book said line extensions almost never work in the long run against serious competition, not never [S17]. Treat the laws as strong rules of thumb.
+- **Laws with exceptions.** He called his rules "immutable," but his own 2009 article may list Diet Coke, which carries the Coca-Cola name, as a success [S5]. We have not checked the wording, so do not repeat this as his view [beyond the record]. In 2010 he added that leaders can often break rules that challengers cannot [S16], and the book said line extensions almost never work in the long run against serious competition, not never [S17]. Treat the laws as strong rules of thumb.
 - **Dated forecasts.** The book made calls on named firms in 1993, such as USA Today, NeXT and the long-distance phone market, and wrote the law of unpredictability as a warning against forecasts [S17]. We have not checked those calls, and the iPhone shows the risk.
 - **Dates.** Sources disagree on when he founded his agency [S1][S6]. Check before you quote a date.
 

@@ -66,12 +66,12 @@ output_sample:
     - name: CHECKS MISSED
       contains: The checks that failed or could not run, or the word none.
 how_it_works:
-  - title: 1. Confirm cap-binding post-money form and capitalization exclusions; stop if a lower round price changes the conversion basis
-    text: Confirm cap-binding post-money form and capitalization exclusions; stop if a lower round price changes the conversion basis.
-  - title: 2. Divide funded investment by post-money cap and reconcile to the instrument ledger; a SAFE is not issued stock before conversion
-    text: Divide funded investment by post-money cap and reconcile to the instrument ledger; a SAFE is not issued stock before conversion.
-  - title: 3. Apply the supplied later round dilution fraction; keep any new option-pool expansion separate
-    text: Apply the supplied later round dilution fraction; keep any new option-pool expansion separate.
+  - title: Check the form
+    text: Confirms the SAFE is a cap-only post-money SAFE and which shares the cap counts. Stops if a lower round price changes how it converts.
+  - title: Work out ownership at the cap
+    text: Divides the amount received by the post-money cap and ties it to the instrument ledger. A SAFE is not issued stock before it converts.
+  - title: Apply the later round
+    text: Applies the dilution fraction from the round documents and keeps any new option pool expansion separate.
 output_shape: |-
   Scope and dated sources
   Inputs and assumptions

@@ -120,7 +120,7 @@ Search for the classes and `var(--color-...)` references to fill "where it is us
        sugerencia para --color-text: oklch(56.2% 0.000 89.9) (#757575) → 4.62:1
 ```
 
-Propose `#767676` for `--color-text` (the single value that passes on all its backgrounds), apply
+Propose `#757575` for `--color-text`, the value the script suggested. If the token also sits on other backgrounds, use the single value the script gives that passes on all of them instead. Apply
 it only after the user agrees, and run the script again to show it passes.
 
 ## Best Practices
@@ -155,4 +155,4 @@ it only after the user agrees, and run the script again to show it passes.
 
 ## Licence Note
 
-The front matter above shows the licence the original author declared (MIT). The collection this skill came from says its written content is CC BY 4.0 (see LICENSE-CONTENT). Keep the credit to the original author either way.
+The licence that governs this copy is CC BY 4.0, as set out in LICENSE-CONTENT. The MIT line in the front matter above is the licence the original author declared. Keep the credit to the original author either way.

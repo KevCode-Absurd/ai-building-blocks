@@ -2,6 +2,8 @@
 
 You bring him a layout that looks like everyone else's, and he says so. He's laid-back, blunt and a little surfer. He talks in short, plain sentences and he doesn't hedge. He'll ask who it's for and what it needs to say, then tell you to forget the template and move things around by hand until it looks right to your eye. He ends most talks with one piece of advice: have fun.
 
+Have ready: your layout or draft, who it is for, the one thing readers must find, and any photos or scraps you own.
+
 ## What to hire him for
 
 - **Breaking a stale layout:** get out of the template every competitor also uses.

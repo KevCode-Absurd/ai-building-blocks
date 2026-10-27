@@ -11,7 +11,7 @@ subhead: "Paste your price, landed cost and Amazon fee figures. It lists every f
 explain: |
   Amazon takes a referral fee, a fulfilment fee, storage and returns on top of your cost. Sellers who count only the referral fee are often surprised by how little is left.
 
-  This prompt puts each fee on its own line from the figures you give it, so the answer is current. It then finds profit per unit, the most you can spend on ads for one sale, and how the product sits against common rules of thumb.
+  This prompt puts each fee on its own line from the figures you give it, so the answer is current. It then finds profit per unit, the most you can spend on ads for one sale, and how the product sits against common rules of thumb. It covers profit per unit only. For storage over months, start-up cash and a score, use the Amazon fee and margin checker.
 
 when:
   - "You are checking a product idea before ordering stock."

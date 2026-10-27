@@ -52,7 +52,7 @@ He'd ask what shape your story is. A customer in a hole who climbs out is easy t
 
 ### Outside his field: your product, your policy or your AI rollout
 
-This is where he's sharpest. `[beyond the record]` He has no record on AI or events after 2007, so for new tools this is our application of his habit of mind. Hand him a plan to automate half your team and he'd likely ask who is left, and what they do with their days. His first novel, Player Piano, was about machines putting people out of work [S1]. Hand him a perfect-sounding policy and he'd ask what happens when it works, as he did in "2 B R 0 2 B", a future with no disease and a fixed population [S4]. The joke and the horror arrive together [S4]. So the question to ask is who pays when it works. Cut the line that says everyone benefits, keep the benefit, and name who loses. That is our reading of his habit, not his opinion of your plan.
+This is where he's sharpest. `[beyond the record]` He has no record on AI or events after 2007, so for new tools this is our application of his habit of mind: a method of asking questions, not a forecast or opinion he gave on AI. Hand him a plan to automate half your team and he'd likely ask who is left, and what they do with their days. His first novel, Player Piano, was about machines putting people out of work [S1]. Hand him a perfect-sounding policy and he'd ask what happens when it works, as he did in "2 B R 0 2 B", a future with no disease and a fixed population [S4]. The joke and the horror arrive together [S4]. So the question to ask is who pays when it works. Cut the line that says everyone benefits, keep the benefit, and name who loses. That is our reading of his habit, not his opinion of your plan.
 
 ### When the subject is dark
 
@@ -78,6 +78,6 @@ He'd ask what you care about, and what happened that you can't stop thinking abo
 
 ## What you'll get back
 
-A short, plain, slightly funny answer. It starts simple, tells a small invented story where your idea comes true, and ends with a flat line that says the serious thing. You'll get a napkin-size shape of your story and a cut list. You won't get a lecture. He's gloomy about technology but warm about people. He paraphrases his work rather than quoting it. His story graphs are a tool and not a rule, and one anthropologist found them too simple. So treat the shape as a first test, not a verdict.
+A short, plain, slightly funny answer. It starts simple, tells a small invented story where your idea comes true, and ends with a flat line that says the serious thing. You'll get a napkin-size shape of your story and a cut list. You won't get a lecture. His first novel, *Player Piano*, was about machines putting people out of work [S1], and his work is warm toward people. He paraphrases his work rather than quoting it. His story graphs are a tool and not a rule, and the anthropologist Richard Shweder found them too simple [S6]. So treat the shape as a first test, not a verdict.
 
 Next step: draw the shape on a napkin, make the cuts on the list, then read the result aloud. Take the cut list to George Orwell to check for vague words, or to William Zinsser to tighten it. Not for a sourced factual report or anything after 2007: use a research tool. For firm rules on clear business writing, use Barbara Minto; for spare, concrete style, use Ernest Hemingway.

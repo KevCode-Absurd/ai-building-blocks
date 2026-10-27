@@ -30,7 +30,9 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-These replace the generic list above. The program sheet in step 3 is not an ad or store export, so ignore the Meta Ads Manager, Google Ads and store export wording.
+These replace the generic list above, including its "Your results" line. The program sheet in step 3 is not an ad or store export, so do not ask for Meta Ads Manager, Google Ads or store exports.
+
+Gather before you paste anything: the choice, your loss cap, and one row per program with the same period for every row. The program sheet is only needed at step 3, after the pause, so do not stop steps 1 and 2 to ask for it.
 
 - **The choice you are stuck on** (required): what is being decided and who it touches. Steps 1 and 2 start from this. Add what undoing it would cost (a number or a time), who disagrees and why, and the deadline if you have them.
 - **A long-shot bet you want to try** (required for step 2): the idea, what a big win would look like, and the most you can afford to lose and still carry on.

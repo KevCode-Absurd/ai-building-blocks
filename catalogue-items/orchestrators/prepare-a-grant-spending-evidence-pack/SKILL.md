@@ -12,6 +12,7 @@ When not to use: you want to hand over a recurring process, not report on grant 
 ## What you need
 
 - The award agreement, fund restrictions, approved budget, transaction records, reporting period and actual receipts.
+- The reporting period as start and end dates, the currency, and the fund or award identifier on each transaction row.
 - The reader, desired outcome, deadline and permission limits.
 - Any approved earlier work or examples, with dates and versions.
 
@@ -29,7 +30,7 @@ Create a short brief for each step: the requested result, original source refere
 
 1. **Spreadsheet checker.** Use `spreadsheet-checker`. Reconcile transactions and receipts to the grant period, budget categories and restricted fund ledger without changing source records. Check that the transaction totals match the receipts for the reporting period, that every transaction sits in one budget category and that the category totals tie to the restricted fund ledger. Mark any transaction that falls outside the grant period or the fund restrictions. Save `outputs/step-01-spreadsheet-checker.md` before continuing.
 
-2. **Budget variance explainer.** Use `budget-variance-explainer`. Bridge the actual grant spending to the approved phased budget, keeping timing differences and unapproved reallocations explicit. Give it the step 1 file and the approved phased budget. Check that the variance lines add up to the gap between actual spending and the approved phased budget, with timing differences and unapproved reallocations on their own lines. Read the original sources and relevant prior step files; do not substitute a summary for source evidence the skill needs. Save `outputs/step-02-budget-variance-explainer.md` before continuing.
+2. **Budget variance explainer.** Use `budget-variance-explainer`. Bridge the actual grant spending to the approved phased budget, keeping timing differences and unapproved reallocations explicit. Give it the step 1 file and the approved phased budget. Check that the variance lines add up to the gap between actual spending and the approved phased budget, with timing differences and unapproved reallocations on their own lines. Call a variance a timing difference only when the approved phased budget or a dated record shows the cost moves to another period inside the award. Call it an unapproved reallocation when money moved between budget categories and no approval is in the sources. If neither shows, mark the cause MISSING: cause and do not guess. Read the original sources and relevant prior step files; do not substitute a summary for source evidence the skill needs. Save `outputs/step-02-budget-variance-explainer.md` before continuing.
 
 3. **Stakeholder update writer.** Use `stakeholder-update-writer`. Draft the fund owner update with source totals, unresolved eligibility questions and requested decisions, without submitting a funder return. Give it the step 1 and step 2 files. Check that every total in the update matches the step 1 table and that each unresolved eligibility question names the award rule or record it depends on. Read the original sources and relevant prior step files; do not substitute a summary for source evidence the skill needs. Save `outputs/step-03-stakeholder-update-writer.md` before continuing.
 

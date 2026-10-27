@@ -32,7 +32,8 @@ you_get:
 how_to_use:
   - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can read and write to your CRM.
+  - It works best when your AI can read and write to your CRM. If it cannot write, use the paste-ready entry and add it yourself.
+  - Next, if the call set a next step, update the deal with the CRM deal updater.
 output_sample:
   input:
     - A short description of the call, meeting or email, or a transcript
@@ -40,7 +41,7 @@ output_sample:
     - When it happened (optional)
     - The outcome or next step (optional)
   prerequisites:
-    - A CRM connected to your AI, to find records and save the entry (without it you get paste-ready text)
+    - A CRM connected to your AI, to find records and save the entry. Saving needs a connection with permission to create records, and your CRM's plan or API access may cost extra. Without it you get paste-ready text to add yourself.
   output:
     - name: Matched records
       contains: The account, contact and open deal the conversation belongs to, with links. You are asked if more than one fits.

@@ -7,7 +7,7 @@ description: Use when you want honest notes on a draft. Asks what the maker love
 
 Good feedback points at lines and leaves the choice with the maker. This skill reads your whole draft, tells you what works, asks about the weak lines one at a time and leaves alone what should stay. It does not judge whether the draft will sell. To choose between several drafts, use the [Shortlist and running-order planner](https://useaiblocks.com/skills/shortlist-running-order). To tidy the wording, use the [Plain English editor](https://useaiblocks.com/skills/plain-english-editor).
 
-Bring three things: the whole draft, what it is for and who reads it, and (if you can) what you love in it. In the next-step list below, the third item is the [Good note sharpener](https://useaiblocks.com/skills/good-note-sharpener), which helps you word the notes you give a team member.
+Bring two things you must have and two that help: the whole draft, and what it is for and who reads it; then, if you can, what you love in it and a brief. In the next-step list below, the third item is the [Draft feedback editor](https://useaiblocks.com/skills/good-note-sharpener), which helps you word the notes you give a team member. Its "Lead the team" heading is just a label for that same skill.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

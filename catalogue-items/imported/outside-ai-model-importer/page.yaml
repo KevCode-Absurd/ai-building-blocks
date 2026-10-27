@@ -5,11 +5,13 @@ name: Outside AI model importer
 summary: Import a PyTorch, ONNX or Keras model into MATLAB and check it gives the same answers as the original. Fixes common import errors.
 job: build-software
 headline: Outside AI model importer
-subhead: Give it a PyTorch, ONNX or Keras model. Get it loaded into MATLAB and ready to run. Bring the model file. Use the result to plan your next step.
+subhead: Give it a PyTorch, ONNX or Keras model. Get it loaded into MATLAB as a checked network, with a match report you can run with predict.
 explain: |
   A trained model from PyTorch, ONNX or Keras, loaded into MATLAB as a network you can run, and checked against the original so you know the results match.
 
-  You give the model file, such as .pt2, .pt, .onnx or .keras. The skill picks the right import route for the format. It sets the input sizes and data formats, handles the PyTorch export step, and runs the import. If it fails, it helps with unsupported operators, networks left uninitialised or zero learnable parameters. Then it runs the same input through both versions and compares the outputs. It does not cover exporting out of MATLAB, training afterwards or embedded deployment. Needs MATLAB with Deep Learning Toolbox. This is a MathWorks skill, copied under a licence that lets you use it only with MathWorks products.
+  You give the model file, such as .pt2, .pt, .onnx or .keras. The skill picks the right import route for the format. It sets the input sizes and data formats, handles the PyTorch export step, and runs the import. If it fails, it helps with unsupported operators, networks left uninitialised or zero learnable parameters. Then it runs the same input through both versions and compares the outputs. It does not cover exporting out of MATLAB, training afterwards or embedded deployment. Needs MATLAB with Deep Learning Toolbox. This is a MathWorks skill.
+
+  Licence: the terms in LICENSE.md (BSD 2-Clause) apply to this copy, and they limit use to MathWorks products such as MATLAB. The skill file header also links MathWorks' own reuse licence. Use this skill only with MathWorks products.
 when:
   - A colleague trained a model in PyTorch and you work in MATLAB.
   - Your import throws unsupported operator warnings.
@@ -22,6 +24,7 @@ not_for:
 you_give:
   - The model file
   - Input size and data format
+  - Your MATLAB release, and the Python and torch version if you export from PyTorch (torch 2.8 is needed)
   - A sample input (optional)
   - MATLAB with Deep Learning Toolbox
 you_get:

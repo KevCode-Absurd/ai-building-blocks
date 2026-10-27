@@ -7,8 +7,6 @@ job: plan-ad-tests
 headline: Experiment tool picker
 subhead: A firm choice of testing tool for your team, a migration plan if you already picked the wrong one, and a view on when running two tools is fine.
 explain: |
-  A firm choice of testing tool for your team, a migration plan if you already picked the wrong one, and a view on when running two tools is fine.
-
   You describe your team, traffic and data setup. The skill works through seven questions: where the data lives, how sound the statistics are, AI assistant support, feature flag fit, analytics depth, access control and cost shape. It compares Statsig, PostHog, GrowthBook, Optimizely, Amplitude, Eppo and Kameleoon, and states strengths, gotchas and the ideal customer for each. Its dollar ranges and engineer-week estimates are rough, unsourced and dated May 2026, so check each vendor's pricing page. Where tools overlap, it advises on consolidating or coordinating them.
 when:
   - You are picking a testing tool for the first time.
@@ -33,6 +31,7 @@ you_get:
   - Governance setup
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the full skill text. No code or paid tool is needed.
+  - List any must-have features in your brief before you ask for a pick, such as CUPED (a method that gives clearer results with less traffic), MCP access for your AI, or self-hosting. The pick is grounded in what you say you need.
   - "Write a short brief with seven answers: where your data lives, how sound the statistics must be, whether you want AI assistant support, whether you need feature flags, how deep your analytics must go, who may launch tests and read data, and your budget shape."
   - Add your current tool and budget if you have them. Say so if you do not.
   - Ask your AI to pick one tool and explain why.

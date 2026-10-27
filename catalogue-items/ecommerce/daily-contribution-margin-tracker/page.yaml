@@ -11,7 +11,7 @@ subhead: Give it your daily net sales, product and variable costs, ad spend and 
 explain: |
   Contribution margin is net sales (before returns) minus the returns accrual, minus product cost, minus variable costs, minus ad spend. Leave fixed costs out of the daily number. If you spread rent across each day, a profitable media day can look like a loss and tell you to cut spend. Fixed costs belong in the owner's view of the month: contribution margin minus overhead is profit.
 
-  Shopify's total sales takes returns off when they are processed, not when the sale happened. December returns can hit January, so January looks worse than it was. This skill accrues returns instead. It applies your expected return rate to each day's revenue, then reconciles to actual returns at month end and resets the rate from the last 90 days. Then your team sees one honest number each morning.
+  Shopify's total sales takes returns off when they are processed, not when the sale happened. December returns can hit January, so January looks worse than it was. This skill accrues returns instead. It applies your expected return rate to each day's revenue, then reconciles to actual returns at month end and resets the rate from the last 90 days. Then your team sees one honest number each morning. You set the return rate once, in the sheet's rate cell, from your own last 90 days. You set the reconciliation date as the last day of each month.
 
 when:
   - You judge a day by revenue and only learn at month end whether it made money.
@@ -124,7 +124,7 @@ improve:
   - Put your return rate and your reconciliation date in the skill file.
   - Add your usual seasonal return spikes so the accrual follows them.
   - Add a weekly roll-up once the daily sheet is steady.
-  - Track the size of your active customer file monthly. One speaker says about 80% of returning buyers come back within 6 to 8 months, so a shrinking file warns of falling repeat revenue. Treat that as a flag to check, not a fact about your store.
+  - Track the size of your active customer file monthly. A shrinking file can warn of falling repeat revenue. Check it against your own order history, and do not quote a repeat-buyer percentage.
   - Money figures are planning numbers. Check them with your accountant.
 
 works_best_with:

@@ -18,7 +18,8 @@ when:
 not_for:
   - "You only have a flat photo of the clothes and no model: use the Virtual try-on photo maker, or book a shoot."
   - "The garment is cropped, hidden by arms or bags, or too small in the photo: reshoot it first, because the swap will guess the missing parts."
-  - "You want a real person's face or likeness on the photo: this is not for that, so get written consent and use a real photo shoot."
+  - "You want a real person's face or likeness on the photo: this is not for that. Any face reference must be your own model or a model who gave written consent. If you want a real person's likeness, use a real photo shoot."
+  - "You plan to post AI-made models in paid ads without checking local rules: some places require you to say the models are AI-made, so check first."
 you_give:
   - The original model or mannequin photo
   - What to swap, the person, the background or both
@@ -31,11 +32,14 @@ you_get:
   - Pose and framing instructions
   - Notes on how to check the result
 how_to_use:
+  - "Before you run anything: image runs go through dLazy, a paid service with an account or API key, and each image costs money. Use the dry-run option first to see the cost. If you use a real person's photo as the model reference, you need their written consent."
+  - "First run, files to gather: your model photo (jpg, jpeg, png or webp, over 400 by 400 pixels, 20 KB to 15 MB), the mode you want, and a short description of the new model or scene. Save the results in a folder such as docs/one-shot/ and tell your AI to write the prompt and the command there. You do not need the Chinese skill file to start."
   - "Pick your mode: swap the person, swap the background, or swap both."
   - The skill file is written in Chinese. Your AI can read it, and you can ask it to reply in English.
   - Paste the skill into your AI and add your model photo. Say who or what the new look should be.
   - Your AI writes the prompt. It also writes the command for the image tool.
   - Run it in your image tool. This needs a dLazy account or API key, and it costs money for each image. Use the dry-run option first to see the cost.
+  - "What you get back: 3 or 4 saved JPG versions, the prompt used, and a checklist to compare each one with your real garment. The skill's core steps are also written in English at the top of the file."
   - Make 3 or 4 versions and pick the best one. Check the garment, the hands and the light against your real garment before you post anything.
   - If you run ads with AI models, check your local ad rules. You may need to say the models are AI-made.
   - Next, if the fabric texture looks flat, ask for a higher quality run and compare it with the first version.

@@ -47,8 +47,8 @@ How to start:
 
 ## What you need
 
-- **Roles and long-term goals** (required): for example from "Roles and long-term goals mapper". A dated plan or a shortlist, named under Before you start, is not needed here; your roles and goals are the input.
-- **Your top values** (optional): a ranked list, for example from "Eulogy values finder".
+- **Roles and long-term goals** (required): for example from "Roles and long-term goals mapper". A dated plan or a shortlist, named under Before you start, is not needed here, even though the list marks a plan as required. Your roles and goals are the input.
+- **Your top values** (optional): a ranked list, for example from the [Eulogy values finder](https://useaiblocks.com/skills/eulogy-values-finder) (the step the Before you start list calls "Life values reflection coach").
 - **What you would refuse to do** (optional): for money, praise or ease. These become the limits.
 - **Who it is for** (optional): you, a family or a small team. Without one, write for one person.
 - **Phrases you already use** (optional): words you say about yourself or your work.

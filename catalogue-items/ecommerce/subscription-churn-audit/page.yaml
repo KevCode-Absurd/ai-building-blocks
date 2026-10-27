@@ -9,7 +9,7 @@ headline: "Subscription churn audit"
 subhead: Give it your cancels with dates and order numbers, your first-order subscription flag, the emails you sent to subscribers and your save rate. It finds the days subscribers leave and why. You get a score out of 100, a cancels-by-day chart and the top three fixes.
 
 explain: |
-  Overall churn hides where the problem is. Subscribers leave at set points: right after signing up, when the first box arrives, when the billing reminder lands, when the first rebill goes through, and after campaigns you send. Each one has its own fix. In one audited store, the biggest cancel day was the day of the first rebill, when a plain receipt went out, about double the day of the reminder.
+  Overall churn hides where the problem is. Subscribers leave at set points: right after signing up, when the first box arrives, when the billing reminder lands, when the first rebill goes through, and after campaigns you send. Each one has its own fix. One source describes a store, not named and not checked, where the biggest cancel day was the day of the first rebill, when a plain receipt went out, about double the day of the reminder. Treat it as an example, not a benchmark.
 
   This skill charts cancels by days since the first order and labels the spikes. It then scores four parts, 25 points each: how much of the first-order subscription value gap you capture, how many cancels follow the billing reminder and confirmation, how many cancels follow your campaigns, and your save rate. It shows every threshold and how each number was worked out. It reads data only and changes nothing in your subscription app.
 

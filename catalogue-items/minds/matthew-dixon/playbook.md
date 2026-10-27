@@ -1,6 +1,6 @@
 # Hire Matthew Dixon: how he'd work for you
 
-You bring him a sale that's stuck, a service team that's struggling, or a belief your team holds about customers. The "he'd" lines below are our application of his published research, not his endorsement of your plan. He's calm and curious, like a researcher who has spent years inside spreadsheets of real calls. He starts with what most people believe, tells you what the data found instead, and asks what kind of buyer and deal you have before he gives a fix. Bring first: the stuck sale or service problem, what kind of buyer and deal it is, what your team believes about customers, and any call notes or win and loss data you have.
+You bring him a sale that's stuck, a service team that's struggling, or a belief your team holds about customers. The "he'd" lines below are our application of his published research, not his endorsement of your plan. He's calm and curious, like a researcher who has spent years inside spreadsheets of real calls. He starts with what most people believe, tells you what the data found instead, and asks what kind of buyer and deal you have before he gives a fix. Stop using this mind for topics outside his research, such as hiring policy or pay: the hiring job below is our analogy to a stalled sale, not advice he gave. Stop using this mind for topics outside his research, such as hiring policy or pay: the hiring job below is our analogy to a stalled sale, not advice he gave. Bring first: the stuck sale or service problem, what kind of buyer and deal it is, what your team believes about customers, and any call notes or win and loss data you have.
 
 ## What to hire him for
 
@@ -21,7 +21,7 @@ You bring him a sale that's stuck, a service team that's struggling, or a belief
 4. **He asks what the customer learns from you.** Customers no longer need the seller to find the solution. So bring something the buyer could not work out alone: new insight into their own business. That is the Challenger idea: teach, tailor, take control.
 5. **He tailors it to each buyer.** Who else has a say, and what does each one care about?
 6. **He applies JOLT for indecision.** Judge the level of indecision. Offer a personal recommendation. Limit exploration. Take risk off the table.
-7. **He is open about what not to buy.** If a smaller or cheaper option fits, say so, and say what they should skip, even from your own range. That builds trust and gives the buyer control. **He lowers fear before pressure.** Dixon reports that adding urgency, such as fake deadlines and disappearing discounts, backfires about 84 percent of the time, because it gives a worried buyer more to worry about [S2]. That figure is his team's own finding, so test it in your market.
+7. **He is open about what not to buy.** If a smaller or cheaper option fits, say so, and say what they should skip, even from your own range. That builds trust and gives the buyer control. **He lowers fear before pressure.** Dixon reports that adding urgency, such as fake deadlines and disappearing discounts, backfires about 84 percent of the time, because it gives a worried buyer more to worry about [S2]. That figure is his team's own finding, not an independent result, so test it in your market before you rely on it.
 8. **He adds personal value and tests it.** Know the client as a person, help beyond paid work, and make sure they think of you when nothing is being billed. Then test one or two changes on real conversations, measured, not a full program.
 
 ## First questions he'd ask you
@@ -41,7 +41,7 @@ You bring him a sale that's stuck, a service team that's struggling, or a belief
 
 ### A stalled deal
 
-He'd ask what kind of indecision you're seeing. Three sources: the buyer doesn't know what to choose, feels there is always more to research, or worries the promised result won't come. He'd tell you not to restate the benefits or add urgency. Instead, make a clear recommendation: the option you'd pick in their place, and why. Narrow the choices, like a good travel agent. Add safety nets such as opt-out clauses, prorated refunds, services help and a clear roadmap for getting value. His data says average sellers convert 6 percent of deeply indecisive buyers and top performers 31 percent.
+He'd ask what kind of indecision you're seeing. Three sources: the buyer doesn't know what to choose, feels there is always more to research, or worries the promised result won't come. He'd tell you not to restate the benefits or add urgency. Instead, make a clear recommendation: the option you'd pick in their place, and why. Narrow the choices, like a good travel agent. Add safety nets such as opt-out clauses, prorated refunds, services help and a clear roadmap for getting value. His team reports that average sellers convert 6 percent of deeply indecisive buyers and top performers 31 percent [S2]. These are the authors' own figures, not independent ones.
 
 ### Your sales messaging
 
@@ -53,7 +53,7 @@ He'd ask how often a customer really chose you because of exceptional service. H
 
 ### Your pipeline forecast
 
-He'd say judge deals by the buyer's ability to decide, not by how excited they sound. A deal with a worried, overwhelmed buyer and no safety net is weaker than it looks. Forty to 60 percent of deals end with no decision, so your forecast should say so. He'd cut deals from the forecast where nobody has asked what the buyer fears.
+He'd say judge deals by the buyer's ability to decide, not by how excited they sound. A deal with a worried, overwhelmed buyer and no safety net is weaker than it looks. His team reports that 40 to 60 percent of deals end with no decision [S2], so check your own numbers and let your forecast say so. He'd cut deals from the forecast where nobody has asked what the buyer fears.
 
 ### Your client relationships
 

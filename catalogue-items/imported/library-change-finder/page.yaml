@@ -11,7 +11,9 @@ explain: |
 
   It reads your lockfile, checks the model's cutoff, and lists which pinned libraries changed their interfaces since then. Then it points to the files in your code that call those changed parts. The scan does not change your project files. It writes only to its own git-ignored .since-cutoff folder and a local cache. If you want, it previews short notes for your AGENTS.md or CLAUDE.md and writes them only after you agree. It needs the small since-cutoff tool, which it asks before downloading.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header says MIT. Credit goes to the since-cutoff author and sickn33.
+  Licence: the one licence for the skill text in this copy is CC BY 4.0, as the LICENSE-CONTENT file says. The MIT line in the author's file header is their own declaration for their code and tool. This is an adapted copy: the method is the author's, and we added safety notes and pinned the tool to one release. Credit goes to the since-cutoff author and sickn33.
+
+  Cost: the scan and the notes are read-only except for the notes block, and they cost nothing. The optional run test is paid. It sends prompts to a model provider and uses your credits.
 when:
   - Your AI keeps calling library functions that no longer exist.
   - You upgraded packages and want to know what the AI may get wrong.
@@ -36,9 +38,15 @@ how_to_use:
   - Paste this skill into the chat and tell your AI which model you use.
   - Say yes when it asks to download the since-cutoff tool. It reads your files and does not run your code.
   - Read the summary. Check each changed library and the files that use it.
-  - The skill can also run an optional test, since-cutoff run, to see which changes your model gets wrong. That test sends prompts to the model company you pick and uses your credits or plan allowance. It never sends your source code. Say no unless you want it.
+  - The skill can also run an optional test, since-cutoff run, to see which changes your model gets wrong. That test sends prompts to the model company you pick and uses your credits or plan allowance. It never sends your source code. Say no unless you want it. The cost is not shown in advance and depends on the model and how many changes it tests. If you say yes, pick the cheapest model and a few libraries first, and check your provider's usage page afterward.
   - Ask for the notes preview if you want them. Read the diff, then say yes to write it into AGENTS.md or CLAUDE.md.
   - Then ask your AI to update the flagged calls or pin the library version, and run the scan again to check.
+  - If the scan reports missing items, such as no lockfile, create one with your package tool (for example uv lock) or pin versions in requirements.txt, then run the scan again.
+output_shape: |-
+  Model and cutoff: <model name, cutoff date>
+  | Library | Pinned version | Changed since cutoff | Changed API your code uses | Files |
+  Notes preview: <diff for AGENTS.md or CLAUDE.md, shown before any write>
+  MISSING: <anything the scan could not read, such as no lockfile>
 output_sample:
   input:
     - Your Python project folder with pinned library versions

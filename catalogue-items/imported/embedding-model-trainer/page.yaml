@@ -5,9 +5,9 @@ name: Embedding model trainer
 summary: Say what your search must match. Get a training script that fine-tunes an embedding model or reranker on your own text pairs.
 job: build-software
 headline: Embedding model trainer
-subhead: Tell it what your search or matching must find, and give it pairs of related text. It picks the right model type, copies a tested training template, trains on your data and reports whether training beat the starting model.
+subhead: Tell it what your search or matching must find, and give it pairs of related text. It picks the right model type, copies a Hugging Face training template, trains on your data and reports whether training beat the starting model.
 explain: |
-  If a ready-made search model keeps missing results in your field, you can train an embedding model on your own text. This embedding model trainer does that with the sentence-transformers library, starting from a tested template instead of a script written from memory.
+  If a ready-made search model keeps missing results in your field, you can train an embedding model on your own text. This embedding model trainer does that with the sentence-transformers library, starting from the training scripts that Hugging Face publishes, instead of a script written from memory. We have not tested those scripts ourselves.
 
   First it decides what you need. A bi-encoder turns each text into numbers for fast search. A cross-encoder reranks the top results. A sparse encoder suits keyword-style search. Then it makes the AI read the matching notes on losses, evaluators and settings before it writes code.
 
@@ -17,7 +17,7 @@ explain: |
 
   What AI Blocks changed from the source skill: we added the one-line WIN, MARGINAL or REGRESSION verdict, the local-only default, a cost warning and a plain run order.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Hugging Face skills) says Apache-2.0. Credit goes to Hugging Face and sickn33.
+  Licence: one licence applies to this copy, CC BY 4.0, as the LICENSE-CONTENT file says. That file governs. The author's own file header (Hugging Face skills) says Apache-2.0 for the original. Both allow reuse with credit, so keep the credit to Hugging Face and sickn33.
 when:
   - Ready-made search misses results in your field, such as legal, medical or product terms.
   - You need a reranker to sort the top 100 search results.
@@ -36,14 +36,16 @@ you_give:
   - Whether you want the result saved only on your computer or also sent to Hugging Face (optional)
 you_get:
   - The model type that fits your job and why
-  - A training script copied from a tested template
+  - A training script copied from a Hugging Face template
   - A before and after score on your data
   - "A one-line verdict: WIN, MARGINAL or REGRESSION"
   - A trained model saved on your computer
 how_to_use:
-  - Open an AI that can run Python code, such as Claude Code, and paste in this skill. The skill folder holds the templates and notes, so add the whole folder.
+  - "Open an AI that can run Python code, such as Claude Code, and paste in this skill. The skill cannot run from the SKILL.md file alone: the references and scripts folders hold the templates and notes, so add the whole folder."
+  - Before you start, check your hardware. The skill's hardware_guide.md lists a 16 GB GPU as the smallest class for demos with small models, and about 24 GB for BERT-base size models. A CPU is listed only for data prep and checks. Ask your AI to read that note and tell you if your machine is enough before you rent anything.
   - Say what your search must do and show your data. Your data should be pairs of related texts (such as a question and its answer) or texts with labels, in two or more columns. The skill's dataset_formats.md note lists the exact column layouts. Answer its question if the model type is unclear.
   - Check the model type it picks. The templates sit in the scripts folder. For a bi-encoder it starts from train_sentence_transformer_example.py, for a cross-encoder from train_cross_encoder_example.py. Ask it to run a one-step smoke test on a tiny slice of your data first.
+  - The skill is marked risk critical because full runs are long and can cost money. Confirm the GPU and the price with your AI before the full run starts, and say no to any push to the Hub you did not ask for.
   - Run the full training. A GPU is strongly advised. How much GPU memory you need depends on the model, so read the hardware_guide.md note in the folder before you start. Renting one from Hugging Face Jobs costs money, so check the current price before you start.
   - Read the verdict line and the before and after scores. Keep the model only if it beat the start. Say so if you want it pushed to the Hugging Face Hub. It stays on your computer unless you do.
 how_it_works:
@@ -52,7 +54,7 @@ how_it_works:
   - title: Reads the notes first
     text: Reads the notes on losses, evaluators, settings and your data format before it writes any code.
   - title: Copies the template
-    text: Starts from the matching production training script instead of writing one from scratch.
+    text: Starts from the matching training script from Hugging Face instead of writing one from scratch.
   - title: Adapts it to you
     text: Swaps in your model, data, loss and evaluator, and checks the loss fits the shape of your data.
   - title: Scores before training

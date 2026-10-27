@@ -33,7 +33,7 @@ How to start:
 - **The task tree** (required): the parent task and the child tasks wanted.
 - **What each task waits for** (required where a task has blockers).
 - **Work only a person can do**, and who that person is (optional).
-- **The project's code** (optional): so the starter can be adapted to it. The "Before you start" list above shows the codebase as needed; it is not. You can run this with only the agent list and the task tree, and the plan then stays a plan.
+- **The project's code** (optional): so the starter can be adapted to it. The "Before you start" list above shows the codebase as needed; it is not. You can run this with only the agent list and the task tree, and the plan then stays a plan. The starter's placeholder blocker and log code must be replaced before any live use, so never treat the starter as working code.
 
 If the agents and the authority rules are both missing, stop. Ask for them in one short message and wait. Do not hand back an empty template. If only some inputs are missing, run the steps you can and write `MISSING: <what>` for the rest. Never invent an agent, a rule or a task.
 

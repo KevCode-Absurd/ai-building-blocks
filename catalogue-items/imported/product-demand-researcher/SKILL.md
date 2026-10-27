@@ -85,6 +85,14 @@ Use this skill when the user asks to:
 2. ...
 ```
 
+## Verdict Rules
+
+Use these defaults for the Demand signal, and say in the report that they are this catalogue's own cut-offs, not a standard. **Strong:** the same pain appears in at least 10 distinct posts or videos from at least 3 separate sources, with buying or switching language in at least 3 of them. **Medium:** 5 to 9 distinct posts, or only 2 sources. **Weak:** fewer than 5 posts or a single source. Count each post once, even if it is quoted again. Set Confidence to Low whenever the posts are older than 12 months or come from one source.
+
+## Platform Terms and Limits
+
+This skill collects public posts and comments through a paid third-party API. Each platform (Reddit, TikTok, YouTube) has its own terms of service and rate limits. Tell the user to check them first, collect only what those terms allow, stay inside the rate limits, and never store personal details about the people who wrote the posts.
+
 ## Common Pitfalls
 
 - Do not claim market validation from a handful of comments.

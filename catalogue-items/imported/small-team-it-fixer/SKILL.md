@@ -42,6 +42,10 @@ Added by AI Blocks. The runbooks below are the original. This part adds the safe
 - Admin tokens and API keys in the examples are placeholders. Never paste a real one into a chat. Keep them in your password manager.
 - Some tools here need paid plans or admin roles: Google Workspace admin, Okta, Slack admin, 1Password, Tailscale, GitHub org admin, AWS IAM. Say which one a step needs.
 
+**Do not run without the owner's approval first (admin power, hard to undo):** turning off two-step sign-in (`turnoff2sv`), enabling Remote Desktop or SSH, enabling FileVault or BitLocker, deleting the Windows Update cache, `docker system prune`, firewall changes, removing accounts or keys, and remote wipe. Show the command, say what it changes, and wait for a clear yes.
+
+**Passwords on the command line:** a `password "..."` argument can be saved in shell history. Prefer to reset the password in the admin console. If you must use the command, run it in a session whose history is off, or delete that line from the history afterwards.
+
 **Answer in this shape:**
 1. **Impact and priority.** One line.
 2. **Most likely cause.** One or two lines. Say if it is a guess.
@@ -72,11 +76,12 @@ Needs: a Google Workspace admin account (paid) and the GAM tool.
 # Do not run a script from the web without reading it first.
 gam oauth create                                                     # authorize
 
-# AI Blocks: make a random password, share it safely, and force a change at next sign-in
-gam update user jane@company.com password "$(openssl rand -base64 16)" changepassword on  # reset password
+# AI Blocks: make a random password in your password manager (not on the command line, so it stays out of shell history), share it safely, and force a change at next sign-in
+gam update user jane@company.com password "[NEW RANDOM PASSWORD FROM YOUR PASSWORD MANAGER]" changepassword on  # reset password
 gam update user jane@company.com suspended off       # unsuspend locked-out user
 gam user jane@company.com signout                    # force sign-out all sessions
 gam user jane@company.com update backupcodes         # new MFA backup codes
+# CONFIRM BEFORE RUNNING: this lowers security for one account.
 gam user jane@company.com turnoff2sv                 # disable 2SV. AI Blocks: only after you verify identity and the owner approves. Re-enable within 24h
 ```
 
@@ -85,7 +90,8 @@ gam user jane@company.com turnoff2sv                 # disable 2SV. AI Blocks: o
 Needs: an Okta tenant (paid) and an admin API token. Treat the token like a password.
 
 ```bash
-OKTA="company.okta.com"; T="your-api-token"; UID="00u1abcdef"
+# AI Blocks: set OKTA_API_TOKEN in your environment first. Do not type the token on the command line.
+OKTA="[YOUR OKTA DOMAIN]"; T="$OKTA_API_TOKEN"; UID="[USER ID]"
 curl -X POST -H "Authorization: SSWS $T" "https://$OKTA/api/v1/users/$UID/lifecycle/unlock"
 curl -X POST -H "Authorization: SSWS $T" "https://$OKTA/api/v1/users/$UID/lifecycle/reset_password?sendEmail=true"
 curl -X POST -H "Authorization: SSWS $T" "https://$OKTA/api/v1/users/$UID/lifecycle/reset_factors"
@@ -159,6 +165,7 @@ networkQuality -s              # macOS 12+ bufferbloat test
 df -h                                    # volume overview
 du -sh ~/* | sort -rh | head -15         # biggest dirs in home
 docker system df                         # Docker disk usage (common culprit)
+# CONFIRM BEFORE RUNNING: this deletes data. Check what is unused and back up first.
 docker system prune -a --volumes         # reclaim Docker space. AI Blocks: this deletes unused images, containers and volumes. Check what is unused and back up data first
 brew cleanup --prune=all                 # macOS Homebrew cleanup
 ```
@@ -205,6 +212,7 @@ powercfg /batteryreport /output "$env:USERPROFILE\Desktop\battery.html"
 
 ```bash
 profiles status -type enrollment          # MDM enrollment check
+# CONFIRM BEFORE RUNNING: this opens a way into the machine.
 sudo systemsetup -setremotelogin on       # enable SSH for remote admin. AI Blocks: this opens a way in, so turn it on only if you need it
 
 # Homebrew fleet setup — standard Brewfile
@@ -235,6 +243,7 @@ Install-Module PSWindowsUpdate -Force -Scope CurrentUser
 Install-WindowsUpdate -AcceptAll -AutoReboot
 # If stuck: reset update components
 Stop-Service wuauserv,cryptSvc,bits,msiserver -Force
+# CONFIRM BEFORE RUNNING: this deletes the Windows Update cache.
 # AI Blocks: this deletes the Windows Update cache. Run it only if updates are stuck, and not during an update
 Remove-Item "C:\Windows\SoftwareDistribution" -Recurse -Force
 Start-Service wuauserv,cryptSvc,bits,msiserver
@@ -313,15 +322,15 @@ dig TXT _dmarc.company.com                       # DMARC
 ```bash
 # 1. Google Workspace account (needs Google Workspace admin)
 gam create user newhire@company.com firstname "[FIRST NAME]" lastname "[LAST NAME]" \
-  password "$(openssl rand -base64 16)" changepassword on org "/Engineering"  # AI Blocks: random password, forced change at first sign-in
+  password "[NEW RANDOM PASSWORD FROM YOUR PASSWORD MANAGER]" changepassword on org "/Engineering"  # AI Blocks: random password, forced change at first sign-in
 gam update group engineering@company.com add member newhire@company.com
 
 # 2. 1Password
 op user provision --email newhire@company.com --name "[FULL NAME]"   # needs a 1Password business plan with admin rights
 
-# 3. Slack (needs Slack admin rights and a paid plan that offers the admin API; check Slack's docs)
+# 3. Slack (set SLACK_ADMIN_TOKEN in your environment first; needs Slack admin rights and a paid plan that offers the admin API; check Slack's docs)
 curl -X POST "https://slack.com/api/admin.users.invite" \
-  -H "Authorization: Bearer xoxp-your-admin-token" \
+  -H "Authorization: Bearer $SLACK_ADMIN_TOKEN" \
   -d "email=newhire@company.com&channel_ids=C01GENERAL,C02ENGINEERING&team_id=T01YOURTEAM"
 
 # 4. GitHub
@@ -329,7 +338,7 @@ gh api orgs/your-company/invitations -f email="newhire@company.com" -f role="dir
 gh api orgs/your-company/teams/engineering/memberships/newhire-username -f role="member" -X PUT
 
 # 5. VPN / Tailscale
-tailscale up --authkey tskey-auth-abc123
+tailscale up --authkey "[TAILSCALE AUTH KEY FROM YOUR PASSWORD MANAGER]"   # never paste a real key into a chat
 ```
 
 ### First-Day Setup Script (macOS)
@@ -362,7 +371,7 @@ gam user departed@company.com signout                         # 2. kill sessions
 gam user departed@company.com transfer drive manager@company.com  # 3. transfer Drive
 gam user departed@company.com add delegate manager@company.com    # 4. delegate email 30d
 curl -X POST "https://slack.com/api/admin.users.remove" \
-  -H "Authorization: Bearer xoxp-your-admin-token" \
+  -H "Authorization: Bearer $SLACK_ADMIN_TOKEN" \
   -d "user_id=U01DEPARTED&team_id=T01YOURTEAM"               # 5. remove Slack
 gh api orgs/your-company/members/departed-username -X DELETE   # 6. remove GitHub
 op user suspend departed@company.com                           # 7. revoke 1Password
@@ -427,6 +436,7 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
 
 # Linux
 # AI Blocks: deny-incoming can cut off your own SSH session. Allow SSH first (sudo ufw allow OpenSSH) and keep a second session open
+# CONFIRM BEFORE RUNNING: you could lock yourself out of this machine.
 sudo ufw enable && sudo ufw default deny incoming && sudo ufw default allow outgoing
 ```
 
@@ -439,7 +449,7 @@ Get-NetFirewallProfile | Select Name, Enabled
 ### Phishing Response
 
 ```bash
-gam update user compromised@company.com password "$(openssl rand -base64 16)" changepassword on
+gam update user compromised@company.com password "[NEW RANDOM PASSWORD FROM YOUR PASSWORD MANAGER]" changepassword on
 gam user compromised@company.com signout             # kill sessions
 # AI Blocks: the next line turns off two-step sign-in for this account. Run it only after you have verified the person and the owner has said yes, then make the user re-enrol at once.
 gam user compromised@company.com turnoff2sv          # reset MFA

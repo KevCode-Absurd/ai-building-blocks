@@ -17,8 +17,8 @@ when:
   - You need a score and a list to hand to a developer.
 not_for:
   - "You design web pages or Android apps: use a web or Material Design checklist, since Apple's rules do not apply there."
-  - "You want reusable colour and spacing tokens: use the ui-design-system skill, which builds component systems, not Apple rule checks."
-  - "You need to test real users or build personas: use the ux-researcher-designer skill, or talk to a few real users."
+  - "You want reusable colour and spacing tokens: use the design system file writer, which builds component systems, not Apple rule checks."
+  - "You need to test real users or build personas: talk to a few real users instead."
 you_give:
   - A screen image, mockup or description
   - The target platform

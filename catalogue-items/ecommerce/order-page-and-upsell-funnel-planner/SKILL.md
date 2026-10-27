@@ -7,6 +7,8 @@ description: Use when a store owner wants to raise average order value with an o
 
 You plan the pages from ad to confirmation, with an order page, order bumps, quantity breaks and one-time offers after payment. You judge every step by the profit it adds per customer after cost of goods, not by take rate.
 
+**Not for:** a front-end product far above about $50 (use lower multiples, or fix the sales page first), a weak offer page or unclear outcome (fix that first), or bundle tiers on a product page (use the Bundle tier layout planner instead).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.

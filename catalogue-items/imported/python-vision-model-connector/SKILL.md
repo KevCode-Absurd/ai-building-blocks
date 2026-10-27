@@ -82,7 +82,7 @@ Fetch and analyze the GitHub repository to determine:
 Create a MATLAB `.m` file that sets up the Python environment. Follow these patterns from the demo files:
 
 ### MANDATORY: Installation folder setup
-Every generated script MUST begin with `MPyReq.setInstallFolder()`. This tells MPyReq where to download Python, packages, and model weights. Without this, MPyReq will show a GUI dialog which blocks non-interactive execution. Also include `MPyReq.autoAcceptDownloadPrompts(true)` to avoid interactive confirmation prompts.
+Every generated script MUST begin with `MPyReq.setInstallFolder()`. This tells MPyReq where to download Python, packages, and model weights. Without this, MPyReq will show a GUI dialog which blocks non-interactive execution. Also include `MPyReq.autoAcceptDownloadPrompts(true)` to avoid interactive confirmation prompts. **Safety gate (added by AI Blocks):** this setting means package installs and weight downloads from the chosen GitHub repo run without asking again. Before the user runs any setup script, tell them this, name the repo and its requirements file, and ask them to read both and say yes.
 
 ```matlab
 % Set installation folder (SSD recommended, ~15+ GB free space)

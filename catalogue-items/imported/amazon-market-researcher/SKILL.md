@@ -13,6 +13,10 @@ tools: [claude, cursor, gemini, codex]
 license: "MIT"
 ---
 
+> **AI Blocks note (licence):** this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says. The `license:` line in the front matter above is the original author's own label (MIT). The LICENSE-CONTENT file governs here. Keep the credit to the author.
+>
+> **AI Blocks note (paid and scraping):** this skill needs a paid Pangolinfo account and the user's own API key. It reads Amazon data through a third-party scraping service. Amazon's conditions and Pangolinfo's terms still apply. The `npx -y` line below runs an unpinned package. Look up the current version of `pangolinfo-amazon-data-mcp` on the official site and pin it in the client settings before you run it.
+
 # Pangolinfo Amazon Data Research
 
 Use this skill to turn a narrowly defined Amazon research question into a
@@ -89,7 +93,7 @@ them into a keyword, category, price band, and evaluation criteria.
 
 Call `pangolinfo_capabilities` or the MCP client's equivalent tool discovery.
 Choose only a tool and fields returned by the live server. Capability names and
-schemas can change as the bridge tracks the hosted service.
+schemas can change as the bridge tracks the hosted service. If `pangolinfo_capabilities` returns nothing or an error, stop. Tell the user the bridge is not connected, ask them to check the key and the setup guide, and do not guess tool names or answer from memory.
 
 ### 3. Make the smallest data request that answers the question
 
@@ -113,7 +117,7 @@ marketplaces as though they were directly interchangeable.
 
 ### 5. Report evidence and limits
 
-Return a compact table with the input, source URL, retrieval time, primary
+Return a compact table with these columns, in this order: input, source URL, retrieval time, primary
 fields, and missing fields. Clearly distinguish:
 
 - values returned by the service;

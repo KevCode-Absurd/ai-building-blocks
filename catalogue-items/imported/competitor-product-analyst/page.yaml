@@ -7,6 +7,8 @@ job: study-competitors
 headline: Competitor product analyst
 subhead: Give it facts on a rival. Get their pricing, features and strengths set against yours, with gaps to act on. Bring two to four competitors. Use the result to plan your next step.
 explain: |
+  Adapted from alirezarezvani's competitive-teardown skill (MIT licence). The method is theirs. We only gave it a plain name.
+
   A scored teardown of how a rival's product, pricing and customer experience stack up against yours, with a short list of what to do next. It turns scattered facts into something a team can act on.
 
   You pick two to four competitors. You supply the raw facts, or your AI reads pages it can open, from at least three sources each, such as the website, reviews, job posts and SEO, and checks you have pricing, twenty or more reviews and hiring counts before moving on. It scores twelve dimensions, each with evidence. It then fills templates for a feature matrix, pricing review, SWOT, positioning map and UX audit. Findings become quick wins, medium term moves and strategic bets, and can be packaged for stakeholders.
@@ -32,12 +34,12 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in this skill.
   - List two to four rivals and say which one matters most.
-  - "Paste what you know about each: pricing, at least 20 reviews, and job post counts. Add your own product details."
+  - "Paste what you know about each: pricing, at least 20 reviews, and job post counts. Add your own product details. Give a source link and the date you saw it for every price, review count and job post count. Any figure you could not check must say no data."
   - Ask for the scorecard first. Check that every score has a sourced note. A dimension with no data should say no data, not get a score.
   - Ask for the matrix, pricing review, SWOT, map and action plan.
   - Ask for the seven-slide summary if you need to share it with your team.
-  - Gather LinkedIn and X data by hand or through an official paid API. Scraping those sites may break their terms.
-  - Next, turn the result into sales battle cards with the sales battlecard builder, or into a plan with the quarterly roadmap builder.
+  - Gather LinkedIn and X data by hand or through an official paid API. Check the terms of every site before you read its reviews, forum posts or job posts with a tool. App stores, Reddit and job boards may limit automated reading. Scraping them may break their terms.
+  - Next, turn the result into sales battle cards with Sales battlecard builder, or into a plan with Quarterly roadmap builder.
 output_sample:
   input:
     - Two to four competitors, and which one matters most

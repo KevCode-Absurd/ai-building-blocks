@@ -19,7 +19,7 @@ Generate three personalized outreach formats — email, call script, and LinkedI
 
 ### Step 1: Look Up the Target
 
-Use Common Room MCP tools to find and retrieve data for the target (company and/or specific contact). Pull:
+Common Room is a separate paid third-party account that the user must connect to your AI. Use Common Room MCP tools to find and retrieve data for the target (company and/or specific contact). Pull:
 - Recent product activity and engagement signals
 - Community activity (posts, questions, reactions)
 - 3rd-party intent signals (job postings, news, funding)
@@ -28,6 +28,8 @@ Use Common Room MCP tools to find and retrieve data for the target (company and/
 If the user specified a person, run contact-level research. If only a company was given, identify the best contact to target based on title, engagement, and role.
 
 ### Step 2: Web Search for External Hooks (If CR Signals Are Thin)
+
+Web search needs a web search tool connected to your AI. If you have none, say so and ask the user to paste any news or context instead.
 
 If CR returned strong signals (recent activity, engagement, product usage), those should drive personalization — skip web search. If CR signals are thin or the prospect has little CR activity, run a web search for external hooks:
 
@@ -63,7 +65,9 @@ Use the strongest hooks to write all three formats. Each format has different co
 
 Always produce all three, clearly labeled.
 
-Ground the value bridge and pitch in the user's own product, offer and positioning. Ask the user to paste them into the chat before you write the pitch. Do not invent them.
+Ground the value bridge and pitch in the user's own product, offer and positioning. There is no company file in this copy, so ask the user to paste their company notes into the chat before you write the pitch. Do not invent them.
+
+Use this only for business outreach to named business contacts. Follow local data-protection rules, use only data you may lawfully use, and honour any opt-out request.
 
 ### Step 6: Annotate Your Choices
 

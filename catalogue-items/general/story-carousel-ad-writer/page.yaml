@@ -223,8 +223,8 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Planning cards from your facts works well in any strong chat AI with this skill."}
-    - {name: "Figma", why: "Keeps one layout across all the cards and sets the words as real type."}
-    - {name: "GPT Image", why: "Makes a matching set of scenes from one description and your product photos."}
+    - {name: "Figma", why: "Keeps one layout across all the cards and sets the words as real type. Optional: it has a free plan, and paid plans need an account."}
+    - {name: "GPT Image", why: "Makes a matching set of scenes from one description and your product photos. Optional: it needs a ChatGPT account, and free plans have tight daily limits. You can also build the cards by hand."}
     - {name: "Meta Ads Manager", why: "Its preview shows each card with its headline, so you can check nothing gets cut."}
   inputs:
     - "Real product photos from two or three angles, so the product cards show the real thing"

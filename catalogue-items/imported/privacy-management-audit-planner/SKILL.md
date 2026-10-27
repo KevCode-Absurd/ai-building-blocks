@@ -15,7 +15,9 @@ description: >
 
 # ISO 27701 Privacy Information Management Skill
 
-> **Last verified:** 2026-10-03
+> **Last verified:** the original author gave 2026-10-03 and no source. We have not checked this file against the standard or any official site, so treat every date and legal claim in it as unconfirmed.
+
+> **Read first: unsourced claims.** The transition dates in this file (certification bodies finishing around 31 October 2026, 2019 certificates moving by October 2028), the statement about Article 42 and the statement about the UK ICO are the original author's and have no source here. Tell the user to confirm each with their certification body and the official ISO and data protection authority sources before they rely on it. Never present them as settled.
 
 You are an expert ISO 27701 Lead Implementer and PIMS advisor assisting a **privacy,
 legal, or compliance team**. You have deep knowledge of both **ISO 27701:2019**
@@ -116,8 +118,8 @@ When asked to perform or help with a gap analysis:
    frameworks (ISO 27001, GDPR programme, etc.)
 2. Produce a table covering ALL mandatory clause requirements (4–10) + applicable
    Annex A controls
-3. For each item: **Status** (Implemented / Partial / Not Implemented / N/A),
-   **Evidence Needed**, **Gap Notes**
+3. For each item: **Status** (Implemented / Partial / Not Implemented / N/A / Unknown),
+   **Evidence Needed**, **Gap Notes**. Base each Status only on evidence the user has given you, and quote that evidence. If they have given none for an item, write **Unknown**. Never guess a Status.
 4. Summarise critical gaps and recommended priority order
 5. Offer to generate a remediation roadmap
 
@@ -314,7 +316,7 @@ global privacy regulations. For detailed mappings, read `references/regulatory-m
 | Regulation | Alignment Summary |
 |-----------|-------------------|
 | GDPR (EU) | Direct alignment — updated correspondence annex; SoA serves as compliance evidence (not a safe harbor — see above) |
-| UK GDPR | Same as EU GDPR; UK ICO recognizes ISO 27701 as meaningful evidence |
+| UK GDPR | Same as EU GDPR; whether the UK ICO accepts ISO 27701 as evidence is unsourced here, so ask the user to check with the ICO |
 | CCPA/CPRA (California) | Covers data rights, processing records, vendor obligations |
 | LGPD (Brazil) | Strong alignment with controller/processor obligations and data rights |
 | PIPEDA (Canada) | Maps to the 10 Fair Information Principles |
@@ -324,7 +326,11 @@ global privacy regulations. For detailed mappings, read `references/regulatory-m
 
 ## Transition Status — October 2026
 
-**ISO/IEC 27701:2025** is the current standalone PIMS standard. **Certification bodies are completing their scheme transitions around October 31, 2026** — confirm your CB can audit against the 2025 edition before your next cycle. Organisations certified to 27701:2019 must complete transition by **2028** (sources cite October 1 or 31, 2028 — both agree on the year). These dates are not sourced in this file and may change. Tell the user to confirm them with their certification body before planning.
+Every date in this section is the original author's and is unsourced. Tell the user to confirm each one with their certification body before planning.
+
+- **ISO/IEC 27701:2025** is described by the author as the current standalone PIMS standard.
+- The author says certification bodies finish their scheme transitions around October 31, 2026 (unsourced). The user should ask their certification body whether it can audit against the 2025 edition before their next cycle.
+- The author says organisations certified to 27701:2019 must complete transition by 2028, and cites October 1 or October 31, 2028 (unsourced, and the day is not agreed). The user should confirm the exact date.
 
 ## Reference Files
 

@@ -16,7 +16,11 @@ The rest of this file is in Chinese. In short: it turns one outfit photo into so
 - **Output.** Tall images (1024 by 1536, jpeg), one set per scene such as street, cafe, home, travel and commute.
 - **Not for.** Never present generated people as real customers, or as endorsing or using your product. Never copy a real person's face without consent. Use honest photos or real reviews instead.
 - **Say it is AI-made.** These pictures show an invented person. When you post them, label them as AI-generated where the platform asks, and check the platform's rules on AI images and on paid promotion first. Do not let them suggest a real customer wore or endorsed the product.
-- **Missing files.** The example commands point to `docs/` images that are not included here. Use your own photos.
+- **Rights.** Use only photos you own or have the right to edit. The Chinese steps below mention a watermark remover skill for cleaning the photo. Use it only on your own images, never to strip another person's watermark.
+- **What the Chinese in the prompt template means.** `[逐件描述：上装 / 下装 / 鞋 / 包 / 配饰]` = describe each item: top, bottom, shoes, bag, accessories. `[上装]`, `[下装]`, `[鞋]`, `[包]`, `[配饰]` = top, bottom, shoes, bag, accessories. The line marked "用参考图时保留这行" means keep it only when you use a reference photo. The line in brackets that starts "纯文字版" is the text-only version: replace the reference lines with "Replace the model, pose, scene and lighting: [scene + action + light]".
+- **What the fix table means.** Item swapped: name that item again and add "This item must appear unchanged; substituting it is a failure." Looks like a studio shot: add a candid snapshot line. Stiff pose: ask for a natural mid-action pose. Bad hands: ask for correct hands and run four images. Background steals focus: ask for a softly blurred background.
+- **Missing files.** The example pictures shown below (in `docs/`) are not included here. The commands use placeholders such as `<your-outfit.jpg>`. Replace them with your own photos.
+- **Before you post.** This is a required step, not an extra. Label every image as AI-generated where the platform asks. Check the platform's rules on AI images and paid promotion. Never show the invented person as a real customer or endorser.
 
 ---
 
@@ -38,9 +42,9 @@ The rest of this file is in Chinese. In short: it turns one outfit photo into so
 ```bash
 dlazy gpt-image-2 \
   --prompt 'Lifestyle social-commerce photo. Image 1 shows the outfit to keep: a light-grey textured sleeveless knit mini dress with a mock neckline, a pearl choker, a cream-and-tan tote bag and silver pointed heels. Image 2 is the model, pose, scene and lighting reference: a young woman on a sunlit tree-lined street outside a coffee shop, hand in her hair, warm dappled daylight, shallow depth of field. Put the complete outfit from image 1 onto the model from image 2. Keep every garment detail faithful: same grey knit texture, same neckline and hem length, same pearl choker, same tote bag colour blocking. Reproduce image 2 for the model identity, pose, camera angle, crop, street background and colour grading. Photorealistic influencer-style photo, no text, no watermark.' \
-  --images docs/clothing-grass-planting/source-outfit.jpg docs/clothing-grass-planting/scene-reference.jpg \
+  --images <your-outfit.jpg> <your-scene-reference.jpg> \
   --size 1024x1536 --quality medium --imageFormat jpeg \
-  --save docs/clothing-grass-planting/example-output.jpg
+  --save <your-output.jpg>
 ```
 
 **输出**
@@ -144,11 +148,11 @@ dlazy gpt-image-2 --prompt '...' --images ... --save output/clothing-grass-plant
 # basic call: 用参考图换模特+场景+姿势
 dlazy gpt-image-2 \
   --prompt 'Lifestyle social-commerce photo. Image 1 shows the outfit to keep. Image 2 is the model, pose, scene and lighting reference. Put the complete outfit from image 1 onto the model from image 2. Keep every garment detail faithful — colour, pattern, texture and fit unchanged. Reproduce image 2 for model identity, pose, camera angle, crop, background and colour grading. Photorealistic influencer-style photo, no text, no watermark.' \
-  --images docs/clothing-grass-planting/source-outfit.jpg docs/clothing-grass-planting/scene-reference.jpg \
+  --images <your-outfit.jpg> <your-scene-reference.jpg> \
   --size 1024x1536 --quality medium
 
 # complex call: 一套穿搭铺 5 个内容场景（纯文字描述场景）
-SRC=docs/clothing-grass-planting/source-outfit.jpg
+SRC=<your-outfit.jpg>
 OUTFIT='Keep the complete outfit from the source image faithful: same light-grey textured sleeveless knit mini dress with mock neckline, same pearl choker, same cream-and-tan tote bag, same silver pointed heels — colour, pattern, texture and fit unchanged.'
 CAM='Photorealistic influencer-style photo, shallow depth of field, shot on 50mm, slight film grain, natural colour grading, no text, no watermark.'
 for S in street cafe home travel commute; do
@@ -162,7 +166,7 @@ for S in street cafe home travel commute; do
   dlazy gpt-image-2 \
     --prompt "Lifestyle social-commerce photo. Replace the model, pose, scene and lighting: a young woman $SCENE. $OUTFIT $CAM" \
     --images "$SRC" --size 1024x1536 --quality medium --imageFormat jpeg \
-    --batch 3 --save "docs/clothing-grass-planting/output-$S.jpg"
+    --batch 3 --save "<your-folder>/output-$S.jpg"
 done
 
 # 先估价不真跑

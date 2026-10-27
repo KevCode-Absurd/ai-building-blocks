@@ -30,10 +30,10 @@ The skill recommends **a model and a range**. The human picks the number, owns t
 - You suspect your packaging has anti-patterns (decoy tier, feature dump, no upgrade trigger)
 
 **Do not use for:**
-- Per-deal discount approval → `deal-desk`
-- Strategic CMO positioning, brand, category creation → `c-level-advisor/cmo-advisor`
-- Whole-company revenue strategy → `c-level-advisor/cro-advisor`
-- Technical-sale enablement → `business-growth/sales-engineer`
+- Per-deal discount approval → a deal desk or sales lead (not in this library)
+- Strategic positioning, brand, category creation → a marketing lead
+- Whole-company revenue strategy → a revenue or sales leader
+- Technical-sale enablement → a sales engineer
 
 ## Workflow
 
@@ -108,43 +108,38 @@ cd commercial/skills/pricing-strategist && python3 scripts/pricing_model_picker.
 - **Designing tiers before picking a model.** Tier structure depends on the model. Run pricing_model_picker first.
 - **Packaging "feature dumps" into the Best tier.** If Best has about 3x the features for about 2x the price, customers buy Better and never upgrade. See `packaging_anti_patterns.md`.
 - **Hidden usage-based pricing inside subscription tiers.** "Up to 100k API calls/mo, then $X per 1k" disguised as a "Pro tier" is two pricing models in one. Customers notice. Pick one.
-- **Confusing this skill with deal-desk.** Pricing strategy = the menu. Deal-desk = approving discounts off the menu. Different decision, different cadence, different owner.
+- **Confusing this skill with deal approval.** Pricing strategy = the menu. A deal desk approves discounts off the menu. Different decision, different cadence, different owner.
 
 ## Distinct from
 
-- **deal-desk** — per-deal discount approval, MEDDIC, deal scoring. Operates daily on existing pricing.
-- **c-level-advisor/cmo-advisor** — strategic positioning, brand, category. Pricing strategist consumes positioning as input, doesn't generate it.
-- **c-level-advisor/cro-advisor** — full-funnel revenue strategy, comp plans, territory design. Pricing strategist is one input to CRO.
-- **business-growth/sales-engineer** — technical sale, POC scoping. Sales engineering operates after pricing is set.
+- **A deal desk** — per-deal discount approval and deal scoring. Works daily on existing pricing.
+- **A marketing lead** — strategic positioning, brand, category. This skill takes positioning as input, it does not create it.
+- **A revenue leader** — full-funnel revenue strategy, comp plans, territory design. Pricing is one input.
+- **A sales engineer** — technical sale and trial scoping. Works after pricing is set.
 
 ## Forcing-question library (Matt Pocock grill discipline)
 
-The percentages and thresholds below (for example "~20% of WTP", "60%+", "70%", "> 10x") are rules of thumb recalled from the named sources. They have not been checked here against the original pages. Do not quote them as findings. Check them against your own numbers.
+Do not quote any percentage, threshold or author finding from this section to the user as fact. The original author attached figures to named authors. None were checked, so they have been taken out. Where a limit matters, work it out from the user's own data.
 
-Walked one at a time by `/cs:grill-commercial` or the orchestrator. Recommended answer + canon citation per question. Never bundled.
+Ask these one at a time. Give a recommended answer for each. Never bundle them.
 
 1. **"Is your customer paying for outcomes, seats, or usage?"**
    Recommended: outcomes (value-based) if you can measure them; usage if marginal cost is variable; seats only if usage is roughly flat per user.
-   Canon: Ramanujam 2016 (*Monetizing Innovation*) — Mistake #1 of 9: seat-based pricing on a usage-variable product caps TAM at ~20% of WTP (unverified rule of thumb, check before use).
+   Note: seat-based pricing on a product whose usage varies a lot can leave money on the table.
 
 2. **"Do you have a measurable value metric, or are you guessing?"**
-   Recommended: instrument the value metric BEFORE going to market with value-based pricing.
-   Canon: Patrick Campbell / ProfitWell research — value-based without instrumentation collapses into bad usage-based pricing.
+   Recommended: instrument the value metric BEFORE going to market with value-based pricing. Without it, value-based collapses into bad usage-based pricing.
 
-3. **"What's the variance in customer usage across your top decile vs. median?"**
-   Recommended: variance > 10x → usage-based wins; variance < 3x → subscription wins; in between → hybrid with usage overage (unverified rule of thumb, check before use).
-   Canon: Kyle Poyar (*Growth Unhinged*) — high-variance products lose 60%+ of revenue on flat-rate plans (unverified rule of thumb, check before use).
+3. **"How much does usage vary between your heaviest customers and a typical one?"**
+   Recommended: very high variance favours usage-based pricing; low variance favours subscription; in between, a hybrid with usage overage. Ask the user for their own numbers and choose the cut-offs with them. Never invent a threshold.
 
 4. **"What's your competitor's pricing model, and why are you choosing the same or different?"**
    Recommended: surface the differentiation hypothesis explicitly. Identical pricing = identical value claim.
-   Canon: David Skok (*For Entrepreneurs*) — pricing is a positioning signal.
 
 5. **"What sample size do you have for WTP analysis, and is it segmented?"**
-   Recommended: N≥30 per segment for PSM, N≥100 for conjoint (unverified rule of thumb, check before use).
-   Canon: van Westendorp 1976 / Sawtooth Software methodology — sub-30 PSM is statistical noise.
+   Recommended: the script's minimum is 30 respondents per segment, with 100 or more preferred. Below that, treat the range as noise.
 
 6. **"What's the ONE feature that forces a tier upgrade?"**
-   Recommended: every Better and Best tier needs a single non-negotiable upgrade trigger.
-   Canon: Ramanujam (*Monetizing Innovation*) — Mistake #4: tiers with no clear differentiator make 70% of customers pick the cheapest (unverified rule of thumb, check before use).
+   Recommended: every Better and Best tier needs a single non-negotiable upgrade trigger. Without one, buyers may default to the cheapest tier.
 
 Walk depth-first. Lock 1-3 before opening 4-6. After all 6 are answered, invoke `pricing_model_picker.py` → `wtp_analyzer.py` → `packaging_designer.py` in sequence.

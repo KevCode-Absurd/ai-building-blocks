@@ -5,7 +5,7 @@ name: AI shopper store scorecard
 summary: Check if AI shopping tools can read your Shopify store. Give it your store link and get a 6-point scorecard with proof for each result.
 job: get-found-in-search
 headline: AI shopper store scorecard
-subhead: Can an AI shopping assistant actually read your Shopify store? In about two minutes you get a six point scorecard with proof for each result, set against 99 other stores.
+subhead: Can an AI shopping assistant actually read your Shopify store? In about two minutes you get a six point scorecard with proof for each result, set against 99 other stores from the author's own unpublished study. That comparison is unverified and only a rough guide.
 explain: |
   Can an AI shopping assistant actually read your Shopify store? In about two minutes you get a six point scorecard with proof for each result, set against 99 other stores.
 
@@ -33,7 +33,7 @@ how_to_use:
   - Open an AI that can run Python code, such as Claude with code tools turned on.
   - The script visits the live store pages, about 15 requests. Run it only on a store you own or have permission to check.
   - Add the skill file and the script folder to the chat.
-  - "Tell your AI: run the quick check on your store link."
+  - "Tell your AI: run the quick check on your store link. Your AI will ask you in chat to confirm you own the store or have permission. Only after you say yes does it add the --owner-confirmed flag the script needs. The flag is a step in the chat, not a real ownership check, so the yes has to be true."
   - Read the scorecard. Start with the gaps that say what an AI agent cannot answer.
   - To fix the gaps, use the structured data writer and the llms.txt writer, both free in this library, and the AI search audit for a wider check. The fuller audit named at the end of the scorecard is a paid product from the skill's author.
   - If a page could not be fetched, paste its text when your AI asks.

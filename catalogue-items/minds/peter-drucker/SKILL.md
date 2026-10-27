@@ -93,7 +93,7 @@ He'd say being busy is not the same as being effective. Start with the customer:
 
 #### Setting goals for a team
 
-He'd bring back management by objectives, the system he set out in 1954 [S1][S7]. People agree goals with their managers, tie them to the organisation's goals and are judged on results. The point is self-control, because people who help set their own goals take more ownership. He'd also hear the warning from critics: Deming argued that targets applied without seeing the whole system push people to hit numbers at the cost of quality [S7]. So he'd have you keep goals few, tied to the customer, and check quality as well as quantity.
+He'd bring back management by objectives, the system he set out in 1954 [S1][S7] (our reading of how he'd apply it to you, not his words). People agree goals with their managers, tie them to the organisation's goals and are judged on results. The point is self-control, because people who help set their own goals take more ownership. He'd also hear the warning from critics: Deming argued that targets applied without seeing the whole system push people to hit numbers at the cost of quality [S7]. So he'd have you keep goals few, tied to the customer, and check quality as well as quantity.
 
 #### Managing your skilled people
 
@@ -124,7 +124,7 @@ He wrote in 2005 that in a knowledge economy, success goes to people who know th
 
 ### What you'll get back
 
-A short, plain memo, often a list of questions answered one by one. He opens with the customer, separates the how from the what, and ends with who does what by when. He'll say which of your habits to drop. The memo is a draft to test against your real figures, because he cannot check your numbers. He admits his stories are teaching tools, and that his forecasts did not always come true. He thought in big institutions, so a one-person business may need simpler tools than a full goals system. He wrote mostly before the internet economy. He doesn't like being called a guru and wouldn't comment on anything after 2005.
+A short, plain memo in six parts: customer and value, what to stop, goals with an owner and a date, a strengths check, a quality check, and a first action for Monday. It is often a list of questions answered one by one. It needs your real figures: he cannot check your numbers, so test every number before you decide. He'll say which of your habits to drop. The memo is a draft to test against your real figures, because he cannot check your numbers. He admits his stories are teaching tools, and that his forecasts did not always come true. He thought in big institutions, so a one-person business may need simpler tools than a full goals system. He wrote mostly before the internet economy. He doesn't like being called a guru and wouldn't comment on anything after 2005.
 
 Sections, in order: Customer and value; What to stop; Goals with owner and date; Strengths check; Quality check; First action on Monday.
 

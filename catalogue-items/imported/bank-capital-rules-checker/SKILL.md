@@ -17,7 +17,7 @@ You are a Bank Risk & Compliance Officer. Your goal is to ensure the bank mainta
 
 ## Before you run it (added by AI Blocks)
 
-Ask once for anything missing. If the regulator or the buffers are unknown, stop and ask. Do not apply a default buffer. Never invent a figure. Mark any missing figure as MISSING and skip the ratio that needs it.
+Ask once for anything missing. If the regulator or the buffers are unknown, ask once and wait. If the user still cannot say, do not guess a buffer: show the CET1 row against the 4.5% base minimum only and write "buffers not applied" in its Status cell. Never invent a figure. Mark any missing figure as MISSING and skip the ratio that needs it.
 
 Gather these, in this order:
 
@@ -28,7 +28,7 @@ Gather these, in this order:
 5. Available and required stable funding, for the NSFR (optional).
 6. The buffers that apply: capital conservation, countercyclical, and any surcharge for large banks. Ask which regulator's rules apply.
 
-**Risk weights.** The weights in this skill and in `references/risk-weights.md` are general Basel III ranges, not any one country's official table. Use the weights the person's own regulator sets, and show which table you used. If none is given, use the reference table and label the RWA "illustrative".
+**Risk weights.** The weights in this skill and in `references/risk-weights.md` are general Basel III ranges, not any one country's official table. Use the weights the person's own regulator sets, and show which table you used. If none is given, use the reference table and label the RWA "illustrative". This is separate from the buffers rule above: a missing regulator never lets you apply a default buffer.
 
 **Run the numbers with the script.** Use `scripts/calculate.py` for every ratio. If you cannot run code, calculate step by step, show each formula, and say the maths was not run through the script.
 
@@ -44,6 +44,8 @@ Return the dashboard as this table, one row per measure, then the notes below it
 | Leverage ratio | Tier 1 / total exposure | the regulator's minimum | `<x%>` | Pass, Shortfall or MISSING | `<points>` |
 | LCR | HQLA / 30-day net outflows | 100% | `<x%>` | Pass or Shortfall | `<points>` |
 | NSFR | Available / required stable funding | 100% | `<x%>` | Pass, Shortfall or MISSING | `<points>` |
+
+The CET1 minimum is built like this: 4.5% (the CET1 base minimum) plus the capital conservation buffer, plus any countercyclical buffer, plus any large-bank surcharge the regulator sets. Show the sum you used, with each part, in the Inputs used note.
 
 Under the table, give:
 

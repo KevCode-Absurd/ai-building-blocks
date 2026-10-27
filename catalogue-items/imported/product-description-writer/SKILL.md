@@ -30,6 +30,7 @@ Collect, or state your assumption:
 
 ## Procedure
 
+0. **Gather the facts first.** List any missing product facts (materials, specs, certifications). Ask for them, or state your assumption, before writing anything.
 1. **Pick three claims.** Rank the benefits; keep the top three (three claims were 10.4% more persuasive than four; skepticism starts at the fourth. Source: Shu & Carlson, 2014). Move the rest to a spec table. Only the 10.4% figure comes from a study listed in reference.md. The "up to 40%" and "up to 30%" figures are practitioner tips with no study on file, and they are marked †. Treat every figure as a guide, not a promise, and never quote them as your own results.
 2. **Best features only.** Don't pad with merely good features — the impression sinks to the weakest claim.
 3. **Units people use.** Uses or pieces (30 washes, 8 cans), not standardized measures (750 g, 96 oz). Raises product evaluations and willingness to pay (Lembregts & Van den Bergh, 2019; Lembregts & Pandelaere, 2013).
@@ -56,6 +57,8 @@ For food, supplements, cosmetics, baby products or anything with a health or saf
 | Branded ingredient | [BRANDED COMPONENT, only if documented], first sentence |
 
 3. What was cut and where it can go.
+
+The percentage lifts marked † are guides, not expected results. Never quote them as the user's own numbers.
 
 ## What to do next
 

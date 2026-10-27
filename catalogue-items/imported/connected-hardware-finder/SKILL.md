@@ -9,6 +9,8 @@ metadata:
 
 # Hardware Discovery
 
+(Added by AI Blocks: the licence that applies to this copy is the LICENSE.md file in this folder, not the link in the header. This skill only reports. Each MATLAB command it runs goes through your AI tool, which should ask for your approval. If it hands a task to another skill, it names that skill first.)
+
 ## 1. What this skill is for
 
 Use this skill to perform **hardware discovery** tasks from natural language: list connected devices, search by capability, inspect a device's details and capabilities, and check if required support packages or add-ons are installed.
@@ -45,7 +47,7 @@ This skill handles **hardware discovery only** — enumerating MATLAB-supported 
 1. Complete the discovery step (confirm device exists, check install state)
 2. Tell the user what you found (e.g., "I found your GigE camera — it's connected and the required packages are installed.")
 3. Search the available skills list for a skill that handles the device type or the user's task (e.g., a skill mentioning "arduino", "camera", "DAQ", "OPC UA", etc.)
-4. If a matching skill is found: silently invoke it to handle the usage/connection/troubleshooting task — do not name the skill to the user
+4. If a matching skill is found: tell the user its name and that you will hand the usage/connection/troubleshooting task to it, and wait for their okay before you use it
 5. If no matching skill is found: fall back to discovery-only output (see below)
 
 **If no device-specific skill is found** for the device category, you are restricted to discovery-level output only:
@@ -115,8 +117,8 @@ Pick the helper that matches the user's intent. **Combine all calls for a task i
 | "How do I use <device>?" / "I can't connect to <device>" / "How do I acquire data from <device>?" | **Defer to device-specific skill (§2).** Run discovery + install-state check first, then hand off. Only use this skill's helpers if no device-specific skill is loaded. |
 | "What do I need to install for <device>?" / "What is required to use <device>?" / "Can I use <device>?" | `getDeviceSetupInfo(deviceName)` |
 | "Are the add-ons for <device> installed?" | `isRequiredAddOnsInstalled(deviceName)` |
-| "Install the <device> support package / toolbox" | Check the available skills list for an install-capable skill and silently invoke it if found. Otherwise, tell the user to open **MATLAB Add-On Explorer** (Home tab → Add-Ons → Get Add-Ons) and search by package name. |
-| Device not found (neither connected nor in "All" mode) | Inform the user that the hardware was not detected. Do not guess what products are needed. Silently check the available skills list for skills that can search for or install products, and offer to help find what's required — without naming the specific skills to the user. |
+| "Install the <device> support package / toolbox" | Check the available skills list for an install-capable skill. If you find one, name it and ask the user before using it. Otherwise, tell the user to open **MATLAB Add-On Explorer** (Home tab → Add-Ons → Get Add-Ons) and search by package name. |
+| Device not found (neither connected nor in "All" mode) | Inform the user that the hardware was not detected. Do not guess what products are needed. Check the available skills list for skills that can search for or install products, and offer to use one, naming it. |
 
 When the user's question fits multiple tasks, prefer the cheapest/most-targeted helper first (e.g., `listHardwareDevices(Capability=...)` before `getDeviceDetails`).
 
@@ -203,12 +205,12 @@ If the capability search returns **no results**, do not guess alternative keywor
 3. Once the user identifies a device, proceed with the Install-state check workflow
 
 ### Install-state check
-When the user asks what they need for a device, or asks how to use / whether they can use a specific device, use Recipe C (`getDeviceSetupInfo` includes the install-state boolean). If packages are missing, list them by human-readable name. Silently check the available skills list for an install-capable skill — if one exists, offer to install on the user's behalf without naming the skill. Only fall back to telling the user to open **MATLAB Add-On Explorer** (Home tab → Add-Ons → Get Add-Ons) if no such skill is available.
+When the user asks what they need for a device, or asks how to use / whether they can use a specific device, use Recipe C (`getDeviceSetupInfo` includes the install-state boolean). If packages are missing, list them by human-readable name. Check the available skills list for an install-capable skill. If one exists, name it and offer to install on the user's behalf, then wait for a yes. Only fall back to telling the user to open **MATLAB Add-On Explorer** (Home tab → Add-Ons → Get Add-Ons) if no such skill is available.
 
 ### Handling empty or missing capabilities
 When `getDeviceDetails` returns an empty `Capabilities` field for a device, do **not** guess or infer capabilities from general knowledge of the board. Instead:
 1. Check the currently loaded skills for any skill related to that hardware type (e.g., DAQ skills for NI devices, radio skills for USRP, Arduino-specific skills)
-2. If a relevant loaded skill exists, silently invoke it to gather capability or usage information — do not name the skill to the user
+2. If a relevant loaded skill exists, tell the user its name and that you are using it to gather capability or usage information
 3. Present whatever information you gather as device capabilities, citing only the hardware and what it supports
 4. If no relevant loaded skill is found and no other source is available, tell the user: "Detailed capability information is not available for this device. You may find more information in the device's documentation." and include the `HardwareSupportUrl` if available
 
@@ -241,7 +243,7 @@ Identify each option by `FriendlyName` plus its **Device ID** or `ConnectionInfo
 - **No `Refresh=true` by default.** Pass `Refresh=true` only when the user explicitly asks for fresh data ("scan again", "refresh", "what's connected now?")
 - **No new MATLAB files.** This skill is consumption-only
 - **No install assumptions.** Always check install state via `isRequiredAddOnsInstalled` or `getDeviceSetupInfo` before claiming a package is ready
-- **No manual install fallback when an install-capable skill is available.** Silently check the available skills list; if one can install products, offer to install on the user's behalf rather than describing Add-On Explorer steps. Never expose internal skill names to the user.
+- **Name any other skill you hand work to.** If an install-capable skill is available, offer to use it and name it. Always also tell the user the manual route (Add-On Explorer) so they can choose.
 
 ## 9. Interpreting CustomData
 

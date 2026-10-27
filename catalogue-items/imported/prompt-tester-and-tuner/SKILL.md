@@ -15,6 +15,14 @@ Eval-driven prompt engineering, RAG quality measurement, and agent workflow vali
 4. **Current-generation models need less scaffolding.** Don't add chain-of-thought boilerplate, role framing, or few-shot examples reflexively — frontier models often do worse with redundant scaffolding. Add each element only when the eval set shows it helps.
 5. **Cost numbers are always user-supplied.** Look up the provider's current per-Mtok pricing and pass it via `--price-per-mtok` (never trust a cached price table — including any you remember).
 
+6. **Never invent test results.** Write `eval_results.json` only from real calls to the model being tested. If you cannot call it, say so and ask the user to run the cases and paste the outputs. Before any run, tell the user the expected cost (cases times tokens per call times their price per million tokens) and wait for a yes. The model API is a paid service.
+
+## When not to use
+
+- The prompt is for one-time use: rewrite it by hand and read the answer.
+- You only want a prompt pattern: read `references/prompt_engineering_patterns.md`.
+- You want a finished score from the scripts alone. The gate script checks only clarity and token count, so it is not a task-level test. A person must read `eval_results.json` before anything ships.
+
 ## Tools (exact CLIs, all stdlib)
 
 ### 1. Prompt Optimizer — `scripts/prompt_optimizer.py`
@@ -125,6 +133,25 @@ Without the two price flags, `--estimate-cost` reports token estimates only. The
 1. `python3 scripts/agent_orchestrator.py agent.yaml --validate` — must exit with VALIDATION PASSED; fix every error and warning (missing tool config, unbounded iterations, loop risk).
 2. Check context discipline: each tool description ≤ 1–2 sentences, tool count minimal for the job, stable system prompt placed first (cache-friendly), iteration cap + early-exit condition present.
 3. Budget: `--estimate-cost --runs N` with your current prices; if cost/run exceeds budget, cut tools or context before downgrading the model.
+
+## Final report
+
+End with a comparison report that has these fields:
+1. Per-case table: case ID, baseline pass or fail, new version pass or fail (from the user's own runs).
+2. Clarity score and token count: baseline, new version and the change.
+3. Cost estimate, only if the user gave a price.
+4. Verdict: ship if no case that passed before now fails and the gate script exits 0. Otherwise no-ship, with the regressed cases listed.
+
+Layout of the report (shape only, every value comes from the user's own runs):
+
+| Case | Baseline | New version |
+|------|----------|-------------|
+| [CASE ID] | [pass or fail] | [pass or fail] |
+
+| Measure | Baseline | New version | Change |
+|---------|----------|-------------|--------|
+| Clarity score | [SCORE] | [SCORE] | [CHANGE] |
+| Token count | [COUNT] | [COUNT] | [CHANGE] |
 
 ## References
 

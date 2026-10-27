@@ -40,7 +40,7 @@ How to start:
 
 ## What you need
 
-Your product material is the only required input. The brand brain named above is optional here: work without it and mark what it would have supplied as `MISSING:`.
+Your product material is the only required input. The "Before you start" list above shows the brand brain under "What you need". Here it is optional: work without it and mark what it would have supplied as `MISSING:`.
 
 - **Your product material** (required): every issue, bonus, past promotion, product page, email and note you can gather. Give each a title and date.
 - **Your brand file** (optional): voice, claims and offers you already have.
@@ -48,7 +48,7 @@ Your product material is the only required input. The brand brain named above is
 
 ## Steps
 
-1. **List what you have.** Make a list of every item you were given, newest first, with its title and date. Flag items with no date. Note anything you would expect to see but did not (a bonus mentioned but not supplied, say) as `MISSING:`. Aim to cover at least a year of material, and more if it exists.
+1. **List what you have.** (If the material is very long, work in parts: send and sort one batch at a time, newest first. When a passage is split across two parts, copy it whole into the file where it starts and keep its source line. Keep one running source list across parts.) Make a list of every item you were given, newest first, with its title and date. Flag items with no date. Note anything you would expect to see but did not (a bonus mentioned but not supplied, say) as `MISSING:`. Aim to cover at least a year of material, and more if it exists.
 2. **Read and sort into files.** Read every item. Copy useful passages word for word into the files below, each with a source line (title, date, location). Put a passage in more than one file if it fits. Do not reword.
 3. **Make the people file.** Passages about the people behind the product: who they are, why they started, what they went through, their stories.
 4. **Make the feeling file.** Passages that touch the buyer's strongest emotions: fears, wishes, frustrations, pride.
@@ -61,7 +61,7 @@ Your product material is the only required input. The brand brain named above is
 
 ## What you hand back
 
-The inventory of what you read. The people, feeling and problem files, each passage with its source. The bonus notes. The proof list with "safe to give away" marks and the fascinating lines. The past hits with why each worked. An angle library and brand file additions. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
+Keep each file in this order: newest source first, passages copied word for word, a file with no passages marked "none found" and never padded. The inventory of what you read. The people, feeling and problem files, each passage with its source. The bonus notes. The proof list with "safe to give away" marks and the fascinating lines. The past hits with why each worked. An angle library and brand file additions. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

@@ -19,9 +19,17 @@ license_source: "https://github.com/263311487-ux/falsify/blob/main/LICENSE"
 > Think like a first-rate scientist: doubt first, verify, then believe.
 > 像一流科学家一样思考：先证伪，再相信；先标不确定，再下结论。
 
+## What you get
+
+You give it a question or a claim, what you already know, and what a wrong answer would cost. You get a short answer that states a testable hypothesis, the strongest attack on it, the evidence for and against, and a list of what is still uncertain. For a simple or urgent question it gives a short answer and says which mode it chose. It is plain text, so it needs no tools. Do not use it for a trivial fact or for a live outage: answer directly, or act first and test the cause later.
+
 ## Overview
 
-falsify is a single-Markdown skill that installs a 5-stage scientific thinking protocol on any AI agent (Codex, Claude Code, DeepSeek Harness, Cursor, Gemini CLI, and 20+ more). It stops the agent from giving confident answers it cannot falsify. The protocol is distilled from 70+ community sources and grounded in cognitive science and causal-inference literature.
+falsify is a single-Markdown skill that installs a 5-stage scientific thinking protocol on an AI agent. The author lists Codex, Claude Code, DeepSeek Harness, Cursor and Gemini CLI as tools it works with. It stops the agent from giving confident answers it cannot falsify.
+
+In plain words, the five stages are: (1) state a guess that could be proven wrong, (2) try hard to break it, (3) gather evidence for and against, (4) judge which version survives, and (5) report what is still uncertain.
+
+(The author also claims the protocol is distilled from 70+ community sources and works with 20+ tools. We have not checked either claim.)
 
 ## The Iron Law
 

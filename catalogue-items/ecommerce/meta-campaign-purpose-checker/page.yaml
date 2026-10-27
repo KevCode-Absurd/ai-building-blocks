@@ -61,9 +61,9 @@ how_it_works:
   - title: Writes each purpose
     text: One sentence per campaign. If it cannot be defended, it goes in the roll-up list.
   - title: Checks frequency by audience
-    text: Looks at frequency, not percent. 30-day frequency on existing customers should stay under 7.
+    text: Looks at frequency, not percent. A 30-day frequency of 7 on existing customers is an unsourced starting limit. Set your own against your results.
   - title: Checks attribution
-    text: Same setting everywhere, 7-day click plus 1-day engaged view.
+    text: Same setting everywhere. 7-day click plus 1-day engaged view is one operator's advice, so confirm what Meta offers today.
   - title: Checks the testing structure
     text: How new ads and products are introduced, and where they are judged.
   - title: Scans for setup errors
@@ -72,6 +72,8 @@ how_it_works:
     text: A campaign called cold that targets existing customers makes its ROAS meaningless.
   - title: Checks switch-offs and sync
     text: Flexible ads and automatic creative enhancements, including advertiser-level settings, and the email-to-Meta audience sync.
+  - title: Checks the mix
+    text: Looks at the share of spend on dynamic product ads and on existing and engaged audiences. The 70 percent DPA limit is an unsourced starting point. Set your own.
   - title: Scores the account
     text: Four parts with weights shown, ours, not Meta's.
 

@@ -9,7 +9,7 @@ headline: "Billing reminder and confirmation writer"
 subhead: Give it your subscription products, your gift schedule and your email platform. It writes a billing reminder for each rebill number and an order confirmation for first orders, rebills and one-time orders. You also get a link setup list and an A/B test plan.
 
 explain: |
-  Two emails sit right next to a cancel. The billing reminder says a charge is coming. The order confirmation says it just happened. Most stores leave both as plain, transactional emails from the subscription app or Shopify, with a big manage button at the top. One brand's audit, as told in the playbook this is built from, found the biggest cancel day was the day of the first rebill, when the plain receipt went out. That was about double the cancels on the reminder. It is one brand's result, not a rule, so check your own cancels by day.
+  Two emails sit right next to a cancel. The billing reminder says a charge is coming. The order confirmation says it just happened. Most stores leave both as plain, transactional emails from the subscription app or Shopify, with a big manage button at the top. The day of the first rebill, when a plain receipt goes out, is a good day to check in your own cancel numbers.
 
   This skill rebuilds both emails in your email platform. It opens warm, shows the product and any free gift in the next box, and puts a one-click delay link first, because having too much product is a common reason to cancel. Check your own cancel reasons first. The manage link sits at the bottom. Cancel stays easy to find. The charge amount and date stay clear.
 
@@ -123,7 +123,7 @@ test:
   - Send yourself the reminder and the confirmation for rebill 1. Click every link. Delay and skip should act in one click, and cancel should work.
   - Check each gift line against your real schedule. A gift that does not arrive causes cancels and complaints.
   - Run the A/B test for at least one full billing cycle. Compare cancels per 100 reminders sent, split by rebill number.
-  - The source reports a drop from 8.6 to 5.8 cancels per 100 for one brand. We could not verify it, so do not use it as a target. Beat your own baseline.
+  - Beat your own cancel baseline. Do not borrow a target from outside figures, which we could not verify.
 
 improve:
   - Save your gift schedule and your best true testimonials to your brand file, so every draft starts from them.

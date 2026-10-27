@@ -49,7 +49,7 @@ Once connected, ask in plain words:
 - [Build and ship software](https://useaiblocks.com/llms/build-software.txt): 399 skills and workflows, such as Agent database migration planner and Agent database setup planner
 - [Build websites and web apps](https://useaiblocks.com/llms/build-websites.txt): 63 skills and workflows, such as Font pair shortlist maker and Website page structure planner
 - [Check ads before they go live](https://useaiblocks.com/llms/check-ads.txt): 42 skills and workflows, such as Ad claims checker and Ad distraction checker
-- [Check contracts and rules](https://useaiblocks.com/llms/check-contracts.txt): 99 skills and workflows, such as Ad claim sorter and Business insurance needs checker
+- [Check contracts and rules](https://useaiblocks.com/llms/check-contracts.txt): 100 skills and workflows, such as Ad claim sorter and Business insurance needs checker
 - [Connect AI to your tools](https://useaiblocks.com/llms/connect-tools.txt): 41 skills and workflows, such as AI tool set designer and Automation flow sketcher
 - [Design and test physical systems](https://useaiblocks.com/llms/engineer-systems.txt): 16 skills and workflows, such as MATLAB antenna designer and MATLAB antenna system designer
 - [Design things people love](https://useaiblocks.com/llms/design-work.txt): 114 skills and workflows, such as Brand logo planner and Design brief rules writer
@@ -59,7 +59,7 @@ Once connected, ask in plain words:
 - [Help your customers](https://useaiblocks.com/llms/help-customers.txt): 71 skills and workflows, such as Angry customer reply writer and Apology email writer
 - [Hire and look after your people](https://useaiblocks.com/llms/hire-people.txt): 108 skills and workflows, such as Candidate comparison table builder and Candidate reply drafter
 - [Keep customers coming back](https://useaiblocks.com/llms/keep-customers.txt): 32 skills and workflows, such as Community growth experiment planner and Viral growth experiment planner
-- [Keep your code secure](https://useaiblocks.com/llms/secure-code.txt): 93 skills and workflows, such as Code change security reviewer and Security alert rule builder
+- [Keep your code secure](https://useaiblocks.com/llms/secure-code.txt): 92 skills and workflows, such as Code change security reviewer and Security alert rule builder
 - [Keep your store safe](https://useaiblocks.com/llms/protect-your-store.txt): 13 skills and workflows, such as Bot and AI agent access planner and Domain access and certificate reviewer
 - [Launch and scale Meta and TikTok ads](https://useaiblocks.com/llms/launch-and-scale-ads.txt): 26 skills and workflows, such as Fading ad opening writer and Social and display ad experiment planner
 - [Lead and manage people](https://useaiblocks.com/llms/lead-people.txt): 89 skills and workflows, such as Difficult conversation repair planner and Feedback notes writer

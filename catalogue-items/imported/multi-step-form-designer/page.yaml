@@ -35,8 +35,8 @@ how_to_use:
   - List every field you must collect. Say who fills in the form and why.
   - Add your current form and completion rate if you have them (optional).
   - Mark any field that law or your process requires, so your AI does not cut it.
-  - Read the plan. Check that each step feels like one clear task.
-  - Build the form in your form tool, then track where people drop off and adjust.
+  - Read the plan. Check that each step feels like one clear task. Treat it as a design to test, not a promise of more completions.
+  - Measure your completion rate before you change anything. Build the form in your form tool, then track where people drop off and compare with that first number. If the form collects personal data, check the privacy rules that apply to you. If the form still does badly, use the Leaky funnel fixer or the Conversion problem finder on the drop-off data.
 output_sample:
   input:
     - The data you must collect

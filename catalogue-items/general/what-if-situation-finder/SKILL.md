@@ -26,7 +26,7 @@ How to start:
 
 ## What you need
 
-The "question" in the block above is your story idea. This skill needs no decision, buyer brief or brand file.
+The "question" in the block above is your story idea. This skill needs no decision, buyer brief or brand file. A story idea needs no files, project access or coding assistant: ignore the "look in the project" line in the block above and work from what the user types.
 
 - **Your idea (required)**: Whatever you have, even one sentence. If it is only a topic, say so.
 - **The two things (optional)**: What you think it grew from: something you saw, something you fear, something you read.

@@ -7,17 +7,20 @@ job: build-software
 headline: Large antenna analyzer
 subhead: Describe a dish or reflector antenna. Get a built model with patterns and performance checked. Bring antenna type and frequency. Use the result to plan your next step.
 explain: |
+  Licence: one licence applies, the BSD 2-Clause terms in LICENSE.md. It adds that you may use this skill only with MathWorks products. The skill file's header links MathWorks' own reuse licence page, which says the same.
+
   A working model of a dish or reflector antenna, with the radiation pattern and performance checked. Describe what you need: a parabolic dish, a Cassegrain or Gregorian pair, an offset reflector, a reflectarray, or an antenna mounted on a vehicle, ship or satellite. It can also compute radar cross section.
 
   The skill builds the geometry in MATLAB Antenna Toolbox, then picks the right solver for the size of the problem, such as MoM-PO, PO or FMM. It sets mesh control, can use the GPU, and plots patterns so you can check gain and beam shape. You need MATLAB with the Antenna Toolbox licence.
 when:
+  - You are an RF engineer, or you have MATLAB with the Antenna Toolbox licence and work with someone who is. This is not a skill for a first look at antennas.
   - You are designing a satellite dish and need gain and sidelobe plots.
   - You want to compare a Cassegrain setup with an offset-fed one.
   - You need to know how a vehicle body changes your antenna pattern.
   - You must estimate radar cross section for a shape.
 not_for:
-  - "You want a single antenna element or a small array with no dish or platform: use matlab-design-antenna, which is a separate MATLAB skill."
-  - "You need impedance matching, measured antenna data, radio propagation or SAR: use matlab-integrate-antenna, which is a separate MATLAB skill."
+  - "You want a single antenna element or a small array with no dish or platform: use the Antenna designer item (antenna-designer)."
+  - "You need impedance matching, measured antenna data, radio propagation or SAR: use the Antenna matching helper item (antenna-matching-helper)."
   - "You have no MATLAB with Antenna Toolbox: ask an RF engineer, or use a simple dish calculator for a rough gain figure."
 you_give:
   - Antenna type and frequency
@@ -33,8 +36,18 @@ how_to_use:
   - Open an AI that can run MATLAB code, and make sure MATLAB has the Antenna Toolbox licence.
   - Paste the skill text into the chat, or add the skill folder if your AI accepts files.
   - "Say what you need: antenna type, frequency, dish size and focal setup. Add a platform file if the antenna sits on a vehicle, ship or satellite."
-  - Let your AI write and run the MATLAB scripts. Ask it to show each plot in its own figure.
+  - Let your AI write and run the MATLAB scripts. It follows this order. 1. Build the geometry. 2. Choose the solver. 3. Set the mesh. 4. Run the pattern analysis, and the radar cross section analysis if you asked for it. 5. Report the metrics with their units. Ask it to show each plot in its own figure.
   - Check the gain, beamwidth and solver reason in the result. Ask for changes to size or feed, then run again.
+  - Next, send the gain, beamwidth and sidelobe numbers to an RF engineer for sign-off, or use them in your build or buying decision. Treat them as model results until a real measurement confirms them.
+terms:
+  - term: MoM-PO
+    meaning: A mix of two methods that is fast for a feed and a large dish. This is the skill's default for reflectors, so accept it unless you have a reason not to.
+  - term: PO
+    meaning: Physical optics. A fast method for large, smooth surfaces. The skill uses it by default for radar cross section.
+  - term: MoM
+    meaning: Method of moments. More exact but slow, so it suits small structures.
+  - term: FMM
+    meaning: Fast multipole method. Used for closed bodies, concave shapes and dielectric targets, where PO and MoM fail or error.
 output_sample:
   input:
     - Antenna type, such as parabolic dish, Cassegrain, offset reflector or reflectarray

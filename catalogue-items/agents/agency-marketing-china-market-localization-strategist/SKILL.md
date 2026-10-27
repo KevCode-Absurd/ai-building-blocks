@@ -55,7 +55,7 @@ Ask once for anything missing. If it is still missing, write `MISSING: <what>`, 
 1. The product, category and price.
 2. The target buyer and city tiers.
 3. Budget range and team size.
-4. Trend data, with the date: screenshots or pasted hot-chart entries from Douyin, Xiaohongshu, Weibo, Bilibili or Zhihu (optional). If you have web search, you may collect public entries yourself, and list each source link. Ask for dated screenshots of the same hot charts on two or three different days, because one snapshot cannot show direction. Without data, write the plan shell with every signal field marked `MISSING:` and add a "what to collect" list.
+4. Trend data, with the date: screenshots or pasted hot-chart entries from Douyin, Xiaohongshu, Weibo, Bilibili or Zhihu (optional). Prefer data the user collected by hand or is allowed to use. If you have web search, you may read public pages and list each source link, but never scrape app pages, get around a login or run automated collection that a platform's terms of use forbid, and tell the user to check each platform's terms first. Ask for dated screenshots of the same hot charts on two or three different days, because one snapshot cannot show direction. Without data, write the plan shell with every signal field marked `MISSING:` and add a "what to collect" list.
 5. Buyer comments for the category or rivals (optional). Without them, leave the comment track empty and say it needs comments.
 
 A trend report from an earlier step, such as the rising trend spotter, can count as trend data. Note its platforms and dates, and that it is not a China hot chart.

@@ -50,9 +50,9 @@ Grow revenue by increasing usage or sales in your existing market.
 - Improve customer experience to drive referrals
 
 **Examples:**
-- Netflix adding games to increase engagement
-- Starbucks encouraging multiple visits per week
-- Adobe expanding Adobe Creative Cloud subscriptions
+- A streaming service adding a feature to keep current members watching longer (generic illustration)
+- A coffee chain giving a reward for one more visit a week (generic illustration)
+- A software firm moving current customers to a bigger plan (generic illustration)
 
 **Risk Level:** Low (familiar market, product, capabilities)
 
@@ -73,9 +73,9 @@ Grow by selling your existing product to new customer segments or geographies.
 - Build brand awareness in new markets
 
 **Examples:**
-- Facebook expanding internationally
-- Uber moving into new cities and countries
-- Slack selling to non-tech industries
+- A social app launching in a new country (generic illustration)
+- A ride service opening in new cities (generic illustration)
+- A work tool selling to a new industry (generic illustration)
 
 **Risk Level:** Medium (new market dynamics, but proven product)
 
@@ -96,9 +96,9 @@ Grow by introducing new products or features to your existing customer base.
 - Upgrade product experience or performance
 
 **Examples:**
-- Spotify adding podcasts
-- Amazon Prime expanding services (video, music, grocery)
-- Figma adding prototyping and FigJam
+- A music app adding a new kind of content for current listeners (generic illustration)
+- A membership service adding extra benefits (generic illustration)
+- A design tool adding a new tool for the same users (generic illustration)
 
 **Risk Level:** Medium (existing customers but new product)
 
@@ -118,9 +118,9 @@ Grow by entering entirely new markets with new products.
 - Apply capabilities to adjacent problems
 
 **Examples:**
-- Amazon expanding from books to cloud services (AWS)
-- Apple expanding from computers to phones, wearables, services
-- Microsoft moving from software to cloud (Azure) and gaming (Xbox)
+- A shop turning its in-house know-how into a service sold to other firms (generic illustration)
+- A hardware maker adding new device types and services (generic illustration)
+- A software firm moving into a new product line for a new customer group (generic illustration)
 
 **Risk Level:** High (new market, new product, new capabilities)
 
@@ -129,6 +129,19 @@ Grow by entering entirely new markets with new products.
 ---
 
 ## Output Process
+
+The examples above are generic illustrations, not verified cases about real firms. Never name a real company as proof that a move works.
+
+Use this fixed template for the result, with at most one short paragraph of notes after it:
+
+| Box | Top moves (2 or 3) | Risk level | Timeline | One first step |
+|-----|--------------------|-----------|----------|----------------|
+| Sell more to current buyers | [MOVES] | [LOW/MEDIUM/HIGH] | [ROUGH TIME] | [FIRST STEP] |
+| Reach new buyers | [MOVES] | [LEVEL] | [TIME] | [FIRST STEP] |
+| Add products for current buyers | [MOVES] | [LEVEL] | [TIME] | [FIRST STEP] |
+| New products for new buyers | [MOVES] | [LEVEL] | [TIME] | [FIRST STEP] |
+
+Then add a ranked list of the top three moves.
 1. Define current market and product clearly
 2. Analyze each quadrant:
    - Identify 2-3 specific opportunities per quadrant

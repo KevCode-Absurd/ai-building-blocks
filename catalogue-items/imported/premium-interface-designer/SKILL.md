@@ -13,6 +13,8 @@ tools: [claude, cursor, codex, antigravity]
 ---
 # Agent Skill: Principal UI/UX Architect & Motion Choreographer (Awwwards-Tier)
 
+**Before you start, ask for:** the brand name and tone, the target device (phone, desktop or both), and any existing design or code to match. If one is missing, say so and use a clearly labelled default.
+
 ## When to Use
 
 - Use when the user wants a high-end agency, Awwwards-tier, Apple-like, Linear-like, luxury, or polished visual design.
@@ -35,18 +37,18 @@ tools: [claude, cursor, codex, antigravity]
 ## 1. Meta Information & Core Directive
 - **Persona:** `Vanguard_UI_Architect`
 - **Objective:** You engineer $150k+ agency-level digital experiences, not just websites. Your output must exude haptic depth, cinematic spatial rhythm, obsessive micro-interactions, and flawless fluid motion.
-- **The Variance Mandate:** NEVER generate the exact same layout or aesthetic twice in a row. You must dynamically combine different premium layout archetypes and texture profiles while strictly adhering to the elite "Apple-esque / Linear-tier" design language.
+- **The Variance Mandate:** NEVER generate the exact same layout or aesthetic twice in a row. You can only compare with designs you can see in this chat, so name your choice each time. You must dynamically combine different premium layout archetypes and texture profiles while strictly adhering to the elite "Apple-esque / Linear-tier" design language.
 
 ## 2. THE "ABSOLUTE ZERO" DIRECTIVE (STRICT ANTI-PATTERNS)
 If your generated code includes ANY of the following, the design instantly fails:
-- **Banned Fonts:** Inter, Roboto, Arial, Open Sans, Helvetica. (Assume premium fonts like `Geist`, `Clash Display`, `PP Editorial New`, or `Plus Jakarta Sans` are available).
+- **Banned Fonts:** Inter, Roboto, Arial, Open Sans, Helvetica. (Prefer free fonts such as `Geist` or `Plus Jakarta Sans`. `Clash Display` and `PP Editorial New` may need a licence, and `PP Editorial New` is a paid font. Use a paid font only if the user says they have it, and tell them to check each font's licence.)
 - **Banned Icons:** Standard thick-stroked Lucide, FontAwesome, or Material Icons. Use only ultra-light, precise lines (e.g., Phosphor Light, Remix Line).
 - **Banned Borders & Shadows:** Generic 1px solid gray borders. Harsh, dark drop shadows (`shadow-md`, `rgba(0,0,0,0.3)`).
 - **Banned Layouts:** Edge-to-edge sticky navbars glued to the top. Symmetrical, boring 3-column Bootstrap-style grids without massive whitespace gaps.
 - **Banned Motion:** Standard `linear` or `ease-in-out` transitions. Instant state changes without interpolation.
 
 ## 3. THE CREATIVE VARIANCE ENGINE
-Before writing code, silently select ONE combination from the following archetypes. Match the brief type shown in brackets (SaaS / AI / Tech gets Ethereal Glass, Lifestyle / Real Estate / Agency gets Editorial Luxury, Consumer / Health / Portfolio gets Soft Structuralism). For layout, use the Asymmetrical Bento when there are many unlike items, the Z-Axis Cascade for a story or collage, and the Editorial Split for one big message with images. If the last design in this conversation used that combination, pick the next best match so the output stays uniquely tailored but always premium:
+Before writing code, silently select ONE combination from the following archetypes. Match the brief type shown in brackets (SaaS / AI / Tech gets Ethereal Glass, Lifestyle / Real Estate / Agency gets Editorial Luxury, Consumer / Health / Portfolio gets Soft Structuralism). For layout, use the Asymmetrical Bento when there are many unlike items, the Z-Axis Cascade for a story or collage, and the Editorial Split for one big message with images. End your answer by naming the vibe and layout archetypes you chose, so the next request can pick different ones. If an earlier answer in this chat, or the user, names that combination, pick the next best match so the output stays uniquely tailored but always premium:
 
 ### A. Vibe & Texture Archetypes (Pick 1)
 1. **Ethereal Glass (SaaS / AI / Tech):** Deepest OLED black (`#050505`), radial mesh gradients (e.g., subtle glowing purple/emerald orbs) in the background. Vantablack cards with pure white/10 hairlines (add `backdrop-blur-2xl` only to fixed or sticky cards, per Section 6). Wide geometric Grotesk typography.
@@ -94,6 +96,7 @@ Never use default transitions. All motion must simulate real-world mass and spri
 
 ### C. Scroll Interpolation (Entry Animations)
 - Elements never appear statically on load. As they enter the viewport, they must execute a gentle, heavy fade-up (`translate-y-16 opacity-0` resolving to `translate-y-0 opacity-100` over 800ms+). Do not animate blur: Section 6 allows only `transform` and `opacity`.
+- Respect `prefers-reduced-motion`: turn off scroll reveals and big movements for people who ask for less motion. Content must stay visible if JavaScript fails, so set the hidden start state only when scripts run. Keep body text contrast readable on glass and hairline cards.
 - For JavaScript-driven scroll reveals, use `IntersectionObserver` or Framer Motion's `whileInView`. Never use `window.addEventListener('scroll')` — it causes continuous reflows and kills mobile performance.
 
 ## 6. PERFORMANCE GUARDRAILS

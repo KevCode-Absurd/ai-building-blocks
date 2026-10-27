@@ -26,7 +26,7 @@ Turn engineering work into evidence-backed impact statements for performance rev
 USE FOR: "brag", "log work", "what did I do", "backfill", "performance review", "self-review", "promo packet", "weekly update", "status report", "write impact statement", "what did I ship", "I forgot to log my work", "review prep", "accomplishments"
 DO NOT USE FOR: project management, sprint planning, time tracking, ticket creation
 
-Not needed for the basic workflow: the Microsoft "Connect" preset and the optional copilot-brag-sheet extension. Skip both unless you work at Microsoft or already use that extension.
+Not needed for the basic workflow: the Microsoft "Connect" preset and the optional copilot-brag-sheet extension. They apply only to Microsoft staff or people who already use that extension. Business users can ignore them.
 
 ## Quick Start
 
@@ -63,11 +63,11 @@ Did [action] → [result/impact] → [evidence]
 
 | ❌ Don't | ✅ Do instead |
 |---------|--------------|
-| "Fixed a bug in auth" | "Fixed token refresh race condition → eliminated 401s affecting 12% of API calls → PR #247" |
-| "Worked on dashboards" | "Built latency dashboard in Grafana → on-call detects P95 spikes in <2min → deployed to prod" |
+| "Fixed a bug in auth" | "Fixed [WHAT BROKE] → [RESULT, with a number only if you have one] → PR #[PR NUMBER]" |
+| "Worked on dashboards" | "Built [WHAT YOU BUILT] → [WHAT IT LETS PEOPLE DO NOW, with a measured number only if you have one] → [WHERE IT SHIPPED]" |
 | Invent a metric: "saved 40% of eng time" | Ask: "Do you have a rough estimate, or should I keep this qualitative?" |
 | One entry per commit | Group related commits into one entry with highest-impact framing |
-| Passive voice: "The pipeline was improved" | Active voice: "Built CI matrix → caught Windows-only bug before release" |
+| Passive voice: "The pipeline was improved" | Active voice: "Built [WHAT YOU BUILT] → [PROBLEM IT CAUGHT OR REMOVED]" |
 | List technologies used | State the outcome: "Migrated 4 services to IaC → deploy time 45min → 8min" |
 | Silently drop weak entries | Mark `(evidence needed)` and present for user to fill in |
 
@@ -103,7 +103,9 @@ Never invent a metric to fill the gap. Qualitative evidence with context beats f
 
 Follow this decision tree:
 
-1. **If `save_to_brag_sheet` tool is available** → use extension tools directly (`save_to_brag_sheet`, `review_brag_sheet`, `generate_work_log`). Do not reference or attempt to call these tools unless they are confirmed available.
+0. **In a plain chat that cannot run commands**, never guess the user's work history. Use step 3, the guided interview, and mark anything unproven as (evidence needed).
+
+1. **Only if the optional extension is installed, and `save_to_brag_sheet` is available** (most business users can skip this step) → use extension tools directly (`save_to_brag_sheet`, `review_brag_sheet`, `generate_work_log`). Do not reference or attempt to call these tools unless they are confirmed available.
 
 2. **If git or gh CLI is available** → backfill from commits and PRs (see Backfill section below)
 
@@ -171,15 +173,15 @@ Format as markdown grouped by week:
 ## Week of 2025-04-14
 
 ### 🚀 PRs & Features
-- **Migrated auth service to managed identity** → eliminated 3 secret rotation incidents/quarter → PR #312
+- **[WHAT YOU DID]** → [RESULT, with a number only if you have one] → PR #[PR NUMBER]
 
 ### 🏗️ Infrastructure
-- **Built CI pipeline for copilot-brag-sheet** → 107 tests across 3 OSes × 3 Node versions → shipped v1.0.0
+- **[WHAT YOU BUILT]** → [RESULT, with a number only if you have one] → [WHERE IT SHIPPED]
 ```
 
 ## Performance Review Prep
 
-When the user is preparing for a performance review (Connect, annual review, etc.):
+When the user is preparing for a performance review (annual review, promotion case, etc.):
 
 ### Structure
 
@@ -209,7 +211,7 @@ When the user is preparing for a performance review (Connect, annual review, etc
 
 For longer narrative sections, use STAR: **S**ituation → **T**ask → **A**ction → **R**esult.
 
-For Microsoft employees using the Connect preset, frame entries around Core Priorities: delivering results, customer obsession, teamwork, and growth mindset.
+(Microsoft staff only, and optional: if you use the Connect preset, frame entries around Core Priorities: delivering results, customer obsession, teamwork, and growth mindset. Everyone else can skip this line.)
 
 ## Output Contract
 

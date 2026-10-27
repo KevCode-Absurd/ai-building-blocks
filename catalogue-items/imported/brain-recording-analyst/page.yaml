@@ -23,7 +23,7 @@ you_give:
   - Your Neuropixels recording files
   - The probe type and file format (SpikeGLX, Open Ephys or NWB)
   - Your choice of spike sorter (optional)
-  - An Anthropic API key for AI-assisted review (optional; paid, and it sends images of your units to Anthropic, so only use it if your data rules allow that)
+  - An Anthropic API key for AI-assisted review (optional; paid, and it sends images of your units to Anthropic, so only use it if your data rules allow that. The skill asks you before it does this)
 you_get:
   - A cleaned and filtered recording
   - Spikes sorted into units
@@ -32,14 +32,17 @@ you_get:
   - A figure report you can read through
 how_to_use:
   - "Before you start: this is a research-grade neuroscience tool. It needs Python, lab recording files, and a computer that can run a spike sorter (a graphics card for Kilosort4, or a CPU sorter). If you are not a lab data person, pass it to one."
+  - "Start here. Gather these first: the recording folder, the probe type (Neuropixels 1.0 or 2.0), the .meta file with your calibration and timing details, and a note of which file format you used. For Kilosort4, also check you have an Nvidia graphics card."
   - Check you have Python 3.10 or newer and SpikeInterface installed. This skill needs an AI that can run code and read your files.
   - Open your AI tool and paste in the skill, or add the skill folder if your tool takes files.
   - Tell your AI where your recording folder is and which probe and format you used.
-  - "Ask it to work in this order, using the skill's scripts: explore_recording.py, then preprocess_recording.py, then run_sorting.py, then compute_metrics.py, then export_to_phy.py. It should check drift before it sorts."
+  - "Ask it to work in this order, using the skill's scripts. It should check drift before it sorts. The commands are python scripts/explore_recording.py /path/to/data, then python scripts/preprocess_recording.py /path/to/data --output preprocessed/, then python scripts/run_sorting.py preprocessed/ --sorter kilosort4 --output sorting/, then python scripts/compute_metrics.py sorting/ preprocessed/ --output metrics/ --curation allen, then python scripts/export_to_phy.py metrics/analyzer --output phy_export/. You get the folders preprocessed, sorting, metrics (with quality_metrics.csv) and phy_export."
   - Review the quality table (quality_metrics.csv, one row per unit) and the figure report, then ask it to keep only the good units.
-  - If you use model-based curation, it downloads trained models from Hugging Face. Only load models from a source you trust.
-  - Export to Phy if you want to check units by hand. Note that Kilosort4 needs its own CUDA install, and native sorters and pretrained models were not tested in the source.
-  - "Next: if you need an NWB file, SpikeInterface 0.105.0 has no NWB exporter. The skill points to the NeuroConv converter for that step, and says it was not run."
+  - Review the units against the example screen in the skill: amplitude cutoff under 0.1, ISI violations ratio under 0.5 and presence ratio over 0.9. A typical signal-to-noise cutoff is 3 to 5. These are starting points, not proof that a unit is one neuron. quality_metrics.csv has one row per unit with firing rate, presence ratio, SNR, ISI violations and amplitude cutoff.
+  - If you use model-based curation, it downloads trained models from Hugging Face and loads them with trust_model=True. The skill stops and asks you before it runs this. Before you say yes, check the repo ID is one you expect (the skill uses SpikeInterface/UnitRefine_noise_neural_classifier and SpikeInterface/UnitRefine_sua_mua_classifier), look at the model's page and the version it asks for, and know that it was not tested with the SpikeInterface version in this skill. Check the labels against a few units you labelled by hand.
+  - Export to Phy if you want to check units by hand. Use Phy when a unit is borderline, since the thresholds are a screen and not proof of a single neuron. Note that Kilosort4 needs its own CUDA install, and native sorters and pretrained models were not tested in the source.
+  - Next, save the curated unit list with the thresholds and model versions you used, so the work can be repeated. Feed the kept units into your own analysis, such as firing rates or tuning curves.
+  - "If you need an NWB file, SpikeInterface 0.105.0 has no NWB exporter. The skill points to the NeuroConv converter for that step, and says it was not run."
 output_sample:
   input:
     - Your Neuropixels recording folder (SpikeGLX, Open Ephys or NWB)

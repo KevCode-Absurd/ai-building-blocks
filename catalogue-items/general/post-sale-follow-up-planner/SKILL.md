@@ -65,11 +65,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## Check before you hand it back
 
-- Note is personal, not a template blast.
-- Promise matches service you can give.
-- Contact schedule has dates.
-- Referral ask comes after service.
-- No pressure to buy again.
+- The note names the buyer, what they bought and one true detail they gave, and is under 80 words.
+- Every promise has a response time you can keep.
+- The schedule has calendar dates, with no gap longer than three months unless a reason is given, and each contact helps the buyer.
+- The referral ask comes after the first check-in, never in the thank-you, and says names are contacted only if the buyer agrees.
+- The problem plan has a reply time and an opening line.
+- No line pushes another sale.
 
 ## If something is missing
 

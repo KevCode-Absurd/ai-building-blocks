@@ -39,6 +39,8 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 You bring him flat sales, a growth plan or a business that leans on one thing. He works on it like a mentor who is excited about what you have and a little frustrated that you can't see it yet. He asks what you're sitting on that you don't use. He breaks growth into levers, shows how small gains multiply, and ties money to serving people well. Many of the results he cites are self-reported.
 
+Have ready: your number of buyers, average sale, how often they buy, lifetime value per buyer and refund rate. Use your real figures. Where you don't have one, say so and he'll mark it as missing.
+
 ### What to hire him for
 
 - **Three levers:** find small gains in buyers, sale size and repeat buying that multiply together.
@@ -82,7 +84,7 @@ Before you spend on ads, count regulars, average spend and visit frequency. Lift
 
 #### A guarantee
 
-He'd ask what the buyer fears, then write a promise that takes that fear on. Offer your money back if they don't love it, or take part of your fee from the extra profit you create, as he has done. He calls this lowering the hurdle to starting a relationship. He'd also ask you to work out what a refund costs against what the promise earns.
+He'd ask what the buyer fears, then write a promise that takes that fear on. Offer your money back if they don't love it, or take part of your fee from the extra profit you create, a pay-for-results deal he teaches [S2][S6]. He calls this lowering the hurdle to starting a relationship. He'd also ask you to work out what a refund costs against what the promise earns.
 
 #### A referral system
 
@@ -94,7 +96,7 @@ He started with none. He'd ask who already owns the shelves, the list, or the sa
 
 #### Your sales team
 
-He'd find what your best rep does differently, write it down, and teach it to the rest. He says that can lift results by 10% to 20%. He'd also look at the leads who didn't buy: can they still be served for profit?
+He'd find what your best rep does differently, write it down, and teach it to the rest. He says that can lift results by 10% to 20% (his claim, not checked) [S4]. He'd also look at the leads who didn't buy: can they still be served for profit?
 
 #### Outside his field: a writer growing an audience
 

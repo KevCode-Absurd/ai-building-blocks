@@ -7,6 +7,8 @@ job: check-contracts
 headline: IP clause checker
 subhead: The intellectual property clauses in a contract read for you, ranked by risk. Share the agreement as a file, link or pasted text. The skill first asks which side you are on for IP, since it differs per document.
 explain: |
+  Three steps. First run the setup interview once, so your practice profile is saved. Then give the skill the agreement and say which side you are on. It then checks who owns the work, and reviews each clause.
+
   The intellectual property clauses in a contract read for you, ranked by risk. Share the agreement as a file, link or pasted text. The skill first asks which side you are on for IP, since it differs per document. For employment, consulting and work-for-hire deals it runs an assignment gap check before anything else, because missing ownership transfers are hard to fix later.
 
   Each clause is explained, compared with market norms and with your preferred position, then rated. It also checks that clauses agree with each other and notes local rules on moral rights, work-for-hire and implied licences. Unclear wording is flagged for a lawyer. It is a first check, not legal advice.
@@ -32,11 +34,11 @@ you_get:
   - Questions for a lawyer
 how_to_use:
   - This is a first check, not legal advice. Have a lawyer sign off before you sign or redline.
-  - Run the setup interview first. It saves your practice profile, which this skill needs. Without it, the skill stops and asks you to run it.
+  - Run the setup interview first. It saves your practice profile in a local file, which this skill needs. The skill looks for that file in your AI's own config folder, so use an AI tool that can read and write files, such as Claude Code. Without the profile, the skill stops and asks you to run the interview.
   - Open your AI and paste in the skill. If you use Claude, it works best with a tool that can read files.
   - Share the agreement as a file, link or pasted text. Say which side you are on for IP in this document.
   - Read the Bottom line and the Assignment gap check first. Then work through the clauses from highest risk down.
-  - Take any unclear clause to a lawyer. If no legal research tool is connected, do not rely on case or law citations until a lawyer checks them.
+  - Take any unclear clause to a lawyer. The skill can use a legal research connector such as Westlaw. That is a paid account-based service and you do not need it. Without it, the skill still runs, and every citation is tagged as unverified. Do not rely on case or law citations until a lawyer checks them.
 output_sample:
   input:
     - The agreement, as a file, link or pasted text

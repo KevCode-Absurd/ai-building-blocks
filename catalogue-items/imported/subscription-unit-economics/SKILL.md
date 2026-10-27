@@ -78,7 +78,7 @@ Formulas: cohort index for a year = that year's revenue from the cohort / the co
 
 ### Step 3: Benchmarking
 
-Compare unit economics to relevant benchmarks. These ranges are common rules of thumb, not sourced data. Check them against the sector before quoting them:
+Compare unit economics to relevant benchmarks. These ranges are common rules of thumb, not sourced data. Check them against the sector before quoting them. In your output, label every range from this list "generic rule of thumb, unsourced", and never present one as a sector figure:
 - **SaaS Rule of 40**: Growth rate + EBITDA margin > 40%
 - **SaaS Magic Number**: Net new ARR / prior period S&M spend > 0.75x
 - **NDR benchmarks**: Best-in-class >120%, good >110%, concerning <100%

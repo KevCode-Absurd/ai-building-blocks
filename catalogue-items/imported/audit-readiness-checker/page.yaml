@@ -30,7 +30,7 @@ you_get:
   - What evidence an auditor will ask for
   - A fix-first action list
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste in the skill instructions from this page.
+  - Open Claude, ChatGPT or Gemini. Upload the SKILL.md file from this item, or paste its text into the chat.
   - Gather these first: the period-end date, your AR aging report, your fixed asset register, and your purchase orders, receiving records and invoices for the three-way match. Your risk control matrix (RCM) is a table of risks and the controls that cover them. SOX is the US law on financial controls at listed companies.
   - Tell your AI the audit you expect and the period it covers.
   - Paste your control documents and name who owns each process. Add sample records if you have them.

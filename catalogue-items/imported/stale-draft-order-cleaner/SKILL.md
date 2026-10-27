@@ -37,7 +37,7 @@ Queries open draft orders older than a configurable age and optionally deletes t
    **Inputs:** `query: "status:open created_at:<='<NOW - older_than_days days>'"`, `first: 250`, pagination cursor
    **Expected output:** Stale open draft orders; paginate until `hasNextPage: false`
 
-2. **Filter before any delete:** ask the user which tag marks live B2B quotes (default `b2b-quote`). Remove every draft with that tag from the delete list, and show how many were kept out. Drafts without that tag stay in the delete list, including B2B quotes that were never tagged, so tell the user to tag live quotes before the first run. The first run is always a dry run. Show the full list and wait for a clear yes. Run the delete step only after that yes.
+2. **Filter before any delete:** the tag question must be answered before the first dry run. Ask the user which tag marks live B2B quotes (default `b2b-quote`). Remove every draft with that tag from the delete list, and show how many were kept out. Drafts without that tag go in a separate "review by hand" list, not the delete list, because they may be live B2B quotes that were never tagged. Only move a draft to the delete list when the user picks it. The cutoff uses `created_at`, so a draft made long ago but edited recently can still match: show `updatedAt` for every draft in the dry-run list and flag any edited in the last 30 days. The first run is always a dry run. Show the full list and wait for a clear yes. Run the delete step only after that yes.
 
 3. **OPERATION:** `draftOrderDelete` — mutation
    **Inputs:** `id: <draft_order_id>`

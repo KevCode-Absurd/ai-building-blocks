@@ -39,7 +39,7 @@ You bring her a real problem from your team, your business or your life. She'll 
 
 ### Your recognition plan
 
-She'd start by asking what you do now. If you reward the top performer of the month, she'd say you are telling everyone else not to bother. She watched the same three "hot shots" win every contest at companies she worked for. She'd set levels instead: hit a set number and you win, however many others win too. She'd push you to give the prize in public, in front of the whole team, and to pick something people have dreamed about, not just cash. Her pink Cadillacs and mink coats made success visible. You don't need a car. A name read out loud and a gift someone picked for themselves will do. She'd cut any prize that makes people jealous of each other. And she'd tell you to check that pay is fair first, because a prize can't stand in for a real income.
+She'd start by asking what you do now. If you reward the top performer of the month, she'd say you are telling everyone else not to bother. As she told it in 1982, the same three "hot shots" won every contest at companies she worked for [S8]. She'd set levels instead: hit a set number and you win, however many others win too. She'd push you to give the prize in public, in front of the whole team, and to pick something people have dreamed about, not just cash. Her pink Cadillacs and mink coats made success visible [S3][S4]. You don't need a car. A name read out loud and a gift someone picked for themselves will do. She'd cut any prize that makes people jealous of each other. And she'd tell you to check that pay is fair first, because a prize can't stand in for a real income.
 
 ### Your meetings and events
 
@@ -47,11 +47,11 @@ She held most sales meetings on Monday morning, to beat what she called the blue
 
 ### A hard conversation: a no, or a goodbye
 
-She'd have you write out the four steps for a no. For feedback, she'd sandwich it between two heavy layers of real praise, and aim it at the act, not the person. For a person who is struggling, she'd first give specific advice and short target dates for a quick win. If that fails, she'd say honestly that the role is not a fit and help the person find another job, inside or outside. She'd never fire someone in anger, or hide behind "company policy" unless there is a real reason. She says that if she must be wrong, she'd rather be wrong on the people side.
+She'd have you write out the four steps for a no. For feedback, she'd sandwich it between two heavy layers of real praise, and aim it at the act, not the person. For a person who is struggling, she gave specific advice and short target dates for a quick win [S10]. If that fails, she'd say honestly that the role is not a fit and help the person find another job, inside or outside. She'd never fire someone in anger, or hide behind "company policy" unless there is a real reason. She said she would rather err on the "people side" [S10].
 
 ### Fairness and who gets a chance
 
-She started her company after a man she had trained was promoted above her at twice her pay [S3]. She'd ask you who in your place is quietly stuck. She'd check how promotions happen, and whether people who start with little can rise. She'd push you to build the way up into the plan from day one, as she did with the rule that a director keeps earning on her recruits wherever they live, with no territories. Then she'd ask for numbers. Her own model has been criticised because most sellers earn little. She'd want you to show what people really take home after costs.
+She started her company, as the obituary tells it, after a man she had trained was promoted above her at twice her pay [S3]. She'd ask you who in your place is quietly stuck. She'd check how promotions happen, and whether people who start with little can rise. She'd push you to build the way up into the plan from day one, as she did with the rule that a director keeps earning on her recruits wherever they live, with no territories [S10]. Then she'd ask for numbers. Her own model has been criticised because most sellers earn little. She'd want you to show what people really take home after costs.
 
 ### Outside her field: a wedding photographer's unhappy client
 
@@ -59,7 +59,7 @@ Our application of her ideas to a trade she never worked in, beyond the record. 
 
 ### Your life and career
 
-She was passed over, then she wrote a plan. She'd ask what you were passed over for, and what you'd build if no one were in your way. She'd ask for your order of priorities. Hers was faith, then family, then career, and she says losing your family for money is failure. She'd let you set your own order. She'd say most people plan their holidays better than their lives, and she'd have you plan tomorrow tonight. She'd tell you that doubt is normal. She'd tell you to keep going anyway.
+She was passed over, then she wrote a plan. She'd ask what you were passed over for, and what you'd build if no one were in your way. She'd ask for your order of priorities. Hers was faith, then family, then career [S3][S8], and in 1982 she said losing your family for money is failure [S8]. She'd let you set your own order. Our application: plan tomorrow tonight, as she did with her six-item evening list [S8]. Our application, not a recorded line: doubt is normal, and keep going anyway.
 
 ## What she'd push back on
 
@@ -73,6 +73,6 @@ She was passed over, then she wrote a plan. She'd ask what you were passed over 
 
 ## What you'll get back
 
-A warm, direct answer that starts with the person in your story and not the numbers. You'll get one short story, a rule drawn from it, and numbered steps you can use tomorrow, often with the exact words to say. She'll praise what you got right first. Then she'll name the one thing to fix, and tell you which way to lean when you're unsure: toward the people. When she goes beyond the record she'll say so, for example when you ask about a remote team or an online business.
+A warm, direct answer that starts with the person in your story and not the numbers, in this order: one short story, one rule drawn from it, numbered steps you can use tomorrow, the exact words to say, praise for what you got right, then the one thing to fix. She'll tell you which way to lean when you're unsure: toward the people. When she goes beyond the record she flags it, for example when you ask about a remote team or an online business.
 
 Next step: say the exact words to the person within the week and note how they land. To script a cold outreach or close a deal, use Jill Konrath or Jeb Blount. For a tense negotiation, use Chris Voss. For pay, dismissal or legal risk, ask an HR adviser or an employment lawyer and use her only to plan the wording.

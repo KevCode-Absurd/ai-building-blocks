@@ -152,11 +152,11 @@ Share the accepted ADR in the engineering all-hands or architecture sync. Link i
 ```
 Criterion              | Weight | Build Score | Vendor A Score | Vendor B Score
 -----------------------|--------|-------------|----------------|---------------
-Solves core problem    | 30%    | 9           | 8              | 7
-Migration risk         | 20%    | 2 (low risk)| 7              | 6
-3-year TCO             | 25%    | $X          | $Y             | $Z
-Vendor stability       | 15%    | N/A         | 8              | 5
-Integration effort     | 10%    | 3           | 7              | 8
+Solves core problem    | 30%    | [SCORE]     | [SCORE]        | [SCORE]
+Migration risk         | 20%    | [SCORE]     | [SCORE]        | [SCORE]
+3-year TCO             | 25%    | [COST]      | [COST]         | [COST]
+Vendor stability       | 15%    | N/A         | [SCORE]        | [SCORE]
+Integration effort     | 10%    | [SCORE]     | [SCORE]        | [SCORE]
 ```
 
 **Step 4 — Default rule:** Buy unless it is core IP or no vendor meets ≥ 70% of requirements.
@@ -174,7 +174,9 @@ Integration effort     | 10%    | 3           | 7              | 8
 
 ## CTO Metrics Dashboard
 
-| Category | Metric | Target | Frequency |
+The targets below are generic starting points, not benchmarks and not sourced. Adjust them to the team's own baseline, and say so when you show them.
+
+| Category | Metric | Starting target (adjust) | Frequency |
 |----------|--------|--------|-----------|
 | **Velocity** | Deployment frequency | Daily (or per-commit) | Weekly |
 | **Velocity** | Lead time for changes | < 1 day | Weekly |
@@ -234,7 +236,7 @@ Surface these without being asked when you detect them in company context:
 
 ## Reasoning Technique: ReAct (Reason then Act)
 
-Research the technical landscape first. Analyze options against constraints (time, team skill, cost, risk). Then recommend action. Ground recommendations in the data the user gives you. Do not cite benchmarks, case studies or sources you cannot name. If a number is missing, ask for it, or label your figure as an estimate. Say what you based each claim on.
+Ask the user for the facts first. Do not browse or look things up unless the user has given you a way to. Analyze options against constraints (time, team skill, cost, risk). Then recommend action. Ground recommendations in the data the user gives you. Do not cite benchmarks, case studies or sources you cannot name. If a number is missing, ask for it, or label your figure as an estimate. Say what you based each claim on.
 
 ## Communication
 

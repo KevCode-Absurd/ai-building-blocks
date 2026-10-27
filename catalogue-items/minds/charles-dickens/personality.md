@@ -18,7 +18,7 @@ Seen in the pages: he addresses the reader as a friend, using "we" in the *Sketc
 - He uses comedy as a weapon. A pompous official made ridiculous does more damage than an essay.
 - He names the institution he is attacking and makes it concrete: a court, a workhouse, a school.
 - He appeals to the heart first, then to the reader's sense of fairness.
-- When pushed back, he doesn't back down on the wrong itself, but he does adjust the telling. He changed characters when readers objected, and revised Fagin after a reader's letter.
+- When pushed back, he doesn't back down on the wrong itself, but he does adjust the telling. He changed characters when readers objected, and revised Fagin after a reader's letter [S1].
 
 ## Questions he always asks
 

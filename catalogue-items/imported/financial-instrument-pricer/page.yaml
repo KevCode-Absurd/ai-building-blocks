@@ -11,7 +11,7 @@ explain: |
 
   You name the instrument and what you want. The skill routes to a method: Monte Carlo for path-dependent and exotic products, trees and lattices for bonds with embedded options, or FFT methods for fast vanilla pricing. It then picks a model such as Black-Scholes, Heston, Hull-White or SABR and builds the instrument, model and pricer objects. It computes Greeks like delta, vega and gamma, and can compare two methods on the same product. It needs MATLAB with the Financial Instruments Toolbox.
 
-  Licence: BSD 2-Clause plus a MathWorks term, as the LICENSE.md file says. You may use it only with MathWorks products such as MATLAB.
+  Licence: one licence applies, the one in the LICENSE.md file. It is BSD 2-Clause with a MathWorks term. That term lets you use the skill text, the notes and the code only together with MathWorks products such as MATLAB. The skill file header links to MathWorks' own licence page. If that page and LICENSE.md ever differ, follow LICENSE.md and check with MathWorks.
 when:
   - You need a fair value for a barrier or Asian option.
   - You want delta and vega for a position.
@@ -33,11 +33,12 @@ you_get:
   - A comparison of methods (optional)
   - Laid out as a short summary with the price, a table of Greeks with units, then the commented MATLAB script
 how_to_use:
-  - Check first that your MATLAB has the Financial Instruments Toolbox (type ver in MATLAB to see your toolboxes). If it does not, stop here, because the code will not run. Then open your AI tool and paste the skill text from this page into the chat.
-  - Say which instrument you want priced. Add its terms, such as dates, strike and rate.
+  - Check first that your MATLAB has the Financial Instruments Toolbox (type ver in MATLAB to see your toolboxes). If it does not, stop here, because the code will not run. Then open your AI tool and upload the whole skill folder, not only SKILL.md. The method notes are in the references folder, and your AI needs them.
+  - Say which instrument you want priced. Add its terms, such as dates, strike and rate. If MATLAB says a function is missing, your toolbox version may be older. Type help or doc with the function name in MATLAB to check it, then ask your AI for another method.
   - "Add your market data. For the rate curve, give dates and zero rates. For volatility, give one flat number or a table of volatility by strike and date. Say which Greeks you want."
   - Run the code your AI writes in MATLAB. This needs the Financial Instruments Toolbox, a paid add-on.
   - Check the price and Greeks. Ask for a second method if you want to compare.
+  - "Check your result: price one plain vanilla option two ways, for example with the Black-Scholes formula and with the method your AI used, and see that the two prices are close. For a bond, compare the price with a market quote. A credible result matches the second method, and your Greeks have the signs you expect (a call's delta is between 0 and 1, and its vega is positive)."
   - Before you use the price, check it against a second method or a market quote. Have a quant review it before any trade or risk decision.
   - Then look at the bond portfolio reviewer if you price bonds, or compare pricing methods again with other inputs. The MATLAB code reviewer can check the code your AI wrote.
 output_sample:
@@ -49,6 +50,7 @@ output_sample:
   prerequisites:
     - MATLAB with the Financial Instruments Toolbox, which is a paid product
     - An AI that can run MATLAB, or a MATLAB window where you paste the code
+    - Optional: the MATLAB MCP server, which lets your AI look up MATLAB help before it writes code. Without it the skill still works, but you should check each function name yourself
   output:
     - name: Price
       contains: The fair value of the instrument from the method the skill picked.

@@ -260,7 +260,7 @@ These skills work together with Workflow Patterns:
 
 ## Pattern Usage
 
-The five patterns below are the most common starting points. This file gives no counts for how often each is used, so do not quote any.
+The five patterns above are the starting points this guide offers. The file gives no data on how often each is used, so do not claim any is the most common.
 
 ---
 
@@ -295,7 +295,7 @@ The five patterns below are the most common starting points. This file gives no 
 ```
 1. Webhook (receive chat message)
 2. AI Agent
-   ├─ OpenAI Chat Model (ai_languageModel)
+   ├─ OpenAI Chat Model (ai_languageModel)   <- needs an OpenAI API key and a paid OpenAI account; swap in another chat model node if you prefer
    ├─ HTTP Request Tool (ai_tool)
    ├─ Database Tool (ai_tool)
    └─ Window Buffer Memory (ai_memory)
@@ -380,8 +380,8 @@ Use `search_templates` and `get_template` from n8n-mcp tools to find examples!
 ## Summary
 
 **Key Points**:
-1. **5 core patterns** cover most workflow use cases
-2. **Webhook processing** is a very common pattern
+1. **5 core patterns** are the starting shapes this skill uses
+2. **Webhook processing** is one of the five patterns
 3. Use the **workflow creation checklist** for every workflow
 4. **Plan pattern** → **Select nodes** → **Build** → **Validate** → **Deploy**
 5. Integrate with other skills for complete workflow development

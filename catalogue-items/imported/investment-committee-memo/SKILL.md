@@ -7,8 +7,7 @@ description: Draft a structured investment committee memo for PE deal approval. 
 
 ## India
 
-This skill operates on **Indian markets**. Load **`india-market-conventions`**
-before building anything, and **`india-market-data`** for sources. Two rules cause
+This skill operates on **Indian markets**. The guides `india-market-conventions` and `india-market-data` are not included in this library, so the two rules below are the whole India guide. Two rules cause
 most Indian errors:
 
 - **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
@@ -19,7 +18,7 @@ most Indian errors:
   **millions under a crore label: the number shown is 10× the real crore figure**. Divide by `10000000` in a live
   formula and label the column `Total Revenue (₹ Cr)`.
 
-What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
+`NOT-ADAPTABLE.md` is not included either. Where something has no Indian equivalent, name the gap —
 never substitute a proxy and present it as the real thing.
 
 ## Before you start
@@ -33,7 +32,7 @@ never substitute a proxy and present it as the real thing.
 
 ### Step 1: Gather Inputs
 
-Collect from the user (or from prior analysis in the session):
+Required: company overview, historical financials (3-5 years), deal terms, and due diligence findings. Optional: management assessment, value creation plan and returns cases (mark any you do not get as `MISSING`). Collect from the user (or from prior analysis in the session):
 
 - Company overview and business description
 - A screening memo or diligence review already in the chat: use it for the findings and the call, and a valuation range for the price view. Ask only for what they leave out.
@@ -119,4 +118,4 @@ Standard IC memo format:
 
 The memo in sections I to IX, then a list of open questions, then one line on what to do next: take the memo to the committee, or fill the open questions first.
 
-- **Runbook:** [`references/runbook-ic-memo.md`](references/runbook-ic-memo.md) — the end-to-end walkthrough (which skills to load in what order, and the output contract).
+- **Runbook:** [`references/runbook-ic-memo.md`](references/runbook-ic-memo.md) — the end-to-end walkthrough (which skills to load in what order, and the output contract). It is in this folder. If it names a skill you do not have, skip that load and follow the steps in this file instead.

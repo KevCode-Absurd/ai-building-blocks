@@ -12,6 +12,8 @@ Work like Manus: Use persistent markdown files as your "working memory on disk."
 
 ## Important: Where Files Go
 
+Note for users of other AI tools: `${CLAUDE_PLUGIN_ROOT}` is a Claude Code plugin setting. In another tool, read it as the folder where you saved this skill. The `risk: critical` tag in the front matter comes from the collection this skill was copied from. The skill writes files in your project folder and has helper scripts that need a shell, so read the scripts before your AI runs them.
+
 When using this skill:
 
 - **Templates** are stored in the skill directory at `${CLAUDE_PLUGIN_ROOT}/templates/`

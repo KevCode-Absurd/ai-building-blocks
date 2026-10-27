@@ -22,7 +22,7 @@ steps:
   - {uses: idea-evidence-review, note: "Every month, for each belief with new evidence: a keep going, change or stop call and the next thing to learn. Uses step 1's prediction and step 2's log. Hands step 4 the call on each belief."}
   - {uses: real-knowledge-tester, note: "Only when a belief has had no evidence either way for three months: the hardest follow-up questions, which you can answer, and which you cannot. Uses step 3's call on the belief. Hands step 5 the gaps it found."}
   - {uses: learn-borrow-or-pass-planner, note: "Only when the knowledge test shows a gap: learn it, borrow help, start small or pass, with a first-week plan. Uses the gaps from step 4."}
-schedule: "On the first Friday of each month, and the day any belief reaches its check date"
+schedule: "Run by hand on the first Friday of each month, and the day any belief reaches its check date. Nothing starts on a timer unless you connect a scheduler."
 asks_before: [changing the plan or strategy, dropping a belief from the list, spending money or time on a bet, telling the team a belief has changed, contacting customers for evidence]
 minds: [charles-darwin]
 origin: own

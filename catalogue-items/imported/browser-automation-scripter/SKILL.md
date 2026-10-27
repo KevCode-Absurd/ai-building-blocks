@@ -1,7 +1,7 @@
 ---
 name: playwright-skill
 description: "IMPORTANT - Path Resolution: This skill can be installed in different locations (plugin system, manual installation, global, or project-specific). Before executing any commands, determine the skill directory based on where you loaded this SKILL.md file, and use that path in all commands below."
-risk: critical
+risk: critical # critical because the skill writes and runs code on your computer that controls a browser. Review each script before it runs.
 source: community
 date_added: "2026-02-27"
 plugin:
@@ -47,9 +47,10 @@ General-purpose browser automation skill. I'll write custom Playwright code for 
 1. You describe what you want to test/automate
 2. I auto-detect running dev servers (or ask for URL if testing external site)
 3. I write custom Playwright code in `/tmp/playwright-test-*.js` (won't clutter your project)
-4. I execute it via: `cd $SKILL_DIR && node run.js /tmp/playwright-test-*.js`
-5. Results displayed in real-time, browser window visible for debugging
-6. Test files auto-cleaned from /tmp by your OS
+4. **I show you the script and wait for your yes before running it.** The script runs on your computer and can open pages, click and type. Read it first. Do not run it without that yes.
+5. I execute it via: `cd $SKILL_DIR && node run.js /tmp/playwright-test-*.js`
+6. Results displayed in real-time, browser window visible for debugging
+7. Delete the files in /tmp yourself when you are done (scripts and screenshots). Nothing cleans them up for you, and screenshots can show private pages.
 
 ## Setup (First Time)
 
@@ -300,7 +301,8 @@ After every run, report these fields, so the result looks the same each time:
 
 ## Inline Execution (Simple Tasks)
 
-For quick one-off tasks, you can execute code inline without creating files:
+For quick one-off tasks, you can run code inline without creating a file. The same rule applies: show the user the code and wait for their yes before you run it. Never run inline code without that yes.
+
 
 ```bash
 # Take a quick screenshot
@@ -444,6 +446,7 @@ Claude: I'll test the marketing page across multiple viewports. Let me first det
 I found your dev server running on http://localhost:3001
 
 [Writes custom automation script to /tmp/playwright-test-marketing.js with URL parameterized]
+[Shows the script and waits for the user's yes]
 [Runs: cd $SKILL_DIR && node run.js /tmp/playwright-test-marketing.js]
 [Shows results with screenshots from /tmp/]
 ```

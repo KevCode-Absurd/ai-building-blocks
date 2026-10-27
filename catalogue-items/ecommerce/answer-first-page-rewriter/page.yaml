@@ -9,7 +9,7 @@ headline: "Answer-first page rewriter"
 subhead: Give it a blog post, buying guide or FAQ page, the questions it should answer and your own data. It rewrites each section with the answer first, adds a short summary, FAQ and comparison table where they fit, and lists the facts that still need a number or a source.
 
 explain: |
-  AI assistants pull short passages from a page. If your answer sits in the fifth paragraph behind a warm-up, the assistant takes someone else's. One report found most AI citations came from the first third of a page. A section that only makes sense with the paragraphs before it cannot be lifted out.
+  AI assistants pull short passages from a page. If your answer sits in the fifth paragraph behind a warm-up, the assistant takes someone else's. One report, which we have not checked, found most AI citations came from the first third of a page. A section that only makes sense with the paragraphs before it cannot be lifted out.
 
   This skill rewrites a page so each section stands on its own. The answer comes first, in 2 to 4 sentences at the top and about 20 to 25 words under each question heading. Things are named in full. Vague claims get a number and a source, and you add your own data and experience. It cannot invent those. It works on blogs, guides and FAQ pages. Product pages use the AI-ready product page editor. It builds on the library's AI search visibility optimiser and adds the exact rewrite rules. The claims here come from outside reports that we have not checked, and they change quickly.
 

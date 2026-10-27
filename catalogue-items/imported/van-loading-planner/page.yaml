@@ -9,7 +9,7 @@ subhead: Give it your van size, weight limit, parcels and stop order. It plans w
 explain: |
   A load plan that puts each parcel in a zone for its stop, with the first drop within easy reach. Fewer repacks, safer weight and less time at the back doors. Parcels too big for their zone or too heavy are listed as not placed, so check that list.
 
-  You give vehicle size, weight limit, door layout and a list of items with sizes, weights and stop order. The skill loads in reverse order of delivery so the last stop goes in first. Heavy items go low and near the axle, and the weight is balanced between front and rear, and checked against the axle limits you give it. The axle check is an estimate, not a legal check. It assumes the rear axle sits at 60% of the cargo length, so a weighbridge reading beats it. Fragile and cold items get their own zones, and stackable and non-stackable cargo are handled apart. It also covers securing with straps and bars. It flags hazardous items for separate handling. Rules for carrying them vary by country, so follow your local dangerous goods rules.
+  You give vehicle size, weight limit, door layout and a list of items with sizes, weights and stop order. The skill loads in reverse order of delivery so the last stop goes in first. For a single-stop load, heavy items go low and near the axle, and the weight is balanced between front and rear and checked against the axle limits you give it. For a multi-stop load, the zone plan does not balance axles or place heavy items low, so you do that by hand. The axle check is an estimate, not a legal check. It assumes the rear axle sits at 60% of the cargo length, so a weighbridge reading beats it. Fragile and cold items get their own zones, and stackable and non-stackable cargo are handled apart. It also covers securing with straps and bars. It flags hazardous items for separate handling. Rules for carrying them vary by country, so follow your local dangerous goods rules.
 when:
   - You run multi-drop routes and waste time digging for the next parcel.
   - A van keeps coming back with items that did not fit.
@@ -31,10 +31,12 @@ you_get:
   - Notes on securing the load
 how_to_use:
   - First look up your van's GVWR and axle limits on its plate, registration or handbook.
-  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. The skill includes Python code, so use an AI that can run Python. If yours cannot, ask it for the plan as a text table and check the arithmetic yourself.
   - Add your van size, weight limit, axle limits and door layout.
-  - Paste your parcel list with one row per parcel: length, width, height, weight and stop number.
+  - "Paste your parcel list with one row per parcel: length, width, height, weight and stop number."
   - Mention fragile, cold or hazardous items.
+  - Know what the plan covers. The axle estimate comes only from the single-stop method. The multi-stop zone plan lists parcels by stop and shows what was not placed, but it does not balance axles or place heavy items low. For a multi-stop run, put heavy parcels low and near the axle yourself.
+  - The axle figures are an estimate for single-stop loads only. Never make them the only basis for loading a multi-stop van.
   - Check the result against your real axle limits before you load. Then print the load order for your drivers.
   - After loading, weigh the van at a public or commercial weighbridge and compare it with the plan's axle figures before the first drop.
 output_sample:

@@ -36,6 +36,9 @@ how_to_use:
   - Read the plan. Check that each task is small and has clear done checks, then answer any open questions.
   - Review the plan with a person before you start. Then run the tasks one at a time, in tasks/todo.md or your tracker.
   - If a plan file already has unchecked tasks for other work, your AI should stop and ask before it writes.
+  - "The original skill points to a Definition of Done file that is not in this copy. This default bar is a fallback chosen by this library, not your project's own standard. Replace it with your team's Definition of Done if you have one. The default: tests pass, the build is clean, a person has reviewed it and nothing else is broken. Check it by hand for each task."
+  - Next, build one task at a time with your AI and tick it off in tasks/todo.md only when its done checks pass. Run the AI-written code reviewer (ai-written-code-reviewer in this library) on each finished task.
+  - "This is a copy of Addy Osmani's MIT-licensed skill (planning-and-task-breakdown). The source link is in the credits below."
 output_sample:
   input:
     - Your spec or requirements

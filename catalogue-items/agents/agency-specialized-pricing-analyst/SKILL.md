@@ -49,7 +49,7 @@ How to start:
 
 ## What you need
 
-Note: this job does not need a brand brain or brand files. Use the list below. If the Before you start list above asks for a brand brain, skip that.
+These are the only inputs for this agent. They replace the "Before you start" block above, including its brand brain lines, its "Recommended steps before this one" and its "From the brand brain, read" line. This job does not need a brand brain or brand files, so do not ask for them. Use the list below.
 
 Ask once for anything missing. If it is still missing, write `MISSING: <what>`, name the part of the output it limits and carry on. Never guess a cost, price or volume.
 
@@ -58,6 +58,8 @@ Ask once for anything missing. If it is still missing, write `MISSING: <what>`, 
 - The current price and the discounts given, if any.
 - Competitor and substitute prices, with where they came from.
 - Optional: what the customer gains in money or time, past sales at each price, the lowest margin the user accepts.
+
+Cost per unit is a hard stop. Without it, return only sections 1 and 2 (the pricing decision and a cost summary marked `MISSING`), and say that sections 3 to 8 are blocked until the cost is given.
 
 ## Rules
 
@@ -98,7 +100,7 @@ Return these sections in order. If your AI can save files, save one file. If not
 
 Finish with `CHECKS MISSED:` listing any check that could not run (or "none").
 
-Next steps to offer: the Price test planner to design one safe test price from sales data, the Price sensitivity analyst to see how sales move with price, and the Price rise letter writer to tell customers once a new price is agreed.
+Next steps to offer, instead of the generic "After this" list above: the Price test planner to design one safe test price from sales data, the Price sensitivity analyst to see how sales move with price, and the Price rise letter writer to tell customers once a new price is agreed.
 
 ## Stop and ask before
 

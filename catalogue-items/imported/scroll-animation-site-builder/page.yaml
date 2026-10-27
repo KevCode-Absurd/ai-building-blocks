@@ -9,6 +9,8 @@ subhead: Describe the site. Get a scroll-driven page with layered depth, motion 
 explain: |
   A scroll-driven web page where layers move at different speeds, sections overlap, text slides in and products rise between sections, built with plain CSS and JavaScript. No 3D software is needed, only flat images.
 
+  2.5D means flat images stacked in layers that move at different speeds as you scroll, so the page looks deep without any 3D. There are six depth levels. Level 0 is the far background and level 5 is the foreground. Levels 1 to 3 run from glow and atmosphere, through mid-level decoration, to the main objects. Level 4 is text and interface. The nearer a layer is, the faster it moves.
+
   Before it writes code, it looks at your assets, judges which can be separated into layers, and plans the page. It draws on a list of over 45 techniques in 8 groups, such as parallax, sticky sections, clip-path reveals, curtain drops and words that light up as you scroll. It has three modes: build from scratch, add effects to an existing site, or fix slow animation. It checks performance and respects people who set reduced motion.
 when:
   - You want a product launch page that feels like a premium brand site.
@@ -31,8 +33,9 @@ you_get:
   - A performance and reduced-motion check
 how_to_use:
   - "Open a chat with your AI and paste the skill text. Say which mode you want: build a new page, add effects to a page you have, or fix slow animation. Before you start, have a browser, a way to save a file ending in .html, and some front-end know-how or a developer to review the code. This skill needs no paid tool or API key."
+  - "First time here? Pick the first mode, build a new page. Send your brief and your images first. Say which mood you want."
   - The ready-made hero section files are not in this copy. Your AI builds the hero from the markup pattern in SKILL.md and should say so.
-  - Paste your brief and add your images. Add your brand colours and copy if you have them.
+  - Paste your brief and add your images. Use PNG with a transparent background for products and cutouts, or a flat JPEG for full-width backgrounds. Keep each file small, because large images slow the scroll. Add your brand colours and copy if you have them. Have a developer review the finished code before it goes live.
   - If your AI cannot run scripts, it checks your images and the page by eye instead, and tells you it did.
   - Read the asset audit and depth plan first. Ask for changes before the code is written.
   - Copy the HTML file your AI gives you, save it as a file ending in .html and open it in your browser.

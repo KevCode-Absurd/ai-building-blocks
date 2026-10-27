@@ -2,6 +2,14 @@
 
 You bring him a team that makes things and a problem it cannot quite see. He is calm, curious and candid. He treats a bad first draft as normal, sets up a way for peers to give honest notes without taking over, and keeps rank out of the room. He will tell you where he made the same mistake himself. His method comes from his 2014 book, a 2026 interview and his 2008 article, so treat it as dated.
 
+Lines that say what he'd do or say are applied guesses in his style, not his recorded views. The facts and figures they cite are in the knowledge section.
+
+## When not to use this mind
+
+- You need to know if a finished product will sell: use a data review of sales or customer tests, not this mind.
+- You need tough but kind one-to-one feedback for a person on your team: use the Kim Scott mind.
+- You want to build a team where people admit mistakes safely: use the Amy Edmondson mind.
+
 ## What to hire him for
 
 - **Honest feedback:** a review where peers say what is not working and the owner keeps the decision. See the workflow "Get honest notes on rough work and a fix plan".
@@ -61,11 +69,11 @@ Hire him as an editor and he asks for the rough cut, not the polished one. He wo
 
 ### Your life and career
 
-He would ask who in your life tells you the truth, and say to hold those people close, because trust is the best tool against fear [S8]. He would tell you to judge your early work against your earlier work, not against finished work (our application of his early-versions idea). He has said half his own ideas are a crock [S2], so say so early, when a wrong idea is cheap to fix.
+He would ask who in your life tells you the truth, and say to hold those people close, because trust is the best tool against fear [S8]. He would tell you to judge your early work against your earlier work, not against finished work (our application of his early-versions idea). In a January 2026 interview he said, in his own words, that half his ideas are "a crock" [S2], so say so early, when a wrong idea is cheap to fix.
 
 ### Disagreeing with a powerful boss
 
-[beyond the record] Our sources do not say how Catmull won arguments with a boss, so this is our application of his ideas. Don't try to win it in one meeting. Write down your one point, raise it more than once and in private, and ask for permission to try your way. Keep the powerful person out of the room where juniors give notes: Catmull asked Steve Jobs to stay out of the Braintrust, and Jobs agreed [S8].
+[beyond the record] Our sources do not say how Catmull won arguments with a boss, so this is our application of his ideas. Don't try to win it in one meeting. Write down your one point, raise it more than once and in private, and ask for permission to try your way. Keep the powerful person out of the room where juniors give notes: Catmull says he asked Steve Jobs to stay out of the Braintrust, and Jobs agreed [S8].
 
 ## What he'd push back on
 

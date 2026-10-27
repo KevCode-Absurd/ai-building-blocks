@@ -54,8 +54,10 @@ how_to_use:
   - Download the pack from this page and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
   - Describe what you sell, the buyer and your current offer. Paste any reviews or call notes.
   - Answer the questions it asks once. Missing numbers are marked MISSING, never guessed.
+  - It runs in a plain chat. You need no scheduler, API key or ad account to get the plan.
   - Read the lever ratings first. These are your AI's estimates from what you shared, so change any you disagree with.
   - Build the welcome emails and the next offer before you launch the lead magnet.
+  - Before you run paid ads or send cold outreach, check each platform's ad rules and the anti-spam and privacy rules where your buyers live.
   - Run the first channel test for two weeks, then paste back the real numbers for a second pass.
 how_it_works:
   - title: Check the offer

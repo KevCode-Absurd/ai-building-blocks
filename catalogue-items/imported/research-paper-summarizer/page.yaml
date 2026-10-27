@@ -27,16 +27,16 @@ you_give:
 you_get:
   - The key findings of each source, with where each one appears
   - A plain summary of the method and its limits
-  - A quality rating for each source
+  - A rough quality rating for each source, judged only from the text you gave it
   - A side-by-side comparison of two or more sources
   - Citations in the style you ask for, APA 7 if you do not say
 how_to_use:
-  - Open your AI chat and paste the skill text in first.
+  - Open your AI chat and paste the skill text in first. The core summary and citations work by pasting text into any AI chat. The scripts and the install commands in the skill file are optional and are not included in this copy.
   - Paste each source as text, or attach the file. Say what question you want answered.
   - Add your citation style and who the summary is for, if you have them.
   - For a comparison, give at least two sources.
   - Check that each finding points to a place in the source. A missing author, date or DOI is marked "not stated" and never filled in. Fix anything marked not stated. Check the citation format against your style guide.
-  - The extractor scripts need code running. Without it, the AI still writes the summaries and citations by hand. Use the brief to write a decision memo or a first draft. Before you rely on it, check every number and quote against the source. The synthesis brief also works as the input for a decision memo, or for content-production if you are writing from it.
+  - The extractor scripts need code running. Without it, the AI still writes the summaries and citations by hand. Use the brief to write a decision memo or a first draft. Before you rely on it, check every number and quote against the source. The synthesis brief also works as the input for a decision memo. Next, fix everything marked "not stated" and check the citations against the source before you send the brief on.
 output_sample:
   input:
     - Your paper, article or report, pasted as text or attached

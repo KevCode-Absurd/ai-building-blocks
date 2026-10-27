@@ -141,6 +141,8 @@ deduped = semantic_dedup(dataset)
 
 ### Stage 3: PII redaction
 
+**Before you train:** automatic redaction misses things. Check a random sample of at least a few hundred redacted documents by hand. If you find misses, tighten the entity list and rerun before any training. Whoever is responsible for privacy law in your organisation (the data owner or a lawyer) must sign off that the redaction meets your legal duties before the data is used for training.
+
 ```python
 from nemo_curator.modules import Modify
 from nemo_curator.modifiers import PIIRedactor
@@ -264,6 +266,8 @@ filtered_audio = duration_filter(high_quality_audio)
 ```
 
 ## Common patterns
+
+**Read this first.** The code below is an outline of the order of stages, not a tested script. The stage classes are not built, and the call style may not match the NeMo Curator version you install. Before running anything, install a pinned version (`uv pip install "nemo-curator[text_cuda12]==<VERSION>"`), read that version's docs, and rewrite each call to match. Run on a small sample first. No call below has been checked against any release, so treat every class name here (the stage list, `PIIRedactor`, `NSFWClassifier`, `LanguageIdentificationFilter` and the others) as a placeholder until you find it in that version's docs.
 
 ### Web scrape curation (Common Crawl)
 

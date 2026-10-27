@@ -28,8 +28,8 @@ you_get:
   - A review file with what went well, what went wrong, the root cause of each problem, and action items with owners and dates
   - A learnings log file with short entries, each marked as a template, checklist, reference page or team habit
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste in the skill text. No code or paid tool is needed.
-  - Paste your project name, scope, timeline and original plan.
+  - Open Claude, ChatGPT or Gemini. Upload the whole skill folder, or paste in SKILL.md plus the four files it uses (references/retro_frameworks.md, references/learning_capture.md and both templates in assets). The review needs those files. No code or paid tool is needed.
+  - Paste your project name, scope, timeline and original plan. Add the planned and actual dates and the planned and actual effort, so the review can compare them.
   - Say who took part. Add what went wrong, if you know.
   - Ask your AI to run the review. Set 30 minutes for one person or 60 for a team.
   - Check each root cause. It should explain the problem, not just repeat it.

@@ -11,7 +11,7 @@ explain: |
 
   It splits the five fields and checks each range. Then it hunts for traps: dates that never exist, like 30 February; day-of-month and day-of-week joined by OR, which fires far more than you meant; and midnight times shifted by time zones. A small Node script that needs no install parses the line, validates it deeply and lists upcoming runs with a yearly count. It suits crontabs, Kubernetes, GitHub Actions and Airflow.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (takeaseat) says MIT. Credit goes to takeaseat and sickn33.
+  Licence: the skill text in this copy is CC BY 4.0, as the LICENSE-CONTENT file in this item says. The scripts folder is code, which LICENSE-CONTENT says stays MIT, and MIT is also the label in the skill file's header. Both allow reuse with credit. Credit goes to takeaseat and sickn33.
 when:
   - A job did not fire and you cannot see why.
   - You are about to deploy a CronJob and want to check its timing.
@@ -35,8 +35,10 @@ how_to_use:
   - Paste the skill text into Claude, ChatGPT or Gemini, then paste your cron line below it.
   - Add the time zone and where it runs, such as Kubernetes or GitHub Actions, if you know them.
   - Read the plain-English meaning first. Check it matches what you wanted.
-  - Check the traps and the next 5 run dates. Without code running, the dates are the AI's estimate, so check them in your scheduler. For exact dates, use an AI that can run code and the bundled script: node scripts/cli.js next "your cron line" 5.
+  - "Check the traps and the next 5 run dates. Without code running, the dates are the AI's estimate, so check them in your scheduler. For exact dates, use an AI that can run code and the bundled script: node scripts/cli.js next \"your cron line\" 5."
   - Use the fixed line, then test it in your own scheduler.
+  - "Next: if the schedule is right but the job still fails inside a container, use the Docker setup builder. For a Kubernetes CronJob, use the Kubernetes deployer."
+next: [kubernetes-deployer]
 output_sample:
   input:
     - Your cron expression, with 5 fields

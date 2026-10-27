@@ -13,7 +13,7 @@ license_source: https://github.com/Dimillian/Skills/blob/main/LICENSE
 # Bug Hunt Swarm
 ## When to Use
 
-Use this skill when you need parallel read-only multi-agent root-cause investigation for bugs, regressions, crashes, flaky behavior, or unexplained failures. Use when the user asks to investigate a bug, find the root cause, trace a regression, understand why something broke, or wants a ranked diagnosis with the...
+Use this skill when you need parallel read-only multi-agent root-cause investigation for bugs, regressions, crashes, flaky behavior, or unexplained failures. Use when the user asks to investigate a bug, find the root cause, trace a regression, understand why something broke, or wants a ranked diagnosis with the fastest proof step for each likely cause. Do not use it to fix the bug: fix it in a separate step once a cause is proven.
 
 
 Investigate a bug with four read-only sub-agents in parallel, then have the main agent rank the likely causes and recommend the fastest path to prove or fix the issue. This skill is diagnosis-first: do not edit files or implement fixes as part of this workflow.

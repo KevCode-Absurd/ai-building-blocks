@@ -1,6 +1,6 @@
 # Keep your code secure: AI Blocks
 
-> 93 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 92 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Agent injection evidence review assistant](https://useaiblocks.com/agents/track-agent-injection-controls-and-retest-evidence): Get safe prompt injection test cases for your AI agent, a control gap list and retest records. Tests run only with the owner's written approval.
 - [AI agent attack tester](https://useaiblocks.com/skills/ai-agent-attack-tester): Share the agent and authorised test scope. Get a test plan, evidence-backed findings and retest results for checks that actually run.
@@ -33,7 +33,6 @@
 - [Django access control reviewer](https://useaiblocks.com/skills/django-access-control-auditor): Trace who can read, change or delete Django data. Get supported access-control findings, enforcement fixes and clearly marked gaps in the review.
 - [EU Cyber Resilience Act reviewer](https://useaiblocks.com/skills/iot-security-check): A product description, role and EU market scope lead to a preliminary CRA scope and class check, duties, routes and gaps.
 - [Exposed secrets finder](https://useaiblocks.com/skills/exposed-secrets-finder): Share a site you own. Get a report of keys and private files visitors can read, with fixes.
-- [Federal security controls planner](https://useaiblocks.com/skills/federal-security-controls): Describe your system and security needs. Get a NIST control baseline, tailoring notes and draft control write-ups.
 - [Fraud review queue builder](https://useaiblocks.com/skills/fraud-review-queue-builder): Build a fraud review queue for your Shopify orders. Get recent orders ranked by risk, with the warning signs Shopify flagged on each one.
 - [GDPR audit prep coach](https://useaiblocks.com/skills/gdpr-audit-prep-coach): Get a GDPR audit prep check before a review. Name your scope, answer six article-based questions and see the privacy gaps to fix first.
 - [GDPR privacy checker](https://useaiblocks.com/skills/gdpr-privacy-checker): Review code for possible privacy risks. Get scan findings, a draft impact assessment and a data-request tracker.

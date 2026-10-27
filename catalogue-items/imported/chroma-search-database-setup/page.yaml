@@ -33,7 +33,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Choose a mode that can run Python code, or plan to run the code yourself.
   - Paste this skill and your text. Say where to save the store, and list the labels to keep with each piece.
   - Ask your AI to write one Python script that sets up Chroma, adds your text and runs a test query.
-  - Run the script. The default model runs on your computer and needs no account. The OpenAI and HuggingFace options need an API key and may cost money.
+  - Run the script. The default model downloads the first time you run it, so the first run can take a few minutes and needs an internet connection. It then runs on your computer and needs no account. The OpenAI and HuggingFace options need an API key and may cost money. They also send your text to that provider, so check your data rules before you use them with private documents.
   - Check that the test query returns passages that match your question, with the right labels.
   - If the matches look off-topic, split your text into shorter pieces (about 1,000 characters each), check that each piece has the right label, or try a different embedding model. Then run the script again.
   - Next, wire the store into a question-answering app. The LangChain and LlamaIndex notes in the skill's references/integration.md show how.

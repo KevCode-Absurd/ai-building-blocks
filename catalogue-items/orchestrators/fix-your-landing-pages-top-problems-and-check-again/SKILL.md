@@ -53,12 +53,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Audit the page.** Use the skill `landing-page-auditor`. Reads your page and ranks what gets in a buyer's way. It hands that ranked audit to step 2. Save it as `outputs/step-01-landing-page-auditor.md`.
-2. **Sort what to fix now.** Use the skill `page-issue-sorter`. Give it the audit report from the steps before. Takes the audit from step 1 and sorts it into fix now, investigate and test. It hands you the fix-now list to work through. Save it as `outputs/step-02-page-issue-sorter.md`.
+1. **Audit the page.** Use the skill `landing-page-auditor`. It reads the page three ways (a five-second glance at the first screen, a skim and a doubter's full read), rates each problem by how bad it is and where it sits, and gives a page score out of 100 with the problems ranked. It confirms the page facts it can see: the offer, the price, the claims and the call to action. It hands the ranked audit to step 2. Save it as `outputs/step-01-landing-page-auditor.md`.
+2. **Sort what to fix now.** Use the skill `page-issue-sorter`. Give it `outputs/step-01-landing-page-auditor.md`. It lists each issue with its proof and puts every issue in one bucket: fix now, investigate or test idea. It hands you the fix-now list to work through. Save it as `outputs/step-02-page-issue-sorter.md`.
 
 Pause here: Make the fix-now changes, then save the updated page text and screenshots.
 
-3. **Check the fixed page.** Use the skill `landing-page-30-point-checker`. Use your own updated page after you made the fix-now changes, not step 2's list. Runs a second, separate check on it; compare the result with the fix-now list from step 2: each fix-now item is marked fixed, partly fixed or still there, and any new problem is listed. Save it as `outputs/step-03-landing-page-30-point-checker.md`.
+3. **Check the fixed page.** Use the skill `landing-page-30-point-checker`. Use your own updated page after you made the fix-now changes, not step 2's list. It runs 30 yes-or-no checks in five stops a buyer makes (arrive, understand, believe, commit, trust the fine print), flags deal-breakers, lists the five fixes to make first and gives a checks score out of 100. This is a separate score from step 1's page score out of 100, so do not compare the two numbers. Compare its findings with the fix-now list from step 2 instead: each fix-now item is marked fixed, partly fixed or still there, and any new problem is listed. Save it as `outputs/step-03-landing-page-30-point-checker.md`.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then a `CHECKS MISSED` list (or "none").
 
 ## What you hand back

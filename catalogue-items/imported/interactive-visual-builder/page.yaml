@@ -21,7 +21,7 @@ not_for:
   - "You want raw data exported or edited as a table: use a spreadsheet such as Google Sheets or Excel."
   - "You need a finished brand design or print layout: work with a designer or a design tool such as Figma."
 you_give:
-  - What you want to show: the series or items, their units, the time range, and the one question the visual should answer
+  - "What you want to show: the series or items, their units, the time range, and the one question the visual should answer"
   - The data or facts to include
   - Where it will be used (optional)
 you_get:
@@ -30,13 +30,17 @@ you_get:
   - Controls like sliders and toggles
   - A page you can open in a browser
 how_to_use:
-  - Gather first the numbers or facts to show, who will see the visual, and which AI tool you use. The steps differ by tool.
-  - In Claude, paste the skill into a chat, or add it as a skill if your plan allows. Then describe the visual you want. The rules are written for Claude's built-in widget tool. Inline visuals need that tool. If you do not have it, ask for a complete saved HTML file instead and open it in your browser.
-  - In ChatGPT or Gemini, paste the skill text first. Then describe your visual and add your numbers. Ask for a full HTML page you can save. Expect a standalone file, and check that any chart library loads when you open it.
-  - In Codex or any tool that can save files, ask for a complete HTML file. Then open the file in your browser.
+  - Gather first. Write down the series or items to show, their units, the time range, the data values, and the one question the visual should answer. Also note who will see it and which AI tool you use. The steps differ by tool.
+  - "In Claude, paste the skill text into a chat and describe the visual. If Claude shows it inside the chat, you are done. In ChatGPT, Gemini, Codex or any other tool, do this: paste the skill text, describe the visual with your numbers, ask for a single saved HTML file, open that file in your browser, then test each slider and toggle."
   - "Check the result: move each slider and toggle, and make sure the numbers look right. Chart.js and the other libraries load from a CDN, so the page needs internet access to show charts."
   - Chat follow-up buttons only work where your AI has a chat link. Without one, they are removed. Sliders and toggles still work.
   - Next, save the HTML file and embed it in a page or slide deck. Check the numbers against a spreadsheet first.
+output_shape: |
+  Visual: <the type chosen and why>
+  Caption: <one line on what it shows>
+  Controls: <each slider or toggle, and what it changes>
+  Key takeaway: <one sentence>
+  File: <where the HTML page is saved, if your AI could not show it in chat>
 output_sample:
   input:
     - What you want to show, in a sentence

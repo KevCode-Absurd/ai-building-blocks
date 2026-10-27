@@ -69,8 +69,8 @@ This skill swaps removed or discouraged APIs for modern equivalents. It does not
 >
 > ```matlab
 > s = datestr(t, 'yyyy-mm-dd HH:MM:SS');          % old
-> s = string(t, 'yyyy-MM-dd HH:mm:ss');           % new — note the specifiers change:
->                                                 % datetime uses MM=month, mm=minute (datestr had mm=month, MM=minute)
+> t.Format = 'yyyy-MM-dd HH:mm:ss';            % new — note the specifiers change:
+> s = string(t);                                  % datetime uses MM=month, mm=minute (datestr had mm=month, MM=minute)
 > ```
 
 ## Modern Design Patterns
@@ -158,7 +158,7 @@ Load these when working in a specific domain:
 
 ## Conventions
 
-- Always run `check_matlab_code` first — let static analysis find removed or discouraged usage
+- Always run `check_matlab_code` first — let static analysis find removed or discouraged usage. If you cannot run it (no MATLAB access or MCP tool), say so at the top of the answer, work from reading the code only, list the functions you are unsure about, and tell the person the result may be incomplete
 - **After running it, scan the source for patterns the Code Analyzer may under-flag:** `str2num` (framed only as a perf tip); `containers.Map` (see next point).
 - **`containers.Map` is *not* flagged by `check_matlab_code`.** A plain script using it returns zero diagnostics; a `containers.Map` *property default* surfaces only a handle-default-sharing warning ("all instances share the same object data"). The detect-first workflow will not find this migration — treat any `containers.Map` usage, and that handle-sharing warning on a property, as a `containers.Map`→`dictionary` trigger.
 - **`subplot` is *not* deprecated or discouraged.** It is fully supported and is never flagged by `check_matlab_code`. `tiledlayout`/`nexttile` is a *preferred alternative for new code, not a required migration* — do not tell the user to replace working `subplot` code.

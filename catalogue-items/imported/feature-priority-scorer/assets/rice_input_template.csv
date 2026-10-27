@@ -1,4 +1,4 @@
-feature,reach,impact,confidence,effort
-Example Feature 1,500,3,0.8,5
-Example Feature 2,1000,2,0.9,3
-Example Feature 3,300,1,1.0,2
+name,reach,impact,confidence,effort,description
+[Feature 1],[REACH PER QUARTER],high,medium,m,[One line about the feature]
+[Feature 2],[REACH PER QUARTER],medium,high,s,[One line about the feature]
+[Feature 3],[REACH PER QUARTER],low,high,xs,[One line about the feature]

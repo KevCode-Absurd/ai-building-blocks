@@ -59,7 +59,7 @@ He'd say a message works when it answers a real need in a particular person. A c
 
 ### A hard order or a risky transfer
 
-It is often said that in 1945 he took a camp transfer he feared was a trap so that he could keep caring for sick prisoners, and that before the war he stayed in Vienna with his parents although he held a visa to the United States [beyond the record]. So he'd ask who your choice serves, not what it spares you. He'd have you write down the person or task that makes a hard option worth it. He'd cut the plan that rests only on safety or comfort. He would not push you toward risk for its own sake, and he would not use his camp years to measure your work. He'd keep the test small and the question the same.
+In March 1945 he took a transfer to another camp that he feared was a trap, so that he could keep caring for sick prisoners [S10]. Before the war he stayed in Vienna with his parents although he held a visa to the United States [S6]. So he'd ask who your choice serves, not what it spares you. He'd have you write down the person or task that makes a hard option worth it. He'd cut the plan that rests only on safety or comfort. He would not push you toward risk for its own sake, and he would not use his camp years to measure your work. He'd keep the test small and the question the same.
 
 ### Fear, worry and the over-watched self
 

@@ -7,11 +7,9 @@ job: build-software
 headline: NI-DAQmx call translator
 subhead: A DAQmx C function turned into a correct calldaqlib call in MATLAB, with the argument types fixed. Wrong types are the usual reason these calls fail, so this saves a lot of trial and error.
 explain: |
-  A DAQmx C function turned into a correct calldaqlib call in MATLAB, with the argument types fixed. Wrong types are the usual reason these calls fail, so this saves a lot of trial and error.
+  The skill follows a short decision tree. If you named calldaqlib or a specific DAQmx function, it writes that call without second-guessing you. If you only described a need, it first checks whether the normal daq object can do it. It then checks whether the function needs a task handle or works at the device level, since calldaqlib handles task creation itself and cannot call DAQmxCreateTask. You need MATLAB and Data Acquisition Toolbox R2026a or newer, which are paid MathWorks products. You also need an NI device and the NI driver. This is a MathWorks skill, and you may use it only with MathWorks products.
 
-  The skill follows a short decision tree. If you named calldaqlib or a specific DAQmx function, it writes that call without second-guessing you. If you only described a need, it first checks whether the normal daq object can do it. It then checks whether the function needs a task handle or works at the device level, since calldaqlib handles task creation itself and cannot call DAQmxCreateTask. It needs Data Acquisition Toolbox R2026a or newer and an NI device. This is a MathWorks skill.
-
-  Licence: we share this copy under the BSD 2-Clause licence in the LICENSE.md file, which adds that you may use it only with MathWorks products such as MATLAB. The skill file header links MathWorks' own reuse licence as well.
+  Licence: two sets of terms apply, and both say to use it only with MathWorks products such as MATLAB. One is the BSD 2-Clause licence in the LICENSE.md file in this item. The other is MathWorks' own reuse licence (PMRL), linked in the skill file header at mathworks.com/content/dam/mathworks/license/pmrl/license.md.
 when:
   - You have example C code from NI and need it in MATLAB.
   - You need a driver feature the daq object does not expose, such as a reference trigger.
@@ -36,7 +34,7 @@ how_to_use:
   - Add your device name and MATLAB release if you know them (optional).
   - Copy the calldaqlib call into MATLAB. It only runs with Data Acquisition Toolbox R2026a or newer, the NI driver installed, and an NI device connected.
   - Check the returned dictionary key, and check the enum names against the NI DAQmx documentation for your driver.
-  - Next, test the call on a single channel with your NI device before you wire it into a larger acquisition script.
+  - Next, test the call on a single channel with your NI device before you wire it into a larger acquisition script. If the daq object can do the job, use it instead and drop the call.
 output_sample:
   input:
     - The DAQmx C function name or signature
@@ -48,7 +46,7 @@ output_sample:
     - An NI device with NI drivers installed, to run the call
   output:
     - name: calldaqlib call
-      contains: A MATLAB code block with the call, argument types fixed and enum names written as strings.
+      contains: "The result comes in this order: a MATLAB code block with the call, a numbered list of argument mappings, then a return-value note. The code block has argument types fixed and enum names written as strings."
     - name: Argument translation
       contains: How each C argument maps to MATLAB, including the dropped task handle and output placeholders.
     - name: Return value note

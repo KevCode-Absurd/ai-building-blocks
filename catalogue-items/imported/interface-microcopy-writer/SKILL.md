@@ -11,7 +11,7 @@ license_source: https://github.com/bitjaru/styleseed/blob/main/LICENSE
 ---
 
 
-> Licence note (added by AI Blocks): the written text of this copy is shared under CC BY-4.0 (see `LICENSE-CONTENT`). The `license: MIT` line in the header above is the original author's own declaration for their repo. Keep the credit to the author either way.
+> Licence note (added by AI Blocks): the one licence that applies to the written text of this copy is CC BY-4.0 (see `LICENSE-CONTENT`). The `license: MIT` line in the header above is the original author's own declaration for their own code repo. It is not the licence for this text. Keep the credit to the author.
 
 # UX Microcopy Generator
 ## When to Use
@@ -26,15 +26,15 @@ Use this skill when you need generate UX microcopy (button labels, error message
 - For brand voice/tone definition itself — this skill consumes a voice spec, doesn't create it
 - For translations to non-English languages — single-language only
 
-Context: the screen or flow the user names (ask for it if missing)
-Description: what the screen does, in the user's words (ask for it if missing)
+**Gather these first** (ask once for anything missing, and never invent it):
+- The screen name or flow.
+- What each button or action on it does, in the user's words.
+- The language to write in (one language per run).
+- Any voice notes or design language (optional).
 
-> **Note (added by AI Blocks).** `engine/UX-WRITING.md` and `DESIGN-LANGUAGE.md` are not in this copy. Use the rules written here and in the Tone Rules below. If the user pastes their own voice notes or design language, follow those. The Korean section (§W8) is only for Korean projects.
+> **Note (added by AI Blocks).** The rules below are the full rule set in this copy. If the user pastes their own voice notes or design language, follow those first.
 >
-> The rule set the skill applies: buttons
-> name the action (not "Submit"), errors help instead of blame, empty states invite,
-> money copy stays calm, one term per concept. Korean/CJK projects: the original §W8 guide
-> is not included in this copy. Paste your own Korean style notes if you have them.
+> The rule set the skill applies: buttons name the action (not "Submit"), errors help instead of blame, empty states invite, money copy stays calm, one term per concept.
 
 ## Instructions
 
@@ -45,7 +45,7 @@ Description: what the screen does, in the user's words (ask for it if missing)
 ### Tone Rules
 - **Casual but polite**: Friendly, not robotic. Like talking to a helpful friend.
 - **Active voice**: "We saved your changes" not "Your changes have been saved"
-- **Positive framing**: "Free shipping on orders over $30" not "Orders under $30 have shipping fees"
+- **Positive framing**: "Free shipping on orders over [AMOUNT]" not "Orders under [AMOUNT] have shipping fees"
 - **Plain language**: "Send money" not "Initiate transfer"
 - **Concise**: Every word must earn its place
 
@@ -107,10 +107,17 @@ Primary: [Action verb] ("Delete", "Confirm")
 Secondary: "Close" (not "Cancel" — avoids confusion)
 ```
 
-3. Generate copy for the requested context, providing:
-   - Primary copy (what to display)
-   - Variants (if context varies)
-   - Do's and Don'ts for the specific context
+3. Work in this order:
+   1. List every state the screen has: each button, each error, the empty state, any toast or dialog.
+   2. Write one line of copy for each state, using the patterns above.
+   3. Check the term list: use one word per idea, and compare against the terms from any earlier screens the user pasted.
+
+   Then give the user:
+   - **Primary copy:** the exact on-screen text for each state, one line per label, message or toast.
+   - **Variants:** one line for each changed cause (for example a different error cause).
+   - **Do's and Don'ts:** 3 to 5 short bullets for this screen.
+
+4. **Next steps:** tell the user to save the approved term list in their design notes so new screens reuse the same words. For the voice itself, point them to the Brand voice guide builder.
 
 ## Limitations
 

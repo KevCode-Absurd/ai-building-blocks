@@ -6,7 +6,7 @@ toolkit: shopify-admin, shopify-admin-execution
 api_version: "2025-01"
 graphql_operations:
   - order:query
-  - fulfillmentUpdate:mutation
+  - fulfillmentTrackingInfoUpdate:mutation
 status: stable
 compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
@@ -30,7 +30,7 @@ Looks up existing fulfillments on orders and updates their tracking numbers and 
 
 ## Safety
 
-> ⚠️ `fulfillmentUpdate` overwrites existing tracking info. Set `notify_customer: false` unless you explicitly want to resend shipment notifications — customers will receive a new email for every updated fulfillment if enabled. Run with `dry_run: true` to confirm the fulfillment list before committing.
+> ⚠️ `fulfillmentTrackingInfoUpdate` overwrites existing tracking info. Set `notify_customer: false` unless you explicitly want to resend shipment notifications — customers will receive a new email for every updated fulfillment if enabled. Run with `dry_run: true` to confirm the fulfillment list before committing.
 
 ## Workflow Steps
 
@@ -38,14 +38,14 @@ Looks up existing fulfillments on orders and updates their tracking numbers and 
    **Inputs:** `id: <order_id>` for each order in `updates`
    **Expected output:** Order with `fulfillments { id, trackingInfo }` to confirm existing fulfillment IDs match
 
-2. **OPERATION:** `fulfillmentUpdate` — mutation
-   **Inputs:** `fulfillmentId: <id>`, `trackingInfoUpdateInput: { company, number, url }`, `notifyCustomer`
+2. **OPERATION:** `fulfillmentTrackingInfoUpdate` — mutation
+   **Inputs:** `fulfillmentId: <id>`, `trackingInfoInput: { company, number, url }`, `notifyCustomer`
    **Expected output:** `fulfillment { id, trackingInfo }`, `userErrors`
 
 ## GraphQL Operations
 
 ```graphql
-# order:query — validated against api_version 2025-01
+# order:query — written for api_version 2025-01
 query OrderFulfillments($id: ID!) {
   order(id: $id) {
     id
@@ -64,11 +64,11 @@ query OrderFulfillments($id: ID!) {
 ```
 
 ```graphql
-# fulfillmentUpdate:mutation — validated against api_version 2025-01
-mutation FulfillmentUpdate($fulfillmentId: ID!, $trackingInfoInput: FulfillmentTrackingInput!, $notifyCustomer: Boolean) {
-  fulfillmentUpdate(
+# fulfillmentTrackingInfoUpdate:mutation — written for api_version 2025-01. Confirm the name and arguments in Shopify's Admin GraphQL docs for your API version before a live run, and always do the dry run first.
+mutation FulfillmentTrackingInfoUpdate($fulfillmentId: ID!, $trackingInfoInput: FulfillmentTrackingInput!, $notifyCustomer: Boolean) {
+  fulfillmentTrackingInfoUpdate(
     fulfillmentId: $fulfillmentId
-    trackingInfoUpdateInput: $trackingInfoInput
+    trackingInfoInput: $trackingInfoInput
     notifyCustomer: $notifyCustomer
   ) {
     fulfillment {
@@ -150,10 +150,12 @@ CSV file `tracking_update_<YYYY-MM-DD>.csv` with columns:
 | Error | Cause | Recovery |
 |-------|-------|----------|
 | `THROTTLED` | API rate limit exceeded | Wait 2 seconds, retry up to 3 times |
-| `userErrors` on fulfillmentUpdate | Fulfillment cancelled or not found | Log error, skip, continue |
+| `userErrors` on fulfillmentTrackingInfoUpdate | Fulfillment cancelled or not found | Log error, skip, continue |
 | Fulfillment ID not on order | Stale ID in updates list | Log mismatch, skip, continue |
 
 ## Best Practices
 - Keep `notify_customer: false` unless the carrier is tracking a replacement shipment — customers find repeated shipping emails confusing and may open unnecessary support tickets.
 - Provide `fulfillment_id` directly in the `updates` input when possible to skip the order lookup step entirely.
 - For 3PL integrations that send corrected tracking via CSV, parse the CSV into the `updates` array before running this skill.
+- Find each fulfillment ID in the order's fulfillment section in Shopify admin, or in an order export. IDs and order IDs must be in Shopify's full GID form, such as `gid://shopify/Fulfillment/[NUMBER]` and `gid://shopify/Order/[NUMBER]`.
+- After a live run, re-export your orders to check the new tracking, and tell the carrier or 3PL which shipments were corrected.

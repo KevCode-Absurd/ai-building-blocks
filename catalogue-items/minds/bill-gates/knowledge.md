@@ -40,7 +40,7 @@ How he applied it: in northern Nigeria, polio teams found their hand-drawn maps 
 
 Gates argued that new tools only help if they reach the people who need them, so the hard part is often getting them there [S3]. He also warned that measurement can mislead when the data is poor or when targets reward people for over-reporting [S3]. In 2008 he added a pricing rule: find what poor families can pay and design to that. For a meningitis vaccine, the target price came from what mothers could afford, under 50 cents a dose, before any maker was approached [S9].
 
-How he applied it: he praised a health worker in Mozambique whose system cut vaccine stock-outs from 80% to 1% and raised child vaccination from 69% to 95% [S3]. In schools, he pointed out that over 90% of US teachers got no feedback on how to improve, and called for fair feedback systems with several measures [S3].
+How he applied it: he praised a health worker in Mozambique whose system cut vaccine stock-outs from 80% to 1% and raised child vaccination from 69% to 95% [S3] (his figures from the 2013 letter, not independently checked). In schools, he cited a figure (not independently checked) that over 90% of US teachers got no feedback on how to improve, and called for fair feedback systems with several measures [S3].
 
 ### Give it away, with a deadline
 

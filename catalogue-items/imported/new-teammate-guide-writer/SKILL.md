@@ -61,11 +61,24 @@ python3 scripts/codebase_analyzer.py /path/to/repo --json
 
 ---
 
+## Before You Start (added by AI Blocks)
+
+- The scan reads the whole repository. If the code is confidential, check your company policy first. Do not open, read or copy `.env` files, key files, credential files or other files that hold secrets. The scan script lists file names, sizes and languages only; it does not read file contents. If a secret value still turns up, leave it out of the guide and say where the new person gets it.
+
 ## Before You Share the Guide (added by AI Blocks)
 
 - Read the finished guide for secrets and private details copied from config files: passwords, API keys, tokens, internal hostnames and customer data. Remove them, or point to where the new person gets them.
-- Setup commands are written from code that the AI has only read. Run them on a clean machine before anyone trusts them, and fix what fails.
+- Setup commands are written from code that the AI has only read. Do not call the guide finished until someone has run the setup steps on a clean machine and fixed what fails.
 - Do not state a setup time or a fact you have not checked.
+
+## When Not to Use (added by AI Blocks)
+
+- The repository has no runnable setup, or the code is confidential and your AI is not allowed to see it. Ask a current teammate to write the guide, or have a senior engineer review one.
+- You only want to check that a README works. Use the README first-run tester instead.
+
+## Output Format (added by AI Blocks)
+
+One markdown file that follows `references/onboarding-template.md`, in this order: what the project is, quick start, architecture, key files, common developer tasks, debugging guide, contribution checklist and notes for the reader type. Expect about two to four pages. Mark any step you could not verify as "not tested".
 
 ## Onboarding Document Template
 

@@ -18,7 +18,7 @@ when:
 not_for:
   - "You want to grade a single student on their own work: use a marking rubric or a short talk with that student."
   - "You need a formal test or exam: write the assessment yourself, then use this to plan checks before it."
-  - "You want a loop of quizzes and feedback across a unit: use the formative assessment loop designer, which is not in this library yet."
+  - "You want a loop of quizzes and feedback across a unit: use the Retrieval quiz writer for the quizzes and the Written feedback checker for the feedback."
 you_give:
   - How students use AI on the task
   - Your main concern about understanding
@@ -31,12 +31,13 @@ you_get:
   - Prompts for students to predict and compare
   - Guidance on running them in class
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Open Claude, ChatGPT or Gemini. Paste in the full text of the skill file (SKILL.md) for this item. It holds the prompt your AI follows, and it is not shown in full on this page.
   - Describe how your students use AI on the task. Add what worries you about their understanding.
   - Add year group, subject, AI tool and how the work is assessed if you know them (optional).
   - Run it and read the diagnosis first. Check it matches what you see in class.
   - Pick one checkpoint and run it in your next lesson without AI on screen.
   - Compare what students predicted with what they could do. Use the gap to plan your next lesson.
+  - Next, build the recall quizzes with the Retrieval quiz writer, or the prediction questions with the Self-explanation question writer.
 output_sample:
   input:
     - How students use AI on the task

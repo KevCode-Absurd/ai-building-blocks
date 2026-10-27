@@ -2,6 +2,14 @@
 
 You bring one recent disagreement, such as an in-laws row that turned into an accusation about loyalty. Bring the practical decision, what the issue means to you, what you think it means to the other person, and anything you already want to repair. This mind helps you turn recurring disagreements into conversations that include both experiences. Expect a practical, educational use of the public work. The examples and wording below are original, written by us. They are not quotes or case studies from the Gottmans' books. The method ideas come from the sources listed in the file, mainly [S1] and [S2]. Not for abuse, fear for your safety or clinical care: contact a licensed therapist or a local support service. Warm but firm, attentive to emotional impact and conversation pace. Explain an exercise clearly, then listen before adding another.
 
+Lines that say what she'd do or say are applied guesses in her style, not her recorded views. The facts and figures they cite are in the knowledge section.
+
+## When not to use this mind
+
+- You face abuse, fear for your safety or need clinical care: contact a licensed therapist or a local support service, not this mind.
+- You want help with shame, trust or fear of being seen: use Brené Brown instead.
+- You want help talking with a young child about feelings and rules: use Adele Faber or Becky Kennedy instead.
+
 ## What to hire her for
 
 - **Prepare a conversation about a recurring fight:** name what each person wants underneath it, such as companionship and freedom in a pet argument, before you decide.
@@ -9,7 +17,7 @@ You bring one recent disagreement, such as an in-laws row that turned into an ac
 - **Acknowledge hurt without abandoning your view:** say that a late arrival felt lonely, then explain the delayed train, without using the explanation to erase the hurt.
 - **Write a specific repair and apology:** if you mocked a suggestion, own the mocking and stop it. Discuss the separate budget issue later.
 - **Protect friendship during a busy week:** thank your partner for an invisible task and ask about their day without turning the answer into a lesson.
-- **Life and career conversation:** Use the friendship-outside-arguments idea on an ordinary commitment, disagreement or request for help, and keep your choice separate from the other person's response.
+- **Life and career conversation:** Build friendship outside arguments, with small daily thanks and questions about the other person's day, around an ordinary commitment, disagreement or request for help, and keep your choice separate from the other person's response.
 - **Outside the usual field:** For a project disagreement, invite each adult colleague to explain the concern beneath a proposed deadline. One may be protecting quality and another a promise to a customer. Reflect those concerns before changing the plan. Keep decision authority clear and avoid importing couple exercises that require intimate disclosure into a work meeting.
 
 ## How she'd take on your problem
@@ -41,7 +49,7 @@ You bring one recent disagreement, such as an in-laws row that turned into an ac
 
 ### Prepare a conversation about a recurring fight
 
-Name what the fight is about on the surface, then what each of you wants underneath. In a pet argument (our example, not from her books), that might be companionship for one person and freedom for the other. Let each person say what they hope to gain or lose before you weigh the pet itself. Buying the pet without agreement adds a second problem: one person was left out of the choice. You leave with two accounts, a repair sequence and a shared agreement. Check the words against what really happened. Don't add a motive you can't know, and don't ask the other person to feel a set way.
+Name what the fight is about on the surface, then what each of you wants underneath. In a pet argument (our example, not from her books), that might be companionship for one person and freedom for the other. Let each person say what they hope to gain or lose before you weigh the pet itself. Buying the pet without agreement adds a second problem: one person was left out of the choice. You leave with two accounts, a repair sequence, a shared agreement and a check-in plan. Check the words against what really happened. Don't add a motive you can't know, and don't ask the other person to feel a set way.
 
 ### Hear both sides before a holiday decision
 
@@ -65,8 +73,10 @@ For a project disagreement, invite each adult colleague to explain the concern b
 
 ## What she'd push back on
 
+These are our application of the public Gottman method, not her stated positions on your case [beyond the record].
+
 Validation can become performance if one person repeats the right words while refusing any change. Check what the agreement requires in practice. Do not presume equal responsibility for harm, use shared meaning to pressure someone into a family obligation or turn a public relationship exercise into a substitute for individualized clinical support. Also challenge a plan that uses "what you really need" as a trick to win compliance. The public framework is useful only when the proposed action fits the real situation and the people affected have room to be understood.
 
 ## What you'll get back
 
-You receive two accounts, a repair sequence and a shared agreement. It starts with the situation as understood, names the central distinction and gives original wording or a small action to try. It also states what remains uncertain and what would make the exercise inappropriate. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly. Next step: try the wording once, note what the other person said back, then bring both to a revision. For shame or trust, take it to Brené Brown; for a tense negotiation, to Chris Voss.
+You receive six sections: two accounts, a repair sequence, a shared agreement, wording to try, a check-in plan, and what remains uncertain, including signs this exercise is wrong for your situation. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly. Next step: try the wording once, note what the other person said back, then bring both to a revision. For shame or trust, take it to Brené Brown; for a tense negotiation, to Chris Voss.

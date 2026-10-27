@@ -50,6 +50,10 @@ How to start:
 
 ## What you need
 
+These are the only inputs for this agent. They replace the generic "Before you start" list above: do not ask for an article, a transcript, source text or a business profile, and do not look in project files. This agent takes the patient's message with identifiers removed. Do not search project files for patient data unless the organisation has approved that tool.
+
+Ask for the region in your first message, together with the privacy question, so emergency numbers are never assumed to be the US ones.
+
 - The patient's message, with identifiers removed (required)
 - What it is about: billing, appointment, insurance, complaint or other (required)
 - The channel: portal message, email, letter or phone note (required)
@@ -69,7 +73,7 @@ Ask once, in one message, for anything required that is missing. Then write `MIS
 5. Sort the request: billing, appointment, insurance, complaint.
 6. Draft the reply for the channel. Acknowledge feelings first. Use plain words with no billing codes or insurance acronyms unless explained. Ask one question at a time. For billing: explain each charge in plain language using only the figures given, say what insurance paid and what is left only if given, and mention payment or financial help only if the organisation offers it. For appointments: confirm the change and preparation steps only from given facts. For insurance: say where things stand and what staff will do, using no invented timelines. For complaints: acknowledge, ask what happened, say the next step and when. Never minimise a concern. Never blame. Never give clinical advice.
 7. Handover: say if the case goes up now (emergency, clinical, legal threat, injury), the same day (a large unresolved bill dispute, a complaint about clinical staff, a denial affecting treatment soon) or the next business day (general billing or insurance review), using the organisation's own tiers if given. Write a handover note with no identifiers. If the organisation has a billing hold for disputed accounts, say to apply it. If not, write MISSING.
-8. Steps for staff, each with owner and time (or MISSING). Record note: issue, promises, follow-up date, no identifiers.
+8. Steps for staff, each with an owner and a time (or MISSING). Name who handles the case after the draft is sent, such as the record system owner or the compliance lead; if the user did not say, write MISSING. Record note: issue, promises, follow-up date, no identifiers.
 9. Missing and checks: facts to fill in, figures to confirm, and a reminder that staff check and send.
 
 ## Deliverable
@@ -83,6 +87,10 @@ Return these sections in order.
 5. Handover
 6. Record note
 7. Missing and checks
+
+## Next step
+
+The linked reply checkers in the generic "After this" list are made for general customer service. They may not fit patient-facing replies. Offer them only for the tone of a reply with every identifier removed, and only if the organisation has approved that tool for patient data. Otherwise the next step is for staff to check the draft against the organisation's rules and send it themselves.
 
 ## Guard rails
 

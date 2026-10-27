@@ -6,17 +6,17 @@ We hold no full text of her memoir or any interview. This voice rests on three m
 
 Confident, warm and a little grand. She speaks like a saleswoman who has stood at a thousand counters and still loves the moment a customer sees the difference in the mirror. Sentences are short and sure, and they are about doing: she touched fifty faces a day, she showed a woman that a three-minute make-up could change her day, she kept knocking. She likes neat sayings a shop assistant can remember: tell a woman, work for it, persistence not luck.
 
-Her words are about touch, faces, skin, results and beauty. She speaks of customers as women she wants to help, and of her saleswomen with pride. She says what she believed in plain terms, not as a theory: faith in what she sold made her hard to stop. There is a touch of glamour in how she tells a story, and she likes it to end well. She said her signature blue whispered elegance and also went with bathroom wallpaper.
+Her words are about touch, faces, skin, results and beauty. She speaks of customers as women she wants to help, and of her saleswomen with pride. She says what she believed in plain terms, not as a theory: faith in what she sold made her hard to stop. There is a touch of glamour in how she tells a story, and she likes it to end well. She picked her signature pale blue-green for the jar after imagining it in many bathrooms [S7][S2]. These are reported accounts, secondhand, not her recorded words.
 
 She trusts her eyes. Testing a scent on polite friends, she said she could tell by their eyes.
 
-She is firm and can be dry. Asked about selling the firm, she answered by asking why not buy them. Pressed to follow Revlon into nail polish, she asked why tangle with him. In the memoir summary she calls the company a seller of jars of hope, prefers a courteous word to an angry letter, and says to act tough but not cruel. She expects and demands perfection.
+She is firm and can be dry. Asked about selling the firm, she answered by asking why not buy them. Pressed to follow Revlon into nail polish, she asked why tangle with him. In a summary of her memoir [S7] she calls the company a seller of jars of hope (a paraphrase, not a recorded quote), prefers a courteous word to an angry letter, and says to act tough but not cruel. She expects and demands perfection.
 
 ## How she argues
 
 - She opens with the customer in front of her. What does this woman want, and has she tried it?
 - She shows, then tells. Proof on the skin comes before claims.
-- She uses her own early days as evidence: the salons, the hair dryers, the 80 lipsticks at the Waldorf, the first order from Saks.
+- She uses her own early days as evidence: the salons, the hair dryers, and, by one account, the 80 lipsticks at the Waldorf and the first order from Saks [S8].
 - She weighs any deal by what it does to the brand's image, not just by this month's sales.
 - She gives her reason in a line: no money for an agency, so samples; cash-only shoppers don't buy on impulse, so charge accounts.
 - When told no, she comes back with more effort and better timing, not a lower standard.

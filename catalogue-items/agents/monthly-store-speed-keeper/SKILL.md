@@ -50,7 +50,7 @@ Keep one folder, `speed/`. It holds `baseline.md` (last month's field score, eac
    - CLS fails and theme files were given: run `layout-shift-fixer`.
    - Blocking time or INP fails and theme files were given: run `theme-script-and-style-loader`, after the app check so you do not delay a script that should be removed.
    - If a code fix is needed and no theme files were given, say what to bring and do not guess the code.
-6. **Rank.** If anything failed or a new app was found, run `speed-fix-ranker` on every problem found, with the store numbers. It prices each fix in orders a month as a range and ranks by gain per hour. The sum is your monthly sessions on that page type, times your conversion rate, times a relative lift. Use the low and high lifts the Speed fix ranker names with their sources (vendor-quoted figures), or a lift the owner sets. If neither exists, ask for one. The lift is an assumption, not a measured result: the vendor figures differ widely and come from large sites. Label every range "assumed lift, rough estimate" and never a promise, and show the lift you used.
+6. **Rank.** If anything failed or a new app was found, run `speed-fix-ranker` on every problem found, with the store numbers. It prices each fix in orders a month as a range and ranks by gain per hour. The sum is your monthly sessions on that page type, times your conversion rate, times a relative lift. Use the low and high lifts the Speed fix ranker names with their sources, or a lift the owner sets. Say plainly that the Speed fix ranker's lifts are vendor-quoted figures from large sites, not measured on this store. If neither the ranker's lifts nor an owner lift exists, ask for one. If the owner gives none, give no range in orders: give effort and risk only and say the gain is not priced. The lift is an assumption, not a measured result: the vendor figures differ widely and come from large sites. Label every range "assumed lift, rough estimate" and never a promise, and show the lift you used.
 7. **Check for a sale.** If a sale or big campaign is within 30 days, run `speed-budget-and-sale-check` and add its checklist.
 8. **Save and hand back.** Update `speed/baseline.md` with this month's numbers and app list, so next month compares against them.
 
@@ -69,7 +69,7 @@ All code is written for a duplicate theme, never the live one. If the owner appr
 - **New and removed apps:** each with its verdict.
 - **Fixes to approve:** ranked, each with the page, who does it, the effort, the risk, the gain as a range of orders a month, and how to check it worked.
 - **Sale check (if run):** the budget and the checklist.
-- **Look again:** the date, plus a reminder that field data takes about 28 days to move.
+- **Look again:** the date, plus a reminder that field data takes about 28 days to move. If the field score rose but a lab metric still fails, say so: keep the fix, and name the failing lab metric as the next item to look at.
 - **Files:** each step's file. Then every `MISSING:` line in one list.
 - **Next:** test each approved fix on the duplicate theme, publish it yourself, then wait 28 days and run this agent again to see if the field score moved.
 
@@ -93,7 +93,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 Write `MISSING: <what>` and carry on. Without last month's baseline, skip the comparison and say the path was not chosen on a trend. Without field data (a page with few visits), say the page can only be judged on lab data and do not give it a field score.
 
 ## Limits
-This is not worth running on a store that already passes everywhere and changes nothing for months. Run it every second or third month then. A store under about 1,000 sessions a month has too little data for pricing a fix in orders.
+The rule for when to run: run it every month by default. Skip a month only when last month's run said "no work this month", no app or theme change has happened since, and no sale is due within 30 days. Then run it again the month after. A store under about 1,000 sessions a month has too little data for pricing a fix in orders.
 
 ## Avoid
 - Chasing a perfect 100. Stop when the real-user numbers pass on the pages that get paid and organic traffic.

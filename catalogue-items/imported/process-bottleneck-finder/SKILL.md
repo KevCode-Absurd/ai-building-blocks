@@ -35,7 +35,7 @@ Five-step deterministic flow:
 
 1. **Intake.** Capture the process as a JSON file with one entry per stage: `name`, `owner`, `type` (`value-add` | `wait` | `rework`), `duration_minutes_p50`, `duration_minutes_p90`. Use `assets/process_template.md` and its JSON skeleton.
 2. **Map stages.** Run `process_documenter.py` to produce an ASCII swim-lane diagram + a normalized JSON artifact. The swim-lane separates lanes by owner so cross-functional handoffs become visible.
-3. **Measure cycle time.** Run `cycle_time_analyzer.py` to compute total P50, total P90, value-add ratio (VA%), and a Little's-Law throughput estimate. Verdict: VA% > 25% = HEALTHY, 10–25% = TYPICAL, < 10% = WASTE-HEAVY.
+3. **Measure cycle time.** Run `cycle_time_analyzer.py` to compute total P50, total P90, value-add ratio (VA%), and a Little's-Law throughput estimate. Verdict: VA% > 25% = HEALTHY, 10–25% = TYPICAL, < 10% = WASTE-HEAVY. These cut-offs, and the 2×, 40% and 15% rules in the next step, are this skill's own rules of thumb. They are not published standards. Say so when you report a verdict.
 4. **Detect bottlenecks.** Run `bottleneck_detector.py` with the appropriate `--profile` (saas / services / manufacturing / healthcare). Output is a ranked list with severity (CRITICAL / HIGH / MEDIUM), root-cause hypothesis, and one recommended action per finding.
 5. **Recommend.** Pair the bottleneck list with the cycle-time verdict; recommend a single constraint-focused intervention per Goldratt's "subordinate everything to the constraint" rule. Don't recommend optimization of a non-constraint stage.
 
@@ -45,7 +45,7 @@ Five-step deterministic flow:
 
 **`scripts/bottleneck_detector.py`** — Applies three deterministic detection rules: (a) stage P50 > 2× mean of value-add stages, (b) wait-state % > 40% of total cycle, (c) rework % > 15%. Thresholds adjust by `--profile` because SaaS, services, manufacturing, and healthcare have different "normal" wait ratios. Output is a ranked list with severity, hypothesis, action.
 
-**`scripts/cycle_time_analyzer.py`** — Computes total P50 and P90 cycle time, value-add ratio (VA%), wait %, rework %, and a Little's-Law throughput estimate (WIP / cycle time). Per Lean canon: VA% > 25% = HEALTHY, 10–25% = TYPICAL (most non-manufacturing processes land here), < 10% = WASTE-HEAVY.
+**`scripts/cycle_time_analyzer.py`** — Computes total P50 and P90 cycle time, value-add ratio (VA%), wait %, rework %, and a Little's-Law throughput estimate (WIP / cycle time). As a rule of thumb the author attributes to Lean (not a published standard): VA% > 25% = HEALTHY, 10–25% = TYPICAL (most non-manufacturing processes land here), < 10% = WASTE-HEAVY.
 
 ## Quick example
 
@@ -84,7 +84,7 @@ cd business-operations/skills/process-mapper && python3 scripts/process_document
 
 ## Forcing-question library (Matt Pocock grill discipline)
 
-Before invoking the tools, the orchestrator (or `/cs:grill-bizops`) walks the user through these questions **one at a time, with a recommended answer + canon citation**. Never bundled.
+Before invoking the tools, ask the user these five questions **one at a time, each with a recommended answer and the author's canon note**. Never bundle them.
 
 1. **"Do you have measured cycle times for the top-3 longest stages, or only estimates?"**
    Recommended: insist on measured data.

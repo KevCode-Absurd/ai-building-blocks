@@ -5,7 +5,7 @@ job: build-software
 headline: First Slack Bot coding prompt
 subhead: Use this to prove your Slack connection works. You give it your project and tokens. It builds a small ping bot that replies in the thread, and explains each part in plain words.
 explain: |-
-  Slack bots are hard to debug when nothing works. This prompt builds the smallest one: a bot that answers "ping" with "Pong" in the same thread. If it replies, your tokens, Socket Mode and scopes are set up right.
+  Slack bots are hard to debug when nothing works. This prompt builds the smallest one: a bot that answers "ping" in the same thread with "Pong! I'm alive. Channel: [channel name], User: [who sent it]". If it replies, your tokens, Socket Mode and scopes are set up right.
 
   Paste the prompt into Claude Code in your project. It writes two files, lib/slack/app.ts and scripts/test-slack-bot.ts, and explains Socket Mode and the two tokens in plain words. You need a Slack app and both tokens first. Try it in a sandbox workspace.
 when:
@@ -19,7 +19,7 @@ not_for:
 you_give:
   - Your code project, open in a coding AI
   - Your Slack bot token and app token, saved in .env.local
-  - A Slack app with Socket Mode on and the scopes listed above
+  - A Slack app with Socket Mode on, the scopes chat:write and channels:history, and the message.channels event
   - A sandbox Slack workspace to test in
 you_get:
   - A Slack bot file that replies Pong when someone says ping
@@ -27,7 +27,7 @@ you_get:
   - A plain explanation of Socket Mode and the two tokens
   - Steps to invite the bot and test it
 how_to_use:
-  - Check you have a Slack app, Socket Mode on, the three bot scopes and both tokens in .env.local.
+  - Check you have a Slack app, Socket Mode on, the two bot scopes (chat:write and channels:history), the message.channels event turned on and both tokens in .env.local.
   - Open your project in a coding AI that can write files, such as Claude Code.
   - Paste the prompt from the skill and send it.
   - Say yes before it installs the Slack package.
@@ -41,7 +41,7 @@ output_sample:
   prerequisites:
     - A coding AI that can read and write files in your project, such as Claude Code
     - A Slack app with Socket Mode on, made at api.slack.com/apps
-    - Bot scopes chat:write, channels:history and app_mentions:read
+    - Bot scopes chat:write and channels:history, and the message.channels event turned on
     - An app-level token with the connections:write scope
   output:
     - name: Package install

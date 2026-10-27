@@ -9,7 +9,7 @@ Paste your rivals and product. Get one word to own, an honest line to set it up 
 
 This workflow is for a brand that already has rivals and says too much. It draws on ideas from The 22 Immutable Laws of Marketing by Al Ries and Jack Trout; the step order is this workflow's own. It ends with one word, the lines that set it up and a cut list. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
-When not to use: your brand already owns a word and you only want to keep it (skip this, or ask a marketing person to check it still holds); you want to judge how far your brand reaches today (use the Brand reach audit); you want to test whether your edge over rivals is real (use the Business power tester); or no rival holds a category and you want to create a new one (use the workflow Find a category to be first in and launch it). The difference from that workflow: this one picks a word to own among rivals that already exist. That one creates a new category.
+When not to use: your brand already owns a word and you only want to keep it (skip this, or ask a marketing person to check it still holds); you want to judge how far your brand reaches today (use the [Brand reach reviewer](https://useaiblocks.com/skills/brand-reach-audit)); you want to test whether your edge over rivals is real (use the [Competitive advantage tester](https://useaiblocks.com/skills/business-power-tester)); or no rival holds a category and you want to create a new one (use the [new category launch](https://useaiblocks.com/workflows/new-category-launch) workflow). The difference from that workflow: this one picks one word to own among rivals that already exist, and ends with a cut list. The other creates a new category and launches it.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -37,6 +37,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+This list replaces the shared "Before you start" block above. Step 1 is the map of who owns which word today. Step 2 is the test of which open word you can own and prove, so the map comes first and the test second.
+
 - **Your rivals** (required): their names, taglines and the words and claims they repeat. Paste or attach the lines as they appear on their sites and ads.
 - **Customer words from reviews, tickets, surveys or calls, with source and date** (optional, but they test which words buyers really use).
 - **Your product's facts** (optional, but needed to test that the word is true): what it does and what you can prove.
@@ -53,10 +55,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Map the words rivals already own.** Use the skill `owned-word-mapper`. Give it your rivals and any customer words. Saves one word per rival and marks each word taken, contested or open, with the empty claims everyone makes. Saves this as `outputs/step-01-owned-word-mapper.md`.
-2. **Pick the word to own.** Use the skill `ownable-word-picker`. Give it the step 1 file (the word map) and your product facts. Saves one word with two backups, each tested on four points: simple, wanted, true and opposed. Saves this as `outputs/step-02-ownable-word-picker.md`.
-3. **Write the honest line that sets it up.** Use the skill `candid-line-writer`. Give it the word from the step 2 file and your customer words. Finds a flaw buyers already see and hands back three admit-then-turn lines that set up the word.
-4. **Decide what to give up.** Use the skill `give-up-list-planner`. Give it the word from the step 2 file, not the lines from step 3, and your list of products and customer groups. Hands back what to cut, which target to aim at and a rule that protects the word.
+1. **Map the words rivals already own.** Use the skill `owned-word-mapper`. Give it your rivals and any customer words. Saves one word per rival and marks each word taken, contested or open, with the empty claims everyone makes. Stop if you gave no rival lines. Saves this as `outputs/step-01-owned-word-mapper.md`.
+2. **Pick the word to own.** Use the skill `ownable-word-picker`. Give it the step 1 file (the word map) and your product facts. Saves one word with two backups, each tested on four points: simple, wanted, true and opposed. Stop if no word passes all four points. Say so and hand back the nearest two. Saves this as `outputs/step-02-ownable-word-picker.md`.
+3. **Write the honest line that sets it up.** Use the skill `candid-line-writer`. Give it the word from the step 2 file and your customer words. Finds a flaw buyers already see and hands back three admit-then-turn lines that set up the word. If buyers name no flaw in their own words, it writes no line and adds a `MISSING:` line. Saved as `outputs/step-03-candid-line-writer.md`.
+4. **Decide what to give up.** Use the skill `give-up-list-planner`. Give it the word from the step 2 file, not the lines from step 3, and your list of products and customer groups. Hands back what to cut, which target to aim at and a rule that protects the word. Reads `outputs/step-02-ownable-word-picker.md`. Saved as `outputs/step-04-give-up-list-planner.md`.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
@@ -71,8 +73,11 @@ When you've handed it back, suggest what they could do next in one short questio
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
+## After this (for this job)
+From the shared "After this" list above, offer the Marketing strategy reviewer if you want the word checked against your whole plan. Then suggest one concrete step: put the word and the three lines to a few customers and ask which they believe, before you change anything public. Bring the step 2 and step 3 files.
+
 ## Check before you hand it back
-- Each step passed its own checks, or the run stopped at the step that failed and says why.
+- The word is true of your product and passed all four points. Every line in step 3 uses a flaw from real customer words. The cut list in step 4 names the products or groups to drop. If one is missing, the run stopped at that step and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.

@@ -7,8 +7,7 @@ description: Create professional equity research earnings update reports (8-12 p
 
 ## India
 
-This skill operates on **Indian markets**. Load **`india-market-conventions`**
-before building anything, and **`india-market-data`** for sources. Two rules cause
+This skill operates on **Indian markets**. The rules below are all you need. Two rules cause
 most Indian errors:
 
 - **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
@@ -19,12 +18,11 @@ most Indian errors:
   **million under a crore label: a 10× error**. Divide by `10000000` in a live
   formula and label the column `Total Revenue (₹ Cr)`.
 
-What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
-never substitute a proxy and present it as the real thing.
+**Sources.** Take figures only from these, and only ones you opened: the company's results filing on BSE or NSE, the results press release, the investor presentation, the concall transcript, and the consensus the user gives you. If the user has no consensus, say so and do not make one up.
 
-**Missing files.** `india-market-conventions`, `india-market-data` and `NOT-ADAPTABLE.md` are not in this folder. Without them, follow the two rules above, take figures only from the company's exchange filing (BSE or NSE) and the documents the user gives you, and name any gap.
+**Gaps.** Some US items have no Indian equivalent, such as 10-Q and 10-K forms, SEC filings and EDGAR links. Name the gap. Never substitute a proxy and present it as the real thing.
 
-**Wording from the US original.** Any 10-Q, SEC, EDGAR or dollar wording that is left in the sections below comes from the original US skill. For an Indian company, use the exchange results filing (BSE or NSE), the results press release, the investor presentation and the concall transcript instead, and show amounts in ₹ crore. Do not cite a US form for an Indian issuer.
+**Wording from the US original.** The reference files may still say 10-Q, SEC, EDGAR or dollars. For an Indian company, use the exchange results filing (BSE or NSE), the results press release, the investor presentation and the concall transcript instead, and show amounts in ₹ crore. Do not cite a US form for an Indian issuer.
 
 **Links.** Only link a document you actually opened. Never guess or complete a URL. If you did not open the page, write the document name and date with no link.
 
@@ -136,6 +134,8 @@ Earnings Materials (Q[N] FY[YY]):
 - Explain what changed and why
 
 ## High-Level Workflow
+
+Steps in order: 1) collect the BSE or NSE results filing, press release, concall transcript and consensus; 2) check that their dates match the latest quarter; 3) build the beat or miss table against consensus; 4) update estimates and check the thesis; 5) draft the report and charts; 6) compliance review before anyone publishes it. The five phases below give the detail.
 
 The earnings update process follows 5 phases:
 

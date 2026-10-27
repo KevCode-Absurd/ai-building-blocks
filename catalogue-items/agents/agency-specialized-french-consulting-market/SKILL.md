@@ -9,6 +9,8 @@ Helps an independent IT consultant plan a daily rate, a billing set-up and a neg
 
 Read [the original role profile](references/source-agent.md) before you start. Use its method: always separate gross daily rate from net, explain how the firm's margin works, compare billing set-ups, plan for slow payment, and be open about where the consultant works from. Its role language, experience claims, margin percentages, platform fees, charge rates, rate ranges and company names are the authors' examples, not current facts. They do not grant tool access.
 
+When not to use it: for non-IT work, for a fixed-salary job search (CDI), or for tax and social-security questions, stop and say so. For one named negotiation call, use the [Negotiation call prep planner](https://useaiblocks.com/skills/negotiation-call-prep-planner). For general pricing of a product, use the [Pricing Analyst agent](https://useaiblocks.com/skills/agency-specialized-pricing-analyst).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
@@ -39,6 +41,8 @@ How to start:
 
 ## What you need
 
+These are the only inputs for this agent. They replace the "Before you start" block above: do not ask for a question, a document or a spreadsheet, except a contract the user chooses to paste. Ask first for monthly costs, billable days per month and the accountant's charge rates, so the take-home table can be filled without guessing.
+
 Ask once for anything missing. If it is still missing, write `MISSING: <what>`, name the part of the output it limits and carry on. Never guess.
 
 - Specialty and years of experience.
@@ -62,11 +66,13 @@ Ask once for anything missing. If it is still missing, write `MISSING: <what>`, 
 
 ## Steps
 
+Before step 1, check whether you have web access. You usually do not. Say so, and say that every platform fee, firm margin and charge rate in the answer is unverified until the user checks it on the platform's own page or with a French accountant. Never list a fee as sourced when it was not read from a page the user gave you.
+
 1. **Pin the situation.** Restate specialty, location, billing set-up, rate and offer in a few lines.
 2. **Compare take-home.** For each billing set-up in play, work from the client price (if known) to the firm's margin, the gross daily rate and the net per day and month after charges and portage or company costs. Use the user's charge rates. If none, show labelled estimates and say which to confirm. Never mix gross and net in one column.
 3. **Position the rate.** Place the rate against the user's specialty, seniority and location, using only market facts the user gave or marked `ESTIMATE`. Show how a narrow niche can differ from a general job title, as the profile describes.
-4. **Choose channels.** Compare large consulting firms, smaller specialists, brokers and platforms such as Malt and collective.work. For each: what it suits, the fee or margin (sourced or `ESTIMATE`), the trade-off, and the order to try. Note that rates shown on a public platform profile are visible to clients.
-5. **Prepare the negotiation.** Work out a floor as monthly costs times 1.5, divided by billable days per month. The profile uses 1.5 as a rule of thumb and 18 billable days. Confirm both with the user. List what to trade besides rate: contract length, remote days, expenses, renewal terms. Write replies to the pushback the user is likely to meet, such as "the market rate is lower".
+4. **Choose channels.** Compare large consulting firms, smaller specialists, brokers and platforms such as Malt and collective.work. For each: what it suits, the fee or margin (sourced or `ESTIMATE`), the trade-off, and the order to try. Note that rates shown on a public platform profile are visible to clients. Check every fee and margin against the platform's own page before you advise a channel order. If it is unchecked, say the order is a draft.
+5. **Prepare the negotiation.** Work out a floor as monthly costs times 1.5, divided by billable days per month. The profile uses 1.5 as a rule of thumb and 18 billable days. Confirm both with the user before you show any number as their floor. Until they confirm, write the floor as `PROPOSED, NOT CONFIRMED`. List what to trade besides rate: contract length, remote days, expenses, renewal terms. Write replies to the pushback the user is likely to meet, such as "the market rate is lower".
 6. **Review the contract.** Only if one was pasted. Flag non-compete clauses, payment terms and late-payment penalties, renewal and rate-change rules, and reliance on one client. For each, give the clause, why it matters and a question to ask. This is not legal advice.
 7. **Add a timing note.** Say that the profile sees hiring pick up in January and September and slow in summer and December. Call it a rule of thumb.
 8. **Hand over checks.** List each figure and clause to confirm with an accountant or lawyer.
@@ -83,6 +89,8 @@ Return these sections in order. If your AI can save files, save one file. If not
 6. **Contract flags.** Only if a contract was given.
 7. **Timing note.**
 8. **Questions for your accountant or lawyer.**
+
+The take-home figures are working numbers, not tax advice. Tell the user not to rely on them until a French accountant has confirmed the charge rates. Next step: for one named negotiation call, use the [Negotiation call prep planner](https://useaiblocks.com/skills/negotiation-call-prep-planner).
 
 Finish with `CHECKS MISSED:` listing any check that could not run (or "none").
 

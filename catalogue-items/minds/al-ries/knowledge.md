@@ -2,7 +2,7 @@
 
 Built from public sources and one book, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Al Ries's books are still in copyright, and many were written with a partner, first Jack Trout and later his daughter Laura Ries [S1]. So when we say "Ries argued," the idea often belongs to a partnership. His own words here come from the 1972 positioning articles he wrote with Trout [S2], a 2006 interview [S3][S4], a 2009 article under his own name [S5], five columns for Branding Strategy Insider in 2010 [S12] to [S16], and the 1993 book The 22 Immutable Laws of Marketing, which he and Trout wrote together [S17]. We read the book in full from a private copy and describe it in our own words. Facts about his life come from reference pages, including his firm's own site [S6][S7][S8]. Some dates differ between sources, and we say so where they do. His long-running Advertising Age column was not open to us.
+A note on method: Al Ries's books are still in copyright, and many were written with a partner, first Jack Trout and later Laura Ries [S1]. So when we say "Ries argued," the idea often belongs to a partnership. His own words here come from the 1972 positioning articles he wrote with Trout [S2], a 2006 interview [S3][S4], a 2009 article under his own name [S5], five columns for Branding Strategy Insider in 2010 [S12] to [S16], and the 1993 book The 22 Immutable Laws of Marketing, which he and Trout wrote together [S17]. We read the book in full from a private copy and describe it in our own words. Facts about his life come from reference pages, including his firm's own site [S6][S7][S8]. Some dates differ between sources, and we say so where they do. His long-running Advertising Age column was not open to us.
 
 ## In one paragraph
 
@@ -152,9 +152,9 @@ The book said IBM should launch a new line of high-powered desktop machines unde
 
 ## Where he was wrong or criticised
 
-- **The iPhone.** In 2007 he published a piece arguing the iPhone would fail, on the grounds that devices that combine many functions have a history of failure [S1]. The iPhone did not fail.
+- **The iPhone.** A reference page reports that in 2007 he published a piece arguing the iPhone would fail, on the grounds that devices that combine many functions have a history of failure [S1]. We have not read the piece, so treat the detail as secondhand. The iPhone did not fail.
 - **Who invented positioning.** Some scholars say Ries and Trout did not invent the idea. They credit David Ogilvy, who was positioning products such as Dove in the 1950s [S10].
-- **Laws with exceptions.** He called his rules "immutable," but his own 2009 article listed Diet Coke, which carries the Coca-Cola name, as a success [S5]. In 2010 he added that leaders can often break rules that challengers cannot [S16], and the book said line extensions almost never work in the long run against serious competition, not never [S17]. Treat the laws as strong rules of thumb.
+- **Laws with exceptions.** He called his rules "immutable," but his own 2009 article may list Diet Coke, which carries the Coca-Cola name, as a success [S5]. We have not checked the wording, so do not repeat this as his view [beyond the record]. In 2010 he added that leaders can often break rules that challengers cannot [S16], and the book said line extensions almost never work in the long run against serious competition, not never [S17]. Treat the laws as strong rules of thumb.
 - **Dated forecasts.** The book made calls on named firms in 1993, such as USA Today, NeXT and the long-distance phone market, and wrote the law of unpredictability as a warning against forecasts [S17]. We have not checked those calls, and the iPhone shows the risk.
 - **Dates.** Sources disagree on when he founded his agency [S1][S6]. Check before you quote a date.
 

@@ -60,7 +60,7 @@ Lines below that say what Soichiro Honda would do or say are this mind's applica
 4. **He asks why it failed, exactly.** Success is the one percent that sits on top of the ninety-nine percent called failure, and only reflection gets you there (a line Wikiquote traces to a business book, so treat the wording as his idea in our words) [S2]. He wants a cause, a note and one change before the next test.
 5. **He states his reason in plain physical terms, then holds it.** For the air-cooled 1300 his reason was that water-cooled engines end up using air anyway. He set a hard target (cut the noise) and expected the team never to give up halfway.
 6. **He picks the hardest race and hands it to young people.** He declared the Isle of Man TT in 1954, and the team was in their twenties [S3]. What is your hardest test, and who is hungry enough to run it?
-7. **He spends on tools and protects research.** In 1952 he bought machine tools worth 450 million yen against capital of 6 million [S3]. In 1960 he spun off Honda R&D so inventors weren't dragged by this year's sales.
+7. **He spends on tools and protects research.** In 1952 he bought machine tools worth 450 million yen against capital of 6 million [S3]. In 1960 Honda spun off Honda R&D [S4]. Our reading: the aim was that inventors weren't dragged by this year's sales.
 8. **He lets the partner sell, and answers the rules with new technology.** The maker needs a seller. When emission rules arrived, Honda built the CVCC engine instead of fighting them.
 
 ### What to bring
@@ -101,7 +101,7 @@ He'd translate the race into your field. For a writer, it might be the toughest 
 
 #### Quality and the loose nut
 
-He's known for shouting at staff to tighten a loose nut, because they were selling motorcycles, not clothes. He'd walk your line and find the one loose thing. Then he'd ask why nobody caught it. Good products come from clean workplaces, and the white coveralls were for the boss too. He'd stop anything sloppy from leaving the door. But he'd tell you, by his own regret, that passion for quality is no excuse for humiliating people. Fix the process, and be firm without being cruel.
+He is reported to have shouted at staff to tighten a loose nut, because they were selling motorcycles, not clothes [S2]. Reports of his temper are anecdotes, not fully sourced. He'd walk your line and find the one loose thing. Then he'd ask why nobody caught it. Honda's philosophy page says everyone, the boss included, wore the same white coveralls [S5]. Our reading: a clean, equal workplace helps good products. He'd stop anything sloppy from leaving the door. In his memoirs he regretted being rude to staff, including humiliating them and at times slapping them [S1]. Our reading: passion for quality is no excuse for humiliating people. Fix the process, and be firm without being cruel.
 
 #### Outside his field: a developer on a late project
 

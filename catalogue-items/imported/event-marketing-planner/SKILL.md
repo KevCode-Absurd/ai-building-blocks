@@ -14,6 +14,8 @@ You are an expert in event-driven marketing — using webinars, conferences, din
 **Check for product marketing context first:**
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
 
+That file is optional and most people do not have it. If it does not exist, skip it and ask the questions below.
+
 Then establish, in one batch:
 
 1. **Which role?** Hosting your own event, sponsoring/exhibiting at someone else's, speaking, or attending?
@@ -82,7 +84,7 @@ The zero-budget motion, and often the best ROI in the building:
 
 1. **Target list first** — 15–30 named people you want to meet, built from the attendee/speaker list and social chatter.
 2. **Pre-book** — outreach 1–3 weeks ahead; the ask is 15 minutes, anchored to a specific time and place.
-3. **The side-event play** — host a dinner or breakfast adjacent to the conference for 8–12 target accounts. You get host status without sponsor pricing; often out-generates a booth at a tenth of the cost (see [sponsorship-roi.md](references/sponsorship-roi.md)).
+3. **The side-event play** — host a dinner or breakfast adjacent to the conference for 8–12 target accounts. You get host status without sponsor pricing; can cost far less than a booth for the meetings it books. That is the author's unverified judgement, not a measured result, so compare the real costs for your own event (see [sponsorship-roi.md](references/sponsorship-roi.md)).
 4. **Work sessions strategically** — go where your targets are speaking, ask a real question, follow up on it.
 5. Same 24–48h follow-up discipline as every other role.
 
@@ -122,12 +124,12 @@ Events produce your highest-proof content — capture it deliberately:
 
 These names come from the original collection. Only Cold email writer and Email sequence writer have matching items in this library. For the rest, handle the task by hand or outside this skill.
 
-- **launch** — the event is a launch moment (announcement, Product Hunt, go-live)
-- **co-marketing** — joint webinars and partner summits: partnership mechanics live there, event execution here
-- **community-marketing** — ongoing community programs; events can seed or serve one
-- **public-relations** — podcast guesting and press at events
-- **lead-magnets** — gated replays and event content as magnets
-- **emails** / **sms** — the reminder and follow-up sequences themselves
-- **cold-email** — pre-event meeting-booking outreach
-- **revops** — routing, scoring, and source-tagging event leads
-- **attribution** — measuring multi-touch event influence honestly
+- **launch** — the event is a launch moment (announcement, Product Hunt, go-live). By hand: write the announcement, date and one-line reason to attend yourself.
+- **co-marketing** — joint webinars and partner summits: partnership mechanics live there, event execution here. By hand: agree with the partner who invites whom and who follows up.
+- **community-marketing** — ongoing community programs; events can seed or serve one. By hand: keep a simple list of repeat attendees.
+- **public-relations** — podcast guesting and press at events. By hand: email the show or reporter yourself.
+- **lead-magnets** — gated replays and event content as magnets. By hand: put the recording behind a simple sign-up form.
+- **emails** / **sms** — the reminder and follow-up sequences themselves. Use Email sequence writer.
+- **cold-email** — pre-event meeting-booking outreach. Use Cold email writer.
+- **revops** — routing, scoring, and source-tagging event leads. By hand: add an "event" source tag to each lead in your CRM or sheet.
+- **attribution** — measuring multi-touch event influence honestly. By hand: ask each new lead "how did you hear about us?" and log the answer.

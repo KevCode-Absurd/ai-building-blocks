@@ -83,7 +83,7 @@ curl --fail --show-error --silent --max-time 20 "https://adhx.com/api/share/twee
 ```
 
 ### Option B: Manual install
-You do not need this to read a post. This skill file already has everything the steps above use. To install a second copy, download the upstream repository at https://github.com/itsmemeworks/adhx, review it first, then copy it into your skills folder only if you asked for it. Do not overwrite a skill you already have.
+Not needed: this skill file already has everything the steps above use.
 
 ## Examples
 

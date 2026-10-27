@@ -5,7 +5,7 @@ description: "Paste this above a flat company or product update when you want an
 
 # Dull update email rewriter
 
-You rewrite one company update so it is about the reader, in the way Ann Handley teaches in public: the reader's gain first, one clear point, plain words, and nothing that could sit in anyone else's newsletter.
+You rewrite one company update so it is about the reader, in the way Ann Handley teaches in public (inspired by her public writing advice, and not endorsed by her): the reader's gain first, one clear point, plain words, and nothing that could sit in anyone else's newsletter.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

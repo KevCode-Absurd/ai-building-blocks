@@ -311,11 +311,9 @@ model_uri = f"runs:/{run_id}/model"
 mlflow.register_model(model_uri, "my-classifier")
 ```
 
-### Model Stages
+### Model aliases (default) and stages (older MLflow only)
 
-Transition models between stages: **None** → **Staging** → **Production** → **Archived**
-
-AI Blocks note: model stages are deprecated in recent MLflow releases. The stage commands below may warn or fail on a current install. Newer MLflow uses aliases instead (for example an alias named `champion` on the version you trust):
+AI Blocks note: use aliases by default. Model stages are deprecated in recent MLflow releases, and the stage commands below may warn or fail on a current install. An alias is a name, such as `champion`, that you point at the version you trust:
 
 ```python
 client.set_registered_model_alias("my-classifier", "champion", 3)
@@ -323,6 +321,8 @@ model = mlflow.pyfunc.load_model("models:/my-classifier@champion")
 ```
 
 Ask which MLflow version the user has (`pip show mlflow`). Use aliases on a recent version, and the stage commands only on an older one. Check the MLflow docs for your version before you rely on either.
+
+Legacy stage commands (None → Staging → Production → Archived), for older MLflow only:
 
 ```python
 from mlflow.tracking import MlflowClient
@@ -357,20 +357,23 @@ client.transition_model_version_stage(
 ```python
 import mlflow.pyfunc
 
-# Load latest production model
-model = mlflow.pyfunc.load_model("models:/my-classifier/Production")
+# Newer MLflow: load by alias (use this first)
+model = mlflow.pyfunc.load_model("models:/my-classifier@champion")
 
-# Load specific version
+# Load a specific version (works on all versions)
 model = mlflow.pyfunc.load_model("models:/my-classifier/3")
 
-# Load from staging
-model = mlflow.pyfunc.load_model("models:/my-classifier/Staging")
+# Older MLflow only (stages), which may fail on a current install:
+# model = mlflow.pyfunc.load_model("models:/my-classifier/Production")
+# model = mlflow.pyfunc.load_model("models:/my-classifier/Staging")
 
 # Use model
 predictions = model.predict(X_test)
 ```
 
 ### Model Versioning
+
+The stage lookups below (`current_stage`, `get_latest_versions` with `stages`) are for older MLflow only. On a current install, find a version by alias or by number instead.
 
 ```python
 client = MlflowClient()
@@ -401,7 +404,7 @@ client = MlflowClient()
 client.update_model_version(
     name="my-classifier",
     version="3",
-    description="ResNet50 classifier trained on 1M images with 95% accuracy"
+    description="[WHAT THE MODEL IS, WHAT IT WAS TRAINED ON, AND ITS MEASURED SCORE]"
 )
 
 # Add tags
@@ -416,7 +419,7 @@ client.set_model_version_tag(
     name="my-classifier",
     version="3",
     key="deployed_date",
-    value="2025-01-15"
+    value="[DATE YOU DEPLOYED IT]"
 )
 ```
 
@@ -636,8 +639,8 @@ with mlflow.start_run(run_name="training"):
 ### 5. Use Model Registry for Deployment
 
 ```python
-# ✅ Good: Use registry for production
-model_uri = "models:/my-classifier/Production"
+# ✅ Good: Use registry for production (an alias on current MLflow)
+model_uri = "models:/my-classifier@champion"
 model = mlflow.pyfunc.load_model(model_uri)
 
 # ❌ Bad: Hard-code run IDs
@@ -647,11 +650,13 @@ model = mlflow.pyfunc.load_model(model_uri)
 
 ## Deployment
 
+**Prerequisite note.** Serving a model on your own computer needs nothing extra. The SageMaker and Azure ML commands further down are optional and need an AWS or Azure account with credentials, which cost money. Registry commands depend on your MLflow version: aliases on a recent one, stages on an older one.
+
 ### Serve Model Locally
 
 ```bash
-# Serve registered model
-mlflow models serve -m "models:/my-classifier/Production" -p 5001
+# Serve registered model (by alias)
+mlflow models serve -m "models:/my-classifier@champion" -p 5001
 
 # Serve from run
 mlflow models serve -m "runs:/<RUN_ID>/model" -p 5001
@@ -664,26 +669,28 @@ curl http://127.0.0.1:5001/invocations -H 'Content-Type: application/json' -d '{
 
 ### Deploy to Cloud
 
-SageMaker and Azure ML need your own paid AWS or Azure account and may cost money. Check prices before you run these commands.
+**Optional, and needs credentials.** SageMaker and Azure ML need your own paid AWS or Azure account, with credentials set up on your machine first (for example the AWS or Azure command-line sign-in). They may cost money, so check prices before you run these commands. Skip this section if you only track runs.
 
 ```bash
-# Deploy to AWS SageMaker
-mlflow sagemaker deploy -m "models:/my-classifier/Production" --region-name us-west-2
+# Deploy to AWS SageMaker (optional; needs AWS credentials and a paid account)
+mlflow sagemaker deploy -m "models:/my-classifier@champion" --region-name [YOUR AWS REGION]
 
-# Deploy to Azure ML
-mlflow azureml deploy -m "models:/my-classifier/Production"
+# Deploy to Azure ML (optional; needs Azure credentials and a paid account)
+mlflow azureml deploy -m "models:/my-classifier@champion"
 ```
 
 ## Configuration
 
 ### Tracking Server
 
+This listens on your own computer only (127.0.0.1). MLflow has no login by default, so do not change the host to 0.0.0.0 or expose the port to other people without putting a login or private network in front of it. Keep real passwords in environment variables, not in commands you paste.
+
 ```bash
 # Start tracking server with backend store
 mlflow server \
-  --backend-store-uri postgresql://user:password@localhost/mlflow \
-  --default-artifact-root s3://my-bucket/mlflow \
-  --host 0.0.0.0 \
+  --backend-store-uri postgresql://[USER]:[PASSWORD]@localhost/mlflow \
+  --default-artifact-root s3://[YOUR BUCKET]/mlflow \
+  --host 127.0.0.1 \
   --port 5000
 ```
 

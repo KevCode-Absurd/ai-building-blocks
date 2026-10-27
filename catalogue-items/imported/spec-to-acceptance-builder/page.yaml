@@ -11,12 +11,12 @@ explain: |
 
   Code starts only after you approve those documents. Helper agents then work with clear ownership of files. When they report back, the lead agent does not take their word for it. It checks diffs, test runs and evidence against each numbered criterion. Gaps are marked TBD, ASSUMPTION or BLOCKED.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The skill file itself says MIT, and the original author is Linji-x. Credit goes to Linji-x and sickn33.
+  Licence: the text of this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file says. The original code and notice from Linji-x stay under MIT, and we keep that notice. Credit goes to Linji-x and sickn33.
 when:
   - You have a large feature and the requirements are still fuzzy.
   - You want to approve what gets built before any code is written.
   - Several AI agents will work on one project and need clear lanes.
-  - You need proof that each acceptance criterion was met.
+  - You need proof that each acceptance criterion was met. A plain chat without file access gives you the spec documents only. The build and the checking need an agent that can read your files.
 not_for:
   - "You need a small bug fix or a one-file change: ask your AI to make the edit directly, no spec needed."
   - "You only want someone to read and review code or explain it: ask your AI for a plain code review instead."
@@ -34,10 +34,11 @@ you_get:
   - A build checked against code changes and test runs
   - A final report with a table of results per criterion
 how_to_use:
+  - "Have ready: a project folder that is a git repository, with tests that can run, and any AGENTS.md file your agent reads. The build stage needs this."
   - Open an AI agent that can read your project files and run code, such as Codex. The build stage needs this.
   - "Put the skill folder where your agent loads skills (for Codex, its skills folder), or upload the folder to your project. Then give your request in plain words. Example: Build a job dashboard with role-based access."
   - Answer the few questions it asks. It looks up facts in your code itself and asks only about real choices.
-  - Read the PRD, tech design and acceptance criteria. Say yes only when they match what you want. No code is written before that.
+  - Read the PRD, tech design and acceptance criteria. Say yes only when they match what you want. No code is written before that. Expect more than one round of changes before you approve, so plan for several back-and-forth sessions.
   - Let it build, then read the acceptance table and the evidence for each criterion.
   - When all criteria pass, hand ACCEPTANCE.md and the acceptance matrix to a reviewer before you merge or ship.
   - Codex or a similar agent tool may need a paid plan or an API key. Check the cost before you start.

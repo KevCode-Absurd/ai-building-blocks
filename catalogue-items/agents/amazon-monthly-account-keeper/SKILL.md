@@ -1,6 +1,6 @@
 ---
 name: amazon-monthly-account-keeper
-description: Use once a month on a live Amazon seller account. It reads the month's fee, stock, returns and sales reports, checks each product's margin against last month, sizes restocks, finds refund claims, and picks listing or ad work only where the numbers call for it. It never changes the account without a yes.
+description: Use once a month on an Amazon seller account, from the reports you supply. It reads the month's fee, stock, returns and sales reports, checks each product's margin against last month, sizes restocks, finds refund claims, and picks listing or ad work only where the numbers call for it. It never changes the account without a yes.
 ---
 
 # Amazon monthly account keeper
@@ -33,6 +33,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+These are the only inputs for this agent. They replace the "Before you start" block above, which asks for a brand brain. The Amazon steps below never use brand facts, voice or buyer quotes, so do not ask for a brand brain, its "Recommended steps" or its "From the brand brain, read" line. The product facts below are the only product input.
+
 - **Product facts** (required the first time): price, landed cost, size and weight of the packed unit, category. Saved after the first run as `amazon/products.md`.
 - **Fee and sales reports for the month** (required): fees by product, units sold, ad spend and ad sales, returns.
 - **Stock and shipments** (required): units in Amazon stock, units on the way, send dates, lead time from the maker.
@@ -74,7 +76,7 @@ If the owner approves one action in clear words, do only that one. Then write wh
 - **Path per product:** margin fix, listing refresh, ad rebuild or hold, and why.
 - **Actions to approve:** each action, the product, its size in money, the step that proposed it and the reason. Most important first. At most 10; put the rest under "Next month".
 - **Restock:** units, send-by date and cash tied up, per product.
-- **Claims to file:** each claim with its amount and proof, and any whose time limit may be near.
+- **Claims to file:** each claim with its amount and proof, and any whose time limit may be near. Tell the owner to check the current claim time limit on Seller Central's claims page, and the current fees in Amazon's fee schedule or revenue calculator.
 - **Watch next month:** the 1 to 3 numbers that decide next month's path.
 - **Files:** each step's file. Then every `MISSING:` line in one list.
 

@@ -10,9 +10,12 @@ explain: |
   Check that your API keys and environment variables are set, valid and loaded, without any secret ever appearing in chat, logs or command history. The point is that Claude never sees the values.
 
   It works on four rules. Never print a secret with echo or env commands. Never open the .env file directly. Use a tool called Varlock to validate and show only masked values. Never place a key inside a command, use variables instead. Claude reads the schema file, which lists names and types but no values, and runs a load check that reports pass or fail. You can also run other commands through the tool so keys are filled in out of sight. You need to install Varlock.
+
+  Licence: the skill text is CC BY 4.0 (see the LICENSE-CONTENT file in this item). Varlock itself is a separate free tool with its own licence. The skill is free to use. The 1Password and AWS examples need paid accounts, and only if you choose them.
 when:
   - Your app fails to start and you want help debugging without sharing your keys.
   - A new teammate needs to confirm every required variable is set.
+  - Your AI can run shell commands on your computer. If it cannot, ask a developer to run the checks and tell you the pass or fail.
   - You worry a key leaked into logs or shell history.
   - You need a schema file that lists which variables your app needs.
 not_for:
@@ -35,6 +38,8 @@ how_to_use:
   - Let it create or read the .env.schema file, then run varlock load to check your variables.
   - Fix any missing or invalid variables yourself in your .env file. Your AI will not edit secret values. Run any command that sets a secret, such as gh secret set, yourself, so the AI never handles the value.
   - Only use the 1Password or AWS examples if you have those accounts and their command line tools.
+  - Next, run secure-development-checker on the same project to scan the code for other leaked keys.
+next: [secure-development-checker, security-incident-triager]
 output_sample:
   input:
     - Your project folder

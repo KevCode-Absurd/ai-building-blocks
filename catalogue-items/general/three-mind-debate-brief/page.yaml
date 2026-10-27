@@ -17,6 +17,7 @@ when:
   - "You are stuck between two good options."
   - "You want to hear the case you are not making."
   - "You have to defend a choice to others."
+  - "You want a quick three-view test. For a fuller council with more checks, use the Advisory council."
 not_for:
   - "Your question has one right answer or is a plain fact check: do your own research or look it up directly."
   - "You need investment, legal, medical or tax advice: talk to a qualified person, then use this to test your thinking."
@@ -76,7 +77,7 @@ output_shape: |
   QUESTION
   <one line>
   COUNCIL
-  <name - seat>
+  <name - seat> (an AI simulation of their public work, not their words)
   OPENING VIEWS
   <three, under 100 words each>
   CHALLENGES
@@ -90,10 +91,12 @@ output_shape: |
   First three steps: <list>
   MISSING
   <lines>
+  CHECKS MISSED
+  <one line each, or none>
 
 tweaks:
   - what: "Who sits"
-    how: "Name three thinkers you trust, or ask for a mix of customer, money and craft."
+    how: "Name three well-known thinkers, or ask for a mix of customer, money and craft. They are an AI playing each person's public style. Check any real statement before you quote them."
   - what: "Facts"
     how: "Paste your numbers. Thinkers argue better from facts than guesses."
   - what: "Second round"

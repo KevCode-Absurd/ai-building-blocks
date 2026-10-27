@@ -310,6 +310,8 @@ export function startPicks<P extends Part>(c: { blocks: P[]; bySlug: Record<stri
   const add = (slug: string, value: number) => score.set(slug, (score.get(slug) ?? 0) + value);
   matches.forEach((m, i) => add(m.b.slug, 1 / (i + 6)));
   retrieve(lib, focus, 40).forEach((b, i) => add(b.slug, 1 / (i + 6)));
+  // A request to check something also reads as a search for checks of it, so the checks are in the running.
+  if (review) goalMatches(lib, `${positiveRequest(goal)} check`, 40).filter(m => m.b.role === "check").forEach((m, i) => add(m.b.slug, 1 / (i + 6)));
   matches.map((m, i) => ({ m, i })).filter(({ m }) => (isFlow(m.b) || m.b.type === "agent") && m.b.steps?.length).slice(0, LENDING_FLOWS)
     .forEach(({ m, i }) => { for (const s of new Set(m.b.steps!.map(x => x.uses))) if (c.bySlug[s]) add(s, 1 / (i + 6)); });
   // A check fits a request to check something; otherwise the step that makes the result comes first.

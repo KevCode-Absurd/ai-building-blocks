@@ -37,7 +37,7 @@ Generate professional, jurisdiction-aware business documents: freelance contract
 |--------|---------|
 | Payment terms | Net-30, milestone-based, monthly retainer |
 | IP ownership | Work-for-hire (US), assignment (EU/UK), license-back |
-| Liability cap | 1x contract value, meaning the fees paid or payable (standard), 3x (high-risk) |
+| Liability cap | 1x contract value, meaning the fees paid or payable (standard), 3x (high-risk). Use 3x only if both sides agree and a lawyer confirms. Each template shows its cap in brackets for you to set. |
 | Termination | For cause (14-day cure), convenience (30/60/90-day notice) |
 | Confidentiality | 2-5 year term, perpetual for trade secrets |
 | Warranty | "As-is" disclaimer, limited 30/90-day fix warranty |
@@ -112,34 +112,34 @@ pandoc contract.md -o contract.docx \
 
 ## Jurisdiction Notes
 
-These notes are a short general summary. We have not checked them against current law, and there is no "last checked" date, so treat every rule here as possibly out of date or incomplete. Check them against current law for the country where the contract will be signed, and have a lawyer confirm before anyone signs. A draft from this skill is not ready to sign.
+These notes are a short general summary. Last checked against current law: never. We have not checked them against current law, and there is no "last checked" date, so treat every rule here as possibly out of date or incomplete. Check them against current law for the country where the contract will be signed, and have a lawyer confirm before anyone signs. A draft from this skill is not ready to sign.
+
+Source: none supplied. Last checked: never. Each line below is a point to put to a lawyer, not a rule to rely on. Do not copy a legal limit, term or section number from here into a contract.
 
 ### US (Delaware)
 - Governing law: State of Delaware
-- Work-for-hire doctrine exists (Copyright Act 101), but a freelancer's work is often not a work made for hire. Use a written assignment, as in Template A, and do not rely on the doctrine alone
+- A freelancer's work is often not a "work made for hire". Use a written assignment, as in Template A, and do not rely on the doctrine alone
 - Arbitration: AAA Commercial Rules
-- Non-compete: enforceable with reasonable scope/time
+- Non-compete: ask a lawyer what scope and time limit the state allows
 
 ### EU (GDPR)
-- Must include Data Processing Addendum if handling personal data
-- IP assignment requires separate written deed in some member states
+- Add a Data Processing Addendum if the work involves personal data
+- IP assignment may need a separate written deed in some member states
 - Arbitration: ICC or local chamber
 
 ### UK (post-Brexit)
 - Governed by English law
-- IP: Patents Act 1977 / CDPA 1988
 - Arbitration: LCIA Rules
-- Data: UK GDPR (post-Brexit equivalent)
+- Data: UK GDPR (the UK's own version of GDPR)
 
 ### DACH (Germany / Austria / Switzerland)
-- BGB (Buergerliches Gesetzbuch) governs contracts
-- Written form requirement for certain clauses (para 126 BGB)
-- IP: Author always retains moral rights; must explicitly transfer Nutzungsrechte
-- Non-competes: max 2 years, compensation required (para 74 HGB)
-- Jurisdiction: German courts (Landgericht) or DIS arbitration
-- DSGVO (GDPR implementation) mandatory for personal data processing
-- Kuendigungsfristen: statutory notice periods apply
-- Terms: Nutzungsrechte = rights to use a work; Kuendigungsfristen = notice periods; para 126 BGB = the written-form rule
+- German civil law (BGB) governs contracts
+- Some clauses may need written form
+- IP: the author keeps moral rights, and the contract should say which Nutzungsrechte (rights to use the work) pass to the client
+- Non-competes: ask a lawyer about limits on length and payment
+- Jurisdiction: German courts or DIS arbitration
+- DSGVO (the German name for GDPR) applies to personal data
+- Kuendigungsfristen (notice periods) may apply by law
 
 ---
 
@@ -181,7 +181,7 @@ Client has [10] business days to accept or reject deliverables in writing.
 
 ## 3. INTELLECTUAL PROPERTY
 
-Upon receipt of full payment, Developer assigns all right, title, and interest in the
+(IP timing: the rights pass on full payment. With milestone payments, say in the contract whether each milestone's work transfers on that milestone's payment instead, and have a lawyer confirm.) Upon receipt of full payment, Developer assigns all right, title, and interest in the
 Work Product to Client. Keep only the version that fits the governing law and delete the others:
 - US: "...to Client by written assignment. To the extent any part qualifies as a work made for hire, it is one." (A freelancer's work is often not a work made for hire, so the written assignment matters.)
 - EU/UK: "...to Client by assignment of copyright, including future copyright."
@@ -207,7 +207,7 @@ this period. EXCEPT AS STATED, WORK PRODUCT IS PROVIDED "AS IS."
 
 ## 6. LIABILITY
 
-Developer's total liability shall not exceed the total fees paid or payable under this Agreement (1x contract value).
+Developer's total liability shall not exceed [1x] the total fees paid or payable under this Agreement. (Set the cap in brackets. 1x is the standard. Use a higher cap only if both sides agree and a lawyer confirms.)
 Neither party liable for indirect, incidental, or consequential damages.
 
 ## 7. TERMINATION
@@ -264,7 +264,7 @@ Consultant provides [DOMAIN, e.g., "CTO advisory and technical architecture"] se
 
 **Monthly Retainer:** [CURRENCY] [AMOUNT], due on the 1st of each month.
 **Payment Method:** Bank transfer / Stripe / SEPA direct debit
-**Late Payment:** 2% monthly interest after [10]-day grace period.
+**Late Payment:** [RATE]% monthly interest after [10]-day grace period. (Check the legal limit on late-payment interest where you work.)
 
 ## 3. TERM AND TERMINATION
 
@@ -295,8 +295,8 @@ shall execute a Data Processing Agreement (DPA) per Art. 28 GDPR.
 
 ## 7. LIABILITY
 
-Consultant's aggregate liability is capped at [3x] the fees paid in the [3] months
-preceding the claim.
+Consultant's aggregate liability is capped at [1x] the fees paid in the [3] months
+preceding the claim. (1x is the default. A higher cap is for high-risk work only, and only if both sides agree and a lawyer confirms.)
 
 ---
 

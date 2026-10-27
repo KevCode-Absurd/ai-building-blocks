@@ -139,6 +139,7 @@ Agent: [scans repo, proposes 3-4 concrete topics with a "why now" each,
 ### Example 2: Freshness check in CI
 
 ```bash
+# First copy check.py from this folder (scripts/check.py) into your repo as tools/slideops-check.py.
 python3 tools/slideops-check.py docs/slides/ --repo . --exit-zero   # report-only PR annotation
 ```
 

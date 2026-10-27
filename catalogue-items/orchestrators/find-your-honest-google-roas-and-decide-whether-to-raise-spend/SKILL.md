@@ -9,6 +9,8 @@ Give it your margins and 30 days of Google data. Get break-even targets, reporte
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
+**When not to use it.** You have under 30 days of Google data (wait, because the split would be noise). Your sales dropped and you want to know why (use the [Ad sales drop analyst](https://useaiblocks.com/skills/ad-sales-drop-analyst)). You want to read past test reports (use the [A/B test results reader](https://useaiblocks.com/skills/split-run-result-reader)). This workflow reads an export and gives advice. It changes nothing in your ad account.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -31,7 +33,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-This list replaces the general one above.
+This list replaces the general one above, including its Meta Ads Manager line. You need three things: the margin figures, the 30-day Google Ads export with the columns below, and your list of brand terms (your business name and product names, as people type them).
 - **Your margins for one product** (required): selling price, cost of the product, shipping, fees and returns, so step 1 can work out break-even ROAS and cost per sale.
 - **A Google Ads export for the last 30 days** (required, taken at the pause): the date window, plus campaign, search term, cost, conversions and conversion value columns. Mark which search terms are your brand.
 - **The brand's facts, voice, products, offers (with effective dates), claims register, personas and look** (optional)
@@ -50,7 +52,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 Pause here: Export the last 30 days from Google Ads with campaigns, search terms and conversions, and mark which terms are your brand.
 
 2. **Brand and non-brand splitter.** Use the skill `brand-and-non-brand-splitter`. Separate queries by the supplied brand terms and compare reported non-brand ROAS with the break-even line from step one. It hands step 3 the split report and your non-brand ROAS, shown beside the break-even line. Save it as `outputs/step-02-brand-and-non-brand-splitter.md`. Non-brand queries do not prove that buyers are new or that the ads caused their orders. Keep customer identity and causal claims unknown unless separate evidence supports them.
-3. **Google Ads scale gate checker.** Use the skill `google-ads-scale-gate-checker`. Pass the split report with its dates, query classification and limits. It returns a go, wait or fix-first call, names each gate the result passed or failed, and, for a go, a stepped raise for the person to approve. Review its budget recommendation against actual costs and required gates. Save it as `outputs/step-03-google-ads-scale-gate-checker.md`. Do not describe a query split as verified new-customer profit, causal return or proof that raising spend is safe. No live budget changes occur without approval.
+3. **Google Ads scale gate checker.** Use the skill `google-ads-scale-gate-checker`. Pass the split report with its dates, query classification and limits. It checks five gates in this order: feed, tracking, structure, creative and bid maturity. Then it checks reported ROAS against break-even and that the plan raises spend in steps. It returns a go, wait or fix-first call, names each gate the result passed or failed, and, for a go, a stepped raise for the person to approve. The safe step size is a rule of thumb, not a law: a common one is 5 to 10 percent on bids, never more than 15 percent, every 5 to 7 days. Give the step size and the days between steps, and say it is a starting point to test. Review its budget recommendation against actual costs and required gates. Save it as `outputs/step-03-google-ads-scale-gate-checker.md`. Do not describe a query split as verified new-customer profit, causal return or proof that raising spend is safe. No live budget changes occur without approval.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then a `CHECKS MISSED` list (or "none").
 
 ## What you hand back

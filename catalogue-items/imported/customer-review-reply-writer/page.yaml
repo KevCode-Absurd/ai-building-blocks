@@ -30,10 +30,12 @@ you_get:
   - A list of customers at risk
   - Win-back offer drafts
 how_to_use:
+  - "What you need to start: pasted or exported reviews are enough, and no connector is needed. Shopify, payments, Zoho Desk and CRM connections are optional. Each needs its own account, and some need a paid plan."
+  - This is an imported copy of Anthropic's review-reputation skill, under its original licence. We gave it a plain name and plainer page text.
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
   - Paste your reviews, or attach an export file. This is the safest route.
   - Add complaints, tickets, your writing samples and a time period if you have them. It uses the last 90 days if you say nothing.
-  - Fetching review pages from the web needs web access. It may break a site's terms, so use pasted or exported files when you can.
+  - Fetching review pages from the web needs web access. Fetching is limited to public pages whose terms allow it. It may break a site's terms, so use pasted or exported files when you can.
   - Read each drafted reply next to its review. Nothing should be posted or sent until you approve it.
   - Pick the three actions at the end and do them this week.
 output_sample:
@@ -43,7 +45,7 @@ output_sample:
     - Samples of your own writing, so replies sound like you (optional)
     - Order history, such as Shopify orders (optional)
   prerequisites:
-    - An AI chat such as Claude, ChatGPT or Gemini
+    - An AI chat such as Claude, ChatGPT or Gemini. Connectors for Shopify, payments, a support desk or a CRM are optional and may need paid plans.
     - Your shared voice profile, or enough of your writing to build one
   output:
     - name: Header

@@ -9,8 +9,13 @@ You are a co-marketing strategist who helps SaaS companies identify ideal partne
 
 ## Before Starting
 
-**Check for product marketing context first:**
-If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task. A brand brain file works the same way.
+**Ask for context first.** Ask the user to paste any brand brain or product notes they have into the chat. If they have none, ask only what the Task-Specific Questions below need. Do not search the user's computer for files. The only file this skill uses is `references/partnership-types.md`. Read it only if it came with the skill and the user asks about partnership types other than co-marketing. If it is not there, skip it.
+
+**Run order (added by AI Blocks).** Work in this order and use the sections below as a menu for each step:
+1. Get the inputs: who the user serves, what they sell, the tools their customers use, the goal, and any partner in mind.
+2. Build and rank a partner shortlist (Partner Identification Framework and Scoring Criteria).
+3. Pick one partner and write one campaign plan (Campaign Types, Brainstorming, Structuring the Partnership).
+4. Write the pitch and the call prep list (Approaching Potential Partners). The user sends it themselves.
 
 ## When to Use This Skill
 
@@ -91,11 +96,9 @@ Co-marketing is one of **five partnership types**. Know the taxonomy so you rout
 | **Co-marketing** | Joint content/campaigns with a peer | Borrowed audience, brand halo |
 | **App Store / Marketplace** | List inside a platform's ecosystem | Built-in distribution, effective CAC |
 
-**The figures below are the original author's claims. No source is given here and they were not checked. Do not repeat them to the user as fact unless they confirm them. Treat them as examples to verify.**
+Do not quote any revenue shares, program-size figures or contract terms for these types. The original author gave some, but no source was given and they were not checked. If the user wants a number, they must find the source first.
 
-**Examples the author cites (unverified, source needed):** HubSpot's partner program, said to bring in a large share of its revenue [figure, source needed]. Mature programs, said to earn a large share of revenue [figure, source needed].
-
-Standout moves the author names (all unverified, source needed): **integrations** as a decision factor for enterprise buyers [figure, source needed], Calendly's staged ladder (calendar → sales → marketing); **affiliate** programs where a small share of affiliates drive most revenue [figure, source needed] and buyout clauses [figure, source needed]; **permissionless co-marketing** (building templates for big brands to ride their brand, no contract needed); App Store distribution. Do not repeat any of these as proof. If the user wants a number, they must find the source first.
+Ideas the author names: integrations as a reason enterprise buyers choose a tool, a staged ladder of partners (for example calendar, then sales, then marketing tools), affiliate programs with a few top affiliates, permissionless co-marketing (building templates for big brands to ride their brand, no contract needed) and App Store distribution. Treat these as ideas to test, not proof.
 
 For the full taxonomy — build patterns, economics, examples, and how to choose where to start — see **[references/partnership-types.md](references/partnership-types.md)**. (Affiliate program *mechanics* live in the referrals skill; keep affiliate work here at the partnership-strategy level.)
 
@@ -237,21 +240,7 @@ Would you be open to a quick call to explore?
 
 ## Measuring Co-Marketing Success
 
-### Quantitative Metrics
-
-- Leads generated (total and per partner)
-- Lead quality (MQL/SQL conversion rate)
-- Revenue attributed
-- Audience growth (new subscribers, followers)
-- Content engagement (views, downloads, shares)
-
-### Qualitative Metrics
-
-- Ease of collaboration
-- Partner responsiveness
-- Audience reception
-- Brand lift
-- Relationship strengthened for future campaigns
+Count leads (total and per partner), lead quality, revenue attributed and audience growth. Also note how easy the partner was to work with and whether you would do it again.
 
 ---
 
@@ -292,15 +281,9 @@ Would you be open to a quick call to explore?
 
 ---
 
-## Tool Integrations
+## Optional Paid Tools
 
-For implementation, see the [tools registry](https://github.com/coreyhaines31/marketingskills/blob/main/tools/REGISTRY.md). Key tools for co-marketing:
-
-| Tool | Best For | Guide |
-|------|----------|-------|
-| **Crossbeam** | Account overlap with partners | [crossbeam.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/crossbeam.md) |
-| **Introw** | Partner program management, deal registration | [introw.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/introw.md) |
-| **PartnerStack** | Partner and affiliate program management | [partnerstack.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/partnerstack.md) |
+Crossbeam and Reveal show account overlap. PartnerStack and Introw manage partner programs. All are paid and optional. Customer surveys work for free.
 
 ---
 

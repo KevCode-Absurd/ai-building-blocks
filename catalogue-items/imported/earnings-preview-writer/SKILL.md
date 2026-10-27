@@ -5,7 +5,7 @@ description: >
   upcoming report date and timing, consensus EPS and revenue estimates with their range,
   the beat/miss track record, analyst ratings and price targets, and what to watch in
   the print. Use this skill whenever the user is preparing for an upcoming earnings
-  report or asks what the street expects — consensus or whisper numbers, EPS
+  report or asks what the street expects — consensus numbers, EPS
   expectations, whether a company will beat, an earnings setup, or an earnings-season
   preview — and whenever a ticker comes up in the context of upcoming earnings, even
   without the word "preview". For results that are already out, use earnings-recap.

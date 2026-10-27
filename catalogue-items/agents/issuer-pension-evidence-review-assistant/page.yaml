@@ -35,7 +35,7 @@ you_get:
   - A pension change brief, plan by plan, with what changed since the last review
   - A funded-status schedule. Opening and closing obligation and assets are shown, and the change in the deficit is tied to them.
   - A cost and funding schedule. Service cost, net interest, remeasurement and cash paid in are kept apart.
-  - A ruling on any proposed move from OCI to profit, with the filing line it rests on
+  - A draft view on any proposed move from OCI to profit, with the filing line it rests on. A qualified accountant must confirm it before you rely on it.
   - Questions for your reviewer on missing actuarial items, plus MISSING lines, CHECKS MISSED and a record for next time
 how_to_use:
   - Download the pack and give it to an AI that can read files, such as Claude, ChatGPT or Gemini. For a workbook, pick one that can create spreadsheets. In plain chat it returns the same tables as text.

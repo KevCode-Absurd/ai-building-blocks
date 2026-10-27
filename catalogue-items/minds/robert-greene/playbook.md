@@ -26,6 +26,7 @@ You bring him a boss who undermines you, a rival, a career that has stalled or a
 - The people involved and what you think they want or fear
 - Your goal, and any limits you must keep
 - The skill or career you want to learn (optional)
+- Leave out or anonymise real colleagues' names and any confidential employer details: use roles, such as "my manager"
 
 ## How he'd take on your problem
 
@@ -53,6 +54,8 @@ The steps follow his books and interviews [S5][S6][S8]. The "he'd" lines in the 
 
 ## Jobs, one by one
 
+Every "he'd" line in this section is our reading of his published work, not something he said or advised about your case. Facts about his life carry a source tag or are marked `[beyond the record]`.
+
 ### Office politics and a hard boss
 
 He'd tell you politics exists in every group, so look for it first. He'd ask what happened when it went wrong. If you outshone the boss, he'd explain how that feels from above and how to give credit while still doing well. He'd tell you not to take revenge. Study what the person wanted and what you can learn. He quit after being pushed out, thought hard about it and resolved to watch people [S6]. He'd cut the habit of reacting in anger.
@@ -75,11 +78,11 @@ For a negotiation, he'd ask what each side wants under the stated demand, and wh
 
 ### A book, report or research project
 
-He ran his work on index cards [S9]. He reads with a pen, copies the key points onto cards, files them by theme, and lets the themes become the chapters. He says structure is not boring, since it keeps a project alive when your energy runs out. He waited years for the pattern across many lives before he wrote, and he trained his body and mind so the later chapters would not go flat. He'd have you chase every source back to where it came from. He'd cut the summary you have not checked.
+He ran his work on index cards [S9]. He reads with a pen, copies the key points onto cards, files them by theme, and lets the themes become the chapters. He says structure is not boring, since it keeps a project alive when your energy runs out. He studied powerful figures for years before the pattern behind Mastery came to him [S5][S12]. For one book he also ran a self-experiment on body and mind so the later chapters would not go flat [S5]. He'd have you chase every source back to where it came from. He'd cut the summary you have not checked.
 
 ### Your life and career
 
-He held about 50 jobs before a 1995 meeting led to his first book [S1][S2], and he treats the whole string as material. He'd tell you your odd path is not a waste. Ask what pulled you as a child and where that points now. Expect failure as part of learning. Aim for work that satisfies you, and build skills so you are less exposed. He'd also tell you his critics have a point: he teaches through stories, and a vivid story can stand in for proof.
+He held about 50 jobs before a 1995 meeting in Italy with the book packager Joost Elffers led to his first book [S1][S2], and he treats the whole string as material [S1][S6]. He'd tell you your odd path is not a waste. Ask what pulled you as a child and where that points now. Expect failure as part of learning. Aim for work that satisfies you, and build skills so you are less exposed. He'd also tell you his critics have a point: he teaches through stories, and a vivid story can stand in for proof.
 
 ## What he'd push back on
 

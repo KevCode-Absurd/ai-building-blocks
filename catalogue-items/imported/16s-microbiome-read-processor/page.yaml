@@ -9,11 +9,11 @@ subhead: Give it paired 16S read files, your primer sequences and a trained clas
 explain: |
   You end up with a table of sequence variants, a species label for each one, and a saved record of every step, so a colleague can rerun the work and get the same answer.
 
-  The skill checks your setup before it runs anything. It confirms the quality encoding, the primer sequences as they were read, and whether primers are still on the reads. It uses your quality plots to set trim points, then tests that the forward and reverse reads will overlap by enough bases. After denoising it reports how many reads survived, and it helps you pick a classifier that fits your region. It needs QIIME 2 installed on your machine.
+  The skill checks your setup before it runs anything. It confirms the quality encoding, the primer sequences as they were read, and whether primers are still on the reads. It uses your quality plots to set trim points, then predicts whether the forward and reverse reads should overlap by enough bases. This is a prediction from read lengths, and it does not prove the pairs will merge. After denoising it reports how many reads survived, and it helps you pick a classifier that fits your region. It needs QIIME 2 installed on your machine.
 when:
   - You have paired 16S reads from a sequencer and need a clean variant table.
   - A reviewer asked you to show exactly how you processed your microbiome data.
-  - You are not sure your trim settings leave enough overlap between read pairs.
+  - You want to predict, before denoising, whether your trim settings leave enough overlap between read pairs.
   - You need species labels for each variant using a reference you trust.
 not_for:
   - Your reads already have primers removed. Import them and run DADA2 directly, and note the skipped trimming in your methods.
@@ -32,12 +32,13 @@ you_get:
   - Saved QIIME 2 files that record every step
   - A short list of checks that passed or failed
 how_to_use:
-  - Install QIIME 2 2026.7 with conda or a container. Do not use PyPI. Your AI cannot do this for you in a chat window.
-  - Get a trusted classifier whose scikit-learn version matches your install. Write down its source, version and checksum.
+  - Install QIIME 2 2026.7 with conda or a container. Do not use PyPI. The install and any classifier or reference download need internet access. If your machine is offline, ask your sequencing core to run it. Your AI cannot do this for you in a chat window.
+  - Get a trusted classifier whose scikit-learn version matches your install. A classifier is a saved scikit-learn model and can run code when it loads, so use one only from a source you trust. Write down its source, version and checksum.
   - Make a tab-separated manifest with the headers sample-id, forward-absolute-filepath and reverse-absolute-filepath. Make a metadata file with sample-id in the first column.
   - Give your AI this skill, the manifest, the metadata, your primers and your quality plots. Ask it to run the check step first.
   - Fix any failed check, such as low overlap or missing primers. Then ask your AI to run the full workflow in a new output folder. It needs to run code.
   - Open trimmed.qzv, table.qzv and taxa.qzv in QIIME 2 View. Read retention-qc.json and check your blanks before any analysis.
+  - Next, plan diversity or differential-abundance work as a separate step. This skill does not choose a rarefaction depth for you.
 output_sample:
   input:
     - Paired FASTQ files, one pair per sample

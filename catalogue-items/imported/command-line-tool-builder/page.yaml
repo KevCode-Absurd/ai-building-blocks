@@ -7,6 +7,8 @@ job: build-software
 headline: Command-line tool builder
 subhead: A real command-line tool you can run by name from any folder. Give it an API doc, a script or a few curl examples, and get a tool that returns clean JSON and handles sign-in.
 explain: |
+  This is a copy of OpenAI's cli-creator skill under the Apache 2.0 licence. Only the name is changed.
+
   A real command-line tool you can run by name from any folder. Give it an API doc, a script or a few curl examples, and get a tool that returns clean JSON and handles sign-in.
 
   You name the source, the first jobs it should do, such as list drafts or download failed logs, and a short install name. It first checks that the name is free. Then it checks your machine for Rust, Node or Python and picks the least surprising option, usually Rust for one fast file. It builds the commands, a login step and JSON output so other tools can read it. It is for lasting tools, not one-off scripts.
@@ -31,10 +33,12 @@ you_get:
   - Install steps
 how_to_use:
   - Open an AI that can run code and save files, such as Claude Code or Codex. A plain chat window cannot install the tool.
-  - Paste this skill into the chat or add it as a skill.
+  - Paste this skill into the chat or add it as a skill. It was written for Codex. Read ~/code/clis as any folder you choose, $CODEX_HOME/skills as your AI's skills folder, and $skill-creator as your AI's tool for making skills. Claude Code and other agents work the same way.
   - Paste your API doc, script or curl examples. Say the first jobs it should do and the install name you want.
+  - Check the service's terms first. Do not script an app or service that forbids it, or an internal tool you are not allowed to automate.
   - Check the command plan your AI shows you. Fix any command names before it builds.
   - Let it build and install the tool. Then run the help and doctor commands from another folder to check it works.
+  - Your sign-in token stays in an environment variable or the tool's config file on your machine, and the tool never prints it in full. Live writes need your approval each time.
   - Next, ask it to write the companion skill, so your AI knows how to use the tool safely.
 output_sample:
   input:

@@ -70,7 +70,7 @@ If items 1 and 4 are both missing, stop after asking for them.
 Read `references/feedback-handler-starter.ts` and `references/method-notes.md` first.
 
 1. **List the gaps in the starter.** Check each and say whether it applies:
-   - The starter's four types are acknowledge, useful, not-useful and flag-for-review. The method note's four are approve, reject, right diagnosis but wrong action, and already known. They do not match. Use the note's four, because the page promises them. Plan the rename.
+   - The starter's four types are acknowledge, useful, not-useful and flag-for-review. The method note's four are approve, reject, right diagnosis but wrong action, and already known. They do not match. Use the note's four: approve, reject, right diagnosis but wrong action, and already known. Plan the rename.
    - A reply in a thread with no reaction is saved as `acknowledge`. That counts as an approval the person never gave. Save it as `context` instead and attach it to a reaction when one arrives.
    - The helper that finds an existing record always returns nothing, so every reply makes a new record. Plan the real lookup.
    - Nothing checks who reacted. Plan the allow-list from item 3.
@@ -117,6 +117,9 @@ TEST CASES
 
 NEXT STEP
 <one smallest useful step>
+
+CHECKS MISSED
+<one line per check that failed or could not run, or none>
 ```
 
 TEST CASES cover at least: one reaction of each kind, a reply with no reaction, a reaction from someone not on the allow-list, a changed reaction, a removed reaction, a contradicted lesson, a data fix marked dismissed, and a lesson that has too few signals to be drafted.

@@ -11,7 +11,7 @@ explain: |
 
   The rule is one fact per file. Each has a one-line description that recall matches against, [[links]] to related files, and a single index line. The hard part is discipline: only keep what is lasting, such as a tool that fails silently or a limit nobody wrote down. Update an existing file instead of making a near-copy. Skip routine work, since filler makes recall worse. You pick a store, either the agent's memory folder or a shared wiki folder, and compile before you close a task.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (5dive-ai) says MIT. Credit goes to 5dive-ai and sickn33.
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (5dive-ai) said MIT. We relabelled it in the skill file, so the one licence that applies here is CC BY 4.0. Credit goes to 5dive-ai and sickn33.
 when:
   - You just finished research and want it available next week.
   - Your AI keeps re-learning the same hard-won fact.
@@ -23,7 +23,7 @@ not_for:
   - "You need the facts checked first: have a person verify them, because this only files what you give it."
 you_give:
   - What you learned or found
-  - Where notes are stored (memory folder or wiki)
+  - The notes folder and its index file, for example memory/ with MEMORY.md, or wiki/ with wiki/index.md. Confirm both before the first run.
   - Existing notes to update (optional)
 you_get:
   - Small single-fact files
@@ -36,7 +36,7 @@ how_to_use:
   - Paste what you learned, or say "save this" at the end of a task. Share your existing notes if you have them.
   - Check that your AI searched for a similar note first, and updated it instead of making a copy.
   - Read the new file and the index line. Make sure the one-line description uses words you would search for.
-  - Before your next session, check that the index line still links to a file that exists.
+  - After each session, check that every index line still links to a file that exists. If the facts came from research, run the "Deep research reporter" item in this library first (slug deep-research-reporter) and feed its findings in here.
   - This works best when your AI can read and save files. In a plain chat, copy the files it writes into your folder yourself.
 output_sample:
   input:

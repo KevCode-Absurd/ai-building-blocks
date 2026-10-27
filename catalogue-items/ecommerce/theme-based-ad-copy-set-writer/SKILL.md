@@ -76,7 +76,7 @@ When not to use: for organic posts, a full landing page or a single headline lis
 ## STEP 2: Copy Components
 
 ### Headline (required)
-- 4-6 words, 40 character hard limit
+- 4-6 words as the target (2-6 allowed for short urgency lines), 40 character hard limit
 - Stop the scroll, one core idea
 - No fluff, no questions unless UGC, front-load value
 
@@ -130,10 +130,11 @@ Character Counts:
 
 | Check | PASS |
 |-------|------|
-| Headline length | 4-6 words, <40 chars |
+| Headline length | 2-6 words (4-6 is the target; a short line like "LAST CHANCE" is allowed), <40 chars |
 | CTA present | Yes |
 | Banned phrases | None of: "game-changer", "revolutionary", "leverage", "unlock", "skyrocket", "delve", "at the end of the day" |
 | Em dashes | None |
+| Claim trace | Every number, quote, deadline and offer matches a fact the user supplied. Otherwise the set fails and shows `MISSING:` in its place |
 | Copy set count | 3+ |
 | Framework variety | 3+ different |
 | Headline uniqueness | All distinct |
@@ -153,7 +154,7 @@ Character Counts:
 
 
 ## What next
-Test the two picked sets with the Ad test brief writer. Check the winners with the Ad and page policy checker before you spend.
+Test the two picked sets with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). Check the winners with the Ad and page policy checker before you spend.
 
 ## Final check
 

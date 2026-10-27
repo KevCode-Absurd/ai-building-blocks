@@ -110,14 +110,7 @@ Name each attached image by its job in every prompt ("image 1 is Dev, image 2 is
 Before the final hand-back, check the run against the 6 checks under "Check before you hand it back". Fix any failed check you can, then check again. List any check still missed on the CHECKS MISSED line, one line each, or "none".
 
 ## What you hand back
-One file per stage:
-1. **Avatar card** for the lead, with the crowd base figures (or the product's card, when the product is the avatar).
-2. **Reference image prompts** and the pick.
-3. **Sheet prompts** (character, crowd, product, sets) and the **lock lines**: SET, LIGHT, PALETTE, LENS and the lead line.
-4. **Storyboard:** a frame prompt and a shot card for every shot, and the scene changes, with the frame pair for any morph.
-5. **Clip prompts,** each with the motion line, counted beats, one camera instruction and the hold line.
-6. **Edit list:** order, scene changes, captions, voice and sound, end card, safe zones, and `MISSING:` lines.
-7. **Checks missed:** one line each, or "none".
+One file per stage: the avatar card (or the product's card when the product is the avatar), reference image prompts and the pick, sheet prompts with the lock lines, the storyboard with scene changes, the clip prompts, and the edit list with `MISSING:` lines. Last, CHECKS MISSED: one line each, or "none".
 
 At an approval stop, hand back the stages done so far in this layout, then ask for a yes. In one go, hand back every stage. Either way, use exactly this layout, with these labels in this order:
 

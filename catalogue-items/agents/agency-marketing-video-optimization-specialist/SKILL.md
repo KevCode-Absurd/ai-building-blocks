@@ -44,7 +44,7 @@ How to start:
 
 ## What you need
 
-Note: the numbers for this job are from YouTube Studio. They are not Meta Ads Manager or Google Ads exports. If the Before you start list above says otherwise, follow this list.
+Note: the "Before you start" block above is shared text. Ignore its "Your question", "Source text" and "Your results" lines. The numbers for this job come from YouTube Studio (click-through rate, retention graph, traffic sources). They are not Meta Ads Manager, Google Ads or store exports. Follow this list instead.
 
 - The video topic, or the current title and script (required)
 - Who the video is for and what the user wants from it, such as search views, subscribers or leads (required)

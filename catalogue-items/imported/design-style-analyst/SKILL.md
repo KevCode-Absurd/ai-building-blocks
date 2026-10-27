@@ -16,6 +16,8 @@ description: >-
 
 # Design DNA
 
+**What you need.** The whole skill folder (this file, `references/` and `scripts/`), not this file alone. Exact colour measurement from screenshot files needs Node.js and an AI that can run code. Without them, say plainly that colours are estimated by eye and may be off. Do not use estimated colours where an exact brand colour matters.
+
 A 3-phase workflow for extracting, structuring, and applying design identity across three dimensions:
 
 1. **Design System** — measurable tokens (color, typography, spacing, layout, shape, elevation, motion, components)
@@ -43,7 +45,7 @@ When the user provides images, screenshots, or links representing a target desig
 1. Read [references/schema.md](references/schema.md) for the full field list
 2. For each reference provided:
    - If image/screenshot: **first run the deterministic color measurement** (see below), then analyze the remaining visual properties directly
-   - If URL: fetch and analyze the page's visual design. Colors from a URL alone are visual estimates, not measured values, so say so in the output. Look at the page only to describe its style. Do not copy its assets.
+   - If URL: fetch and analyze the page's visual design. Colors from a URL alone are visual estimates, not measured values, so say so in the output and tell the user not to use them where exact brand colours matter. Look at the page only to describe its style. Do not copy its assets.
 3. For every field in the schema, extract or infer a value from the references
 4. When multiple references conflict, note the dominant pattern and mention variants
 5. Output a complete Design DNA JSON — every field populated, no empty strings
@@ -85,7 +87,7 @@ When the user provides DNA JSON + content to design:
 2. Parse the DNA JSON and extract all tokens across three dimensions
 3. Build CSS custom properties from `design_system` values
 4. Apply `design_style` qualitative fields to guide subjective design decisions
-5. When the design needs assets or source materials, fetch them from the original source whenever possible. If the user provided a URL, retrieve the real asset from that URL instead of recreating, approximating, or substituting it. Only do this for assets the user owns or has the right to use. Never fetch or reuse another company's logos, photos, text or other assets; recreate the look from the profile instead.
+5. When the design needs assets or source materials, fetch them from the original source whenever possible. If the user provided a URL, retrieve the real asset from that URL instead of recreating, approximating, or substituting it. Only do this for assets the user owns or has the right to use, and remind the user to check the licence of anything fetched before they reuse it. Never fetch or reuse another company's logos, photos, text or other assets; recreate the look from the profile instead.
 6. Implement `visual_effects` using appropriate technologies:
    - Lightweight effects → CSS animations, SVG, vanilla JS
    - Medium effects → Canvas 2D, GSAP, Lottie

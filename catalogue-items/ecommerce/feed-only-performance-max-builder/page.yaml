@@ -9,7 +9,7 @@ headline: "Feed-only Performance Max builder"
 subhead: Give it your Shopping campaigns, conversions in the last 30 days and brand negatives. It hands back step-by-step settings for a Performance Max campaign with no text, image or video assets, the priority setup beside Shopping, the brand exclusion step, and review dates with kill rules.
 
 explain: |
-  A normal Performance Max campaign can wander into YouTube, Display and Gmail, spending where you did not plan. A feed-only version leaves the asset group blank, so the campaign runs on your product feed. That keeps spend on Shopping placements, which is useful for reaching people who already visited your store.
+  A normal Performance Max campaign can wander into YouTube, Display and Gmail, spending where you did not plan. A feed-only version leaves the asset group blank, so the campaign runs on your product feed. That aims to keep spend on Shopping placements, which is useful for reaching people who already visited your store. It is not guaranteed, so check placements after one week.
 
   This skill builds that campaign. It checks you are ready (sales coming in, at least 15 live products, a clean feed), gives the exact settings, and pairs it with a High priority new-customer Shopping campaign. It also picks one role for the campaign, because the sources disagree: a remarketing layer under Shopping, or the main engine. It sets review dates at two and four weeks with rules for when to stop.
 
@@ -83,7 +83,7 @@ how_it_works:
   - title: Excludes brand
     text: Brand terms out of this campaign so branded sales stay in the branded campaigns.
   - title: Sets the reviews
-    text: A look at 2 weeks and 4 weeks, with kill rules, and a note that Poor ad strength can be ignored for this setup.
+    text: A look at 2 weeks and 4 weeks, with kill rules, and a check that the campaign's ads and assets are approved. Poor ad strength alone does not mean it is broken for this setup.
 
 output_shape: |
   READINESS  <ready / not yet>  | sales/mo <n> | live products <n> | feed <clean?>

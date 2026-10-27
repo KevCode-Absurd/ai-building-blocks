@@ -13,7 +13,7 @@ description: >
 
 # CIS Controls v8 Skill
 
-> **Last verified:** 2026-10-03 (the original author's date)
+> **Last verified:** 2026-10-03 (the original author's date). AI Blocks imported this copy on 2026-10-20 and did not recheck it.
 
 > **Mappings:** The tables that map CIS Controls to NIST CSF, ISO 27001 and CMMC are general guides. They have not been checked against the current text of those standards, and some CMMC entries use `x` as a placeholder. An assessor must check them before anyone relies on them for an audit.
 

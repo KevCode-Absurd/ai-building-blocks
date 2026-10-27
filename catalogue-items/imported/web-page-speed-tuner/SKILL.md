@@ -191,6 +191,8 @@ See [references/real-time-communication.md](references/real-time-communication.m
 
 ## Quick Diagnostic
 
+**Where the numbers come from:** LCP 2.5s, INP 200ms and CLS 0.1 are Google's published "good" Core Web Vitals thresholds. TTFB 800ms and FCP 1.8s are Google web.dev guidance for a "good" result, but they are not Core Web Vitals limits. Check web.dev for the current figures, because Google can change them.
+
 | Question | If No | Action |
 |----------|-------|--------|
 | Is TTFB under 800ms? | Server or network too slow | CDN, server caching, check backend |
@@ -206,7 +208,7 @@ See [references/real-time-communication.md](references/real-time-communication.m
 
 Based on Ilya Grigorik's comprehensive guide to browser networking and web performance:
 
-- [*"High Performance Browser Networking"*](https://www.amazon.com/High-Performance-Browser-Networking-performance/dp/1449344763?tag=wondelai00-20) by Ilya Grigorik (the complete reference for networking protocols, browser internals, and performance optimization)
+- [*"High Performance Browser Networking"*](https://www.amazon.com/High-Performance-Browser-Networking-performance/dp/1449344763) by Ilya Grigorik (the complete reference for networking protocols, browser internals, and performance optimization)
 - [hpbn.co](https://hpbn.co/) -- Free online edition maintained by the author
 
 ## About the Author

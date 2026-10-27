@@ -7,6 +7,8 @@ job: work-with-audio
 headline: Noisy audio cleaner
 subhead: Give it a noisy recording. Get clean speech with the background noise and music removed. Bring a noisy audio file or link. Use the result to plan your next step.
 explain: |
+  This is an unchanged copy of ElevenLabs' own voice-isolator skill (MIT licence). We added the setup safety notes: a version you choose, permission for the voices, and limits to check.
+
   Speech pulled clean out of a noisy recording. Traffic, hiss, room echo and background music are stripped away, so you hear the voice.
 
   The skill sends your file to the ElevenLabs Voice Isolator and saves the cleaned audio. It works on any common format, and a faster option takes raw 16 kHz mono PCM when you need low delay. It can also fetch audio from a link. Use it to prepare interviews for transcription, tidy up a call, or pull dialogue out of a mixed track. You can run it from Python, JavaScript or the command line. You need an ElevenLabs account and API key, and usage may cost credits.
@@ -20,7 +22,7 @@ not_for:
   - "You cannot send audio to a paid online service: use a free denoise tool on your own computer, or ask a sound editor."
   - "You only have a music track and want the music itself: this keeps speech and removes the rest, so use a stem splitter instead."
 you_give:
-  - A noisy audio file or link
+  - A noisy audio file or link. Look up the file size and length limits in the Voice Isolator section of the ElevenLabs API docs (elevenlabs.io/docs) first, and split long files if needed.
   - Your ElevenLabs API key
   - File format notes (optional)
 you_get:
@@ -28,8 +30,8 @@ you_get:
   - Code to run it on more files
   - A faster PCM option for low delay
 how_to_use:
-  - Make an ElevenLabs account. Each file you clean uses credits on your plan, so check current pricing before you run it on many files.
-  - Open an AI tool that can run code, such as Claude Code, and add this skill. If the key is not set, your AI will ask to run ElevenLabs' sign-in command (npx -y @elevenlabs/cli@latest onboard init). It signs you in and stores a key for the project. That command downloads the newest version of a third-party tool, so read it before you say yes. You can also save your key as the ELEVENLABS_API_KEY setting on your own computer. Never paste the key into a chat.
+  - Make an ElevenLabs account. Each file you clean uses credits on your plan, so check current pricing before you run it on many files. Your audio is sent to ElevenLabs, so get permission from anyone whose voice is on it before you upload.
+  - Open an AI tool that can run code, such as Claude Code, and add this skill. If the key is not set, your AI will ask to run ElevenLabs' sign-in command (npx -y @elevenlabs/cli@[VERSION] onboard init). It signs you in and stores a key for the project. Open npmjs.com/package/@elevenlabs/cli, read the package page, pick a version number and give it to your AI to use in place of [VERSION]. Never let it run @latest. You can also save your key as the ELEVENLABS_API_KEY setting on your own computer. Never paste the key into a chat.
   - Give your AI the audio file or link and ask it to clean the speech.
   - Ask it to run the example on your file first. It saves the result as clean.mp3.
   - Play clean.mp3 and check that the voice is clear. Then run it on your other files. Send the clean file to a speech-to-text tool, such as the Recording transcriber, if you want a transcript. Read the transcript against the audio for names and numbers before you publish it.

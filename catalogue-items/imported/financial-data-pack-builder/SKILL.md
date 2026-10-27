@@ -10,11 +10,12 @@ description: Build professional financial services data packs from various sourc
 > **Facts rule.** Every number, including market size, growth, market share, benchmark and peer figures, must come from the document the user uploaded, with its page. If a figure is not in the source, write "not in source" in the cell. Do not fill it from memory. If you use a web search, tag each figure "web, unverified" and give the link.
 >
 > **Scenarios.** Base and Downside cases are assumptions, not forecasts or advice. Label every such figure "Assumption".
+>
+> **First, ask which currency.** Before you build anything, ask: "Is this pack in US dollars or Indian rupees?" For USD, use Rules 1 to 5 below. For INR, use the India section and the rupee sign. Do not mix the two in one pack. `NOT-ADAPTABLE.md` is not included here, so if something has no Indian equivalent, say so and name the gap.
 
 ## India
 
-This skill operates on **Indian markets**. Load **`india-market-conventions`**
-before building anything, and **`india-market-data`** for sources. Two rules cause
+For an Indian pack, the two rules below are all you need. Take figures only from the document the user uploaded. Two rules cause
 most Indian errors:
 
 - **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
@@ -22,15 +23,15 @@ most Indian errors:
   Never annualise a quarter without stating the fiscal offset.
 - **Units are lakh (10⁵) and crore (10⁷).** Never use the Excel format
   `#,##0,," Cr"` — each trailing comma divides by 1,000, so that format displays
-  **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
+  **million under a crore label: a 10× error**. Divide by `10000000` in a live
   formula and label the column `Total Revenue (₹ Cr)`.
 
-What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
+If something has no Indian equivalent, name the gap —
 never substitute a proxy and present it as the real thing.
 
 Build professional, standardized financial data packs for private equity, investment banking, and asset management. Transform financial data from CIMs, offering memorandums, SEC filings, web research, or a connected data source into polished Excel workbooks ready for investment committee review.
 
-**Important:** Use the xlsx skill for all Excel file creation and manipulation throughout this workflow.
+**Important:** Use the xlsx skill for all Excel file creation and manipulation throughout this workflow, if you have it. If you do not, use whatever spreadsheet tool you have and keep every rule in this file about formulas, formats and font colors.
 
 ## CRITICAL SUCCESS FACTORS
 
@@ -334,7 +335,7 @@ For every normalization:
 
 ### Phase 3: Build Excel Workbook
 
-**CRITICAL: Use xlsx skill for all Excel file manipulation. Read xlsx skill documentation before proceeding.**
+**CRITICAL: Use the xlsx skill for all Excel file manipulation, if you have it, and read its documentation first. If you do not have it, use your own spreadsheet tool and keep the rules in this file.**
 
 **Step 3.1: Create standardized tab structure**
 Create workbook with tabs:

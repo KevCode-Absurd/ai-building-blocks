@@ -32,10 +32,11 @@ you_get:
 how_to_use:
   - Use an AI that can run code and read files, with Python 3 installed. Add the skill folder and your spec file.
   - "Ask your AI to run the linter: python3 scripts/api_linter.py openapi.json --format json -o lint.json"
-  - "If you have an older spec, ask it to run: python3 scripts/breaking_change_detector.py openapi-v1.json openapi-v2.json --format json -o breaking.json"
+  - "If you have an older spec, ask it to run: python3 scripts/breaking_change_detector.py openapi-v1.json openapi-v2.json --format json --exit-on-breaking -o breaking.json"
   - "Ask it to run the scorecard: python3 scripts/api_scorecard.py openapi.json --format json --min-grade B -o scorecard.json"
   - Read the findings and grade. Ask your AI to fix the spec, then run all three checks again.
   - Stop when the linter is clean, nothing breaks without a version bump, and the grade meets your target.
+  - Then attach lint.json, breaking.json and scorecard.json to the pull request, or share the summary with the people who own the API.
 output_sample:
   input:
     - Your OpenAPI or Swagger file

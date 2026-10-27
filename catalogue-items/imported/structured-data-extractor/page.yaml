@@ -31,9 +31,11 @@ you_get:
   - Extraction code with automatic retries
   - Validation rules
   - Example runs on your text
-  - Optional streaming code
+  - Optional streaming code. Streaming calls change between versions, so check them against the docs for your pinned version.
+  - In the end, one Python file you can run, plus a sample run on your text so you can see the checked data
 how_to_use:
-  - "Use your chat AI only to draft the code. Open Claude, ChatGPT or Gemini and paste this skill into the chat. You run the code yourself later, on your own computer, with Python and your own API key."
+  - "Your chat AI only drafts the code. It does not run it. Open Claude, ChatGPT or Gemini and paste this skill into the chat. You then run the code yourself, on your own computer, with Python and your own API key. API calls are billed by your AI provider."
+  - Check you have Python 3.9 or newer. The code needs Instructor 1.x and Pydantic 2.x, so install with pins such as pip install "instructor>=1,<2" "pydantic>=2,<3".
   - List the fields you want, with a type for each, such as text, number or date.
   - Paste a sample of the text you want to read. Say which AI provider you use.
   - Add rules for valid values if you have any, such as an age range or a fixed list of choices.

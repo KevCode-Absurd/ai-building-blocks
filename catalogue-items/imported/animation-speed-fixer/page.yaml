@@ -11,7 +11,7 @@ explain: |
 
   It sorts the work by what the browser must redo each frame. Moving or fading with transform and opacity is cheap. Changing colours, gradients and filters costs more. Changing size or position forces a full layout and costs the most. The skill flags common traps: reading and writing layout in the same frame, animating large areas, tying motion to scroll in a heavy way, and heavy blur.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (ibelick) says MIT. Credit goes to ibelick and sickn33.
+  Licence: CC BY 4.0 applies to this copy, as its LICENSE-CONTENT file says. Reuse it with credit to ibelick and sickn33. The author's own file header says MIT, which also allows reuse with credit.
 when:
   - Your page janks while scrolling and you suspect the animations.
   - A menu or card slide drops frames on phones.
@@ -20,6 +20,7 @@ when:
 not_for:
   - "You build a native phone app: use the tools made for that platform, such as Xcode Instruments or Android Studio profiler."
   - "You want a first look at what is slow: use the Performance tab in your browser devtools, then come back with the code."
+  - "You want a full motion review for feel, easing and reduced motion: use the animation reviewer. This item only fixes speed."
   - "Your page has no motion at all: there is nothing to fix, so check image size and page load instead."
 you_give:
   - The file or component with the animation
@@ -31,8 +32,8 @@ you_get:
   - A concrete code fix
   - A list of safer properties to animate
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
-  - Paste the file or component with the slow animation. If your AI can read files, upload it instead.
+  - Open Claude, ChatGPT or Gemini and paste in the contents of SKILL.md from this item.
+  - Paste the file or component with the slow animation, or upload it. Then ask your AI to list each violation, why it matters and a fix.
   - Say what feels slow and on which device, for example a menu that drops frames on phones.
   - Read each quoted line and its reason, then paste in the fix that suits you.
   - Test again on the same device to check the motion is smooth. This skill reads code only and does not run your page.

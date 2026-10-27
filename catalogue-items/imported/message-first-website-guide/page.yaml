@@ -10,6 +10,10 @@ explain: |
   A step-by-step plan for building a website that gets visitors to act, with the words settled before the looks. Describe your business and you are walked through ten phases, saved in a plan file you can pick up again later.
 
   The order is fixed: first who the site is for and its one job, then the message with your customer as the hero, then making it memorable. After that come visual design, type, consistency and ease of use. The last phases fix why people do not convert, capture those not ready to buy, and run a final review. Each phase ends with a draft you approve. Every claim, testimonial and guarantee must be true.
+
+  The ten phases in order: 1 who it is for and its one job. 2 the message. 3 making it memorable. 4 the standout design. 5 the type. 6 consistent design. 7 ease of use. 8 why people do not convert. 9 a quiz to capture people not ready to buy. 10 a final review.
+
+  Short words used in the phases. SB7 is the StoryBrand seven-part message: your customer is the hero and you are the guide. PVP scores a niche on personal fulfilment, value to the market and profit. The Trunk Test asks whether a stranger dropped on any page can say what it is, where they are and what to do next. The Big 5 are the five reasons people do not buy: trust, price, fit, timing and effort.
 when:
   - You are starting a new site and do not know where to begin.
   - Your site looks fine but nobody signs up.
@@ -30,11 +34,14 @@ you_get:
   - A conversion and test plan
 how_to_use:
   - Use an AI that can work with files, such as Claude with a project folder. The plan is saved as files so you can stop and resume.
-  - Install the ten companion skills this guide calls, or paste each one in when its phase starts.
+  - "The guide calls ten companion skills: one-page-marketing, storybrand-messaging, made-to-stick, top-design, web-typography, refactoring-ui, ux-heuristics, cro-methodology, scorecard-marketing and steve-jobs-design-review. In this library, nine are here under plain names: One-page marketing plan builder, Customer-as-hero message planner, Memorable message writer, Standout website designer, Web font pairing picker, Visual hierarchy fixer, Conversion problem finder, Quiz funnel builder and Ruthless simplicity reviewer (that one is steve-jobs-design-review). The tenth, ux-heuristics, is not in this library. For that phase, use the built-in brief, or the Everyday usability reviewer, which does a similar check."
+  - You do not need to install anything. The built-in fallback brief in the skill covers every one of the ten phases, so you can skip the install command entirely.
+  - The skill file also offers an npx command to install the originals from another GitHub repo (wondelai/skills). That command downloads and runs code from outside this library, and we have not reviewed it. Before you run it, open github.com/wondelai/skills in your browser and read the folder of each skill it would install. If you cannot read it, or do not understand it, skip it.
   - Tell your AI what you sell, who it is for and the main goal of the site. Add any customer notes you have.
   - Answer the questions your AI asks at each phase. Approve each draft before you move on.
   - Check that every claim, testimonial and guarantee in the copy is true before you publish.
   - Come back later and ask your AI to pick up from the plan file.
+  - "When the ten phases are done, run the conversion and test plan, check every claim again, then publish."
 output_sample:
   input:
     - What you sell and who it is for
@@ -42,7 +49,7 @@ output_sample:
     - Any positioning or customer notes you already have (optional)
   prerequisites:
     - An AI that can read and write files in a project folder, so the plan can be saved and picked up later
-    - The ten companion skills this guide calls, from one-page-marketing to steve-jobs-design-review
+    - The companion skills are optional. Nine are in this library under plain names, and every phase also has a built-in fallback brief
   output:
     - name: docs/MARKETING.md
       contains: Who the site is for, the one niche you picked and the single job the site must do.

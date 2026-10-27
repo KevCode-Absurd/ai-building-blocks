@@ -13,7 +13,7 @@ At the start of any non-trivial analysis request, especially when the ask is vag
 2. **Identify the decision type** — apply `references/decision_maker_framework.md` to classify the decision (strategic / operational / tactical) and calibrate the required rigour and format.
 3. **Document requirements** — fill in `assets/requirements_doc_template.md` covering: business question, success criteria, scope inclusions/exclusions, data sources, and timeline.
 4. **Resolve ambiguities** — use the elicitation techniques in `references/elicitation_techniques.md` for any requirement still unclear after the interview (5-whys, scenario walkthrough, MoSCoW prioritisation).
-5. **Get explicit sign-off** — send the requirements doc to the requestor for confirmation before starting work; update based on feedback.
+5. **Get explicit sign-off** — send the requirements doc to the requestor for confirmation before starting work; update based on feedback. If the requestor does not reply by the deadline, list the open points as assumptions in the requirements doc and tell the requestor you are proceeding on them.
 6. **Produce the analysis brief** — convert approved requirements into `assets/analysis_brief_template.md`, which becomes the authoritative scope document for the project.
 
 # Inputs the skill needs

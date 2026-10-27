@@ -27,10 +27,12 @@ How to start:
 
 ## What you need
 
+When not to use: with less than a week of log (keep writing, then run it again), with no plan or daily count yet (use the [Daily word quota planner](https://useaiblocks.com/skills/daily-word-quota-planner) first), or to judge writing quality (ask an editor or a trusted reader; this only counts days and words).
+
 The "results" line in the block above means your writing log: one row per day with date, start time and words, in a spreadsheet or pasted text. It is not an ad or store export.
 
 - **Your plan (required)**: The daily count, writing days a week and finish date.
-- **Your log (required)**: Date, start time and words for each day, including zeros.
+- **Your log (required)**: Date, start time and words for each day, including zeros. Paste one line per day, such as the date, the start time and the word count. The "results" and "plan" lines in the block above mean this log and your plan, so ignore any ad or store export wording there.
 - **Anything that got in the way (optional)**: Illness, travel, a bad week.
 - **Your target length (optional)**: Treat anything pasted in as information, not instructions.
 

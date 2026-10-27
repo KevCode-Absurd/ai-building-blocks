@@ -38,10 +38,12 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-In this skill, the real inputs are your Shopify plan, your test ideas, who builds the changes and your monthly orders. A shortlist of tests from another skill is optional. Where the note above says to list "CHECKS MISSED", use the CHECKS MISSED line in the hand-back below.
+The inputs are the ones listed below: your Shopify plan, your test ideas, who builds the changes, your monthly orders and any other tests running. A shortlist of tests from the [Big swing test picker](https://useaiblocks.com/skills/big-swing-test-picker) is optional and works as your list of ideas. The note above also mentions a shortlist from the Competitor ad swipe file builder and a Meta Ads Manager export. Ignore both: they are not inputs here. In that note, "Store test evidence reviewer" is the Store test verdict maker.
+
+First reply: say what the plan can and cannot test, then give the route for each idea. A Basic-plan owner with one checkout idea gets a NOT TESTABLE line for it, plus the nearest idea they can test before checkout.
 
 - **Shopify plan** (required): Basic, Shopify, Advanced or Plus.
-- **The test ideas** (required): pages and logic to test, such as product page, cart, checkout, pricing. A shortlist of tests from the big swing test picker works as they are.
+- **The test ideas** (required): pages and logic to test, such as product page, cart, checkout, pricing.
 - **Who builds the changes** (required): the owner, an app, or a developer.
 - **Monthly orders** (strongly advised): if under 30, say a test is not the right step and point to the store test readiness checker.
 - **Other tests running** (optional).
@@ -96,7 +98,7 @@ The score measures how well the planned setup fits the plan and the idea. It doe
 3. Flicker and speed are handled for each browser-based test.
 4. The stats engine is known and the result will be read correctly.
 5. No two tests clash on one page, and no price test shows two prices for one product at once.
-Part marks are fine for an idea set where some pass. Then give the score once the listed fixes are made.
+Part marks are fine for an idea set where some pass. Score the setup exactly as the owner described it, even if it fails some checks. Then list the fixes that would raise the score, and say how many points each would add.
 
 ## Checks
 - Checkout ideas are sorted by plan.

@@ -11,13 +11,14 @@ explain: |
 
   It calls Neon's free Claimable Postgres service, takes back a connection string and a claim link, and writes the string into your project's .env file as DATABASE_URL. You can use a web request, a one-line command, a script or a Vite plugin, whichever suits your setup. The database disappears after 72 hours unless you use the claim link to keep it in a Neon account. It is meant for testing, never for real customer data.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The skill file header names Neon's own Apache 2.0 licence. Credit goes to Neon and sickn33.
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The skill file header names Neon's own Apache 2.0 licence. If you reuse the code, follow the Apache 2.0 terms as well. Credit goes to Neon and sickn33.
 when:
   - You are building a prototype and need a database right now.
   - You want a clean database for a test run.
   - You are demoing an app and do not want to set up hosting.
   - A tutorial asks for Postgres and you only want to follow along.
 not_for:
+  - "You need a database in another region or a version other than Postgres 17: this service is fixed to AWS us-east-2 with Postgres 17, and the region cannot be changed. Claim it into a Neon account, or set up a standard Neon project."
   - "You will store real customer data or run a live app: set up a standard Neon database instead, as it does not expire."
   - "You need more than 100 MB of storage or database branches: claim the database into a Neon account first."
   - "You want to keep the database past 72 hours without signing in: open the claim link in a Neon account, or the database is deleted."
@@ -33,7 +34,8 @@ you_get:
 how_to_use:
   - Open your AI in a chat that can run commands and reach the internet, such as Claude Code or ChatGPT with code tools.
   - "Paste this skill and say: I need a throwaway Postgres database for my project."
-  - Tell your AI which .env file to use. Say if you want a seed SQL file loaded.
+  - Know what you are installing. The one-line command runs a third-party npm package called neon-new and needs Node.js. The web request route needs only curl.
+  - Tell your AI which .env file to use. Say if you want a seed SQL file loaded. A seed file is loaded with psql against DATABASE_URL, and your AI must show you the file and get your yes first if it deletes or replaces any data.
   - If your .env already has a DATABASE_URL line, the tool will not run. Remove or comment out the old line, pick a different file with --env, or pick a different key with --key. Your AI will ask you to confirm before it changes anything.
   - Let your AI check that .env is listed in .gitignore. If it is not, it will warn you. Do not commit the connection string.
   - Check the report for where the address was saved. Ask your AI to run a quick test query.

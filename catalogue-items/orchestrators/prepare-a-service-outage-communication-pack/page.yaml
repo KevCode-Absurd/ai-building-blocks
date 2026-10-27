@@ -61,9 +61,9 @@ output_sample:
       contains: Files saved, facts still unconfirmed, checks not run and one next step.
 how_it_works:
   - title: Incident runbook writer
-    text: Sets owners, update times and the fact ledger from your confirmed facts. Hands step 2 only facts marked confirmed, with the open ones listed.
+    text: Sets owners, update times and the fact ledger from your confirmed facts. Hands step 2 the full ledger (confirmed, being investigated, unknown), the owner of each message and each next-update time.
   - title: Stakeholder update writer
-    text: Writes the first notice, progress and recovery messages for each audience. Hands step 3 the drafts and the ledger they came from.
+    text: Writes the first notice, progress and recovery messages for each audience. Hands step 3 the drafts only. Step 3 edits the words and does not get the ledger.
   - title: Plain English editor
     text: Edits for clarity and keeps every condition and promise as written. Hands back the final messages.
 output_shape: |-

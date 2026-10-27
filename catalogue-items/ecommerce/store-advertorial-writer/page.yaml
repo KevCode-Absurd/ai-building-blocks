@@ -126,7 +126,7 @@ tweaks:
   - what: Price and compare price
     how: Give both, with the true alternative you compare to. The skill uses only comparisons that are true.
   - what: A swipe page
-    how: Add a winning page as a PDF to rebuild its structure. Expect a skeleton that is 80 to 90% there.
+    how: Add your own page as a PDF, or type by hand notes on a public page's section order. Never capture or copy a rival's page or its HTML. The page is written from your own copy and facts. Expect a skeleton that is 80 to 90% there.
 
 judge:
   - The ad label is at the top and nothing makes the page look like a real news site.

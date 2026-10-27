@@ -12,12 +12,12 @@ Extract product data, prices, reviews, and seller information from any e-commerc
 
 ## When to Use
 - You need product, pricing, review, stock, or seller data from e-commerce sites.
-- The task involves price monitoring, competitor product comparison, MAP enforcement, or review analysis.
+- The task involves price monitoring, competitor product comparison, finding possible MAP breaches, or review analysis.
 - You need a guided workflow for extracting marketplace data and summarizing findings.
 
 ## Before you scrape
 
-Check each site's terms and robots rules first. Avoid high-volume runs against sites that forbid scraping. Keep `maxProductResults` low.
+Check each site's terms and robots rules first. Avoid high-volume runs against sites that forbid scraping. Keep `maxProductResults` low. Before the first run, set a spending limit and a result cap in the Apify console.
 
 The `risk: critical` label in the header is the author's. It flags that this skill runs a paid outside service, reads other sites and uses an access token. Customer reviews can contain personal data, so store and share the files with care.
 
@@ -79,7 +79,7 @@ Task Progress:
   "keyword": "Samsung Galaxy S24",
   "marketplaces": ["www.amazon.com", "www.walmart.com"],
   "additionalProperties": true,
-  "maxProductResults": 50
+  "maxProductResults": 20
 }
 ```
 
@@ -97,7 +97,7 @@ Add these fields to get AI-generated insights:
 {
   "keyword": "robot vacuum",
   "marketplaces": ["www.amazon.com"],
-  "maxProductResults": 50,
+  "maxProductResults": 20,
   "additionalProperties": true,
   "fieldsToAnalyze": ["name", "offers", "brand"],
   "customPrompt": "Summarize price range and identify top brands"
@@ -138,7 +138,7 @@ Add these fields to get AI-generated insights:
   ],
   "sortReview": "Most recent",
   "additionalReviewProperties": true,
-  "maxReviewResults": 500
+  "maxReviewResults": 100
 }
 ```
 
@@ -149,7 +149,7 @@ Add these fields to get AI-generated insights:
   "marketplacesReviews": ["www.amazon.com"],
   "sortReview": "Most recent",
   "additionalReviewProperties": true,
-  "maxReviewResults": 200
+  "maxReviewResults": 100
 }
 ```
 
@@ -163,7 +163,7 @@ Add these fields to get AI-generated insights:
 > **Note:** The `sortReview: "Lowest rated"` option may not work consistently across all marketplaces. For quality analysis, collect a large sample and filter by rating in post-processing.
 
 ### Quality Analysis Tips
-- Set high `maxReviewResults` for statistical significance
+- Start with a low `maxReviewResults` (the examples use 100) and raise it only if you need a bigger sample, since each result adds to the Apify bill and the load on the site
 - Look for recurring keywords: "broke", "defect", "quality", "returned"
 - Filter results by rating if sorting doesn't work as expected
 - Cross-reference with competitor products for benchmarking
@@ -260,9 +260,9 @@ Report:
 - Number of items extracted
 - File location (if exported)
 - Key insights based on workflow:
-  - **Products:** Price range, outliers, MAP violations
+  - **Products:** Price range, outliers, possible MAP breaches (leads to check by hand, not proof)
   - **Reviews:** Average rating, sentiment trends, quality issues
-  - **Sellers:** Seller count, unauthorized sellers found
+  - **Sellers:** Seller count, sellers you do not recognise (leads to check by hand)
 
 ---
 

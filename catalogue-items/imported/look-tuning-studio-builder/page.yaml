@@ -11,7 +11,7 @@ explain: |
 
   There are two kinds. For visual settings such as color, type, layout, image treatment or animation, the page has controls for each setting and records your final choices. For text, such as a blog post, doc or copy, the page lets you read, edit and mark up the content directly, and it captures your edits. Either way, the point is to replace static grids of options and walls of prose with something you can act on. Your AI builds the page for whatever you name.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Conner K Ward) says MIT. Credit goes to Conner K Ward and sickn33.
+  Licence: the skill text in this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Conner K Ward) says MIT, which covers the author's own code. Credit goes to Conner K Ward and sickn33.
 when:
   - You want to fine-tune colors and spacing and pick by looking, not by guessing numbers.
   - You need to compare design variations quickly.
@@ -23,7 +23,7 @@ not_for:
   - You need final design work in a full design app. Use a standard design tool, then bring the values here.
 you_give:
   - What you want to tune or review
-  - The files or page involved
+  - The files or page involved, such as the page address or file path
   - Which settings matter (optional)
   - A reference look (optional)
 you_get:
@@ -33,6 +33,7 @@ you_get:
   - Captured edits and notes
 how_to_use:
   - Open a chat with an AI that can run code and open a browser, such as Claude Code.
+  - Before you start, gather the page address or file path, the settings you want to adjust, and a reference look if you have one.
   - Paste the skill, then say what you want to tune, for example the colors and spacing of your landing page.
   - Share the files or page involved. Say which settings matter, if you know.
   - Your AI builds a local page. Open it and adjust the controls by eye, or edit and comment on the text.

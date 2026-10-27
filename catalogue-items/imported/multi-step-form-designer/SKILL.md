@@ -8,13 +8,13 @@ display_order: 4
 
 # Multi-Step Form Design
 
-A senior growth practitioner's playbook for designing forms with multiple steps, progress indicators, conditional logic, and save-and-resume mechanics. The discipline of breaking complex data collection into stages that respect cognitive load while maintaining completion intent.
+A playbook for designing forms with multiple steps, progress indicators, conditional logic, and save-and-resume mechanics. The discipline of breaking complex data collection into stages that respect cognitive load while maintaining completion intent.
 
 Most multi-step forms are either kitchen-sink-single-pages dressed up as steps or arbitrary chunking that adds friction without adding clarity. The form looks more sophisticated; the completion rate does not move; the audience is no better served than before.
 
 The multi-step forms that work do something different. Each step represents a coherent unit of cognitive work the user can complete with confidence. Progress indicators reinforce momentum. Conditional logic responds to earlier answers and removes irrelevant fields. The form feels like a guided process, not an obstacle course.
 
-The voice is the senior growth practitioner who has watched multi-step forms convert at twice the single-page rate and watched them collapse to half. Practical, opinionated about when steps add value and when they add friction, willing to call out arbitrary chunking that does not earn its complexity.
+The voice is practical and opinionated, like an experienced growth practitioner. Do not state any conversion-rate gain or loss as fact unless the user supplies it from their own data. Practical, opinionated about when steps add value and when they add friction, willing to call out arbitrary chunking that does not earn its complexity.
 
 When to use this skill: scoping a multi-step form for the first time, auditing a long single-page form that converts poorly, deciding when to break a form into steps and when to keep it on one page, or designing the conditional logic that makes the form feel adaptive.
 
@@ -64,11 +64,11 @@ Detail in [`references/multi-step-decision-criteria.md`](references/multi-step-d
 
 The keystone framing.
 
-**Kitchen-sink-single-page.** 30 fields on one page. Overwhelms before the user even starts. Drop-off near 100 percent on anything beyond a contact form. The audience scrolls, sees the length, and leaves. Cost: the form's data collection scope is correct; the structure is wrong; nobody completes it.
+**Kitchen-sink-single-page.** 30 fields on one page. Overwhelms before the user even starts. Drop-off is usually high on very long forms (a rule of thumb, not a measured result). The audience scrolls, sees the length, and leaves. Cost: the form's data collection scope is correct; the structure is wrong; nobody completes it.
 
 **Progress-theater.** The form is broken into 5 steps but the steps are arbitrary. "Step 1: name. Step 2: email. Step 3: phone. Step 4: company. Step 5: role." The progress bar exists; the staging logic does not. Cost: the form feels broken; users reach step 3 wondering why they did not just fill a single page; the completion rate may be slightly better than kitchen-sink but the audience perceives the format as gimmicky.
 
-**Genuinely-staged.** Each step represents a coherent unit of cognitive work. The user finishes a step and feels they accomplished something. Steps progress from low-friction to higher-commitment as intent compounds. Cost: the design effort upfront is significant; the maintenance is real; the conversion rate often outperforms both alternatives meaningfully.
+**Genuinely-staged.** Each step represents a coherent unit of cognitive work. The user finishes a step and feels they accomplished something. Steps progress from low-friction to higher-commitment as intent compounds. Cost: the design effort upfront is significant; the maintenance is real; it may convert better than both alternatives, but only your own numbers can show that.
 
 The litmus test. Ask a user who completed step 2 what they just did. Can they describe the unit of work as something coherent ("I gave you the basics about my company") or is the answer atomized ("I typed my company name in a field")? Coherent answers signal genuinely-staged; atomized answers signal progress-theater.
 
@@ -276,7 +276,7 @@ Detail in [`references/form-anti-patterns.md`](references/form-anti-patterns.md)
 
 Rapid-fire. Diagnoses in [`references/common-multi-step-form-failures.md`](references/common-multi-step-form-failures.md).
 
-- "Form converts at 4 percent; we expected 12 percent." Likely too long, or the value of completing is not clear, or the form is mobile-broken.
+- "Form converts at [CURRENT RATE]; we expected [EXPECTED RATE]." Likely too long, or the value of completing is not clear, or the form is mobile-broken.
 - "Drop-off concentrates at step 3." Specific-step issue; audit step 3's field count, sensitivity, and clarity.
 - "Mobile completion is half of desktop." Mobile design issue; audit form behavior on actual devices.
 - "Validation rejects valid inputs." Validation strictness; relax the validation or improve the input formats accepted.

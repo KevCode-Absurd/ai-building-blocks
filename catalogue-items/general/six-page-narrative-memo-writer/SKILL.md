@@ -5,7 +5,7 @@ description: Use when you need a decision on a proposal and have a press release
 
 # Six-page narrative memo writer
 
-A narrative memo makes you connect your facts in sentences, so weak spots show before the meeting. Read in silence at the start, it gives everyone the same facts. For a check before the meeting, use "Narrative memo checker".
+A narrative memo makes you connect your facts in sentences, so weak spots show before the meeting. Read in silence at the start, it gives everyone the same facts. For a check before the meeting, use the [Narrative memo checker](https://useaiblocks.com/skills/narrative-memo-checker). This memo is for a decision. If you need no decision, use one of the two memos below.
 
 Use [Outcome-first positioning memo writer](https://useaiblocks.com/skills/positioning-memo) instead when your team needs one clear idea of what you sell, not a proposal to decide on.
 Use [Top-priority shift memo writer](https://useaiblocks.com/skills/top-priority-shift-memo-writer) instead when a change has broken the plan and every leader must change direction in one page.
@@ -36,7 +36,7 @@ How to start:
 
 ## What you need
 
-- **The press release and its answered questions** (required): from "Future press release writer" and "Hard questions FAQ writer".
+- **The press release and its answered questions** (required): from the [Future press release writer](https://useaiblocks.com/skills/future-press-release-writer) and the [Hard questions FAQ writer](https://useaiblocks.com/skills/hard-questions-faq-writer).
 - **The decision you want and the date** (required).
 - **Numbers you can back** (optional): costs, revenue, tests, customer counts.
 - **A buyer brief** (optional): it helps with the customer story but the memo does not need it. If the "Before you start" text above asks for a draft that is an ad, page, email or script, ignore that: the inputs for this memo are the press release, the answered questions, the decision and the date.
@@ -55,7 +55,7 @@ How to start:
 
 ## What you hand back
 
-The memo, up to six pages, with no author name, the writing schedule, `MISSING:` lines and CHECKS MISSED. Mention that it should be read in silence at the start of the meeting.
+The memo, up to six pages, with no author name, the writing schedule, `MISSING:` lines and CHECKS MISSED. Mention that it should be read in silence at the start of the meeting. Then say what next: bring the memo and the meeting date to the [Narrative memo checker](https://useaiblocks.com/skills/narrative-memo-checker).
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

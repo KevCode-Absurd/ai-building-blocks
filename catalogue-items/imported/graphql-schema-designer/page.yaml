@@ -9,7 +9,7 @@ subhead: Describe your data and get a GraphQL API plan you can build from. You r
 explain: |
   Describe your data and get a GraphQL API plan you can build from. You receive a full schema, plus resolver code that avoids the slow trap of one database call per item.
 
-  It starts by modelling real entities as types, inputs, enums and interfaces. Queries are named for things, mutations for actions. Long lists use cursor paging with edges, nodes and page info. Resolvers use DataLoader so fifty posts and their authors cost two lookups, not fifty-one. Other list fields, such as tags, need their own loader too. It adds subscriptions for live data, limits on query depth and cost, field-level access rules, and options for Apollo Federation and persisted queries.
+  It starts by modelling real entities as types, inputs, enums and interfaces. Queries are named for things, mutations for actions. Long lists use cursor paging with edges, nodes and page info. Resolvers use DataLoader so fifty posts and their authors cost two lookups, not fifty-one. Other list fields, such as tags, need their own loader too. This skill is MIT licensed. It is imported from Burhan Sebin's collection, with only a plain name added. It adds subscriptions for live data, limits on query depth and cost, field-level access rules, and options for Apollo Federation and persisted queries.
 when:
   - You are starting a new API and need a schema design.
   - Your API is slow because each list item triggers its own query.
@@ -28,7 +28,7 @@ you_get:
   - A complete GraphQL schema
   - Resolver code with batching
   - Paging for list fields
-  - Depth and cost limits
+  - Advice on depth and cost limits (described, not coded in the sample)
 how_to_use:
   - Gather these first. Your list of entities with their fields, the reads and writes you need, and your server choice (for example Apollo Server).
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
@@ -36,8 +36,9 @@ how_to_use:
   - Name your server, such as Apollo Server, and say if you want schema-first or code-first output (optional).
   - Add your auth rules, such as who may edit or delete (optional).
   - Read the schema first. Check which fields can be empty and that the names fit your data.
+  - The sample code does not include depth or cost limits. The skill describes them, and you add them in your server before you go live.
   - Copy the code into your project to run it. Your AI chat can't run it for you. Test it in Apollo Studio.
-  - The sample resolvers leave out the edit and delete actions (updatePost and deletePost in the example), so you or your AI must write them. Before you go live, add a sign-in and owner check to every edit and delete action, and only pass fixed table names into the paging SQL.
+  - The sample code includes sign-in and owner checks on the edit and delete actions, and a fixed list of tables and columns for the paging SQL. Keep those checks when you adapt the code, and add the same to every new edit or delete action. The subscription example needs a pub/sub setup in your server.
 output_sample:
   input:
     - Your entities and how they relate

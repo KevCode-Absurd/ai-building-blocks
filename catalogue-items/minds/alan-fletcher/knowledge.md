@@ -14,13 +14,13 @@ Fletcher was a British graphic designer, born in Nairobi, who moved to England a
 
 Fletcher believed design means reading between the lines of a brief. Once you have the idea, he said, the rest is just layout [S2]. He even treated a colour combination as a possible idea [S2].
 
-How he applied it: IBM asked for a simple notice saying a painting would arrive for a wall in its new Paris office. He made a series of posters, each giving a different writer's or artist's definition of art, and put the line about the painting in tiny type along the bottom. A literal answer, he said, would have been a plain placard [S2].
+How he applied it (his own account in an interview [S2], not independently checked): IBM asked for a simple notice saying a painting would arrive for a wall in its new Paris office. He made a series of posters, each giving a different writer's or artist's definition of art, and put the line about the painting in tiny type along the bottom. A literal answer, he said, would have been a plain placard [S2].
 
 ### Wit is the rarest skill
 
 In his view, a portfolio shows whether someone has ideas and craft. The rarer qualities are economy of thought, the oblique reference, charm and wit [S2]. He liked ideas with extra layers, even private jokes [S2]. A 1993 review noted how much Pentagram's work was built on visual humour [S8].
 
-How he applied it: for Polaroid's new colour film he proposed a colour Rorschach test, the inkblot used by psychologists. When a client asked what it meant, he just shrugged and smiled. He enjoyed the ambiguity [S2].
+How he applied it (his own account in an interview [S2], not independently checked): for Polaroid's new colour film he proposed a colour Rorschach test, the inkblot used by psychologists. When a client asked what it meant, he just shrugged and smiled. He enjoyed the ambiguity [S2].
 
 ### Make one mark do two jobs
 

@@ -61,7 +61,7 @@ chains_well_with:
   - "cpa-sequence-designer"
   - "diagnostic-question-generator"
   - "curriculum-knowledge-architecture-designer"
-teacher_time: "3 minutes"
+teacher_time: "20 minutes to write the task and check the examples"
 tags: ["variation-theory", "Marton", "discernment", "contrast", "critical-features", "Hong-Kong", "Sweden", "mathematics-education"]
 ---
 
@@ -176,6 +176,8 @@ The dimensions of variation are:
 
 ### Task Sequence
 
+(The areas and perimeters in these tables were worked out by hand. Teachers: draw each shape on squared paper and recount before class.)
+
 **Phase 1 — Contrast (What IS area vs. what IS perimeter?)**
 
 Present two identical rectangles (3 × 4 on squared paper). On Rectangle A, shade the inside squares in blue. On Rectangle B, highlight the outside edge in red.
@@ -198,7 +200,7 @@ Present four shapes, all made from exactly 12 square tiles (so area = 12 for all
 | Shape A | 3 × 4 rectangle | 12 | 14 |
 | Shape B | 2 × 6 rectangle | 12 | 16 |
 | Shape C | 1 × 12 rectangle | 12 | 26 |
-| Shape D | L-shape (3×3 with 3×1 extension) | 12 | 16 |
+| Shape D | L-shape (a 4 × 4 square with a 2 × 2 corner cut out) | 12 | 16 |
 
 Ask: "Every shape has exactly 12 squares inside. But look at the perimeters. What's happening?"
 
@@ -211,7 +213,7 @@ Then reverse: present four shapes all with perimeter = 16, but different areas:
 | Shape E | 4 × 4 square | 16 | 16 |
 | Shape F | 2 × 6 rectangle | 16 | 12 |
 | Shape G | 1 × 7 rectangle | 16 | 7 |
-| Shape H | T-shape | 16 | 10 |
+| Shape H | Staircase (rows of 5, 3 and 2 squares, lined up on the left) | 16 | 10 |
 
 Ask: "Every shape has the same perimeter — 16 units around the edge. But look at the areas. What do you notice?"
 
@@ -223,12 +225,12 @@ Show that the independence of area and perimeter is not limited to rectangles:
 
 | Shape | Type | Area | Perimeter |
 |---|---|---|---|
-| Shape I | Triangle on dotted paper | 6 | 12 |
-| Shape J | Different triangle | 6 | 14.5 |
-| Shape K | Irregular quadrilateral | 6 | 16 |
-| Shape L | Pentagon | 6 | 13.2 |
+| Shape I | Right triangle with sides 3 and 4 around the right angle | 6 | 12 |
+| Shape J | Right triangle with sides 2 and 6 around the right angle | 6 | about 14.3 |
+| Shape K | Rectangle 2 × 3 | 6 | 10 |
+| Shape L | Rectangle 1 × 6 | 6 | 14 |
 
-Ask: "These are all different types of shapes — triangles, quadrilaterals, pentagons. They all have area 6. Do they all have the same perimeter?"
+Ask: "These are different types of shapes, triangles and rectangles. They all have area 6. Do they all have the same perimeter?"
 
 The critical feature (independence) is held constant — it is true for ALL shapes, not just rectangles. The surface feature (shape type) varies. This generalises the principle beyond the specific context of rectangles.
 

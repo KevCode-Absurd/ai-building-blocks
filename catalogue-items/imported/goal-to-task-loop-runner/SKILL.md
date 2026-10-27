@@ -25,7 +25,7 @@ per-run **state file** (the single source of truth; a fresh session resumes from
 
 ## Quick start
 
-> **Safety note.** The `verify` step runs each task's check command on the user's own computer with no sandbox. Run this only in a project folder you trust, check each task's check command before you start the loop, and never run it on plan or state files from someone else. Tell the user this before step 1.
+> **Safety note.** The `verify` step runs each task's check command on the user's own computer with no sandbox. Run this only in a project folder you trust, check each task's check command before you start the loop, and never run it on plan or state files from someone else. Tell the user this before step 1. After step 1, list every check command in plan.json for the user and wait for a yes before step 2. Never run plan or state files that came from someone else.
 
 ```bash
 # 0. Pick the domain manifest (18 committed under assets/harnesses/, e.g. engineering-team.json)

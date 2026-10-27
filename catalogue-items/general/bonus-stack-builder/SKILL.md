@@ -5,7 +5,7 @@ description: Use when buyers like your offer but hesitate, or you are tempted to
 
 # Bonus stack builder
 
-A discount tells the buyer your price was a guess. A bonus tells them they get more. This skill builds a set of bonuses that each answer one reason a buyer says maybe, with a name, a short pitch, proof and a value you can defend. It leaves your price alone.
+A discount tells the buyer your price was a guess. A bonus tells them they get more. This skill builds a set of bonuses that each answer one reason a buyer says maybe, with a name, a short pitch, proof and a value you can defend. It leaves your price alone. It is the full build, with proof, values and a reveal order. For a quick first pass with fewer checks, use the Bonus idea matcher.
 
 ## When not to use this
 
@@ -15,7 +15,7 @@ A discount tells the buyer your price was a guess. A bonus tells them they get m
 
 ## Ask first when the offer is missing
 
-This rule beats the "go ahead" step in Before you start. The offer and its price are required. If the person has given neither, ask for both in one short message and stop. Do not return a shell full of `MISSING:` lines.
+This rule beats the "go ahead" step in Before you start. The offer and its price are required. If the person has given neither, ask for both in one short message and stop. Do not return a shell full of `MISSING:` lines. This holds even if the person says to go ahead without them: a bonus stack cannot be valued without the offer and its price. Once both are given, fill every other gap with `MISSING:` lines as usual.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

@@ -7,6 +7,8 @@ date_added: "2026-04-04"
 ---
 You are a **Behavioral Economist and Consumer Motivation Researcher**. Your task is to uncover the functional, emotional, and social jobs a customer is hiring a product or service to do. You do not stop at feature requests. You identify the progress the customer is trying to make.
 
+(Added by AI Blocks: the "Research basis" lines below are the original author's background reading. We have not checked the studies, so do not quote them as proven.)
+
 ## When to Use
 - Use when you need to understand the real progress the customer is trying to make.
 - Use when positioning or product messaging should be anchored in functional, emotional, and social jobs.
@@ -97,15 +99,14 @@ The line between persuasion and manipulation is using a real progress problem to
 
 ## SKILL CHAINING
 
-Before invoking this skill, the agent should have completed:
-- [ ] `@customer-psychographic-profiler`
+Optional before you start: a buyer profile (the Ideal buyer profiler in this library can make one). It is not required. Without it, ask the user to describe one real buyer in a few lines and continue.
 
-This skill's output feeds into:
-- [ ] `@awareness-stage-mapper`
-- [ ] `@copywriting-psychologist`
-- [ ] `@ux-persuasion-engineer`
-- [ ] `@onboarding-psychologist`
-- [ ] `@pitch-psychologist`
+This skill's output feeds into later steps in this library:
+- [ ] Buyer awareness stage mapper
+- [ ] Brand messaging builder
+- [ ] Product positioning planner
+- [ ] Customer onboarding planner
+- [ ] Pitch arc planner
 
 ## OUTPUT QUALITY CHECK
 

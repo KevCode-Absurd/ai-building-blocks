@@ -11,7 +11,7 @@ subhead: "Give it your monthly Meta spend, product categories with margins, buye
 explain: |
   Most Meta accounts have too many campaigns. Each campaign learns on its own, so splitting 100 monthly sales across four campaigns leaves 25 each and starves all four. The opposite mistake is one pile of ads where you cannot tell what works.
 
-  This skill starts from one consolidated campaign and adds a layer only when it has a reason: different margins, different buyer groups, separate stock by country, or a very high order value with few orders a day. It sizes the layout to your spend tier, groups ads by concept (buyer group + angle + offer), caps how much one concept can take, and lists the settings that hide your data. The rules come from agencies running large stores, so the plan scales them down for a small one.
+  This skill starts from one consolidated campaign and adds a layer only when it has a reason: different margins, different buyer groups, separate stock by country, or a very high order value with few orders a day. It sizes the layout to your spend tier, groups ads by concept (buyer group + angle + offer), caps how much one concept can take, and lists the settings that hide your data. The rules come from agencies running large stores, so the plan scales them down for a small one. Figures such as 100 to 200 sales a month, 300 to 500 live ads per page and a $400 a day scaling point are unverified starting points from unnamed operators, not rules. Check them in your own account, and recheck Meta setting names in Ads Manager before you launch.
 
 when:
   - You are setting up Meta ads for a store, or you inherited an account with campaigns nobody can explain.
@@ -71,7 +71,7 @@ how_it_works:
   - title: Asks five questions
     text: How many product categories, how wide the margin spread, how many separate buyer groups, how many countries, and how many new ads a month.
   - title: Starts from one campaign
-    text: Every extra campaign must earn its place. Performance tends to improve once a campaign has 100 to 200 sales a month.
+    text: Every extra campaign must earn its place. One agency claims performance improves once a campaign has 100 to 200 sales a month. It is unverified, so use it as a starting point.
   - title: Splits for a reason
     text: Different margins, different buyer groups, separate stock by country, or very high order value with very few orders. Group by margin band, not by category.
   - title: Groups ads by concept

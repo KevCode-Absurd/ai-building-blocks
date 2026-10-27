@@ -41,6 +41,8 @@ Create job stories using the 'When [situation], I want to [motivation], so I can
 5. [Edge cases are handled gracefully]
 6. [Integration and notifications work]
 
+These six criteria are placeholders. Replace each one with a check that is specific to the feature you are breaking down. Use as many as the feature needs, up to 8.
+
 ## Example Job Story
 
 **Title:** Track Weekly Snack Spending

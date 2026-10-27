@@ -11,9 +11,9 @@ explain: |
 
   You paste five ordinary recent posts. If you cannot, you answer four short questions about your topics, openings, pace and words you never use. The skill writes a voice sketch covering how you open, your sentence length and your habits, and shows it to you before drafting. It then writes the post, compares the draft to the sketch and fixes lines that drift. You can also paste text and ask whether it sounds like you.
 
-  On its own it only writes text. It posts nothing. The skill file header carries a risk label from the source, which comes from the optional VoiceMoat connector that can post for you.
+  On its own it only writes text. It posts nothing. The optional VoiceMoat connector is a paid service (Pro or Enterprise plan) and it sends your post text to voicemoat.com when you use it. You do not need it. The skill file header carries a risk label from the source, which comes from the optional VoiceMoat connector that can post for you.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (prateeks367) says MIT. Credit goes to prateeks367 and sickn33.
+  Licence: the LICENSE-CONTENT file in this item governs this copy. It says CC BY 4.0 for written content like this skill. The author's own header (prateeks367) says MIT. Both are permissive and both need credit, so keep the credit to prateeks367 and sickn33 if you share it.
 when:
   - You post on LinkedIn or X and want drafts that need less editing.
   - Your AI posts all sound generic.

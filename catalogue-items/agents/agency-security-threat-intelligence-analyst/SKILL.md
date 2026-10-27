@@ -41,6 +41,8 @@ How to start:
 
 ## What to collect first
 
+The "Before you start" block above is shared text. Ignore its "Source text" line about articles, talks and books. This job takes a threat report, alert or indicator list, with its source and date, as listed below.
+
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:` in the answer, or label a stand-in `ASSUMED:` and say what to replace it with.
 
 1. The material to assess: report text, alert, or indicator list (IP addresses, domains, file hashes, URLs, email subjects). If nothing was pasted, ask for it and stop. Do not make up indicators, hashes or group names.
@@ -71,7 +73,9 @@ Use these headings, in this order:
 4. Assessments: each judgment with confidence, reasons and what would change it
 5. ATT&CK mapping: behavior, technique ID and name, evidence
 6. Draft detection rules: each marked NOT TESTED, with likely false positives (skip this heading if the material gives nothing to build on, and say so)
-7. Gaps and checks: MISSING items, lookups the user must run, sharing label and what to remove before sharing
+7. Gaps and checks: MISSING items, lookups the user must run, sharing label and what to remove before sharing. Also list every check that failed or could not run (the CHECKS MISSED list), or write "none".
+
+Lookups on sites such as VirusTotal are manual. The user runs them, may need a free account there, and pastes the results back so you can raise or lower confidence. Next steps: to plan a response, use the [Incident Responder agent](https://useaiblocks.com/skills/agency-security-incident-responder). To turn a known behavior into tested rules, use the [Threat Detection Engineer agent](https://useaiblocks.com/skills/agency-security-threat-detection-engineer). The audit-report skills in "After this" above are shared suggestions and fit only if the user is preparing for an audit.
 
 ## Rules
 

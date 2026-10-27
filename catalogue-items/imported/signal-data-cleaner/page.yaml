@@ -24,16 +24,18 @@ not_for:
 you_give:
   - Your signal data, or a folder of signal files
   - The sample rate
+  - The timestamp format and units, and whether the timestamps are evenly spaced
   - "The problems you see: gaps, drift, spikes or noise"
   - The file format, such as .mat or .csv
 you_get:
-  - A runnable .m cleaning script
+  - "A runnable .m cleaning script with one section for each step, in order: repair gaps, remove outliers, remove drift, smooth noise, align channels, then label and split"
   - Gaps filled and drift removed
   - Outlier handling
   - Labelled, split data for training
+  - Before and after plots of the signal for each cleaning step, if you ask for them
 how_to_use:
   - "This suits people who already work in MATLAB. If you do not use MATLAB, do not start here. MATLAB and the Signal Processing Toolbox are paid products, so check you have both. Your AI must be able to run MATLAB code, or you run the script yourself."
-  - Paste the skill into your AI, and also give it the reference files in the skill folder, since the steps depend on them. Open wf-repair-missing.md for gaps, wf-detrend-smooth-deoutlier.md for drift, spikes and noise, wf-align-channels.md to line up channels, and wf-load-and-split.md for a folder of files. Without them your AI may guess function names.
+  - Paste the skill into your AI, and also give it the reference files in the references folder of this item, since the steps depend on them. Open wf-repair-missing.md for gaps, wf-detrend-smooth-deoutlier.md for drift, spikes and noise, wf-align-channels.md to line up channels, and wf-load-and-split.md for a folder of files. Without them your AI may guess function names.
   - Share your data, the sample rate and the file format. Say which problem to fix first.
   - Ask for a runnable .m script with one section per step.
   - Run the script. Check a plot of the signal before and after each step.

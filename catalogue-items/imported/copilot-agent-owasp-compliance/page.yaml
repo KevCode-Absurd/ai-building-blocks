@@ -2,10 +2,10 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-agent-owasp-compliance
 name: Agent OWASP risk checker
-summary: Check your AI agent code against the OWASP agent security risks. Get a pass or fail for each of 10 risks, with evidence and fixes.
+summary: Check your AI agent code against the OWASP agent security risks. Get a pass, fail or not confirmed for each of 10 risks, with evidence and fixes.
 job: set-up-ai
 headline: Agent OWASP risk checker
-subhead: Give it your agent code and a list of its tools. It checks the code against the 10 OWASP agent security risks. You get a pass or fail for each risk, with evidence and fixes.
+subhead: Give it your agent code and a list of its tools. It checks the code against the 10 OWASP agent security risks. You get a pass, fail or not confirmed for each risk, with evidence and fixes.
 not_for:
   - "You need a formal certification or legal audit: ask a human security reviewer, because this is a self-check."
   - "You want to approve an agent for production on this report alone: have a security person verify every pass first."
@@ -13,8 +13,9 @@ not_for:
 how_to_use:
   - Open your AI tool. Use one that can read files, such as Claude or ChatGPT with file upload.
   - Paste the skill text, then add your agent code folder or key files.
-  - Add the framework name, your tool list with what each tool may do, and any config files.
+  - Add the framework name, your tool list with what each tool may do, a sample of the path a tool call takes through your code, and any config files. Paste the files in parts if your AI cuts them off, and ask it to say which files it did not read. If it cannot read a file, or the code is too large, ask it to mark those risks not confirmed rather than guess.
   - Ask it to check all 10 risks and write the report.
+  - The result is a self-check draft, not an audit. Third-party packages the report suggests, such as agent-governance-toolkit, need your own review before you install them.
   - Read each pass yourself. A keyword match is only a starting point. A pass needs a person to follow the code path and confirm it works, not just find a word.
   - The risk names and numbers are the author's list. Check them against the current OWASP material before you quote them.
   - Fix the gaps, then run the check again. Ask a human security reviewer before production.
@@ -50,6 +51,6 @@ you_give:
   - Your deployment or config files (optional)
 you_get:
   - A count of how many of the 10 risks look covered
-  - A pass or fail for each risk with the code that shows why
+  - A pass, fail or not confirmed for each risk with the code that shows why
   - A short list of the biggest gaps
   - A fix to try for each gap

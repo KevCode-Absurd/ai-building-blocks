@@ -173,7 +173,7 @@ example:
     on readers who reach the offer on the page, then on sales.
 
     CHECKS MISSED
-    None. (The problem moment skill's own checks weren't run here.)
+    The problem moment skill's own checks were not run here.
 
 tweaks:
   - what: Name a skill

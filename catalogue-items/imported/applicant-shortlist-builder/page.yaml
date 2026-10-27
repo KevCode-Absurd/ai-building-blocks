@@ -9,7 +9,7 @@ subhead: A ranked shortlist of the people worth calling, scored only on what the
 explain: |
   A ranked shortlist of the people worth calling, scored only on what the job needs, with reply drafts ready. It turns a full inbox of applications into a short list you can act on today.
 
-  It will not score anyone until there is a rubric, which is the list of skills and experience in the job post. If you have no rubric, it builds one with you first. Each candidate is scored only against those points. Name, age, gender, photo, address, school prestige, gaps and resume looks are never used. It reads applications from your hiring inbox or uploaded files, pulls out only evidence that matters for the role, ranks people, and drafts replies and interview scheduling.
+  This is Anthropic's hiring-screener skill under the Apache 2.0 licence, used without changes to its method. It will not score anyone until there is a rubric, which is the list of skills and experience in the job post. If you have no rubric, it builds one with you first. Each candidate is scored only against those points. Name, age, gender, photo, address, school prestige, gaps and resume looks are never used. It reads applications from your hiring inbox or uploaded files, pulls out only evidence that matters for the role, ranks people, and drafts replies and interview scheduling.
 when:
   - Fifty applications arrived and you have an hour.
   - You want your hiring choices to be fair and easy to explain.
@@ -35,7 +35,11 @@ how_to_use:
   - Upload the resumes, or connect your hiring inbox if your AI can read it.
   - Check the ranked shortlist and the quoted evidence. Look at the cannot assess group before you reject anyone.
   - Read the draft replies. Say yes before anything is sent, or copy them and send them yourself.
+  - AI ranking of job applicants is regulated in some places, such as New York City's rules on automated hiring tools and the EU's AI rules for hiring. These can need a bias audit, a notice to applicants or a human review. Check the rules where you hire before you rely on a shortlist.
+  - Hiring rules differ by country and state. Keep your own record of why each person was ranked, and have an HR adviser check your process if you are unsure.
   - Optional tools like Gmail, Calendar, Gusto, DocuSign and Trello need your own account. The skill works without them.
+  - Next, rework a thin job post with the Job post writer, or check an offer letter or contract with the Contract reviewer.
+next: [job-post-writer, contract-reviewer]
 output_sample:
   input:
     - Your job post or a rubric (the list of skills and experience the job needs)

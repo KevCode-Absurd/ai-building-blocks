@@ -130,7 +130,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Any current chat AI can search pasted text for the five groups. Paste with dates and source types."}
-    - {name: "Shopify admin", why: "Its search terms and abandoned checkout views give the 'buys nothing' data."}
+    - {name: "Shopify admin", why: "A paid subscription. Its search terms and abandoned checkout views give the 'buys nothing' data. Some of these reports need a higher plan, so check what yours includes."}
     - {name: "GA4", why: "Its site-search report shows what visitors look for and do not find."}
   inputs:
     - "Wishlist, back-in-stock and notify-me counts by product"

@@ -48,7 +48,7 @@ obsidian create name="My Note" content="Hello world"
 **Flags** are boolean switches with no value:
 
 ```bash
-obsidian create name="New Note" silent  # Preserve existing notes unless replacement is explicitly requested
+obsidian create name="New Note" silent  # silent only stops the file opening. It does not protect an existing note, so check the name is free first
 ```
 
 For multiline content use `\n` for newline and `\t` for tab.

@@ -32,8 +32,8 @@ how_to_use:
   - Get a free TranscriptAPI key at transcriptapi.com. It needs no card and comes with 100 credits.
   - Open an AI that can run code and reach the web, such as Claude with code tools on.
   - Paste the skill text into the chat and add your key when asked.
-  - Give it a channel @handle, link or ID. Ask for the latest uploads first, since that call is free.
-  - Add a search phrase if you want videos on one topic. Check the list before you use it.
+  - Give it a channel @handle, link or ID. Your first call should be the free latest-uploads lookup with the @handle. Avoid the calls that cost credits (search, full video list, channel profile, playlists and posts) until you need them.
+  - Add a search phrase if you want videos on one topic. Check the list before you use it. Next, pick the videos you want and pull their transcripts with the YouTube transcript saver.
 output_sample:
   input:
     - A channel @handle, link or ID
@@ -55,3 +55,4 @@ output_sample:
       contains: Title, handle, subscriber and video counts, description and tags. Costs 1 credit.
     - name: Playlists and posts
       contains: The channel's playlists and community posts, if you ask for them. Each page costs 1 credit.
+next: [youtube-transcript-saver]

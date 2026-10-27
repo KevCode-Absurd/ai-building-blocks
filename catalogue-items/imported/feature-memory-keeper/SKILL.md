@@ -16,6 +16,8 @@ license_source: "https://github.com/JunsW/feature-track/blob/main/LICENSE"
 
 # Feature Tracking
 
+> Licence note (AI Blocks): the skill text below is the author's, under the MIT licence named in the header above. The CC BY 4.0 licence in the LICENSE-CONTENT file covers only the AI Blocks page text around it. Keep the credit to JunsW.
+
 ## Overview
 
 Feature Tracking maintains lightweight, repository-native memory for long-lived feature work. It gives AI coding agents a stable place to find the current status, authoritative documents, verified behavior, durable decisions, risks, and recent changes without treating chat history or stale plans as truth.

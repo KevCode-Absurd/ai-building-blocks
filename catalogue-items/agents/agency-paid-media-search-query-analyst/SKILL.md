@@ -40,11 +40,13 @@ How to start:
 
 ## What you need
 
+The "Before you start" block above is shared text. It names a Google Search Console export. For this job use the Google Ads search terms report only. Search Console has clicks but no cost or conversions, so it cannot show waste.
+
 Ask once for anything missing. If it is still missing, write `MISSING: <what>`, name the part of the review it limits, and carry on. Never invent a query, a spend figure or a conversion.
 
 - The search terms report with, for each term, spend (cost), clicks and conversions. Impressions and match type help. If the report has no conversion column, say that waste can only be judged by spend and clicks.
 - The date range and total spend in the report.
-- The target cost per sale or lead, or what a sale is worth. If missing, use "no sale after N clicks" with N set by the user, and ask once for N.
+- The target cost per sale or lead, or what a sale is worth (optional but best). If missing, use "no sale after N clicks" with N set by the user, and ask once for N.
 - Optional: the current keywords, the negative lists, and which campaigns are brand.
 - If the report is very large, work on the top spend rows first and say how many rows were covered.
 
@@ -88,7 +90,7 @@ Finish with `CHECKS MISSED:` listing any check that could not run (for example "
 
 ## Stop and ask before
 
-- Proposing broad-match negatives.
+- Proposing broad-match negatives without stating the risk, or when a word could appear in a converting query.
 - Suggesting any negative that contains a word from a converting query.
 - Describing any change as made or applied.
 

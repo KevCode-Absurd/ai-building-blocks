@@ -11,7 +11,7 @@ subhead: Give it your order export with discount codes and refunds. It splits yo
 explain: |
   A sale can look great in your ad report and still lose money. A buyer who came in on a weak angle, took a deep discount, then refunded, counts as a win for return on ad spend (ROAS) and a loss for your bank account. Most stores only find out months later.
 
-  This skill ranks customers by gross profit over a fixed window, then compares the best fifth with the worst fifth. For each group it finds who they are, which angle they came in on and which first-order offer they took. It also splits customers by discount code, because in the source's client mix discounted buyers often turned out worse. The result tells you which angles to scale, which offers to stop and which product page promises to fix. It adds to the best customer finder, which only finds the top group.
+  This skill ranks customers by gross profit over a fixed window, then compares the best fifth with the worst fifth. For each group it finds who they are, which angle they came in on and which first-order offer they took. It also splits customers by discount code, because discount buyers can differ from full-price buyers. It checks that against your own numbers. The result tells you which angles to scale, which offers to stop and which product page promises to fix. It adds to the best customer finder, which only finds the top group.
 
 when:
   - Your ads show a strong ROAS but repeat orders and profit are weak.

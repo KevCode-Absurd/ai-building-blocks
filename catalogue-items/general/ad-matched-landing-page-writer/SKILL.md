@@ -62,7 +62,7 @@ How to start:
 6. **Fit how it's bought.**
    - Used up: "will it suit me" means taste or feel, what's in it, how to use it, how long a pack lasts. The risk line is the guarantee plus how to pause or cancel. A price per day is fine if the facts give it.
    - Kept: it means size, fit, materials, what it works with, care, how long it lasts. The risk line is returns and warranty. No price per day and no "supply".
-7. **Offer.** Show only offers in the facts, under the exact name the facts give (if they say only "Subscribe", write "Subscribe"; never add words like "& Save"), at their prices. A saving shown as a percent or an amount must match the facts exactly. Never round it up or make it larger than the stated price difference. A crossed-out price must be one the item really sold at. State the saving the way that reads largest while staying true: under about 100 in your currency a percentage tends to read bigger, above that a money amount does. A deadline appears only if the facts give a date.
+7. **Offer.** Show only offers in the facts, under the exact name the facts give (if they say only "Subscribe", write "Subscribe"; never add words like "& Save"), at their prices. A saving shown as a percent or an amount must match the facts exactly. Never round it up or make it larger than the stated price difference. A crossed-out price must be one the item really sold at. Show the saving in the form the facts give it. If the facts give both a percent and an amount, show both. Never choose a form because it looks bigger. A deadline appears only if the facts give a date.
 8. **Proof.** Quote customers word for word, choosing quotes that answer the doubt in that section. Never write a review, name, rating, count, award or press mention.
 9. **Questions.** After the body, answer the doubts still open, in the buyer's words, as many as the evidence supports. Delivery and returns belong here only when asked as worries ("What if it doesn't fit?").
 10. **Close.** Come back to the ad's promise in one line, then the button and the risk line.
@@ -98,7 +98,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The renewal price, shipping, delivery time and returns terms are all stated before the last button. Any the facts don't give is marked `MISSING:` right there in the cost block, never guessed. That counts as passed.
 - No price per day on something bought once.
 - Buttons say what the buyer gets and say the same thing all the way down.
+- No health, supplement-replacement or digestive claims unless the facts state them and they are approved for use. A customer's own words may be quoted, but never turned into your claim.
 - No long dashes in the copy.
+
+## When not to use
+Do not use it to state a price, shipping or renewal term the facts do not confirm. Check every price and term against the live checkout before the page goes out. If you have no ad and no facts yet, write the ad first with the Fact-based ad copy writer.
 
 ## If something is missing
 Write `MISSING: <what>` instead of guessing. No rating: no rating line. No guarantee, delivery or returns terms: promise none, and list them. No buyer and no ad: ask once who the page is for and what brought them, then carry on with the most likely buyer from the facts, marked `[inferred]`.

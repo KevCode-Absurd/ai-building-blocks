@@ -28,7 +28,7 @@ How to start:
 
 **Tools that do this best:**
 - **Any good chat AI:** Any current chat AI can search pasted text for the five groups. Paste with dates and source types.
-- **Shopify admin:** Its search terms and abandoned checkout views give the 'buys nothing' data.
+- **Shopify admin:** A paid subscription. Its search terms and abandoned checkout views give the 'buys nothing' data. Some of these reports need a higher plan, so check what yours includes.
 - **GA4:** Its site-search report shows what visitors look for and do not find.
 <!-- /needs -->
 
@@ -49,8 +49,8 @@ The book's company stories come from large businesses. Do not copy their numbers
 3. **Workarounds.** Search reviews and returns for "I use it with", "I had to", homemade fixes and two-product combinations. Someone who builds a workaround pays in effort for a job they care about.
 4. **Negative jobs.** Find what people do not want to do: wait, assemble, go to a store, ask permission. The book calls these often the best opportunities. Search for "hate", "hassle", "no more".
 5. **Unusual uses.** List uses in reviews, customer photos and tickets that differ from your page. In the book's baking soda case, the maker found over a dozen uses this way and the original use fell to under 7 percent of its consumer revenue. That is a large-company case. Each use here is a candidate angle, bundle or product.
-6. **Check the feeling on each lead.** What does the buyer feel, and who sees them? A lead with only a practical reason is weak: put it under "too weak to rank".
-7. **Rank the leads** by evidence count (how many separate items, not repeats from one person) and ease of test. Pick the top one or two to test with an ad angle or landing page before building anything.
+6. **Check the feeling on each lead.** What does the buyer feel, and who sees them? A lead with only a practical reason is weak: put it under "too weak to rank". A lead passes when a buyer's words show a feeling such as worry, pride, embarrassment or relief.
+7. **Rank the leads** by evidence count (how many separate items, not repeats from one person) and ease of test. Starting rule of ours: 5 or more separate items is strong, 2 to 4 is some, 1 is a hunch. An easy test is one ad angle or landing page headline that needs no new stock. A hard test needs a new product. Pick the top one or two to test with an ad angle or landing page before building anything.
 8. **Flag cash needs.** A lead that needs a new product needs cash for samples and stock. Say what it would take before it is tested.
 9. **Sanity rule.** If you think the market has no room to grow, you probably defined the job too narrowly. Say so when it applies.
 

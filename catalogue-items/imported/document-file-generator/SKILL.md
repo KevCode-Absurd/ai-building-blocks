@@ -48,18 +48,20 @@ Do not hand-draw documents with low-level PaperJSX calls. Build a JSON spec and 
 
 ## Example: PPTX generation
 
+The bracketed values in these examples are placeholders. Replace them with the user's own text and real figures. Never invent numbers.
+
 ```javascript
 import { PaperEngine } from "@paperjsx/json-to-pptx";
 import fs from "node:fs";
 
 const spec = {
   type: "Document",
-  meta: { title: "Q4 Review" },
+  meta: { title: "[DECK TITLE]" },
   slides: [
     {
       type: "Slide",
       children: [
-        { type: "Text", content: "Q4 2025 Business Review", style: { fontSize: 36, bold: true } }
+        { type: "Text", content: "[SLIDE HEADING]", style: { fontSize: 36, bold: true } }
       ]
     }
   ]
@@ -83,8 +85,8 @@ const result = await renderToDocx({
   pages: [
     {
       elements: [
-        { type: "heading", level: 1, text: "Quarterly Report" },
-        { type: "paragraph", text: "Section content here." }
+        { type: "heading", level: 1, text: "[REPORT TITLE]" },
+        { type: "paragraph", text: "[SECTION TEXT]" }
       ]
     }
   ]
@@ -101,20 +103,20 @@ import { SpreadsheetEngine } from "@paperjsx/json-to-xlsx";
 import fs from "node:fs";
 
 const spec = {
-  meta: { title: "Revenue Data", creator: "PaperJSX" },
+  meta: { title: "[SHEET TITLE]", creator: "PaperJSX" },
   sheets: [{
-    name: "Revenue",
+    name: "[SHEET NAME]",
     rows: [
-      { cells: [{ value: "Quarter" }, { value: "Revenue" }] },
-      { cells: [{ value: "Q1 2026" }, { value: 420000 }] },
-      { cells: [{ value: "Q2 2026" }, { value: 510000 }] }
+      { cells: [{ value: "[COLUMN 1 HEADING]" }, { value: "[COLUMN 2 HEADING]" }] },
+      { cells: [{ value: "[ROW 1 LABEL]" }, { value: "[ROW 1 NUMBER]" }] },
+      { cells: [{ value: "[ROW 2 LABEL]" }, { value: "[ROW 2 NUMBER]" }] }
     ]
   }]
 };
 
 const buffer = await SpreadsheetEngine.render(spec);
-fs.writeFileSync("revenue.xlsx", buffer);
-console.log("Generated revenue.xlsx");
+fs.writeFileSync("sheet.xlsx", buffer);
+console.log("Generated sheet.xlsx");
 ```
 
 ## Example: PDF generation

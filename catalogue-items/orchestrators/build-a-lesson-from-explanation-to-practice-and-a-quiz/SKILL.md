@@ -30,6 +30,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+This list is the inputs for this workflow. You do not need to bring a lesson plan: step 1 makes it. The only required input is the topic and the learners. The "Before you start" block above is shared text: skip its lesson plan line and its "How to start" list, and use the steps below.
+
 - **The topic and the learners** (required): what they must learn, their age or level, and the time you have.
 - **A source to teach from** (optional): an article, a transcript or notes. If you have none, build from the topic and say so.
 
@@ -52,6 +54,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## What you hand back
 5 step files and the summary. The first file holds the lesson plan, the third and fourth the practice set and quiz, the last the overload check.
 
+**What next:** teach the lesson, then bring back what happened and re-run the [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker) on the changes. In the "After this" list below, offer only the [Assignment AI-use rules planner](https://useaiblocks.com/skills/assignment-ai-boundaries). Skip its History thinking task link (it fits only a history lesson) and its Recall quiz writer link (it repeats step 4).
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -66,4 +70,5 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+- The lesson states its topic, the learners and the time, and every practice and quiz question can be answered from what the lesson teaches.
 

@@ -14,6 +14,14 @@ Read [the detailed guide](references/detailed-guide.md) before executing this sk
 
 If an earlier speed check gave you a report or a ranked fix list, use its findings as the problems to fix, and measure again to confirm.
 
+## First run, in order
+
+1. Get a speed report for the pages that matter (PageSpeed Insights or Lighthouse). Paste it in.
+2. Read the report with your AI and note the baseline for LCP, INP and CLS.
+3. Work out the biggest cause of the slowest metric and fix that first.
+4. Make one change at a time.
+5. Test again with the same tool and compare with the target.
+
 ## When to Use This Skill
 
 - Use when website or app is loading slowly
@@ -25,19 +33,26 @@ If an earlier speed check gave you a report or a ranked fix list, use its findin
 - Use when debugging performance bottlenecks
 - Use when preparing for performance audits
 
+## When not to use this skill
+
+- Your site is a small static page and nobody says it feels slow. Leave it as it is.
+- Your server is slow to answer before the page starts to load. Fix your hosting or CDN settings first, or ask your host.
+- You need an audit signed off by an expert. Hire a web performance specialist and use this only for the to-do list.
+- You want an eight-check score on the network side: use the Web page speed tuner. For one fix on one page, use the Page speed fixer.
+
 ## Examples
 
 **The examples below use bracketed placeholders such as [your LCP] where the original had sample numbers. Fill them only with the user's own measurements.** Never quote them as results. In a real run, report only the user's own measurements, and write [your LCP] or "unknown" where you have none. The front-matter label `risk: critical` is the original author's tag for skills that change live code. It means: ask before you change production, and test first.
 
 ### Example 1: Optimizing Core Web Vitals
 
-```markdown
+````markdown
 ## Performance Audit Results
 
 ### Current Metrics (Before Optimization, illustrative)
-- **LCP (Largest Contentful Paint):** [your LCP] ❌ (should be < 2.5s)
-- **INP (Interaction to Next Paint):** [your INP] ❌ (should be ≤ 200ms)
-- **CLS (Cumulative Layout Shift):** [your CLS] ❌ (should be < 0.1)
+- **LCP (Largest Contentful Paint):** [your LCP] (target: under 2.5s)
+- **INP (Interaction to Next Paint):** [your INP] (target: 200ms or less)
+- **CLS (Cumulative Layout Shift):** [your CLS] (target: under 0.1)
 - **Lighthouse Score:** [your score]/100
 
 ### Issues Identified
@@ -53,7 +68,7 @@ If an earlier speed check gave you a report or a ranked fix list, use its findin
 **Problem:** Hero image is [SIZE] and loads slowly
 
 **Solutions:**
-\`\`\`html
+```html
 <!-- Before: Unoptimized image -->
 <img src="/hero.jpg" alt="Hero">
 
@@ -70,7 +85,7 @@ If an earlier speed check gave you a report or a ranked fix list, use its findin
     fetchpriority="high"
   >
 </picture>
-\`\`\`
+```
 
 **Additional optimizations:**
 - Compress the image (set a size budget for your page)
@@ -84,7 +99,7 @@ If an earlier speed check gave you a report or a ranked fix list, use its findin
 **Solutions:**
 
 1. **Code Splitting:**
-\`\`\`javascript
+```javascript
 // Before: Everything in one bundle
 import { HeavyComponent } from './HeavyComponent';
 import { Analytics } from './analytics';
@@ -102,33 +117,33 @@ if (typeof window !== 'undefined') {
     });
   });
 }
-\`\`\`
+```
 
 2. **Remove Unused Dependencies:**
-\`\`\`bash
+```bash
 # Analyze bundle
 npx webpack-bundle-analyzer
 
 # Remove unused packages
 npm uninstall moment  # Use date-fns instead (smaller)
 npm install date-fns
-\`\`\`
+```
 
 3. **Defer Non-Critical Scripts:**
-\`\`\`html
+```html
 <!-- Before: Blocks rendering -->
 <script src="/analytics.js"></script>
 
 <!-- After: Deferred -->
 <script src="/analytics.js" defer></script>
-\`\`\`
+```
 
 #### Fix CLS (Cumulative Layout Shift)
 
 **Problem:** Images without dimensions cause layout shifts
 
 **Solutions:**
-\`\`\`html
+```html
 <!-- Before: No dimensions -->
 <img src="/product.jpg" alt="Product">
 
@@ -140,10 +155,10 @@ npm install date-fns
   height="300"
   style="aspect-ratio: 4/3;"
 >
-\`\`\`
+```
 
 **For dynamic content:**
-\`\`\`css
+```css
 /* Reserve space for content that loads later */
 .skeleton-loader {
   min-height: 200px;
@@ -156,19 +171,19 @@ npm install date-fns
   0% { background-position: 200% 0; }
   100% { background-position: -200% 0; }
 }
-\`\`\`
-
-### Results After Optimization (illustrative, not measured)
-
-- **LCP:** [new LCP] ✅ (improved by [PERCENT])
-- **INP:** [new INP] ✅ (improved by [PERCENT])
-- **CLS:** [new CLS] ✅ (improved by [PERCENT])
-- **Lighthouse Score:** [new score]/100 ✅
 ```
+
+### Results After Optimization (fill in with your own re-test, never guess)
+
+- **LCP:** [your new LCP]
+- **INP:** [your new INP]
+- **CLS:** [your new CLS]
+- **Lighthouse Score:** [your new score]/100
+````
 
 ### Example 2: Reducing JavaScript Bundle Size
 
-```markdown
+````markdown
 ## Bundle Size Optimization
 
 ### Current State (illustrative)
@@ -179,10 +194,10 @@ npm install date-fns
 
 ### Analysis
 
-\`\`\`bash
+```bash
 # Analyze bundle composition
 npx webpack-bundle-analyzer dist/stats.json
-\`\`\`
+```
 
 **Findings:**
 1. Moment.js: [SIZE] (can replace with date-fns, usually smaller: check both sizes)
@@ -194,25 +209,31 @@ npx webpack-bundle-analyzer dist/stats.json
 
 #### 1. Replace Heavy Dependencies
 
-\`\`\`bash
+Shell commands (run in your terminal):
+
+```bash
 # Remove moment.js → Use date-fns (compare the sizes in your bundle first)
 npm uninstall moment
 npm install date-fns
+```
 
-// Before (JavaScript code, not shell commands):
+JavaScript code (change in your source files, do not run in a terminal):
+
+```javascript
+// Before
 import moment from 'moment';
 const formatted = moment(date).format('YYYY-MM-DD');
 
-// After (JavaScript code):
+// After
 import { format } from 'date-fns';
 const formatted = format(date, 'yyyy-MM-dd');
-\`\`\`
+```
 
 **Savings:** [SIZE] (measure it)
 
 #### 2. Use Lodash Selectively
 
-\`\`\`javascript
+```javascript
 // Before: Import entire library
 import _ from 'lodash';
 const unique = _.uniq(array);
@@ -223,13 +244,13 @@ const unique = uniq(array);
 
 // Or use native methods
 const unique = [...new Set(array)];
-\`\`\`
+```
 
 **Savings:** [SIZE] (measure it)
 
 #### 3. Implement Code Splitting
 
-\`\`\`javascript
+```javascript
 // Next.js example
 import dynamic from 'next/dynamic';
 
@@ -246,11 +267,11 @@ const AdminPanel = dynamic(() => import('./AdminPanel'), {
 // Route-based code splitting (automatic in Next.js)
 // pages/admin.js - Only loaded when visiting /admin
 // pages/dashboard.js - Only loaded when visiting /dashboard
-\`\`\`
+```
 
 #### 4. Remove Dead Code
 
-\`\`\`javascript
+```javascript
 // Tree shaking in webpack.config.js: production mode already enables
 // optimization.usedExports and optimization.sideEffects.
 // Do not set optimization.sideEffects to false: that turns the optimization off.
@@ -264,11 +285,11 @@ module.exports = {
 {
   "sideEffects": ["*.css", "*.scss", "./src/polyfills.js"]
 }
-\`\`\`
+```
 
 #### 5. Optimize Third-Party Scripts
 
-\`\`\`html
+```html
 <!-- Before: Loads immediately -->
 <script src="https://analytics.com/script.js"></script>
 
@@ -281,19 +302,19 @@ module.exports = {
     document.body.appendChild(script);
   });
 </script>
-\`\`\`
-
-### Results (illustrative, not measured)
-
-- **Total Bundle:** [new SIZE] ✅ (reduced by [PERCENT])
-- **Main Bundle:** [new SIZE] ✅
-- **Vendor Bundle:** [new SIZE] ✅
-- **Load Time (3G):** [new load time] ✅ (improved by [PERCENT])
 ```
+
+### Results (fill in with your own re-test, never guess)
+
+- **Total Bundle:** [your new SIZE]
+- **Main Bundle:** [your new SIZE]
+- **Vendor Bundle:** [your new SIZE]
+- **Load Time (3G):** [your new load time]
+````
 
 ### Example 3: Image Optimization Strategy
 
-```markdown
+````markdown
 ## Image Optimization
 
 ### Current Issues
@@ -306,11 +327,15 @@ module.exports = {
 
 #### 1. Convert to Modern Formats
 
-\`\`\`bash
-# Install image optimization tools
-npm install sharp
+Shell command (run in your terminal):
 
-# Conversion script (optimize-images.js)
+```bash
+npm install sharp
+```
+
+JavaScript file (save as optimize-images.js, then run it with `node optimize-images.js`):
+
+```javascript
 const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
@@ -321,29 +346,29 @@ async function optimizeImage(inputPath, outputDir) {
   // Generate WebP
   await sharp(inputPath)
     .webp({ quality: 80 })
-    .toFile(path.join(outputDir, \`\${filename}.webp\`));
+    .toFile(path.join(outputDir, `${filename}.webp`));
   
   // Generate AVIF (best compression)
   await sharp(inputPath)
     .avif({ quality: 70 })
-    .toFile(path.join(outputDir, \`\${filename}.avif\`));
+    .toFile(path.join(outputDir, `${filename}.avif`));
   
   // Generate optimized JPEG fallback
   await sharp(inputPath)
     .jpeg({ quality: 80, progressive: true })
-    .toFile(path.join(outputDir, \`\${filename}.jpg\`));
+    .toFile(path.join(outputDir, `${filename}.jpg`));
 }
 
 // Process all images
 const images = fs.readdirSync('./images');
 images.forEach(img => {
-  optimizeImage(\`./images/\${img}\`, './images/optimized');
+  optimizeImage(`./images/${img}`, './images/optimized');
 });
-\`\`\`
+```
 
 #### 2. Implement Responsive Images
 
-\`\`\`html
+```html
 <!-- Responsive images with modern formats -->
 <picture>
   <!-- AVIF for browsers that support it (best compression) -->
@@ -383,11 +408,11 @@ images.forEach(img => {
     fetchpriority="high"
   >
 </picture>
-\`\`\`
+```
 
 #### 3. Lazy Loading
 
-\`\`\`html
+```html
 <!-- Native lazy loading -->
 <img 
   src="/image.jpg" 
@@ -404,11 +429,11 @@ images.forEach(img => {
   loading="eager"
   fetchpriority="high"
 >
-\`\`\`
+```
 
 #### 4. Next.js Image Component
 
-\`\`\`javascript
+```javascript
 import Image from 'next/image';
 
 // Automatic optimization
@@ -429,18 +454,18 @@ import Image from 'next/image';
   height={300}
   loading="lazy"
 />
-\`\`\`
-
-### Results (illustrative, not measured)
-
-| Metric | Before | After | Improvement |
-|--------|--------|-------|-------------|
-| Total Image Size | [SIZE] | [new SIZE] | [PERCENT] reduction |
-| LCP | [your LCP] | [new LCP] | [PERCENT] faster |
-| Page Load (3G) | [your load time] | [new load time] | [PERCENT] faster |
 ```
 
+### Results (fill in with your own re-test, never guess)
+
+| Metric | Before | After |
+|--------|--------|-------|
+| Total Image Size | [your SIZE] | [your new SIZE] |
+| LCP | [your LCP] | [your new LCP] |
+| Page Load (3G) | [your load time] | [your new load time] |
+````
+
 ## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.
+- Test changes on a copy before you change a live site, and get approval for production changes.
+- Do not treat the output as a substitute for testing on your own pages or expert review.
+- Stop and ask for clarification if required inputs, permissions or success criteria are missing.

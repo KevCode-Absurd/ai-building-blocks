@@ -10,6 +10,10 @@ explain: |
   Your feature list ranked by a score, not by who asked loudest. You also get interview themes and a requirements template to start writing the spec.
 
   The RICE tool takes a CSV where each feature has reach, impact, confidence and effort, and scores it as reach times impact times confidence, divided by effort. With a team capacity figure, it shows what fits in the quarter. A second script reads a customer interview transcript and pulls out pain points, requests and quotes. Templates in the references folder help write the requirements document after that. The scripts need Python. A sample file shows the format.
+
+  Where it stops: a RICE score is only as good as the reach and effort guesses behind it. Check the estimates with your engineers before you commit to the top picks.
+
+  Licence: MIT, from Alireza Rezvani's product manager toolkit (see the LICENSE file). It is a general toolkit. The scripts, templates and notes are in the skill folder, so upload the whole folder.
 when:
   - You have 30 feature ideas and room for six.
   - Stakeholders disagree on what to build first.
@@ -20,21 +24,21 @@ not_for:
   - "You have no reach estimates for your features: run a few customer calls first, then score."
   - "You need a full product roadmap with dates: use a roadmap session with your team and engineers."
 you_give:
-  - A feature list. For each feature give reach (users per quarter, as a number), impact (massive, high, medium, low or minimal), confidence (high, medium or low) and effort (xl, l, m, s or xs, which count as 13, 8, 5, 3 and 1 person-months)
+  - A feature list as a CSV with the header name,reach,impact,confidence,effort,description. For each feature give reach (users per quarter, as a number), impact (massive, high, medium, low or minimal), confidence (high, medium or low) and effort (xl, l, m, s or xs, which count as 13, 8, 5, 3 and 1 person-months)
   - Team capacity for the period, in person-months (the default is 10)
-  - Interview transcripts (optional)
+  - Interview transcripts as plain .txt files (optional)
   - The problem you are solving
 you_get:
-  - Features ranked by RICE score
+  - Features ranked by RICE score, with an optional JSON or CSV export
   - A shortlist that fits your capacity
   - Pain points and quotes from interviews
   - A requirements template
 how_to_use:
   - Open an AI that can run Python 3 code, such as Claude Code, and upload the skill folder. The scripts need only Python 3. If your AI cannot run code, paste in the skill text and it will score the features by hand with the same formula. Hand scoring is less reliable than running the script, so check its sums.
   - Ask it to make the sample CSV file, so you can see the format.
-  - Replace the sample rows with your own features. Fill reach as a number, and impact, confidence and effort as the labels listed above. Words such as "big" are not read, and the script quietly swaps in a default value.
+  - Replace the sample rows with your own features. Fill reach as a number, and impact, confidence and effort as the labels listed above. Words such as "big" are not read. The script stops and names the row, so fix the label and run it again.
   - Ask it to run the scoring with your team capacity in person-months, and read the ranked list.
-  - Check the top picks against your goals and ask your team if they agree.
+  - Check the top picks against your goals and ask your team if they agree. Ask your engineers to check the reach and effort numbers first, because the score is only as good as those guesses.
   - Save the ranking as a CSV or JSON file, add it to your roadmap or spreadsheet, and check the top picks with the people who asked for them. Then write the spec for the winner.
   - To analyze a customer call, upload the transcript and ask for the pain points, requests and quotes. For many calls at once, use the customer interview synthesizer.
 output_sample:

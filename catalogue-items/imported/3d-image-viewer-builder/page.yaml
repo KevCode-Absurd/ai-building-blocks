@@ -10,6 +10,8 @@ explain: |
   You get MATLAB code that opens a 3D scan or surface mesh in an interactive viewer. You can scroll through slices, lay a colour mask on top, and draw marked regions and notes right on the volume.
 
   The skill picks the right display call for your data type. Volumes go in a volume viewer, and meshes use a faster surface object than the older isosurface route. Medical files such as DICOM or NIfTI load through the medical volume class, which brings in spacing and units from the file. It also covers overlays, drawn shapes with move callbacks, streaming data in, and wrapping the viewer in an app. It needs MATLAB with the Image Processing Toolbox.
+
+  Licence: BSD 2-Clause, as the LICENSE.md file says, with one extra condition: you may use it only together with MathWorks products such as MATLAB. The skill file also links MathWorks' own reuse licence. Credit goes to MathWorks.
 when:
   - You have a CT or MRI file and want to look at it in 3D.
   - You need to lay a segmentation mask over the original scan.
@@ -32,10 +34,10 @@ you_get:
   - Slice scrolling controls
   - A starter app layout (optional)
 how_to_use:
-  - Open your AI chat and paste in the skill text from this page.
-  - Paste in the file type of your scan (DICOM, NIfTI or mesh) and say what you want to see, such as slices, a mask overlay or drawn regions.
+  - Open your AI chat and paste in the text of the skill file (SKILL.md) for this item. MATLAB, the Image Processing Toolbox and the Medical Imaging Toolbox are paid MathWorks products, so check you have licences for them first.
+  - Paste in the file type of your scan (DICOM, NIfTI, NRRD or mesh) and say what you want to see, such as slices, a mask overlay or drawn regions.
   - Say if you want a small app around the viewer.
-  - Run the code it gives you in MATLAB. You need the Image Processing Toolbox. DICOM and NIfTI files also need the Medical Imaging Toolbox.
+  - You get MATLAB code with one section for each feature you asked for, and a short list of the toolboxes it calls. Run it in MATLAB. You need the Image Processing Toolbox. DICOM and NIfTI files also need the Medical Imaging Toolbox.
   - Check the scan opens with the right size and units, and that a slice looks like the scan you expect.
   - If it fails, tell your AI the exact MATLAB error. The usual causes are a missing toolbox and wrong spacing or units.
   - Want a full app next? Ask for the app layout, or pair the viewer with the MATLAB app builder.

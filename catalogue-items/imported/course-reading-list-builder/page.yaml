@@ -7,6 +7,8 @@ job: teach-and-train
 headline: Course reading list builder
 subhead: A Word document of recent, peer-reviewed papers for each section of your course, each with a short summary and discussion questions. You get reading that is current and matches your students' level.
 explain: |
+  Before you start: this needs a paid Consensus account, an AI that can run code and Node.js. Without those, use your library's database search instead.
+
   A Word document of recent, peer-reviewed papers for each section of your course, each with a short summary and discussion questions. You get reading that is current and matches your students' level.
 
   You answer three questions about your syllabus format, your audience and the year range. The skill reads the syllabus, groups the topics into sections and asks you to confirm the grouping before searching. For each section it searches an academic database for papers, favouring recent and relevant work and tying topics to applied settings. It writes summaries and discussion questions, then builds the document with a script. It needs a paid Consensus account and a way to run the script.
@@ -30,11 +32,12 @@ you_get:
   - Discussion questions
   - Confirmed topic grouping
 how_to_use:
-  - Check your setup first. You need a paid Consensus account connected to your AI, an AI that can run code, and Node.js. Pasting the instructions into a plain chat is not enough.
+  - This item needs a paid service and some setup. You need a paid Consensus account connected to your AI, an AI that can run code, and Node.js. Pasting the instructions into a plain chat is not enough. If that is not you, ask your librarian for a database search and write the summaries from the abstracts yourself.
   - Open your AI and load this skill. Say you want a reading list from your syllabus.
   - Give your syllabus as a file, pasted text or a photo. Then pick your course level and how recent the papers should be.
   - Check the proposed sections. Ask to merge, split, add or remove any, then confirm. Searching starts only after you confirm.
-  - Read the finished Word file. Check each summary and question against your learning goals.
+  - Read the finished Word file. Check each summary against the paper's abstract on Consensus, and each question against your learning goals. Summaries must come only from what Consensus returned.
+  - Next, send the list to your students once every link and summary is checked.
   - Note any section marked as limited results. Fill it by hand or with a library search.
 output_sample:
   input:

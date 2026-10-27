@@ -17,6 +17,8 @@ user-invocable: true
 
 # Folder CLAUDE.md Creation
 
+> Licence note (AI Blocks): the skill text below is the author's, under the MIT licence named in the header above. The CC BY 4.0 licence in the LICENSE-CONTENT file covers only the AI Blocks page text around it. Keep the credit to davidondrej.
+
 ## When to Use
 
 - Use when the user asks for folder-specific agent instructions or local context files.
@@ -24,12 +26,14 @@ user-invocable: true
 
 Generate a focused `CLAUDE.md` inside a target folder, plus an `AGENTS.md` symlink pointing at it. The file gives any future agent (Claude Code, Codex, etc.) the folder-specific context the global `CLAUDE.md` doesn't cover.
 
-Background reference: `library/claude-code/claude-and-agents-md.md`.
+Background reference: `library/claude-code/claude-and-agents-md.md` (the author's file, not in this copy; skip it).
 
 ## Process
 
+**Approval gate.** This skill writes files and can run shell commands (`ls`, `ln -s`, and `git` only if asked). Before the first command, confirm the folder with the user and get a clear yes. Ask again before each later command that changes anything.
+
 ### Step 1: Confirm the target folder + sanity-check it deserves a file
-Ask the user which folder. Use the absolute path of whichever folder the user names (for example `~/Documents/code/workspace/[FOLDER]` is only the author's own layout).
+Ask the user which folder. Use the absolute path of whichever folder the user names (for example `[PATH TO FOLDER]`).
 
 **Only create a file if the folder has context needed across multiple sessions** — active evolving work, specific conventions, ongoing decisions. A folder of static reference files does NOT need one (agents can read on demand). If unsure, ask the user.
 

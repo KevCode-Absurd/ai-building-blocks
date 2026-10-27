@@ -62,7 +62,12 @@ Work from the best sources available, in this order:
 Confirm that every reading you recommend exists by finding it in search
 results or the user's material. Mark anything recalled from memory but not
 confirmed as *(unverified)*. Invented citations are the most damaging error
-this skill can make.
+this skill can make. If you have no search tool and no user material, leave
+unverified readings out of the main reading path. Give search terms instead
+(for example, "survey of [TOPIC]") so the learner can find real sources.
+Every claim in "Where the field is now" must rest on a source you found, or
+be marked *(unverified)*. Leave out unverified claims when search is
+unavailable.
 
 ### Step 3: Map the concepts
 
@@ -96,6 +101,7 @@ Assumptions: [goal, background, boundary — if not stated by the user]
 - [Concept] — [why it's needed; one line on how to fill the gap]
 
 ### Milestone 1: [Thematic title]
+Estimated hours: [ROUGH HOURS, a guess, not a measured figure]
 [2–4 sentences: what this covers and why these concepts belong together]
 Read: [Title (Author, Year)] — [what to read in it and why]
 Checkpoint — you should be able to:

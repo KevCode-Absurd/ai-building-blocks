@@ -75,7 +75,7 @@ How he applied it: Seven Samurai, written with Shinobu Hashimoto and Hideo Oguni
 
 **Who is strong in history?** Ordinary people who hold to the land, more than the warriors who pass through [S1].
 
-**Has he mastered cinema?** No. At almost 80 he said he still didn't understand it [S1]. For years, asked which film was his best, he would answer: the next one [S1].
+**Has he mastered cinema?** No. At almost 80 he said he still didn't understand it [S1]. For years, asked which film was his best, he is reported to have answered: the next one [S1]. This is a reported paraphrase, not a recorded quote.
 
 ## His work and record
 
@@ -103,7 +103,7 @@ How he applied it: Seven Samurai, written with Shinobu Hashimoto and Hideo Oguni
 
 ### Painting the film to win the money
 
-Through the late 1970s Kurosawa could not get his large period films funded in Japan. Toho showed interest in *Kagemusha* and then passed, citing a budget of about $5.5 million [S6]. He had picked it over his other period ideas because he thought it the most likely to earn money [S6]. He began painting storyboards for it, and the studio saw them as a way to show that his plan would work [S11]. George Lucas and Francis Ford Coppola admired them. A deal with Twentieth Century Fox for foreign rights was announced on 20 December 1978, and Toho came back in [S6][S11]. The film took the Cannes top prize in May 1980 [S6].
+Through the late 1970s Kurosawa could not get his large period films funded in Japan. Toho showed interest in *Kagemusha* and then passed, citing a budget of about $5.5 million [S6]. He had picked it over his other period ideas because he thought it the most likely to earn money [S6]. He began painting storyboards for it, and the studio saw them as a way to show that his plan would work [S11]. George Lucas and Francis Ford Coppola admired them. A deal with Twentieth Century Fox for foreign rights was announced on 20 December 1978, and Toho came back in [S6][S11]. The date comes from a fan-run biography site and we have not checked it against a second source. The film took the Cannes top prize in May 1980 [S6].
 
 ### Writing *Dreams* alone and taking foreign money
 
@@ -115,7 +115,7 @@ In November 1966, a month before shooting, Kurosawa asked the producers for a ye
 
 ### Casting war veterans, then leaving *Tora! Tora! Tora!*
 
-For the Japanese half of the film he chose non-professional actors, businessmen who had served in the war. He reasoned they would bring an authority that trained actors could not [S7]. He wanted an epic tragedy while Fox wanted an exact historical spectacle, and his script ran longer than the planned film [S7]. After 23 days, on 24 December 1968, Fox announced he had left for fatigue, which was in effect a firing [S7]. The break cost him co-writers and a lasting partner, and his company made no film for over ten years [S7].
+For the Japanese half of the film he chose non-professional actors, businessmen who had served in the war. He reasoned they would bring an authority that trained actors could not [S7]. He wanted an epic tragedy while Fox wanted an exact historical spectacle, and his script ran longer than the planned film [S7]. After 23 days, on 24 December 1968, Fox announced he had left for fatigue, which was in effect a firing [S7]. The day count and date come from one secondary biography site, so treat them as reported, not checked. The break cost him co-writers and a lasting partner, and his company made no film for over ten years [S7].
 
 ### Standing firm on the score and the cast of *Kagemusha*
 

@@ -2,14 +2,14 @@ thinking: medium
 thinking_why: It picks the best hooks from the data and writes three versions.
 new_slug: account-based-outreach-drafter
 name: Account-based outreach drafter
-summary: Draft account-based outreach for one named company or contact. Get an email, call script and LinkedIn note built on real signals.
+summary: Draft outreach for one named company or contact. Get an email, call script and LinkedIn note from real signals. Needs a paid Common Room account.
 job: write-emails
 headline: Account-based outreach drafter
 subhead: Name a company or contact and say why you are reaching out. It looks them up in your Common Room data, pulls activity, posts, hiring and funding signals, and searches the web if the data is thin. You get a personal email, a call script and a LinkedIn message, with the signals behind each. You send them.
 explain: |
   One target, three ready messages: an email, a call script and a LinkedIn note. Each is based on what that company or person has actually been doing. You review and send them yourself.
 
-  The skill looks up the company or contact in your Common Room data. It pulls product activity, community posts, hiring or funding signals and your past contact. If the data is thin, it searches the web for a recent hook, such as news from the last two weeks that the person will know you could see. The result is personal to that target, not a template. It is an imported skill from Common Room, so it needs your own Common Room account connected. A plain email template does not use your account data.
+  The skill looks up the company or contact in your Common Room data. It pulls product activity, community posts, hiring or funding signals and your past contact. If the data is thin, it searches the web for a recent hook, such as news from the last two weeks that the person will know you could see. The result is personal to that target, not a template. It is an imported skill from Common Room, so it needs your own Common Room account connected. A plain email template does not use your account data. Common Room is a paid outside service, so check its plan and cost before you start. Use this only for business contacts you may lawfully contact, and honour any opt-out.
 when:
   - You want to reach a named account with a message that sounds informed.
   - You need an email, a call opener and a LinkedIn note in one go.
@@ -19,6 +19,7 @@ not_for:
   - You have a cold list with no named target. Use a simple email template and fill in each name by hand.
   - You have no Common Room data and no recent news to cite. Ask a person on your team for context first, then write the note yourself.
   - You want to send messages in bulk. This writes drafts for one target at a time, and you send them yourself.
+  - Your message is not business outreach, or the person has asked not to be contacted. Use it only for business outreach, follow your local data-protection rules, and honour any opt-out. It pulls activity, posts and web details about named people, so only use what you may lawfully use.
 you_give:
   - A company name or a contact
   - Your offer or reason for reaching out
@@ -34,14 +35,15 @@ you_get:
 how_to_use:
   - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on this page.
-  - It works best when your AI can connect to your Common Room account.
+  - Paste your product, offer and positioning notes into the chat. This copy does not include a company notes file, so your AI cannot write about your offer without them.
+  - Connect your AI to your Common Room account. It is a paid outside service. Without it, the skill falls back to web search and writes a shorter limited-data note.
   - Pick one draft, adapt it, send it yourself and log the outreach in your CRM or Common Room.
   - If there is no reply, set a follow-up date and ask your AI for a short second message built on a new signal.
 output_sample:
   input:
     - A company name or a contact name
     - Your offer or reason for reaching out
-    - Your product and positioning, if your AI has no company notes (optional)
+    - Your product, offer and positioning, pasted into the chat. This copy has no company notes file, so your AI needs them from you
     - Tone preferences (optional)
   prerequisites:
     - A Common Room account connected to your AI

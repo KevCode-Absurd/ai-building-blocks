@@ -35,10 +35,10 @@ how_to_use:
   - Make a Lambda Labs account, add a payment method, create an API key and add your SSH key. This is a paid service.
   - Do not paste your Lambda API key into a chat AI. Store it on your own machine as the environment variable LAMBDA_API_KEY, and tell your AI to refer to that name.
   - Paste this skill into Claude, ChatGPT or Gemini. Say what you want to train and how long it may run.
-  - Check the GPU, region and hourly price your AI suggests before you launch.
+  - Check the GPU, region and hourly price your AI suggests before you launch. Ask it to add up the total per hour and for the whole run, and say yes only if you accept that cost. An 8 GPU server costs eight times a single GPU.
   - Run the launch steps, either in the Lambda console or with the commands. Commands need a terminal or an AI that can run code.
   - Connect with ssh, copy your files over and start the run. Save checkpoints to the persistent folder.
-  - When you finish, run the terminate command from the skill. Lambda does not stop the server for you.
+  - When you finish, run the terminate command from the skill. Lambda does not stop the server for you. Then open the Lambda dashboard and check the server no longer shows as running.
 output_sample:
   input:
     - What you need to train or run

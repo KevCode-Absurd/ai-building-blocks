@@ -16,7 +16,7 @@ A family recipe can be recorded while the cook works. Note the size of the pan, 
 
 When teaching an unfamiliar term, explain it at the action where it matters. A learner needs to know what to do, what to look for and what happens next. Save a longer cultural explanation for a point where it will not interrupt a time-sensitive step. Clear instruction preserves precision without forcing a newcomer to master a glossary before eating.
 
-## Questions they always ask
+## Questions to ask (sample prompts we wrote)
 
 These are sample prompts written by us for this profile. They are not her words, and she is not recorded as asking them.
 

@@ -30,9 +30,11 @@ you_get:
   - Links for every claim
   - Suggested threads to read
 how_to_use:
-  - Before you start: Reddit's terms may limit automated access, so keep it light and never work around a block. X results need an export file or a paid X API key.
+  - "Before you start: Reddit's terms may limit automated access, so keep it light and never work around a block. X results need an export file or a paid X API key."
+  - Grok and browser automation are optional extras that may need paid accounts. The run works without them.
+  - Before the search runs, check Reddit's rules and the rules of each web source you plan to use. If a site blocks access, stop on that site. Do not look for a way round it.
   - Have ready your topic in one sentence, what you want to learn (trends, opinions, problems or a comparison), the time window, which sources to use, and an X export file if you have one.
-  - Open Claude, ChatGPT or Gemini with web search turned on. Paste in the skill instructions.
+  - Open Claude, ChatGPT or Gemini with web search turned on. Paste in the text of this item's SKILL.md file, which is on this page or in the item folder.
   - Say "pulse on" and then your topic. For example, "pulse on your product category".
   - "Answer the 2 to 4 short questions it asks: topic detail, angle, time window and sources."
   - If you want X results, attach your X search export file when asked. Skip this if you have none.

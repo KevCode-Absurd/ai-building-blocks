@@ -9,7 +9,7 @@ subhead: Describe the interface. Get a built page with careful colour, layout an
 explain: |
   Ask for a page or app screen and get working front-end code with a deliberate look, not the stock template feel of centred heroes, purple gradients and rows of identical cards.
 
-  The skill sets three dials for layout variety, motion and density, then builds to rules on type, colour, spacing and responsive behaviour. It defaults to React with Tailwind unless you name another stack. It covers loading, empty and error states, avoids fragile layouts, and checks that each part earns its place. If your brand already has a style, tell it and it follows that instead. You can also ask it to review an existing screen. This copy adds one rule to the original: every name, number and review it invents for the mock-up is marked as a placeholder to replace.
+  The skill sets three dials for layout variety, motion and density, then builds to rules on type, colour, spacing and responsive behaviour. It defaults to React with Tailwind unless you name another stack. It covers loading, empty and error states, avoids fragile layouts, and checks that each part earns its place. If your brand already has a style, tell it and it follows that instead. You can also ask it to review an existing screen. This is an imported copy of a skill by Leonxlnx, shared by sickn33 under CC BY 4.0 (see LICENSE-CONTENT). This copy adds one rule to the original: every name, number and review it invents for the mock-up is marked as a placeholder to replace.
 when:
   - Your landing page looks like every other AI-made site.
   - You need a dashboard that works on phone and desktop.
@@ -31,7 +31,8 @@ you_get:
   - Ranked list of design fixes for a review
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the full text of the skill's SKILL.md file. It is long, so use an AI that takes long text.
-  - Describe the page or app you want. Add your brand colours, stack and look (calm or bold) if you have them.
+  - Describe the page or app you want. Name your existing project or stack first, so your AI checks your package.json before it writes code. Add your brand colours and look (calm or bold) if you have them.
+  - Before any code is written, ask your AI to reply with the values it chose for the three dials (layout variety, motion, density) and the stack. Confirm or change them, then let it build.
   - To review a screen, paste its code or describe it. Ask for the biggest problems first, with a fix.
   - Read the result. Check the code runs in your project and works on phone and desktop.
   - Code running and file access help a lot. Without them, copy the code into your project yourself.

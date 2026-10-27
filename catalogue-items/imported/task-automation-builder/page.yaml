@@ -2,14 +2,14 @@ thinking: medium
 thinking_why: It picks the right trigger and writes the script.
 new_slug: task-automation-builder
 name: Task automation builder
-summary: Turn a repetitive task into a script, schedule or file watcher. Name the task and its trigger, and get a tested task automation you can run.
+summary: Turn a repetitive task into a script, schedule or file watcher. Name the task and its trigger, and get a task automation with tests you can run.
 job: set-up-ai
 headline: Task automation builder
 subhead: Name the repetitive task, what starts it and where it will run. It picks a pattern, such as a script, a file watcher or a scheduled job, then builds and tests it. You get the working script, the trigger set up, error handling and logs, and notes on running it.
 explain: |
   A working script, schedule or trigger that does a boring job for you, tested and logged, so you stop doing it by hand. You describe what starts it and what should happen, and the skill builds the right kind of automation.
 
-  It first asks what triggers the job, what the inputs and outputs are and how often it runs. It then picks a pattern: a shell or Python script, a cron schedule, a file watcher, a CI trigger or API polling. It adds retries, error handling, logging and safe handling of secrets. It is tested on empty files and failures first. It needs somewhere to run.
+  It first asks what triggers the job, what the inputs and outputs are and how often it runs. It then picks a pattern: a shell or Python script, a cron schedule, a file watcher, a CI trigger or API polling. It adds retries, error handling, logging and safe handling of secrets. It gives you tests for empty files and failures. Your AI reports a test as run only if it really ran it, and lists the ones it could not run. It needs somewhere to run.
 when:
   - You move or rename the same files every week and want it done for you.
   - A CSV arrives in a folder and must be checked and converted.
@@ -31,12 +31,14 @@ you_get:
   - Error handling and logs
   - Short notes on how to run and monitor it
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Use one that can run code and read files if you want the script tested.
+  - Open Claude, ChatGPT or Gemini. Use one that can run code and read files if you want the script tested. Code running in an AI chat may need a paid plan. If yours cannot run code, it can still write the script, but you must run the tests yourself.
+  - "Have ready what the examples need. The file watcher example needs Python and the watchdog package (pip install watchdog). The health check example needs a Slack workspace where you can add an incoming webhook app, with the webhook saved as SLACK_WEBHOOK_URL, and your health check address saved as HEALTH_URL."
   - Paste this skill into the chat.
-  - Describe the task, what starts it and where it will run. Gather first: the folder paths, a sample CSV header row if files are involved, how often it should run, and the apps or web addresses it talks to.
+  - "Describe the task, what starts it and where it will run. Gather first: the folder paths, a sample CSV header row if files are involved, how often it should run, and the apps or web addresses it talks to."
   - Read the plan and the script. Check any file paths and names before you run it.
   - Run the tests it gives you, then set up the schedule or trigger.
   - Keep the notes it writes so you know how to pause or turn off the job.
+  - Next, look at the error log on a set day each week, and send Slack alerts to one named channel that someone owns.
 output_sample:
   input:
     - The repetitive task in plain words

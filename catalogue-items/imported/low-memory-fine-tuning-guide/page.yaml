@@ -7,6 +7,8 @@ job: build-software
 headline: Low-memory fine-tuning guide
 subhead: A fine-tuning setup that trains less than one percent of a large model, so it fits on a single GPU. It uses small add-on layers called adapters, which can be around 6 MB instead of a 14 GB full copy.
 explain: |
+  This is an MIT-licensed skill by Orchestra Research (peft-fine-tuning) that we copied. It was not written for AI Blocks.
+
   A fine-tuning setup that trains less than one percent of a large model, so it fits on a single GPU. It uses small add-on layers called adapters, which can be around 6 MB instead of a 14 GB full copy.
 
   Tell it your model and GPU. It picks LoRA for standard fine-tuning of 7B to 70B models, or QLoRA when memory is tight. QLoRA saves memory and may cost a little quality. The source's own table shows a drop of under one point on one benchmark, but it does not say what hardware it used, so test on your own task. It gives Python code using the peft, transformers and bitsandbytes libraries, along with settings like rank. It also covers saving several adapters for different tasks on one base model, and when full fine-tuning is the better choice instead.
@@ -31,7 +33,7 @@ you_get:
   - Settings such as rank and alpha, set for your memory
   - Steps to save, load, merge and swap adapters
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste this skill.
+  - Open Claude, ChatGPT or Gemini and paste this skill. This is a copy of the MIT-licensed peft-fine-tuning skill by Orchestra Research (see item.yaml for the source link).
   - Tell it your base model, your GPU and its memory, and what your training data looks like.
   - Check the method it picks. For example, a 8B model on a 24 GB card with 2,000 support tickets suits LoRA with rank 16 and alpha 32. That adapter is only a few MB to tens of MB.
   - Copy the script to a computer with a GPU, or a cloud notebook, and run it. Your AI does not run the training itself.

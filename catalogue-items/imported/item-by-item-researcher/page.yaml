@@ -30,6 +30,7 @@ you_get:
   - A record of finished items for resuming
   - Batch-by-batch progress
 how_to_use:
+  - "Warning: this skill sends many agents to read websites. You must check each site's terms and robots.txt. The skill asks you to confirm before it starts, but it cannot enforce the rules. It also uses a lot of a paid Claude plan or API credit."
   - Make a folder with an outline.yaml that lists your topic and items, and a fields.yaml that lists what to fill in for each one.
   - Open an AI tool that can search the web, save files and run helpers in parallel, such as Claude Code. A plain chat window cannot do this.
   - Add the skill to your AI tool, then type /research-deep in the folder.
@@ -37,7 +38,7 @@ how_to_use:
   - If the run stops, start it again. It skips items that already have a file.
   - When it finishes, merge the JSON files into one spreadsheet. Re-run or check by hand any item with uncertain fields.
   - This skill scrapes websites. Some sites forbid that, so respect their terms.
-  - Before the first batch, check the terms of the sites it will read. Use the files only if the sites allow it.
+  - Before the first batch, the skill stops and asks you to check the terms and robots.txt of the sites it will read. Say yes only after you have checked. Use the files only if the sites allow it.
 output_sample:
   input:
     - An outline file (outline.yaml) with your topic, the list of items and the run settings

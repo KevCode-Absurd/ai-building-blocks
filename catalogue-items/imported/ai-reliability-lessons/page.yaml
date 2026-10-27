@@ -10,6 +10,8 @@ explain: |
   A lesson sequence that shows students where AI answers can be trusted and where they bend the truth, one school subject at a time. A chatbot may do well on a biology process and badly on a historical judgement. Students find out why.
 
   You name two or three subjects and a year group. The plan first describes how each subject builds knowledge and what counts as evidence there. Then it writes the same type of question in each subject's own terms, such as a cause question. Students run all of them through AI and compare. A protocol says what to record. A reliability framework and discussion guide help them draw conclusions.
+
+  You do not need the research behind it. In short, Bernstein sorted knowledge into types, such as steps that build on each other and ideas that stand side by side. Maton described a semantic wave, which is a rise and fall between abstract ideas and everyday examples. The skill uses both to explain why AI is trusted more in some subjects than others.
 when:
   - You want students to see that AI is not equally reliable in every subject.
   - You are planning cross-subject AI literacy work.
@@ -20,10 +22,10 @@ not_for:
   - You want to teach students how to write good prompts. Use a basic prompting lesson from your school or exam board instead.
   - You need one worksheet to mark a single AI answer. Ask a colleague or your subject lead for a simple answer-checking sheet instead.
 you_give:
-  - Two or three subjects to compare
+  - Two or three subjects to compare (gather these before you paste)
   - Year group
   - The question type to use, such as cause or how it works (optional)
-  - Time available (optional)
+  - Time available. Have your class time ready, because it sets how long the plan runs (optional)
 you_get:
   - A note on how each subject builds knowledge
   - Matching questions for each subject

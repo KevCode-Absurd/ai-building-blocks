@@ -36,12 +36,13 @@ you_get:
   - A balance check and cash tie-out for every period
   - A gap list of cells it could not fill
 how_to_use:
-  - Use an AI that can run commands and read your files, such as Claude Code. Install the officecli tool first. It is a command-line tool, not part of this library. Check its own project page for install steps and cost. If you cannot install it, ask your AI for the formulas to type into Excel yourself.
+  - Use an AI that can run commands and read your files, such as Claude Code. Install the officecli tool first. It is a command-line tool, not part of this library. Check its own project page for install steps and cost before you start. We have not checked whether it is free. If you cannot install it, ask your AI for the formulas to type into Excel yourself.
   - Open the skill. Give your AI the template and the company's results files, and tell it which years to fill. The US-only parts of the skill, the SEC filing guide and the 80% tax loss limit, are skipped for Indian companies.
   - Check the tab map it shows you before it touches any cell. Fix the mapping if a tab is read wrongly.
   - Approve each statement in turn, starting with historicals, then income statement, then balance sheet, then cash flow.
   - Open the Checks tab. Every balance and cash check should pass before you use the model.
-  - Read the gap list. Fill those cells from the filing yourself, then move on to valuation.
+  - Read the gap list. Fill those cells from the filing yourself, then move on to valuation with the DCF model builder for India. Run the India modeling rules checker on the finished file.
+  - Five guide files named in the skill are not in this library, and each has a fallback. india-market-conventions and india-market-data are replaced by the two India rules in the skill (April to March years, and crore by dividing by 10,000,000). xlsx-author and officecli-xlsx are replaced by officecli's own built-in help. NOT-ADAPTABLE.md is replaced by naming each gap in the gap list, without a stand-in number. Your AI will tell you which files it could not load.
 output_sample:
   input:
     - A model template (.xlsx) with income statement, balance sheet and cash flow tabs

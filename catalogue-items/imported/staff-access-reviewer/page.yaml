@@ -35,6 +35,8 @@ how_to_use:
   - Read the summary first. Then open the CSV and sort by days since last login, longest first.
   - Check each flagged account with the person's manager. Remove access yourself in your Shopify admin.
   - The CSV holds staff names and emails. Keep it private, and delete it when the review is finished.
+  - The flag called high privilege only means owner or collaborator. Open each flagged account in Shopify admin to see what it can really do.
+  - Next, take the flagged accounts into the Offboarding plan builder for anyone who has left. Keep the CSV in a spreadsheet as your access review record.
 output_sample:
   input:
     - Your store domain

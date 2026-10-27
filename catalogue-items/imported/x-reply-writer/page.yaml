@@ -9,9 +9,9 @@ subhead: A reply that gets read has to work as a post on its own. Paste a tweet 
 explain: |
   A reply that gets read has to work as a post on its own. Paste a tweet and this skill writes a short reply that does, or tells you plainly to skip it.
 
-  First it decides whether you have anything to add. If not, the answer is skip. It then checks timing, because a good reply an hour late is seen by almost nobody. Next it names the gap in the original: a hidden assumption, a missing fact, or a case from your own life. The reply is written in two lines or fewer, with no praise opener and no quoting the tweet back. It warns you off becoming the reply guy.
+  First it decides whether you have anything to add. If not, the answer is skip. It then checks timing. The author's view is that a reply an hour late is seen by almost nobody. X does not publish exact reply ranking rules, so treat that as a rule of thumb. Next it names the gap in the original: a hidden assumption, a missing fact, or a case from your own life. The reply is written in two lines or fewer, with no praise opener and no quoting the tweet back. It warns you off becoming the reply guy.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (prateeks367) says MIT. Credit goes to prateeks367 and sickn33.
+  Licence: the LICENSE-CONTENT file in this folder applies to our copy: CC BY 4.0, which means free reuse with credit. The author's own file header (prateeks367) says MIT, which also allows reuse with credit. Either way, keep the credit to prateeks367 and sickn33.
 when:
   - A large account posted something you disagree with or can improve.
   - You reply often but nobody reacts.

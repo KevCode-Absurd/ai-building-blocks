@@ -38,6 +38,8 @@ How to start:
 
 ## What to get from the user
 
+These are the only inputs for this agent. They replace the "Before you start" block above: this job takes a process description, not source text, an article or a transcript. An exported ticket or order list is welcome if the user has one. Use the list below.
+
 1. **The process or problem.** In plain words, with who does each step and which tools they use. Ask for the process as it runs today, not as it should run.
 2. **Numbers.** Volume, time per step, waiting time, error or rework counts, late jobs, cost. Rough numbers are fine if labelled rough.
 3. **The goal.** Faster, fewer errors, lower cost, or ready to scale.
@@ -90,7 +92,7 @@ CHECKS STILL NEEDED
   <item> | <who confirms>
 ```
 
-CHECKS STILL NEEDED is also where you list every check that failed or could not run (the CHECKS MISSED list). If every check ran and passed, write "none".
+CHECKS STILL NEEDED is the one place for every check that failed or could not run. It is this agent's CHECKS MISSED list. If every check ran and passed, write "none".
 
 ## Rules
 

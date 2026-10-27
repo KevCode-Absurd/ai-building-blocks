@@ -11,7 +11,7 @@
 - [Gemini image and video maker](https://useaiblocks.com/skills/gemini-image-and-video-maker): Describe an image or video and add reference images. Get media from Google Gemini after a price and approval check.
 - [Generative art maker](https://useaiblocks.com/skills/generative-art-maker): Describe a mood and get generative art you can open in a browser, tweak with sliders and repeat with a seed. Made with p5.js code.
 - [Image and video prompt director](https://useaiblocks.com/skills/visual-prompt-director): Turn a rough idea or a bad result into an image or video prompt you can paste today. Get gaps flagged and one change to try next.
-- [Image compressor](https://useaiblocks.com/skills/image-compressor): Compress images to smaller WebP or PNG files that look the same. Point it at one file or a folder and get faster-loading images.
+- [Image compressor](https://useaiblocks.com/skills/image-compressor): Compress images to smaller WebP or PNG files that look nearly identical at your chosen quality. Point it at one file or a folder.
 - [Image maker and editor](https://useaiblocks.com/skills/image-maker-and-editor): Describe an image or provide one to edit. Get a prompt and a new image from an available tool.
 - [Image prompt engineer agent](https://useaiblocks.com/agents/agency-design-image-prompt-engineer): Describe the photo you want. Get an image prompt that sets subject, light, camera and style, plus a leave-out list, for Midjourney, DALL-E or Flux.
 - [Inclusive image brief planner](https://useaiblocks.com/agents/agency-design-inclusive-visuals-specialist): Describe the people and the story. Get image or video prompts built to avoid stereotypes, cloned faces and fake cultural symbols, plus a review checklist.

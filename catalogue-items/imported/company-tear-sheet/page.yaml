@@ -20,14 +20,16 @@ when:
 not_for:
   - You want a PowerPoint slide for a pitch book. Use the company strip profile slide maker.
   - You want a valuation or a fair price. Use the company fair value modeler.
+  - You will send the sheet to a client as it is. The price data comes from yfinance, which is for personal use only. Check the figures against filings or a licensed source first, or label the sheet internal.
   - You need live prices or a document a client will trade on. Free data is end of day or delayed, so use a licensed data terminal.
-  - The company is outside the US. Free data is thin there, so use the company's investor relations pages and paste in its annual report.
+  - The company is outside the US or India. Free data is thin there, so use the company's investor relations pages and paste in its annual report. Indian companies do work, from delayed Yahoo data and the annual report figures you paste in.
 you_give:
   - The company name or ticker
   - The reader, such as equity research, investment banking, corporate development or sales
   - Comparable companies you want shown (optional)
   - Page length or layout (optional)
   - The company's annual report or results, for an Indian or private company (optional)
+  - A free Alpha Vantage key for consensus estimates (optional)
 you_get:
   - A one-page Word tear sheet for your reader
   - Key financials for three years, with growth
@@ -41,7 +43,7 @@ how_to_use:
   - For an Indian or private company, paste the annual report figures. Free sources have little on them.
   - Read the Not disclosed marks first. Fill them from the company's filings if you need them.
   - Check the figures and dates against the latest results. Note that the price data is delayed.
-  - Put the sheet in your pack only after you have checked it.
+  - Put the sheet in your pack only after you have checked it. Refresh it after each results release. To value the company, use the company fair value modeler. For a pitch slide, use the company strip profile slide maker.
   - The run order is: confirm the reader, pull the filings and price data, save each figure with its source and date, build the Word file, then check every figure against its source.
 output_sample:
   input:
@@ -51,7 +53,8 @@ output_sample:
     - Annual report figures for an Indian or private company (optional)
   prerequisites:
     - An AI that can run code and reach the web
-    - The officecli tool installed, to build the Word file
+    - The officecli tool installed, to build the Word file. If it cannot be installed, ask for the sheet as text and paste it into Word.
+    - A free Alpha Vantage key, only if you want consensus estimates (optional)
   output:
     - name: Header banner
       contains: Company name, ticker, headquarters, employees, market cap, share price and as-of date.

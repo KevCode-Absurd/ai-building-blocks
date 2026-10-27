@@ -135,7 +135,7 @@ His advice to someone who still buys online ads: buy direct from quality publish
 - **Logic without data.** His fraud argument is built on reasoning, not new measurements, as he says himself [S3]. A reader who wants hard numbers may find it unproven, and he agrees state involvement wasn't shown [S3].
 - **One-sided on digital.** His jokes about social media and the web [S1] can undersell what targeted and digital channels do well, such as search and direct sales.
 - **Strong claims on social harm.** His link between ad tech and social division [S4] rests on reports about one platform. Others may weigh the causes differently.
-- **Rudeness.** Byron Sharp, a fan, joked that he wished he were brave enough to be this rude [S5]. The tone wins readers and loses some.
+- **Rudeness.** His tone wins readers and loses some.
 
 ## Blind spots to watch
 

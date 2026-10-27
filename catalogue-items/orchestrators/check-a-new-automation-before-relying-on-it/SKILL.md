@@ -7,6 +7,8 @@ description: "Use when a new automation or AI loop is built but not yet trusted:
 
 Audit an automation on paper, repair what is weak, then write the procedure people will follow. Two skills run in order. This workflow reads a description. It does not run the automation, and a pass here is not a test.
 
+**When not to use it.** You have no automation yet and want one built: use the Build an n8n automation that reports failures and can be reused workflow (https://useaiblocks.com/workflows/build-an-n8n-automation-that-reports-failures-and-can-be-reused). You want to find which chores are worth automating: use the Repeat chore automation planner (https://useaiblocks.com/skills/repeat-chore-automation-planner). You want a plan for an AI agent with tools and permissions: use the Review an agent before launch workflow (https://useaiblocks.com/workflows/review-an-agent-before-launch). You want the automation tested for you: this checks the design and writes the test list, and you run the test.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -27,17 +29,17 @@ How to start:
 - **The tool the automation runs in (optional):** You run the test checklist there. This workflow does not connect to it or run anything.
 <!-- /needs -->
 
-## Before you start
+## What to have ready for this job
 
-Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
+Use what is attached or pasted first. Ask once, in one short message, for only the facts you cannot work without. This is the same rule as the general list above, so there is one question, not two.
 
-**You need for this job.** This list replaces the general one above.
+**You need.** This list replaces the general "Before you start" list above.
 - The automation as it stands: its prompt, steps or settings, pasted in. If you only get a description in words, use that and say so.
 - What starts it, what data it reads and where results go.
 
 **Makes it better (optional):** one small real case to test with, who approves changes, and a log of a run that went wrong.
 
-Read each component skill in full before you use it: `repeatable-ai-loop-designer`, `process-and-sop-writer`. If one is missing, fetch its page at https://useaiblocks.com/skills/<slug> when you can browse, or ask for the file. Never swap in made-up instructions.
+Both component skills are required: `repeatable-ai-loop-designer` and `process-and-sop-writer`. Read each in full before you use it. If one is missing, fetch it at https://useaiblocks.com/skills/repeatable-ai-loop-designer or https://useaiblocks.com/skills/process-and-sop-writer when you can browse, or ask for the file. Never swap in made-up instructions.
 
 ## Rules
 
@@ -94,7 +96,7 @@ Write `MISSING: <what>` next to the affected part. Carry on with the parts that 
 
 ## After this (for this job)
 
-Use these first. They follow from the test checklist, which is the main thing this workflow hands back. Suggest one next step as a short question, and say the user can type their own:
+Use this list, not the shared "After this" list above. These follow from the test checklist, which is the main thing this workflow hands back. Suggest one next step as a short question, and say the user can type their own:
 - **Run the checklist** on one small real case, then bring back the pass and fail marks to update the procedure.
 - **Hand it over.** For a task that people do by hand, use the [Make a recurring process easier to hand over](https://useaiblocks.com/workflows/make-a-recurring-process-easier-to-hand-over) workflow.
-If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring. If the automation has a live system behind it that needs ongoing monitoring, the Site reliability engineer skill above is the one to offer, with the procedure and the recovery steps.
+If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring. If the automation is built in n8n and needs failure alerts, offer the [n8n failure handler](https://useaiblocks.com/skills/n8n-failure-handler), with the procedure and the recovery steps.

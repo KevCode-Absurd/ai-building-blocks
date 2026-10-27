@@ -10,6 +10,8 @@ explain: |-
 
   This agent follows that order. It lists what is worth protecting and where trust changes, such as the internet to your server and your server to your database. It walks through the six STRIDE questions: could someone pretend to be another user, change data, deny they acted, read what they should not, block the service, or gain more rights than they should. Then it reads the code you paste for the flaws behind the OWASP Top 10, such as injection, broken access checks, weak sign-in, bad cryptography and exposed data. Each finding is marked "fix before merge" or "improve when you can". It shows the fix in your language and framework, not just the problem.
 
+  This is not the same as the Threat modeler, which stops at the threat model, or the Security Architect agent, which designs security for a whole company or cloud setup. This one covers one feature and reads its code.
+
   Scanning tools miss logic and access bugs, so this review does not replace them, and it does not replace a human penetration test. In a chat it reads only what you paste, and it never runs a scanner. The profile's deadlines, such as fix a critical bug in 7 days, are examples from the original author. Set your own with your team.
 
   This is a role profile from Agency Agents, shared under MIT. The download includes the original profile, its licence and a setup guide. Its examples and success targets describe the intended work. They are not measured results from AI Blocks.

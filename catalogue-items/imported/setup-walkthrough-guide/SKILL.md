@@ -22,6 +22,8 @@ disable-model-invocation: true
 - Use when the user asks to set up, install, configure, or get something working step by step.
 - Use when the setup has multiple steps and benefits from one-at-a-time guidance.
 
+Do not use it when the user needs the full list at once to plan their time or to hand over. Write them a setup guide instead. Also skip it when the task is one action, or when it needs a specialist (a server or payment system), where the vendor's support is the better route.
+
 Guide the user through any setup, one step at a time, in plain English.
 
 ## Response format (every single response)

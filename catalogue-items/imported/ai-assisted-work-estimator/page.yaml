@@ -9,7 +9,9 @@ subhead: Time estimates for work done with AI agents, shown as a likely range yo
 explain: |
   Time estimates for work done with AI agents, shown as a likely range you can plan on instead of one hopeful number. It works for a single task or a backlog of hundreds.
 
-  First it finds your mode: all human, a mix of people and agents, or agent-first. Then it sorts each task by size, complexity and risk, and applies the right speed multipliers. Three-point estimates, best, likely and worst, are blended into an expected value. Results come with confidence bands at 50, 75 and 90 percent, so you can commit to the 75 or 90 when dates matter. Output can be formatted for Jira, Linear, GitHub and others. You can feed back actual times to sharpen future guesses.
+  First it finds your mode: all human, a mix of people and agents, or agent-first. Then it sorts each task by size, complexity and risk. It does not set the speed multipliers itself. It asks for your numbers, or it proposes guesses that it labels as guesses. Three-point estimates, best, likely and worst, are blended into an expected value with the standard PERT formula: (best + 4 x likely + worst) / 6. Results come with bands at 50, 75 and 90 percent, so you can commit to the 75 or 90 when dates matter. These are planning buffers built from your inputs, not measured chances of hitting the date, and they are only as good as your multipliers. Output can be formatted for Jira, Linear, GitHub and others. You can feed back actual times to sharpen future guesses.
+
+  Licence: CC BY 4.0 applies to this copy, as the LICENSE-CONTENT file in this folder says. Credit goes to Enreign and sickn33.
 when:
   - You plan a sprint where AI agents write part of the code.
   - You need a date you can defend with a confidence level.
@@ -26,18 +28,19 @@ you_give:
   - Past actual times (optional)
 you_get:
   - An estimate for each task
-  - Likely, 75 percent and 90 percent figures
+  - Likely, 75 percent and 90 percent planning figures (buffers, not measured odds)
   - Task size and risk labels
   - Output ready for your tracker
   - Notes on how to improve with actuals
 how_to_use:
-  - Open Claude and paste the skill text from this page into a new chat. No code, files or paid tools are needed.
+  - Open Claude, ChatGPT or Gemini and paste the skill text from this page into a new chat. No code, files or paid tools are needed.
   - Paste your tasks or tickets. Add your team size and how much of the work agents do.
   - Answer any questions your AI asks. It will ask if team size or agent use is missing.
   - Read the 75 and 90 percent figures. Use one of them when you promise a date, not the likely figure.
-  - Before it estimates, your AI should show the speed multiplier it uses for people only, mixed and agent-first work. This skill ships no table of them, so ask for the numbers and change any that do not fit your team.
+  - Before it estimates, your AI should show the speed multiplier it uses for people only, mixed and agent-first work. This skill sets no values for them and has no research source, so your AI should ask for your numbers. If you have none, any number it suggests is a guess. Change any that do not fit your team.
   - Start with one task to check the result feels right. Then paste a bigger list.
-  - After the first few tasks are done, paste the real times back in and replace the default speed multipliers with your own. Keep a list of your calibrated multipliers in your tracker or a sheet, and pick the tracker format when you ask for output. The defaults are rough starting assumptions, not measured figures.
+  - After the first few tasks are done, paste the real times back in and replace the guessed speed multipliers with your own. Keep a list of your calibrated multipliers in your tracker or a sheet, and pick the tracker format when you ask for output. Any starting numbers are rough guesses, not measured figures.
+  - Next, paste the tracker output into your tool, then send back finished times to recalibrate. For sequencing the work, pair it with the Sprint plan writer.
 output_sample:
   input:
     - The tasks or tickets to estimate

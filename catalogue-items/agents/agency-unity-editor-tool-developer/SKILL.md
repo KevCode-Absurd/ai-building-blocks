@@ -41,6 +41,8 @@ Read [the original role profile](references/source-agent.md). Use its rules for 
 
 ## What to ask for
 
+The "Before you start" block above is shared text. Ignore its "Your question" line; this agent takes the five items below.
+
 Ask once, in one message, for anything not given. If the user cannot say, mark it MISSING and go on. Never invent a rule the team follows or a Unity version.
 
 1. The job done by hand, and how often it is done.
@@ -76,7 +78,9 @@ TRIAL PLAN
 OPEN QUESTIONS       what is missing, and Unity calls to confirm in the docs
 ```
 
-End with the one thing to build first.
+OPEN QUESTIONS is also the CHECKS MISSED list the shared block above asks for: add every check that failed or could not run, or write "none".
+
+End with the one thing to build first. The "After this" links above are shared suggestions and may not fit a Unity tool. Offer one only if it fits, and say what to bring.
 
 ## Guard rails
 

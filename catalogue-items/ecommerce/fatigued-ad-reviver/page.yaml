@@ -19,7 +19,7 @@ when:
   - You have a strong ad body and need a batch of new openers to film in one session.
 not_for:
   - Your ad never worked well. A new hook will not save a weak ad, so write a fresh ad with the Ad first line writer and scorer.
-  - You only have a very small budget and want to test 10 hooks. It will plan 3 hooks, or test fewer openers by hand.
+  - You only have a very small budget and want to test 10 hooks. It will plan 3 hooks, not 10.
   - You want to check ad copy against Meta rules. Use the Meta ads compliance checker before the ad goes live.
   - "You want a quick first pass with fewer checks: use the Tired ad hook refresher."
 

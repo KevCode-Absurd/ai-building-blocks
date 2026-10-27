@@ -19,6 +19,7 @@ Walks every product flagged as a bundle (either via Shopify's native `requiresCo
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_products,read_inventory`
 - For metafield bundles, the metafield value is a JSON list such as `[{"variantId": "gid://shopify/ProductVariant/[ID]", "quantity": [NUMBER]}]`. Add it in the Shopify admin under Settings, Custom data, Products, then fill it in on each bundle product.
 - API scopes: `read_products`, `read_inventory`
+- Native bundles (the `requiresComponents` mechanic) need a store where Shopify's bundle feature is available to you. Check this in your Shopify admin or with Shopify support. On any other setup, use the metafield method above.
 
 ## Parameters
 
@@ -38,7 +39,7 @@ Walks every product flagged as a bundle (either via Shopify's native `requiresCo
 ## Workflow Steps
 
 1. **OPERATION:** `products` — query
-   **Inputs:** `first: 250`, `query: "metafield:<namespace>.<key>:* OR product_type:bundle"`, select `requiresSellingPlan`, `status`, `metafield(namespace, key)`, `variants`, pagination cursor
+   **Inputs:** `first: 250`, `query: "metafield:<namespace>.<key>:* OR product_type:bundle"`, select `requiresSellingPlan`, `status`, `metafield(namespace, key)`, `variants`, pagination cursor. When `only_listed` is true (the default), add `AND status:active` to the query so only active bundles are checked.
    **Expected output:** Bundle products and their parent variants; paginate until `hasNextPage: false`
 
 2. For each bundle, parse component list. Native bundles use `productVariant.requiresComponents` and `productVariant.productVariantComponents`. Metafield bundles parse JSON value into `[{variantId, quantity}]`.
@@ -55,10 +56,10 @@ Walks every product flagged as a bundle (either via Shopify's native `requiresCo
 
 ## GraphQL Operations
 
-The field names below were written for API version 2025-01 and were not run again in this catalogue. Check names such as `inventoryQuantity` and `productVariantComponents` against Shopify's current docs before the first run. If a query fails, fix the field name and say so in the report.
+The field names below were written for API version 2025-01 and were not run again in this catalogue. Check names such as `inventoryQuantity` and `productVariantComponents` against Shopify's current docs before the first run. If a query fails, fix the field name and say so in the report. Before the full run, test the `products` query on 2 or 3 bundles (or a development store) and confirm the fields come back.
 
 ```graphql
-# products:query — validated against api_version 2025-01
+# products:query — written for api_version 2025-01, not yet verified on a live store
 query BundleProducts($query: String!, $after: String, $namespace: String!, $key: String!) {
   products(first: 250, after: $after, query: $query) {
     edges {
@@ -110,7 +111,7 @@ query BundleProducts($query: String!, $after: String, $namespace: String!, $key:
 ```
 
 ```graphql
-# productVariants:query — validated against api_version 2025-01
+# productVariants:query — written for api_version 2025-01, not yet verified on a live store
 query ComponentVariantStock($ids: [ID!]!) {
   nodes(ids: $ids) {
     ... on ProductVariant {
@@ -131,7 +132,7 @@ query ComponentVariantStock($ids: [ID!]!) {
 ```
 
 ```graphql
-# inventoryItems:query — validated against api_version 2025-01
+# inventoryItems:query — written for api_version 2025-01, not yet verified on a live store
 query ComponentInventoryLevels($ids: [ID!]!) {
   nodes(ids: $ids) {
     ... on InventoryItem {
@@ -224,4 +225,4 @@ CSV file `bundle_availability_<YYYY-MM-DD>.csv` with columns:
 - Use `safety_stock` to keep a buffer for non-bundle sales of the same component — bundles share inventory with standalone variants.
 - Pair with `stock-count-updater` or `restock-list-builder` to action a broken bundle into a reorder.
 - For native bundles, `requiresComponents: true` is authoritative — prefer it over metafield conventions when both exist.
-- A bundle with `max_buildable_units = 0` should also be temporarily unpublished until the bottleneck component is restocked; consider chaining this skill with `product-launch-retire`.
+- A bundle with `max_buildable_units = 0` may need to be unpublished until the bottleneck component is restocked. This skill does not do that. It only reads data. Unpublishing is a manual step you take in your Shopify admin, if you decide to.

@@ -13,7 +13,7 @@ description: >
 
 # PCI DSS Compliance Skill
 
-> **Last verified:** 2026-09-05
+> **Last verified:** 2026-09-05 (the original author's date, not checked by us). Confirm the standard, FAQ 1331 and the SAQ control counts at pcisecuritystandards.org before use.
 
 You are an expert PCI DSS compliance advisor and QSA-trained consultant assisting **security, compliance, and engineering teams** that handle payment card data. You have deep knowledge of **PCI DSS v4.0.1** (June 2024 — current) and **PCI DSS v4.0** (March 2022), and can help with CDE scoping, gap assessments, SAQ selection, control implementation guidance, QSA audit preparation, and remediation planning.
 
@@ -102,10 +102,10 @@ The Customised Approach requires a **Targeted Risk Analysis (TRA)** for each cus
 
 Consult `references/pci-dss-saq-guide.md` for the full SAQ selection decision tree and per-SAQ control counts.
 
-**FAQ 1331 (updated August 31, 2026) — critical scoping rule:** SAQ eligibility criteria may **no longer be used as a guide** for determining PCI DSS requirement applicability in a **ROC** assessment "unless explicitly reviewed, discussed and agreed upon with the merchant's compliance accepting entity (e.g., payment brands and acquirers)". QSA agreement alone no longer suffices — flag this to any ROC merchant marking requirements N/A via SAQ-A-style criteria (notably 6.4.3/11.6.1 e-commerce scoping), and advise obtaining acquirer/payment-brand approval in writing.
+**FAQ 1331 — critical scoping rule. Tell the user to read the current text of FAQ 1331 and check its date at pcisecuritystandards.org. Do not state a date for it as fact. The rule as the original author describes it:** SAQ eligibility criteria may **no longer be used as a guide** for determining PCI DSS requirement applicability in a **ROC** assessment "unless explicitly reviewed, discussed and agreed upon with the merchant's compliance accepting entity (e.g., payment brands and acquirers)". QSA agreement alone no longer suffices — flag this to any ROC merchant marking requirements N/A via SAQ-A-style criteria (notably 6.4.3/11.6.1 e-commerce scoping), and advise obtaining acquirer/payment-brand approval in writing.
 
 **Quick reference.** The control counts are approximate. FAQ 1331 and the SAQ criteria change over time, so tell the user to check the form and its count against the current documents at pcisecuritystandards.org before they rely on them.
-| SAQ | Applies To | ~Controls |
+| SAQ | Applies To | ~Controls (approximate, unchecked) |
 |-----|-----------|----------|
 | **A** | Card-not-present merchants; all CHD functions fully outsourced to PCI-compliant third parties | ~22 |
 | **A-EP** | E-commerce merchants; outsource payment processing but control how customers redirect to third party | ~191 |

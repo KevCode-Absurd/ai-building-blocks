@@ -21,13 +21,18 @@ A description of what the app stores and how it is read and written. If an earli
 
 ## Scoring
 
-**Goal: 10/10.** Score a data architecture by the seven Quick Diagnostic rows below: award ~1.4 points per row answered "yes" with evidence (deliberate, documented trade-off), 0 where the answer is "no" or unknown.
+**Goal: 10/10.** Score a data architecture by the seven Quick Diagnostic rows below: award 10/7 (about 1.43) points per row answered "yes" with evidence (deliberate, documented trade-off), 0 where the answer is "no" or unknown. Seven passes add up to exactly 10. This is a judgement against the seven checks, not a measurement.
 
 - **9-10:** every domain choice -- data model, storage engine, replication, partitioning, isolation, derived-data, fault handling -- is deliberate, documented, and matched to actual read/write/consistency requirements; failover tested.
 - **5-6:** core choices made but two or three diagnostic rows fail -- e.g. default isolation level unknown, hot-key risk unhandled, or failover untested.
 - **<=3:** choices driven by familiarity, not requirements; ignored failure modes (replication lag, write skew, hot partitions) and accidental complexity dominate.
 
-Report the current score, which diagnostic rows failed, and the improvements needed to reach 10/10.
+Report the current score, which diagnostic rows failed, and the improvements needed to reach 10/10. Use this fixed shape:
+
+1. Score line, such as "Score: [N]/10".
+2. A pass or fail table, one row per diagnostic row, with one line of evidence from the user's brief for each.
+3. The failed checks, in one or two lines each.
+4. A numbered fix list, in order.
 
 ## The DDIA Framework
 

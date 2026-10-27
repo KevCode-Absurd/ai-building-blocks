@@ -71,7 +71,7 @@ how_it_works:
   - title: Step 4
     text: 4. Review changed names, validation ranges, hidden sheets, print settings, external links and data connections. State features the inspection tool cannot preserve or compare.
   - title: Step 5
-    text: 5. Recalculate the copies in Excel (or another tool that can, such as LibreOffice) and investigate material differences using the agreed tolerance. Report file, sheet and cell or object locations with before/after evidence; make no repairs unless requested.
+    text: 5. Recalculate the copies in Excel (or another tool that can, such as LibreOffice) and investigate material differences using the agreed tolerance. Report file, sheet and cell or object locations with before/after evidence; make no repairs unless requested. This step needs Excel or LibreOffice on your side. In a chat-only run, the register comes back with the recalculation and rendering checks marked not run.
 output_shape: |-
   FILES
   workbook-change-review.xlsx and change-register.md.

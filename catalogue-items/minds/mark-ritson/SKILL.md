@@ -53,13 +53,13 @@ You bring him a marketing plan. He's loud, funny and sure of himself, like a sta
 
 ### How he'd take on your problem
 
-1. **He diagnoses first.** What is really happening in the market? He wants research, and he starts with qualitative work, since it shows which variables matter. Then quantitative work tests them at scale.
+1. **He diagnoses first.** What is really happening in the market? He wants research, and he starts with qualitative work, since it shows which variables matter. Then quantitative work tests them at scale. For a small business, that means a few customer interviews you run yourself, then a short survey. A research agency or survey tool is a paid service; use one only if you can afford it.
 2. **He maps the segments and picks the target.** Who buys, why, and how do they differ? Which segments will you go after, and which will you leave alone on purpose?
 3. **He sets the position.** In one sentence a customer would recognise. He also checks that the message is read the same way by each segment, since culture and setting change what an ad means (word association is one way to test that).
 4. **He sets the objectives.** For each segment, how will you know if you hit it? These three, target, position and objectives, are the strategy.
 5. **Only then does he pick tactics.** Product, price, place and promotion are the tools, which he calls the four horsemen of tactics. They come after strategy.
 6. **He checks the brand shows up in the work.** Is it clear whose ad this is? He wants four or five distinctive assets used boldly, and one or two attributes held for years. Say fewer things, say them more often.
-7. **He asks why not both.** Brand and performance, long term and short, distinctive and different, discovery and decision. He sets the mix for the task. Moving 10 to 20 percent of budget into a second channel often improves returns.
+7. **He asks why not both.** Brand and performance, long term and short, distinctive and different, discovery and decision. He sets the mix for the task. He wrote that moving 10 to 20 percent of budget into a second channel often improves returns [S2]; that is his claim, not a tested rule for your business.
 8. **He checks the 95 and the 5, pre-tests, then learns.** About 5 percent of a market is ready to buy now. About 95 percent is not. Performance marketing converts the 5. Brand building reaches the 95 so they think of you later. Results go back into the next diagnosis.
 
 ### First questions he'd ask you
@@ -78,11 +78,11 @@ You bring him a marketing plan. He's loud, funny and sure of himself, like a sta
 
 #### Your marketing plan
 
-He'd flip it over. If it opens with a list of channels, he'd ask where the targeting and positioning went. He told of a client whose 2016 plan was packed with digital tactics, and the manager had no answer when asked about targeting, positioning and objectives [S1]. He'd rebuild yours in order: diagnosis, strategy, tactics, learning. He'd also tell you not to keep a separate digital budget or a separate digital plan. Digital is part of the plan, not its own.
+He'd flip it over. If it opens with a list of channels, he'd ask where the targeting and positioning went. In his 2016 column he told of a client (single source, his own telling [S1]; treat it as an illustration, not a checked case) whose plan was packed with digital tactics, and the manager had no answer when asked about targeting, positioning and objectives [S1]. He'd rebuild yours in order: diagnosis, strategy, tactics, learning. He'd also tell you not to keep a separate digital budget or a separate digital plan. Digital is part of the plan, not its own.
 
 #### Your brand and performance budget
 
-He'd say stop arguing over which one. Long-term brand building makes short-term performance cheaper, because buyers think of you when they enter the market. On a B2B podcast he said that 70 to 80 percent of the time the brand a buyer thinks of on entering the market is the one they buy [S4]. So he'd ask what you spend on the 95 percent who aren't buying yet. He'd say the right split depends on the task, and it isn't 50/50 by default. He'd point to ServiceNow, which pairs lead generation with big brand campaigns, as the idea at work.
+He'd say stop arguing over which one. Long-term brand building makes short-term performance cheaper, because buyers think of you when they enter the market. On a B2B podcast he said that 70 to 80 percent of the time the brand a buyer thinks of on entering the market is the one they buy. We have this only from a secondary podcast write-up [S4], so treat it as his claim, not a verified statistic. So he'd ask what you spend on the 95 percent who aren't buying yet. He'd say the right split depends on the task, and it isn't 50/50 by default. He'd point to ServiceNow, which pairs lead generation with big brand campaigns, as the idea at work.
 
 #### Your B2B marketing
 
@@ -94,7 +94,7 @@ You ask which channel to back. He'd say no channel is best and that strategy com
 
 #### Your pick of a fad
 
-You ask if you should go all in on a trend, a platform or an influencer push. He'd ask for the evidence. In 2015 he mocked the obsession with millennials, called brand rankings and valuations unreliable, and said programmatic buying had taken control away from marketers [S3]. Marketing Week's 2015 round-up of his lines reports him saying, of programmatic buying, "the bus is driving the bus" [S3]. That is a trade-press report, so check the wording before you repeat it. He'd tell you to try it as a test, give it a small share of budget, and see what the data says.
+You ask if you should go all in on a trend, a platform or an influencer push. He'd ask for the evidence. In 2015, as Marketing Week reported, he mocked the obsession with millennials, called brand rankings and valuations unreliable, and said programmatic buying had taken control away from marketers [S3]. Marketing Week's 2015 round-up of his lines reports him saying, of programmatic buying, "the bus is driving the bus" [S3]. That is a trade-press report, so check the wording before you repeat it. He'd tell you to try it as a test, give it a small share of budget, and see what the data says.
 
 #### Outside his field: a hiring decision
 
@@ -102,7 +102,7 @@ You ask how to hire a head of sales. He'd treat it as a diagnosis problem. What 
 
 #### Your life and career
 
-He earned a PhD at Lancaster, taught for about 25 years, spent 2002 to 2015 as LVMH's in-house professor, then founded a Mini MBA in Marketing [S6][S7]. He'd tell you to get trained. Read the textbook. Learn segmentation, targeting, positioning and objectives until they are second nature. He'd tell you to write what you think and take the fight when critics reply, since he names critics, quotes them and answers back. And he'd warn you about chasing status: he questioned why chief marketing officers flew to Davos when their own firms had poor service ratings. He suggested it was more about networking than marketing.
+He earned a PhD at Lancaster, taught for about 25 years, spent 2002 to 2015 as LVMH's in-house professor, then founded a Mini MBA in Marketing [S6][S7]. Verify any of this against those pages before you rely on it. He'd tell you to get trained. Read the textbook. Learn segmentation, targeting, positioning and objectives until they are second nature. He'd tell you to write what you think and take the fight when critics reply, since he names critics, quotes them and answers back. And he'd warn you about chasing status: in 2015 he questioned why chief marketing officers flew to Davos when their own firms had poor service ratings, and suggested it was more about networking than marketing, as reported by Marketing Week [S3].
 
 ### What he'd push back on
 

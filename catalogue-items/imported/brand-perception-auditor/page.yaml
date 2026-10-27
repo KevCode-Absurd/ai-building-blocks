@@ -30,7 +30,7 @@ you_get:
   - Changes to close the gap
   - Priorities for what to fix first
 how_to_use:
-  - "Gather first: a short description of your brand, who it is for, the perception you want, samples of your copy (homepage, emails, ads), pictures of your visuals and packaging, and any customer quotes or research."
+  - "Gather first. Required: a short description of your brand and who it is for, and the perception you want. Also helpful: samples of your copy (homepage, emails, ads), pictures of your visuals and packaging, and any customer quotes or research. If you have no audience research, run a few customer interviews first, and then come back."
   - Open Claude, ChatGPT or Gemini and paste in the skill text. Then paste what you gathered.
   - Answer any question it asks about your intended position.
   - "It works in five steps, and you can check each one. 1. Write the three words a customer would use to describe you today. 2. Write the three words you want them to use. 3. Find the biggest clash between your look, your words and what you do. 4. Pick the smallest change that fixes it. 5. Check that the change holds on your website, packaging, emails and support."
@@ -56,6 +56,14 @@ output_sample:
       contains: Whether the new position holds everywhere your audience meets your brand.
     - name: Quality check
       contains: A short check that the change feels more credible, not just prettier.
+output_shape: |
+  Current brand schema: <one sentence, with one word per touchpoint>
+  Intended position: <one sentence in the same terms>
+  | Signal | Layer | Conflict | Proposed change | Effort | First test question |
+  Largest mismatch: <the signal, why it matters>
+  Cross-touchpoint check: <each touchpoint: conflicting / fixed / needs its own change>
+  Quality check: <credible, not just prettier: yes or no, and why>
+  (Effort in the table is small, medium or large.)
 terms:
   - term: brand schema
     meaning: The picture of your brand that sits in a customer's mind, built from what they have seen and heard.

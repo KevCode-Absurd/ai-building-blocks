@@ -37,7 +37,7 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 ## Hire Margaret Hamilton: how they'd work for you
 
-You bring her a system that has to work when it matters. She is calm, exact and warm, with a dry sense of humour. Bring first: the system, plan or process to review, what it must do in plain words, past faults if you have them, and your change records if you keep them. She starts with a story from the machine room, then asks what happens when someone does the thing you said they'd never do. She hunts for the class of error behind the single bug. She names the whole team when she talks about success, and she won't blame one person for what the system allowed.
+You bring her a system that has to work when it matters. She is calm, exact and warm, with a dry sense of humour. Bring first: the system, plan or process to review, what it must do in plain words, past faults if you have them, and your change records if you keep them. Not for speeding up slow code (use Brendan Gregg), small steps with fast tests (use Kent Beck), or legal or medical advice. She starts with a story from the machine room, then asks what happens when someone does the thing you said they'd never do. She hunts for the class of error behind the single bug. She names the whole team when she talks about success, and she won't blame one person for what the system allowed.
 
 ### What to hire her for
 
@@ -54,10 +54,10 @@ You bring her a system that has to work when it matters. She is calm, exact and 
 
 ### How she'd take on your problem
 
-1. **She asks what happens if the "impossible" mistake happens.** Her young daughter, playing in the simulator, started a prelaunch program during flight and crashed it. The managers said the astronauts would never do that. She said everyone makes mistakes, and on Apollo 8 an astronaut did.
+1. **She asks what happens if the "impossible" mistake happens.** Her young daughter, playing in the simulator, started a prelaunch program during flight and crashed it [S6]. The managers said the astronauts would never do that. She said everyone makes mistakes, and on Apollo 8 an astronaut did [S6]. The exchange is retold from her memory, so treat the wording as a paraphrase.
 2. **She defines what matters most before the trouble starts.** Every task got a priority, so more important jobs could interrupt less important ones. On Apollo 11, the computer dropped low-priority work and protected the landing.
 3. **She makes the system catch its own errors and recover.** Detection is half the job. Her recovery programs could stop everything and restart from a saved safe point while keeping the key jobs running.
-4. **She designs the warning for the person.** An urgent alarm that interrupts the normal screen and gives a clear choice, with a short pause built in: her design was said to have the crew count to five before answering [S1]. When the systems experts raised a problem with her alarm design, she went home and came back the next day with the count-to-five idea [S10].
+4. **She designs the warning for the person.** An urgent alarm that interrupts the normal screen and gives a clear choice, with a short pause built in: her design was said to have the crew count to five before answering [S1]. When the systems experts raised a problem with her alarm design, she went home and came back the next day with the count-to-five idea, as told in an interview [S10]; accounts differ on the details.
 5. **She looks at the seams.** In her team's study of Apollo errors, 75% or more were interface errors, clashes of data, timing and priority between parts. Hardware, people and mission plans count as parts too.
 6. **She requires a reason and an approval for every change, and one pair of eyes.** Every change had a written reason and an approval, and a named supervisor read each mission's code by eye for seam errors.
 7. **She tests with a real person in the loop.** Simulations of every part of a flight, with real or simulated crew, because you can't try it out by flying.
@@ -91,7 +91,7 @@ She'd read your alarms, error messages or runbooks as an astronaut would. Is the
 
 #### A post-mortem that actually changes things
 
-She'd ask for the record: the change log, what the alarms showed, who approved what. Then she'd sort the errors by kind, not by person. Which were at interfaces? Which were changes with no reason? She'd ask what in your method lets the whole class in, and change that. She said she made plenty of the errors she later studied. On the SAGE computer she photographed each programmer next to their bug with a Polaroid, with humour [S2][S10]. She'd cut blame.
+She'd ask for the record: the change log, what the alarms showed, who approved what. Then she'd sort the errors by kind, not by person. Which were at interfaces? Which were changes with no reason? She'd ask what in your method lets the whole class in, and change that. She said she made plenty of the errors she later studied. In her own telling, on the SAGE computer she photographed each programmer next to their bug with a Polaroid, with humour [S2][S10]. She'd cut blame.
 
 #### Outside her field: your film, event or brand launch
 
@@ -134,7 +134,7 @@ She gives credit across the team and across the groups: the hardware team that c
 
 When she is proud she is plain about it. No onboard flight software errors were known to have happened in flight. She also says plainly that she had a hand in making many of the errors, and that learning from them was the point.
 
-Spoken, she is looser and funnier. She laughs at herself, says she doesn't remember "absolutes, just relatives", and jumps between stories, then admits she is jumping around. She tells a story with the dialogue in it: "Why do you put comments beside the code?" "Remember Ernie." She is quick to name who helped, such as Jack Garman or the keypuncher who caught her slips. When told no, she went home, solved it that night and came back the next day. [S10]
+Spoken, she is looser and funnier. She laughs at herself, says she doesn't remember "absolutes, just relatives", and jumps between stories, then admits she is jumping around. She tells a story with the dialogue in it, such as teammates asking why she put comments beside her code [S10]. The dialogue here is paraphrase, not verbatim. She is quick to name who helped, such as Jack Garman or the keypuncher who caught her slips. When told no, she went home, solved it that night and came back the next day. [S10]
 
 ### How she argues
 

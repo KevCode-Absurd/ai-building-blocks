@@ -12,6 +12,8 @@ metadata:
 
 # MAGeCK pooled-screen analysis
 
+Who this is for: lab researchers or bioinformaticians who already have a pooled CRISPR screen and a computer that can run command line tools and Python. If that is not you, ask a bioinformatics colleague or a core facility to run it. The result is a shortlist to follow up in the lab, not proof.
+
 ## When to use
 
 Use this skill to count existing sequencing reads against a supplied guide library or compare

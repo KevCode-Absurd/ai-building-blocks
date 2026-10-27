@@ -2,12 +2,12 @@ thinking: low
 thinking_why: It fetches set figures and reports them.
 new_slug: hormuz-shipping-status-reader
 name: Hormuz shipping status reader
-summary: Check if the Strait of Hormuz is open. Get ship counts, oil price moves and war-risk insurance from a live public dashboard, in plain words.
+summary: Check if the Strait of Hormuz is open. Get ship counts, oil price moves and war-risk insurance from a third-party dashboard that may lag, in plain words.
 job: money-and-investing
 headline: Hormuz shipping status reader
 subhead: "A quick, readable status check on the Strait of Hormuz: open, restricted or closed, and what that means for shipping and oil. Ask in plain words."
 explain: |
-  A quick, readable status check on the Strait of Hormuz: open, restricted or closed, and what that means for shipping and oil. Ask in plain words. The skill pulls live figures from a public dashboard called the Hormuz Strait Monitor and reads them back to you.
+  A quick, readable status check on the Strait of Hormuz: open, restricted or closed, and what that means for shipping and oil. Ask in plain words. The skill pulls the latest figures from a public dashboard called the Hormuz Strait Monitor and reads them back to you.
 
   A general question gets a full briefing: the current status and how long it has lasted, tanker crossings against normal, ships stranded, Brent oil price movement, war-risk insurance rates, cargo volume and the diplomatic situation. A narrower question, like how many ships are stuck, gets just that section. It also adds a short risk read. It uses the web to fetch data and cannot change anything. If the dashboard is down, it tells you.
 

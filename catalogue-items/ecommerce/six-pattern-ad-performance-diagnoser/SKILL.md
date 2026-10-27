@@ -26,6 +26,11 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
+## What you need
+In the box above, "your results" means one campaign's numbers from Meta Ads Manager or Google Ads. Export them as a CSV, or paste the table, with these columns for the last 7, 14 and 30 days: spend, revenue or conversions, ROAS, CPA, CTR, CPC, CPM, plus frequency and reach for 7 days. Also have your gross margin, your target ROAS or CPA, and a note of what changed and the date it started. If you cannot run a check, list it on the CHECKS MISSED line of the diagnosis.
+
+**Not for:** a campaign under two weeks old, one with zero conversions (check your pixel and conversion tracking first), or a review of a whole account.
+
 ## Working rules
 
 - Use the supplied product, brand, account and evidence; no invented claims, testimonials, revenue or observations.
@@ -45,7 +50,7 @@ You are a senior media buyer diagnosing why a campaign's performance has changed
 
 ## STEP 1: Collect Data
 
-Ask for the problematic campaign(s):
+Before you run this, the user should have ready the 7, 14 and 30 day CSV (or pasted table), their gross margin, their target ROAS or CPA, and the date the change started. If any is missing at the start, say so in one short message, then carry on and list it under MISSING. Ask for the problematic campaign(s):
 
 | Metric | Time Periods Needed |
 |--------|---------------------|
@@ -103,7 +108,7 @@ Break-even ROAS = 1 / gross margin (for example, a 40 percent margin gives 2.5).
 
 ### Level 4: Industry Defaults (last-resort anchors)
 
-If you have no baseline and no absolute thresholds, fall back to public industry rules of thumb for the business type (eCommerce ROAS targets, lead gen CPA targets, etc.). Treat these as the weakest signal in the chain and lower confidence accordingly.
+If you have no baseline and no absolute thresholds, ask the user for the targets their team uses for this business type. Do not supply industry benchmarks from memory, because they may be wrong or out of date. If the user has none, say the diagnosis rests on Levels 1 to 3 only, mark confidence low, and write `MISSING: targets`.
 
 ## STEP 3: Profitability Gate
 
@@ -138,7 +143,7 @@ Fix: Expand audience (broader, new lookalikes, new geos).
 ### Pattern 4: Budget Constraint
 Signals: Good ROAS + Low spend + Learning Limited
 Confidence boost: +0.10
-Fix: Consolidate ad sets. If you raise budget, raise it in small steps. A common rule of thumb is a daily budget of about 10x target CPA per ad set, but it is only a rule of thumb, so check it against your own account and what you can afford to lose.
+Fix: Consolidate ad sets. If you raise budget, raise it in small steps. Some buyers suggest a daily budget of about 10x target CPA per ad set. This is an unverified rule of thumb with no source here. Do not apply it as advice. Ask the user for their own budget limit and what they can afford to lose before suggesting any increase.
 
 ### Pattern 5: Platform Algorithm Shift
 Signals: CPM spike + All campaigns affected + No changes made
@@ -199,6 +204,9 @@ DO NOT:
 MONITORING:
 - Check [metric] in [X] days
 - If [condition], escalate to [action]
+
+CHECKS MISSED: [none, or each check that could not run and why]
+MISSING: [each input not given, such as margin, targets, change date]
 ```
 
 NEXT STEP:

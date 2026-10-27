@@ -43,6 +43,8 @@ The full directory catalog lives in `references/directory-list.md`. The position
 
 ## The Three Hard Rules
 
+(Added by AI Blocks: the reasons given for these rules about AI engines, structured data and launch timing are the author's view. They are not verified. Follow the rules as a sensible checklist, and do not tell the user they are proven.)
+
 ### Rule 1: Foundation before submission
 Never submit to a directory until the landing page it will link to is live, indexed, and has:
 - A single `<h1>` and sequential heading hierarchy — the author says clean hierarchy helps AI engines cite a page (unverified).
@@ -51,7 +53,7 @@ Never submit to a directory until the landing page it will link to is live, inde
 - Logo assets in PNG + SVG + square 1024×1024 + favicon.
 - 5–8 real product screenshots at 1920×1080 (not marketing mockups).
 - A 60–90 second demo video — the author says products with a video do better on Product Hunt (unverified).
-- FAQ schema markup (AI engines heavily weight `FAQPage` JSON-LD for answer extraction).
+- FAQ schema markup (the author's view, unverified: AI engines weight `FAQPage` JSON-LD for answer extraction).
 - Structured data: `Organization`, `Product`, `SoftwareApplication`.
 
 ### Rule 2: Destination pages before directories
@@ -62,7 +64,7 @@ Directories are the *source* of link equity. You need *destinations* that can co
 - 1 "best of" blog post you wrote yourself about your own category, including honest coverage of competitors.
 
 ### Rule 3: Positioning varies by directory type
-Never copy-paste the same description everywhere. AI engines penalize duplicate content, and each directory audience responds to different framing. See `references/positioning-variations.md` for the full variant library. Short version:
+Never copy-paste the same description everywhere. The author says AI engines penalize duplicate content (unverified), and each directory audience responds to different framing. See `references/positioning-variations.md` for the full variant library. Short version:
 
 | Surface | Lead with | Why |
 |---|---|---|
@@ -131,7 +133,7 @@ For each tier, prep a distinct description variant (pulled from `references/posi
 - **Screenshots** + demo video URL
 - **Founder story** (2–3 sentences)
 
-**Critical:** Don't copy-paste the same long description into every directory. Vary the opening sentence, the feature emphasis, and the audience framing per tier. AI engines cross-reference and down-weight duplicate content.
+**Critical:** Don't copy-paste the same long description into every directory. Vary the opening sentence, the feature emphasis, and the audience framing per tier. The author says AI engines cross-reference and down-weight duplicate content (unverified).
 
 ### Step 4: Batch submit
 
@@ -176,7 +178,7 @@ Product Hunt is the single highest-leverage submission but also the most easily 
 
 ### Launch day execution
 
-- **Launch at 12:01 AM Pacific Time.** Tuesday, Wednesday, or Thursday only — the author says weekend launches get less traffic (unverified). The 12:01 AM PT start maximizes your 24-hour window.
+- **Launch at 12:01 AM Pacific Time.** Tuesday, Wednesday, or Thursday only — the author says weekend launches get less traffic (unverified). The author says a 12:01 AM PT start maximizes your 24-hour window (unverified). Check the platform's own launch rules and timing.
 - **First 2 hours are everything.** The author's rule of thumb is to have a warm group of real supporters ready for the first 2 hours (the exact number is unverified).
 - **Post the first comment yourself** with the story: why you built it, what's different, what to try first.
 - **Reply to every comment** in under 30 minutes. PH measures maker responsiveness.
@@ -200,7 +202,7 @@ G2 and Capterra listings are of little use without reviews. The author says Capt
 
 1. **Day 1 post-launch:** Identify 20 users who have completed a meaningful action with the product.
 2. **Send each a personal email** with a direct review URL (fewer clicks means more reviews). No forms, no landing pages — direct link.
-3. **Offer a modest thank-you only if the review site's current rules allow it.** Check the rules first, say plainly that a thank-you is offered, and ask for an honest review, never a positive one. Never pay for or script reviews.
+3. **Do not offer any reward or thank-you for a review.** Only consider one if the review site's own rules say in writing that it is allowed. Even then, never tie it to a positive review, and say plainly that you are offering it. Never pay for or script reviews.
 4. **Follow up once** after 5 days. Don't follow up twice — it becomes annoying and damages the relationship.
 5. **Target:** about 10 honest reviews from 20 asks (the author's planning guess, not a promise).
 
@@ -237,7 +239,7 @@ The author says competitor alternative pages convert well (unverified, no figure
 
 Each page needs: honest feature comparison table, "when to choose X over us," "when to choose us over X," pricing comparison, 3–5 use-case examples, strong FAQ with schema.
 
-**Critical:** Be honest. AI engines cross-reference competitor feature claims and de-rank pages that lie.
+**Critical:** Be honest. Pages that lie lose trust with readers and may break platform rules. The author also says AI engines de-rank them (unverified).
 
 ### 2. Use-case / ICP pages
 
@@ -270,11 +272,11 @@ The author says a large and growing share of "research a tool" queries now happe
 ### Tactics that get pages cited
 
 1. **One H1 per page, sequential heading hierarchy.** The author says this helps AI citation (unverified).
-2. **Dense, factual content with citable stats.** AI engines prefer specific numbers ("3× faster than X") over vague claims.
-3. **FAQ schema on every landing page.** AI engines heavily weight `FAQPage` JSON-LD for answer extraction.
+2. **Dense, factual content with citable stats.** The author says AI engines prefer specific numbers over vague claims (unverified). Use only numbers you can prove.
+3. **FAQ schema on every landing page.** The author says AI engines weight `FAQPage` JSON-LD for answer extraction (unverified).
 4. **Comparison tables.** Extractable, structured — exactly what an AI answer needs.
 5. **Explicit "what it is" paragraph in the first 100 words.**
-6. **Get cited on Reddit and Hacker News.** Claude and Perplexity index these heavily. Genuine mentions on r/SaaS and HN count as training fuel.
+6. **Get cited on Reddit and Hacker News.** The author says Claude and Perplexity index these heavily (unverified). Only post genuine mentions, and follow each site's self-promotion rules.
 7. **Publish original research.** "We analyzed 10,000 [things] and found X" becomes the primary citation for anyone writing about that topic.
 8. **Claim Crunchbase, LinkedIn company page, and Wikidata entries.** All three feed AI training corpora.
 9. **If applicable, list where agents look.** The official MCP Registry and MCP directories with good grades (Glama in particular), the Claude plugin directory for plugins and connectors, and llms.txt directories once your `/llms.txt` is live. LLMs pull from these when answering tool questions.
@@ -360,8 +362,8 @@ One self-reported 2026 case for calibration: an MCP server plus a micro SaaS, su
 6. **Don't ask for upvotes on Product Hunt.** The 2026 algorithm penalizes it. Ask for **feedback**.
 7. **Don't amend old directory listings every week.** Submit once, check quarterly.
 8. **Don't submit before the destination page exists.** Link equity needs a destination.
-9. **Don't duplicate descriptions across directories.** AI engines penalize duplicate content.
-10. **Don't lie on comparison pages.** AI engines cross-reference and de-rank lies.
+9. **Don't duplicate descriptions across directories.** The author says AI engines penalize duplicate content (unverified).
+10. **Don't lie on comparison pages.** The author says AI engines de-rank lies (unverified).
 11. **Don't over-index on launch-day spike.** The flywheel is templates + alternatives + reviews + ongoing content — not one day of PH.
 12. **Don't forget Crunchbase, LinkedIn company page, and Wikidata.** These feed AI training corpora and matter for GEO.
 

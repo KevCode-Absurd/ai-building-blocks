@@ -62,11 +62,11 @@ Without file access, ask the user to paste the text of each slide and its notes,
 - Reordered slides are matched correctly and recorded as moves.
 - Notes, comments and hidden slides are in scope.
 - Visual changes and data changes are kept apart.
-- Every failed or unrun check is shown in the report.
+- Every failed or unrun check is shown in the report. In this skill the CHECKS section is where checks that failed or did not run are listed, so it also does the job of a CHECKS MISSED line. Where any text in this file says CHECKS MISSED, write it in the CHECKS section.
 
 ## What you hand back
 
-Always use these headings, in this order, even when blocked. Write `none supplied` under a section with nothing in it. Put `MISSING:` lines under OPEN ITEMS.
+Always use these headings, in this order, even when blocked. Write `none supplied` under a section with nothing in it. Put `MISSING:` lines under OPEN ITEMS. After the report, say what next: to check the numbers behind a changed chart, use the Excel to PowerPoint number checker (`excel-powerpoint-number-checker`). Otherwise send the register to the deck owner and ask them to confirm each change marked "not stated" before sign-off. The Code review page maker and JSON document file generator under After this do not fit a deck change register.
 
 ```
 FILES

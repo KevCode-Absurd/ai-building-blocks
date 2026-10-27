@@ -67,6 +67,7 @@ output_shape: |
 
   STOP RULE  observation window <days or purchases> | stop if <rule> | judge the winner by <measure>
   REVIEW OWNER  <name> | APPROVALS OUTSTANDING  <list>
+  EVIDENCE AND ASSUMPTIONS  <evidence used> | <assumptions made>
   NOT RUN  <check, why>
   MISSING: <what was not given>
 output_sample:

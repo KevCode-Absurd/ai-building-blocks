@@ -13,6 +13,10 @@ description: >
 
 # Generative UI Skill
 
+> **Start here if you are not a developer (added by AI Blocks):** skip the `show_widget`, CSP, CDN-allowlist and `sendPrompt` rules below unless your host is Claude on claude.ai. In any other tool, write one complete HTML file, save it, and tell the user how to open it in a browser. Finish with a caption, a list of the controls and what each does, and one key takeaway.
+
+> **Plain-language note (added by AI Blocks):** the rules below about `show_widget`, the CDN allowlist, CSP and `sendPrompt` apply only to Claude's own renderer on claude.ai. They do not apply in ChatGPT, Gemini, Codex or other hosts. On those hosts, save a full HTML page and follow the Codex and other hosts paragraph. A "fragment" is a piece of HTML with no page wrapper. CSP is a security rule that lists which sites a page may load scripts from.
+
 This skill contains the complete design system for Claude's built-in `show_widget` tool — the generative UI feature that renders interactive HTML/SVG widgets inline in claude.ai conversations. The guidelines below are the skill author's copy of the design rules for that tool (we have not verified where the author got them, so do not credit them to any company), so you can produce high-quality widgets directly without needing the `read_me` setup call.
 
 **How it works**: On claude.ai, Claude has access to the `show_widget` tool which renders raw HTML/SVG fragments inline in the conversation. This skill provides the design system, templates, and patterns to use it well.

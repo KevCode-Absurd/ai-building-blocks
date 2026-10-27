@@ -1,6 +1,6 @@
 slug: amazon-market-researcher
 name: Amazon market researcher
-summary: Give it a product or category. Get Amazon sales rank, reviews and seller data in a report. Collects data from websites.
+summary: Give it a product or category. Get Amazon rank, review and seller data in a report. Collects website data through Pangolinfo, a paid service that needs your own key.
 category: general
 boards: []
 type: skill

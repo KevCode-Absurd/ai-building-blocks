@@ -14,6 +14,8 @@ license: "MIT"
 license_source: "https://github.com/cruisekkk/time-ledger/blob/main/LICENSE"
 ---
 
+<!-- Licence note: this copy is shared under CC BY 4.0 (see LICENSE-CONTENT). The MIT line in the header above is the original author's, kept as the upstream source. -->
+
 # Time Ledger
 
 ## Overview

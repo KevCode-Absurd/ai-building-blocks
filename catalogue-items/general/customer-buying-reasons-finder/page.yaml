@@ -215,7 +215,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Claude", why: "Every current Claude model reads up to 1 million tokens, so hundreds of reviews fit in one chat with their source IDs."}
+    - {name: "Claude", why: "Long-context chat models can take hundreds of reviews in one chat with their source IDs. Check your plan's limit."}
     - {name: "Gemini", why: "Also takes long inputs, and works inside Google Sheets if your reviews live there."}
     - {name: "Google Sheets", why: "One row per quote with its source ID lets you count separate people with COUNTUNIQUE, so counts can be checked."}
   inputs:

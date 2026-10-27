@@ -7,10 +7,13 @@ job: build-software
 headline: Parallel cluster finder
 subhead: A list of the computing clusters your MATLAB can use, with each profile checked and one set as the default. It answers the question of where you can run big jobs.
 explain: |
+  This is an unchanged copy of the MathWorks skill (commit dc9507d). It has not been adapted for this catalogue beyond the plain name and page text.
+
   A list of the computing clusters your MATLAB can use, with each profile checked and one set as the default. It answers the question of where you can run big jobs.
 
-  It lists saved cluster profiles, finds clusters on your network and cloud, and imports a profile file from an admin. Then it validates the profile to prove it connects, sets the default and removes profiles you no longer need. It covers local, job-scheduler and cloud cluster types. It does not submit jobs or open pools. You need MATLAB with Parallel Computing Toolbox. 
-  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
+  It lists saved cluster profiles, finds clusters on your network and cloud, and imports a profile file from an admin. Then it validates the profile to prove it connects, sets the default and removes profiles you no longer need. It covers local, job-scheduler and cloud cluster types. It does not submit jobs or open pools. You need MATLAB with Parallel Computing Toolbox, a paid add-on. The cluster finder script that comes with the skill is a compiled MathWorks file (a .p file). You cannot read it, so use it only if you trust MathWorks.
+
+  Licence: this is MathWorks' skill. The LICENSE.md file in this item governs: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. The link inside the skill file points to a different MathWorks licence page, but LICENSE.md is the one that applies to this copy.
 when:
   - You do not know what parallel resources you have.
   - An admin sent you a profile file and you need to load it.
@@ -25,6 +28,7 @@ you_give:
   - Profile file from an admin (optional)
   - Which cluster you want as default (optional)
 you_get:
+  - A table with one row per profile: name, type, number of workers, a default marker and the validation result
   - List of available clusters and profiles
   - Validation result for each profile
   - Imported profile
@@ -33,8 +37,10 @@ how_to_use:
   - Before any step, you need a MATLAB licence with Parallel Computing Toolbox (a paid add-on). Open MATLAB and check that it is installed. Use an AI that can run MATLAB code, or paste the code it gives you into MATLAB.
   - Check your MATLAB release. Listing, importing and setting a default work from R2022b. Checking a profile in code needs R2025a, and deleting one in code needs R2026a. On older releases, use the Cluster Profile Manager in MATLAB for those two steps.
   - Paste the skill into your AI chat, or upload the skill folder if your AI accepts files.
+  - The cluster finder script (discoverClusters.p) is compiled and cannot be read. It scans your network and cloud, so run cluster discovery only on networks and machines you trust.
   - Ask a plain question, such as "What parallel clusters can I use?" Add your admin's profile file if you have one.
   - Read the profile table. Unreachable profiles are marked, so you can tell them apart from missing ones.
+  - Before you validate or connect to a MATLAB Job Scheduler (MJS) cluster, stay at the MATLAB window. A sign-in dialog may open and will block MATLAB until you answer it. If you close it without entering your details, the step fails.
   - When you validate a profile on a shared cluster, use a small worker count, such as 2.
   - Cloud clusters need a cloud account and may bill you. Check the cost before you validate a cloud profile.
   - Confirm before your AI deletes any profile. Deleting cannot be undone.

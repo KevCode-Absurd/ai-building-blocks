@@ -9,7 +9,7 @@ description: Build and maintain a calendar of upcoming catalysts across a covera
 
 ## India
 
-This skill operates on **Indian markets**. The helper files `india-market-conventions`, `india-market-data` and `NOT-ADAPTABLE.md` are not in this copy. Do not say you read them. The key rules are written out here. For sources, use each company's investor relations page and the NSE and BSE announcement pages. Two rules cause
+This skill operates on **Indian markets**. The rules you need are written out below. For sources, use each company's investor relations page and the NSE and BSE announcement pages. Two rules cause
 most Indian errors:
 
 - **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
@@ -35,6 +35,12 @@ never substitute a proxy and present it as the real thing.
 - Time horizon (next 2 weeks, month, quarter)
 
 ### Step 2: Gather Catalysts
+
+Work through the companies one at a time, in the order the user listed them. For each company, check the four groups below in this order: earnings and financial events, corporate events, industry events, then macro events. Record each event with its date and where the date came from. Then rate each event's impact:
+
+- **High:** a results date, a regulatory decision, a merger or deal milestone, or a policy decision that can change the outlook for the company or sector.
+- **Moderate:** an investor day, a conference where the company presents, a product launch, or a management change.
+- **Routine:** a recurring monthly data release, a minor filing, or a repeat event with no new decision.
 
 For each company, identify upcoming events:
 

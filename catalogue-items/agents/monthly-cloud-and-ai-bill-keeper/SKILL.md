@@ -22,8 +22,11 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+These are the only inputs for this agent. They replace the generic "Before you start" text above, which is shared setup text and is not specific to bills.
+
 - **This month's bills** (required): a spreadsheet or export with cost by service or line item. Cloud, hosting and AI providers, each as a separate file or tab.
-- **Last month's bills** (required for the comparison; the agent saves each month's after the first run in `bills/`).
+- **Last month's bills** (required for the comparison; the agent saves each month's after the first run in `bills/`). On a first run with none, give this month's totals and the checks only, and say there is no trend yet.
+- **Account access** (optional, read-only): exported bills need no credentials, and are the safer route. If the owner wants you to run read-only commands, ask for a read-only role or user for one named account, with permission only to view cost and resources. Some billing API calls cost money: AWS Cost Explorer API requests can carry a small charge per call. Prefer an export first, and get the owner's yes before you run any call that can be billed. Never ask for keys pasted into the chat, and never ask for write access. Tell the owner to delete that role or key in the provider's console when the check is done.
 - **The code** (optional): needed to find AI calls and add caps. Without it, the AI steps give advice only.
 - **What changed** (optional): launches, new customers, a traffic spike, a migration or a new feature that uses AI.
 - **Your target** (optional): a monthly budget. Without one, the agent only reports change.
@@ -37,7 +40,7 @@ Keep one folder, `bills/`. Save every step's result as `bills/<month>/step-NN-<s
 2. **Compare with last month.** For each line, the change in money and in percent. On the first run there is no comparison, so say so and treat step 4 as a baseline.
 3. **Find the mover.** Name the one to three lines that explain most of the change. Check "what changed" against them. A jump with a known cause, such as a launch, is noted but not treated as waste.
 4. **Choose the path.**
-   - If AI spend is up by more than half (this agent's own starting point), or an unexplained AI line is climbing day by day, run `ai-spend-limit-checker` first. A loop with no cap can cost more in a week than every other saving in a year. Do this before anything else.
+   - If AI spend is up by more than half (this agent's own starting point), or an unexplained AI line is climbing day by day, or this is the first run and the code calls paid AI models, run `ai-spend-limit-checker` first. A loop with no cap can cost more in a week than every other saving in a year. Do this before anything else.
    - Then, for each provider on the bills: run `cloud-bill-waste-finder` for AWS, `vercel-cost-and-speed-auditor` for Vercel. Skip the ones you do not use and say so.
    - If AI is a top-three line, or it grew since last month, run `ai-cost-cutter`.
 5. **Check the saving is worth it.** For every proposed fix, write the monthly saving and the time to do it. Drop a fix that saves less than an hour of the owner's time per month (this agent's own starting point) unless it removes a risk.

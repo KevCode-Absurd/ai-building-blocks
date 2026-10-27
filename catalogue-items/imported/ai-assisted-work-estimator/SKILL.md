@@ -36,9 +36,9 @@ Progressive Estimation adapts to your team's working mode — human-only, hybrid
 
 1. **Mode Detection** — Determines if the team works human-only, hybrid, or agent-first
 2. **Task Classification** — Categorizes by size (XS–XL), complexity, and risk
-3. **Formula Application** — Applies default speed multipliers. The original author says these come from research, but the files give no figures or sources. Treat them as rough starting assumptions and replace them with your team's own figures once you have a few finished tasks. Show the user the multiplier you use for each mode before you estimate, so they can change it.
-4. **PERT Calculation** — Produces expected values using three-point estimation
-5. **Confidence Bands** — Generates P50, P75, P90 intervals
+3. **Formula Application** — Applies speed multipliers. This skill sets no multiplier values and gives no research source for any. Do not invent figures or call them research-based. Ask the user for their own multiplier for each mode (people only, mixed, agent-first). If they have none, propose rough starting numbers and label each one clearly as a guess, not a measured figure. Show the user the multiplier you use for each mode before you estimate, so they can change it. Replace the guesses with the team's own figures once a few tasks are finished.
+4. **PERT Calculation** — Produces expected values using three-point estimation. Use the standard PERT formula, expected = (best + 4 x likely + worst) / 6, and show it to the user so they can check the arithmetic.
+5. **Confidence Bands** — Generates P50, P75, P90 intervals. These are planning buffers built from the user's inputs, not measured probabilities of hitting a date. The multipliers are guesses, so say the bands are only as good as those guesses.
 6. **Output Formatting** — Formats for Linear, JIRA, ClickUp, GitHub Issues, Monday, or GitLab
 7. **Calibration** — Feeds back actuals to improve future estimates
 

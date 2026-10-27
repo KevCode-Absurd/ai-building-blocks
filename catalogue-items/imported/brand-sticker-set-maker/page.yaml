@@ -18,7 +18,7 @@ when:
 not_for:
   - "You have no logo yet: get a logo made first with a designer or a logo design process, then come back."
   - "You want one flat product photo or ad image: ask your AI for a single image instead of a full sticker set."
-  - "Your AI cannot make images or save clear backgrounds: you will only get prompts, so use an AI image tool first."
+  - "Your AI cannot make images or save clear backgrounds: you will only get prompts, so use an AI image tool first. Check the tool takes a reference image and saves transparent PNGs. ChatGPT with image generation and Google Gemini with image output are two to test."
 you_give:
   - Your logo file
   - Your brand colours and any existing mascot (optional)
@@ -34,10 +34,11 @@ how_to_use:
   - Check that your AI can make images from a reference picture and save clear-background PNG files. This may need a paid plan.
   - Open a chat with your AI and paste the skill text.
   - Upload your logo and add your colours, any mascot and what your product does.
-  - Ask for the full set. Your AI makes one sticker first, then matches the rest to it.
+  - Ask for the full set. The prompt template sits in the skill under Generate a consistent set. Your AI fills its brackets with your brand colours, one brand mark and the one-sentence plot for each sticker. It makes one sticker first, then matches the rest to it.
   - "Check each sticker: is your brand easy to spot, and is the white edge whole? Ask for a redo of any weak one."
   - If your AI cannot save transparent PNG files, expect prompts only, not finished stickers. Open the first sticker file and check its size and that the background is really clear before you use the set.
-  - Next, place the PNG files on your site or in a print mock-up. If your AI cannot make images, you get prompts to use in an image tool.
+  - Ask your AI to give each file a clear name with a version, such as brand-sticker-01-v1.png, so you can tell drafts apart.
+  - Next, upload the PNG files to your website, or send them to a sticker print supplier for merchandise. Ask the supplier for a proof first. If your AI cannot make images, you get prompts to use in an image tool.
 output_sample:
   input:
     - Your logo file

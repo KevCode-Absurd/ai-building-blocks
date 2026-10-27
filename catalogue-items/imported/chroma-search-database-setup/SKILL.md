@@ -82,6 +82,7 @@ print(results)
 collection = client.create_collection("my_docs")
 
 # With custom embedding function
+import os
 from chromadb.utils import embedding_functions
 
 openai_ef = embedding_functions.OpenAIEmbeddingFunction(
@@ -115,7 +116,7 @@ collection.add(
     ids=["id1", "id2", "id3"]
 )
 
-# Add with custom embeddings (placeholder: replace the lists with real vectors from your
+# Add with custom embeddings (NOT RUNNABLE AS WRITTEN. For a first working store, use the default embedding above. Placeholder: replace the lists with real vectors from your
 # own embedding model, all with the same length. This snippet will not run as written.)
 collection.add(
     embeddings=[[0.1, 0.2, ...], [0.3, 0.4, ...]],
@@ -226,11 +227,14 @@ collection = client.create_collection("my_docs")
 
 ### OpenAI
 
+Using this option sends your text to OpenAI to be turned into embeddings, and needs a paid API key. Check your data rules before you use it with private documents.
+
 ```python
+import os
 from chromadb.utils import embedding_functions
 
 openai_ef = embedding_functions.OpenAIEmbeddingFunction(
-    api_key="your-key",
+    api_key=os.environ["OPENAI_API_KEY"],  # never write the key in the code
     model_name="text-embedding-3-small"
 )
 
@@ -242,9 +246,11 @@ collection = client.create_collection(
 
 ### HuggingFace
 
+This needs a HuggingFace API key, which may cost money. It sends your text to HuggingFace, so check your data rules first. Keep the key in an environment variable. Never write it in the code.
+
 ```python
 huggingface_ef = embedding_functions.HuggingFaceEmbeddingFunction(
-    api_key="your-key",
+    api_key=os.environ["HUGGINGFACE_API_KEY"],  # keep keys in an environment variable, never in code
     model_name="sentence-transformers/all-mpnet-base-v2"
 )
 
@@ -256,12 +262,15 @@ collection = client.create_collection(
 
 ### Custom embedding function
 
+This is a placeholder, not code that runs as written. For a first working store, use the default embedding instead. Replace the body of `__call__` with your own embedding model, and return one list of numbers per input text, all the same length.
+
 ```python
 from chromadb import Documents, EmbeddingFunction, Embeddings
 
 class MyEmbeddingFunction(EmbeddingFunction):
     def __call__(self, input: Documents) -> Embeddings:
-        # Your embedding logic
+        # PLACEHOLDER: replace with your own embedding logic.
+        # `embeddings` is not defined here, so this raises an error until you do.
         return embeddings
 
 my_ef = MyEmbeddingFunction()

@@ -2,7 +2,7 @@ thinking: high
 thinking_why: It combines many sources into one report.
 new_slug: india-earnings-preview
 name: Earnings preview report builder for India
-summary: Get a 4 to 5 page earnings preview for an Indian listed company, with consensus, past surprises, peers and beat or miss cases. It uses free web data.
+summary: Preview an Indian company's results with consensus, past surprises and peers. Check Yahoo's terms first, and paste in the latest actuals yourself.
 job: money-and-investing
 headline: Earnings preview report builder for India
 subhead: Name an Indian listed company and the quarter. Your AI pulls free consensus, price and peer data from websites. You get a printable HTML earnings preview with a source table and a list of gaps you must check by hand.
@@ -35,12 +35,14 @@ you_get:
   - A peer table with the data source named on every row
   - A source appendix and a manual review list
 how_to_use:
-  - Pick an AI that can run Python and reach the web, such as Claude Code or ChatGPT with code running. A plain chat cannot fetch the data.
-  - Install yfinance once (pip install yfinance). It reads Yahoo Finance pages without a licence. Check Yahoo's terms before you use it, and do not use it for routine or commercial work unless the terms allow it. Your AI should stop and ask you first. The US-only data sources (EDGAR, FRED, CBOE) do not cover Indian companies, so paste the Indian actuals yourself. Get a free Alpha Vantage key if you want analyst consensus from that source.
+  - First check Yahoo's terms of use. The skill uses a free tool called yfinance, which reads Yahoo Finance pages without a licence from Yahoo. Your AI must not run it until you confirm the terms allow your use. Do not use it for routine or commercial work unless they do. If you cannot confirm, paste the figures yourself.
+  - Pick an AI that can run Python and reach the web, such as Claude Code or ChatGPT with code running. A plain chat cannot fetch the data. Once you have checked the terms, install yfinance (pip install yfinance).
+  - The US-only data sources (EDGAR, FRED, CBOE) do not cover Indian companies, so paste the Indian actuals yourself. Get a free Alpha Vantage key if you want analyst consensus from that source.
   - Open the skill, then give your AI one company, the quarter, and the latest results if you have them.
   - Read the manual review table first. Check every gap against the company's own results filing on NSE or BSE.
   - Open the HTML file and check the consensus source line, the as-of dates and that fiscal quarters are labelled right.
   - Do not act on the report alone. Confirm key numbers before you share or trade.
+  - Next, build a full valuation with the DCF model builder for India, and check the finished spreadsheet with the India modeling rules checker.
 output_sample:
   input:
     - The company name or NSE ticker

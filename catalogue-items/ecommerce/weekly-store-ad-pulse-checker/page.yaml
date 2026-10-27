@@ -9,9 +9,9 @@ headline: "Weekly store ad pulse checker"
 subhead: Paste your store's weekly spend, sales, email and discount numbers. It reads them in a fixed order, flags what moved, scores the week's health out of 100 and lists which levers to pull first, with email and drops ahead of any discount.
 
 explain: |
-  Looking at ad numbers every hour makes owners jumpy. Mid-day, blended ROAS (all your revenue divided by all your ad spend) can look weak because the day's emails haven't gone out. This is the sources' view, so check it on your own numbers. A weak week can lead to a discount, and a discount can hide a bigger problem.
+  Looking at ad numbers every hour makes owners jumpy. Mid-day, blended ROAS (all your revenue divided by all your ad spend) can look weak because the day's emails haven't gone out. That is one operator's view, so check it on your own numbers. A weak week can lead to a discount, and a discount can hide a bigger problem.
 
-  This skill gives you one weekly pulse. It reads blended ROAS first, then new-customer ROAS and CAC (the cost to get a new customer), CPM and spend by channel. It adds email capture, discount share and large orders. It tells you what moved and what to pull, in order: emails and drops first, creative and budget next, a discount last. The method comes from two large brands, so use it as practice and test it on your own store.
+  This skill gives you one weekly pulse. It reads blended ROAS first, then new-customer ROAS and CAC (the cost to get a new customer), CPM and spend by channel. It adds email capture, discount share and large orders. It tells you what moved and what to pull, in order: emails and drops first, creative and budget next, a discount last. The method comes from two podcast interviews with brand operators. It is their untested view, so use it as practice and test it on your own store.
 
 when:
   - You want one weekly check of your store's marketing instead of checking numbers all day.
@@ -53,7 +53,7 @@ output_sample:
     - name: Pulse table
       contains: Last week, this week, the change and an ok, watch or act flag for each number.
     - name: Health score
-      contains: A score out of 100 in four parts of 25, with the sum shown.
+      contains: A score out of 100 in four parts of 25, with the sum shown, and a band that says act now, watch or hold steady.
     - name: Levers to pull
       contains: Actions in order, emails and drops first, each with the number behind it and a day.
     - name: Pace
@@ -91,6 +91,7 @@ output_shape: |
   Large orders/day  <n> ...
 
   HEALTH SCORE  <n>/100 (spend/ROAS + CAC + email + discount, 25 each). Weights are a starting point.
+  BAND  <0-49 act now | 50-74 watch | 75-100 hold steady>, so <the action this week>
 
   LEVERS TO PULL (in order)
   1 <lever> | why: <number> | when: <day>

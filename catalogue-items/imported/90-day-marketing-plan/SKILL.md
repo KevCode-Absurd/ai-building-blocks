@@ -127,32 +127,32 @@ A few quick questions so I can build your strategy (just reply with the letters)
 
 ## Key Benchmarks (2025-2026)
 
-*The author's figures, taken from the reports named in each table. Links and dates are not included here, so treat them as unverified starting points and mark any you use with ⚠️.*
+*WARNING: the figures in this section (including the Source column and the retention stats) are the author's reading of the reports named. They have not been checked, and links and dates are not included. Treat them as unverified starting points. Mark every one you use with ⚠️ and tell the user it is unverified. Ask the user for their own numbers and use those first.*
 
 ### Channel ROI
 
-| Channel | Average ROI | Best For | Source |
+| Channel | Average ROI (⚠️ unverified) | Best For | Source (⚠️ unverified) |
 |---------|:----------:|----------|--------|
-| Email marketing | $36-40 per $1 | Retention, repeat purchases, cart recovery | Omnisend 2026 Report |
-| SMS marketing | $21-71 per $1 | Time-sensitive offers, cart abandonment | Omnisend 2026 Report |
-| SEO / organic search | $7.48 per $1 | Long-term sustainable traffic | FirstPageSage |
-| Google Ads (search) | $8 per $1 | High-intent buyers | Google Economic Impact Report |
-| Paid social (Meta/TikTok) | $2.5 per $1 | Awareness + prospecting | FirstPageSage ROAS Statistics |
+| Email marketing | $36-40 per $1 | Retention, repeat purchases, cart recovery | ⚠️ Omnisend 2026 Report |
+| SMS marketing | $21-71 per $1 | Time-sensitive offers, cart abandonment | ⚠️ Omnisend 2026 Report |
+| SEO / organic search | $7.48 per $1 | Long-term sustainable traffic | ⚠️ FirstPageSage |
+| Google Ads (search) | $8 per $1 | High-intent buyers | ⚠️ Google Economic Impact Report |
+| Paid social (Meta/TikTok) | $2.5 per $1 | Awareness + prospecting | ⚠️ FirstPageSage ROAS Statistics |
 | Influencer marketing | Varies | Brand credibility, new audiences | — |
 | Affiliate marketing | Performance-based | Low-risk expansion (pay per sale) | — |
 
 ### Marketing Budget Benchmarks
 
-| Business Stage | Marketing as % of Revenue | Notes | Source |
+| Business Stage | Marketing as % of Revenue (⚠️ unverified) | Notes | Source (⚠️ unverified) |
 |---------------|:------------------------:|-------|--------|
-| New / pre-launch | 15-20% | Invest heavily to build awareness | Hostinger, WebFX |
-| Early stage (<$500K/yr) | 10-15% | Build foundational channels | Hostinger |
-| Growing ($500K-$5M/yr) | 7-12% | Optimize and scale what works | Gartner 2025 CMO Survey (avg 7.7%) |
-| Established ($5M+/yr) | 5-8% | Efficiency + retention focus | Gartner |
+| New / pre-launch | 15-20% | Invest heavily to build awareness | ⚠️ Hostinger, WebFX |
+| Early stage (<$500K/yr) | 10-15% | Build foundational channels | ⚠️ Hostinger |
+| Growing ($500K-$5M/yr) | 7-12% | Optimize and scale what works | ⚠️ Gartner 2025 CMO Survey (avg 7.7%) |
+| Established ($5M+/yr) | 5-8% | Efficiency + retention focus | ⚠️ Gartner |
 
 ### Budget Allocation Framework
 
-| Channel | % of Budget | Priority |
+| Channel | % of Budget (⚠️ starting guess, not a checked figure) | Priority |
 |---------|:----------:|:--------:|
 | Paid ads (Google, Meta, TikTok) | 25-35% | P1 — Immediate traffic |
 | Content + SEO | 20-25% | P2 — Long-term compound growth |
@@ -165,9 +165,9 @@ Recommended overall split: **60% owned/organic (SEO, email, content) + 40% paid 
 
 ### Customer Retention Stats
 
-- Repeat customers = 21% of customer base but drive 44% of revenue *(Omnisend)*
-- After 1st purchase: 27% chance of buying again → 2nd: 49% → 3rd: 62% *(Smile.io)*
-- Using 3+ marketing channels: 287% higher purchase rate *(Omnisend)*
+- ⚠️ Unverified: repeat customers = 21% of customer base but drive 44% of revenue *(Omnisend, as read by the author)*
+- After 1st purchase: 27% chance of buying again → 2nd: 49% → 3rd: 62% *(Smile.io, as read by the author)* ⚠️ Unverified
+- ⚠️ Unverified: using 3+ marketing channels: 287% higher purchase rate *(Omnisend, as read by the author)*
 
 ---
 
@@ -370,16 +370,16 @@ KEY MILESTONES:
 
 Define success metrics:
 
-| Metric | Benchmark | Your Target (how to set) | How to Track |
+| Metric | Benchmark (⚠️ unverified) | Your Target (how to set) | How to Track |
 |--------|:---------:|:------------------------:|-------------|
 | CAC | Varies | Must be < profit per order (AOV × margin) | Ad platforms + analytics |
-| LTV | Varies | Aim for > 3× CAC (if LTV < 3× CAC, acquisition is too expensive) | Shopify/platform analytics |
+| LTV | Varies | Rule of thumb: aim for LTV above 3× CAC (if LTV is below 3× CAC, acquisition may be too expensive). Not a sourced standard | Shopify/platform analytics |
 | Email list growth | 5-10%/month | New stores: aim for 5%/mo. Growing: 8-10%/mo | Email platform |
 | Email revenue share | 25-30% of total | Start with 15% target, grow to 25%+ over 6 months | Email platform |
 | Organic traffic growth | 10-20%/month | SEO takes 3-6 months to kick in. Set 10%/mo after month 3 | Google Analytics |
 | Social engagement rate | 1-3% | Below 1% = content problem. Target 2%+ | Platform analytics |
 | Repeat purchase rate | 28% avg | New stores: 15-20%. Growing: 25%+. Established: 30%+ | Platform analytics |
-| Blended ROAS | 2.5x+ | Calculate: 1 ÷ margin × 1.5 = your minimum target ROAS (example: a 40% margin gives 1 ÷ 0.40 × 1.5 = 3.75x) | All platforms combined |
+| Blended ROAS | 2.5x+ | Rule of thumb only, not a sourced standard: break-even ROAS is 1 ÷ your margin, so aim above that with a safety cushion (the author uses 1.5 times). Work it out from the user's own margin: [MARGIN %] gives 1 ÷ [MARGIN AS DECIMAL] × 1.5 | All platforms combined |
 
 ---
 

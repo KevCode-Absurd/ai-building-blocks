@@ -73,7 +73,7 @@ how_it_works:
   - title: Asks for the aim
     text: A profit play and a stock-clearing play need different CAC limits, so it records which one before the sale.
   - title: Reads platform results with care
-    text: ROAS tends to rise on Meta in a sale and fall on Google. It will not let that excuse a deeper discount than your margin allows.
+    text: One agency report says platform ROAS can move differently on Meta and Google in a sale. That is unverified, so check your own past sales. It will not let a higher platform ROAS excuse a deeper discount than your margin allows.
   - title: Builds the table and score
     text: One row per discount, with a go or skip. The score checks margin, ROAS, CAC limit and the repeat-rate gap.
 

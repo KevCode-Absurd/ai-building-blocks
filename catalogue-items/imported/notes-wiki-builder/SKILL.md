@@ -10,7 +10,7 @@ date_added: "2026-08-16"
 author: 5dive-ai
 tags: [knowledge-management, memory, documentation, wiki, notes]
 tools: [claude, cursor, gemini]
-license: "MIT"
+license: "CC-BY-4.0" # AI Blocks: the licence for this copy is CC BY 4.0 (see LICENSE-CONTENT). The author's own header said MIT.
 license_source: "https://github.com/5dive-ai/skills/blob/main/LICENSE"
 ---
 
@@ -181,7 +181,7 @@ only for today. Close the task without writing anything.
 
 - `@writing-skills` - When you want to package a repeatable procedure as a skill rather
   than record a fact.
-- `@deep-research` - Produces the findings; this skill is what keeps them after the
+- `@deep-research` (on this site: the Deep research reporter item) - Produces the findings; this skill is what keeps them after the
   session ends.
 
 ## Licence note

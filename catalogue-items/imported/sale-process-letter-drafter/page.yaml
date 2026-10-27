@@ -31,10 +31,12 @@ you_get:
   - A confidentiality and contacts section
 how_to_use:
   - Gather your deal code name, round dates, bid address, data room access and what the seller wants.
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - "Open Claude, ChatGPT or Gemini and paste in the full skill text, the whole SKILL.md for this item, from this page. Then give it your request in this pattern: \"Draft the [first process letter, final bid letter or management meeting invite] for [deal code name]. Facts: [dates, bid address, data room terms, number of rounds, what the seller wants].\""
   - "Say which letter you need: first process letter, final bid letter or management meeting invite."
   - Paste in your deal facts. If a fact is missing, your AI should ask you.
   - Check every date and contact. Then ask your advisor and lawyer to review the draft before you send it.
+  - "Next: log each recipient and the date you sent the letter in your process tracker. Pair the letter with the anonymous company teaser and the sale memorandum that go with it."
+next: [anonymous-company-teaser-writer, sale-memorandum-drafter]
 output_sample:
   input:
     - Deal code name and what the seller wants

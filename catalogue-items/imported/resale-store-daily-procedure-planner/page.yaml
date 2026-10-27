@@ -12,7 +12,7 @@ when:
   - Stock loss is rising and you need a loss-prevention plan.
   - New volunteers need written opening and closing steps.
 not_for:
-  - "You need to set store prices or plan displays: use the Nonprofit retail pricing and merchandising skill, or ask your store lead."
+  - "You need to set store prices or plan displays: use the Resale store pricing and layout planner, or ask your store lead."
   - "You need to change the group's approval limits or financial policy: ask your board or finance lead. This page only follows those rules at the register."
   - "You sell online only: use an online resale guide, as this page covers a store floor with registers."
 you_give:
@@ -46,7 +46,8 @@ how_to_use:
   - Ask for opening and closing checklists, the over/short template, deposit checks and loss-prevention steps.
   - Check the plan against your group's approved financial rules. Fix anything that clashes.
   - Give the plan to a named reviewer, such as your finance lead, before staff use it.
-  - Train staff and volunteers on the final version and redo it when your register system changes.
+  - Save the approved plan where staff can find it, such as a shared folder and a printed copy at each register. Train staff and volunteers on the final version and redo it when your register system changes.
+  - Replace any example variance figure in the plan with your group's approved limit before use.
 output_sample:
   input:
     - Your register setup and how many tills you run

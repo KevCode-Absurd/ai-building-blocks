@@ -9,6 +9,10 @@ subhead: A market size estimate for your idea, shown as TAM, SAM and SOM and bui
 explain: |
   A market size estimate for your idea, shown as TAM, SAM and SOM and built three ways so you can see if the numbers agree. It is useful for fundraising, planning and checking whether an idea is big enough.
 
+  This is a sizing method, not a market research report. It gives you the numbers and how they were built. For a written report on trends and competitors, use the Market research report writer.
+
+  Licence: the skill text is shared under CC BY 4.0. We made two changes to the original: share rates are labelled as scenario assumptions, and sample figures are replaced with bracketed placeholders. Nothing else was changed.
+
   TAM is the whole market if you took all of it. SAM is the part your product and region can reach. SOM is the slice you can realistically win. The skill builds these top-down from industry reports, bottom-up from customer counts times price, and by value, based on what people would pay to solve the problem. It lays out the steps, the assumptions and the sources, and explains how to cross-check the results.
 when:
   - You are writing a pitch deck and need defensible market numbers.
@@ -30,7 +34,8 @@ you_get:
   - A willingness-to-pay view
   - Assumptions and sources list
 how_to_use:
-  - Open your AI tool (Claude, ChatGPT or Gemini) and paste in the skill text.
+  - Open your AI tool (Claude, ChatGPT or Gemini) and paste in the skill text. This is an adapted copy of the sickn33 skill under the CC BY-4.0 licence. We changed it to label share rates as scenario assumptions and to use bracketed placeholders in place of sample figures.
+  - Choose a method to start. Use bottom-up (customers times price) for a business-to-business or niche product. Use value theory (what the problem costs, times what people would pay to solve it) for a new category. Then cross-check with top-down.
   - Gather two numbers first: how many customers could buy from you, and what one customer would pay you per year. Then describe your product or idea, your target customers, your region and your price.
   - "Ask your AI to work in this order: define the market, gather data, work out TAM, then SAM, then SOM, then cross-check the three methods and list your assumptions."
   - Paste any industry reports you have (optional). If your AI can search the web, ask it to find current market data.

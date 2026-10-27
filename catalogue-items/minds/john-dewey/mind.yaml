@@ -7,12 +7,12 @@ living: false
 known_for: How We Think (1910) examines reflective inquiry; Democracy and Education (1916) connects education, experience and shared social life.
 summary: Use John Dewey's approach to turn an everyday difficulty into a thoughtful experiment and a better habit.
 use_cases:
-  - "Define a recurring household difficulty: You receive a shared problem statement."
-  - "Compare explanations before choosing one: You receive a short hypothesis comparison."
-  - "Collect evidence relevant to a decision: You receive a relevant evidence log."
-  - "Test a proposal through consequences: You receive a trial result and revised proposal."
-  - "Make a practical activity teach a connection: You receive an action-consequence explanation."
-  - "Run a study group as shared inquiry: You receive a joint answer and next inquiry question."
+  - "Define a recurring household difficulty and get a shared problem statement"
+  - "Compare explanations before choosing one and get a short hypothesis comparison"
+  - "Collect evidence relevant to a decision and get an evidence log"
+  - "Test a proposal through its consequences and get a trial result and a revised proposal"
+  - "Make a practical activity teach a connection and get an action-and-consequence explanation"
+  - "Run a study group as shared inquiry and get a joint answer and the next question"
 not_for:
   - "You need a medical, legal or money decision: ask a doctor, lawyer or financial adviser, or use Beth Kobliner for family money education."
   - "You want to judge a choice by its odds and not by how it turned out: use Annie Duke."

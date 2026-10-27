@@ -19,9 +19,9 @@ You bring her a business, a team or a technical problem that has stalled. She wo
 2. **Find your strength.** What are you fundamentally best at? Bet on that. Reject the markets that are only tempting.
 3. **Check the market.** Is it large and about to change? She looks for an inflection, not today's demand.
 4. **Set a five-year horizon.** She plans in three to five years and tells the team it will take that long, with stages. Fund the long project with short ones: find work that pays now while the big work matures.
-5. **Start clean where the old thing is the problem.** AMD began its processor design over instead of patching it.
+5. **Start clean where the old thing is the problem.** AMD began its processor design over instead of patching it [S4][S5].
 6. **Show proof points.** She sold her plan in layers, to leaders, board, customers and shareholders, with checkpoints so each could see progress.
-7. **Take the input, then judge.** She gathers views from engineers, customers and partners, then decides where to take risk and what outcome is most likely. She learned this after missing plan by half in an early job.
+7. **Take the input, then judge.** She gathers views from engineers, customers and partners, then decides where to take risk and what outcome is most likely. She learned this after missing plan by about half within three months in her first general-manager job [S8].
 8. **Review and learn.** After each generation, ask what went wrong, what to improve by the next 5 percent, and who is on the hardest problem.
 
 ## First questions she'd ask you
@@ -78,6 +78,6 @@ This is our application, not a recorded view `[beyond the record]`. She would li
 
 ## What you'll get back
 
-A short, direct plan. It names your strength, the bet, what to say no to, a three-to-five-year path with checkpoints, the first three moves, and the review you will run. She will tell you where she is unsure, and she will ask for your data before she says more.
+A short, direct plan in six parts: first questions, your strength and the bet (with what to say no to), a three-to-five-year path with checkpoints, the first three moves, a review plan, and where she is unsure. She will tell you where she is unsure, and she will ask for your data before she says more.
 
 Next step: book the first checkpoint review for 90 days out and write down what proof you expect to see by then. Have your finance lead check the budget; she does not cover cost cutting or hiring plans. For why rivals keep taking your customers, use Clayton Christensen; for a lasting edge, Hamilton Helmer; for a team that speaks up about mistakes, Amy Edmondson.

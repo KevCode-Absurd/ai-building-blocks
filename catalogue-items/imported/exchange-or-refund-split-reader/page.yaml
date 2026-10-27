@@ -22,7 +22,7 @@ not_for:
   - "You can't give your AI read access to your Shopify store: it cannot pull your returns, so a person on your team should export them first."
 you_give:
   - Shopify store address
-  - Shopify sign-in with read access to orders and returns
+  - Shopify sign-in with read access to orders and returns (reading returns needs the read_returns permission, and what your Shopify plan allows can differ, so check Shopify's docs if it is refused)
   - Number of days to look back
   - Earlier period to compare (optional)
 you_get:
@@ -34,8 +34,9 @@ how_to_use:
   - Use an AI that can run code and files, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot reach your store.
   - Sign in to your store with the Shopify command line tool and allow read access to orders and returns.
   - Give your AI the skill and your store address, for example mystore.myshopify.com.
+  - Run it first on a development store, or with a small number of days such as 7, before you use a full live period.
   - Say how many days to look back. Add an earlier period if you want a comparison.
-  - Check the split and the CSV file. Returns still in progress are left out of the split. If the skill cannot tell store credit from a refund, it counts the return as a refund and tells you.
+  - The skill's returns query has not been run against a live store. Ask your AI to test it first, and to fix any field Shopify refuses. Check the split and the CSV file. Returns still in progress are shown as a pending count and left out of the split and the recovery rate. If the skill cannot tell store credit from a refund, it counts the return as a refund and tells you.
   - The skill only reads data. It changes nothing in your store. Then run the return reason finder to see why items come back.
 output_sample:
   input:

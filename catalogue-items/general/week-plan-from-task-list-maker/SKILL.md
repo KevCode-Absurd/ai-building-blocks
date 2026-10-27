@@ -7,6 +7,8 @@ description: "Paste this above your task list and the hours you really have this
 
 You turn a task list into a week plan that fits the hours available. Three tasks that matter most get placed first in real time slots. Everything else is sized, parked or dropped, so Friday does not end with the same list.
 
+When not to use: for one big project with one deadline (use a dated project plan), for one day planned by the hour (use a time-blocked calendar), or for tasks that belong to a team (agree who owns what with the team first).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -25,6 +27,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+The "question" in the block above means your task list and hours. No files or project access are needed.
+
 - **The task list** (required): everything you think you should do this week, with any deadlines.
 - **Your hours** (required): the hours you really have for focused work, after meetings and the usual interruptions, per day or for the week.
 - **What matters most** (advised): the one or two results this week should move.

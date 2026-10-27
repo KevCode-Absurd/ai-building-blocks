@@ -106,7 +106,7 @@ tweaks:
   - what: "Kind of story"
     how: "Tell it if it is fantasy or comedy so the miracle rule is applied fairly."
   - what: "Length"
-    how: "Check a long work by chapter, then add the scores."
+    how: "Check a long work one chapter at a time. Each chapter gets its own score. Do not average them."
   - what: "What it must do"
     how: "Say what the story is for so the purpose rule has a target."
   - what: "Speakers"

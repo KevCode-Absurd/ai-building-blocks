@@ -10,6 +10,8 @@ license: MIT
 license_source: https://github.com/LambdaTest/agent-skills/blob/main/LICENSE
 ---
 
+> **AI Blocks note (licence):** this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says. The `license:` line in the front matter above is the original author's own label (MIT). The LICENSE-CONTENT file governs here. Keep the credit to the author.
+
 # Newman CI/CD Integration Generator
 ## When to Use
 
@@ -67,6 +69,8 @@ jobs:
         run: |
           newman run ./collections/my-api.json \
             -e ./environments/staging.json \
+            --env-var "BASE_URL=$BASE_URL" \
+            --env-var "API_KEY=$API_KEY" \
             -r cli,junit,htmlextra \
             --reporter-junit-export ./results/junit.xml \
             --reporter-htmlextra-export ./results/report.html \
@@ -120,9 +124,8 @@ api-tests:
     paths:
       - results/report.html
     expire_in: 7 days
-  variables:
-    BASE_URL: $BASE_URL   # Set in GitLab CI/CD > Variables
-    API_KEY: $API_KEY
+  # BASE_URL and API_KEY come from GitLab CI/CD > Settings > Variables.
+  # Do not redefine them here: a line like "API_KEY: $API_KEY" points to itself and gives an empty value.
 ```
 
 ---
@@ -146,14 +149,23 @@ pipeline {
 
     stage('Run API Tests') {
       steps {
-        sh '''
-          newman run ./collections/my-api.json \
-            -e ./environments/staging.json \
-            -r cli,junit,htmlextra \
-            --reporter-junit-export results/junit.xml \
-            --reporter-htmlextra-export results/report.html \
-            --reporter-htmlextra-title "API Tests - ${BUILD_NUMBER}"
-        '''
+        // Create two "Secret text" credentials in Jenkins (Manage Jenkins > Credentials).
+        // Put your own credential IDs in place of the two bracketed IDs below.
+        withCredentials([
+          string(credentialsId: '[BASE_URL CREDENTIAL ID]', variable: 'BASE_URL'),
+          string(credentialsId: '[API_KEY CREDENTIAL ID]', variable: 'API_KEY')
+        ]) {
+          sh '''
+            newman run ./collections/my-api.json \
+              -e ./environments/staging.json \
+              --env-var "BASE_URL=$BASE_URL" \
+              --env-var "API_KEY=$API_KEY" \
+              -r cli,junit,htmlextra \
+              --reporter-junit-export results/junit.xml \
+              --reporter-htmlextra-export results/report.html \
+              --reporter-htmlextra-title "API Tests - ${BUILD_NUMBER}"
+          '''
+        }
       }
     }
   }
@@ -305,7 +317,9 @@ Newman exits with code `1` if any tests fail — this automatically fails the pi
 
 ## After Completing the Newman CICD output
 
-Once the Newman CICD output is delivered, ask the user:
+AI Blocks note: the Postman test case follow-up below is not available in this library, because the postman-testcase-generator skill is not included. Do not offer it. Instead, point the user to the Postman collection maker or the API test suite builder in this library.
+
+If you have the postman-testcase-generator skill installed yourself, you can ask the user:
 
 "Would you like me to generate Postman Test Cases for these commands? (yes/no)"
 

@@ -20,7 +20,7 @@ not_for:
   - "You need a full company valuation or an investment call: use a person who does valuation work, such as an analyst or adviser."
   - "You are valuing a bank, insurer or other financial firm: this method does not fit, so use a model built for financial firms."
   - "Your reinvestment comes out zero, negative or above 100%: the steady-state view fails, so rework your growth, WACC or terminal value first."
-  - "You start from growth and return on capital and want the reinvestment a terminal value needs: use the Terminal growth reinvestment check instead."
+  - "You start from growth and return on capital and want the reinvestment a terminal value needs: use the Terminal growth reinvestment checker instead."
 you_give:
   - Terminal operating value, first stable-year NOPAT, stable growth and matching WACC.
   - "The terminal date, plus the currency and scale used for the implied terminal reinvestment."

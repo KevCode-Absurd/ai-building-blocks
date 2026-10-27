@@ -39,6 +39,7 @@ how_to_use:
   - Ask for the contrast ratio of every text, icon and focus outline. Any pair that fails should be fixed in the guide.
   - Ask your AI where the style should not be used in your product, and keep those parts plain.
   - Hand the guide to your designer or developer. It writes rules only. It does not draw screens.
+  - Next, check your final colour pairs with the Colour contrast checker, and turn the guide into build notes with the Developer handoff spec writer.
 how_it_works:
   - title: States the design idea
     text: Writes one sentence for the look as it fits your product, and names the trade between depth and contrast.

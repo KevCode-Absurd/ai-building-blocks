@@ -30,8 +30,8 @@ you_get:
   - Permission suggestions
   - Pages created or updated in Confluence
 how_to_use:
-  - Make an empty space in Confluence first. Your AI cannot create the space itself.
-  - Paste the skill into your AI chat. Turn on the Atlassian connector if you want pages created for you.
+  - "What it does not do: it does not create the space, set permissions or add labels. Make an empty space in Confluence first. Your AI cannot create the space itself."
+  - Paste the skill into your AI chat. Turn on the Atlassian connector if you want pages created for you. Before you rely on it, ask your AI to list its Atlassian tools. Check that createConfluencePage, updateConfluencePage and searchConfluenceUsingCql are on the list. If one is missing, your AI will give you the page text to paste into Confluence by hand.
   - The two Python scripts in the skill folder (space_structure_generator.py and content_audit_analyzer.py) are optional and need Python 3 on your computer. The first reads a JSON file with name, size, type (engineering, product, marketing or project) and projects. The second reads a JSON list of pages with title, last_modified, view_count, author, labels and word_count. Without Python, your AI plans the tree and reviews the page list by hand.
   - Describe what your team documents. Add your team and group names, and any pages you want to reorganise (optional).
   - Read the page tree plan your AI shows you. Ask for changes, then say yes before it creates any page.
@@ -49,7 +49,7 @@ output_sample:
     - The Atlassian connector turned on in your AI, to create pages (optional)
   output:
     - name: Page tree plan
-      contains: A layout of parent and child pages, no more than three levels deep, for you to approve first.
+      contains: A layout of parent and child pages, no more than three levels deep, for you to approve first. With Python 3 the script prints the tree as JSON. Without Python, your AI writes the same tree as an indented list.
     - name: Page templates
       contains: Ready-to-use pages for meeting notes, project overviews, decision logs and retrospectives, with placeholders.
     - name: Permission suggestions

@@ -120,7 +120,7 @@ works_best_with:
     - name: Any good chat AI
       why: Tagging numbers and drafting measures is text work any strong chat AI does with this skill.
     - name: A short survey tool
-      why: Some measures of progress, such as would do it again, can only come from asking.
+      why: Optional. Some measures of progress, such as would do it again, can only come from asking. Free survey tools exist, such as Google Forms. Paid ones add features you do not need to start.
   inputs:
     - Your current dashboard or weekly report
     - A job spec from the Job spec writer

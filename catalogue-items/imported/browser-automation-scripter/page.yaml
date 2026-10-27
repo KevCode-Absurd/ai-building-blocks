@@ -30,12 +30,13 @@ you_get:
   - Screenshots of the result
 how_to_use:
   - Use an AI that can run code on your computer, such as Claude Code. A plain chat window cannot run it.
-  - Install the skill and run its setup step once. This installs Playwright and a browser.
+  - Install the skill and run its setup step once. You need Node.js 14 or newer. The setup step downloads Playwright and a Chromium browser onto your computer, which takes some disk space.
   - Tell your AI what to do in the browser and give the web address. If you have a local site running, say so. Only run it on sites you own or have permission to test. If it must log in, use test accounts, never real customer or staff logins.
   - If it finds more than one local site, pick the one to use.
+  - Your AI writes a script and runs it on your computer, so ask it to show you the script first and say yes before it runs. Delete the script and screenshots from the /tmp folder yourself when you finish.
   - Watch the browser window while the script runs. Then read the results and open the screenshots.
   - Change the web address at the top of the script if you want to run it on another page.
-  - Check the screenshots by hand before you share them. Pass any failing step to your developer or web host to fix.
+  - Check the screenshots by hand before you share them. Then ask your AI whether to fix the failing step in your own code or to run the script again with changed values. Pass anything it cannot fix to your developer or web host.
 output_sample:
   input:
     - What you want done in the browser, in plain words

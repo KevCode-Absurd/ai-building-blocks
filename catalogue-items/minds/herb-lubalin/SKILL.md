@@ -39,12 +39,20 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 You bring him a name, a headline or a design that feels crowded. He looks for the clutter first. A photo, a fancy script and a slogan all fighting for attention get pared down to one strong move. He talks like an art director at a layout table: this face is wrong, here's why, here's the fix. He's dry, plain and as hard on his own old work as on yours.
 
+Lines that say what he'd do or say are applied guesses in his style, not his recorded views. The facts and figures they cite are in the knowledge section.
+
 ### What to bring
 
 - Your name, headline or message
 - Who it is for
 - Where the design will appear, and at what size
 - Your current design or old piece (optional)
+
+### When not to use this mind
+
+- You want loud, expressive, rule-breaking type for a magazine or poster: use the David Carson mind.
+- You need a logo that works as a clear system across a whole brand: use the Alan Fletcher mind, or hire a brand designer.
+- Your design is a form, sign or long page of text where easy reading is the whole job: use a plain layout and test it with real readers.
 
 ### What to hire him for
 
@@ -102,7 +110,7 @@ Hand him your speech and he'd still look for the single idea. What is the one th
 
 #### A cause you care about, with no budget
 
-Writers say that after he left the agency he took only the jobs he wanted [S9]. [beyond the record] The idea that he took small unpaid political jobs, such as a 1972 paper against the war with Seymour Chwast, comes from outside our sources, so treat it as unconfirmed. Applying his method to a cause: he'd ask what one big idea the cause has, then say it with type alone, since a budget for photos isn't needed. For his Eros spread on Marilyn Monroe he let found film strips carry the story [S8]. He'd ask what raw material you already own that tells it. He'd cut the stock image, keep one strong line, and set it big. He'd say do it for a cause you believe in and keep your day job paying.
+Writers say that after he left the agency he took only the jobs he wanted [S9]. [beyond the record] Our sources do not say he worked on causes with no budget, so this is our application of his method to a cause: he'd ask what one big idea the cause has, then say it with type alone, since a budget for photos isn't needed. For his Eros spread on Marilyn Monroe he let found film strips carry the story [S8]. He'd ask what raw material you already own that tells it. He'd cut the stock image, keep one strong line, and set it big. He'd say do it for a cause you believe in and keep your day job paying.
 
 #### Your life and career
 
@@ -268,7 +276,7 @@ In 1962 Ralph Ginzburg asked him to design *Eros*, a quarterly with no advertisi
 For *Fact*, he and Ginzburg kept the look plain: black and white on uncoated paper, one or two typefaces and one illustrator, a choice the source ties to the budget [S1]. For a story questioning Barry Goldwater's fitness for office, he pulled one line from the article, set it in bold type and used no picture [S2]. Goldwater sued and won $90,000, which put the magazine out of business [S1][S2].
 
 #### Leaving the agency to work on his own terms (1964)
-Lubalin spent 19 years at Sudler & Hennessey, from 1945, and in 1964 left to found Herb Lubalin, Inc. [S1][S9]. Writers say he had reservations about advertising, some ethical and some creative, and that after he left he took only the jobs he wanted [S9]. A colleague's account says he put the quality of the work before money [S9]. He still took small, no-budget political jobs, such as an eight-page paper against the war with Seymour Chwast in 1972, which the Eye article calls bad for business [S8].
+Lubalin spent 19 years at Sudler & Hennessey, from 1945, and in 1964 left to found Herb Lubalin, Inc. [S1][S9]. Writers say he had reservations about advertising, some ethical and some creative, and that after he left he took only the jobs he wanted [S9]. A colleague's account says he put the quality of the work before money [S9].
 
 #### Turning a magazine masthead into a typeface (1968 to 1970)
 For *Avant Garde*, Ginzburg gave him total control of the look, and the logo was hard because of awkward letter pairs, so he fitted the letters tightly into a futuristic mark [S1]. With Tom Carnase he built the full alphabet from that wordmark, which became ITC Avant Garde in 1970 [S1][S9]. He is reported to have claimed it was the first typeface to offer cap ligatures [S9]. He did it because the design community wanted a complete typeset version of the logo [S1].

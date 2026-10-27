@@ -23,6 +23,7 @@ when:
 not_for:
   - You hold a SAFE, not a note. Use the SAFE financing revision assistant.
   - Your note charges compound interest, or sets its price a different way. This checks simple interest and a lower-of cap and discount only, and it stops if the note says otherwise.
+  - You want a lawyer's or accountant's sign-off on the note terms and the share figures. This gives working figures only. Have your lawyer or accountant check them before anyone relies on them.
   - You want legal advice on what the note means. It reads the clauses you give it and lists what it cannot confirm. Ask your lawyer.
   - You want the share count once and no record kept. Run the Check a convertible note conversion workflow on its own.
 
@@ -43,7 +44,7 @@ you_get:
   - What changed since the last review, a record for the next one, MISSING lines and any checks that could not run
 
 how_to_use:
-  - Add this agent to Claude, ChatGPT or Gemini, with the two pieces it uses. They are the Check a convertible note conversion workflow and the Option pool top-up checker skill. An AI that reads files works best. In plain chat it still works, but it cannot save files.
+  - Add this agent to Claude, ChatGPT or Gemini, with the two pieces it uses. They are the Check a convertible note conversion workflow and the Option pool top-up checker skill. If either piece is missing, the agent stops and asks you for it. An AI that reads files works best. In plain chat it still works, but it cannot save files.
   - Say if this is the first run. If not, paste last time's record. Then attach the signed note, the term sheet and anything that changed.
   - Tell it the cut-off date and the year fraction the note uses. Check that the interest it shows matches your own sum of principal x rate x year fraction.
   - Check that the lower-of clause really appears in the note. If it does not, the comparison should stop and say so. Check the share count is shown unrounded until the rounding rule is confirmed.

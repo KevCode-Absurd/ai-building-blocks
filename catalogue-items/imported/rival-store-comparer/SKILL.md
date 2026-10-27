@@ -66,6 +66,8 @@ Not needed here. Paste this file into your AI chat. (The author's own install co
 ### Step 1: Multi-Platform Competitor Mapping
 *Comprehensive cross-channel competitive landscape analysis*
 
+Input: the rival names or links and the channels. Output: a table of where each rival sells, with the page each entry came from.
+
 Map competitive presence and strategy:
 - Identify and catalog competitor presence across all relevant e-commerce platforms
 - Analyze platform-specific strategies, messaging, and performance indicators
@@ -75,6 +77,8 @@ Map competitive presence and strategy:
 ### Step 2: Strategic Analysis & Intelligence Gathering
 *Deep-dive competitive strategy and positioning assessment*
 
+Input: the channel table from step 1 and the rivals' public pages. Output: for each rival, its positioning, messaging, prices, product range and ways of winning customers.
+
 Analyze competitive strategies and positioning:
 - Evaluate brand positioning, messaging frameworks, and customer value propositions
 - Analyze product portfolios, pricing strategies, and market expansion approaches
@@ -83,6 +87,8 @@ Analyze competitive strategies and positioning:
 
 ### Step 3: Benchmarking & Strategic Recommendations
 *Performance comparison and strategic opportunity identification*
+
+Input: the notes from steps 1 and 2, and the user's own prices and message if given. Output: a list of gaps the user could win, each tagged with its source page, and a short plan.
 
 Generate competitive insights and recommendations:
 - Benchmark performance metrics and identify competitive gaps and opportunities
@@ -180,12 +186,11 @@ Budget Price
 
 | Competitor | Content Focus | Tone/Style | Platform Adaptation | Effectiveness |
 |------------|---------------|------------|-------------------|---------------|
-| [Brand A] | Educational | Professional | Platform-native | High |
-| [Brand B] | Entertainment | Casual/Fun | Consistent across | Medium |
-| [Brand C] | Social Proof | Authentic/UGC | Highly adapted | High |
+| [Brand A] | [Content focus] | [Tone/style] | [Platform adaptation] | [Your judgement, tied to a page you saw] |
+| [Brand B] | [Content focus] | [Tone/style] | [Platform adaptation] | [Your judgement, tied to a page you saw] |
 
 **Customer Acquisition Strategies:**
-- **Paid advertising:** [Who spends most, where, and estimated budgets]
+- **Paid advertising:** [Public spend evidence, such as an ad library link, or "not found". Never estimate a budget]
 - **Influencer marketing:** [Partnership approaches and investment levels]
 - **SEO/Content marketing:** [Content strategies and organic presence]
 - **Email/SMS marketing:** [Retention and nurturing approaches]

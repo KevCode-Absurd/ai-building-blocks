@@ -278,7 +278,7 @@ Result:
 - DynamoDB pay-per-request for data
 - Cognito for authentication
 - S3 + CloudFront for static assets
-- Estimated: [MONTHLY COST RANGE]
+- Estimated cost: read the range from the AWS pricing calculator for your usage. Do not quote a figure from memory.
 ```
 
 ### Scaling Architecture ($500-2000/month)
@@ -307,7 +307,7 @@ Result:
 - Right-sizing recommendations
 - Savings Plans analysis
 - Storage lifecycle policies
-- Target savings: [SAVINGS TARGET]
+- Target savings: set from the user's goal (here, 30%), and confirm the real amount against their billing data.
 ```
 
 ### IaC Generation

@@ -5,17 +5,18 @@ summary: Share the source files. Get a reconciled grant spending table, variance
 job: track-numbers
 thinking: high
 thinking_why: It connects several skills, checks their inputs and preserves evidence through each handoff.
-subhead: A reconciled grant spending table, variance brief and evidence gaps. Share the award agreement, fund restrictions, approved budget, transaction records, reporting period and actual receipts. Your AI prepares the work and marks any facts it cannot verify.
+subhead: Share your award agreement, approved budget, transaction records and receipts. You get each grant transaction matched to a receipt and a budget line, a variance brief, and a list of spending the award rules may not allow.
 explain: |-
-  A reconciled grant spending table, variance brief and evidence gaps.
+  Funders want to see that every dollar spent matches the award. This workflow matches each transaction to a receipt, a budget category and the restricted fund ledger for the reporting period. It then explains where actual spending differs from the approved phased budget, and drafts the update to the fund owner.
 
-  Give your AI the source material listed below and install the complete pack. It uses the component skills in the stated order, saves each result and checks the handoff before continuing. Restricted spending follows the supplied award rules; unknown eligibility is a question for the fund owner. Missing tools or evidence stay visible in the final summary.
+  Restricted spending follows the award rules you supply. If the rules do not say whether a cost is allowed, it goes to the fund owner as a question. Gaps stay visible in the final summary. It does not file a funder return.
 when:
   - You need a reconciled grant spending table, variance brief and evidence gaps.
   - The relevant facts are spread across files or notes and need one consistent review.
   - You want the work and its checks saved so another person can review it.
 you_give:
   - The award agreement, fund restrictions, approved budget, transaction records, reporting period and actual receipts.
+  - The reporting period as start and end dates, the currency, and the fund or award identifier that appears on each transaction row.
   - The intended reader, deadline and limits on what may be changed.
   - Earlier work and approved examples, if available.
   - "Available tools for the finished output: A compatible spreadsheet engine."

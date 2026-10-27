@@ -44,7 +44,7 @@ How to start:
 - Health, "before and after" and competitor comparison frames (patterns 1, 3, 8 and 9 especially) need checking against the ad platform's policy and the user's supplied facts before use. The examples below are only layouts. If the user has no checked facts, offer a plain product frame with no claim text.
 - This skill writes briefs. It does not make or publish images.
 
-When not to use: for a finished image, use a designer or an image tool with the brief. For the spoken or written first line, write it first, then pair it with each frame. To check the final ad against platform rules, use the Ad and page policy checker.
+When not to use: for a finished image, use a designer or an image tool with the brief. For the spoken or written first line, write it first, then pair it with each frame. To check the final ad against platform rules, use the [Ad and page policy checker](https://useaiblocks.com/skills/ad-and-page-policy-checker).
 
 ## Method
 
@@ -116,7 +116,8 @@ Example: Creator in kitchen, phone selfie, product slightly off-center.
 
 ## STEP 1: Collect Inputs
 
-- Product + packaging visual
+- Product photos: ask for 2 to 4 clear photos of the real product, such as front, side and in hand
+- Packaging: one packaging shot, needed for patterns 2 and 4 and any pattern that shows the box or label
 - Core claim / angle
 - Theme (Urgency, Lifestyle, Social Proof, etc.)
 - Target audience
@@ -155,8 +156,17 @@ For each frame:
 5. Always pair visual hook pattern with verbal hook choice.
 
 
+## What you hand back
+Use these sections, in this order:
+1. **Chosen patterns:** the 3 to 5 patterns, with the one to test first and why. Name any pattern you skipped and why.
+2. **Frame spec:** for each pattern, the subject, composition, background, text overlay, lighting and colours.
+3. **Production notes:** for each frame, the photo type, what the user has and lacks, time to make it and A/B variants.
+4. **Verbal hook pairing:** a first line to pair with each frame.
+5. **Sources, gaps and assumptions:** the facts used, each `MISSING:` item, and what you assumed.
+6. **CHECKS MISSED:** any rule or policy check that failed or could not run (for example, a claim frame not checked against platform rules), or "none".
+
 ## What next
-Pick the first pattern to test and run the frames as an A/B test with the Ad test brief writer. Write the paired first line with the Ad opening line batch writer.
+Pick the first pattern to test and run the frames as an A/B test with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). Write the paired first line with the [Ad opening line batch writer](https://useaiblocks.com/skills/ad-opening-line-batch-writer). Check the finished ad with the [Ad and page policy checker](https://useaiblocks.com/skills/ad-and-page-policy-checker).
 
 ## Final check
 

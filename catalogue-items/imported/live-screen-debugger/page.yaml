@@ -7,7 +7,7 @@ job: test-and-fix-code
 headline: Live screen debugger
 subhead: Describe the screen bug and give your local app's address. Your AI opens the app in a real browser window, repeats your steps, changes the code and checks the screen again. It tests desktop and phone sizes. Electron apps are supported.
 explain: |
-  Before you start: this skill needs your AI run with its safety sandbox turned off. Use it only in a disposable setup, on a local app you trust.
+  Before you start: this skill needs your AI run with its safety sandbox turned off. Use it only in a disposable setup, on a local app you trust. Its steps and js_repl cells are written for OpenAI Codex. Other tools can run the same Playwright steps as a script, but you will need to change the setup first (the skill ends with a short how-to).
 
   Most screen bugs need you to look at the screen. A button does nothing, a menu is cut off, or a layout breaks on a phone. Your AI cannot see any of this by reading code alone, so it guesses.
 
@@ -15,7 +15,7 @@ explain: |
 
   Before it starts, your AI writes a short list of what you asked for and what it changed, and every item must be tested before it says it is done. It also does a short free-form test to find weak spots you did not list. It uses Playwright, a tool that drives a browser, and for Electron it needs the app project itself.
 
-  Licence: this is an unmodified copy of OpenAI's playwright-interactive skill, shared under the Apache 2.0 licence.
+  Licence: this is OpenAI's playwright-interactive skill, shared under the Apache 2.0 licence (see LICENSE.txt). We added a short AI Blocks safety note at the top of SKILL.md.
 when:
   - You can run your AI with its safety sandbox turned off, in a disposable setup. This skill needs that.
   - A button, menu or form does nothing on your local site and you cannot see why.
@@ -39,7 +39,7 @@ you_get:
   - Screenshots in the chat, with notes on the desktop and phone checks
   - A short list of what was tested and what was left out
 how_to_use:
-  - "Warning: this skill needs your AI started with its safety sandbox turned off, so it can reach your browser. That lets it do more on your computer. Use it only in an isolated or disposable setup, never on a machine that holds sensitive data, and only on a local app you trust, never on a live site."
+  - "Warning: this skill needs your AI started with its safety sandbox turned off, so it can reach your browser. That lets it do more on your computer. Use it only in an isolated or disposable setup, never on a machine that holds sensitive data, and only on a local app you trust, never on a live site. A safe setup is a throwaway virtual machine or container with a copy of the project, no saved passwords or keys, and no personal files. When you finish, close the session, start your next session without the sandbox-off setting so the sandbox is back on (if you changed ~/.codex/config.toml, remove that line), and delete the throwaway setup. Point it only at an app on this computer, never at a live site."
   - Use an AI tool that can run code on your computer and open a browser. The skill was written for OpenAI Codex and its js_repl tool. A plain chat window will not work.
   - Have Node.js installed. In your project folder, run npm install playwright and then npx playwright install chromium. The first run fails without them.
   - Start your app in its own terminal so it keeps running.
@@ -47,7 +47,7 @@ how_to_use:
   - Let it run the loop. Read its test list first, and add anything it missed.
   - When it says it is done, look at the screenshots it shows in the chat. Ask it to repeat any check you doubt.
   - Run your own tests, then look at the changes in your code review before you save them.
-  - Next, turn the bug you reproduced into a lasting test with the Browser test writer, so it stays fixed.
+  - Next, take the exact steps that reproduced the bug and the Playwright script your AI used, and give them to the Browser test writer. It turns them into a lasting test so the bug stays fixed.
 how_it_works:
   - title: Write the test list
     text: It lists what you asked for, what it changed and what it will claim, and plans a check for each. It adds at least two off-path tests.

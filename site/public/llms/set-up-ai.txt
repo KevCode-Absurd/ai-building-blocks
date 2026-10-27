@@ -6,7 +6,7 @@
 - [Agent action approval reviewer](https://useaiblocks.com/skills/copilot-verify-agent-action): Check an AI agent action before it runs. Get a review of its scope, approval, risks and missing evidence, with a clear result and reason.
 - [Agent goal writer](https://useaiblocks.com/skills/agent-goal-writer): Share a multi-step job or existing goal. Get a clear outcome, proof of completion, a bounded work loop and stop rules.
 - [Agent loop designer](https://useaiblocks.com/skills/agent-loop-designer): Say the job you want repeated. Get a bounded AI loop with checks, stop rules and handoffs.
-- [Agent OWASP risk checker](https://useaiblocks.com/skills/copilot-agent-owasp-compliance): Check your AI agent code against the OWASP agent security risks. Get a pass or fail for each of 10 risks, with evidence and fixes.
+- [Agent OWASP risk checker](https://useaiblocks.com/skills/copilot-agent-owasp-compliance): Check your AI agent code against the OWASP agent security risks. Get a pass, fail or not confirmed for each of 10 risks, with evidence and fixes.
 - [Agent plugin integrity checker](https://useaiblocks.com/skills/copilot-agent-supply-chain): Check your agent plugin folder for changed, missing or new files. Get a hash manifest and a list of loose dependency versions.
 - [Agent prompt writer](https://useaiblocks.com/skills/agent-prompt-writer): Turn a rough request into a clear AI agent prompt. Answer a few questions and get one prompt to copy, with exact names and paths filled in.
 - [Agent readiness dashboard builder](https://useaiblocks.com/skills/copilot-acreadiness-assess): Run an agent readiness check on your repo and get a dashboard of what stops coding agents from working well, with a fix plan.
@@ -18,7 +18,7 @@
 - [AI agent workflow designer](https://useaiblocks.com/skills/ai-agent-workflow-designer): Describe the job. Get a multi-agent design with handoffs, failure handling and cost limits.
 - [AI app quality reviewer](https://useaiblocks.com/workflows/check-an-ai-app-improvement): Set useful test cases for an AI app change, plan feedback checks and rank the next fixes from real evidence.
 - [AI build-or-buy advisor](https://useaiblocks.com/skills/ai-build-or-buy-advisor): Share your AI plan and usage for model choices, cost estimates, risk guidance, and hiring advice.
-- [AI coding agent rules writer](https://useaiblocks.com/skills/ai-coding-agent-rules-writer): Set up an AI coding agent rules file and plan file so your agent works one test at a time and cannot delete tests to pass.
+- [AI coding agent rules writer](https://useaiblocks.com/skills/ai-coding-agent-rules-writer): Set up an AI coding agent rules file and plan file so your agent works one test at a time and is told not to delete tests to pass.
 - [AI coding rules writer and auditor](https://useaiblocks.com/skills/agent-instructions-auditor): Share your code project. Get an evidence-based AGENTS.md edit, with commands, file rules and any checks that remain unverified.
 - [AI creative workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner): List the steps in your creative AI workflow. Get clear instructions for passing facts and results between them, with claim limits kept intact.
 - [AI memory routine designer](https://useaiblocks.com/skills/ai-memory-habit-setter): Share your memory tool. Get rules for when AI looks up past work and saves key choices, fixes and lessons.
@@ -79,7 +79,7 @@
 - [Project memory organizer](https://useaiblocks.com/skills/project-memory-organizer): Share your project. Get small context files per folder so your AI reads less and costs less.
 - [Prompt and skill improvement tester](https://useaiblocks.com/agents/prompt-and-skill-tuner): Test a prompt or skill against agreed cases. Try one change at a time and keep fixes that avoid regressions.
 - [Prompt change manager](https://useaiblocks.com/skills/prompt-change-manager): Set up prompt versioning, tests and rollback for AI features already live. Get a prompt registry, eval plan and safe deploy steps for your team.
-- [Prompt change tester](https://useaiblocks.com/skills/prompt-change-tester): Compare a new prompt with your old one on the same test cases. You get a case-by-case report of what got better or worse, and a ship or hold call.
+- [Prompt change tester](https://useaiblocks.com/skills/prompt-change-tester): Compare a new prompt with your old one on the same test cases. You get a case-by-case report of what got better or worse, and a keep, revise or reject call.
 - [Prompt editor](https://useaiblocks.com/skills/prompt-improver): Turn a rough request into a clear prompt for any AI. Give it your idea and get a prompt improver result you can paste and use right away.
 - [Prompt fixer](https://useaiblocks.com/skills/prompt-fixer): Fix a prompt that gives vague or uneven answers. Paste it in with one bad reply and get a tighter version that works more reliably.
 - [Prompt safety and bias reviewer](https://useaiblocks.com/skills/copilot-ai-prompt-engineering-safety-review): Check an AI prompt for safety, bias and security risks before you use it. Get a risk report, test ideas and a safer rewritten prompt.
@@ -92,5 +92,5 @@
 - [Routine task automation planner](https://useaiblocks.com/skills/repeat-chore-automation-planner): Plan which repeat chores to automate. List your weekly tasks and get ranked picks, steps a new hire can run, and a small first version.
 - [Specialist findings coordinator](https://useaiblocks.com/agents/specialist-findings-brief-agent): Combine findings from several specialists into one decision brief. Settle clashes, rank next steps and get a checkpoint with owners.
 - [Story ad workflow test planner](https://useaiblocks.com/workflows/ad-ai-setup-test): Plan an old-versus-new story ad test, define what each AI step receives, then compare saved outputs and costs.
-- [Task automation builder](https://useaiblocks.com/skills/task-automation-builder): Turn a repetitive task into a script, schedule or file watcher. Name the task and its trigger, and get a tested task automation you can run.
+- [Task automation builder](https://useaiblocks.com/skills/task-automation-builder): Turn a repetitive task into a script, schedule or file watcher. Name the task and its trigger, and get a task automation with tests you can run.
 - [Workflow diagram and change planner](https://useaiblocks.com/skills/workflow-diagram-and-change-planner): Share a workflow or goal. Get it drawn as a diagram, each hand-off checked, and changes with reasons.

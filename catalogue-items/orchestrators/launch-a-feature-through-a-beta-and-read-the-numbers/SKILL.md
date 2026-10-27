@@ -33,12 +33,14 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+This list replaces the shared "Before you start" block above. Where that block asks for "Your results" (it names Meta Ads Manager, Google Ads and store exports), give your product's own numbers for the feature, as described below. No ad export is used.
+
 - **The feature** (required): what it does and who it is for.
 - **What the business needs from it** (required), for example fewer cancels or more sign-ups. Step 3 sets the metrics from this.
 - **Your code changes** (optional): step 4 uses them to write the release notes.
 - **A way to roll out to a subset** (optional): a feature flag or rollout tool. If you have none, step 1 plans a manual beta to a hand-picked group instead.
-- **Your numbers after launch, plus the beta feedback** (required for step 5). These are your product's own numbers for the feature, such as use, sign-ups or cancels from your analytics tool, not an ad platform export. Wait two to four weeks after launch, then paste them. Step 5 reads only these numbers and never fills in a missing one.
-- **Your list of possible beta users** (optional): get their consent before you invite them, and keep their names and notes private.
+- **Your numbers after launch, plus the beta feedback** (required for step 5). These are your product's own numbers for the feature, such as use, sign-ups or cancels from your analytics tool, not an ad platform export. Name the analytics events for the feature before launch, so the numbers can be pulled. Wait two to four weeks after launch, then paste them. Step 5 reads only these numbers and never fills in a missing one.
+- **Your list of possible beta users** (optional), starting with the people who feel the problem most: get their consent before you invite them, and keep their names and notes private.
 
 Not for: a feature already live for weeks with no plan (use the Product metrics review writer skill alone), a pure bug fix, or a change too small to need a beta. The release notes are a draft. A person approves them before anything is published.
 
@@ -62,7 +64,7 @@ Pause here: Run the beta. Collect the weekly feedback and fix what it finds.
 Pause here: Publish the release notes and roll out. After two to four weeks, paste the numbers.
 
 5. **Read the numbers.** Use the skill `product-metrics-review-writer`. Give it your own post-launch numbers and the step 3 file (the metrics plan), not the release notes. The numbers against the metrics you set: success, guardrails, the pull number, with what they mean and what they cannot yet say.
-6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then `CHECKS MISSED:` (the checks that failed or could not run, or "none").
 
 ## What you hand back
 Five step files and the summary. The third file holds the metrics decided before launch; the last holds the results read against them. Each file has this shape:
@@ -81,6 +83,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Product feature review planner](https://useaiblocks.com/skills/review-a-feature-and-plan-its-future). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+Of the shared "After this" links above, offer the Feature request screener only for your next feature, not as a follow-up to this run: it decides whether to build something, which comes before this workflow. The Product feature review planner fits this run best.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

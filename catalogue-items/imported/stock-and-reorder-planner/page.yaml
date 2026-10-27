@@ -34,6 +34,7 @@ you_get:
   - Negotiation points for your 3PL
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - "Before you start: the 4 to 6 times a year stock turnover and the 1% stockout rules in the skill are general rules of thumb, not sector data. The storage fee and 3PL cost tables have no source or date. Use your own figures and quotes."
   - Tell your AI how you fulfill orders, how many products you have, and how many orders you ship a month.
   - "Gather first: supplier lead times and current stock counts. Then paste your product list with monthly sales, the lead times and the stock. Add your costs if you have them."
   - If you only have monthly totals, say so. Safety stock needs how much daily sales swing, so your AI will use a simpler estimate, such as your best day minus your average day, and mark it as a rough guide. That estimate is a rough rule, not a service-level calculation. The proper formula needs daily sales swing (the standard deviation of daily demand).

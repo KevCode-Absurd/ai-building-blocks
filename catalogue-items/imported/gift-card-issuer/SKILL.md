@@ -12,7 +12,7 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
 ## Purpose
-Issues Shopify native gift cards to customers programmatically — as goodwill for a delayed shipment, as store credit instead of a cash refund, or as a loyalty reward. Uses Shopify's built-in gift card system; no 3rd-party app required. Gift cards issued here are redeemable at checkout exactly like manual gift cards. Note: `giftCardCreate` is available on all Shopify plans but may require the store to have gift cards enabled in settings.
+Issues Shopify native gift cards to customers programmatically — as goodwill for a delayed shipment, as store credit instead of a cash refund, or as a loyalty reward. Uses Shopify's built-in gift card system; no 3rd-party app required. Gift cards issued here are redeemable at checkout exactly like manual gift cards. Note: gift card availability depends on your Shopify plan and store settings. Whether `giftCardCreate` works on every plan is not verified here. Check that your plan supports gift cards and that they are turned on in settings. If the call fails with a plan or permission error, stop and tell the user.
 
 ## Prerequisites
 - `shopify auth login --store <domain>`
@@ -44,7 +44,7 @@ Issues Shopify native gift cards to customers programmatically — as goodwill f
 ## Workflow Steps
 
 1. **OPERATION:** `customer` — query
-   **Inputs:** Look up by `customer_email` (using customers search) or directly by `customer_id`
+   **Inputs:** Look up by `customer_email` with the `customers` query shown below (pass the email as the `$query` search text), or directly by `customer_id`
    **Expected output:** Customer `id`, `firstName`, `lastName`, `email`; confirm customer exists before issuing
 
 2. **OPERATION:** `giftCardCreate` — mutation

@@ -5,7 +5,7 @@ description: Use when pricing or promoting tickets, classes, workshops, bookings
 
 # Event pricing
 
-Events are experiences: buyers decide on feelings, sold-out dates signal quality, and the wrong kind of scarcity turns the people who miss out against you. This skill covers only what changes for dated, capacity-limited events. The general pricing, promotion, discount and product-page skills it was built beside are not in this library, so every rule you need is written here. The payment form is set up in your booking or checkout tool. All figures below (30%, 3 weeks, 40%) are rules of thumb from the author's evidence notes in reference.md, not tested laws. Check them against your own sales.
+Events are experiences: buyers decide on feelings, sold-out dates signal quality, and the wrong kind of scarcity turns the people who miss out against you. This skill covers only what changes for dated, capacity-limited events. The general pricing, promotion, discount and product-page skills it was built beside are not in this library, so the five rules you need for events are written here. The topics it does not cover are named under the procedure. The payment form is set up in your booking or checkout tool. All figures below (30%, 3 weeks, 40%) are rules of thumb from the author's evidence notes in reference.md, not tested laws. Check them against your own sales.
 
 ## When to use
 
@@ -22,6 +22,8 @@ Events are experiences: buyers decide on feelings, sold-out dates signal quality
 
 Collect, or state your assumption: the event, ticket price, and date(s); how far away the first date is; how many dates or slots and how many are sold out; any complementary item you can give; whether it is bought for enjoyment or for a functional outcome.
 
+If you have no past sales data, do not invent figures. Say so, then test two prices or two offers with a small early group and compare the results before you commit to one.
+
 Most events — workshops, concerts, retreats, cooking classes — are hedonic. Training bought for a functional result (exam prep, compliance) is the utilitarian exception.
 
 ## Procedure
@@ -29,12 +31,14 @@ Most events — workshops, concerts, retreats, cooking classes — are hedonic. 
 Only the rules that change for dated, capacity-limited events.
 
 1. **Rounded ticket price.** Experiences are bought on feelings, so $150 beats $149. Just-below only for a promotion price.
-2. **Show sold-out dates — up to 30% of them.** Mark them instead of hiding them; beyond ~30% people abandon. This is the event form of the sold-out-variant rule.
+2. **Show sold-out dates — about 10% to 30% of them.** Mark them instead of hiding them. As a rule of thumb, keep the share of sold-out dates between about 10% and 30%. That is not a tested result, so check it against your own sales. This is the event form of the sold-out-variant rule.
 3. **Deadline, not a seat-count, as the promotional lever.** "Early pricing ends 30 Sept, 23:59 CET" is fine. "Only 12 seats left!" as a marketing hook is not: people who miss a quantity-capped *offer* get angry and switch. Showing *accurate* remaining capacity as inventory (a seat picker, "2 dates left" in a list) is fine.
 4. **Pre-sales: gift, not early-bird discount, when the event is 3+ weeks out.** A bonus session, materials, or the recording at no cost. Within about a week, either works. Hedonic events tolerate long windows; functional ones should keep them short.
 5. **Human-labeled recommendations** for experiences ("others also booked").
 
-Not covered here: general discount rules (the usual rule of thumb is to keep any discount at 40% or below), special-day offers, and ticket-page layout. Ask your AI to check those separately.
+Not covered here: general discounts (the usual rule of thumb is to keep any discount at 40% or below), special-day offers and ticket-page layout. Ask your AI to handle those separately.
+
+**If an input is missing:** ask the user for it. If they cannot say, state an assumption and label it (for example, "assuming 10 seats per date") before you apply rule 2 or rule 4, and tell them to replace it with the real figure.
 
 **Rules of thumb, not tested laws.** The 30% sold-out limit, the 3-week gift rule and the 40% discount cap are rules of thumb with no strong source. Say so next to each one in your answer, and tell the user to check them against their own sales.
 
@@ -60,9 +64,9 @@ Illustration only, with made-up numbers. Pottery studio, 8-week wheel class, pla
 
 ## Common mistakes
 
-- Keeping the early-bird discount because it "gives a real reason to book now" — 3+ weeks out, a gift converts better.
+- Keeping the early-bird discount because it "gives a real reason to book now" — 3+ weeks out, a gift tends to work better (a rule of thumb from reference.md, not a tested result for your event).
 - Dropping "12 seats left" only because it might be inaccurate — accurate or not, unit caps as a promo anger the people who miss out. Use a deadline. Accurate inventory in a picker is a different thing.
-- Hiding sold-out dates — they are the strongest quality signal on the page; show them, up to 30%.
+- Hiding sold-out dates — a sold-out date can signal quality (see reference.md, the sold-out section, an untested rule of thumb for your own sales); show them, about 10% to 30%.
 - Pricing at $149 to look cheaper — it signals a bargain, not an experience.
 
 ## Quick reference
@@ -70,7 +74,7 @@ Illustration only, with made-up numbers. Pottery studio, 8-week wheel class, pla
 | Situation | Do |
 |---|---|
 | Ticket price | Rounded |
-| Sold-out dates | Show, marked; 10–30% |
+| Sold-out dates | Show, marked; about 10–30% |
 | Promo urgency | Deadline, never a seat-count hook |
 | Pre-sale, 3+ weeks out | Gift, not early-bird |
 | Recommendations | Human label |

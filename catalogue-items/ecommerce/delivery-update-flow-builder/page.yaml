@@ -9,7 +9,7 @@ headline: "Delivery update flow builder"
 subhead: Give it your orders per month, your order-status tickets and your real delivery times. It rates your numbers against clear limits, then hands back a delivery date rule, a four-message update flow, a tracking page plan and a script for late parcels.
 
 explain: |
-  Most "where is my order" (WISMO) tickets are not complaints. They come from customers who were told nothing. Each one costs an agent about 3 to 5 minutes, so a store with 100 such tickets a day loses 5 to 8 hours of work to lookups.
+  Most "where is my order" (WISMO) tickets are not complaints. They come from customers who were told nothing. Each one costs an agent a few minutes (3 to 5 is a rule of thumb, so time your own). Add up your own tickets and minutes to see the hours lost to lookups.
 
   This skill starts by measuring: your WISMO rate, and how often parcels arrive inside the date you promised. It then builds the date from your handling time and real carrier times, with a little padding so you usually beat it. It writes four automatic messages (confirmed, shipped, out for delivery, delayed), plans a tracking page on your own domain, and uses the quiet days to teach first use. Most size claims come from software vendors, so it treats them as direction and tells you what to measure on your own store.
 
@@ -18,7 +18,7 @@ when:
   - Customers get only the carrier's tracking link and nothing from your store.
   - Parcels are often late and you only hear about it when someone is angry.
 not_for:
-  - "You ship fewer than 300 orders a month and want a paid tracking page: start with the email flow and the date rule, then add a tracking page later."
+  - "You ship fewer than about 300 orders a month (a rough guide) and want a paid tracking page: start with the email flow and the date rule, then add a tracking page later."
   - "Your parcels are often late: fix delivery accuracy with your carrier first, because messages do not fix lateness."
   - "You want to find orders that are already at risk: pull the late scans from your carrier by hand. This skill sets up the messages, not that list."
 
@@ -66,7 +66,7 @@ how_it_works:
   - title: Measures first
     text: WISMO rate is order-status contacts divided by orders. Under 3 percent is healthy, 3 to 8 percent is normal but costly, and over 8 percent is a structural problem. These bands are rules of thumb, not measured industry data.
   - title: Costs the tickets
-    text: At 3 to 5 minutes a lookup, it turns your ticket count into agent hours.
+    text: Using your minutes per lookup (3 to 5 as a rule of thumb), it turns your ticket count into agent hours.
   - title: Builds the date rule
     text: It uses handling time plus real carrier times for each lane, padded slightly, and checks delivery accuracy against 90 percent.
   - title: Writes the four messages

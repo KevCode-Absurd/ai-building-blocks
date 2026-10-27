@@ -9,9 +9,9 @@ subhead: Give it sentences or documents. Get number versions of them for search,
 explain: |
   Turn sentences or documents into lists of numbers that capture their meaning, so a computer can find text that says similar things even when the words differ. That powers meaning-based search, grouping of similar items and question answering over your own files.
 
-  The skill uses the Sentence Transformers library in Python. It picks a pre-trained model that fits your language and size needs, encodes your text in batches, and compares results with cosine similarity. It covers semantic search, clustering and reranking, and shows how to run it locally with no paid API. You need Python, and a graphics card helps for large sets.
+  The skill uses the Sentence Transformers library in Python. It picks a pre-trained model that fits your language and size needs, encodes your text in batches, and compares results with cosine similarity. It covers semantic search, clustering and reranking, and shows how to run it locally with no paid API. The skill says there are 5000+ models and 100+ languages. Those are the author's rough figures and were not checked here, so look up current numbers before you quote them. You need Python, and a graphics card helps for large sets.
 
-  Licence: MIT, as the LICENSE file in this item says. The Sentence Transformers library the code uses has its own licence, Apache 2.0. Credit goes to Orchestra Research.
+  Licence: the skill file is MIT, as the LICENSE file in this item says. The Sentence Transformers library the code uses has its own licence, Apache 2.0. Credit goes to Orchestra Research.
 when:
   - You want search that finds matches by meaning, not exact words.
   - You have thousands of support tickets and want to group similar ones.
@@ -22,7 +22,8 @@ not_for:
   - "You cannot run Python on your computer: use a hosted embedding service from an AI company instead."
   - "You only need exact word search: use the find tool in your document app or spreadsheet."
 you_give:
-  - Your sentences or documents
+  - "Your sentences or documents, as a plain text or CSV file, one text per line or row"
+  - 5 to 20 real example questions you would ask, to test the search
   - The language or languages involved
   - "What you want to do: search, group or compare"
   - Your Python setup
@@ -32,11 +33,11 @@ you_get:
   - Similarity scores between texts
   - A working search or clustering example
 how_to_use:
-  - Before you start, you need Python 3 and the install command pip install sentence-transformers. If you do not code, use an AI that can run Python, or a hosted notebook such as Google Colab.
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. The code needs Python, so use an AI that can run it, or run the code yourself on your own computer.
-  - Paste your sentences or documents. Say which languages they use.
+  - "One path: install Python 3 and run pip install sentence-transformers, then run the code yourself on your own computer or in a notebook such as Google Colab. A chat AI only writes the code. It does not run it unless it has a code tool."
+  - Open Claude, ChatGPT or Gemini and paste in the skill text, then paste your sentences or documents. Say which languages they use.
   - "Say what you want: search, group or compare similar text."
-  - Run the code it writes. This needs an AI that can run Python, or Python on your own computer.
+  - Copy the code it writes and run it in your Python setup. Fix any error by pasting the message back to your AI.
+  - "How to tell it worked: run your 5 to 20 real questions, one at a time. Read the top 3 matches for each. Most of them should be texts you would pick yourself. If many are wrong, change the model before you build anything on top."
   - Check the top matches make sense. If not, ask your AI to try a different model. Then store the vectors in a vector database such as Chroma, or pass them to a reranker, and test with 20 real queries.
 output_sample:
   input:

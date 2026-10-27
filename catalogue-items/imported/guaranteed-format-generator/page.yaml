@@ -14,6 +14,8 @@ explain: |
   What sets it apart is that the format is enforced while the model writes, so you do not need retry loops for format errors. The content can still be wrong, so check it on a sample.
 
   You need Python and a model that runs on your own machine or server.
+
+  This is an MIT-licensed copy of the Outlines skill by Orchestra Research. AI Blocks changed the name and added the run steps, the version note and the local-model-only scope.
 when:
   - Your script keeps crashing because the model returned broken JSON.
   - You need every answer to be one of a fixed set of labels, such as positive, negative or neutral.
@@ -38,7 +40,8 @@ you_get:
 how_to_use:
   - Open an AI that can run Python, such as Claude Code, or open any chat AI and run the code yourself. Paste in this skill.
   - Say what shape you need and paste two or three sample texts. Name your model and backend. If you have none, ask for the small Phi-3-mini model.
-  - Install the older release the code was written for: pip install "outlines>=0.1,<0.2" transformers. Newer releases changed the calls. If you use one, ask your AI to rewrite the code from that version's docs, and give it the output of pip show outlines.
+  - "Install the older release the code was written for: pip install \"outlines>=0.1,<0.2\" transformers. Newer releases changed the calls. If you use one, ask your AI to rewrite the code from that version's docs, and give it the output of pip show outlines."
+  - AI Blocks has not run this code. It was written for the Outlines 0.1 series and has not been checked on any set of Python or Outlines versions. Treat the first run as a test.
   - Run the first example on one sample. Look at the type it returns and the values inside.
   - Run your samples, and check the content by eye. A valid shape does not mean a right answer. Then add more fields or limits.
   - Log every sample where the content is wrong. Tighten the type, enum or limit that let it through, and run again on 20 or more real samples before you use it for real work.

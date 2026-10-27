@@ -10,6 +10,8 @@ explain: |
   A blameless postmortem of an outage, written so your team learns from it and the same failure does not return. You give the facts and get a document with a timeline, causes and follow-up actions that have owners.
 
   The skill swaps blame for system questions. It asks what let the mistake happen, not who made it. It builds a minute-by-minute timeline, separates the root cause from contributing factors, and measures impact in users, money and time. Each fix becomes a numbered action with an owner and a due date. It also gives a way to run the review meeting so people speak freely, plus templates for short and long incidents.
+
+  Source note: this is a copy of a public skill shared by sickn33 in agentic-awesome-skills, under the CC BY-4.0 licence. Keep the credit to the author. Every template uses bracketed placeholders, so fill them only from your own records.
 when:
   - Your service went down and leadership wants a written review.
   - You have a pile of chat logs and need a clean timeline.
@@ -20,7 +22,7 @@ not_for:
   - "You face a security breach or data loss that needs legal or compliance review: ask your legal or compliance lead first, then use this only for the technical timeline."
   - "You have no facts yet, only a guess at what broke: gather the chat logs and alert times first, or ask the people who were on call."
 you_give:
-  - Incident notes, chat logs or alerts
+  - Incident notes, chat logs or alerts. The templates hold only bracketed placeholders, no real data, so replace each one with your own records
   - At least the start and end times, the first alert and the fix applied
   - Impact figures such as users, money and time (optional)
   - Who was involved (optional)

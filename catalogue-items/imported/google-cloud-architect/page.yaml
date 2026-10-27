@@ -38,7 +38,8 @@ how_to_use:
   - Ask for the Terraform code, deploy commands and Cloud Build file. Running the included scripts needs an AI that can run Python. The design script reads a requirements.json file, and the cost script reads a current_setup.json file listing your resources. Ask your AI to run each script with --help first to see the fields it needs.
   - Only allow public access to a service if it is meant to be public. Otherwise keep access limited with IAM roles.
   - The design does not make you compliant with HIPAA or GDPR. Have a compliance expert review it before real data goes in.
-  - Image paths that start with gcr.io are the old Container Registry. Ask your AI to use Artifact Registry instead.
+  - For your own app images, use Artifact Registry paths. Paths that start with gcr.io are the old Container Registry. The Cloud Build tool images in the build file are Google's own and are the one exception.
+  - Services deploy as private by default. Add the public-access flag only if you want anyone on the internet to reach the service. Read every command before you run it.
 output_sample:
   input:
     - Your app type, such as web app, mobile backend, data pipeline or SaaS

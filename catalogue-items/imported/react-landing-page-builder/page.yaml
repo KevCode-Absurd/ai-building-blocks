@@ -10,6 +10,8 @@ explain: |
   A full landing page as React code, built from your product description. It has a hero, features, pricing, FAQ and proof sections, each with copy written to a proven pattern.
 
   You give your product name, tagline, audience, pain point and pricing. The skill picks one of four design styles and one of several copy frameworks, such as problem then solution, based on the tone of your existing content. It offers five hero layouts, feature grids, two to four pricing tiers, a FAQ with search markup, testimonials and calls to action. It also writes SEO tags. The page is a Next.js TSX component with Tailwind, aimed at fast load.
+
+  Licence: the original skill is MIT and comes with its own LICENSE file in this folder. That file governs reuse. Credit goes to the original author.
 when:
   - You are launching a product and need a page this week.
   - You want pricing and FAQ sections without hand coding them.
@@ -32,9 +34,10 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Send your product name, tagline, audience, main problem, key benefit and pricing tiers. You can also name a style and a copy pattern.
-  - Paste your website copy if you have it, so the tone fits. The brand voice script in the skill is optional. Skip it if you do not have the file.
+  - Paste your website copy if you have it, so the tone fits. Your AI reads the tone from that copy. No separate brand voice script is needed.
   - Read the code and copy. Replace every example number and claim, such as [X hours] or [your trial terms], with true facts.
   - Paste the files into your Next.js project and check the page on a phone before you publish.
+  - After you publish, run the Landing page auditor on the live page and fix what it flags. Load speed figures in the skill are goals to measure, not results the code guarantees.
 output_sample:
   input:
     - Your product name and tagline

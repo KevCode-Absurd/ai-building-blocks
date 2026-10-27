@@ -36,11 +36,13 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Claude Code:** It can keep the page and post files between months and run on the second Monday.
+- **Claude Code:** It can keep the page and post files between months. You start the run on the second Monday. It does not run on a timer.
 - **Google Search Console:** Export queries and pages with clicks, impressions and position for the month.
 <!-- /needs -->
 
 ## What you need
+The "Before you start" block above is shared text. Ignore its Google Ads line, its "Your question" line and its brand brain steps. This agent works from the Search Console export and the list below.
+
 - **Search Console export** (required): queries and pages for last month with clicks, impressions, average position and click rate. The same date range each month.
 - **Your site address and page list** (required): so the basics check and the thin-page check know what exists.
 - **A read-only connection to your site** (optional): so thin pages can be read directly.
@@ -56,7 +58,7 @@ Keep one folder, `search/`. Save each step's result as `search/<month>/step-NN-<
 1. **Read last month.** Open `pages.md` and `posts.md`. For every page pushed or fixed last month, compare position and clicks with the month before. Mark each as "moved", "no change" or "fell". For every post published, note its first month of impressions.
 2. **Check the basics, quarterly.** Once a quarter, or when the page list changed, run `site-search-basics-checker` on the site address and page list. Keep its fix list: duplicate titles, missing sitemap, dead links. These come before any new writing.
 3. **Find the quick wins.** Run `search-console-quick-win-finder` on the export. Keep the pages ranked by what a push is worth, using the visitor value if given. Ignore pages with many impressions and nothing a visitor would buy or sign up for. If a page has no visitor value set, rank it by clicks only, mark its worth as "clicks only" and ask once for a value for that page type.
-4. **Find the thin pages.** If the site is connected read-only, run `thin-page-finder`. Keep pages that are empty, short or missing search fields. Without a connection, list pages in the export with high impressions and a click rate under 1 percent (this agent's starting point) as thin suspects.
+4. **Find the thin pages.** If the site is connected read-only, run `thin-page-finder`. Keep pages that are empty, short or missing search fields. Without a connection, list pages in the export with high impressions and a click rate under 1 percent as thin suspects. That 1 percent line is a default. The user can set a different line by telling you at the start of the run.
 5. **Sort each quick win.**
    - Problem is the writing (good position, poor click rate, or a page that does not answer the query): run `answer-first-page-rewriter` on that page for the rewrite.
    - Problem is the basics (duplicate title, dead links): send it to the basics fix list.
@@ -107,7 +109,7 @@ Write `MISSING: <what>` and carry on. Without a visitor value, rank by clicks an
 - Search data moves slowly. A push takes four to eight weeks to show. The agent judges last month's pushes, not this week's.
 - It reads what Search Console shows. It cannot see rankings for queries the site never appeared for.
 - Three pushes and three posts a month is a pace a small team can hold. More is not better.
-- The 1 percent click rate line is this agent's starting point.
+- The 1 percent click rate line is a default the user can change at the start of a run.
 
 ## Avoid
 - Chasing a query with big numbers and no buyer behind it.

@@ -10,6 +10,10 @@ argument-hint: "[the question]"
 
 # /is-this-a-problem
 
+> **Plain chat first (added by AI Blocks).** Sections named plugin or Claude Code only (matter context, config file paths, slash commands) do not apply in a plain chat. Use the pasted risk table. A "Fine" answer is a first read, not clearance. Remind the user to keep sensitive legal questions, privileged advice and customer names out of tools your company has not approved.
+
+Risk table template to paste: Pattern | Usual call (fine, needs a look, hold) | Next step | Timeline. Example row shape: [PATTERN] | [CALL] | [NEXT STEP] | [DAYS].
+
 0. **In a plain chat (no plugin files):** there is no config file to load. Ask the user to paste their risk table (what is usually fine, what usually needs work, what usually blocks, with a timeline for each). If they have none, answer "Needs a human look" and send the question to their lawyer or privacy lead. Do not guess a call without a table. The `/product-legal` and `/ai-governance-legal` commands named below are not available in a plain chat. Where this skill says to route to one of them, say "send this to your lawyer or privacy lead" instead.
 1. Load `~/.claude/plugins/config/claude-for-legal/product-legal/CLAUDE.md` → Risk calibration (or the pasted risk table).
 2. Apply the triage workflow below.
@@ -23,7 +27,7 @@ argument-hint: "[the question]"
 
 ---
 
-## Matter context
+## Matter context (Claude Code plugin only; skip this in a plain chat)
 
 **Matter context.** Check `## Matter workspaces` in the practice-level CLAUDE.md. If `Enabled` is `✗` (the default for in-house users), skip the rest of this paragraph — skills use practice-level context and the matter machinery is invisible. If enabled and there is no active matter, ask: "Which matter is this for? Run `/product-legal:matter-workspace switch <slug>` or say `practice-level`." Load the active matter's `matter.md` for matter-specific context and overrides. Write outputs to the matter folder at `~/.claude/plugins/config/claude-for-legal/product-legal/matters/<matter-slug>/`. Never read another matter's files unless `Cross-matter context` is `on`.
 
@@ -33,13 +37,17 @@ argument-hint: "[the question]"
 
 Before producing output, check where it's going. If the user has named a destination (a channel, a distribution list, a counterparty, "everyone"), ask whether it's inside the privilege circle. Public channels, company-wide lists, counterparty/opposing counsel, vendors, and clients (for work product) waive the protection. When the destination looks outside the circle, flag it and offer (a) the privileged version for legal only, (b) a sanitized version for the broader channel, or (c) both — don't silently apply a privileged header and then help paste it somewhere the header won't protect it. See the canonical `## Shared guardrails → Destination check` in this plugin's CLAUDE.md.
 
+## Plain chat note
+
+The trap-check table below names plugin commands such as `/ai-governance-legal:use-case-triage` and `/ai-governance-legal:vendor-ai-review`. In a plain chat these do not exist. Read each one as "send this to your lawyer or privacy lead", and do not give a call on those rows.
+
 ## Purpose
 
 Most "quick legal question" Slacks are one of three things: (a) not a problem, say so fast, (b) a real thing that needs a real look, route it, (c) a thing that looks fine but has a trap, catch the trap. This skill sorts in under a minute using the calibration table.
 
 The goal is speed. The PM asked at 4:47pm. They want an answer, not a memo.
 
-## Load calibration
+## Load calibration (the config file is Claude Code only; in a plain chat use the pasted risk table)
 
 Read `~/.claude/plugins/config/claude-for-legal/product-legal/CLAUDE.md` → `## Risk calibration`. If that file is not there, use the risk table the user pasted; if there is none, ask for one (see step 0). The whole point of this skill is pattern-matching against that table.
 
@@ -86,11 +94,7 @@ If a trap might be present, ask the one question before answering. One question,
 
 **For Slack (the common case):**
 
-Slack triage replies are internal legal advice. If the reply is being pasted into a ticket, document, or channel that's broadly shared with non-legal, prepend the work-product header from `~/.claude/plugins/config/claude-for-legal/product-legal/CLAUDE.md` `## Outputs` (it differs by user role — see `## Who's using this`):
-
-```
-[WORK-PRODUCT HEADER — per plugin config ## Outputs]
-```
+Slack triage replies are internal legal advice. If the reply will be shared beyond legal, such as in a ticket, a document or a wide channel, add one line at the top saying it is a draft for legal review and is not for circulation. (In the Claude Code plugin, use the work-product header set in the plugin config instead.)
 
 For an in-the-flow Slack DM reply to the PM, the short form is:
 
@@ -106,8 +110,7 @@ For an in-the-flow Slack DM reply to the PM, the short form is:
 **Examples:**
 
 ```
-✅ Fine on a first read — adding an analytics event is an FYI here as long as it's covered by
-the existing privacy policy categories. This one is.
+✅ Fine on a first read — adding an analytics event matches the "usually FYI" row in the risk table, as long as it stays inside the existing privacy policy categories. Confirm with your lawyer before you act.
 ```
 
 ```
@@ -141,4 +144,4 @@ You are the lawyer people want to ask, not the one they route around.
 
 ## Close with the next-steps decision tree
 
-End with the next-steps decision tree per CLAUDE.md `## Outputs`. Customize the options to what this skill just produced — the five default branches (draft the X, escalate, get more facts, watch and wait, something else) are a starting point, not a lock-in. The tree is the output; the lawyer picks.
+End with a short next-steps list (in the Claude Code plugin, the decision tree per CLAUDE.md `## Outputs`; in a plain chat, just offer the options). Customize the options to what this skill just produced — the five default branches (draft the X, escalate, get more facts, watch and wait, something else) are a starting point, not a lock-in. The tree is the output; the lawyer picks.

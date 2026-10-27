@@ -31,11 +31,13 @@ you_get:
   - A list of codes that were not found
 how_to_use:
   - Collect your counts as a list. Each row needs a product code, a location and a change, such as +5 or -3.
+  - Find each location ID in your Shopify admin under Settings, then Locations. The location page address ends with its number. Your AI can also look the locations up for you, then show you the list to confirm. Product codes are the SKUs in your product list.
   - Pick a reason, such as cycle count, damaged or received. Add a link to your count sheet or return paperwork if you have one (optional).
   - This skill needs an AI that can run commands. Log in to your store first with shopify auth login --store your-store.myshopify.com. Your access needs the read_products and write_inventory scopes.
   - Ask your AI to run the skill in preview mode first (dry run). Nothing changes in your store yet.
   - Check the preview. Confirm each product code, location and new quantity. Fix any code that was not found.
   - Run it again without preview to apply the changes. If one is wrong, run the skill again with the opposite change, for example +3 to undo a -3, and use the same reason so the history is clear.
+  - Next, check the quantities in the Shopify admin, or use the Stock sync error finder to confirm no differences remain.
 output_sample:
   input:
     - Your Shopify store domain

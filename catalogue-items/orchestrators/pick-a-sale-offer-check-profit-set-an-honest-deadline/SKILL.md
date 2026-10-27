@@ -34,6 +34,7 @@ How to start:
 
 ## What you need
 - **One product's facts: price, variants, ingredients or materials, how it is used, photos by job** (required)
+- **Your cost per order** (required for step 3): product cost, shipping, payment fees and packaging for each order. Without them, step 3 cannot say if the deal pays and stops with `MISSING: cost per order`.
 - **Ad or store performance export for a closed date window, with definitions** (optional)
 - **Customer words from reviews, tickets, surveys or calls, with source and date** (optional)
 - **A buyer grounded in real review language: problem, trigger, wants, doubts, words they use** (optional)
@@ -48,10 +49,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Store offer picker.** Use the skill `store-offer-picker`. Starts the chain: the offer types worth testing, ranked, with the maths.
-2. **Reason-why deal writer.** Use the skill `reason-why-deal-writer`. Give it the shortlist from the steps before. Takes the top offer type from the step before and writes the deal with a reason a buyer will believe.
-3. **Discount impact checker.** Use the skill `discount-impact-checker`. Give it the offer from the steps before. Runs the deal from step 2 through your costs to find the return you must hit. If it says the deal does not pay, fix the deal before step 4.
-4. **Honest urgency planner.** Use the skill `honest-urgency-planner`. Give it the offer from the steps before. Uses the deal from step 2 and your own capacity (not step 3's report), once step 3 says the deal pays. Hands back a limit and date you can keep.
+1. **Store offer picker.** Use the skill `store-offer-picker`. Starts the chain: the offer types worth testing, ranked, with the maths. Saved as `outputs/step-01-store-offer-picker.md`.
+2. **Reason-why deal writer.** Use the skill `reason-why-deal-writer`. Give it the shortlist from the steps before. Takes the top offer type from the step before and writes the deal with a reason a buyer will believe. Reads `outputs/step-01-store-offer-picker.md`. Saved as `outputs/step-02-reason-why-deal-writer.md`. The reason must be true. Do not invent one.
+3. **Discount impact checker.** Use the skill `discount-impact-checker`. Give it the offer from the steps before. Runs the deal from step 2 through your costs to find the return you must hit. If it says the deal does not pay, fix the deal with step 2 and run step 3 again. Do not go to step 4. Saved as `outputs/step-03-discount-impact-checker.md`.
+4. **Honest urgency planner.** Use the skill `honest-urgency-planner`. Give it the offer from the steps before. Uses the deal from step 2 and your own capacity (not step 3's report), once step 3 says the deal pays. Hands back a limit and date you can keep. Saved as `outputs/step-04-honest-urgency-planner.md`.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
@@ -67,7 +68,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 <!-- /next -->
 
 ## Check before you hand it back
-- Each step passed its own checks, or the run stopped at the step that failed and says why.
+- Step 1 ranks offer types with the maths shown. Step 2 gives a true reason. Step 3 gives the return the ads must hit, from your real costs. Step 4 gives a limit and a date you can keep. If one is missing, the run stopped at that step and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.

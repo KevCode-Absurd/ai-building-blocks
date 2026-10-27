@@ -10,6 +10,8 @@ license: MIT
 license_source: https://github.com/expo/skills/blob/main/LICENSE
 ---
 
+> **AI Blocks note (licence):** this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says. The `license:` line in the front matter above is the original author's own label (MIT). The LICENSE-CONTENT file governs here. Keep the credit to the author.
+
 # EAS Update Insights
 
 Query the health of published EAS Updates directly from the CLI: launches, failed launches, crash rates, unique users, payload size, the embedded-vs-OTA user split per channel, and the most popular updates per runtime version. The data is the same data that powers the update and channel detail pages on expo.dev; these commands expose it in the terminal in human and JSON form.

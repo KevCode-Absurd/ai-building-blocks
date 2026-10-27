@@ -35,7 +35,8 @@ how_to_use:
   - Add your foreign currency amounts and any floating-rate debt. Add your investment policy limits if you have them.
   - Tell the AI the confidence level and time horizon you want for the currency risk estimate. If you do not know, ask it to suggest one and explain why.
   - Read the 13-week forecast first and check every balance against your bank statements.
-  - Take the hedge and investment ideas to your bank or adviser before you act. Running the calculation script needs an AI that can run code.
+  - No code? Plain chat still works. The AI adds the numbers by hand and shows each sum. Check every figure against your bank statements.
+  - Take the hedge and investment ideas to your bank or adviser before you act. The result puts the adviser sign-off line above the ideas. Running the calculation script needs an AI that can run code.
   - Next, build a full forecast with cash-forecast-builder, or find cash stuck in customers and stock with cash-tied-up-finder.
 output_sample:
   input:

@@ -32,10 +32,16 @@ you_get:
 how_to_use:
   - Use an AI that can reach the web. The skill's scripts are not included, so the AI does the lookups and checks by hand, one entry at a time.
   - Paste your DOIs, titles or BibTeX file into the chat. Add a topic and year range if you want it to search.
+  - If your AI cannot reach the web, it must return every entry as unverified and must not produce a validation report.
   - Ask your AI to list each entry as "checked against the source page" or "unverified", with the page it used. Without the scripts it cannot produce a full automatic validation report, so it must not claim one.
+  - An entry may be marked checked only after your AI has fetched its source page and can name that URL. If it cannot name the URL, the entry must say unverified.
   - Read the list. Check every changed entry against the publisher page yourself.
   - Do not use Google Scholar for bulk or automated searches. Its terms may forbid scraping. Search it by hand if you must, and use PubMed or the publisher's export for the lookups.
   - Skim the final list before you submit your paper.
+output_shape: |
+  | Entry key | Status (checked or unverified) | Source URL used | Fields that did not match |
+  <one row per entry>
+  Cleaned BibTeX: <the file, with unverified entries marked in a comment>
 output_sample:
   input:
     - DOIs, PubMed IDs, arXiv IDs or paper titles

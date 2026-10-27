@@ -11,7 +11,7 @@ explain: |
 
   The skill starts with your product, market and rivals. From that it writes a buyer profile with pains and buying reasons, then maps how competitors price and position, and where the gaps sit. Next it ranks channels such as paid ads, search, email and text, content, social, influencers and referrals by likely return for your stage. Each one gets a budget share and a content direction. It works for Shopify, Amazon, Etsy and others, and needs no API key.
 
-  The benchmark figures in the plan (channel returns, budget shares, repeat-buyer rates) come from the original author's reading of public reports such as Omnisend and Gartner. We have not checked them. Treat them as starting guesses and replace them with your own numbers as soon as you have them.
+  Unchecked figures: the benchmark figures in the plan (channel returns, budget shares, repeat-buyer rates) come from the original author's reading of public reports. We have not checked them. Treat them as starting guesses, do not quote them as facts, and replace them with your own numbers as soon as you have them. The target return on ad spend in the plan is a rule of thumb. Work out yours from your own margin.
 when:
   - You just launched a store and have no marketing plan.
   - You have a small budget and need to know where to spend it first.
@@ -38,9 +38,10 @@ how_to_use:
   - Tell it about your product, price, margin, monthly budget and where you sell.
   - Answer its one round of multiple-choice questions. Short replies like 1b 2c 3a are enough.
   - Add competitor names or links if you have them. Your AI needs web access to look them up.
-  - Check the guesses marked with a warning sign. Give better numbers and ask it to update the plan.
+  - Check the guesses marked with a warning sign. Every benchmark in the plan is unverified, so replace each one with your own store data before you use any budget split. Then ask your AI to update the plan.
   - Start with the week one actions in the 90-day plan.
   - After week four, add your real sales and spend numbers and ask your AI to update the plan.
+  - Next, for detailed ad setup, use the Amazon PPC launch builder if you sell on Amazon, or your ad platform's own setup guide. Re-run this plan each quarter with your own numbers.
 output_sample:
   input:
     - Your product type and price

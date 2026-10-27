@@ -88,8 +88,8 @@ output_shape: |
   NAME <name>   SCORE <n>/100   CALL <KEEP | FIX | DROP>
   Spell and search  <0 / 10 / 20>  <reason, from the five-person test>
   Easy to say       <0 / 10 / 20>  <reason>
-  Surprise          <0 / 10 / 20>  <reason>
-  Sound fit         <0 / 10 / 20>  <reason, tie-breaker only>
+  Surprise          <0 / 10 / 20>  <reason; any comfort-trap result marked "weak evidence">
+  Sound fit         <0 / 10 / 20>  <reason, tie-breaker only, weak evidence>
   Clear of rivals   <0 / 10 / 20>  <reason>
   Sum: <a> + <b> + <c> + <d> + <e> = <n>
 

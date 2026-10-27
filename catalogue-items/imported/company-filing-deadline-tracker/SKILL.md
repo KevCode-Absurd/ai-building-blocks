@@ -19,22 +19,26 @@ This imported guide contains stale, jurisdiction-specific examples. Treat every 
 
 Use a file location available to the user in the current environment. The legacy Claude paths below are examples only; do not read or write them unless the user has provided them and they are accessible.
 
+## What you need (added by AI Blocks)
+
+This skill needs web search, to check official filing pages. Without search, mark every date unknown and ask the user to check each official page and paste what it says. A registered agent is optional, and agent services usually cost money. Use plain-chat requests only: the flags in the front matter are not needed. The tracker file is always called compliance-tracker.yaml.
+
 ## Real-task output
 
 For each entity, show the confirmed source and as-of date, the filing and date (or “unknown”), the entity facts used, and any missing facts. Call the result a tracking aid, not a legal determination.
 
 # How to run it
 
-In a plain chat there are no slash commands and no `~/.claude` folder. Treat each flag below as a plain request ("build my tracker", "show what is due in 90 days", "update", "audit", "export"). Take the entity list from what the user pastes, and keep the tracker as a file in the user's own folder.
+In a plain chat there are no slash commands and no `~/.claude` folder. Users do not type flags. Match each request below to a mode. Take the entity list from what the user pastes, and keep the tracker as a file in the user's own folder.
 
 1. Take the entity table (name, type, where formed or registered, registered agent) from what the user pastes.
-2. Route to the correct mode below based on flag:
-   - No flag or `--init`: Mode 1 — initialize tracker from entity table
-   - `--report`: Mode 2 — surface upcoming deadlines and overdue items
-   - `--update`: Mode 3a (manual) or 3b (--from-report upload) — update status
-   - `--sweep`: Mode 3c — walk through unknown/overdue items one by one
-   - `--audit`: Mode 4 — full health audit
-   - `--export`: Mode 5 — produce CSV or table export
+2. Route to the correct mode below based on what the user asks:
+   - "Build my filing tracker": Mode 1 — initialize tracker from entity table
+   - "Show what is due in the next 90 days": Mode 2 — surface upcoming deadlines and overdue items
+   - "Update" with a new filing date: Mode 3a (manual) or 3b (the user pastes a registered agent's report) — update status
+   - "Go through the unknown items": Mode 3c — walk through unknown/overdue items one by one
+   - "Audit my tracker": Mode 4 — full health audit
+   - "Export as CSV" or "as a table": Mode 5 — produce CSV or table export
 3. Read and write the tracker file the user keeps, for example compliance-tracker.yaml in their own folder.
 4. After any update: show summary of changes and next action.
 
@@ -179,7 +183,7 @@ custom_jurisdictions:
 ```
 
 This custom definition is then applied to all entities in that jurisdiction.
-Future `--init` runs and entity additions will use it automatically.
+Future tracker builds and entity additions will use it automatically.
 
 **International jurisdictions specifically:**
 

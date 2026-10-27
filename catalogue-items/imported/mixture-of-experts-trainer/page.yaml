@@ -35,7 +35,7 @@ you_get:
   - Starting values for experts, routing and loss weights
   - A short list of what to watch while it trains
 how_to_use:
-  - Make sure you have Python, PyTorch and GPUs ready. Your AI writes the code but cannot train in a chat window.
+  - "Make sure you have Python, PyTorch and GPUs ready. Your AI writes the code but cannot train in a chat window. Rented cloud GPUs cost money by the hour, so estimate the cost before a long run."
   - Open Claude, ChatGPT or Gemini and paste this skill. If your AI can read files, give it the skill folder too.
   - Tell it your GPUs, your goal, your data and your tool. Say if you want DeepSpeed, Megatron-DeepSpeed or Hugging Face.
   - Read the setup it recommends before you run anything. Check the flag names against the DeepSpeed version you install.

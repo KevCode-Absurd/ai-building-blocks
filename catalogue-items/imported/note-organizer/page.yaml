@@ -31,13 +31,13 @@ you_get:
   - Action items as checkboxes
   - Search results and topic summaries
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. To save files into a folder, use an AI that can work with files on your computer.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. To save files into a folder, use an AI that works with files on your computer, such as Claude Code or Codex. With only a chat window, ask for the note as text and save it in your notes app yourself.
   - Tell your AI where your notes folder is. If it does not exist yet, ask the AI to create it.
   - "Paste your notes and say the type: meeting, research, idea, daily log or project."
   - Add the tags you already use (optional), so new notes match your old ones.
   - Check the note. Make sure names, dates and action items are right. Do not include passwords or keys.
   - "To find things later, ask a question like: what did we decide about the dashboard this month?"
-  - Then copy the action items into your task list. Once a month, ask for a summary of a topic to spot decisions that were later replaced.
+  - Then copy the action items into your own task list or task app. Once a month, ask for a summary of a topic to spot decisions that were later replaced.
   - The skill writes down only what you tell it. Anything it adds on its own is marked to verify, with a source. It never invents a source title or link.
 output_sample:
   input:

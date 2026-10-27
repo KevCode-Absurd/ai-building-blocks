@@ -27,8 +27,8 @@ Instructor is an open-source Python library that works with many AI providers.
 The examples were written for Instructor 1.x with Pydantic v2. Pin the versions you install, and if a call or mode name fails, check the Instructor docs for your version. Model names in the examples change often, so use one your provider offers today.
 
 ```bash
-# Base installation
-pip install instructor
+# Base installation. Use Python 3.9 or newer, Instructor 1.x and Pydantic 2.x
+pip install "instructor>=1,<2" "pydantic>=2,<3"
 
 # With specific providers
 pip install "instructor[anthropic]"  # Anthropic Claude
@@ -285,6 +285,8 @@ Stream partial results for real-time processing.
 
 #### Streaming Partial Objects
 
+Streaming calls (`create_partial`, `create_iterable`) change between Instructor versions. Check both against the docs for the version you pinned before you rely on them.
+
 ```python
 class Story(BaseModel):
     title: str
@@ -400,9 +402,9 @@ class CompanyInfo(BaseModel):
     headquarters: str
 
 text = """
-Tesla, Inc. was founded in 2003. It operates in the automotive and energy
-industry with approximately 140,000 employees. The company is headquartered
-in Austin, Texas.
+[COMPANY NAME] was founded in [YEAR]. It operates in the [INDUSTRY]
+industry with approximately [EMPLOYEE COUNT] employees. The company is
+headquartered in [CITY, REGION].
 """
 
 company = client.messages.create(
@@ -458,7 +460,7 @@ class Entities(BaseModel):
     organizations: list[Organization]
     locations: list[str]
 
-text = "Tim Cook, CEO of Apple, announced at the event in Cupertino..."
+text = "[PERSON NAME], [ROLE] of [COMPANY], announced at the event in [CITY]..."
 
 entities = client.messages.create(
     model="claude-sonnet-4-5-20250929",
@@ -579,18 +581,18 @@ client = instructor.from_anthropic(
 # - Mode.TOOLS (OpenAI tools)
 ```
 
-### Context Management
+### Single-use client
 
 ```python
-# Single-use client
-with instructor.from_anthropic(Anthropic()) as client:
-    result = client.messages.create(
-        model="claude-sonnet-4-5-20250929",
-        max_tokens=1024,
-        messages=[...],
-        response_model=YourModel
-    )
-    # Client closed automatically
+# Create the client, use it, and let it go out of scope.
+# (Some Instructor versions also work as a context manager. Check your version's docs before using "with".)
+client = instructor.from_anthropic(Anthropic())
+result = client.messages.create(
+    model="claude-sonnet-4-5-20250929",
+    max_tokens=1024,
+    messages=[...],
+    response_model=YourModel
+)
 ```
 
 ## Error Handling
@@ -730,7 +732,7 @@ class PartialData(BaseModel):
 ## Resources
 
 - **Documentation**: https://python.useinstructor.com
-- **GitHub**: https://github.com/jxnl/instructor (15k+ stars)
+- **GitHub**: https://github.com/jxnl/instructor
 - **Cookbook**: https://python.useinstructor.com/examples
 - **Discord**: Community support available
 

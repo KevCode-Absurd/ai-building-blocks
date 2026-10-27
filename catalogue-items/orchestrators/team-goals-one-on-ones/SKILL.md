@@ -34,7 +34,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **Your team** (required): who is on it, what each person does and how long they have done their current task. Step 2 plans a meeting rhythm for each person from this.
+- **Your team** (required): who is on it, what each person does, how long they have done their current task and how experienced they are at it. Gather last period's key result figures too, before you start. Step 2 plans a meeting rhythm for each person from this.
 - **What you want to get done in the period** (required): a quarter or a month, with the dates and where you want to go.
 - **Last period's results and current numbers** (optional): ask for them before writing new goals, so the key results start from real figures. The level above's goals help too.
 - **A current plan or list of priorities** (optional).
@@ -53,6 +53,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 2. **One-on-one meeting planner.** Use the skill `one-on-one-meeting-planner`. Give it the goals and key results from `outputs/step-01-okr-goal-writer.md`, plus each person and their job, how experienced they are at the task, and when and where you can meet. A meeting plan with agenda rules, timing and follow-up. Reads the plan from the step before. It saves `outputs/step-02-one-on-one-meeting-planner.md`: how often and how long to meet each person, the outline they write, your meeting rules and how actions are checked.
 3. **Informed captain decision planner.** Use the skill `informed-captain-decisions`. Give it the stuck decision, who is involved and the goals from `outputs/step-01-okr-goal-writer.md`. One named owner, a plan to collect dissent, and a review date. Reads the plan from the step before. It saves `outputs/step-03-informed-captain-decisions.md`: the owner, who to hear from, the strongest case against, a decision date and what everyone does after the call.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+
+## Next steps to offer
+
+Use these instead of the general "After this" list above:
+- Write an agreement with each person using the [Work expectations agreement writer](https://useaiblocks.com/skills/results-agreement-writer), so their goals match the key results.
+- At the end of the quarter, write each review with the [Employee performance review writer](https://useaiblocks.com/skills/quarterly-performance-review-keeper).
 
 ## What you hand back
 3 step files and the summary. The last file holds the plan. Each file has this shape:

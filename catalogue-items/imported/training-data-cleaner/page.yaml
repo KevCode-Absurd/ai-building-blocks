@@ -33,10 +33,12 @@ you_get:
   - A report of what was removed
 how_to_use:
   - Open an AI that can run Python code, on a computer with an NVIDIA GPU if you have one.
-  - Paste the skill text. Tell your AI where your files are and which format they use: Parquet, JSONL or CSV, with a text column that holds the document text.
+  - "Paste the skill text. Tell your AI where your files are and which format they use: Parquet, JSONL or CSV, with a text column that holds the document text. Expect the AI to install a pinned NeMo Curator version first. The code in the skill is an outline, so the AI must check each call against that version."
+  - "Install a pinned version first, for example uv pip install \"nemo-curator[text_cuda12]==<VERSION>\", where <VERSION> is the release you chose from the NeMo Curator docs. Then run a tiny test: import each stage you plan to use, and run it on three or four sample documents. Stop if any stage fails to import."
   - Say which quality rules to use and which personal details to remove.
-  - Ask your AI to run the steps one at a time and show how many documents each step removes.
-  - Check a sample of removed and kept documents before you train. Check the personal detail redaction against your own legal duties.
+  - Ask your AI to run the steps one at a time on a small sample first, and show how many documents each step removes. After each step you should have a smaller file and a count of what was dropped.
+  - Check a sample of removed and kept documents before you train.
+  - Before you train, check a sample of redacted documents for missed personal details. The redaction calls in the skill have not been verified here, so do not trust the redaction step until you have confirmed it on a hand-checked sample from your pinned version. If the check finds misses, tighten the list and rerun. Have the person responsible for privacy law in your organisation, or a lawyer, sign off that the redaction meets your legal duties.
   - Treat the speed and cost figures in the skill as vendor claims. Cloud machines cost money.
   - Hand the cleaned set to your training pipeline (for a small first model, see the tiny GPT trainer). Run the removal report again on each new scrape before every training run.
 output_sample:

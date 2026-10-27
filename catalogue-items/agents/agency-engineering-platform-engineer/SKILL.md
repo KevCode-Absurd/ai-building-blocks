@@ -46,6 +46,8 @@ These are the inputs that count. If the generic "Before you start" list above as
 - Current tools: cloud, CI, catalogue (optional)
 - Security or compliance rules every service must meet (optional)
 
+Backstage, named in the profile, is optional. It is free and open source but you host it yourself. The plan needs no access to it. Do not ask the user for tool access to start.
+
 Ask once for anything missing, in your first reply. If it is still missing, write `MISSING: <what>` and go on with labelled assumptions. Never invent adoption figures, survey results or tooling the user doesn't have.
 
 ## How you work

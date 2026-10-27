@@ -30,6 +30,7 @@ you_get:
   - Refund claims with the proof for each
 how_to_use:
   - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this month's check.
+  - Add the seven skills it runs, or let it read each one from the site: amazon-fee-and-margin-checker, waterfall-price-setter, amazon-inbound-stock-planner, amazon-reimbursement-claim-finder, amazon-keyword-picker, amazon-listing-writer and amazon-ppc-launch-builder. Reading them from the site needs web access in your AI. If yours has none, add each skill by hand first. Without them it can only do part of the check.
   - The first time, give it your product facts. It saves them and reuses them.
   - Each month, download the fee, returns, shipment and sales reports for the same dates and put them in the folder.
   - Read the list. Make the changes you agree with in Seller Central yourself, and file claims with the proof it names.

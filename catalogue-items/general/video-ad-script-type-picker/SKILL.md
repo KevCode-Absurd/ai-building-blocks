@@ -41,6 +41,7 @@ This skill runs on its own. If something marked required below is missing, ask o
 - **Concept** (required): the buyer, the reason they buy, the offer.
 - **Awareness and length** (required): how much the buyer knows (unaware of the problem, aware of it, aware of fixes, aware of you, ready to buy), and the length.
 - **What you can supply** (required): points from the buyer's timeline (Before, Trigger, Tries, Last doubt, After), a true cause, process facts, a real customer account, something you can film working, time points, offer terms, a real shortcoming.
+- **Approved claim wording** (required for health, supplement, food or money products): the exact claims your product label, your legal check and the ad platform's rules allow. Scripts must stay inside it.
 - **How many scripts** (optional): default 4.
 
 ## Steps
@@ -110,6 +111,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - At least three selling beats and, where possible, all four groups.
 - No two scripts open on the same point or fact.
 - No example from the recipes appears in a script.
+- Health, body or money claims: no disease, cure or body-function claim beyond the approved claim wording and the ad platform's rules. Flag every line that would need proof, and tell the user to check these rules before the ads run (for example Meta's rules for health and supplement ads).
 
 ## If something is missing
 Write `MISSING: <need>` and skip the type. A "Someone noticed" or "Turning point" type without a real account turns into filming notes for a real customer, with blanks for their details.

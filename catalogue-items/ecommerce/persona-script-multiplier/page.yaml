@@ -38,7 +38,7 @@ how_to_use:
   - Paste your winning script and the product facts, with doses or specs.
   - List each buyer group with their top problem and their own words, from reviews if you can.
   - List the claims you may make and the proof you have. Say when your customers typically notice a result, if you have data for it.
-  - Have a qualified person read every script before it runs, then test one new script at a time against the original.
+  - Have a named compliance reviewer read every script and sign it off before it runs. Then test one new script at a time against the original.
 output_sample:
   input:
     - Your winning video ad script
@@ -98,6 +98,7 @@ output_shape: |
 
   CLAIM REVIEW
   <line> : <claim, backed or not, what to check>
+  Reviewer sign-off: [REVIEWER NAME], [DATE], cleared yes or no
 
   (one script, page brief and claim review per group)
   MISSING: <winning script | doses | proof | allowed claims>

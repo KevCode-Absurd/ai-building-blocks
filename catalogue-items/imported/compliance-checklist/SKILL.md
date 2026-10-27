@@ -42,17 +42,17 @@ The counts, percentages and day estimates below are made up to show the layout. 
 
 **Output:**
 
-**Readiness Summary:** 34% ready (estimated)
+**Readiness Summary:** 40% ready (estimated). Rule used in every row: readiness = (implemented + half of partial) / controls. Say which rule you use.
 
 | Category | Controls | Implemented | Partial | Missing | Readiness |
 |----------|----------|-------------|---------|---------|-----------|
-| Access Control | 12 | 3 | 4 | 5 | 28% |
-| Change Management | 8 | 5 | 2 | 1 | 63% |
+| Access Control | 12 | 3 | 4 | 5 | 42% |
+| Change Management | 8 | 5 | 2 | 1 | 75% |
 | Incident Response | 6 | 0 | 1 | 5 | 8% |
 | Risk Assessment | 5 | 0 | 0 | 5 | 0% |
-| Monitoring & Logging | 7 | 4 | 2 | 1 | 57% |
+| Monitoring & Logging | 7 | 4 | 2 | 1 | 71% |
 | Vendor Management | 4 | 0 | 1 | 3 | 13% |
-| HR & Security Awareness | 6 | 1 | 2 | 3 | 17% |
+| HR & Security Awareness | 6 | 1 | 2 | 3 | 33% |
 
 **Sample Controls (Access Control category):**
 
@@ -71,7 +71,7 @@ The counts, percentages and day estimates below are made up to show the layout. 
 
 **Output:**
 
-**Readiness Summary:** 42% ready (estimated)
+**Readiness Summary:** 40% ready (estimated). Rule used: readiness = requirements met / requirements. Partly met counts as a gap.
 
 | GDPR Area | Requirements | Met | Gaps | Readiness |
 |-----------|-------------|-----|------|-----------|

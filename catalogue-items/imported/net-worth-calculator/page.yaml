@@ -12,6 +12,8 @@ explain: |
   Assets go into three groups: cash you can reach in days, investments and retirement accounts, and slow assets such as property or a business. It uses today's value, not what you paid, and the balance you owe now, not the original loan. It then works out debts against assets, the share held as cash and the share invested.
 
   If you give last month's totals, it shows the change and which item moved it most. It works only from your numbers and never guesses a balance. It is a tracking aid. It is not financial advice, and the ratios are rules of thumb that change with your age, income and country.
+
+  Licence: MIT, as the LICENSE file in this item says. This is a copy of the net-worth-tracker skill by GAJETOso. Credit goes to the author.
 when:
   - You have never added up everything you own and owe in one place.
   - You want a monthly check on whether your net worth is going up.
@@ -27,6 +29,7 @@ you_give:
   - Investment and retirement account values today
   - Property, vehicle and business values today
   - Every loan, card and other debt with its balance
+  - The currency and the date of the figures
   - Last period's totals (optional)
   - Your monthly savings, to work out a milestone date (optional)
 you_get:

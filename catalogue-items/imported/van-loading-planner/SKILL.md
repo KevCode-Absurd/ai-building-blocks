@@ -82,8 +82,7 @@ Before optimizing vehicle loading, understand:
 - These are general planning figures for large trucks, not legal limits for a van. Use the axle and GVWR limits on the user's vehicle plate or in its handbook. If the user does not give them, write `MISSING: axle limits` and say the axle check is not valid.
 - The code below places the rear axle at a fixed 60% of cargo length. That is an estimate. Say so in the result, and tell the user to confirm with a weighbridge.
 - Hazardous goods have legal rules that vary by country. Flag them for separate handling and tell the user to follow their local dangerous goods rules. Do not plan their stowage from this skill.
-- Front axle: 12,000-13,000 lbs max (varies by state)
-- Rear axle(s): 34,000 lbs max
+- Large-truck figures only (NOT for vans, do not use them for a van): front axle about 12,000-13,000 lbs, rear axle(s) about 34,000 lbs. For a van, use the GVWR and axle limits on its plate or in its handbook.
 - Gross Vehicle Weight Rating (GVWR): varies
 - Target: 40% front, 60% rear (general rule)
 
@@ -208,6 +207,7 @@ class SingleStopVehicleLoader:
             sorted_items = self.items
 
         loaded_items = []
+        unplaced_items = []  # every parcel that is not placed is listed here, with a reason
         current_weight = 0
 
         # Simple layer-based loading
@@ -221,7 +221,8 @@ class SingleStopVehicleLoader:
 
             # Check weight
             if current_weight + weight > self.weight_capacity:
-                continue  # Skip item if too heavy
+                unplaced_items.append({'id': item['id'], 'reason': 'over the weight capacity'})
+                continue
 
             # Try to place item
             if current_x + l <= L:
@@ -259,6 +260,9 @@ class SingleStopVehicleLoader:
                 current_x += l
                 current_weight += weight
 
+            else:
+                unplaced_items.append({'id': item['id'], 'reason': 'no space left'})
+
         # Check axle weights
         axle_check = self.check_axle_weights(loaded_items)
 
@@ -267,6 +271,7 @@ class SingleStopVehicleLoader:
             'total_weight': current_weight,
             'items_loaded': len(loaded_items),
             'items_not_loaded': len(self.items) - len(loaded_items),
+            'unplaced_items': unplaced_items,  # show this list in the result
             'utilization': self.calculate_utilization(loaded_items),
             'axle_weights': axle_check
         }
@@ -385,6 +390,8 @@ if __name__ == "__main__":
 
 ### Multi-Stop Vehicle Loading
 
+**What this code does and does not do:** it splits the cargo area into one zone per stop, last stop nearest the door, and lists items that are too big or too heavy as not placed. It does NOT check axle weights and does NOT put heavy items low or near the axle. The axle estimate comes only from the single-stop method above. For a multi-stop load, place heavy items low and near the axle by hand, and check the axle limits yourself.
+
 ```python
 class MultiStopVehicleLoader:
     """
@@ -462,6 +469,9 @@ class MultiStopVehicleLoader:
                         'zone': (zone_start, zone_end)
                     })
                     current_weight += item['weight']
+                else:
+                    # Too heavy for the weight limit: report it, do not skip it silently
+                    unplaced.append(item)
 
             zones.append({
                 'stop': stop,

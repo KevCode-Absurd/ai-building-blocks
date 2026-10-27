@@ -28,11 +28,11 @@ How to start:
 - **A reference manager:** Holds the corrected entries once you accept them, and fills in missing details from a trusted source.
 <!-- /needs -->
 
-## Before you start
+## What to have ready for this job
 
 Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
 
-**You need for this job.** This list replaces the general one above. The source text is the cited papers.
+**You need.** This list replaces the general "Before you start" list above. The source text is the cited papers.
 - The manuscript, with its version or date.
 - The reference list as it stands now.
 - The cited papers, as PDFs or pasted first pages. As many as you have.
@@ -61,6 +61,7 @@ Read each component skill in full before you use it: `source-note-summariser`, `
    - Author names, spelling, year and title agree between the text, the list and the paper.
    - Entries follow the named citation style.
    - Two entries that share most of their title and authors are duplicate candidates. List them as candidates, do not merge them.
+   If a cited paper's year or author list conflicts with the reference list or the text, the paper's own page is the tie-breaker. Flag the entry as a mismatch with the paper and page shown. Do not correct the list silently, and do not choose between the two without the paper.
    For each mismatch, write the issue, the paper and page that settle it, and a suggested fix. Build the source request list from citations with no paper and details a paper does not show. Save `outputs/step-02-proofreader.md`. **Gate:** every suggested fix names a supplied paper. If not, move it to the source requests.
 
 3. **Check and hand back.** Check the result against the list below, then return it in the layout that follows.
@@ -106,7 +107,7 @@ Write `MISSING: <what>` next to the affected line. Carry on with the citations t
 
 Use these first. The tracker link in the general list above is the same tool as the one named here. Suggest one next step as a short question, and say the user can type their own:
 - **Fix the source requests.** Add the missing papers and run this check again on the changed entries.
-- **Keep a record for later revisions.** Use the [Manuscript reference change tracker](https://useaiblocks.com/agents/bibliography-revision-review-assistant), which compares each new version with the last one.
+- **Keep a record for later revisions.** Use the [Manuscript reference change tracker](https://useaiblocks.com/skills/bibliography-revision-review-assistant), which compares each new version with the last one.
 - **Fix the wording.** Run the [Text proofreader](https://useaiblocks.com/skills/proofreader) on the text itself.
 Nothing is edited for them. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.
 

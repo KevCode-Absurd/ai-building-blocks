@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: Rules follow a set pattern, but each needs testing.
 new_slug: ai-app-guardrails-builder
 name: AI app guardrails builder
-summary: Set up guardrails for your AI chatbot with NeMo Guardrails. Get rules set to refuse jailbreaks and private data, with a test plan to confirm each one.
+summary: Set up guardrails for your AI chatbot with NeMo Guardrails. Get rules set to refuse jailbreaks and private data, and a test plan. Fact checks are placeholders you finish.
 job: build-software
 headline: AI app guardrails builder
-subhead: Tell it what your AI app must never say or do. You get guardrail rules for what users send in and what the app sends back, refusal messages and a test plan. It labels any check you must still write yourself.
+subhead: Tell it what your AI app must never say or do. You get guardrail rules for what users send in and what the app sends back, refusal messages and a test plan. It labels any check you must still write yourself. Fact checks and toxicity checks come as placeholders, and you supply the source or service.
 explain: |
   AI chatbot guardrails are rules that sit outside the prompt. They check what a user sends before the model sees it, and what the model says before the user sees it. Because they sit outside the prompt, they are harder to talk your way around.
 
@@ -38,8 +38,9 @@ you_get:
 how_to_use:
   - Write what your app must never do, in plain words. Add any real attack texts you have seen. Use fake names and numbers, never real ones.
   - Check what you need. NeMo Guardrails is a Python package you install, your app needs a model with its own key, and Presidio and LlamaGuard are extra installs.
+  - Stop here before any toxicity step. ActiveFence is a paid outside service that sends your text off your machine. Do not set it up until you have approved the cost and the data leaving your machine. A free option is a hosted moderation API or your own model.
   - Open Claude, ChatGPT or Gemini and paste the skill instructions. It works best when your AI can run Python. If it cannot, every test is marked NOT RUN.
-  - Paste your notes. Answer any question your AI asks. Skipped inputs are listed as missing, not guessed.
+  - Paste your notes. Answer any question your AI asks. Skipped inputs are listed as missing, not guessed. The code in the skill file is sketches, not working guardrails. Do not paste it into a live app.
   - Run the test plan yourself with fake data. Fix any rule that does not give the result the plan expects.
   - Next, run the test plan with fake data and record each NOT RUN result. Then write the placeholder checks before any release.
   - Do not ship until you have written the placeholder checks and tested real attacks. Pair it with the AI agent attack tester.

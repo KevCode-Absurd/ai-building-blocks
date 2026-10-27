@@ -11,7 +11,7 @@ explain: |
 
   From Search Console it takes queries, positions, clicks, impressions and indexed pages. From the live pages it reads titles, descriptions, canonical links (the address you tell Google is the main copy of a page), robots rules (instructions that tell search engines to skip or hide a page) and schema (hidden labels that describe the page). When you compare, it flags ranking drops, pages that dropped out of the index, overwritten metadata and missing markup. This is useful after a redesign, migration or redeploy. If Search Console is missing, it compares pages only and says ranking changes could not be measured.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (nowork-studio) says MIT. Credit goes to nowork-studio and sickn33.
+  Licence: the licence that applies to this copy is CC BY 4.0, as the LICENSE-CONTENT file in this item says. The MIT label in the skill file's header is the original author's label (nowork-studio). Both allow reuse with credit. Credit goes to nowork-studio and sickn33.
 when:
   - You are about to relaunch your site and want a before picture.
   - Traffic dropped after a release and you need to see what changed.
@@ -35,7 +35,10 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Pick a chat that can browse the web. Have a Search Console export or access ready if you can, because the ranking checks depend on it. You need verified access to your site's property there. Without it, the tool only compares pages and cannot measure ranking changes.
   - Paste the skill text into the chat. Say if you want a baseline or a comparison.
   - Give your site address and the key URLs. Include your best landing pages, sales pages and any page a recent release touched.
+  - "First run: the first run only records a baseline. You will see a dated snapshot of your key pages and their search data, and no change report. Comparing starts with the second run, which needs the same URLs and date range."
   - For a comparison, paste your last snapshot and say which dates each one covers. Use the same URLs and date range both times.
+  - If your chat cannot save files, it prints the snapshot in the chat. Copy it into a file you keep, because the next comparison needs it pasted back in.
+  - How often: take a baseline before each release or redesign, and a comparison right after. For a quiet site, compare once a month.
   - Read the critical items first. Check each one on the live page before you act.
   - Hand the repairs to your developer or whoever runs your site's CMS. Then ask for a new baseline and compare it using the same URLs and date range, so the check stays fair.
 output_sample:

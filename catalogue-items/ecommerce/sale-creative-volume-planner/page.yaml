@@ -93,8 +93,9 @@ output_shape: |
   Ads to make: <n> (from your winner rate of <n%>, or MISSING)  Capacity check: <can you make this? yes | no, cap at $...>
 
   MIX BY SHARE OF SPEND
-  Evergreen kept running: <50% of total spend, changeable>
-  Share of the other 50%: Offer statics <~19%>  Offer-badged winners <~18%>  Catalog ads <~12%>  Long educational video <~14% or none>  Creator and founder with sale banner and early access <rest, ~37%>
+  Evergreen kept running: <[EVERGREEN SHARE]% of total spend, the person's choice>
+  Share of the rest: Offer statics <[SHARE]%>  Offer-badged winners <[SHARE]%>  Catalog ads <[SHARE]%>  Long educational video <[SHARE]% or none>  Creator and founder with sale banner and early access <[SHARE]%>
+  (Starting shares come from one agency's sample, not a benchmark. The shares must add to 100.)
 
   OFFER AD RULES
   <readable at thumbnail | end date | brand | offer in first line | feed crop check>
@@ -113,9 +114,9 @@ output_shape: |
 
 tweaks:
   - what: Spend per winner
-    how: Use your own account's figures. The source's examples are in Australian dollars. Evergreen ads ran $4,000 to $8,500 a day, the top ad $12,500, and the planning figure was $5,000 typical and $10,000 to $12,000 for a winner.
+    how: Use your own account's figures from last year's sale. Do not borrow another store's daily spend per ad.
   - what: Your winner rate
-    how: Give your share of ads that become winners. If it is near 5 percent, 12 to 18 winners means roughly 240 to 360 ads. That sum is our maths, not the source's.
+    how: Give your share of ads that become winners. The sum is winners divided by your winner rate. For example, [WINNERS] winners at [WINNER RATE] means [WINNERS] / [WINNER RATE] ads. That sum is our maths, not the source's.
   - what: Ad types you can make
     how: Tell it what you can produce. If you cannot make founder videos, it moves that share to the other types.
   - what: Store size
@@ -142,8 +143,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Meta Ads Manager", why: "Exports spend by ad for last year's sale period."}
-    - {name: "Canva", why: "A fast way to make the offer statics in bulk with a template."}
+    - {name: "Meta Ads Manager", why: "Free to use; you pay only for ad spend. Exports spend by ad for last year's sale period."}
+    - {name: "Canva", why: "Has a free plan. Making many offer statics from one template in bulk may need a paid plan, so check yours first."}
     - {name: "Any good chat AI", why: "Does the sums and builds the phase list from the sheet you paste."}
   inputs:
     - "Last year's sale-period spend by ad, top 50"

@@ -34,7 +34,7 @@ The lesson for any small team: a simple, repeatable process lets you make far mo
 
 ### Good business is art
 
-In *The Philosophy of Andy Warhol* (1975), he wrote that being good in business is the most fascinating kind of art, and that making money, working and good business are all art [S2]. He said he went into business art and wanted to be a business artist [S1]. By the 1970s he charged $25,000 for a commissioned portrait [S1].
+In *The Philosophy of Andy Warhol* (1975), he wrote that being good in business is the most fascinating kind of art, and that making money, working and good business are all art [S2]. He said he went into business art and wanted to be a business artist [S1]. By the 1970s he charged $25,000 for a commissioned portrait [S1]. This figure comes from a reference page and is not checked against a second source.
 
 ### Everyone is equal before a Coke
 
@@ -124,7 +124,7 @@ In the O'Brien interview he says he ate Campbell's soup for lunch for about twen
 
 ### Leaving illustration for fine art
 
-In the 1950s he was a highly successful commercial illustrator [S1]. In the early 1960s he moved into fine art [S4]. Asked why soup, he said he used to drink it, and had the same lunch for twenty years [S8]. The 32 soup cans were shown at the Ferus Gallery in Los Angeles on 9 July 1962 [S8]. Critics called him a fool or a charlatan [S8]. He kept going.
+In the 1950s he was a highly successful commercial illustrator [S1]. In the early 1960s he moved into fine art [S4]. Asked why soup, he is reported to have said he used to drink it, and had the same lunch for twenty years [S8]. This is a reported paraphrase. The 32 soup cans were shown at the Ferus Gallery in Los Angeles on 9 July 1962 [S8]. Critics called him a fool or a charlatan [S8]. He kept going.
 
 ### Painting all 32 flavours
 
@@ -148,7 +148,7 @@ In 1977 he described his early films as a weekly production, with scripts nobody
 
 ### Declaring business art
 
-In 1975 he wrote that good business is the most fascinating kind of art [S2]. He said he wanted to be a business artist, and by the 1970s he charged $25,000 for a commissioned portrait [S1].
+In 1975 he wrote that good business is the most fascinating kind of art [S2]. He said he wanted to be a business artist [S1].
 
 ### Starting a magazine and a box habit
 

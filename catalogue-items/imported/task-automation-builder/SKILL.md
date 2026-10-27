@@ -21,7 +21,7 @@ This skill enables an AI agent to design and implement automations for repetitiv
 
 4. **Write the Automation Code:** Implement the automation using the appropriate tools and languages. Prefer well-established, widely-supported tools: bash/Python for scripts, crontab for scheduling, GitHub Actions or GitLab CI for CI triggers, and standard webhook frameworks for event listeners.
 
-5. **Test and Validate:** Run the automation in a safe environment first. Verify it handles the happy path correctly, then test edge cases: empty inputs, network failures, permission errors, and concurrent executions. Confirm that logging captures enough information for debugging.
+5. **Test and Validate:** Run the automation in a safe environment first. Verify it handles the happy path correctly, then test edge cases: empty inputs, network failures, permission errors, and concurrent executions. Confirm that logging captures enough information for debugging. Report only the tests you actually ran. If you cannot run code here, say so and list the tests the user should run.
 
 6. **Deploy and Monitor:** Deploy the automation to its target environment with appropriate permissions. Set up monitoring or alerting so failures are noticed promptly. Document the automation's purpose, configuration, and how to disable it if needed.
 
@@ -141,8 +141,8 @@ import os
 import json
 import urllib.request
 
-HEALTH_URL = "https://api.example.com/health"
-SLACK_WEBHOOK = os.environ["SLACK_WEBHOOK_URL"]
+HEALTH_URL = os.environ["HEALTH_URL"]  # [YOUR HEALTH CHECK URL]
+SLACK_WEBHOOK = os.environ["SLACK_WEBHOOK_URL"]  # a Slack incoming webhook you create in your Slack workspace
 
 
 def check_health():
@@ -167,7 +167,16 @@ def send_slack_alert(degraded_services):
 
 
 if __name__ == "__main__":
-    health = check_health()
+    try:
+        health = check_health()
+    except Exception as err:
+        # The endpoint could not be reached or its reply could not be read.
+        print(f"Health check failed: {err}")
+        try:
+            send_slack_alert([("health endpoint", f"unreachable: {err}")])
+        except Exception as slack_err:
+            print(f"Could not send the Slack alert either: {slack_err}")
+        exit(2)
     degraded = [
         (name, status)
         for name, status in health.get("services", {}).items()

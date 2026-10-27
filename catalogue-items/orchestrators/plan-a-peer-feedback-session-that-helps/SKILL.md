@@ -30,6 +30,8 @@ How to start:
 
 ## What you need
 
+This list replaces the shared "Before you start" block above. Where that block asks for "Your question", give the task or criteria and the group below. Where it asks for "A draft", give the drafts. This workflow writes no lesson plan.
+
 - **The drafts** (required): the drafts to be reviewed, or a short description of each if they are not ready.
 - **The task or criteria** (required): what reviewers should look for.
 - **The reviewers, group size and time** (required): who reviews whom is decided in step 1. If the time is missing, ask once. If still missing, write `MISSING: session time`.
@@ -55,9 +57,10 @@ Save each step as `outputs/step-NN-<skill>.md` before the next step starts.
 
 ## If something is missing
 
-Write `MISSING: <what>` next to the affected result and keep going on work that does not depend on it. Stop a step when a required input is absent, and hand back the partial files with the exact input needed to resume.
+Write `MISSING: <what>` next to the affected result. If a step's required input is absent, stop that step only. Run later steps only if they do not depend on it (step 3 and step 4 do not depend on step 2). Hand back the partial files with the exact input needed to resume.
 
 ## What you hand back
+The session plan is this workflow's plan output. No separate lesson plan is written.
 
 ```
 SESSION PLAN
@@ -87,14 +90,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Teaching reflection prompt writer](https://useaiblocks.com/skills/teaching-reflection-prompts).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## After this
-
-Nothing has been shared with reviewers. Offer one next step and say the person can type their own:
-
-- After the session, bring the typed comments back to run the sorting step and fill the record.
-- Plan the writer's rewrite of one draft using the sorted list.
-- Write feedback students can act on with the [Prepare feedback students can act on](https://useaiblocks.com/workflows/prepare-feedback-students-can-act-on) workflow.
+Use this note first, then the shared "After this" list above. Nothing has been shared with reviewers. After the session, bring the typed comments back to run the sorting step and fill the record. Then plan the writer's rewrite of one draft from the sorted list.
 
 ## Check before you hand it back
 

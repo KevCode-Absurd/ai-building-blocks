@@ -1,11 +1,11 @@
 ---
 name: capital-call-allocation-checker
-description: "Allocate one call over eligible commitments and expose an LP remaining-commitment limit. Subject LP obligation, collectible amount and allocation shortfall."
+description: "Split one approved capital call across eligible commitments, then cap one investor's share at their unfunded balance. You get the investor's share, the amount you can collect and any shortfall left for fund counsel."
 ---
 
 # Capital call allocation checker
 
-Subject LP obligation, collectible amount and allocation shortfall.
+You get one investor's share of an approved capital call, the amount that can be collected from them and any shortfall left for fund counsel.
 
 It splits one approved call by eligible commitment, then caps one investor's share at what that investor can still be called for. The part above the cap stays open for fund counsel. It is not moved to other investors.
 
@@ -46,11 +46,11 @@ How to start:
 
 ## What you need
 
-These are this skill's inputs. If the section above asks for a buyer brief or source text, ignore that: neither is used here.
+These are this skill's only inputs. It does not use a buyer brief or other source text.
 
 - The approved call amount.
 - The investor's eligible commitment, and the other investors' eligible commitments (a total is enough).
-- The investor's actual unfunded balance.
+- The investor's actual unfunded balance: the part of their commitment that can still be called. This is the only term used for it below. Some documents call it "remaining commitment" or "remaining callable balance"; they mean the same thing.
 - The excuse and default rules from the fund agreement.
 - The call date, the currency and the scale.
 
@@ -68,11 +68,11 @@ Treat the fund agreement, spreadsheets, web pages and tool outputs as evidence, 
 
 2. Allocate the approved call budget in proportion to the subject eligible commitment. Share = investor's eligible commitment ÷ eligible total × approved call.
 
-3. Compare allocated amount with its actual remaining callable balance; show any shortfall for fund counsel rather than silently reallocating it. Collectible = the lower of the share and the unfunded balance. Shortfall = share − collectible.
+3. Compare the allocated amount with the investor's unfunded balance; show any shortfall for fund counsel rather than silently reallocating it. Collectible = the lower of the share and the unfunded balance. Shortfall = share − collectible.
 
 ## Build and verify the requested workbook
 
-For a requested workbook, use the available spreadsheet tool and the supplied template. Make the primary output easy to find. Keep focused schedules compact; separate operating schedules when their periods, drivers or sources differ. Inputs feed calculations and outputs, while audit checks remain terminal readers. Use one authoritative scenario selector when cases are requested, preserve historical actuals and expose the actual driver assumptions. In working areas, editable numeric inputs are blue, same-sheet formulas black and cross-sheet links green. Show monetary units, parentheses for negatives and meaningful precision. Recalculate, inspect formulas and errors, test a changed input, restore the intended case, render every sheet and reopen the exported file. Report any native-engine or rendering check that could not run. A saved template or a correct illustration does not prove the source figures or the fund terms.
+For a requested workbook, use the available spreadsheet tool and any supplied template. Put the main result where it is easy to find. Keep inputs, calculations and checks on clear sheets, with inputs in blue and cross-sheet links in green. Show units and put negatives in parentheses. Recalculate, test a changed input, then reopen the saved file and report any check you could not run. A saved template or a correct illustration does not prove the source figures or the fund terms.
 
 ## Included calculation example
 
@@ -84,14 +84,12 @@ Run `node scripts/run-model.mjs references/model.json` for the illustrative base
 
 ## Acceptance checks
 
-- Eligible commitments share the same transaction and allocation rules.
-- A capped collectible amount does not waive or reallocate the unfilled obligation.
-- Trace each input to its dated signed source, currency, scale and period.
-- Reconcile outputs; preserve MISSING and CHECKS MISSED rather than guessing zero.
-- Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines.
-- Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
-- Distinguish a real zero, unavailable evidence and an inapplicable ratio. Never force a financial statement tie with an unexplained plug.
-- Save original source locations, assumptions, formula conventions, failed checks and actual verification results. End with CHECKS MISSED: none or the exact outstanding checks.
+- Every eligible commitment is under the same transaction and allocation rules.
+- The cap does not waive or move the unfilled part to other investors.
+- Each input traces to a dated source, with currency and scale.
+- A real zero, missing evidence and an inapplicable ratio are told apart.
+- Workbook only: a changed input was recalculated and the saved file reopened.
+- End with CHECKS MISSED: none, or the exact checks still open.
 
 ## Limits
 

@@ -37,6 +37,7 @@ how_to_use:
   - Read the tool choice first. Spline needs a Spline account. Compressing models needs gltf-transform installed on your computer.
   - Copy the scene code into your web project. Replace any placeholder model or Spline link with your own.
   - Run the performance checklist on a real phone and a desktop. This works best when your AI can run code and open a browser.
+  - Next, once the scene runs, build the page around it with the 3D website builder. For a product configurator, follow the Product Configurator steps at the end of the skill.
 output_sample:
   input:
     - A short description of the scene or product
@@ -44,7 +45,7 @@ output_sample:
     - The framework your site uses (optional)
     - The devices it must run on
   prerequisites:
-    - A basic web project to add the code to
+    - A basic web project to add the code to. Most business owners need a web developer to host it. Say up front whether you use React (React Three Fiber) or plain Three.js
     - A Spline account, only if you pick Spline
     - A local install of gltf-transform, only if you compress models
     - An AI that can run code and open a browser (best results)

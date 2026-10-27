@@ -38,10 +38,10 @@ Then ask for more detail: "Now give me a bit more detail. You might include, how
 
 ### Workflow
 From there, guide the user through the early stages of problem selection and evaluation:
-- **Skill 1: Intuition Pumps** - Refine and strengthen the idea
-- **Skill 2: Risk Assessment** - Identify and manage project risks
-- **Skill 3: Optimization Function** - Define success metrics
-- **Skill 4: Parameter Strategy** - Determine what to fix vs. keep flexible
+- **Step 1: Intuition Pumps** - Refine and strengthen the idea
+- **Step 2: Risk Assessment** - Identify and manage project risks
+- **Step 3: Optimization Function** - Define success metrics
+- **Step 4: Parameter Strategy** - Determine what to fix vs. keep flexible
 
 See `references/01-intuition-pumps.md`, `references/02-risk-assessment.md`, `references/03-optimization-function.md`, and `references/04-parameter-strategy.md` for detailed guidance.
 
@@ -63,10 +63,10 @@ Then ask: "Now give me a bit more detail. You might include, however briefly:
 
 ### Workflow
 From there, guide the user through troubleshooting and decision tree navigation:
-- **Skill 5: Decision Tree Navigation** - Plan decision points and navigate between execution and strategic thinking
-- **Skill 4: Parameter Strategy** - Fix one parameter at a time, let others float
-- **Skill 6: Adversity Response** - Frame problems as opportunities for growth
-- **Skill 7: Problem Inversion** - Strategies for navigating around obstacles
+- **Step 5: Decision Tree Navigation** - Plan decision points and navigate between execution and strategic thinking
+- **Step 4: Parameter Strategy** - Fix one parameter at a time, let others float
+- **Step 6: Adversity Response** - Frame problems as opportunities for growth
+- **Step 7: Problem Inversion** - Strategies for navigating around obstacles
 
 Always include workarounds that might be useful whether or not the problem can be fixed easily.
 
@@ -89,10 +89,10 @@ Then ask: "Now give me a bit more detail. You might include, however briefly:
 
 ### Workflow
 From there, draw on the specific modules from the problem choice framework most appropriate to the question:
-- **Skills 1-4** for future project planning (ideation, risk, optimization, parameters)
-- **Skills 5-7** for current project navigation (decision trees, adversity, inversion)
-- **Skill 8** for communication and synthesis
-- **Skill 9** for comprehensive workflow orchestration
+- **Steps 1-4** for future project planning (ideation, risk, optimization, parameters)
+- **Steps 5-7** for current project navigation (decision trees, adversity, inversion)
+- **Step 8** for communication and synthesis
+- **Step 9** for comprehensive workflow orchestration
 
 See the complete reference materials in the `references/` folder.
 
@@ -137,7 +137,7 @@ Skills help move ideas rightward (more feasible) and upward (more impactful).
 
 ---
 
-## The 9 Skills Overview
+## The 9 Steps Overview
 
 | Skill | Purpose | Output | Time |
 |-------|---------|--------|------|
@@ -145,7 +145,7 @@ Skills help move ideas rightward (more feasible) and upward (more impactful).
 | 2. Risk Assessment | Identify and manage project risks | Risk Assessment Matrix | 3-5 days |
 | 3. Optimization Function | Define success metrics | Impact Assessment Document | 2-3 days |
 | 4. Parameter Strategy | Decide what to fix vs. keep flexible | Parameter Strategy Document | 2-3 days |
-| 5. Decision Tree Navigation | Plan decision points and altitude dance | Decision Tree Map | 2 days |
+| 5. Decision Tree Navigation | Plan decision points and when to move between daily work and big-picture thinking | Decision Tree Map | 2 days |
 | 6. Adversity Response | Prepare for crises as opportunities | Adversity Playbook | 2 days |
 | 7. Problem Inversion | Navigate around obstacles | Problem Inversion Analysis | 1 day |
 | 8. Integration & Synthesis | Synthesize into coherent plan | Project Communication Package | 3-5 days |
@@ -156,31 +156,31 @@ Skills help move ideas rightward (more feasible) and upward (more impactful).
 ## Skill Workflow
 
 ```
-SKILL 1: Intuition Pumps
+STEP 1: Intuition Pumps
          | (generates idea)
          v
-SKILL 2: Risk Assessment
+STEP 2: Risk Assessment
          | (evaluates feasibility)
          v
-SKILL 3: Optimization Function
+STEP 3: Optimization Function
          | (defines success metrics)
          v
-SKILL 4: Parameter Strategy
+STEP 4: Parameter Strategy
          | (determines flexibility)
          v
-SKILL 5: Decision Tree
+STEP 5: Decision Tree
          | (plans execution and evaluation)
          v
-SKILL 6: Adversity Planning
+STEP 6: Adversity Planning
          | (prepares for failure modes)
          v
-SKILL 7: Problem Inversion
+STEP 7: Problem Inversion
          | (provides pivot strategies)
          v
-SKILL 8: Integration & Communication
+STEP 8: Integration & Communication
          | (synthesizes into coherent plan)
          v
-SKILL 9: Meta-Skill
+STEP 9: Meta-Skill
          (orchestrates complete workflow)
 ```
 
@@ -202,7 +202,7 @@ SKILL 9: Meta-Skill
 
 ### Graduate Students (Primary Audience)
 - **When:** Choosing thesis projects, qualifying exams, committee meetings
-- **Focus:** Skills 1-3 (ideation, risk, impact) + Skill 9 (complete workflow)
+- **Focus:** Steps 1-3 (ideation, risk, impact) + Step 9 (complete workflow)
 - **Timeline:** 2-4 weeks for comprehensive planning
 
 ### Postdocs
@@ -212,12 +212,12 @@ SKILL 9: Meta-Skill
 
 ### Principal Investigators
 - **When:** New lab, new direction, mentoring trainees, grant cycles
-- **Focus:** Skills 1, 3, 4, 6 (ideation, impact, parameters, adversity)
+- **Focus:** Steps 1, 3, 4, 6 (ideation, impact, parameters, adversity)
 - **Timeline:** Ongoing, integrate into lab culture
 
 ### Startup Founders
 - **When:** Company inception, pivot decisions, investor pitches
-- **Focus:** Skills 1-4 (ideation through parameters) + Skill 8 (communication)
+- **Focus:** Steps 1-4 (ideation through parameters) + Step 8 (communication)
 - **Timeline:** 1-2 weeks for initial planning, revisit quarterly
 
 ---
@@ -240,7 +240,7 @@ Detailed skill documentation is available in the `references/` folder:
 
 ---
 
-## Expected Outcomes
+## Hoped-for outcomes (not promised)
 
 ### Immediate (After Completing Workflow)
 - Clear project vision

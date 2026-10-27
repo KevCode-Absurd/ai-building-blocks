@@ -20,7 +20,7 @@ when:
 not_for:
   - Your buyer is ready to buy and a short offer ad would do. Ask your AI for a short ad instead of a long script.
   - "You need the script read aloud and tightened for speech: use the Ad script read-aloud editor."
-  - "You have the script and want it checked against Meta rules: use the Meta ad policy checker."
+  - "You have the script and want it checked against Meta rules: use the Meta ads compliance checker."
 
 you_give:
   - The brief, the length you want, where it will run, and the buyer stage
@@ -41,6 +41,7 @@ how_to_use:
   - Say the length and where it runs, for example "5 minutes, YouTube, skippable".
   - Read the stock list first. If it chose a shorter length, it says what a longer one would need.
   - Read the whole script aloud with a timer before it goes to the editor.
+  - Before filming, check every health or results claim against your local ad rules and your proof file.
 output_sample:
   input:
     - "Your brief: length wanted, where it runs, and why people buy"
@@ -237,7 +238,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Claude", why: "Keeps a long stock list and every source straight across a script of 1,500 words."}
-    - {name: "ElevenLabs", why: "Reads the draft aloud in a steady voice, so you can time it and hear slow stretches before recording."}
+    - {name: "ElevenLabs", why: "A paid service that needs an account. Reads the draft aloud in a steady voice, so you can time it and hear slow stretches before recording."}
   inputs:
     - "The questions from your FAQ page, so the doubts list holds what people ask before buying"
     - "Where viewers dropped off in a past long video, from your video stats, so the new script fixes that spot"

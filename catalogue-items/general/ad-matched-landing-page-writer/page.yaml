@@ -21,6 +21,7 @@ not_for:
   - "You have no ad and no page yet: write the ad first with the Fact-based ad copy writer, then come back here."
   - "You want to check a finished page against a list: use the Landing page 30-point checker."
   - "You want to check ad rules before you publish: use the Meta ads compliance checker."
+  - "You do not have a confirmed price, shipping or renewal term: this skill will not guess one. Confirm each against your live checkout first."
 
 you_give:
   - Your facts, such as what you sell, prices and offer names, guarantee, delivery and shipping terms, the claims you may make and any rating you hold
@@ -143,7 +144,7 @@ example:
     PAGE BRIEF
     Buyer: quit powders and pills, wants one habit that lasts
     Reason to buy: it's the one you'll keep taking
-    Offer: Subscribe & Save, Low Sugar, $29.99 first box
+    Offer: Subscribe, Low Sugar, $29.99 first box
     Ad's opening line: "One Step I Never Skip"
 
     FIRST SCREEN
@@ -166,14 +167,13 @@ example:
     1 You'll keep doing it, because there's nothing to mix
     Tear a pack, eat the handful. 95% of surveyed users take it at least
     4 to 6 times a week.
-    2 One pack covers the powder and the pill shelf
+    2 What is in one pack, and what customers swapped for it
     60+ ingredients, 21 vitamins and minerals and 6 g prebiotic fiber.
     "I also stopped buying separate probiotic gummies, b12 gummies, and
     multivitamin gummies. I just take these now..." (R5)
     3 Most people like the taste. Some need a few days
     "I thought the first pack I tried tasted terrible, but after the third
-    day they started tasting better" (R18). Sensitive stomach? Start with
-    Low Sugar. Sugar-Free uses sugar alcohols.
+    day they started tasting better" (R18). Sugar-Free uses sugar alcohols.
     4 You can pause or cancel any time
     Your first order has a 30-day money-back guarantee.
 

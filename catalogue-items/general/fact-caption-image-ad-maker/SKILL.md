@@ -57,7 +57,7 @@ How to start:
 
 If you can make images in this chat (ChatGPT and Gemini can), make the picture from your prompt once the prompt passes its checks, then check the picture against the same list and say what to fix. If you can't (Claude can't draw unless an image tool is connected), say that once, in one line, before you start, so nobody waits for a picture that won't come. Hand back the prompt, and at the end tell them how to finish it:
 - **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture, or paste this whole skill there so it writes the prompt and makes the picture in one go. ChatGPT uses GPT Image, Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
-- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Higgsfield:** a paid service. It needs an account and its own plan or credits. Paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
 - **Claude Code:** with an OpenAI or Google key saved as `OPENAI_API_KEY` or `GEMINI_API_KEY`, offer to send the prompt to that image API and save the file. Keys: platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
 
 If an image tool is connected, offer to make the picture with it, and ask before you spend credits.
@@ -65,7 +65,7 @@ If an image tool is connected, offer to make the picture with it, and ask before
 
 ## Steps
 1. **Follow the house rules.**
-2. **Take the one fact the story turns on.** One number or one finding. If the story uses two, pick the one closest to the reader's doubt.
+2. **Take the one fact the story turns on.** One number or one finding. If the story uses two, pick the one closest to the reader's doubt. If a buyer persona is given, use the doubt it names.
 3. **Check it against its source.**
    - The number is the source's own: 40.1% stays 40.1%, never "about 40%" or "nearly half".
    - The verbs are the source's: "rose in a study" stays that, never "boosts" or "proves".
@@ -77,7 +77,7 @@ If an image tool is connected, offer to make the picture with it, and ask before
 5. **Write the source line:** who and how, in a few words ("2025 study, 120 adults, placebo-controlled"). Small, but readable.
 6. **Choose the scene:** the everyday moment the fact is about, or the doubt it answers. Brief it as a phone photo with calm space at the bottom for the strip.
 7. **Brief the strip:** a plain band across the lower part, white or black at partial opacity, one plain typeface. The way a phone editor adds a caption.
-8. **Say how to make it.** Best: make the photo, then add the strip in a phone editor or design tool, so every character is exact. If the image tool adds it, check the number digit by digit.
+8. **Say how to make it,** using "Making the picture" above. Best: make the photo with no words, then add the strip in a phone editor or design tool, so every character is exact. If the image tool adds the strip, check the number digit by digit.
 9. **Check it.** Run "Check before you hand it back" and fix any check that fails where you can. List each check still missed under `CHECKS MISSED`, one line each, or write "none".
 
 ## What you hand back

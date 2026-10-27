@@ -136,6 +136,7 @@ A bundle is **conformant** with OKF v0.1 if:
 ```bash
 # 1. Create a bundle directory
 mkdir my-knowledge && cd my-knowledge
+mkdir -p datasets
 
 # 2. Create a concept file
 cat > datasets/sales.md << 'EOF'

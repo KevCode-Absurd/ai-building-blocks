@@ -54,7 +54,7 @@ output_sample:
       contains: "The escalation procedure: triggers, evidence, receiving role, acceptance, fallback and closure, with gaps shown."
     - name: step-02-stakeholder-update-writer.md
       contains: Update drafts for your team and for customers, with confirmed facts kept apart from estimates.
-    - name: Hand-back summary
+    - name: step-03-hand-back-summary.md
       contains: Files saved, deadlines still blank, checks not run and one next step.
 how_it_works:
   - title: Process and SOP writer

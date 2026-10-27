@@ -5,6 +5,10 @@ description: "Paste your product link. Get all 19 growth channels compared, a fe
 
 # Find your SaaS growth channel
 
+**What you need to start.** A link to your product page is enough, but your AI must be able to open it. If it cannot, paste the page text, your price and who the buyer is. No paid tool, API key or scraping is needed: the channel tests are plans for you to approve and run, and nothing here sends, spends or posts.
+
+**When not to use it.** You already have steady paying customers and want to review one running channel: use the Customer acquisition experiment reviewer (https://useaiblocks.com/skills/traction-experiment-reviewer). You sell goods through a store, not software: use the ecommerce workflows. You want a single launch plan for a new product: use the Find your first SaaS customers workflow (https://useaiblocks.com/workflows/find-your-first-saas-customers).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

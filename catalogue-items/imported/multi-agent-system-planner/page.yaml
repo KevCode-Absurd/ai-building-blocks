@@ -10,6 +10,8 @@ explain: |
   A choice of design for a team of AI agents, with the trade-offs laid out so you pick the one that fits your job. It also tells you when one agent is enough.
 
   The main point is that extra agents are for splitting up the context, not for playing office roles. The skill compares three patterns: a supervisor who directs workers, a swarm that hands work sideways, and layers of managers. For each it names where it breaks: bottlenecks, drift between agents and errors that spread. It adds ways to get agreement without flattery, then recommends one design with a handoff protocol.
+
+  Three terms it uses. Context isolation means each agent only holds the information its own part needs. The telephone game is when a supervisor re-words what a worker said and loses detail. Sycophancy is when agents just agree with each other instead of checking. The skill quotes three figures: 95% of results explained by three factors, supervisors 50% worse, and about 15 times the tokens. They are the original author's and have no source link, so check them before you quote them.
 when:
   - One agent runs out of room and loses track of earlier work.
   - Your job splits into parts that need different tools.

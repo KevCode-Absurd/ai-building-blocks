@@ -11,7 +11,11 @@ explain: |
 
   The plan comes first. It sets a course title, a short description and 6 to 8 ordered lessons. Each lesson has a goal, 2 to 4 objectives, 2 or 3 flashcards and 1 or 2 quiz questions. It then builds three files: index.html, styles.css and script.js. The page has a lesson list on the left, a reader, a sources list and a final review.
 
+  Lesson facts that do not come from your sources come from the AI's general knowledge. They are not checked, so verify every fact before you share the course.
+
   It will not make up sources. If you give it links or notes, it shows them as real links. If you give none, the sources card says so, and you should check the facts before you share the course.
+
+  This is a copy of a skill by DAIR.AI, shared by sickn33. The licence that applies to this copy is CC BY 4.0, as the LICENSE-CONTENT file in this item says. The MIT line in the skill file is the author's own header (DAIR.AI) and covers the author's own work. This copy, as shared in sickn33's collection, follows the LICENSE-CONTENT file. Keep the credit if you reuse it.
 when:
   - You need a quick course for your team on a new tool.
   - You want to turn what you know into a study page for customers or clients.
@@ -34,10 +38,14 @@ you_get:
   - A list of facts and sources to check before you share
 how_to_use:
   - Open Claude Code, or another AI that can save files. Paste in this skill.
-  - Say the topic and who the learners are. Paste your notes or links, if you have them.
+  - "Have ready: the topic, who the learners are and what they know now, and any notes or links to base it on. Paste them in."
   - Read the course plan before the page is built. Reorder or cut lessons if the order is wrong.
   - Open index.html in your browser. Click each lesson, flip the flashcards and answer the quiz questions.
-  - Check every fact against your own sources. Then host the three files, or send them as they are.
+  - Check every fact against your own sources. Facts not taken from your notes or links come from general knowledge and may be wrong. Then host the three files, or send them as they are.
+  - "Next, write a set of recall questions for spaced practice with the Retrieval quiz writer, once the facts are checked."
+next:
+  - retrieval-quiz-writer
+  - course-scope-sequence
 output_sample:
   input:
     - The topic

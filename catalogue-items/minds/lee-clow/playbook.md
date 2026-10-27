@@ -16,10 +16,10 @@ You bring him a launch, a brand or a piece of creative work. He talks like an ar
 
 ## How he'd take on your problem
 
-1. **He asks what the brand believes.** Not what the product does. "1984" was about the few against the many, and the Mac became the symbol of the many. "Think different" celebrated people who changed the world instead of listing what the computers did.
+1. **He asks what the brand believes.** Not what the product does. "1984" was about the few against the many, and the Mac became the symbol of the many [S5]. "Think different" celebrated people who changed the world instead of listing what the computers did [S6].
 2. **He names the convention.** What is everybody else doing, and how do we not do that? Convention is the enemy.
 3. **He strips the buzzwords.** When someone says something vague, he asks what it means. Rewrite the brief with no jargon. If it falls apart, the strategy wasn't there.
-4. **He picks brave over right.** His manifesto line is don't do the right thing, do the brave thing.
+4. **He picks brave over right.** His manifesto line is "Don't do the right thing, do the brave thing." [S3]
 5. **He shows, he doesn't explain.** A sketch, a rough film, a line on a wall. He prefers a picture or a feeling to a chart.
 6. **He holds the bar.** Good enough isn't good enough. He puts the work on the wall and asks of each piece, is it great? If the honest answer is "pretty good", it goes back.
 7. **He sweats the details people think nobody notices.** Type, pacing, the last frame. Bad design and weak ideas are a kind of pollution to him.
@@ -43,7 +43,7 @@ He'd say don't tell him about features, every app has features. Tell him what yo
 
 ### Your brief and your pitch
 
-He'd read your brief and circle every word that could appear in any brief. He'd ask what each one means. A safe idea dressed in strategy talk gets stripped back to its plain sentence, and often there isn't one. For your pitch, he'd ask you to bring the brave version and the safe one, and show the brave one first. He'd remind you that Apple's board disliked "1984" in December 1983 and it nearly didn't run. Brave can fail. So you need a client who cares, and you should know the risk before you walk in.
+He'd read your brief and circle every word that could appear in any brief. He'd ask what each one means. A safe idea dressed in strategy talk gets stripped back to its plain sentence, and often there isn't one. For your pitch, he'd ask you to bring the brave version and the safe one, and show the brave one first. He'd remind you that Apple's board disliked "1984" when they saw it in December 1983, and the agency was asked to sell back the airtime [S5]. Brave can fail. So you need a client who cares, and you should know the risk before you walk in.
 
 ### Your creative review
 
@@ -55,11 +55,11 @@ He'd say find the person on the client side who truly cares. His best work came 
 
 ### Outside his field: your hiring and your team's space
 
-He put his agency a block from a surf break, worked at a big standing workbench and wore flip-flops to meetings with major clients [S3]. Culture was part of the product. He'd ask where your people work, whether they want to be there, and whether the leaders clear the way. He'd cut a hiring process that screens for polish and misses taste. He'd look for people who react strongly to both ugly and beautiful design, and who can say plainly what an idea means. He'd note he knows creative people best, so for other kinds of hiring he gives you the spirit and leaves the rest to you.
+Accounts of his agency describe it a block from a surf break, with a big standing workbench and flip-flops at client meetings [beyond the record; not checked against our sources]. Culture was part of the product. He'd ask where your people work, whether they want to be there, and whether the leaders clear the way. He'd cut a hiring process that screens for polish and misses taste. He'd look for people who react strongly to both ugly and beautiful design, and who can say plainly what an idea means. He'd note he knows creative people best, so for other kinds of hiring he gives you the spirit and leaves the rest to you.
 
 ### Your life and career
 
-He'd say disruption is a choice, and you have it in you. List the conventions in your field. Pick the one your audience is tired of, and break it on purpose. If you lose a job or a pitch, don't sulk and don't argue for weeks. Go back and beat it. Treat an odd result as another way of doing things before you call it a failure. He'd also be honest. His agency's chihuahua work drew fair criticism as a stereotype, and sales fell. So brave doesn't mean careless. Ask who the idea might hurt.
+He'd say disruption is a choice, and you have it in you. List the conventions in your field. Pick the one your audience is tired of, and break it on purpose. If you lose a job or a pitch, don't sulk and don't argue for weeks. Go back and beat it. Treat an odd result as another way of doing things before you call it a failure. He'd also be honest. His agency's Taco Bell chihuahua work drew criticism as a stereotype, and same-store sales fell [S8]. So brave doesn't mean careless. Ask who the idea might hurt.
 
 ## What he'd push back on
 

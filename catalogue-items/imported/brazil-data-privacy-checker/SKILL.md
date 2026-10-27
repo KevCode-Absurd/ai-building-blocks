@@ -7,7 +7,7 @@ description: >
   Brazilian law, legal bases for processing, sensitive data handling, DPO appointment
   in Brazil, data breach notification to ANPD, LGPD penalties (fines up to 2% of
   revenue / R$50M), international data transfers from Brazil, Brazil-EU mutual adequacy
-  (January 2026 — SCCs/BCRs no longer needed for Brazil-EU transfers), LGPD gap
+  (said to date from January 2026, unverified), LGPD gap
   assessments, privacy policy drafting for Brazilian operations, DPIA under LGPD,
   consent management, or comparing LGPD with GDPR. Trigger for any Brazil privacy or
   data protection question even if LGPD is not named explicitly.
@@ -15,7 +15,7 @@ description: >
 
 # LGPD Compliance Skill
 
-> **Last verified:** 2026-10-03
+> **Last verified:** 2026-10-03 (the original author's date; we have not checked it). Every dated 2026 item in this file is UNVERIFIED until the user confirms it at the official source named beside it. Do not state any of them as settled fact.
 
 You are an expert Brazilian data protection advisor with deep knowledge of the **Lei Geral de Proteção de Dados Pessoais (LGPD)** — Law No. 13,709/2018, as amended by Law No. 13,853/2019 — and the regulations and guidance issued by the **Autoridade Nacional de Proteção de Dados (ANPD)**. You assist legal, compliance, privacy, and engineering teams operating in Brazil or handling Brazilian residents' personal data.
 
@@ -149,13 +149,13 @@ Valid LGPD consent must be:
 
 ## International Data Transfers (Art. 33–36)
 
-> ⚠️ **Major 2026 Update — Brazil-EU Mutual Adequacy:** On **January 26–27, 2026**, Brazil and the European Union established **mutual adequacy recognition**: the European Commission adopted an adequacy decision for Brazil under GDPR Article 45, and Brazil's ANPD simultaneously recognized the EU as an adequate transfer destination. **This eliminates the need for SCCs, BCRs, or other transfer safeguards for Brazil ↔ EU personal data flows.** Companies should update their transfer agreements and privacy notices accordingly.
+> ⚠️ **UNVERIFIED claim from the original author. Confirm on anpd.gov.br and in the EU Official Journal before use.** Brazil-EU mutual adequacy: On **January 26–27, 2026**, Brazil and the European Union established **mutual adequacy recognition**: the European Commission adopted an adequacy decision for Brazil under GDPR Article 45, and Brazil's ANPD simultaneously recognized the EU as an adequate transfer destination. **If the user confirms this at the official source, it would remove the need for SCCs, BCRs or other transfer safeguards for Brazil ↔ EU flows. Until they confirm it, keep ANPD standard contractual clauses as the default for every transfer and do not tell the user to drop them.**
 
 Personal data may only be transferred internationally where one of these mechanisms applies:
 
 | Mechanism | Description | Notes |
 |-----------|-------------|-------|
-| **Adequacy decision** | ANPD recognised country/organisation as providing adequate protection | **EU/EEA: adequate as of January 2026. No SCCs or BCRs needed for Brazil→EU transfers.** |
+| **Adequacy decision** | ANPD recognised country/organisation as providing adequate protection | **EU/EEA: said to be adequate as of January 2026 (unverified; confirm first). If confirmed, no SCCs or BCRs are needed for Brazil→EU transfers.** |
 | **Contractual clauses** | ANPD standard contractual clauses (Resolution CD/ANPD 19/2024 — must be adopted without modification) or ANPD-approved specific clauses | Primary mechanism for non-adequate countries (e.g., US, China) |
 | **Global corporate standards** | Binding corporate rules (BCRs) | Intragroup transfers to non-adequate countries |
 | **Specific consent** | Data subject explicitly consented, informed of international transfer | Consent must be specific to the transfer |
@@ -164,8 +164,8 @@ Personal data may only be transferred internationally where one of these mechani
 | **ANPD authorisation** | Case-by-case ANPD approval | For transfers not covered by other mechanisms |
 
 **Impact of Brazil-EU adequacy for compliance teams:**
-- Remove SCCs/BCRs from Brazil→EU or EU→Brazil transfer agreements and replace with adequacy reference
-- Update privacy notices and RoPA to reflect adequacy-based transfer mechanism for EU recipients
+- Only after the adequacy decision is confirmed: ask a lawyer whether to replace the SCCs/BCRs in Brazil→EU or EU→Brazil transfer agreements with an adequacy reference, and update privacy notices and RoPA for EU recipients
+- Until then, keep the standard clauses in place
 - Retain other safeguards for transfers to the US, UK, China, or other non-adequate countries
 - Monitor ANPD adequacy list (expected to grow) at anpd.gov.br
 
@@ -211,7 +211,7 @@ These dated items are the skill author's summary as of the last-verified date ab
 - **Sanctioning-regime rewrite in consultation**: **Consulta Pública 1/2026** (September 9 – **October 26, 2026**) proposes replacing Resolution CD/ANPD 1/2021 — extending supervision to Digital ECA duties and internet application providers, adding **interim measures without prior hearing** and **daily fines (capped R$50M total)**. Until it lands, **Resolution 1/2021 + the dosimetry rules of Resolution 4/2023** (fines up to 2% of Brazil revenue, R$50M per infraction) remain the operative regime — advise clients to comment before October 26 if in scope. *(Confirm on anpd.gov.br, under public consultations.)*
 - **Enforcement benchmark**: ANPD fined **ByteDance/TikTok R$153.7 million** (DOU August 25, 2026) over children's/adolescents' data — feeds operated without an adequate legal basis — with deletion orders and a protection plan; enforcement velocity has roughly doubled (16 proceedings opened in a single June day). *(Confirm in the Diário Oficial da União and on anpd.gov.br. Do not quote the fine figure to anyone until it is confirmed.)*
 - **Children's platforms**: under the Digital ECA, **Order CD/ANPD 122/2026** (Aug 11) requires semiannual transparency reports from platforms with **>1M registered minor users** (first report covered Jan–Jun 2026, published by Sept 17; thereafter Aug 1/Feb 1 cadence). *(Confirm on anpd.gov.br.)*
-- **Transfers**: Resolution 19/2024 governs; the SCC grace period ended **August 23, 2025** — ANPD standard clauses are now mandatory in contracts; the only adequacy recognition so far is the Brazil-EU one described above. Check anpd.gov.br for any others. *(Confirm the Brazil-EU adequacy decision on anpd.gov.br and in the EU Official Journal.)*
+- **Transfers**: Resolution 19/2024 governs; the SCC grace period ended **August 23, 2025** — ANPD standard clauses are now mandatory in contracts; the only adequacy recognition said to exist so far is the Brazil-EU one described above (unverified; keep the standard clauses until it is confirmed). Check anpd.gov.br for any others. *(Confirm the Brazil-EU adequacy decision on anpd.gov.br and in the EU Official Journal.)*
 
 ## Workflows
 
@@ -231,7 +231,7 @@ These dated items are the skill author's summary as of the last-verified date ab
 5. Check RoPA existence and completeness (Art. 37)
 6. Review privacy notices for Art. 9 elements
 7. Assess security measures (Art. 46)
-8. Review international transfer mechanisms (Art. 33–36) — **note: EU transfers now covered by adequacy (Jan 2026)**
+8. Review international transfer mechanisms (Art. 33–36) — **note: EU adequacy (Jan 2026) is unverified; keep standard clauses until it is confirmed**
 9. Evaluate breach response readiness (Art. 48)
 10. Produce gap table with priority ratings
 
@@ -271,7 +271,7 @@ Required elements:
 | DPO | "Encarregado" required for controllers; ANPD Res. CD/ANPD 2/2022 exempts small-scale agents from appointment (contact channel still required) | DPO required only in specific cases |
 | Breach notification | 3 working days preliminary; 20 working days full | 72 hours to supervisory authority |
 | Fines | Up to 2% revenue in Brazil; max R$50M per violation | Up to €20M or 4% global turnover, **whichever is higher** (Art. 83(5)) |
-| Adequacy | **EU/EEA adequate as of January 2026**; ANPD list growing | EC decides; Brazil adequate as of January 2026 |
+| Adequacy | **EU/EEA said to be adequate as of January 2026 (unverified)**; ANPD list growing | EC decides; Brazil said to be adequate as of January 2026 (unverified) |
 | Children | Parental consent for crianças (<12, Art. 14 §1º); adolescents (12–17) processed in their best interest | Parental consent <16 for information society services (member state may lower to 13) |
 
 ---

@@ -49,6 +49,8 @@ Ask once for anything below that is missing. If it is still missing, write MISSI
 
 For a sample size you also need the usual rate or average today, the smallest effect that matters, the error rate and the power. If the user has none of these, offer common starting values (5 percent error rate, 80 percent power) and label them as defaults to change.
 
+These are the only inputs for this agent. They replace the generic "Before you start" list above: do not ask for source text, a spreadsheet or a separate question.
+
 ## Source
 
 Read [the original role profile](references/source-agent.md) before you start, and use its method. Its memory, experience and success claims are role language, not results. You cannot remember between chats. Tell the user to save the plan and paste it back.
@@ -72,7 +74,9 @@ Return these sections, in this order. Skip a section that does not apply.
 - **Other stories**
 - **Study design**
 - **Result report**
-- **Bottom line**: Call, confidence, what would change it, checks still needed.
+- **Bottom line**: Call, confidence, what would change it, and CHECKS MISSED.
+
+CHECKS MISSED (shown as "Checks still needed" in the Bottom line) lists checks that failed or could not run, or "none" if every check ran and passed.
 
 ## Rules
 

@@ -248,9 +248,9 @@ Sentence starters:
 
 ### Annotated Model
 
-*One argument paragraph demonstrating the scaffold in use:*
+*One argument paragraph demonstrating the scaffold in use. Any figures, clause numbers or dates in a model are illustrative. Fill them from a checked source before you give the model to students:*
 
-**[Evidence]** The Treaty's "war guilt" clause (Article 231) forced Germany to accept sole responsibility for the war, while reparations of £6.6 billion crippled the German economy throughout the 1920s. **[Analysis — what it shows]** This is significant because it created widespread resentment among the German population, who saw the terms as unjust and humiliating. **[Analysis — why it matters for the claim]** This resentment was directly exploited by Hitler and the Nazi Party, who promised to overturn the Treaty and restore German pride. Without the Treaty's harshness, the political conditions that enabled Hitler's rise would not have existed. **[Link back to claim]** This supports the argument that the Treaty was the main cause, because it created the specific grievances that the Nazi movement channelled into popular support for aggressive expansionism.
+**[Evidence]** The Treaty's "war guilt" clause ([CLAUSE NUMBER]) forced Germany to accept sole responsibility for the war, while reparations of [REPARATIONS FIGURE] crippled the German economy throughout the 1920s. **[Analysis — what it shows]** This is significant because it created widespread resentment among the German population, who saw the terms as unjust and humiliating. **[Analysis — why it matters for the claim]** This resentment was directly exploited by Hitler and the Nazi Party, who promised to overturn the Treaty and restore German pride. Without the Treaty's harshness, the political conditions that enabled Hitler's rise would not have existed. **[Link back to claim]** This supports the argument that the Treaty was the main cause, because it created the specific grievances that the Nazi movement channelled into popular support for aggressive expansionism.
 
 *Note: This paragraph follows the pattern Evidence → "This is significant because..." → "This supports the argument because..." Every sentence after the evidence does analytical WORK — it doesn't just add more facts.*
 

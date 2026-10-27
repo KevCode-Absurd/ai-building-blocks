@@ -14,7 +14,11 @@ license: "MIT"
 license_source: "https://github.com/davidondrej/skills/blob/main/LICENSE"
 ---
 
+<!-- Licence note: this copy is shared under CC BY 4.0 (see LICENSE-CONTENT). The MIT line in the header above is the original author's, kept as the upstream source. -->
+
 # Interview-Style Doc Building
+
+> The `risk: critical` label in the header is the author's. It flags that this skill creates and edits files. Give your AI access to one folder only, and back up any file you want it to patch.
 
 The user's preferred mode for creating durable strategic docs. AI does NOT propose content — AI asks one question, the user answers, AI patches the file, AI asks the next question. The file IS the conversation's output, updated incrementally.
 
@@ -24,7 +28,7 @@ The user's preferred mode for creating durable strategic docs. AI does NOT propo
 - Filling out a structured doc the user explicitly wants to author themselves.
 - Quarterly/annual reviews where the user's words go into the file.
 
-**NOT for:** day planning (use `day-plan`), task triage (`organize-tasks`), or anything where AI proposes content first.
+**NOT for:** day planning (use a day planner), task triage (use a task list), or anything where AI proposes content first.
 
 ## The Loop
 
@@ -61,8 +65,8 @@ After each answer:
 
 For ranked lists, append one rank at a time:
 ```
-1. **Business** — Q2 #1 goal: ...
-2. **Health** — get below 81.0 kg, sleep 9h/day, ...
+1. **[AREA]** — [PERIOD] #1 goal: [THE USER'S WORDS]
+2. **[AREA]** — [THE USER'S WORDS]
 ```
 Each rank gets patched in as the user confirms it.
 
@@ -76,11 +80,13 @@ Each rank gets patched in as the user confirms it.
 
 ## Pairing with Other Skills
 
-These skills are not in this library. They are named only for contrast:
+Next step: when the file is complete, save it where you keep long-lived notes and reopen it at your next review. To turn it into actions, ask your AI for a task list based on it.
 
-- `day-plan` — different pattern (task triage), not interview-style.
-- `organize-tasks` — Todoist-specific.
-- `memory-management` — separate from this; persona/preferences go to memory.
+These are named only for contrast. None of them are in this library:
+
+- A day planner is a different pattern (task triage), not interview-style.
+- A task organizer is a different job.
+- Personal preferences belong in your AI's memory settings, not in this document.
 
 ## Limitations
 

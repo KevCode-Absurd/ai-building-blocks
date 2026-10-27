@@ -11,7 +11,7 @@ explain: |
 
   It keeps three questions apart: did the AI gather evidence, does the cited source actually say that, and is the claim true. Paste the answer text, the original question and any date or country that matters. Every web page and file is treated as untrusted. Links are screened before they open. It does not log in for you or touch private chats. Using the web tools your AI already has, it writes a report with one row per claim.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (ASI2030) says Apache-2.0. Credit goes to ASI2030 and sickn33.
+  Licence: CC BY 4.0 applies to this copy, as the LICENSE-CONTENT file in this folder says. That file governs. The author's own file header (ASI2030) says Apache-2.0, which is the author's label for the original. The LICENSE-CONTENT file also lets a more specific upstream notice apply, and the original author's notice is Apache-2.0. If you reuse the text, keep both the CC BY 4.0 credit and the Apache-2.0 notice. Credit goes to ASI2030 and sickn33.
 when:
   - An AI gave you facts and you need to know which ones hold up.
   - You asked two or three AIs the same question and the answers differ.
@@ -33,13 +33,13 @@ you_get:
   - Links to the public pages that back each finding
   - A comparison of where several AIs agree or clash
 how_to_use:
-  - Open Claude, ChatGPT or Gemini with web search turned on. The check needs a web-enabled AI. Web search can need a paid plan or a setting you turn on, so check before you start.
-  - Paste the skill text into the chat.
+  - This skill is a written method only. It has no browser tool, report maker or login steps of its own, so your AI runs the checks with the web tools it already has. Open Claude, ChatGPT or Gemini with web search turned on. The check needs a web-enabled AI. Web search can need a paid plan or a setting you turn on, so check before you start.
+  - Paste the skill text into the chat once per chat. It is long, so send it on its own first. Then send your question and the AI answers after it.
   - Paste your question, then the AI answer. Label each answer with the AI that wrote it.
   - Add the date or country that matters, if there is one.
   - Read the claim matrix first. Open the links for any claim that matters to you.
   - The check opens public web pages and PDFs, which can hold bad or unsafe content. Your AI treats them as untrusted. Do not give it passwords or log-in details.
-  - For contradicted claims, fix them before you use the answer. For insufficient claims, find better proof or ask an expert in that field. Drop or fix every claim that fails before you send the answer on, and re-run the check on the new text.
+  - After the claim matrix, fix or drop every contradicted claim. For insufficient claims, find better proof or ask an expert in that field. Then re-run the check on the revised answer before you send it on.
 output_sample:
   input:
     - The question you asked the AI

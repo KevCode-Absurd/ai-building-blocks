@@ -39,7 +39,7 @@ how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste your product facts, figures, claims and colours underneath.
   - Say the point you want to prove, or ask it to pick one from your facts.
-  - Make the image from the prompt with your product photo attached, then set the words in a design tool.
+  - Make the image from the prompt with your product photo attached, then set the words in a design tool. Image tools like ChatGPT, Gemini and Higgsfield may need a paid plan or credits.
   - Show it to someone for two seconds. If they can't say the point, ask for a simpler proof picture.
 output_sample:
   input:

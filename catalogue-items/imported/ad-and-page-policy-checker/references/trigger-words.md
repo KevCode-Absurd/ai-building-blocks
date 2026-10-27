@@ -18,13 +18,12 @@ Quick reference for compliance checking. Organized by category.
 
 | Trigger Word/Phrase | Compliant Substitution |
 |---|---|
-| Diabetes | Type two (do NOT say "diabetes") |
-| Diabetics | People with blood sugar concerns |
+| Diabetes / Diabetics | Platforms flag disease names. Do not just rename the condition. Fix the claim itself, check the platform's current policy and get a compliance review. |
 | High blood sugar | Erratic blood sugar, blood sugar concerns |
 | Blood sugar spike | Blood sugar fluctuations |
 | Regulate blood sugar | Helps support blood sugar, promotes balanced blood sugar |
 | Manage blood sugar | Help sustain blood sugar, support balanced glucose levels |
-| Cure diabetes / reverse diabetes | Help support blood sugar wellness |
+| Cure diabetes / reverse diabetes | Do not make this claim at all. Remove it. |
 
 ## Aging & Skin
 
@@ -39,10 +38,7 @@ Quick reference for compliance checking. Organized by category.
 
 | Trigger Word/Phrase | Compliant Substitution |
 |---|---|
-| Alzheimer's / dementia | Memory, brain health, brain fog |
-| Cancer | [Cannot mention — reframe entirely] |
-| Heart disease | Heart health, cardiovascular wellness |
-| Arthritis | Joint health, joint comfort |
+| Alzheimer's / dementia, cancer, heart disease, arthritis | Platforms flag disease names and disease hints. Do not rename the condition to get past a review. Remove any claim you cannot support, check the platform's current policy and get a compliance review. |
 | Cure / treat / diagnose | Help support, may help, can promote |
 | Grow hair | Help support hair growth |
 | Better digestion | Good digestion, digestive wellness |

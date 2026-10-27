@@ -11,7 +11,7 @@ explain: |
 
   The skill uses the photopea.js wrapper instead of hand-written message passing. It gives scripts for common jobs such as renaming text layers from their contents, exporting each layer as its own PNG, and editing text, selections, filters, colours and paths. A detailed guide holds the full steps, safety notes and checks, and the skill says to read it first. It needs web development skills.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (yikuansun) says MIT. Credit goes to yikuansun and sickn33.
+  Licence: two licences apply, as the LICENSE-CONTENT file says. The code and scripts are MIT, which is what the author's own file header (yikuansun) says. The written text of this copy is CC BY 4.0. Keep the credit to yikuansun and sickn33 with any copy you share.
 when:
   - You are adding image editing to your product.
   - You need to export every layer of a design as a separate file.
@@ -36,9 +36,10 @@ how_to_use:
   - Open a chat with your AI and paste this skill. If your AI can read files, upload the skill folder instead.
   - Tell it what edits your app needs, such as swapping text or exporting layers.
   - Share the page or app where the editor will sit, and a sample file to open.
-  - Ask your AI for the embed code and one script per edit.
-  - Add the code to your page and test it in a browser. This step needs a browser, and code running if you want your AI to test it.
-  - Check Photopea's terms before you ship your app. Then test the exported files, and pass the PNG files or layer data (JSON) to your storage or print step. If your code passes user text, links or layer names into a script, run them through JSON.stringify first, as the skill's limits require. The skill text is MIT licensed and the collection is CC BY 4.0, so keep the credit with any copy you share.
+  - Ask your AI for the embed code and one script per edit. For the watermark script, replace the [YOUR LOGO URL] placeholder with a link to your own logo. Host the logo where a browser may load it from another site (cross-origin), or Photopea cannot open it.
+  - Add the code to your page in this order. First, a container div with a fixed width and height. Second, load photopea.js and call Photopea.createEmbed on that div. Third, open a file with openFromURL. Fourth, send a script with runScript and read the result. Fifth, export with exportImage. Test it in a browser. Your AI needs a browser and code running to test it itself.
+  - If Photopea's terms do not allow your use, or the scripts keep failing, switch to a server-side image library and ask your AI to redo the edits there.
+  - Check Photopea's terms before you ship your app. Then test the exported files, and pass the PNG files or layer data (JSON) to your storage or print step. If your code passes user text, links or layer names into a script, run them through JSON.stringify first, as the skill's limits require. Keep the credit with any copy you share.
 output_sample:
   input:
     - What image edits your app needs

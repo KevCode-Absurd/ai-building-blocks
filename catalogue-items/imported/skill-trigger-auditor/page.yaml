@@ -10,6 +10,8 @@ explain: |
   A graded report card for your AI skills that shows which ones will actually run when someone asks. A skill can be written well and still never fire, because its short description is vague or a sibling skill wins first. This tool catches that.
 
   It grades each skill from A to F on its name and description. You can also type a sample request and see which skill it would pick and why. A collisions view lists groups of skills that shadow each other. A fix option adds a clearer "use when" line to weak descriptions. It runs from the command line, so you need Node or Homebrew.
+
+  Licence: the skill text in this copy is CC BY 4.0, as the LICENSE-CONTENT file says. The skill-issue tool you install is the original author's code, and that is MIT, which is the licence the skill file header names. Credit goes to mishanefedov and sickn33.
 when:
   - A skill you wrote never seems to run and you do not know why.
   - You want to know which skill a request like "deploy to prod" will pick.
@@ -33,7 +35,9 @@ how_to_use:
   - Read the A to F grades. Start with the F and C skills.
   - "Test a request: add --why followed by your sample request in quotes. Check the margin between the top two skills."
   - Run it with --collisions to see which skills shadow each other.
-  - Run it with --fix to add "Use when" lines. Read every edit before you keep it.
+  - Run it with --fix to add "Use when" lines. It edits your skill files in place, so commit or back up the folder first. Read every edit before you keep it.
+  - Next, re-run the audit after you edit any flagged skill. To stop weak descriptions in future, add the --json check to your build pipeline so it fails when it finds errors.
+  - The optional --llm flag judges with a local claude or codex command line tool, which must already be installed. Leave it off to stay offline.
 output_sample:
   input:
     - The folder that holds your skills

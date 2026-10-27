@@ -7,9 +7,11 @@ job: secure-code
 headline: Open-source license checker
 subhead: A report on the licenses in your project's dependencies, showing which ones clash, what each requires of you, and where the risk sits. It helps you avoid a surprise when you publish or sell your software.
 explain: |
+  This is an imported MIT-licensed skill. It spots issues from the files you paste, so check each package's own LICENSE file before you rely on it.
+
   A report on the licenses in your project's dependencies, showing which ones clash, what each requires of you, and where the risk sits. It helps you avoid a surprise when you publish or sell your software.
 
-  The skill reads your dependency file and follows the chain to every package underneath. It finds each license, then checks how they fit together given how you share your software: as a service, a download, a library or an internal tool. It flags strong copyleft licenses such as GPL and AGPL and weaker ones such as LGPL and MPL. The report lists notices you must include and suggests fixes. It is not legal advice.
+  The skill reads only the files you paste. It reads the license of each package it can see in them, and marks any license it cannot see as unverified. It then checks how they fit together given how you share your software: as a service, a download, a library or an internal tool. It flags strong copyleft licenses such as GPL and AGPL and weaker ones such as LGPL and MPL. The report lists notices you must include and suggests fixes. It is not legal advice.
 
   This is Burhan Sebin's skill, renamed, with the method unchanged. Licence: MIT (see the LICENSE file).
 when:
@@ -35,6 +37,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in this skill's instructions.
   - Paste your dependency file, such as package.json. You need only the pasted files. No paid service, account or API key is involved.
   - "Say what license your project uses and how you share it: as a service, a download, a library or an internal tool."
+  - Check each license it reports against that package's own LICENSE file before you rely on it.
   - Read the risk flags first. Treat clashes as likely problems and check them with a lawyer before you act.
   - If your AI cannot read your whole project, paste the lock file too so it can see packages underneath.
   - Send the report to a qualified lawyer before you ship. For known security holes in the same packages, use the Dependency risk scanner.

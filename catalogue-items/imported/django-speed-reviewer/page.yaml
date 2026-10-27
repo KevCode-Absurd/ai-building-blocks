@@ -11,18 +11,20 @@ explain: |
 
   The skill ranks problems by impact. N+1 queries and unbounded querysets come first, because they break at scale. Next come missing indexes and write loops. Minor patterns are skipped. Before reporting anything, it traces the data flow, checks for existing fixes and thinks about data volume. A finding marked critical must really be critical, or it is downgraded or dropped. It reads your code and does not need a running site. It does not measure runtime, so confirm any gain with a profiler. The code it reads may be private, so only paste what you are allowed to share.
 
-  This is a copy of the django-perf-review skill from sickn33's collection. The licence that applies to this copy is the one in the LICENSE-CONTENT file in this item, CC BY 4.0. The skill file's header also names Apache 2.0 for the original skill. Both allow reuse with credit.
+  This is a copy of the django-perf-review skill from sickn33's collection. The licence that applies to this copy is the one in the LICENSE-CONTENT file in this item, CC BY 4.0. The skill file's header also names Apache 2.0 for the original skill. Both allow reuse with credit, so keep the credit to sickn33. Item files and page text follow the CC BY 4.0 file.
 when:
   - A page gets slower as your data grows.
   - You suspect an N+1 query behind a slow list view.
   - Your server runs out of memory when loading big tables.
   - You want a trusted review without a pile of maybe-issues.
 not_for:
+  - "What it cannot see: your settings, caching layers, database query logs or the live site. Findings stop at what the code shows."
   - "You need measured timings from a running site: use a profiler such as django-debug-toolbar."
   - "You want to test how your site handles heavy traffic: use a load testing tool, since this review only reads code."
   - "Your code is not Django, or the slowness is not from the database: ask a developer to look at that part."
 you_give:
   - Your Django views, models and queries
+  - Your Django and Django REST framework versions, and your database (such as PostgreSQL or SQLite)
   - The slow page or endpoint (optional)
   - Rough data sizes (optional, the review will not guess them)
 you_get:
@@ -33,8 +35,9 @@ you_get:
 how_to_use:
   - Open your AI tool. Paste in the skill text, or upload the skill folder if your tool takes files.
   - Add your Django views, models, serializers and templates for the slow area. Share the whole project if your AI can read files. It reads code only and assumes the Django ORM, and Django REST framework if you use it.
+  - Tell your AI your Django version, whether you use Django REST framework, and which database you run. The findings depend on them.
   - Say which page or endpoint is slow, and roughly how many rows your biggest tables have. Both are optional but help.
-  - Ask your AI to review the code for Django speed problems using this skill.
+  - 'Ask your AI: "Review this Django code for N+1 queries, unbounded querysets, missing indexes and write loops, using the django-perf-review rules in this skill. Report only problems you can prove from the code."'
   - Read each finding and check the evidence matches your code. Fix the top one first, then run the review again.
   - To confirm the gain, time the page before and after with a profiler such as django-debug-toolbar.
 output_sample:

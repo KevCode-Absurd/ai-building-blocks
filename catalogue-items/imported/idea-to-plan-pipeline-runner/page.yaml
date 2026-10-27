@@ -31,14 +31,15 @@ you_get:
   - A product brief
   - A phased plan with stop criteria
 how_to_use:
-  - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
+  - You need an AI that can search the web and save files. The skill file says WebSearch and WebFetch. That means your AI's own web search and page reading, and any tool with those works. No paid service or key is needed beyond your AI plan.
+  - Add the skill to your AI. In Claude, upload it as a skill in your settings. In ChatGPT, add the files to a project. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
   - Give your AI your raw idea and say how technical you are. It sorts the idea by size and writes a questions file.
   - Answer every question before research starts. If you skip some, it must say which assumptions it made.
   - Let it research and write the product brief, then the phased plan. It works best when your AI can search the web and save files. If yours cannot, it should go on only with the assumptions it states, and mark every number it could not source as [assumption]. Check every number in the research against its source.
   - Save the four files in order: questions, research, brief, plan. Review the stop criteria after the first phase.
   - Next, hand the brief to the Idea to dev brief writer or the Product requirements writer.
 not_for:
-  - You want a quick gut-check, not four files. Use the Idea validation analyst.
+  - You want a quick gut-check, not four files. Use the Idea sharpener.
   - You already know what to build and only need requirements. Use the Product requirements writer.
   - You need a short brief a developer can build from. Use the Idea to dev brief writer.
 output_sample:

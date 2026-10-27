@@ -13,6 +13,7 @@ when:
   - Your board asks for a retention number and you have only total dollars raised.
 you_give:
   - Dated giving records, current thank-you process, receipt wording, and donor contact preferences.
+  - Your country and its tax-receipt rules. The skill is built around US rules, so supply your own country details before you draft receipts.
 you_get:
   - A thank-you guide, donor contact plan, retention measures, and lapsed-donor campaign outline.
 how_it_works:
@@ -32,7 +33,7 @@ how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Add a table of gifts (donor ID, gift date, amount), your current receipt and thank-you text, and your contact preferences. A CSV or spreadsheet works.
   - Ask for the retention numbers first. Then fix receipt speed, then add the first-gift welcome, then plan the lapsed-donor outreach.
-  - Have an accountant or lawyer check the receipt wording for your country. The receipt rules in the skill follow US tax rules.
+  - You get tables for retention and the stewardship matrix, an outline for the donor path and win-back plan, and short draft letters. Have an accountant or lawyer check the receipt wording for your country. The receipt rules in the skill follow US tax rules.
   - Measure retention again after one full giving cycle, and report it to your board next to total dollars raised.
 not_for:
   - "You are moving new prospects toward a first gift. Use the Nonprofit donor relationship planner."

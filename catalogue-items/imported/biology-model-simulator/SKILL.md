@@ -1,7 +1,7 @@
 ---
 name: simbiology-simulate-model
 description: "Simulate SimBiology models — ODE, stochastic (SSA), scenarios, and sensitivity analysis. Use when asked to run, simulate, predict, explore what-if, or identify influential parameters."
-license: https://www.mathworks.com/content/dam/mathworks/license/pmrl/license.md
+license: BSD-2-Clause with a MathWorks-products-only term (see LICENSE.md). Original reuse licence https://www.mathworks.com/content/dam/mathworks/license/pmrl/license.md
 metadata:
   author: MathWorks
   version: "2.0"
@@ -28,9 +28,9 @@ The SimBiology model, and the cases you want to run. If the model came from the 
 
 ## When NOT to Use
 
-- Model construction or diagram layout (use `simbiology-build-model`)
-- Parameter estimation from data (use `simbiology-fit-model`)
-- NCA / AUC / Cmax from data (use `simbiology-fit-model`)
+- Model construction or diagram layout (use `simbiology-build-model`, a separate MathWorks skill; in this library use Biology model builder)
+- Parameter estimation from data (use `simbiology-fit-model`, a separate MathWorks skill; in this library use Biology model fitter)
+- NCA / AUC / Cmax from data (use `simbiology-fit-model` or Biology model fitter)
 
 ## Must-Follow Rules
 

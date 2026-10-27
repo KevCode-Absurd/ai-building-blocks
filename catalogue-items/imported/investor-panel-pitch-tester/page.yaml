@@ -37,6 +37,7 @@ how_to_use:
   - Type /shark, then your idea. Add price, costs and customers so far. Add --investors and a number from 2 to 10 if you want.
   - Read the one-line size check. Five investors means 11 helper calls, and each counts toward your plan usage.
   - Let the panel run. Then read BOARD.md and start with the first item on the homework list.
+  - If an investor comes back with NO DECISION, run a new session with a fuller pitch file. Add price, costs and traction.
   - Rewrite your pitch file with the new answers and run a fresh session. Check whether the panel's votes change.
   - Before a real investor meeting, take the revised pitch and BOARD.md to a mentor or advisor and ask them to test it again.
 output_sample:
@@ -48,6 +49,7 @@ output_sample:
     - Claude Code, which can run helper AIs and code
     - Python 3 installed
     - A folder where files can be saved
+    - Room on your plan. Five investors means 11 helper calls, and each counts toward your plan usage
   output:
     - name: pitch.md
       contains: Your idea and every fact you gave, written so the investors and founder can read it alone.

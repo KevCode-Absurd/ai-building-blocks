@@ -1,8 +1,8 @@
 # Regulatory Notification Deadlines
 
-Reference table for incident notification deadlines under major regulatory frameworks. The notification clock starts at the moment an incident is declared, not at investigation completion.
+Reference table for incident notification deadlines under major regulatory frameworks. Each framework sets its own start for the clock (see the Notification Deadline column: discovery, confirmation or a materiality decision). None waits for the investigation to finish.
 
-**Operational rule:** If the scope of a breach is unclear at declaration time, assume the most restrictive applicable deadline and confirm scope within the first response window. Document the assumption and its resolution in the incident record.
+**Operational rule:** If the scope of a breach is unclear when you declare the incident, assume the most restrictive applicable deadline and confirm scope within the first response window. Document the assumption and its resolution in the incident record.
 
 ---
 

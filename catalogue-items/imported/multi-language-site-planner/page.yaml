@@ -32,10 +32,11 @@ you_get:
   - Right-to-left layout notes
 how_to_use:
   - "Gather first: your list of languages and regions, traffic or sales per market if you have it, your current URLs, and who can translate."
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. No code running or paid tool is needed.
+  - Open Claude, ChatGPT or Gemini and paste in the full contents of this item's SKILL.md file. No code running or paid tool is needed.
   - Paste in your gathered details. If something is missing, your AI should ask you before it plans.
   - Read the URL choice and the translation workflow first. Check that you can keep up with them.
   - Give the plan to your web developer. Use it to build the site and to test each language before launch.
+  - Once the plan is approved, build one language first. Then run a technical SEO check on it, such as the Technical SEO auditor, to confirm the hreflang tags before you add the rest.
 output_sample:
   input:
     - The languages and regions you want, such as German for Germany

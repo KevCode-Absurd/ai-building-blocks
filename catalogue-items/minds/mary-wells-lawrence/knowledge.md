@@ -32,13 +32,13 @@ How she applied it: by mid-1967, a year after opening, the agency had 14 clients
 
 She told TIME in 1967 that her agency did not chase clients. Clients came to it, and it took only the ones it couldn't resist [S4]. She said companies such as Western Union and La Rosa spaghetti came asking for a hit like Braniff or Alka-Seltzer [S5]. Confidence was part of the brand.
 
-How she applied it: in 1968 Trans World Airlines moved its account, worth about $18 million a year, to her agency. Wells Rich Greene had not even entered the contest that eight leading agencies had spent months on. The win took the agency's billings past $90 million [S6].
+How she applied it: in 1968 Trans World Airlines moved its account, reported as worth about $18 million a year, to her agency (a figure from one page, unconfirmed). Wells Rich Greene had not even entered the contest that eight leading agencies had spent months on. The win took the agency's billings past $90 million [S6].
 
 ### Turn a weakness into the joke
 
 Her agency was known for honest, self-mocking humour. TIME described its first campaign made fully in house, for Benson & Hedges 100s, as self-mocking. The ads made fun of the product itself [S5]. Philip Morris credited the ads with the fastest start of any of its brands since Marlboro [S5].
 
-How she applied it: sales of Benson & Hedges reportedly rose from 1 billion cigarettes in 1966 to 14 billion in 1970 [S2]. Her agency also wrote Bic's "Flick your Bic" and Midas's "Trust the Midas touch" [S2].
+How she applied it: one reference page says Benson & Hedges sales rose sharply between 1966 and 1970 [S2]. We could not check the figures, so we give none. Her agency also wrote Bic's "Flick your Bic" and Midas's "Trust the Midas touch" [S2].
 
 ### Learn from the best, then leave to do it your way
 
@@ -50,7 +50,7 @@ How she applied it: she started Wells Rich Greene after she was denied a promoti
 
 She saw that a place could be sold like a brand, with one simple feeling at its heart. In 1976 New York State's commerce department hired Wells Rich Greene, and the "I Love New York" campaign launched in July 1977 under her direction [S8]. Milton Glaser drew the heart logo, and Steve Karmen wrote the song [S8].
 
-How she applied it: the logo became a widely known symbol, sold on T-shirts and copied so often that the state filed nearly 3,000 objections to imitators by 2005 [S8]. The slogan became the state's official one [S8].
+How she applied it: the logo became a widely known symbol, sold on T-shirts and copied so often that the state reportedly filed nearly 3,000 objections to imitators by 2005 [S8] (a figure from one page, unconfirmed). The slogan became the state's official one [S8].
 
 ### Write for the person who buys
 

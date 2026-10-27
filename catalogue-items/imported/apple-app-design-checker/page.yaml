@@ -47,7 +47,7 @@ output_sample:
     - What your app is for
   output:
     - name: Findings by principle
-      contains: Each problem is tied to one of Apple's design principles, such as content first, accessibility or privacy.
+      contains: A table with the columns screen, principle, finding, fix and accessibility impact. Each problem is tied to one of Apple's design principles, such as content first, accessibility or privacy.
     - name: Reference file and section
       contains: Each finding names the guideline file it comes from, such as accessibility.md or color.md, when you gave your AI those files. Without them it says the finding is from general knowledge.
     - name: Fixes for color, type and icons

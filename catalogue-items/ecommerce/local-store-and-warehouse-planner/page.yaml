@@ -20,7 +20,7 @@ when:
 not_for:
   - "Your range is bulky or seasonal with many sizes: the sample order does not fit, so ask a freight or fulfilment firm for quotes first."
   - "Your home market sales are still unstable: fix that first, then come back to this plan."
-  - "You only want to know which country to enter first: use a general overseas market ranking step, not a store and warehouse plan."
+  - "You only want to know which country to enter first: use the Overseas market planner, not a store and warehouse plan."
 
 you_give:
   - Sales and traffic by country from your analytics

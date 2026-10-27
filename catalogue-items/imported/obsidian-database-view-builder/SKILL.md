@@ -14,13 +14,26 @@ Read [the detailed guide](references/detailed-guide.md) before executing this sk
 
 ## What you need
 
-How you want your notes filtered and shown. If you have note templates or a property list from an earlier step, filter and group on those properties.
+- Obsidian with the Bases feature turned on.
+- The tags, folders or properties that pick out the notes to show.
+- The columns you want, and any calculations such as days until due.
+- Optional: a note template or property list from an earlier step. Filter and group on those properties.
 
 
 ## When to Use
 - Use when creating or editing `.base` files in Obsidian.
 - Use for database-like note views with filters, formulas, summaries, or cards/tables.
 - Use when the user asks about Obsidian Bases specifically.
+
+## When Not to Use
+
+- You only want a plain list of notes: use a manual list or Obsidian's search.
+- You already use Dataview queries and want to keep them: this skill writes Bases files only.
+- Your notes have no tags, folders or properties to filter on: add those first.
+
+## What you get
+
+A `.base` file with filters, formulas, views and summaries. Ask the person to open it in Obsidian and check that each view loads before they rely on it. The `risk: critical` label above is the collection's own tag. This skill only writes one text file.
 
 ## Complete Examples
 

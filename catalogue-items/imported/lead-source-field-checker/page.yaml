@@ -7,6 +7,8 @@ job: track-numbers
 headline: Lead source field checker
 subhead: A yes or no on whether your CRM's source fields are good enough to link leads to the ads that brought them. Give it CRM rows and ad history rows, plus a binding that says which CRM fields join to which ad account, platform and entity type.
 explain: |
+  This is a third-party skill, copied under the MIT licence. The five verdicts mean: propose, the field can join to an ad key. corroborate, the field is filled but does not join to an ad key. reject, the field fails the checks. capture missing, a field that should hold ad data is empty. pre-window, only the recent rows join well.
+
   A yes or no on whether your CRM's source fields are good enough to link leads to the ads that brought them. Give it CRM rows and ad history rows, plus a binding that says which CRM fields join to which ad account, platform and entity type. Joins are never guessed from a bare ID.
 
   It measures how complete and consistent the fields are, then returns one verdict per field: propose, corroborate, reject, capture missing or pre-window. Only counts, rates and shape summaries are kept, never raw customer rows. It does not prove causal attribution. It needs Node to run the checks and the thresholds you set.
@@ -30,12 +32,20 @@ you_get:
   - Gaps in what is captured
   - Counts you can share without customer data
 how_to_use:
-  - Install Node on your computer, or use an AI tool that can run Node code.
+  - Install Node on your computer, or use an AI tool that can run Node code. A current version (18 or newer) is the safe choice. The skill expects its own folder layout, with a references folder and a scripts folder, so keep the downloaded folder as it is. Your pass marks go in config.thresholds, and all nine values are required.
   - Download the skill folder and put your CRM export and ad history export inside it.
-  - Write a binding for each CRM to ad join. Use your real field names, and name the ad account, platform and entity type.
+  - "Write a binding for each CRM to ad join. Use your own names. A binding has six keys, and this is the shape to fill in: crm_source_system = [YOUR CRM], crm_source_scope = [YOUR CRM ACCOUNT], ad_source_system = [YOUR AD PLATFORM], ad_source_scope = [YOUR AD ACCOUNT], platform = [PLATFORM], entity_type = [campaign, ad set or ad]. Every key needs a value. Never guess one from a bare ID."
+  - Also name the date window and its timezone, such as a start date, an end date and a timezone like Europe/London. Dates must be written in ISO-8601 form with Z or an offset.
   - Set your pass marks in config.thresholds. The skill will not guess them.
   - Run node scripts/run-checks.mjs, or ask your AI to run it.
   - Read the verdict for each field. Fix tracking where a field is rejected or missing before you build attribution.
+  - "Next: fix the fields marked capture missing or reject first, since no join can work on them. Then change your tracking, export fresh rows and run the check again. A field marked corroborate shows the data is captured but does not join to an ad key. Plan your attribution only on the fields marked propose."
+output_shape: |-
+  Field | Verdict | Confidence | Fill rate | Exact match rate | Diagnostic codes
+  <CRM field> | <propose, corroborate, reject, capture_missing or pre_window> | <high or not> | <% of rows filled> | <weighted and distinct rates> | <codes>
+  Row counts: <CRM rows, valid in window, malformed, outside window>
+  Shape summary per field: <counts per value shape, never raw values>
+  Diagnostic codes seen: <population_below_threshold, fuzzy_match_not_used, invalid_join_value, malformed_timestamp, outside_window, sf_internal_fk, outbound_label_excluded>
 output_sample:
   input:
     - Your CRM lead rows, with the source fields you want to check

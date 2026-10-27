@@ -11,6 +11,8 @@ explain: |
 
   It works through eight areas in order: query speed, connections, security and row-level access, table design, locking, data access, monitoring and advanced features. For each problem it opens the matching rule file from Supabase and shows your SQL next to a better version. The rules suit any Postgres database, not only Supabase.
 
+  Licence: the written text of this copy is shared under CC BY 4.0 (see LICENSE-CONTENT). The rules were written by Supabase, whose own licence is MIT, as the skill file says. Keep the credit to Supabase and sickn33 with any copy you share.
+
   Use it to review a whole set of queries and a schema. For one slow query you want rewritten, the Postgres query tuner is the quicker route.
 when:
   - A page or report is slow and you do not know which query is the cause.
@@ -34,7 +36,7 @@ you_get:
   - A way to test each fix on a copy of your data
 how_to_use:
   - Gather your table definitions and your slowest queries. If you can, run EXPLAIN ANALYZE on a slow query in Postgres and copy what it prints.
-  - Open Claude, ChatGPT or Gemini. Paste the skill text. If your AI takes file uploads, attach the references folder too, so it can open each rule file.
+  - Open Claude, ChatGPT or Gemini. Paste the skill text. If your AI takes file uploads, attach the references folder too, so it can open each rule file. If you cannot attach it, your AI works from general Postgres knowledge and marks those findings "rule file not available".
   - Paste your tables first, then your queries, then any EXPLAIN ANALYZE output. Say how big the tables are, if you know.
   - Read the ranked table at the top. Start with the first finding. Ask your AI to explain any line you do not follow.
   - Test each change on a copy of your database. Your AI cannot run SQL on your database from a chat.

@@ -16,6 +16,7 @@ when:
   - You want to know if a request needs a full legal review.
   - You need a quick call before sending a message that touches legal risk.
 not_for:
+  - "Any question about privacy, AI or customer data where you want to act on a fine call: a fine call is only a first read. Have your lawyer or privacy lead confirm it before you act."
   - "You need a full review of a product plan or feature: ask your lawyer for a proper review, since this tool only gives a fast first call."
   - "The question has many issues or covers a new area: book time with your lawyer instead of relying on a one-line answer."
   - "You need a legal opinion you can rely on or act on in court: use a licensed lawyer, because this tool does not give legal advice."
@@ -30,11 +31,11 @@ you_get:
   - A named next step and timeline when it is not fine
   - A warning if your answer is going to a wide channel
 how_to_use:
-  - "Write your risk table first. Three or four rows is enough, like: customer logo on website, needs a look, check the contract for publicity terms."
+  - "Write your risk table first, with four columns: pattern, usual call (fine, needs a look or hold), next step and timeline. Three or four rows is enough, like: customer logo on website, needs a look, check the contract for publicity terms, [DAYS]."
   - Open a chat in Claude, ChatGPT or Gemini and paste the skill instructions, then paste your risk table under them. The skill file mentions a plugin config file and commands such as /product-legal. A plain chat does not have these, so it uses your pasted table and sends those questions to your lawyer.
   - Paste your question and say where the answer will go, for example a private message to a product manager.
   - Read the call and the reason. If it asks a catch question, answer it and run it again.
-  - If the call is needs a look or hold, send the question to your lawyer or privacy lead. This tool does not replace them.
+  - If the call is needs a look or hold, send the question to your lawyer or privacy lead. This tool does not replace them. A fine call is a first read, not clearance. Keep privileged or sensitive legal questions out of AI tools your company has not approved.
   - It runs in a plain chat with no code or paid tools. Any links to other commands in the skill file need setup, so route those questions to your own legal or privacy lead.
 output_sample:
   input:

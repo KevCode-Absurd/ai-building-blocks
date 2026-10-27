@@ -13,21 +13,21 @@ argument-hint: "[describe a proposed new practice — or omit / use --sweep for 
 # /policy-monitor
 
 **Sweep mode** (no argument or `--sweep`):
-1. Read `~/.claude/plugins/config/claude-for-legal/privacy-legal/CLAUDE.md` → outputs folder path, policy document, last sweep date.
-2. Run the workflow below. Scan outputs folder for files since last sweep.
+1. Read `~/.claude/plugins/config/claude-for-legal/privacy-legal/CLAUDE.md` → outputs folder path, policy document, last sweep date. If that file does not exist in this chat, ask the user to paste the policy text, the saved reviews since the last check and the last check date instead.
+2. Run the workflow below. Scan the outputs folder (or the pasted reviews) for items since last sweep.
 3. For each output: extract approved practices → diff against current policy commitments.
 4. Classify gaps: REQUIRED (policy misrepresents current practice) vs ADVISABLE (policy silent).
 5. For each gap: quote current policy, describe gap, draft suggested language.
-6. Update Last policy sweep date in `~/.claude/plugins/config/claude-for-legal/privacy-legal/CLAUDE.md`.
+6. Update Last policy sweep date in `~/.claude/plugins/config/claude-for-legal/privacy-legal/CLAUDE.md` if it exists. If not, tell the user to note today's date and give it to you at the next check.
 
 **Direct query mode** (with description argument):
-1. Read `~/.claude/plugins/config/claude-for-legal/privacy-legal/CLAUDE.md` → current policy commitments + actual policy document.
+1. Read `~/.claude/plugins/config/claude-for-legal/privacy-legal/CLAUDE.md` → current policy commitments + actual policy document. If that file does not exist in this chat, ask the user to paste the policy text and use that.
 2. Parse proposed practice. Diff against policy: data categories, purposes, third parties, retention, user rights, disclosure.
 3. Output: covered / missing / conflicting + suggested language for each gap + timing recommendation.
 
 **Schedule:** Set up a recurring reminder in your own scheduler (calendar, task manager, or CI) to run `/privacy-legal:policy-monitor` weekly. Scheduled execution requires a scheduled-tasks integration, which is not bundled with this plugin.
 
-**No plugin config? Work from what the user pastes.** The config file, the outputs folder, the `/privacy-legal:cold-start-interview` command and the scheduler may not exist in this chat. If they do not, do not stop. Ask the user to paste the privacy policy text, the new practice, and any saved reviews they want checked, then run direct query mode on that text. Sweep mode needs the saved reviews pasted or uploaded.
+**No plugin config? Work from what the user pastes.** The config file, the outputs folder, the `/privacy-legal:cold-start-interview` command and the scheduler may not exist in this chat. If they do not, do not stop. Ask the user to paste the privacy policy text, the new practice, and any saved reviews they want checked, then run direct query mode on that text. Sweep mode needs the saved reviews pasted or uploaded. Paste each saved review as text, and state the last check date in the chat. If the user is in a sector regime (GLBA, HIPAA, FERPA, COPPA) and has not pasted that notice, say that the notice was not checked.
 
 **Counsel must approve.** All suggested policy wording is a draft. Say so each time, and tell the user a lawyer must approve each change before it is published.
 
@@ -57,6 +57,8 @@ The output is always the same: here's the gap, here's the suggested language.
 ---
 
 ## Load current state
+
+If the config file below does not exist in this chat, skip this section and work from the policy text, practice and reviews the user pastes.
 
 Read `~/.claude/plugins/config/claude-for-legal/privacy-legal/CLAUDE.md`:
 - `## Who we are` → `## Regulatory footprint` — the regimes in scope (GDPR, CCPA / CPRA / other state consumer privacy, GLBA, HIPAA, FERPA, COPPA, VPPA, CPNI, etc.)

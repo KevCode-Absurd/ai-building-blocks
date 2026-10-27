@@ -7,6 +7,8 @@ description: Use when you are launching against a bigger rival with a small budg
 
 A small business can earn press by doing what a big rival will not. This skill finds the contrast, shapes three stunts with a clear headline, and sets limits so saying yes does not put the business at risk. Its method comes from Richard Branson's public interviews and book. For writing the press note, use a press note writer.
 
+**Not for:** a launch with no real contrast to the rival (fix the offer first), a launch where nobody is willing to be in the picture (use a plain press note), or ad copy rather than a public stunt (use the Story image ad writer).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -40,8 +42,8 @@ How to start:
 2. **Find your contrast.** Write what you do that is more fun, more human or better value than the rival, using only facts supplied. If there is no real contrast, say so and stop.
 3. **Write the headline first.** For each stunt, write a one-line story a reporter could print. If it needs two sentences, shrink the stunt.
 4. **Put a face in the picture.** Each stunt has the founder or a named person in it, doing something visible. Do not include anyone who has not agreed.
-5. **Write the worst case and the cap.** For each stunt, write what could go wrong (money, safety, reputation) and the most it can cost. If the cap is above the budget, change the stunt. List any permit or safety sign-off needed. If one is missing, the stunt is held until it is in place.
-6. **Say yes, then plan.** Write the details to work out after the person agrees, with an owner for each. Do not plan every step before saying yes.
+5. **Check the permit and sign-off first, then the worst case and the cap.** For each stunt, list any permit, safety or legal sign-off needed before anything else. If one is missing, the stunt is held until it is in place, and nothing below goes ahead. Then write what could go wrong (money, safety, reputation) and the most it can cost. If the cap is above the budget, change the stunt.
+6. **Say yes, then plan.** Only for a stunt that cleared step 5: write the details to work out after the person agrees, with an owner for each. Do not plan every step before saying yes. A held stunt gets no yes until its sign-off is in place.
 7. **Plan a same-week review.** Write the questions (what did the press say, what did it cost, who saw it) and a line for what to change.
 8. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
 

@@ -13,7 +13,7 @@ explain: |
 
   This is a copy of a skill by Romuald Czlonkowski (github.com/czlonkowski/n8n-skills), shared through sickn33's collection.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header says MIT. Credit goes to Romuald Czlonkowski and sickn33.
+  The licence that applies to this copy is CC BY 4.0, as the LICENSE-CONTENT file in this item says. The MIT line in the skill file is the author's own header. Keep the credit to Romuald Czlonkowski and sickn33 if you reuse it.
 when:
   - The same date-cleaning steps are copied across four workflows.
   - One workflow has grown so large that nobody wants to edit it.
@@ -39,6 +39,7 @@ how_to_use:
   - Paste the long workflow or the steps to split out. Add what the piece should accept and return, and whether the caller should wait.
   - Let your AI list your existing workflows. Check that it reuses one if a good match exists.
   - Read the plan before it builds. Approve anything that sends, writes, deletes or costs money.
+  - "If it fails: if there is no MCP connection, or no workflow list comes back, fix the connection and retry from the first call. If the sub-workflow call errors, check the input names match and run the parent again."
   - Open the parent in n8n and run it once with test data to check the call settings. To let an AI agent call the new piece as a tool, use the n8n AI agent builder next. To tidy the parent flow, use the n8n workflow designer.
 output_sample:
   input:

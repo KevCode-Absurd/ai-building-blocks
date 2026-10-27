@@ -33,8 +33,10 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill text into a new chat. No code or paid tool is needed.
   - Describe your product and who buys it. Say what progress you think they want.
   - Add the rivals and workarounds you know of (optional). Include doing nothing.
-  - Read the map. Check that each job is written in your buyer's words, not as a feature list.
+  - Read the map. It gives one short paragraph for each job layer, written in your buyer's words. Check that none of them reads as a feature list.
+  - A buyer profile is optional. If you do not have one, describe one real buyer in a few lines. The Ideal buyer profiler can make a profile first.
   - If the AI says your input is too thin, add more detail about a real buyer and run it again.
+  - The skill lists studies as "Research basis" for each step. They are the original author's reading and have not been checked here. Treat them as background, and do not quote them as proof.
   - Use the map as the input for positioning, messaging or onboarding.
 next: [product-positioning-planner, brand-messaging-builder, customer-onboarding-planner]
 output_sample:

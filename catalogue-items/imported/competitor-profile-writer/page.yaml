@@ -7,7 +7,9 @@ job: study-competitors
 headline: Competitor profile writer
 subhead: A structured profile for each competitor, built from their own site and public data, with facts kept separate from opinion. Every claim traces back to a source page, a review or an SEO figure.
 explain: |
-  A structured profile for each competitor, built from their own site and public data, with facts kept separate from opinion. Every claim traces back to a source page, a review or an SEO figure.
+  This skill text is copied unchanged from its MIT-licensed source. Only the name is ours.
+
+  Use it to learn how your rivals sell, what they charge and what their customers say, without reading every site yourself. Each profile keeps three things apart: what the page says, what the AI reads into it, and what it means for you.
 
   You give Claude a list of competitor links, your product, and how deep to go: a quick scan or a full profile. It crawls each site for positioning, pricing, features and content. If an SEO data tool is connected, such as DataForSEO, Ahrefs or Semrush, it adds search and traffic numbers. If not, it falls back to plain page fetching. It keeps what was observed, what was reported and what was inferred visibly apart, and it reads your product notes first if you have them.
 when:
@@ -30,8 +32,10 @@ you_get:
   - Search and traffic data when available
   - Sources for every claim
 how_to_use:
+  - First, check each competitor site's terms and its robots.txt file (add /robots.txt to the web address). Do this before any tool reads the site. Check the terms of G2, Capterra and any other review site before pulling reviews. Skip a site that forbids automated reading and paste the text in by hand.
   - Open Claude, ChatGPT or Gemini in a chat that can browse the web, and paste in the skill.
-  - Before you run it, check each site's terms and robots.txt. The skill reads public pages and may be blocked on some.
+  - Only Claude with connected tools (MCP access) can run the Firecrawl and DataForSEO steps. ChatGPT and Gemini cannot, unless you connect the same tools. Without them, the skill reads the pages your AI can open and marks search and traffic numbers as unavailable.
+  - "No keys? The paste-in route works with no keys and gives page-fetch data only. The steps: 1) paste the skill, 2) paste your competitor links and your product line, 3) pick quick or deep, 4) let your AI read each page it can open, 5) check every claim marked inferred against its source page."
   - Paste your competitor links, one per line, and one line on what your product does.
   - "Say how deep to go: quick scan for key facts, or deep profile for full research."
   - Say if you have a Firecrawl key or an SEO tool connected. DataForSEO, Ahrefs and Semrush are paid, and Firecrawl needs its own key. Without them it reads pages directly.

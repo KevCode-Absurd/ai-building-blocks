@@ -34,11 +34,14 @@ you_get:
   - A budget outline with a reason for each line
   - A critique against the funder's review criteria
 how_to_use:
+  - "Gather first: the call text or PDF, the due date, and the draft sections you have, plus any reviewer comments from an earlier round."
   - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page, or upload the skill folder if your AI takes files.
   - Say the funder and the call name or number. If your AI can browse, ask it to check the current call. If not, paste the call text yourself.
   - Paste your idea in a few sentences, plus any draft sections or reviewer comments.
   - Read the Call facts part first. Confirm each fact against the live call before you draft, because the funder rules in the skill notes may be out of date. Fix anything wrong. Then work through the checklist and mark each gap.
   - Write the aims and sections yourself, using the outline. Then paste your draft back for a critique against the review criteria.
+  - Turn each gap in the checklist into a task with an owner and a date, before you start drafting.
+  - Next steps after the critique, in this same coach: ask for the Resubmission plan if you have reviewer comments, or for the Budget outline with a reason for each line. Revise, then paste the new draft back for another critique.
   - Before you submit, check every page limit and date against the live call. Some rules in the skill may be out of date.
 how_it_works:
   - title: Confirm the call

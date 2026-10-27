@@ -11,6 +11,14 @@ date_added: "2026-03-05"
 
 Find and fix performance bottlenecks. Measure, optimize, verify. Make it fast.
 
+## Before you start
+
+Gather these first. If one is missing, ask for it before you change any code:
+
+1. The slow code or query.
+2. A current timing of the slow step (or permission to time it).
+3. The database or framework in use.
+
 ## When to Use This Skill
 
 - App is slow or laggy
@@ -365,10 +373,7 @@ If the measurement points somewhere else, do not apply these. Fix what the numbe
 
 ## When NOT to Optimize
 
-- Premature optimization (optimize when it's actually slow)
-- Micro-optimizations (save 1ms when page takes 5 seconds)
-- Readable code is more important than tiny speed gains
-- If it's already fast enough
+Skip it when the code is already fast enough or when nothing has been timed yet. Do not trade readable code for a gain of a few milliseconds.
 
 ## Key Principles
 
@@ -381,9 +386,19 @@ If the measurement points somewhere else, do not apply these. Fix what the numbe
 
 ## Related Skills
 
-- If the problem is a bug and not speed, use the hidden bug hunter or the bug root cause finder in the AI Blocks library.
+- If the problem is a bug and not speed, use the bug root cause finder in the AI Blocks library.
 
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.
+If no timing exists yet, stop and ask for one before you change any code.
+
+## What you hand back
+
+Give the result in these six parts:
+
+1. **Bottleneck:** the slowest part, and how you found it.
+2. **Change made:** the fix, aimed at that part.
+3. **Before time:** the timing before the change.
+4. **After time:** the timing after, measured the same way.
+5. **Kept or rejected:** which changes helped and stayed, and which were dropped.
+6. **Checklist:** the Optimization Checklist above, ticked.
+
+Use only timings that were measured. Never write an estimated time as if it were measured.

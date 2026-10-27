@@ -23,6 +23,7 @@ you_give:
   - Last month's bills, or let the agent save them from the first run
   - The code, if you want caps added to AI calls (optional)
   - What changed this month, such as a launch or a new feature (optional)
+  - Read-only access to one named account, only if you want it to run checks itself (optional; exports work without it)
   - A monthly budget (optional)
 you_get:
   - Each line against last month, with the sums
@@ -32,7 +33,7 @@ you_get:
 how_to_use:
   - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this month's check.
   - Put the final bills in one folder, or attach them in the chat.
-  - Point it at the code if you want caps added. Give it read-only access to any account it needs to look at.
+  - Point it at the code if you want caps added. Exports from your billing pages need no credentials. If you let it run commands, give it a read-only role or user for one named account, never paste keys into the chat, and delete the role or key in the provider's console when the check is done.
   - Read the list. Say yes to the fixes you want, or make them yourself.
   - Run it next month. It checks whether each fix brought its line down.
 output_sample:

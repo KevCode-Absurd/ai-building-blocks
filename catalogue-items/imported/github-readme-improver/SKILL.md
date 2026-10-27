@@ -321,6 +321,8 @@ Getting on awesome lists drives traffic and credibility.
 
 These are optional extras for users who are comfortable with GitHub Actions. Some need secret keys (a metrics token, Twitter or X keys) and third-party actions that you should review first. Never ask the user to paste a key into the chat. Skip this section if the user just wants a better README.
 
+**Pin before you use.** Each third-party action below runs with access to your repository, and some get your secret keys. Pin every one to a full commit SHA (not a tag like `@master`, `@latest` or `@v1`), read its code first, and only then add any secret. The tags in the examples are placeholders to replace with a reviewed commit SHA.
+
 ### Automated README Updates
 
 ```yaml
@@ -336,10 +338,10 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@[FULL COMMIT SHA]
 
       # Example: Update blog post list
-      - uses: gautamkrishnar/blog-post-workflow@master
+      - uses: gautamkrishnar/blog-post-workflow@[FULL COMMIT SHA]
         with:
           feed_list: "https://yourblog.com/feed"
 
@@ -356,7 +358,7 @@ jobs:
 
 ```yaml
 # Auto-update GitHub stats image
-- uses: lowlighter/metrics@latest
+- uses: lowlighter/metrics@[FULL COMMIT SHA]
   with:
     token: ${{ secrets.METRICS_TOKEN }}
     filename: github-metrics.svg
@@ -376,7 +378,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Tweet
-        uses: ethomson/send-tweet-action@v1
+        uses: ethomson/send-tweet-action@[FULL COMMIT SHA]
         with:
           status: "🚀 ${{ github.repository }} ${{ github.event.release.tag_name }} released! ${{ github.event.release.html_url }}"
           consumer-key: ${{ secrets.TWITTER_CONSUMER_KEY }}

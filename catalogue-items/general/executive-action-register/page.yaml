@@ -16,7 +16,7 @@ when:
 not_for:
   - "You want to send messages or change tasks without checking them first: this only drafts changes, so approve each one yourself."
   - "You have one action and no source notes: type it straight into your task manager."
-  - "You need a summary of a meeting, not a task list: ask your AI for a plain meeting summary instead."
+  - "You need minutes or a summary of one meeting, not a task list: use the Meeting minutes writer instead."
 you_give:
   - The source files, notes or product facts for this job
   - Your goal, deadline and limits
@@ -50,8 +50,12 @@ output_sample:
 how_it_works:
   - title: Read the sources
     text: Identify the current request, time window and facts you can verify.
-  - title: Build the result
-    text: Share meeting notes or email threads. Get one action list with owners, deadlines, source links and unresolved commitments.
+  - title: Pull out the actions
+    text: Find each commitment, decision and request. Give each a stable ID, a task, an owner, a due date and a source link.
+  - title: Fix dates and remove repeats
+    text: Turn dates like "by Friday" into real dates using your timezone. Merge the same action from email and notes into one row.
+  - title: Flag the gaps
+    text: List actions with no owner or no date. Show overdue, due soon, blocked and undated work apart.
   - title: Check and hand back
     text: Check owners, dates and sources. Separate drafts from completed external actions.
 output_shape: |-

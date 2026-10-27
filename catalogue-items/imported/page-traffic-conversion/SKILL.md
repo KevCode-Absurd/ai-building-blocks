@@ -24,7 +24,7 @@ Queries Shopify's built-in analytics engine (ShopifyQL) to surface session-level
 |-----------|------|----------|---------|-------------|
 | store | string | yes | — | Store domain (e.g., mystore.myshopify.com) |
 | format | string | no | human | Output format: `human` or `json` |
-| dry_run | bool | no | false | Preview operations without executing mutations |
+| dry_run | bool | no | false | Not used: this skill only reads data, so there is nothing to preview. Kept for compatibility |
 | days_back | integer | no | 30 | Lookback window in days (e.g., `30` = last 30 days) |
 | page_type | string | no | both | Filter to: `products`, `collections`, or `both` |
 | top_n | integer | no | 25 | Number of pages to show in the ranked output |
@@ -34,9 +34,9 @@ Queries Shopify's built-in analytics engine (ShopifyQL) to surface session-level
 
 1. **OPERATION:** `shopifyqlQuery` — query (all landing pages)
    **Inputs:** ShopifyQL string `FROM sessions SHOW sessions, conversion_rate GROUP BY landing_page_path SINCE -<days_back>d UNTIL today ORDER BY sessions DESC LIMIT 250`; `sessions` and `conversion_rate` are the confirmed available metrics for this data source
-   **Expected output:** All landing pages with session counts and conversion rates; paginate via `OFFSET` if result count equals 250
+   **Expected output:** All landing pages with session counts and conversion rates; if the result count equals 250, try paginating with `OFFSET`. If Shopify does not accept `OFFSET`, say that the report shows only the top 250 pages and ask the person to narrow `days_back` instead
 
-> **Query plan, stated once:** one query fetches up to 250 landing pages (use `OFFSET` for more). Everything after that is done in memory, and only the top `top_n` rows (25 by default) are shown. The CSV file is written to the folder the AI runs from.
+> **Query plan, stated once:** one query fetches up to 250 landing pages (try `OFFSET` for more; if it is refused, narrow `days_back` and say the list is capped at 250). Everything after that is done in memory, and only the top `top_n` rows (25 by default) are shown. The CSV file is written to the folder the AI runs from.
 
 2. **In-memory filtering:** Filter rows where `landing_page_path` starts with `/products/` (product pages) or `/collections/` (collection pages); apply `page_type` parameter; sort by `sort_by`; truncate to `top_n`; flag pages with sessions above median and `conversion_rate < 0.02` as `high_traffic_low_conversion`
 

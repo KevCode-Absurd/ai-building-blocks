@@ -39,6 +39,18 @@ how_to_use:
   - If the contrast check fails, pick a darker main colour and run it again.
   - Next, run one converter on a short sample Markdown file to confirm your saved style is applied. Then convert your real pages.
 next: [markdown-to-web-page-maker, markdown-slide-deck-maker, code-review-page-maker]
+output_shape: |
+  design-system.json
+    version, skill, default_output_dir
+    brand: primary, accent, bg, text
+    typography: heading_font, body_font, scale_ratio
+    design_style: editorial | technical | minimal | playful
+    code_theme: light | dark | auto
+    toc: behavior, max_depth
+    company_name, logo_url
+    derived_palette: twelve --md-* colour values
+    setup_completed_at
+  Contrast check: <pass or fail for body text and links at 4.5 to 1>
 output_sample:
   input:
     - Your main brand colour and an accent colour (optional)

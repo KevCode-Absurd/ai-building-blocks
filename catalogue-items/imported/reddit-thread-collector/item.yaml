@@ -1,6 +1,6 @@
 slug: reddit-thread-collector
 name: Reddit thread collector
-summary: Give it a topic or subreddit. Get posts and comments in a table you can study. Collects data from websites.
+summary: Give it a topic or subreddit. Get Reddit posts and comments in a table you can study. Needs a paid Apify account, and Reddit's terms must allow your use.
 category: general
 boards: []
 type: skill

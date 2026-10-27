@@ -11,14 +11,14 @@ subhead: "Show your ad to ten people, write down what each says it said, and pas
 explain: |
   An ad can be liked, remembered and still fail, because what people remember is not the claim. A second reason to buy, added to be safe, can pull attention from the first. A striking picture that has nothing to do with the words can do worse: people recall the picture and not the message.
 
-  This skill scores the playback. It counts how many viewers said your claim, in their own words, and sorts the rest into other claims, pictures, people and sounds. It then reads the ad line by line to match what is said with what is shown. It tells you which element took the biggest share and what to cut. It also tells you what this test cannot do: it shows whether the claim gets across, not whether the claim sells.
+  This skill scores the playback. It counts how many viewers said your claim, in their own words, and sorts the rest into other claims, pictures, people and sounds. It then reads the ad line by line to match what is said with what is shown. It tells you which element took the biggest share and what to cut. The 60% and 30% lines it uses are the skill's own rule of thumb, adapted from the playback idea in Rosser Reeves' book. They are not figures from the book. It also tells you what this test cannot do: it shows whether the claim gets across, not whether the claim sells.
 
 when:
   - "Your team loves an ad and nobody can say what it promises."
   - "You added a second benefit to an ad that was working and recall dropped."
   - "People remember the actor, the animal or the song, not the product."
 not_for:
-  - "You have fewer than five viewers: ask more people first, or use a simple recall survey."
+  - "You have fewer than ten viewers: you get only a hint. Ask more people first, or use a simple recall survey. With no viewer answers at all, use the Pre-launch ad checker."
   - "Your ad has no single claim to test: write one claim first with the USP claim checker."
   - "You want to know if the claim will sell: run a small paid test, because this only shows if the claim gets across."
 
@@ -34,6 +34,7 @@ you_get:
 
 how_to_use:
   - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "No viewer answers yet? Ask ten people first, or use the Pre-launch ad checker."
   - "Show the ad to ten people who have not seen it. Ask only: what did that ad say? Write their words down."
   - "Paste the ad, the claim you meant, and all ten answers."
   - "Make the cuts, then test again with ten new people."

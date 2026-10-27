@@ -38,8 +38,11 @@ how_to_use:
   - Put your Apify token in a local file called .env. Never paste it into the chat. Platform terms apply, so collect only public data.
   - Add this skill and tell your AI your niche, platforms and what a good fit looks like.
   - Pick a quick answer in chat, or a CSV or JSON file. Start with a small number of creators to keep the cost low.
-  - Read the ranked table. Open the top creators' profiles yourself and look at recent posts before you reach out.
-  - This collects data about named real people. Take contact details only from a creator's own published profile, and delete the collected creator data when the campaign ends.
+  - Start with about 10 creators. A larger run uses more of your Apify credits.
+  - Before any run, check each platform's terms and your local privacy law for this campaign. Your AI will ask you to confirm this first.
+  - Read the ranked table. The flags are prompts for a manual check, never a reason to drop a creator on their own. Open the top creators' profiles yourself and look at recent posts before you reach out.
+  - The token loads from your .env file into the shell without being typed. Keep shell tracing off and do not save the session to a log while it is loaded.
+  - This collects data about named real people. Take contact details only from a creator's own published profile, and delete the collected creator data when the campaign ends. Save the ranked table first, and set a date to delete the rest.
   - No code or no Apify account? Paste each creator's public numbers into the chat instead, and ask for the same ranking.
 how_it_works:
   - title: Pick the data source

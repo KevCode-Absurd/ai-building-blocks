@@ -81,6 +81,9 @@ output_shape: |-
 
   NEXT STEP
   <the smallest useful step>
+
+  CHECKS MISSED
+  <one line per check that failed or could not run, or none>
 output_sample:
   input:
     - The Slack channels where your agent posts findings, and how each message links to its job

@@ -181,7 +181,7 @@ accelerate config
 
 **Launch**:
 ```bash
-accelerate launch --config_file deepspeed_config.json train.py
+accelerate launch --use_deepspeed --deepspeed_config_file deepspeed_config.json train.py
 ```
 
 ### Workflow 4: FSDP (Fully Sharded Data Parallel)

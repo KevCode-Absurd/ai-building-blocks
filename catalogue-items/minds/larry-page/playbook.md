@@ -14,7 +14,7 @@ His views come from Google's founders' letters, his 2009 speech to Michigan grad
 - **Putting users first:** make money without trading away trust, and keep ads or sales pitches visibly apart from advice.
 - **Using technology to do the hard work:** find where software can do a job for people.
 - **Checking whether your idea is needed:** ask if it would exist without you.
-- **Fixing a process that size has broken:** meetings, reporting or hiring that worked at 50 people and fails at 500.
+- **Fixing a process that size has broken:** meetings, reporting or hiring that worked when you were small and fails as you grow.
 - **Your own path:** a comfortable job that has gone flat, or a risky idea you keep avoiding.
 
 ## How he'd take on your problem
@@ -25,8 +25,8 @@ His views come from Google's founders' letters, his 2009 speech to Michigan grad
 4. **He goes to first principles.** What does it cost today, and how far is that from the raw materials? He also looks for the craziest person in the field and asks what they think.
 5. **He asks what the user gets.** Does it help the user, or just this quarter's numbers? Users come first, and the money follows. Keep paid and unpaid things clearly apart.
 6. **He keeps most effort on the core.** The heart of the business gets most of the work. A few odd side bets sit beside it, small enough to survive failing.
-7. **He asks what to close.** When he returned as CEO Google closed or merged more than 30 products to focus [S2], and the question he keeps asking is what must go, even if it is loved (our reading).
-8. **He gives each big bet an owner,** and fixes processes that size has broken, as he did when weekly all-hands meetings that worked at about 50 people stopped working at about 1,000 staff [S10].
+7. **He asks what to close.** When he returned as CEO Google closed or merged more than 30 products to focus (the count is from his CEO update in the 2012 founders' letter [S2]), and the question he keeps asking is what must go, even if it is loved (our reading).
+8. **He gives each big bet an owner,** and fixes processes that size has broken, as he did when weekly all-hands meetings that worked when Google was small stopped working as it grew (his own account in the 2004 Playboy interview [S10]).
 
 ## First questions he'd ask you
 
@@ -56,7 +56,7 @@ He'd tell you to keep most effort on the main business and to place small bets i
 
 ### Putting users ahead of the quarter
 
-He said a site that shows its own stuff first is as conflicted as one that sells its rankings, and Google kept ads visibly separate. He'd ask where your own line is. Is there a way you make money that blurs the line between help and sales? He'd say no to it. He also admitted a user-first motto doesn't settle every question about data and power, so ask who gains from each choice.
+He said a site that shows its own stuff first is as conflicted as one that sells its rankings [S10], and Google kept ads visibly separate [S1]. He'd ask where your own line is. Is there a way you make money that blurs the line between help and sales? He'd say no to it. He also admitted a user-first motto doesn't settle every question about data and power, so ask who gains from each choice.
 
 ### Outside his field: your creative work
 
@@ -64,7 +64,7 @@ Our application of his method, not something he said. Say you edit video or writ
 
 ### Your life and career
 
-Our application of his method, apart from the graduates' advice, which is on the record. He told graduates to work hard on something uncomfortably exciting and to grab a great dream when it shows up. He'd ask whether you have become too comfortable, since a safe path of small steps can slowly make you irrelevant. He'd tell you to keep most of your time on what you do well and put a small slice into something strange. He'd be honest about the cost: some bets fail, as Google+ did. Keep what pays the bills, and try the bold thing beside it.
+Our application of his method, apart from the graduates' advice, which is on the record. He told graduates to work hard on something uncomfortably exciting and to grab a great dream when it shows up. He'd ask whether you have become too comfortable, since a safe path of small steps can slowly make you irrelevant. He'd tell you to keep most of your time on what you do well and put a small slice into something strange. He'd be honest about the cost: some bets fail, as Google+ did [S6]. Keep what pays the bills, and try the bold thing beside it.
 
 ## What he'd push back on
 

@@ -75,7 +75,7 @@ Takes a specific student response during classroom dialogue and generates high-q
 
 ## Evidence Foundation
 
-Mercer (2000) introduced the concept of "interthinking" — the idea that dialogue is not just communication but a tool for thinking together. He identified three types of classroom talk: disputational (disagreement without reasoning), cumulative (uncritical agreement), and exploratory (critical, constructive engagement with evidence and reasoning). Only exploratory talk consistently produces learning gains. Alexander (2008, 2020) built on this with his framework of dialogic teaching, identifying five principles: collective (learning together), reciprocal (listening and sharing), supportive (freely expressed ideas without fear), cumulative (building on each other's contributions), and purposeful (directed toward learning goals). Michaels et al. (2008) operationalised dialogic teaching into specific, teachable "talk moves" — revoicing ("So you're saying..."), pressing for reasoning ("What makes you think that?"), inviting others ("Who can add to what she said?"), and challenging ("Does anyone disagree?"). Resnick et al. (2015) demonstrated that systematic use of these accountable talk moves produced significant gains in reading comprehension and mathematical reasoning, particularly for students from disadvantaged backgrounds. Cazden (2001) identified the dominant classroom discourse pattern as IRE (Initiate-Respond-Evaluate) and showed that breaking this pattern — by replacing evaluation with follow-up moves — transforms the quality of classroom thinking.
+Mercer (2000) introduced the concept of "interthinking" — the idea that dialogue is not just communication but a tool for thinking together. He identified three types of classroom talk: disputational (disagreement without reasoning), cumulative (uncritical agreement), and exploratory (critical, constructive engagement with evidence and reasoning). Mercer argues that exploratory talk is the type most likely to support learning. Alexander (2008, 2020) built on this with his framework of dialogic teaching, identifying five principles: collective (learning together), reciprocal (listening and sharing), supportive (freely expressed ideas without fear), cumulative (building on each other's contributions), and purposeful (directed toward learning goals). Michaels et al. (2008) operationalised dialogic teaching into specific, teachable "talk moves" — revoicing ("So you're saying..."), pressing for reasoning ("What makes you think that?"), inviting others ("Who can add to what she said?"), and challenging ("Does anyone disagree?"). Resnick et al. (2015) report benefits from using these accountable talk moves in reading and mathematical reasoning. These research summaries are the author's and were not checked here, so do not quote them to a class or a school as proven results. Cazden (2001) identified the dominant classroom discourse pattern as IRE (Initiate-Respond-Evaluate) and argued that breaking this pattern, by replacing evaluation with follow-up moves, improves the quality of classroom thinking.
 
 ## Input Schema
 
@@ -170,61 +170,51 @@ For each move (generate 4–5):
 
 ## Example Output
 
-**Scenario:** *Student response: "The character is selfish because she didn't share the food with the others" / Learning goal: "Students should understand that character motivation in Lord of the Flies is complex — shaped by fear, survival instinct, and the breakdown of social norms, not simple personality traits" / Subject context: "Year 10 English — analysing character motivation in Lord of the Flies, Chapter 9"*
+This is the shape of a good answer, with placeholders where your own details go. Replace every bracket with the real student words, topic and goal. Never reuse a placeholder as if it were a fact about the text or the class.
+
+**Scenario:** *Student response: "[STUDENT'S EXACT WORDS]" / Learning goal: "[WHAT STUDENTS SHOULD UNDERSTAND]" / Subject context: "[YEAR GROUP, SUBJECT AND TOPIC]"*
 
 ---
 
-## Dialogic Teaching Moves: Character Motivation in Lord of the Flies
+## Dialogic Teaching Moves: [TOPIC]
 
-**Student said:** "The character is selfish because she didn't share the food with the others."
-**Learning goal:** Students should understand that character motivation is complex — shaped by fear, survival instinct, and the breakdown of social norms, not simple personality traits.
-**Response analysis:** Partially correct — the student has identified a relevant action (not sharing food) and made a character judgment, but the analysis is superficial. "Selfish" is a personality label, not an explanation of motivation. The response doesn't consider context (survival situation, fear, group dynamics) and treats character as a fixed trait rather than a product of circumstances. This is exactly the kind of response that needs pressing and challenging to move toward the learning goal.
+**Student said:** "[STUDENT'S EXACT WORDS]"
+**Learning goal:** [WHAT STUDENTS SHOULD UNDERSTAND]
+**Response analysis:** [Right, partly right, wrong, unclear or thin, and why. Name what the student got right and what is missing against the learning goal.]
 
 ### Recommended Moves
 
 **Move 1: Revoicing + Pressing for Reasoning**
-**Say:** "OK, so you're saying that not sharing the food is an act of selfishness. That's an interesting claim. What's your evidence that it's selfishness specifically — as opposed to something else driving that behaviour?"
-**Why this move:** Revoicing makes the claim visible to the class and validates that the student has made a substantive contribution. The press ("as opposed to something else") opens the door to alternative explanations without telling the student they're wrong. It signals that the teacher takes the idea seriously enough to interrogate it.
-**Likely student response:** "Because she had enough food and she chose not to give any to them" — the student is likely to defend the claim with more evidence from the text, staying at the surface level.
-**Second-turn follow-up:** "So there was enough food and she chose not to share. Let me push on the word 'chose' — at this point in the novel, what's the situation on the island? What's everyone feeling?" This redirects toward context (fear, breakdown of norms) without abandoning the student's observation.
+**Say:** "So you're saying [REVOICE THE CLAIM]. What makes you think that, rather than [ALTERNATIVE EXPLANATION]?"
+**Why this move:** [Why it fits this answer and this goal.]
+**Likely student response:** [What the student is likely to say next.]
+**Second-turn follow-up:** [What to ask if they answer as predicted.]
 
 **Move 2: Challenging with a Counter-Example**
-**Say:** "Interesting. Let me put a different reading to you: imagine you're on that island. You haven't eaten properly in days. You don't know if there will be food tomorrow. You don't trust the people around you. In that situation — is not sharing food selfish, or is it survival? Where's the line?"
-**Why this move:** This introduces the contextual factors (fear, scarcity, distrust) that the learning goal requires. It doesn't tell the student they're wrong — it reframes the same action under different conditions. The question "Where's the line?" is genuinely open, inviting the class to grapple with moral complexity.
-**Likely student response:** Some students will argue it's still selfish, others will say it's survival. This disagreement is productive — it's exactly the complexity the learning goal targets.
-**Second-turn follow-up:** "So we've got two readings — selfishness and survival. Who can find a moment in the text that helps us decide which one Golding intends?"
+**Say:** "[A CASE THAT CHANGES THE CONTEXT OF THE CLAIM]. Does your idea still hold? Where is the line?"
+**Why this move:** [Why it fits.]
+**Likely student response:** [Prediction.]
+**Second-turn follow-up:** [Next question.]
 
 **Move 3: Inviting Others**
-**Say:** "Alex says the character is selfish. Who sees it differently? Is there another way to read that moment?"
-**Why this move:** This is the simplest move and the most powerful for generating dialogue. It positions the student's response as one interpretation among several, inviting disagreement without the teacher having to be the one who disagrees. It distributes thinking across the room.
-**Likely student response:** Another student may offer an alternative ("I think she's scared, not selfish") or may agree and add evidence. Either response extends the dialogue.
-**Second-turn follow-up:** If a student offers an alternative: "So now we've got two readings — selfish and scared. Alex, what do you think of that? Is there a difference between being selfish and being scared?" If students agree: "OK, everyone agrees she's selfish. Let me challenge that — would you call it selfish if she genuinely believed there wasn't enough for everyone?"
+**Say:** "[STUDENT'S NAME] says [CLAIM]. Who sees it differently?"
+**Why this move:** [Why it fits.]
+**Likely student response:** [Prediction.]
+**Second-turn follow-up:** [Next question.]
 
-**Move 4: Building On + Connecting to the Learning Goal**
-**Say:** "You've picked up something important — the food scene is a turning point. But I want us to think about the word 'selfish.' In Chapter 2, the same character shared willingly. Now she doesn't. What's changed — is she a different person, or is the island changing how everyone behaves?"
-**Why this move:** This builds on the student's observation (the food scene matters) while redirecting from a personality explanation to a situational one. The question "Is she a different person, or is the island changing how everyone behaves?" directly addresses the learning goal — that behaviour is shaped by context, not just character.
-**Likely student response:** Students may split between "she changed" and "the island changed everyone." Both responses are productive and lead toward the complexity the learning goal requires.
-**Second-turn follow-up:** "If the island is changing how everyone behaves, what does Golding want us to think about human nature? Is selfishness something people are, or something situations create?"
-
-**Move 5: Pressing for Textual Evidence**
-**Say:** "Selfish is a strong word. Can you point me to the specific moment in the text — the exact lines — that made you think 'selfish' rather than, say, 'frightened' or 'desperate'?"
-**Why this move:** This presses for evidence while subtly introducing alternative interpretations. It models the disciplinary practice of close reading — claims about characters must be grounded in textual evidence, not impressions. It also forces the student to re-engage with the text rather than relying on a general impression.
-**Likely student response:** The student will either find a specific passage (which the class can then analyse together) or realise their claim was based on a general impression rather than specific evidence.
-**Second-turn follow-up:** If they find a passage: "Read it out. Let's all look at it. Does this passage support 'selfish' — or could we read it another way?" If they can't find one: "That's OK — sometimes our first reading is an impression. Let's go back to the text and see what Golding actually shows us."
+(Moves 4 and 5 follow the same shape: building on the idea and connecting it to the learning goal, and pressing for evidence from the work or text the class is using.)
 
 ### Move Selection Guide
 
-- **Use Move 1 (Revoicing + Pressing)** as your default — it's the safest and most versatile. It validates the student, makes the idea public, and opens space for deeper thinking. Good when the student seems confident and the class is engaged.
-- **Use Move 2 (Challenging)** if the class is comfortable with debate and you want to accelerate toward the learning goal. It's more direct and may feel confrontational to less confident students — use it when the classroom culture supports challenge.
-- **Use Move 3 (Inviting Others)** if you can see other students want to contribute or if the responding student tends to dominate. This is the fastest way to turn a teacher-student exchange into a class dialogue.
-- **Use Move 4 (Building On)** if the class has been circling the surface and you need to redirect toward the learning goal. This is the most directive move — use it when the dialogue needs steering, not when it's flowing productively.
-- **Use Move 5 (Pressing for Evidence)** if the student's claim is unsupported or vague. This teaches the disciplinary skill (evidence-based argument) while also deepening the analysis.
+- **Use Move 1** as your default when the student is confident and the class is engaged.
+- **Use Move 2** when the class is used to debate and you want to move faster toward the goal.
+- **Use Move 3** when other students want to speak or one student dominates.
 
 ### Moves to Avoid Here
 
-1. **Avoid: "Good point, but actually the character isn't selfish — she's scared."** This is the IRE pattern disguised as dialogue. The "but actually" negates the validation of "good point," and the teacher supplies the answer rather than letting the class reason toward it. The student learns that their job is to guess what the teacher thinks, not to build their own interpretation.
+1. **Avoid: "Good point, but actually [THE ANSWER YOU WANT]."** This is the IRE pattern (teacher asks, student answers, teacher judges) in disguise. The "but actually" cancels the praise and hands the student the answer instead of letting the class reason to it.
 
-2. **Avoid: "Does anyone else want to add something?"** This is too vague. It doesn't give other students anything specific to respond to. It signals that the teacher is fishing for a different answer. Compare with Move 3's "Who sees it differently?" — which explicitly invites disagreement and gives students permission to challenge a peer's interpretation.
+2. **Avoid: "Does anyone else want to add something?"** It is too vague. Give other students something specific to respond to, such as "Who sees it differently?"
 
 ---
 

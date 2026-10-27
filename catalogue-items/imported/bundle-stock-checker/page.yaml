@@ -7,7 +7,7 @@ job: run-your-store
 headline: Bundle stock checker
 subhead: Find bundles that look in stock on your storefront but cannot be shipped because one part ran out. It only reads data and changes nothing.
 explain: |
-  Find bundles that look in stock on your storefront but cannot be shipped because one part ran out. It only reads data and changes nothing.
+  A bundle can only be sold as often as its scarcest part allows. The skill names that bottleneck part for each bundle, and flags every bundle that part blocks.
 
   The skill goes through every product marked as a bundle, using Shopify's own bundle setup or a metafield that lists the component variants and quantities. For each part it compares stock on hand against what one bundle needs. An optional safety buffer treats a part as out when stock minus the buffer falls short. It reports which bundles are at risk and how many you can truly sell. You need the Shopify CLI signed in with read access to products and inventory.
 when:

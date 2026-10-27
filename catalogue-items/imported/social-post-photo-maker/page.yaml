@@ -30,14 +30,15 @@ you_get:
   - Variations in pose and angle
   - Tips to finish the images in your image tool
 how_to_use:
-  - Clean your photo first. Remove filters, text and stickers, or the new image will keep them. The watermark remover skill can help.
+  - "Before you start: you need a dLazy account and API key, and each image costs money. Add --dry-run to the command first to see the cost. Use only photos you own or have the right to edit."
+  - Clean your photo first. Remove filters, text and stickers, or the new image will keep them. The watermark remover skill can help, but only on your own images. Never strip another person's watermark.
   - Open your AI and paste this skill. Add the outfit photo and, if you have one, a scene reference photo.
   - Tell it the mood or scene. It lists each item you wear, then writes the picture prompt.
   - Run the prompt in your image tool. The skill's commands use the dlazy tool and an API key, which may cost money per image, so check prices first.
   - The skill file is in Chinese, with an English summary at the top. The example images it points to (in a docs folder) are not included here, so use your own outfit and scene photos.
   - Make three or four images per scene. Pick the most natural pose.
   - Check each image for swapped items, odd hands and a busy background. Add a fix line to the prompt and run again if needed.
-  - Before you post, label the images as AI-generated where the platform asks, and check the platform's rules on AI images and on paid promotion. The person in the photo is invented. Do not present them as a real customer or as someone who endorses your product.
+  - Required before you post: label the images as AI-generated where the platform asks, and check the platform's rules on AI images and on paid promotion. The person in the photo is invented. Do not present them as a real customer or as someone who endorses your product.
   - Next, save each set in a folder named for the scene, pick one image to post, and note which pose and prompt worked so you can reuse them.
 output_sample:
   input:

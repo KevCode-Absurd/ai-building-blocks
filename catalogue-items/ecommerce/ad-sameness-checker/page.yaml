@@ -67,7 +67,7 @@ how_it_works:
   - title: Applies the change test
     text: A background colour or model pose change is not a variation. Same visuals, same audience and small script tweaks stay in the same cluster.
   - title: Counts distinct clusters
-    text: Counts ideas, not ads. Fewer than ten distinct ideas in a 50-ad account is a warning.
+    text: Counts ideas, not ads. Fewer than ten distinct ideas in a 50-ad account is a warning. For other account sizes it compares with a target of 10 to 15 distinct angles and formats.
   - title: Checks frequency
     text: On cold campaigns, over 30 to 60 days, a frequency above 2 points to a fatigue or variety problem.
   - title: Notes hook swaps

@@ -12,9 +12,11 @@ not_for:
   - "You have no way to run the full chat flow: this setup asks questions one at a time and saves a file. In a plain chat with no tools, ask your AI to draft the briefing straight from one or two past updates instead."
 how_to_use:
   - Have these ready first. One or two status updates you have written, with names and private details removed. A list of who reads them. A list of where your work and talks happen. Your AI must be able to ask you questions one at a time (the ask_user tool) and to create files.
+  - Copilot CLI and the optional GitHub or Microsoft 365 connections need their own accounts, and may need a paid plan. Check your plan before you start.
   - Install the roundup skill and this setup skill in Copilot CLI. This setup needs the ask_user tool and the ability to create files. To read your GitHub repos or Microsoft 365 mail and chats, those tools must also be connected. If they are not, you name your sources by hand.
   - Start a chat and ask your AI to run the roundup setup.
   - Answer the questions one at a time. Paste in a past status update or two when asked. Remove names and private details first, because the saved config file keeps your examples as plain text.
+  - After setup, open the saved config.md file in a text editor. Check it for names and private figures, edit or remove them, or delete the file if you do not want it kept.
   - Check the style playback and fix anything that is wrong.
   - Say yes to the test run and read the draft briefing.
   - Later, ask the roundup skill for a briefing. Re-run this setup if your tools or readers change.

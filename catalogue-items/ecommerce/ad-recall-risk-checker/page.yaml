@@ -1,17 +1,17 @@
 new_slug: ad-recall-risk-checker
 name: "Ad recall risk checker"
-summary: "Check whether viewers will remember your brand before you spend. Paste an ad script or brief and get a brand recall score out of 100, plus fixes."
+summary: "Paste an ad script or brief. Get a brand recall score out of 100, a list of what pulls eyes off the product and fixes."
 job: check-ads
 thinking: medium
 thinking_why: "It judges an ad against twenty yes or no questions and writes fixes, so a mid-size model works and a stronger one reads visuals more closely."
 
 headline: "Ad recall risk checker"
-subhead: Paste your ad script, creator brief or finished ad. It tests whether viewers will remember the brand, across five areas. You get a brand-recall score out of 100 with the sum shown, what pulls attention from the product, fixes for weak areas, and one cheap test.
+subhead: Paste your ad script, creator brief or finished ad. It scores the ad on five areas that help people remember the brand. The score is a judgement from the ad itself, not a measured or proven prediction of recall. You get a brand-recall score out of 100 with the sum shown, what pulls attention from the product, fixes for weak areas, and one cheap test.
 
 explain: |
   An ad can be watched, liked and shared, and still leave the viewer unable to say who it was for. A famous face, a big joke or a stunt can pull the eye away from the product. A product that sits in a corner, or only shows up on the last frame, gets forgotten.
 
-  This skill checks five things: what the product does in the story, whether it fits the scene, what distracts from it, whether a normal customer would see themselves in the ad, and whether the brand cues show early, late and when the hook lands. Each area has four yes or no questions worth 5 points. The score is for brand recall judged from the ad itself, not for sales. The lab figures behind the method come from small studies, so treat them as prompts to test. Run the cheap recall test before you scale spend.
+  This skill checks five things: what the product does in the story, whether it fits the scene, what distracts from it, whether a normal customer would see themselves in the ad, and whether the brand cues show early, late and when the hook lands. Each area has four yes or no questions worth 5 points. The score is for brand recall judged from the ad itself, not for sales. The method draws on book-reported study figures from Buyology. They are unchecked here and used only as prompts to test, not as proof. The score is a judgement rubric, not a validated predictor of recall. Run the cheap recall test before you scale spend.
 
 when:
   - You are about to spend on a new ad or brief and want to know if the brand will be remembered.

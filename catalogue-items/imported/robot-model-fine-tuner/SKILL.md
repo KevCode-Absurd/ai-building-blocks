@@ -19,7 +19,7 @@ This catalog copy does not include these files:
 - `scripts/train_pytorch.py`
 - `examples/simple_client/main.py`
 
-Do not say you read or ran them from this folder. They are not included here. They live in the public openpi repo (https://github.com/Physical-Intelligence/openpi), which Workflow 0 clones (use the repo path `scripts/` and `examples/` inside the clone, at the latest main unless the user pins a commit). Fetch them from that clone before you run any command here, and run every `uv run` command from inside the clone.
+Do not say you read or ran them from this folder. They are not included here. They live in the public openpi repo (https://github.com/Physical-Intelligence/openpi), which Workflow 0 clones (use the repo path `scripts/` and `examples/` inside the clone). Pin one openpi commit that you have tested, write it down, and check it out after cloning. Do not train or serve from the latest main for real robot work, because the code can change under you. Fetch them from that clone before you run any command here, and run every `uv run` command from inside the clone.
 
 # OpenPI Fine-Tuning and Serving
 
@@ -376,8 +376,26 @@ actions = result["actions"]  # shape: (action_chunk_size, action_dim)
 # SAFETY: do not run this on a real robot until you have tested the policy in
 # simulation first. For the first real runs, use an emergency stop within reach,
 # reduced speed and a supervised, clear workspace.
-# Execute first action on robot
-robot.step(actions[0])
+# Guard every action before it reaches the robot. This sketch assumes the actions
+# are joint positions. If your config gives deltas or end-effector poses, change
+# the guard to match.
+# Copy the three limits below from your robot's spec sheet. They are None on
+# purpose, so the guard refuses to run until you set real numbers.
+# Example shape only: np.array([<one number per joint>, ...]) in the same units as the state.
+MAX_STEP = None    # largest allowed change per joint in one control cycle (speed clamp)
+JOINT_MIN = None   # lowest allowed value per joint
+JOINT_MAX = None   # highest allowed value per joint
+if MAX_STEP is None or JOINT_MIN is None or JOINT_MAX is None:
+    raise RuntimeError("Set MAX_STEP, JOINT_MIN and JOINT_MAX from your robot's spec sheet first")
+# robot.step, robot.stop and robot.emergency_stop_pressed below are stubs.
+# Wire them to your own robot's SDK and test them in simulation before any real run.
+state_now = observation["state"]
+target = state_now + np.clip(np.asarray(actions[0]) - state_now, -MAX_STEP, MAX_STEP)
+if np.any(target < JOINT_MIN) or np.any(target > JOINT_MAX) or robot.emergency_stop_pressed():
+    robot.stop()                      # your robot's own stop call
+    raise RuntimeError("Action rejected: out of range or emergency stop")
+# Execute the guarded action on the robot
+robot.step(target)
 ```
 
 **Next steps after the server runs:** test it in the matching LIBERO or ALOHA simulation, then run staged robot trials at reduced speed, and evaluate before any unsupervised use.

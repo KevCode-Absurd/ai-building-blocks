@@ -52,7 +52,7 @@ output_sample:
     - Google Merchant Center connected with approved products, for the Shopping campaign
   output:
     - name: FIT
-      contains: Whether your brand is searched enough to pay off, and a spend cap of about 3 to 8 percent of Google spend.
+      contains: Whether your brand is searched enough to pay off, and a spend cap to test of about 3 to 8 percent of Google spend (an unsourced starting value).
     - name: SEARCH CAMPAIGN SETTINGS
       contains: Goal, network, location, bidding with both views and the pick, budget, and the customer list as observation.
     - name: KEYWORDS (exact)
@@ -70,7 +70,7 @@ output_sample:
 
 how_it_works:
   - title: Checks the fit
-    text: A brand that people search pays off. A brand nobody searches gets almost no volume. Brand spend should be about 3 to 8 percent of Google spend.
+    text: A brand that people search pays off. A brand nobody searches gets almost no volume. Brand spend could start at about 3 to 8 percent of Google spend. That is an unsourced value to test.
   - title: Sets Search bidding
     text: Shows both views, target impression share at the absolute top, or manual CPC aiming for over 90 percent. Max conversions is not used.
   - title: Sets the Search basics
@@ -87,7 +87,7 @@ how_it_works:
     text: Settings, budgets, ad rules and claims are checked, and any check it could not run is listed.
 
 output_shape: |
-  FIT  <brand searched? volume note> | brand spend cap <3 to 8% of Google spend>
+  FIT  <brand searched? volume note> | brand spend cap <3 to 8% of Google spend, an unsourced test value>
 
   SEARCH CAMPAIGN SETTINGS
   goal <sales: purchase> | network <Search only> | location <presence only>
@@ -118,7 +118,7 @@ tweaks:
   - what: Rival activity on your name
     how: Auction insights show who bids on you. A rival makes the campaign more worth running.
   - what: Impression share target
-    how: Aim for 78 percent or more when you run Meta heavily, and near full when rivals bid on your name.
+    how: One unnamed source suggests 78 percent or more when you run Meta heavily. Treat it as an unverified aim to test. When rivals bid on your name, aim near full.
 
 judge:
   - Every keyword is in exact match and the list is short, around four.

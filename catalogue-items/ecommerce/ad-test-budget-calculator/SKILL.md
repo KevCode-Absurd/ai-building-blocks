@@ -38,11 +38,11 @@ This skill runs on its own. All it needs to start is a target cost per sale. If 
 
 ## How to do it
 1. **Work out the daily test budget.** Daily test budget = sales needed x expected cost per sale / test days. Example from the source: 20 sales x $100 / 14 days = about $143 a day. Show the sum with the person's numbers.
-2. **Compare with Meta's advice.** Meta says 50 sales in 7 days to leave the learning phase. For the same example that is $714 a day for one test, and about $7,000 a day for 10 tests, so use a lower threshold. State that this is the source's reading and the person can check Meta's current advice.
-3. **Set the spend limit before judging.** The common rule is 3 times the target cost per sale. At 3 times: 4 sales is good, 3 is fine, 2 earns another small top-up of spend (the source used $50 to $100 as an example; set your own step), and 0 or 1 is cut. The speaker prefers 5 times the target (for a $50 target, $250) as a flat yes or no with no yellow light, because early spend is when delivery learns who to show the ad to. Give both, with the dollar figure for each. Say that 3 times versus 5 times is a speaker's preference, not a rule.
-4. **Pick the test length.** About one week suits most stores: it covers day-of-week swings and a 3 to 4 day path from first view to purchase. Use 3 to 4 days for large stable stores with a short buying path. Use 10 to 14 days for tiny budgets, a long buying path or big weekly swings. Explain why a one-day test is wrong: you launch on a good or bad day, and people see the ad and buy later after being shown other ads, so you cut the top ad that earned the sale.
-5. **Do not read too early.** Do not read results over fewer than 5 days when spend is low. Match the window to the number of sales: 3 days works with a thousand sales a day and means nothing with 3. Below about $1,000 a day, results swing up and down day to day, so judge on 7 days or more. The $1,000 line is a starting point from the course video credited for this item, not a rule. Check it against your own results. Do not obsess over the learning label, because ads keep learning. Read the window, not the label.
-6. **Say what to do next.** If the ad set hits the target over the window, raise the budget in steps of about 20 percent a day. Treat 20 percent as a starting point, not a rule. It is a habit from the course video credited for this item, and the same source says Meta allows faster moves than Google, so call it a habit. Never edit a winning ad set. Add new ads as a new ad set next to it. If it misses, say why the creative missed, make new ads and wind it down. Do not change budgets or bids every day: the source says daily bid moves might squeeze about 5 percent more, while better creative can double the account.
+2. **Compare with the 50-sales advice.** The course source says Meta advises 50 sales in 7 days to leave the learning phase. For the same example that is $714 a day for one test, and about $7,000 a day for 10 tests, so use a lower threshold. This is the source's reading and it may be out of date. Tell the person to check Meta's current advice before relying on it.
+3. **Set the spend limit before judging.** The common rule is 3 times the target cost per sale. At 3 times: 4 sales is good, 3 is fine, 2 earns another small top-up of spend (the source used $50 to $100 as an example; set your own step), and 0 or 1 is cut. The speaker prefers 5 times the target (for a $50 target, $250) as a flat yes or no with no yellow light, because early spend is when delivery learns who to show the ad to. Give both, with the dollar figure for each. 3 times versus 5 times is a speaker's preference, not a rule.
+4. **Pick the test length.** About one week suits most stores: it covers day-of-week swings and a 3 to 4 day path from first view to purchase. Use 10 to 14 days for tiny budgets, a long buying path or big weekly swings. Use 3 to 4 days only for a large stable store that spends about $1,000 a day or more and has a short buying path. One rule decides the window: use the minimum days in step 5. If two rules give different windows, the longer one wins. Explain why a one-day test is wrong: you launch on a good or bad day, and people see the ad and buy later after being shown other ads, so you cut the top ad that earned the sale.
+5. **Do not read too early.** The minimum read window is 7 days when daily spend is below about $1,000, and never fewer than 5 days at any low spend. At about $1,000 a day or more with a short buying path, 3 to 4 days can work. Match the window to the number of sales: 3 days works with a thousand sales a day and means nothing with 3. Results swing up and down day to day at low spend. The $1,000 line is a starting point from the course video credited for this item, not a rule. Check it against your own results. Read the window, not the learning label.
+6. **Say what to do next.** If the ad set hits the target over the window, raise the budget in steps of about 20 percent a day. Treat 20 percent as a starting point, not a rule. It is a habit from the course video credited for this item. Check the platform's current guidance before big budget moves. Never edit a winning ad set. Add new ads as a new ad set next to it. If it misses, say why the creative missed, make new ads and wind it down. Do not change budgets or bids every day: the source says daily bid moves might squeeze about 5 percent more, while better creative can double the account.
 7. **Count the ads for the idea.** Hit rates are around 5 percent by the source's rough figure, so a new idea needs at least 10 ads and more like 20 to expect one winner. A losing ad is not a losing idea: build variations, such as three different openings, before you drop the idea.
 8. **List common mistakes.** Testing inside the scaling campaign. No exclusions of existing customers. Killing tests too early. Setting budgets from the 50 sales in 7 days rule.
 9. **High order value branch.** If order value is high and orders a week are few, say plainly that there is much less purchase signal: at $1,000 you may see about a tenth of the sales you would at $100 (one founder's estimate). Offer three things. Use longer windows. Test hooks as organic posts on separate topic accounts and run only the ones that work as paid ads (this needs a weekly posting habit; without it the plan stalls). Optimize the test ad on add to cart or page view for more signal, then run the shortlisted winner on purchase before scaling, because an upper-funnel signal can pick the wrong winner. Give a shortlist rule for what moves to paid. Do not copy or imply fake accounts: the topic accounts must not pretend to be customers or hide that they are run by the brand when the platform requires saying so.
@@ -57,6 +57,7 @@ Target cost per sale: <$>  Sales needed: <n>  Days: <n>  Order value: <$ or MISS
 TEST BUDGET
 Daily budget = <sales needed> x <cost per sale> / <days> = <$ a day>
 Total for the test: <$>
+This daily budget is a starting point. Adjust it after the first checkpoint, because it is a formula result and not a setting Meta requires.
 Compare: Meta's 50 sales in 7 days would be <$ a day> for this test
 
 JUDGE AT (pick 3x or 5x)
@@ -65,7 +66,7 @@ Spend limit: <3 or 5> x <target> = <$>
 5x rule: yes or no at the limit, no wait
 
 READ WINDOW
-<days> because <your store size and buying path>  Do not read before day 5 at low volume
+<days> because <your store size and buying path>  Minimum: 7 days under about $1,000 a day, never under 5 days at low volume
 Number of ads for this idea: <10 to 20> because the hit rate is about 5%
 
 AFTER THE TEST
@@ -100,5 +101,6 @@ Write `MISSING: <target cost per sale | sales needed | days | order value>`. Wit
 - Judging an ad after one day.
 - Sizing the budget to Meta's 50 sales in 7 days.
 - Editing the ad set of a winner.
+- Treating the formula's daily budget as a fixed Meta setting.
 - Treating one speaker's 3x or 5x choice as a platform rule.
 - Picking a winner on add to cart alone.

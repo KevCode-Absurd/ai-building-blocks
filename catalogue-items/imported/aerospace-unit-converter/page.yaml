@@ -10,6 +10,8 @@ explain: |
   Values move correctly between units, time systems and coordinate frames, with MATLAB code you can run again. That avoids the slip-ups that come from mixing frames in flight or space work.
 
   The skill covers unit changes, time systems such as UTC and sidereal time, and positions in latitude, longitude and altitude, Earth-fixed and Earth-inertial frames. It also converts orbit elements to position and velocity, and moves between Euler angles, rotation matrices and quaternions. Time-dependent conversions use the right date. It shows the standard patterns and picks the right function for each case. It stays inside basic aerospace maths, so check the toolbox notes for harder dynamics. This is for aerospace and flight-data engineers who already work in MATLAB. MATLAB and the Aerospace Toolbox are paid products from MathWorks, and you must already hold a licence for both.
+
+  Licence: the LICENSE.md file in this folder governs (BSD 2-Clause plus a MathWorks term that limits use to MathWorks products). The skill file header links MathWorks' own licence page, which says the same kind of thing.
 when:
   - You have data in feet and knots and need metres and metres per second.
   - You need to turn GPS positions into Earth-fixed coordinates.
@@ -30,8 +32,8 @@ you_get:
   - The frame and time assumptions used
   - A check of the result
 how_to_use:
-  - Open a chat with an AI that can run MATLAB code, or plan to run the code yourself. You need MATLAB with the Aerospace Toolbox.
-  - Paste the skill text into the chat.
+  - Open a chat with an AI that can run MATLAB code, or plan to run the code yourself. You need MATLAB with the Aerospace Toolbox. Check your MATLAB release first, because some functions only exist from certain releases. The skill lists the release for most functions.
+  - Paste the skill text into the chat, about 1,400 words. If your question is about frames or rotations, also paste the matching reference file from the references folder (coordinate-systems.md or rotation-conventions.md). For unit questions, paste unit-conversion-guide.md.
   - Add your values, their current units or frame, and the target. Add dates if the frame depends on time.
   - Ask your AI to name the frame and time system it assumes before it converts.
   - Run the MATLAB code and check the round-trip result matches your starting values.
@@ -54,4 +56,4 @@ output_sample:
     - name: Assumptions used
       contains: The frames, time system, date and rotation order the conversion relied on.
     - name: Check of the result
-      contains: A round-trip test that converts back and compares with your starting values.
+      contains: A round-trip test that converts back and compares with your starting values. It passes when the error is under 1e-10.

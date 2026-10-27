@@ -11,25 +11,33 @@ description: 鞋包配饰真人穿戴图。商品图 + 模特参考图 → 真�
 > 3. Write one image prompt that says where the item sits on the body, keeps the product's shape, colour, hardware and logo the same, and says to change nothing else.
 > 4. Run it in an image tool (this costs credits; do a dry run to see the cost), make 2 to 4 versions, and check placement, scale, reflections and the face.
 >
+> Output file: with the dLazy tool the picture is a JPEG, 1024 x 1536 for half or full body shots and 1024 x 1024 for close-ups of a wrist or ear. Ask for 2 to 4 versions per run.
+>
 > What you give back: one image prompt (product, model photo, exact placement line, keep-unchanged rules), a few fix-up lines, and, once an image tool runs it, one portrait JPEG per run (2 to 4 versions if asked).
 >
-> Paid service: step 4 needs an account with the dLazy image service (or another image tool that can edit with several pictures), an API key and credits. Do the dry-run cost check before any real run.
+> Paid service (the commands in the Chinese sections 5 and 7 also need it): step 4 needs an account with the dLazy image service (or another image tool that can edit with several pictures), an API key and credits. Do the dry-run cost check before any real run.
 >
-> Consent and labelling: only use a reference photo of a person who has agreed to it. Do not present the result as a real customer photo or an endorsement. Label the image as illustrative wherever a buyer or marketplace could read it as a real customer photo.
+> Consent and labelling: only use a reference photo of a person who has agreed to it, in writing. The skill puts a real person's likeness in your ad, so this check is yours to carry out. Do not present the result as a real customer photo or an endorsement. Label the image as illustrative wherever a buyer or marketplace could read it as a real customer photo.
+>
+> Placement lines (the table in section 3, in English): glasses sit on the nose bridge and hook over both ears. A watch goes on the wrist with the dial facing the camera. A necklace goes around the neck with the clasp at the nape and the pendant on the collarbone. Earrings hang from the visible earlobe. A hat sits on the head with the brim matching the head tilt. A scarf wraps the neck. Shoes are on both feet with soles on the ground and a grounded shadow. A bag is held in the hand or rests on the shoulder. Always add: change nothing else, so face, hair, clothing, background and crop stay the same as the model photo.
+>
+> Fix-up lines (sections 6 and 8, in English): if the item sits wrong, tell it to re-check the placement against a body landmark. If the size is off, give the item's width as a share of a body part. If the model already wears a similar item, say to remove it and replace it with your product. If the face or background changed, say to change only the item's region. If metal or lenses look fake, ask for reflections that match the light in the model photo and use the high quality setting.
 >
 > Next: check the image against the marketplace's image rules, then pair it with a listing copy skill. Links to `../flat-lay` and the `docs/` example pictures point to files that are not in this library. Ignore them; the steps above work without them. The `references/` and `scripts/` folders are included.
 
 把一张**鞋 / 包 / 手表 / 眼镜 / 帽子 / 围巾 / 项链 / 耳饰**的商品图，变成**真人正确佩戴**的商拍图。
 
-和 [flat-lay](../flat-lay/skill.md) 的区别：flat-lay 处理「穿在身上的衣服」，本技能处理「戴在身上的东西」——商品只占画面的一小块区域，因此**选区（商品出现在参考图的哪个位置）**是成败关键。
+和 flat-lay（本库没有这个技能，链接已移除）的区别：flat-lay 处理「穿在身上的衣服」，本技能处理「戴在身上的东西」——商品只占画面的一小块区域，因此**选区（商品出现在参考图的哪个位置）**是成败关键。
 
 ---
 
 ## 生成效果示例
 
+> AI Blocks: the example pictures below (docs/wear-everything) are not in this library, so the example output cannot be checked here. Treat this section as a description only.
+
 | 输入：商品图 | 输入：参考图 |
 | --- | --- |
-| <img src="../../docs/wear-everything/product-sunglasses.jpg" width="280"> | <img src="../../docs/wear-everything/model-reference.jpg" width="280"> |
+| (picture not included) | (picture not included) |
 | `product-sunglasses.jpg` — 玳瑁色方框墨镜，768×1024 | `model-reference.jpg` — 女青年正脸、夜景街拍，768×1024 |
 
 实际执行的命令：
@@ -44,7 +52,7 @@ dlazy gpt-image-2 \
 
 **输出**
 
-<img src="../../docs/wear-everything/example-output.jpg" width="320">
+(example output picture not included in this library)
 
 `example-output.jpg` — 1024×1536。墨镜按正确的鼻梁/耳挂关系落位，镜框玳瑁纹理与镜片色保留；模特五官、围巾千鸟格、夜景街道与色调保持原样。
 
@@ -60,7 +68,7 @@ dlazy gpt-image-2 \
 | 选区 | 在参考图上框出商品该出现的位置（眼部 / 手腕 / 颈部 / 脚部 / 肩背 / 头顶） |
 | 支持品类 | 鞋、包、手表、眼镜墨镜、帽子、围巾、项链、耳饰、腰带、手套等 |
 
-**不做**：不改商品外形、颜色、五金、logo 与镜片色；不处理服装（用 [flat-lay](../flat-lay/skill.md)）；不用于伪造他人肖像代言。
+**不做**：不改商品外形、颜色、五金、logo 与镜片色；不处理服装（要做服装请用其他工具；flat-lay 不在本库中）；不用于伪造他人肖像代言。
 
 ---
 

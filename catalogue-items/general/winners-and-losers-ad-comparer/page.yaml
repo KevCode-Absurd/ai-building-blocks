@@ -18,7 +18,7 @@ when:
   - You keep hearing that something always works and want to see if it does for you.
   - You are about to brief new ads and want to copy a pattern, not a hunch.
 not_for:
-  - "You have one weak ad and want to know why it fell short: use the Ad pull diagnoser."
+  - "You have one weak ad and want to know why it fell short: use the Ad response troubleshooter (ad-pull-diagnoser)."
   - "You only want the style of winning image ads: use the Winning image ad style finder."
   - "You have fewer than five ads with results: wait for more results, or compare the few you have by eye."
 
@@ -44,7 +44,7 @@ output_sample:
   input:
     - "Results for each ad: ad name, replies or sales, spend or audience size, and date range"
     - "The ads themselves: headline, copy, picture, offer, size and where each ran (optional)"
-    - A diagnosis from the Ad pull diagnoser (optional)
+    - A diagnosis from the Ad response troubleshooter (optional)
   prerequisites:
     - Results for at least five ads, exported from your ad platform, email tool or store
   output:

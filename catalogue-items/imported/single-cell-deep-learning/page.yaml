@@ -7,7 +7,9 @@ job: build-software
 headline: Single-cell deep learning analyst
 subhead: Single-cell datasets merged, batch effects removed and cell types found with scvi-tools, the deep learning toolkit for single-cell data. Your samples then line up so real biology shows through.
 explain: |
-  Single-cell datasets merged, batch effects removed and cell types found with scvi-tools, the deep learning toolkit for single-cell data. Your samples then line up so real biology shows through.
+  The first thing you get is a merged, batch-corrected AnnData file with cell clusters and a map of your cells.
+
+  An AnnData file (.h5ad) holds your cells, genes and counts in one file. Raw integer counts are the whole-number read counts straight from the sequencer, before any scaling. The latent matrix is a short list of numbers per cell that puts all your samples in one shared space.
 
   It starts with a model table: scVI for plain RNA integration, scANVI when you have labels, totalVI for RNA plus protein, PeakVI and MultiVI for chromatin data, and DestVI for spatial data. It points you to the matching step-by-step reference, ready scripts and notes on GPU setup and fixing errors. Tasks include batch correction, label transfer to a reference, joint analysis of several data types and a latent map of cells. You need Python, scvi-tools and ideally a GPU.
 when:
@@ -35,7 +37,8 @@ how_to_use:
   - Tell your AI the name of your batch column, your data type, and any labels you have.
   - Ask your AI to run validate_adata.py first, then follow the steps for the model it picks.
   - Check the UMAP and clusters. Batches should mix, and real cell types should stay apart.
-  - Use the latent matrix and de.csv for your next analysis.
+  - Open the UMAP first. If batches mix and real cell types stay apart, go on and read de.csv for marker genes. If batches stay split, ask your AI to change the model settings and run it again before you read de.csv.
+  - Use the latent matrix and de.csv for your next analysis. Ask a bioinformatician to review the result before you rely on it for a decision.
 output_sample:
   input:
     - Your single-cell data as an AnnData file (.h5ad) with raw integer counts

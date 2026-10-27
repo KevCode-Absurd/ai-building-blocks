@@ -129,7 +129,7 @@ litgpt finetune_lora \
 
 **Step 4: Run fine-tuning**
 
-Training saves checkpoints to `out/finetune/` automatically.
+Test first: run a short trial (for example `--train.max_steps 20`) to check that the data loads and the memory fits, then start the full run. Training saves checkpoints to `out/finetune/` automatically.
 
 Monitor training:
 ```bash
@@ -217,6 +217,8 @@ llm = LLM.load("out/phi2-merged")
 ```
 
 ### Workflow 3: Pretrain from scratch
+
+**Out of scope for this copy.** The data preparation script is not included, and `--data.data_dir` in the commands below is only a placeholder for a folder you must prepare yourself. Do not run these commands unless the user supplies prepared data and has checked the option names in the LitGPT docs. For most users, use Workflow 1 or 2 instead.
 
 Train new model on your domain data.
 
@@ -335,6 +337,8 @@ litgpt convert_lit_checkpoint \
 
 **Step 3: Convert to GGUF** (for llama.cpp)
 
+Skip this step in this copy: `scripts/convert_lit_checkpoint.py` is not included, so the command below cannot run as written. Use the LitGPT and llama.cpp docs for the conversion instead.
+
 ```bash
 python scripts/convert_lit_checkpoint.py \
   --checkpoint_path out/phi2-lora/final \
@@ -343,6 +347,8 @@ python scripts/convert_lit_checkpoint.py \
 ```
 
 **Step 4: Deploy with API**
+
+This example has no login. It listens on this computer only (127.0.0.1). Before you let anyone else reach it, put it behind an API key or a private network.
 
 ```python
 from fastapi import FastAPI
@@ -360,7 +366,7 @@ def generate(prompt: str, max_tokens: int = 100):
     )
     return {"response": result}
 
-# Run: uvicorn api:app --host 0.0.0.0 --port 8000
+# Run: uvicorn api:app --host 127.0.0.1 --port 8000
 ```
 
 ## When to use vs alternatives

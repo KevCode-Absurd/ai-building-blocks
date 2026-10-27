@@ -10,6 +10,8 @@ license: Apache-2.0
 license_source: https://github.com/neondatabase/agent-skills/blob/main/LICENSE
 ---
 
+<!-- Licence note: this copy is shared under CC BY 4.0 (see LICENSE-CONTENT). The Apache-2.0 line in the header above is Neon's own, kept as the upstream source. -->
+
 # Claimable Postgres
 ## When to Use
 
@@ -160,7 +162,7 @@ For Vite projects, `vite-plugin-neon-new` auto-provisions a database on `vite de
 2. **Provision:** POST to `https://neon.new/api/v1/database` with `{"ref": "agent-skills"}`.
 3. **Parse response:** Extract `connection_string`, `claim_url`, and `expires_at` from the JSON response.
 4. **Write .env:** Write `DATABASE_URL=<connection_string>` to the project's `.env` (or the user's preferred file and key). Do not overwrite an existing key without confirmation.
-5. **Seed (if needed):** If the user has a seed SQL file, run it against the new database:
+5. **Seed (if needed):** If the user has a seed SQL file, show them what it does first. Get a yes before you run any seed SQL that drops, deletes or replaces data. Then run it against the new database:
    ```bash
    psql "$DATABASE_URL" -f seed.sql
    ```

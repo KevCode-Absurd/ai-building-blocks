@@ -11,7 +11,7 @@ explain: |
 
   Each quoted piece of code is saved with its file, line range and a fingerprint of those lines, and the deck notes the commit it came from. Later, a small Python script compares every citation with today's code and marks it current, moved, changed or missing. It needs no model and no network. The deck is one self-contained HTML file. A full version lives in the SlideOps repository.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (glukicov) says MIT, and the bundled helper files keep that MIT licence (see UPSTREAM-LICENSE.txt). Credit goes to glukicov and sickn33.
+  Licence: two licences apply, to different parts. The skill file (SKILL.md) and the bundled helper files are glukicov's work under the MIT licence (see UPSTREAM-LICENSE.txt). The page text written for this library is under CC BY 4.0 (see LICENSE-CONTENT). Both let you reuse with credit. Credit glukicov (author) and sickn33 (collection).
 
   Risk: the skill file is marked "critical" because it clones an outside repo, adds links in your home folder and writes files. It asks before each of those steps.
 when:
@@ -36,11 +36,12 @@ you_get:
 how_to_use:
   - Before you start, check that your repo has git history, that Python 3 and Chrome or Chromium run from your terminal, and decide where the deck is saved (the default is docs/slides/).
   - Use an AI that can run code and read your files, such as Claude Code, Codex CLI, Copilot CLI or OpenCode. A plain chat window cannot run the checks.
-  - Review before you install. The install step clones an outside repo (glukicov/slideops) and links the skills into your home folder. The exact commands are: git clone https://github.com/glukicov/slideops, then cd slideops, then git checkout ba43e89bc7936649be36a1796a62203f704f8c60, then ./install.sh. The pinned commit ba43e89 is the slideops release. It differs from the commit in this library's source record (0c10eb8), which is the collection the copy came from. Check the pinned commit first, then run install.sh. It adds two skill links, one in ~/.claude/skills and one in ~/.agents/skills. To undo it, delete those links. The pinned commit belongs to the slideops repository.
+  - "Review before you install. The install step clones an outside repo (glukicov/slideops) and links the skills into your home folder. The exact commands are: git clone https://github.com/glukicov/slideops, then cd slideops, then git checkout ba43e89bc7936649be36a1796a62203f704f8c60, then ./install.sh. The pinned commit ba43e89 is the slideops release. It differs from the commit in this library's source record (0c10eb8), which is the collection the copy came from. Check the pinned commit first. Open the slideops repository on GitHub, find the v1.0.0 release or tag, and confirm its commit starts with ba43e89. If it does not match, stop and do not run install.sh. Then run install.sh. It adds two skill links, one in ~/.claude/skills and one in ~/.agents/skills. To undo it, delete those links. The pinned commit belongs to the slideops repository."
   - Open your repository and ask your AI to make slides about it. Answer its short questions on topic, audience, length and theme.
   - Read the outline it shows you and approve it or ask for changes. It builds the deck after that.
   - Open the HTML deck and look through each slide. Your AI also checks each slide in Chrome.
-  - Later, ask your AI to check the deck against the code. Fix the slides marked changed or missing, then stamp the deck again.
+  - Later, ask your AI to check the deck against the code. Fix the slides marked changed or missing, then stamp the deck again. Run the check in your automated tests as a report-only step, so a stale slide shows a note but does not block work.
+  - For a PDF copy to hand out, use the PDF converter on the HTML deck. The PDF holds no citations, so check the HTML deck, not the PDF.
 output_sample:
   input:
     - Your code repository (a git repo)

@@ -17,13 +17,13 @@ This skill enables the agent to analyze a project's direct and transitive depend
 
 2. **Resolve the Full Dependency Tree** — Parse lock files to build the complete dependency graph including transitive dependencies. Identify dependency depth, shared sub-dependencies, and version constraints. Flag phantom dependencies that are used in code but missing from the manifest.
 
-3. **Scan Against Vulnerability Databases** — Query the National Vulnerability Database (NVD), GitHub Advisory Database, and OSV for each resolved package and version. Match results by CPE or PURL identifier. Record CVE IDs, CVSS scores, severity levels, affected version ranges, and fixed versions where available.
+3. **Scan Against Vulnerability Databases** — Run the audit command for the ecosystem (for example `npm audit --json` for Node, `pip-audit -r requirements.txt` for Python, `osv-scanner` for many ecosystems), then check each result against the National Vulnerability Database (NVD), GitHub Advisory Database, and OSV. Match results by CPE or PURL identifier. Record CVE IDs, CVSS scores, severity levels, affected version ranges, and fixed versions where available.
 
 4. **Assess License Compliance** — Extract the declared license for each dependency and compare it against the project's license policy. Flag copyleft licenses (GPL, AGPL) in proprietary projects, identify packages with no declared license, and detect license conflicts between direct and transitive dependencies.
 
 5. **Generate SBOM and Vulnerability Report** — Produce a Software Bill of Materials in CycloneDX or SPDX format. Generate a vulnerability report sorted by severity, including CVE identifiers, affected dependency paths, available fix versions, and whether the vulnerable code path is reachable.
 
-6. **Recommend and Apply Fixes** — Suggest the minimum version upgrades required to resolve vulnerabilities without breaking changes. Where possible, generate updated manifest and lock files automatically. Flag cases where no fix is available and suggest alternative packages or workarounds.
+6. **Recommend and Apply Fixes** — Suggest the minimum version upgrades required to resolve vulnerabilities without breaking changes. Show every manifest or lock file change as a diff, and wait for the user to approve each change before anything is written. Never write a file without that yes. Flag cases where no fix is available and suggest alternative packages or workarounds.
 
 ## Supported Technologies
 
@@ -46,6 +46,8 @@ Scan the Node.js project in /app for dependency vulnerabilities. Generate a Cycl
 ```
 
 ## Examples
+
+The CVE IDs, package versions and fixed versions in both examples are placeholders. Check every one against NVD or OSV (the public vulnerability databases) before you change anything.
 
 ### Example 1: Scanning a Node.js Project
 
@@ -112,7 +114,7 @@ gunicorn==21.2.0
 
 - **Scan on every CI build** — integrate dependency scanning into CI pipelines so that new vulnerabilities are caught before code is merged, not after deployment.
 - **Pin dependencies and use lock files** — reproducible builds with lock files ensure that the exact versions scanned in CI are the same versions deployed to production.
-- **Monitor transitive dependencies** — over 80% of vulnerabilities in typical projects come from transitive dependencies. Always resolve and scan the full dependency tree, not just direct dependencies.
+- **Monitor transitive dependencies** — many vulnerabilities in a typical project sit in transitive dependencies (the packages your packages use). Always resolve and scan the full dependency tree, not just direct dependencies.
 - **Automate update PRs** — use Dependabot, Renovate, or Snyk to automatically open pull requests when fix versions become available, reducing the window of exposure.
 - **Maintain a license allow-list** — define an approved license list (e.g., MIT, Apache-2.0, BSD) and block builds that introduce dependencies with disallowed licenses.
 - **Generate SBOMs for every release** — store CycloneDX or SPDX SBOMs alongside release artifacts to support supply chain transparency and incident response.

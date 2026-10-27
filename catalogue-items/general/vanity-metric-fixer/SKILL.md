@@ -7,6 +7,8 @@ description: Use when you report numbers that only go up, such as total users, p
 
 A number that grows no matter what you do tells you nothing about your work. This skill finds those numbers and replaces them with rates you can act on. It splits results by group and by release, so you can see what caused each change. It also checks where the data comes from.
 
+**Not for:** a snapshot of one launch day (use a basic dashboard from your analytics tool), numbers with no per-customer or per-group data (ask your tool or a developer for an export by sign-up month first), or finding why one rate dropped (use the [Root cause finder](https://useaiblocks.com/skills/root-cause-finder), then come back to pick the number). To follow groups of customers over time in depth, use the [Cohort funnel analyst](https://useaiblocks.com/skills/cohort-funnel-reader).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -39,7 +41,7 @@ How to start:
 
 1. **List the weekly numbers.** Make a table of every number reported, with its definition, the period, and who sees it. If a definition is missing, mark `MISSING: definition`.
 2. **Mark the vanity ones.** A vanity number is a total, hit count or sign-up count that only grows with time or spend. For each, write yes or no and the one-line test: "would this go up even if we did nothing useful?".
-3. **Swap for rates.** For each vanity number, write the per-customer or per-group version: share of new sign-ups who used the product in the first week, orders per customer, repeat rate by month joined. Give the formula and the data it needs.
+3. **Swap for rates.** For each vanity number, write the per-customer or per-group version: share of new sign-ups who used the product in the first week, orders per customer, repeat rate by month joined. Give the formula and the data it needs. Shape of one swap, with placeholders to replace with the person's own figures: total sign-ups is a vanity number. The rate that replaces it is first-week activation rate for the [MONTH] group = [SIGN-UPS WHO DID THE KEY ACTION IN WEEK 1] divided by [SIGN-UPS IN [MONTH]]. It needs each sign-up's date and the date of the key action.
 4. **Split by group and release.** Group customers by the month they joined or by the release they saw. Show how each group behaves over the same stretch of time. If the data cannot be split, write what is needed to split it.
 5. **Tie moves to causes.** For each rate, list one change that could have caused a rise or fall (a release, price change, campaign, season). Note what other change happened at the same time, so you do not claim a cause that was a coincidence.
 6. **State one goal with a date.** Write the goal in one line: "raise <rate> from <x> to <y> by <date>". Use only figures from the data or mark them `MISSING:`.
@@ -60,6 +62,8 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Plan your strategy** with the [Cohort funnel analyst](https://useaiblocks.com/skills/cohort-funnel-reader). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+What next: the links under "After this" all take the plan this skill writes. Pick the Cohort funnel analyst to follow each sign-up group over time, or the Root cause finder if one rate fell and you need to know why.
 
 ## Check before you hand it back
 

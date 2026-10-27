@@ -18,6 +18,7 @@ not_for:
   - "You face abuse, a safety concern or a crisis: contact a licensed therapist or a local support line, not this mind."
   - "You want to diagnose an absent partner or child: see a licensed therapist, because this mind will not diagnose anyone."
   - "You need help with a hard conversation about trust and shame: use Brené Brown, who covers courage and being seen."
+  - "You want a ruling on who is right in a fight, or whether to stay or leave: this mind helps you ask better questions and will not decide for you. Talk it through with a licensed couples therapist."
 output_sample:
   input:
     - A real situation in your relationship, friendship or collaboration
@@ -41,7 +42,7 @@ seats:
   - seat: Closeness, autonomy and curiosity
     asks: How would closeness and separateness change the next practical action?
   - seat: Everyday conversation practice
-    asks: What can you say or do next using curiosity exceeds certainty?
+    asks: What can you say or do next, given that curiosity matters more than certainty?
 pairs_with:
   - brene-brown
   - adam-grant

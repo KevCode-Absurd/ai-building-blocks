@@ -91,29 +91,15 @@ Put the findings in a table with these columns: screen, principle, finding, fix 
 3. What accessibility level are you targeting? (WCAG AA, AAA, Apple baseline?)
 4. System colors or custom?
 
-## Related Skills
+## What next
 
-These related skills are not part of this item:
-
-- **hig-platforms** -- How foundations apply per platform (e.g., type scale differences on watchOS vs macOS)
-- **hig-patterns** -- Interaction patterns where foundations like writing and accessibility are critical
-- **hig-components-layout** -- Structural components implementing layout principles
-- **hig-components-content** -- Content display using color, typography, and images
+After the fixes, run the accessibility checker on the updated design, then the App Store listing optimiser before you submit.
 
 ---
 
 *Built by [Raintree Technology](https://raintree.technology) · [More developer tools](https://raintree.technology)*
 
-## When to Use
-This skill is applicable to execute the workflow or actions described in the overview.
-
-## Example
-
-**User request:**
-
-> Use @hig-foundations for this task: Apple Human Interface Guidelines design foundations.
-
 ## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.
+- Not for Android or web designs.
+- This is not proof of accessibility or App Store approval. Test on a real device.
+- Stop and ask if the design, target device or app purpose is missing.

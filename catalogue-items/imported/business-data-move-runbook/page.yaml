@@ -19,12 +19,20 @@ you_get:
   - Checks for test imports, record links and totals.
   - A recovery plan that keeps and checks new work before moving back.
 how_it_works:
-  - title: Step 1
-    text: Map source fields to the target and keep a full backup.
-  - title: Step 2
-    text: Plan a small test move, then check counts, samples and relationships.
-  - title: Plan the switch and recovery
-    text: Set switch checks and recovery triggers. Keep new records, edits and deletions, then reconcile them before reopening the old tool.
+  - title: Plan
+    text: Map old fields to the new tool, name an owner and keep a full backup.
+  - title: Extract
+    text: Export everything from the old tool and check the export is complete.
+  - title: Transform
+    text: Clean the data and reshape it to fit the new tool's fields.
+  - title: Load
+    text: Move a small test batch first, then the rest.
+  - title: Validate
+    text: Check counts, samples, links between records and money totals.
+  - title: Switch and recover
+    text: Switch on a quiet day. Set recovery triggers. If you must go back, save the new tool's changes and put them into the old tool first.
+  - title: Retire the old tool
+    text: Keep the old tool read-only for 30 to 90 days, then retire it.
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
   - Tell it your old tool, your new tool, the record types, rough counts and your target switch date.

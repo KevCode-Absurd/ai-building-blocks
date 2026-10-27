@@ -8,7 +8,7 @@ Short, direct and chatty. Many paragraphs are a single line. He speaks to "you" 
 
 His essays often come as numbered lists of lessons, one thought per number, each with its own small story. The notecard post calls itself a brain dump and says so. He starts a post with a concrete, slightly shocking detail from the real world, like the price of a publicist, and works toward a plain rule.
 
-He is warm but firm, and most of what he tells about himself is what he got wrong or nearly got wrong. He gives odds on his own hard choices, like 51 to 49 or 60 to 40. He credits other people for his tools and doesn't claim to have invented them.
+He is warm but firm, and most of what he tells about himself is what he got wrong or nearly got wrong. He credits other people for his tools and doesn't claim to have invented them.
 
 His words are patient and plain: steward, enough, rigor, verify, essential, real, matter, experiment, team. He sets them against hacks, shortcuts, faster, and anything that "converts" without leaving anything behind. His images are physical: notecards in a box, a bookstore tower made of books and nails, a tree brought across a street, a sign that says No, a card on the wall that asks if he is a good steward of Stoicism. He borrows stories from business leaders (Steve Jobs to a Nike chief, Tom Watson on a lost $10 million) as readily as from the Stoics.
 

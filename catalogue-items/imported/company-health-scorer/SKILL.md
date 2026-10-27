@@ -14,7 +14,7 @@ metadata:
 
 # Org Health Diagnostic
 
-Eight dimensions. Traffic lights. Real benchmarks. Surfaces the problems you don't know you have.
+Eight dimensions. Traffic lights. Stated thresholds, which come from the skill author and are rules of thumb, not an official standard. Surfaces the problems you don't know you have.
 
 ## Keywords
 org health, organizational health, health diagnostic, health dashboard, health check, company health, functional health, team health, startup health, health scorecard, health assessment, risk dashboard
@@ -123,7 +123,7 @@ Each metric gets a colour from its threshold, then a score from 1 to 10. A dimen
 - 🔴 **Red (1-3):** Action required — address within 30 days
 
 **Overall Health Score:**
-Weighted average by company stage (see `references/health-benchmarks.md` for weights). If a stage-specific threshold in the reference file differs from an example above, the reference file wins. If neither the reference file nor the script is available, use the thresholds on this page and say so in the result.
+Weighted average by company stage (see `references/health-benchmarks.md` for weights). If a stage-specific threshold in the reference file differs from an example above, the reference file wins. If neither the reference file nor the script is available, use the thresholds on this page for each dimension, say so in the result, and do not give an overall score. Show the dimension scores only, because the stage weights live only in the reference file.
 
 ---
 
@@ -185,4 +185,4 @@ You don't need all metrics to run a diagnostic. The tool handles partial data:
 
 ## Repaired scoring rules
 
-Apply thresholds from the benchmark reference as the single source of truth. Use the supplied scorer thresholds for other dimensions and show the raw metric, comparison operator and threshold next to every color. Values on a boundary follow the stated inclusive rule. Do not average Unknown into a company total. If a dimension is missing, report it as unscored and show the denominator for any aggregate; never silently reweight. Treat the score as a diagnostic based on supplied inputs, not a prediction. Do not generalize Seed runway thresholds to other stages unless their benchmark is explicitly provided.
+Apply thresholds from the benchmark reference as the single source of truth. For the other dimensions, use the thresholds listed under each dimension in "The 8 Dimensions" above, and show the raw metric, comparison operator and threshold next to every color. Values on a boundary follow the stated inclusive rule. Do not average Unknown into a company total. If a dimension is missing, report it as unscored and show the denominator for any aggregate; never silently reweight. Treat the score as a diagnostic based on supplied inputs, not a prediction. Do not generalize Seed runway thresholds to other stages unless their benchmark is explicitly provided.

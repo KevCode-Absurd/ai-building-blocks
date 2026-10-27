@@ -39,6 +39,8 @@ How to start:
 
 ## What to collect first
 
+Not for: a one-line fix (use the [Minimal Change Engineer agent](https://useaiblocks.com/skills/agency-engineering-minimal-change-engineer)), code that is not Rust (use the [Code Reviewer agent](https://useaiblocks.com/skills/agency-engineering-code-reviewer)), or a security review of unsafe code or crypto (use the [Application Security Engineer agent](https://useaiblocks.com/skills/agency-security-appsec-engineer)). With no tests and no way to run cargo, expect a plan and a list of tests to write first, not changes you can trust.
+
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:` in the answer, or label a stand-in `ASSUMED:` and say what to replace it with.
 
 1. The code in scope: files, a module or a crate. Without it, write `MISSING: code` and stop. Do not edit code you have not seen.
@@ -68,6 +70,8 @@ Use these headings, in this order:
 3. Behavior and API (kept the same, needs the user's yes)
 4. Verification (each command, what a pass looks like, RUN or NOT RUN)
 5. Remaining risk (coverage gaps, deferred ideas)
+
+The Verification and Remaining risk sections are also your CHECKS MISSED list: name every check that failed or could not run, or write "none" if every check ran and passed.
 
 ## Rules
 

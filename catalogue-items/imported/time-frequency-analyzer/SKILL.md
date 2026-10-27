@@ -14,6 +14,8 @@ metadata:
   version: "2.0"
 ---
 
+<!-- Licence note: the licence line in the header above links a MathWorks reuse page. The licence that governs this copy is LICENSE.md in this folder: BSD 2-Clause, for use with MathWorks products only. -->
+
 # Time-Frequency Analysis in MATLAB
 
 Analyze how frequency content evolves over time using STFT, CWT, synchrosqueezing,

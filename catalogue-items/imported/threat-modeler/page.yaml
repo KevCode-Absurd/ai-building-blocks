@@ -11,7 +11,7 @@ explain: |
 
   The skill walks through the STRIDE method: spoofing, tampering, repudiation, information disclosure, denial of service and elevation of privilege. For each one it asks where your system is exposed, such as logins, data stores or third-party links. It scores likelihood and impact, then suggests controls like multi-factor login, signed requests or stricter logging. It works from your architecture notes or diagrams, and from how sensitive your data is.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header says MIT. Credit goes to BagelHole and sickn33.
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header says MIT. Credit goes to BagelHole (the DevOps-Security-Agent-Skills repository, where the file names devops-skills as author) and sickn33.
 when:
   - You are designing a new feature that handles personal data.
   - You are adding a third-party service and want to know the risk.
@@ -33,11 +33,13 @@ you_get:
   - A short summary for reviewers
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste this skill. It runs in a normal chat and needs no code. The Threat Dragon, Docker and CI/CD parts of the skill need a terminal and are optional. Skip them in a chat.
+  - "Gather first: a list of the parts of your system, which ones cross a trust boundary (for example, from a browser to your server, or to an outside service), and the kind of data each one holds."
+  - "No architecture docs yet? Start here: list the three to five main parts of your system, such as the browser, your server, your database and any outside service. Mark which links between them cross a trust boundary, where data passes from something you control to something you do not, or the other way."
   - Paste your system description or diagram notes. Say which parts handle data and where users log in.
   - List the kinds of data you hold, such as personal, health or payment data. List the outside services you use.
   - Ask your AI to go through each part of the system one at a time using STRIDE and fill in the worksheet.
-  - Check the risk ratings with someone who knows the system. Fix any that look wrong.
-  - Ask for the short reviewer summary, then share it with your team.
+  - "Check the risk ratings with someone who knows the system. Fix any that look wrong. The skill's example actions by score: 20 or more, fix at once (24 hours, security head approves). 12 to 19, fix this sprint (one week, security lead approves). 6 to 11, next sprint. 2 to 5, backlog. 1, accept and write it down. These are examples. Set your own deadlines and owners."
+  - Ask for the short reviewer summary. Keep it to the top five risks in under 300 words, then share it with your team.
   - Last, give each open threat an owner and a deadline, and track it in your issue tracker with your other work.
 output_sample:
   input:

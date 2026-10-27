@@ -6,7 +6,10 @@ summary: Check an AWS resource's health from its CloudWatch logs and metrics. Ge
 job: ship-and-host
 headline: AWS service health investigator
 subhead: Tell your AI which AWS resource has a problem and what you see. It runs read-only checks, reads your logs and metrics, and rates each issue. Then it writes a fix plan you approve before anything changes.
+explain: |
+  This is an imported copy of the aws-resource-health-diagnose skill from github/awesome-copilot, shared under the MIT licence. Only the name is ours.
 not_for:
+  - "You are in a live outage and need a person now: call your on-call engineer first. This check needs live AWS access and does not replace one."
   - "You want to cut your AWS bill: use your AWS cost tools or a cloud cost review with a person who knows your setup."
   - "You need a security audit of your account: use a security review by a cloud security expert or AWS's own security tools."
   - "You have no AWS CLI access or logging turned off: ask a teammate with access to run the checks, or turn on CloudWatch logging first."
@@ -14,8 +17,9 @@ how_to_use:
   - Use an AI that can run AWS CLI commands, such as Claude Code or another coding agent. In a plain chat, run each command yourself and paste the results back.
   - Check that the AWS CLI is signed in to the right account and region, and that CloudWatch logging is on for your resource. Your AI should read the account ID back to you before it runs anything. Say yes only if it is the account you mean.
   - Give the AI read-only access if you can. The checks need only read permissions for logs, metrics and the resource.
-  - Paste the skill, then give the resource name, type, region and symptoms.
-  - Let it run the read-only checks and read the summary report.
+  - Paste the skill, then give the resource name, type, region and symptoms. Have your recent deployment times or CloudTrail history ready, since one step compares problems with deployments.
+  - Let it run the read-only checks and read the summary report. The date -d commands in the steps need GNU date, which Linux has. On a Mac, ask your AI to use the date -u -v-24H form instead.
+  - Some checks, such as RDS Performance Insights, need features you have turned on and may cost extra on AWS.
   - Read every fix before you approve it. Rebooting a database or changing Lambda concurrency can cause downtime or throttling.
   - Approve the fixes one at a time, then run the validation checklist. No command that changes anything runs without your yes.
   - Next, set up the CloudWatch alarms it suggests, and run the check again after each fix.

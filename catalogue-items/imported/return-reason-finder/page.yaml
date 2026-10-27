@@ -30,10 +30,11 @@ you_get:
   - Clues pointing to quality or listing problems
 how_to_use:
   - Open an AI tool that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat can't read your store.
-  - Install the Shopify CLI first (npm install -g @shopify/cli). Add the skill file, then sign in with: shopify store auth --store your-store.myshopify.com --scopes read_orders,read_returns. If the command differs in your CLI version, ask your AI to check Shopify's current docs. A store with many orders can take a few minutes to count.
+  - "Install the Shopify CLI first (npm install -g @shopify/cli). Add the skill file, then sign in with: shopify store auth --store your-store.myshopify.com --scopes read_orders,read_returns. The skill's queries are written for Shopify API version 2025-01. We do not know which CLI version it was tested with. If the sign-in command differs in your CLI version, ask your AI to check Shopify's current docs. A store with many orders can take a few minutes to count."
   - Tell your AI your store address and how many days back to look. The default is 30.
   - Read the top reasons and top products first. Then open the listings of the worst products.
   - Check the photos, size chart and description. Rewrite the listing if buyers say not as described.
+  - The CSV holds customer return notes and order names, which are personal data. Keep it private, do not paste it into other tools or share it, and delete it when you are done.
 output_sample:
   input:
     - Your Shopify store address

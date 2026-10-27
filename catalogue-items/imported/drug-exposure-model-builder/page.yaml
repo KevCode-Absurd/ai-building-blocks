@@ -9,7 +9,7 @@ subhead: Give it concentration-over-time data. Get fitted drug exposure models, 
 explain: |
   Concentration-over-time numbers turned into fitted drug models, exposure measures and a write-up that says what the data does and does not support. This is exploratory research work. It does not give a dose for a patient.
 
-  The skill makes you fix the basics first: which compound, what matrix, units, the exposure measure, and how to handle values below the assay limit. It then separates the structure model, the residual error and any covariates. It checks whether parameters can really be told apart, using sensitivity and multiple starts. The Python scripts need only NumPy and SciPy. They cover dose simulation, exposure-response, bioequivalence planning and interaction screening.
+  The skill makes you fix the basics first: which compound, what matrix, units, the exposure measure, and how to handle values below the assay limit. It then separates the structure model, the residual error and any covariates. It checks whether parameters can really be told apart, using sensitivity and multiple starts. The Python scripts need only NumPy and SciPy, and never use the internet. Only the optional step that looks up a citation may read arXiv, if your AI has web access. The vancomycin monitoring example is a demonstration only: its prior values are illustrative, it must not be run on real patient data, and those values must be replaced before any use. They cover dose simulation, exposure-response, bioequivalence planning and interaction screening.
 when:
   - You have concentration-time data and want fitted PK curves.
   - You are planning a bioequivalence study and need sample sizes.
@@ -31,11 +31,13 @@ you_get:
   - A write-up of assumptions and limits
 how_to_use:
   - Start here. Get your concentration-time file with units, your dose history and your question ready. Use an AI that can run code, such as Claude with code running turned on. The scripts need Python 3.12 or newer, NumPy 2 and SciPy. They need no internet.
+  - Know this before you start. The monitoring example in the skill runs on placeholder values. A qualified person must replace them, and its output must never go into a patient's record or be used to set a dose.
   - 'Open the skill folder and give your AI the SKILL.md file. Say: "Follow this skill on my data."'
   - Upload your concentration-time file. Tell your AI the units, the dose history, the sample times and your question.
   - Add your assay limit and any covariates, if you have them. Say how to treat values below the limit.
   - New to pharmacokinetics? Read the findings write-up first, then the fits. Before you trust any result, check that the units match your file and that the fitted values can be told apart.
   - Treat dose results as research scenarios only. Take clinical questions to a qualified pharmacometrician.
+  - "What next: hand the write-up to a pharmacometrician or your study team. Move to NONMEM or Monolix when you need full population model fitting or a regulatory submission."
 terms:
   - term: AUC
     meaning: The total drug exposure over time. It is the area under the concentration curve.
@@ -69,13 +71,17 @@ output_sample:
       contains: Sample size and design checks for a bioequivalence study.
     - name: Interaction screen
       contains: An early read on drug interaction risk, with assumptions stated.
-    - name: Research monitoring calculator
-      contains: A Bayesian vancomycin example that gives a model-target dose from weight and kidney function. It is a research example only. Its starting values are illustrative, and it must never set a patient's dose.
+    - name: Monitoring demonstration (not a dosing tool)
+      contains: A Bayesian vancomycin example that shows how drug monitoring works. It runs on placeholder values you replace. It is a demonstration only and must never be used on real patient data or to set a patient's dose.
     - name: Findings and write-up
       contains: A plain account of assumptions, limits and what the data does and does not support.
 output_shape: |
-  <ANALYSIS NAME>  one table of results per analysis you ask for
-  <what each number means, with units>
+  Sections, in this order:
+  1. SETUP RECAP  compound, matrix, units, exposure measure, rule for values below the assay limit
+  2. <ANALYSIS NAME>  one table per analysis you ask for, one row per subject or scenario
+     Columns: the measure name, its value, and its unit, for example AUC (concentration x hours), Cmax (concentration), half-life (hours), clearance (volume per hour)
+     A line under each table saying what each number means
+  3. FINDINGS AND WRITE-UP
 
   FINDINGS AND WRITE-UP
   Assumptions: <what you told it and what it assumed>

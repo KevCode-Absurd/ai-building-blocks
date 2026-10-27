@@ -11,7 +11,7 @@ explain: |
 
   The skill starts with plain fetch plus error handling, then picks React Query for bigger apps or SWR for simpler ones. It sets how long data stays fresh, keeps saved answers on the phone, and watches the connection to pause or resume requests. Login tokens go in secure storage, not plain files. Web addresses for development and production live in separate environment files. Secret keys stay on the server side only.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Expo) says MIT. Credit goes to Expo and sickn33.
+  The licence that applies to this copy is CC BY 4.0, as the LICENSE-CONTENT file in this item says. The MIT line in the skill file is the author's own header (Expo). Keep the credit if you reuse it. Credit goes to Expo and sickn33.
 when:
   - Your app shows a blank screen whenever the signal drops.
   - API calls feel slow and repeat for data you already have.
@@ -34,12 +34,13 @@ you_get:
   - Environment files for each stage
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill text from this page into a new chat, then paste references/detailed-guide.md too. SKILL.md tells the AI to read that guide before it starts, because the full steps are in it. For route-level loaders on the web, also paste references/expo-router-loaders.md.
-  - Describe the data each screen needs, the API it comes from, and how fresh it must be.
+  - "Have ready: your API base URL, the login method, the list of screens with the data each one needs, and how fresh each piece of data must be. Describe them to your AI."
   - Add your login method if the API needs one (optional).
   - Share your Expo project files if your AI can read them. Otherwise paste the files that make requests.
   - "Check the result before you use it: test it with the network off, and make sure no secret key sits in app code."
+  - Next, ask your AI to review the fetch and token code against your API's docs before you merge it.
   - Run the code on your own phone or emulator. Your AI can only write it, it cannot test it for you.
-  - "You get one file for each part: fetch, cache, offline, token storage and environment settings. Before you ship, test with the network off, test a refresh of an expired login token, and search your app code for secret keys."
+  - "You get one code file for each part: fetch, cache, offline, token storage and environment settings, each with a short note on what to test. Before you ship, test with the network off, test a refresh of an expired login token, and search your app code for secret keys."
 output_sample:
   input:
     - The data your screens need and the API it comes from

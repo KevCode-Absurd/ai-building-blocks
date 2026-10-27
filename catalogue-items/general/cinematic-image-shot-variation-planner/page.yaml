@@ -5,9 +5,9 @@ job: make-images
 headline: Cinematic image shot variation planner
 subhead: Share a visual idea. Your AI plans four shots from places a real photographer could stand. You get four prompts you can paste into an image tool.
 explain: |-
-  Use this when you need four camera-aware still-image variations. Identify subject, moment, intended style and fixed continuity. Return four variations unless the user asks for another number.
+  One image idea can be shot many ways. This skill reads your idea, then plans four shots. Each has its own camera spot, lens feel and moment. It gives you four prompts to paste into an image tool. You get four unless you ask for another number.
 
-  Before writing, plan distance, lens feel, where the camera stands (a real place a person could stand), orientation, foreground, crop, focus, height and tilt for each variation.
+  For each shot it plans the distance, the lens feel, where the camera stands (a real place a person could stand), the crop, the focus and the height. It also lists what must stay the same across all four.
 when:
   - You have one image idea and want four different ways to shoot it.
   - Your first image prompt looks flat and you want new angles.

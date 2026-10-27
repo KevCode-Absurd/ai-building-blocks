@@ -9,7 +9,7 @@ subhead: A MATLAB live script, as plain text you can open and run, with explanat
 explain: |
   A MATLAB live script, as plain text you can open and run, with explanations, equations and figures built in. Describe the analysis or lesson and get a runnable notebook.
 
-  It writes in the live script text format. Text lines hold the explanation, section breaks split the work, and LaTeX gives clean equations. Figures sit inline, and tiled layouts compare results side by side. A required appendix at the end keeps the file valid. If MATLAB is attached, it runs the code, saves outputs for each section and exports an HTML copy to check how it looks. It can also convert from the older binary format.
+  It writes in the live script text format. Text lines hold the explanation, section breaks split the work, and LaTeX gives clean equations. Figures sit inline, and tiled layouts compare results side by side. A required appendix at the end keeps the file valid. If MATLAB is attached, it runs the code, saves outputs for each section and exports an HTML copy to check how it looks. It can also convert from the older binary format. This skill is copied from MathWorks under the BSD 2-Clause licence (see LICENSE.md).
 when:
   - You want a tutorial in MATLAB that students can run.
   - You are turning an analysis into a report with equations.
@@ -33,12 +33,15 @@ you_get:
   - An HTML export (optional)
   - A run-checked version (optional)
 how_to_use:
+  - MATLAB is paid software from MathWorks, and you need a licence for R2025a or later to open and run the file. The MathWorks toolkit that lets your AI run MATLAB is a separate install, and it also needs your MATLAB licence. Without MATLAB, your AI can still write the .m file, but you cannot run or check it.
+  - This skill is a pasted prompt for an AI that writes MATLAB files. Running the code, saving outputs and exporting HTML need a MATLAB session attached to your AI, with the MathWorks toolkit. A plain chat can write the file but cannot run it.
   - Open a chat with your AI and paste in the skill text.
   - Say what the analysis or lesson is, who it is for, and which MATLAB version you have.
   - Add any data, code or equations you want included.
-  - Your AI writes the live script as a .m file. If it can run MATLAB, it also runs the code, saves the outputs and checks an HTML copy.
+  - Your AI writes the live script as a .m file. If it can run MATLAB, it also runs the code, saves the outputs and checks an HTML copy. If MATLAB is not attached, stop after the write step and open the .m file yourself in MATLAB.
   - Open the .m file in MATLAB R2025a or later and select Run All to check it.
   - Share the .m file for review, or export it to HTML from MATLAB.
+  - Next, put the reviewed .m file where it will be used: in your course page, your report folder or your version-control repo. For a plain script or a function file instead of a notebook, ask your AI to write that directly.
 output_sample:
   input:
     - The topic or analysis you want to cover

@@ -11,7 +11,7 @@ explain: |
 
   Before anything else it reads your existing docs, since other people and agents may have added to them. Then it asks, listens, and writes. The README holds the vision, and a docs folder holds one record per decision, with what you chose and why. Over time the files become what a new teammate or AI agent reads to understand your project. Each pass checks the docs first, so nothing is overwritten by accident.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (davidondrej) says MIT. Credit goes to davidondrej and sickn33.
+  Licence: davidondrej wrote the skill and marked it MIT in the skill file's header. sickn33 collected it, and the LICENSE-CONTENT file in this item sets CC BY 4.0 for the written text. Both let you reuse it if you give credit. Credit davidondrej (author) and sickn33 (collection) on any copy you share.
 when:
   - You have a project in your head and nothing written down.
   - Your team keeps re-debating decisions that were already made.
@@ -31,7 +31,8 @@ you_get:
   - Reasons behind each decision
   - Updated docs after each session
 how_to_use:
-  - Have ready the path to your project folder and any README or notes you already have. Open your AI in a chat that can read and save files there. If it cannot, paste your README and notes into the chat.
+  - Have ready the path to your project folder, any README or notes you already have, and a rough list of the decisions you have already made. Your AI shows each proposed file change and waits for your yes before it saves. Open your AI in a chat that can read and save files there. If it cannot, paste your README and notes into the chat.
+  - If your AI cannot save files, ask it to print each README or decision record in full after each round. Copy each one into your project folder yourself.
   - "Paste the skill text and say: start the README and decision interview."
   - Answer the questions you find most useful. You can skip the rest.
   - Check each update. Tell your AI to fix anything that is wrong or too long.

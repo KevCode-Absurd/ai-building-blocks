@@ -7,7 +7,7 @@ thinking_why: It follows a fixed plan, with a few sums to check.
 headline: Two-day paid ask planner
 subhead: Paste a one-line idea, who it is for and a price under this prompt. It does the buyer-count math, lists ten people to ask and writes the ask. You get a two-day schedule and a go or change rule to set first.
 explain: |
-  Asking friends "would you buy this?" gets polite answers. Asking them to pay gets the truth. A quick way to test an idea is to ask ten people who already have the problem to pay a real price, and write down the go rule before you start.
+  Asking friends "would you buy this?" gets polite answers. Asking them to pay gets the truth. This is the quick, one-message version of the Three-buyer idea test planner. A quick way to test an idea is to ask ten people who already have the problem to pay a real price, and write down the go rule before you start.
 
         This prompt builds that test. It checks how many buyers your goal needs, finds ten reachable people, writes a direct ask, and sets the rules in advance so you cannot talk yourself into a yes. It is a test plan, not a forecast.
 when:
@@ -15,7 +15,7 @@ when:
   - You keep planning and have not asked anyone for money.
   - You want a rule for when to go and when to change.
 not_for:
-  - "You want the fuller test with every check: use the Three-buyer idea test planner."
+  - "You want the fuller test with every check: use the Business idea payment test planner (three-buyer-idea-test-planner)."
   - "Your idea cannot be delivered by hand within a week: first shrink it to a small offer you could do yourself."
   - "You want to test a feature inside a product you already sell: use the Minimum experiment planner."
 you_give:

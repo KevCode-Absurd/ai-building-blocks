@@ -5,7 +5,7 @@ description: No-code automation democratizes workflow building. Zapier and Make
   writing code. But no-code doesn't mean no-complexity - these platforms have
   their own patterns, pitfalls, and breaking points.
 risk: critical
-source: vibeship-spawner-skills (Apache 2.0)
+source: vibeship-spawner-skills (we share this copy under CC BY-4.0, see LICENSE-CONTENT)
 date_added: 2026-02-27
 ---
 
@@ -18,7 +18,7 @@ own patterns, pitfalls, and breaking points.
 
 This skill covers when to use which platform, how to build reliable
 automations, and when to graduate to code-based solutions. Key insight:
-Zapier optimizes for simplicity and integrations (the author's app count was 7000+; check Zapier's own list), Make
+Zapier optimizes for simplicity and integrations (it lists far more apps; check Zapier's own list for the current count), Make
 optimizes for power and cost-efficiency (visual branching, operations-based
 pricing).
 
@@ -78,19 +78,6 @@ Todoist Module:
 - Test with real sample data
 - Use filters to prevent unwanted runs
 
-### Multi-Step Sequential Pattern
-
-Chain of actions executed in order
-
-**When to use**: Multi-app workflows, data enrichment pipelines
-
-# MULTI-STEP SEQUENTIAL:
-
-"""
-[Trigger] → [Action 1] → [Action 2] → [Action 3]
-Each step's output available to subsequent steps
-"""
-
 ## When to Use
 - User mentions or implies: zapier
 - User mentions or implies: make
@@ -110,4 +97,4 @@ Each step's output available to subsequent steps
 
 ## Licence note
 
-The header above gives the source as Apache 2.0 (vibeship-spawner-skills). The collection this copy came from lists its written content as CC BY 4.0 (see `LICENSE-CONTENT`). We share this copy under CC BY 4.0. Keep the credit to the author and sickn33.
+The original repo (vibeship-spawner-skills) lists Apache 2.0. The collection this copy came from lists its written content as CC BY 4.0 (see `LICENSE-CONTENT`). The licence that applies to this copy is CC BY 4.0. Keep the credit to the author and sickn33.

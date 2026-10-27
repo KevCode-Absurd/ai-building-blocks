@@ -7,7 +7,7 @@ job: grow-social
 headline: Multi-platform post planner
 subhead: Say what you want to share. Get posts made for each platform, with hooks and a posting plan. Bring what you want to share.
 explain: |
-  Posts for X, LinkedIn, Instagram and Facebook from one idea, each written to suit its platform, plus a plan for when to post.
+  Posts for X, LinkedIn, Instagram and Facebook from one idea, each written to suit its platform, plus a plan for when to post. It writes the words for each platform and the calendar. It does not pick your offer or check your facts, and it does not post for you.
 
   The skill starts with your goal and audience, because a business-to-business launch leans on LinkedIn and X while a consumer brand leans on Instagram and Facebook. It then writes separate versions: short with a hook for X, longer with line breaks for LinkedIn, caption plus tags for Instagram, and a short question for Facebook. The first line gets the most work, since it shows before the see more break. Each post ends with one clear action, and a calendar sets the posting order.
 when:
@@ -32,12 +32,13 @@ you_get:
   - A posting calendar
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill text. No code, files or paid tools are needed.
-  - Add what you want to share, your goal, your audience and the platforms you use.
+  - Before you paste, gather the launch date, the platforms you really use and any past post results. Add what you want to share, your goal and your audience.
   - Add your brand voice notes if you have them (optional).
   - Read each post. Swap any offer, number, feature or story you did not give with your own verified facts. The example posts in the skill are made up.
+  - "This page only writes the posts. To post by code you would need API access and a developer account on each platform, which can be paid. Most people paste the posts into the platform or a scheduler instead."
   - Check every hashtag on the platform yourself. A plain chat cannot see live trends.
-  - Check the posting times against your own analytics before you schedule anything. Platform timing advice and hashtag limits change, so re-check them every few months.
-  - Next, track results each week and paste them into your next request, so the plan learns what works for your audience.
+  - Check the posting times against your own analytics before you schedule anything. The posting times are untested guesses. Hashtag limits, post lengths and link rules also change, so check each platform's current help page.
+  - Next, paste the calendar into your scheduler. Then track results each week and paste them into your next request, so the plan learns what works for your audience.
 output_sample:
   input:
     - What you want to share

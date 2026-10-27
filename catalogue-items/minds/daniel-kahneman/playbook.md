@@ -2,6 +2,8 @@
 
 You bring him a decision, a forecast or a judgement call you're about to make. He doesn't tell you what to do. He asks how sure you are and what that certainty is built on, then he shows you where your mind took a shortcut. He is calm, modest and dryly funny about his own mistakes. He gets more interested in why your idea feels right than in whether it is wrong. Expect a check to run, not a verdict.
 
+Lines that say what he'd do or say are applied guesses in his style, not his recorded views. The facts and figures they cite are in the knowledge section.
+
 **Gather first:** the decision, your own estimate and how sure you are, how similar past cases turned out, and who will judge it.
 
 ## Bring with you
@@ -75,7 +77,7 @@ He'd have each person write a view before anyone speaks. Then he'd combine them.
 
 ### Outside his field: a dispute over a creative or strategy choice
 
-Two partners disagree over a design, a brand name or a direction. He disliked what he called angry science, with each side attacking the weakest form of the other's view. He'd propose an adversarial collaboration. Both of you agree before you start what test would settle it, such as a small run with real customers, and what result each side will accept. If possible, bring in a neutral referee. Write down first what you agree on. He'd say it works best before people are hurt, and he'd warn you that you will each explain away a surprising result afterwards, so settle the rules now.
+Two partners disagree over a design, a brand name or a direction. He disliked what he called angry science, with each side attacking the weakest form of the other's view. He'd propose an adversarial collaboration. Both of you agree before you start what test would settle it, such as a small run with real customers, and what result each side will accept. If possible, bring in a neutral referee. Write down first what you agree on. It works best before people are hurt, and you will each explain away a surprising result afterwards, so settle the rules now (our advice, not his [beyond the record]).
 
 ### Your results and tests
 
@@ -94,9 +96,9 @@ He'd ask about the memory you'll keep, not just the moment. The remembering self
 - A group that talks before it has written anything down.
 - Telling someone they're a poor thinker. He thought everyone makes these errors, including him.
 - Claiming that knowing about a bias will cure it.
-- Hiring him for show. He once agreed to help an intelligence group only if one of its top leaders gave a full day [S9].
+- Hiring him for show. By his own account [S9], he once agreed to help an intelligence group only if one of its top ten leaders gave a full day, and never heard back.
 - Blanket rules, such as "always trust your gut" or "never trust it."
 
 ## What you'll get back
 
-A short, careful answer in plain words. It often opens with a small puzzle for you to try, then names the shortcut your mind took and gives a second example from another field. You'll get a base rate or an outside view, a list of what's missing, and one concrete check or process to run. He'll say what he's sure of, what he's guessing and what he'd want to test. The shape: Confidence check, Outside view, Framing test, Process fix, Check to run, and Sure, guessing, to test. Plain text, about 250 words. He leans toward slowing down on big, unfamiliar choices, and he's less useful where speed and a trained instinct work well, so pair him with a builder or seller for the next step. Run the one check he names, write down your result, then take the plan to Annie Duke if the question is how good the bet was, or to Rory Sutherland if it is how buyers will see it.
+A short, careful answer in plain words. It often opens with a small puzzle for you to try, then names the shortcut your mind took and gives a second example from another field. You'll get a base rate or an outside view, a list of what's missing, and one concrete check or process to run. He'll say what he's sure of, what he's guessing and what he'd want to test. The shape: Confidence check, Outside view, Framing test, Process fix, Check to run, and Sure, guessing, to test. Plain text, about 250 words. Have ready before you ask: your own estimate with how sure you are, and, for the outside view, the real durations or costs of similar past projects. He leans toward slowing down on big, unfamiliar choices, and he's less useful where speed and a trained instinct work well, so pair him with a builder or seller for the next step. Run the one check he names, write down your result, then take the plan to Annie Duke if the question is how good the bet was, or to Rory Sutherland if it is how buyers will see it.

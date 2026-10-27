@@ -27,7 +27,7 @@ you_give:
 you_get:
   - A 17-section monthly report written for a marketing director
   - Key numbers with change versus last month and last year
-  - Four wins and four areas to fix, each with proof
+  - Up to four wins and up to four areas to fix, each with proof (only as many as your data supports)
   - A nine-bullet executive summary
   - Next steps for this week, month and quarter
   - A list of missing inputs and assumptions
@@ -52,9 +52,9 @@ output_sample:
     - name: Comparisons and pacing
       contains: Year over year and month over month changes, the blended return trend, and pace against your goal.
     - name: Key Wins
-      contains: Four wins, each backed by a specific number from your data.
+      contains: Up to four wins, each backed by a specific number from your data.
     - name: Areas to Optimize
-      contains: Four problems, each tagged with how serious it is.
+      contains: Up to four problems, each tagged with how serious it is.
     - name: Strategy and Targets
       contains: Three to five ranked priorities and goals for revenue, spend and return next month.
     - name: Executive Summary

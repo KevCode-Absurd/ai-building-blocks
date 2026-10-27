@@ -39,6 +39,8 @@ When in doubt, **start at lemmaly** — it is the gateway and will tell you when
 | Implement an algorithm where the obvious version is subtly wrong (binary search variants, in-place dedup, Boyer–Moore, QuickSelect partition, recursion with accumulators, fixed-point / termination concerns) | **invariant-guard** | Forces writing the function contract + loop invariant before code. The trap is in the contract, not the loop body. |
 | Work with n ≥ 10⁶, similarity search, dedup at scale, top-K, streaming analytics, cardinality estimation, embeddings, FFT/NTT, dimensionality reduction, computational geometry, randomized algorithms | **mathguard** | Classical algorithms have hit their lower bound; an approximate or math-heavy technique (Bloom, HLL, Count-Min, MinHash/LSH, FFT, JL projection, sweep line, kd-tree) gives the asymptotic win. |
 
+(Added by AI Blocks: in this library the skills in the table are available as follows. complexity-cuts is the Slow code speeder item. invariant-guard is the Code correctness planner item. mathguard is not available here, so for very large data say that a specialist approach may be needed and name the options without writing code for them.)
+
 ### Routing flow
 
 ```text
@@ -141,24 +143,7 @@ The first version is the default an AI ships when asked "filter the active users
 
 The upstream repo ships a deterministic CLI scanner with the same anti-patterns this skill enforces (the author says **59 rules across 11 languages**, which this copy does not include: JavaScript/TypeScript, Python, SQL, Java, C#, C++, Go, Rust, PHP, Ruby, Shell/Bash). Each rule has a documented why, an incorrect example, a correct example, and the sibling skill to escalate to.
 
-The scanner is optional. Do not automatically clone and run the upstream
-repository from its default branch, because that executes whatever code is
-current in a third-party repository. If the user explicitly wants the scanner,
-pin the source to a reviewed release tag or commit, use a throwaway directory,
-and show the resolved commit before running it:
-
-```bash
-# Replace <reviewed-tag-or-commit> after reviewing the upstream release.
-tmpdir="$(mktemp -d)"
-git clone --filter=blob:none https://github.com/morsechimwai/lemmaly.git "$tmpdir/lemmaly"
-git -C "$tmpdir/lemmaly" checkout --detach <reviewed-tag-or-commit>
-git -C "$tmpdir/lemmaly" rev-parse HEAD
-node "$tmpdir/lemmaly/cli/lemmaly.js" scan <path>
-node "$tmpdir/lemmaly/cli/lemmaly.js" rules
-```
-
-When the scan is done, remove the throwaway directory only after verifying that
-`$tmpdir` points to the directory created by `mktemp -d`.
+The scanner is not part of this copy. Do not clone or run anything from the upstream repository. Your AI applies the rules listed below by reading the code you give it.
 
 **CRITICAL severity (error in CI):**
 
@@ -239,6 +224,8 @@ Cannot check every box? You did not run the protocol. Restart from step 1.
 > **AI ships algorithmically lazy code by default. lemmaly makes it think first.**
 
 ## Related Skills
+
+(Added by AI Blocks: mathguard is not in this library. complexity-cuts is the Slow code speeder item, and invariant-guard is the Code correctness planner item.)
 
 - `mathguard` — escalation for n ≥ 10⁶ where classical O(n log n) is the floor and probabilistic / math-heavy techniques win.
 - `invariant-guard` — correctness layer for algorithms whose obvious version is subtly wrong.

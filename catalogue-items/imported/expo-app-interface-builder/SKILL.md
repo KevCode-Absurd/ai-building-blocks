@@ -14,8 +14,10 @@ license_source: https://github.com/expo/skills/blob/main/LICENSE
 
 ## How to run this skill (added by AI Blocks)
 
+Licence note: this copy of the skill text is covered by CC BY 4.0, as the LICENSE-CONTENT file says. The "MIT" in the header above is the original author's claim. Keep the credit to Expo and sickn33.
+
 1. Ask once for what is missing: a description of each screen and how people move between them, whether there is an Expo project already (and its SDK version), the look wanted (optional), and data to keep on the phone (optional). If something is still missing, write `MISSING: <what>`. Never invent screens, brand colors or data.
-2. Open only the reference notes that the screens need.
+2. Before you write any code, check these three imports against the user's Expo SDK in the current Expo docs: native tabs (`expo-router/unstable-native-tabs`), `Color` from `expo-router`, and `expo-router/react-navigation`. Then open only the reference notes that the screens need.
 3. Hand back: the file tree, the full contents of each file, the theme file, the packages to install with the command, and the steps to try it (`npx expo start`, then Expo Go). End with `OPEN QUESTIONS` for anything marked MISSING.
 4. Several features are iOS first (SF Symbols, liquid glass, zoom transitions, form sheets, link previews). Say which of the screens use them and that they need a check on a real phone and, for some, a newer iOS.
 5. Example code in the notes that calls handlers such as `handleSharePress` or `handleBlockPress` is a pattern. Define every handler you use, or replace it with a real action.
@@ -27,7 +29,7 @@ Use this skill when you need screens, navigation, native tabs, styling, motion, 
 
 Do not use it for web-only apps, apps not built with Expo, server routes (use the Expo API route builder), SDK upgrades (use the Expo upgrade helper) or data fetching (use the Mobile data fetching coder).
 
-These notes follow a recent Expo SDK, and some imports here (for example `Color` from `expo-router` and `expo-router/react-navigation`) may differ in yours. Ask the person which SDK version they use, and confirm any API you are not sure of in the current Expo docs before you write code.
+These notes follow a recent Expo SDK, and some imports here (for example `Color` from `expo-router` and `expo-router/react-navigation`) may differ in yours. Ask the person which SDK version they use, and confirm any API you are not sure of in the current Expo docs before you write code. These are SDK-specific and need checking against the current Expo docs for the person's SDK: native tabs (`expo-router/unstable-native-tabs`), `Color` from `expo-router`, and `expo-router/react-navigation`. The "SDK 56+" rules apply only if the project is on that SDK or newer.
 
 
 ## References
@@ -277,12 +279,13 @@ import { Link } from "expo-router";
       onPress={handleBlockPress}
     />
     <Link.Menu title="More" icon="ellipsis">
-      <Link.MenuAction title="Copy" icon="doc.on.doc" onPress={() => {}} />
+      {/* PLACEHOLDER: wire each onPress below to a real action before use */}
+      <Link.MenuAction title="Copy" icon="doc.on.doc" onPress={handleCopyPress} />
       <Link.MenuAction
         title="Delete"
         icon="trash"
         destructive
-        onPress={() => {}}
+        onPress={handleDeletePress}
       />
     </Link.Menu>
   </Link.Menu>

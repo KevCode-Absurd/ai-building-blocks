@@ -11,7 +11,7 @@ explain: |
 
   It starts from your one action, such as buy, book or sign up. Your AI sets colours, type and spacing, then writes rules for the parts that move people: forms, buttons, proof and error messages, each with every state. Each rule carries a number or an example, such as the most fields a form may have or the most clicks a task may take. The numbers come from you. If you give none, it marks its own as "suggested".
 
-  It also checks contrast. The default purple is only about 4.2 to 1 on white, under the 4.5 to 1 normal text needs, so the guide says where to darken it. This is a rules document for a whole site. It does not plan one page.
+  It also checks contrast. The default main colour (near black) passes. The default secondary purple is only about 4.2 to 1 on white, under the 4.5 to 1 normal text needs, so the guide says where to darken it. This is a rules document for a whole site. It does not plan one page.
 when:
   - Each page on your site looks and reads differently.
   - You are hiring a designer and need to say what you expect.
@@ -20,11 +20,13 @@ when:
 not_for:
   - "You need one landing page planned, with its order and copy: use the Conversion landing page designer."
   - "Your page tells a story before it asks for anything: use the Story-led page style guide writer."
+  - "You have one page, or no team to apply the rules: this suits a team with several pages to keep the same. For one page, use the Conversion landing page designer."
   - "Your brand already has a written style guide: extend that guide, or run the Design system auditor to check it."
   - "You want a calm look with no sales push: use the Minimal style guide writer."
 you_give:
   - The one action you want visitors to take, such as buy, book or sign up
   - Who your visitors are
+  - "Platform: web, iOS, Android or several"
   - Your brand voice and colours (optional)
   - Limits you already have, such as the most form fields or clicks (optional)
   - Screenshots of pages you have now (optional)

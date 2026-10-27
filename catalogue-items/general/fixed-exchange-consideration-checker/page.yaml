@@ -65,6 +65,7 @@ how_it_works:
     text: Adds stock and cash, reconciles to the total and lists missing inputs and any check that did not run.
 output_shape: |-
   Shares issued, cash leg and total consideration at the supplied price.
+  Table: eligible target shares | exchange ratio | shares issued | acquirer price and date | stock value | cash leg | total consideration (one currency and scale)
   Scope and dated sources
   Inputs and assumptions
   Model calculations and reconciliations

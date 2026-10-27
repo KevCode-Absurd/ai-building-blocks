@@ -2,16 +2,16 @@ thinking: low
 thinking_why: It reads numbers and reports them.
 new_slug: app-update-health-checker
 name: App update health checker
-summary: Check if your latest Expo app update is crashing. Get crash rate, launches, users and bundle size for each EAS update. Needs the EAS command line.
+summary: Read the crash count, launches, users and bundle size for each EAS update. Counts are self-reported and lag by up to a day. Needs the EAS command line.
 job: ship-and-host
 headline: App update health checker
-subhead: "Give it your Expo app and the update you want to check. It reads your EAS update numbers and tells you if the release is crashing. You see crash rate, launches, users and bundle size for each platform."
+subhead: "Give it your Expo app and the update you want to check. It reads your EAS update numbers. You see the self-reported crash rate, launches, users and bundle size for each platform. Numbers lag by up to a day, so this shows a trend, not a diagnosis."
 explain: |
   A clear read on whether your latest Expo app update is healthy: crash rate, launches, unique users and bundle size, for each published update. You can answer is the new release crashing more than the last one in minutes.
 
   The skill uses the Expo command line tool, so it needs to be installed and signed in. It lists recent update groups, then pulls per-platform launches, failed launches, crash rate and daily numbers for the one you pick. For a channel and runtime, it shows how many users run the embedded build and how many run over-the-air updates, and which updates are most popular. It reports totals only. It cannot show a single user's crash or device detail.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Expo) says MIT. Credit goes to Expo and sickn33.
+  Licence: CC BY 4.0 applies to this copy, as its LICENSE-CONTENT file says. Reuse it with credit to Expo and sickn33. The author's own file header says MIT, which also allows reuse with credit.
 when:
   - You just pushed an update and want to know if it is crashing.
   - You need to compare the new release with the last one.
@@ -33,8 +33,8 @@ you_get:
   - The most popular updates on a channel
   - Average update size
 how_to_use:
-  - Use an AI that can run commands on your computer. A plain chat window cannot do this.
-  - Install the EAS command line tool and the jq tool (the checks use it to read the results), and sign in to Expo. Open your app folder.
+  - You need an Expo account with access to the project and its updates. Use an AI that can run commands on your computer. A plain chat window cannot do this.
+  - Install the EAS command line tool and the jq tool (the checks use it to read the results), and sign in to Expo. Open your app folder. Channel insights only work when you run them from the Expo project folder. Before the first query, run "eas --version" and "jq --version" to check both tools work.
   - Ask your AI to check the health of your latest update, and name the channel or branch. It runs eas update:list --branch <name> --json --non-interactive and uses jq to pick the group ID of the newest update.
   - It then runs eas update:insights <group ID> to get launches, failed launches and crash rate for each platform. For the channel view it runs eas channel:insights with your channel and runtime version.
   - Ask it to run update:insights again on the group ID of the previous update, so you can compare the two crash rates.

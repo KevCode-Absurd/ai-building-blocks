@@ -36,13 +36,15 @@ you_get:
   - Three sensitivity tables with the base case marked
   - A list of assumed inputs and their sources
 how_to_use:
+  - First, check the terms of use of CCIL (ccilindia.com) before you let any tool read its bond yield page. If the terms do not allow automatic reading, paste the 10-year yield and its date yourself.
   - Use an AI that can run commands and save files, such as Claude Code. The skill builds the Excel file with a command line tool called officecli. A plain chat cannot do this and would give you a table of formulas.
+  - "Steps at a glance, in order: 1 data retrieval, 2 historical analysis, 3 revenue forecast, 4 operating costs, 5 free cash flow, 6 discount rate (WACC), 7 applying the discount rate, 8 terminal value, 9 value bridge to price per share, 10 sensitivity tables."
   - Open the skill and name the company. Add the annual reports if you have them.
   - "Check each stage when it pauses: raw inputs, revenue forecast, cash flow, discount rate, then the value bridge. Reply to continue or to change an assumption."
   - If it asks for the 10-year government bond yield because the web page failed, paste the current yield and its date.
   - Open the file. Read the sensitivity tables to see which assumptions move the answer most. Do this before you compare the implied price with the market price.
   - Check the figures in the cell comments against the company's filings. Treat the result as research, not advice.
-  - Next, compare the implied price with the market price. If you change formulas or units by hand, run the India modeling rules checker on the file.
+  - Next, compare the implied price with the market price. If the two are far apart, rerun the sensitivity tables and check how much of the value comes from the terminal value. The skill's rule of thumb is that it should be about 50 to 70 percent. If you change formulas or units by hand, run the India modeling rules checker on the file.
 output_sample:
   input:
     - The company name or NSE or BSE ticker

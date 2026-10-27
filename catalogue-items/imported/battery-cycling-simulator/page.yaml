@@ -30,12 +30,14 @@ you_get:
   - A comparison with your measured data, if you gave it
   - A record of where the parameters came from
 how_to_use:
+  - Before you start, gather your cell's parameter set (from the cell maker or a published paper, and note the source), the charge and discharge C-rates, the temperature and the nominal capacity.
   - Use an AI that can run code. You need Python 3.12 and a PyBaMM install, set up with the commands in the skill.
   - Paste the skill into your AI. Add your cell type, parameter source and steps. A C-rate is the current as a share of cell capacity, so 0.5C is half the capacity per hour.
   - Say whether you want SPM or DFN. Add your measured CSV with time_s, voltage_V and current_A columns if you have one.
   - Ask your AI to run the simulation into a new output folder.
   - Read the solver and mesh differences in report.json first. Refine the mesh again if they are too large for your question.
   - If you gave measured data, check that current and start time match before you trust the voltage error.
+  - Then take report.json and measurement-residuals.csv to a battery engineer or lab test rig to decide whether the model is fit for your question. This skill does not validate hardware.
 output_sample:
   input:
     - Your cell type and where its parameter set comes from

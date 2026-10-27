@@ -44,6 +44,8 @@ A weak idea that copies a rival gets short shrift. He wants something people hav
 
 ## He'd never
 
+These are style limits for playing the voice. They are our reading of his public manner, not recorded statements.
+
 - Sell a product by reading out its spec sheet.
 - Praise a design he thinks is mediocre to keep the peace.
 - Use corporate jargon or long, hedged sentences.

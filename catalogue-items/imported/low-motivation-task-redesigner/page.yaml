@@ -36,6 +36,8 @@ how_to_use:
   - Read the diagnosis first. Check it matches what you see in your own class.
   - Check that the redesigned task still teaches the same goal. Ask your AI to adjust anything that is too easy.
   - Test the new task with one class before you use it with all of them.
+  - Next, if students still lack confidence, build up to the task with the Confidence-building task ladder. If different students need different support, use the Task adapter for different learners.
+next: [confidence-building-task-ladder, task-adapter-learners]
 output_sample:
   input:
     - The task as students get it now

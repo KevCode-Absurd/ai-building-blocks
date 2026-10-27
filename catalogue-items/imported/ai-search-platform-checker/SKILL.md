@@ -26,11 +26,13 @@ tags:
 allowed-tools: Read, Grep, Glob, Bash, WebFetch, Write
 ---
 
+> **AI Blocks note (licence):** this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says. The `license:` line in the front matter above is the original author's own label (MIT). The LICENSE-CONTENT file governs here. Keep the credit to the author.
+
 # GEO Platform Optimizer
 
 ## Core Insight
 
-Only **11% of domains** are cited by BOTH ChatGPT and Google AI Overviews for the same query. Each AI search platform uses different indexes, ranking logic, and source preferences. A page optimized for Google AI Overviews may be invisible to ChatGPT, and vice versa. Platform-specific optimization is not optional — it is the foundation of any serious GEO strategy.
+The original author reports (with no source) that few domains are cited by BOTH ChatGPT and Google AI Overviews for the same query. Each AI search platform uses different indexes, ranking logic, and source preferences. A page optimized for Google AI Overviews may be invisible to ChatGPT, and vice versa. Platform-specific optimization is not optional — it is the foundation of any serious GEO strategy.
 
 **About the figures in this skill:** the percentages here come from the original author and carry no source. Treat them as rough guides. Do not quote them to the user as fact.
 
@@ -38,7 +40,8 @@ Only **11% of domains** are cited by BOTH ChatGPT and Google AI Overviews for th
 
 1. Collect the target URL and the site's primary topic/industry
 2. Run each platform checklist below against the site
-3. Score each platform on the 0-100 rubric. Some factors (Reddit activity, backlinks, Knowledge Panel, Bing coverage, social engagement) cannot be read from the public web. Ask the user for that data, or mark the factor "unverified" and leave it out of the score. Never estimate it.
+3. Score each platform on the 0-100 rubric. Some factors (Reddit activity, backlinks, Knowledge Panel, Bing coverage, social engagement) cannot be read from the public web. Ask the user for that data, or mark the factor "unverified" and leave it out of the score. Never estimate it. If any factor is left out, the score is partial: show it as points earned out of the points you could check (for example [POINTS EARNED] out of [POINTS CHECKED]) and say "partial score" next to it. Do not scale it up to 100.
+   Any advice about Wikipedia, Reddit or other communities must tell the brand to say who it is and follow each site's rules on self-promotion. Never advise posting as if independent.
 4. Generate GEO-PLATFORM-OPTIMIZATION.md with per-platform scores, gaps, and action items
 
 ---
@@ -48,8 +51,8 @@ Only **11% of domains** are cited by BOTH ChatGPT and Google AI Overviews for th
 ### How AIO Selects Sources
 
 *Unsourced: the percentages and platform claims in this list are the original author's. Do not quote them as fact. Say "the author reports".*
-- 92% of AIO citations come from pages already ranking in the **top 10 organic results** — traditional SEO is the gateway
-- However, 47% of citations come from pages ranking **below position 5** — AIO has its own selection logic favoring clarity and directness over raw rank
+- The author says most AIO citations come from pages already ranking in the **top 10 organic results** (the author gives a high share but no source, so do not quote a figure) — traditional SEO is the gateway
+- However, the author says many citations (the author gives a large share but no source, and it may not agree with the claim above, so do not quote either) come from pages ranking **below position 5** — AIO has its own selection logic favoring clarity and directness over raw rank
 - AIO strongly favors pages with **clean structure, direct answers, and scannable formatting**
 - Featured snippet optimization has ~70% overlap with AIO optimization
 - AIO prefers **concise, factual, unambiguous answers** — hedging and filler reduce citation probability
@@ -90,7 +93,7 @@ Only **11% of domains** are cited by BOTH ChatGPT and Google AI Overviews for th
 
 *Unsourced: the percentages and platform claims in this list are the original author's. Do not quote them as fact. Say "the author reports".*
 - Uses **Bing's search index** as its foundation (not Google)
-- Top citation sources by domain share: **Wikipedia (47.9%)**, Reddit (11.3%), YouTube, major news outlets
+- Top citation sources by domain share: **Wikipedia**, Reddit (the author gives exact shares with no source, so they are left out here), YouTube, major news outlets
 - ChatGPT heavily weights **entity recognition** — if your brand exists as a structured entity (Wikipedia, Wikidata, Crunchbase), it is far more likely to be cited
 - Prefers **authoritative, well-established sources** over new or niche sites
 - Longer, more comprehensive articles get cited more often than short pieces
@@ -130,7 +133,7 @@ Only **11% of domains** are cited by BOTH ChatGPT and Google AI Overviews for th
 ### How Perplexity Selects Sources
 
 *Unsourced: the percentages and platform claims in this list are the original author's. Do not quote them as fact. Say "the author reports".*
-- Top citation sources: **Reddit (46.7%)**, Wikipedia, YouTube, major publications
+- Top citation sources: **Reddit (the author gives an exact share with no source, so it is left out here)**, Wikipedia, YouTube, major publications
 - Perplexity places the **heaviest emphasis on community validation** of all AI search platforms
 - Strongly favors **discussion threads** where claims are debated, validated, or expanded by multiple participants
 - Prefers recent content — publication date is a strong ranking signal

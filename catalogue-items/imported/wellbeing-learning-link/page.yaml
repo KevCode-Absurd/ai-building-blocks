@@ -9,7 +9,7 @@ subhead: The case, in evidence, for how a wellbeing programme helps academic res
 explain: |
   The case, in evidence, for how a wellbeing programme helps academic results. It gives you wording for governors, leaders, parents or inspectors who ask why you spend time and money on it.
 
-  You describe the programme and your school. The skill draws on research such as broaden-and-build theory, social and emotional learning studies and Visible Learning to trace a pathway from the programme to specific learning outcomes. It explains the mechanism, meaning how the programme is expected to change behaviour and attention, and predicts results at student, class and school level with realistic timeframes. Not medical advice.
+  You describe the programme and your school. The skill draws on research such as broaden-and-build theory, social and emotional learning studies and Visible Learning to trace a pathway from the programme to specific learning outcomes. It explains the mechanism, meaning how the programme is expected to change behaviour and attention, and predicts results at student, class and school level with realistic timeframes. The timeframes are estimates. Test them against your own school's baseline data. They are not guaranteed results. Not medical advice.
 when:
   - You need to justify a wellbeing programme in a funding bid.
   - Governors ask how it improves attainment.
@@ -35,7 +35,8 @@ how_to_use:
   - Copy the full text of the Prompt block in SKILL.md (the text inside the code fence under the Prompt heading) and paste it in, or add the skill to your AI. The page does not hold the prompt itself.
   - Add your programme description, school phase and context, the outcomes you hope for, and who will read the case.
   - Gather your baseline figures first if you have them: attendance, exclusions and survey results. Add them. If you have none, say so, and the case will tell you to collect a baseline before you start.
-  - Read the result. Check every study and figure against the original source before you put it in a bid or report.
+  - Read the result. The example output in SKILL.md shows layout only. Its citations and figures come from the original author and were not checked here, so they are placeholders and must not be quoted. Check every study and figure against the original source before you put it in a bid or report.
+  - "Check each study the case names against its original source (for example the Durlak et al. 2011 meta-analysis) before you share anything with governors, funders or inspectors. Remove any line marked [SOURCE NEEDED] unless you add a source you have checked."
   - Add your own school's data to the rationale before you share it.
   - Next, take the leadership rationale to your governors. To plan the work itself, use classroom-belonging-planner.
 output_sample:

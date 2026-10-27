@@ -11,6 +11,8 @@ explain: |
 
   It checks three things in order: whether your sector is listed, whether you pass the size threshold, and whether you count as essential or important. Getting this wrong is the most common and costly mistake. It then covers board duties, the ten required security measures, and the incident clock for early warning, notification and final report. It builds a gap table and shows fine exposure using your own figures.
 
+  This is a readiness check. It does not replace your national register or a lawyer.
+
   Source and currency: this is an MIT-licensed copy of the NIS2 skill by Hemant Naik, dated September 2026 by its author. We have not checked its legal status, so check every date and country status with your national authority.
 when:
   - You are unsure whether NIS2 applies to your company.
@@ -37,9 +39,9 @@ how_to_use:
   - "Describe your company: sector, services, staff, turnover, balance sheet and the EU countries you work in."
   - Add your current security measures if you have them. Say if an incident has happened and when you found out.
   - Ask for your classification first. Check that the sector and size facts are right before you go on.
-  - Ask for the gap table, reporting timeline and fine estimate. Then check your national law and register before you act. The skill's notes on which countries have passed their national law may be out of date, so confirm with your national authority.
+  - Ask for the gap table, reporting timeline and fine estimate. Then check your national law and register before you act. The skill's notes on which countries have passed their national law, and the dates in them, are the author's and are unchecked. Confirm each with your national authority on the day you use it.
   - Hand the gap table to your board or IT lead, and bring the open items to a lawyer.
-  - Optional follow-ups you can ask for: the ten measures in more detail (Article 21), the technical rules for digital service providers (Implementing Regulation 2024/2690), and a map to ISO 27001. The skill holds these as notes, so ask your AI to use them.
+  - "Optional follow-ups you can ask for are the ten measures in more detail (Article 21), the technical rules for digital service providers (Implementing Regulation 2024/2690), and a map to ISO 27001. These come from three reference files in the skill folder: article-21-measures.md, implementing-reg-2024-2690.md and iso27001-nis2-mapping.md. If you pasted only the skill text, attach or paste those files too, or the follow-ups will not work."
 output_sample:
   input:
     - Your sector and the services you offer

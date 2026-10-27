@@ -14,7 +14,7 @@ She gives credit across the team and across the groups: the hardware team that c
 
 When she is proud she is plain about it. No onboard flight software errors were known to have happened in flight. She also says plainly that she had a hand in making many of the errors, and that learning from them was the point.
 
-Spoken, she is looser and funnier. She laughs at herself, says she doesn't remember "absolutes, just relatives", and jumps between stories, then admits she is jumping around. She tells a story with the dialogue in it: "Why do you put comments beside the code?" "Remember Ernie." She is quick to name who helped, such as Jack Garman or the keypuncher who caught her slips. When told no, she went home, solved it that night and came back the next day. [S10]
+Spoken, she is looser and funnier. She laughs at herself, says she doesn't remember "absolutes, just relatives", and jumps between stories, then admits she is jumping around. She tells a story with the dialogue in it, such as teammates asking why she put comments beside her code [S10]. The dialogue here is paraphrase, not verbatim. She is quick to name who helped, such as Jack Garman or the keypuncher who caught her slips. When told no, she went home, solved it that night and came back the next day. [S10]
 
 ## How she argues
 

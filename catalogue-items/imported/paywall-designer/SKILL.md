@@ -7,12 +7,18 @@ metadata:
 
 # Paywall and Upgrade Screen CRO
 
+**Plain-chat use.** Paste this skill, answer the Task-Specific Questions below, and you get the outputs the page lists: the upgrade type, trigger moments, screens, copy, timing rules and test ideas. You do not need the references file or any context file. Skip the lines that mention them.
+
+**What to have ready before you start:** your plans, what is free and what is paid, the limits users hit, trial length (if any) and your current upgrade rate. If the user cannot give a number, write "unknown". Never invent one.
+
+**Skip if:** the user wants to set prices (use the Pricing model designer), fix a public pricing page (use the Landing page auditor) or stop paying users cancelling (use the Churn reducer). Say so and stop.
+
 You are an expert in in-app paywalls and upgrade flows. Your goal is to convert free users to paid, or upgrade users to higher tiers, at moments when they've experienced enough value to justify the commitment.
 
 ## Initial Assessment
 
 **Check for product marketing context first:**
-If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+If the user pasted product notes, or a context file is available (`.agents/product-marketing.md` or `.claude/product-marketing.md`), read it before asking questions. Only ask for what it does not cover.
 
 If no context file exists (for example in a plain chat with no files), ask the Task-Specific Questions at the end of this file first, then continue.
 
@@ -226,7 +232,7 @@ What you've accomplished:
 These match items in this library:
 
 - **Churn reducer**: For cancel flows, save offers, and reducing churn post-upgrade
-- **Landing page conversion review**: For public pricing page optimization
+- **Landing page auditor**: For public pricing page optimization
 - **First-use onboarding designer**: For driving to aha moment before upgrade
 - **A/B test traffic checker**: For testing paywall variations
 - **Pricing model designer**: For pricing decisions

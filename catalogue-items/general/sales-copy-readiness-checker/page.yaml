@@ -18,7 +18,7 @@ when:
   - You're reviewing a writer's or an AI's copy and want reasons you can send back.
   - Two people disagree about whether a piece is ready.
 not_for:
-  - "Your copy is still a rough draft: use the Edit a draft so it reads clean and sells skill first, then run this as the last check."
+  - "Your copy is still a rough draft: use the Sales copy editor first, then run this as the last check."
   - "You need new ad copy written from scratch: use the Reply-getting fix writer, then check the result here."
   - "You want to plan what to test or read ad results: use the Ad test brief writer or the Campaign keep-or-change checker."
 
@@ -95,6 +95,9 @@ output_shape: |
   READINESS SCORE
   Now: <passed> / <judged> x 100 = <score>
   With the fixes made: <score>
+
+  CHECKS MISSED
+  <one line each, or none>
 
 example:
   business: sprout
@@ -184,7 +187,7 @@ improve:
   - Paste your exact guarantee wording and offer terms into "Facts" in the skill file, so the gate always has them.
   - Add a check of your own under Act or Believe if every piece must pass a rule of yours, such as "every star rating names its source".
   - Save the checks your copy fails most often to your brand file, and give them to writers up front.
-  - Run "Edit a draft so it reads clean and sells" first, so this is the final check, not the first edit.
+  - Run the Sales copy editor first, so this is the final check, not the first edit.
 
 works_best_with:
   tools:

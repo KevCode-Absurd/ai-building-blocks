@@ -61,6 +61,8 @@ cd business-operations/skills/knowledge-ops && python3 scripts/kb_ingester.py --
 
 ## References
 
+The sources named below have no titles or links in this copy. Treat each one as unverified, and do not quote them to the user as fact without checking the source.
+
 - `references/5w2h_sop_canon.md` — Kaoru Ishikawa's 5W2H method, Toyota standard-work discipline, Atul Gawande's checklist manifesto, Atlassian Confluence SOP guidance, ISO 9001 SOP requirements, ITIL v4 Service Operation, FDA 21 CFR Part 211. Eight cited sources covering SOP authoring canon.
 - `references/runbook_canon.md` — Google SRE Workbook (runbook chapter), Atlassian incident-management runbooks, PagerDuty Incident Response taxonomy, AWS Well-Architected operational excellence pillar, Charity Majors on observability-runbook integration, Susan Fowler on production-ready microservices, ITIL v4 Operations. Seven cited sources covering runbook design canon.
 - `references/kb_hygiene_anti_patterns.md` — Eight anti-patterns drawn from Notion/Confluence wiki industry research, Mozilla SUMO knowledge-base lessons, Stack Overflow community-management research, the Atlassian Team Playbook, MIT TIK org-wiki studies, Cynthia Lee on glossary drift, and Adam Wiggins on "documentation rot".
@@ -70,7 +72,7 @@ cd business-operations/skills/knowledge-ops && python3 scripts/kb_ingester.py --
 1. The KB is in markdown (or can be exported to markdown — Notion, Confluence, Obsidian, and Google Docs all support this). HTML-only or PDF-only KBs require a conversion pass first; out of scope.
 2. The user has authority to commission rewrites or archives. Producing a cleanup list nobody acts on is wasted work — route findings to a named owner before running the ingester.
 3. Owner metadata lives in YAML frontmatter (`owner: alex@company.com`) or in a top-of-page "Owner:" line. Tribal-knowledge ownership (the person who last edited the page) is treated as missing.
-4. "Stale" defaults to 12 months. Override with `--stale-days` on `kb_ingester.py`. Some compliance regimes (FDA, ISO 13485) require shorter review cycles; use `--profile regulated` and `--stale-days 365`.
+4. "Stale" defaults to 12 months. Override with `--stale-days` on `kb_ingester.py`. Some compliance regimes (FDA, ISO 13485) require shorter review cycles; use `--profile regulated` and `--stale-days 90`. Ask the user which cycle their rules require.
 5. The user is not asking for a personal PKM. Personal Karpathy-style second-brain work belongs in `engineering/llm-wiki`.
 
 ## Anti-patterns
@@ -94,34 +96,34 @@ cd business-operations/skills/knowledge-ops && python3 scripts/kb_ingester.py --
 
 ## Forcing-question library (Matt Pocock grill discipline)
 
-Before invoking the tools, the orchestrator (or `/cs:grill-bizops`) walks the user through these questions **one at a time, with a recommended answer + canon citation**. Never bundled. Walk depth-first — do not open question 4 until 1-3 are locked.
+Before invoking the tools, the AI walks the user through these questions **one at a time, with a recommended answer + canon citation**. Never bundled. Walk depth-first — do not open question 4 until 1-3 are locked.
 
 1. **"Who is the named owner of this SOP / runbook, and do they know they own it?"**
    Recommended: a single human (not "the team"), and yes — they have agreed in writing.
-   Canon: Gawande 2009 (*The Checklist Manifesto*) — a checklist with no owner tends to go stale. Ownership is the discipline. (Unverified claim; treat as a rule of thumb.)
+   Canon (unverified, check the source before you quote it): Gawande 2009 (*The Checklist Manifesto*) — a checklist with no owner tends to go stale. Ownership is the discipline. (Unverified claim; treat as a rule of thumb.)
 
 2. **"When was this doc last reviewed, and what is the review cadence?"**
-   Recommended: reviewed within the last 12 months (90 days if `--profile regulated`); cadence written in the frontmatter.
-   Canon: ISO 9001:2015 §7.5.3 — controlled documents require review-cycle metadata. ITIL v4 echoes this for Service Operation runbooks.
+   Recommended: reviewed within the last 12 months (90 days if `--profile regulated --stale-days 90`); cadence written in the frontmatter.
+   Canon (unverified, check the source before you quote it): ISO 9001:2015 §7.5.3 — controlled documents require review-cycle metadata. ITIL v4 echoes this for Service Operation runbooks.
 
 3. **"For each runbook step: what is the observable success signal — by which I mean, what specific output tells you the step worked?"**
    Recommended: a concrete observable ("HTTP 200 from `/healthz`", "Slack thread closed with `done` reaction", "Salesforce opportunity moved to `Closed-Won` stage") — not "the service is up" or "it works".
-   Canon: Beyer et al. 2018 (*Site Reliability Workbook*, Ch. 8) — observable signals are the entire point of a runbook. Vague success criteria are the leading cause of runbook misuse during incidents.
+   Canon (unverified, check the source before you quote it): Beyer et al. 2018 (*Site Reliability Workbook*, Ch. 8) — observable signals are the point of a runbook. Vague success criteria make a runbook hard to use during an incident. (A rule of thumb, with no figure behind it.)
 
 4. **"What is the rollback path for each runbook step that can fail?"**
    Recommended: every step that mutates state has either a rollback path or an explicit "cannot roll back — escalate to X" line.
-   Canon: AWS Well-Architected Framework, Operational Excellence pillar — "you cannot run a process you cannot reverse without first agreeing what 'reverse' means".
+   Canon (unverified, check the source before you quote it): AWS Well-Architected Framework, Operational Excellence pillar. The line in quotes below is a paraphrase, not a verified quote: "you cannot run a process you cannot reverse without first agreeing what 'reverse' means".
 
 5. **"Where does this doc live, and what other docs link to it?"**
    Recommended: in the canonical wiki, and at least 2 inbound links from related docs. An orphan SOP is an unfindable SOP.
-   Canon: Atlassian Team Playbook on documentation health — a high share of orphan pages is a warning sign of wiki sprawl. (Unverified; the 20% line is a rule of thumb, not a sourced figure.)
+   Canon (unverified, check the source before you quote it): Atlassian Team Playbook on documentation health — a high share of orphan pages is a warning sign of wiki sprawl. (The 20% line is a rule of thumb, not a sourced figure.)
 
 6. **"What is the regulatory overlay on this process — SOC 2, HIPAA, ISO 13485, GDPR, SOX, none?"**
    Recommended: explicit answer. If "none", confirm by checking the data classes the process touches.
-   Canon: FDA 21 CFR Part 211.100 (Written procedures; deviations) — regulated SOPs require version control, change history, and signoff. Skip this step and the doc is an audit finding.
+   Canon (unverified, check the source before you quote it): FDA 21 CFR Part 211.100 (Written procedures; deviations) — regulated SOPs require version control, change history, and signoff. This is not legal or regulatory advice. Ask a qualified person what applies to you.
 
 7. **"Is the happy path the *only* path documented, or are the 2-3 most common failure modes also documented?"**
    Recommended: the top-2 failure modes per process are documented with their own recovery sub-procedure.
-   Canon: Fowler 2016 (*Production-Ready Microservices*) — docs that cover only the happy path waste time in an incident. (Unverified; no figure is claimed.)
+   Canon (unverified, check the source before you quote it): Fowler 2016 (*Production-Ready Microservices*) — docs that cover only the happy path waste time in an incident. (No figure is claimed.)
 
 After all 7 are locked, invoke `kb_ingester.py` → `runbook_validator.py` → `sop_generator.py` in sequence.

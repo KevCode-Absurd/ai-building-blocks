@@ -73,10 +73,10 @@ Quarterly: Review patterns across incidents
 ```markdown
 # Postmortem: [Incident Title]
 
-**Date**: 2024-01-15
-**Authors**: @alice, @bob
+**Date**: [DATE]
+**Authors**: [AUTHOR HANDLES]
 **Status**: Draft | In Review | Final
-**Incident Severity**: SEV2
+**Incident Severity**: [SEVERITY]
 **Incident Duration**: [DURATION]
 
 ## Executive Summary
@@ -93,39 +93,38 @@ On [DATE], the [SERVICE] experienced a [DURATION] outage affecting approximately
 
 | Time | Event |
 |------|-------|
-| 14:23 | Deployment v2.3.4 completed to production |
-| 14:31 | First alert: `payment_error_rate > 5%` |
-| 14:33 | On-call engineer @alice acknowledges alert |
-| 14:35 | Initial investigation begins, error rate at 23% |
-| 14:41 | Incident declared SEV2, @bob joins |
-| 14:45 | Database connection exhaustion identified |
-| 14:52 | Decision to rollback deployment |
-| 14:58 | Rollback to v2.3.3 initiated |
-| 15:10 | Rollback complete, error rate dropping |
-| 15:18 | Service fully recovered, incident resolved |
+| [TIME] | [Change or deployment that started it, from your records] |
+| [TIME] | First alert: [ALERT NAME AND THRESHOLD] |
+| [TIME] | On-call engineer [HANDLE] acknowledges alert |
+| [TIME] | Initial investigation begins, error rate at [RATE] |
+| [TIME] | Incident declared [SEVERITY], [HANDLE] joins |
+| [TIME] | [Cause identified] |
+| [TIME] | Decision to [FIX ACTION] |
+| [TIME] | [FIX ACTION] started |
+| [TIME] | [FIX ACTION] complete, [METRIC] improving |
+| [TIME] | Service fully recovered, incident resolved |
 
 ## Root Cause Analysis
 
 ### What Happened
 
-The v2.3.4 deployment included a change to the database query pattern that inadvertently removed connection pooling for a frequently-called endpoint. Each request opened a new database connection instead of reusing pooled connections.
+[Describe what changed and what it did, using only facts from your records. Example shape: a change in [COMPONENT] caused [EFFECT] on [SYSTEM].]
 
 ### Why It Happened
 
-1. **Proximate Cause**: Code change in `PaymentRepository.java` replaced pooled `DataSource` with direct `DriverManager.getConnection()` calls.
+1. **Proximate Cause**: [The direct cause, with the file or change from your records]
 
-2. **Contributing Factors**:
-   - Code review did not catch the connection handling change
-   - No integration tests specifically for connection pool behavior
-   - Staging environment has lower traffic, masking the issue
-   - Database connection metrics alert threshold was too high (90%)
+2. **Contributing Factors** (list only those your records support):
+   - [FACTOR 1]
+   - [FACTOR 2]
+   - [FACTOR 3]
 
 3. **5 Whys Analysis**:
-   - Why did the service fail? → Database connections exhausted
-   - Why were connections exhausted? → Each request opened new connection
-   - Why did each request open new connection? → Code bypassed connection pool
-   - Why did code bypass connection pool? → Developer unfamiliar with codebase patterns
-   - Why was developer unfamiliar? → No documentation on connection management patterns
+   - Why did the service fail? → [ANSWER]
+   - Why? → [ANSWER]
+   - Why? → [ANSWER]
+   - Why? → [ANSWER]
+   - Why? → [ANSWER, ending at a system or process gap, not a person]
 
 ### System Diagram
 
@@ -140,29 +139,29 @@ The v2.3.4 deployment included a change to the database query pattern that inadv
 ## Detection
 
 ### What Worked
-- Error rate alert fired within 8 minutes of deployment
-- Grafana dashboard clearly showed connection spike
-- On-call response was swift (2 minute acknowledgment)
+- [What alerted you, and how fast, from your records]
+- [Which dashboard or signal showed the problem]
+- [How fast the on-call person responded]
 
 ### What Didn't Work
-- Database connection metric alert threshold too high
-- No deployment-correlated alerting
-- Canary deployment would have caught this earlier
+- [Alert or signal that was too late or missing]
+- [Gap in tooling or process]
+- [What could have caught it earlier]
 
 ### Detection Gap
-The deployment completed at 14:23, but the first alert didn't fire until 14:31 (8 minutes). A deployment-aware alert could have detected the issue faster.
+The change completed at [TIME], but the first alert didn't fire until [TIME] ([MINUTES] minutes). [What could have detected it faster.]
 
 ## Response
 
 ### What Worked
-- On-call engineer quickly identified database as the issue
-- Rollback decision was made decisively
-- Clear communication in incident channel
+- [What the responders did well]
+- [Which decision helped]
+- [How the team communicated]
 
 ### What Could Be Improved
-- Took 10 minutes to correlate issue with recent deployment
-- Had to manually check deployment history
-- Rollback took [MINUTES] (could be faster)
+- [Delay in finding the cause, in minutes, from your records]
+- [Manual step that slowed the response]
+- Fix took [MINUTES]
 
 ## Impact
 
@@ -178,39 +177,34 @@ The deployment completed at 14:23, but the first alert didn't fire until 14:31 (
 - Engineering time: [PERSON-HOURS, or TBD]
 
 ### Technical Impact
-- Database primary experienced elevated load
-- Some replica lag during incident
-- No permanent damage to systems
+- [Effect on your systems, from your records]
+- [Other technical effects]
+- [Whether anything was lost or damaged: state what is confirmed, or TBD]
 
 ## Lessons Learned
 
 ### What Went Well
-1. Alerting detected the issue before customer reports
-2. Team collaborated effectively under pressure
-3. Rollback procedure worked smoothly
-4. Communication was clear and timely
+1. [What went well]
+2. [What went well]
+3. [What went well]
 
 ### What Went Wrong
-1. Code review missed critical change
-2. Test coverage gap for connection pooling
-3. Staging environment doesn't reflect production traffic
-4. Alert thresholds were not tuned properly
+1. [What went wrong, as a system gap]
+2. [What went wrong, as a system gap]
+3. [What went wrong, as a system gap]
 
 ### Where We Got Lucky
-1. Incident occurred during business hours with full team available
-2. Database handled the load without failing completely
-3. No other incidents occurred simultaneously
+1. [Luck factor from your records, or leave out]
+2. [Luck factor from your records, or leave out]
 
 ## Action Items
 
 | Priority | Action | Owner | Due Date | Ticket |
 |----------|--------|-------|----------|--------|
-| P0 | Add integration test for connection pool behavior | @alice | 2024-01-22 | ENG-1234 |
-| P0 | Lower database connection alert threshold to 70% | @bob | 2024-01-17 | OPS-567 |
-| P1 | Document connection management patterns | @alice | 2024-01-29 | DOC-89 |
-| P1 | Implement deployment-correlated alerting | @bob | 2024-02-05 | OPS-568 |
-| P2 | Evaluate canary deployment strategy | @charlie | 2024-02-15 | ENG-1235 |
-| P2 | Load test staging with production-like traffic | @dave | 2024-02-28 | QA-123 |
+| P0 | [ACTION] | [OWNER] | [DUE DATE] | [TICKET ID] |
+| P0 | [ACTION] | [OWNER] | [DUE DATE] | [TICKET ID] |
+| P1 | [ACTION] | [OWNER] | [DUE DATE] | [TICKET ID] |
+| P2 | [ACTION] | [OWNER] | [DUE DATE] | [TICKET ID] |
 
 ## Appendix
 
@@ -223,7 +217,7 @@ The deployment completed at 14:23, but the first alert didn't fire until 14:31 (
 [Link to metrics]
 
 ### Related Incidents
-- 2023-11-02: Similar connection issue in User Service (POSTMORTEM-42)
+- [DATE]: [Related incident and its postmortem ID, from your records]
 
 ### References
 - Connection Pool Best Practices
@@ -241,52 +235,51 @@ The deployment completed at 14:23, but the first alert didn't fire until 14:31 (
 ## Analysis
 
 ### Why #1: Why did the service fail?
-**Answer**: Database connections were exhausted, causing all new requests to fail.
+**Answer**: [ANSWER from your records]
 
-**Evidence**: Metrics showed connection count at 100/100 (max), with 500+ pending requests.
-
----
-
-### Why #2: Why were database connections exhausted?
-**Answer**: Each incoming request opened a new database connection instead of using the connection pool.
-
-**Evidence**: Code diff shows direct `DriverManager.getConnection()` instead of pooled `DataSource`.
+**Evidence**: [Metric, log line or ticket that shows it, with its source]
 
 ---
 
-### Why #3: Why did the code bypass the connection pool?
-**Answer**: A developer refactored the repository class and inadvertently changed the connection acquisition method.
+### Why #2: Why did that happen?
+**Answer**: [ANSWER]
 
-**Evidence**: PR #1234 shows the change, made while fixing a different bug.
+**Evidence**: [EVIDENCE]
 
 ---
 
-### Why #4: Why wasn't this caught in code review?
-**Answer**: The reviewer focused on the functional change (the bug fix) and didn't notice the infrastructure change.
+### Why #3: Why did that happen?
+**Answer**: [ANSWER]
 
-**Evidence**: Review comments only discuss business logic.
+**Evidence**: [EVIDENCE]
+
+---
+
+### Why #4: Why wasn't this caught earlier?
+**Answer**: [ANSWER, about the process, not a person]
+
+**Evidence**: [EVIDENCE]
 
 ---
 
 ### Why #5: Why isn't there a safety net for this type of change?
-**Answer**: We lack automated tests that verify connection pool behavior and lack documentation about our connection patterns.
+**Answer**: [ANSWER]
 
-**Evidence**: Test suite has no tests for connection handling; wiki has no article on database connections.
+**Evidence**: [EVIDENCE]
 
 ## Root Causes Identified
 
-1. **Primary**: Missing automated tests for infrastructure behavior
-2. **Secondary**: Insufficient documentation of architectural patterns
-3. **Tertiary**: Code review checklist doesn't include infrastructure considerations
+1. **Primary**: [ROOT CAUSE]
+2. **Secondary**: [ROOT CAUSE]
+3. **Tertiary**: [ROOT CAUSE]
 
 ## Systemic Improvements
 
 | Root Cause | Improvement | Type |
 |------------|-------------|------|
-| Missing tests | Add infrastructure behavior tests | Prevention |
-| Missing docs | Document connection patterns | Prevention |
-| Review gaps | Update review checklist | Detection |
-| No canary | Implement canary deployments | Mitigation |
+| [CAUSE] | [IMPROVEMENT] | Prevention |
+| [CAUSE] | [IMPROVEMENT] | Detection |
+| [CAUSE] | [IMPROVEMENT] | Mitigation |
 ```
 
 ### Template 3: Quick Postmortem (Minor Incidents)
@@ -294,27 +287,27 @@ The deployment completed at 14:23, but the first alert didn't fire until 14:31 (
 ```markdown
 # Quick Postmortem: [Brief Title]
 
-**Date**: 2024-01-15 | **Duration**: 12 min | **Severity**: SEV3
+**Date**: [DATE] | **Duration**: [DURATION] | **Severity**: [SEVERITY]
 
 ## What Happened
-API latency spiked to 5s due to cache miss storm after cache flush.
+[What failed, for how long, and the main cause, from your records.]
 
 ## Timeline
-- 10:00 - Cache flush initiated for config update
-- 10:02 - Latency alerts fire
-- 10:05 - Identified as cache miss storm
-- 10:08 - Enabled cache warming
-- 10:12 - Latency normalized
+- [TIME] - [What started it]
+- [TIME] - [First alert]
+- [TIME] - [Cause identified]
+- [TIME] - [Fix applied]
+- [TIME] - [Back to normal]
 
 ## Root Cause
-Full cache flush for minor config update caused thundering herd.
+[Direct cause, from your records.]
 
 ## Fix
-- Immediate: Enabled cache warming
-- Long-term: Implement partial cache invalidation (ENG-999)
+- Immediate: [WHAT YOU DID TO FIX IT]
+- Long-term: [LONG-TERM FIX] ([FIX TICKET ID])
 
 ## Lessons
-Don't full-flush cache in production; use targeted invalidation.
+[One lesson, stated as a system change.]
 ```
 
 ## Facilitation Guide

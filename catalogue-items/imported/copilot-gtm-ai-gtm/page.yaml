@@ -5,7 +5,9 @@ name: AI product market entry planner
 summary: Plan how to sell your AI product to businesses. Give it your product and buyer. You get positioning, trust questions and a go-to-market plan.
 job: plan-strategy
 headline: AI product market entry planner
-subhead: "Describe your AI product and the person who would buy it. Your AI uses the author's selling patterns to pick your positioning and pricing. You also get answers to the question buyers ask most: who is responsible when it breaks. The numbers and rules of thumb come from the author's own sales experience, not proven facts."
+subhead: "Describe your AI product and the person who would buy it. You get a framework built from one author's selling experience, for positioning, pricing and trust. Check it against your own buyers. You also get answers to the question buyers ask most: who is responsible when it breaks. The numbers and rules of thumb come from the author's own sales experience, not proven facts."
+explain: |
+  This is a copy of Smit Patel's MIT-licensed gtm-ai-gtm skill, taken from github/awesome-copilot with only light renaming. The page adds the caveats and the how-to. The frameworks, numbers and rules of thumb are the original author's.
 not_for:
   - "You want a plan for a normal software product with no AI decisions in it: use a plain positioning workshop with your team instead."
   - "You need exact prices from market data: this gives pricing models to weigh, so check real buyer quotes or ask a finance lead."
@@ -14,7 +16,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill text into the chat. No code or paid tool is needed.
   - Write your product description, buyer role and the objections you have heard.
   - Add your pricing options and any security or operations notes if you have them.
-  - Ask your AI to follow the skill and give you positioning, trust questions and a plan.
+  - Ask your AI to follow the skill and give you positioning, trust questions and a plan. The skill has a Start here section that maps each step to its part of the file. It works in this order. 1) Gather your inputs. 2) Choose positioning. 3) Answer the accountability questions. 4) Pick a pricing model. 5) Build the trust ladder. 6) Plan the demo. Each section is one short paragraph.
   - Read the result as one author's experience, not fact. Check each point against what your own buyers tell you.
   - Next, test the positioning with 3 to 5 real buyers and run the skill again with their answers.
   - Send the answers on who monitors, fixes and owns problems to your support and operations leads. Send the pricing model to your finance lead and the demo plan to sales.
@@ -27,7 +29,7 @@ output_sample:
     - Any security or operations documents you already have (optional)
   output:
     - name: Positioning choice
-      contains: Whether to frame your product as a copilot, an agent or a teammate, with the reason.
+      contains: Whether to frame your product as a copilot, an agent or a teammate, with the reason. Each section of the result is one short paragraph.
     - name: Accountability answers
       contains: Who watches the product, who fixes it and who speaks to customers when it fails.
     - name: Pricing model pick

@@ -34,9 +34,10 @@ how_to_use:
   - "Pick your edit: flat-lay retouch, wrinkle removal only, general clean-up or custom."
   - Paste your photo or photos into your AI. Use one product only, at least 400 by 400 pixels, as jpg, png or webp.
   - Tell your AI what looks wrong, then ask it to write the editing prompt using this skill.
-  - Run the prompt in your image model. The free route is to give the prompt and your photo to the image tools in ChatGPT or Gemini. The skill's own route uses gpt-image-2 through the dLazy tool, which needs a dLazy account and costs credits, and an AI that can run commands.
-  - Compare the result with your original. Check that folds, hardware and colour match, and that no flaws were erased.
-  - If something is off, add the matching fix-up line and run it again.
+  - "Free route: paste your photo and this prompt into the image tools in ChatGPT or Gemini. Prompt: Studio retouch of a [product type] photo. Press out the random wrinkles and creases, straighten and even out the shape, and balance the light so there is no hot spot or colour cast. Keep the [style, pattern, hardware, structure] and the exact [colour] unchanged and sharper than before. Pure white seamless background with a subtle soft contact shadow. Photorealistic, no text, no watermark."
+  - "dLazy route (paid, optional): you need a dLazy account, Node, an AI that can run commands, and about 60 credits per image. Run with --dry-run first to check the call and cost. This route uses gpt-image-2 through the dLazy tool."
+  - Compare the result with your original. Check that folds, hardware and colour match, and that no flaws were erased. The retouched photo must still match the item the buyer receives. Check your marketplace's rules on edited product photos before you upload.
+  - "If something is off, add one matching fix-up line and run it again. Fix-up lines: Do not flatten structural folds, pleats and gathers must stay three-dimensional. The silhouette, seam lines and hardware positions must match the source exactly. Preserve fabric micro-texture, do not smooth it into plastic. Do not remove holes, stains or damage."
   - When it looks right, upload it to your shop listing. Next, check it against your marketplace's photo rules.
 next: [marketplace-photo-rule-checker, product-photo-set-builder]
 output_sample:

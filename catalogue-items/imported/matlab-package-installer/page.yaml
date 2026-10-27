@@ -5,11 +5,13 @@ name: MATLAB package installer
 summary: Install, update or remove a MATLAB package from the command line, and fix dependency errors. Give it the package name and your release.
 job: build-software
 headline: MATLAB package installer
-subhead: Name the package. Get it installed, updated or removed, with dependency errors sorted. Bring the package name. Use the result to plan your next step.
+subhead: Name the package. Get it installed, updated or removed, with dependency errors sorted. Bring the package name and your MATLAB release (R2026b or later).
 explain: |
   MATLAB packages installed, updated or removed from the command line, with dependency errors sorted out. Name the package and say what you want done.
 
   The skill uses MATLAB's own package manager from release 2026b. It always turns off the prompt so scripts do not hang waiting for an answer. It uses a dry run to resolve a package name across all configured sources before it installs. It prefers a project file to list dependencies, so another person can rebuild your setup. It warns that every install is global, that names in search are case-sensitive in one form, and that forcing an install can remove other packages. It asks you before any force. Older releases use the Add-On Manager instead.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page, and the skill file now says LICENSE.md governs. Follow the LICENSE.md file.
 when:
   - You need a community package and are unsure of its exact name.
   - An install fails because of a missing dependency.
@@ -24,6 +26,7 @@ you_give:
   - "What you want done: install, update or remove"
   - MATLAB release
   - Project folder (optional)
+  - A check that you are happy for the package to install globally. Every install applies to all your projects on this machine, not only the current one.
 you_get:
   - Install commands that run without prompts
   - A dry run result first
@@ -36,6 +39,10 @@ how_to_use:
   - Read the dry run result first. Confirm it found the right package.
   - Approve the change. If a force is needed, it will ask you before it runs.
   - Check the package list to see the final result.
+  - Next, write the package into your project file with the MATLAB project setup helper, so a teammate can match it.
+next:
+  - matlab-project-setup-helper
+  - matlab-code-sharer
 output_sample:
   input:
     - The package name, or part of it
@@ -44,6 +51,9 @@ output_sample:
     - Your project folder (optional)
   prerequisites:
     - An AI that can run code in MATLAB R2026b or later
+    - A MATLAB licence for that release. MATLAB itself is paid software
+    - For a custom or Artifactory package source, an access token set as an environment variable. Never paste the token into the chat or into code.
+    - Looking up a File Exchange package sends web requests to MathWorks, so your AI needs web access for that one step
   output:
     - name: Package check
       contains: A dry run that finds the package name in your configured sources before anything is installed.

@@ -14,6 +14,8 @@ license: Apache-2.0
 license_source: https://github.com/ASI2030/Fact-Check-X/blob/4dd7eef0452a4c31e4b3b3b0d643c9daeea7fdbe/LICENSE
 ---
 
+> **AI Blocks note (licence):** this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says. The `license:` line in the front matter above is the original author's own label (Apache-2.0). The LICENSE-CONTENT file governs here. Keep the credit to the author.
+
 # Fact-Check-X Complete
 
 Compare factual claims made by one or more AI systems, inspect the sources they

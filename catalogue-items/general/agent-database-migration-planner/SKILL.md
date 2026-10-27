@@ -5,7 +5,7 @@ description: Plan a database change that preserves existing agent data. Get a sc
 
 # Agent database migration planner
 
-When not to use: to add one column to a table with no data you need, use your normal migration tool. To wipe and rebuild a live database, use a script made for a throwaway test copy. This skill plans and writes files. It does not run the migration.
+When not to use: to add one column to a table with no data you need, use your normal migration tool. To wipe and rebuild a live database, use a script made for a throwaway test copy. This skill plans. It writes change files only if you allow that, and it never runs the migration.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
@@ -45,7 +45,7 @@ Historical examples, thresholds and platform labels are starting assumptions, no
 
 ## Method
 
-1. Inspect schema history, live table definitions, constraints, data volume, ownership and every job/runtime component that reads them. Capture the current state and backup/restore evidence before designing a change. A mismatch with the expected schema is not a reason to delete data.
+1. Start by reading the schema file or dump, the migration folder and the code that reads the agent tables. Record in the current-state summary: each table name, its columns and constraints, row counts, who owns it and which jobs read it. Then inspect schema history, live table definitions, constraints, data volume, ownership and every job/runtime component that reads them. Capture the current state and backup/restore evidence before designing a change. A mismatch with the expected schema is not a reason to delete data.
 
 2. Map required agent registry, jobs, activity, issues, findings, costs and proposal records to the selected project. Separate missing columns, renamed fields and semantic differences. Define compatibility for old readers and in-flight jobs.
 
@@ -69,6 +69,7 @@ Use forward migrations and rehearsed recovery. Existing data and access policies
 - Staging checks and the rehearsal plan
 - Release order and rollback limits, including what a rollback cannot restore
 - Missing inputs and a bounded verification plan
+- Checks missed: one line for each check that failed or could not run, or "none"
 
 Next: a developer runs the staging rehearsal on a test copy and brings the results back so the rollback plan can be confirmed before any live release.
 

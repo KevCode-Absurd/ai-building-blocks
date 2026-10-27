@@ -1,13 +1,13 @@
 new_slug: economic-profit-fade-schedule
 name: Economic profit fade schedule
 headline: Economic profit fade schedule
-summary: "Build an economic profit schedule: two years of excess returns, then zero. You get the present value added to your invested capital."
+summary: "Value two years of excess returns, then none. You get their present value on top of your invested capital."
 job: money-and-investing
 thinking: high
 thinking_why: "Capital and returns are held flat after year two, so the assumptions behind that must be stated and tested."
 subhead: A two-period economic-profit schedule and PV contribution over invested capital. Share opening invested capital, two annual NOPAT forecasts, WACC and evidence supporting constant capital and zero later excess returns.
 explain: |-
-  Economic profit is the profit left after a charge for the capital used. Capital charge = invested capital × WACC, the return investors require. This schedule runs two years of economic profit, discounts them and adds them to the starting capital. It then assumes capital stays flat and no excess return is earned after year two.
+  Economic profit is the profit left after a charge for the capital used. Capital charge = invested capital × WACC, the return investors require. This schedule runs two years of economic profit, discounts them and adds them to the starting capital. It then assumes capital stays flat and no excess return is earned after year two. This is a fixed two-year fade. For growth that lasts after year two, use the Terminal growth reinvestment checker.
 
   Practice numbers, not a real company: capital of 1,000 and WACC of 10% give a capital charge of 100. NOPAT of 120 and 110 leaves economic profit of 20 and 10. Their present value is 20 / 1.1 + 10 / 1.21 = 26.45. Adding the 1,000 of capital gives 1,026.45.
 when:

@@ -42,7 +42,7 @@ How he applied it: he grew the KISSmetrics blog partly with data-driven infograp
 
 ### Outreach beats waiting: the 200 list
 
-In 2013 he said a new guide from someone with no following needs a push. His method: pay a freelancer to build four lists of 200 each, covering relevant websites, blogs that cover the topic, Facebook pages and Twitter profiles, with names and emails. Write the outreach templates before launch, post the guide quietly, then send each person a personal note that names their site and why the guide fits their readers [S4]. He put the response at about 5% for sites and blogs, 3% to 5% for Twitter messages and about 2% for Facebook pages [S4]. Generic repeat messages on Twitter get you penalised, so each one must be unique [S4].
+In 2013 he said a new guide from someone with no following needs a push. His method: pay a freelancer to build four lists of 200 each, covering relevant websites, blogs that cover the topic, Facebook pages and Twitter profiles, with names and emails. Write the outreach templates before launch, post the guide quietly, then send each person a personal note that names their site and why the guide fits their readers [S4]. He gave response rates of about 5% for sites and blogs, 3% to 5% for Twitter messages and about 2% for Facebook pages [S4]. These are 2013 figures from one talk, not current guidance. Generic repeat messages on Twitter get you penalised, so each one must be unique [S4].
 
 In his own post on guest blogging he added that he picks targets by fit with his audience over prestige, wants a domain score of at least 30, and starts from the top five search results for his topic [S11]. He wrote about 300 guest posts and learned to use headlines people would search for and with numbers [S11].
 
@@ -168,4 +168,4 @@ He started NeilPatel.com in August 2014 as a personal blog apart from business p
 - "if you focus on the user, you'll always do well." (Inbound After Hours, about 2022) [S2]
 - "without the quantity, you won't do well." (Inbound After Hours, about 2022) [S2]
 - "emails are worth money" (Contently interview, 2015) [S3]
-- "Live, learn, you adapt." (Inbound After Hours, about 2022) [S2]
+- "Live, learn, you adapt." (Inbound After Hours, about 2022, reported wording, unchecked) [S2]

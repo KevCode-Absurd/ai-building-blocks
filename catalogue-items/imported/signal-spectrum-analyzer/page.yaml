@@ -20,7 +20,7 @@ when:
 not_for:
   - You want to use this code outside MATLAB or other MathWorks products. The licence (BSD 2-Clause plus MathWorks terms) does not allow it.
   - "You want to design or apply a filter: use the digital filter designer."
-  - "You want a spectrogram or time-frequency view of a signal that changes over time: use a time-frequency tool, since this skill does not cover it yet."
+  - "You want a spectrogram or time-frequency view of a signal that changes over time: use the Time-frequency analyzer item, or in MATLAB the spectrogram function or the Time-Frequency analyzer app, since this skill does not cover it."
   - "You want audio features such as pitch, or Bode and Nyquist plots: use Audio Toolbox or Control System Toolbox."
 you_give:
   - Your signal, as a MATLAB variable or a CSV file
@@ -34,12 +34,12 @@ you_get:
   - Band power and bandwidth figures
 how_to_use:
   - Open MATLAB with the Signal Processing Toolbox (paid). For live, frame-by-frame data you also need the DSP System Toolbox (also paid). Your AI needs to run MATLAB code, so use an AI that can do that. The licence lets you use this skill only with MathWorks products.
-  - Paste the skill into your AI chat, or add the skill folder to your AI tool.
+  - Paste the skill into your AI chat, or add the skill folder to your AI tool. The licence link inside the skill file is superseded by the LICENSE.md file in this folder, so follow LICENSE.md.
   - Load your signal into MATLAB as a variable, or save it as a CSV file.
   - "Tell your AI the sample rate in Hz and the measurement you want: peaks, band power or bandwidth."
   - Read the data check first. Then check the plot axes and the peak table.
   - If your data arrives live, frame by frame, say so. The skill uses a different method for that.
-  - Next, check the peak table against a tone you know is in the signal. If you need a filter, use the Digital filter designer. For a view over time, use the Time-frequency analyzer.
+  - Next, check the peak table against a tone you know is in the signal. Then use the peaks to set band edges for band power and bandwidth checks. If you need a filter, use the Digital filter designer. For a view over time, use the Time-frequency analyzer.
 output_sample:
   input:
     - Your signal, as a variable in MATLAB or a CSV file

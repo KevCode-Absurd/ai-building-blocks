@@ -31,11 +31,12 @@ you_get:
   - A security score
 how_to_use:
   - Check that your skill folder sits in the claude-skills repo, for example at engineering/skills/your-skill. The commands expect that folder layout, so the path must match. This copy has only four tools: the validator, the script tester, the quality scorer and the security scorer. The skill's audit_skills.py tool, which checks many skills at once, is not included, so run the three commands on each folder in turn.
+  - "Run the tools in this order: skill_validator.py first, then script_tester.py on a throwaway copy only, then quality_scorer.py. Because audit_skills.py is not included, loop over your folders by hand."
   - Open a terminal in the repo root, or use an AI that can run code and read files. Python 3 is all you need.
   - Run the structure check on your skill folder with the skill_validator.py script. Add the JSON flag if you want results a program can read.
   - Read the skill's Python scripts first. script_tester.py runs them, so only use it on code you trust, and run it on a throwaway copy of the folder or inside a container. Then run the script_tester.py script on that copy, then the quality_scorer.py script. Add a minimum score if you want it to fail below a bar.
   - Work through the improvement roadmap from the top. Fix one item, then run all three checks again.
-  - Stop when the structure check passes, every script passes and the score meets your target.
+  - Stop when the structure check passes, every script passes and the score meets your target. Then update the skill's README to match what you changed, and ship it.
 output_sample:
   input:
     - A skill folder inside the claude-skills repo, such as one under engineering/skills

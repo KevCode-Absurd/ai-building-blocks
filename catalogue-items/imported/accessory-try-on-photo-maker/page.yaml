@@ -32,13 +32,15 @@ you_get:
   - Rules that keep the product unchanged
   - The finished on-model image, once your image tool runs it
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in this skill.
+  - Before you start. The picture step needs a paid dLazy account, an API key and credits. A dry run shows the cost first. Without them you still get the prompt, which you can run in another image tool that edits with several pictures.
+  - Open Claude, ChatGPT or Gemini and paste in this skill. Pasting it into a chat only writes the prompt. It does not draw the picture.
   - Add your product photo, your model photo and where the item should be worn. Photos must be 20 KB to 15 MB, larger than 400 x 400 pixels, and jpg, jpeg, png or webp. The model must have agreed to the use of their photo.
   - Read the prompt it writes. Check the placement line and the keep-unchanged rules.
-  - To get the picture, run the prompt in your image tool. It uses paid credits and a key, so do a cost check first.
-  - Ask for 2 to 4 versions, pick the best, and fix any problem with the fix-up lines.
+  - To get the picture, run the prompt in your image tool. The skill's own route is the dlazy command line tool or scripts/gen.mjs, which need a paid API key and credits, so a coder or an AI that can run code must do this step. Do the cost check first (it has a dry run). Or paste the prompt into another image tool that can edit with several pictures.
+  - Ask for 2 to 4 versions, pick the best, and fix any problem with the fix-up lines. Each version is one JPEG, 1024 x 1536 for body shots or 1024 x 1024 for close-ups of a wrist or ear.
   - Label the image as illustrative wherever a buyer or marketplace could take it for a real customer photo.
   - Check the image against the marketplace's image rules before you upload it.
+  - Next, write the listing text with the Product description writer.
 output_sample:
   input:
     - "A clear photo of your product (optional: more angles of it)"

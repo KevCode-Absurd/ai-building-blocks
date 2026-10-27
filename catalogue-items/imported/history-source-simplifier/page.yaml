@@ -11,6 +11,8 @@ explain: |
 
   The skill keeps the full source note: author, date and where it came from. It keeps the writer's voice and any loaded words, then shortens sentences instead of swapping vocabulary. Hard words go in a word bank at the bottom with plain definitions, never explanations of what the writer meant. Every cut is marked with brackets, and the note says the text is adapted. Key passages can appear in both forms side by side.
 
+  Research notes: the skill file cites Reisman (2012) as background. It quotes no figures. Check the study against the original paper before you repeat it to others.
+
   Credit: Gareth Manning, education-agent-skills. The skill file also names Sean Hu as contributor. Licence: CC BY-SA 4.0. We renamed it (the skill file calls it "historical-source-adapter") and rewrote the page text. The prompt itself is unchanged.
 when:
   - A source is too hard or long for your class.
@@ -35,7 +37,7 @@ you_get:
 next: [primary-source-lesson, history-thinking-quiz-designer]
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
-  - Paste the full source. Add the author, date, publication and where it came from.
+  - Paste the full source. Add the author, date, publication and where it came from. If one of these is not known, write "unknown" in the source note. Do not guess it.
   - Say how old your learners are and their reading level. Name the skills you want them to use.
   - Add a target length, your question, or must-keep phrases if you have them.
   - "Check the five sections: adapted source, word bank, notes, preserved features and value check."

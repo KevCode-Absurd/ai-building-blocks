@@ -1,6 +1,6 @@
 slug: ai-app-guardrails-builder
 name: AI app guardrails builder
-summary: Describe what your AI app must never do. Get rules that block jailbreaks, made-up facts and leaked personal details.
+summary: Describe what your AI app must never do. Get rules set to refuse jailbreaks, made-up facts and leaked personal details, plus a test plan to check each one.
 category: general
 boards: []
 type: skill

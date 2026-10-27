@@ -37,7 +37,7 @@ you_get:
 how_to_use:
   - Open an AI that can read and move files on your computer. Or paste the skill into a chat to get the plan only.
   - Say which folder to tidy, what annoys you most, and what to leave alone.
-  - Back up the folder first, or work on a copy. Moves are not undone for you.
+  - Back up the folder first, or work on a copy. Moves are not undone for you. The Mac, Windows and Linux commands in the skill have not been tested on your setup, so run the first pass on a copy.
   - Tell it to show the plan first and not delete anything.
   - Read the duplicate list and the planned moves. Ask for changes until you are happy.
   - Say yes to start the moves. Deleting needs its own separate yes.

@@ -7,11 +7,11 @@ job: make-skills
 headline: Project skill finder
 subhead: A short list of skills worth adding to your project, picked from how you really work rather than a generic wish list. Updating an existing skill comes before inventing a new one.
 explain: |
-  A short list of skills worth adding to your project, picked from how you really work rather than a generic wish list. Updating an existing skill comes before inventing a new one.
-
   The skill reads your project guidance files, then checks your AI's memory notes and past session summaries for jobs you repeat. It scans the skills you already have so it does not suggest duplicates. For each recommendation it gives the evidence, such as the repeated task and where it showed up, and says whether to update or add. Past sessions are read in order, starting with summaries and only falling back to raw logs when needed.
 
-  Licence: this copy comes from the sickn33 collection under CC BY 4.0 (LICENSE-CONTENT). The skill file's own header names Dimillian/Skills as its source, under MIT. Both are open licences, so you may use and share it with credit.
+  Paid or extra tools: none are needed. It reads files you already have.
+
+  Licence: CC BY 4.0 applies to this copy, as the LICENSE-CONTENT file in this folder says. That file governs. The skill file's own header says the original author, Dimillian/Skills, used MIT. Credit goes to Dimillian and sickn33.
 when:
   - You suspect you keep doing the same task by hand that a skill could do.
   - You have skills already but are not sure which are worth improving.
@@ -36,7 +36,7 @@ how_to_use:
   - "Ask: Audit this project and tell me which skills to add or update."
   - Add your memory notes and past session summaries if you have them. The skill looks for them in the ~/.codex folder, which is where Codex keeps them. Other assistants do not use that folder, so paste your summaries instead. Those notes can hold private details, so check them and remove anything sensitive first.
   - If those folders are missing, it still reads your project files and existing skills, but the evidence will be thinner. Paste a few past chat summaries instead.
-  - Check each pick has real evidence. Then ask your AI to write the skill you chose.
+  - Check each pick has real evidence. Then ask your AI to write the skill you chose. The skill file says to switch to a skill-creator tool for that step, so use your AI's own skill creator if it has one.
 output_sample:
   input:
     - Your project folder, with files like README and AGENTS.md

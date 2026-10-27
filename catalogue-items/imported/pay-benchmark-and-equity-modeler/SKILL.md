@@ -19,13 +19,13 @@ Analyze compensation data for benchmarking, band placement, and planning. Helps 
 ## What I Need From You
 
 **Option A: Single role analysis**
-"What should we pay a Senior Software Engineer in SF?"
+"What should we pay a [ROLE AND LEVEL] in [CITY]?"
 
 **Option B: Upload comp data**
 Upload a CSV or paste your comp bands. I'll analyze placement, identify outliers, and compare to market.
 
 **Option C: Equity modeling**
-"Model a refresh grant of 10K shares over 4 years at a $50 stock price."
+"Model a refresh grant of [NUMBER OF SHARES] shares over [YEARS] years at a [STOCK PRICE] stock price."
 
 ## Compensation Framework
 
@@ -36,6 +36,7 @@ Upload a CSV or paste your comp bands. I'll analyze placement, identify outliers
 - **Benefits**: Health, retirement, perks (harder to quantify)
 
 ### Key Variables
+- **Country and currency**: Say which country and currency your pay data and benchmarks use. If you do not say, ask.
 - **Role**: Function and specialization
 - **Level**: IC levels, management levels
 - **Location**: Geographic pay adjustments
@@ -94,4 +95,4 @@ If **~~HRIS** is connected:
 
 1. **Location matters** — Always specify location for benchmarking. SF vs. Austin vs. London are very different.
 2. **Total comp, not just base** — Include equity, bonus, and benefits for a complete picture.
-3. **Keep data confidential** — Comp data is sensitive. Results stay in your conversation.
+3. **Keep data confidential** — Comp data is sensitive. Remove names or swap them for IDs before you paste or upload a pay sheet. Whether the data is kept depends on your AI tool and its settings, so check them first.

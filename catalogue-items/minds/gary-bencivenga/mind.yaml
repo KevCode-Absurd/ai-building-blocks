@@ -18,7 +18,7 @@ use_cases:
   - "Judge a website or campaign by sales, not by visits or clicks"
 not_for:
   - "You want a brand's place in buyers' minds or a clear category: use the April Dunford mind or the Al Ries mind."
-  - "You want long-form sales letters built around a reader's real concern: use the Clayton Makepeace mind."
+  - "You want long-form sales letters built around a reader's real concern: use the Clayton Makepeace mind. For a whole category strategy, use the Al Ries mind."
   - "You need legal, medical or investment copy, or personal investment advice: ask a qualified professional, since this mind gives neither."
 output_sample:
   input:

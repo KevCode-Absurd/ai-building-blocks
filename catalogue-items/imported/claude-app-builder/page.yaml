@@ -7,7 +7,7 @@ job: build-software
 headline: Claude app builder
 subhead: Tell it what you want to build with Claude. It writes code that calls the Claude API through the official SDK for your language. It checks the SDK docs for names and imports, and tests the code if it can.
 explain: |
-  Tell it what you want to build with Claude, and get working code that talks to the Claude API correctly. It uses the official software kit for your language, so function names and imports are real and not guessed.
+  Tell it what you want to build with Claude, and get working code that talks to the Claude API correctly. It uses the official software kit for your language. Function names and imports come from the official SDK docs when your AI can reach them. If it cannot, they are unchecked, so test the names and imports before you rely on the code.
 
   It first looks at your project for signs of another AI provider and stops if you are using one. Then it picks the right way to build: a single call, a tool-using loop or a longer-running agent. It covers streaming, tool use, saved prompts to cut cost, token counts and moving to newer models. It warns where old habits from training are out of date, such as how thinking is switched on. This is an Apache 2.0 copy of Anthropic's claude-api skill. The default model name and settings in it can go out of date, so check them against your account before you run the code.
 when:
@@ -35,10 +35,10 @@ how_to_use:
   - Add the skill. Paste its text into a chat, or install the skill folder if your tool supports it.
   - Say what you want to build and name your language. Add your existing code if you have it.
   - Read the approach it picks before you run anything. Check that it fits your goal.
-  - Add your API key as a setting in your project, not in the code. Then run the code. Each run is billed by Anthropic.
+  - Create the API key in your Anthropic account. Add it as a setting in your project, not in the code and not in the chat. Your AI should ask before it runs anything that calls the API. Each run is billed by Anthropic.
   - If your AI cannot reach the web, it works from the skill's own notes. Test the code and fix any errors.
   - If you already have Claude code, ask for migrate first to move it to a newer model, or prompt-audit to find prompts written for older models.
-  - Check the model name and thinking settings it picks against what your account offers. They are defaults written into the skill and can go out of date.
+  - Before it writes code, ask your AI to list the model names your account offers and confirm which one to use. The skill's default model and thinking settings were right when written and can go out of date.
   - You get the changed or new files (with their paths), the command to run them, and what the first answer should look like. The full reference is long, so ask for just the part you need.
   - Next, run the code once on one small test input. When it works, ask for cost-optimize to cut the bill or build-eval to test the answers.
 output_sample:

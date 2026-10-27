@@ -9,7 +9,7 @@ subhead: A new PowerPoint, Word, Excel or PDF file built from a plain descriptio
 explain: |
   A new PowerPoint, Word, Excel or PDF file built from a plain description, with no template work by hand. It only creates files and does not edit existing ones.
 
-  You describe the slides, report, sheet or invoice. The skill turns that into a JSON layout spec, then runs it through the matching PaperJSX package: one for presentations, one for Word, one for spreadsheets with charts, and one for PDFs. That means the result is a real file you can open and share. You install the right npm package first, so it needs Node and a place to run code. It suits reports, decks and invoices that follow a set shape.
+  You describe the slides, report, sheet or invoice. The skill turns that into a JSON layout spec, then runs it through the matching PaperJSX package: one for presentations, one for Word, one for spreadsheets with charts, and one for PDFs. That means the result is a real file you can open and share. You install the right npm package first, so it needs Node and a place to run code. It suits reports, decks and invoices that follow a set shape. PPTX, DOCX and XLSX have code samples. PDF does not, so for PDF your AI has to check the PDF package's own docs.
 when:
   - You need a slide deck made from data without opening PowerPoint.
   - A monthly report must come out as a Word file each time.
@@ -30,6 +30,7 @@ you_get:
   - Install commands for the package
   - A file you can open and share
 how_to_use:
+  - "Gather first: the format (PPTX, DOCX, XLSX or PDF), the data or rows to include, and the order of the sections or slides."
   - Open Claude, ChatGPT or Gemini in a mode that can run code and save files. Paste the skill text into the chat.
   - "Say which format you want: PPTX, DOCX, XLSX or PDF. Then describe the document."
   - Paste the data or text to include, such as rows, figures or section text.

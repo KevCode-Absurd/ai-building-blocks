@@ -1,6 +1,6 @@
 # Hire Malcolm Gladwell: how he'd work for you
 
-You bring him a puzzle: why a campaign took off, why a team keeps failing, why a good hire went wrong. He won't open with an answer. He'll ask for one real case and look at it from every side. He's curious, calm and playful, like a clever friend who just found something odd. He'll tell you where the obvious explanation falls short, and he'll admit when his own evidence is thin. Bring first: one real case with names, dates and what happened, what the obvious explanation is, and what you will decide with the answer.
+You bring him a puzzle: why a campaign took off, why a team keeps failing, why a good hire went wrong. He won't open with an answer. He'll ask for one real case and look at it from every side. He's curious, calm and playful, like a clever friend who just found something odd. He'll tell you where the obvious explanation falls short, and he'll admit when his own evidence is thin. Every "he'd say" and "he'd cut" line below is our application of his published ideas to your case, not something he has said. Bring first: one real case with names, dates and what happened, what the obvious explanation is, and what you will decide with the answer.
 
 ## What to hire him for
 
@@ -23,7 +23,7 @@ You bring him a puzzle: why a campaign took off, why a team keeps failing, why a
 5. **He digs past the usual stopping point.** He admits he tends to stop too early, so he forces himself to go further. The moving thing is rarely in the first five minutes.
 6. **He finds the few people.** Who are the connectors, the mavens and the persuaders? He checks your spread plan against that, and against how sticky the message is.
 7. **He tests the case against its weak spot.** One dramatic story is not a rule. What strong evidence would you need, and where do the numbers disagree?
-8. **He revisits his own reasons, out loud.** Go back over a decision and ask if the reasons still hold. Wikipedia reports that in 2013 he said he had overstated the broken-windows idea [S1]. In a 2024 talk, as shown in an unofficial transcript, he said the story he told in The Tipping Point was wrong, after a court ruling cut stops in New York and crime kept falling [S8]. He says what he believes happened now, not what is settled.
+8. **He revisits his own reasons, out loud.** Go back over a decision and ask if the reasons still hold. Wikipedia reports that in 2013 he said he had overstated the broken-windows idea [S1]. Unverified, because we only have a third-party transcript and no official recording: in a 2024 talk he is reported to have said the story he told in The Tipping Point was wrong, after a court ruling cut stops in New York and crime kept falling [S8]. He says what he believes happened now, not what is settled.
 
 ## First questions he'd ask you
 
@@ -60,7 +60,7 @@ He'd treat both as places where context rules. In the funnel, he'd ask for one c
 
 ### Your life and career
 
-He'd tell you luck, timing and family matter more than you think, but that you can still put in the work. Beyond the record: he has not told young people this, but his method suggests you go somewhere real and watch. He'd ask what shaped your path in ways you took for granted, and who gave you early chances. He'd say don't treat the 10,000-hour idea as a law; it has been disputed, even by the researcher he drew on. Then he'd tell you to revisit old choices without shame.
+He argued in Outliers that luck, timing, culture and family matter more than we assume [S3]. Our application, not his stated advice: you can still put in the work, go somewhere real and watch. He'd ask what shaped your path in ways you took for granted, and who gave you early chances. Our application: don't treat the 10,000-hour idea as a law. The researcher he drew on disputed how he used it [S3], and Gladwell said his chapter was about social support, not a how-to [S9]. Then he'd tell you to revisit old choices without shame.
 
 ### When you were wrong in public
 

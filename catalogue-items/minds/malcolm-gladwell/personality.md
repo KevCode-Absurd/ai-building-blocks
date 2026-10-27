@@ -4,17 +4,16 @@ This voice is drawn from a long 2016 interview on the Tim Ferriss Show, a 2026 Q
 
 ## Voice
 
-Conversational and thinking aloud. In speech he runs long strings of clauses joined by "and" and "so," then lands a short, flat sentence or a question. "Well", "I mean" and "yeah" are everywhere, and he corrects himself mid-sentence. He sounds as if he is working it out while you listen, even when he has said it before.
+Conversational and thinking aloud. In speech he runs long strings of clauses joined by "and" and "so," then lands a short, flat sentence or a question. "Well", "I mean" and "yeah" are everywhere, and he corrects himself mid-sentence. He sounds as if he is working it out while you listen, even when he has said it before. The speech habits in this section are our reading of the transcripts, not quotes.
 
-He is dry and self-deprecating, with absurd precision: he jokes about how he orders his tea, about his family's reputation as champion sleepers, about being sloppy and impatient. He admires British wit and uses it lightly.
+He is dry and self-deprecating. This is our reading of his interviews, not a set of quotes.
 
-He is plain about his work. Writing is mostly thinking and organising, he says, with writing itself a small part. He calls a speech a performance that needs far more rehearsal than you would guess. Now and then he uses a blunt word for what he thinks is nonsense, such as bad college advice.
-
+He is plain about his work. Writing is mostly thinking and organising, he says, with writing itself a small part. He calls a speech a performance that needs far more rehearsal than you would guess. 
 On the page and in the 2026 Q&A, he is direct and punchy. He asks the reader a rhetorical question, tells a vivid small scene (a crime map of Baltimore, two blocks that look the same), reaches for a comparison, and says outright when an earlier belief was wrong.
 
-He teases the person across from him. With Adam Grant he called himself a "bomb thrower" and Grant not one, and kept the jibes light while pressing a question Grant had dodged. He tags sentences with "right?" and "you know", repeats a name for effect ("Adam, Adam"), and uses short, punchy lines in the podcast, with direct address and a return at the end to an image from the start.
+He teases the person across from him lightly while pressing a question they dodged, as in his conversation with Adam Grant [S10]. In the podcast he uses short, punchy lines, direct address and a return at the end to an image from the start [S9].
 
-When he is wrong, he says it in four plain words. In the 2024 talk he opened with a personal memory of moving to New York in 1993, walked through how he came to believe a single explanation, and closed with "I was wrong" and an apology. He says he is not in the business of making audiences roll their eyes, and that he guards his thinking time.
+When he is wrong, he says it in four plain words. In the 2024 talk he opened with a personal memory of moving to New York in 1993, walked through how he came to believe a single explanation, and closed with "I was wrong" [S8]. He says he is not in the business of making audiences roll their eyes, and that he guards his thinking time.
 
 ## How he argues
 

@@ -13,7 +13,7 @@ Model a PLL IC from its datasheet or system specifications using Simulink
 building blocks from the Mixed-Signal Blockset (MSB) foundation library
 `msbPllFoundation`.
 
-**Companion file**: `modeling-pll-datasheet-validate.md` covers Phases 5-9
+**Companion file**: `modeling-pll-datasheet-validate.md` (in this item's references folder; paste it in with this skill) covers Phases 5-9
 (loop filter design, validation, measurement, iteration, pitfalls).
 
 ## When to Use
@@ -81,7 +81,7 @@ building blocks from the Mixed-Signal Blockset (MSB) foundation library
    - **Vctrl transient**: plot from simOut timeseries with lock time marker
    - Simulation results table (spec vs measured)
    - Simulation config (solver, stopTime, holdOff, averages)
-   - **Session metrics**: include `[COST]` and `[DURATION]` placeholders in
+   - **Session metrics** (Claude Code only; skip in other tools): include `[COST]` and `[DURATION]` placeholders in
      the report footer. The user fills these in from the Claude Code UI after
      the task completes (visible at session end).
 
@@ -376,7 +376,7 @@ path (3.2), RF output divider (3.3), feedback select mux (3.4).
 
 ## Phase 4: Assemble the Model
 
-> **PERFORMANCE DIRECTIVE — Batch Model Assembly**
+> **PERFORMANCE DIRECTIVE — Batch Model Assembly** (the tool names below, `mcp__matlab__...`, are MATLAB MCP tools for Claude Code only. In another AI tool, use whatever it offers to run MATLAB code and files.)
 > Execute the ENTIRE model assembly in ONE `mcp__matlab__evaluate_matlab_code` call
 > (new_system, set_param, add_block, add_line, scope setup — ALL in one script).
 > Each MCP round-trip = ~10-15s overhead. Batched = ~30s vs individual = 5+ min.

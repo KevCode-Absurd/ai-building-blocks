@@ -53,7 +53,7 @@ The script needs no account. Turning it into audio needs an ElevenLabs account, 
 
 5. For dialogue, label every speaker and give each a stable vocal/delivery note. Separate spoken words from directions so unsupported tags can be removed without losing the script.
 
-6. Offer tag-free fallback and a short synthesis-check list if model support is unknown. Do not prescribe stability values across incompatible voice modes; any settings are user-verified starting points.
+6. Offer a tag-free fallback if you do not know whether the voice supports tags. Give a short synthesis-check list for the user to run in ElevenLabs: (a) make one test take; (b) listen for names and product terms said wrongly; (c) time the take against your estimated length; (d) check that no bracketed cue is read aloud. Do not prescribe stability values across incompatible voice modes; any settings are the user's starting points to test.
 
 7. Keep supplied product facts and approved claims exact. A fictional speaker cannot provide a fabricated customer testimonial.
 
@@ -66,8 +66,8 @@ DELIVERY NOTES
 [pacing, emotional turns, estimated duration]
 TAG-FREE VERSION
 [the same script with every bracketed cue removed, for voices that do not support tags]
-NOT RUN
-[audio synthesis and listening checks if absent]
+NOT RUN (this is your CHECKS MISSED list)
+[audio synthesis and listening checks if absent, or none]
 ```
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->

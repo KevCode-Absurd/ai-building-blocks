@@ -10,6 +10,8 @@ explain: |
   When young children keep asking about the same thing, like worms, shadows or bridges, you get a project plan that grows from their questions. Instead of a fixed unit, it starts from what you saw and heard and moves toward deeper inquiry.
 
   You describe the interest and what you have noticed: their questions, theories, drawings and experiments. The skill turns those into possible directions, then suggests ways children can explore through building, drawing, talking and trying things out. It plans how you will record their work, how you will ask questions that push thinking, and how families or the wider community can join.
+
+  Licence: this copy is under CC BY-SA 4.0 (see LICENSE). The text is unchanged apart from the plain name. If you share or adapt it, you must credit Gareth Manning and share your version under the same licence.
 when:
   - Your class is fascinated by something and you want to build on it.
   - You have notes of children's questions and need a next step.
@@ -37,6 +39,8 @@ how_to_use:
   - "Add any optional details: age group, materials, space, time and local help."
   - Read the four phases. Check the Decision Points and change the plan to fit your children.
   - Ask your AI to tighten any phase that is too big for your time or space.
+  - Next, plan how you will record the children's learning with the Learning documentation planner. This item gives you a project plan, not a single lesson plan, so use your own lesson plan format if your school needs one.
+next: [learning-documentation-planner]
 output_sample:
   input:
     - The interest the children have shown

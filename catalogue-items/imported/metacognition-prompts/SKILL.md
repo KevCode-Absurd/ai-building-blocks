@@ -231,9 +231,13 @@ That process — estimating first, checking against context, asking whether my a
 
 ---
 
+## What to use next (added by AI Blocks)
+
+The `chains_well_with` list in the header names the author's own skills, which are not in this library. In this library, use the Student mistake analyser to find where students went wrong, and the Study strategy picker to choose what they should do next.
+
 ## Known Limitations
 
-1. **Metacognitive prompts require teacher modelling to be effective.** Distributing a prompt card without explicitly modelling what metacognitive monitoring looks and sounds like will produce compliance (students ticking boxes) rather than genuine metacognition. Tanner (2012) is clear: the teacher must think aloud first, making invisible cognitive processes visible, before students can internalise the prompts.
+1. **Metacognitive prompts require teacher modelling to be effective.** Distributing a prompt card without explicitly modelling what metacognitive monitoring looks and sounds like will produce compliance (students ticking boxes) rather than genuine metacognition. Tanner (2012) argues that the teacher must think aloud first, making invisible cognitive processes visible, before students can internalise the prompts.
 
 2. **Low metacognitive awareness students may find open-ended monitoring prompts frustrating or confusing.** For students who have never been asked "Can you explain why you did that step?", the initial experience is uncomfortable. Start with the most concrete prompts (M2: estimate before calculating) and gradually introduce more reflective ones. Do not launch all prompts simultaneously.
 

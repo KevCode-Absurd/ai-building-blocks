@@ -53,6 +53,8 @@ Review flow: run all three, report linter findings + breaking changes + grade to
 - **Usability Design** (15%): Analyzes ease of use, discoverability, and developer experience
 - **Performance Patterns** (15%): Evaluates caching, pagination, and efficiency patterns
 
+> **Background reference.** The three scripts in the Quick Start are this skill's checks. Everything from here to "Tools and Scripts" is general REST guidance (naming, versioning, paging, errors, rate limits, caching). Use it to explain findings, not as extra steps.
+
 ## REST Design Principles
 
 ### Resource Naming Conventions
@@ -384,19 +386,19 @@ Provides comprehensive scoring of API design quality.
 ### CI/CD Integration
 ```yaml
 - name: "api-linting"
-  run: python scripts/api_linter.py openapi.json
+  run: python3 scripts/api_linter.py openapi.json
 
 - name: "breaking-change-detection"
-  run: python scripts/breaking_change_detector.py openapi-v1.json openapi-v2.json
+  run: python3 scripts/breaking_change_detector.py openapi-v1.json openapi-v2.json --exit-on-breaking
 
 - name: "api-scorecard"
-  run: python scripts/api_scorecard.py openapi.json
+  run: python3 scripts/api_scorecard.py openapi.json --min-grade B
 ```
 
 ### Pre-commit Hooks
 ```bash
 #!/bin/bash
-python engineering/skills/api-design-reviewer/scripts/api_linter.py api/openapi.json
+python3 scripts/api_linter.py openapi.json
 if [ $? -ne 0 ]; then
   echo "API linting failed. Please fix the issues before committing."
   exit 1

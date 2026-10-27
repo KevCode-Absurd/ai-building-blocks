@@ -227,6 +227,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
+// Check these gsap imports against the gsap version your project installs.
 // Integration fragment: camera and the section are supplied by your scene.
 // Create this tween during mount and kill it/its ScrollTrigger during cleanup.
 
@@ -284,8 +285,8 @@ const lights = (
   </>
 );
 
-// 3. Use LOD (Level of Detail)
-import { LOD } from 'three';
+// 3. Use LOD (Level of Detail): create a THREE.LOD in your scene
+// and add lower-detail copies of the model at set distances.
 
 // 4. Lazy load models
 import { lazy } from 'react';

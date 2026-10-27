@@ -5,7 +5,7 @@ name: Build pipeline setter
 summary: Set up a build pipeline that checks every change before it ships. Give it your tools and deploy target. You get ordered checks and a draft workflow file.
 job: ship-and-host
 headline: Build pipeline setter
-subhead: Describe how you ship. Get automatic checks and a deploy pipeline so bad changes never reach users. Run each check on your own computer once before you commit the workflow file.
+subhead: Describe how you ship. Get automatic checks and a deploy pipeline so bad changes never reach users. Run each check on your own computer once before you commit the workflow file. The examples assume GitHub Actions, Node with npm and Vercel for deploys. For another stack, ask your AI to swap in your commands.
 explain: |
   Every change is checked automatically before it reaches users, so a broken build gets caught in minutes instead of in production.
 
@@ -31,12 +31,13 @@ you_get:
   - Security and size checks
   - Guidance on fixing CI failures
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in this skill. The deploy examples assume Vercel hosting. If you use another host, ask your AI to swap in your host's commands. This is an MIT-licensed copy of Addy Osmani's ci-cd-and-automation skill, not original AI Blocks text.
+  - Open Claude, ChatGPT or Gemini and paste in this skill. The deploy examples assume Vercel hosting. If you use another host, ask your AI to swap in your host's commands. This is an MIT-licensed copy of Addy Osmani's ci-cd-and-automation skill, not original AI Blocks text. We changed the page text only, and marked the rollback command as a placeholder to check.
   - Tell it your language, tools, host and how you ship today. Paste your CI files if you have them (optional).
-  - Ask for the gates in order, a draft workflow file and a deploy plan.
+  - Do these first, in order. Pick your stack. List the CI files you already have. Ask for the gates in order, a draft workflow file and a deploy plan. Then run each gate command on your own computer.
+  - The rollback command in the deploy plan is a placeholder. Confirm it in your host's docs and try it on a staging copy before you rely on it in production.
   - Check that every gate has a command and a reason. Fix any command that does not match your project. Run each gate command on your own computer once before you commit the workflow file.
   - Add the workflow file to your repository. Store secrets in GitHub Secrets, not in the file or in your chat with the AI. Give your AI only the secret names, such as VERCEL_TOKEN, never the values.
-  - If a run fails, paste the error back to your AI and ask for a fix. Your AI does not need to run code, but it helps if it can read your files.
+  - If a run fails, paste the error back to your AI and ask for a fix. For a hard failing test, use the Error and log debugger next. Your AI does not need to run code, but it helps if it can read your files.
 output_sample:
   input:
     - Your language and tools
@@ -62,3 +63,4 @@ output_sample:
       contains: How to feed a CI error back to your AI so it can fix the cause.
     - name: Final checklist
       contains: A short list to confirm gates, branch protection, secrets and rollback are all in place.
+next: [error-and-log-debugger]

@@ -30,7 +30,7 @@ You bring him a selling problem, or any talk where you need someone to see a nee
 
 The steps follow his published SPIN work and interviews [S1][S3][S9][S13]. The "he'd" lines in the jobs below are our reading of how it applies to your case.
 
-1. **He measures what the best actually do.** He calls himself a measurement freak [S9]. Record real calls, code each behaviour, and count how often it happens. Ask what your top performers do that the average ones don't. He is wary of explanations like easy accounts or buyers who had already decided, so check those first.
+1. **He measures what the best actually do.** He has called himself a measurement freak [S9], a phrase on the record from a 2026 interview. Record real calls, code each behaviour, and count how often it happens. Ask what your top performers do that the average ones don't. He is wary of explanations like easy accounts or buyers who had already decided, so check those first.
 2. **He asks Situation questions, but only the ones you need.** Do your homework for the rest. A buyer who is already looking at suppliers doesn't want background questions you could have read online.
 3. **He moves to Problem questions.** Find what isn't working now. This is where the talk shifts from facts to pain.
 4. **He spends the most time on Implication questions.** What does this problem cost? A small problem lived with for years looks bigger once the buyer sees what it does to deadlines, morale or results.
@@ -71,7 +71,7 @@ He says the same sequence helps a leader win buy-in, a coach help a team member,
 
 ### Your sales training
 
-He'd start with measurement, and he'd build it as one project: train your managers to code calls, have each rep observed on a baseline call and several coached calls, and review monthly. Keep the model to a few behaviours. He once tested SPIN at the branch of a big firm that ranked last of 17 in the UK. It rose to first, and he still named the other causes of its rise [S11]. What are your best sellers doing in real calls? Record, code the behaviours, compare them to the average. Huthwaite calls the result a success model [S1]. He'd push you to test a change on a small group before rolling it out. He'd cut training that teaches a popular style nobody has checked. He'd also remind you that his own firm sells SPIN training, so ask for local evidence and don't take any claim of being the most researched method on trust.
+He'd start with measurement, and he'd build it as one project: train your managers to code calls, have each rep observed on a baseline call and several coached calls, and review monthly. Keep the model to a few behaviours. By his own telling in an interview, he once tested SPIN at a Xerox branch that ranked last of 17 in the UK, and it rose to first. He also named other causes of its rise [S11]. We have not checked this account elsewhere. What are your best sellers doing in real calls? Record, code the behaviours, compare them to the average. Huthwaite calls the result a success model [S1]. He'd push you to test a change on a small group before rolling it out. He'd cut training that teaches a popular style nobody has checked. He'd also remind you that his own firm sells SPIN training, so ask for local evidence and don't take any claim of being the most researched method on trust.
 
 ### Your life and career
 

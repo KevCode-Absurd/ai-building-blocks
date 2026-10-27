@@ -217,9 +217,9 @@ Every evidence item must be recorded with:
 
 ## Regulatory Notification Obligations
 
-The notification clock starts at incident declaration, not at investigation completion.
+Each framework sets its own start for the notification clock. Read the Deadline column: GDPR and HIPAA count from discovery, PCI-DSS from confirmation, and the SEC rule from the materiality decision. None of them waits for the investigation to finish. Until counsel confirms which apply, start every clock you may owe at the earliest point it could count, which is usually discovery.
 
-This table is a quick reference only. Deadlines and penalties change, so confirm each one with legal counsel before you act on it.
+This table is a quick reference only. **Status: unverified.** It comes from the original author. It was not rechecked when this copy was imported on 2026-10-20, and every row may be out of date. Say so when you show it, and give no penalty figure as current. Confirm each deadline, its start point and the penalty with legal counsel and the regulator's own text before you act on it.
 
 | Framework | Incident Type | Deadline | Penalty |
 |-----------|--------------|----------|---------|
@@ -304,7 +304,7 @@ done
 
 ## Anti-Patterns
 
-1. **Starting the notification clock at investigation completion** — Regulatory clocks (GDPR 72 hours, PCI 24 hours) start at discovery, not investigation completion. Declaring late exposes the organization to maximum penalties even if the incident itself was minor.
+1. **Starting the notification clock at investigation completion** — Regulatory clocks (GDPR 72 hours after discovery, PCI 24 hours after confirmation) start before the investigation ends, not at its completion. Check each framework's start in the table. Declaring late exposes the organization to maximum penalties even if the incident itself was minor.
 2. **Containing before collecting volatile evidence** — Rebooting or isolating a system destroys RAM, running processes, and active connections. Forensic collection of volatile evidence must happen in parallel with containment, never after.
 3. **Skipping false positive verification before escalation** — Escalating every alert to SEV1 degrades SOC credibility and causes alert fatigue. Always run false positive filters before paging the CISO.
 4. **Undocumented incident command decisions** — Every decision made during a SEV1, including decisions made under uncertainty, must be logged in the evidence chain with timestamp and rationale. Undocumented decisions cannot be defended in regulatory investigations.
@@ -316,9 +316,13 @@ done
 
 ## Cross-References
 
+These related skills are not in this copy.
+
 | Skill | Relationship |
 |-------|-------------|
-| [threat-detection](../threat-detection/SKILL.md) | Confirmed hunting findings escalate to incident-response for triage and classification |
-| [cloud-security](../cloud-security/SKILL.md) | Cloud posture findings (IAM compromise, S3 exposure) may trigger incident classification |
-| [red-team](../red-team/SKILL.md) | Red team findings validate detection coverage; confirmed gaps become hunting hypotheses |
-| [security-pen-testing](../security-pen-testing/SKILL.md) | Pen test vulnerabilities exploited in the wild escalate to incident-response for active incident handling |
+| threat-detection | Confirmed hunting findings escalate to incident-response for triage and classification |
+| cloud-security | Cloud posture findings (IAM compromise, S3 exposure) may trigger incident classification |
+| red-team | Red team findings validate detection coverage; confirmed gaps become hunting hypotheses |
+| security-pen-testing | Pen test vulnerabilities exploited in the wild escalate to incident-response for active incident handling |
+
+After triage, hand the evidence list and chain-of-custody record to your forensic lead or legal counsel. For the write-up once the incident is over, use incident-postmortem-writer from the AI Blocks library.

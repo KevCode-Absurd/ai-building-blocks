@@ -31,6 +31,7 @@ How to start:
 ## What you need
 Gather these before step 1:
 - **Your idea** (required): a few sentences, who it is for, and why you think it will work.
+- **Your question** (required): the decision you need to make, such as whether to build it, fix it or stop, and the date you need the answer by.
 - **Your numbers** (optional): customers, sales or users today, costs, and profit or cash by year so far.
 - **Lost-deal notes** (optional): why recent buyers said no, in their words, and what they picked instead.
 - **Your team** (optional): who is involved, their roles and hours, and how long you have worked together.
@@ -45,7 +46,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Find the belief your idea rests on.** Use the skill `contrarian-belief-tester` on your idea and who disagrees. It saves `outputs/step-01-contrarian-belief-tester.md`: the one belief, whether it is new or a copy, and a first market.
+1. **Find the belief your idea rests on.** Use the skill `contrarian-belief-tester` on your idea and who disagrees. It saves `outputs/step-01-contrarian-belief-tester.md`: the one belief, whether it is new or a copy, and a first market. To tell new from copy, name two products that already hold the same belief. If you can, it is a copy.
 2. **Size your market without flattering yourself.** Use the skill `market-boundary-checker`. Give it `outputs/step-01-contrarian-belief-tester.md` and your numbers. It saves your share of the market a buyer really compares you in, not the one that flatters you, with an own, reach, sliver or fiction call.
 3. **Test for a ten-times edge.** Use the skill `ten-times-better-checker`. Give it `outputs/step-02-market-boundary-checker.md` and what buyers use today. It saves whether the gap to the closest substitute is big enough that a buyer notices at once.
 4. **Check it still holds in ten years.** Use the skill `ten-year-durability-checker`. Give it `outputs/step-03-ten-times-better-checker.md` and your rivals and suppliers. It saves what stops a rival, a cheaper copy or a change in the world from ending your edge.

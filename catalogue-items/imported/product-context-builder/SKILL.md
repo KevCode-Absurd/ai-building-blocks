@@ -35,7 +35,7 @@ Most users prefer option 1. After presenting the draft, ask: "What needs correct
 
 **If auto-drafting:**
 1. Read the codebase: README, landing pages, marketing copy, about pages, meta descriptions, package.json, any existing docs
-2. Draft all sections based on what you find
+2. Draft all sections based on what you find. **Only write metrics, customer names, testimonials and customer phrases that appear in the source files.** Never invent or round them. List anything else under Proof Points, Customer Language and Goals as a gap for the user to fill, and leave those lines blank.
 3. Present the draft and ask what needs correcting or is missing
 4. Iterate until the user is satisfied
 

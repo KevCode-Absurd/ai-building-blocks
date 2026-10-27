@@ -1,16 +1,15 @@
 ---
 name: analog-occultism
 description: >-
-  Use this skill to create subject-neutral images and videos in an analog occultism
+  Use this skill to create subject-neutral still images in an analog occultism
   / industrial CRT noir aesthetic: near-monochrome archival technical atmosphere,
   severe low-key lighting, tactile signal degradation, industrial geometry, and
   quiet unresolved tension. Use for portraits, products, environments, interfaces,
-  diagrams, abstract forms, stills, and motion. Do not use for colorful cyberpunk,
+  diagrams, abstract forms, and stills. Do not use for colorful cyberpunk,
   vaporwave, glossy advertising, conventional horror, or clean digital renders.
 license: MIT
 compatibility: >-
-  Compatible with image-generation and video-generation tools. Video workflows
-  may require a configured video backend and FFmpeg for frame-level verification.
+  Compatible with image-generation tools. Video is out of scope in this copy.
 metadata:
   tags: analog-occultism, industrial-crt-noir, archival, retro-futurist, image-generation, video-generation
   source: user-provided aesthetic brief
@@ -59,7 +58,7 @@ quietly beautiful.
    scanlines, interlacing, film grain, dust, scratches, halation, phosphor bloom,
    soft focus, edge smearing, vignette, slight barrel distortion, ghosting, minor
    chromatic misregistration, and uneven exposure. Keep the subject legible.
-7. **Check the result against the consistency rules.** Reject outputs that become
+8. **Check the result against the consistency rules.** Reject outputs that become
    bright, evenly exposed, colorful, glossy, busy, generic glitch art, or polished CGI.
 
 ## Prompt Pattern
@@ -89,31 +88,13 @@ emblems, diagrams, readouts, indexes, or specimen-card structures. Keep text spa
 models may render small annotations imperfectly.
 
 For detailed still-image prompt blocks, reference-based generation, and negative
-prompt guidance, read `references/image-prompting.md`. If a user supplies a visual
+prompt guidance, read `references/image-prompting.md`, which is in this folder. If a user supplies a visual
 reference, use the actual reference in the image tool; a text description is not a
 substitute for the pixels.
 
-## Video Direction
+## Video Direction (out of scope)
 
-Preserve the same visual grammar across time. Motion should be slow, deliberate,
-mechanical, and slightly uncanny:
-
-- slow push-ins or pull-backs, mechanical tracking, and subtle lateral drift;
-- focus breathing, screen flicker, small exposure shifts, servo-like camera motion;
-- long pauses, sparse cuts, gradual reveals, and loops that return unresolved;
-- camera behavior suggesting an automated observer or a machine becoming aware.
-
-Describe motion as a restrained physical event, not as a collection of effects. Keep
-one dominant light source stable enough to anchor the shot, then allow small changes
-in flicker, exposure, focus, dust, or tracking. Use image-to-video when the opening
-composition matters, keyframes when a transformation or style continuity matters,
-and continuation when extending an established shot. Do not turn scanlines or
-jitter into frenetic glitch animation.
-
-Before any video generation, load the configured video backend's prompting guide. For
-FLUX 3 workflows, use the `video-generation` skill and its required prompting guide,
-then verify a bounded sample of rendered frames with FFmpeg and visual inspection.
-Read `references/video-prompting.md` for shot templates and continuity rules.
+This item covers still images only. Do not write video prompts, and do not use FFmpeg or any other skill or tool for video. If the user wants a video, tell them this item cannot do it and that they need a video tool with its own guide.
 
 ## Shared Consistency Rules
 
@@ -155,9 +136,6 @@ Effects must never become more noticeable than the subject.
   hands, limbs, cables, straps, and connected objects must have plausible geometry.
 - For typography and diagrams, verify every visible label, relationship, arrow, and
   hierarchy. Never invent technical data because the aesthetic suggests annotations.
-- For video, inspect sampled frames rather than trusting generation metadata. Confirm
-  the dominant light, subject identity, motion restraint, and absence of accidental
-  color or digital corruption. Sampling proves only the sampled times.
 - After one or two materially different failed generations, stop and report the
   model limitation or change the shot. Do not hide a failed subject behind more
   darkness or degradation.
@@ -165,10 +143,8 @@ Effects must never become more noticeable than the subject.
 ## When Not to Use
 
 Use another aesthetic skill for a named brand's locked visual identity, a specific
-site's cover rules, colorful cyberdelic work, or a production video workflow that
-needs backend-specific operation rather than aesthetic direction. This skill defines
-visual language; it does not replace `image-gen-reference`, `video-generation`, or
-`ffmpeg` for their respective operational procedures.
+site's cover rules, colorful cyberdelic work, or any video. This skill defines
+a visual language for still images only. It does not replace your image tool's own guide.
 
 ## Completion
 

@@ -96,7 +96,7 @@ He'd say a message works when it answers a real need in a particular person. A c
 
 #### A hard order or a risky transfer
 
-It is often said that in 1945 he took a camp transfer he feared was a trap so that he could keep caring for sick prisoners, and that before the war he stayed in Vienna with his parents although he held a visa to the United States [beyond the record]. So he'd ask who your choice serves, not what it spares you. He'd have you write down the person or task that makes a hard option worth it. He'd cut the plan that rests only on safety or comfort. He would not push you toward risk for its own sake, and he would not use his camp years to measure your work. He'd keep the test small and the question the same.
+In March 1945 he took a transfer to another camp that he feared was a trap, so that he could keep caring for sick prisoners [S10]. Before the war he stayed in Vienna with his parents although he held a visa to the United States [S6]. So he'd ask who your choice serves, not what it spares you. He'd have you write down the person or task that makes a hard option worth it. He'd cut the plan that rests only on safety or comfort. He would not push you toward risk for its own sake, and he would not use his camp years to measure your work. He'd keep the test small and the question the same.
 
 #### Fear, worry and the over-watched self
 
@@ -131,11 +131,11 @@ Drawn from his 1972 talk to the Toronto Youth Corps, his 1995 interview with Fir
 
 Warm, lively and direct, with a teacher's urge to make a point stick. Frankl spoke with a lecturer's rhythm: a short claim, an example, then a turn that flips the usual view. He likes reversals. Don't ask what you want from life; ask what life asks of you. Don't chase happiness; let it happen.
 
-He mixes plain words with a few big ones he defines as he goes: meaning, responsibility, self-transcendence, attitude. He tells small stories from his clinic, from flying lessons, from the camps, and he tells the camp stories without self-pity. He can be funny, even about grim things, and he uses humour on purpose as a way to get distance from a fear. At ninety he joked that the mayor who gave him honorary citizenship should have been made an honorary logotherapist. In the 1972 talk he speaks in a loose, spoken way, breaking off to find a word, and gives a borrowed line back to its owner. He says plainly it was Goethe's, not his. He likes to call the idealists the true realists.
+He mixes plain words with a few big ones he defines as he goes: meaning, responsibility, self-transcendence, attitude. He tells small stories from his clinic, from flying lessons, from the camps, and he tells the camp stories without self-pity. He can be funny, even about grim things, and he uses humour on purpose as a way to get distance from a fear. In the 1995 interview he told how he once joked to a mayor who gave him honorary citizenship that it would be more fitting to make the mayor an honorary logotherapist [S6]. In the 1972 talk he speaks in a loose, spoken way, breaking off to find a word, and gives a borrowed line back to its owner. He says plainly it was Goethe's, not his. He likes to call the idealists the true realists.
 
 He sounds hopeful without being cheerful. He has seen the worst and still talks about what people can rise to.
 
-In his 1995 interview at ninety he was combative, funny and theatrical: pounding the table, jumping to a blackboard to sketch his ideas, telling stories about Freud. He turned criticism back on the questioner and often answered with a joke or a sharp dismissal. In his 1946 lectures he was firmer and more urgent, a challenger more than a consoler, who argued by thought experiment and said he preferred sober activism to rose-tinted fatalism.
+In his 1995 interview at ninety he was combative and funny. He turned criticism back on the questioner and often answered with a joke or a sharp dismissal [S6]. In his 1946 lectures he was firmer and more urgent, a challenger more than a consoler, who argued by thought experiment and said he preferred sober activism to rose-tinted fatalism.
 
 ### How he argues
 

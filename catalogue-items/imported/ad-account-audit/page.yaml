@@ -9,7 +9,7 @@ subhead: Give it your ad account exports, your goal, your monthly budget and you
 explain: |
   A fact-based audit of your paid advertising comes with the proof for each finding and clear next steps. It covers Google, Meta, YouTube, LinkedIn, TikTok and other platforms.
 
-  The skill works in a set order. It first collects context: your goal, budget and exports. Then it routes the job, whether that is an audit, strategy, measurement plan or report. Every finding must cite its source, and it will not claim what the data cannot show. Helper workers can check different platforms side by side. The result carries a score and a ranked list of actions. It will not change a live campaign unless you clearly approve the specific change first. Your keys and secrets stay out of the output.
+  The skill works in a set order. It first collects context: your goal, budget and exports. Then it routes the job, whether that is an audit, strategy, measurement plan or report. Every finding must cite its source, and it will not claim what the data cannot show. In this copy the helper workers and the scoring engine are not included. Your AI does one pass over your exports and gives a rough score for each platform, shown with how much of the evidence it could see, plus a ranked list of actions. It will not change a live campaign unless you clearly approve the specific change first. Your keys and secrets stay out of the output.
 when:
   - You spend on several ad platforms and do not know what is working.
   - A new agency took over and you want an independent check.
@@ -33,11 +33,12 @@ you_get:
   - A budget and measurement plan
   - Test ideas for the next month
 how_to_use:
+  - Know this first. The helper workers, sub-skills, run folders and slash commands are not included in this copy. Plain chat is the default way to use it, with one pass over your exports.
   - Open Claude, ChatGPT or Gemini and paste in the skill text, or upload the skill folder if your AI accepts files.
   - Upload your ad exports. Add your goal, monthly budget and the platforms you run. Add your tracking setup and landing page links if you have them.
-  - In a plain chat, the AI audits from your exports in one pass. It skips the helper workers, run folders and slash commands, which need the full toolkit. The landing page and competitor steps look at live pages, so approve each source first, or paste the page text.
+  - A plain chat run gives a single-pass audit with no run manifest, no worker fan-out and no live-account data. Do not mistake it for the full toolkit's output. The landing page and competitor steps look at live pages, so approve each source first, or paste the page text.
   - Live account reading is optional. It needs your own read-only tokens and an AI that can run code. Skip it if you only have exports.
-  - Ask your AI to audit your ad account. Answer any question it asks about your goal or data.
+  - Ask your AI to audit your ad account. Answer any question it asks about your goal or data. The report has six parts, in this order. They are a scored summary, findings with sources, ranked fixes, a budget and measurement plan, missing data, and test ideas.
   - Check the findings and their sources first. Then work through the ranked fixes.
   - Treat every account change as a draft. Approve and apply each one yourself.
 output_sample:
@@ -51,8 +52,8 @@ output_sample:
     - An AI that can read files, so it can open your exports
     - Your own read-only access tokens, only if you want it to read live ad accounts (optional)
   output:
-    - name: Run manifest
-      contains: "A record of this run: your goal, platforms, budget, data window and which files were used."
+    - name: Run header
+      contains: "A short record of this run: your goal, platforms, budget, data window and which files were used."
     - name: Platform scores
       contains: A health score for each platform, shown with how much of the evidence was available.
     - name: Findings with evidence

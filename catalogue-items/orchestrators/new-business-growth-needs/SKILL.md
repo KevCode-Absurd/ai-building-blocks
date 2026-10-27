@@ -9,7 +9,7 @@ Name a business and a target size. Get the big choices, the sums behind the size
 
 This workflow draws on ideas from Poor Charlie's Almanack by Charles T. Munger, ed. Peter D. Kaufman. The five-step order is this workflow's own design, not a method from the book. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
-**When not to use:** you want to value a company that already trades or has sales (use a valuation tool or ask an accountant), you have no buyer group in mind yet (use the Buyer brief writer first), or you want to test how strong your edge is (use the Business power tester). This is a planning aid, not investment advice.
+**When not to use:** you want to value a company that already trades or has sales (use a valuation tool or ask an accountant), you have no buyer group in mind yet (use the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer) first), or you want to test how strong your edge is (use the [Business power tester](https://useaiblocks.com/skills/business-power-tester)). This is a planning aid, not investment advice.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -28,6 +28,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+This list replaces the shared "Before you start" block above. This run needs the business, the target size and the year. Skip the block's "question" and "council brief" lines. Report failed or skipped checks in the HAND-BACK SUMMARY as `MISSING:` lines and a `CHECKS MISSED:` line (or "none").
+
 Required (step 1 stops without these):
 - **The business, what it sells and to whom.** Name the exact group of buyers. A narrow, real group gives a firm sum in step 2.
 - **The target size and the year to reach it.** Give a number and a year, such as earnings a year in year N. "Huge" gives nothing to test.
@@ -49,11 +51,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - Nothing is sent, published or paid for. The run gives a plan, not a valuation.
 
 ## Steps
-1. **Big decisions first sorter.** Use the skill `big-decisions-first-sorter`. It receives the business, the target and the open questions. It saves the goal in one line and three to six choices the goal already settles, each with its reason and what it rules out. It also saves the questions still open, in order.
-2. **Target size back-solver.** Use the skill `target-size-back-solver`. It receives the settled choices from the step 1 file and any market figures you gave. It saves the target as earnings a year in year N, split into buyers, purchases, share and profit per sale, each marked CHECKED, ESTIMATED or GUESS. It also saves a today's-money test, a half test on each part, and the part the plan leans on most. If you gave no market figures, mark all four parts GUESS and name the one figure to source first, the one the plan leans on most.
-3. **Buying habit stack designer.** Use the skill `buying-habit-stack-designer`. It receives the sized plan from the step 2 file. It saves the response and its cue, the rewards rated strong, weak or none, five true ties, a map of where rivals could form a habit, and the chain that makes buying repeat. Every reward must be real.
-4. **Incentive checker.** Use the skill `incentive-checker`. It receives the habit plan from the step 3 file and your list of partners. It saves each partner, how they are paid, what that encourages, where it pulls the wrong way, and a fix.
-5. **Failure-first plan check.** Use the skill `failure-first-plan-check`. It receives the step 3 habit plan and the step 4 partner findings. It saves what would guarantee failure (for example losing the name, a sudden big product change or earning envy), the standard failures it checked, and a list of what to avoid with the changes to the plan.
+1. **Big decisions first sorter.** Use the skill `big-decisions-first-sorter`. It receives the business, the target and the open questions. It saves the goal in one line and three to six choices the goal already settles, each with its reason and what it rules out. It also saves the questions still open, in order. Saved as `outputs/step-01-big-decisions-first-sorter.md`.
+2. **Target size back-solver.** Use the skill `target-size-back-solver`. It receives the settled choices from the step 1 file and any market figures you gave. It saves the target as earnings a year in year N, split into buyers, purchases, share and profit per sale, each marked CHECKED, ESTIMATED or GUESS. It also saves a today's-money test, a half test on each part, and the part the plan leans on most. If you gave no market figures, mark all four parts GUESS and name the one figure to source first, the one the plan leans on most. Saved as `outputs/step-02-target-size-back-solver.md`.
+3. **Buying habit stack designer.** Use the skill `buying-habit-stack-designer`. It receives the sized plan from the step 2 file. It saves the response and its cue, the rewards rated strong, weak or none, five true ties, a map of where rivals could form a habit, and the chain that makes buying repeat. Every reward must be real. Saved as `outputs/step-03-buying-habit-stack-designer.md`.
+4. **Incentive checker.** Use the skill `incentive-checker`. It receives the habit plan from the step 3 file and your list of partners. It saves each partner, how they are paid, what that encourages, where it pulls the wrong way, and a fix. Saved as `outputs/step-04-incentive-checker.md`.
+5. **Failure-first plan check.** Use the skill `failure-first-plan-check`. It receives the step 3 habit plan and the step 4 partner findings. It saves what would guarantee failure (for example losing the name, a sudden big product change or earning envy), the standard failures it checked, and a list of what to avoid with the changes to the plan. Saved as `outputs/step-05-failure-first-plan-check.md`.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

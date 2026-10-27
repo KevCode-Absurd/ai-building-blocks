@@ -30,11 +30,11 @@ you_get:
   - An annotated model answer
   - Adjusted support for the level
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste in the prompt from the skill file. No code or paid tool is needed.
+  - Open Claude, ChatGPT or Gemini. Paste in the whole SKILL.md text, or just the block under its "Prompt" heading. No code or paid tool is needed.
   - Type your claim or question, the year group and how well they write, and the frame you want.
   - Add the subject and any sources students can use (optional).
   - Read the scaffold and the model answer. Check any evidence it gives, since your AI can get facts wrong. If you gave no sources, replace any sample evidence with real, checked sources before you hand anything out.
-  - Fix anything that does not fit your class, then hand it out.
+  - Fix anything that does not fit your class, then hand it out. Any figures, dates or clause numbers in the model answer are for show. Check each one against a real source first.
   - After class, use the Differentiation section to adjust the frame for weaker and stronger writers, and check the finished drafts with the written feedback checker.
 output_sample:
   input:

@@ -87,6 +87,8 @@ Before designing cross-dock operations, understand:
 
 ## Cross-Dock Design Principles
 
+The chat-only plan above is the main route. All the Python below is optional reference code. Skip it unless you can run it with your own data.
+
 Note: the figures in the code below (30 pallets per door per day, 25 sq ft per pallet, 20 doors) are placeholders. Replace them with the user's own data, and never present them as planning rules. The door assignment code splits each inbound load across every outbound door at a fixed 10% share. That is a simplification, so treat its result as a first draft to check against real lane volumes.
 
 ### Facility Layout
@@ -109,7 +111,7 @@ class CrossDockLayoutDesigner:
         self.staging_area = staging_area_sqft
 
     def calculate_facility_requirements(self, daily_volume_pallets,
-                                       dwell_time_hours=4):
+                                       dwell_time_hours=4):  # PLACEHOLDER: replace 4 with your own dwell time
         """
         Calculate facility size requirements
 
@@ -256,23 +258,23 @@ class CrossDockLayoutDesigner:
             'daily_volume': daily_volume
         }
 
-# Example usage
+# Example usage. EVERY number below is a PLACEHOLDER: replace each with your own data before you run this.
 designer = CrossDockLayoutDesigner(
-    num_inbound_doors=20,
-    num_outbound_doors=25,
-    staging_area_sqft=50000
+    num_inbound_doors=20,       # PLACEHOLDER: your inbound doors
+    num_outbound_doors=25,      # PLACEHOLDER: your outbound doors
+    staging_area_sqft=50000     # PLACEHOLDER: your staging area
 )
 
 requirements = designer.calculate_facility_requirements(
-    daily_volume_pallets=1200,
-    dwell_time_hours=4
+    daily_volume_pallets=1200,  # PLACEHOLDER: your pallets per day
+    dwell_time_hours=4          # PLACEHOLDER: your dwell time
 )
 
 print(f"Staging area needed: {requirements['staging_area_sqft']:,.0f} sq ft")
 print(f"Inbound doors: {requirements['inbound_doors_needed']}")
 print(f"Outbound doors: {requirements['outbound_doors_needed']}")
 
-layout_rec = designer.recommend_layout(daily_volume=1200)
+layout_rec = designer.recommend_layout(daily_volume=1200)  # PLACEHOLDER: your pallets per day
 print(f"\nRecommended layout: {layout_rec['recommended_layout']}")
 print(f"Rationale: {layout_rec['rationale']}")
 ```
@@ -409,7 +411,7 @@ class DoorAssignmentOptimizer:
         for _, inbound in self.inbound.iterrows():
             for _, outbound in self.outbound.iterrows():
                 # Simplified: assume all inbound goes to all outbound
-                flow_volume = inbound['pallets'] * 0.1  # Simplified allocation
+                flow_volume = inbound['pallets'] * 0.1  # PLACEHOLDER: fixed 10% split, replace with real lane volumes
 
                 flows.append({
                     'inbound_door': inbound['door_id'],
@@ -460,7 +462,7 @@ class CrossDockReceivingManager:
         """
 
         # Time slot capacity (doors * slots per hour)
-        num_doors = 20
+        num_doors = 20  # PLACEHOLDER: your number of doors
         capacity_per_hour = num_doors * 1  # 1 truck per door per hour
 
         scheduled = []
@@ -543,7 +545,7 @@ class CrossDockReceivingManager:
             summary.append({
                 'destination': destination,
                 'pallets_staged': len(pallets),
-                'ready_to_ship': len(pallets) >= 20  # Minimum for TL
+                'ready_to_ship': len(pallets) >= 20  # Minimum for TL  # PLACEHOLDER: 20 is an example, use your own full-load size
             })
 
         return pd.DataFrame(summary)
@@ -722,7 +724,7 @@ class CrossDockMetrics:
             'shipments_within_target': sum(1 for d in dwell_times if d <= 4) / len(dwell_times) if dwell_times else 0
         }
 
-    def calculate_dock_door_utilization(self, num_doors=20, hours_per_day=16):
+    def calculate_dock_door_utilization(self, num_doors=20, hours_per_day=16):  # PLACEHOLDER: use your own doors and hours
         """
         Calculate dock door utilization
 
@@ -972,79 +974,34 @@ class CrossDockMetrics:
 
 ## Output Format
 
+Every figure below is a bracketed placeholder. Fill each one only from the user's own lane data. If the user has not given a figure, write "needs your data". Do not invent targets or expected impact.
+
 ### Cross-Dock Operations Report
 
-**Executive Summary:**
-- Daily volume: 1,850 pallets
-- Dwell time: 6.2 hours (target: <4 hours)
-- Cross-dock rate: 78% (target: >90%)
-- Door utilization: 68% (target: 75%)
-- Recommendation: Improve scheduling, reduce dwell time
+**1. Cross-dock type:** [pre-sorted direct transfer / consolidation / break-bulk], with the reason, based on the user's loads.
 
-**Performance Metrics:**
+**2. Door assignments:**
 
-| Metric | Current | Target | Status |
-|--------|---------|--------|--------|
-| Avg dwell time | 6.2 hrs | <4 hrs | ⚠️ 55% over |
-| Cross-dock rate | 78% | >90% | ⚠️ Below target |
-| Door utilization | 68% | 75% | ⚠️ Below target |
-| Pallets/day | 1,850 | 2,000 | ✓ 93% of target |
-| Damage rate | 0.8% | <0.5% | ⚠️ 60% over |
+| Door | Direction | Lanes or destinations | Volume carried |
+|------|-----------|-----------------------|----------------|
+| [DOOR] | [inbound / outbound] | [LANES] | [PALLETS PER DAY, from the user] |
 
-**Operational Analysis:**
+**3. Staging summary:** space needed [SQ FT or PALLET POSITIONS, from the user's volumes], where it sits, and the dwell-time target [HOURS, set by the user].
 
-**Dwell Time by Destination:**
+**4. Flow and handling rules:**
+- [Rule for how freight moves from inbound door to staging to outbound door]
+- [Rule for who sorts, labels and checks, and when]
 
-| Destination | Volume | Avg Dwell | % Over Target |
-|-------------|--------|-----------|---------------|
-| Southeast | 550 | 4.2 hrs | 5% |
-| Midwest | 420 | 8.5 hrs | 113% ⚠️ |
-| West | 380 | 5.8 hrs | 45% ⚠️ |
-| Northeast | 500 | 5.1 hrs | 28% |
+**Checks to run on your real data:**
 
-**Root Causes for Long Dwell (Midwest):**
-- No scheduled outbound Monday/Wednesday
-- Pallets wait for Friday consolidation
-- Recommendation: Add mid-week departure or use 3PL
+| Metric | Your current value | Your target | Status |
+|--------|--------------------|-------------|--------|
+| Average dwell time | [HOURS] | [HOURS] | [on track / over / needs your data] |
+| Cross-dock rate | [%] | [%] | [status] |
+| Door use | [%] | [%] | [status] |
+| Damage rate | [%] | [%] | [status] |
 
-**Door Utilization:**
-
-| Door Type | Doors | Utilization | Peak Hours | Bottleneck? |
-|-----------|-------|-------------|------------|-------------|
-| Inbound | 20 | 72% | 6 AM - 10 AM | Yes |
-| Outbound | 25 | 64% | 2 PM - 6 PM | No |
-
-**Recommendations:**
-
-1. **Synchronized Scheduling** - Impact: -2 hours dwell time
-   - Coordinate inbound/outbound appointments
-   - Schedule outbound within 2 hours of inbound receipt
-   - Use ASN to pre-assign staging lanes
-
-2. **Expand Midwest Service** - Impact: +12% cross-dock rate
-   - Add Wednesday departure
-   - Reduce Midwest dwell from 8.5 to 4 hours
-   - Cost: $40K annually, saves $65K in handling
-
-3. **Implement Sortation System** - Impact: +30% throughput
-   - Automate staging by destination
-   - Reduce labor by 20%
-   - Investment: $850K, ROI: 2.1 years
-
-4. **Improve Door Scheduling** - Impact: +7% door utilization
-   - Time-slot appointments (prevent congestion)
-   - Balance inbound arrivals throughout day
-   - Use dock scheduling software
-
-**Expected Results (6 months):**
-
-| Metric | Current | Target | Improvement |
-|--------|---------|--------|-------------|
-| Avg dwell time | 6.2 hrs | 4.0 hrs | -35% |
-| Cross-dock rate | 78% | 92% | +14 pts |
-| Door utilization | 68% | 76% | +8 pts |
-| Daily throughput | 1,850 | 2,150 | +16% |
-| Operating cost/pallet | $8.50 | $7.20 | -15% |
+**Recommendations:** numbered fixes, each with the reason and the metric it should move. Give an expected impact only when the user's own data supports it. Otherwise write "needs your data".
 
 ---
 

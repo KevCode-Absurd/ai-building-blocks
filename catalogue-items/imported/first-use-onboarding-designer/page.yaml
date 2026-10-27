@@ -31,12 +31,13 @@ you_get:
   - Different paths by user readiness
   - List of setup steps to cut
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed. The skill names three skills to run first and three to run after. They are optional. Instead of them, tell your AI who your customer is, what job they hire the product for, and what would persuade them without pressure.
   - Describe your product and who uses it.
   - Say what the first win should be. If you are not sure, your AI will ask.
   - Add time or platform limits (optional).
   - Read the flow. Check that each step leads to the first win and that the cut list matches what you can remove.
-  - Share the flow with your team, then test it with a few new users.
+  - Take the first-win definition into your product plan, then test the flow with about five new users. Watch where they stall.
+  - The research names inside the skill text are the author's background and are not checked. Do not quote them as proof.
 output_sample:
   input:
     - What your product does

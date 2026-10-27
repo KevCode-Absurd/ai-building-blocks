@@ -5,13 +5,29 @@ description: 上架前平台合规校验与自动修复。待上架图 → Amazo
 
 **Working in a chat (added by AI Blocks).** This file is in Chinese. Read it and reply in English. It links to other skills (detect-task, flat-lay, batch-image, remove-watermark, item-repair and run_loop) that are not in this folder, so skip those steps. The platform limits in the table are a snapshot, copied when AI Blocks imported this skill on 20 Oct 2026, and not re-checked since. A pass or reject here can be wrong for today's store rules. Tell the user to confirm each limit in the store's own seller image guide (search the store's seller help for "product image requirements") before they rely on it, and say so in the report.
 
+## English summary (added for this catalogue)
+
+In short, the Chinese sections below say this:
+
+1. Confirm the platform (Amazon, TikTok Shop, Temu, Shopee, Shopify or Taobao). Ask if the user has not said.
+2. Run the check first, without `--fix`: `python3 scripts/check_listing.py <photo> --platform <platform>` (needs Python and `pip install Pillow`). Read the problems out to the user.
+3. Sort the problems. Size, white background, how much the product fills the frame and file weight can be fixed with `--fix <folder>`, which saves new copies and leaves the originals alone. Text, watermarks and damaged products cannot be fixed here: they go back to a photo editor or the image tool.
+4. After a fix, the script checks the new file again. Report that result.
+5. The limits in section 2 are a snapshot from 20 Oct 2026. Tell the user to confirm each one in the store's own seller image guide.
+
+Sections: 1 is what it can and cannot do, 2 is the rule table, 3 is the commands, 4 is the step order, 5 is prompt lines that avoid problems when you make the image, 6 is troubleshooting.
+
+Other skills named in this file (detect-task, flat-lay, batch-image, remove-watermark, item-repair, run_loop) are not included here. Skip any step that needs them.
+
+---
+
 # platform-compliance — 上架前合规校验
 
 图片好不好看是一回事，**平台收不收**是另一回事。
 
 这个技能只回答后者：这张图传上去会不会被驳回，卡在哪一条，怎么改。
 
-和 [detect-task](../detect-task/skill.md) 的分工：
+和 detect-task（本目录未包含 / not included） 的分工：
 detect-task 用视觉模型判断「像不像真的」，主观、要花算力；
 本技能读像素做客观判定，不花算力、毫秒级、结论可复现。**两个都过才叫能投。**
 
@@ -19,7 +35,9 @@ detect-task 用视觉模型判断「像不像真的」，主观、要花算力�
 
 ## 生成效果示例
 
-拿本仓库 [flat-lay](../flat-lay/skill.md) 的实际产出图，按 Amazon 主图规则检：
+*(English: this section shows output from the original author's own test photo. The file names such as docs/flat-lay/example-output.jpg are not in this folder, and the numbers are the author's, not a result for your photo. Use your own photo path.)*
+
+拿本仓库 flat-lay（本目录未包含 / not included） 的实际产出图，按 Amazon 主图规则检：
 
 ```bash
 python3 scripts/check_listing.py docs/flat-lay/example-output.jpg --platform amazon
@@ -68,15 +86,15 @@ out/example-output-fixed.jpg  ·  Amazon 主图  ·  通过
 | 客观规格判定 | 背景纯度、主体占比、分辨率、比例、透明通道、描边、格式、体积、色彩模式 |
 | 多平台规则 | Amazon / TikTok Shop / Temu / Shopee / Shopify / 淘宝，可自定义 |
 | 自动修复 | 压白底、按目标占比重构画布、补分辨率、压到体积上限 |
-| 批量 | 一次传多张，或配合 [batch-image](../batch-image/skill.md) 整批过 |
+| 批量 | 一次传多张，或配合 batch-image（本目录未包含 / not included） 整批过 |
 | 退出码 | 0 = 可投；1 = 有驳回风险，便于接进 CI 或流水线 |
 
 | 不能做 | 去哪 |
 | --- | --- |
-| 判断有没有文字 / 水印 / 拼图 | [detect-task](../detect-task/skill.md) 的视觉模型 |
-| 判断商品有没有崩 | [detect-task](../detect-task/skill.md) |
-| 去水印 | [remove-watermark](../remove-watermark/skill.md) |
-| 修图、去褶皱 | [item-repair](../item-repair/skill.md) |
+| 判断有没有文字 / 水印 / 拼图 | detect-task（本目录未包含 / not included） 的视觉模型 |
+| 判断商品有没有崩 | detect-task（本目录未包含 / not included） |
+| 去水印 | remove-watermark（本目录未包含 / not included） |
+| 修图、去褶皱 | item-repair（本目录未包含 / not included） |
 
 **自动修复的边界**：`--fix` 只做几何与色彩层面的合规化，它不会替你修图。
 如果原图本身是糊的、崩的、带水印的，修完还是糊的崩的带水印的。
@@ -85,14 +103,16 @@ out/example-output-fixed.jpg  ·  Amazon 主图  ·  通过
 
 ## 二、平台规则
 
-| 平台 | 纯白底 | 最长边（下限 / 建议） | 主体占比 | 比例 | 体积上限 |
-| --- | --- | --- | --- | --- | --- |
-| `amazon` | 是 | 1000 / 1600 | ≥ 85% | 不限 | 10 MB |
-| `tiktok-shop` | 否 | 800 / 1600 | ≥ 60% | 1:1 或 3:4 | 5 MB |
-| `temu` | 是 | 800 / 1350 | ≥ 70% | 1:1 | 3 MB |
-| `shopee` | 否 | 500 / 1024 | ≥ 55% | 1:1 | 2 MB |
-| `shopify` | 否 | 1024 / 2048 | 不限 | 不限 | 20 MB |
-| `taobao` | 是 | 800 / 1200 | ≥ 70% | 1:1 | 3 MB |
+| 平台 | 纯白底 | 最长边（下限 / 建议） | 主体占比 | 比例 | 体积上限 | 最后核对 |
+| --- | --- | --- | --- | --- | --- | --- |
+| `amazon` | 是 | 1000 / 1600 | ≥ 85% | 不限 | 10 MB | 2026-10-20（复制，未再核对） |
+| `tiktok-shop` | 否 | 800 / 1600 | ≥ 60% | 1:1 或 3:4 | 5 MB | 2026-10-20（复制，未再核对） |
+| `temu` | 是 | 800 / 1350 | ≥ 70% | 1:1 | 3 MB | 2026-10-20（复制，未再核对） |
+| `shopee` | 否 | 500 / 1024 | ≥ 55% | 1:1 | 2 MB | 2026-10-20（复制，未再核对） |
+| `shopify` | 否 | 1024 / 2048 | 不限 | 不限 | 20 MB | 2026-10-20（复制，未再核对） |
+| `taobao` | 是 | 800 / 1200 | ≥ 70% | 1:1 | 3 MB | 2026-10-20（复制，未再核对） |
+
+*(English: the last column says each row was copied on 20 Oct 2026 and not re-checked since. The table is a snapshot. Before you trust a pass, confirm every limit in that store's own seller image guide.)*
 
 **平台规则会变。** 上表是可机检的子集，以各平台最新官方文档为准。
 需要改用自己的口径，写一份 JSON 用 `--rules` 传入，字段说明见
@@ -135,6 +155,8 @@ pip install Pillow
 
 ## 四、执行流程
 
+*(English, the core steps: 1. Confirm the platform. 2. Run `check_listing.py` without `--fix` and read the problems to the user. 3. Fix size, white background, frame fill and file weight with `--fix <folder>`. Send text, watermark and damage problems back to a photo editor. 4. Read the automatic re-check of the fixed copy. 5. Tell the user to confirm the limits in the store's own seller guide before upload.)*
+
 1. **确认平台**。用户没说就问，或按店铺主战场默认（跨境 → `amazon`，国内 → `taobao`）。
 2. **先检后修**。直接跑一次不带 `--fix` 的校验，把问题念给用户听——
    有些问题（比如主体占比不够）修复会裁掉画面，得让用户先知道。
@@ -158,8 +180,7 @@ pip install Pillow
 | 无文字水印 | `No text, no logo, no watermark, no inset images, no borders anywhere in the frame.` |
 | 方图 | `Square 1:1 composition, product centered.` |
 
-[run_loop](../detect-task/skill.md) 会自动做这件事：合规校验失败时，
-它把上面对应的句子追加进 prompt 再跑一轮，不用人管。
+*(English: the original skill run_loop did this automatically. It is not included here. Do it by hand: if a check fails, add the matching line above to your image prompt and generate again, then re-check.)*
 
 ---
 

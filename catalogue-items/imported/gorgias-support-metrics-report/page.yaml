@@ -18,7 +18,7 @@ not_for:
 you_give:
   - The dates you want to review.
   - Access to your Gorgias tickets, linked through Composio.
-  - Your Google account linked through Composio (optional).
+  - Your Google account linked through Composio (optional). The skill also looks in your Google Drive for an existing Support Metrics sheet before it makes a new one, so it needs Google Drive access too.
 you_get:
   - Ticket counts by status, plus new tickets in the last day and week.
   - Average and median first response time, and average resolution time.
@@ -35,8 +35,10 @@ how_it_works:
     text: Show volume, response times, issue groups, trends, and notable tickets. Offer a Google Sheets export.
 works_best_with:
   tools:
-    - name: Gorgias; Google Sheets for optional export
-      why: Live lookups need Composio CLI access and connected accounts for these services.
+    - name: Gorgias
+      why: Live lookups need Composio CLI access and your Gorgias account linked through Composio.
+    - name: Google Sheets and Google Drive
+      why: Only for the optional export. Link your Google account through Composio. The skill looks in Drive for an existing sheet first.
 how_to_use:
   - Use an AI that can run commands and read skill files, such as Claude Code. A plain chat window cannot run this.
   - Install Composio CLI and link your accounts. Run composio link gorgias, and link Google Sheets if you want the export.
@@ -44,6 +46,7 @@ how_to_use:
   - Tell it the dates to review.
   - Check the sample note. Counts cover the first 100 tickets in your dates, so a busy period is cut off. Response times come from up to 20 tickets, the most recently created ones.
   - Say yes if you want the Google Sheet. The sheet holds customer ticket data, so share it with care.
+  - Use the result in your weekly team review. Share the Highlights and Trends sections, and use the Gorgias weekly support report and the Gorgias support queue action planner to turn the numbers into next steps.
 output_sample:
   input:
     - The dates you want to review

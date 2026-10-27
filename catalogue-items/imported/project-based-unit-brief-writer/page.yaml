@@ -35,7 +35,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code, files or paid tools are needed.
   - "Add your topic, learning goals, year group and project length. Then ask your AI to follow the skill's prompt step by step: driving question, scenario, what students make, milestones, marking criteria, teacher guide."
   - Add your subject, a real-world link, class details or resources if you have them (optional).
-  - Read the driving question and scenario first. Change them if they do not fit your class.
+  - Read the driving question and scenario first. If you gave no real-world link, the scenario is made up and labelled as fictional. Replace any invented local details with real local facts before you hand the brief to students. Change the question and scenario if they do not fit your class.
   - Check the Known Design Choices section and edit any choice you disagree with.
   - Next, use the Task rubric drafter for the full marking rubric. Then ask your AI to adapt the brief for your learners.
 output_sample:

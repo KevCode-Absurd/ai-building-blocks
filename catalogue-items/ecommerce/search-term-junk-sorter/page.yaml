@@ -71,6 +71,8 @@ how_it_works:
     text: "Block clearly irrelevant terms, or terms with about 20 to 30 clicks and no sale (a rule of thumb). Check tracking works first. Give a match type and a level for each."
   - title: "Leave the judgement calls to the user"
     text: "Competitor names, low-intent words and unproven terms go under YOUR CALL. Never add them yourself. List brand terms spending in cold campaigns."
+  - title: "Score the waste"
+    text: "Wasted spend is the cost of the terms listed as negatives. Waste score = 100 minus wasted spend as a share of total spend. The sum is shown."
 
 output_shape: |
   DATA CHECK: <conversions a month> | <early read: yes | no>
@@ -79,6 +81,7 @@ output_shape: |
   YOUR CALL: <term> | <the choice>
   BRAND TERMS IN COLD CAMPAIGNS: <term> | <spend>
   WASTE SCORE: 100 minus wasted spend as a share of total spend = <n>/100 (sum shown)
+  MISSING: <what was not given, and any check you could not run, or none>
 
 tweaks:
   - what: "Break-even CPA"

@@ -336,6 +336,8 @@ for _, batch in batches.iterrows():
 
 ### K-Means Clustering for Batching
 
+_All numbers printed by the example code below come from random mock data. They are not real results. Never quote them. Replace the mock orders and distances with the user's own before you run anything._
+
 ```python
 from sklearn.cluster import KMeans
 
@@ -416,6 +418,12 @@ for _, batch in batches_kmeans.iterrows():
 
 ### Optimization Model: MIP-Based Batching
 
+_All numbers printed by the example code below come from random mock data. They are not real results. Never quote them. Replace the mock orders and distances with the user's own before you run anything._
+
+**Stop before you use this code.** It builds pairs only and does not enforce cart limits. Add cart-limit constraints before you use it with carts that hold more than two orders.
+
+**Limit of this model.** It only builds candidate batches of one order or two orders (single and paired batches). It does not enforce `max_orders_per_batch` or `max_lines_per_batch`, and it does not build larger batches. Do not trust its batches to fit the user's cart. If the cart holds more than two orders, build larger candidate batches and add the cart limits as constraints before you use the result, or say plainly that the result is limited to pairs.
+
 ```python
 from pulp import *
 
@@ -441,13 +449,17 @@ def optimize_order_batching(orders, travel_distances, max_orders_per_batch=8,
     Optimal batching
     """
 
+    # This model builds pairs only. Refuse a cart limit it cannot enforce.
+    if max_orders_per_batch > 2:
+        raise ValueError("This example builds batches of 1 or 2 orders only. Add larger candidate batches and cart-limit constraints first.")
+
     # For tractability, use a simplified model
     # In practice, would use heuristics to generate candidate batches
     # then solve assignment problem
 
     prob = LpProblem("Order_Batching", LpMinimize)
 
-    # Generate candidate batches (simplified: all pairs and triples)
+    # Generate candidate batches (simplified: singles and pairs only, no triples)
     candidate_batches = []
     batch_id = 0
 
@@ -538,6 +550,8 @@ for batch in result['batches']:
 ## Advanced Batching Techniques
 
 ### Dynamic Batching with Real-Time Updates
+
+_All numbers printed by the example code below come from random mock data. They are not real results. Never quote them. Replace the mock orders and distances with the user's own before you run anything._
 
 ```python
 from datetime import datetime, timedelta
@@ -696,6 +710,8 @@ print(f"\nPending Orders: {len(batcher.pending_orders)}")
 ```
 
 ### Batch-and-Sort Optimization
+
+_All numbers printed by the example code below come from random mock data. They are not real results. Never quote them. Replace the mock orders and distances with the user's own before you run anything._
 
 ```python
 def optimize_batch_and_sort(batch_orders, sort_stations=4):

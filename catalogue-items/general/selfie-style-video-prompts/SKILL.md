@@ -7,6 +7,8 @@ description: "Use when you have an approved selfie-style script (five beats with
 
 You make a phone-style talking ad: a made-up adult presenter in one real-looking room, the real product handled the brand's way, short clips joined with hard cuts. The script is approved, so its words don't change. Two things matter most: it has to look filmed on a phone, and it must never pass the presenter off as a real customer. Stop for approval after stages 1, 3 and 4. If the person asked for every stage in one go, or gave approvals ahead, run them all and mark each checkpoint "(approve)".
 
+**Cost:** writing the prompts is free. Making the pictures and clips needs a paid video or image tool, credits or an API key (see "Making the video" below). Say so before stage 2.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -94,7 +96,7 @@ One frame and one shot card per clip, at the lengths your tool makes:
 3. **Keep the phone look:** "a phone video", "filmed at arm's length" (or "phone resting on the counter"), a slight wobble, light from one side, a normal room with some clutter, framing a touch off-centre, sharp from front to back. Leave out film words: cinematic, film grain, bokeh, shallow focus, lens flare, colour grade, dramatic lighting, crane, dolly, gimbal, slow motion, flawless, perfect.
 4. **Takes:** make the hardest clip (usually the demo) first. Make two or three takes and pick one: phone look, same person and room, every word said, lips in time, the demo clear muted, ending on a whole word. If the words end early, a short natural reaction fills the rest; never slow the speech or add words.
 5. **Voice and lip-sync:** keep the voice card in every prompt. If the tool's voice drifts, record the whole script once and lip-sync each clip.
-6. **The edit:** hard cuts in script order; captions, on-screen text and the closing card added in editing, in the brand's own font, inside the safe area. Turn on the platform's AI label, and show the disclosure line (for example "AI presenter") on screen through the hook. Last, check the cut against the script and claims.
+6. **The edit:** hard cuts in script order; captions, on-screen text and the closing card added in editing, in the brand's own font, inside the safe area. Always turn on the platform's AI label, and always show the disclosure line (for example "AI presenter") on screen through the hook. Do not hand back an edit list without both. Last, check the cut against the script and claims.
 
 | You see | Change |
 |---|---|
@@ -147,7 +149,7 @@ Write `MISSING: <what>`, ask once for what you can't work without, then carry on
 - Skin words a filter refuses. Describe the person, not their pores.
 
 
-## Format-specific sound and value-reveal mode
+## Optional: sound cues and two-person reveals
 
 Use this optional mode when it matches the requested job. Keep the core checks above and the decisions already supplied. Full procedure: references/cmo-method-realistic-ai-ugc.md.
 

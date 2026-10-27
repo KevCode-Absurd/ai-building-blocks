@@ -46,7 +46,7 @@ Does not fit:
 - A decision to squeeze a winner because an agency wants a 30 to 90 day case study. Do not.
 - Tiny budgets. You need enough spend per opener to read a result. With a small budget, test 3 openers, not 10.
 - Opener tests find a better hook. They do not find a better offer.
-- The claim that Meta does not penalise hook testing is one agency's view of how newer delivery works. Check it against current results.
+- The claim that Meta does not penalise hook testing is one agency's view of how newer delivery works. It is unverified. Check it against current results and do not promise it.
 - Costs assume the store can film short clips itself.
 
 ## Steps
@@ -54,25 +54,25 @@ Does not fit:
 2. **Call the cause.** There are two.
    - The ad is stale or too like the others in the account (same visuals, same idea, same audience). It needs new ideas.
    - The audience is too small. A very narrow persona has a daily spend ceiling, and frequency climbs when you push past it. It needs wider personas, or a rest and then rotation as people enter and leave that audience. A broader audience scales further, but calls for stronger creative. Do not go broad just to spend more.
-3. **Set the pace by stock and cash.** Plenty of stock to sell through: squeeze the winner. Limited stock, restocking, or a slow cash cycle: run it lower for months. In the source's picture, running at a lower daily spend, such as $100 a day, kept an ad alive for months instead of letting it fade within weeks. Use the store's own numbers. Tell any agency your stock position. Without it they may squeeze for a 30 to 90 day case study and leave you out of stock.
+3. **Set the pace by stock and cash.** Plenty of stock to sell through: squeeze the winner. Limited stock, restocking, or a slow cash cycle: run it lower for months. One agency's picture (single source, unverified) is that a lower daily spend kept an ad alive for months instead of letting it fade within weeks. Do not quote its dollar figure as a target. Use the store's own numbers. Tell any agency your stock position. Without it they may squeeze for a 30 to 90 day case study and leave you out of stock.
 4. **Rank the revival moves.**
    - First: new hooks on the same body. One account reported a large amount of extra spend at the same efficiency after rotating in 50 new hooks that took about an hour to shoot. That is one unverified report, not a promise. Never quote it as an expected result.
    - Second: change the format: video to image, a long sales video to a customer-style video, or an image to a long-copy static.
    - Third: move it to a cost cap campaign. This is a short-term fix and it fatigues the ad faster.
-   - Fourth: copy the post ID into a scaling campaign. It may help. It will not save the account.
+   - Fourth: duplicate the winning post into a separate scaling campaign. In Ads Manager, open the ad and copy its post ID. In the scaling campaign, create a new ad with "use existing post" and that ID. Do not edit the live ad. Check the new campaign's budget and audience before it spends. It may help. It will not save the account. Menu names may have moved, so check the labels in your account.
    - Whatever you pick, **find the body that works.** The body that got the most spend before it faded is the one to keep. Rework only the first 3 to 5 seconds.
-6. **Write 10 or more hook briefs.** Keep the body the same and change only the first 3 to 5 seconds. Each brief changes one of four levers, and you tag it.
+5. **Write 10 or more hook briefs.** Keep the body the same and change only the first 3 to 5 seconds. Each brief changes one of four levers, and you tag it.
    - Angle: the message or the season.
    - Offer: a bundle, a sale, or a different call to action in the copy.
    - Avatar: who says it.
    - Format: video, a still image, or a motion graphic for 3 seconds before the video.
-   Do not recut lines from the old video. Most of the market has already watched that opening and left. Film new hooks with a visibly different person. Visual differences matter more than word changes. Avoid three near-identical versions, which the delivery system may group as one.
-7. **Match the number of hooks to the budget.** Ten or more is the target when spend per hook is enough to read. With a small budget, test 3. Each hook needs a fair share of spend.
-8. **Add the cost logic.** The speaker said 80 to 90% of viewers leave at the hook, and a hook is 3 to 5 seconds of a roughly 75-second video. Ten new hooks cost far less than ten new ads. These are one agency's numbers and we have not checked them. Use your own hook rate and hold rate.
-9. **Test the openers cheaply.** Put a little spend behind each opener, then add budget to the one with the best thumb-stop and hold. One brand puts four to five openers on every ad. A cheaper option, dated April 2026: cut the call to action off and post each hook as a trial reel on the page the ad runs through. Read how far it travels and the retention graph (it shows whether the hook, the bridge or the body lost people). One team tested 20 hooks this way and put only the best 5 into the account. Check the feature still works the same way.
-10. **Refresh and log.** Update dated lines in the body when the season changes. Log which lever changed on each ad, so the next round learns from it.
-11. **Plan for backups.** If one ad is over half of spend, make its replacement now. See the creative portfolio mix planner.
-12. **Keep it honest.** Every new hook must be true to the product. No invented customers, experts or results. Health, weight and money claims need a check with a qualified person and a read of the platform's ad rules.
+   Do not recut lines from the old video. Most of the market has already watched that opening and left. Film new hooks with a visibly different person. Visual differences matter more than word changes. Avoid three near-identical versions. Some media buyers say the delivery system may group them as one. That is unverified, so treat it as a reason to make them clearly different.
+6. **Match the number of hooks to the budget.** Ten or more is the target when spend per hook is enough to read. With a small budget, test 3. Each hook needs a fair share of spend.
+7. **Add the cost logic.** The logic: a hook is only the first 3 to 5 seconds of a longer video, so ten new hooks cost far less than ten new ads. The speaker's figures for how many viewers leave at the hook and how long the video runs are single-source, undated and unchecked, so do not use them. Use the store's own hook rate and hold rate.
+8. **Test the openers cheaply.** Put a little spend behind each opener, then add budget to the one with the best thumb-stop and hold. One brand puts four to five openers on every ad. A cheaper option, as described in a source dated April 2026 (the feature may have changed since): cut the call to action off and post each hook as a trial reel on the page the ad runs through. Read how far it travels and the retention graph (it shows whether the hook, the bridge or the body lost people). One team tested 20 hooks this way and put only the best 5 into the account. Check the feature still works the same way. Trial reels may not be open to your account. If they are not, skip that option and test the openers in Ads Manager with small spend instead.
+9. **Refresh and log.** Update dated lines in the body when the season changes. Log which lever changed on each ad, so the next round learns from it.
+10. **Plan for backups.** If one ad is over half of spend, make its replacement now. See the creative portfolio mix planner.
+11. **Keep it honest.** Every new hook must be true to the product. No invented customers, experts or results. Health, weight and money claims need a check with a qualified person and a read of the platform's ad rules.
 
 ## What you hand back
 ```

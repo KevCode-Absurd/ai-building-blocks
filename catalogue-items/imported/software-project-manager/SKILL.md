@@ -71,16 +71,16 @@ Both examples use invented data for illustration. The "pushed to Linear" and Sla
 **Dates:** Feb 17 – Feb 28, 2025
 **Team capacity:** 26 story points
 
-### Selected Stories (26 pts)
+### Selected Stories (24 pts of 26 capacity)
 
 | ID     | Story                                              | Points | Assignee | Depends On |
 |--------|-----------------------------------------------------|--------|----------|------------|
 | LUM-41 | As a user, I want to receive in-app notifications    | 5      | Alice    | —          |
-| LUM-42 | As a user, I want to receive push notifications      | 8      | Bob      | LUM-41     |
 | LUM-43 | As a user, I want to configure notification prefs    | 3      | Alice    | LUM-41     |
-| LUM-44 | Build notification service with WebSocket delivery   | 8      | Bob      | —          |
-| LUM-45 | As a user, I want to see a notification history page | 5      | Carol    | LUM-44     |
-| LUM-46 | Write integration tests for notification flow        | 3      | Carol    | LUM-42     |
+| LUM-42 | As a user, I want to receive push notifications      | 8      | Bob      | LUM-41     |
+| LUM-44 | Build notification service with WebSocket delivery   | 8      | Carol    | —          |
+
+Load per person: Alice 8 of 8, Bob 8 of 10, Carol 8 of 8. Held back for the next sprint: LUM-45 (history page, 5 pts) and LUM-46 (integration tests, 3 pts), because they would push Carol over her capacity.
 
 ### Acceptance Criteria (example — LUM-42)
 - [ ] Push notification is delivered to iOS and Android within 5 seconds
@@ -90,8 +90,7 @@ Both examples use invented data for illustration. The "pushed to Linear" and Sla
 
 ### Dependencies
   LUM-42 → LUM-41 (push requires in-app infrastructure)
-  LUM-45 → LUM-44 (history page reads from notification service)
-  LUM-46 → LUM-42 (integration tests cover push path)
+  LUM-43 → LUM-41 (preferences build on the in-app screen)
 
 [Only with tracker and Slack access: sprint pushed to Linear, Slack channel notified.]
 [Without access: copy these stories into your tracker.]

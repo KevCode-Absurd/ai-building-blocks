@@ -30,6 +30,17 @@ Do NOT use this skill when:
 - Analyzing personal 1-on-1 romantic or private relationships.
 - Processing generic SaaS helpdesk feeds (Zendesk, Intercom, Gong) with structured ticket schemas.
 
+## Run order (short version)
+
+Follow this first. The sections below hold the detail and the anti-pattern table, and you can skim them.
+
+1. Confirm the user has the right to analyse these chats, and that they are exports on their own computer.
+2. Read each `result.json` in chunks (see rule 1 below). Read the `messages` list. Skip any entry with type `service`. For each remaining message take the date, the chat name and the text.
+3. Count hits for the seed phrases with the scanner. The scanner only counts and samples.
+4. Group hits into themes. Rank each theme by how many separate chats it appears in, then by hits.
+5. For each theme, copy 2 to 5 exact quotes from the export, with date and chat name. If a theme has no exact quote, mark it `[UNCONFIRMED / NO VERBATIM EVIDENCE]`.
+6. Run the quote check: every quote must match the export word for word.
+
 ## Core Mental Models & Non-Negotiable Rules
 
 1. **The 4MB Stream & Overlap Invariant (Memory Ceiling <= 8MB)**:

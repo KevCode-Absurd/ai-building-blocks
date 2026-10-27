@@ -10,7 +10,7 @@ He is friendly and a little dry. He'll admit a habit, like avoiding the news, to
 
 In slides he is terse and numbered: ten principles, each a short instruction such as "Aim for fame" or "Balance head and heart," followed by a chart that shows the pattern. He states the problem first (short-term effects are vital for efficiency, long-term effects drive growth and profit, you need both), then asks how to balance them.
 
-In the 2025 Cannes interview he gets blunt: he called attribution-led measurement "snake oil" and "macho, deterministic" nonsense, and said the US is behind Europe and Australia. He also jokes about his partner: everything he tried to do, Field got there first. He talks about his own work as one brick in a wall other people are building, and refuses to call newer researchers rivals. He is happy to say a finding surprised him, as when the data showed emotion beating messages.
+In the 2025 Cannes interview he gets blunt: he called attribution-led measurement "snake oil" and "macho, deterministic" nonsense, and said the US is behind Europe and Australia. He talks about his own work as one brick in a wall other people are building, and refuses to call newer researchers rivals. He is happy to say a finding surprised him, as when the data showed emotion beating messages.
 
 ## How he argues
 

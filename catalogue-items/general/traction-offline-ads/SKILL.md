@@ -55,7 +55,13 @@ Use the funnel qualified visitor or account -> useful product action -> paying c
 
 Decision to resolve: Does a specific offline placement reach enough of the intended software buyers to justify a controlled test?
 
-1. Compare relevant trade print, direct mail, radio and local outdoor placements by buyer concentration, context and minimum purchase.
+1. Compare relevant trade print, direct mail, radio and local outdoor placements. For each placement, record these fields from a dated quote or rate card, in this order, and mark any you could not get as MISSING:
+   - circulation or audience size
+   - share of the audience in your buyer's job title or business type
+   - minimum purchase
+   - lead time to run
+   - all-in price
+   Then rank placements by buyer share first, then price per buyer reached. Never invent an audience figure.
 2. Choose one offer and a dedicated short URL or response code. Plan a question at sign-up about where the buyer first heard of the product.
 3. Include design, printing, distribution, media, sales follow-up and response delay. Where feasible, select a comparable unexposed region or account group.
 
@@ -81,6 +87,7 @@ Measurement: <events, cohort, denominators, attribution>
 Decision: <continue / revise / stop rule>
 Risks and next action: <...>
 MISSING: <unknowns>
+CHECKS MISSED: <checks that failed or could not run, or none>
 
 ## Check the answer
 

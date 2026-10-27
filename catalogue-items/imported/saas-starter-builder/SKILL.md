@@ -18,7 +18,7 @@ Product: [name]
 Description: [1-3 sentences]
 Auth: nextauth | clerk | supabase
 Database: neondb | supabase | planetscale
-Payments: stripe | lemonsqueezy | none
+Payments: stripe | none   (the billing code is Stripe only. Lemon Squeezy needs a developer to adapt it)
 Features: [comma-separated list]
 ```
 
@@ -184,6 +184,11 @@ export async function POST(req: Request) {
   if (!session?.user) return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
 
   const { priceId } = await req.json()
+  // Only accept a price you set on the server. Never trust the price from the browser.
+  const allowedPrices = [process.env.STRIPE_PRO_PRICE_ID]
+  if (!priceId || !allowedPrices.includes(priceId)) {
+    return NextResponse.json({ error: "Invalid price" }, { status: 400 })
+  }
   const [user] = await db.select().from(users).where(eq(users.id, session.user.id))
   if (!user) return NextResponse.json({ error: "User not found" }, { status: 404 })
 
@@ -206,6 +211,50 @@ export async function POST(req: Request) {
   })
 
   return NextResponse.json({ url: checkoutSession.url })
+}
+```
+
+### Stripe Webhook Route (sketch)
+
+This is a sketch. A developer must review it and test it with the Stripe CLI before launch. It checks the Stripe signature on the raw request body, and it writes the same values each time, so a replayed event does not create duplicates. Check the subscription field names against your Stripe API version.
+
+```typescript
+// app/api/webhooks/stripe/route.ts
+import { NextResponse } from "next/server"
+import Stripe from "stripe"
+import { stripe } from "@/lib/stripe"
+import { db } from "@/lib/db"
+import { users } from "@/db/schema"
+import { eq } from "drizzle-orm"
+
+export async function POST(req: Request) {
+  const body = await req.text() // raw body: the signature check needs it unparsed
+  const signature = req.headers.get("stripe-signature")
+  if (!signature) return NextResponse.json({ error: "Missing signature" }, { status: 400 })
+
+  let event: Stripe.Event
+  try {
+    event = stripe.webhooks.constructEvent(body, signature, process.env.STRIPE_WEBHOOK_SECRET!)
+  } catch {
+    return NextResponse.json({ error: "Invalid signature" }, { status: 400 })
+  }
+
+  if (event.type === "checkout.session.completed") {
+    const checkout = event.data.object as Stripe.Checkout.Session
+    const subscription = await stripe.subscriptions.retrieve(checkout.subscription as string)
+    // "Set" the values instead of adding to them, so replaying the event is safe.
+    await db
+      .update(users)
+      .set({
+        stripeSubscriptionId: subscription.id,
+        stripePriceId: subscription.items.data[0].price.id,
+        // Field name depends on your Stripe API version. Check it.
+        stripeCurrentPeriodEnd: new Date(subscription.items.data[0].current_period_end * 1000),
+      })
+      .where(eq(users.stripeCustomerId, checkout.customer as string))
+  }
+  // Handle invoice.payment_succeeded and customer.subscription.deleted the same way.
+  return NextResponse.json({ received: true })
 }
 ```
 
@@ -275,7 +324,7 @@ The following phases must be completed in order. **Validate at the end of each p
 
 ### Phase 3 — Authentication
 - [ ] 11. Auth provider installed (NextAuth is fully scaffolded here. For Clerk or Supabase, the code samples do not apply and a developer must adapt them)
-- [ ] 12. OAuth provider configured (Google / GitHub)
+- [ ] 12. OAuth provider configured (the sample code writes only the Google provider. Adding GitHub or any other provider is a manual step)
 - [ ] 13. Auth API route created
 - [ ] 14. Session callback adds user ID and subscription status
 - [ ] 15. Middleware protects dashboard routes

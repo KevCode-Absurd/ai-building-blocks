@@ -7,14 +7,14 @@ subhead: Share campaign spend, budget, results, targets and allowed total spend.
 explain: |-
   Moving ad budget by instinct is how a good campaign gets starved and a weak one gets fed. Big jumps can also reset a platform's learning, so results get worse before they get better.
 
-  Paste 30 days of spend and results for each campaign, your target return and your total daily budget. The skill puts each campaign in one group (scale, maintain, reduce or pause), then builds three plans: careful, middle and bold. Each plan adds up to your total, keeps every move under 50% and checks that no campaign takes more than 60% of the budget. It proposes changes only. You make them.
+  Paste 30 days of results for each campaign: name, platform, daily budget, 30-day spend, revenue and purchases. Add currency, time zone, attribution window, your target return and your total daily budget. The skill puts each campaign in one group (scale, maintain, reduce or pause), then builds three plans: careful, middle and bold. Each plan adds up to your total, keeps every move to 50% or less on Google Ads and 20% or less on Meta, and checks that no campaign takes more than 60% of the budget. It proposes changes only. You make them.
 when:
   - You have several campaigns and need to decide where the next dollar goes.
   - One campaign is far ahead on return and you want to scale it without breaking it.
   - You want the budget moves written down in safe steps before you touch the ad account.
 not_for:
   - "You have no campaign-level spend and results data: pull a report from your ad platform first, then come back."
-  - "You run ads outside Meta and have not checked that platform's learning rules: use that platform's own budget tool."
+  - "You run ads outside Meta or Google and have not checked that platform's learning rules: use that platform's own budget tool."
   - "Your campaigns all miss the target and none qualify to scale: get a creative review before you change budgets."
 you_give:
   - Campaign spend
@@ -44,7 +44,7 @@ output_sample:
     - name: Scaling plan
       contains: For each campaign to scale, three budget increases (conservative, moderate, aggressive) with phases and a risk level.
     - name: Reduction plan
-      contains: For each campaign to cut, the new budget and the step-by-step phases, with no single move over 50%.
+      contains: For each campaign to cut, the new budget and the step-by-step phases, with no single move over 50% on Google Ads or 20% on Meta.
     - name: Net impact summary
       contains: Current daily spend and return next to the proposed spend and return, plus the monthly change.
     - name: Implementation timeline
@@ -57,9 +57,9 @@ how_it_works:
   - title: Sort each campaign
     text: "Each campaign lands in one group: scale, maintain, reduce or pause. It uses your target, and a placeholder if you gave none, and says so."
   - title: Build three plans
-    text: For campaigns to scale it models a careful, a middle and a bold increase. It takes some return off the bold case, because return usually falls as spend rises.
+    text: For campaigns to scale it models a careful, a middle and a bold increase. It takes some return off the bold case, because return usually falls as spend rises. On Meta the 20% step cap always wins over the middle plan's default size.
   - title: Apply the safety rules
-    text: No move over 50%, a gap of 72 hours between changes, a revert rule and a check that no campaign holds over 60% of the budget.
+    text: No move over 50% on Google Ads or 20% on Meta, a gap of 72 hours between changes, a revert rule and a check that no campaign holds over 60% of the budget.
   - title: Check the totals
     text: Money freed from cuts and pauses goes to the campaigns that scale. Every plan adds up to your total.
   - title: Review the result

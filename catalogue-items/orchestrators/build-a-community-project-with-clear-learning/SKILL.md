@@ -31,6 +31,8 @@ How to start:
 
 ## What you need
 
+The "Before you start" block above is shared text and may mention a lesson plan or source files. Skip those lines. This workflow starts from the four required items below, and step 1 makes the project plan. It needs no lesson plan and makes none.
+
 - **The local need** (required): in the partner's words. If it is a guess, say so and write `MISSING: partner's own statement`.
 - **The curriculum goal** (required): the skill or topic. If it is missing, ask once. If it is still missing, stop. The project cannot be tied to learning without it.
 - **The learners' age or year and the project length** (required).
@@ -93,9 +95,9 @@ When you've handed it back, suggest what they could do next in one short questio
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
-## After this
+## Next steps for this workflow
 
-Offer one next step and say they can type their own:
+Use this list, not the generic links in the block above. Offer one next step and say they can type their own:
 
 - Get the approvals in your own way, then share the brief with students.
 - Halfway through, bring back what you observed and ask for the brief to be adjusted.

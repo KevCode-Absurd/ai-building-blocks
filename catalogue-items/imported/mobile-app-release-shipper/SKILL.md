@@ -12,7 +12,18 @@ license_source: https://github.com/expo/skills/blob/main/LICENSE
 
 # Deployment
 
+AI Blocks note on the licence: the MIT line in the front matter above is the original author's (Expo) header. The licence that applies to this copy in the AI Blocks catalogue is CC BY 4.0, as the LICENSE-CONTENT file in this folder says. Keep the credit to Expo.
+
 Costs: EAS builds use your Expo plan, and its free build allowance is limited. Apple and Google charge for developer accounts. This skill does not check current prices, so tell the user to look them up before building.
+
+## First run, in order (added by AI Blocks)
+
+1. Install the EAS command-line tool.
+2. Sign in with `eas login`.
+3. Run `eas init` to create `eas.json`.
+4. Make the first production build for one platform, and check its status.
+5. Send the first iOS build to TestFlight, or the first Android build to the Google Play internal track. Needs a paid Apple developer account for iOS.
+6. Check the submission status with `eas submit:list`.
 
 ## When to Use
 
@@ -74,8 +85,8 @@ npx eas-cli@latest build -p ios --profile production --submit
 # Android: Build and submit to Play Store
 npx eas-cli@latest build -p android --profile production --submit
 
-# Shortcut for iOS TestFlight
-npx testflight
+# Send the latest iOS build to TestFlight (needs a paid Apple developer account; show the user the command and wait for a yes first)
+npx eas-cli@latest submit -p ios --latest
 ```
 
 ## Web Deployment
@@ -134,7 +145,7 @@ Standard `eas.json` for production deployments:
 
 ### iOS
 
-- Use `npx testflight` for quick TestFlight submissions
+- Use `npx eas-cli@latest submit -p ios --latest` for TestFlight submissions (ask the user for a yes first). The `npx testflight` shortcut is not used here, because we have not checked that package.
 - Configure Apple credentials via `eas credentials`
 - See ./references/testflight.md for credential setup
 - See ./references/ios-app-store.md for App Store submission
@@ -179,6 +190,8 @@ eas build:view
 # View submission status
 eas submit:list
 ```
+
+**Output:** finish by listing the build ID for each platform and the submission status for each store (for example, iOS: sent to TestFlight; Android: not submitted yet).
 
 ## Limitations
 

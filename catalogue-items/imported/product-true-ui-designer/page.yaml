@@ -12,6 +12,8 @@ explain: |
   Your AI first works out the screen's real job: who uses it, their main action and the content they need. It lists every state to design, such as loading, empty, error, success, disabled and no permission. For a new screen or a big redesign it writes a short design contract with the layout order, the parts allowed, and checks you can observe. Then it reuses your components before it invents anything.
 
   Outside reference screens are optional and used only to answer a clear visual question. UIZZE, the author, offers an account-based tool for that. The skill works without it. The last step is to render the result, look at it and fix clipping, overlap or dead buttons. It covers web and iOS.
+
+  Licence: CC BY 4.0 applies to this copy, as the LICENSE-CONTENT file in this folder says. That file governs. The author's own file header says MIT, which is the author's label for the original. Credit goes to UIZZE and sickn33.
 when:
   - You are building a screen and want it to match your product.
   - AI-built screens keep coming out generic.
@@ -33,11 +35,13 @@ you_get:
   - The screen, built from your own parts
   - A review of the rendered result and a list of fixes before shipping
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. The core steps, the states table and the render check work without a UIZZE account or any paid service.
+  - "First message to send: Here is my brief and my component list. Give me the screen job and the states table before any code is written."
   - Paste your product brief and say what the screen is for. Say web or iOS, and give your AI your components and tokens, as files or pasted code.
   - Read the screen job and the states table first. Add any state it missed, and cut ones that cannot happen.
   - Check the screen it builds. It works best when your AI can read your project files and open a browser to look at the result. If yours cannot, open the screen yourself at a phone width and a desktop width, and tick off each state in the table.
   - Fix the items under "Fix before shipping". Then run your normal tests and an accessibility check, because this skill does not replace them.
+  - "Optional, not needed: the skill file shows an npx command that installs the author's copy. It downloads and runs code from uizze.com in a terminal on your computer. We have not checked that code. Skip it, or read the code first and only run it if you trust it."
 how_it_works:
   - title: Find the screen job
     text: It names the user, the main action, the content needed and the states that matter.
@@ -75,7 +79,7 @@ output_sample:
     - A reference or screenshot you like (optional)
   prerequisites:
     - An AI that can read your project files and open a browser, for the render check (optional)
-    - A UIZZE account, only if you want its reference screens (optional)
+    - A UIZZE account, only if you want its reference screens (optional, and the price is not stated in the source). The rest works with no account and no paid service.
   output:
     - name: Screen job
       contains: Who uses the screen, their main action and the content it needs.

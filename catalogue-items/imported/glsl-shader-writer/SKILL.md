@@ -8,6 +8,8 @@ date_added: "2026-02-27"
 
 # Shader Programming GLSL
 
+> **Who this is for (added by AI Blocks).** Developers, or business owners working with one, who need a custom visual effect on a web page or in a game. A shader is code that runs on the graphics card, so it only shows up inside a project that can run it, such as a WebGL page or a Three.js scene. This skill writes the code. It does not draw anything by itself. Give your AI the effect, the engine and the values you want to control, then check the result in your own scene.
+
 ## Overview
 
 A comprehensive guide to writing GPU shaders using GLSL (OpenGL Shading Language). Learn syntax, uniforms, varying variables, and key mathematical concepts like swizzling and vector operations for visual effects.

@@ -26,13 +26,15 @@ Collect, or state your assumption:
 - Worn, and by whom (womenswear vs menswear)?
 - Where the visuals run (product page, ads, social); audience reading direction
 
-> **Classify the product first.** *Hedonic* = bought for enjoyment, pleasure, or the experience (chocolate, fashion, decor, travel, spa, perfume). *Utilitarian* = bought to do a job, judged on function and value (detergent, appliances, insect repellent, tools, accounting software). If it's mixed, decide by what the buyer is optimizing for at the moment of purchase.
+> **Classify the product first.** *Hedonic* = bought for enjoyment, pleasure, or the experience (chocolate, fashion, decor, travel, spa, perfume). *Utilitarian* = bought to do a job, judged on function and value (detergent, appliances, insect repellent, tools, accounting software). If it's mixed, decide by what the buyer is optimizing for at the moment of purchase. If you still cannot tell, use this default: a full set of stills, one first-person hand shot, and one short optional video marked "test". Ask the user to confirm the product type before the brief is final.
 
 ## Before you start
 
 Have ready: a product photo or spec sheet, the sales channels (product page, ads, social), and the target buyer's reading direction.
 
 ## Procedure
+
+Run in this order: (a) collect the Inputs, (b) classify the product as hedonic or utilitarian, (c) work through steps 1 to 10 in number order, format first, then the composition rules.
 
 Every effect size below (for example +79%, +22%, +30%) is a result from one study, and the studies are listed in reference.md. Figures marked † have no study behind them. Treat all of them as a guide, not a promise.
 
@@ -54,7 +56,9 @@ Every effect size below (for example +79%, +22%, +30%) is a result from one stud
 | 1 | Hero video, [LENGTH] s | [SHOT DIRECTION FOR THE USER'S PRODUCT] | Hedonic → video; premium → slow-mo † | Willingness to pay +79% in the study (example row, shape only) |
 | 2 | Hand shot | First-person hand holding [PRODUCT], [PRODUCT] on the right | Touch; graspable right | +16% in the study (example row, shape only) |
 
-In the Effect column, give the study name for each figure. A rule marked † has no study on file, so write "practitioner tip" instead of a number.
+In the Effect column, give the study name for each figure. Each figure comes from one study in one setting, so say so beside it. A rule marked † has no study on file, so write "practitioner tip" instead of a number.
+
+The effect figures come from the studies in reference.md. Check each one against its source before it goes into a brief for a client or a team, and never present it as your own result.
 
 Then list what *not* to do for this product (e.g. no direct gaze, no matte finish).
 

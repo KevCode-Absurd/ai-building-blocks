@@ -27,9 +27,9 @@ How to start:
 - **A spreadsheet app such as Excel or Google Sheets (optional):** Lets you recalculate the totals yourself and compare them with the AI's.
 <!-- /needs -->
 
-## Before you start
+## What to gather first
 
-Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
+These four inputs replace the generic "Your question" and "Spreadsheet" lines above. Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
 
 **You need:**
 - The pilot goal, in the words used before the pilot if they exist.
@@ -99,9 +99,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 Write `MISSING: <what>` next to the affected line. Carry on with work that does not depend on it. If there is no results table at all, stop after step 1 and say exactly what to bring.
 
-## After this
+## What to do with the result
 
-Suggest one next step as a short question, and say the user can type their own:
+This is the one next-step list for this run. Suggest one step as a short question, and say the user can type their own:
 - **Fill the unknowns.** Find the missing facts, then run the checklist again.
+- **Keep reviewing results as the pilot grows.** Use the [AI pilot evaluation review assistant](https://useaiblocks.com/agents/ai-pilot-evaluation-review-assistant).
 - **Check the build.** If the pilot used an agent, use the [Review an agent before launch](https://useaiblocks.com/workflows/review-an-agent-before-launch) workflow.
 If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

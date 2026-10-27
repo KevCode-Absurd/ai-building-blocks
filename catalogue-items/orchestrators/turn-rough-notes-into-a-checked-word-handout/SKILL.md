@@ -38,6 +38,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+The general "Before you start" list above mentions a brand brain, a question and an ad, page, email or script draft. This job uses none of them. Ignore the brand brain lines, "Recommended steps before this one" and "From the brand brain, read" in that box. Its real inputs are below: the rough notes (pasted or attached before step 1), the reader and action, the format, and an optional past handout.
+
 
 - **The rough notes** (required): pasted text or files. If missing, write `MISSING: notes` and stop.
 - **The reader and the action** (required): who gets the handout and what they should understand or do after. If the action is missing, ask once. If still missing, write `MISSING: reader action` and write for understanding only.
@@ -103,12 +105,12 @@ When you've handed it back, suggest what they could do next in one short questio
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
-## After this
+## Next steps to offer
 
-Offer one next step and say they can type their own:
+Ignore the "After this" list above and use only this list. Offer one next step and say they can type their own:
 
 - Open the Word file and read any page marked not run before you send or print it.
-- For a one-page version to use at a desk, try the [Training handout writer](https://useaiblocks.com/skills/training-handout-writer).
+- For a one-page version to use at a desk, try the [Training handout writer](https://useaiblocks.com/prompts/training-handout-writer).
 - To share it alongside a deck, use the [PowerPoint audience handout builder](https://useaiblocks.com/skills/powerpoint-audience-handout-builder).
 
 ## Check before you hand it back

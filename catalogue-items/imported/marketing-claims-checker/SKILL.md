@@ -10,7 +10,7 @@ argument-hint: "[paste copy, or file path]"
 
 # /marketing-claims-review
 
-1. Load `~/.claude/plugins/config/claude-for-legal/product-legal/CLAUDE.md` → Marketing claims standards.
+1. Plugin only: load `~/.claude/plugins/config/claude-for-legal/product-legal/CLAUDE.md` → Marketing claims standards. In a plain chat, skip this and use the claims standards the user pastes (see the plain chat note below).
 2. Apply the claim taxonomy and review workflow below.
 3. Extract every claim. Classify: puffery / factual / comparative / implied / absolute.
 4. For each non-puffery claim: substantiation check, suggested fix.
@@ -33,41 +33,31 @@ The steps below were written for a lawyer's plugin that has saved settings, matt
 - Without a research tool, name only the kind of rule that may apply (for example "FTC rules on endorsements"). Do not give section numbers, case names or dates from memory. Tag each rule `[verify]` and tell the user to check it at the issuing authority before relying on it.
 - Always end the result with: "This is a risk check, not legal advice. Have a lawyer confirm anything high-stakes before it runs." This applies to every result, not only the ones marked "Ready to ship".
 - Never state a claim is substantiated unless the user gave you the proof.
+- In a plain chat, treat the person as a non-lawyer. Show "Ready to ship: Yes" only when the user supplied proof for every non-puffery claim, and still end with the lawyer line above. Never say "Ready to ship: Yes" on the user's word alone that proof exists.
 
 ---
 
-## Matter context
+## Plugin only (skip this block in a plain chat)
 
-**Matter context.** Check `## Matter workspaces` in the practice-level CLAUDE.md. If `Enabled` is `✗` (the default for in-house users), skip the rest of this paragraph — skills use practice-level context and the matter machinery is invisible. If enabled and there is no active matter, ask: "Which matter is this for? Run `/product-legal:matter-workspace switch <slug>` or say `practice-level`." Load the active matter's `matter.md` for matter-specific context and overrides. Write outputs to the matter folder at `~/.claude/plugins/config/claude-for-legal/product-legal/matters/<matter-slug>/`. Never read another matter's files unless `Cross-matter context` is `on`.
+These steps need the lawyer's plugin, its saved settings and a research tool. In a plain chat, do none of them.
 
----
+- **Matter context.** If matter workspaces are enabled in the plugin's practice-level CLAUDE.md, ask which matter this is for, load that matter's `matter.md`, and write outputs to its folder under `~/.claude/plugins/config/claude-for-legal/product-legal/matters/`. Never read another matter's files unless cross-matter context is on.
+- **Load standards.** Read the `## Marketing claims` section of `~/.claude/plugins/config/claude-for-legal/product-legal/CLAUDE.md`: the comparative claims policy (allowed with substantiation, discouraged or never), the substantiation standard and the list of commonly rejected claims. If comparative claims are "never", flag all of them. If "allowed with substantiation", check for the substantiation.
+- **Work-product header and next-steps tree.** Use the ones defined in that file's `## Outputs` section.
+- **Legal research tool.** If a research tool is configured and returns few or no results, report what was found and stop. Do not fill the gap from web search or model memory without asking the user first.
 
 ## Purpose
 
 Marketing wants to say the product is the best. Legal needs it to be true, or at least not provably false. This skill finds the claims that will get a demand letter from a competitor or an inquiry from a regulator, and suggests how to keep the energy while fixing the exposure.
 
-## Load standards
+## Rules for any rule or case you cite (all modes)
 
-Read `~/.claude/plugins/config/claude-for-legal/product-legal/CLAUDE.md` → `## Marketing claims`:
-- Comparative claims policy (allowed with substantiation / discouraged / never)
-- Substantiation standard (what's required before a claim ships)
-- Common rejected claims (learn from history)
-
-## Research the applicable standards before clearing copy
-
-Research the currently operative advertising and substantiation standards for the applicable jurisdictions and media (for example, FTC, NAD, state UDAP regimes, sector regulators for healthcare / financial / children's products, and platform-specific policies). Identify what substantiation the *specific claim* requires — who measured it, when, sample size, apples-to-apples basis — not just whether *some* substantiation exists on file. Flag implied claims and comparative claims for heightened scrutiny. Verify currency: endorsement and review guides have been updated recently and continue to evolve. Cite primary sources with pinpoint references. If you cannot verify the current standard, flag for attorney verification — do not state a rule you haven't confirmed.
-
-> **Only cite the standards that apply to the specific claims under review.** A blanket list of every FTC guideline, NAD practice note, or sector rule makes the load-bearing ones invisible. Do not cite the Endorsement Guides (16 CFR Part 255) unless the copy contains an endorsement, testimonial, or influencer content. Do not cite disclosure-overlay rules unless a claim in the asset triggers the overlay. Do not cite a sector regulator unless the copy targets or implicates that sector. A standard earns its place in the output by mapping to a specific quoted claim; otherwise drop it.
-
-> **No silent supplement.** If a research query to the configured legal research tool returns few or no results for the applicable standard (FTC rule, NAD decision, state UDAP, sector rule, platform policy), report what was found and stop. Do NOT fill the gap from web search or model knowledge without asking. Say: "The search returned [N] results from [tool]. Coverage appears thin for [standard / jurisdiction]. Options: (1) broaden the search query, (2) try a different research tool, (3) search the web — results will be tagged `[web search — verify]` and should be checked against the issuing authority before relying, or (4) flag as unverified and stop. Which would you like?" A lawyer decides whether to accept lower-confidence sources.
->
-> **Source attribution tiering.** Tag every citation with its source. For model-knowledge citations, use one of three tiers rather than a single blanket "verify" tag:
->
-> - `[settled]` — stable, well-known statutory and regulatory references unlikely to have changed (e.g., FTC Act § 5, Lanham Act § 43(a) as a concept). Still verify before approving copy, but lower priority.
-> - `[verify]` — model-knowledge citations that are real but should be verified: specific FTC enforcement actions, NAD decisions, state UDAP statutes, sector-specific rules, platform policies, case holdings, thresholds, effective dates, recent updates (the Endorsement Guides and disclosure rules update frequently).
-> - `[verify-pinpoint]` — pinpoint citations (specific subsection letters, CFR subpart references, case paragraph numbers) carry the highest fabrication risk and should ALWAYS be verified against a primary source.
->
-> Tool-retrieved citations keep their source tag (`[Westlaw]`, `[CourtListener]`, `[FTC site]`, `[NAD]`, `[platform policy]`, or the MCP tool name); web-search citations remain `[web search — verify]`; user-supplied citations (from substantiation files) remain `[user provided]`. The tiering surfaces the real verification work — a reader who verifies everything verifies nothing. Never strip or collapse the tags.
+- Say which advertising and substantiation rules may apply to the specific claim, for example FTC rules, NAD practice, state consumer-protection law, sector rules for health, finance or children's products, and the platform's own ad policy. Cite only the ones a quoted claim actually triggers. Do not list every guideline.
+- Without a research tool, give no section numbers, case names or dates from memory. Name the official source (the FTC website, the NAD, the platform's ad policy page) and tell the user to confirm the rule there.
+- Tag every rule you name: `[settled]` for a stable, well-known principle (such as FTC Act section 5), `[verify]` for anything else from memory, `[verify-pinpoint]` for a subsection, CFR part or case paragraph, which carries the highest risk of error. Keep source tags such as `[web search — verify]` or `[user provided]` as they are.
+- Ask what proof exists for the specific claim: who measured it, when, how many, and on what like-for-like basis. Some proof on file is not the same as proof for this claim.
+- Flag implied and comparative claims for closer checking.
+- If you cannot verify a current rule, flag it for a lawyer. Do not state a rule you have not confirmed.
 
 ## Claim taxonomy
 
@@ -155,7 +145,7 @@ Common drift: marketing copy written from an early spec, product changed, nobody
 
 ### Step 4: Output
 
-Prepend the work-product header from `~/.claude/plugins/config/claude-for-legal/product-legal/CLAUDE.md` `## Outputs` (it differs by user role — see `## Who's using this`).
+Plugin only: prepend the work-product header from the plugin's CLAUDE.md `## Outputs`. In a plain chat, start with the title line below.
 
 ```markdown
 [WORK-PRODUCT HEADER — per plugin config ## Outputs]
@@ -173,7 +163,7 @@ Prepend the work-product header from `~/.claude/plugins/config/claude-for-legal/
 
 **Ready to ship:** [Yes | With changes below | No — rewrite needed]
 
-> **Before emitting "Ready to ship: Yes" (i.e., approving a claim for external use / publication):** Read `## Who's using this` in `~/.claude/plugins/config/claude-for-legal/product-legal/CLAUDE.md`. If the Role is Non-lawyer:
+> **Before emitting "Ready to ship: Yes" (i.e., approving a claim for external use / publication):** In the plugin, read `## Who's using this` in its CLAUDE.md. In a plain chat, treat the person as a non-lawyer. If the Role is Non-lawyer:
 >
 > > Approving a marketing claim for publication is a legal act — once published, substantiation gaps and comparative-claim exposure become enforcement or competitor-challenge risk. Have you reviewed this with an attorney? If yes, proceed. If no, here's a brief to bring to them:
 > >
@@ -224,7 +214,7 @@ Copy that involves any of the fact patterns below sits inside an additional disc
 
 ## Close with the next-steps decision tree
 
-End with the next-steps decision tree per CLAUDE.md `## Outputs`. Customize the options to what this skill just produced — the five default branches (draft the X, escalate, get more facts, watch and wait, something else) are a starting point, not a lock-in. The tree is the output; the lawyer picks.
+End with next steps (plugin: the decision tree from CLAUDE.md `## Outputs`; plain chat: a short list such as gather proof, send to a lawyer, rewrite and re-check). Customize the options to what this skill just produced — the five default branches (draft the X, escalate, get more facts, watch and wait, something else) are a starting point, not a lock-in. The tree is the output; the lawyer picks.
 
 ## What this skill does not do
 

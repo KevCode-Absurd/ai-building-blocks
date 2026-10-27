@@ -32,8 +32,8 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
   - Paste your plan. Add your goals and limits, and any reviewer roles you want.
-  - Answer the first questions until your AI confirms the Understanding Lock, the short summary of what you are building.
-  - "Let each reviewer go in turn: skeptic, constraint checker, then user advocate. Read each objection and the designer's reply."
+  - Answer the first questions until your AI confirms the Understanding Lock. That is one short, confirmed summary of what you are building, for whom and under which limits. Do not start the review until you see it.
+  - "Let each reviewer go in turn. Paste each prompt in a new message. Skeptic: Act only as the skeptic. Assume this design fails in production. Why? Do not propose new features or a redesign. Constraint guardian: Act only as the constraint guardian. Check performance, scale, reliability, security, privacy, upkeep and cost. User advocate: Act only as the user advocate. Find confusing flows, poor defaults and gaps between what users want and what they get. Arbiter: Rule on each objection and give APPROVED, REVISE or REJECT with a reason. Read each objection and the designer's reply."
   - Check the Decision Log and the final verdict. If it says REVISE, fix the open objections and run it again.
   - Build only after the verdict is APPROVED. Keep the Decision Log with your project.
 output_sample:
@@ -43,7 +43,7 @@ output_sample:
     - The reviewer roles you want (optional)
   prerequisites:
     - An AI chat that can hold a long back-and-forth
-    - The standard brainstorming skill, or your AI can ask the first questions itself
+    - Nothing else is needed. Your AI asks the first questions itself.
   output:
     - name: Understanding Lock
       contains: A short confirmed summary of what you are building, for whom and under which limits, before any review starts.

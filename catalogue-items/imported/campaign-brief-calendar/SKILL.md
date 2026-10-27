@@ -6,7 +6,7 @@ argument-hint: "<campaign objective or product>"
 
 # Campaign Plan
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> No connected tools are required. Everything here works from what you paste into the chat. (The original skill linked a CONNECTORS.md file for optional tool connections. It is not part of this item.)
 
 Generate a comprehensive marketing campaign brief with objectives, audience, messaging, channel strategy, content calendar, and success metrics.
 
@@ -96,7 +96,7 @@ Define KPIs aligned to the campaign objective:
 - How each metric will be tracked
 - Reporting cadence recommendation
 
-If ~~product analytics is connected, reference any available historical performance benchmarks to inform targets.
+If product analytics is available, or the user pastes past results, use those benchmarks to set targets. If not, set targets from the user's own goals and say they are estimates.
 
 ### 8. Budget Allocation (if budget provided)
 - Breakdown by channel or activity
@@ -113,6 +113,8 @@ If ~~product analytics is connected, reference any available historical performa
 - Key decision points
 
 ## Planning Reference
+
+The ranges and timelines in this section are general rules of thumb from the original author, not verified figures. They carry no source or date. Check them against your own results, team size and industry before you plan around them.
 
 ### Campaign Framework: Objective, Audience, Message, Channel, Measure
 

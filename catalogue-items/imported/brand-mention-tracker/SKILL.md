@@ -19,7 +19,7 @@ Scrape reviews, ratings, and brand mentions from multiple platforms using Apify 
 
 This skill collects public reviews and comments. Only use it where the site's terms allow it, and stop if they do not. Collect only what the question needs, set a result cap, and keep the saved file private. Reviews and comments can contain personal details. In your summary, quote the text only and leave out names and handles.
 
-Apify charges for runs. Before you run, tell the user which Actor you chose for each site and ask them to check its price on its Apify page. Leave out Facebook, Instagram and TikTok personal profiles unless the question needs them, and keep customer names out of what you share. Never show the token in chat or in saved logs. The token lives in `.env` only, and the run script reads it from there. The optional `mcpc` command in Step 2 is different: it puts the token on the command line, where other programs on a shared machine could see it in the process list. Use that command only on a computer that only you use. Otherwise skip it and read the Actor's input fields on its public Apify page, which needs no token.
+Apify charges for runs. Before you run, tell the user which Actor you chose for each site and ask them to check its price on its Apify page. Do not collect from Facebook, Instagram or TikTok personal profiles. Use business pages, public posts and public comments only, and ask the user before including anything else. Keep customer names out of what you share. Never show the token in chat or in saved logs. The token lives in `.env` only, and the run script reads it from there. Never use a tool or command that puts the token on the command line, such as `mcpc`, because other programs on a shared machine can see it. Read the Actor's input fields on its public Apify page, which needs no token.
 
 Before the first run, ask the user to confirm, for each site, that they have checked the site's terms and collecting public reviews is allowed. Do not run an Actor for a site until they say yes.
 
@@ -34,8 +34,6 @@ Check these before you run anything:
 
 - `.env` file with `APIFY_TOKEN`
 - Node.js 20.6+ (for native `--env-file` support)
-- `mcpc` CLI tool, only if you use the optional Step 2 command: `npm install -g @apify/mcpc`
-- `jq` (used by the schema command in Step 2)
 
 ## Workflow
 
@@ -44,7 +42,7 @@ Copy this checklist and track progress:
 ```
 Task Progress:
 - [ ] Step 1: Determine data source (select Actor)
-- [ ] Step 2: Fetch Actor schema via mcpc
+- [ ] Step 2: Read the Actor's input fields on its public page
 - [ ] Step 3: Ask user preferences (format, filename)
 - [ ] Step 4: Run the monitoring script
 - [ ] Step 5: Summarize results
@@ -75,19 +73,11 @@ Select the appropriate Actor based on user needs:
 | YouTube comments | `streamers/youtube-comments-scraper` | Video comment sentiment |
 | TikTok comments | `clockworks/tiktok-comments-scraper` | TikTok sentiment |
 
-### Step 2: Fetch Actor Schema
+### Step 2: Read the Actor's Inputs
 
-Read the Actor's input fields. The safest way is to open the Actor's public page on apify.com and copy its README and input fields. No token is needed for that.
+Read the Actor's input fields. Open the Actor's public page on apify.com (for example `apify.com/compass/crawler-google-places`) and copy its README, input fields and price per run. No token is needed for that. Do not fetch the details with a command that puts the token on the command line.
 
-Optional, on a computer only you use: fetch the details with mcpc. This puts your token on the command line.
-
-```bash
-export $(grep APIFY_TOKEN .env | xargs) && mcpc --json mcp.apify.com --header "Authorization: Bearer $APIFY_TOKEN" tools-call fetch-actor-details actor:="ACTOR_ID" | jq -r ".content"
-```
-
-Replace `ACTOR_ID` with the selected Actor (e.g., `compass/crawler-google-places`).
-
-This returns:
+The page shows:
 - Actor description and README
 - Required and optional input parameters
 - Output fields (if available)
@@ -139,7 +129,6 @@ After completion, report:
 ## Error Handling
 
 `APIFY_TOKEN not found` - Ask user to create `.env` with `APIFY_TOKEN=your_token`
-`mcpc not found` - Ask user to install `npm install -g @apify/mcpc`
 `Actor not found` - Check Actor ID spelling
 `Run FAILED` - Ask user to check Apify console link in error output
 `Timeout` - Reduce input size or increase `--timeout`

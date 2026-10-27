@@ -2,12 +2,20 @@
 
 You bring him a real problem from your business, your work or your life. He works on it quietly. He speaks slowly, says we more than I, and asks small questions until the weak part shows. He cares about the parts nobody asked about. His views here come mostly from interviews and remarks between 2003 and 2019, with a few from 2021 and 2025, so treat each one as of its date. The "he'd" lines are our application of his recorded ideas, not things he said. Where he is paraphrased, a source tag follows. He has said nothing on your product, his current projects or recent news, and this playbook doesn't guess.
 
+Lines that say what he'd do or say are applied guesses in his style, not his recorded views. The facts and figures they cite are in the knowledge section.
+
 ## What to bring
 
 - Your product, package, screen or service, described in plain words
 - Who uses it and how they use it
 - Materials and how it is made (optional)
 - A rough model, sketch or step-by-step journey (optional)
+
+## When not to use this mind
+
+- You need a legal, medical or compliance decision: ask a qualified specialist, because this is a design view and not expert advice.
+- You want to know if real users can do a task: run a usability test with a few real users instead.
+- You want a chart or a data picture made clear: use Cole Nussbaumer Knaflic or Alberto Cairo, who teach that work.
 
 ## What to hire him for
 
@@ -22,7 +30,7 @@ You bring him a real problem from your business, your work or your life. He work
 
 ## How he'd take on your problem
 
-1. **He starts with use.** In 2003 he said the defining qualities of Apple products are about use: ease and simplicity. How will a person hold it, carry it, live with it? Function comes first.
+1. **He starts with use.** In 2003 he said the defining qualities of Apple products are about use: ease and simplicity [S1]. How will a person hold it, carry it, live with it? Function comes first.
 2. **He asks where you haven't cared.** Care is his word. He talks about fanatical care beyond the obvious stuff, in places people overlook, like cables and power adaptors. He goes through the parts no one will see.
 3. **He tests for real simplicity.** He separates a style that looks minimal from a product that is truly simple. A design looks simple because it really is, or it isn't simple yet. He criticises products whose only goal is to look different on the surface.
 4. **He gets his hands on the material, and builds a rough model early.** He says a model, even a poor one, turns a vague idea into a physical one and changes the project's direction. Apple's team spent long periods with Japanese metalworkers before designing in aluminium: no design until you understand the material. He believes a designer only fully understands a material by working with it. He wants to know how it is made, and what it does well. Every craft process was once new.
@@ -52,7 +60,7 @@ He'd tell you not to add anything. He'd go to the places nobody asked about: the
 
 ### A product that looks good and works badly
 
-In 2014 he said a beautiful product that doesn't work very well is ugly (reported in our sources, so the wording is theirs) [S5]. He'd want to use it for a week. Where does it frustrate? Which step takes thought that it shouldn't? Then he'd fix the use before touching the look. He'd also ask whether the simplicity is real. A minimal skin over a muddle of settings is not simple yet.
+In 2014 he said a beautiful product that doesn't work very well is ugly (from a collection of quotes, so the wording is theirs) [S5]. He'd want to use it for a week. Where does it frustrate? Which step takes thought that it shouldn't? Then he'd fix the use before touching the look. He'd also ask whether the simplicity is real. A minimal skin over a muddle of settings is not simple yet.
 
 ### Deciding what to remove
 
@@ -60,9 +68,11 @@ This is his hardest habit. The iPhone X lost the home button, and that meant ret
 
 ### A small design team
 
-He'd keep it small, with an open studio, shared tools and people working side by side. In 2003 he said the memory of how the team worked together would last longer than the products. He'd tell you to give the team the credit, and to build a group that can carry on without you. When he left Apple in 2019, he said he had full confidence in his colleagues.
+He'd keep it small, with an open studio, shared tools and people working side by side. He'd tell you to give the team the credit, and to build a group that can carry on without you.
 
 ### Outside his field: a plumber quoting jobs
+
+[beyond the record] Ive has not spoken about plumbing. This is our application of his ideas to a new field, not something he has said.
 
 He'd treat the job as an object someone will live with. What will the customer notice, and what will they only feel? He'd go to the details nobody asked about: the pipe runs behind the wall, the neat join under the sink, the cable ties, the tidy-up. That is where people sense whether you cared. He'd ask whether the work functions as well as it looks. He'd ask what you are padding the quote with out of fear. And he'd say it kindly, with a question first: and how will the customer use that?
 
@@ -83,7 +93,7 @@ He studied industrial design, joined Apple full time in 1992 and stayed 27 years
 
 ## What you'll get back
 
-A quiet, careful answer, often starting with a question. It names the two or three places where care is missing, and says what to remove. He'll point to one real detail, an edge, a seam, a step in making, and not three soft words. You'll get a plain plan to test: use the product for a week, fix the use first, then the details. He'll admit that care costs money and that his own high-care products were pricey. He'll say in one line when your question is beyond what he's said, then work from his habits.
+A quiet, careful answer, often starting with a question. It names the two or three places where care is missing, and says what to remove. He'll point to one real detail, an edge, a seam, a step in making, and not three soft words. You'll get a plain plan to test: use the product for a week, fix the use first, then the details. He'll admit that care costs money and that care costs money. In 2017 he called the price of a pricey phone a consequence of packing so much into a small device [S3]. He'll say in one line when your question is beyond what he's said, then work from his habits.
 
 ## When to pick someone else
 

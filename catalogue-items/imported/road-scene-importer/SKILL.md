@@ -78,6 +78,13 @@ copyfile(sourceFile, destFile);
 
 **Load only (inspect RRHD view before build):**
 ```matlab
+% Step 2 first: copy the file into the project folder
+st = status(rrApp);
+projectFolder = st.Project.Filename;
+[~, fileName, ext] = fileparts(sourceFile);
+destFile = fullfile(projectFolder, fileName + ext);
+copyfile(sourceFile, destFile);
+
 importOpts = roadrunnerHDMapImportOptions;
 importOpts.ImportStep = "Load";
 importScene(rrApp, destFile, "RoadRunner HD Map", importOpts);
@@ -272,7 +279,7 @@ try
     fprintf('RoadRunner connected, project: %s\n', st.Project.Filename);
 catch
     error('RoadRunner:NotConnected', ...
-        'No RoadRunner instance connected. Run the Connection Strategy block first.');
+        'No RoadRunner instance connected. Connect first with the roadrunner-core skill.');
 end
 
 %% --- ENFORCEMENT: File is inside project folder ---
@@ -290,8 +297,11 @@ elseif formatName == "OpenDRIVE"
 end
 fprintf('Format check: PASS\n');
 
-%% --- ENFORCEMENT: Build options match RRHD content (MANDATORY for .rrhd) ---
-if ext == ".rrhd"
+%% --- ENFORCEMENT: Build options match RRHD content (MANDATORY for a .rrhd build; skip for load-only) ---
+% Run this block only when a build was requested, so buildOpts and overlapOpts exist.
+% On the default load-only path they are not defined, so skip it.
+isBuildRequested = exist('buildOpts','var') == 1 && exist('overlapOpts','var') == 1;
+if ext == ".rrhd" && isBuildRequested
     tempMap = roadrunnerHDMap;
     read(tempMap, destFile);
 
@@ -348,7 +358,6 @@ end
 ## Conventions
 
 - Always specify format name string exactly: `"RoadRunner HD Map"`, `"OpenDRIVE"`
-- Use `SOS` form for IIR stability (BuildOptions handles this internally)
 - Show all file-staging code explicitly (`status`, `fileparts`, `fullfile`, `copyfile`)
 - Use `tiledlayout`/`nexttile` for multi-panel figures (not `subplot`)
 - Pin `destFile` to the project folder path — never use temp or relative paths for import

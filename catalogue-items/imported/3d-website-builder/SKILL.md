@@ -29,6 +29,18 @@ If you already have a site or shader code, give it as the codebase and build on 
 
 ## How It Works
 
+### Ordered checklist
+
+Work through these in order. Do each one, check it in the browser, then go on.
+
+1. Create `src/Scene.jsx` (React) or `main.js` (plain Three.js). Run `npm install --save-exact three` (add `@react-three/fiber @react-three/drei` for React), so each package version is pinned in package.json. Check each version on npmjs.com first. Start the dev server with `npm run dev` and check a blank canvas shows.
+2. In that file, set up the render loop and resize handler, with the pixel ratio capped at 2 (Step 1).
+3. Add `@react-three/postprocessing` (or `EffectComposer`), then add bloom, depth of field or film grain, a few passes at most (Step 2).
+4. Create `src/shaders/wavy.js` for any custom GLSL effect and load it as a `ShaderMaterial` (Example 2).
+5. Add hover, drag and click motion with springs or a physics library (Step 3).
+6. Compress each model with `npx @gltf-transform/cli@[PINNED VERSION] optimize input.glb output.glb --compress draco` (look up the current version on npmjs.com and pin it, never run it unpinned), then add a loading manager and preloader (Step 4).
+7. Test on a real phone. Cut any effect that drops frames.
+
 ### Step 1: Establish the Render Loop and Scene Architecture
 Setting up a robust WebGL context with proper resize handling and performance-friendly pixel ratios is crucial. Keep pixel ratios capped at a maximum of 2 to avoid rendering too many pixels on high-DPI screens.
 

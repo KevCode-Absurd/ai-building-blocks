@@ -11,6 +11,8 @@ metadata:
 
 Four-phase framework for onboarding enterprise customers from contract to value realization. The goal isn't just go-live — it's sustained adoption that doesn't cliff at Week 12.
 
+Gather first (ask for anything missing): the signed contract summary, the customer's success goals, named customer stakeholders, the go-live date, and integration and single sign-on needs.
+
 What you hand back: an owner check, a pre-kickoff checklist, a four-phase plan with owners and checks, warning signs, and checks that use is holding after go-live. Aim for two to four pages. The Week 4 and Week 12 patterns are the author's experience, not measured facts.
 
 ## When to Use
@@ -33,6 +35,8 @@ What you hand back: an owner check, a pre-kickoff checklist, a four-phase plan w
 ---
 
 ## Core Frameworks
+
+(The Week 4 and Week 12 timings below are the author's experience, not measured data. Treat them as warning points to watch, not as rules.)
 
 ### 1. The Week 4 Ghosting Problem (And How to Prevent It)
 
@@ -414,6 +418,8 @@ Are active users growing Week 6 → Week 12?
 
 ## Quick Reference
 
+Next step: after the owner check, take any role with no named person to the customer before the kickoff call. For ongoing reviews, use the Company meeting rhythm designer (copilot-gtm-operating-cadence). For the deal before signing, use the Enterprise account deal planner (copilot-gtm-enterprise-account-planning).
+
 **Pre-Kickoff Validation:**
 - [ ] Sales handoff complete (deal drivers, stakeholders, requirements)
 - [ ] Project owner identified by name on customer side
@@ -450,9 +456,9 @@ Are active users growing Week 6 → Week 12?
 
 ## Related Skills
 
-- **enterprise-account-planning**: Pre-sale deal planning and stakeholder mapping
-- **operating-cadence**: Onboarding review cadence and health metrics
-- **product-led-growth**: Self-serve onboarding patterns
+- **Enterprise account deal planner** (copilot-gtm-enterprise-account-planning): Pre-sale deal planning and stakeholder mapping
+- **Company meeting rhythm designer** (copilot-gtm-operating-cadence): Onboarding review cadence and health metrics
+- **Self serve product growth planner** (copilot-gtm-product-led-growth): Self-serve onboarding patterns
 
 ---
 

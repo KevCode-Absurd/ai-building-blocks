@@ -35,8 +35,10 @@ how_to_use:
   - Add 20 or more examples with the right answers, and say what a good answer looks like.
   - Ask your AI to write the metric, then run a baseline score before any tuning. A metric can be as simple as returning 1 when the predicted label matches the expected label, and 0 when it does not.
   - Ask it to run the optimiser on your examples, then compare the new score with the baseline.
-  - Check the tuned program on a few new inputs before you use it. Then load the saved program in your app, and run the same metric again after each new batch of examples. Do not change your live prompts until the new score beats the baseline on examples the optimiser never saw.
-  - Search-based answers need a retriever, such as a Chroma store, set up before you run the pipeline. The retry-and-check pattern (dspy.Assert) only exists in some DSPy versions, so check the DSPy docs for your version first.
+  - Check the tuned program on a few new inputs before you use it. Then load the saved program in your app, and run the same metric again after each new batch of examples. Do not change your live prompts until the new score beats the baseline on examples the optimiser never saw. To keep scoring over time, pair it with AI app evaluation planner.
+  - Cost: the optimiser makes many model calls, and every call is billed to your API account. Set a spend limit on the account first. Start with the simplest optimiser on your 20 examples, and look at your usage page before you run a bigger one.
+  - ProgramOfThought runs code the model writes. Use it only in a sandbox, never on a machine with private files or keys.
+  - Search-based answers need a retriever, such as a Chroma store, set up before you run the pipeline. The retry-and-check pattern (dspy.Assert) and the older tracing example are in an appendix at the end of the skill. They are untested and only exist in some DSPy versions, so check the DSPy docs for your version first.
 output_sample:
   input:
     - A plain description of your AI task

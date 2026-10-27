@@ -9,6 +9,8 @@ metadata:
 
 # Writing MATLAB Performance Tests
 
+AI Blocks note on the licence: the licence link in the front matter above points to a different MathWorks page. In this catalogue, the LICENSE.md file in this folder governs (BSD 2-Clause, with the rule that you use it only with MathWorks products such as MATLAB).
+
 Write performance tests for MATLAB code using the `matlab.perftest.TestCase` framework. This framework provides statistically rigorous timing with automatic warmup, multiple samples, and outlier handling.
 
 ## When to Use
@@ -263,7 +265,7 @@ A coefficient of variation (CV) above 10% indicates noisy results — revisit yo
 | Anti-Pattern | Why It's Wrong | Fix |
 |-------------|---------------|-----|
 | Setup inside measurement | Inflates timing, adds noise | Move to `TestMethodSetup` |
-| Sub-1ms test without `keepMeasuring` | Noise dominates | Use `keepMeasuring` or increase data size |
+| Sub-10ms test without `keepMeasuring` | Noise dominates | Use `keepMeasuring` or increase data size |
 | `tic/toc` instead of framework | No statistical rigor, no warmup handling | Use `runperf`/`keepMeasuring` |
 | `TestParameter` for setup params | Framework error at runtime | Use `MethodSetupParameter` |
 | Single test covering multiple APIs | Can't isolate regressions | Split into focused tests |

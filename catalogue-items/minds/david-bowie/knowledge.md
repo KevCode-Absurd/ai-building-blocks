@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Bowie gave many interviews, but few full transcripts are online in stable places. The own-words sources here are his 1999 commencement address at Berklee College of Music, read through the school's long page summary of the speech [S2], his filmed advice to young artists as quoted in 2020 [S3], and the first part of an interview about songwriting for the albums Heathen and Reality, republished in 2025 and cut off partway [S7]. An obituary quotes his views on labels, change and age [S8], and Wikiquote lists lines from NME 1984, Playboy 1976 and a 2002 interview whose pages did not load for us [S9]. Wikipedia pages give dates and album facts only [S1][S4][S5][S6]. This file never quotes his song lyrics.
+Bowie gave many interviews, but few full transcripts are online in stable places. The own-words sources here are his 1999 commencement address at Berklee College of Music, read through the school's long page summary of the speech [S2], his filmed advice to young artists as quoted in 2020 [S3], and the first part of an interview about songwriting for the albums Heathen and Reality, republished in 2025 and cut off partway [S7]. An obituary quotes his views on labels, change and age [S8], and Wikiquote lists lines from NME 1984, Playboy 1976 and a 2002 interview whose pages did not load for us [S9]. Wikipedia pages give dates and album facts only [S1][S4][S5][S6]. This file never quotes his song lyrics. [S2] and [S3] are a page summary and a quoted report, not full transcripts, so quote him only with the short phrases listed under "Short phrases on the record".
 
 ## In one paragraph
 
@@ -129,7 +129,7 @@ Bowie rejected looking back to youth as a trap that leaves a person living in me
 ## Where he was wrong or criticised
 
 - **Fascism remarks.** In 1976 he made statements praising fascism and Hitler. He retracted them in 1977, blaming his drug use [S1].
-- **Drugs and the Berlin move.** He later blamed a mid-1970s cocaine addiction for his erratic behaviour, and moved to Berlin partly to escape it [S4]. He said he had feared his creativity depended on drugs [S4].
+- **Drugs and the Berlin move.** A reference account says he later blamed mid-1970s drug use for his erratic behaviour, and moved to Berlin partly to get away from it [S4]. Treat this as a health matter and check it before you repeat it. The same account says he feared his creativity depended on drugs [S4].
 - **Misfires.** Tin Machine was dismissed by one biographer as pompous and dull [S1]. The film Just a Gigolo (1978) failed, and he said he was disappointed in it [S1].
 - **Fans split.** His 1995 tour with Nine Inch Nails drew mixed reactions [S1]. Critics were divided on Low when it came out [S4].
 

@@ -14,6 +14,8 @@ license: "MIT"
 license_source: "https://github.com/gooseworks-ai/goose-skills/blob/main/LICENSE"
 ---
 
+> **AI Blocks note (licence):** this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says. The `license:` line in the front matter above is the original author's own label (MIT). The LICENSE-CONTENT file governs here. Keep the credit to the author.
+
 # Ad Campaign Analyzer
 
 ## Overview
@@ -36,6 +38,8 @@ Take raw campaign performance data and turn it into testable decisions. Normaliz
 - "I have $X/month for ads — how should I distribute it?"
 
 ## Phase 0: Intake
+
+**Required for a first pass:** campaign data, platform(s), time period, monthly budget and primary goal (items 1 to 5). **Optional:** everything else (items 6 to 11). If the user has only one export, start with items 1 to 5 and ask for the rest only if needed.
 
 1. **Campaign data** — One of:
    - CSV export from Google Ads / Meta Ads Manager / LinkedIn Campaign Manager

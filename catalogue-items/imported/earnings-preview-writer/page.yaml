@@ -31,10 +31,19 @@ you_get:
 how_to_use:
   - Open an AI that can run Python and get online, such as Claude with code tools turned on.
   - Paste in this skill, or upload its folder.
-  - "Type the ticker, for example: Write an earnings preview for the ticker you hold. Add any metrics you care about (optional)."
+  - 'Type the exact ticker, for example: "Write an earnings preview for [TICKER]." Add any metrics you care about (optional). If you give a company name, check the ticker your AI picks before it fetches anything. Several companies have similar names.'
   - Let it install yfinance if asked. This is a free tool that reads Yahoo Finance data.
   - Read the brief. Check any line with missing data, since Yahoo may lack some figures.
+  - If the install is refused or Yahoo returns no data, get the report date and estimates from the company's own investor relations page and paste them in for your AI to summarise. Or run it again later.
+  - The estimates are a snapshot from the moment you run it. Run it again closer to the report date.
   - After the company reports, use earnings-recap to compare the results with this brief.
+terms:
+  - term: Consensus
+    meaning: The average of what analysts expect the company to report.
+  - term: Surprise %
+    meaning: How far the real result landed above or below the consensus, as a percent.
+  - term: Whisper number
+    meaning: An unofficial guess of the result that circulates among traders. This skill does not use it. It shows only the published consensus.
 output_sample:
   input:
     - A stock ticker or company name

@@ -7,7 +7,7 @@ description: Use when something said or done at work or home has made you angry 
 
 The first reply to a hurt is often the one you regret. This skill puts a pause between the hurt and the message, helps you sort what happened from how it felt, and drafts a calm first message that asks for help instead of blame. It is not therapy and gives no mental health advice. If you feel unsafe or in crisis, contact a qualified person or your local emergency line.
 
-When not to use: for abuse, threats or harassment, go to HR, a manager or a qualified adviser, not a message plan. For a legal dispute, talk to a lawyer before you write back. If the user describes any of these, say so in the first lines, point them there, and do not draft a message. Once you are calm and want to hold the conversation, use the Listening conversation planner.
+When not to use: for abuse, threats or harassment, go to HR, a manager or a qualified adviser, not a message plan. For a legal dispute, talk to a lawyer before you write back. If the user describes any of these, say so in the first lines, point them there, and do not draft a message. Once you are calm and want to hold the conversation, use the Listen-first talk planner.
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -43,7 +43,7 @@ How to start:
 8. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
 
 ## What you hand back
-The pause plan, the three lists (facts, feelings, guesses), the source check, the care-or-irritation line, the calm message, a wait-before-sending note and `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
+The pause plan, the three lists (facts, feelings, guesses), the source check, the care-or-irritation line, the calm message, a wait-before-sending note and `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none". Then say what comes next: once they are calm, use the Listen-first talk planner and bring the calm message, the facts list and the wait time. Skip the pay-plan suggestion below unless the dispute is about pay.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

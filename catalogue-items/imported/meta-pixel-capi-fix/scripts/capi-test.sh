@@ -2,7 +2,7 @@
 # capi-test.sh -- Send test CAPI events to verify Meta Conversions API is working
 #
 # Usage:
-#   capi-test.sh <pixel_id> [test_event_code]
+#   capi-test.sh <pixel_id> <test_event_code>   (the code is required)
 #
 # Sends: test PageView + test Purchase
 # Events appear in Events Manager > Data Sources > [Pixel] > Test Events
@@ -28,13 +28,15 @@ get_token() {
   exit 1
 }
 
-if [[ $# -lt 1 ]]; then
-  echo "Usage: capi-test.sh <pixel_id> [test_event_code]" >&2
+if [[ $# -lt 2 ]]; then
+  echo "Usage: capi-test.sh <pixel_id> <test_event_code>" >&2
+  echo "The test event code is required. Copy it from Events Manager > Test Events." >&2
+  echo "Without it, these fake events could reach your live pixel and your reports." >&2
   exit 1
 fi
 
 PIXEL_ID="$1"
-TEST_CODE="${2:-TEST$(date +%s | tail -c 6)}"
+TEST_CODE="$2"
 TOKEN=$(get_token)
 
 NOW=$(date +%s)

@@ -11,7 +11,7 @@ explain: |
 
   The skill starts by working out who would use the project, where they spend time, what they use today and how they judge a project: stars, recent activity, docs and community. It then covers your GitHub page, a readme that answers a visitor in seconds, easy first issues for new contributors, a launch plan, and how to keep going after launch. It suggests how to talk about the project on developer forums and social channels in a way that feels like sharing, not selling.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (jonathimer) says MIT. Credit goes to jonathimer and sickn33.
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (jonathimer) said MIT. We relabelled it in the skill file, so the one licence that applies here is CC BY 4.0. Credit goes to jonathimer and sickn33.
 when:
   - You built a useful tool and nobody knows it exists.
   - Your repo has stars but no contributors.
@@ -19,6 +19,8 @@ when:
   - Your readme gets visitors but few of them try the project.
 not_for:
   - "You want to promote a paid app or a software company: use a normal marketing plan or a person who does marketing."
+  - "You only need the launch-day post or tweet written: use the Social post writer, or the Developer Advocate agent for talks and outreach."
+  - "Your readme is the only problem: use the GitHub README improver."
   - "You have not built anything yet: finish a first working version before you plan any promotion."
   - "You need help writing code, fixing bugs or reviewing pull requests: use a coding assistant or a maintainer you trust."
 you_give:
@@ -32,10 +34,10 @@ you_get:
   - Contributor-friendly issue ideas
   - A launch and follow-up schedule
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code running, files or paid tools. Octolens, the monitoring tool it names, is optional and may cost money.
+  - Start by pasting your repo link and answering the audience questions the skill asks. Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code running, files or paid tools. Octolens, the monitoring tool it names, is optional and may cost money.
   - "Describe your project in a few lines: what it does, who uses it and where it is hosted."
   - Say how much time you have each week (optional).
-  - Ask for the full plan, then read the readme and launch parts first.
+  - Ask for the full plan, then read the readme and launch parts first. The plan is advice. Check it against your own numbers, since the skill never guesses your users or metrics.
   - Fix your readme and repo page before you post anywhere, then follow the launch schedule.
 output_sample:
   input:

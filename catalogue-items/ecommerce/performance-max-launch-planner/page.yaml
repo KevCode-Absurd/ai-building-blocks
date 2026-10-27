@@ -76,7 +76,7 @@ how_it_works:
   - title: Maps asset groups
     text: Split by product type, with 15 or more products in each, never one, and 3 to 20 asset groups in total.
   - title: Orders the products
-    text: The 20 percent of products earning 80 percent of revenue go first. Weak or untested ones go in a separate zombie group.
+    text: The 20 percent of products earning 80 percent of revenue go first. Weak or untested ones go in a separate low-performer test group.
   - title: Fills the assets
     text: Shows both views, fill every slot or start lean, and says to skip Google's auto-generated assets.
   - title: Sets the switches
@@ -96,7 +96,7 @@ output_shape: |
 
   CAMPAIGN MAP
   <campaign> | <asset groups> | <listing group per asset group> | <products>
-  zombie group: <products>
+  low-performer test group: <products>
 
   ASSETS  <headlines> / <long headlines> / <descriptions> / <images> / <extras>
   SWITCH OFF  <automatic text assets, final URL expansion, tablets, TV>

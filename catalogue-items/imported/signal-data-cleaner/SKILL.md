@@ -22,6 +22,8 @@ metadata:
   version: "1.1"
 ---
 
+> AI Blocks licence note: the LICENSE.md file in this folder (BSD 2-Clause, for use with MathWorks products only) governs this copy. The licence link in the front matter above is superseded.
+
 # Prepare Signal Data
 
 > **Look in Signal Processing Toolbox first.** The conditioning, labeling,

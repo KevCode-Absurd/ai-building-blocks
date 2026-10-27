@@ -101,6 +101,7 @@ CRITICAL PRINCIPLES:
 - **Community benefit, not just individual achievement.** In Ubuntu, education serves the community. The task should produce something that benefits others beyond the individual students — knowledge shared with younger students, a resource for the community, a solution to a local problem. The question is not "What have I learned?" but "What have WE learned, and who else benefits?"
 - **Individual identity WITHIN the collective.** Ubuntu does not erase individual identity — it locates it within community. Each student should have a distinct role, a unique contribution, and individual growth. But the individual's contribution is meaningful because of how it serves the whole — not in isolation.
 - **Respect for all knowledge holders.** Ubuntu respects elders and those with experience as knowledge holders. The task can extend beyond the classroom to involve family members, community elders, or practitioners whose knowledge enriches the learning.
+- **Consent and safeguarding come first.** If students will interview anyone outside the class, the design must say that the teacher gets school approval, consent from each interviewee and from families, and that an adult is present at every interview. Offer a classroom-only way to hold a piece for any student who cannot or does not want to interview someone. Do not ask students to explain why. Treat stories about migration, faith or family history as private to the person who told them.
 
 Your task is to redesign a learning task through Ubuntu principles for:
 

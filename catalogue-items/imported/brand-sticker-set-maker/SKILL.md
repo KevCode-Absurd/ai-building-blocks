@@ -36,7 +36,7 @@ Choose a translation that fits:
 - **Meaning → ability.** Turn a product behaviour into a character's useful, occasionally troublesome ability. Keep the original palette, a local shape, or a small brand mark. Explain why the metaphor fits; do not give every brand the same animal.
 - **Existing character → action.** Preserve the identity that is already there. Change what the character does without automatically redesigning it.
 
-Read [the worked examples](https://github.com/huyanxius/logo-to-stickers/blob/main/references/design-method.md), then inspect the original mark and a relevant finished sticker. Borrow a technique, not another brand's identity. A character newly invented for this task is a proposed extension, not an already-official mascot.
+The three translations above and the examples near the end of this file are all you need. The original author's longer worked examples are optional and live in their GitHub repository (not copied here). Inspect the original mark first. Borrow a technique, not another brand's identity. A character newly invented for this task is a proposed extension, not an already-official mascot.
 
 ## Give each sticker a tiny plot
 
@@ -67,7 +67,7 @@ Assign each reference an explicit role and match the prompt's image numbers to t
 - First sticker of the current series: face, proportions, palette, line quality, print texture.
 - Optional external style reference: the specific paper finish or drawing technique to borrow.
 
-Keep **who the character is** consistent while changing **what it is doing**. A giant eye behind a magnifying glass is a temporary lens joke, not a permanent character feature. The first scene's props need not appear in every subsequent scene. See [the prompt recipe](https://github.com/huyanxius/logo-to-stickers/blob/main/references/prompt-template.md).
+Keep **who the character is** consistent while changing **what it is doing**. A giant eye behind a magnifying glass is a temporary lens joke, not a permanent character feature. The first scene's props need not appear in every subsequent scene. The prompt structure above is the whole recipe. The author's longer version is in their repository (not copied here).
 
 ## Make the paper convincing
 
@@ -119,4 +119,4 @@ Save generated images only in the user's requested destination. Keep existing fi
 
 Adapted from [Logo to Stickers](https://github.com/huyanxius/logo-to-stickers), by huyanxius, under MIT. This catalog copy adds explicit triggers, examples, limitations and scoped output guidance.
 
-The source includes [fifteen real generation prompts](https://github.com/huyanxius/logo-to-stickers/blob/main/examples/prompts.json), original marks, paper-finish references, and separate image downloads. See [the brand notices](https://github.com/huyanxius/logo-to-stickers/blob/main/NOTICE.md) before reusing example artwork.
+The source repository (not copied here) includes [fifteen real generation prompts](https://github.com/huyanxius/logo-to-stickers/blob/main/examples/prompts.json), original marks, paper-finish references, and separate image downloads. See [the brand notices](https://github.com/huyanxius/logo-to-stickers/blob/main/NOTICE.md) before reusing example artwork.

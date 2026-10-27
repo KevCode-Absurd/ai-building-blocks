@@ -93,6 +93,8 @@ FLAGS FOR THE CLAIMS CHECK (not changed)
 STILL FAILING: <line, or none>
 ```
 
+This layout has no CHECKS MISSED label. Wherever the steps above say to list checks that failed or could not run, put them under STILL FAILING, and write "none" if every check ran and passed.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:

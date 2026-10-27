@@ -69,11 +69,15 @@ Ask for these metrics per campaign (last 30 days):
 | Lost Impression Share - Rank (%) | If available | Competitiveness indicator |
 | Days running at current budget | If known | Stability reference |
 
-Also ask:
+Paste the numbers as a table or spreadsheet export, one row per campaign, with these columns. Also ask:
+- Currency, time zone and the attribution window the numbers use
+- Platform for each campaign (Google Ads or Meta), because the change limits differ
 - Target ROAS (default: 3.0x if not specified)
 - Target CPA (if known)
 - Total available daily budget
 - Risk tolerance (conservative, moderate, aggressive)
+
+Lost Impression Share is the share of searches where your ad could have shown but did not. "Budget" means the budget ran out. "Rank" means the ad ranked too low. If the platform does not report it (Meta does not), use the fallback in Step 2 and say it is an assumption.
 
 ---
 
@@ -103,14 +107,14 @@ On Meta, with no lost share figure: use 20% of the current budget as the startin
 
 ```
 New budget = Current budget x (Current ROAS / Target ROAS)
-Floor: never reduce below 50% of the current budget in one move
+Floor: never cut by more than the step limit in Step 4 in one move (50% on Google Ads, 20% on Meta)
 ```
 
 ### Tier 2: MAINTAIN (hold steady)
 - Everything else: for example ROAS near the target, under 14 days of data, or spend of $50 a day or less.
 - Say why each campaign sits here.
 
-If the target ROAS or CPA is not given, write `MISSING: target ROAS`, use 3.0x as a placeholder only, and say so. Never present it as the user's real target.
+If the target ROAS or CPA is not given, write `MISSING: target ROAS`, use 3.0x as a placeholder only, and say so. Never present it as the user's real target. Print `TARGET ROAS 3.0x (placeholder, MISSING)` at the top of the classification table so the tiers are not read as built on the user's real target.
 
 ---
 
@@ -127,7 +131,7 @@ Risk: LOW
 ```
 
 ### Moderate (75% of max headroom) - DEFAULT
-On Meta, the 20% learning-phase rule in Step 4 wins over this default. Cap each step at 20% of the current budget and phase larger moves. The 50% limit is for Google Ads and for phasing only.
+On Meta, the 20% step limit in Step 4 wins over this default. Cap each step at 20% of the current budget and phase larger moves. The 50% step limit applies to Google Ads only.
 ```
 Budget increase: (headroom x 0.75)
 Risk: MEDIUM, monitor 72 hours
@@ -145,16 +149,19 @@ ROAS decay assumption: marginal ROAS does not stay constant as spend rises. As a
 
 ## STEP 4: Safety Rails
 
-### Maximum Single Adjustment: +/-50%
-Split larger moves into phases with 7-day review between.
+### Maximum Single Adjustment: one rule per platform
+- Google Ads: no more than +/-50% in one step.
+- Meta: no more than +/-20% in one step.
+Split larger moves into phases with a 7-day review between.
 
-Example: $100/day → $300/day
-- Phase 1: $100 → $150 (7 days)
-- Phase 2: $150 → $225 (7 days)
-- Phase 3: $225 → $300
+Example on Google Ads, with [CURRENT BUDGET] and [TARGET BUDGET] from the user's data:
+- Phase 1: [CURRENT BUDGET] up by 50% (7 days)
+- Phase 2: up by another 50% of the new budget (7 days)
+- Phase 3: continue in steps of at most 50% until [TARGET BUDGET]
+On Meta use the same phases with steps of at most 20%.
 
 ### Learning Phase Protection
-- Any change above 20% may reset Meta's learning phase. Prefer steps of 20% or less. The 50% cap above is a hard limit, not a target.
+- Any change above 20% may reset Meta's learning phase, so 20% is the hard step limit on Meta. On Google Ads the 50% step limit is a ceiling, not a target.
 - After increase: no other edits for 72 hours
 - If ROAS drops >30% within 48 hours: revert
 
@@ -178,9 +185,9 @@ Allocation priority:
 
 Net impact:
 ```
-Current: $X/day → $Y/day (Z.Zx ROAS)
-Proposed: $A/day → $B/day (C.Cx ROAS)
-Monthly: +$F/month
+Current: [X]/day → [Y]/day ([Z.Z]x ROAS)
+Proposed: [A]/day → [B]/day ([C.C]x ROAS)
+Monthly: [change]/month, in the user's currency
 ```
 
 ---
@@ -194,17 +201,18 @@ Include:
 4. Net impact summary
 5. Implementation timeline (Day 1, 2-3, 4-7, 8, 15)
 6. Monitoring checklist
+7. A closing line: to move budget across channels, bring the classification table and the chosen plan to the [Marketing budget allocation planner](https://useaiblocks.com/skills/next-dollar-budget-allocator).
 
 ---
 
 ## When not to use
 - You have no campaign-level spend and results data. Pull a report from your ad platform first.
-- You run ads outside Meta or Google and have not checked that platform's learning rules.
+- You run ads outside Meta or Google and have not checked that platform's learning rules. Use that platform's own budget tool.
 - Your campaigns all miss the target and none qualify to scale. Get a creative review first.
 
 ## Rules
 
-1. Never >50% budget change in one move. Phase it.
+1. Never change a budget by more than 50% in one move on Google Ads, or 20% on Meta. Phase it.
 2. 72-hour no-touch rule after changes.
 3. Concentration risk > individual campaign performance.
 4. ROAS decay at scale is real. 10-20% decay in aggressive projections.

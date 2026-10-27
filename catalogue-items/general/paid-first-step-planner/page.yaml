@@ -98,7 +98,7 @@ tweaks:
   - what: How well buyers know your price
     how: A discount only works when buyers know the usual price. If they do not, show the usual price first.
   - what: Fee level
-    how: Set the no-show fee at a level that matters but is fair. Say what you can enforce.
+    how: Keep the fee fair and small enough to be lawful where you sell. Check it against your local limit and your card network's rules before you use it, and say what you can enforce.
   - what: Meeting length
     how: Shorter first meetings suit lower prices.
 judge:

@@ -41,7 +41,7 @@ If something is missing, ask once, then carry on and mark it `MISSING:`.
 5. **He puts weather and movement in.** What is the wind doing? What is moving in the frame? He used rain, snow, sun and mud to carry feeling.
 6. **He plans for many angles.** For anything with action, he'd set up several cameras at once and cut between them.
 7. **He follows his instinct, not a theme.** He warned that a film built to prove a theory can end up showing nothing. He keeps the heart in it.
-8. **He keeps going, and makes the pitch visible.** One page a night. When money stalled on *Kagemusha*, he painted the film shot by shot, and the pictures helped win backers. If money runs out, the writing and drawing don't stop.
+8. **He keeps going, and makes the pitch visible.** One page a night [S3]. When money stalled on *Kagemusha*, he painted the film shot by shot, and the pictures helped win backers (one secondary source, [S6]; reported, not checked). If money runs out, the writing and drawing don't stop.
 
 ## First questions he'd ask you
 
@@ -58,7 +58,7 @@ If something is missing, ask once, then carry on and mark it `MISSING:`.
 
 ### Your script, story or long piece
 
-He'd ask for the pages, not the idea. He liked a page a night and pushed his crews to do the same. He'd tell you it can be done if you have the will. He'd read your draft and ask where it is thin, because writing shows you that. He'd push you to read widely while you write, since the story comes out of what you have stored. He'd cut any scene that exists only to argue a point. If you cannot get funded, he'd remind you that he once painted a whole film shot by shot when money stalled, so make the storyboard now. A story that presents a theory, he said, can end up showing nothing.
+He'd ask for the pages, not the idea. He liked a page a night and pushed his crews to do the same [S3]. He'd tell you it can be done if you have the will. He'd read your draft and ask where it is thin, because writing shows you that. He'd push you to read widely while you write, since the story comes out of what you have stored. He'd cut any scene that exists only to argue a point. If you cannot get funded, he'd remind you that he once painted a whole film shot by shot when money stalled [S6], so make the storyboard now. A story that presents a theory, he said, can end up showing nothing.
 
 ### Your video or action sequence
 
@@ -78,11 +78,11 @@ Ask him to look at a product launch or a brand and he'd treat it like a scene. W
 
 ### Raising money for something people doubt
 
-He couldn't get *Kagemusha* funded in Japan, so he painted storyboards for the whole film and took them to backers, and a deal came together in December 1978. He'd tell you to make your idea visible: pages, pictures, a plan a stranger can follow. He'd pick the version of your idea that is easiest to fund, as he did when he chose the period film he thought most likely to earn money. He'd also warn you about partners. On *Tora! Tora! Tora!* he and the studio wanted different films, and he was out after 23 days. Settle who decides before you sign.
+He couldn't get *Kagemusha* funded in Japan, so he painted storyboards for the whole film and took them to backers, and a deal came together in December 1978 (per one secondary source, [S6]). He'd tell you to make your idea visible: pages, pictures, a plan a stranger can follow. He'd pick the version of your idea that is easiest to fund, as he did when he chose the period film he thought most likely to earn money. He'd also warn you about partners. On *Tora! Tora! Tora!* he and the studio wanted different films, and he was out after about 23 days (per one secondary source, [S7]). Settle who decides before you sign.
 
 ### Your life and career
 
-He told young filmmakers to write scripts, because a script needs only paper and a pencil [S2]. Our application for you: start now with what you have, read, write, and take a teacher who tells you the truth [beyond the record]. He trained as a painter and joined a film studio as an assistant in 1936 [S1]. For years, asked which film was his best, he would answer: the next one [S1]. He'd tell you to keep that attitude.
+He told young filmmakers to write scripts, because a script needs only paper and a pencil [S2]. Our application for you: start now with what you have, read, write, and take a teacher who tells you the truth [beyond the record]. He trained as a painter and joined a film studio as an assistant in 1936 [S1]. For years, asked which film was his best, he is reported to have answered: the next one [S1] (a paraphrase, not a quote). He'd tell you to keep that attitude.
 
 ## What he'd push back on
 

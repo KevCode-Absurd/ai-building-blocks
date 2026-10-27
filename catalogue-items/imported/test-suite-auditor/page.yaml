@@ -20,7 +20,7 @@ when:
   - You let AI write tests and need to check how useful they are.
 not_for:
   - Your project is not written in Python or does not use pytest. Use the test tools for your own language, or ask a developer.
-  - You only want to check one code change. Use the agentic-verify skill from the same author, which is not in this library yet. It runs every mutant of the changed lines.
+  - You only want to check one code change. Use the agentic-verify skill from the same author, which is not in this library yet. It runs every mutant of the changed lines. Until then, ask your AI to review that one change by hand.
   - You want your tests fixed or deleted for you. This audit only reports, so ask your AI for a specific change after you read the report.
 you_give:
   - Your Python project
@@ -33,10 +33,11 @@ you_get:
   - A list of slow tests
   - Tests that add no detection
 how_to_use:
-  - Check that your project uses Python 3.12 or newer and pytest. Add the pytest-cov add-on first.
-  - Review the runner before you first use it. It is fetched from GitHub at tag v0.3.0, commit 07608b3, and it runs code on your machine.
+  - "Install first: Python 3.12 or newer, pytest and pytest-cov must already be in your project (pip install pytest pytest-cov). Add pytest-randomly too if you want order checks."
+  - "Risk: the runner is downloaded from GitHub with uvx and runs code on your computer, with access to your project files. Read it first, and run it only in a project you trust. It is fetched at tag v0.3.0, commit 07608b3. Check for a newer tag before you rely on it, and re-read the code if you change the tag."
+  - Before you run it, make sure your project has a clean git state or a backup. The runner works in a copy, but it writes a .test-suite-audit/ folder in your project. Add that folder to .gitignore.
   - Open your AI in a tool that can run code and read your project files. Paste this skill and say quick or deep.
-  - Quick takes about 5 minutes. Deep takes 30 minutes by default and runs the mutation checks. Say how long you can spare.
+  - "Quick takes about 5 minutes. Deep takes 30 minutes by default and runs the mutation checks. Say how long you can spare. These are budgets, not promises. Bigger projects need more: in the author's tests, two projects of about 3,600 and 5,000 lines needed more than 30 minutes."
   - Read report.md first. A surviving mutant is a gap to look at, not proof of a bug.
   - If the deep audit lists tests to remove, ask for the removal check before you delete anything.
   - Next, replay one surviving mutant with the replay command in the report. Then ask your AI to draft a test that catches it, and add that test yourself if it looks right.

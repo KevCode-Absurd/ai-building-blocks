@@ -100,25 +100,16 @@ How this persona evaluates opportunities:
 
 ### 6. Transition Readiness
 
-Assess how likely the persona is to successfully transition based on their current company context. This is especially important when the hiring company differs significantly in size or stage from typical source companies.
+Describe what the role itself needs in pace, ambiguity and support, so the hiring team knows what to ask. Describe the role only. Do not rate people, or types of people, by company size, tenure, past employers or career path, and do not give any "friction" rating. Those things can stand in for age, national origin or other protected traits. Do not use this section for screening.
 
-**Transition friction levels:**
-- **Startup to startup** (low friction): Candidate already understands ambiguity, lean resources, wearing multiple hats. Focus screening on role fit, not environment fit.
-- **Scaleup to startup** (low-medium friction): Candidate has seen growth but may expect more structure. Screen for tolerance of early-stage chaos.
-- **Enterprise to startup** (high friction): Large culture gap, comp gap, and risk tolerance gap. Only viable when strong push factors exist (layoffs, blocked promotion, title upgrade) or the candidate has prior startup experience.
+**Questions to ask about transition readiness:**
+- What did you like about working in a small, fast-moving team? (Ask it. Do not guess from their history.)
+- Which parts of this role's pace and ambiguity appeal to you?
+- What would you need from us to do well in an early-stage setting?
 
-**Signals of transition readiness:**
-- Has worked at a sub-100 person company before (strongest signal)
-- Relocated internationally for work (high risk tolerance)
-- Left a bigger company for a smaller one previously (pattern, not accident)
+These are questions for a conversation. Never use company size, past relocation, tenure, career gaps or career pattern to judge a person. Judge candidates on what the role needs, and what they tell you.
 
-Use these only as questions to ask in conversation. Never use tenure, company size or career pattern to judge age or any other protected trait. Judge candidates on what the role needs.
-
-**Red flags for startup transitions:**
-- Risk-averse language the candidate uses themselves in screening: "guaranteed base," "established brand," "proven playbook"
-- Do not use length of time at a company, company size or career history as a red flag. These can stand in for age. Ask the candidate about the role instead.
-
-Include transition readiness assessment in the persona when the hiring company is significantly smaller or earlier-stage than the typical source companies.
+Include this section in the persona only as a list of what the role needs and questions to ask. Never as a rating of candidates.
 
 ## Persona Building Process
 
@@ -161,7 +152,7 @@ Do this part by hand, within each platform's terms of use. The AI cannot browse 
 
 ### Step 5: Build the Persona
 
-Combine all inputs into a narrative persona document:
+Describe the role's needs only. Do not use tenure, company size, career gaps or relocation as signals about a person. Combine all inputs into a narrative persona document:
 - Give the persona a name (e.g., "Senior SRE Sara") for team reference
 - Write in present tense, describing a specific person
 - Professional profile (career path, education patterns, company types)
@@ -186,6 +177,8 @@ Share the persona with the hiring manager and team:
 # Candidate Persona: [Persona Name]
 **Role:** [Target Role Title]
 **Created:** [Date]
+
+> **Everything below is an assumption.** Every habit, platform, community, event and motive in this persona is a guess built from the job description. Check each one with the hiring manager and with real profiles before you use it. Do not treat it as fact about a real market or a real person.
 
 ## Who They Are
 [2-3 paragraph narrative description painting a vivid picture of this person.

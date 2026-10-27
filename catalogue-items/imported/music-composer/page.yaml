@@ -30,8 +30,9 @@ you_get:
   - A composition plan you can edit and rerun
   - Setup steps in Python, JavaScript or the command line
 how_to_use:
+  - This is an imported ElevenLabs skill under the MIT licence. The code it runs is ElevenLabs' own, from github.com/elevenlabs/skills.
   - Get an ElevenLabs account and API key. Some features, such as streaming, need a paid plan.
-  - Open an AI that can run code, such as Claude Code, and add this skill. If no key is set, the setup step runs ElevenLabs' sign-in command, which signs you in and saves ELEVENLABS_API_KEY for the project. Do not paste your key into a chat.
+  - Open an AI that can run code, such as Claude Code, and add this skill. If no key is set, the setup step runs ElevenLabs' sign-in command through npx. Pick a version number from the package's page on npm and use it, instead of running the newest version blind. The command signs you in and saves ELEVENLABS_API_KEY in your project folder. When you finish, delete that saved key or revoke it on elevenlabs.io, and never commit it. Do not paste your key into a chat.
   - Describe the mood, genre, instruments and length. Add lyrics if you have them.
   - For more control, ask for a composition plan first. Edit the sections, then ask for the audio.
   - Listen to the MP3. Change the description or plan and run it again until it fits.

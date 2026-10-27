@@ -9,6 +9,8 @@ subhead: Say what a person wants to do in your app, and get a clear flow from fi
 explain: |
   Say what a person wants to do in your app, and get a clear flow from first tap to done, plus a navigation layout that fits it. Every step has a way in, a way out and a way back from errors.
 
+  Licence: the LICENSE-CONTENT file in this item says CC BY 4.0 for written content like this skill, and that is the licence shown for this copy. The author's own header (bitjaru, styleseed) says MIT. Both are permissive and both need credit, so keep the credit to the author if you share it.
+
   The skill applies simple rules. Show only what is needed at each step. Keep choices per screen low. Group items in sets of five to nine. Reach any key feature in three taps or fewer. It picks a pattern: hub and spoke for dashboards, a straight line for forms and checkout, or tabs for three to five main areas. It adds loading, empty and error states, and makes each screen answer one main question.
 when:
   - You are starting a new app and need to map its main screens.
@@ -35,7 +37,7 @@ how_to_use:
   - Add who the user is, what device they use and any steps that must happen.
   - If you have design notes or a component list, paste them in. If not, say so and your AI will use common patterns.
   - Read the flow diagram first. Check that each screen has a way in, a way out and a way back from errors.
-  - Ask for the page files only if your project uses the same parts. This step needs your AI to write code files.
+  - Ask for the page files only if your project uses the same parts. This step needs your AI to write code files. If you have no design system or component list, the skill uses common patterns and skips this step.
 output_shape: |
   Flow diagram: a text diagram from the first screen to the exit, with a way back from each error
   Navigation pattern: hub and spoke, straight line or tabs, and why it fits

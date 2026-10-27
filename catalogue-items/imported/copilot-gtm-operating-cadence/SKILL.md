@@ -91,8 +91,9 @@ Anti-pattern: No clear decisions coming out.
 
 **Scaling Adjustments:**
 
-- **<30 people**: Levels 2-3 only. Skip daily standups (you see everything). Skip bi-weekly leadership (you ARE leadership).
-- **30-100 people**: Add all 5 levels. Monthly review catches what you no longer see daily.
+- **Under 20 people**: Skip this skill. A short weekly chat is enough.
+- **20-30 people**: Levels 2-3 only. Skip daily standups (you see everything). Skip bi-weekly leadership (you ARE leadership).
+- **Over 30 and up to 100 people**: Use all 5 levels. Monthly review catches what you no longer see daily.
 - **100-300 people**: Add skip-level reviews. You're 2+ layers from execution.
 - **300+ people**: Add function-specific sub-cadences. CEO should be in *fewer* meetings than at 50 — not more.
 
@@ -420,4 +421,4 @@ Daily: Slack wins/customer-voice → Weekly: CEO email + function updates → Mo
 
 ---
 
-*The author's own account (not checked here): operating cadence design across companies scaling from 20 to 1,000+ employees, including the five-level meeting architecture that survived 3x headcount growth, the weekly reporting format that caught pipeline problems 3 weeks earlier than monthly reviews, and the CEO weekly update format refined across multiple companies. Not theory — patterns from building operating systems through hypergrowth and teaching them to the next team. These are one author's experience. The results quoted here are not measured or sourced.*
+*The author's own account (not checked here): operating cadence design across companies scaling from 20 to 1,000+ employees, including a five-level meeting architecture, a weekly reporting format and a CEO weekly update format. The author reports good results from them, but those results are the author's claim, are not checked, and must not be quoted as findings. Not theory — patterns from building operating systems through hypergrowth and teaching them to the next team. These are one author's experience. The results quoted here are not measured or sourced.*

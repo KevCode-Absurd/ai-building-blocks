@@ -19,6 +19,7 @@ not_for:
   - "You buy from one supplier with no price breaks or limits: just order the quantity you need, or ask the supplier for a better price."
   - "You have not chosen suppliers yet: use a supplier selection step first, then come back to split the order."
   - "You want to see where your money goes: use a spend review of your past purchases instead."
+  - "You want to place an order from the result: it is a planning estimate only. Get each supplier's confirmed price first."
 you_give:
   - Supplier quotes and price breaks
   - Supplier capacity limits
@@ -35,8 +36,9 @@ how_to_use:
   - Paste the skill text, or upload the skill file.
   - "Add your supplier quotes, price breaks, limits and demand. A simple layout works: one row per supplier, with columns for unit price, price breaks, minimum order, maximum capacity and lead time, and the demand figure on its own line. Say if you have holding and ordering costs."
   - Answer any questions your AI asks. If a quote, limit or demand figure is missing, it should ask you for it before it calculates. Do not let it guess.
+  - First test it on a small case you can work by hand, with two suppliers. Stop if any total does not match the quotes. The portfolio and joint ordering models are approximations. They assume supplier costs are independent and ignore some price breaks.
   - Check every total against your original quotes, and that each supplier stays within its limit and the total meets your demand. The code is copied as it is and has not been tested on your numbers.
-  - Before you place any order, compare the result with your original quotes and each supplier's limits. This is a plan to check, not an order.
+  - Before you place any order, compare the result with your original quotes and each supplier's limits. This is a plan to check, not an order. Do not place orders from it until each supplier has confirmed its price.
   - If you run the code yourself, install numpy, pandas, pulp, scipy and matplotlib first. Then run the Supplier scorer or the Spend savings finder to act on the result.
 output_sample:
   input:

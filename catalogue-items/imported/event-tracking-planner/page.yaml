@@ -11,7 +11,7 @@ explain: |
 
   It builds from the bottom up, because bad events give bad funnels. Events are named object then action in past tense, like checkout_completed. States such as active status become properties, not events. It aims for 30 to 50 events, and warns when you go over 100. It also covers how to tie anonymous visits to a signed-in user, how to version your schema, and how to pick a North Star metric. The result is a spec your developers can build from.
 when:
-  - You are launching a product and need to set up analytics properly.
+  - You are launching a product and need to set up analytics properly. Before you start, have a one-line goal and the three questions your data must answer.
   - Your current data is messy and nobody trusts the dashboards.
   - You are adding a feature and want to track it without breaking old events.
   - You need to define signup to paid funnels and retention groups.
@@ -31,13 +31,14 @@ you_get:
   - User identity plan
   - North Star metric choice
 how_to_use:
+  - Before anything else, write down your business goal in one line and the three questions your data must answer. If you have not decided these yet, decide them by hand first.
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed. Your own analytics tool, such as Mixpanel, Amplitude or PostHog, may cost money.
   - Describe your product in a few lines and list the main steps a user takes.
+  - First, ask your AI to produce the event list as a table you can paste into a spreadsheet, with columns for name, trigger, properties, owner and version.
   - Say which analytics tool you use and what your business goal is. Paste your current event list if you have one.
   - Read the event list first. Cut any event you will not use, and check that names follow the rules.
   - Check the funnels and the North Star metric against your goal. Ask your AI to fix anything that does not fit.
   - Hand the final plan to your developers to build.
-  - If you have not yet decided what to measure and why, decide it by hand first. Write down your business goal and the three questions you want your data to answer. Your AI will ask for these if you leave them out.
   - After your developers build the events, check the first dashboard against your North Star metric after two weeks. Fix any event that is missing or named wrong, and review the plan again every quarter.
 output_sample:
   input:

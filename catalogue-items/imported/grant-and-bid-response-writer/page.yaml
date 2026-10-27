@@ -32,6 +32,7 @@ you_get:
   - A draft response for each bid
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions from this page's skill file. Use an AI that can browse web pages if you want it to search for you.
+  - Fetch only public pages. Check each portal's terms and rate limits first, and never let your AI log in to a portal for you. If a site forbids automated reading, paste the listing in yourself.
   - Tell it who your organisation is. Paste or upload your past submissions and project results so it can build your profile.
   - The built-in sources are US portals such as SAM.gov and Grants.gov. Outside the US, name the portals or funder lists you use.
   - Paste today's list of solicitations, or give the links to the portals you use. It cannot read a feed on its own without web access.
@@ -48,6 +49,7 @@ output_sample:
   prerequisites:
     - An AI that can read web pages, if you want it to search portals for you
     - Your past submissions as files or pasted text, so drafts use your real work
+    - Optional connectors the skill names: Google Drive or Microsoft 365 for past files, DocuSign for signatures, Trello for a pipeline board, Calendar for deadlines, and Zapier for tools that are not linked. Each needs its own account, and some of them are paid. None is required
   output:
     - name: Organisation profile
       contains: Your entity type, registrations, codes, certifications, service area, budget, capacity and past performance, saved once for every later step.
@@ -61,4 +63,4 @@ output_sample:
       contains: A first draft built from your past work, with clearly marked gaps where a number or reference is missing.
     - name: Deadline and obligation list
       contains: Question, submission, award and reporting dates, plus a pipeline record of pursuing, submitted, won, lost or no-bid.
-next: [contract-and-proposal-drafter]
+next: [contract-and-proposal-drafter, contract-reviewer, cash-forecast-builder]

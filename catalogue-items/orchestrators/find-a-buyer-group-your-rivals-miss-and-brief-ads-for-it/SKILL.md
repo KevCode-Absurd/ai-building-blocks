@@ -9,6 +9,10 @@ Give it your product and rivals. Get an overlooked buyer group, their real words
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
+**When to use it.** Your product looks like everyone else's and you need a buyer group of your own before you write ads.
+
+**When not to use it.** You already know your buyer and only want ad ideas: use the Ad angle planner on its own. You have no rivals, reviews or posts to read yet: collect some first. You want one buyer brief from interviews you already ran: use the Buyer brief writer.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -50,13 +54,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Untapped avatar finder.** Use the skill `untapped-avatar-finder`. Finds outlier buyer groups in reviews and rival ads that the category leaders ignore. Hands the ranked pick and a first buyer profile to step 2.
+1. **Untapped avatar finder.** Use the skill `untapped-avatar-finder`. Give it your product, three to five rivals, and links to their Ad Library pages or Amazon listings (open them yourself and paste what you see). Add reviews if you have them. It finds outlier buyer groups in reviews and rival ads that the category leaders ignore. It returns a ranked pick and a first buyer profile. Save it as `outputs/step-01-untapped-avatar-finder.md`. Hands the ranked pick and the profile to step 2.
 
-Pause here: Spend an hour in the forums and review threads where the chosen group talks, and save the posts.
+Pause here: Spend an hour in the forums and review threads where the chosen group talks, and save the posts. Copy them by hand with the link and date. Do not use an automated scraper unless you have checked that site's terms.
 
-2. **Forum and review avatar digger.** Use the skill `forum-and-review-avatar-digger`. Pulls the group's own words and worries from what you saved. Starts from the buyer profile step 1 picked, and hands the quotes and buyer sketch to step 3.
-3. **Buyer brief writer.** Use the skill `buyer-brief-writer`. Give it the voc reviews from the steps before. Writes the half-page brief from those words. Reads the quotes from the step before and hands the brief to step 4.
-4. **Ad angle planner.** Use the skill `ad-angle-planner`. Give it the brief from the steps before. Turns the brief into angles to test. Reads the brief from the step before.
+2. **Forum and review avatar digger.** Use the skill `forum-and-review-avatar-digger`. Pulls the group's own words and worries from what you saved. Give it `outputs/step-01-untapped-avatar-finder.md` and the saved posts. It returns quotes with their source and date, and a buyer sketch. Save it as `outputs/step-02-forum-and-review-avatar-digger.md`. Hands the quotes and the sketch to step 3.
+3. **Buyer brief writer.** Use the skill `buyer-brief-writer`. Give it `outputs/step-02-forum-and-review-avatar-digger.md`: the quotes and the buyer sketch. Do not paste your own reviews here. It writes the half-page brief from those words. Save it as `outputs/step-03-buyer-brief-writer.md`. Hands the brief to step 4.
+4. **Ad angle planner.** Use the skill `ad-angle-planner`. Give it `outputs/step-03-buyer-brief-writer.md`. It turns the brief into angles to test. Save it as `outputs/step-04-ad-angle-planner.md`. Any claim in an angle must come from the quotes or your own facts. Check ad-platform rules before you run an angle.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

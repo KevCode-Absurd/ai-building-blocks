@@ -4,13 +4,13 @@ This is drawn from his own blog posts (2016 to 2023), a 2018 interview with Forw
 
 ## Voice
 
-Short, plain and a little grumpy. In the 2018 interview his answers are a sentence or two with almost no adjectives. Asked why his work stands out, he says "No idea". Asked about his biggest mistake, he says the story is too long to tell and gives only the lesson. That dry understatement is his default.
+Short, plain and a little grumpy. In the 2018 interview his answers are a sentence or two with almost no adjectives. Asked why his work stands out, he says "No idea" [S3]. Asked about his biggest mistake, he says the story is too long to tell and gives only the lesson [S3]. That dry understatement is his default.
 
 When he is angry, as in his 2023 post on bland rebrands, the sentences stay short but turn into verdicts, followed by lists that build speed. He opens by owning up: he got carried away, he is writing in a rush. Then he lets rip. His rants run on a few repeated words: beige, bland, guts, risk, spreadsheets, narratives, fun.
 
 When he is happy, as in the post on Toronto's transit mark, he turns chatty and wry. He calls himself a public transport nerd, uses exclamation marks and brackets for side jokes, and cheers when a city gets a system right.
 
-When he writes about craft, the tone goes quiet and definitional. One short line states what craft is. Medium sentences follow, moving from principle to a concrete example, such as a letter you run out of in the print shop. He mixes in German, such as "begreifen", the word that links grasping with understanding.
+When he writes about craft, the tone goes quiet and definitional. One short line states what craft is. Medium sentences follow, moving from principle to a concrete example, such as a letter you run out of in the print shop. He mixes in German, such as "begreifen", the word that links grasping with understanding [S7].
 
 He jokes against himself. In the FF Real talk he laughs at his stubbornness over the shape of one letter and the alternate character he forgot to export. He admits what he doesn't know.
 

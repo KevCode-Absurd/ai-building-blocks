@@ -31,6 +31,7 @@ you_get:
   - Notes on keeping the product unchanged
   - Tips to fix a swap that looks fake
 how_to_use:
+  - "Free route, in order: first check your photo specs. Second, write the prompt using the three realism rules. Third, paste the prompt and your photo into ChatGPT or Gemini. Fourth, check the shadow, the edges and that the product is unchanged. The steps below give the detail."
   - Check your photo first. It should be a jpg, png or webp file, at least 400 by 400 pixels, between 20KB and 15MB.
   - Pick your scene. Choose one that fits the product, such as a floor for shoes or a counter for beauty items.
   - Paste the skill into Claude, ChatGPT or Gemini. Add your photo, the scene and the product details.
@@ -38,7 +39,7 @@ how_to_use:
   - The skill file also lists scripts, docs/ paths and dLazy commands. They are not included here, so follow the ChatGPT or Gemini route above.
   - Check the result for a shadow under the product, matching light, clean edges and an unchanged product.
   - If it looks fake, add one of the fix lines to the prompt and run it again.
-  - When you are happy, save the image under a clear name, such as shoes-desk-1.jpg, and reuse the same prompt for other products in the same category.
+  - When you are happy, save the image under a clear name, such as shoes-desk-1.jpg, and reuse the same prompt for other products in the same category. Next, use it on your listing or ad. If the shadow looks wrong, fix it with the fix lines above, or run a background-remover on the photo first.
 output_sample:
   input:
     - Your product photo on a white or plain background
@@ -60,4 +61,4 @@ output_sample:
     - name: Fix lines
       contains: Short sentences to add when the result looks like a sticker, has a white edge, or changes the product.
     - name: Scene images
-      contains: One or more JPEG images in square or tall size. You can ask for 2 to 4 variants per run.
+      contains: "On the free route you get one English image prompt, and a saved image file from your image model. The source skill uses 1024x1024 for square and 1024x1536 for tall scenes, and names files for the scene and variant, such as shoes-desk-1.jpg. You can ask for 2 to 4 variants. The source skill's own example picture is not included here, so the page cannot show a result."

@@ -8,6 +8,10 @@ explain: |-
   Use this when you need a timed product-only or surreal-comedy spot. Choose product-only hyper-motion or surreal actor-and-product comedy. These are modes of one short-spot method; neither requires a long spoken script.
 
   Get duration, real product reference, palette and permitted transformations. Product package geometry, label, logo and material remain fixed even when its surroundings become surreal.
+
+  What to gather first: your product name, spot length, label artwork or photos, palette, and whether a person appears. This skill only writes the prompt. To make the video you need your own account on a video tool such as Kling, Veo or Higgsfield. These are usually paid, so check the price first.
+
+  Beats are 1 to 2 seconds each. A 15 to 20 second spot gets up to ten. Shorter spots get fewer, so nothing runs too fast to read.
 when:
   - You need a timed product-only or surreal-comedy spot.
   - You have a product and a spot of 5 to 20 seconds in mind, and want a prompt to paste into a video tool.
@@ -52,8 +56,8 @@ how_it_works:
   - title: Read the brief
     text: Choose product-only hyper-motion or surreal actor-and-product comedy. These are modes of one short-spot method; neither requires a long spoken script.
   - title: Build the result
-    text: "For product-only default architecture use ten short beats: material-world macro, material cascade, floating elements, vortex, pack reveal, label/material detail, badge accent, hero arc, tactile payoff and final hero hold."
+    text: "For product-only use up to ten short beats, fewer for a short spot:material-world macro, material cascade, floating elements, vortex, pack reveal, label/material detail, badge accent, hero arc, tactile payoff and final hero hold."
   - title: Check and hand off
-    text: Keep the final label/front readable; exact text may require compositing approved artwork. Choose audio intentionally and avoid unsupported claims about model superiority, price or render resolution.
+    text: Keep the final label/front readable; exact text may require compositing approved artwork. Name the audio in each beat (music only, sound effects only, or no sound). Avoid unsupported claims about model superiority, price or render resolution.
 thinking: medium
 thinking_why: It compares supplied evidence and follows a specific method.

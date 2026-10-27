@@ -46,9 +46,11 @@ than not replying.
 
 ## Step 2: timing is a real factor here, unlike almost anywhere else
 
-Replies are ordered partly by when they arrived and how they did. A good reply
-an hour late is read by almost nobody. A good reply in the first few minutes
-sits where people are still looking.
+In the author's experience, replies seem to be ordered partly by when they
+arrived and how they did. X does not publish its exact rules, so this is a
+rule of thumb, not a fact. A good reply an hour late is likely to be read by
+almost nobody. A good reply in the first few minutes sits where people are
+still looking.
 
 So say plainly when a tweet is too old to be worth replying to for reach. It is
 still worth replying to for the person, which is a different reason and a
@@ -63,6 +65,8 @@ Read the tweet for one of these, and name which you found:
 - A case where your own experience went the other way
 - The specific example it stayed general about
 - The next step it stops short of
+
+Name the gap in one line, at this level of detail: "It assumes [A TEAM WITH A DEDICATED DESIGNER]." Fill the bracket from the real tweet, never from a guess.
 
 ## Step 4: write it as a tweet, not as a comment
 

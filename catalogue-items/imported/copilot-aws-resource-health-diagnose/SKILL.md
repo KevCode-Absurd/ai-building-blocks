@@ -99,7 +99,7 @@ aws logs start-query \
   --end-time $(date -u +%s) \
   --query-string 'filter @type = "REPORT" | filter @initDuration > 0 | stats count() as coldStarts by bin(1h)'
 
-# RDS Performance Insights (if enabled)
+# RDS Performance Insights (only if already enabled; it may cost extra, so do not turn it on without asking)
 aws pi get-resource-metrics \
   --service-type RDS --identifier db:<identifier> \
   --metric-queries '[{"Metric":"db.load.avg"}]' \

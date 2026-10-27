@@ -2,14 +2,14 @@ thinking: medium
 thinking_why: It repeats the same research for each call, then gathers it.
 new_slug: weekly-customer-call-planner
 name: Weekly customer call planner
-summary: Get one weekly customer call planner brief for every outside call in the next 7 days, with company and attendee notes. Needs Common Room.
+summary: Get one weekly customer call planner brief for every outside call in the next 7 days, with company and attendee notes. Needs a paid Common Room account.
 job: organise-work
 headline: Weekly customer call planner
 subhead: One brief that prepares you for every outside call in the next seven days. Instead of researching each company the night before, you open a single document and know who you are meeting and what has changed.
 explain: |
   One brief that prepares you for every outside call in the next seven days. Instead of researching each company the night before, you open a single document and know who you are meeting and what has changed.
 
-  The skill lists your external meetings from your calendar, or from names you type in, and asks you to confirm the list. It then researches each account and each attendee using your Common Room data, plus a quick check for company news from the past week and recent posts by senior attendees. Each meeting gets a short profile with talking points. It needs a Common Room account.
+  The skill lists your external meetings from your calendar, or from names you type in, and asks you to confirm the list. It then researches each account and each attendee using your Common Room data, plus a quick check for company news from the past week and recent posts by senior attendees. Each meeting gets a short profile with talking points. Common Room is a paid tool: you need an account and a plan, which you sign up for yourself. Without one, use a simple web search for each company, or type the facts in yourself.
 when:
   - Your Monday starts with five customer calls and no prep time.
   - You want one document to read instead of ten tabs.
@@ -31,10 +31,11 @@ you_get:
   - Recent news for each company
   - Suggested talking points
 how_to_use:
-  - Open your AI and paste in this skill. Use a setup that can connect to Common Room and your calendar.
+  - Open your AI and paste in this skill. Use a setup that can connect to Common Room (a paid account) and your calendar. The brief is only as good as your calendar and Common Room data. If your calendar tool is not available, type your calls in instead.
   - Ask for your weekly prep brief. Add a date range if you want something other than the next 7 days.
   - If your calendar is not connected, type each outside call with the company, time and attendee names.
   - Check the list of calls your AI shows you. Remove cancelled calls and add any it missed.
+  - Privacy: the AI looks for recent public business posts and news about attendees in their professional role only. It skips personal accounts.
   - Read the brief. Meetings with thin data get a short note, so check those accounts yourself before the call.
   - Share the brief with your reps or keep it as your Monday reading.
   - After each call, update your Common Room notes, or turn the call into a written summary with meeting-notes-maker.

@@ -78,7 +78,7 @@ How he applied it: his institute publishes unrealised propositions that look bey
 - Redraw a familiar mark with care and keep what people already know [S17].
 - Test big ideas as unrealised propositions, with costs and legal limits stated [S12].
 - Start each project by sharing the vision with the whole team [S5].
-- Commit so fully that you can't imagine dying before it's done [S3].
+- Commit fully to the vision once the team shares it [S5].
 
 ## Real decisions
 

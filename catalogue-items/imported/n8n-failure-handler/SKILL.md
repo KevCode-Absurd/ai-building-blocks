@@ -7,7 +7,7 @@ source_repo: czlonkowski/n8n-skills
 source_type: community
 date_added: "2026-07-21"
 author: Romuald Czlonkowski
-license: MIT
+license: CC-BY-4.0 # AI Blocks: the licence for this copy is CC BY 4.0 (see LICENSE-CONTENT). The author's own repo header said MIT.
 license_source: https://github.com/czlonkowski/n8n-skills/blob/main/LICENSE
 ---
 

@@ -72,7 +72,7 @@ Maps the evidence-based connections between a specific wellbeing intervention an
 
 ## Evidence Foundation
 
-Fredrickson (2001) proposed the broaden-and-build theory of positive emotions: positive emotions (joy, interest, contentment, pride) broaden cognitive repertoires — expanding attention, creativity, and problem-solving capacity — while negative emotions narrow them (fight-or-flight reduces cognitive flexibility). Over time, broadened cognition builds lasting intellectual, social, and psychological resources. This provides the core mechanism: wellbeing → positive emotions → broadened cognition → better learning. Durlak et al. (2011) conducted a meta-analysis of 213 school-based social and emotional learning (SEL) programmes involving 270,000+ students. They found an average 11-percentile gain in academic achievement for students in SEL programmes compared to controls — and this effect held across ages, demographics, and programme types. The key finding is that SEL doesn't compete with academic time — it enhances it. Hattie (2009) identified student background factors (anxiety, stress, family disruption) as significant negative influences on achievement and teacher-student relationships, classroom climate, and student self-concept as significant positive influences. Roffey (2012) demonstrated bidirectionality: student wellbeing affects learning, and teacher wellbeing affects teaching quality — the two are connected. Seligman et al. (2009) piloted Positive Education at Geelong Grammar School, showing that explicit wellbeing teaching alongside academic teaching improved both wellbeing and academic outcomes.
+Fredrickson (2001) proposed the broaden-and-build theory of positive emotions: positive emotions (joy, interest, contentment, pride) broaden cognitive repertoires — expanding attention, creativity, and problem-solving capacity — while negative emotions narrow them (fight-or-flight reduces cognitive flexibility). Over time, broadened cognition builds lasting intellectual, social, and psychological resources. This provides the core mechanism: wellbeing → positive emotions → broadened cognition → better learning. Durlak et al. (2011) conducted a meta-analysis of school-based social and emotional learning (SEL) programmes. The original author reports an average gain in academic achievement for students in SEL programmes compared to controls (the original gave programme counts, student numbers and a percentile gain; they are unverified here, so check the paper before you quote any figure). The key finding is that SEL doesn't compete with academic time — it enhances it. Hattie (2009) identified student background factors (anxiety, stress, family disruption) as significant negative influences on achievement and teacher-student relationships, classroom climate, and student self-concept as significant positive influences. Roffey (2012) demonstrated bidirectionality: student wellbeing affects learning, and teacher wellbeing affects teaching quality — the two are connected. Seligman et al. (2009) piloted Positive Education at Geelong Grammar School, showing that explicit wellbeing teaching alongside academic teaching improved both wellbeing and academic outcomes.
 
 ## Input Schema
 
@@ -116,7 +116,7 @@ Apply these evidence-based principles:
 2. **Distinguish proximal and distal outcomes:**
    - Proximal (months): changes in student emotions, behaviour, engagement, attendance.
    - Distal (terms/years): changes in academic outcomes, exam results, progress measures.
-   - School leaders often expect distal outcomes too quickly. Set realistic timeframes.
+   - School leaders often expect distal outcomes too quickly. Set realistic timeframes, and say they are estimates to test against the school's own baseline data, not promises.
 
 3. **Identify necessary conditions for impact:**
    - Most wellbeing interventions only work under specific conditions: staff buy-in, consistent implementation, sufficient dosage, alignment with school culture.
@@ -191,7 +191,7 @@ Return your output in this exact format:
 Restorative practice replaces punitive responses to behaviour
     ↓
 Students experience: being heard, understanding impact, repairing harm
-(Mechanism: relatedness need met; emotional regulation practised. The original example named Deci & Ryan and Brackett here: unverified, name a source you have checked)
+(Mechanism: relatedness need met; emotional regulation practised. [SOURCE NEEDED: name one you have checked])
     ↓
 Short-term: fewer repeat behaviour incidents (harm is repaired, not just punished)
 Fewer exclusions → more time in classroom → more learning time
@@ -203,16 +203,16 @@ Students feel safer and more connected → reduced anxiety → broadened cogniti
 (Mechanism: Fredrickson broaden-and-build — positive emotions expand cognitive capacity)
     ↓
 Long-term: improved engagement, attendance, and academic outcomes
-(Evidence: Durlak et al., 2011 — SEL approaches produce average 11-percentile academic gain)
+(Evidence: Durlak et al., 2011 — SEL approaches produce an average academic gain of [SIZE, FROM THE PAPER]: check before you quote)
 ```
 
 ### Mechanism Analysis
 
-**Mechanism 1: Reduced exclusion time increases learning time.** This is the most direct pathway. A student who is excluded for 10 days loses 10 days of teaching. If restorative practice reduces exclusions, students spend more time in classrooms being taught. This is not a wellbeing argument — it is a basic instructional time argument. Some research suggests that exclusion does not improve behaviour and can worsen it by damaging the student's relationship with school (unverified here: name a source before you use this). It also removes the student from the classroom, where teaching happens.
+**Mechanism 1: Reduced exclusion time increases learning time.** This is the most direct pathway. A student who is excluded for 10 days loses 10 days of teaching. If restorative practice reduces exclusions, students spend more time in classrooms being taught. This is not a wellbeing argument — it is a basic instructional time argument. Exclusion may not improve behaviour and may worsen it by damaging the student's relationship with school [SOURCE NEEDED: do not use this line without a source you have checked]. It also removes the student from the classroom, where teaching happens.
 
-**Mechanism 2: Relationship quality predicts learning.** Hattie (2009) is cited by the original author as finding that teacher-student relationships have a large effect on achievement (the original example gave an effect size of 0.72, unverified here: check the book before you quote it). Restorative practice, by replacing punishment with dialogue, builds rather than damages these relationships. A student who has been listened to in a restorative conversation is more likely to engage in that teacher's lessons than a student who has been given a detention and feels resentful.
+**Mechanism 2: Relationship quality predicts learning.** Hattie (2009) is cited by the original author as finding that teacher-student relationships have a large effect on achievement (the original example gave an effect size; it is not repeated here because it is unverified: check the book before you quote any figure). Restorative practice, by replacing punishment with dialogue, builds rather than damages these relationships. A student who has been listened to in a restorative conversation is more likely to engage in that teacher's lessons than a student who has been given a detention and feels resentful.
 
-**Mechanism 3: Emotional safety enables cognitive function.** Students with high ACE scores may have elevated stress responses (the original example cited van der Kolk, 2014, unverified here: check the source before you use it). A punitive environment activates threat responses, narrowing cognitive capacity to survival-mode thinking. A restorative environment, where harm is addressed through dialogue rather than punishment, reduces chronic stress and allows cognitive resources to be directed toward learning rather than self-protection (Fredrickson, 2001).
+**Mechanism 3: Emotional safety enables cognitive function.** Students with high ACE scores may have elevated stress responses [SOURCE NEEDED: name one you have checked]. A punitive environment activates threat responses, narrowing cognitive capacity to survival-mode thinking. A restorative environment, where harm is addressed through dialogue rather than punishment, reduces chronic stress and allows cognitive resources to be directed toward learning rather than self-protection (Fredrickson, 2001).
 
 **Mechanism 4: Restorative skills are transferable life skills.** Restorative practice teaches students to identify emotions, understand impact, take responsibility, and repair harm. These are social-emotional skills that support academic collaboration, conflict resolution, and self-regulation — all of which improve classroom learning (Durlak et al., 2011).
 
@@ -224,7 +224,7 @@ Long-term: improved engagement, attendance, and academic outcomes
 - Some improvement in student-reported relationship quality (measurable via student survey).
 
 **Medium-term (one term to one year):**
-- Reduction in fixed-term exclusions (figures like 20–50% have been quoted for well-run programmes, but this is unverified here: give a size only if the user supplies a source).
+- Reduction in fixed-term exclusions (some sources quote a size for well-run programmes; give a size, written as [SIZE, FROM YOUR SOURCE], only if the user supplies a checked source).
 - Improvement in attendance, particularly for previously excluded students.
 - Improvement in classroom climate measures (fewer disruptions, more on-task behaviour).
 - Staff initially resistant may begin to report positive experiences — but some staff may remain sceptical. This is normal.
@@ -238,7 +238,7 @@ Long-term: improved engagement, attendance, and academic outcomes
 
 1. **Whole-school implementation.** Restorative practice only works when it is the consistent approach across the school, not an add-on used by some staff. If students experience restorative responses from one teacher and punitive responses from another, the approach is undermined. This requires full staff training (minimum 2 days initial, with ongoing practice sessions).
 
-2. **Senior leadership commitment.** The leadership team must model restorative approaches and must not revert to punitive measures when under pressure (e.g., when a governor asks "Why haven't you excluded that student?"). Leadership consistency is widely seen as important for implementation (unverified here: name a source before you claim more).
+2. **Senior leadership commitment.** The leadership team must model restorative approaches and must not revert to punitive measures when under pressure (e.g., when a governor asks "Why haven't you excluded that student?"). Leadership consistency matters for implementation [SOURCE NEEDED].
 
 3. **Staff training and ongoing support.** Restorative conversations are a skill, not a disposition. Staff need training in facilitation, active listening, and managing their own emotional responses. Without training, "restorative practice" becomes "letting students off" — which is neither restorative nor effective.
 
@@ -250,9 +250,9 @@ Long-term: improved engagement, attendance, and academic outcomes
 
 "Our current behaviour system relies primarily on detentions and exclusions. The data shows this is not working: [OUR EXCLUSION RATE AND HOW IT COMPARES] and [OUR REPEAT INCIDENT TREND], from our own records. Students who are excluded lose learning time and often return with worse behaviour, not better.
 
-We are proposing to move to a whole-school restorative practice approach. This is not 'being soft on behaviour.' It is a structured approach where students are held accountable for their actions — but through dialogue that requires them to understand the impact of their behaviour and take steps to repair the harm, rather than sitting in a room for an hour (which the original example said does not change behaviour: unverified, name a source or remove it).
+We are proposing to move to a whole-school restorative practice approach. This is not 'being soft on behaviour.' It is a structured approach where students are held accountable for their actions — but through dialogue that requires them to understand the impact of their behaviour and take steps to repair the harm, rather than sitting in a room for an hour [SOURCE NEEDED, or remove this clause].
 
-The evidence supports this approach. A meta-analysis of 213 schools implementing social-emotional approaches found an average 11-percentile gain in academic achievement (Durlak et al., 2011). Research on teacher-student relationships shows they are one of the strongest predictors of student achievement (Hattie, 2009, effect size 0.72). And the basic logic is straightforward: students who are in the classroom learn more than students who are excluded from it.
+The evidence supports this approach. A meta-analysis of social-emotional programmes found an average gain in academic achievement of [GAIN, FROM THE SOURCE YOU HAVE CHECKED] (Durlak et al., 2011: check the paper before you quote it). Research on teacher-student relationships shows they are one of the strongest predictors of student achievement (Hattie, 2009, effect size [SIZE, FROM THE BOOK]; [SOURCE NEEDED: check before you quote it]). And the basic logic is straightforward: students who are in the classroom learn more than students who are excluded from it.
 
 We expect to see a reduction in exclusions within the first term, improvements in attendance and classroom behaviour over the first year, and a contribution to improved academic outcomes over 1–3 years. The approach requires investment in staff training and protected time for restorative conversations. We are asking for that investment because the current approach is not working, and continuing to do the same thing will produce the same results."
 

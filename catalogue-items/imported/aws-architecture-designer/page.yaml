@@ -9,7 +9,7 @@ subhead: An AWS design for your app that fits your budget, with setup templates 
 explain: |
   An AWS design for your app that fits your budget, with setup templates ready to deploy. Tell the AI the app type, expected users, monthly spend limit, team experience and any rules such as GDPR or HIPAA.
 
-  It chooses a pattern, often serverless with Lambda, API Gateway and DynamoDB, or containers and Aurora when that suits better. It writes CloudFormation templates, adds a build and deploy pipeline, estimates costs and suggests savings. It has starting points for a budget under 100 dollars a month and for a bigger setup in the hundreds or low thousands. It also covers how to check the deploy and what to do when it fails. Python helper scripts are included.
+  It chooses a pattern, often serverless with Lambda, API Gateway and DynamoDB, or containers and Aurora when that suits better. It writes CloudFormation templates, suggests CodePipeline for build and deploy on larger setups, estimates costs and suggests savings. It has starting points for a budget under 100 dollars a month and for a bigger setup in the hundreds or low thousands. It also covers how to check the deploy and what to do when it fails. Python helper scripts are included.
 when:
   - You are building a startup app and need a cloud plan without a cloud engineer.
   - Your AWS bill is rising and you want to cut it.
@@ -27,13 +27,14 @@ you_give:
 you_get:
   - A recommended architecture
   - CloudFormation templates
-  - A deployment pipeline outline
+  - A suggested deploy pipeline (CodePipeline) for larger setups
   - A cost estimate with savings ideas
 how_to_use:
   - Write down your app type, expected users, monthly budget, team experience and any rules like GDPR or HIPAA. Add your current AWS resource list if you want savings ideas.
   - Open your AI and paste this skill, or upload the skill folder. It works best in a tool that can run code, because it uses Python scripts.
-  - Give it your details and ask for a design. It turns them into a small file called requirements.json for its Python scripts. Check that the pattern fits your team and your rules before you ask for templates.
+  - Give it your details and ask for a design. It turns them into a small file called requirements.json for its Python scripts (the file's shape is in the Input Requirements section of SKILL.md). Check that the pattern fits your team and your rules before you ask for templates.
   - Ask for the CloudFormation template. Read it, and have someone who knows AWS review it before you deploy.
+  - To deploy, install the AWS command line, plus CDK or Terraform if you asked for that code. Without them you can read the design but not deploy it.
   - Deploying creates AWS resources that cost money. Set a budget alarm and try it in a test account first.
   - The cost figures in the examples are only illustrations. Your real costs depend on your usage, so check the AWS pricing pages.
   - Next, run the cost analysis and share the result with whoever approves the budget. Deploy to a test account first.

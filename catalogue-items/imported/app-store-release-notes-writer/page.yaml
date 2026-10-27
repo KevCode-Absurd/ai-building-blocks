@@ -11,7 +11,7 @@ explain: |
 
   The skill reads your git history from the last tag using a helper script, or from the full history if there are no tags. It sorts the changes by what a user would notice: new, improved and fixed. It drops internal work like build scripts, refactors, dependency updates and test setup. Each kept change becomes a short bullet with a clear verb. A login race fix, for instance, becomes a line about fewer unexpected sign-outs. It then checks every bullet against a real change, removes duplicates, and asks if anything is unclear.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Dimillian) says MIT. Credit goes to Dimillian and sickn33.
+  Licence: CC BY 4.0 applies to this copy, as its LICENSE-CONTENT file says. Reuse it with credit to Dimillian and sickn33. The author's own file header says MIT, which also allows reuse with credit.
 when:
   - You are about to submit an update and have no release notes.
   - Your commit log reads like code and users need plain words.
@@ -36,7 +36,8 @@ how_to_use:
   - Point your AI at your project and say "Write App Store release notes since the last tag".
   - Add your last release tag, your wanted length or a character limit if you have them.
   - Check each bullet against your changes and answer any questions the AI asks.
-  - Paste the bullets into the "What's New" field in App Store Connect and check the character limit.
+  - If the helper script fails, run "git log <last-tag>..HEAD --oneline" yourself and paste the output into the chat.
+  - Check the current "What's New" character limit in App Store Connect, because the skill does not give a number. Then paste the bullets into that field.
   - Once the update is live, check your listing with the App Store listing optimiser.
 next: [app-store-listing-optimiser]
 output_sample:

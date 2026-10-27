@@ -79,7 +79,8 @@ Use these headings, in this order:
 - BOUNDARY RULES.
 - QUALITY CHECKS: scale, failures, upkeep, visibility.
 - DECISION RECORD: status, context, decision, consequences.
-- GROWTH PATH AND OPEN QUESTIONS. This is also your CHECKS MISSED list: name every check that could not run, or write "none".
+- GROWTH PATH AND OPEN QUESTIONS.
+- CHECKS MISSED: name every check that failed or could not run, or write "none" if every check ran and passed.
 
 A text sketch of the parts and their links is welcome. Keep it plain text.
 

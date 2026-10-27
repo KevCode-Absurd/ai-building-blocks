@@ -11,7 +11,7 @@ explain: |
 
   It keeps only the final working version of any block that was retried, and drops shell commands, tool wrapper text, debugging one-liners and helper print lines meant for the assistant. Blocks are ordered as setup, model, configuration, analysis and plots, with %% section headings and parameters moved to the top. Figure settings that hid windows are removed, so the script works when you run it by hand. The file is saved in a Results folder with a descriptive name.
 
-  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. The restriction applies to the skill and to scripts made with it. The link inside the skill file goes to a separate MathWorks reuse licence page, which says the same. Follow the LICENSE.md file.
 when:
   - You finished an analysis with Claude and want to rerun it yourself.
   - You need a script to hand to a colleague after a MATLAB session.
@@ -33,6 +33,7 @@ you_get:
   - A saved file in the Results folder
 how_to_use:
   - Before you start, you need a licensed MATLAB installation (paid) and an AI tool that can run MATLAB code, for example through MCP or matlab -batch. The licence lets you use this skill and its scripts only with MathWorks products, so do not hand the script to someone who will run it elsewhere.
+  - The script lists the toolboxes it uses at the top. Each of those toolboxes must be installed and licensed on the computer that runs it, so check your licences before you run or share it.
   - Finish your MATLAB work in a chat with an AI that can run MATLAB code.
   - Paste the skill text into the chat, or add the skill in your AI tool.
   - "Say: export this session as a script. Add a script name if you want one."

@@ -35,7 +35,7 @@ how_to_use:
   - "Tell your AI which gap to fix and paste your three inputs: the gap, the current approved policy and the rule text. The skill mentions /regulatory-legal commands and a gap tracker from its original plugin. They are not included, so skip them. A chat shows the draft in the reply. Saving a dated file needs an AI that can write files."
   - Answer its question about whether your policy text is the latest approved version.
   - Read the marked-up draft and the change summary. Check every item tagged [verify] against the primary source.
-  - Send the draft to your policy owner. Update your gap tracker only after the change is applied and approved.
+  - Send the draft to your policy owner. After they review it and approve it, they apply the change. Only then record the gap as closed in your own list.
 output_sample:
   input:
     - A description of the gap, or a gap ID from your tracker
@@ -44,7 +44,6 @@ output_sample:
     - Name of the policy owner (optional)
   prerequisites:
     - A gap found by a gap review or a policy comparison, or one you can describe in your own words
-    - Your saved setup notes and gap tracker, if your AI can read files (optional)
   output:
     - name: Rule status banner
       contains: A warning at the top if the rule could not be confirmed as in force.
@@ -57,9 +56,9 @@ output_sample:
     - name: Change summary
       contains: A table of each provision with current wording, proposed wording, the reason, and what to verify.
     - name: Before applying checklist
-      contains: Steps to confirm the policy version, rule status, owner review, approval, and tracker update.
+      contains: Steps to confirm the policy version, rule status, owner review and approval, and to record the change in your own list once approved.
     - name: Next steps
-      contains: Choices for what to do next, such as sign-off, more research, escalation, or waiting.
+      contains: Choices for what to do next. After the policy owner reviews the memo, they apply and approve the change, and you record the gap as closed in your own list. Other choices are more research, escalation, or waiting.
     - name: Saved draft file
       contains: A new file named with the policy, the words proposed-redraft, and the date. Your source policy is never changed.
 next: [company-policy-explainer, gdpr-privacy-checker]

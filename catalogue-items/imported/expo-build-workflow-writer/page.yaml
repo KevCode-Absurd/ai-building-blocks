@@ -13,7 +13,9 @@ explain: |
 
   It can also edit a workflow file you already have, without breaking it.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Expo) says MIT. Credit goes to Expo and sickn33.
+  What this copy changes: we added a plain list of what to ask for, a rule to wait for your yes before any store or paid step, the pinned package versions and a plain-English note on each job. Expo's method and scripts are unchanged.
+
+  Licence: one licence applies to this copy, CC BY 4.0, as the LICENSE-CONTENT file says. That file governs. The skill file's own header (Expo) says MIT for the original, and that header is kept as the author wrote it. Both allow reuse with credit, so keep the credit to Expo and sickn33.
 when:
   - You want every push to your main branch to make a test build.
   - You want each pull request to make a preview build you can share.
@@ -34,11 +36,12 @@ you_get:
   - Edits to your current workflow file, if you gave one
   - A short note on what each job does and what it needs
 how_to_use:
+  - "Before you start, gather: your existing workflow file (if any), your app.json or app.config file, and the names of the branches you build from."
   - Open Claude Code, or another AI that can run code and read your project folder. A chat window alone cannot fetch Expo's rules or run the check.
   - Upload or open the skill folder, with its scripts, and open your Expo project.
   - Say what you want, for example "build iOS and Android on every push to main, then submit". Add your existing workflow file if you have one.
-  - Make sure you have Node installed and an internet connection. The skill needs both to download Expo's rules. It also runs npm install for its helper scripts. Those scripts download files from the internet and run on your machine, so read scripts/fetch.js and scripts/validate.js first, and run it in a copy of your project if you can.
-  - Before you run the scripts, check the versions of ajv, ajv-formats and js-yaml in scripts/package.json, or compare the script files with the original. Never run a store submission job against your real App Store or Google Play account without your own clear yes.
+  - Make sure you have Node installed and an internet connection. The skill needs both to download Expo's rules. It also runs npm install for its helper scripts. Those scripts download files from the internet and run on your machine, so read scripts/fetch.js and scripts/validate.js first, and run it in a copy of your project or a sandbox, not in your real project.
+  - "The helper scripts use three npm packages, pinned in this copy to exact versions: ajv 8.17.1, ajv-formats 3.0.1 and js-yaml 4.1.0. Check them in scripts/package.json before you run anything. Never run a store submission job against your real App Store or Google Play account without your own clear yes."
   - Read the note on each job. Check that the file passes the check, and commit it to your project in .eas/workflows.
   - Next, run the first workflow on a test branch and read the job logs in EAS. Fix anything that fails, then merge it into your main workflow.
   - You need an Expo account to run the workflow. EAS builds can have limits or costs on your Expo plan, so check your plan first.

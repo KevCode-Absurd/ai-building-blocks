@@ -9,7 +9,9 @@ subhead: A short CLAUDE.md file for one folder, so any AI helper that opens it k
 explain: |
   A short CLAUDE.md file for one folder, so any AI helper that opens it knows what the work is, which files matter and what not to touch. A matching AGENTS.md points to the same file.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (davidondrej) says MIT. Credit goes to davidondrej.
+  This is davidondrej's skill, copied as it is. Licence: for reuse, follow the MIT licence the author names in the skill file header. That covers the skill text. Our LICENSE-CONTENT file (CC BY 4.0) covers only the rest of this page. Credit davidondrej if you reuse it.
+
+  No paid service, API key or web scraping is needed. Your AI must ask you before it runs each shell command.
 
   First it checks the folder is worth a guide. Then it reads every file in full, not just names. Before writing, it shows you a bullet list of what it plans to include, so you can react. Sections cover purpose, key files, hard limits, naming habits, decisions already made and how you like to work. The hard limits section tends to pay off most. You approve the list, then it writes the file.
 when:
@@ -51,7 +53,7 @@ output_sample:
     - name: Bullet list of planned content
       contains: A grouped list of what the guide will hold, shown first so you can change it.
     - name: CLAUDE.md
-      contains: The folder guide, with a one-line purpose header and short bullets under each section you approved.
+      contains: The folder guide, with a one-line purpose header and short bullets under each section you approved. It stays at about 60 lines or fewer. Sections come from this set, and any that do not apply are left out. Product or Purpose, Audience, Essential Files, Constraints (MUST NOT), Conventions, Locked Decisions, Context, How to work with you, Positioning, Top Insights.
     - name: Constraints (MUST NOT)
       contains: Hard rules for the folder, such as files the AI must never edit.
     - name: Locked Decisions

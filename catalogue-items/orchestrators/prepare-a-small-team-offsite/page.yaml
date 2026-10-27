@@ -11,6 +11,8 @@ explain: |-
 
   The Executive meeting brief writer sets out the decision, the facts and the questions. The Meeting agenda and cost planner then runs a gate with three answers: ASYNC (write it up instead), NOT-READY (something is missing) or MEET. Only a MEET gets an agenda, with decision sessions, breaks and a closing actions recap. The Executive action register keeper then prepares the register for the day.
 
+  The Meeting agenda and cost planner used alone plans one meeting you already decided to hold. This pack adds the decision brief first, a pre-read request, and an action register for the day.
+
   Costs come only from figures you give. If you give none, the pack shows the sum as a formula and marks the rates missing.
 when:
   - Your team of 4 to 12 wants a day away to settle one big decision.

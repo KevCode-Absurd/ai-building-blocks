@@ -58,6 +58,8 @@ If the user describes a target file + a way to measure success → this skill ap
 
 ### First Time — Create the Experiment
 
+**Hard gate before setup (added by AI Blocks).** The loop undoes each failed try with `git reset --hard HEAD~1`, which wipes uncommitted work. Run `git status` first. If it shows any change, commit or stash it, then create a new branch for the experiments. Do not run setup until the tree is clean and you are on that branch.
+
 Run the setup script. The user decides where experiments live:
 
 **Project-level** (inside repo, git-tracked, shareable with team):
@@ -294,10 +296,7 @@ cp -r claude-skills/engineering/autoresearch-agent ~/.claude/skills/
 ```
 
 ### Multi-tool install
-The convert.sh script is not in this catalogue copy. Use the one-liner above, or get the script from the source repo.
-```bash
-./scripts/convert.sh --skill autoresearch-agent --tool codex|gemini|cursor|windsurf|openclaw
-```
+Not available in this catalogue copy: the original install script (`convert.sh`) is not included. Use the one-liner above, or get the script from the source repo.
 
 ### OpenClaw
 ```bash

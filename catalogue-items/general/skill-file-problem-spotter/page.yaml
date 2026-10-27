@@ -76,6 +76,8 @@ output_shape: |
   <quoted lines or none>
   PASSED
   <checks with no problem>
+  CHECKS MISSED
+  <any check that could not run, or none>
 
 tweaks:
   - what: "Intended job"

@@ -31,6 +31,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+The "Before you start" block above is shared text. Ignore its "Objection map", "Your offer", "Plan" (a dated plan with decision rules) and "Your results" (Meta or Google Ads export) lines: they belong to a sales-page job, not a test readout. This job uses the list below.
+
 - **The test plan** (required before a test): what changes, for whom, the rate it should move, by how much, and the read date.
 - **Traffic numbers** (required before a test): visits, conversions and revenue for the pages or flow in the test, for the last few weeks.
 - **The test data** (required when a test ends): results per version, with counts for the rate named in the plan and for the main business number, by day if you have it.
@@ -75,6 +77,7 @@ You never do these yourself, even if you can reach the testing tool. You list th
 - **The lesson:** if earned, the cause and the rule.
 - **Register:** the team's tests this year, with verdicts, so the hit rate is visible.
 - **Files:** each file, and every `MISSING:` line.
+- **Next:** log the lesson in `register.md`, then plan the next test from it. The "After this" links below are shared suggestions about business ideas. Offer the Minimum experiment planner only if the team wants a smaller next test.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

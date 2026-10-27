@@ -57,35 +57,35 @@ The short cases below are made-up examples written for this page. They are not s
 ### Choose among too many meaningful projects
 You have five worthwhile side projects and one free weekend. Instead of searching for a schedule that develops all five, choose the one whose progress matters now and name the others as deferred. The disappointment is part of the choice. Make the selected project small enough to touch this weekend. You can value the other possibilities without treating them as debts.
 
-You leave with one current commitment and an honest deferred list. Mortality arithmetic can become a panic device. Use finitude to clarify a choice, not to demand that every hour justify the whole life.
+You leave with one current commitment and an honest deferred list.
 
 ### Start important work while life still feels unfinished
 A person says they will write after all household admin is finished. The admin queue keeps renewing. Choose a bounded writing period alongside a separate admin session. Decide which genuine deadline must be met, then let lower-priority paperwork remain visible and unfinished. The writing session can happen with that discomfort present. It does not require pretending the paperwork no longer exists.
 
-You leave with a bounded start and a clear account of the unresolved work it coexists with. “Start now” should not erase a genuine dependency. Distinguish an unavoidable prerequisite from an endlessly renewing condition such as complete peace of mind.
+You leave with a bounded start and a clear account of the unresolved work it coexists with.
 
 ### Renegotiate a week that cannot hold every commitment
 A team lead has a report, mentoring request and process improvement competing for the same afternoon. Name the real deadlines and consequences. Choose the report if its decision meeting is tomorrow, reschedule the mentoring conversation openly and postpone the improvement. This does not prove the report is universally more valuable. It makes the present allocation and its consequences explicit.
 
-You leave with a chosen priority and clear changes to the other promises. Neglect becomes careless when others continue relying on a promise you have stopped honoring. Communicate a changed commitment rather than hiding behind philosophy.
+You leave with a chosen priority and clear changes to the other promises.
 
 ### Reduce guilt about an endless reading and podcast queue
 You save thirty articles a week and read five. Keep a short selection for the topic you are working on, and allow older material to pass without a catch-up campaign. For a specific research project, maintain a bounded reading list with a purpose. For general curiosity, choose what attracts your attention today. These two collections need different expectations.
 
-You leave with a purposeful reading selection and a lower-pressure stream of possibilities. Calling every source optional can weaken actual research. A reading stream differs from a defined evidence review with explicit coverage requirements.
+You leave with a purposeful reading selection and a lower-pressure stream of possibilities.
 
 ### Finish a stalled draft or personal project
 A person has reorganized notes for a guide three times but has shared nothing. Define a useful first section that answers one reader’s question. Finish and share that section with a clear description of its scope. Record it as completed before expanding the project. The next section can remain a future task rather than retroactively making the finished part worthless.
 
-You leave with a useful definition of finished and a bounded delivery. An artificial finish that helps nobody is another avoidance tactic. Choose a completion with a real use, while allowing it to remain imperfect.
+You leave with a useful definition of finished and a bounded delivery.
 
 ### Restart a creative routine after breaking a streak
 A person’s daily drawing streak breaks during travel. Instead of restarting a punitive counter, choose regular drawing on several available days and prepare a modest subject. If a day is missed, return on the next suitable occasion. Keep a record if it helps enjoyment, but stop using it as a verdict about being a real artist. The drawing is the point.
 
-You leave with a humane practice rule and a concrete next occasion. Flexibility can slide into an indefinite intention. Keep a concrete next occasion, while releasing the requirement that every occasion be identical.
+You leave with a humane practice rule and a concrete next occasion.
 
 ## What he'd push back on
-He would challenge a plan to finally finish every possible obligation, a reading queue treated as a moral debt, and an identity built around an unbroken streak. He would also challenge the fantasy that a good choice feels free of loss. Choose responsibly, communicate the tradeoff and get involved in the life actually available.
+This section is our applied reading of his method, not a record of things he said. He would challenge a plan to finally finish every possible obligation, a reading queue treated as a moral debt, and an identity built around an unbroken streak. He would also challenge the fantasy that a good choice feels free of loss. Choose responsibly, communicate the tradeoff and get involved in the life actually available.
 
 ## What you'll get back
 You receive a clear statement of the impossible demand, a chosen commitment that fits real capacity and a deliberate account of what will wait. For a stalled project, the answer defines a useful finish. For overload, it includes the changed promises and the discomfort you may need to tolerate while acting.

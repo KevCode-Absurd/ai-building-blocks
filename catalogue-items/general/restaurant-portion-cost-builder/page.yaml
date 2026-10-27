@@ -57,14 +57,14 @@ output_sample:
     - name: "MISSING: and CHECKS MISSED"
       contains: Inputs you did not supply and any check that failed or could not run, or none.
 how_it_works:
-  - title: 1. Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing
-    text: Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing.
-  - title: 2. Source actual purchased and edible weights for the same batch; use measured yield, not a culinary safety or handling assumption
-    text: Source actual purchased and edible weights for the same batch; use measured yield, not a culinary safety or handling assumption.
-  - title: 3. Divide edible mass by the approved serving mass to show theoretical portion capacity, then cap modeled served portions at supplied demand
-    text: Divide edible mass by the approved serving mass to show theoretical portion capacity, then cap modeled served portions at supplied demand.
-  - title: 4. Allocate batch cash across theoretical portions, show unserved capacity and reconcile actual modeled service receipts less full batch cash
-    text: Allocate batch cash across theoretical portions, show unserved capacity and reconcile actual modeled service receipts less full batch cash.
+  - title: Gather the batch records
+    text: Lists the dated receipt, the weights, the cash cost, the price and the portions served. Anything missing is marked MISSING.
+  - title: Work out the edible yield
+    text: Divides the weight you can serve by the weight you bought, using measured weights.
+  - title: Count the portions
+    text: Divides the edible weight by the portion weight, and shows unserved portions apart.
+  - title: Spread the cost and find the contribution
+    text: Spreads the batch cash over the portions, then takes the cost of the whole batch from what the served portions earned.
 output_shape: |-
   SCOPE AND DATED SOURCES
   INPUTS AND ASSUMPTIONS
@@ -103,8 +103,8 @@ works_best_with:
     - name: Node.js 20 or later
       why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - The dated purchase receipt and the weights you measured for the batch.
+    - Your selling price and how many portions you served.
 terms:
   - term: Illustrative figures
     meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.

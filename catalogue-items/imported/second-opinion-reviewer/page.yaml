@@ -9,6 +9,8 @@ subhead: A set of the hardest objections to a plan or change you feel sure about
 explain: |
   A set of the hardest objections to a plan or change you feel sure about, sorted by how much each one matters. In a long session, guesses quietly turn into facts. This skill breaks that by handing your work to a fresh reviewer who has not seen your reasoning and is told to find what is wrong.
 
+  This is an imported skill under the MIT licence. Pasting your work into a new chat to act as the reviewer is the default path. The terminal steps for a second AI tool are optional. One file it mentions, references/orchestration-patterns.md, is not included, and the five steps work without it.
+
   It applies only to non-trivial decisions: new branching logic, anything crossing a module boundary, claims such as "this is safe", or changes you cannot undo. Typos and renames are skipped. The reviewer sees only the artifact and the requirements, returns objections, and you decide which hold up. It is meant for the main session, since a helper cannot start another.
 when:
   - You are about to commit a change that touches logic you only half understand.
@@ -16,7 +18,7 @@ when:
   - You are about to say "this scales" and want someone to try to prove otherwise.
   - A plan has run for many messages and you suspect your assumptions have hardened.
 not_for:
-  - "You want a quick verdict on a finished piece of work: ask your AI for a normal review instead."
+  - "You want a quick verdict on a finished piece of work: use the Code change reviewer, or ask your AI for a normal review."
   - "You are making a small change, like a rename, a typo fix or a file move: skip the review and just do it."
   - "You need speed more than checking, or the step is clear and has one right answer: do the task without a review."
 you_give:
@@ -36,6 +38,18 @@ how_to_use:
   - Read the objections. Mark each one fix or dismiss, and give a reason.
   - The commands in the skill file are only for that optional other-AI step. Skip them if you do not use a terminal. The step that asks another AI tool for a view is optional. It may need a paid account or API key, and it sends your work to that tool's service. Only use it with material you may share.
   - Use the revised decision. The skill stops after a set number of rounds, so it does not loop forever.
+output_shape: |
+  CLAIM
+  <what you are about to treat as true, and why it matters>
+
+  OBJECTIONS (most serious first)
+  1. <objection> | targets: <part of the work> | severity: <high, medium or low> | why: <reason>
+
+  RECONCILIATION
+  1. <fix, accepted trade-off or dismiss> | reason: <one line>
+
+  REVISED DECISION
+  <updated plan or change, or a note that it stands>
 output_sample:
   input:
     - Your plan, code change or claim

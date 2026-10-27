@@ -287,6 +287,7 @@ end
 results = writeFutures.fetchOutputs("UniformOutput", false);
 
 function finished = hsqlwriteMT(connParams, tablename, data, startRow, endRow)
+    % MySQL example. For PostgreSQL, SQLite or ODBC, swap this connect line for that connection type.
     conn = mysql(connParams.user, connParams.pass, ...
         Server=connParams.server, DatabaseName=connParams.db);
     sqlwrite(conn, tablename, data.Value(startRow:endRow-1, :));

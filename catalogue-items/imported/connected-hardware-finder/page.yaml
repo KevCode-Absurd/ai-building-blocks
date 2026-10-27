@@ -30,7 +30,7 @@ you_get:
   - The support packages you need to install
 how_to_use:
   - Open your AI tool on the computer that has MATLAB and the hardware plugged in. It must be able to run MATLAB code.
-  - Add the skill folder to your AI, or paste in the skill text.
+  - Add the skill folder to your AI, or paste in the skill text. Your AI runs MATLAB code through its tool, so you approve each run. If you ask to use a device, it may offer to hand the job to another skill, and it names that skill first.
   - "Ask a plain question, such as: What is connected, and can any of it do CAN?"
   - Read the reply. It lists each device, whether its add-ons are installed, and which ones are missing.
   - Install any missing package yourself in MATLAB. Then use a device-specific skill to collect data or program the device.
@@ -45,7 +45,7 @@ output_sample:
     - A MATLAB licence, and licences for any add-ons you use
   output:
     - name: Connected devices
-      contains: A list of the hardware MATLAB can see right now, with each device's name and how it connects.
+      contains: A short reply in this order, connected devices (name and how each connects), capability matches, device details, install state, then missing packages. The LICENSE.md file in this folder sets the licence.
     - name: Capability matches
       contains: The devices that support the thing you asked about, such as CAN or analog input.
     - name: Device details

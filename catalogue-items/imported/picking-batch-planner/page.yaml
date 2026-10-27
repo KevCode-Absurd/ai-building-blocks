@@ -10,6 +10,8 @@ explain: |
   Group a day of orders so pickers pick them together and walk less, with the expected distance saved. Fewer trips mean faster orders and lower labour cost.
 
   The skill first learns your picking method, order shapes, layout, cart size and current picks per hour. It then compares ways to group: single orders, batches, zones and cart clusters. It builds batches from items that overlap, respecting priority, cart limits and sort time after picking. You get the batches, the distance and time saved, and the trade-off against sorting errors. It suits any warehouse that picks by hand.
+
+  This is an MIT-licensed skill (see the LICENSE file), renamed. The method is unchanged. The example code in it uses random mock data only to show how the method works, and the sample code only builds batches of one or two orders. Check the cart limit before you trust its batches.
 when:
   - Pickers cross the same aisles for many small orders.
   - Your daily orders have lots of repeated items.
@@ -36,6 +38,7 @@ how_to_use:
   - Ask for the batch table, the walking distance saved and the sort steps. It works best when your AI can run code (Python), but a chat can do small lists.
   - Check two or three batches by hand against your floor layout. Then try one batch on a real shift before you change how you pick for the whole day.
   - The distance saved is an estimate. Measure it on your own orders.
+  - The optimiser example in the skill builds batches of one or two orders only and does not check cart size. If your cart holds more than two orders, your AI must add cart-limit rules before you use its batches.
   - Then take the batch table to your warehouse system, or to the Warehouse picker route planner, to set the walking order inside each batch.
 output_sample:
   input:
@@ -54,9 +57,9 @@ output_sample:
     - name: Batching statistics
       contains: Total orders, number of batches, average batch size and how many batches are of each size.
     - name: Travel savings
-      contains: Walking distance with single-order picking against batched picking, and the distance saved.
+      contains: Walking distance with single-order picking against batched picking, and the distance saved. Needs your own layout and pick data. If it is missing, the AI writes MISSING and does not estimate.
     - name: Productivity impact
-      contains: Picker hours with and without batching, and the labour hours saved.
+      contains: Picker hours with and without batching, and the labour hours saved. Needs your own pick times. If they are missing, the AI writes MISSING and does not estimate.
     - name: Recommendations
       contains: Next steps such as extra sort stations, express batches for priority orders and cart size changes.
 next: [warehouse-picker-route-planner, warehouse-slot-assigner]

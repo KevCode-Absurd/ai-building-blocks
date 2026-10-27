@@ -63,6 +63,8 @@ exactly one stage at a time:
 4. **Prospect rating scale** — document the capacity bands and LAI scoring rubric used, so ratings
    are consistent across gift officers.
 
+> Added by AI Blocks: the numbers in this skill (a 30-50% close rate, 100-150 prospects per officer, a 60-90 day stall window) are rules of thumb with no source. Replace them with your own history when you have it, and say so in the plan. The skills named here (`nonprofit-major-gifts`, `nonprofit-donor-retention`, `nonprofit-annual-appeals`) are not included. Tell the person which hand-offs you skipped.
+
 ## Concrete Steps
 
 1. Pull all active donor/prospect records and bucket each into exactly one current stage using the

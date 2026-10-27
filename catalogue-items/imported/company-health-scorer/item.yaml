@@ -1,6 +1,6 @@
 slug: company-health-scorer
 name: "Company health scorer"
-summary: "Score company functions from supplied metrics using published thresholds. Show missing data and the reason for each rating."
+summary: "Score company functions from supplied metrics using the thresholds written in the skill. Show missing data and the reason for each rating."
 category: general
 boards: []
 type: skill

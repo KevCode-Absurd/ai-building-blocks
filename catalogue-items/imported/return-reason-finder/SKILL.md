@@ -176,6 +176,8 @@ For `format: json`, emit:
 ```
 
 ## Output Format
+The CSV holds customer return notes and order names, which are personal data. Tell the user to keep it private and delete it when the analysis is done.
+
 CSV file `return_reasons_<YYYY-MM-DD>.csv` with columns:
 `return_id`, `order_name`, `product_title`, `sku`, `quantity`, `return_reason`, `reason_note`, `created_at`
 

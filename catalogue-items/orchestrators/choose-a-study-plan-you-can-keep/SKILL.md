@@ -31,7 +31,9 @@ How to start:
 
 ## What you need
 
-This list replaces the general one above. You do not need a brief in a separate file.
+This list replaces the shared "Before you start" block above. There is no teacher's lesson plan here. Where that block asks for "Your lesson plan", give the learner's goal, date, level and weekly hours below. Where it asks for "Your question", the goal is the question.
+
+Three component skills must be in the pack: `topic-learning-roadmap`, `study-strategy-picker` and `study-session-planner-and-review`. Get each at https://useaiblocks.com/skills/topic-learning-roadmap, https://useaiblocks.com/skills/study-strategy-picker and https://useaiblocks.com/skills/study-session-planner-and-review if one is missing, or ask for the file.
 
 - **The goal** (required): what the learner wants to be able to do, such as pass a named exam.
 - **The date** (required): the exam day or deadline. If there is none, write `MISSING: date` and plan in blocks of weeks.
@@ -94,10 +96,10 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## After this (for this job)
 
-The progress reviewer in the general list above is the same tool as the one named here, and this is its correct link. Offer one next step and say they can type their own:
+Use this list, not the shared "After this" list above. Offer one next step and say they can type their own:
 
 - Do the first week and bring your closing reflections back. Ask for the plan to be adjusted.
-- After a few weeks, review how it is going with the [Study practice progress reviewer](https://useaiblocks.com/agents/study-plan-progress-review-assistant).
+- After a few weeks, review how it is going with the [Study practice progress reviewer](https://useaiblocks.com/skills/study-plan-progress-review-assistant).
 - If the date is close, rank topics by marks with the [Exam study roadmap builder](https://useaiblocks.com/skills/exam-study-roadmap-builder).
 
 ## Check before you hand it back

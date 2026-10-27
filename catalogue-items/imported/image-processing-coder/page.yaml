@@ -17,8 +17,8 @@ when:
   - You want to align or stitch several images into one.
   - You are unsure which MATLAB function suits your image problem.
 not_for:
-  - "You work with DICOM or NIfTI medical scans: use the sibling medical imaging skill listed in the SKILL.md routing table."
-  - "You have hyperspectral data or factory defect inspection: use the sibling skills named in the SKILL.md routing table."
+  - "You work with DICOM or NIfTI medical scans: use the Medical scan reader instead."
+  - "You have hyperspectral data or factory defect inspection: use the Spectral image analyst or the Machine vision inspector builder."
   - "You need point clouds, 3-D reconstruction, video stabilization or code generation: use Computer Vision Toolbox or MATLAB Coder directly."
 you_give:
   - A sample image or a description of it
@@ -32,10 +32,11 @@ you_get:
 how_to_use:
   - Open your AI chat and paste in this skill's instructions, or load the skill folder if your AI tool supports files.
   - Describe your image problem in plain words, such as dark, noisy, blurry or uneven light.
-  - Add a sample image or a short description of it, plus what you want done, such as counting cells about 15 pixels wide.
-  - Run the code in MATLAB. You need MATLAB and the Image Processing Toolbox for it to work, and both are paid licences. In a plain chat your AI cannot run MATLAB, so paste the code into MATLAB yourself and tell the AI what happened.
+  - "Gather first: your MATLAB release and toolbox list, how many images are in the folder, and the pixel size or the known size of one object in your images. Add a sample image or a short description of it, plus what you want done, such as counting cells about 15 pixels wide."
+  - "Run the code in MATLAB. You need MATLAB and the Image Processing Toolbox for it to work, and both are paid licences. Some tasks need more paid toolboxes: matching features to align images needs the Computer Vision Toolbox, and deep learning needs the Deep Learning Toolbox. Ask your AI which toolboxes your task needs before you start. Only some AI tools can run MATLAB for you. In a plain chat, paste the code into MATLAB yourself and tell the AI what happened."
   - Check the figures and counts against a few images you know well, then run the whole folder.
-  - Check the counts or masks against hand counts on a few images. Then export them to a spreadsheet or report. The skill's routes to medical imaging, visual inspection and large-image skills are not in this library, so install those separately if you need them.
+  - Check the counts or masks against hand counts on a few images. Then export them to a spreadsheet or report. For medical scans, inspection or very large images, use the Medical scan reader, Machine vision inspector builder or Huge image processor.
+next: [huge-image-processor, medical-scan-reader, image-viewer-builder]
 output_sample:
   input:
     - A sample image, or a plain description of it

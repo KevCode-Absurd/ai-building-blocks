@@ -188,7 +188,7 @@ ARIA (Accessible Rich Internet Applications) adds semantics when HTML alone is i
 
 ## Global Legal Framework Mapping
 
-These rows were last checked by the original author on the "Last verified" date at the top. They are not checked against current law, and some dates (such as the June 2025 EAA deadline) have already passed. Before anyone relies on a deadline or a jurisdiction, ask them to confirm it with an accredited accessibility assessor or a lawyer.
+Check each row against the current official text (EUR-Lex for EU law, the US Access Board for Section 508, gov.uk for UK rules) before you use it. The EAA private-sector deadline of June 2025 has already passed, so say it is in force now, not upcoming. These rows were last checked by the original author on the "Last verified" date at the top. They are not checked against current law, and some dates (such as the June 2025 EAA deadline) have already passed. Before anyone relies on a deadline or a jurisdiction, ask them to confirm it with an accredited accessibility assessor or a lawyer.
 
 | Law / Standard | Jurisdiction | WCAG Requirement |
 |----------------|-------------|-----------------|

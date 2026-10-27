@@ -197,6 +197,11 @@ function createLoaders(db) {
       const postMap = new Map(posts.map((p) => [p.id, p]));
       return postIds.map((id) => postMap.get(id) || null);
     }),
+    // Batches tag lookups: one query for all posts on the page, grouped by post id
+    tagsLoader: new DataLoader(async (postIds) => {
+      const tags = await db.tags.findByPostIds(postIds);
+      return postIds.map((id) => tags.filter((t) => t.postId === id));
+    }),
   };
 }
 
@@ -235,8 +240,7 @@ const resolvers = {
   },
   Post: {
     author: (post, _, { loaders }) => loaders.userLoader.load(post.authorId),
-    // Runs one query per post. To batch it like the authors, add a tagsLoader to createLoaders.
-    tags: (post, _, { db }) => db.tags.findByPostId(post.id),
+    tags: (post, _, { loaders }) => loaders.tagsLoader.load(post.id),
   },
   Comment: {
     author: (comment, _, { loaders }) => loaders.userLoader.load(comment.authorId),
@@ -250,8 +254,46 @@ const resolvers = {
       const post = await db.posts.create({ ...input, authorId: currentUser.id });
       return { post, errors: [] };
     },
-    // updatePost and deletePost are not shown. Each one must check that the caller is signed in
-    // and owns the post (or is an admin) before it changes anything.
+    // The schema lists updatePost and deletePost, so they need guarded resolvers like these.
+    // Each one checks that the caller is signed in and owns the post (or is an admin).
+    updatePost: async (_, { id, input }, { currentUser, db }) => {
+      if (!currentUser) return { post: null, errors: [{ message: "Not authenticated" }] };
+      const existing = await db.posts.findById(id);
+      if (!existing) return { post: null, errors: [{ message: "Post not found" }] };
+      if (existing.authorId !== currentUser.id && !currentUser.isAdmin) {
+        return { post: null, errors: [{ message: "Not allowed" }] };
+      }
+      const post = await db.posts.update(id, input);
+      return { post, errors: [] };
+    },
+    deletePost: async (_, { id }, { currentUser, db }) => {
+      if (!currentUser) return false;
+      const existing = await db.posts.findById(id);
+      if (!existing || (existing.authorId !== currentUser.id && !currentUser.isAdmin)) return false;
+      await db.posts.delete(id);
+      return true;
+    },
+    // Guarded like createPost: the caller must be signed in, and the post must exist.
+    addComment: async (_, { postId, body }, { currentUser, db, pubsub }) => {
+      if (!currentUser) throw new Error("Not authenticated");
+      if (!body.trim()) throw new Error("Comment cannot be empty");
+      const post = await db.posts.findById(postId);
+      if (!post) throw new Error("Post not found");
+      const comment = await db.comments.create({ postId, body, authorId: currentUser.id });
+      await pubsub.publish(`COMMENT_ADDED_${postId}`, { commentAdded: comment });
+      return comment;
+    },
+  },
+  // Subscription resolvers need a pub/sub object in the context (in-memory for development,
+  // Redis or Kafka for production). The addComment resolver above publishes to the same
+  // COMMENT_ADDED_<postId> channel that commentAdded listens on, after it saves a comment.
+  Subscription: {
+    commentAdded: {
+      subscribe: (_, { postId }, { pubsub }) => pubsub.asyncIterator(`COMMENT_ADDED_${postId}`),
+    },
+    postPublished: {
+      subscribe: (_, __, { pubsub }) => pubsub.asyncIterator("POST_PUBLISHED"),
+    },
   },
 };
 
@@ -271,7 +313,15 @@ function decodeCursor(cursor) { return Buffer.from(cursor, "base64").toString().
  * Generic paginated query builder for SQL databases.
  * Works with any table that has an auto-incrementing or sortable ID.
  */
+const ALLOWED_TABLES = new Set(["posts", "comments"]); // tables this helper may query
+const ALLOWED_COLUMNS = { posts: new Set(["status", "authorId"]), comments: new Set(["postId"]) };
+
 async function paginatedQuery(db, { table, first = 10, after, where = {} }) {
+  // Enforce the fixed lists in code, not only in a comment
+  if (!ALLOWED_TABLES.has(table)) throw new Error("Table not allowed");
+  for (const key of Object.keys(where)) {
+    if (!ALLOWED_COLUMNS[table].has(key)) throw new Error("Column not allowed: " + key);
+  }
   const limit = Math.min(first, 100); // Cap at 100 per page
   const filterConditions = [];
   const filterParams = [];
@@ -338,6 +388,10 @@ const resolvers = {
   },
 };
 ```
+
+## Depth and cost limits
+
+The sample code above does not include depth or cost limits. Step 6 describes them. Add them in your server, for example with a depth-limit validation rule and a query-cost plugin for your server, and set a maximum depth of 10 to 15 levels. Test with a deliberately deep query before you go live.
 
 ## Best Practices
 

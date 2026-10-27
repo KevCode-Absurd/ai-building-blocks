@@ -81,18 +81,10 @@ Files | MISSING | source claims not checked | one next step
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [AI answer review worksheet builder](https://useaiblocks.com/skills/ai-answer-critique-lesson). It takes the lesson plan.
+- The [AI answer critique activity builder](https://useaiblocks.com/skills/ai-answer-critique-lesson). It takes the lesson plan.
 - The [Teaching reflection prompt writer](https://useaiblocks.com/skills/teaching-reflection-prompts).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## After this
-
-Nothing has been taught. Offer one next step and say the teacher can type their own:
-
-- Add a lesson where learners mark up an AI answer with the [AI answer critique activity builder](https://useaiblocks.com/skills/ai-answer-critique-lesson).
-- After the lesson, reflect on it with the [Teaching reflection prompt writer](https://useaiblocks.com/skills/teaching-reflection-prompts).
-- Come back with learners' work and ask for the rubric to be tightened.
 
 ## Check before you hand it back
 
@@ -100,3 +92,5 @@ Nothing has been taught. Offer one next step and say the teacher can type their 
 - No source is declared true or false by the AI.
 - The rubric rewards checking and reasoning, not agreement with the teacher.
 - The student checklist and student rubric use words learners at this level know.
+
+To tighten the rubric later, come back with learners' work and ask for a revision.

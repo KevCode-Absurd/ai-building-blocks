@@ -5,6 +5,10 @@ description: "Plan a speaking engagements acquisition experiment from a product 
 
 # Speaking channel experiment planner
 
+When to use: you think your buyers learn from talks and you want one small speaking test. When not to use: to compare all 19 growth channels, use the Traction workflow (traction-channel-ranker). Also not if your buyers do not go to events or listen to talks: pick another channel. This plans the test; it does not write your slides or book the slot.
+
+Gather first: your product URL, your buyer type, your cash cap, your hours per week, and any past talks or event contacts.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
@@ -47,7 +51,7 @@ Use the funnel qualified visitor or account -> useful product action -> paying c
 
 Decision to resolve: Can the founder or expert teach something useful to an audience containing future buyers?
 
-1. Research events by topic, audience, deadlines and speaker requirements. Match the speaker's demonstrated expertise to a practical buyer problem.
+1. Research up to 10 events and record, for each, the audience size, the call-for-proposals deadline, the speaker requirements and the cost to attend or speak. Mark any you could not check as MISSING. Rank them by how many of your buyers are in the room, then by cost, and shortlist the top three before drafting any proposal. Match the speaker's demonstrated expertise to a practical buyer problem.
 2. Draft a talk proposal with a useful outcome, supporting evidence and a story of the problem and discovery. Separate teaching from a product advertisement.
 3. Plan an optional relevant resource, a permitted way to keep in touch and a follow-up path into the product. Budget preparation, travel and speaking time.
 
@@ -73,6 +77,7 @@ Measurement: <events, cohort, denominators, attribution>
 Decision: <continue / revise / stop rule>
 Risks and next action: <...>
 MISSING: <unknowns>
+CHECKS MISSED: <checks that failed or could not run, or none>
 
 ## Check the answer
 

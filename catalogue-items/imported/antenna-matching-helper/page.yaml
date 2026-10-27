@@ -9,6 +9,8 @@ subhead: An antenna that does not match your radio wastes power and sends signal
 explain: |
   An antenna that does not match your radio wastes power and sends signal back. This skill builds the matching network and the system model that tie your antenna to the rest of your radio chain, so the signal actually gets out.
 
+  Licence: BSD 2-Clause, as the LICENSE.md file says, with one extra condition: you may use it only together with MathWorks products such as MATLAB. You may not use the code outside them. The skill file also links MathWorks' own reuse licence. The two skills it points to for antenna design and structure work (matlab-design-antenna and matlab-analyze-antenna-structures) are not in this folder.
+
   It works in MATLAB with the Antenna and RF toolboxes. It designs L, Pi or Tee networks, compares two and three element versions for bandwidth, and can convert them to distributed form. It can turn your measured or simulated data into a reusable antenna model, including files from other design tools. From there it estimates coverage, signal strength, interference and link budget with ray tracing, and can estimate body exposure (SAR) for devices near tissue.
 when:
   - Your antenna's return loss is poor and you need a matching network.
@@ -16,7 +18,7 @@ when:
   - You are planning where to place transmitters for coverage.
   - You must show an RF exposure check for a wearable or implant.
 not_for:
-  - "You need to design the antenna shape or an antenna array: use the matlab-design-antenna skill, which this skill does not cover."
+  - "You need to design the antenna shape or an antenna array: use the antenna designer, which this skill does not cover."
   - "You work with reflector antennas, reflectarrays, installed antennas or radar cross section: use the matlab-analyze-antenna-structures skill."
   - "You have no MATLAB with the Antenna and RF Toolboxes: ask an RF engineer, or use a free matching calculator for a quick L network."
 you_give:
@@ -28,14 +30,16 @@ you_get:
   - A matching network design
   - A reusable antenna model
   - Coverage and link budget results
-  - SAR estimate (optional)
+  - SAR estimate (optional). It is an estimate only and is not compliance evidence until an RF expert and the relevant standard have checked it.
 how_to_use:
   - Check first that you have MATLAB with the Antenna Toolbox and RF Toolbox. Both are paid tools.
-  - Gather your antenna design or data file, your target impedance and your frequency or band.
+  - Gather your antenna as a MATLAB script (for example one exported from the antenna designer) or as a measured data file, your target impedance, your frequency band and your MATLAB release.
   - Open an AI that can run MATLAB code. Paste the skill and your details.
   - Ask for a matching network first. Check the return loss and Smith chart plots it makes.
   - Then ask for a measured antenna model, coverage results or a SAR estimate if you need them.
-  - Have an RF expert review any SAR result before you use it for compliance.
+  - The result arrives as MATLAB scripts, return loss and Smith chart plots, and a short text summary listing component values, bandwidth and link margin.
+  - SAR figures are estimates, not compliance evidence. Have an RF expert and the relevant standard check any SAR result before you use it for compliance.
+  - Before you fit the network to a real radio, build the circuit and check it on a vector network analyser (VNA). Parts and board layout change the result.
 output_sample:
   input:
     - Your antenna design, or measured or simulated antenna data

@@ -128,13 +128,13 @@ When asked to build an implementation plan:
 ### 4. Cross-Framework Mapping
 When asked to map CSF to other frameworks:
 - Read `references/csf-20-functions-categories.md` for subcategory IDs
-- Common mappings:
+- Common mappings (approximate, from the author. Check every control ID against the NIST, ISO and CIS source documents before use):
 
-| CSF Subcategory Area | NIST SP 800-53 Rev 5 | ISO 27001:2022 Annex A | CIS Controls v8 |
+| CSF Subcategory Area | NIST SP 800-53 Rev 5 | ISO 27001:2022 (clause number or Annex A control) | CIS Controls v8 |
 |---------------------|---------------------|----------------------|----------------|
-| GV.OC (Org Context) | PM-1, PM-2, PM-8 | 4.1, 4.2 | CIS 17 |
+| GV.OC (Org Context) | PM-1, PM-2, PM-8 | Clauses 4.1, 4.2 (main body, not Annex A) | CIS 17 |
 | ID.AM (Asset Mgmt) | CM-8, PM-5 | A.5.9, A.5.10 | CIS 1, 2 |
-| ID.RA (Risk Assess) | RA-3, RA-5 | 6.1.2 | CIS 18 |
+| ID.RA (Risk Assess) | RA-3, RA-5 | Clause 6.1.2 (main body, not Annex A) | CIS 18 |
 | PR.AA (Access Control) | AC-1 to AC-25 | A.5.15–5.18 | CIS 5, 6 |
 | PR.DS (Data Security) | SC-1 to SC-51 | A.5.33, A.8.24 | CIS 3 |
 | PR.IR (Tech Resilience) | CP-6, CP-7, CP-9 | A.8.6, A.5.30 | CIS 11 |

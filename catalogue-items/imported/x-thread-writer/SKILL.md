@@ -16,6 +16,8 @@ tools: [claude, cursor, gemini, codex]
 
 # Turn this into a thread
 
+Note: the `risk: critical` tag in the front matter comes from the collection this skill was copied from. The skill itself only writes text. Posting only happens if you add the optional VoiceMoat connector, which shows a preview and needs your clear yes first.
+
 Most threads fail for one of two reasons. Either they are an article chopped
 into tweet-sized pieces, so no individual tweet is worth reading, or they are a
 small idea stretched to eleven tweets because the writer thought longer meant
@@ -90,15 +92,15 @@ story makes it feel like homework.
 ## Example
 
 ```text
-User: Turn this 1,200-word blog post about how we cut our cloud bill into a
-thread.
+User: Turn this [LENGTH]-word blog post about [TOPIC] into a thread.
 
-Agent:
-1. The idea in one sentence, checked with the user.
-2. The spine: one line per beat, in order, shown before any tweet is written.
-3. The thread, each tweet separated by a line containing only three dashes,
+Agent returns these five parts, in this order:
+1. Check: the idea in one sentence, and whether it needs a thread or is one post.
+2. Skeleton: one line per beat, in order, shown before any tweet is written.
+3. Thread: each tweet separated by a line containing only three dashes,
    with a first tweet that makes the specific claim.
-4. A note if the material only supports five tweets rather than seven.
+4. Closing post: ends the loop opened by the first, with one call to action if given.
+5. Length note: a short note if the material only supports a shorter thread than expected.
 ```
 
 ## Limitations

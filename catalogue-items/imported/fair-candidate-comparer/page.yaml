@@ -17,7 +17,7 @@ when:
   - You want to check whether a rating has real evidence behind it.
 not_for:
   - "You only have one interviewer's loose notes and no written scorecard: write the scorecard first, with questions and green and red flags, then come back."
-  - "You want the AI to pick who to hire: make the call yourself with your team, and check employment-law and data-protection rules before using AI on candidates."
+  - "You want the AI to pick who to hire: make the call yourself with your team. AI ratings must never be the only basis for a decision. Check employment-law and data-protection rules before using AI on candidates."
   - "You need a legal or HR review of your hiring process: ask an HR adviser or employment lawyer."
 you_give:
   - Interview transcripts or notes
@@ -34,7 +34,9 @@ next: [candidate-comparison-table-builder]
 how_to_use:
   - Write your role scorecard first. List each question, the follow-ups, and the green and red flags.
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed. Metaview and Teamtailor, which it names, are paid tools you only need if you use their transcripts or kits.
-  - Paste the transcript or notes, then the scorecard. Add candidate notes if you have them.
+  - Before you paste, swap each candidate's name and personal details for Candidate A and Candidate B. Use only an AI tool your company has approved for candidate data.
+  - Use one rating scale for every candidate, the one in your scorecard. If you have none, use the 1 to 4 scale in the skill. Do not mix scales.
+  - Check again that names and personal details are gone before you paste. Then paste the transcript or notes, then the scorecard. Add candidate notes if you have them.
   - Ask for the scorecard and the screen evaluation. For several candidates, ask for the comparison matrix.
   - Check each rating against its quotes. Fix any that rest on feeling, then make the hiring call yourself. For a table of finalists, use the Candidate comparison table builder, and agree your decision rules with your team before you decide.
 output_sample:
@@ -60,4 +62,4 @@ output_sample:
     - name: Process gaps
       contains: Follow-ups never asked, vague answers accepted, and questions skipped by the interviewer.
     - name: Comparison matrix
-      contains: Candidates side by side on must-have and nice-to-have skills, with a hire level and confidence for each.
+      contains: Candidates side by side on must-have and nice-to-have skills, with an evidence rating and confidence for each. It does not say who to hire.

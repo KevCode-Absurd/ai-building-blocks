@@ -22,11 +22,8 @@ multiple registers."
 
 **Boundary:** this skill is the retail-floor procedure layer — how controls are executed at the
 register and on the floor day to day. Org-wide internal control *policy design* (approval thresholds,
-segregation of duties, board-adopted financial policy, audit prep) is `nonprofit-financial-controls`;
-this skill implements those policies at store level and should reference, not redesign, the
-org's approval-threshold table. Pricing strategy and merchandising are
-`nonprofit-retail-pricing-merchandising`. Online marketplace operations are `nonprofit-online-resale`.
-Staffing/scheduling of the people running these procedures is `nonprofit-retail-staffing`.
+segregation of duties, board-adopted financial policy, audit prep) belongs to your group's approved financial rules, which are not part of this item. This skill implements those policies at store level and should reference, not redesign, the
+org's approval-threshold table. Ask the user to paste those rules. Pricing strategy and merchandising are covered by the Resale store pricing and layout planner. Online marketplace operations are covered by the Donated goods online resale planner. Staffing and scheduling of the people running these procedures is not covered here: ask your store lead.
 
 ## Core Framework: The Store Operations Triangle
 
@@ -74,9 +71,9 @@ accountability challenges. Build procedures assuming these conditions, not a sta
    POS close-of-day report, discrepancy documentation on any over/short, deposit prep, alarm/lock
    sequence, and a designated closer sign-off.
 4. **Set the daily over/short threshold and escalation path**: define what dollar variance is normal
-   register error (e.g., under $5) versus what triggers a manager review and, above a second
-   threshold, a report up to whoever owns org-wide financial controls per `nonprofit-financial-
-   controls`'s approval structure — this skill executes that org policy at store level rather than
+   register error ([YOUR APPROVED LIMIT], a placeholder: replace it with the group's approved variance limit before use) versus what triggers a manager review and, above a second
+   threshold, a report up to whoever owns org-wide financial controls per your group's
+   approved approval structure — this skill executes that org policy at store level rather than
    setting the threshold itself.
 5. **Build the deposit and reconciliation cycle**: bank the counted deposit promptly (same or next
    business day), reconcile the bank-deposit slip against the POS close-of-day total, and route any
@@ -115,7 +112,7 @@ accountability challenges. Build procedures assuming these conditions, not a sta
 - **Deposits delayed or batched irregularly**, making bank reconciliation difficult and creating a
   window where cash sits unsecured on-site.
 - **Store-level procedures invented ad hoc instead of tied to the org's approval-threshold policy**,
-  creating a gap between what `nonprofit-financial-controls` says should happen and what actually
+  creating a gap between what the group's approved financial rules say should happen and what actually
   happens at the register.
 - **Unsorted/unpriced backstock accessible to the sales floor**, enabling both shrinkage and
   inconsistent off-book pricing by whoever reaches it first.
@@ -126,6 +123,6 @@ accountability challenges. Build procedures assuming these conditions, not a sta
   — same-day review of a variance is far more likely to identify a training gap or an actual loss
   than a variance discovered weeks later with no memory of that day's specifics.
 - **As a consultant advising a resale store**, don't propose new policy thresholds from scratch —
-  first confirm the org's board-adopted approval/threshold policy from `nonprofit-financial-controls`
+  first confirm the org's board-adopted approval/threshold policy (ask the user to paste it)
   and design the store procedure to execute that policy; a floor-level fix that contradicts org policy
   creates an audit finding even if it "solves" the immediate operational complaint.

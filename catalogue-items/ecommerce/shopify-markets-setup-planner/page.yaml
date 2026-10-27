@@ -137,7 +137,7 @@ works_best_with:
   tools:
     - {name: "Shopify Markets", why: "Where market groups, catalogs and per-market settings are set."}
     - {name: "Shopify Payments", why: "Needed for local currency at checkout, in countries where it is offered."}
-    - {name: "Translate and Adapt", why: "The free Shopify app for adding languages; it offers two free."}
+    - {name: "Translate and Adapt", why: "Shopify's app for adding languages. It has offered a limited number of free languages, so check Shopify's current listing for the limit and price."}
   inputs:
     - "Sales and traffic by country from analytics"
     - "Your shipping rates by country"

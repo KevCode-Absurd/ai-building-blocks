@@ -25,15 +25,9 @@ argument-hint: "[describe the data processing activity or feature]"
 
 # Privacy Use Case Triage
 
-## Matter context
+## Matter context and destination check (shortened by AI Blocks)
 
-**Matter context.** Check `## Matter workspaces` in the practice-level CLAUDE.md. If `Enabled` is `✗` (the default for in-house users), skip the rest of this paragraph — skills use practice-level context and the matter machinery is invisible. If enabled and there is no active matter, ask: "Which matter is this for? Run `/privacy-legal:matter-workspace switch <slug>` or say `practice-level`." Load the active matter's `matter.md` for matter-specific context and overrides. Write outputs to the matter folder at `~/.claude/plugins/config/claude-for-legal/privacy-legal/matters/<matter-slug>/`. Never read another matter's files unless `Cross-matter context` is `on`.
-
----
-
-## Destination check
-
-Before producing output, check where it's going. If the user has named a destination (a channel, a distribution list, a counterparty, "everyone"), ask whether it's inside the privilege circle. Public channels, company-wide lists, counterparty/opposing counsel, vendors, and clients (for work product) waive the protection. When the destination looks outside the circle, flag it and offer (a) the privileged version for legal only, (b) a sanitized version for the broader channel, or (c) both — don't silently apply a privileged header and then help paste it somewhere the header won't protect it. See the canonical `## Shared guardrails → Destination check` in this plugin's CLAUDE.md.
+The plugin's shared guardrails file and matter workspaces are not included here, so skip any step that points to them. Before you give the result, ask who will read it. If it will go outside the legal or privacy team (a company-wide channel, a vendor or a customer), say that sharing it may waive legal privilege, and offer a short version for that wider group.
 
 ## Purpose
 
@@ -71,13 +65,15 @@ If the file is missing or contains `[PLACEHOLDER]`, surface this bounce:
 >
 > **Two choices:**
 > - Run `/privacy-legal:cold-start-interview` (2 minutes) to configure your profile, then I'll triage tailored to YOUR practice.
-> - Say **"provisional"** and I'll triage against generic defaults — US jurisdiction, middle risk appetite, lawyer role, no playbook — and tag every output `[PROVISIONAL — configure your profile for tailored output]` so you can see what I do before committing.
+> - Only if you have no customers in the EU or UK: say **"provisional"** and I'll triage against generic defaults — US jurisdiction, middle risk appetite, lawyer role, no playbook — and tag every output `[PROVISIONAL — configure your profile for tailored output]` so you can see what I do before committing.
 
 ### Provisional mode
 
+**Added by AI Blocks:** only offer provisional mode if the person says they have no customers in the EU or UK. If they do, or do not know, ask them to finish the setup first and do not offer it.
+
 **Warning (added by AI Blocks):** provisional mode assumes US rules only. If the business has customers in the EU or UK, or you do not know, a provisional call can be wrong. Say so at the top of the answer and tell the person to finish setup first.
 
-If the user says "provisional," run triage normally using these generic defaults: middle risk appetite, lawyer role, US jurisdiction (CCPA + common federal sectoral baselines), no playbook (classify from general privacy-law principles rather than matching to configured commitments). Tag the reviewer note and every finding block with `[PROVISIONAL]`. At the end of the output, append:
+If the user says "provisional" and has confirmed they have no EU or UK customers, run triage normally using these generic defaults: middle risk appetite, lawyer role, US jurisdiction (CCPA + common federal sectoral baselines), no playbook (classify from general privacy-law principles rather than matching to configured commitments). Tag the reviewer note and every finding block with `[PROVISIONAL]`. At the end of the output, append:
 
 > "That was a generic run against default assumptions. Run `/privacy-legal:cold-start-interview` to get output calibrated to YOUR practice — your regulatory footprint, your privacy policy commitments, your risk appetite. 2 minutes."
 
@@ -169,6 +165,8 @@ proceeds.
 ---
 
 ### Step 5: Classification and output
+
+> Added by AI Blocks: start every answer with one line: "Not legal advice. Your privacy counsel must check every law I cite before you rely on this." Treat PROCEED, PIA REQUIRED, DPIA MANDATORY and STOP as a first screen for the person's privacy counsel, not a final decision. Say so after the classification.
 
 ---
 
@@ -294,6 +292,6 @@ If the activity generates inferred data about individuals (e.g., a behavioral sc
 a predicted preference), treat the inferred attribute as personal data for triage
 purposes. Don't let "we're just computing a score" obscure what the score represents.
 
-## Close with the next-steps decision tree
+## Close with next steps
 
-End with the next-steps decision tree per CLAUDE.md `## Outputs`. Customize the options to what this skill just produced — the five default branches (draft the X, escalate, get more facts, watch and wait, something else) are a starting point, not a lock-in. The tree is the output; the lawyer picks.
+(AI Blocks note: the plugin's CLAUDE.md `## Outputs` file is not included, so there is no fixed decision tree.) End with a short list of next steps that fit what you just produced, such as draft the assessment, ask privacy counsel, get more facts, or wait. The person picks.

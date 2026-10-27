@@ -48,7 +48,7 @@ output_sample:
     - Two or three competitor menus (optional)
     - Your current menu and collections (optional)
   prerequisites:
-    - A Shopify store on a paid plan, to build the result with Search & Discovery and the bulk editor
+    - A Shopify store (a paid service). Check your plan and the Search & Discovery app's page in the Shopify app store for what is included.
   output:
     - name: TAGS AND TYPES
       contains: One spelling for each product type, with the tags each product needs.
@@ -140,7 +140,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Shopify Search & Discovery", why: "A free Shopify app for filters and synonyms, with filters you can order by importance."}
+    - {name: "Shopify Search & Discovery", why: "A Shopify app for filters and synonyms, with filters you can order by importance. Check its current price in the Shopify app store."}
     - {name: "Shopify", why: "Smart collections, nested menus and a bulk editor for tags and types are built in."}
     - {name: "Any good chat AI", why: "Any current chat AI can sort a product list into tags and collections."}
   inputs:

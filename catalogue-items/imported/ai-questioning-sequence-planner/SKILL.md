@@ -14,11 +14,12 @@ domain: "ai-literacy"
 version: "1.0"
 contributor: "Gareth Manning"
 evidence_strength: "moderate"
+# AI Blocks note: check each paper below yourself before you quote what it found. The AI cannot confirm that a paper says what this skill's text suggests. One title was already corrected from another source, so the list is not fully verified.
 evidence_sources:
   - "Paul & Elder (2008) — The Miniature Guide to Critical Thinking Concepts and Tools"
   - "Walsh & Sattes (2005) — Quality Questioning: research-based practice to engage every learner"
   - "Nystrand et al. (1997) — Opening Dialogue: understanding the dynamics of language and learning in English classrooms"
-  - "Perez et al. (2022) — Sycophancy to Subterfuge: investigating reward tampering in language models"
+  - "Perez et al. (2022) — Discovering Language Model Behaviors with Model-Written Evaluations (AI Blocks: the original file gave a different title, 'Sycophancy to Subterfuge', which is about reward tampering. We corrected it, but check the paper before you quote it)"
   - "Wei et al. (2022) — Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"
 input_schema:
   required:

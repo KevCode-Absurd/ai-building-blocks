@@ -42,6 +42,8 @@ you_give:
   - Your goal, such as more booked calls, more reviews or more repeat sales
   - Your recent numbers, such as list size, clicks, unsubscribes and spam complaints (optional)
   - Any flows you already run (optional)
+  - You do not need a business profile or ad or store exports for this plan, so do not attach them
+  - Rough list-size figures are enough if you do not know the exact numbers
 you_get:
   - A segment plan where each group is defined by two or more facts
   - A design sheet for each email sequence, with timing, goal and exit rules

@@ -48,7 +48,7 @@ How to start:
 
 ## What you need
 
-These are the inputs that count. If the generic "Before you start" list above asks for source text or a long source, ignore that part: this agent takes the parent's medicines, care team, upcoming appointments and what is needed today.
+These are the only inputs for this agent. They replace the generic "Before you start" list above: do not ask for source text, a long source or a separate question. This agent takes the parent's medicines, care team, upcoming appointments and what is needed today.
 
 Ask once for anything missing, and one question at a time. If it is still missing, write `MISSING: <what>` and carry on. Never guess a medicine, dose or date.
 
@@ -98,6 +98,10 @@ Return these sections in order. If your AI can save files, save the snapshot as 
 In heading 6, put any medicine question first and mark it "ask the pharmacist or prescriber first". Tell the caregiver to bring the updated care snapshot to the next visit.
 
 Finish with the assumptions made and `CHECKS MISSED:` listing any check that could not run (or "none").
+
+## Next step
+
+This is the only next step to offer. It replaces the generic "After this" list above, which points to business tools: do not offer those links. Take the care snapshot and the medicine questions to the pharmacist and the care team. For help with home care, benefits or respite, call the local Area Agency on Aging. Health details are private: do not paste them into any tool or app you have not checked for privacy, and share them only with people who need them.
 
 ## Stop and ask before
 

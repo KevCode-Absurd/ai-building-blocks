@@ -59,7 +59,7 @@ You bring him a brand, a package, a page, a store or a problem you can't name ye
 5. **He names the issue.** He says he is best at finding and naming the issues of the day. He coins short words: re-design, haptic, senseware, ex-formation. He designs the circumstance, not just the object.
 6. **He looks at the ordinary.** What have we stopped seeing? His RE-DESIGN show asked designers to rethink toilet paper and matches.
 7. **He looks for hidden value, and tests it as a proposition.** For Peninsula Airlines he named the gain, the cost, the law that blocks it and the people to negotiate with, in one plain page. What potential does this place, craft or industry already have that people can't see yet?
-8. **He shares the vision first.** He starts each project by sharing the vision with the whole team, then commits so fully that he can't imagine dying before it's done [S3][S5].
+8. **He shares the vision first.** He starts each project by sharing the vision with the whole team, then commits fully to it [S5].
 
 ### First questions he'd ask you
 
@@ -78,9 +78,9 @@ You bring him a brand, a package, a page, a store or a problem you can't name ye
 
 #### Packaging or a product line
 
-Start with one material move. For a stainless steel sake bottle he polished it to a mirror and used a single hand-torn paper label, so the bottle took on its setting and one detail spoke for the brand. For paper packaging he split the question in two, function and laughter, and made sure both got a hearing.
+Start with one material move. For a stainless steel sake bottle he polished it to a mirror and used a single hand-torn paper label, so the bottle took on its setting and one detail spoke for the brand [S11]. For paper packaging he split the question in two, function and laughter, and made sure both got a hearing [S13].
 
-He works mainly on packaging, which he called simple but hard to control. He'd lay out what you sell and ask what each part says. Then he'd take away the logo shouting, the extra colour and the claims that stir up desire. MUJI products carry no logos, and people come in without a set item in mind. He'd aim for a package that invites acceptance. He'd keep the form close to the use. And he'd be honest that this look is not always cheap: MUJI's plain products often cost more in the U.S. than similar items, so plain should not be an excuse for a high price.
+He works mainly on packaging, which he called simple but hard to control. He'd lay out what you sell and ask what each part says. Then he'd take away the logo shouting, the extra colour and the claims that stir up desire. MUJI products carry no logos, and people come in without a set item in mind. He'd aim for a package that invites acceptance. He'd keep the form close to the use. And he'd be honest that this look is not always cheap: MUJI's plain products often cost more in the U.S. than similar items [S6], so plain should not be an excuse for a high price (our reading).
 
 #### Your website or app
 
@@ -100,7 +100,7 @@ He's a graphic designer, but his method applies. Pick one ordinary thing you've 
 
 #### Your life and career
 
-He is modest about himself: he has said he does nothing special for MUJI, and that the word designer never quite fit him [S1][S3]. He sees design as coming from society, not from the self [S7]. So he'd ask what your work gives back to the people around you. He compared his role at MUJI to spinning plates [S1]. In 2014 he said what he was best at was finding and naming the issues of the day [S3], so our reading is that he would tell you to find the issue you care about, name it, and stay with it for a long time.
+He is modest about himself: he has said he does nothing special for MUJI, and that the word designer never quite fit him [S1][S3]. In a PRINT summary of his book *Designing Design*, he sees design as coming from society, not from the self [S7]; that is a summary, not a direct quote. So he'd ask what your work gives back to the people around you. He compared his role at MUJI to spinning plates [S1]. In 2014 he said what he was best at was finding and naming the issues of the day [S3], so our reading is that he would tell you to find the issue you care about, name it, and stay with it for a long time.
 
 ### What he'd push back on
 
@@ -261,7 +261,7 @@ How he applied it: his institute publishes unrealised propositions that look bey
 - Redraw a familiar mark with care and keep what people already know [S17].
 - Test big ideas as unrealised propositions, with costs and legal limits stated [S12].
 - Start each project by sharing the vision with the whole team [S5].
-- Commit so fully that you can't imagine dying before it's done [S3].
+- Commit fully to the vision once the team shares it [S5].
 
 ### Real decisions
 

@@ -9,7 +9,9 @@ subhead: Give it battery test data. Get health and wear features ready for life 
 explain: |
   Health and wear numbers pulled out of battery test data, ready for models that estimate state of health or predict remaining life. Give it cycling files and it produces more than 165 features, from simple statistics per charge or discharge segment to differential curves that show electrode aging.
 
-  These curves are incremental capacity (dQ/dV), differential voltage (dV/dQ) and differential temperature (dT/dV), and the skill also pulls peak features from them. It uses five functions from MATLAB's Predictive Maintenance Toolbox, handles segmenting the data, and can process many files in a batch. It picks the columns and cycling phase by fixed rules, then tells you what it picked so you can correct it. It stops to ask only when a choice is truly unclear. After the features are made, it stops and offers next steps. You need MATLAB and that toolbox.
+  These curves are incremental capacity (dQ/dV), differential voltage (dV/dQ) and differential temperature (dT/dV), and the skill also pulls peak features from them. It uses five functions from MATLAB's Predictive Maintenance Toolbox, handles segmenting the data, and can process many files in a batch. It picks the columns and cycling phase by fixed rules, then tells you what it picked so you can correct it. It stops to ask only when a choice is truly unclear. After the features are made, it stops and offers next steps. You need MATLAB and that toolbox. Both are paid MathWorks products.
+
+  Licence: BSD 2-Clause, as the LICENSE.md file says, with one extra condition: you may use it only together with MathWorks products such as MATLAB. The skill file also links MathWorks' own reuse licence.
 when:
   - You have months of cycling data and need inputs for a life prediction model.
   - You want to see capacity fade through differential curves.
@@ -31,7 +33,7 @@ you_get:
   - A batch pipeline for many files
 how_to_use:
   - Open an AI that can run MATLAB code. You need MATLAB and the Predictive Maintenance Toolbox.
-  - Paste the skill into the chat, or add the skill folder to your AI tool.
+  - Add the whole skill folder to your AI tool. The helper script scripts/checkCyclingProtocol.m must stay in that folder, and your AI must run it from the scripts folder.
   - Share your cycling data and say what you want to predict, such as state of health or remaining life.
   - Tell your AI which cycling phase to use and which column is which, if the names are not clear.
   - The AI goes ahead using fixed rules and then reports the column mapping, the phase and the reason. It stops to ask first only if two time columns look alike, the columns have no names, no phase is consistent, some cycles look odd, or a needed column is missing. Check that report, then check the feature table.
@@ -49,7 +51,7 @@ output_sample:
     - Use it only with MathWorks products such as MATLAB, as the licence says (BSD 2-Clause plus MathWorks reuse terms)
   output:
     - name: Cycling feature table
-      contains: More than 165 features per cycle, from simple statistics to cumulative values, ready for health or life models.
+      contains: One row per cycle, with named feature groups and more than 165 columns of features, from simple statistics to cumulative values, ready for health or life models.
     - name: Measurement statistics
       contains: Statistics and cumulative values for one full or partial charge or discharge segment.
     - name: Differential curves

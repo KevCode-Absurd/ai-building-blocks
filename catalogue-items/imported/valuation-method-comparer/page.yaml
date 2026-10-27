@@ -30,9 +30,9 @@ you_get:
   - The key assumptions and what changes them
 how_to_use:
   - Gather three or more years of financials, one row per year, with revenue, EBIT, D&A, capex, change in working capital, net debt and share count. Write down why you need the value, and whether it is for control or a minority stake.
-  - Pick five to ten peer companies with a similar business model. Add recent deals in your sector if you have them. Add management forecasts too (optional).
+  - Pick five to ten peer companies with a similar business model. Peer multiples and deal multiples must come from sources you name, such as filings or a data service. Paste them in. Your AI must mark any figure it cannot source as an assumption, not a fact. Add recent deals in your sector if you have them. Add management forecasts too (optional).
   - Open Claude, ChatGPT or Gemini and paste the skill. Use an AI that can run code, because the model and the sensitivity grid need it. Code running is built into some paid plans and not others, so check yours.
-  - Paste your financials and your purpose. Ask it to run the cash flow model, the peer multiples and the past deals.
+  - Paste your financials and your purpose. Ask it to run the cash flow model, the peer multiples and the past deals. The skill points to a script, scripts/calculate.py, that a pasted skill does not include. Upload the scripts folder, or let your AI write its own cash flow and sensitivity code. If it cannot run code, it works the numbers by hand in the chat and tells you the result is unchecked.
   - Check the bridge first. Every debt-like item should be listed. Then read Key Judgments and test the assumptions you doubt.
   - If the cash flow value and the peer value differ by more than 30 percent, ask your AI to find the assumption that is off. Then use the Cost of capital calculator for the discount rate, and put the football field chart in your board pack.
 output_sample:

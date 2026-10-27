@@ -10,12 +10,15 @@ explain: |
   Get a pile of brain imaging and related files named, laid out and described to the BIDS standard, so other people and tools can read them at once. Problems are flagged before you share or submit.
 
   BIDS sets file names, folder layout and metadata fields. It covers MRI, PET, EEG, MEG, intracranial recordings, near-infrared, motion capture, behaviour and more. The skill uses Python tools such as PyBIDS to index and query the dataset, and it checks the result against the current spec. Each archive has its own submission rules, so check your target before you deposit.
+
+  Licence: this copy is under the MIT licence (see LICENSE.md). The skill file also names CC BY 4.0, which is its original author's licence. Both allow reuse with credit, so keep the credit to K-Dense and the original author.
 when:
   - You have raw scanner files and need a standard layout.
   - A repository asks for BIDS before you can submit.
   - You must add the metadata files BIDS requires.
   - You want a check that finds naming and layout errors.
 not_for:
+  - "Hard stop: your files are not de-identified, or participant consent does not allow sharing them with an AI tool. This skill does not check either one, so settle that first or run the tools on your own computer without uploading the scans."
   - Your data is already in BIDS and the validator passes. You only need to query it, so use PyBIDS directly.
   - You need to analyse scans or run statistics. Use your usual analysis software, because this only organises and checks files.
   - You must meet one archive's own rules. Read that archive's submission guide first, since rules differ by archive.
@@ -34,9 +37,10 @@ how_to_use:
   - Before you upload, check that the files are de-identified (no names, dates of birth or faces in the scans) and that participant consent allows sharing them with an AI tool. Keep the original scanner files in your own storage.
   - Paste the skill into the chat, or upload the skill folder if your AI accepts files.
   - Add your files or folder, then say what the study is, how many subjects and sessions, and which kind of data it is.
+  - First run, in this order. Install PyBIDS and the BIDS validator. Run the validator on the raw folder to see what is wrong. Apply the fixes: names, folders, sidecar files, participants.tsv and dataset_description.json. Re-run the validator. Then index the result with PyBIDS to confirm it reads.
   - Name your target archive if you have one, so your AI can note any extra rules to check.
   - Read the problem list. Fix or approve each item, then ask your AI to run the validator again.
-  - Run it until the report is clean, then check the archive's own rules before you submit.
+  - Run it until the report is clean. Then read your target archive's own submission rules, and only then deposit or share the dataset.
 output_sample:
   input:
     - Your raw imaging or recording files, such as DICOM, MRI, EEG or MEG

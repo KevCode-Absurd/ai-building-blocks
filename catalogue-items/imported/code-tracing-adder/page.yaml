@@ -30,8 +30,8 @@ you_get:
   - Recorded exceptions
   - Timed events inside slow steps
 how_to_use:
-  - "Install the OpenTelemetry-MATLAB package, version 1.11.0 or newer. You need MATLAB R2022b or newer, and a MATLAB licence. Licence: the LICENSE.md in this folder applies. It is BSD 2-Clause with an added MathWorks term: use it only with MathWorks products such as MATLAB. The skill file header links MathWorks' own licence page, which is where that term comes from."
-  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill text.
+  - "Install the OpenTelemetry-MATLAB package, version 1.11.0 or newer. You need MATLAB R2022b or newer, and a MATLAB licence. Licence: the LICENSE.md in this folder governs. It is BSD 2-Clause, and you may use the software only with MathWorks products such as MATLAB."
+  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill text. The skill's check step calls MATLAB tools. Without a MATLAB connection, your AI only writes the code and you run it in MATLAB yourself.
   - Paste your MATLAB functions. Say where you want traces sent, if you know.
   - Read the changed code. Check that your function signatures are the same.
   - Run your code once in MATLAB yourself, unless your AI is connected to MATLAB. Open your tracing tool and confirm the spans show up.
@@ -55,4 +55,4 @@ output_sample:
     - name: Events and loop spans
       contains: Timed events inside slow steps, and spans ended mid-function inside loops.
     - name: Verification check
-      contains: A final pass that checks the spans follow the skill's rules.
+      contains: A final pass that checks the spans follow the skill's rules. It confirms the code runs, not that spans reach your tracing tool. Check that yourself, as in the last step above.

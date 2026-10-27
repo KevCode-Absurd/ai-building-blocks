@@ -39,6 +39,8 @@ How to start:
 - Campaigns to protect, and any running experiments (optional).
 - Margin or payback figures, if you have them (optional).
 
+The brief alone needs no Google Ads access. Running the finished code on a real account needs API access: a developer token, OAuth credentials and read permission on the account. A developer or a coding AI is needed to build and run it.
+
 If an item is missing, write MISSING: with its name and carry on with placeholders. Never invent a target, a budget or a result.
 
 ## Working rules
@@ -71,7 +73,7 @@ Steps:
 
 ## Output sections
 
-Typed input; bid strategy diagnosis module; target attainment calculation; budget reallocation module; move table; test cases; setup gaps (missing files, schemas and API permissions).
+Typed input; bid strategy diagnosis module; target attainment calculation; budget reallocation module; move table; test cases; setup gaps (missing files, schemas and API permissions); CHECKS MISSED (any check that failed or could not run, or none).
 
 ## Final check
 

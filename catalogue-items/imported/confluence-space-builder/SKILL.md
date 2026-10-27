@@ -7,7 +7,7 @@ description: Atlassian Confluence expert for creating and managing spaces, knowl
 
 This catalog copy does not include these files:
 
-- `project-management/references/atlassian-mcp-tools.md`
+- the Atlassian tool list file from the original package
 - `../atlassian-templates/scripts/template_scaffolder.py`
 
 Do not say you read or ran them. Do those steps by hand: write the storage-format XHTML for each page yourself, using `references/macro-cheat-sheet.md` and `references/templates.md`.
@@ -18,7 +18,7 @@ Master-level expertise in Confluence space management, documentation architectur
 
 ## Atlassian MCP Integration
 
-**Primary Tool**: Atlassian Remote MCP server (server key `atlassian`; the original bundled `.mcp.json` is not in this copy, so the user must turn the Atlassian connector on in their AI). Tools are camelCase and surface as `mcp__atlassian__<toolName>`. **Tool list**: the file `project-management/references/atlassian-mcp-tools.md` is not in this copy, so use only the Atlassian tool names your AI can actually see. Never invent tool names — if a capability isn't there, it is not available via MCP. For page bodies, write the storage-format XHTML by hand (see `references/macro-cheat-sheet.md`).
+**Primary Tool**: Atlassian Remote MCP server (server key `atlassian`; the original bundled `.mcp.json` is not in this copy, so the user must turn the Atlassian connector on in their AI). Tools are camelCase and surface as `mcp__atlassian__<toolName>`. **Tool list**: no tool list file is included in this copy. The tools assumed are those named under Key Operations below. Check them in your connector. Use only the Atlassian tool names your AI can actually see. Never invent tool names — if a capability isn't there, it is not available via MCP. For page bodies, write the storage-format XHTML by hand (see `references/macro-cheat-sheet.md`).
 
 **Key Operations** (obtain `cloudId` once via `mcp__atlassian__getAccessibleAtlassianResources`):
 
@@ -133,7 +133,7 @@ Space Home
 ```bash
 python3 scripts/content_audit_analyzer.py pages.json --format json
 ```
-This also needs Python 3. Without it, review the page list by hand. Input: a JSON list of pages, one object per page, with the fields (`title`, `last_modified`, `view_count`, `author`, `labels`, `word_count`) — build it by exporting page metadata via `mcp__atlassian__getPagesInConfluenceSpace` / `mcp__atlassian__searchConfluenceUsingCql`. Consume the output: the stale/orphaned/low-engagement findings become the archive list (label + move via UI, since label tools aren't on the MCP) and the update backlog for the quality standards below.
+This also needs Python 3. Without it, review the page list by hand. Input: a JSON list of pages, one object per page, with the fields (`title`, `last_modified`, `view_count`, `author`, `labels`, `word_count`) — build it by exporting page metadata with `mcp__atlassian__searchConfluenceUsingCql`, or with the page-list tool your AI can see in the Atlassian connector. Confirm the tool name before you use it. Consume the output: the stale/orphaned/low-engagement findings become the archive list (label + move via UI, since label tools aren't on the MCP) and the update backlog for the quality standards below.
 
 **Article Types**:
 - How-to guides
@@ -370,5 +370,4 @@ For a Jira chart, see `references/macro-cheat-sheet.md` and check the macro name
 
 ## Related Skills
 
-- **Jira Expert** (`project-management/jira-expert/`) — Jira issue macros and linking complement Confluence docs
-- **Atlassian Templates** (`project-management/atlassian-templates/`) — Template patterns for Confluence content creation
+The original package names two companion skills (a Jira expert and Atlassian templates). They are not in this copy. Use `references/templates.md` for template patterns.

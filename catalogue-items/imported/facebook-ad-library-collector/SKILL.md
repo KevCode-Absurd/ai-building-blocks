@@ -18,6 +18,8 @@ license_source: "https://github.com/harshmaur/apify-facebook-ads-library-scraper
 
 Turn "what ads does X run" into one run of `harshmaur/facebook-ads-library-scraper` and return one row per ad. The Actor reads the public Meta Ad Library. It takes two kinds of input: an Ad Library search URL for a keyword, or a Facebook Page for one advertiser. The agent's job is to build the right URL and to cap the ad count.
 
+Plain words (added by AI Blocks): `risk: critical` in the header is the author's own label. Treat it as a reminder that this skill runs a paid third-party scraper that may not fit Meta's terms, so run it only with the user's clear yes and a cost cap. Every command below carries the same `--user-agent` flag. It only labels the request for Apify, so keep it as written.
+
 Disclosure: the Actor is paid per result and is built by the skill author. Links carry no affiliate parameters.
 
 ## When to Use
@@ -40,7 +42,8 @@ Out of scope (the boundary):
 
 ## Prerequisites
 
-- Apify account ([sign up](https://apify.com)). The free plan's monthly credit covers about 10,000 ads.
+- **Meta terms check (do this before the first Apify run).** This skill runs a paid third-party scraper on Meta's Ad Library, which Meta's terms may not allow. Ask the user to read Meta's Ad Library terms and say yes in plain words. If they do not say yes, stop and do not run the Actor.
+- Apify account ([sign up](https://apify.com)). The author says the free plan's monthly credit covers about 10,000 ads. Apify changes its plans, so check [apify.com/pricing](https://apify.com/pricing).
 - Authentication via one of:
   - `apify login` (OAuth, if you use the Apify CLI)
   - `APIFY_TOKEN` environment variable
@@ -107,7 +110,7 @@ apify actors info "harshmaur/facebook-ads-library-scraper" --input --json \
 
 ### Step 3 — Estimate the cost, then run
 
-The price is per ad in the dataset. There is no start fee, and `scrapeAdDetails` costs nothing extra:
+The price is per ad in the dataset. There is no start fee, and `scrapeAdDetails` costs nothing extra. These prices are the author's figures as of this copy (October 2026). Apify changes prices, so check [apify.com/pricing](https://apify.com/pricing) and the Actor's own page before a big run:
 
 | Apify plan | Per 1,000 ads |
 |---|---|

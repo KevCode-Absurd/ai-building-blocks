@@ -21,6 +21,7 @@ not_for:
   - "You have no customers yet, or fewer than about 20: run a short survey of people who might buy instead."
   - "You want to know why sales are slow: look at your sales calls and offer first, since this tool only studies customers who already bought."
   - "You have no record of who stayed and who left: write that list first, because the tool stops without it."
+  - "The early action cannot be logged within a few weeks in your own system: the 30 to 60 day check only works when you can count the action that soon."
 
 you_give:
   - What customers did after they bought, with dates

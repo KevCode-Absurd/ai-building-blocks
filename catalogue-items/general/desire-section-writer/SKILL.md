@@ -7,6 +7,8 @@ description: Use when a headline gets read but the copy underneath leaves the re
 
 Copy cannot make a buyer want something new. It can make a want that is already there sharper, clearer and more specific, until the price stops being the issue. This skill takes the want and the product facts and writes the section of copy that does that. It does not write the headline, the proof or the close.
 
+Not for: a finished page that needs a proof or guarantee section (use "Belief ladder builder"), or tone and flow edits on finished copy (use "Sales copy editor", which edits copy you already have; this skill builds the want from your product facts).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.

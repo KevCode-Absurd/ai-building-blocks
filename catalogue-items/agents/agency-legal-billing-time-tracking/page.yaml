@@ -73,6 +73,8 @@ how_it_works:
     text: It lists write-downs and disputes for the responsible attorney. It does not adjust or send anything itself.
   - title: Draft the follow-up
     text: It writes the reminder for 35, 60 or 90 days late, and sets out billing figures when you give it the data.
+  - title: Hand over to a person
+    text: The attorney approves the rewrites and reminders. A person then copies them into the firm's own billing system. The agent sends and posts nothing.
 output_shape: |-
   ENTRY REVIEW
     <date> | <hours> | <narrative as written> | <clear, vague, block billed or non-billable> | <reason> | <fix>

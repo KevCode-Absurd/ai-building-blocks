@@ -35,11 +35,18 @@ How to start:
 - The date window and your time zone.
 - Access to your mail or task tool is optional. Pasted text works.
 
-If the "What you need" list above names a different input, use this list.
+The Before you start list above is a general template. Read its "Plan" as your task export: task ID, owner, due date, status and thread ID for each task. The email threads, the date window and your time zone go with it. The inputs here are what this skill needs.
 
 ## The job
 
 Share due tasks and related threads. Get follow-up drafts linked to each task, with missing facts and send status clear.
+
+**Use it when** several tasks are due and each needs a nudge or a reply by email.
+
+**Not for:**
+- Tasks with no email thread or recipient on file. Ask the owner who to write to first.
+- One email from scratch. Write it directly in your AI chat.
+- Sending messages for you. This only makes drafts. Send each one yourself after you review it.
 
 ## Method
 

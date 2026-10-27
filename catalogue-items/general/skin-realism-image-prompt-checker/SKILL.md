@@ -7,6 +7,8 @@ description: Use when the user wants a focused skin, hand and contact realism re
 
 Share a portrait or prompt. Get focused fixes for skin, hands and contact while keeping identity and light.
 
+**What you get:** a note on whether the image was really seen or only the prompt read, the top faults ranked, one revised prompt with a list of what to keep, and the checks that did not run.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -30,13 +32,17 @@ This skill reviews a portrait or an image prompt and returns a short fault list 
 
 **Inputs:** the image or the prompt text; whether it is a still or part of a video; the face, age and skin tone to keep; approved reference images (optional). If the image cannot be opened, say so and review the prompt text only.
 
+**Before you review:** ask the user to confirm two things. The person shown is an adult, and, if the face is a real person's, that person has agreed to the image being edited or recreated. If either is not confirmed, or the face looks like a child, stop and say why. Do not write a revised prompt.
+
 **Rules:** do not edit or recreate a real person's face without their consent. Use only adult faces. Do not make the image look like proof that a beauty product works.
+
+**When not to use it:** stylized, cartoon or painted looks (skip the skin check and use the [Multi-provider image maker](https://useaiblocks.com/skills/multi-provider-image-maker) with a style prompt), making the image itself (run the revised prompt in your image tool), or proof that a beauty product works (this never claims product results). The "brief" in "Before you start" means your prompt or portrait and the details listed under Inputs.
 
 ## Method
 
 1. Decide if the job fits. Use this for photorealistic adult faces and hands, beauty or UGC stills, or portrait-to-video consistency. A stylized brief does not need photoreal skin correction. Then read the image zone by zone in this order: skin (forehead and nose, cheeks, under-eyes, lips), then makeup edges, then hands and contact. Write the revised prompt last.
 
-2. Read the image if accessible; distinguish observation from prompt-only intent. Keep the chosen identity, age, skin tone and existing marks rather than adding arbitrary blemishes.
+2. Gather first: the image file or link, whether it is a still or video, and the face, age and skin tone to keep. If you can open the image, say what you observed in it. If you cannot, say you are reviewing the prompt text only. Keep the chosen identity, age, skin tone and existing marks rather than adding arbitrary blemishes.
 
 3. Review skin by facial zone: forehead/nose versus cheeks, under-eyes, lips, peach fuzz and natural tonal variation. Texture strength should follow distance, focus and light rather than uniform stamped pores.
 
@@ -75,6 +81,6 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 Check the required facts, format and internal consistency against the actual input. Repair contradictions before delivery. Keep user facts, creative choices and missing evidence distinct. A prompt or plan is not a generated asset; name any tool or visual/audio check that did not run. If the user asks for a revision, preserve the approved parts and change the requested dimension.
 
-## Offline practice case
+## What the result is
 
-A fictional practice example is included for installation and method checks. It does not establish real tool execution, measured audience results or production performance.
+The result is a revised prompt for another tool. It is not a checked image. If you could not see a real image, or could not check a video, say so under CHECKS NOT RUN.

@@ -34,9 +34,13 @@ how_to_use:
   - Before you start, check you have a recent Python, run pip install mlflow, and install the machine learning library your script uses. Pick a small training script you already have. Tell your AI the MLflow version you installed (run pip show mlflow), because some registry commands changed between versions.
   - Paste the skill into your AI, then paste your script. Say which scores you care about and which library you use.
   - Ask your AI to add MLflow logging. It should name the experiment and give each run a clear name.
+  - "You get back your edited script, plus a table or list of the logged runs with their best scores and a short summary of each run."
   - Run the script a few times with different settings. This needs an AI that can run Python, or you run it yourself.
   - Start the MLflow screen with the command mlflow ui and open http://localhost:5000. Sort runs by score and compare two.
-  - After you compare runs, pick the best one and give its model a name in the model registry. Only if you need it, ask for the registry or deploy steps. Cloud deploy needs your own AWS or Azure account and may cost money.
+  - After you compare runs, pick the best one and give its model a name in the model registry. On a recent MLflow, use an alias such as champion. The stage commands are for older versions only. Only if you need it, ask for the registry or deploy steps. Cloud deploy needs your own AWS or Azure account and may cost money.
+next:
+  - language-model-benchmark-runner
+  - copilot-eval-driven-dev
 output_sample:
   input:
     - Your training script

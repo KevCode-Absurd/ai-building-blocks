@@ -11,7 +11,7 @@ subhead: Give it a rival store's monthly visits, its price and the offers you sa
 explain: |
   You cannot see a rival's sales. You can see their traffic, and traffic times conversion rate times order value gives a rough revenue. Without a method, people pick one optimistic number and call it fact.
 
-  This skill uses the formula from one e-commerce video with cautious inputs. Conversion is 2% for a mid-priced item and about 1.5% for a high-ticket one, inside a range of 1.5% to 3.5%. Order value is the low end of the rival's bundles and upsells. It gives you three cases, marks which inputs are guesses and compares the mid case with a bar. The default bar is $300,000 a month, and you can change it.
+  This skill uses the formula and rates from one e-commerce video with cautious inputs. The rates and the bar are unvalidated assumptions, not tested against store data. Conversion is 2% for a mid-priced item and about 1.5% for a high-ticket one, inside a range of 1.5% to 3.5%. Order value is the low end of the rival's bundles and upsells. It gives you three cases, marks which inputs are guesses and compares the mid case with a bar. The default bar is $300,000 a month, and you can change it.
 
 when:
   - You found a store selling your product and want to know if the market is big enough to chase.

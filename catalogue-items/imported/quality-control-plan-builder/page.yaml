@@ -10,6 +10,8 @@ explain: |
   A quality plan built from your own defect data. You see control charts that show whether your process is stable, a ranked list of the biggest causes of defects, and a step-by-step plan to cut them.
 
   It starts by asking what is going wrong, how bad the rates are, what a defect costs you, and how you inspect today. Then it applies standard quality methods: control charts, process capability, Pareto ranking and root cause tools. It tells you where you sit on the path from inspecting finished goods to preventing defects at the source. The plan sets targets and owners, so improvement does not stop at the report.
+
+  Limits of this skill: charts and capability figures need enough stable data to mean anything. The sigma level and defect rate assume a normal spread, so treat them as estimates. The plan is a template. Check it against your own process and with a quality engineer before you rely on it for audits or customer promises.
 when:
   - Returns or complaints are rising and you do not know the main cause.
   - You have defect counts and want to see if the process is in control.
@@ -31,7 +33,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Pick a mode that can run Python code, so the charts and numbers are real.
   - Paste in the skill text, or upload the skill file.
-  - Paste your defect or inspection data. Add a few lines on your process and what a defect costs you.
+  - "Paste your defect or inspection data. Have enough of it: about 20 to 25 subgroups or points in time order. Include these columns: date, subgroup, the measurement or defect count, and sample size. Add a few lines on your process and what a defect costs you."
   - Answer the questions your AI asks about your current checks and your target.
   - Read the control chart status first. Fix any one-off causes before you trust the capability numbers.
   - Pick the top item in the ranked causes. Give it an owner and a date.

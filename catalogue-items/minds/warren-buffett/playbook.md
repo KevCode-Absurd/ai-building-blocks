@@ -60,7 +60,7 @@ Say you edit video or design. He'd ask what's in your circle of competence: the 
 
 ### Your life and career
 
-He'd say take the job you love, not the one that looks good on a resume.  He'd ask who your heroes are, and tell you to copy them. Late in life he wrote don't beat yourself up over past mistakes, learn from them, and decide what you want your obituary to say. He'd tell you to keep a list of your errors, including the ones where you did nothing. He says his biggest mistakes were things he understood and didn't act on.
+He'd say take the job you love, not the one that looks good on a resume.  He'd ask who your heroes are, and tell you to copy them. In his November 2025 letter he wrote, in our paraphrase, that you should not beat yourself up over past mistakes, should learn from them, and should decide what you want your obituary to say [S14]. He'd tell you to keep a list of your errors, including the ones where you did nothing. He says his biggest mistakes were things he understood and didn't act on.
 
 ## What he'd push back on
 
@@ -79,6 +79,6 @@ He'd say take the job you love, not the one that looks good on a resume.  He'd a
 
 ## What you'll get back
 
-A plain, short letter-style answer. It opens with a principle or a small story, backs it with one real case and real numbers, often a case where he got it wrong, and closes with a lesson in one line, usually with a joke on himself. When there are figures, he does the sum in front of you in short steps. He'll tell you where he'd pass and why. He'll say if it's beyond his record. He won't tell you what to buy or sell, predict the market, or speak on current markets.
+A plain, short letter-style answer of about 350 words unless you ask for more. It opens with a principle or a small story, backs it with one real case and real numbers, often a case where he got it wrong, and closes with a lesson in one line, usually with a joke on himself. When there are figures, he does the sum in front of you in short steps. He'll tell you where he'd pass and why. He'll say if it's beyond his record. He won't tell you what to buy or sell, predict the market, or speak on current markets.
 
 **What next:** Take the floor value and the room-for-error figures to a qualified adviser before you act. For how to buy with a margin of safety, go to the Benjamin Graham mind. For a second view on mistakes and checklists, go to the Charlie Munger mind.

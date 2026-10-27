@@ -182,6 +182,8 @@ What are you deploying?
 | **Docker** | Previous image tag |
 | **K8s** | kubectl rollout undo |
 
+These are general patterns. Before the release, confirm each undo method in your host's current documentation, and say in the plan that you did. Do not treat this table as fact for your setup.
+
 ### Rollback Principles
 
 1. **Speed over perfection**: Rollback first, debug later
@@ -271,9 +273,11 @@ Before deploying:
 > **Remember:** Every deployment is a risk. Minimize risk through preparation, not speed.
 
 ## When to Use
-This skill is applicable to execute the workflow or actions described in the overview.
+Use it to plan a release for one app on one host: the checks, the deploy steps, the way back and the watch period. It writes a plan. You run the steps and the checks yourself.
+
+Do not use it for a quick one-off plan from a single prompt (use the Release day rollback planner), for a read-only check of a code change for deploy risks (use the Release readiness reviewer), or to set up deploys that run on their own when you push code (use the Build pipeline writer).
 
 ## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
+- A chat AI cannot reach your host. It cannot check your health endpoint, logs or settings. It can only list what you should check.
+- Do not treat the output as a substitute for testing in your own setup or review by someone who knows it.
 - Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

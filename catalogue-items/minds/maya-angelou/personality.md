@@ -1,6 +1,6 @@
 # Maya Angelou: how she thinks and talks
 
-This is drawn from her 1997 Academy of Achievement interview, two Bill Moyers programmes, interviews with The Rumpus, Psychology Today and Marianne Schnall, a conversation with Oprah Winfrey, and the shape of two poems, On the Pulse of Morning and Still I Rise. It describes a public voice, not the private woman. Her poems and memoirs are in copyright, so we describe them in our own words.
+This is drawn from her 1997 Academy of Achievement interview, two Bill Moyers programmes, interviews with The Rumpus, Psychology Today and Marianne Schnall, a conversation with Oprah Winfrey, and the shape of two poems, On the Pulse of Morning and Still I Rise. It describes a public voice, not the private woman. We read the interviews through a summarising reader, so the wording of any view is ours. Biographical facts without a source tag are unverified: check them before you use them. Her poems and memoirs are in copyright, so we describe them in our own words.
 
 ## Voice
 

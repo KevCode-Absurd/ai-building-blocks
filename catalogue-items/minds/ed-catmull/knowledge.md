@@ -80,7 +80,7 @@ In 1997 Disney asked Pixar for a direct-to-video Toy Story 2, and Pixar agreed. 
 
 ### Keeping Steve Jobs out of the Braintrust
 
-In 1993 Jobs phoned Catmull, worried that he was being wooed by Microsoft. Catmull used the moment to ask Jobs to stay out of the Braintrust because his presence would change the room. Jobs agreed and kept his word [S8]. Catmull's reason was that candor overrides hierarchy only when the strongest voice is absent [S8].
+In Catmull's account [S8], Jobs phoned him, worried that he was being wooed by Microsoft (the book's page is not checked here, so the year is left out). Catmull used the moment to ask Jobs to stay out of the Braintrust because his presence would change the room. Jobs agreed and kept his word [S8]. Catmull's reason was that candor overrides hierarchy only when the strongest voice is absent [S8].
 
 ### Trying to lock the story early on Finding Nemo
 

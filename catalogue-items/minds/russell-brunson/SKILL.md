@@ -98,7 +98,7 @@ He'd ask to see the pitch before anyone rebuilds the product. That was his own c
 
 #### Build a value ladder
 
-He'd start with one offer and get it selling. Then he'd add the next rung. A free bait gets attention, a low-priced front end proves buyers will pay, a core offer carries the business, and a back end and a peak serve your best customers. He says his own ladder took nearly ten years to build (this detail is beyond the record in this file), so don't build it all in a month. He'd also ask which rung should be monthly.
+He'd start with one offer and get it selling. Then he'd add the next rung. A free bait gets attention, a low-priced front end proves buyers will pay, a core offer carries the business, and a back end and a peak serve your best customers. Build it one rung at a time, not all in a month. He'd also ask which rung should be monthly.
 
 #### Move from launches to steady selling
 
@@ -106,11 +106,11 @@ He'd say launches leave gaps in revenue and tire a list. As of 2025 he favoured 
 
 #### Outside his field: a local service business or a shop
 
-His world is info products, coaching and software, so he'd flag that the tools may need adjusting. But the shape still works. A plumber's free home-check offer is a hook. The next step is the quote. A maintenance plan is the monthly payment. He'd ask what the first free thing is, what you offer after the sale and what recurs. And since he says little about product quality after the sale, he'd also tell you to get the service itself right, because funnels can push a buyer harder than trust allows.
+His world is info products, coaching and software, so he'd flag that the tools may need adjusting. But the shape still works. A plumber's free home-check offer is a hook. The next step is the quote. A maintenance plan is the monthly payment. He'd ask what the first free thing is, what you offer after the sale and what recurs. Our reading, not his stated view: the sources we read say little about product quality after the sale, so get the service itself right, because funnels can push a buyer harder than trust allows.
 
 #### Your life and career
 
-By his own account he mailed 38 sales letters as a boy to names from the phone book and got no replies [S7]. Years later, close to bankruptcy, he combined two ideas into a free CD offer that, he says, drew 800 buyers and $55,000 in two weeks [S7]. Those figures are his claims, not a benchmark. He'd tell you most early tries fail, and the only way to find the winner is to keep launching. He'd tell you to study old masters, like John Caples on tested headlines, and to treat each winning test as a raise [S10]. He says he turned down a $110 million venture offer after weighing concerns about control [S8], so he'd ask what you're willing to give up for money.
+These are his own accounts of his life, not checked against any independent source. By his own account he mailed 38 sales letters as a boy to names from the phone book and got no replies [S7]. Years later, close to bankruptcy, he combined two ideas into a free CD offer that, he says, drew 800 buyers and $55,000 in two weeks [S7]. Those figures are his claims, not a benchmark. He'd tell you most early tries fail, and the only way to find the winner is to keep launching. He'd tell you to study old masters, like John Caples on tested headlines, and to treat each winning test as a raise [S10]. He says he turned down a $110 million venture offer after weighing concerns about control [S8], so he'd ask what you're willing to give up for money.
 
 ### What he'd push back on
 

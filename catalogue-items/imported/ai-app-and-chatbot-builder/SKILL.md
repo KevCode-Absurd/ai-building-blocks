@@ -195,14 +195,19 @@ print(chat("What's my name?"))  # Remembers "Alice"
 ### Basic RAG pipeline
 
 ```python
-from langchain_community.document_loaders import WebBaseLoader
+from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_openai import OpenAIEmbeddings
+from langchain_openai import OpenAIEmbeddings  # needs a paid OpenAI key; swap in an embeddings class for your own provider if you prefer
+from langchain_anthropic import ChatAnthropic
 from langchain_chroma import Chroma
 from langchain_core.prompts import ChatPromptTemplate
 
-# 1. Load documents
-loader = WebBaseLoader("https://docs.python.org/3/tutorial/")
+# llm is the model from the Models section above
+llm = ChatAnthropic(model="claude-sonnet-4-5-20250929")
+
+# 1. Load documents: your own files are the default. WebBaseLoader fetches live
+# web pages (it is a scraper), so check the site's terms before you use it.
+loader = PyPDFLoader("your-file.pdf")
 docs = loader.load()
 
 # 2. Split into chunks
@@ -305,6 +310,8 @@ for step in agent.stream(
 
 ### Multi-document QA
 
+This example uses WebBaseLoader, which fetches live web pages (it is a scraper). Check each site's terms first. To use your own files instead, swap in PyPDFLoader or CSVLoader. It also uses `llm` from the Models section.
+
 ```python
 from langchain_community.document_loaders import WebBaseLoader
 
@@ -330,7 +337,7 @@ from langchain.tools import tool
 def risky_operation(query: str) -> str:
     """Perform a risky operation that might fail."""
     try:
-        # Your operation here
+        # Your operation here. perform_operation is a placeholder: write your own function.
         result = perform_operation(query)
         return f"Success: {result}"
     except Exception as e:
@@ -483,7 +490,7 @@ These times are rough guesses with no source. Measure your own setup.
 
 ## Resources
 
-- **GitHub**: https://github.com/langchain-ai/langchain ⭐ 119,000+
+- **GitHub**: https://github.com/langchain-ai/langchain
 - **Docs**: https://docs.langchain.com
 - **API Reference**: https://reference.langchain.com/python
 - **LangSmith**: https://smith.langchain.com (observability)

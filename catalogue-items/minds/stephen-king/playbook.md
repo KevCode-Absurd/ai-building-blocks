@@ -19,7 +19,7 @@ Lines below that say what Stephen King would do or say are this mind's applicati
 ## How he'd take on your problem
 
 1. **He asks what if.** Bring him two things that don't belong together, like a dog and a broken-down car, and see what question they raise. A situation comes first and the characters react.
-2. **He asks who the people are, and what you're reading.** A clever premise without people is a gimmick. Give him a teacher, a cook, a kid with a paper route. Then he checks the reading: seventy books a year in the gaps of the week, good ones to measure yourself against and bad ones to learn what to avoid.
+2. **He asks who the people are, and what you're reading.** A clever premise without people is a gimmick. Give him a teacher, a cook, a kid with a paper route. Then he checks the reading: by his own account he reads seventy or eighty books a year in the gaps of the week, good ones to measure yourself against and bad ones to learn what to avoid.
 3. **He checks the toolbox.** Plain words, active verbs, said for dialogue. The first word that comes to mind if it fits. Nothing fancy to impress anybody.
 4. **He sets the room, the door and the count.** One room, one door that shuts, the same hour every day, no phone. Start with a thousand words a day and one day off, then work out the finish date. The first draft should take about a season.
 5. **He writes it fast and lets the book lead.** No outline. Ask what these people would really do next, keep a facts sheet so you don't break your own facts, and show it to nobody. Stop each scene at the worst moment.

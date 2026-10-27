@@ -39,7 +39,7 @@ How to start:
 
 ## What you need
 
-These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
+These are the only inputs for this agent. They replace the generic "Before you start" list above: do not ask for source text, a spreadsheet or a separate question.
 
 - The payment provider, what is sold, and the currencies
 - The checkout flow and what happens after payment, including refunds

@@ -11,7 +11,7 @@ compatible_tools: [claude-code, codex-cli, cursor, antigravity, opencode, gemini
 
 # Kubernetes Operator
 
-Build operators that reconcile correctly. Most operator bugs are not Kubernetes bugs — they are reconcile-loop bugs: missing finalizers, blocking calls, no requeue on transient errors, status drift, RBAC over-grants. This skill catches them deterministically before they reach a cluster.
+Build operators that reconcile correctly. Most operator bugs are not Kubernetes bugs — they are reconcile-loop bugs: missing finalizers, blocking calls, no requeue on transient errors, status drift, RBAC over-grants. This skill flags likely instances of them before they reach a cluster. Its lint scripts use pattern checks and can miss issues, so still read the code.
 
 ## When to use
 
@@ -118,7 +118,7 @@ python scripts/operator_capability_audit.py --operator-dir .
 - **L4 — Deep Insights:** metrics endpoint, Prometheus rules, alerts
 - **L5 — Auto Pilot:** auto-scaling, auto-tuning, anomaly detection
 
-Reports current level + concrete next steps to advance one level.
+Reports current level + concrete next steps to advance one level. The report is a text report with sections for CRD findings, lint findings, the current level and next steps.
 
 ## Tooling landscape
 

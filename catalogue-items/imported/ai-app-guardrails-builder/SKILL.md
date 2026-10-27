@@ -1,6 +1,6 @@
 ---
 name: nemo-guardrails
-description: NVIDIA's runtime safety framework for LLM applications. Features jailbreak detection, input/output validation, fact-checking, hallucination detection, PII filtering, toxicity detection. Uses Colang 2.0 DSL for programmable rails. (AI Blocks: the code below is unverified sketches, not production-ready, and fact and hallucination checks need a placeholder you write.)
+description: NVIDIA's runtime safety framework for LLM applications. Features jailbreak detection, input/output validation, fact-checking, hallucination detection, PII filtering, toxicity detection. Programmable rails are written in Colang (the sketches here use Colang 1.0 style; check the version your install uses). (AI Blocks: the code below is unverified sketches, not production-ready, and fact and hallucination checks need a placeholder you write.)
 version: 1.0.0
 author: Orchestra Research
 license: MIT
@@ -12,7 +12,7 @@ dependencies: [nemoguardrails]
 
 Compatibility note, 24 October 2026: Before running the examples below, read references/colang-guide.md, references/integrations.md and references/performance.md against your installed NeMo Guardrails version. The original sample syntax, helper names, integration APIs and latency or hardware figures are illustrative until verified in that environment; the supporting guides identify current documented paths, required setup and checks. Preserve source-specific data restrictions, obtain authorization for installs or outside calls, and report unrun checks honestly.
 
-Every code block below is a sketch in Colang 1.0 style, even where the text mentions Colang 2.0. Treat the Workflow 2 and Workflow 3 snippets as non-runnable pseudocode: do not copy them into a working app. None of it was run by us. Any function that is not defined in the sketch is a PLACEHOLDER the person must write. Do not present a sketch as working code.
+Every code block below is a sketch in Colang 1.0 style. Check your installed Colang version before you use any of it. Treat the Workflow 2 and Workflow 3 snippets as non-runnable pseudocode: do not copy them into a working app. None of it was run by us. Any function that is not defined in the sketch is a PLACEHOLDER the person must write. Do not present a sketch as working code.
 
 # NeMo Guardrails - Programmable Safety for LLMs
 
@@ -72,7 +72,7 @@ Never say a rule "blocks" something unless a test showed it. Say "is set to refu
 pip install nemoguardrails
 ```
 
-**Basic example** (input validation). Colang 1.0 style. Check against your installed version:
+**Sketch only, not run** (input validation). Colang 1.0 style. It is not a ready example. Check it against your installed version before you use any of it:
 ```python
 from nemoguardrails import RailsConfig, LLMRails
 
@@ -132,7 +132,12 @@ response = rails.generate(messages=[{
 
 ### Workflow 2: Self-check input/output
 
-Validate both input and output. `toxicity_detector`, `extract_facts` and `verify_facts` below are PLACEHOLDERS. They are not part of NeMo Guardrails. The person must supply real code or a real service for each, and a fact check needs a source the person trusts.
+What each check needs, in plain terms:
+- Input toxicity check. Needs: the user's message (text). Gives back: a safe or not-safe answer. You supply the toxicity detector (a model or service).
+- Output fact check. Needs: the bot's reply and a source you trust. Gives back: verified or not. You supply the source and the fact check.
+- Refusal lines for each case.
+
+The sketch below shows the shape only, and it is not for copying into a live app. Validate both input and output. The two checks below are PLACEHOLDERS that raise an error on purpose, so they can never pass as working guardrails. They are not part of NeMo Guardrails. The person must supply real code or a real service for each, and a fact check needs a source the person trusts.
 ```python
 # NOT RUN, NOT RUNNABLE: pseudocode. Do not copy into a live app.
 from nemoguardrails.actions import action
@@ -141,15 +146,13 @@ from nemoguardrails.actions import action
 async def check_input_toxicity(context):
     """Check if user input is toxic."""
     user_message = context.get("user_message")
-    toxicity_score = toxicity_detector(user_message)  # PLACEHOLDER
-    return toxicity_score < 0.5  # True if safe
+    raise NotImplementedError("PLACEHOLDER: write or buy a real toxicity check")  # fails loudly so it cannot pass as a working guardrail
 
 @action()
 async def check_output_hallucination(context):
     """Check if bot output states unsupported facts."""
     bot_message = context.get("bot_message")
-    facts = extract_facts(bot_message)  # PLACEHOLDER
-    return verify_facts(facts)  # PLACEHOLDER
+    raise NotImplementedError("PLACEHOLDER: write a real fact check against a source you trust")
 
 config = RailsConfig.from_content("""
 define flow self check input
@@ -170,6 +173,8 @@ define flow self check output
 If no real fact check exists, say so in **Limits**. Do not claim the app blocks made-up facts. Do not put this sketch in a live chatbot: the toxicity and fact checks are placeholders, so it would look like a guardrail while blocking nothing.
 
 ### Workflow 3: Fact-checking with retrieval
+
+What this needs, in plain terms: the bot's reply, a source the person supplies (such as a document set with search), a step that pulls claims from the reply, and a step that compares them with the source. It gives back verified or not verified, and a fallback line when not verified. The person writes the source and the comparison.
 
 A sketch of the idea only. The names `extract facts`, `check facts` and `fact_check_action` are PLACEHOLDERS. The method for registering an action depends on your version: see references/integrations.md.
 ```python
@@ -242,7 +247,7 @@ A check is only as good as its source. Define which sources count and what happe
 
 ## Advanced topics
 
-**Colang 2.0 DSL**: See [references/colang-guide.md](references/colang-guide.md) for flow syntax, actions, variables, and advanced patterns.
+**Colang guide**: See [references/colang-guide.md](references/colang-guide.md) for flow syntax, actions, variables, and advanced patterns.
 
 **Integration guide**: See [references/integrations.md](references/integrations.md) for LlamaGuard, Presidio, ActiveFence, and custom models.
 

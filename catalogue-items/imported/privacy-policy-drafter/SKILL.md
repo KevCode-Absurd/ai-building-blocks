@@ -34,7 +34,7 @@ Draft a privacy policy for my SaaS app "TaskFlow" — a project management tool.
 
 ## Examples
 
-The examples below are fictional. Statements about security (such as AES-256 or TLS 1.3), data sales ("we do not sell personal information"), retention periods and consent steps are placeholders. Replace each one with a fact you have confirmed about your own business and systems. Never publish a claim you have not checked.
+The examples below are fictional. Statements about security, data sales, retention periods and consent steps are shown as [CONFIRM: ...] placeholders. Replace each one with a fact you have confirmed about your own business and systems. Never publish a claim you have not checked.
 
 ### Example 1: SaaS App with Email and Usage Data
 
@@ -44,7 +44,7 @@ The examples below are fictional. Statements about security (such as AES-256 or 
 
 **Information We Collect**
 
-*Information you provide:* When you create an account, we collect your name, email address, and profile photo (if provided via Google OAuth). When you subscribe to a paid plan, our payment processor Stripe collects your payment card details — we do not store full card numbers on our servers.
+*Information you provide:* When you create an account, we collect your name, email address, and profile photo (if provided via Google OAuth). When you subscribe to a paid plan, our payment processor Stripe collects your payment card details — [CONFIRM: what card data we store, if any].
 
 *Information collected automatically:* We collect usage data including features accessed, session duration, and interaction patterns through Mixpanel. We collect device information (browser type, operating system, screen resolution), IP address, and approximate location derived from IP. We use cookies and similar technologies as described in our Cookie Policy section below.
 
@@ -62,7 +62,7 @@ The examples below are fictional. Statements about security (such as AES-256 or 
 
 **Your Rights**
 
-Under GDPR (EEA/UK users): access, rectification, erasure, restriction, portability, objection, and withdrawal of consent. Under CCPA (California residents): right to know, right to delete, right to opt-out of sale (we do not sell personal information), and right to non-discrimination.
+Under GDPR (EEA/UK users): access, rectification, erasure, restriction, portability, objection, and withdrawal of consent. Under CCPA (California residents): right to know, right to delete, right to opt-out of sale ([CONFIRM: whether we sell or share personal information]), and right to non-discrimination.
 
 ### Example 2: Mobile App with Location Tracking
 
@@ -72,11 +72,11 @@ Under GDPR (EEA/UK users): access, rectification, erasure, restriction, portabil
 
 **Location Data**
 
-FitRoute collects precise GPS location data during active workout sessions to map your route and calculate distance. Location tracking begins only when you start a workout and stops when you end it. We do not track your location in the background. You can revoke location permissions at any time through your device settings, though this will prevent route mapping features from functioning.
+FitRoute collects precise GPS location data during active workout sessions to map your route and calculate distance. Location tracking begins only when you start a workout and stops when you end it. [CONFIRM: whether we track location in the background.] You can revoke location permissions at any time through your device settings, though this will prevent route mapping features from functioning.
 
 **Health and Sensitive Data**
 
-We collect health-related data including heart rate (synced from connected wearables), workout duration, calories burned, and body metrics you voluntarily provide (age, weight, height). Under GDPR, health data is a special category requiring explicit consent — we obtain this consent during onboarding. Under California law, this constitutes sensitive personal information subject to additional protections. This data is encrypted at rest using AES-256 and in transit using TLS 1.3.
+We collect health-related data including heart rate (synced from connected wearables), workout duration, calories burned, and body metrics you voluntarily provide (age, weight, height). Under GDPR, health data is a special category requiring explicit consent — [CONFIRM: how and when we obtain this consent]. Under California law, this constitutes sensitive personal information subject to additional protections. [CONFIRM: encryption method at rest and in transit].
 
 **Consent Requirements**
 

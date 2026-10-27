@@ -46,7 +46,7 @@ If there is no account data at all, do not score. Reply with one short list of t
 
 1. **Collect and date the data.** Note the date range, currency and attribution window. If these are missing, mark them MISSING and carry on.
 2. **Pick the checks.** Use the Meta list and the Google list below. Run only the categories that match the campaign types present (for Google: Search, Shopping, Performance Max, Display, Demand Gen). Mark a check NOT APPLICABLE only when the account type rules it out. If the user wants it, they can add or drop checks. Say how many checks you ran, by platform.
-3. **Judge each check** PASS, WARNING, FAIL or INSUFFICIENT_DATA, using only the evidence you have. Write the number or screenshot that shows it. Never judge pixel, server-side event or domain checks from a performance CSV alone. Those need Events Manager or Business settings screenshots.
+3. **Judge each check** PASS, WARNING, FAIL or INSUFFICIENT_DATA, using only the evidence you have. Write the number or screenshot that shows it. Never judge pixel, server-side event or domain checks from a performance CSV alone. Those need Events Manager or Business settings screenshots. Time-based and ratio checks (such as C03 click-through decay, C04 hook rate, S02 budget adequacy and S03 learning phase) need a stated threshold. Ask the owner to set one, for example the number of days of decay or the minimum daily budget. If they give none, mark the check INSUFFICIENT_DATA and say a threshold is needed.
 4. **Score with this math.**
 
    | Status | Points |
@@ -212,3 +212,6 @@ Before you hand it back, check each of these and fix any that fail.
 - Calling a score a measure of sales. It measures the setup and evidence you showed.
 - Treating a starter threshold as an industry rule.
 - Telling the owner to change anything you could not see.
+
+## What pairs with this
+This score says where the account is weak. For a written diagnosis, use the [Meta Ads 30-check account auditor](https://useaiblocks.com/skills/meta-ads-30-check-account-auditor) or the [Google Ads store account auditor](https://useaiblocks.com/skills/google-ads-store-account-auditor). Then fix the Critical failures first and score again next month.

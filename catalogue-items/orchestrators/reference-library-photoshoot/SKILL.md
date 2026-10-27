@@ -41,8 +41,21 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
+## Run order
+
+1. Gather real photos of the exact variant and the reference photos.
+2. Write the truth sheet (section 1).
+3. Agree the set, ratios and budget (section 2).
+4. Rate each reference and pick the looks (section 3).
+5. Write a keep, swap or drop plan for each look (section 4).
+6. Make and inspect one pilot, then the full set, one composition per ratio (section 5).
+7. Run the checks and build the review deck (section 6).
+8. Hand over the files and the record (section 7).
+
+When not to use: you only have rough phone photos and want a quick set (use [A full product photoshoot from your phone photos](https://useaiblocks.com/workflows/phone-product-photoshoot)). You only need the plan (use the [Product photo shoot planner](https://useaiblocks.com/skills/product-photo-shoot-planner)). You already have pictures to check (use the [AI product photo inspector](https://useaiblocks.com/skills/ai-product-photo-inspector)).
+
 ## 1. Verify the product before choosing looks
-Inspect as many supplied real photographs as needed to understand front, back, detail, scale and actual use. A white-background packshot does not establish worn, opened, held or installed geometry. Write a truth sheet using references/look-and-shot-record.md. Record exact size, colourway, pattern, finish, silhouette, closures, label text and which parts are visible in use.
+Inspect as many supplied real photographs as needed to understand front, back, detail, scale and actual use. A white-background packshot does not establish worn, opened, held or installed geometry. Write a truth sheet using references/look-and-shot-record.md. Record exact size, colourway, pattern, finish, silhouette, closures, label text and which parts are visible in use. The truth sheet has these fields: exact variant, colourway, label text, the real anchor photos used, the in-use views you have, and what cannot change. Write `MISSING:` for any field you cannot fill from the photos.
 
 Four stops protect the output: no usable exact-variant anchor means no product-accurate generation; a look that cannot show the product honestly must change; uncertain product accuracy is a failed frame; an unviewed output is not ready. Continue harmless planning while missing images are requested. Never replace a needed real anchor with a competitor product, invented canonical rendering or different variant.
 

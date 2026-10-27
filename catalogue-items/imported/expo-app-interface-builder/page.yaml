@@ -15,7 +15,7 @@ explain: |
 
   Many of the polish features, such as SF Symbols and liquid glass, work on iPhone first. Test on a real phone.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Expo) says MIT. Credit goes to Expo and sickn33.
+  Licence: one licence applies to this copy, CC BY 4.0, as the LICENSE-CONTENT file says. That file governs. The skill file's own header (Expo) says MIT for the original. Both allow reuse with credit, so keep the credit to Expo and sickn33.
 when:
   - You are starting an Expo app and need the screens and navigation set up.
   - Your tab bar looks like a web page, not a phone app.
@@ -38,12 +38,14 @@ you_get:
   - Motion, native controls, search and sheets where you asked for them
   - The list of packages to install
 how_to_use:
+  - "Know this before you start. The code examples call handlers that are not written for you: handleSharePress, handleBlockPress, handleCopyPress and handleDeletePress in the skill, and handlePress, handleAdd and handleSettings in the visual effects note. Write each one, or replace it with a real action, before the screens run."
+  - Before any code is written, ask your AI to check three imports against your Expo SDK version in the current Expo docs: native tabs (expo-router/unstable-native-tabs), Color from expo-router, and expo-router/react-navigation.
   - Open Claude Code, or any AI that can read and write your project files. Paste in this skill, or add the whole folder, so it can open the notes for each area. Tell it your Expo SDK version and Node version first, since the code depends on them.
   - Gather your screens. Describe each one in a line or two and say how people move between them. Say whether you have a project already.
   - Ask your AI to create the route files, then the layouts for stacks and tabs.
   - Ask it to add the theme file and install the packages it lists.
   - Run the app with npx expo start and the Expo Go app on your phone. You only need a custom build for features Expo Go lacks.
-  - Check each screen on a real phone. Look at the tab bar, the top bar, the scroll behavior and dark mode. The code examples in the skill are patterns, and some call handlers you must write yourself before they work.
+  - Check each screen on a real phone. Look at the tab bar, the top bar, the scroll behavior and dark mode. The code examples in the skill are patterns. Some call handlers (such as handleCopyPress or handleDeletePress) that you must write yourself before they work. Some imports, such as native tabs and Color from expo-router, depend on your Expo SDK, so check them against the current Expo docs.
   - Ask for fixes screen by screen. Then connect your real data with the Mobile data fetching coder.
 how_it_works:
   - title: Plans the routes

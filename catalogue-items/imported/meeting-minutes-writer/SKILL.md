@@ -58,8 +58,8 @@ Output:
 - Adopt a cache layer for login-page performance (pilot first, not a full rollout).
 
 ### Action items
-- [ ] Maria: draft the caching proposal, due next Wednesday `[date to confirm]`
-- [ ] [unassigned]: schedule pricing discussion with Finance `[time TBD]`
+- [ ] Maria: draft the caching proposal, due next Wednesday `[to confirm]`
+- [ ] [unassigned]: schedule pricing discussion with Finance `[TBD]`
 
 ### Open questions
 - Pricing strategy: no decision reached; the action-item owner will book a dedicated session with Finance.

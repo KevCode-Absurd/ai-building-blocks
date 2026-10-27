@@ -43,7 +43,7 @@ How to start:
 
 ## What you need
 
-Note: the stats for this job come from the Xiaohongshu app. They are not Meta Ads Manager, Google Ads or store exports. If the Before you start list above says otherwise, follow this list.
+Note: the "Before you start" block above is shared text. Ignore its "Your question", "Business profile" and "Your results" lines. The stats for this job come from the Xiaohongshu app. They are not Meta Ads Manager, Google Ads or store exports. Follow this list instead.
 
 - The brand, what it sells and who buys it (required)
 - The goal, such as awareness, store visits or sales (required)

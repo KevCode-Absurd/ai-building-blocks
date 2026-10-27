@@ -23,7 +23,7 @@ not_for:
   - You need to answer a customer's security questions. Use Prepare a vendor security questionnaire response.
 you_give:
   - "The review scope: systems, teams and the period under review"
-  - The framework or control list your reviewer uses (from their request)
+  - The framework or control list your reviewer uses (from their request). This is required. The workflow stops at step 1 without it and never picks a framework for you.
   - The evidence you already hold, as files or a list with dates
   - The review date and the reviewer's name (optional)
   - The people who own each area (optional)

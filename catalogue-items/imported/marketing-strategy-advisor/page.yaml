@@ -24,6 +24,7 @@ you_give:
   - Your stage and current channels
   - Spend, lead and customer numbers
   - Your customer description (optional)
+  - Cost to win a customer (CAC) and spend for each channel. A useful budget split needs these by channel. If you only have one blended number, the result will flag that instead of guessing.
 you_get:
   - A positioning check
   - A recommended growth model
@@ -36,9 +37,18 @@ how_to_use:
   - "Say which answer you want: a positioning check, a growth model, or a budget split."
   - If a number is missing, let your AI ask for it. Do not let it guess.
   - Read the budget split and check each assumption against your own data. Fix any that are wrong and ask for a rerun.
+  - "For the budget, ask your AI to work in this order: revenue target, customers needed, conversion rate at each step, leads needed, then spend per channel from what each customer costs to win. You can follow it without the Python scripts."
   - "Optional: if your AI can run code, ask it to run the budget and growth scripts. If not, skip them. It will do the sums in chat."
+  - Short glossary. CAC is what it costs you to win one customer. LTV is what one customer pays you over time. MQL is a lead your marketing team has judged ready for sales. PLG means product-led growth, where people try the product themselves before they talk to sales.
   - The healthy targets it quotes, such as a 3 to 1 ratio of customer value to cost, are common rules of thumb. Check them against your own market and numbers.
   - Next, share the channel cost targets and budget split with whoever does your finance forecast. Run the plan again each quarter with the new channel results.
+output_shape: |-
+  Positioning check: <four short answers: who it is for, why they choose you, how they find you, whether it works. 2 to 3 lines each>
+  Growth model: <product-led, sales-led, community-led or mix, with the reason in 3 to 5 lines>
+  | Channel | Monthly spend | Target cost per customer | Expected customers |
+  Key numbers: <cost to win a customer by channel, payback time, lifetime value against cost>
+  Warning signs: <at most 6 bullets, one line each>
+  MISSING: <numbers you did not give>
 output_sample:
   input:
     - Your revenue target and how long you have to hit it

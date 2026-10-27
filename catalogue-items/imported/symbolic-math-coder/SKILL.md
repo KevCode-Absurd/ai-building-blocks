@@ -14,6 +14,8 @@ metadata:
   version: "1.0"
 ---
 
+<!-- Licence note: the licence line in the header above links a MathWorks reuse page. The licence that governs this copy is LICENSE.md in this folder: BSD 2-Clause, for use with MathWorks products only. -->
+
 # MATLAB Symbolic Math Toolbox
 
 This skill provides guidelines, correct syntax, and common patterns for generating MATLAB® code that uses Symbolic Math Toolbox.

@@ -171,7 +171,7 @@ Return your output in this exact format:
 ### Task 1: [Brief title]
 
 **Document:**
-[Brief source with full attribution]
+[Brief source with full attribution, or labelled "written for this task"]
 
 **Question:**
 [The prompt — designed to require the target skill without naming it]
@@ -184,6 +184,8 @@ Return your output in this exact format:
 - **Proficient (2):** [Description of a full demonstration]
 
 [Repeat for additional tasks]
+
+**Check before use:** Check every author, date and archive in the documents against a real collection. Replace any source you cannot find.
 
 ### Diagnostic Value
 

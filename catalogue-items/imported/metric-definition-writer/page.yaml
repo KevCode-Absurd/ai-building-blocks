@@ -5,7 +5,7 @@ name: Metric definition writer
 summary: Write one agreed metric definition as checked YAML. Give it the calculation and who uses it. You get a checked YAML file for dbt that your teams can share.
 job: document-work
 headline: Metric definition writer
-subhead: Give it a metric name, how it is calculated and who uses it. You get a filled YAML definition for dbt, a validation report and notes on edge cases, so two teams stop arguing over the same number.
+subhead: Give it a metric name, how it is calculated and who uses it. You get a filled YAML definition for dbt, a validation report and notes on edge cases, so two teams work from one written definition.
 explain: |
   One agreed definition for a metric, written as YAML that a tool can check and your team can reuse. It gives your teams one written definition to check against when two teams run different queries for the same number.
 
@@ -34,7 +34,8 @@ how_to_use:
   - Download the skill folder and open it in an AI that can run code, such as Claude with file access.
   - "Say: use the semantic model builder skill to define my metric. Then paste the metric name, the calculation, who uses it and what a good value looks like."
   - Add your source tables and any YAML you already have (optional). Say if you need dbt Semantic Layer field names, and which dbt version.
-  - Let your AI run the template script, fill in the YAML, then run the checking script.
+  - Let your AI run the template script, fill in the YAML, then run the checking script. It checks fields, types and links inside one file only. Links to items in other files are not checked.
+  - "The result is YAML files for the metric, dimension and entity, plus the validation report. It does not test the calculation against your real data, so run the SQL yourself."
   - Read the validation report and the edge case notes. Fix anything flagged, then get the data owner to confirm the definition.
   - Save the final files in your dbt project or data catalog. The data owner signs off the definition before anyone uses it, and the signed-off file is shared where both teams look up metrics, such as the dbt project or data catalog.
 output_sample:

@@ -13,7 +13,7 @@ Use a marketing planning and audience-research lens. Your task is to diagnose wh
 
 ## Evidence and scope
 
-Use observed audience research and verified product facts. Psychological interpretations and the author-year references below are inherited conceptual context, not validated evidence for this exact workflow or a guaranteed conversion effect. Before using a scientific claim externally, verify the actual publication, method and applicability; omit unsupported claims. This is marketing planning, not clinical diagnosis. Do not infer sensitive traits or exploit vulnerabilities.
+Use observed audience research and verified product facts. Psychological interpretations and the author-year references below are unverified. They are inherited conceptual context, not validated evidence for this exact workflow or a guaranteed conversion effect. Do not quote them to the user as proof. Before using a scientific claim externally, verify the actual publication, method and applicability; omit unsupported claims. This is marketing planning, not clinical diagnosis. Do not infer sensitive traits or exploit vulnerabilities.
 
 Original contribution: [PR 451](https://github.com/sickn33/agentic-awesome-skills/pull/451) by MMEHDI0606; [immutable source snapshot](https://github.com/MMEHDI0606/antigravity-awesome-skills/blob/9c61357e3e6bb167946036f52ac1e28fc82e04d0/skills/brand-perception-psychologist/SKILL.md). This identifies the contributed instructions, not scientific validation or a new upstream endorsement.
 
@@ -31,28 +31,28 @@ If the intended position is unclear, ask before proceeding. If you already have 
 ## PSYCHOLOGICAL FRAMEWORK: BRAND SCHEMA ALIGNMENT
 
 ### Mechanism
-People do not evaluate a brand only by what it says. They infer a schema from repeated visual, verbal, and behavioral signals, then store the brand in a mental category. Alignment matters because one mismatched signal can weaken the whole impression through schema inconsistency and halo effects (Aaker brand personality theory; Bagozzi et al., 2021; schema theory; halo effect research).
+People do not evaluate a brand only by what it says. They infer a schema from repeated visual, verbal, and behavioral signals, then store the brand in a mental category. Alignment matters because one mismatched signal can weaken the whole impression through schema inconsistency and halo effects. (The original author names Aaker, Bagozzi et al. 2021, schema theory and halo effect research as background. These references are unverified: nobody has checked them for this skill. Treat them as ideas to test, not as proof, and do not quote them to others.)
 
 ### Execution Steps
 
 **Step 1 - Identify the current brand schema**
-Describe the subconscious impression the audience is likely forming now.
+List the lines of copy, visuals and behaviours the audience actually sees (homepage headline, packaging, reply tone, price display). For each, write one word for the impression it gives. Then sum up the impression the audience is likely forming now, in one sentence.
 *Planning hypothesis (verify before presenting as research): brand meaning is built from repeated signals, not from mission statements alone (Bagozzi et al., 2021).*
 
 **Step 2 - Compare to intended position**
-State the desired perception in the same terms.
+State the desired perception in the same one-word terms, so each signal can be marked as matching or not matching.
 *Planning hypothesis (verify before presenting as research): perception shifts when the audience sees congruent evidence across touchpoints (congruence theory).*
 
 **Step 3 - Find the largest mismatch**
-Locate the strongest signal conflict across visual, verbal, or behavioral layers.
+Score each touchpoint 0 (matches the intended position), 1 (partly off) or 2 (contradicts it). Pick the highest score on the most visible touchpoint. Write a mismatch note: the signal, the layer (visual, verbal or behavioural), what it says, what it should say.
 *Planning hypothesis (verify before presenting as research): one strong mismatch can create cognitive dissonance and weaken trust (halo effect and schema theory).*
 
 **Step 4 - Prescribe the smallest useful correction**
-Change the signal that will most efficiently move perception.
+Change the one signal that will most efficiently move perception. Write the exact new line, image or behaviour, how much effort it takes (rate it small, medium or large), and one question to ask five customers to test whether it worked.
 *Planning hypothesis (verify before presenting as research): brand meaning changes fastest when the highest-salience signal changes first (Aaker; semiotics research).*
 
 **Step 5 - Verify cross-touchpoint consistency**
-Check that the new position is supported everywhere the audience interacts.
+Go back through every touchpoint from Step 1 and mark each as still conflicting, fixed by this change, or needing its own change.
 *Planning hypothesis (verify before presenting as research): consistency across channels reduces ambiguity and builds stronger category placement (Bagozzi et al., 2021).*
 
 ## DECISION MATRIX

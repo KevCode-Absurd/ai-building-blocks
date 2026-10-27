@@ -45,7 +45,7 @@ Each agent operates under a **hard scope limit**.
 
 **Role:**
 - Owns the design
-- Runs the standard `brainstorming` skill
+- Runs the standard `brainstorming` skill if it is installed. If it is not, ask the user the first questions yourself: what is being built, for whom, and under what limits
 - Maintains the Decision Log
 
 **May:**
@@ -152,7 +152,7 @@ Focus areas:
 
 ### Phase 1 — Single-Agent Design
 
-1. Primary Designer runs the **standard `brainstorming` skill**
+1. Primary Designer runs the **standard `brainstorming` skill** (or asks the first questions directly if that skill is not installed)
 2. Understanding Lock is completed and confirmed
 3. Initial design is produced
 4. Decision Log is started

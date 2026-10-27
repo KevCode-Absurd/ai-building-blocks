@@ -17,7 +17,7 @@ when:
   - You want to prepare for a head-to-head evaluation.
 not_for:
   - "You have never met this rival in a deal: skip the card and note them in a simple list until they show up."
-  - "You only need one reply to one email: write it by hand or ask your AI for a single draft."
+  - "You only need one quick comparison or a brief for one deal: use the Customer call prep writer, or ask your AI for a single draft."
   - "You need a rival's private pricing or plans: ask your buyer or a person on your team, because the skill only uses public facts."
 you_give:
   - The competitor name
@@ -31,7 +31,7 @@ you_get:
   - Win themes with talk tracks
 how_to_use:
   - Have ready the rival's public website, pricing page and two or three review-site links, so the research step has sources to work from.
-  - Open Claude, ChatGPT or Gemini. Paste in the full text of the skill file (SKILL.md), not just the summary. Use an AI that can search the web.
+  - Open Claude, ChatGPT or Gemini. Paste in the full text of the skill file (SKILL.md), not just the summary. Use an AI that can search the web. Web search may need a paid plan of Claude, ChatGPT or Gemini, so check your access before you start.
   - Type the rival's name and what your product does best. Add your buyer and the objections you hear, if you know them.
   - Read the result. Check every customer story, number and certification against a source with a date. Replace anything you cannot confirm.
   - Fix the wording so it sounds like your reps talk, then share the card with your sales team.

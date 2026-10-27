@@ -124,6 +124,7 @@ The antenna to match, as the MATLAB code that builds it (for example a script fr
 3. **Compute E-fields** -- `EHfields(ant, freq, obsPoints')` (3-by-M format)
 4. **Calculate SAR** -- Apply formula with tissue sigma and rho; normalize to input power
 5. **Validate** -- Power balance check (efficiency method vs SAR integral)
+6. **State the limit** -- AI Blocks note: a SAR figure from this skill is an estimate. It is not compliance evidence until an RF expert has checked it against the relevant exposure standard. Say so next to every SAR result.
 
 ## Key Classes
 

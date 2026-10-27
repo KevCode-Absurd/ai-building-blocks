@@ -9,7 +9,7 @@ headline: "New and returning P&L splitter"
 subhead: Paste one month of your profit and loss and your orders tagged first-time or returning. It builds one P&L for each group, shows which group is paying for the other, and tracks the trend. You get a score out of 100 for acquisition health.
 
 explain: |
-  A single profit and loss hides a common problem. Returning customers are cheap to serve and carry no ad cost, so they can cover for new customers who lose money. In the source's example, first-time customers went from a $20,000 profit a month to a $70,000 loss while the overall P&L still showed a profit. Returning customers covered it, and nobody noticed that winning new customers had stopped paying.
+  A single profit and loss hides a common problem. Returning customers are cheap to serve and carry no ad cost, so they can cover for new customers who lose money. In one agency operator's example (illustrative, not a reported result), first-time customers went from a $20,000 profit a month to a $70,000 loss while the overall P&L still showed a profit. Returning customers covered it, and nobody noticed that winning new customers had stopped paying.
 
   This is the monthly, full-P&L view. The new-customer profit dashboard builder is the daily, ratio-based view of the same question.
 

@@ -43,8 +43,8 @@ the broad annual-fund donor file — not for configuring the CRM/segmentation so
   `nonprofit-donor-retention`; this skill covers what to send an active/recently-lapsed segment as
   part of the regular appeal calendar.
 - **Appeal calendar** — the annual sequence of mass appeals, typically: spring/mid-year appeal,
-  summer sustainer push, fall/pre-year-end appeal, December year-end appeal (often 30-40%+ of
-  annual-fund dollars for many orgs), and a January thank-you/tax-receipt touch.
+  summer sustainer push, fall/pre-year-end appeal, December year-end appeal (often a large share of
+  annual-fund dollars; the share varies, so check your own giving data), and a January thank-you/tax-receipt touch.
 
 ## Standard Deliverables
 

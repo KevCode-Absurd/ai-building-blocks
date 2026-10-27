@@ -9,6 +9,8 @@ subhead: Give it a security alert. Get severity, who to tell, what to preserve a
 explain: |
   The first hour of a security alert, sorted out: what kind of incident it is, how severe, who needs to know, and what evidence to keep. You feed it an alert from a SIEM, an endpoint tool, a threat feed or a user report.
 
+  The skill's notice deadlines and penalties are a starting guide from the original author. They were not rechecked when this copy was imported on 2026-10-20. Each framework starts its clock at a different point, so confirm every deadline and its start with legal counsel before you act.
+
   A triage script classifies the event, filters out likely false alarms, scores severity and decides who to escalate to. It sets up evidence collection with a chain of custody, so you can use the findings later. The skill also covers legal notice duties and common mistakes in the early response. It is for declared incidents, not for hunting threats before an alert or mapping compliance afterwards.
 when:
   - An alert fired and you need to know if it is real and how bad.
@@ -31,12 +33,14 @@ you_get:
   - An evidence preservation list
   - Next steps
 how_to_use:
-  - Open a chat with an AI that can run Python code, and paste in the skill instructions. Without code running, it can still triage by hand.
+  - "Open a chat with an AI that can run Python code, and paste in the skill instructions. Without code running, it can still triage by hand: you fill in event type, host, user, source IP and time yourself, then your AI picks the incident type and severity from the skill's tables and gives the same escalation steps. It cannot return the script's exit code, so it states SEV1 (code 2), SEV2 (code 1) or SEV3 and SEV4 (code 0) in words instead."
   - Paste the alert details. For the script, use JSON with at least event_type and host. Add user, source_ip, timestamp and raw_payload if you have them. Plain text works for a hand triage.
   - Add the systems and data involved. Add your escalation contacts and your location and sector if you have them.
-  - Read the severity, the false positive flag and the escalation path first. The script returns the severity, an exit code (0, 1 or 2), the escalation path and the false positive flag. A false positive is closed only when the source host or asset also matches, and every closure is logged.
+  - The result is a short report in six parts, with one to three lines each, except the evidence list and the notification duties, which run longer. Read the severity, the false positive flag and the escalation path first. The script returns the severity, an exit code (0, 1 or 2), the escalation path and the false positive flag. A false positive is closed only when the source host or asset also matches, and every closure is logged.
   - If the severity is SEV1 or SEV2, alert your security lead at once. Then start the evidence list.
   - Check any notice deadlines with legal counsel before you act on them.
+  - Next, hand the evidence list and the chain-of-custody record to your forensic lead or legal counsel. Once the incident is over, write it up with incident-postmortem-writer.
+next: [incident-postmortem-writer, incident-runbook-writer]
 output_sample:
   input:
     - The alert or event details, in JSON if you have them

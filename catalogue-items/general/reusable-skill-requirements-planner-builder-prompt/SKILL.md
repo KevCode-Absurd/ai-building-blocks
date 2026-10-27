@@ -7,6 +7,11 @@ description: Fill in a short template and paste it into Claude Code. It writes a
 
 A fill-in template. You describe a task you repeat. Claude Code turns it into a skill file you can run by typing a command.
 
+## When not to use it
+- You already have a skill file and want it checked: use the [Skill file problem spotter](https://useaiblocks.com/skills/skill-file-problem-spotter).
+- You are in a chat AI, not Claude Code, and want a draft from a job you repeat: use the [Repeat job skill drafter](https://useaiblocks.com/skills/repeat-job-skill-drafter).
+- The task happens once: ask your AI directly.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
@@ -35,14 +40,14 @@ How to start:
 
 ## What you need
 
-- Claude Code, open in a folder. It writes the skill file into that folder. Claude Code runs on a paid Claude plan or an API account.
+- Claude Code, open in a folder. This folder is the "Codebase" in "Before you start": it only needs to be a place to save the new skill file. It writes the skill file into that folder. Claude Code runs on a paid Claude plan or an API account.
 - A task you do more than once, and a rough idea of its steps.
 - What the task needs from you each time, and what the result should look like.
 
 ## Working rules
 
 - Create only the skill file. Do not run the skill, install anything, connect to a service or change other files.
-- Use only what the user wrote in the template. Do not add steps, rules, thresholds or examples from another field, such as ad buying, unless the user's task is about that.
+- Use only what the user wrote in the template. Do not add steps, rules, thresholds or examples from a field the user did not write about.
 - Do not add any step that sends, posts, buys, deletes or changes something outside the folder unless the user wrote it.
 - If a blank is empty, write MISSING in the skill where it matters and tell the user what to decide. Do not invent a rule or a format.
 - If two blanks contradict each other, or a blank is unclear, ask up to three short questions before writing the file.
@@ -120,6 +125,8 @@ what you marked MISSING, and that it has not been tested yet.
 
 - A skill file at `.claude/skills/<command>/SKILL.md` with front matter and the six parts.
 - A short note: file path, command, what to give it, MISSING items, "not yet tested".
+
+What next: the [Skill file problem spotter](https://useaiblocks.com/prompts/skill-file-problem-spotter) checks the new file. The links under "After this" are about code changes, so use them only if you also changed code.
 
 ## How to use it
 

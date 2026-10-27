@@ -82,7 +82,7 @@ output_shape: |
   SCORE  <n>/100  (<points by area, with what each counts>)
   BRAND LEAKAGE
     cold campaigns: <x>% of conversions and <y>% of spend from brand queries
-    brand spend share: <z>% of Google spend (over 10% is over)
+    brand spend share: <z>% of Google spend (one agency flags above about 10%; unverified)
     brand impression share: <n>%  Meta overlap: <n>% (if known)
   TRIPWIRES FOUND
     <area> | <what> | <evidence> | <severity>
@@ -92,7 +92,7 @@ output_shape: |
     1 tracking  2 structure map  3 PMax check  4 bidding review
     5 waste sweep  6 ad asset health  7 feed (slow batches)
   LEAVE ALONE: <what is fine and why>
-  NOT CHECKED: <area, and what is needed>
+  NOT CHECKED (the CHECKS MISSED line): <area, and what is needed, or "none">
   MISSING: <item>
 
 tweaks:

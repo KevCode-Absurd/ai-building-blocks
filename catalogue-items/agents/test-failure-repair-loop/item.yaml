@@ -21,7 +21,7 @@ steps:
   - {uses: bug-root-cause-finder, note: "Only when the cause of a group is not clear after one try: prove the cause before editing again. Takes the failing group from the last round as its brief, with that round's test result."}
   - {uses: fix-loop-breaker, note: "Only when the same failure comes back after a fix: a three-try budget with proof, and a rollback. Takes the earlier rounds' changes and results so it can see the failure repeat."}
   - {uses: lint-and-type-check-runner, note: "Once, when the tests are green: the project's own checks, so the fixes did not break something else. Checks the code with all the rounds' changes and hands back the check result."}
-schedule: "Whenever the test suite goes red, or a pull request check fails"
+schedule: "Started by you, or by a CI trigger you set up, when the test suite goes red or a pull request check fails"
 asks_before: [committing or pushing, editing or deleting an expected value in a test, skipping or disabling a test, changing build or test settings, upgrading or installing packages, editing files outside the failing area]
 origin: own
 version: 1.0.0

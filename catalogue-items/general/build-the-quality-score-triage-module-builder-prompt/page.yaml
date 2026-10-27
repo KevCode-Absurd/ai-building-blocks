@@ -35,7 +35,7 @@ how_to_use:
   - Decide where keyword data comes from. If you have code that fetches it, tell the AI where it is. If not, the prompt builds the function to take typed rows.
   - Copy the prompt from the skill and fill in the angle brackets, including your spend floor and cost bands. Paste it into your coding AI with your project open.
   - Read what the AI says about your project first. If it lists missing pieces, decide whether to add them or build without them.
-  - Check the thresholds it lists, then run the tests on sample rows.
+  - Check the thresholds it lists. The spend floor and cost bands are starting guesses, so set your own before you trust the severity labels. Then run the tests on sample rows.
   - Run it on a live account only when you decide to, read-only. Review monthly, not weekly.
   - Use the fixes as a to-do list for your ads and landing pages. Nothing is changed for you.
 how_it_works:

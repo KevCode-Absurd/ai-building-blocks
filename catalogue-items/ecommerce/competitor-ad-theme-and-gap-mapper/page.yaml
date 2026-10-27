@@ -58,7 +58,7 @@ output_shape: |
   competitor | ads seen | formats | main theme | tone | spend (only if the library shows it)
 
   THEME HEAT MAP
-  theme | <competitor 1> | <competitor 2> | <brand> | status (Saturated | Contested | Emerging | Open)
+  theme | <competitor 1> | <competitor 2> | <brand> | status (Crowded | Contested | Emerging | Open)
 
   TOP 3 INSIGHTS
   1. <insight>

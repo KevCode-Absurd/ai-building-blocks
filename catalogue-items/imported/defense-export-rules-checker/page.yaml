@@ -17,6 +17,7 @@ when:
   - A foreign national joins your team and will see technical data.
   - You need to know which licence form fits your deal.
   - You found a possible violation and need to know how to report it.
+  - You want a starting point to bring to trade counsel. The result is not a classification you can rely on to ship or share data.
 not_for:
   - "You need a final legal call or a formal Commodity Jurisdiction ruling: ask trade counsel, or file a request with the State Department's DDTC."
   - "Your item is a normal commercial product with no military use: check the Commerce Department's export rules (EAR) with a trade adviser instead."
@@ -32,7 +33,8 @@ you_get:
   - Compliance checklist
   - Disclosure steps if relevant
 how_to_use:
-  - Gather first: the item's USML category if you know it, the commodity classification, the buyer's country and end-user statement, and any foreign persons who will have access.
+  - "Gather first: the item's USML category if you know it, the commodity classification, the buyer's country and end-user statement, and any foreign persons who will have access."
+  - "Warning: do not paste controlled technical data, drawings or specifications into a public AI tool. That could itself be an unauthorised export. Use a tool your organisation has approved for controlled data, or describe the item in general terms only."
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, web access or paid tool is needed.
   - Describe your item or technical data. Say which country it goes to and who the end user is.
   - Add your registration status and any foreign persons who will see the data, if you know them.

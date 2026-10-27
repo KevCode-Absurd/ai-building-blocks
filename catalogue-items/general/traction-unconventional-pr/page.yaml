@@ -7,7 +7,7 @@ thinking_why: It weighs buyer evidence, channel fit and test economics. Use your
 headline: Publicity experiment planner
 subhead: Paste your product link and add your goal, budget and time limits if you have them. Get advice tied to your business, a small test with clear limits, and the facts still needed before you act.
 explain: >-
-  A focused unconventional pr plan for your product. It reads the buyer and offer, checks why this channel might work and writes a small test. The default is SaaS; you can ask for general-business mode.
+  A focused unconventional PR plan for your product. It reads the buyer and offer, checks why this channel might work and writes a small test. The default is SaaS; you can ask for general-business mode.
 
 
   Storyboard or privately demonstrate one concept to a small relevant group. Check comprehension and willingness to share before funding an event.
@@ -81,7 +81,9 @@ output_shape: |
   Measurement: <events, cohort, denominators, attribution>
   Decision: <continue / revise / stop rule>
   Risks and next action: <...>
+  Concepts and prototype: <three concept briefs, the chosen prototype, production checklist, response plan>
   MISSING: <unknowns>
+  CHECKS MISSED: <checks that failed or could not run, or none>
 tweaks:
   - what: Your growth goal
     how: Give a target and deadline so the advice has something concrete to work towards.

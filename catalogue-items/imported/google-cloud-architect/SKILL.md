@@ -26,7 +26,7 @@ Collect application specifications:
 
 ### Step 2: Design Architecture
 
-> **Cost warning.** The deploy steps later in this skill create billable Google Cloud resources (Cloud Run, Firestore, Cloud Build and more). Tell the user this before they run any deploy command. Suggest they set a budget alert in the Google Cloud console and check Billing reports for the project after deploying. Treat every cost figure in this skill as a sample.
+> **Cost warning.** The deploy steps later in this skill create billable Google Cloud resources (Cloud Run, Firestore, Cloud Build and more). Tell the user this before they run any deploy command, show them each command, and wait for a yes before running it. Suggest they set a budget alert in the Google Cloud console and check Billing reports for the project after deploying. Treat every cost figure in this skill as a sample.
 
 Run the architecture designer to get pattern recommendations:
 
@@ -41,7 +41,7 @@ python scripts/architecture_designer.py --input requirements.json
   "recommended_pattern": "serverless_web",
   "service_stack": ["Cloud Storage", "Cloud CDN", "Cloud Run", "Firestore", "Identity Platform"],
   "estimated_monthly_cost_usd": 30,
-  "pros": ["Low ops overhead", "Pay-per-use", "Auto-scaling", "No cold starts on Cloud Run min instances"],
+  "pros": ["Low ops overhead", "Pay-per-use", "Auto-scaling", "Fewer cold starts when Cloud Run min instances is set above 0 (the sample Terraform sets 0, so cold starts can happen)"],
   "cons": ["Vendor lock-in", "Regional limitations", "Eventual consistency with Firestore"]
 }
 ```
@@ -134,13 +134,18 @@ variable "app_name" {
   type        = string
 }
 
+variable "artifact_repo" {
+  description = "Name of your Artifact Registry repository (create it first)"
+  type        = string
+}
+
 resource "google_cloud_run_v2_service" "api" {
   name     = "${var.environment}-${var.app_name}-api"
   location = var.region
 
   template {
     containers {
-      image = "gcr.io/${var.project_id}/${var.app_name}:latest"
+      image = "${var.region}-docker.pkg.dev/${var.project_id}/${var.artifact_repo}/${var.app_name}:latest"
       resources {
         limits = {
           cpu    = "1000m"
@@ -169,15 +174,14 @@ resource "google_firestore_database" "default" {
 
 **Example gcloud CLI deployment:**
 
-Notes: the `gcr.io` image paths in these examples are the older Container Registry. Google has replaced it with Artifact Registry, so use `REGION-docker.pkg.dev/PROJECT_ID/REPO/IMAGE` for new work. `--allow-unauthenticated` makes the service public to anyone on the internet. Keep it only for a service that is meant to be public, and remove it for internal APIs.
+Notes: the image paths in these examples use Artifact Registry, `REGION-docker.pkg.dev/PROJECT_ID/REPO/IMAGE`. Replace [REGION] and [REPO] in the shell and YAML examples with your own, and create the repository first. In Terraform they are the `region` and `artifact_repo` variables. For your own app images, do not use the older `gcr.io` Container Registry paths, which Google has replaced. The Cloud Build tool images in the CI/CD step (`gcr.io/cloud-builders/...`) are Google's own builder images, not your app, so they are the one exception. Check Google's current builder list if your tool warns about them. The deploy command below is private by default. Add `--allow-unauthenticated` only for a service that is meant to be public to anyone on the internet.
 
 ```bash
 # Deploy Cloud Run service
 gcloud run deploy my-app-api \
-  --image gcr.io/$PROJECT_ID/my-app:latest \
+  --image [REGION]-docker.pkg.dev/$PROJECT_ID/[REPO]/my-app:latest \
   --region us-central1 \
   --platform managed \
-  --allow-unauthenticated \
   --memory 512Mi \
   --cpu 1 \
   --min-instances 0 \
@@ -197,10 +201,10 @@ Set up automated deployment with Cloud Build or GitHub Actions:
 # cloudbuild.yaml
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/$PROJECT_ID/my-app:$COMMIT_SHA', '.']
+    args: ['build', '-t', '[REGION]-docker.pkg.dev/$PROJECT_ID/[REPO]/my-app:$COMMIT_SHA', '.']
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/$PROJECT_ID/my-app:$COMMIT_SHA']
+    args: ['push', '[REGION]-docker.pkg.dev/$PROJECT_ID/[REPO]/my-app:$COMMIT_SHA']
 
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud
@@ -208,12 +212,12 @@ steps:
       - 'run'
       - 'deploy'
       - 'my-app-api'
-      - '--image=gcr.io/$PROJECT_ID/my-app:$COMMIT_SHA'
+      - '--image=[REGION]-docker.pkg.dev/$PROJECT_ID/[REPO]/my-app:$COMMIT_SHA'
       - '--region=us-central1'
       - '--platform=managed'
 
 images:
-  - 'gcr.io/$PROJECT_ID/my-app:$COMMIT_SHA'
+  - '[REGION]-docker.pkg.dev/$PROJECT_ID/[REPO]/my-app:$COMMIT_SHA'
 ```
 
 ```bash
@@ -237,6 +241,8 @@ gcloud projects get-iam-policy $PROJECT_ID --format=json
 gcloud iam service-accounts list --project=$PROJECT_ID
 
 # Verify VPC Service Controls (if applicable)
+# POLICY_ID is your organization's access policy ID. Find it first with:
+gcloud access-context-manager policies list --organization=[ORGANIZATION_ID]
 gcloud access-context-manager perimeters list --policy=$POLICY_ID
 ```
 
@@ -260,7 +266,7 @@ gcloud access-context-manager perimeters list --policy=$POLICY_ID
 3. Fix the configuration or container image.
 4. Redeploy:
    ```bash
-   gcloud run deploy my-app-api --image gcr.io/$PROJECT_ID/my-app:latest --region us-central1
+   gcloud run deploy my-app-api --image [REGION]-docker.pkg.dev/$PROJECT_ID/[REPO]/my-app:latest --region us-central1
    ```
 
 **Common failure causes:**
@@ -324,7 +330,7 @@ python scripts/deployment_manager.py --app-name my-app --pattern serverless_web 
 Ask: "Design a serverless web backend for a mobile app with 1000 users"
 
 Result:
-- Cloud Run for API (auto-scaling, no cold start with min instances)
+- Cloud Run for API (auto-scaling; set min instances above 0 to cut cold starts)
 - Firestore for data (pay-per-operation)
 - Identity Platform for authentication
 - Cloud Storage + Cloud CDN for static assets
@@ -400,6 +406,22 @@ Provide these details for architecture design:
   "availability_sla": "99.9%"
 }
 ```
+
+The numbers above are placeholders. Replace each with the user's own figures. `data_size_gb` (how much data you store) is optional.
+
+**current_setup.json** (for the cost script) lists what the user already runs. Every list is optional. Use only the lists that apply:
+
+| Field | What goes in it |
+|---|---|
+| gce_instances | One entry per VM: cpu_utilization, pricing, uptime_hours_month |
+| gke_clusters | One entry per cluster: mode, avg_node_utilization, monthly_cost |
+| cloud_run_services | One entry per service: name, min_instances, avg_rps |
+| gcs_buckets | One entry per bucket: name, size_gb, storage_class, has_lifecycle_policy |
+| cloud_sql_instances | One entry per database: name, connections_per_day, utilization, has_ha, monthly_cost |
+| bigquery_datasets | One entry per dataset: name, pricing_model, monthly_tb_scanned, has_partitioning |
+| other | monthly_egress_gb, monthly_log_volume_gb, persistent_disks, static_ips, log_sinks, cloud_nat_gateways |
+
+Copy the numbers from the user's Google Cloud console or billing report. Do not guess them.
 
 ---
 

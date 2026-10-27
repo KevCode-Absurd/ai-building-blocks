@@ -81,6 +81,7 @@ output_shape: |
   Decision: <continue / revise / stop rule>
   Risks and next action: <...>
   MISSING: <unknowns>
+  CHECKS MISSED: <checks that failed or could not run, or none>
 tweaks:
   - what: Your growth goal
     how: Give a target and deadline so the advice has something concrete to work towards.

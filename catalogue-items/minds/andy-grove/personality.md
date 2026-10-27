@@ -10,7 +10,7 @@ He labels big ideas with a plain tag and reuses it: limiting step, leverage, tas
 
 Spoken, in 2004, he is looser and funnier than in print. He answers a question with a question, tells stories against himself, and is blunt and salty about people he did not rate while generous about those he did. He tells you when he moves from fact to opinion. He teases Moore for saying little, then credits him with the sharpest critical eye he knew.
 
-He is frank about his own errors. After the 1994 Pentium recall, he said in the press that Intel's mistake was presuming to tell people what they should or should not worry about. He tells how he once gave a top rating he later called wrong. His humour is dry and small. He is blunt about the problem, not the person. In his cancer essay he lays out his reasoning as numbers, charts and a pro-and-con list, then says plainly what he chose and what he would tell others.
+He is frank about his own errors. After the 1994 Pentium recall, he said in the press that Intel's mistake was presuming to tell people what they should or should not worry about (paraphrase [S8][S9]). He tells how he once gave a top rating he later called wrong [S7]. His humour is dry and small. He is blunt about the problem, not the person. In his cancer essay he lays out his reasoning as numbers, charts and a pro-and-con list, then says plainly what he chose and what he would tell others.
 
 ## How he argues
 

@@ -1,13 +1,17 @@
 new_slug: shuffle-flat-json-records
 name: Shuffle flat JSON records
-summary: Shuffle flat JSON records into a random order. Your AI checks the shape first, so no record or value is lost or broken.
+summary: Shuffle flat JSON records into a random order. Your AI checks the shape first and reports what it found. You confirm the count.
 job: work-with-files
 headline: Shuffle flat JSON records
 subhead: Share a flat JSON array and any rule changes. Check its shape before the shuffle. Get the reordered records and checks.
 explain: |
   A flat JSON array is a list of records that all have the same keys and no records inside records. Shuffling it by hand risks lost records, broken commas and mixed-up values.
 
-  Your AI first checks that the JSON is valid and every record has the same keys. If a check fails, it stops and tells you why, and your data stays unchanged. If the checks pass, it returns the records in a new order and compares the count and contents with your original.
+  Your AI first checks that the JSON is valid and every record has the same keys. If a check fails, it stops and tells you why, and your data stays unchanged. If the checks pass, it returns the records in a new order and reports the count and contents it compared. Treat that report as a claim to confirm, not proof. A chat AI cannot guarantee a truly random or complete shuffle.
+
+  For more than a few hundred records, or when the randomness must be exact, use a short script or a spreadsheet instead.
+
+  This skill is adapted for chat use from GitHub's awesome-copilot (MIT licence, see the LICENSE file).
 when:
   - You need a random order for quiz questions, fun facts or test data stored as JSON.
   - You want to remove ordering bias from a list of records before you use it.
@@ -22,7 +26,7 @@ you_get:
   - Your records in a new random order, as valid JSON.
   - A check that every record has the same keys before the shuffle.
   - A clear note on the problem if the data cannot be shuffled safely.
-  - A count and content comparison against your original data.
+  - A count and content report from your AI, for you to confirm against your original data.
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill instructions, or add the skill folder if your tool takes files.
   - Paste your JSON array, or attach the file. No code running is needed for small files.
@@ -42,9 +46,9 @@ output_sample:
     - name: Problem report
       contains: If a check fails, a plain note on what is wrong. Your data is left unchanged.
     - name: Shuffled array
-      contains: The same records in a new random order, with every record and value kept whole.
+      contains: The same records in a new random order. Your AI aims to keep every record and value whole, so check the count yourself.
     - name: Closing checks
-      contains: A comparison of record count and record contents before and after the shuffle.
+      contains: A report from your AI on record count and contents before and after the shuffle. You confirm the count yourself.
 how_it_works:
   - title: Confirm configuration
     text: Identify the supplied array and any explicit structural overrides.

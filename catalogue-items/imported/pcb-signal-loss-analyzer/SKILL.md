@@ -1,7 +1,7 @@
 ---
 name: matlab-analyze-em
 description: "S-parameters, insertion loss, fields, currents, mesh control, and solver selection for RF PCB performance validation. TRIGGER: user asks to compute S-parameters, analyze insertion/return loss, extract fields or currents, compare MoM vs FEM, or control mesh for any RF PCB component. Invoke BEFORE writing sparameters() or solver code — API is non-obvious. SKIP: designing or creating components (use the specific matlab-design-pcb-* skill), material/stackup setup only (use matlab-manage-pcb-material), optimization sweeps (use matlab-optimize-pcb-design), PDN/IR-drop analysis (use matlab-analyze-pcb-pdn)."
-license: https://www.mathworks.com/content/dam/mathworks/license/pmrl/license.md
+license: https://www.mathworks.com/content/dam/mathworks/license/pmrl/license.md # AI Blocks: for this copy, LICENSE.md in this folder applies (BSD 2-Clause, use only with MathWorks products such as MATLAB). This link is MathWorks' own upstream terms and also limits use to MathWorks products.
 metadata:
   author: MathWorks
   version: "1.0"

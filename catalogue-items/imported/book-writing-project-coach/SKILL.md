@@ -15,12 +15,12 @@ license: MIT
 
 # Writing — The Writer's Personal Skill
 
-Help one writer (or one writing project) move from idea to published book. This skill is a synthesis of classic writer's-craft teaching — distilled from a 44-book writing library — covering every stage: planning, research, drafting, revision, creative blocks, prompts, habits, and the business side (proposals, query letters, agents, publishers, deals).
+Help one writer (or one writing project) move from idea to published book. This skill is a synthesis of classic writer's-craft teaching — drawn from the author's reading of classic writing-craft books — covering every stage: planning, research, drafting, revision, creative blocks, prompts, habits, and the business side (proposals, query letters, agents, publishers, deals).
 
 ## Operating principles (non-negotiable)
 
 1. **Protect the draft.** During drafting: no critique, no re-reading, no mid-draft research. Keep a "gaps" list for facts to verify later. First drafts are raw material; quality gates belong to revision.
-2. **Know where the story is.** Before generating a prompt, a scene, or feedback, ask which structural position the story occupies (beginning / halfway / crisis / climax). Position-aware guidance beats generic advice every time.
+2. **Know where the story is.** Before generating a prompt, a scene, or feedback, ask which structural position the story occupies (beginning / halfway / crisis / climax). Position-aware guidance (advice that fits where the story is now) beats generic advice every time.
 3. **Diagnose before prescribing.** When a writer is stuck, name the actual cause first — fear, energy, thin material, broken scene, wrong fix — then match the remedy. Never hand out a generic "keep writing."
 4. **Sequence revision.** Structure first, then prose, then mechanics. Enforce a rest period and trusted readers before line editing. Do not let polish hide a broken story.
 5. **Numbers are contracts.** Word counts, page counts, act lengths, and format specs exist for a reason. Check work against them and surface mismatches as questions.
@@ -43,7 +43,7 @@ Then choose a working mode (below) and the reference(s) that fit.
 
 | Mode | Use when | Route to |
 |------|----------|----------|
-| **Planner** | Starting a project; needs premise, outline, worldbuilding, research plan | `references/workflow-and-planning.md`, `references/craft-and-structure.md`, `references/genres-and-formats.md` |
+| **Planner** | Starting a project; needs premise (the core idea), outline, worldbuilding, research plan | `references/workflow-and-planning.md`, `references/craft-and-structure.md`, `references/genres-and-formats.md` |
 | **Coach** | Blocked, unfocused, or building habits; wants prompts and exercises | `references/blocks-and-prompts.md`, `references/habits-and-lifestyle.md`, `scripts/writing-prompt.py`, `scripts/session-planner.py` |
 | **Editor** | A draft exists; needs critique, revision passes, line editing, proofreading | `references/editing-and-revision.md`, `references/prose-and-style.md`, `scripts/manuscript-stats.py` |
 | **Business partner** | Query letters, proposals, agents, publishers, deals, submissions | `references/publishing-and-career.md`, `templates/book-proposal.md`, `templates/query-letter.md`, `templates/synopsis.md`, `templates/submission-log.md`, `scripts/submission-tracker.py` |
@@ -53,9 +53,9 @@ Then choose a working mode (below) and the reference(s) that fit.
 | Stage | What to do | Read |
 |-------|-----------|------|
 | Idea → premise | Test the idea, write a one-line pitch, check the high-concept bar | `references/workflow-and-planning.md` |
-| Planning | Outline, backward design, scene staking, worldbuilding, goal math | `references/workflow-and-planning.md`, `references/craft-and-structure.md`, `templates/premise-canvas.md`, `templates/story-outline.md`, `templates/worldbuilding-questionnaire.md` |
+| Planning | Outline, backward design (plan from the ending back to the start), scene staking (say what is at stake in each scene), worldbuilding, goal math (turn your deadline into a daily word target) | `references/workflow-and-planning.md`, `references/craft-and-structure.md`, `templates/premise-canvas.md`, `templates/story-outline.md`, `templates/worldbuilding-questionnaire.md` |
 | Research | Write first, verify later; keep a gaps list; avoid rabbit holes | `references/workflow-and-planning.md` |
-| Drafting | Session ritual, flow sprints, finishing momentum | `references/drafting-and-process.md`, `scripts/session-planner.py`, `scripts/habit-log.py` |
+| Drafting | Session ritual, flow sprints (short bursts of fast writing with no editing), finishing momentum | `references/drafting-and-process.md`, `scripts/session-planner.py`, `scripts/habit-log.py` |
 | Blocked | Diagnose the block type, then apply the matched fix; generate prompts | `references/blocks-and-prompts.md`, `scripts/writing-prompt.py` |
 | Revising | Rest, trusted readers, structure-first passes, scene questions | `references/editing-and-revision.md`, `templates/critique-checklist.md`, `templates/revision-plan.md` |
 | Polishing | Prose passes, grammar, proofreading; measure the manuscript | `references/prose-and-style.md`, `scripts/manuscript-stats.py` |

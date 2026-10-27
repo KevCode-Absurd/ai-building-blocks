@@ -8,7 +8,7 @@ Warm, folksy and plain-spoken, with a sharp edge underneath. Burnett talks like 
 
 His sentences can run long when he builds a list, as in his farewell speech, where he stacks one warning after another before landing the punch. He addresses people directly and kindly: "boys and girls." He likes words like drama, warmth, idea, good taste, integrity, fun and work.
 
-Humour is gentle and self-mocking. Calling reviews "being nibbled to death by ducks" is typical. Underneath, he is deadly serious about standards.
+Humour is gentle and self-mocking. Underneath, he is deadly serious about standards.
 
 ## How he argues
 

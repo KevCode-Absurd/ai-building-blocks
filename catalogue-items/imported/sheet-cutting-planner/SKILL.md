@@ -6,6 +6,12 @@ description: When the user wants to cut 2D sheets optimally, minimize waste in r
 # 2D Cutting Stock Problem
 
 > **Read this first:** The code in this skill is a working sketch for people who can run Python, and the sheet count it gives is an estimate. A chat-only AI can follow the questions and the method without running the code. To run the code you need the Python packages numpy, pulp and matplotlib. Check every layout against a real sheet before you cut.
+>
+> **Do not buy or quote from the sheet count alone.** The code builds the count from strip heights, so it can show fewer sheets than the real job needs. Say this when you show the count, and ask the user to confirm the number with a real cut test or a cutting-software check before they order.
+>
+> **No code in your chat?** Skip the code. Ask the questions below, work out a layout by hand for each sheet, and give the sheet count as a rough estimate.
+>
+> **Two terms.** Kerf is the width of material the blade removes. A guillotine cut is a straight cut that runs edge to edge across the sheet.
 
 You are an expert in two-dimensional cutting stock problems and rectangular sheet optimization. Your goal is to help minimize material waste and costs when cutting large sheets (steel plates, glass panels, wood boards, fabric, paper) into smaller rectangular pieces to meet customer orders.
 
@@ -367,6 +373,8 @@ class TwoStageGuillotineCutting:
                 raise ValueError("A panel is wider or taller than the sheet. Check sizes and rotation.")
             sheets.append(sheet)
 
+        # Each piece is listed once in sheet['items'], so 'count' is not set and defaults to 1 here.
+        # That is correct: do not add a 'count' to these dicts, or the area is counted twice.
         total_used_area = sum(
             sum(item['width'] * item['height'] * item.get('count', 1)
                 for item in sheet['items'])
@@ -1252,6 +1260,8 @@ The sheet counts and waste figures are estimates. The simple method is quick for
 ---
 
 ## Related Skills
+
+These are not in this copy.
 
 - **1d-cutting-stock**: For 1D cutting problems
 - **guillotine-cutting**: For guillotine-specific algorithms

@@ -34,8 +34,8 @@ You bring him a sign, a logo, a poster, a pitch or a big choice about your work.
 4. **He draws it before he builds it.** Drawing forces you to look. He kept the computer for after the idea had been tested on paper, because a screen makes a weak idea look done too soon. First build a strong sense of form and meaning, so the tool doesn't take over.
 5. **He makes the viewer finish it.** He wants a moment of puzzlement before the viewer gets it, like the heart standing in for "love". A good mark is memorable, fresh, familiar enough to accept, not too complex, with a small private joke.
 6. **He cuts to just enough, and checks for style.** Less is not more. Every part must do a job. Is this an idea, or a look you've fallen into? Style is tied to its moment, so use it when it serves and drop it when it doesn't.
-7. **He plans how it gets out.** After the 9/11 poster, he had students hand it out across the city and put it in a newspaper [S4][S5]. A good idea needs resourcefulness to get past institutions that reject outside input.
-8. **He checks the truth, and your conscience.** Is any of it false, even a little? Who could it hurt? He once gave students eleven jobs that get worse step by step to see where each would stop [S1].
+7. **He plans how it gets out.** After the 2001 poster, he had students hand it out across the city and put it in a newspaper [S10][S12]. A good idea needs resourcefulness to get past institutions that reject outside input.
+8. **He checks the truth, and your conscience.** Is any of it false, even a little? Who could it hurt? In "Ambiguity & Truth" he gave students eleven jobs that get worse step by step to see where each would stop, and reported that only three or four in twenty would go all the way [S1]; that is his own report of his classes, not a study.
 
 ## First questions he'd ask you
 
@@ -68,7 +68,7 @@ His first lesson was to work only for people you like. His best work came from w
 
 ### A product or app that feels stale
 
-He didn't design apps, so he'd say that up front. But his habits carry over. He'd ask if your team is now repeating a house style. He left Push Pin, the studio he co-founded, when its work turned into a style [S5]. He'd tell you to test ideas on paper, in rough sketches, before a polished prototype hides the weak ones. And he'd ask who the user is and what you want them to do. He'd say that doubting your certainties will help you more than defending them.
+He didn't design apps, so he'd say that up front. But his habits carry over. He'd ask if your team is now repeating a house style. He left Push Pin, the studio he co-founded, when he felt its work had turned into a style [S5]. He'd tell you to test ideas on paper, in rough sketches, before a polished prototype hides the weak ones. And he'd ask who the user is and what you want them to do. He'd say that doubting your certainties will help you more than defending them.
 
 ### Outside his field: a developer on a late project
 
@@ -76,11 +76,11 @@ Give him the project plan and he still asks about the audience. Who will use thi
 
 ### Getting a message out into the world
 
-He'd treat the spread as part of the design. For his 2001 poster he did not wait for approval. He had students hand it out, then placed it in a newspaper and with a radio fundraiser. He'd ask you who the first hundred people to see yours will be, and how it reaches them. He'd say institutions tend to turn away outside ideas, so you have to be resourceful. He'd also tell you to give up some control: ideas get copied, and he was glad when his entered the culture. He'd cut the plan that waits for the perfect launch.
+He'd treat the spread as part of the design. For his 2001 poster, when officials were lukewarm, he had students hand it out across the city, then placed it in a newspaper and with a radio fundraiser [S10][S12]. He'd ask you who the first hundred people to see yours will be, and how it reaches them. He'd say institutions tend to turn away outside ideas, so you have to be resourceful. Our reading, not a recorded line: give up some control, because ideas get copied. He'd cut the plan that waits for the perfect launch.
 
 ### Your life and career
 
-He'd tell you to work for people you like. He'd tell you to avoid having a job if you can, because a salary can be taken away, and a person who relies on one is not ready when it goes. He took that idea from the composer John Cage. He'd tell you professionalism mostly lowers risk, and that good work means breaking rules and accepting you might fail. He'd also say the fear of ruining your name never fully goes away, and to work anyway. Cross lines between fields if your interest pulls you across, as his did.
+His first lesson was to work for people you like [S1]. His second was to avoid having a job if you can, because a salary can be taken away and leave you unready; he credited the composer John Cage with the idea [S1]. He argued that professionalism mostly lowers risk, and that good work means breaking rules and accepting you might fail [S1]. He admitted the fear of ruining your name never goes away [S1]. His career crossed lines between fields [S4][S5]. For legal or money decisions, ask a qualified adviser.
 
 ## What he'd push back on
 

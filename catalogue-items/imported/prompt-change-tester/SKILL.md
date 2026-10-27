@@ -41,7 +41,7 @@ source_repo: Ranjeet2063/agentic-awesome-skills
    uncertainty. Keep mandatory safety/schema failures visible even if aggregate
    similarity improves. Use the predeclared rule, not a threshold selected after results.
 7. Store a redacted report and exact artifacts at an authorized destination.
-   Decide retain/revise/reject for the stated dataset; deployment is separate. On the page these read as ship (retain), hold (revise) and keep the old prompt (reject).
+   Decide keep/revise/reject for the stated dataset; deployment is separate. Keep means the new prompt can replace the old one. Revise means send the regressions back for changes. Reject means keep the old prompt.
 
 ## Regression register
 
@@ -108,8 +108,6 @@ checks passed; it is not a release or general quality certificate.
 
 ## Limitations
 
-- No RPC, relayer, signing key or blockchain deployment is required for this
-  generic prompt workflow. Real integrations may have their own dependencies.
 - Exact text match is unsuitable for many valid open-ended outputs; embeddings
   and judges have blind spots and cannot replace mandatory behavioral checks.
 - A golden set must be reviewed/versioned; it is not created merely by naming it.

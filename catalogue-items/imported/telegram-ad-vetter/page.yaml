@@ -9,7 +9,7 @@ subhead: Give it a channel and its price. Get a verdict on audience, fake follow
 explain: |
   A verdict on whether a Telegram channel is worth the price you were quoted, based on real audience reach, signs of fake followers and a fair cost per thousand views. You avoid paying for a post that nobody sees.
 
-  The skill reads the public preview of the channel and records subscriber count and views of 10 to 20 older posts. It works out reach as median views divided by subscribers and compares that with benchmarks for channels of the same size. It looks for odd growth and flat views. It then calculates cost per thousand views, explains what slots like 1/24 or a permanent post are worth. The benchmarks come from studies by TGScope, whose maker wrote this skill, so weigh them as one source.
+  You paste in the channel's subscriber count and the views of 10 to 20 older posts. Your AI can read the public preview for you only if you allow it. It works out reach as median views divided by subscribers and compares that with benchmarks for channels of the same size. It looks for odd growth and flat views. It then calculates cost per thousand views, explains what slots like 1/24 or a permanent post are worth. The benchmarks come from one vendor's studies of 2026 channel data (TGScope), and the maker of that vendor wrote this skill. Weigh them as one source, and check them against the channel's own statistics before a large spend.
 when:
   - An admin offers you a post slot and you are unsure about the price.
   - You want to compare five channels for one campaign.
@@ -31,10 +31,11 @@ you_get:
   - Cost per thousand views
   - A buy, negotiate or skip verdict
 how_to_use:
-  - Open your AI chat and paste the skill text. Use an AI that can open web links if you can. It reads the channel's public t.me page, which is a form of scraping. Check Telegram's terms first, or paste the numbers in yourself.
+  - "Warning: having an AI read a channel's public t.me page is a form of scraping and may break Telegram's terms. The default route is to paste the numbers in yourself. Let your AI open the page only if you have checked the terms and they allow it."
+  - Open your AI chat and paste the skill text.
+  - Copy the subscriber count and the views of 10 to 20 posts that are over a week old from the channel, and paste them in.
   - Give it the channel name or link, the price and the post format offered.
   - Add other channels you want to compare (optional).
-  - If the AI cannot open the channel preview, paste in the subscriber count and the views of 10 to 20 posts that are over a week old.
   - Read the reach check and red flags first, then the cost per thousand and the verdict.
   - Before you pay, ask the admin for 30 days of Telegram statistics. Give each channel its own link or code.
 output_sample:

@@ -31,11 +31,11 @@ you_get:
   - A count of customers found, tagged and failed
 how_to_use:
   - Use an AI that can run code and the Shopify CLI, such as Claude Code. A plain chat window cannot do this.
-  - Log in to your store first with the Shopify CLI. Your login needs permission to read and change customers.
-  - Paste the skill and give your store domain. Turn dry run on. Use a dated tag such as win-back-2026-11, so you can tell each run apart and not tag the same people twice.
+  - Log in to your store first with the Shopify CLI, using the login command in Shopify's current docs. Your login needs permission to read and change customers. The skill runs its calls through that session, so you never paste an access token into the chat.
+  - Paste the skill and give your store domain. Dry run is on by default, so keep it on for the first run. Use a dated tag such as win-back-2026-11, so you can tell each run apart and not tag the same people twice.
   - Check the count and the preview. Change the cutoff or minimum orders if the list looks wrong.
-  - Run it again with dry run off. It tags up to 500 customers per run.
-  - The skill leaves out anyone who already has the tag or is not subscribed to marketing email. If it cannot see that status, remove those people yourself before you email the CSV.
+  - Only when the preview looks right, run it again with dry run set to false. It then tags live customer records, and it tags up to 500 customers per run.
+  - The skill leaves out anyone who already has the tag or is not subscribed to marketing email. If it cannot read that status, it stops. It tags nobody and writes no CSV. Check email consent in Shopify first, then run it again.
   - Next, import the CSV into Klaviyo or Shopify Email, filter on the win-back tag, and send the campaign only to customers who agreed to marketing email.
 output_sample:
   input:

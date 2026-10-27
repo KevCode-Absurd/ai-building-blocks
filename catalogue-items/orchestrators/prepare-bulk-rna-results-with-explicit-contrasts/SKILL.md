@@ -33,13 +33,19 @@ How to start:
 <!-- /needs -->
 
 ## Fill these inputs
+Gather these files before step 1:
+- The count matrix (or the quantification files), with the tool and reference build that made it.
+- The sample sheet, one row per sample.
+- The contrast specification: the groups compared, the reference level and the design formula.
+- Package versions and the output folder you may write to.
+
 - COUNT_SOURCES: attach raw gene counts or supported quantification files, orientation, tool versions and reference provenance.
 - SAMPLE_METADATA: attach unique sample IDs, biological units, condition, batch and relevant covariates.
 - COMPARISON: state the explicit contrast, reference levels, design formula, exclusions, prefilter and error-rate threshold.
 - RUN_SCOPE: identify the permitted local environment, package versions and output folder.
 
 ## Setup and tool limits
-The three named skills (`rna-seq-comparison-preparer`, `rna-seq-group-difference-finder` and `journal-ready-figure-maker`) must be in the folder before you start. If one is missing, stop and ask for it. Open the included SKILL.md and required references for each named skill before its stage. Inherit source requirements, approvals, local-only handling and action boundaries. If a skill folder is absent, ask the user to attach it. A chat without tools can use pasted skill instructions and source records for draft text and tables, but must mark unavailable conversion, rendering, API calls or tests NOT RUN. Never fabricate files, access or download links.
+The three named skills (`rna-seq-comparison-preparer`, `rna-seq-group-difference-finder` and `journal-ready-figure-maker`) must be in the folder before you start. If one is missing, stop and ask for it. START_HERE.txt comes with the downloaded pack; if it is not there, follow this file. Open the included SKILL.md and required references for each named skill before its stage. Inherit source requirements, approvals, local-only handling and action boundaries. If a skill folder is absent, ask the user to attach it. A chat without tools can use pasted skill instructions and source records for draft text and tables, but must mark unavailable conversion, rendering, API calls or tests NOT RUN. Never fabricate files, access or download links.
 
 ## Work in this order
 1. **Validate the count handoff** Use `rna-seq-comparison-preparer`. Confirm bulk biological replication, count provenance, reference build and quantification path. Assemble gene-level counts with the explicit conversion policy: accept raw gene counts from STAR or featureCounts, and Salmon output imported as length-scaled counts (rounded to integers, and labelled as estimates). Reject fractional featureCounts values. If only TPM, FPKM or normalized values are supplied, stop and ask for raw counts or the quantification files; do not relabel them. Hand counts, metadata, QC and exclusions to statistical fitting.
@@ -52,7 +58,14 @@ The three named skills (`rna-seq-comparison-preparer`, `rna-seq-group-difference
 Stop fitting when raw-count provenance, replication, sample matching or contrast is unresolved. TPM, log data and normalized expression do not become raw counts through relabelling. Never silently intersect mismatched sample IDs. Return exact corrections needed and the next valid preparation step. Respect local data restrictions; do not send private reads to external services.
 
 ## Deliverable format
-Return validation, design/contrast record, reproducible analysis code, full tables, diagnostics, figures and version/parameter manifest. State which code ran and unresolved warnings. Distinguish association from mechanism, significance from biological importance and exploratory findings from confirmed effects. This research workflow does not produce clinical interpretation.
+Return these in this order:
+1. Validation: count provenance, sample matching, replication and exclusions.
+2. Design and contrast record: the formula, reference levels and the exact comparison tested.
+3. Full result tables: every gene, with adjusted p-values, effect sizes, warnings and missing values kept in.
+4. Diagnostics and figures: labelled, with uncertainty, plotting code and the source data behind each one.
+5. Version and parameter manifest, plus reproducible analysis code.
+
+State which code ran and unresolved warnings. Distinguish association from mechanism, significance from biological importance and exploratory findings from confirmed effects. This research workflow does not produce clinical interpretation.
 
 ## Final check
 Return the listed deliverables, source and assumption register, missing inputs and a check table with PASS, FAIL or NOT RUN for each check below. Explain failures and the next person or input needed. Keep measured facts, proposed work and illustrative examples separate. A draft or structural check is not executed validation.

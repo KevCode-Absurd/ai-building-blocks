@@ -35,7 +35,8 @@ How to start:
 - **Three to five rivals** (strongly advised): names or Meta Ad Library links for the brands that are winning.
 - **Amazon links** (strongly advised) for the top-reviewed product, or a similar one.
 - **Customer data** (optional): who buys from you now, and their order values.
-- The Brand brain is not needed. Where the "After this" links mention it, bring only the chosen group and its evidence.
+- No brand files are needed. For the next skills below, bring only the chosen group and its evidence.
+- Cost: the Meta Ad Library, Amazon reviews and Reddit search are free. Traffic tools (step 2) and deep research (step 14) are optional and may need a paid plan or account.
 - The person pastes what they find (ad notes, review stories, forum threads). Use only what is pasted. If your AI can open pages, say so, and still show the source for each claim.
 
 Does not fit: a product that is already unusual, in a new category, or one with no rivals to learn from. Skip it if the product cannot truly help the new group. Do not stretch claims to fit a group. The rule behind this skill: if the product is not truly different, change who you sell to, not what you claim. A new mechanism needs a physically different product, which is rare for products bought from suppliers.
@@ -44,19 +45,19 @@ Privacy: public posts and reviews only. Label each candidate with a tag or first
 
 ## Steps
 1. **Name the problem the product solves** in one line. Everything below follows it.
-2. **Map the rivals' buyers.** In the Meta Ad Library, search the product. For each winning brand, write down the age range, gender, desires and selling points shown in the ads. In video ads, note who appears on screen and what they say. A traffic tool can show how big the rival is (visits, average order value). Most such tools are paid and optional. The rival map still works from the Meta Ad Library and public signals alone. Repeat for as many successful rivals as you can. The group most of them share is the one to avoid.
+2. **Map the rivals' buyers.** In the Meta Ad Library, search the product. For each winning brand, write down the age range, gender, desires and selling points shown in the ads. In video ads, note who appears on screen and what they say. A traffic tool can show how big the rival is (visits, average order value). Most such tools are paid (they need an account and a plan) and are optional. The rival map still works from the Meta Ad Library and public signals alone. Repeat for as many successful rivals as you can. The group most of them share is the one to avoid.
 3. **Open the Amazon reviews** of the top-reviewed product or a similar one. Sort by top reviews and, if you can, filter to reviews with photos or video. People who add pictures tend to write long stories.
 4. **Look for long life stories.** The best reviews say who the writer is and what they went through. Each different story is a candidate group. The sources' examples: new mothers after surgery, men over 65. Short reviews rarely help.
 5. **Tag each candidate** with a tag or a first name only, for example "Candidate 1, new mother".
 6. **Check the size on Reddit.** Search the situation plus the word Reddit, for example "post C-section weight gain Reddit". Many threads about the same problem mean many people. A single thread means you may have found one person.
 7. **Write each candidate's picture from the threads.** The beliefs they hold (for example "only surgery flattens it"), the fixes they tried, and how they feel. Quote the words, with no names.
 8. **Choose one.** Pick the group with strong evidence, many threads, a clear wish for what your product does, and no brand talking to them yet. Check the last point in the Ad Library: if nobody is advertising to them, that is the opening. If you cannot show all four, say what is missing.
-9. **Carve a layer.** Do not take a slice of the whole market. Take a small group inside it and aim to own all of it. Add layers one at a time. A fat burner for everyone, then for women, then for women over 40: each layer makes the message sharper. The source's examples of this: supplements for women at one life stage, a thinking supplement for entrepreneurs, a pillowcase for people with acne.
+9. **Carve a layer.** Do not take a slice of the whole market. Take a small group inside it and aim to own all of it. Add layers one at a time. A fat burner for everyone, then for women, then for women over 40: each layer makes the message sharper. The source's examples of this: supplements for women at one life stage, a thinking supplement for entrepreneurs, a pillowcase for people with acne. Layers built around a health condition or a body goal are the riskiest. Never write a claim that the product treats, cures or fixes a health problem, or that it earns a person money. Mark any such layer "claims need a qualified-person check" and use only what the product's maker can back up.
 10. **Rank the layers** by three things: how strong the pain is, whether they can pay, and whether the group is still large enough. People tend to underestimate how big a group is, so do not cut a layer on a feeling. A source's example showed that a narrower group can have a more painful, higher-value problem. That is one marketer's illustration, not a rule. Treat any price or pain guess here as something to test.
 11. **Run the contrast check.** Look at the top rivals' ads and ask what the polar opposite would be. Does the chosen layer stand apart from them in who it talks to and how?
 12. **Write a one-sentence offer line** for the top pick: who it is for, what they get, what makes it different for them.
 13. **Plan the test.** Test the top two or three layers with separate ad angles, not separate products. An ad test is what confirms the pain and buying power guesses. A small segment inside a proven market is safer than a brand-new category, because the demand is already shown.
-14. **Optional deep research.** Only after you have a pick, you may run a deep-research prompt on that one group and read every source it cites. It can be slow and the report long. Treat its findings as ideas to check, not facts.
+14. **Optional deep research (may be a paid feature).** Only after you have a pick, you may run a deep-research prompt on that one group and read every source it cites. It can be slow and the report long. Treat its findings as ideas to check, not facts.
 
 ## What you hand back
 Use these labels in this order:

@@ -7,7 +7,7 @@ description: "Turn your AI pilot results into an evidence brief, data quality ga
 
 Reviews one bounded AI pilot at a gate: it checks the goal and baseline, checks the test results table, finds the data gaps and applies the team's own ordered go or stop checklist. It works only from files and text the user supplies. It never turns a tool on, changes a budget, approves a purchase or sends anything. One bounded run per request. Installing it does not create a schedule or connect an account.
 
-This agent runs the workflow `prepare-an-ai-pilot-go-decision` (steps: test the goal as a hypothesis, check the case table, apply the checklist). The steps below are the full method, so it runs without the other files. If the workflow and the skills `hypothesis-first-design-planner`, `spreadsheet-checker`, `decision-checklist-runner` and `source-note-summariser` are installed, read them and follow their wording where they say more.
+This agent runs the workflow `prepare-an-ai-pilot-go-decision` (steps: test the goal as a hypothesis, check the case table, apply the checklist). The steps below are the full method, so it runs without the other files. The workflow and all four skills are optional: none is required to run this agent. If the workflow and the skills `hypothesis-first-design-planner`, `spreadsheet-checker`, `decision-checklist-runner` and `source-note-summariser` are installed, read them and follow their wording where they say more.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
@@ -49,6 +49,7 @@ Ask once for anything below that is missing. If it is still missing, write `MISS
 - The go or stop checklist, in the team's order, with its stop rules. If none exists, say the agent applies a checklist and does not write one, and stop at the evidence brief and gaps.
 - The date the results run to.
 - The record from the last review (optional): `next-review-record.md`.
+- The owner who approves the go or stop call, and where that sign-off is recorded (for example the gate meeting notes). If unknown, write `MISSING: approver` and say the call has no sign-off yet.
 
 If your AI cannot read files, ask the user to paste the table as text, and say in the output that no files were read.
 
@@ -85,6 +86,8 @@ Allow at most two correction passes on any step. After that, stop and name the b
 - `next-review-record.md`: the record for the next run.
 
 Finish with the evidence used, assumptions, `MISSING:` lines, and `CHECKS MISSED:` listing any check that could not run (or "none"). Say whether this was a first baseline or a comparison with a record.
+
+What next: take the evidence brief and the gap list to the named owner, and set the next gate or results date. The generic "After this" list above (a documentation accuracy reviewer and a private bug evidence assistant) does not fit a pilot review. Do not offer those links. Offer only these next steps: the Prepare an AI pilot go decision workflow for one decision, or the [Pilot customer promise review assistant](https://useaiblocks.com/skills/pilot-customer-promise-review-assistant) to check what was promised to pilot customers. Say what to bring: the evidence brief and the checklist result.
 
 ## Stop and ask before
 

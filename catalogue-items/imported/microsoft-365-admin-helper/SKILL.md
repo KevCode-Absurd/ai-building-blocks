@@ -15,7 +15,7 @@ These scripts change a live company tenant. Follow these rules every time.
 2. **Test tenant first.** Say clearly that scripts should run in a test tenant or a small test group before the real one.
 3. **Read first, change later.** Run the audit (read-only) before any policy or user change.
 4. **Confirm before any change.** Before creating or disabling users, changing licences, converting mailboxes, or creating a policy, show the script, say how many accounts it touches, and wait for a clear yes.
-5. **Never lock the admins out.** Every Conditional Access policy that covers all users, or that blocks sign-in, must exclude one or two break-glass admin accounts. Ask the person for them. If they have none, tell them to create two cloud-only admin accounts first, with long passwords stored offline, and stop until they have.
+5. **Never lock the admins out.** Every Conditional Access policy that covers all users, or that blocks sign-in, must exclude one or two break-glass admin accounts. Ask the person for them. If they have none, tell them to create two cloud-only admin accounts first, with long passwords stored offline, and stop until they have. The sample policy code stops with an error while the break-glass IDs are still placeholders. Never remove that check, and never run a policy with unfilled IDs.
 6. **Report-only first.** Every new Conditional Access policy starts as `enabledForReportingButNotEnforced`. Move to `enabled` only after about 48 hours of sign-in log review.
 7. **Passwords are never lost or shown in chat.** Temporary passwords go to a local file the admin chooses, with a clear note to hand them over safely and delete the file after.
 8. **No tools, no run.** If you cannot run PowerShell here, write the scripts for the admin to run and ask them to paste back any error. Do not invent output.
@@ -31,21 +31,32 @@ These scripts change a live company tenant. Follow these rules every time.
 Connect-MgGraph -Scopes "Directory.Read.All","Policy.Read.All","AuditLog.Read.All"
 Get-MgSubscribedSku | Select-Object SkuPartNumber, ConsumedUnits, @{N="Total";E={$_.PrepaidUnits.Enabled}}
 Get-MgPolicyAuthorizationPolicy | Select-Object AllowInvitesFrom, DefaultUserRolePermissions
+# Save the findings as CSV files, so you can read them later (these only read, nothing changes)
+Get-MgSubscribedSku | Select-Object SkuPartNumber, ConsumedUnits | Export-Csv .\licences.csv -NoTypeInformation
+Get-MgIdentityConditionalAccessPolicy | Select-Object DisplayName, State | Export-Csv .\ca_policies.csv -NoTypeInformation
 ```
 
 ### Bulk Provision Users from CSV
 
 ```powershell
+# Run this in a test tenant or on a small test group first. Show the admin the script and the row count, and wait for a clear yes.
 # CSV columns: DisplayName, UserPrincipalName, Department, LicenseSku
 # Same pattern as Workflow 1, Step 4: one failed row must not stop the rest, and each user gets a licence.
-# Temporary passwords are saved to .\temp_passwords.csv, a file only you can open. Hand them over safely, then delete the file.
+# Temporary passwords are saved to .\temp_passwords.csv in plain text, a file only you can open. Hand them over safely, then DELETE the file straight away.
+function New-TempPassword {
+    # 16 random characters from a cryptographic random source, plus a fixed tail so it meets complexity rules
+    $chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789!@#$%'
+    $bytes = New-Object byte[] 16
+    [System.Security.Cryptography.RandomNumberGenerator]::Create().GetBytes($bytes)
+    (-join ($bytes | ForEach-Object { $chars[$_ % $chars.Length] })) + "Aa9!"
+}
 $licenseSku = (Get-MgSubscribedSku | Where-Object { $_.SkuPartNumber -eq "[LICENCE SKU PART NUMBER]" }).SkuId
 $results = Import-Csv .\new_users.csv | ForEach-Object {
     try {
-        $tempPassword = (New-Guid).ToString().Substring(0,16) + "!"
+        $tempPassword = New-TempPassword
         $passwordProfile = @{ Password = $tempPassword; ForceChangePasswordNextSignIn = $true }
         $user = New-MgUser -DisplayName $_.DisplayName -UserPrincipalName $_.UserPrincipalName `
-                   -Department $_.Department -AccountEnabled -PasswordProfile $passwordProfile
+                   -Department $_.Department -MailNickname ($_.UserPrincipalName.Split('@')[0]) -AccountEnabled -PasswordProfile $passwordProfile
         Set-MgUserLicense -UserId $user.Id -AddLicenses @(@{ SkuId = $licenseSku }) -RemoveLicenses @()
         [pscustomobject]@{ UserPrincipalName = $_.UserPrincipalName; TempPassword = $tempPassword }
     } catch {
@@ -63,6 +74,8 @@ icacls .\temp_passwords.csv /inheritance:r /grant:r "$($env:USERNAME):F"
 ```powershell
 $adminRoles = (Get-MgDirectoryRole | Where-Object { $_.DisplayName -match "Admin" }).Id
 $breakGlassIds = @("<break-glass account 1 object ID>", "<break-glass account 2 object ID>")   # ask the admin for these first
+# Stop if the break-glass IDs are still placeholders. Never run this policy with them unfilled.
+if ($breakGlassIds | Where-Object { $_ -match '^<' -or [string]::IsNullOrWhiteSpace($_) }) { throw "Fill in both break-glass object IDs first. Stopping so nobody is locked out." }
 $policy = @{
     DisplayName = "Require MFA for Admins"
     State = "enabledForReportingButNotEnforced"   # Start in report-only mode
@@ -129,6 +142,8 @@ Wait for DNS propagation (up to 48 h) before bulk user creation.
 # Start in report-only mode; switch to "enabled" only after reviewing sign-in logs for about 48 hours.
 # Exclude break-glass admin accounts from any policy that blocks sign-in. Ask the admin for their object IDs.
 $breakGlassIds = @("<break-glass account 1 object ID>", "<break-glass account 2 object ID>")
+# Stop if the break-glass IDs are still placeholders. Never run this policy with them unfilled.
+if ($breakGlassIds | Where-Object { $_ -match '^<' -or [string]::IsNullOrWhiteSpace($_) }) { throw "Fill in both break-glass object IDs first. Stopping so nobody is locked out." }
 $policy = @{
     DisplayName = "Block Legacy Authentication"
     State = "enabledForReportingButNotEnforced"
@@ -144,15 +159,22 @@ Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
 **Step 4: Provision Users**
 
 ```powershell
+function New-TempPassword {
+    # 16 random characters from a cryptographic random source, plus a fixed tail so it meets complexity rules
+    $chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789!@#$%'
+    $bytes = New-Object byte[] 16
+    [System.Security.Cryptography.RandomNumberGenerator]::Create().GetBytes($bytes)
+    (-join ($bytes | ForEach-Object { $chars[$_ % $chars.Length] })) + "Aa9!"
+}
 $licenseSku = (Get-MgSubscribedSku | Where-Object { $_.SkuPartNumber -eq "ENTERPRISEPACK" }).SkuId
 
 # Temporary passwords are saved to .\temp_passwords.csv so new people can sign in.
 # Hand them over safely (not by email to the same account), then delete the file.
 $results = Import-Csv .\employees.csv | ForEach-Object {
     try {
-        $tempPassword = (New-Guid).ToString().Substring(0,12)+"!"
+        $tempPassword = New-TempPassword
         $user = New-MgUser -DisplayName $_.DisplayName -UserPrincipalName $_.UserPrincipalName `
-                           -AccountEnabled -PasswordProfile @{ Password = $tempPassword; ForceChangePasswordNextSignIn = $true }
+                           -MailNickname ($_.UserPrincipalName.Split('@')[0]) -AccountEnabled -PasswordProfile @{ Password = $tempPassword; ForceChangePasswordNextSignIn = $true }
         Set-MgUserLicense -UserId $user.Id -AddLicenses @(@{ SkuId = $licenseSku }) -RemoveLicenses @()
         Write-Host "Provisioned: $($_.UserPrincipalName)"
         [pscustomobject]@{ UserPrincipalName = $_.UserPrincipalName; TempPassword = $tempPassword }
@@ -217,7 +239,7 @@ Get-MgSecuritySecureScoreControlProfile | Sort-Object -Property ActionType |
 
 ### Workflow 3: User Offboarding
 
-**Step 1: Preview what will change (a list only; nothing changes)**
+**Step 1: Preview what will change (a printed list only; nothing changes, and it is not a dry run)**
 
 ```powershell
 $upn = "departing.user@company.com"
@@ -231,6 +253,8 @@ $licenses | ForEach-Object { Write-Host "Would remove SKU: $_" }
 Write-Host "Would also block sign-in, revoke sessions, convert the mailbox to shared and remove group memberships for $upn"
 # Show the list to the admin and wait for a clear yes before Step 2.
 ```
+
+**Step 1b: Real dry run (before any removal).** Add `-WhatIf` to each change command in Steps 2 and 3 (for example `Update-MgUser ... -WhatIf`, `Set-MgUserLicense ... -WhatIf`, `Set-Mailbox ... -WhatIf`) and run them once. Or use the offboarding template in `references/powershell-templates.md`, which has a `-WhatIf` switch. Read what it says it would do, and only then ask the admin for the yes.
 
 **Step 2: Block Sign-in and Revoke Sessions (only after the admin says yes)**
 

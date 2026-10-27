@@ -13,7 +13,7 @@ explain: |
 
   The main examples are Node with TypeScript, Express and a queue worker. A FastAPI example shows how Uvicorn does the draining for you. The same steps apply to other languages.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Prajeeth-12) says MIT, so the code and the text can be reused with credit. Adapted from a skill by Prajeeth-12, shared by sickn33.
+  Licence: the written text in this copy is under CC BY 4.0, as the LICENSE-CONTENT file says. The code examples in it carry the author's MIT label (the file header, by Prajeeth-12). Both allow reuse with credit. Adapted from a skill by Prajeeth-12, shared by sickn33.
 when:
   - Deploys drop active requests and users see errors.
   - A background worker loses jobs when its container restarts.

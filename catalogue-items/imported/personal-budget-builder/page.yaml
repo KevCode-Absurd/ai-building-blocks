@@ -34,6 +34,7 @@ how_to_use:
   - Tell your AI your monthly take-home pay and whether it is steady or changes.
   - Add your fixed bills and your main money goal.
   - Paste 1 to 3 months of statements if you have them (optional). Remove account numbers first.
+  - Ask your AI to work in this order. First, sort each statement line into Needs, Wants or Savings. Second, work out your savings rate (monthly savings divided by income). Third, fill in the 50/30/20 comparison and show the surplus or deficit. Fourth, set category caps and a payday savings transfer.
   - Read the plan and check the category totals against your own records.
   - Use the check-in table at the end of the month, then ask your AI to reset the plan.
 output_sample:
@@ -53,3 +54,4 @@ output_sample:
       contains: The top three spending areas to cut, with a target for each, and a plan to move savings on payday.
     - name: 30-Day Check-in Template
       contains: A simple table to compare your plan with what you actually spend.
+next: [debt-payoff-planner, net-worth-calculator, retirement-savings-projector]

@@ -12,7 +12,7 @@ metadata:
 # Weekly Review — GTD Loop → Trusted System
 
 > **Portability:** Reasoning-led skill with 3 stdlib Python scripts. No external APIs, no LLM calls
-> in scripts. Works in Claude Code CLI and Claude.ai web. The scripts do the inventory and the
+> in scripts. Needs an AI that can run Python scripts and read a notes folder (for example Claude Code or Codex). A plain chat can follow the steps by hand but cannot run the scripts. The scripts do the inventory and the
 > gating; Claude and the user do the thinking.
 
 ## What this does
@@ -56,6 +56,14 @@ audit the whole commitment portfolio:
 
 ```bash
 python scripts/commitment_auditor.py --input commitments.json
+```
+
+`commitments.json` is a non-empty JSON list with one object per project or promise. Each object needs three fields: `name` (text), `days_since_touched` (a number, zero or more) and `has_next_action` (true or false). Fill it from the user's own notes, never from guesses. Shape only (replace every bracket):
+
+```json
+[
+  { "name": "[PROJECT OR PROMISE]", "days_since_touched": [NUMBER OF DAYS], "has_next_action": [true OR false] }
+]
 ```
 
 Flags STALLED / NO-NEXT-ACTION / SOMEDAY-CANDIDATE, prints the health formula with the score, and

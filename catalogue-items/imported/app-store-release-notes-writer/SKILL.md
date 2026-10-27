@@ -27,6 +27,7 @@ You need a git repo with the last release tag, git and bash available, and the h
 - Run `scripts/collect_release_changes.sh` from the repo root to gather commits and touched files.
 - If needed, pass a specific tag or ref: `scripts/collect_release_changes.sh v1.2.3 HEAD`.
 - If no tags exist, the script falls back to full history.
+- If the script is missing or fails, run `git log <last-tag>..HEAD --oneline` yourself (or `git log --oneline` with no tag) and use that output.
 
 ### 2) Triage for user impact
 - Scan commits and files to identify user-visible changes.
@@ -37,6 +38,7 @@ You need a git repo with the last release tag, git and bash available, and the h
 - Write short, benefit-focused bullets for each user-facing change.
 - Use clear verbs and plain language; avoid internal jargon.
 - Prefer 5 to 10 bullets unless the user requests a different length.
+- This skill does not know the current "What's New" character limit. Tell the user to check it in App Store Connect before pasting.
 
 ### 4) Validate
 - Ensure every bullet maps back to a real change in the range.

@@ -12,7 +12,9 @@ argument-hint: "[regulation name, or paste regulatory text, or attach a document
 
 # /reg-gap-analysis
 
-**Needs a setup file (added by AI Blocks).** This skill depends on the `ai-governance-legal` plugin from claude-for-legal and its CLAUDE.md file, which is not in this folder. Without that file it will not run as intended: say so and ask the user to fill in the file or give you the same facts in the chat. Applicability answers, thresholds, dates and article numbers can come from memory or web search, so they are leads for a lawyer to check, not legal conclusions. This is not legal advice.
+**Needs a setup file (added by AI Blocks).** This skill depends on the `ai-governance-legal` plugin from claude-for-legal and its CLAUDE.md file, which is not in this folder. Without that file it will not run as intended: say so and ask the user to fill in the file or give you the same facts in the chat. Applicability answers, thresholds, dates and article numbers can come from memory or web search, so they are leads for a lawyer to check, not legal conclusions. This is not legal advice. Web search: if the legal research tool finds little, ask the user first. Use web search only after they say yes, and tag every result `[web search — verify]`.
+
+**No setup file? Use this instead (added by AI Blocks).** Ask the user to paste five short sections in the chat: Regulatory footprint (where you operate, size, sector, builder or user of AI), Use case registry (each AI tool or use, and what it is used for), AI policy commitments (promises you made publicly or in contracts), Vendor AI governance (what each AI vendor has agreed to), and Impact assessment house style (what checks you already do). Then run the steps below with those facts in place of the file. Never fill a missing section by guessing, and never state an article number, threshold or date as fact unless it came from the rule text the user gave you or a source you can name. Otherwise write "confirm with counsel".
 
 1. Read `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md`. Confirm regulatory footprint and use case registry are populated.
 2. Use the framework below.
@@ -59,18 +61,7 @@ directly: "Doesn't apply. Here's why: [reason]. No action needed."
 
 ## Research first, then workflow
 
-Before running the gap analysis, research the currently operative AI regulatory regimes for the jurisdictions in the user's footprint. For each regime identify:
-
-- **Scope** — who's covered (provider/builder vs. deployer vs. distributor vs. user; sectoral carve-outs).
-- **Applicability thresholds** — revenue, user count, headcount, compute, model category, affected-population size.
-- **Risk-tier definitions** — how the regime distinguishes tiers (prohibited / high-risk / limited-risk / minimal), what's in each.
-- **Substantive obligations** — transparency, documentation, human oversight, bias testing, registration, incident reporting, vendor flow-down.
-- **Enforcement mechanism** — which regulator, what penalties, any private right of action.
-- **Effective dates** — many AI laws phase in obligations over 2-4 years; note which obligations are live vs. upcoming.
-
-Cite the regulatory text with pinpoint references. Flag provisions subject to ongoing interpretation, delegated acts, or pending rulemaking. The AI regulatory landscape changes quickly — verify currency before advising.
-
-Build the gap analysis from the researched requirements, not from hardcoded reference tables.
+Before the gap analysis, research the rules that are in force for the places in the footprint. Use the checklist in "Research the regulation before building the gap analysis" below, and build the gaps from that research, not from fixed tables.
 
 ## Workflow
 

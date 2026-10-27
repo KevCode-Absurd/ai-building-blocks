@@ -56,7 +56,7 @@ how_it_works:
   - title: Adds shopper context
     text: Makes some questions long, with a need or limit in them, because long prompts make an AI run narrower searches.
   - title: Shows the follow-up searches
-    text: "Perplexity shows its searches, so paste what it shows. Reading them from ChatGPT's network tab is unofficial and may go against its terms. Run each question 3 times, because they change each run."
+    text: "Perplexity shows its searches, so paste what it shows. Use only what a tool shows on screen. Run each question 3 times, because they change each run."
   - title: Reads fan-out as topics
     text: Uses the follow-up searches to see which topics a page must cover. It does not treat them as a keyword list.
   - title: Groups into topics

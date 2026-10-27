@@ -5,11 +5,15 @@ job: run-google-ads
 thinking: medium
 thinking_why: It applies a fixed routine to exports and weighs a budget move, so a mid-size model is enough.
 headline: Performance Max routine keeper
-subhead: It reviews terms, products, assets and placement reports, then compares matched account and store measures. Get proposed exclusions, budget choices and a custom score only where flagged spend can be counted once. Unknown overlap leaves the score unresolved. Rising spend with flat revenue does not prove warm-buyer attribution. Applying changes needs separate approval.
+subhead: Give it your Performance Max reports and your store revenue. You get this week's changes to review, a budget call, and a spend score when the numbers allow one. Nothing changes in your account until you approve it.
 explain: |
-  A regular review can make Performance Max changes easier to assess. Reports show different slices of the same spend, so adding their flagged amounts can count one cost several times. Reported ad returns and store revenue also measure different things.
+  Performance Max hides a lot. A short routine each day, week and month shows where money goes and what to cut.
 
-  This skill works from dated exports and reports daily, weekly and monthly findings. It proposes changes using the source’s stated planning rules, which are not universal targets. A custom score needs a matching total and uniquely mapped flagged spend. Unknown overlap or missing definitions leave it unresolved. Trend differences are observations to investigate, not proof of cause or incremental sales. No recommendation itself changes an account.
+  Your reports slice the same spend in different ways. One wasted dollar can show up in the product report and the search term report. So the skill counts each dollar once before it gives a score. If it cannot tell which spend overlaps, it says so and gives no score.
+
+  Google's ad return and your store revenue also measure different things. When they disagree, the skill notes it and tells you what to check. It does not guess the cause.
+
+  The budget rules (raise 10 to 20 percent, the 80 percent test) come from one course. Treat them as a starting point and check them against your own results. The skill proposes changes only. You make them in Google Ads.
 when:
   - You run Performance Max and want a weekly routine that fits into an hour.
   - Performance Max ROAS looks great but your store revenue does not match.

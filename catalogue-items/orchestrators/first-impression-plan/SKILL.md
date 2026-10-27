@@ -27,7 +27,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **The person's name and role, and why you are meeting** (required): your aim, and what small good result would count.
+This list replaces the general "Your question" line above. The question is who you are meeting and your aim.
+- **The person's name and role, and why you are meeting** (required): your meeting aim, and what small good result would count.
 - **Public material about them** (optional): paste the text of their site, profile, talk or posts. The brief uses only public facts you paste or name. It does not search for private details or invent any. With little to go on, it writes `MISSING:` and says what to look for.
 - **Where and how long you will meet** (optional).
 - **Your notes from the meeting** (needed for steps 3 and 4): the name as spelled, what they said they care about, anything you promised, and one thing you truly valued.
@@ -54,6 +55,12 @@ Pause here: Have the meeting. Write down the name as spelled, what they said the
 
 ## What you hand back
 4 step files and the summary. Step 1's file is the persona brief. Step 2's is the meeting plan. Step 3's is the memory card. Step 4's is the thank-you note.
+
+## After this (for this job)
+After the meeting, put each card's next-contact date in your calendar. Suggest one next step as a short question, and say the person can type their own:
+- If a follow-up is needed, use the [Call follow-up drafter](https://useaiblocks.com/skills/call-follow-up-drafter) or the [Follow-up email sequence writer](https://useaiblocks.com/skills/follow-up-email-sequence-writer). Bring the memory card and the thank-you note.
+- Before the next meeting, use the [Executive meeting brief writer](https://useaiblocks.com/skills/executive-meeting-brief). Bring the memory card.
+Nothing is sent for them. Send the thank-you note yourself.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

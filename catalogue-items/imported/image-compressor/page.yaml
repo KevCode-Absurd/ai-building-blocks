@@ -2,12 +2,12 @@ thinking: low
 thinking_why: It runs a fixed tool on each file.
 new_slug: image-compressor
 name: Image compressor
-summary: Compress images to smaller WebP or PNG files that look the same. Point it at one file or a folder and get faster-loading images.
+summary: Compress images to smaller WebP or PNG files that look nearly identical at your chosen quality. Point it at one file or a folder.
 job: make-images
 headline: Image compressor
-subhead: Smaller image files that look the same and load faster. Point it at one file or a folder and get compressed WebP or PNG copies.
+subhead: Smaller image files that look nearly identical at your chosen quality and load faster. Point it at one file or a folder and get compressed WebP or PNG copies.
 explain: |
-  Smaller image files that look the same and load faster. Point it at one file or a folder and get compressed WebP or PNG copies.
+  Smaller image files that look nearly identical at your chosen quality and load faster. Point it at one file or a folder and get compressed WebP or PNG copies. WebP and JPEG lose a little detail each time, so always check a sample.
 
   It picks the best tool found on your computer, trying sips, then cwebp, then ImageMagick and then Sharp. You can set the output format, quality and whether to keep the original. A small preferences file can store your defaults at project, user or home level, and the first one found wins. It runs through a script using Bun or npx, so you need one of those installed. It works on a single image or a whole folder in one go.
 when:
@@ -34,7 +34,7 @@ how_to_use:
   - Paste in this skill and tell your AI the path to your image or folder.
   - Say which format and quality you want. The default is WebP at quality 80.
   - Check the size report, then open a few images to confirm they still look right. Keep the smaller files only after you have checked a sample.
-  - Next, put the images on your page and test how fast it loads.
+  - Next, put the images on your page and run a page speed test to see the gain. Update each image's alt text (the short description for screen readers) while you are there.
 output_sample:
   input:
     - An image file or a folder of images

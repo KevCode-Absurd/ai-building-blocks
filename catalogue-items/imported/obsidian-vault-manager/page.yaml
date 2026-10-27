@@ -28,11 +28,11 @@ you_give:
   - The note names or paths involved (optional)
   - Obsidian installed and open on your computer, with its command line tool
 how_to_use:
-  - Use an AI that can run commands on your computer, such as Claude Code. A plain chat window can write the commands but cannot run them. Open Obsidian first.
+  - Use an AI that can run commands on your computer, such as Claude Code. A plain chat window can write the commands but cannot run them. Open Obsidian first. If Obsidian is closed, stop and use Obsidian's own tools instead.
   - Add the skill, then say what you want and which vault. Example, "In my Work vault, find notes that mention onboarding."
   - Check the vault name and the commands before it runs them. Back up the vault before large changes.
-  - Say yes only for deletes, overwrites, plugin reloads and anything that runs code in the app.
-  - Open the notes in Obsidian to check the result. Ask it to read the changed notes back too.
+  - Say yes only for deletes, overwrites, plugin reloads and anything that runs code in the app. The eval command runs any code inside Obsidian, with full access to your vault, so say yes only if you understand the code.
+  - Open the notes in Obsidian to check the result. Ask it to read the changed notes back too, then to run a search or backlinks check to confirm the change.
   - To write the note content itself, use the Obsidian note writer first, then this skill to add it to the vault.
 you_get:
   - The exact commands to run, with the vault named
@@ -46,7 +46,7 @@ how_it_works:
   - title: Confirm the vault
     text: Names the vault and the note paths before any write.
   - title: Build the command
-    text: Writes the command with the right values and flags, such as silent to keep existing notes.
+    text: Writes the command with the right values and flags, such as silent, which only stops the file opening. It does not protect an existing note, so the skill checks the name first.
   - title: Run with limits
     text: Runs reads freely and asks before it deletes, overwrites or runs code in the app.
   - title: Read it back

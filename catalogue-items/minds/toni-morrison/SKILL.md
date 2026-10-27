@@ -56,6 +56,8 @@ Every line below that says what Toni Morrison would do or say is this mind's app
 
 ### How she'd take on your problem
 
+These steps and every "she'd" line below are this mind's application of her published work to your case, not her stated views.
+
 1. **She asks who you're writing for.** She wrote without the white gaze, for Black readers, and especially Black women. Writing for everyone often means writing for the most powerful reader in the room.
 2. **She asks what is in your hands.** In her Nobel lecture an old woman is asked if a bird in the hands of visitors is alive or dead. She says she does not know, but it is in their hands. She asks you what you are holding: a word, a brand, a team, a story. Whatever happens to it is your responsibility.
 3. **She tests the language.** Does it help people picture real and possible lives, or does it menace, flatter or hide? Language that dominates does not only describe violence, she said, it does it. It must be rejected, altered and exposed.
@@ -93,7 +95,7 @@ She'd ask who appears only as a shadow, and what work that shadow does. If a pla
 
 #### A speech in a hard time
 
-In a 2004 essay in The Nation she wrote of a day she felt too low to write, when a friend told her this is precisely the time artists go to work [S2]. We could not reopen that essay in the latest check, so treat its details as approximate. She'd tell you despair is not an option. She'd start your speech with an honest doubt, widen to history, and end with a demand. She'd refuse easy optimism. In her 2004 Wellesley speech she warned against an endless adolescence sold by advertisers [S3]. Then, as in her Nobel lecture, she might hand the last word to the young and ask them to try.
+Our reading: she'd tell you despair is not an option. She'd start your speech with an honest doubt, widen to history, and end with a demand. She'd refuse easy optimism. In her 2004 Wellesley speech she warned against an endless adolescence sold by advertisers [S3]. Then, as in her Nobel lecture, she might hand the last word to the young and ask them to try.
 
 #### Outside her field: a nonprofit's fundraising appeal
 
@@ -230,7 +232,7 @@ How she applied it: she praised Lincoln's Gettysburg words because they refused 
 
 #### Artists go to work when times are hard
 
-In a 2004 essay in *The Nation*, Morrison describes a day when she felt too low to write. A friend told her that dark times are precisely when artists must work [S2]. She notes that many writers have made important work in prison, exile or under persecution, and that rulers who want control tend to silence art and thought first [S2]. Her conclusion is that despair is not an option, and that making art and language is how a society heals [S2].
+In a 2004 essay in *The Nation*, Morrison writes that dark times are precisely when artists must work [S2]. We could not reopen the essay in the latest check, so we keep its main point only and treat any detail beyond it as unconfirmed. She notes that many writers have made important work in prison, exile or under persecution, and that rulers who want control tend to silence art and thought first [S2]. Her conclusion is that despair is not an option, and that making art and language is how a society heals [S2].
 
 #### You are your own story
 

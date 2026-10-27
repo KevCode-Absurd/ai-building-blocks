@@ -5,7 +5,7 @@ name: Customer reply and order checker
 summary: Check a customer's order and payment status, then get a reply in your voice. Refunds only go out after you say yes. Works from a pasted email.
 job: help-customers
 headline: Customer reply and order checker
-subhead: Forward a customer email and get back a reply in your own voice, with the facts already checked. It pulls order and payment status, account history and open tickets before it writes.
+subhead: Forward a customer email and get back a reply in your own voice. With a payments, Shopify, CRM or support desk connection, it checks order and payment status, history and open tickets first. With pasted text alone, you get an unchecked draft.
 explain: |
   Forward a customer email and get back a reply in your own voice, with the facts already checked. It pulls order and payment status, account history and open tickets before it writes.
 
@@ -30,11 +30,12 @@ you_get:
   - A staged refund waiting for your approval
   - A list of orders needing attention (with Shopify)
 how_to_use:
-  - Open your AI tool and add this skill. Use a chat that can reach your files or accounts if you want live order checks.
+  - This is an Apache-2.0 import from Anthropic's small-business skills, adapted for this catalogue. Open your AI tool and add this skill. Use a chat that can reach your files or accounts if you want live order checks.
   - Paste or forward the customer email. Add your refund policy and a few samples of your writing.
-  - Connect PayPal, Square, Stripe, Shopify, your CRM or your support desk if you can. Without them, it works from the pasted text alone.
+  - Connect PayPal, Square, Stripe, Shopify, your CRM or your support desk if you can. Each needs its own account, and some need a paid plan or an API key. A refund also needs write access to your payments tool. Without connections, it works from the pasted text alone and the facts are not checked.
   - Read the order facts first, then the drafted reply. Change anything that does not sound like you.
   - If a refund is needed, check the details it sets out. Say yes only when they are right.
+  - The result is the order facts, a drafted reply, and a staged refund if one is needed. Facts are checked only when a connection is made.
   - Copy the reply and send it yourself. To spot problem orders early, ask it to check your Shopify orders.
 output_sample:
   input:

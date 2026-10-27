@@ -10,6 +10,8 @@ explain: |
   An AI coder that fixes what you asked and nothing more. It stops the habit of adding extra layers, renaming files or tidying code nobody mentioned, so your review stays small.
 
   Three rules drive it. First, touch only the code you pointed to, and list any other changes it wants to make and wait for your answer. Second, use the simplest fix: one line if one line works, reuse what exists, add no new file or package unless needed. Third, when unsure, ask instead of assuming. The result is a smaller change that is easier to read, test and undo. Turn it on at the start of a coding session and leave it running.
+
+  This is a copy of the public moyu skill shared by sickn33. Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The skill file header says MIT. Credit goes to sickn33.
 when:
   - Your AI keeps rewriting files you did not mention.
   - You want a bug fix that is three lines, not thirty.
@@ -20,8 +22,9 @@ not_for:
   - "You are building a new project from scratch: a small-change rule will slow you down, so turn it off."
   - "You want an AI to find other problems in your code: ask for a review as a separate request."
 you_give:
-  - The change or bug you want fixed
-  - The files it may touch
+  - The change or bug you want fixed, in one sentence
+  - The exact file paths it may touch
+  - Whether your tool can open the whole project or only the code you paste
   - A request to turn it on for the session
 you_get:
   - A minimal change limited to your request
@@ -33,7 +36,7 @@ how_to_use:
   - Open your AI coding tool, or a chat if you can paste in the code.
   - Add the skill folder if your coding tool loads SKILL.md skills (Claude Code and similar tools do), or paste the skill text into the chat.
   - "Say: use this skill for the whole session."
-  - Describe the bug or change, and name the files it may touch.
+  - Describe the bug or change, and name the files it may touch. If your tool cannot read your project folder, paste only those files and say in the request that nothing else was shared.
   - "The reply has four parts, in this order: the minimal change, the held-back edits, questions, then a checklist result. Approve or skip each held-back edit. If the list is empty, there is nothing to approve."
   - After you approve edits, run your tests and read the diff yourself. Ask for tests or a separate review by name if you want them. Then merge the change, or ask for a separate review first with the code change reviewer.
   - "If the change is still too big, say: too much, revert. The skill then offers a fix of 10 lines or fewer."

@@ -78,6 +78,8 @@ Collect 3-5 credible, citable sources before drafting. Prioritize:
 
 **Rule:** If you can't cite a specific number, don't make a vague claim. "Studies show" is a red flag. Find the actual study.
 
+**No web search?** Say so. Mark every statistic and quote as UNVERIFIED, leave the claim out or write it without a number, and ask the user to paste the sources they trust. Never invent a source, a quote or a link.
+
 ### Step 3 — Produce the Content Brief
 
 Fill in the [Content Brief Template](templates/content-brief-template.md). The brief defines:
@@ -143,7 +145,7 @@ Don't pad the conclusion. If it's done, it's done.
 
 ## Mode 3: Optimize & Polish
 
-Draft exists. Run this in order. Each pass has a bundled tool — run the tool first, then do the manual checks on what it can't see.
+Draft exists. Run this in order. Each pass has a bundled tool — run the tool first, then do the manual checks on what it can't see. The scripts only count words, keywords, readability and brand-voice matches. If you can't run them (no code access, or the scripts folder is missing), do the same checks by hand: count the words against the target, check the keyword sits in the title, first 100 words and one heading, read each sentence aloud for length, and go down the quality-gate list below.
 
 ### SEO Pass
 

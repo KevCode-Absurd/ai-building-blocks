@@ -33,13 +33,14 @@ you_get:
   - Deploy steps for EAS Hosting
   - Advice if a managed backend fits better
 how_to_use:
+  - Know this before you start. The sign-in helper in the skill is a placeholder that refuses every request until a real token check is written. Do not ship any route until that check is in place.
   - Open your AI tool and paste the skill, or load the skill folder if your tool takes files.
   - Say what your app needs from a server and which services you call.
   - Share your Expo project files. This works best when your AI can read files and run commands.
-  - Check the routes it writes. Make sure each one checks who is calling and limits use before it calls a paid service. The skill's sign-in example is a stub that refuses every request until you add a real token check, so replace it before you ship. Do not ship any route until that check is in place. The skill gives no rate-limit code, so ask your AI to add one, such as a per-user counter in your database or your host's rate-limit feature.
-  - Verify before use: the weather and OpenAI examples in the skill use a placeholder endpoint and a model name to replace. Check the provider's current docs.
+  - Check the routes it writes. Make sure each one checks who is calling and limits use before it calls a paid service. The skill's sign-in example is a stub that refuses every request until you add a real token check, so replace it before you ship. Do not ship any route until that check is in place. The skill has only a rate-limit sketch, so ask your AI to finish it with your own database or your host's rate-limit feature, and set the limits yourself.
+  - "Verify before use: the weather and OpenAI examples in the skill are templates, not code to ship as they are. The weather route reads its endpoint and header name from environment variables you must set, and the OpenAI example has a model name to replace. Check the provider's current docs."
   - Test locally with npx expo serve and curl.
-  - To go live, log in to EAS, set your secrets (leave out --value so EAS asks for the key and it stays out of your shell history), then run eas deploy. Stripe, OpenAI and hosting use can cost money.
+  - To go live, log in to EAS, set your secrets (leave out --value so EAS asks for the key and it stays out of your shell history), then run eas deploy. Stripe, OpenAI and hosting use can cost money. After you deploy, test each route with curl, rotate any key that was pasted anywhere it should not be, and check your EAS usage and billing alerts. Next, if you need sign-in or saved data, pair the routes with a managed service such as Clerk, Auth0, Firebase Auth, Supabase or Convex. After the first deploy, check that unauthenticated calls are refused and that no secret shows in your app bundle.
 output_sample:
   input:
     - What your app needs from a server

@@ -44,6 +44,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+The general "Before you start" list above mentions a buyer brief, an eight-file brand brain and a CHECKS MISSED line. For this job, the brand brain is optional. Read only the files that hold your facts, claims and voice if you have them. Do not ask for a buyer brief. Step 1 needs the rival names, the web address of each rival's homepage and pricing page (or pasted text), and the pages to read: product, about, news and blog.
+
 - **The names of one to five rivals** (required). Include anything buyers use instead of you, if you know it. Say the one buyer question you want the page to answer, if you have one.
 - **Your product facts and where you honestly win** (optional). Price, features and proof you can show. The page uses only facts you give it.
 - **What your buyers say about the choice** (optional). Reviews, tickets, survey answers or call notes, with source and date.
@@ -58,11 +60,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop:** stop and go to the hand-back summary if no rival is named, or if no rival page can be read or pasted. Never write the page around a rival you could not read.
 
 ## Steps
-1. **Compare how rivals pitch themselves.** Use the skill `competitor-messaging-comparer`. It starts from the rival names and the person's product facts. For each rival, open the homepage, the product pages, the pricing page if public, the about page, recent news, and the blog or resource list. Log the main tagline and three to five messaging themes, the claims, and the proof each one gives (numbers, logos, reviews). It saves to `outputs/step-01-competitor-messaging-comparer.md` a profile of each rival, a matrix with one column per rival (tagline, target buyer, key differentiator, tone, core promise), the topics nobody covers, threats and next moves. Each claim names the page it came from.
+1. **Compare how rivals pitch themselves.** Use the skill `competitor-messaging-comparer`. It starts from the rival names and the person's product facts. It reads public pages the way a visitor would. It does not scrape, log in, bulk download or use paid tools. For each rival, open the homepage, the product pages, the pricing page if public, the about page, recent news, and the blog or resource list. Log the main tagline and three to five messaging themes, the claims, and the proof each one gives (numbers, logos, reviews). It saves to `outputs/step-01-competitor-messaging-comparer.md` a profile of each rival, a matrix with one column per rival (tagline, target buyer, key differentiator, tone, core promise), the topics nobody covers, threats and next moves. Each claim names the page it came from.
 2. **Map where nobody is strong.** Use the skill `competitor-white-space-mapper`. It takes the rival set in `outputs/step-01-competitor-messaging-comparer.md` and any buyer words or brand file. It saves to `outputs/step-02-competitor-white-space-mapper.md` a grid rating every rival and you on the features that decide the choice, the open spaces, the one gap you can honestly own, and the fights to skip.
 3. **Write the alternative page.** Use the skill `alternative-page-writer`. It takes the rival set from `outputs/step-01-competitor-messaging-comparer.md`, the gap from `outputs/step-02-competitor-white-space-mapper.md`, and the person's product facts. It saves the page to `outputs/step-03-alternative-page-writer.md`. The page leads with the gap, compares fairly (naming something the rival does better), says who should switch and who should not, and puts a date on every rival fact.
 4. **Review the page before it goes live.** Use the skill `landing-page-auditor`. It reviews the alternative page in `outputs/step-03-alternative-page-writer.md`. It saves to `outputs/step-04-landing-page-auditor.md` the page's job, notes from a glance, a skim and a doubtful read, fixes ranked by impact, and a score.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then `CHECKS MISSED:` with each check that failed or could not run, or `none`.
 
 ## What you hand back
 4 step files and the summary. The last file holds the audit report.
@@ -71,6 +73,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - Step 3: a fair page with why people look, a comparison, who should switch, a move path, proof and a call to act.
 - Step 4: the page's job, glance, skim and doubt notes, ranked fixes and a score.
 - The summary lists each file, any step not run, and every `MISSING:` line.
+
+What to bring to the next step: for the Rival weakness message finder, bring the step 1 matrix and the step 2 grid. For the Competitive disruption risk reviewer, bring the step 4 audit report and the rival profiles from step 1.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

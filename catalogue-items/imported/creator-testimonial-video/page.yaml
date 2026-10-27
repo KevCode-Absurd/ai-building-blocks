@@ -14,8 +14,9 @@ when:
   - You need a product video and have no creator to film it.
   - You want to test two or three personas for the same product.
   - You sell on a social platform where casual videos get watched.
-  - You need a script that stays inside advertising rules.
+  - You need a script that stays inside advertising rules. Before you publish, read the ad policy page of your platform (for example TikTok, Meta or YouTube ads policy) and its rule on AI-made video.
 not_for:
+  - "Your product is health, medical, financial or anything else that needs proof for its claims: have your compliance reviewer write and approve the claims first, or use a real buyer video with their permission."
   - "You want real customer reviews: use a real video from a buyer, with their permission. This tool makes acted scenes, not real buyer reviews."
   - "You need the speaker's lips to match the words: add a voiceover in a video editor, or use shots that do not show the face."
   - "You have no video model account or key: write the script here, then ask a freelance creator to film it."
@@ -34,14 +35,17 @@ you_get:
   - Steps to make the video with your video model
   - Fixes for common problems
 how_to_use:
+  - Setup in short. You need an AI that can run code, Node.js, and your own paid fal or Replicate key. The first dry run is free and only prints what would be sent. Set a spending limit in your fal or Replicate account before the real run. The brand-kit file the original skill mentions is not included.
   - Paste the skill into Claude, ChatGPT or Gemini. The skill text is in Chinese with an English summary at the top, so ask your AI to reply in English. The video is an acted demo. Never present it as a real customer's review.
   - Give it your product, key points, platform and the persona you want.
   - Read the compliance note and the script. Check every claim about the product (washing, warmth, fit, results) is true for your product. The example lines in the skill are placeholders, so replace them with facts you have checked.
   - Edit the script until it sounds like a real person talking.
   - To make video, you need an AI that can run code, plus your own paid fal or Replicate key. Each clip costs money, so run the dry run first.
+  - The video command reads the shot list in examples/ugc-board.json. Replace the image paths in that file with your own consented face image and your own product photo, because the example images are not included. The --brand option and the model.reference setting are optional. You can skip both, but then the clips will not share one face.
   - Add a face image so every clip shows the same person. Use a model who has given written consent, never a customer or a public figure. If you have none, leave the face out and use hand and product shots. The skill's file paths (such as assets/model/face-a.jpg) are examples, so point them at your own files.
   - Join the clips with ffmpeg.
   - Add captions and a voiceover, since lip sync is weak. Label the video as AI-made if the platform asks.
+  - Next, have a person check every caption and claim, and read the platform's ad policy before you publish.
 output_sample:
   input:
     - Your product and its key selling points

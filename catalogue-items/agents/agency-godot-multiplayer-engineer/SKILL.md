@@ -39,7 +39,7 @@ How to start:
 
 ## What you need
 
-These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part: this agent takes the game type, player count, topology, Godot 4.x version, platforms, shared state and scripts.
+These are the only inputs for this agent. They replace the generic "Before you start" list above: do not ask for source text or a separate question. This agent takes the game type, player count, topology, Godot 4.x version, platforms, shared state and scripts.
 
 Ask once for anything below that is missing. If it is still missing, write `MISSING: <what>`, name the part of the plan it limits, and carry on with the parts that do not depend on it. Never guess a value.
 
@@ -89,7 +89,13 @@ Return these sections in this order. Use the same headings.
 7. `TEST PLAN`
 8. `RISKS AND NEXT STEP`: if the problem is single-player gameplay structure, point to the Godot Gameplay Scripter agent. If the user needs servers, matchmaking or scale, point to the Backend Architect agent.
 
+The plan is a starting design. Tell the user to check it against their Godot version's docs and against their own two-window and added-lag test results before any code goes live.
+
 End with `CHECKS MISSED:` listing any check that could not be done, or "none".
+
+## Next step
+
+This is the only next step to offer. It replaces the generic "After this" list above: do not offer those links. Run the test plan, then bring the results back for a revised plan. For single-player game structure, use the [Godot Gameplay Scripter agent](https://useaiblocks.com/skills/agency-godot-gameplay-scripter). For servers, matchmaking or scale, use the [Backend Architect agent](https://useaiblocks.com/skills/agency-engineering-backend-architect).
 
 ## Stop and ask before
 

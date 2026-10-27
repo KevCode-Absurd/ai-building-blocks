@@ -29,10 +29,11 @@ you_get:
   - A file you can order from
 how_to_use:
   - Use an AI that can run code and use the Shopify command line, such as Claude Code. A plain chat window cannot read your store.
-  - Sign in to your store with the Shopify command line, with read access to products and inventory.
+  - Sign in to your store with the Shopify command line, with read access to products and inventory. You need a Shopify account for your store. Claude Code or a similar AI that runs code may need a paid plan, and the Shopify command line is free to install.
   - Paste the skill and give your store address. Set the stock limit if you do not want 10, and say whether to leave out zero-stock items.
   - Let it run the query and export the CSV. Only variants that Shopify tracks are listed. Untracked ones are left out, so check those by hand.
   - Open the CSV and review it by vendor. Send each vendor's rows to your supplier order form or your purchasing process.
+  - "Next: hand each vendor's rows to the supplier order splitter. This list only reads stock. It does not place orders or change counts."
 output_sample:
   input:
     - Your Shopify store address

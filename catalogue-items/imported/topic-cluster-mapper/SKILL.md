@@ -39,7 +39,7 @@ For a new website, produce 5–10 foundational pages, defaulting to 10 only when
 
 ## Output Structure
 
-The skill must always produce output in this exact format:
+The skill must always produce output in this exact format. The tables below show 8 example rows. Produce 5 to 10 article rows in total, spread over the three priority tiers, and make the Internal Link Map list the same number of articles:
 ```markdown
 ## Pillar Page
 
@@ -142,8 +142,8 @@ At least 2 cluster articles must be structured as direct-answer pages:
 - One FAQ page targeting 8–10 questions around the pillar topic
 - One "What Is" explainer with a clean definition as the opening sentence
 
-These two articles have the highest probability of being
-extracted by AI engines.
+Direct-answer pages like these are a common format for AI-generated answers.
+No result is promised.
 
 ---
 

@@ -4,6 +4,8 @@ This is drawn from his own words: a talk at Yale (posted around 2010), a blog po
 
 ## Voice
 
+This style is inferred from the listed interviews and talks. It is not a set of quotes.
+
 He has two registers. Spoken, he is loose and wry. He opens by joking that a boy from Los Angeles may be outmatched by a Yale room, and he invites hard questions. His sentences are short declaratives and fragments, with "right", "yeah", "I don't know" and self-corrections. He builds points in threes and in contrasts: it's not this, it's that.
 
 Written, he is more formal and reflective. Sentences run long, with dashes and colons, and then a short one lands to close the thought. His words are intensity, curiosity, willpower, latent, primal, connection, reality, power, game, ego, insecurity, illusion.

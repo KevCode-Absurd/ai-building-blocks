@@ -25,6 +25,7 @@ you_give:
   - The company name
   - Names of people on the call (optional)
   - Call type, such as discovery, demo or renewal (optional)
+  - What you sell and why it is worth buying, in a line or two
   - A Common Room connection
 you_get:
   - A one-page account and attendee brief
@@ -36,7 +37,7 @@ how_to_use:
   - Open the skill in Claude, ChatGPT or Gemini, or paste its instructions into a chat. It needs a tool that can reach Common Room.
   - Type the company name. Add the people on the call and the call type if you know them.
   - Read the brief. Check that each talking point matches a signal it names.
-  - If it says data is thin, believe it. Look in Common Room yourself for what is missing.
+  - If it says data is thin, believe it. It then lists only what Common Room returned, plus web search results. Look in Common Room yourself for what is missing, or use your own call notes.
   - After the call, log the outcome and next steps in your CRM and send a follow-up note.
 output_sample:
   input:

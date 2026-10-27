@@ -130,3 +130,4 @@ terms:
     meaning: A set of attempts in order, each costing more than the one before.
   - term: Clock
     meaning: A deadline in the story that the character cannot move.
+next: [fair-escape-checker]

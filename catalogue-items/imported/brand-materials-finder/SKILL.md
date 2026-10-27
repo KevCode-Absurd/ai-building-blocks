@@ -66,7 +66,7 @@ Apply these rules:
 
 Before launching discovery, confirm:
 - Which platforms to search (default: all connected)
-- Whether to include conversation transcripts (Gong, Granola, Slack) or just documents. Leave them out unless the user confirms they hold no customer data, or they are fine to share with this AI. Connecting these tools may need a paid plan or API access on their side.
+- Whether to include conversation transcripts (Gong, Granola, Slack) or just documents. Leave them out unless the user confirms in this chat that they hold no customer data, or that they are fine to share with this AI. Do not search them on your own say-so. Connecting these tools may need a paid plan or API access on their side.
 - Any known locations to prioritize
 
 Keep this brief — one question, not a questionnaire.
@@ -80,10 +80,12 @@ Launch the discover-brand agent via the Task tool. That agent file is not part o
 - Any known URLs or locations to check first
 
 The agent executes the 4-phase discovery algorithm autonomously:
-1. **Broad Discovery** — parallel searches across platforms
-2. **Source Triage** — categorize and rank sources
-3. **Deep Fetch** — retrieve and extract from top sources
-4. **Discovery Report** — structured output with open questions
+1. **Broad Discovery** — run searches in each connected platform for style guides, brand decks, templates and transcripts, using the company name and words like "brand", "voice" and "tone"
+2. **Source Triage** — sort what was found by type, date and how official it looks, and drop duplicates and old drafts
+3. **Deep Fetch** — open the top-ranked sources and pull out voice, tone, messaging and visual rules
+4. **Discovery Report** — write up what was found, ranked by usefulness, with conflicts and open questions
+
+Without the agent, this is the default path: your AI runs all four phases itself in this chat, starting with the first and ending with the report.
 
 ### 5. Present Discovery Report
 

@@ -12,6 +12,8 @@ explain: |
   You name the role and level. Your AI first picks the best fit: a skills test, a work sample, a simulation or an assessment centre. It then writes a task based on what the person would do in their first 90 days. It builds a scoring guide with plain examples at each rating, so two people marking the same answer give close scores.
 
   It also weighs how hard the test is against candidate time, because a long test makes good people drop out. It checks the task for bias and for steps that block people for reasons unrelated to the job. The final hire stays your decision.
+
+  This skill designs the test, the scoring guide and the fairness checks. The Hiring interview designer plans interview rounds and questions instead.
 when:
   - Your interviews are not telling you who will do the job well.
   - Two people on your team score the same candidate very differently.

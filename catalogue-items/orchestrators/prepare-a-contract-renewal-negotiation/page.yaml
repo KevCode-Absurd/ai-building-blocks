@@ -18,9 +18,9 @@ when:
   - You pay for seats, licences or services that few people use.
   - Your manager asks whether to renew, push back or switch.
 not_for:
-  - You want a calendar of many renewals at once. Use the Renewal watch planner.
-  - The notice date has already passed. Ask your legal reviewer what is still possible, then use the Negotiation prep coach for the talk.
-  - You are choosing between new vendors. Use the Software vendor chooser, or Preserve a procurement decision audit trail if you need a record of the choice.
+  - You want a calendar of many renewals at once. Use the Renewal watch planner (useaiblocks.com/skills/renewal-watch-planner).
+  - The notice date has already passed. Ask your legal reviewer what is still possible, then use the Negotiation prep coach (useaiblocks.com/skills/negotiation-prep-coach) for the talk.
+  - You are choosing between new vendors. Use the Software vendor chooser (useaiblocks.com/skills/software-vendor-chooser), or the Preserve a procurement decision audit trail workflow (useaiblocks.com/workflows/preserve-a-procurement-decision-audit-trail) if you need a record of the choice.
 you_give:
   - The current signed agreement (PDF, Word or pasted terms)
   - The renewal quote or order form
@@ -36,6 +36,7 @@ you_get:
 how_to_use:
   - Download the pack and give the whole folder to Claude, ChatGPT or Gemini. If your AI cannot search your contract tools, attach the agreement. It works from the file.
   - Attach the agreement and the renewal quote. Paste your usage numbers and a few lines on any problems.
+  - Confirm the notice date in the signed contract before the talk. Do not rely on a date from a quote or an email.
   - Check the deadline plan first. Each date must match the clause it quotes. Fix any error before step 2.
   - Check that the options compare the same scope and term. A cheaper quote for fewer features is not a saving.
   - Take the negotiation brief to whoever owns the budget before the notice date. Nothing is sent to the vendor for you.

@@ -9,7 +9,7 @@ subhead: A plan to earn links and mentions that point at your site, with ideas p
 explain: |
   A plan to earn links and mentions that point at your site, with ideas people will want to link to. You stop sending bulk pitches that get ignored.
 
-  It starts by checking your current links, then fixes one goal, since ranking for a term needs different work than building authority. It splits effort across four areas: earned press, assets you own, partnerships, and local listings. A new site often leans on its own assets first. Then it builds a prospect list and personal outreach notes, and sets up tracking. It warns about bought links, stuffed anchor text and templated emails, and tells you when to disavow.
+  It starts by checking your current links, then fixes one goal, since ranking for a term needs different work than building authority. It splits effort across four areas: earned press, assets you own, partnerships, and local listings. A new site often leans on its own assets first. The 70/20/10/0 split it suggests for a new site is a starting guess to adjust, not a benchmark. Then it builds a prospect list and personal outreach notes, and sets up tracking. It warns about bought links, stuffed anchor text and templated emails, and tells you when to disavow.
 when:
   - Your site ranks poorly because few sites link to it.
   - You want to plan a digital PR campaign with real hooks.
@@ -33,10 +33,12 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or special tools are needed.
   - Tell your AI your website, what it offers and your main goal.
-  - Add your backlink data from a tool if you have it. If not, say so and the plan will list what is missing.
+  - Add your backlink data from a tool if you have it. If not, say so. The plan will list what is missing and give you free checks to do by hand, such as searching for your brand name and reading your competitors' partner pages.
+  - Know these words. Domain rating is a score a tool gives a site for how strong its links are. Anchor text is the clickable words in a link. A toxic link is a link from a spam or farm site. Disavow means telling Google to ignore a link, and you only do it when you have real proof of harm.
   - Read the strategy mix and the Q1 tasks first. Start with the linkable asset tasks in Q1.
   - Ask for the prospect list and outreach notes, then edit each note so it sounds like you.
-  - Note that setup steps for your AI tool are not in the skill files.
+  - Expect the first result to be a summary of your current links, then your goal and the strategy mix.
+  - Next, work the Q1 asset tasks first, then build the prospect list, then review the monthly tracking. Fix any on-site problems before you start outreach.
 output_sample:
   input:
     - Your website and what it offers

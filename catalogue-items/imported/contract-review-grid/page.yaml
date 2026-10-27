@@ -30,11 +30,13 @@ you_get:
   - Flags for absent, unfound or unclear
   - Short summary of patterns
 how_to_use:
-  - Put your contracts in one folder. Open your AI tool and give it the folder and the skill.
+  - Before you upload anything, check your confidentiality and privilege rules. The contracts are sent to your AI tool.
+  - Put your contracts in one folder. Open your AI tool and give it the folder and the skill. The skill came from a legal plugin that kept a config file at ~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md. You do not need it. If it is missing, your AI asks you for your structure and thresholds, and uses the templates in the references folder.
   - Say which points to find, such as renewal date, notice period or liability cap. Say if you want Excel, Google Sheets or CSV.
   - Check the column list your AI proposes. Then check the sample run on a few contracts and fix any column that looks wrong.
-  - Let it run the full set. If it cannot read many files at once or reach Excel or Sheets, paste a few contracts at a time and ask for a table in chat.
+  - Let it run the full set. If it cannot read many files at once or reach Excel or Sheets, paste a few contracts at a time and ask for a table in chat. The matter workspace, config file and next-steps tree in the skill belong to the original plugin. Skip them in a plain chat.
   - Read the summary first. Then check the yellow and gray cells, and the key rows, against the quotes before you rely on them.
+  - "Next, with no plugin needed: sort the grid by the flagged columns and send the needs_review rows to a lawyer. Then take the problems the grid shows into Acquisition due diligence planner, or build a checklist with Due diligence checklist builder."
 output_sample:
   input:
     - A folder of your contracts

@@ -11,7 +11,7 @@ explain: |
 
   The skill first sorts each reply. Bad requests and permission errors are final and never retried. Rate limits, timeouts and server faults are retried. Next it reads the delay hints the service sends, such as the Retry-After header or a reset time, before it makes up its own wait. If there is no hint, it uses growing waits with a little random jitter and a hard cap on attempts. It also checks that repeating the action is safe.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Prajeeth-12) says MIT. Credit goes to Prajeeth-12 and sickn33.
+  Licence: CC BY 4.0 applies to this copy, as its LICENSE-CONTENT file says. Reuse it with credit to Prajeeth-12 and sickn33. The author's own file header says MIT, which also allows reuse with credit.
 when:
   - Your script gets 429 errors from a payment, AI or code hosting service.
   - Retries sometimes create duplicate orders or messages.
@@ -37,7 +37,7 @@ how_to_use:
   - Say how bad a repeated call would be, for example a second payment or a second email.
   - Add the rate limits from the API docs if you have them (optional).
   - Read the result. Check that actions which change data are not retried without a repeat-safe key.
-  - Run and test the code in your own project. Your AI can only run it if it has code tools.
+  - Run and test the code in your own project. Your AI can only run it if it has code tools. The code sets a timeout on each call, so a hung call stops with an error and is not retried. Change the number to fit your API.
   - Wire the retry function into one real API call and log each retry. For long outages, add a circuit breaker (a switch that stops calls for a while). No circuit breaker skill is included here, so ask your AI to write one.
   - Next, build the full connector around it with the API connector builder, or test it with the API test suite builder.
 next: [api-rate-limit-adder, api-test-suite-builder]

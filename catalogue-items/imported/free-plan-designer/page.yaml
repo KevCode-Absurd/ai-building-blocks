@@ -13,7 +13,7 @@ explain: |
 
   It also lists what to keep free, such as core features and integrations, and what to gate, such as team controls and support terms. It adds upgrade messages that warn early and offer a choice, plus the questions a pricing page should answer. The skill is written for developer tools, so some examples will not fit other products.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (jonathimer) says MIT. Credit goes to jonathimer.
+  Licence: for reuse, follow the MIT licence the author names in the skill file header. That covers the skill text. Our LICENSE-CONTENT file (CC BY 4.0) covers only the rest of this page. Credit jonathimer if you reuse it.
 when:
   - You are launching a developer tool and must decide what to give away.
   - Your free users never pay, or they leave angry about limits.
@@ -23,10 +23,11 @@ not_for:
   - You need prices for your paid plans. Use the Technical SaaS pricing adviser.
   - You want a free tool or sample that brings in leads for a store or service. Use the Free diagnostic tool planner or the Free sample offer planner.
   - You want to plan how people find and sign up for your product. Use the Self serve product growth planner.
+  - Your product is not a developer tool. The skill is written for developer tools, and its examples will not fit other products.
 you_give:
   - What your product does and who uses it
   - How you sell, such as self-serve or sales-led
-  - What one free user costs you each month
+  - What one free user costs you each month. You need this to set limit amounts. Without it you get only the model pick and the feature split
   - Your paid plan names and prices
   - Whether users are hobbyists, startups or large companies (optional)
 you_get:
@@ -37,13 +38,14 @@ you_get:
   - Pricing page questions to answer
 next: [copilot-gtm-technical-product-pricing, copilot-gtm-product-led-growth]
 how_to_use:
+  - Know this first. Company examples in the skill (Vercel, Supabase, Stripe's fee, Algolia and others) and their limits are old and undated. Do not quote them as current. Check each vendor's page.
   - Open Claude, ChatGPT or Gemini. Add this skill, or paste its text into a new chat.
   - Describe the product, who uses it and how you sell. Add what a free user costs you and your paid prices.
   - Ask for the model pick first. Check that it fits how you really sell.
   - Ask for limits, the free and gated feature lists, and the upgrade messages. Fix any line marked MISSING with your real numbers.
   - Compare the draft with the failure patterns in the skill, such as hidden trials and moving free features behind a paywall.
   - After launch, track how many free users reach each limit and how many of them upgrade. Change the limits if few reach them or if many leave at them.
-  - Treat company figures in the skill, such as Vercel or Supabase limits, as old examples. Check the vendor's page before you quote them. This needs no code and no paid tools.
+  - This needs no code and no paid tools.
 how_it_works:
   - title: Pick the model
     text: It compares free trial, free tier, freemium and open core with your sales motion and explains the pick.

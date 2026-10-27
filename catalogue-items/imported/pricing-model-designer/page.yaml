@@ -21,7 +21,7 @@ not_for:
   - "You want one final price to type in: this gives a model and a range, so you pick the number."
 you_give:
   - Product and customer description
-  - Price survey responses (optional)
+  - Price survey responses (optional), kept in separate groups if you have more than one customer type, with 30 or more people per group
   - Competitor prices
   - Current plans (optional)
 you_get:
@@ -31,10 +31,11 @@ you_get:
   - List of packaging problems found
 how_to_use:
   - Open your AI tool. Use one that can run code and read files, such as Claude or ChatGPT with code tools on.
-  - Upload the skill folder, or paste the SKILL.md text into the chat.
+  - Upload the whole skill folder, with its scripts, references and assets. Do not paste only SKILL.md. The three scripts do the scoring, the survey maths and the tier build, so a paste alone drops the core method.
   - "Fill in the pricing brief first: your industry, deal size, customer count, value drivers and competitor models."
   - Ask your AI to pick the pricing model from your brief. Read the trade-offs before you move on.
-  - If you have survey answers, add them next. You need at least 30 people, and 100 is better. Each person answers four questions: at what price is it too cheap, a bargain, getting expensive, and too expensive. If you have not run the survey yet, use the Willingness-to-pay survey designer to write the questions. Ask for the acceptable price range.
+  - The survey is optional. Without it, the skill still picks a model and builds tiers, but gives no survey-based price range.
+  - If you have survey answers, add them next. You need at least 30 people, and 100 is better. If you have more than one type of customer, keep the answers in separate groups, with at least 30 people in each group. Do not read one range across mixed groups. Each person answers four questions: at what price is it too cheap, a bargain, getting expensive, and too expensive. If you have not run the survey yet, use the Willingness-to-pay survey designer to write the questions. Ask for the acceptable price range.
   - Add your feature list and ask for good, better, best tiers. Fix any packaging flags, then choose your own price.
   - Next, test the price range in the market with a small price test on new customers. Then pass the chosen tiers to your discount rules, for example your deal approval step.
 output_sample:

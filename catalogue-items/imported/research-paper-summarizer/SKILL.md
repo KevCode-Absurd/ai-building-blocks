@@ -258,7 +258,7 @@ Flag these without being asked:
 
 ## Installation
 
-This is the author's install note. The `scripts/convert.sh` and `clawhub` commands below are not part of this library's copy, so skip them. To use the skill, paste SKILL.md into your AI chat.
+This is the author's install note. The `scripts/convert.sh` and `clawhub` commands below are not part of this library's copy and will not work here, so do not run them. The core workflow works by pasting this file into a chat. To use the skill, paste SKILL.md into your AI chat.
 
 ### One-liner (any tool)
 ```bash

@@ -66,11 +66,11 @@ Lead with the notice date and what must be decided before it. Then give the opti
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Incoming demand letter reviewer](https://useaiblocks.com/skills/incoming-demand-letter-reviewer). It takes the document.
-- The [Subpoena first-look reviewer](https://useaiblocks.com/skills/subpoena-first-look-reviewer). It takes the document.
-- The [Company filing deadline tracker](https://useaiblocks.com/skills/company-filing-deadline-tracker). It takes the document.
+- The [Negotiation prep coach](https://useaiblocks.com/skills/negotiation-prep-coach). It takes the negotiation brief.
+- The [Renewal watch planner](https://useaiblocks.com/skills/renewal-watch-planner). It tracks the other renewals coming up.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+Also offer to give the negotiation brief to the budget owner before the notice date. Nothing here sends, signs or changes anything outside the working files.
 
 ## Check before you hand it back
 
@@ -91,16 +91,6 @@ Write MISSING: <what> next to the affected result. Keep going with the work that
 - Notice date not in the contract text: mark MISSING: notice date and tell the user to ask the vendor in writing. Do not estimate it.
 - No usage data: continue, and mark any per-unit cost MISSING.
 - Notice date already passed: say so first, and stop the options step until the user has asked their legal reviewer what is still possible.
-
-## After this
-
-Ask one short question about what to do next, and say they can type their own. Offer:
-
-- Give the negotiation brief to the budget owner before the notice date.
-- Use the Negotiation prep coach to plan the call itself.
-- Use the Renewal watch planner to track other renewals coming up.
-
-Nothing here sends, signs or changes anything outside the working files. If they pick a next step that is not in this pack, give them its link on useaiblocks.com and say what to bring to it.
 
 ## Avoid
 

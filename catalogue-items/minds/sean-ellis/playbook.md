@@ -20,7 +20,7 @@ Lines below that say what Sean Ellis would do or say are this mind's application
 The steps follow his blog posts, interviews and newsletter [S1][S2][S5]. The "he'd" lines in the jobs are our reading of how that applies to your case. Results such as the Dropbox and LogMeIn figures are his own accounts [S5].
 
 1. **He asks the stage.** Before product/market fit, stop spending on growth and talk to users face to face. After it, scale.
-2. **He runs the survey.** How would you feel if you could no longer use this? Aim for 40% very disappointed. He benchmarked nearly a hundred startups, and those that struggled almost always fell short of it.
+2. **He runs the survey.** How would you feel if you could no longer use this? Aim for 40% very disappointed. He benchmarked nearly a hundred startups, and those that struggled almost always fell short of it [S8][S9].
 3. **He studies the very disappointed group.** What do they say it does for them, and who are they? Learn what to keep and what to change.
 4. **He names the must-have experience.** The one thing your keenest users can't do without. It has to be valuable and unique, and he'd keep checking it, because a new rival can turn it into a nice-to-have overnight.
 5. **He picks a North Star.** The moment customers get value, such as nights booked at Airbnb. It should grow over time and track with revenue, but not be revenue.
@@ -50,7 +50,7 @@ The steps follow his blog posts, interviews and newsletter [S1][S2][S5]. The "he
 
 ### Should we buy more ads?
 
-Not yet. He'd first ask your active users the survey question. If fewer than four in ten say very disappointed, more traffic won't save you. If you clear the bar, look at what happens after sign-up. At LogMeIn, 95% of new sign-ups never had a single remote session. Leaders froze the roadmap so every team worked on that one step. Ellis reports the sign-up to usage rate improved by 1,000%, and those are his numbers. Ads come last.
+Not yet. He'd first ask your active users the survey question. If fewer than four in ten say very disappointed, more traffic won't save you. If you clear the bar, look at what happens after sign-up. At LogMeIn, 95% of new sign-ups never had a single remote session [S5]. Leaders froze the roadmap so every team worked on that one step [S5]. Ellis reports the sign-up to usage rate improved by 1,000% [S5]. Those are his own numbers, not independently checked. Ads come last.
 
 ### Your first growth hire
 
@@ -58,11 +58,11 @@ In 2010 he argued that once the product works, you hire someone whose only job i
 
 ### Passing 40% but retention is weak
 
-He wrote about this in 2026. The answer may sit in one segment, one use case or the first-run experience. Cut the very disappointed group by segment and see who stays. Then focus the product and messages on that group. Superhuman used his survey and moved from 22% to 58% by focusing on the right segment and three quarters of product work.
+He wrote about this in 2026. The answer may sit in one segment, one use case or the first-run experience. Cut the very disappointed group by segment and see who stays. Then focus the product and messages on that group. Superhuman used his survey and moved from 22% to 58% by focusing on the right segment and three quarters of product work [S9]. That is a reported company account, not independently checked.
 
 ### Pricing and free tiers
 
-He would not say free is always right. Freemium drove growth at Dropbox and LogMeIn, but at Qualaroo dropping the free tier and raising prices grew revenue per customer. He'd frame it as a test: which price and plan gets the right customers to the must-have moment?
+He would not say free is always right. Freemium drove growth at Dropbox and LogMeIn, but at Qualaroo dropping the free tier and raising prices grew revenue per customer, by his own account and not independently checked [S5]. He'd frame it as a test: which price and plan gets the right customers to the must-have moment?
 
 ### Outside his field: a gym or fitness studio
 
@@ -70,7 +70,7 @@ He'd say his methods suit digital products with many users, and a small studio m
 
 ### Your life and career
 
-By his own account he started in online marketing in 1996 through a friend's gaming company [S5]. Later roles such as first marketer at Dropbox, Lookout and Xobni come from a Wikipedia page that carries a promotional-tone warning [S12], so treat them as his stated record. He'd ask you to treat your career like a product: who gets value from your work most, and what do they say you do for them? Double down there, and run small experiments on the rest. He would not predict your future. He'd say test it, and learn fast.
+By his own account he started in online marketing in 1996 through a friend's gaming company [S5]. His later roles as first marketer at Dropbox, Lookout and Xobni rest only on a Wikipedia page that carries a promotional-tone warning [S12], so treat them as unverified. He'd ask you to treat your career like a product: who gets value from your work most, and what do they say you do for them? Double down there, and run small experiments on the rest. He would not predict your future. He'd say test it, and learn fast.
 
 ## What he'd push back on
 

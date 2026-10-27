@@ -9,7 +9,7 @@ subhead: Give it a page, screenshot or flow such as a checkout or sign-up, the o
 explain: |
   Spot why people stall on your page or flow, and fix it. Give it a screen, checkout or sign-up and you get a marked-up list of friction points in layout, defaults, order of steps and cues, each with a clearer replacement.
 
-  It first pins down who the user is, the single action you want, and your limits such as accessibility. Then it traces the path step by step, looking for too many choices, hidden next steps, weak defaults and moments where effort rises. Fixes borrow from choice design: fewer options, a better first step, clear cues. It treats psychology as a guide to test, not proof, so each change is meant to be A/B tested.
+  It first pins down who the user is, the single action you want, and your limits such as accessibility. Then it traces the path step by step, looking for too many choices, hidden next steps, weak defaults and moments where effort rises. Fixes borrow from choice design: fewer options, a better first step, clear cues. It treats psychology as a guide to test, not proof, so each change is meant to be A/B tested. The studies the skill names (such as Fogg, Volpp and Loewenstein, and Stawarz) are unverified ideas to check before you use them. Original contribution by MMEHDI0606 (PR 451), shared by sickn33.
 when:
   - Visitors reach your sign-up page but do not finish it.
   - A pricing page has too many options and people leave.
@@ -33,6 +33,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill instructions. No code, files or paid tools are needed.
   - Paste your page text or flow steps, or attach a screenshot if your AI reads images.
   - Say the one action you want and who the users are. Add limits such as accessibility (optional).
+  - Ask your AI to follow these steps. 1 Name the one action you want. 2 List every extra decision, field, screen or pause. 3 Design the easiest default path. 4 Add small yes-steps before the big ask. 5 Check that exits stay clear. For each friction point it should give the place in the flow, the type of friction, why it hurts and a clearer replacement.
   - Read the friction list first. Check each point against your own page and data.
   - Pick the top fixes and run each as an A/B test before you roll it out.
 output_sample:

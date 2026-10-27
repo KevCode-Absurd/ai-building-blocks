@@ -32,6 +32,7 @@ you_get:
   - Uniform names to adjust the effect
   - Notes on speed and compatibility
 how_to_use:
+  - You need a developer, or a WebGL or Three.js project of your own, to run the shader. The skill writes the code only. It does not render anything.
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Say what effect you want to see, such as a ripple, glow or blur.
   - Name your engine, such as WebGL or Three.js, and list any values you want to control. Say if you want a Shadertoy-style effect, which needs a full-screen quad and a resolution value from your code.
@@ -39,6 +40,7 @@ how_to_use:
   - Copy the vertex and fragment shaders into your project and set the uniforms from your code.
   - If the screen is black, check that your uniforms are set and your UV values run from 0 to 1, then ask your AI to fix it.
   - Test the speed on the devices you care about before you publish.
+  - Next, place the shader in a scene with the 3D web scene builder, then add motion with the web animation builder.
 output_sample:
   input:
     - A description of the effect you want to see

@@ -39,6 +39,8 @@ How to start:
 
 ## What you need
 
+The "Before you start" block above is shared text. Ignore its "Your question" and "Source text" lines: this job takes the project facts listed below, not an article or transcript. File upload in some AI apps needs a paid plan. If the user has none, ask them to paste the same material into a free chat.
+
 Ask once for anything missing. If it is still missing, write `MISSING: <what>`, name the part of the plan it limits, and carry on. Never guess a value.
 
 - The mode: a new plan, a status report, or both. If the user does not say, ask once.

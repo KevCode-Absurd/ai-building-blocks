@@ -8,9 +8,9 @@ description: 'Perform an AWS Well-Architected Framework review of the current wo
 This workflow performs a structured AWS Well-Architected Framework (WAF) review against your workload's IaC files and deployed infrastructure. It identifies risks across all 6 WAF pillars and creates GitHub issues to track remediation.
 
 ## Prerequisites
-- AWS CLI configured and authenticated
+- AWS CLI configured and authenticated, using a read-only AWS role or profile (for example the AWS ReadOnlyAccess or SecurityAudit policy). Do not use an admin role.
 - IaC files present in the repository (Terraform, CloudFormation, CDK, or SAM)
-- GitHub MCP server configured and authenticated
+- GitHub MCP server configured and authenticated, with a token limited to writing issues on the one named repository. Do not use a token with wider rights.
 
 ## Workflow Steps
 
@@ -28,6 +28,8 @@ Scan the repository for IaC files:
 Identify key AWS services in use (compute, data, networking, security, observability) and generate a Mermaid architecture diagram.
 
 ### Step 3: Pillar-by-Pillar Review
+
+Check each item below against the files or CLI output it names. If you cannot verify an item from what you can see, mark it "not checked". Never mark it as passed.
 
 #### Pillar 1: Operational Excellence
 - [ ] All infrastructure defined as IaC (no manual console changes)

@@ -50,11 +50,11 @@ You want to drop an old option after two years. He'd say a time limit isn't a re
 
 ### Running a team that has outgrown you
 
-He'd tell you not to review everything yourself. Split the work into areas, each with an owner who decides what goes in. Owners pull from owners. In the 2.6.38 kernel release he picked about 112 of more than 9,500 patches directly, and maintainers handled the rest [S8]. Set a fixed rhythm: a two-week window for new work, then weekly fixes only, and a release every two or three months. Direct submissions to the right owner. He'd also warn this model needs many skilled people, so a small team should copy the idea at a smaller scale.
+He'd tell you not to review everything yourself. Split the work into areas, each with an owner who decides what goes in. Owners pull from owners. The kernel's process notes say he picks only a small share of patches directly, and maintainers handle the rest [S8]. Set a fixed rhythm: a two-week window for new work, then weekly fixes only, and a release every two or three months [S8]. Direct submissions to the right owner. He'd also warn this model needs many skilled people, so a small team should copy the idea at a smaller scale.
 
 ### Picking, or building, the tool
 
-When the kernel lost free use of its tool in 2005, he wrote Git. The goals were speed, a simple design, many parallel branches and the ability to handle a very large project. Then he handed it to Junio Hamano to run, because someone else was better suited to the daily work. So he'd ask what in your tool is slowing the team. If a better one exists, switch. If not, build the smallest one that works, and give it to the person who will keep it going.
+When the kernel lost free use of its tool in 2005, he wrote Git. The goals were speed, a simple design, many parallel branches and the ability to handle a very large project [S7]. Then he handed it to Junio Hamano to run [S1]. Our reading is that someone else was better suited to the daily work. So he'd ask what in your tool is slowing the team. If a better one exists, switch. If not, build the smallest one that works, and give it to the person who will keep it going.
 
 ### Outside his field: a restaurant owner with a messy menu
 
@@ -66,7 +66,7 @@ He'd say a leader should dodge big, painful choices and cut them into small ones
 
 ### Your life and career
 
-He started in 1991 by telling strangers it was just a hobby and asking what they wanted. He'd tell you to start small, share early and listen. He's not a visionary, he's an engineer, and he'd say you don't need a ten-year plan. Fix what is in front of you. In 2018 he wrote that he was truly sorry for his attacks on people. He took time off to get help and change how he treats people. He'd tell you that if your style is driving good people away, you can name it, apologise without excuses and work on it.
+In 1991 he told strangers on Usenet it was just a hobby and asked what they wanted [S2]. He'd tell you to start small, share early and listen. He's not a visionary, he's an engineer, and he'd say you don't need a ten-year plan. Fix what is in front of you. In 2018 he wrote that his flippant attacks on people had been unprofessional, and that he would take time off to get help [S5]. He'd tell you that if your style is driving good people away, you can name it, apologise without excuses and work on it.
 
 ## What he'd push back on
 

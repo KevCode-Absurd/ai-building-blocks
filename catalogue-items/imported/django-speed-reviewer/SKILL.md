@@ -10,6 +10,8 @@ date_added: "2026-09-04"
 
 # Django Performance Review
 
+(Added by AI Blocks. This is a read-only code review. The header lists Bash among the allowed tools and the risk label "critical" comes from the original collection. Do not run commands that change data or the project. It cannot see settings, caches, query logs or the live site. Licence of this copy: CC BY 4.0, per the LICENSE-CONTENT file. The Apache-2.0 label in the header is the original label.)
+
 Review Django code for **validated** performance issues. Research the codebase to confirm issues before reporting. Report only what you can prove.
 
 ## When to Use

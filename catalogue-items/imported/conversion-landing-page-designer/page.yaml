@@ -38,7 +38,7 @@ how_to_use:
   - Treat the design rules in Part B as one house style. Keep the ones you like and skip the rest, or hand them to your developer.
   - Replace any made-up names, numbers or reviews with real ones before the page goes live. Do not publish invented proof.
   - This needs no code running, files or paid tools.
-  - Next, check the finished page with Landing page 30-point checker before you send traffic to it.
+  - Next, check the finished page with the Landing page 30-point checker (in the general library) before you send traffic to it. The skill also mentions a redesign skill, redesign-existing-projects. It is not in this library. You can find it at github.com/elayadesign/redesign-skill.
 output_sample:
   input:
     - Your offer and what the buyer gets

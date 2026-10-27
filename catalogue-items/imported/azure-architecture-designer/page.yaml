@@ -9,7 +9,7 @@ subhead: An Azure design for your app, with Bicep setup templates, a deployment 
 explain: |
   An Azure design for your app, with Bicep setup templates, a deployment pipeline and ways to lower the bill. Say what you are building, your traffic, budget, team skills, compliance needs and which region your data must stay in.
 
-  The AI picks services such as App Service, Functions, Cosmos DB or Kubernetes (AKS) to match your size, from a small, low-cost web app to microservices. It generates Bicep, builds an Azure DevOps pipeline, runs a cost review and finishes with a security check. Helper Python scripts back each step. Deploying needs an Azure account.
+  The AI picks services such as App Service, Functions, Cosmos DB or Kubernetes (AKS) to match your size, from a small, low-cost web app to microservices. It generates Bicep, builds an Azure DevOps pipeline, runs a cost review and finishes with a security check. Helper Python scripts back each step. Deploying needs an Azure account. This is a starting design, not a compliance sign-off. If you hold health or personal data, ask a qualified compliance adviser to review it.
 when:
   - You are launching on Azure and don't know which services to pick.
   - Your monthly Azure cost is higher than planned.
@@ -31,12 +31,16 @@ you_get:
   - Cost review and security review
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill text. It works best in an AI that can run code. The three Python helper scripts (architecture_designer.py, bicep_generator.py and cost_optimizer.py) are in this item's scripts folder, so upload the folder with them. If your AI cannot run code, it can still follow the steps and write the design, the Bicep and the cost review by hand, but the results will be less exact.
+  - The pasted skill text alone cannot run architecture_designer.py, bicep_generator.py or cost_optimizer.py. You need the uploaded scripts folder and an AI that can run code. Without them, your AI does the steps by hand.
   - Describe your app, your users, your monthly budget, your compliance needs and your region.
   - Read the recommended pattern first. Check it fits your team's skills before you ask for templates.
   - Ask for the Bicep templates and the pipeline. You need an Azure account to deploy them.
   - For a cost review, export your current resources as a JSON file from the Azure portal or Azure CLI. Paste it in.
   - Treat every dollar figure as a rough guide. The example numbers are made up. Check costs in the Azure pricing calculator before you put them in a budget.
   - Before go-live, run the pricing calculator again and work through the security review checklist.
+  - Then set up the build and deploy steps with the CI/CD pipeline setup or the Terraform setup builder if you prefer Terraform.
+  - The result has six parts in a fixed order. They are the recommendation, Bicep templates, pipeline, cost review, security review and deployment fixes. Each is a short section, and the templates are files.
+  - Some services it may pick, such as Front Door, Azure SQL and AKS, are paid and have no free tier. The Bicep example uses the low-cost B1 plan, so check the plan size before you deploy.
 output_sample:
   input:
     - What you are building, such as a web app or a data pipeline

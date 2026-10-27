@@ -26,6 +26,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+In "Before you start", "your question" is your dump. Nothing else is needed, and no file or project access is used.
 - **Your dump** (required): paste it as it is, in any order.
 - **What matters this week** (optional): so it can pick your top three.
 

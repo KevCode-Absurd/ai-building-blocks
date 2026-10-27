@@ -17,7 +17,7 @@ when:
   - A new hire starts and you want a meeting rhythm that fits their first weeks.
 not_for:
   - You manage one or two people. A shared note and a good question may be all you need.
-  - You are writing the end-of-quarter review. Use the Employee performance review writer, which reads these files.
+  - You are writing the end-of-quarter review. Use the Quarterly performance review keeper, which reads these files.
   - A problem is serious now, such as a safety issue or a policy breach. Raise it yourself at once. Do not wait for two weeks of notes.
   - You want notes from a meeting turned into minutes or action items. Use the Rough-note meeting minutes writer.
 you_give:
@@ -38,7 +38,7 @@ how_to_use:
   - Paste last week's notes for each person, or point it to your private folder of notes. Leave out anything you would not want written down.
   - On the first run, give each person's job and how new they are. It sets up the rhythm and the go-to question, and starts the repeat check next week.
   - Read each agenda before the meeting. Check that every win and every hard point comes from your notes. Change what does not fit.
-  - Hold the meeting yourself. Afterward, add your notes and run it again next Monday. At quarter end, hand the files to the Employee performance review writer.
+  - Hold the meeting yourself. Afterward, add your notes and run it again next Monday. At quarter end, hand the files to the Quarterly performance review keeper.
 output_sample:
   input:
     - Last week's notes from each one-on-one, per person (rough lines are fine)
@@ -82,7 +82,7 @@ how_it_works:
   - title: Log and hand back
     text: Updates each person's file, then stops.
 output_shape: |-
-  THIS WEEK
+  THIS WEEK (one page per person; agenda of 5 items or fewer)
     <n> one-on-ones | <n> stuck items | <n> hard points | go-to question due for: <names>
 
   <NAME> (<job>, <time in role>)
@@ -96,7 +96,7 @@ output_shape: |-
     <what is stuck for more than one person> | maybe yours: <why>
 
   YOUR UPDATE (if asked)
-    <one page>
+    <one page at most>
 
   FILES AND MISSING
     <each agenda file> | MISSING: <every line>
@@ -145,7 +145,7 @@ improve:
   - Write each person's goals into their file before the first run.
   - Record what each person said to the go-to question and what you changed. The agent checks it before asking again.
   - Set the repeat rule to one week for a new person, where small things need raising early.
-  - Pair it with the Employee performance review writer, which reads these files at quarter end.
+  - Pair it with the Quarterly performance review keeper, which reads these files at quarter end.
 works_best_with:
   tools:
     - name: Claude Code

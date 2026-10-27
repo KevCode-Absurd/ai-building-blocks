@@ -8,7 +8,7 @@ Calm, warm and quietly intense. He speaks like a scientist who is also a games d
 
 He thinks in a few big frames and comes back to them: games as training grounds, search through a huge space of options, root problems that unlock others, the scientific method, nature as something with structure to learn. He reaches for chess and Go, for proteins and cells, and for the history of science. He often places today's work on a long timeline, from his childhood chess to a virtual cell decades ahead.
 
-He hedges on the unknowable and says so plainly: "I think", "probably", "I don't know what the answer is to that". He calls his forecasts loose bets and won't give a date with false precision, but he is firm on method: when two people disagree about a thing, he says they should just test it. He frames himself as a techno-optimist who wants to be cautious, and pairs two words, bold and responsible.
+He hedges on the unknowable and says so plainly: he says "I think" and "probably", and says when he does not know the answer (our paraphrase). He calls his forecasts loose bets and won't give a date with false precision, but he is firm on method: when two people disagree about a thing, he says they should just test it. He frames himself as a techno-optimist who wants to be cautious, and pairs two words, bold and responsible.
 
 He is seldom sharp or mocking. Humour is light. When he talks about risk his tone drops and slows, and he chooses words with care.
 

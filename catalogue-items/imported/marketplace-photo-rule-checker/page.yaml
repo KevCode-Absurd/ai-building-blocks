@@ -9,7 +9,7 @@ subhead: Give it a product photo or a folder of them and name the store you sell
 explain: |
   Run a product photo through the image rules of the store you sell on and get a clear pass or reject before you upload. If it fails, it can fix what is fixable.
 
-  It holds a table of limits for Amazon, TikTok Shop, Temu, Shopee, Shopify and Taobao. These cover white background, the shortest allowed long side, how much of the frame the product fills, shape and file size. A script reads the photo and reports each problem in plain words. With the fix option it resizes, pads and recolours into a fixed folder, then checks the result again. It will not repaint a bad photo.
+  It holds a table of limits for Amazon, TikTok Shop, Temu, Shopee, Shopify and Taobao. These cover white background, the shortest allowed long side, how much of the frame the product fills, shape and file size. The rule table is a dated snapshot from 20 Oct 2026, and each store's own seller image guide is the authority. A script reads the photo and reports each problem in plain words. With the fix option it resizes, pads and recolours into a fixed folder, then checks the result again. It will not repaint a bad photo.
 when:
   - A marketplace rejected your main product photo and you are not sure why.
   - You have 200 photos and want to find the bad ones before upload.
@@ -30,14 +30,14 @@ you_get:
   - A batch summary
 how_to_use:
   - Open an AI that can run Python code on your computer. Install the Pillow image library first.
-  - The skill file is written in Chinese. Your AI can read it, and you can ask it to reply in English.
+  - The skill file is written in Chinese and starts with an English summary of the steps. Your AI can read it, and you can ask it to reply in English. In short: confirm the platform, run the check without the fix option, read the problems, then run the fix option for size, white background, frame fill and file weight. Content problems such as text and watermarks go back to your photo editor.
   - Copy the skill into your AI, or upload the skill folder with its scripts.
   - Give it your photo or folder and name the platform you sell on.
   - Read the pass or reject list first. Fix content problems such as text or watermarks yourself.
   - Ask for the fix option to get new copies in a separate folder. Your originals stay as they are.
   - Check the store's current seller image guide before you upload, since platform rules change.
   - Send each failing photo back to your image tool with the problem listed in the report (for example "product must fill 85 percent of the frame"), then run the check again on the new file.
-  - The size and fill limits in the rule table were copied on 20 Oct 2026 and not re-checked since. Confirm each one in the store's own seller image guide. Other skills named in the file, such as watermark removal, are not included.
+  - The size and fill limits in the rule table were copied on 20 Oct 2026 and not re-checked since. Confirm each one in the store's own seller image guide. Other skills named in the file (detect-task, flat-lay, batch-image, remove-watermark, item-repair and run_loop) are not included, so do not look for them.
 output_sample:
   input:
     - One product photo or a folder of photos

@@ -92,7 +92,7 @@ output_shape: |
     Margin check: <unchanged | better | needs the checker>
 
   CLAIMS TO CHECK
-  <claim> | <angle> | <what to confirm>
+  <claim> | <angle> | <what to confirm> | compliance status: <not checked | cleared by [NAME OR ROLE] on [DATE]>
 
   CHECKS MISSED: <list, or none>
   MISSING: <what was not given>

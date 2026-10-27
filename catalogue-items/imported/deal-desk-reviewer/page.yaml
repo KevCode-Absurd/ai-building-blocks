@@ -40,9 +40,11 @@ output_shape: |
   NEXT STEP: send this packet to the named approvers. A person approves the deal.
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Pick a chat that can run code, since the scoring uses Python scripts.
+  - "Fill in the deal intake form first (assets/deal_intake_template.md in the folder). Gather these fields: deal ID, customer, deal size (ARR and total), term, list price, discount, customer tier, product margin, extra costs, strategic flags, payment terms and any term redlines."
   - Upload the skill folder, or paste the skill text into the chat.
   - "Describe the deal: size, term, discount, tier, payment terms and costs. Paste the customer's contract edits if you have them."
   - Ask your AI to run the deal scorer, the discount router and the terms checker.
+  - The scoring weights are a starting guide. Set the discount limits against your own company's discount matrix before you rely on a verdict.
   - Read the verdict, the approver chain and the risky terms. Fix or counter the risky terms.
   - Send the packet to the named approvers. The skill never approves a deal itself.
 next: [contract-risk-reviewer, discount-policy-designer]

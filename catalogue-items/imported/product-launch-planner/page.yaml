@@ -31,6 +31,7 @@ you_get:
   - Announcement copy drafts
   - A pre-launch checklist
 how_to_use:
+  - "Gather these first: what you are launching, your audience, your target date, your channels, and the size of any waitlist or email list."
   - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. No code or paid tool is needed. The tools it names, such as Navattic, Introw, SparkToro and Listen Notes, are optional and may cost money.
   - Say what you are launching and the main benefit. Add your audience, your target date and the channels you can use.
   - Paste the text of your product context file too, if you have one (optional). Your AI cannot read files on your computer. It then asks only for what is missing.

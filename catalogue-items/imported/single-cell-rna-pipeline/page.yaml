@@ -23,6 +23,7 @@ not_for:
   - "You need a complex model to merge many batches: use a scvi-tools or Seurat workflow instead."
 you_give:
   - Single-cell raw counts in h5ad or similar
+  - The number of cells and genes, and your computer's memory, so you know before you start whether the file will fit
   - Python 3.12 or newer with Scanpy
   - Sample and condition labels (optional)
   - Species and tissue notes (optional)
@@ -37,8 +38,9 @@ how_to_use:
   - Add your counts file. Say which samples and conditions you have, if you know them.
   - First ask your AI to run scripts/inspect_data.py on the file. It shows what the file holds, so you can confirm the values are raw counts before run_pipeline.py starts.
   - Ask your AI to run the whole pipeline in one go, or one step at a time so you can check each.
+  - A good run ends with a processed .h5ad file, figures, and marker CSV files under results/markers, one per cluster plus a combined table. Each table lists genes with their score and fold change.
   - Open the marker gene tables. Choose cell type names and ask your AI to add them to the data.
-  - If your data is a Seurat or SingleCellExperiment file, ask your AI to convert it to h5ad first. The conversion script is in references/r_interop.md and needs R.
+  - If your data is a Seurat or SingleCellExperiment file, ask your AI to convert it to h5ad first. The conversion script is not a separate file. Ask your AI to copy the code block under "Convert .rds to .h5ad" in references/r_interop.md into a new file named convert_rds_to_h5ad.R, then run it with Rscript. It needs R.
   - Next, run pseudobulk.py to compare conditions. Treat the marker tables as an exploratory first look only, and have a specialist check cell type names.
 output_sample:
   input:

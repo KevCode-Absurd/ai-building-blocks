@@ -32,7 +32,7 @@ you_get:
   - A list of people to tell
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
-  - Paste the skill text, then describe the change in a few lines.
+  - Paste the skill text, then describe the change in a few lines. The skill mentions ticket, project and chat tools, but they are optional. It works fully from pasted text, so ignore any placeholders about connected tools.
   - Add who is affected, how many people, and the planned date. Name who can roll it back if you know.
   - Read the risks and the rollback plan first. Fix anything that does not match your real setup.
   - Fill in any gaps your AI marked as missing, then send the request for approval.

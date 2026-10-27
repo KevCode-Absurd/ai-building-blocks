@@ -38,7 +38,7 @@ How to start:
 
 ## What you need
 
-This list replaces the general "Before you start" list above. There, "A brief" means your complaints and the screens they are about, and "Customer words" means the complaints themselves. Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never invent a complaint, a count or a quote.
+This list replaces the general "Before you start" list above. There, "Your question" means the screens or flows the complaints are about, and "Customer words" means the complaints themselves. Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never invent a complaint, a count or a quote.
 
 **What you need:**
 - **Complaints** (yours): support excerpts, reviews or survey comments the user has the right to use. Ask for dates and product versions. If they are missing, mark them `MISSING: date` or `MISSING: version` on each theme they affect.
@@ -72,7 +72,7 @@ Write `MISSING: <what>` next to the affected result. Carry on with work that doe
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list above. Suggest one next step in a short question, and say they can type their own:
+Ignore the "After this" list above and use only this list. Suggest one next step in a short question, and say they can type their own:
 - **Run the top research task** and bring back the answers.
 - **Turn a known problem into changes** with the [Turn a design review into fixes](https://useaiblocks.com/workflows/turn-a-design-review-into-fixes) workflow.
 - **Dig into one repeated mistake** with the [Hard-to-use thing diagnoser](https://useaiblocks.com/skills/hard-to-use-thing-diagnoser).

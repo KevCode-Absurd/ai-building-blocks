@@ -9,7 +9,7 @@ subhead: A small open model, downloaded, trained on your examples and ready to c
 explain: |
   A small open model, downloaded, trained on your examples and ready to chat with, without writing training code from scratch. You pick the model and data and get working commands.
 
-  It uses LitGPT, a clean library with more than 20 model designs, including Llama, Gemma, Phi, Qwen and Mistral. For one graphics card it suggests LoRA, a light method that fits in about 16 GB, and small models such as Phi-2 that use 8 to 12 GB. Full tuning of a 7B model needs 40 GB or more. It also covers pretraining from scratch and viewing logs. You need Python and a GPU.
+  It uses LitGPT, a clean library with more than 20 model designs, including Llama, Gemma, Phi, Qwen and Mistral. For one graphics card it suggests LoRA, a light method that fits in about 16 GB, and small models such as Phi-2 that use 8 to 12 GB. Full tuning of a 7B model needs 40 GB or more. It also covers viewing logs. Pretraining from scratch is out of scope here, because the data step needs a script that is not in this copy. You need Python and a GPU.
 when:
   - You want a small model that answers in your tone or format.
   - You have a single GPU and need a method that fits.
@@ -31,13 +31,15 @@ you_get:
   - Steps to chat with the result
   - How to watch training logs
 how_to_use:
+  - A chat AI cannot run these commands unless it has a code-running tool. You run them yourself on a computer with a GPU, then paste back any error so your AI can fix it.
   - Open Claude, ChatGPT or Gemini and paste in this skill.
   - Tell your AI which model you want, how much GPU memory you have and what the model should do.
   - Paste or describe your training examples. Your AI will put them in the right JSON format.
   - For gated models like Meta-Llama, sign in to Hugging Face, accept the licence and give your access token first.
-  - Run the commands your AI gives you on your own computer. This needs Python, LitGPT and a GPU. A chat window cannot run them for you, so paste any error back and ask for a fix.
-  - Two helper scripts named in the skill are not in this folder. Your AI will tell you what to do by hand for the pretraining data and GGUF steps. Fine-tuning from a JSON file does not need them.
-  - Next, chat with the tuned model, then merge the LoRA weights if you want one file to deploy.
+  - Run the commands your AI gives you on your own computer. This needs Python, LitGPT and a GPU.
+  - Test first. Run a short trial with a small --train.max_steps (for example 20) to check that the data loads and the memory fits. Only then start the full run.
+  - Pretraining from scratch is not covered by this page. The data preparation script is not in this folder, so use fine-tuning from a JSON file. The GGUF step is also skipped, and your AI will point you to the LitGPT and llama.cpp docs for it.
+  - Next, chat with the tuned model, then merge the LoRA weights if you want one file to deploy. The sample web server for your model has no login. Keep it on your own computer, and add an API key or a private network before anyone else can reach it.
   - Check that your tuned model appears in the out folder, then try the chat steps.
 output_sample:
   input:

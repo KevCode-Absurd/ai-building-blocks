@@ -17,6 +17,10 @@ metadata:
 
 # Using Cameras in MATLAB
 
+AI Blocks note on the licence: the licence link in the front matter above points to a different MathWorks page. In this catalogue, the LICENSE.md file in this folder governs (BSD 2-Clause, with the rule that you use it only with MathWorks products).
+
+What you hand back, in this order: 1. device listing code, 2. connect code, 3. capture code (a preview, then one snapshot or a set number of frames with timestamps), 4. clean-up code, 5. the list of support packages and vendor files to install first. Put each in its own code block with one line saying what it does.
+
 Use Image Acquisition Toolbox's `videoinput` as the primary interface for all camera workflows. Other interfaces (`webcam`, `gigecam`) are secondary and should only be used when explicitly requested or when `videoinput` is unavailable.
 
 ## When to Use

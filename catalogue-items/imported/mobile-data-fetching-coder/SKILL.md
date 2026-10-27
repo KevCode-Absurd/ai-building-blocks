@@ -12,6 +12,17 @@ license_source: https://github.com/expo/skills/blob/main/LICENSE
 
 # Expo Networking
 
+AI Blocks note on the licence: the MIT line in the front matter above is the original author's (Expo) header. The licence that applies to this copy in the AI Blocks catalogue is CC BY 4.0, as the LICENSE-CONTENT file in this folder says.
+
+**Core steps (the short version; the detailed guide has the full procedure).**
+1. Ask for the API base URL, the login method, the list of screens and the data each screen needs, and how fresh each piece of data must be.
+2. Write the fetch code first: plain `fetch` with error handling. Move to React Query for bigger apps or SWR for simpler ones.
+3. Set how long data stays fresh (`staleTime`), how often a failed request retries, and keep saved answers on the phone.
+4. Watch the connection with NetInfo, pause or resume requests, and show saved data when offline.
+5. Keep login tokens in `expo-secure-store`, with a refresh step. Never keep a secret key in app code.
+6. Put server addresses in `.env.development` and `.env.production` using `EXPO_PUBLIC_` names. Secret keys stay on the server side.
+7. Give the user one code file for each part (fetch, cache, offline, token storage, environment), each with a short note on what to test: the network off, an expired token refresh, and a search of app code for secret keys.
+
 **You MUST use this skill for ANY networking work including API requests, data fetching, caching, or network debugging.**
 
 ## Detailed Guide

@@ -5,11 +5,11 @@ name: Directory listing planner
 summary: Plan your directory listings for a software product. Give it your product details. You get a ranked directory list and listing text to submit by hand.
 job: grow-social
 headline: Directory listing planner
-subhead: A ranked list of directories where your software product should be listed, plus listing text ready to submit by hand. Directory links pass authority to your site and put you in front of people who are shopping.
+subhead: A ranked list of directories where your software product should be listed, plus listing text ready to submit by hand. The author says directory links can pass authority to your site and put you in front of people who are shopping. That is an estimate, not a checked fact.
 explain: |
-  A ranked list of directories where your software product should be listed, plus listing text ready to submit by hand. Directory links pass authority to your site and put you in front of people who are shopping.
+  A ranked list of directories where your software product should be listed, plus listing text ready to submit by hand. This is Corey Haines' directory-submissions skill, shared under the MIT licence. The author says directory links can pass authority to your site and put you in front of people who are shopping. That is his view, and the figures in the skill file are his estimates. They are not checked here, so check them on each platform's own site before you plan around them.
 
-  The skill sets three hard rules. Have a strong landing page live before submitting anywhere. Build destination pages before directories. And treat directories as a base layer, not your whole plan. Before you submit, it checks you have clean headings, a pricing page, policies, logos, real screenshots, a short demo video and structured data. It draws on a catalogue of directories and a set of positioning variants, so the descriptions differ between sites. The figures in the skill file are the original author's estimates and are not checked here. This is Corey Haines' directory-submissions skill, shared under the MIT licence.
+  The skill sets three hard rules. Have a strong landing page live before submitting anywhere. Build destination pages before directories. And treat directories as a base layer, not your whole plan. Before you submit, it checks you have clean headings, a pricing page, policies, logos, real screenshots, a short demo video and structured data. It draws on a catalogue of directories and a set of positioning variants, so the descriptions differ between sites. Claims such as AI engines citing high-rated directories, or Product Hunt weighting comment quality, are the author's opinion and are unverified.
 when:
   - You are launching a SaaS or AI product and want backlinks and discovery.
   - You do not know which directories are worth the time.
@@ -33,11 +33,11 @@ you_get:
   - Positioning variants
   - A submission order
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. Also paste the two reference files in its references folder, directory-list.md and positioning-variations.md. The skill depends on them for the directory list and the listing variants.
   - Paste your product details, landing page link and pricing. Add your marketing notes if you have them.
   - Read the readiness check first. Fix any missing items before you submit anywhere.
   - Submit by hand in the order given, using the listing text for each directory.
-  - Ask for a review plan only if you will follow each site's rules on asking for and rewarding reviews. Treat any figures in the plan as unsourced estimates and check them.
+  - Ask for a review plan only if you will follow each site's rules on asking for reviews. Do not offer incentives for reviews unless the platform's own rules explicitly allow it, and never tie a reward to a positive review. Treat any figures in the plan as unsourced estimates and check them.
   - The core plan needs no paid service. A paid G2 plan, a Product Hunt hunter and any other paid extra are optional, and each must follow that platform's rules. Check prices and rules on the platform's own site, since they change. Never buy upvotes or reviews.
 output_sample:
   input:

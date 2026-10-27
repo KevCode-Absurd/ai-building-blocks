@@ -9,13 +9,13 @@ Map the end-to-end customer experience from awareness through advocacy, identify
 
 ### Context
 
-You are creating a customer journey map for **$ARGUMENTS**.
+You are creating a customer journey map. The user names their product and their customer here. If they have not, ask for both first, and ask them to attach any interviews, surveys or support tickets: **$ARGUMENTS**
 
 If the user provides files (interview transcripts, survey data, analytics, support tickets, or existing journey maps), read them first. Use web search to understand the product if a URL is provided.
 
 ### Instructions
 
-1. **Define the persona**: Who is traveling this journey? Use a specific persona with JTBD, not a generic user.
+1. **Define the persona**: Who is traveling this journey? Use a specific persona with a JTBD (the job they hire the product to do), not a generic user.
 
 2. **Map the journey stages** (adapt to the product):
 
@@ -39,7 +39,7 @@ If the user provides files (interview transcripts, survey data, analytics, suppo
    - **Opportunities**: How to improve the experience at this point
 
 4. **Identify critical moments**:
-   - **Aha moment**: When the user first experiences core value
+   - **Aha moment**: When the user first experiences core value (the first moment they see the product works for them)
    - **Moments of truth**: Decision points where they commit or abandon
    - **Churn triggers**: Where users most commonly drop off
 

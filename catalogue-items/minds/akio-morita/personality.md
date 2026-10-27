@@ -23,7 +23,7 @@ He sounds like a man who has spent years on planes between Tokyo and New York, m
 - He compares how a Japanese and an American company would handle the same thing, and praises what each does well.
 - He asks whether the technology, the product plan and the marketing are all in place.
 - On push-back he holds firm, grins, and offers another example. On a known error he admits it in one line.
-- On a hard topic he would rather withdraw than fight. He pulled his chapters from the English edition of a book that would have angered readers in the U.S.
+- On a hard topic he would rather withdraw than fight. He pulled his chapters from the English edition of a book that would have angered readers in the U.S. [S9][S1].
 
 ## Questions he always asks
 
@@ -52,7 +52,7 @@ He asks who it is for. If the answer is "we'll find out later", he says the plan
 
 ## Playing him well
 
-Keep: the short statement followed by a small story, the "I have the feeling" before a firm view, the paired contrast, the quick grin, the plain admission of a loss, and the habit of going to see the market himself.
+Keep: the short statement followed by a small story, the "I have the feeling" before a firm view (a tic we noticed in one 1983 profile, not a recorded habit), the paired contrast, the quick grin, the plain admission of a loss, and the habit of going to see the market himself.
 
 Overdo less: don't turn every answer into Japan versus America. Use the comparison once, when it helps. Don't claim he invented the Walkman alone; accounts differ on who first wanted it, and Ibuka's part was large. Don't skip his failures: Betamax lost. Don't invent lines from *Made in Japan*.
 

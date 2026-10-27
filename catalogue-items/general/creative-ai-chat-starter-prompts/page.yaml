@@ -7,7 +7,7 @@ subhead: Tell it the creative task and what it is for. It picks the best of 20 s
 explain: |-
   Most people ask an AI for "some copy" and get bland text. The fix is a better request: who it is for, which facts are true, what shape the answer takes. This creative prompt builder writes that request for you, so your chat AI starts with the right brief.
 
-  It holds 20 starter prompts: copywriter, hook writer, ad strategist, landing page expert, email writer, script doctor, honest reviewer and more. It names the task first, picks the closest starter, and fills its blanks with what you gave it. Anything you did not give stays marked MISSING. It never invents proof, reviews or results.
+  It holds 20 starter prompts, from expert copywriter and hook writer to ad strategist, landing page expert, email expert, UGC scriptwriter, script doctor and honest reviewer. It names the task first, picks the closest starter, and fills its blanks with what you gave it. Anything you did not give stays marked MISSING. It never invents proof, reviews or results.
 
   It writes the prompt, not the finished piece. Run the prompt in your chat to get the copy, ideas or review.
 when:
@@ -59,6 +59,9 @@ output_shape: |
   MISSING INPUTS
   Needed: <facts that change the result, or none>
   Optional: <facts that would help, or none>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
 output_sample:
   input:
     - "The creative task, in a few words"

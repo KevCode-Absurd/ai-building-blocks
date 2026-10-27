@@ -7,7 +7,7 @@ subhead: Paste an image prompt or upload a portrait, and say whether it is a sti
 explain: |-
   Use this when you need a focused skin, hand and contact realism review. Use this for photorealistic adult faces/hands, beauty/UGC stills or portrait-to-video consistency. A stylized brief does not need photoreal skin correction.
 
-  Read the image if accessible; distinguish observation from prompt-only intent. Keep the chosen identity, age, skin tone and existing marks rather than adding arbitrary blemishes.
+  It says whether it saw your picture or only read your prompt. It keeps the face, age, skin tone and any marks you already have, and does not add blemishes.
 when:
   - You need a focused skin, hand and contact realism review.
   - You want a clear draft and checks from the material you already have.

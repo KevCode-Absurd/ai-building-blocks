@@ -9,7 +9,7 @@ headline: "New customer onboarding sequence writer"
 subhead: Give it your product, how long results take and how customers use it. It writes about six emails and four texts for days 0 to 14, a touch map out to day 100, a review and referral timing rule, and a survey that finds the habit linked to people staying.
 
 explain: |
-  Most cancels and lost second orders happen early. Customers wait for the box, feel unsure, and then either forget the product or stack up more than they use. One source says most churn happens in the first 100 days. The common fix is to send more emails, which backfires. In the supplement example, cancels clustered just after delivery, days 7 to 14, and every extra email in that window reminds people they could cancel. Check this against your own cancels by day.
+  Most cancels and lost second orders happen early. Customers wait for the box, feel unsure, and then either forget the product or stack up more than they use. One source says most churn happens in the first 100 days. The common fix is to send more emails, which backfires. In the supplement example, cancels clustered just after delivery, days 7 to 14, and every extra email in that window reminds people they could cancel. The timing here (most churn in the first 100 days, cancels in days 7 to 14, the coffee habit) comes from unnamed write-ups and one brand's example. Treat it as unverified hypotheses. Replace it with your own cancels by day before you set the quiet window.
 
   This skill teaches first, then goes quiet at the right time. It is heavy on education in days 0 to 7, backs off in days 7 to 14, and sends a short check-in after that. It uses a survey of how people fit the product into their day, because the habit linked to staying becomes the thing every email teaches. It branches for subscribers and one-time buyers.
 
@@ -38,7 +38,7 @@ how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Say whether this is for subscribers, one-time buyers or both, and paste your product facts and delivery time.
   - Paste survey answers if you have them. With few customers, say how people actually use it and refresh later.
-  - Check every claim about results and timing before you send. Only keep the "90 to 120 days" line if it is true for your product.
+  - Check every claim about results and timing before you send. Only keep a results-time line if it is true for your product. Use your own time-to-result data, not a default.
   - Build it in your email and SMS platforms, then compare the second-order rate and cancels by day with the quiet window on and off.
 output_sample:
   input:
@@ -81,7 +81,7 @@ how_it_works:
   - title: Writes the emails and texts
     text: A founder thank-you, a live-subscription note, use steps, week-one expectations and a consistency tip. Texts mirror email, every other day.
   - title: Sets review and referral timing
-    text: Triggers asks from the delivered event, and asks for referrals right after a good moment.
+    text: Triggers asks from the delivered event, and asks for referrals only after a confirmed positive use moment.
   - title: Adds the long map
     text: An insert, a community name, a reward after the second purchase, and a measure of second-order rate within 60 to 100 days.
 
@@ -141,9 +141,9 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Klaviyo", why: "It can send on the delivered event, branch subscribers from one-time buyers and run email and SMS from one flow."}
+    - {name: "Klaviyo", why: "Paid subscription. It can send on the delivered event (step 10), branch subscribers from one-time buyers and run email and SMS from one flow. The delivered-event trigger may need a paid plan."}
     - {name: "Any good chat AI", why: "Any current chat AI can write the copy once you give it the facts."}
-    - {name: "A subscription app such as Skio or Recharge", why: "It tells you who is a subscriber and when the next order ships."}
+    - {name: "A subscription app such as Skio or Recharge", why: "Paid subscription. It tells you who is a subscriber and when the next order ships (steps 4 and 8)."}
   inputs:
     - "Cancels by day since the first order"
     - "Retention by survey answer"

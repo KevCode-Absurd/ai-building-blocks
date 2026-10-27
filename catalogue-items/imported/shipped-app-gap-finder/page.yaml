@@ -9,6 +9,8 @@ subhead: A list of the gaps in a live app that AI-built projects often miss, fou
 explain: |
   A list of the gaps in a live app that AI-built projects often miss, found before a user or attacker finds them. It looks at the deployed product, not just the code in your editor.
 
+  Read this first: the audit runs an outside tool on your machine and sends your repo address and live link to a third-party service (api.commit.show). Run it only in a folder with no secrets, and only if you approve.
+
   It runs an outside audit of your repo and live URL using a command line tool. The checks cover database access rules, webhook handling, leaked secrets, permission grants, payment retries that could charge twice, missing indexes, monitoring and mobile use. Results are saved in a folder in the project so later sessions can read them without a re-run. It works best alongside the code-time security checks you already use, and is useful right after merging to main.
 
   Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (commitshow) says MIT. Credit goes to commitshow and sickn33.
@@ -33,7 +35,9 @@ you_get:
   - Fix suggestions
   - A saved report for later sessions
 how_to_use:
-  - "Check first: your repo must be public on GitHub, and it must not hold secrets or private files. The audit runs an outside npm package, pinned to commitshow@0.3.23, on your machine. What leaves your machine: the repo's address on GitHub, the public GitHub data about it, and your live link. These go to api.commit.show, a third-party service. The package itself runs with access to your local files and environment variables, so run it only in a folder with no secrets. Run it only if you approve all of that."
+  - "Check first: your repo must be public on GitHub, and it must not hold secrets or private files. Ask your AI to list every file in the folder, hidden ones too (ls -a), and look for .env files, keys and private files. Remove or move them before you go on. The audit runs an outside npm package, pinned to commitshow@0.3.23, on your machine. What leaves your machine: the repo's address on GitHub, the public GitHub data about it, and your live link. These go to api.commit.show, a third-party service. The package itself runs with access to your local files and environment variables, so run it only in a folder with no secrets. Run it only if you approve all of that."
+  - "Do not want anything sent to api.commit.show? Do not run the audit as written. The author lists a --no-network option for local-only checks. It is not tested here and it skips the live link and GitHub checks, so the score is partial."
+  - "Know the limits: a result is reused for 7 days, a free anonymous run is capped at 5 per repo per day, and --refresh counts against those limits."
   - Open your AI in your project folder. It needs to run code and read files. Chat-only AI cannot run this.
   - Stop here unless approved. The next step runs an npm package that can read your local files and environment variables. Only run it in a folder with no secrets.
   - "Ask your AI to run: mkdir -p .commitshow, then npx commitshow@0.3.23 audit . --json, saving the result in .commitshow/audit.json. The first run takes 60 to 90 seconds."

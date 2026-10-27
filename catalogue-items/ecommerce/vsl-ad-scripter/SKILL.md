@@ -55,7 +55,7 @@ Does not fit:
 
 ## Steps
 1. **Confirm the fit.** A VSL suits complicated products that are hard to explain, low-trust categories, and new categories that need education first. If the product is simple, say a short demo will do.
-2. **Choose the starting length.** Start at 1 to 3 minutes. The range is 45 seconds to 20 minutes. Plan a longer master edit only if you can afford the edit.
+2. **Choose the starting length.** Start at 1 to 3 minutes. The range is 45 seconds to 20 minutes. Plan a longer master edit only if you can afford the edit. The 5-minute cut is optional and needs a master of at least 5 minutes. With a 1 to 3 minute master, hand back only the 45-second and 2-minute cuts.
 3. **Write the seven parts in order, with timings.**
    1. **Hook.** Speak to the people who have the problem. Do not open with the brand story. A call-out to several closely related groups can widen the audience (for example, naming three related conditions), but each group must still be relevant to the product.
    2. **Problem.** Use the customer's words. Teach why it happens, so the viewer does not yet see a product.
@@ -68,8 +68,8 @@ Does not fit:
 5. **Complete the bridge slowly.** Do not jump from education straight to "buy our product". A bridge that is too aggressive loses viewers. Explain the rest of the why first (for example, the full set of things the product needs to work), then bring in the product.
 6. **Use numbers carefully.** A statistic that shows many people have the problem can widen the audience. Only use a figure the store can source, and explain any unfamiliar word. Do not invent or round up a number.
 7. **Write 3 to 6 hooks once the body is done.** Many viewers leave before the body starts, so hooks are the main thing to test. Do not quote a drop-off percentage as fact. Tell the user to read their own watch-time numbers.
-8. **Plan the cuts.** From one master edit, make a 45-second, a 2-minute and a 5-minute version. Make modular variants: mechanism before the problem in one, problem agitation pulled earlier in another. Test them against each other.
-9. **Write editor notes.** Mix kinds of footage (real customer video, AI-made customer-style video, animation, animated stills) but keep one consistent look: mostly customer video, or all animation. Use large, readable text, because most people watch on a phone. Check who your audience is before you choose text size. Do not show made-up people as real customers, doctors or experts. Say any visuals are not a real person where that matters.
+8. **Plan the cuts.** From one master edit, make a 45-second and a 2-minute version, and a 5-minute version only if the master runs 5 minutes or more. Make modular variants: mechanism before the problem in one, problem agitation pulled earlier in another. Test them against each other.
+9. **Write editor notes.** Mix kinds of footage (real customer video, animation, animated stills, product footage) but keep one consistent look: mostly customer video, or all animation. Use large, readable text, because most people watch on a phone. Check who your audience is before you choose text size. Never use AI-made or actor footage that looks like a real customer, doctor or expert, and never present it as a testimonial. Any person on screen who is not a real customer must be shown as an actor or an illustration, and labelled so where that matters.
 10. **Write the landing page brief.** Send people to a page built for this VSL, such as an advertorial or a dedicated page, not a standard product page, so the story carries on. List the parts the page must repeat.
 11. **Run the checks** and fix any that fail.
 

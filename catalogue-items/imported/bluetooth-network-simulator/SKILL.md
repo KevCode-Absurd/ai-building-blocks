@@ -1,7 +1,7 @@
 ---
 name: matlab-simulate-bluetooth-network
 description: >
-    Simulate Bluetooth system-level networks using the Bluetooth Toolbox. Use this skill for any Bluetooth topology: BLE ACL (Asynchronous Connection-Less) data connections, CIS (Connected Isochronous Stream) and LE Audio for stereo speakers or hearing aids, BLE GAP (Generic Access Profile) connection establishment with advertising and scanning, Classic BR/EDR piconets with ACL data and SCO (Synchronous Connection-Oriented) voice links, and BLE+BR/EDR coexistence with adaptive frequency hopping. Covers bluetoothLENode, bluetoothNode, bluetoothLEConnectionConfig, bluetoothLECISConfig, bluetoothLEGAPConfig, bluetoothConnectionConfig, configureConnection, kpi (), updateChannelList, and all Bluetooth statistics.
+    Simulate Bluetooth system-level networks using the Bluetooth Toolbox. Use this skill for any Bluetooth topology: BLE ACL (Asynchronous Connection-Less) data connections, CIS (Connected Isochronous Stream) and LE Audio for stereo speakers or hearing aids, BLE GAP (Generic Access Profile) connection establishment with advertising and scanning, Classic BR/EDR piconets with ACL data and SCO (Synchronous Connection-Oriented) voice links, and BLE+BR/EDR coexistence with adaptive frequency hopping. Covers bluetoothLENode, bluetoothNode, bluetoothLEConnectionConfig, bluetoothLECISConfig, bluetoothLEGAPConfig, bluetoothConnectionConfig, configureConnection, kpi(), updateChannelList, and all Bluetooth statistics.
 license: https://www.mathworks.com/content/dam/mathworks/license/pmrl/license.md
 compatibility: ">=R2026a"
 metadata:
@@ -33,7 +33,20 @@ This skill needs MATLAB R2026a or later with the Bluetooth Toolbox, which are pa
 4. Reading the numbers: one short paragraph on what they mean for the person's case.
 5. Next change to try: one setting to change and compare.
 
-If the companion `matlab-simulate-wireless-network` skill is not available, follow its order: init the simulator, set traffic, set mobility, add statistics, addNodes, run.
+If the companion `matlab-simulate-wireless-network` skill is not available (it is a separate MathWorks skill, not part of this item), follow its order. This is an outline of one BLE data link, not code to paste. Check each function name and argument against the MATLAB help for your release:
+
+```matlab
+sim = wirelessNetworkSimulator.init;               % 1. start the simulator
+central = bluetoothLENode("central");              % 2. create the nodes
+peripheral = bluetoothLENode("peripheral");
+cfg = bluetoothLEConnectionConfig;                 % 3. link them, one call per peripheral
+configureConnection(cfg, central, peripheral);
+% 4. add a traffic source (DataRate is in Kbps), then set mobility
+% 5. switch on statistics, then addNodes(sim, [central peripheral])
+% 6. run(sim, runTime), then read kpi() from the layer in the table below
+```
+
+The `references/*.md` files in this folder hold the full pattern for each Bluetooth type.
 
 ## When to Use
 

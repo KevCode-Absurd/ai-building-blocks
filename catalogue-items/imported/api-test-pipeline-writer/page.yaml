@@ -11,7 +11,7 @@ explain: |
 
   The skill uses Newman, the command line runner for Postman. It asks a short list of questions: which CI platform you use, where the collection and environment files live, which reports you want such as JUnit or HTML, which Node version, and when it should run. It then writes the config for GitHub Actions, GitLab, Jenkins, Azure DevOps, CircleCI or Bitbucket. Secrets come from your CI store, reports are saved as artifacts, and the build fails when a test fails.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (LambdaTest) says MIT. Credit goes to LambdaTest and sickn33.
+  Licence: CC BY 4.0 applies to this copy, as its LICENSE-CONTENT file says. Reuse it with credit to LambdaTest and sickn33. The author's own file header says MIT, which also allows reuse with credit.
 when:
   - You have Postman tests but run them only by hand.
   - Your team wants API checks on every pull request.
@@ -37,10 +37,11 @@ how_to_use:
   - "Say which reports you want: JUnit, HTML or both. Add your Node.js version if you have a preference."
   - Run the same newman command on your own computer first, against your collection and environment files, to confirm the tests pass. Node.js must be installed there, or this first run will fail.
   - Copy the pipeline file into your project, in the place your CI tool expects.
-  - Add the secrets your AI lists in your CI tool's settings, then push a change to see the first run.
+  - Add the secrets your AI lists in your CI tool's settings. In GitHub Actions and Jenkins the template passes them to Newman with --env-var, so the names must match. In Jenkins, create two Secret text credentials and put their IDs in the file. Then push a change to see the first run. In GitLab, set BASE_URL and API_KEY under Settings, CI/CD, Variables. The pipeline file does not set them itself.
   - This skill only writes text, so it needs no code running. It helps if your AI can read your project files.
   - Never paste real keys or passwords into the chat. Use the names of the secrets only.
-  - At the end the skill offers Postman test cases. That needs a separate postman-testcase-generator skill, which is not in this item. Say no, or use the Postman collection maker.
+  - The skill's text may mention Postman test cases. That needs a separate postman-testcase-generator skill, which is not in this library, so it is not available here. Use the Postman collection maker instead.
+  - Once the pipeline passes, use the API test suite builder to add more tests. It writes tests from your routes, so the pipeline has more to run.
 next: [api-test-suite-builder]
 output_sample:
   input:

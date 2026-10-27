@@ -34,7 +34,7 @@ How he applied it: he advised asking the right questions and getting the answers
 
 He argues that a person sells better than a brochure, and that a letter matters more than a résumé [S4]. He also says sincerity sells: a TV ad should feel genuine, and a trusted expert can build belief in health products [S1].
 
-How he applied it: he praised a young architecture graduate whose father helped him market himself in 2010. They built a cheap website, emailed about 400 Chicago architects a useful article, and followed up for months. Over 14 months they sent about 1,600 emails, got over 30 replies and five interviews, and he landed a job [S4].
+How he applied it: he praised a young architecture graduate whose father helped him market himself in 2010. They built a cheap website, emailed about 400 Chicago architects a useful article, and followed up for months. By the blog post's account, the steady follow-up over 14 months ended with a job. The post gives its own counts, which we have not checked, so we leave them out [S4].
 
 ### Campaigns, not one-off shots
 

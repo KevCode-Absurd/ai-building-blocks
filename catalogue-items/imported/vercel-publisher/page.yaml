@@ -9,13 +9,18 @@ subhead: Say deploy my app and get a live address back. It uses the Vercel comma
 explain: |
   Say deploy my app and get a live address back. It uses the Vercel command line tool if you have it, and a no-login fallback if you do not.
 
-  The skill checks whether the Vercel CLI is installed, then runs the deploy command with a ten minute allowance, since builds can be slow. By default it publishes a preview. Production happens only if you say so, with the production flag. If there is no sign-in, a bundled script packages the project, detects the framework, uploads it and returns two links: a preview link and a claim link that lets you take ownership of the deployment later. If the network blocks the deploy, it reruns with wider access.
+  The skill checks whether the Vercel CLI is installed, then runs the deploy command with a ten minute allowance, since builds can be slow. By default it publishes a preview. Production happens only if you say so, with the production flag. If there is no sign-in, a bundled script packages the project, detects the framework, uploads it and returns two links: a preview link and a claim link that lets you take ownership of the deployment later. If the network blocks the deploy, it shows you the command and asks before it reruns it with wider access.
+
+  Before you use the no-login route: it uploads your whole project folder to a third-party deploy service (codex-deploy-skills.vercel.sh) and the preview link is public until you claim it.
+
+  Source: copied from OpenAI's vercel-deploy skill (github.com/openai/skills) under the MIT licence, as the LICENSE.txt file in this item says. We gave it a plain name and rewrote this page. The skill text is unchanged apart from added warnings about secrets and network access.
 when:
   - You want a shareable link for a prototype in minutes.
   - You do not have a Vercel account yet and want to try it.
   - Your build is slow and a default time limit keeps cutting it off.
   - You need to ship to production after checking the preview.
 not_for:
+  - Your project is private and you cannot make a public link. The no-login route sends the whole folder to a third-party service and makes the preview public, so use the signed-in route with your own Vercel account.
   - Your project holds secrets, .env files or private data. Remove them first, or use the Vercel CLI with your own account.
   - You need a site that stays private. The no-login preview link is public, and your files go to Vercel's no-login deploy service (codex-deploy-skills.vercel.sh), so use your own Vercel account with access settings.
   - You want the AI to test the live site after it deploys. This skill only returns the link, so check the site yourself.
@@ -32,7 +37,7 @@ how_to_use:
   - Open an AI that can run commands and see your project folder, such as Claude Code. Add the skill folder to it, or paste in the SKILL.md text. If you want the signed-in route, install the Vercel command line tool first with npm install -g vercel, then run vercel login. Skip this if you want the no-login route.
   - Remove secrets and .env files from the project first. The no-login deploy uploads the whole folder, and the preview link is public. Your AI will list what it is about to upload. Read that list and stop it if you see a key, token or private file.
   - Say "deploy my app". Your AI checks for the Vercel CLI and deploys a preview.
-  - If you are not signed in to Vercel, it uses the no-login method. You get a preview link and a claim link.
+  - If you are not signed in to Vercel, it can use the no-login method. It only does that after it has shown you the list of files it will upload and you have said yes. You then get a preview link and a claim link. The preview link is public until you claim it, and the skill has no way to delete it. Claim it and remove it in your own Vercel account if you want it gone.
   - Open the preview link and check the site. Then say "deploy to production" if you want it live.
   - If the deploy fails on the network, your AI will show you the exact command and ask before it reruns it with wider access. Read it, and say yes only if you are happy with it.
   - When the site is ready for good, switch to vercel-deployer. It checks the team, branch and project link, and sets up deploys on every push. Use this skill for a quick link. Use that one when the site will stay live.
@@ -52,5 +57,5 @@ output_sample:
     - name: Production deploy
       contains: A live production release, made only when you clearly ask for it.
     - name: Network fix offer
-      contains: If the deploy is blocked, a request to rerun it with wider network access.
+      contains: If the deploy is blocked, the exact command and a question asking if you agree to rerun it with wider network access.
 next: [vercel-deployer]

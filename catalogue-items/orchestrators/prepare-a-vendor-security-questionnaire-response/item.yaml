@@ -32,8 +32,9 @@ steps:
       defines the response scope. Hands step 2 the checklist of questions with
       the proof each needs.
   - uses: spreadsheet-checker
-    note: Uses your own evidence sheet, not step 1's output, and takes step 1's
-      checklist as the audit report to check against. Builds a
+    note: Takes two inputs. One is your own evidence files with their dates. The
+      other is step 1's checklist of questions and proof types, which it checks
+      the evidence against. Builds a
       question-to-evidence table where each proposed yes has a dated source, the
       right scope and a visible gap when proof is absent. Hands step 3 the
       checked table.

@@ -9,7 +9,7 @@ subhead: A finished analysis turned into a write-up that someone else can read, 
 explain: |
   A finished analysis turned into a write-up that someone else can read, trust and rerun. It covers the question, the data, the method, the results and the steps to repeat it, so your future self will not have to guess.
 
-  First it decides who is reading: data people, business people or both. Then it writes the business context, notes each data source with its dates, row counts and known problems, and explains the method, including tool versions and the choices made. Results come in order of importance with captioned charts. Each finding links to a business meaning and a next action. The last section gives the rerun steps.
+  The write-up has six sections, in this order: business context, data sources, methodology, results, insights and reproducibility. First it decides who is reading: data people, business people or both. Then it writes the business context, notes each data source with its dates, row counts and known problems, and explains the method, including tool versions and the choices made. Results come in order of importance with captioned charts. Each finding links to a business meaning and a next action. The last section gives the rerun steps.
 when:
   - You are about to share an analysis and want it documented properly.
   - You are handing a notebook to a teammate.
@@ -33,8 +33,8 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
   - Paste your code and outputs. Add the business question, who asked, your key findings, data source details and tool versions.
   - "Say who will read it: data people, business people or both."
-  - Check the data and method sections first. Fix any detail the AI guessed or marked as missing.
-  - Share the write-up, or file it in your team archive so it can be rerun later.
+  - Check the data and method sections first. Anything not in what you pasted, such as a row count, date range or tool version, should show as MISSING. Fill it in yourself. Do not accept an estimate.
+  - Have the person who owns the question sign off the write-up before you share it. File it in your team archive, and set a date to review it or rerun the analysis.
 output_sample:
   input:
     - Your code (SQL, Python or notebook) and its outputs

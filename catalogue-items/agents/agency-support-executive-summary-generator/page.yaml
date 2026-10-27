@@ -35,7 +35,7 @@ you_give:
   - The report, analysis, data or notes to summarise. Paste it or attach the file.
   - Who will read the summary and what decision they must make.
   - A topic name for the title.
-  - Owners and deadlines that already exist, such as "Maria owns this, due 15 June" (optional).
+  - Owners and deadlines that already exist, such as "[NAME] owns this, due [DATE]" (optional).
 you_get:
   - A summary of 325 to 475 words, never over 500.
   - Five sections: situation, key findings, business impact, recommendations and next steps.

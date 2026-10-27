@@ -5,11 +5,13 @@ name: Internal update writer
 summary: "Write an internal update from your facts: a team update, newsletter, FAQ answer or status report, in a clear format your readers can scan fast."
 job: organise-work
 headline: Internal update writer
-subhead: A status report, leadership update, newsletter, FAQ answer or incident note in the right format, written from the facts you give. Each type has its own guideline, so the result reads as it should for that audience.
+subhead: A team update, newsletter, FAQ answer, status report, leadership update or incident note, written from the facts you give. Four format guides cover these. Status reports, leadership updates and incident notes use the general one.
 explain: |
-  A status report, leadership update, newsletter, FAQ answer or incident note in the right format, written from the facts you give. Each type has its own guideline, so the result reads as it should for that audience.
+  A team update, newsletter, FAQ answer, status report, leadership update or incident note, written from the facts you give. The result reads as it should for that audience.
 
-  The skill first names what kind of message you need. It then loads the matching guide: the progress, plans and problems layout for team updates, a newsletter template, FAQ answers, status reports, leadership updates, project updates or incident reports. It fits your facts into that structure, keeps the points short and puts the key message first. Use it when you spend too long on the same kinds of messages.
+  The skill first names what kind of message you need. It then loads the matching guide. Only four guides exist: 3p-updates (progress, plans and problems for team updates), company-newsletter, faq-answers and general-comms. Status reports, leadership updates, project updates and incident notes all use general-comms. It fits your facts into that structure, keeps the points short and puts the key message first. Use it when you spend too long on the same kinds of messages.
+
+  Source note: this is a copy of the internal-comms skill from Anthropic's public skills repository, shared under the Apache 2.0 licence (the LICENSE.txt file). The format guides in the examples folder come from that skill. What this version adds: a plain name, a staff-only limit, the not-for guidance and the how-to steps. The skill text and the four guides are unchanged.
 when:
   - You write a weekly team update and want it faster.
   - You must report an incident to the company.
@@ -31,10 +33,11 @@ you_get:
   - A tone suited to the audience
 how_to_use:
   - "Gather your facts: what is done, what is next and what is stuck. Add dates and owners if you have them."
-  - Open Claude, ChatGPT or Gemini. Upload the whole skill folder, including the examples folder, because the format guides live there. Pasting only the skill text leaves them out.
+  - Open Claude, ChatGPT or Gemini. Upload the whole skill folder, including the examples folder, because the format guides live there. Claude skills and ChatGPT project files can take a folder. If yours cannot, paste the guide you need from the examples folder after the skill text. The four guides are 3p-updates, company-newsletter, faq-answers and general-comms. Pasting only the skill text leaves them out.
   - Say what kind of message you need and who will read it. Paste your facts.
+  - "For a status report, ask for these sections: headline, what changed, impact, next action, owner and date. For an incident note, ask for: headline, what happened and when, who or what was affected, what was done, next action, owner and date. Use only facts you gave, and mark anything missing as [MISSING]."
   - Read the draft. Check every date, name and claim against your facts, and fix anything that is off.
-  - Send it where your readers look. Updates go to your team channel, leadership notes by email, incident notes to the incident log. Reuse the same format next time.
+  - Send it where your readers look. Updates go to your team channel, leadership notes by email, incident notes to the incident log. Reuse the same format next time. For an incident note, also log it in your incident record. To go further, pair a status report with a leadership update.
 output_sample:
   input:
     - "The facts: what got done, what comes next and what is stuck"

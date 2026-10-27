@@ -10,6 +10,8 @@ explain: |
   Drop in a meeting recording and get back a transcript with each speaker named, plus a summary, the decisions made and the action items. You stop replaying audio to find who said what.
 
   The recording is checked for format and size, cleaned of hum, clicks and echo, and levelled out. Speakers are told apart by voice. A speech-to-text tool such as Whisper or Deepgram then writes the words with timestamps. The result is grouped into topics, decisions, open questions and tasks. You choose Markdown, JSON or plain text, and can give speaker names and the main language. It needs a speech-to-text service to run.
+
+  This is a copy of a skill by Burhan Sebin, shared under the MIT licence (the LICENSE file in this item). It was not written for this library. The original is in the seb1n/awesome-ai-agent-skills repo on GitHub.
 when:
   - You recorded a sprint planning call and need a written record.
   - You joined a long call and want only the decisions and tasks.
@@ -32,9 +34,10 @@ you_get:
 how_to_use:
   - Check that you can run code and upload audio files in your AI tool. Without that, you can only paste in a transcript you already have.
   - Choose a speech-to-text tool such as Whisper or Deepgram. Whisper can run on your own computer. Deepgram is a paid service and needs an API key.
-  - Before you upload, make sure everyone in the meeting agreed to be recorded, and that your data rules allow sending the audio to an outside speech-to-text service. Whisper on your own computer keeps the audio with you. Deepgram and other hosted services receive it.
-  - Upload your recording. Add speaker names, the main language and the format you want.
-  - Ask your AI to make the meeting notes from the recording. Your AI does the audio cleanup, the transcript and the first summary. You check the speaker names against the recording and fill any owner or date marked [unassigned] or [TBD].
+  - Before you upload, make sure everyone in the meeting agreed to be recorded, and that your data rules allow sending the audio to an outside speech-to-text service. Whisper on your own computer keeps the audio with you. Deepgram and other hosted services receive it. Telling speakers apart by voice uses voiceprints, which count as biometric data in some places. Check your local privacy rules, and tell people before you do it.
+  - Upload your recording. Add speaker names, the main language and the format you want. If anyone has not agreed to voice matching, tell your AI to skip it and label speakers by the names you give.
+  - 'Paste this prompt with the file: "Make meeting notes from this recording. Speakers: [NAMES]. Language: [LANGUAGE]. Format: [MARKDOWN, JSON OR TEXT]." Your AI cleans the audio, writes the transcript and drafts the summary.'
+  - Fill any owner or date marked [unassigned] or [TBD]. Do not leave them for your AI to guess.
   - Check speaker names, numbers and deadlines against the recording before you send the action items on.
   - Read the transcript marks for unclear parts, and fix names and tasks that look wrong.
   - Copy the action items into your task tracker or send them to the team.

@@ -144,7 +144,7 @@ improve:
 works_best_with:
   tools:
     - name: Claude Code
-      why: It can keep the weeks and definitions files between runs and run every Monday.
+      why: It can keep the weeks and definitions files between runs. You start each run by hand every Monday.
     - name: Your billing tool
       why: Export per-customer plan, price, start, cancel and payments. A read-only connection lets the tracker read them directly.
   inputs:

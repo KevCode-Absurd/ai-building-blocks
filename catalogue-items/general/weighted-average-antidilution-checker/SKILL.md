@@ -40,6 +40,8 @@ How to start:
 
 ## What you need
 
+The "question" and "deal terms" in the "Before you start" block above mean the charter clause, the old price, and the issue price and shares listed here. Ignore the spreadsheet and Node.js lines unless the user asks for a workbook. Do the sums in the chat and show each one.
+
 - **The charter clause** that sets the conversion price reset, word for word.
 - **Old conversion price** for the series.
 - **A:** the share count the clause defines (broad or narrow based).
@@ -70,7 +72,7 @@ Build a workbook only if one is asked for and you have a spreadsheet tool. Give 
 
 The included `examples/model.xlsx` is a focused editable example using illustrative figures only. `references/model.json` defines its inputs, calculations, units and expected fixtures. It demonstrates the calculation specified below; it is not a substitute for the complete source-driven work above.
 
-Illustrative figures only. A100,C40,old price10 and consideration200 give B20 and price60/7. Consideration400 leaves conversion price10.
+Illustrative figures only. With A = 100, C = 40, old price = 10 and consideration = 200, B = 20 and the new price = 60/7 (about 8.57). With consideration = 400, B = 40 and the conversion price stays 10.
 
 Run `node scripts/run-model.mjs references/model.json` for the illustrative baseline. For actual numbers, provide a complete numeric input object: `node scripts/run-model.mjs references/model.json inputs.json`. Every input is required; rates use decimal fractions and units must match the schema. The script performs local arithmetic and rejects missing or invalid inputs. It does not fetch data, inspect contracts or validate source truth. Save its output and the actual workbook check results separately.
 
@@ -97,6 +99,14 @@ These links identify public methods and definitions. All instructions and practi
 
 ## Hand back
 
-Return the actual native files, source index, dated assumptions, reconciliations, supported conclusions and unresolved MISSING: lines. State which checks ran and end with CHECKS MISSED: none or the exact outstanding checks. Keep unsupported financial or legal conclusions unresolved.
+Use these five parts, in this order:
+
+1. **Revised conversion price and ratio:** the new price and the protected-series ratio, or the old price if no reset applies.
+2. **Scope and dated sources:** the charter and records used, with dates.
+3. **Inputs and assumptions:** each input with its source, and any assumption where the charter was unclear.
+4. **Model calculations and reconciliations:** the steps that find B and the new price, with the checks that tie back to the inputs.
+5. **MISSING and CHECKS MISSED:** inputs not supplied and checks that failed or could not run, or none.
+
+If a workbook was built, also say which file checks ran. Return the actual native files, source index, dated assumptions, reconciliations, supported conclusions and unresolved MISSING: lines. State which checks ran and end with CHECKS MISSED: none or the exact outstanding checks. Keep unsupported financial or legal conclusions unresolved.
 
 Next steps: send the result, the clause you read and your assumptions to your startup lawyer to confirm the charter reading, then update the cap table. Do not treat this as legal advice.

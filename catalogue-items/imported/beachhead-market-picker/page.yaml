@@ -10,6 +10,8 @@ explain: |
   One starting customer segment you can win, and a plan to grow from there into the mainstream. Describe your product and your first users, and the AI uses Geoffrey Moore's Crossing the Chasm to see where you are on the adoption curve.
 
   It guides you to pick a single point of attack, assemble the whole product with partners, define the competitor to beat, and launch with positioning that feels like an evolution rather than a revolution. After that comes the bowling pin sequence, moving to neighbouring segments. A quick diagnostic scores you out of 10, names the weak rows and gives a fix for each. It has a special section for freemium software.
+
+  This is a renamed copy of the crossing-the-chasm skill by wondelai (Wondel.ai), shared under the MIT licence. The method is the original. We changed only the name and this page.
 when:
   - Early fans love your product but the mainstream ignores it.
   - You are targeting five segments and winning none.
@@ -31,8 +33,8 @@ you_get:
   - A 0 to 10 diagnostic score with fixes
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill text. It needs no code, files or paid tools.
-  - Describe your product and what it does. Say who uses it today and why they like it. Before it starts, your AI needs the full product description and a list of the named segments you are weighing, so the brief is complete.
-  - List the segments you are thinking about. Add your partners and references if you have them (optional).
+  - Gather first: a product description, your current users and why they like it, a named list of the candidate segments, and any partners (optional). Your AI needs these to write a complete brief.
+  - Paste them in, one item per heading, and add your partners and references if you have them.
   - Ask your AI to pick one beachhead segment and score you with the quick diagnostic.
   - Check the result against what you know about your customers. Fill in any messaging templates with real customer words before you use them.
   - Work through the fixes for the weak rows, then run it again.

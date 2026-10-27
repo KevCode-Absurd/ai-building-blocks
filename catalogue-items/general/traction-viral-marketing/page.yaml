@@ -16,11 +16,12 @@ explain: >-
   An invitation within an existing customer account is not a new acquired customer. A coefficient above one alone does not prove sustainable growth when retention is weak.
 when:
   - Your product has a natural moment where one user needs another person, and you want to test an invite.
+  - Your growth would come from your own users inviting others. If it would come from a deal with another company, use the Partnership experiment planner (traction-business-development) instead.
   - You need a practical way to find customers for a software business.
   - You want to test a growth idea before committing more time or money.
 not_for:
-  - "Your product is for one person and has no natural moment to invite others: pick a different channel from the Traction workflow."
-  - "You sell through sales calls and invites do not create buying accounts: use the Traction workflow to compare all 19 channels."
+  - "Your product is for one person and has no natural moment to invite others: pick a different channel from the Find your SaaS growth channel workflow."
+  - "You sell through sales calls and invites do not create buying accounts: use the Find your SaaS growth channel workflow to compare all 19 channels."
   - "You want a ready campaign sent or published for you: this plan sends, spends and publishes nothing, so ask a person or run it yourself."
 you_give:
   - A public product link or pasted product and pricing text
@@ -71,7 +72,7 @@ how_it_works:
   - title: Separate new accounts from team invites
     text: Separate team invitations inside one paying account from new buying accounts. Find where a user naturally needs another person to finish a useful job.
   - title: Measure the loop on one cohort
-    text: Estimate invites per eligible active user, invitation-to-activation rate and cycle time for the same cohort. Use their product as the loop, without copying another company's creative.
+    text: Estimate invites per eligible active user, invitation-to-activation rate and cycle time for the same cohort. Invites that lead to activation per active user = invites per user × activation rate (for example [INVITES PER USER] × [ACTIVATION RATE]). Use their product as the loop, without copying another company's creative.
 output_shape: |
   Recommendation: <test now / later / weak fit, with reason>
   Evidence: <source URL, access date, fact, implication>

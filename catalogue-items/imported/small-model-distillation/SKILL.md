@@ -82,6 +82,21 @@ pip install -e .
 
 ### Basic Knowledge Distillation
 
+Before you run: define `dataset` first. A minimal version, using your own prompts in `my_prompts`:
+
+```python
+my_prompts = ["[YOUR TRAINING PROMPT 1]", "[YOUR TRAINING PROMPT 2]"]  # replace with your task prompts
+
+def encode(text):
+    enc = tokenizer(text, return_tensors="pt", truncation=True, max_length=512)
+    return {"input_ids": enc["input_ids"][0], "attention_mask": enc["attention_mask"][0], "labels": enc["input_ids"][0].clone()}
+
+dataset = [encode(t) for t in my_prompts]
+# With batch_size=1 each item needs a batch dimension: use a collate function that stacks (or unsqueezes) the tensors.
+```
+
+Run this after the tokenizer is loaded in step 1 below, and move each batch to the models' devices (`batch = {k: v.to(student.device) for k, v in batch.items()}`) before the forward pass. The teacher and the student may sit on different devices.
+
 ```python
 import torch
 import torch.nn.functional as F
@@ -161,11 +176,13 @@ for batch in dataloader:
     optimizer.zero_grad()
 ```
 
-### MiniLLM (Reverse KLD)
+### Per-token reverse KL (simplified, not full MiniLLM)
 
-**Source**: arXiv 2306.08543 (2024)
+**Source of the idea**: arXiv 2306.08543 (MiniLLM)
 
-**Innovation**: Use reverse KLD instead of forward KLD for better generative model distillation.
+**Read this first**: the code below is a simplified per-token reverse KL. It is not the MiniLLM method. MiniLLM trains on text the student samples and uses a policy gradient (see references/minillm.md). Do not tell the user they ran MiniLLM.
+
+**Idea**: use reverse KL instead of forward KL, which the paper argues suits free-text generation.
 
 ```python
 def reverse_kl_loss(student_logits, teacher_logits, temperature=1.0):
@@ -184,18 +201,19 @@ def reverse_kl_loss(student_logits, teacher_logits, temperature=1.0):
 
     return reverse_kl * (temperature ** 2)
 
-# Training with MiniLLM
+# Training with the simplified reverse KL (needs the teacher, student, dataloader and optimizer from Quick Start above)
 for batch in dataloader:
     with torch.no_grad():
         teacher_logits = teacher(**batch).logits
 
     student_logits = student(**batch).logits
 
-    # Reverse KLD (better for generation)
+    # Reverse KL (the paper argues it suits generation; test it on your task)
     loss = reverse_kl_loss(student_logits, teacher_logits, temperature=1.0)
 
     loss.backward()
     optimizer.step()
+    optimizer.zero_grad()
 ```
 
 **Why reverse KL?**
@@ -207,6 +225,8 @@ for batch in dataloader:
 
 ```python
 # Generate synthetic data from teacher, train student to imitate
+# Needs the teacher, student and tokenizer loaded as in Quick Start above.
+from transformers import DataCollatorForLanguageModeling, Trainer, TrainingArguments
 
 # 1. Generate synthetic responses from teacher
 prompts = ["Explain AI:", "What is ML?", "Define NLP:"]
@@ -219,16 +239,20 @@ for prompt in prompts:
     teacher_responses.append(response)
 
 # 2. Train student on teacher's responses (standard fine-tuning)
-train_dataset = [
-    {"text": f"{prompt}\n{response}"}
-    for prompt, response in zip(prompts, teacher_responses)
-]
+# Tokenise first: Trainer needs input_ids, attention_mask and labels, not raw text.
+tokenizer.pad_token = tokenizer.pad_token or tokenizer.eos_token
+train_dataset = []
+for prompt, response in zip(prompts, teacher_responses):
+    enc = tokenizer(f"{prompt}\n{response}", truncation=True, max_length=512)
+    enc["labels"] = enc["input_ids"].copy()
+    train_dataset.append(enc)
 
 # 3. Fine-tune student
 trainer = Trainer(
     model=student,
     args=TrainingArguments(output_dir="./student", num_train_epochs=3, learning_rate=2e-5),
     train_dataset=train_dataset,
+    data_collator=DataCollatorForLanguageModeling(tokenizer, mlm=False),
 )
 trainer.train()
 ```
@@ -361,8 +385,20 @@ def multi_teacher_distillation(student, teachers, batch):
 
 ### Complete Training Script
 
+You must define `train_dataset` yourself before you call this. Use the tokenised items from Quick Start (each with input_ids, attention_mask and labels). The cost and memory warning above applies to the default model names.
+
 ```python
-from transformers import Trainer, TrainingArguments, DataCollatorForLanguageModeling
+import torch
+import torch.nn.functional as F
+from transformers import (
+    AutoModelForCausalLM,
+    AutoTokenizer,
+    Trainer,
+    TrainingArguments,
+    DataCollatorForLanguageModeling,
+)
+
+# train_dataset: YOU MUST DEFINE THIS before running (list of tokenised items)
 
 def train_distilled_model(
     teacher_name="meta-llama/Llama-2-70b-hf",

@@ -13,7 +13,7 @@ when:
   - You want voice, music and effects planned in time order before you edit.
   - You need to hand an editor a clear mix plan.
 you_give:
-  - Your brief, with where the video will play and how long it runs
+  - Your brief. Before the mix plan can be timed, it needs three things, which are where the video plays, its total length and the rights status of each music and effects file
   - Your script, with the approved wording (optional)
   - Voice takes, music and sound effect files, with their usage rights (optional)
   - Your footage or a timed edit (optional)
@@ -29,11 +29,11 @@ how_to_use:
   - Hand the timed mix plan to your editor. If the recordings are noisy, repair them first with the Noisy audio cleaner.
 how_it_works:
   - title: Read the brief
-    text: Inventory the script, dialogue/voice takes, footage, music and SFX with durations and approvals. Separate created assets from assets only planned.
+    text: Gives you an asset inventory with each file, its role, approval and length, and marks what is only planned.
   - title: Build the result
-    text: Lock the approved spoken words and select the best understandable take. Mark breaths and dead air for intentional trimming; do not remove every pause or alter meaning.
+    text: Gives you a timecoded mix plan with the approved voice take, room tone under the cuts, music start, duck and fade, and each sound effect with its timecode.
   - title: Check and hand off
-    text: Review dialogue intelligibility on speakers/headphones, transitions and peaks, end silence, sync and rights. If processing tools exist, preserve originals and report actual measurements; otherwise provide a timecoded edit plan without claiming a finished mix.
+    text: Gives you the loudness and file target for where the video plays, the listening checks to do, and a Not run list. Without processing tools, you get a timecoded edit plan, not a finished mix.
 thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.
 not_for:

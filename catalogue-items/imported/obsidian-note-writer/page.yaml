@@ -11,7 +11,7 @@ explain: |
 
   The skill starts with a properties block at the top for title, tags and aliases. It writes the body in normal Markdown, then adds links between notes in double brackets, so Obsidian keeps them working if you rename a note. It can link to a single heading or block, embed other notes, images and PDFs, and wrap key points in callouts such as tip or warning. External web links stay as standard links. It follows Obsidian's syntax rules. The note can still break if a linked note name is wrong, so open it in reading view to confirm it renders. The skill cannot see your vault, so you must give it the exact names of the notes to link to. It works on one note at a time.
 
-  This is a copy of the obsidian-markdown skill by kepano (github.com/kepano/obsidian-skills), shared through sickn33's collection. Licence: CC BY 4.0, as the LICENSE-CONTENT file says. It was not written for this catalogue.
+  This is a copy of the obsidian-markdown skill by kepano (github.com/kepano/obsidian-skills), shared through sickn33's collection. Licence: CC BY 4.0, as the LICENSE-CONTENT file says. It was not written for this catalogue. We changed only its name and the page text.
 when:
   - You pasted meeting notes and want them linked to the people and project notes already in your vault.
   - You want a warning or tip box that stands out in a long note.
@@ -27,7 +27,7 @@ you_give:
   - Tags and aliases you use
   - Any images or PDFs to embed (optional)
 you_get:
-  - An Obsidian-ready Markdown note
+  - An Obsidian-ready Markdown note, with the properties block first, then the body. Its length follows the text you give it
   - A properties block
   - Links and block references
   - Callouts and embeds in the right syntax

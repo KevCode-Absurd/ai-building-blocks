@@ -17,13 +17,13 @@ when:
   - You need stress cases for a board paper.
 not_for:
   - "You want a buy or sell call or personal investment advice: talk to a licensed financial adviser."
-  - "You want to value a stock or business: use an investment analysis step, not this risk review."
+  - "You want to value a stock or business: use the valuation method comparer, not this risk review."
   - "You need to place hedges or trade derivatives: ask a qualified professional and check your own risk limits first. The hedging ideas here are questions to take to an adviser, not orders."
-  - "You want to value a business: use the valuation method comparer."
 you_give:
   - Your positions, exposures or counterparties
   - Time horizon
-  - Price history or credit ratings (optional)
+  - Price history for your positions. It is required for the VaR and stress figures. Without it the skill asks for it and stops
+  - Credit ratings (optional)
   - Liquidity figures (optional)
 you_get:
   - A ranked risk register
@@ -32,19 +32,22 @@ you_get:
   - Mitigation steps
   - A monitoring plan
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. For the VaR figures, also attach scripts/calculate.py and the two files in the references folder (hedging-guide.md and risk-metrics.md), or use a tool that can run the whole skill folder. Pasting the skill text alone is not enough to calculate them.
+  - If your chat cannot run code, skip the script. The VaR and stress figures are then rough estimates by your AI. Ask it to mark each one "unverified, not calculated by script" and do not rely on them for a decision.
   - "Say which risk you care about: portfolio, credit or operational. Add your time horizon."
-  - Paste your positions or counterparties. Add price history or credit ratings if you have them.
+  - Paste your positions or counterparties and the price history. Add credit ratings if you have them.
   - Ask for the risk dashboard. Code running helps the VaR figures, so use a chat that can run code if you can.
+  - The Altman Z-score was built for listed manufacturing firms. For other kinds of business, treat it as a rough signal, and ask a lender or adviser to check it.
   - Check the top three risks and stress cases against what you know. Set a review date, such as every quarter, and update the register then. Treat the hedging ideas as general information and show them to a qualified professional before you act.
 output_sample:
   input:
     - Your positions, exposures or counterparties
     - Your time horizon, such as one day or one year
-    - Price history or credit ratings (optional)
+    - Price history for your positions (needed for VaR and stress figures)
+    - Credit ratings (optional)
     - Liquidity figures (optional)
   prerequisites:
-    - An AI that can run code, if you want the VaR figures calculated by the skill's script
+    - An AI that can run code, with scripts/calculate.py and the reference files attached, if you want the VaR figures calculated by the skill's script
   output:
     - name: Executive Summary
       contains: Your top three risk exposures and whether you are within or over your risk limits.
@@ -55,5 +58,5 @@ output_sample:
     - name: Concentration report
       contains: Where you are too heavily invested in one area.
     - name: Mitigation Plan
-      contains: Hedging ideas, diversification steps and how much cash reserve to hold.
+      contains: Hedging ideas, diversification steps and what to review for the cash reserve, to agree with a qualified adviser.
 next: [valuation-method-comparer, vendor-risk-reviewer]

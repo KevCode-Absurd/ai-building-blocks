@@ -7,6 +7,11 @@ description: Paste this above two to four real review lines with their sources. 
 
 One image ad per real review, with the customer's words kept exactly as written.
 
+## When not to use it
+- You do not have written permission to use the reviews, or cannot show they are real: get permission from each reviewer first.
+- You plan to run a result or health claim from a quote: check the proof first with the [Ad claim proof gap finder](https://useaiblocks.com/skills/ad-claim-proof-gap-finder).
+- You want the full set of checks on one quote: use the [Customer quote image ad](https://useaiblocks.com/skills/customer-quote-image-ad).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -59,7 +64,7 @@ One block per card, then a trim record and flags. Claude cannot draw: paste each
 ```
 CARD <n>: <push | pull | doubt | habit>, <layout>
 Quote (<source>): "<exactly as written>"
-Other words on the image: <plainer than the quote, or none>
+Other words on the image: <plainer than the quote, such as the product name or a short label like "Verified buyer" if the review shows it, or none>
 Picture prompt: <background, where the quote sits, the real product>
 Headline (<characters>): <the quote cut at a whole word>
 Short text (<characters>): <who it is for, then the quote's point>

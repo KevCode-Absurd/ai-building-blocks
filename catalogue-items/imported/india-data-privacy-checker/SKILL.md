@@ -16,7 +16,11 @@ description: >
 
 # India DPDPA — Digital Personal Data Protection Act, 2023 Skill
 
+> **Last checked:** AI Blocks has not confirmed any figure or date in this skill against the official text. Check these sources yourself and write down the date you did: the Act on India Code (indiacode.nic.in), the Rules and commencement notices in the Gazette of India (egazette.gov.in), and current notices from the Ministry of Electronics and Information Technology (meity.gov.in).
+>
 > **Source check required:** Check the current Act, notified Rules, Gazette commencement provisions and current MeitY/Board notifications for each real task. Record official URLs and the date checked. The Rules have phased commencement; do not describe 13 May 2027 as the start date for every provision.
+>
+> **Figures in this skill are not verified:** the section numbers, penalty amounts (such as the crore figures), thresholds and commencement dates below come from the model's training and the original author. Match each one against the linked Gazette notices and the official Act and Rules text before you rely on it. If you cannot browse the web, give them as "indicative, check the official source" and not as confirmed law.
 
 Map each provision to its own effective date and confirm the organisation’s role, processing purpose, data, users, and any applicable exemption or notification. If these facts or an official current source are missing, identify the unknowns and give no confirmed legal duty or compliance conclusion.
 

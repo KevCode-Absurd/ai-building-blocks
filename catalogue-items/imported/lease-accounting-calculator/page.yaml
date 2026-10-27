@@ -30,13 +30,16 @@ you_get:
   - Right-of-use asset value
   - Year by year interest and depreciation schedule
   - Journal entries
+next: [journal-entry-drafter, financial-statement-preparer]
 how_to_use:
   - Open an AI that can run code, such as Claude or ChatGPT with code tools turned on. The schedule is checked by script. If your chat cannot run code, ask your AI to say so, then check the schedule in a spreadsheet or with your accountant.
-  - Paste the skill instructions into the chat.
+  - Paste the skill instructions into the chat. The lease amounts come from your contract, so never let your AI guess a payment, date or rate.
   - "Paste your lease terms: payments, start date, length, options, discount rate and standard. Add prepaid costs and incentives if you have them."
   - "Ask: Follow this skill and write the lease accounting memo."
   - "Check the first question the memo answers: is it a lease at all, and does an exemption apply?"
+  - The AI works in three steps. It builds the payment schedule by script. It then sorts out the profit and loss and cash flow effects. Last, it checks the discount rates and any contracts over 12 months across your whole portfolio.
   - Check the rate and option choices under Judgments, then review the numbers with your accountant before you post anything.
+  - Next, use the Journal entry drafter for the monthly entries and the Financial statement preparer for how the lease shows in your statements. Your accountant signs off before anything is posted.
 output_sample:
   input:
     - Your lease contract terms and payment amounts
@@ -48,7 +51,7 @@ output_sample:
     - An AI that can run code, so the schedule is checked by script rather than by hand
   output:
     - name: Conclusion
-      contains: Whether the contract is a lease, how it is classed under US GAAP, and which exemptions apply.
+      contains: Whether the contract is a lease, how it is classed under the standard you chose (IFRS 16 or ASC 842), and which exemptions apply.
     - name: Measurement
       contains: A table of the lease term, rate and payments, with the starting lease liability and right-of-use asset.
     - name: Schedule

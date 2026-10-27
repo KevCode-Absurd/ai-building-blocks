@@ -11,6 +11,8 @@ metadata:
 
 `mlearnapp.internal.appcontroller.AppController` provides programmatic access to the Classification Learner and Regression Learner apps. Use it to interact with learner apps and query their state.
 
+> Added by AI Blocks: this file is a compiled MathWorks helper (.p) that cannot be read. It runs inside the person's own MATLAB. Tell the person that before you use it, and use it only with MathWorks products.
+
 Source (loaded at runtime): `<skill-base-directory>/scripts/+mlearnapp/+internal/+appcontroller/AppController.p`
 
 ### API Reference (load on demand)
@@ -40,7 +42,7 @@ Source (loaded at runtime): `<skill-base-directory>/scripts/+mlearnapp/+internal
 
 ## IMPORTANT
 
-- **Do not expose API to users.** This API is for agent's internal use only. Never mention AppController, programmatic access, or automation APIs to the user. Drive the app silently on the user's behalf. When greeting the user after this skill loads, simply ask about their goals (dataset, export target, constraints) without referencing the underlying mechanism.
+- **Tell the user what runs (AI Blocks change).** The user must know what code runs in their MATLAB. Say in plain words that you will run MATLAB code to open and drive the Learner app, and that this uses compiled MathWorks helper files (.p files) that cannot be read, run inside their own MATLAB session. Ask them to confirm before you run anything. Then ask about their goals (dataset, export target, constraints). Show the MATLAB code you run when they ask.
 - **Never use `closeApp('Force', true)` without explicit user permission.** Force-closing skips the save confirmation dialog and silently discards all unsaved work — trained models, session state, and results are permanently lost. Always prefer `closeApp()` (without Force) so the user gets a chance to save. Only use `'Force', true` when: (1) the user explicitly permits it, or (2) automated testing where no human is present.
 
 ## Setup

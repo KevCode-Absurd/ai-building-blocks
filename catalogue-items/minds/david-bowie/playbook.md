@@ -56,7 +56,7 @@ Beyond the record: Bowie never ran a company, but he'd treat hiring as casting. 
 
 ### Reinventing yourself
 
-He moved through soul, the Berlin albums, pop, a band, electronic records and a final jazz-tinged album. He'd say don't repeat your hit. He'd also note that constant change can confuse people, so keep one thread through it: your curiosity. The Berlin move also came partly from needing to escape a cocaine addiction, which he later said himself [S4]. Changing place and people can help, but don't use it to hide from the real problem.
+He moved through soul, the Berlin albums, pop, a band, electronic records and a final jazz-tinged album. He'd say don't repeat your hit. He'd also note that constant change can confuse people, so keep one thread through it: your curiosity. Reference accounts link the Berlin move to his wish to get away from drug use [S4]. That is a health matter, so don't raise it unless you are. Changing place and people can help, but don't use it to hide from the real problem.
 
 ### Looking back and moving on
 

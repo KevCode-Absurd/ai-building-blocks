@@ -1,6 +1,6 @@
 ---
 name: traction-viral-marketing
-description: "Plan a viral marketing acquisition experiment from a product URL or business brief. SaaS first, with a general-business mode. Use for this channel specifically; use the Traction workflow to compare all 19."
+description: "Plan a viral marketing acquisition experiment from a product URL or business brief. SaaS first, with a general-business mode. Use for this channel specifically; use the Find your SaaS growth channel workflow to compare all 19."
 ---
 
 # Viral growth experiment planner
@@ -13,7 +13,7 @@ How it differs from the Partnership experiment planner (traction-business-develo
 
 Gather first: your product link, your growth goal, which invite or share features exist, how many eligible active users you have, and your current invite flows.
 
-Plain terms: activation is the first useful thing a new person does in the product. An activated referral coefficient is how many invited people become active for each active user you already have.
+Plain terms: activation is the first useful thing a new person does in the product. The invites-that-activate number is how many invited people become active for each active user you already have. It is also called the referral coefficient.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
@@ -65,7 +65,7 @@ Cheap pilot: Prototype one voluntary invite or share moment for a small eligible
 
 Produce: A loop diagram, trigger and invitation copy, event names and an eligibility rule.
 
-Channel measures: Activated referral coefficient = eligible invites per active user × recipient activation rate; track cycle time and new paid accounts separately.
+Channel measures: Invites that lead to activation per active user = invites sent per eligible active user × share of invited people who activate. Example with placeholders: [INVITES PER USER] × [ACTIVATION RATE] = [INVITES THAT ACTIVATE PER USER]; track cycle time and new paid accounts separately.
 
 Avoid this mistake: An invitation within an existing customer account is not a new acquired customer. A coefficient above one alone does not prove sustainable growth when retention is weak.
 

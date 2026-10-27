@@ -1,6 +1,6 @@
 ---
 name: traction-unconventional-pr
-description: "Plan a unconventional pr acquisition experiment from a product URL or business brief. SaaS first, with a general-business mode. Use for this channel specifically; use the Traction workflow to compare all 19."
+description: "Plan an unconventional PR acquisition experiment from a product URL or business brief. SaaS first, with a general-business mode. Use for this channel specifically; use the Traction workflow to compare all 19."
 ---
 
 # Publicity experiment planner
@@ -47,7 +47,10 @@ Use the funnel qualified visitor or account -> useful product action -> paying c
 
 Decision to resolve: Can an unusual, truthful action earn attention from the intended buyers at a bounded cost?
 
-1. Generate contrasting concepts around a surprising product demonstration, a useful public challenge and exceptional customer care.
+1. Write three contrasting concept briefs, one for each type of action, each in two or three lines:
+   - a surprising product demonstration, such as doing a real customer job live in a fraction of the usual time and showing the steps
+   - a useful public challenge, such as a free fix or teardown offered to a defined group of buyers
+   - exceptional customer care, such as a real handwritten fix for one customer problem, shared with that customer's permission
 2. Explain why a software buyer would share each action and how the attention connects to a concrete problem the product solves.
 3. Screen the concepts for truthful claims, consent, reputational risk, operational burden and imitation risk. Choose one reversible prototype with a clear owner.
 
@@ -72,7 +75,9 @@ Limits: <cash, hours, date, proposed or approved>
 Measurement: <events, cohort, denominators, attribution>
 Decision: <continue / revise / stop rule>
 Risks and next action: <...>
+Concepts and prototype: <three concept briefs, the chosen prototype, production checklist, response plan>
 MISSING: <unknowns>
+CHECKS MISSED: <checks that failed or could not run, or none>
 
 ## Check the answer
 

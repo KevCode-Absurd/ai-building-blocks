@@ -70,6 +70,8 @@ Calculate:
 | **IRR** | |
 | Cash-on-cash | |
 
+Reconciliation check before any sensitivity table is built: confirm the base-case IRR and MOIC match the cash-flow dates and amounts (equity in at entry, equity out at exit, and any interim cash flows). If they do not match, fix the base case first.
+
 Show the returns waterfall:
 - EBITDA growth contribution
 - Multiple expansion/contraction contribution

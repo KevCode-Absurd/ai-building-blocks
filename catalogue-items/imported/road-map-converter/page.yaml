@@ -5,9 +5,11 @@ name: Road map converter
 summary: Convert a Lanelet2 map to a RoadRunner HD map file. Give it your .osm file and get an .rrhd scene with lanes, junctions and signs.
 job: build-software
 headline: Road map converter
-subhead: A Lanelet2 map turned into a RoadRunner HD map file you can open and simulate. This copy needs eight supporting files from the roadrunner-rrhd-authoring skill to finish the whole scene. Without them it stops partway and tells you which steps are left.
+subhead: A Lanelet2 map turned into a RoadRunner HD map file you can open and simulate. It finishes only when the eight supporting files from the Road map author item are added. Without them it stops partway and lists the steps left.
 explain: |
-  A Lanelet2 map turned into a RoadRunner HD map file you can open and simulate. With the eight supporting files in place, the whole pipeline runs, so you get a finished scene and not half a road. Without them, it stops before the centre line, closed-road, snapping, height and duplicate-boundary steps.
+  You get an .rrhd file only after the eight supporting files from the Road map author item are added. Without them you get a partial result and a list of the steps that are blocked: centre line synthesis, closed-road splitting, endpoint snapping, height conflicts, boundary alignment and boundary deduplication. The eight files are in this library, in the Road map author item. Add that item's folder to your AI.
+
+  This copy is an imported MathWorks skill under BSD 2-Clause plus a rule that you may use it only with MathWorks products (see LICENSE.md).
 
   It reads the .osm file and its lanelet relations, then builds boundaries, lanes, centre lines, junctions, barriers, signs, markings and speed limits. Boundary points are never changed, and each boundary is built once. Lane direction is worked out for every lane, never assumed. Before saving, checks run on alignment, position, extensions and completeness. It works through MATLAB script files and needs MATLAB with RoadRunner. Plain OpenStreetMap roads or OpenDRIVE files need a different route.
 when:
@@ -34,10 +36,13 @@ how_to_use:
   - Check you have MATLAB and RoadRunner. Both are paid and must be installed and licensed before you start. The licence (BSD 2-Clause plus MathWorks terms, see LICENSE.md) lets you use this only with MathWorks products such as MATLAB.
   - Use an AI that can run MATLAB code and write files, through the MATLAB MCP tool. A plain chat window or any other code runner cannot finish this job. This copy leaves out eight supporting files from the original roadrunner-rrhd-authoring skill. Your AI should stop and ask you for them before it does the steps that need them.
   - Paste this skill into your AI and give it your .osm file, your project folder and where to save the result.
+  - To finish the whole job, also add the Road map author item's folder, which holds the eight supporting files. Without it, your AI stops partway.
   - Let your AI run the steps it can. When it reaches a step that needs one of the eight missing files, it must stop and ask you for them, not guess the geometry. Once you supply them, it carries on to the end.
   - Check that the results list shows all checks passed before the file is saved.
   - Open the new .rrhd file in RoadRunner and look over lanes, junctions and signs.
   - Next, compare the junction, sign and speed-limit counts in the new .rrhd with the source .osm. Rerun the saved .m scripts after any edit.
+  - Next steps: the Road map author item is the required companion, because it holds the eight supporting files. Then open the finished .rrhd in RoadRunner, check lanes, junctions and signs, and import it into your scene with the Road scene importer.
+next: [road-map-author, road-scene-importer]
 output_sample:
   input:
     - Your Lanelet2 map file (.osm)
@@ -45,6 +50,7 @@ output_sample:
     - Where to save the result (optional)
   prerequisites:
     - MATLAB with RoadRunner installed and licensed (both are paid products)
+    - The eight supporting files, found in the Road map author item
     - An AI that can run MATLAB code and write script files
     - A RoadRunner project folder
   output:
@@ -57,6 +63,6 @@ output_sample:
     - name: Barriers, signs, markings and speed limits
       contains: Every non-lane item found in the map, built as scene objects.
     - name: Check results
-      contains: Pass or fail results for alignment, position, extensions and completeness, run before saving.
+      contains: Pass or fail results for alignment, position, extensions and completeness, run before saving. They appear only after the eight supporting files are supplied. Until then your AI lists the steps it could not run.
     - name: RoadRunner HD map (.rrhd)
-      contains: The finished map file, ready to open in RoadRunner for simulation.
+      contains: The finished map file, ready to open in RoadRunner for simulation. It is written only after the eight supporting files are supplied and every check passes. Otherwise you get a partial result and a list of what is left.

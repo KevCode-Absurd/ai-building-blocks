@@ -9,7 +9,7 @@ subhead: Describe your audience, what you sell and the action you want. It place
 explain: |
   Your message finally matches where each buyer is in their thinking. You describe your audience and offer, and you get a map of where people sit, from not knowing they have a problem to ready to buy. Each stage comes with the words, tone and proof that suit it.
 
-  The skill starts by getting context: who the person is and what you want them to do. Then it places them on the awareness ladder and shapes the approach for that spot. Someone who feels the pain needs different copy from someone comparing prices. It treats psychology claims as ideas to check, not proven facts, and avoids targeting sensitive traits.
+  The skill starts by getting context: who the person is and what you want them to do. Then it places them on the awareness ladder and shapes the approach for that spot. Someone who feels the pain needs different copy from someone comparing prices. The research names it cites, such as ELM (the elaboration likelihood model), are unchecked ideas to test, not proven facts. Check them before you repeat them in your own copy. It avoids targeting sensitive traits.
 when:
   - Your ads and emails sound the same to people who are at very different stages.
   - You are about to write a landing page and are not sure what the reader already knows.
@@ -35,6 +35,14 @@ how_to_use:
   - Paste interview notes or buyer questions if you have them (optional). Your AI will mark guesses as guesses.
   - Read the stage diagnosis first. Fix it if it does not match what you know about your buyers.
   - Use the language and message order to write your copy. Check the claims list before you publish.
+output_shape: |
+  1. Stage diagnosis: <stage, and a guess flag if evidence is thin> (max 3 lines)
+  2. Persuasion route: <teach, compare or prove, and why> (max 3 lines)
+  3. Language register: <vocabulary, jargon level, detail> (max 4 lines)
+  4. Entry point: <first touch> (max 2 lines)
+  5. Message order: <numbered list, one line per message> (max 7 lines)
+  6. Claims to verify: <list> (max 5 lines)
+  7. Quality check: <does it fit the stage, yes or no, and why> (max 3 lines)
 output_sample:
   input:
     - Your audience, in plain words

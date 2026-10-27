@@ -66,7 +66,7 @@ how_it_works:
   - title: Picks the mark type
     text: Compares a word mark with a logo mark. A logo mark was easier to win for generic names in the source.
   - title: Plans the filing
-    text: Applies for the trademark first. A pending application is enough for registry.
+    text: Applies for the trademark first. One course source says a pending application is enough for registry. You confirm that on the registry site.
   - title: Creates the listing
     text: Makes the listing first, because the registry form needs an ASIN.
   - title: Builds the application pack
@@ -84,7 +84,7 @@ output_shape: |
 
   TRADEMARK CHOICE
   Mark type: <word | logo | both> | why: <...>
-  Country: <...> | status needed for registry: <pending is enough>
+  Country: <...> | status needed for registry: <pending is enough per one source, confirm on the registry site>
   Filing steps: <...>
 
   REGISTRY APPLICATION PACK
@@ -97,7 +97,7 @@ output_shape: |
   ALSO CONSIDER
   <provisional patent for a new invention | manufacturer agreement>
 
-  CHECK ON THE REGISTRY SITE: <current rules and tools>
+  CHECK ON THE REGISTRY SITE: <current rules and tools> | page: Amazon Brand Registry (brandservices.amazon.com) | last checked: <date>
   NOT LEGAL ADVICE: check with a qualified trademark professional.
   MISSING: <brand name | country | ASIN>
 

@@ -10,13 +10,15 @@ explain: |
   For a tough question where a wrong answer costs you, this makes the AI commit to a guess, then try hard to prove itself wrong before it gives a final answer. You see the guess, the test, the evidence and the answer that survived.
 
   It starts by choosing a mode. A live outage gets quick action. A simple fact gets a short answer. A vague question gets one round of clarifying questions. Only high stakes or why-is-it-broken questions run the full five stages: state a hypothesis that could be proven wrong, try to break it, gather evidence, judge it, and report what remains uncertain. The rule is that no answer is allowed without a stated way it could fail.
+
+  Licence: the licence file in this folder (LICENSE-CONTENT) says CC BY 4.0, and that is the licence we apply to this copy. The skill's own header says MIT, from its original author, 263311487-ux. Both allow reuse with credit, so keep the credit.
 when:
   - You must decide something important and your first idea may be wrong.
   - A system is failing and you need to know the real cause.
   - You suspect an AI answer sounds sure but has no proof.
   - You want the uncertain parts marked, not hidden.
 not_for:
-  - "You need a quick fact or a rough estimate: just ask your AI directly, no protocol needed."
+  - "You need a quick fact or a rough estimate, or the answer is needed in minutes: just ask your AI directly, no protocol needed. If you use it anyway, check that the answer says which mode was chosen."
   - "A live outage is happening now: act first with a safe rollback, then test the cause after things are stable."
   - "You want a finished decision memo or test plan: use this result as the input, then write that document in a normal chat."
 you_give:
@@ -31,7 +33,7 @@ you_get:
   - A tested answer with uncertainty marked
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. No code, files or paid tools are needed.
-  - Before you type, write down the question, what you already know or tried, and what a wrong answer would cost. The skill depends on these details.
+  - Before you type, write down the question, what you already know or tried, what a wrong answer would cost, and your deadline. The skill depends on these details.
   - Type your question and add those details.
   - Paste any logs or data if you have them (optional).
   - Read the mode your AI picks. If it is a simple or urgent question, expect a short answer, not five stages.

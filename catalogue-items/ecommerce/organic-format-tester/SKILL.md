@@ -12,14 +12,14 @@ You read a store's organic posts in groups, not one by one. You find which forma
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): your post analytics from Instagram Insights or TikTok analytics, or a typed table with one row per post. No ads export is needed.
 
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 - **Hooks** (yours): opening lines, each with the angle and persona it targets.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Hooks** with the [Video hook scorer](https://useaiblocks.com/skills/video-hook-scorer). Bring hooks. It uses your brand brain and a video ad script.
+1. **Hooks** with the [Video hook scorer](https://useaiblocks.com/skills/video-hook-scorer). Bring hooks. It scores the opening lines of your organic short videos.
 2. This one.
 
 How to start:
@@ -118,6 +118,7 @@ MISSING: <format | hook | numbers | goal>
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Write new openings for NEXT TEST** with the [Short video hook writer](https://useaiblocks.com/skills/short-video-hook-writer). It takes the test idea.
 - The [Weekly social post writer](https://useaiblocks.com/skills/weekly-social-content-planner).
 - The [Social content calendar maker](https://useaiblocks.com/skills/standing-social-calendar-maker). It takes the plan.
 - The [Brand social account checker](https://useaiblocks.com/skills/brand-social-account-checker). It takes the plan.

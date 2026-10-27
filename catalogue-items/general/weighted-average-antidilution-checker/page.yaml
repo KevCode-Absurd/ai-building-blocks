@@ -90,8 +90,8 @@ tweaks:
     how: "Take the issue date from the charter clause and the share counts. Use one currency and scale on every line."
   - what: "Cash consideration"
     how: "Change the cash consideration and have your AI recalculate. Keep the actual figures you supplied."
-  - what: Acceptance
-    how: A must follow the actual broad- or narrow-based charter denominator.
+  - what: Broad or narrow count
+    how: Paste the clause wording that sets A. A broad-based clause counts options, warrants and convertibles as well as shares outstanding. A narrow-based one counts only shares outstanding.
 judge:
   - A must follow the actual broad- or narrow-based charter denominator.
   - Only a qualifying down-round issuance enters this calculation.

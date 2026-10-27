@@ -11,7 +11,7 @@ explain: |
 
   It works through six steps with Unsloth. First, it estimates memory before any code. Then it loads the model and fixes the chat template, a common cause of models that ignore stop tokens. It attaches LoRA adapters, runs the training, and exports to the format your runtime needs, such as GGUF. It covers QLoRA on a 16 GB GPU and reward-based methods like GRPO and DPO. You need Python and a GPU.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header says Apache-2.0. Unsloth's core package is Apache-2.0, and optional parts such as its Studio app are AGPL-3.0.
+  Licence: the skill text in this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header says Apache-2.0, which covers the author's code. Unsloth's core package is Apache-2.0, and optional parts such as its Studio app are AGPL-3.0.
 when:
   - You want a model that follows your format and have one consumer GPU.
   - Training crashes with out of memory part way through.
@@ -33,14 +33,17 @@ you_get:
   - A fixed chat template
   - A tuning run setup
   - Export steps
+next: [local-ai-model-setup]
 how_to_use:
-  - Open an AI chat that can run Python code. Paste in the skill text.
+  - Open an AI chat that can run Python code. Paste in the skill text. Install Unsloth first with pip install unsloth, and match the Python, PyTorch and CUDA versions to the ones on Unsloth's own install page for your GPU and driver.
+  - Pick your base model and training dataset, then look up the full 40-character commit ID of each on its Hugging Face page (the "History" or "Files" view). Review that exact version and set it before you run. The code stops with a message if you do not.
   - Tell it your base model, your GPU and its memory, and what the tuned model should do.
   - Add your training data, or say what format it is in.
-  - Check the memory estimate first. Resize the plan if it is too tight.
+  - Check the memory estimate first. The figures are planning guesses, so confirm them with nvidia-smi on the first run. Resize the plan if it is too tight.
   - Before you train, check that the chat template step shows the right part of one batch masked.
-  - For the GRPO example, replace the <your-prompt-dataset> placeholder with your own prompt dataset first. The code fails if you leave it.
+  - For the GRPO example, set prompt_dataset to your own prompt dataset first. The code is not runnable until you do, and a check stops it with a message if you leave the placeholder.
   - Run the training, then ask for the export format your runtime needs.
+  - Next, test the exported model on questions it has not seen, because shrinking it (quantization) can change how it behaves. Then serve it on your own computer with the Local AI model setup.
   - The result comes in the order of the six steps. A memory table comes first, then one code block for each step, then the export commands.
 output_sample:
   input:

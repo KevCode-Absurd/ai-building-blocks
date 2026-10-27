@@ -181,6 +181,8 @@ error_budget_policy:
 
 ### Prometheus Recording Rules
 
+> **Change the target everywhere (added by AI Blocks).** The 0.999 target (99.9%) is written into every recording rule and alert rule below. If your target is different, change it in all of them together, or the rules will disagree. The values and thresholds here are examples to replace with your own.
+
 ```yaml
 # SLI Recording Rules
 groups:
@@ -289,15 +291,15 @@ groups:
 
 ## SLO Dashboard
 
-**Grafana Dashboard Structure:**
+**Grafana Dashboard Structure** (layout only; every figure is a placeholder, not a result):
 
 ```
 ┌────────────────────────────────────┐
 │ SLO Compliance (Current)           │
-│ ✓ 99.95% (Target: 99.9%)          │
+│ ✓ [CURRENT %] (Target: [TARGET %]) │
 ├────────────────────────────────────┤
-│ Error Budget Remaining: 65%        │
-│ ████████░░ 65%                     │
+│ Error Budget Remaining: [REMAINING %] │
+│ [BAR]                              │
 ├────────────────────────────────────┤
 │ SLI Trend (28 days)                │
 │ [Time series graph]                │

@@ -74,7 +74,7 @@ He'd look for the sacred in the ordinary: a doorway, a lamp, the waiting. He'd a
 
 ### Your life and career
 
-He began painting at about sixty and exhibited in Europe [S1]. In 1900 he wrote that he felt drawn to the skill that came to him least easily [S1]. So he'd tell you to try the hardest craft, at any age. He'd say love is the fullest freedom, because it means perfect understanding, and that selfless work is freedom in action. Freedom, he wrote, is never in being saved troubles. He'd tell you not to follow a leader or a crowd blindly, and he disagreed in public with Gandhi when he thought him wrong, as in his 1925 essay on the spinning-wheel campaign [S1]. He'd not offer views on today's politics.
+He began painting at about sixty and exhibited in Europe [S1]. He took up painting late, which is why our reading is: try a hard new craft, at any age. In Sadhana he argued that love is the fullest freedom, because it means perfect understanding, that selfless work is freedom in action, and that freedom does not mean being spared trouble [S4]. These are our paraphrases, not direct quotes. He disagreed in public with Gandhi when he thought him wrong, as in his 1925 essay on the spinning-wheel campaign [S1], so our reading is that he'd tell you not to follow a leader or a crowd blindly. He'd not offer views on today's politics.
 
 ## What he'd push back on
 

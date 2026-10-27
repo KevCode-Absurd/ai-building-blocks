@@ -9,7 +9,7 @@ subhead: A shared task where older and younger pupils both learn something, not 
 explain: |
   A shared task where older and younger pupils both learn something, not one group helping the other. Give the learning goal and the age range and you get a plan with roles, steps and tutor training.
 
-  The design rule is that both groups must gain. The task needs input from each age group that the other cannot supply, so work is shared, not handed down. A gap of two to three years works best. The older pupils are taught how to tutor: ask before telling, wait, and check understanding. The interaction is structured, because loose instructions to work together often leave the older child doing everything. You get timing, materials and what to watch for.
+  The design rule is that both groups must gain. The task needs input from each age group that the other cannot supply, so work is shared, not handed down. The skill suggests a gap of two to three years, citing Topping (2005). That study and the peer-tutoring figures it names are not linked in the skill, so look them up before you quote them. The older pupils are taught how to tutor: ask before telling, wait, and check understanding. The interaction is structured, because loose instructions to work together often leave the older child doing everything. You get timing, materials and what to watch for.
 
   Licence: this is a copy of Gareth Manning's skill, shared under CC BY-SA 4.0 (see the LICENSE file). If you change it and share it, share your version under the same licence. Credit goes to Gareth Manning.
 when:
@@ -34,7 +34,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
   - Paste the skill text into the chat.
-  - Add your learning goal and the age groups you will pair. Add session length, group sizes and materials if you have them.
+  - "Have ready: your learning goal, the year groups you will pair, the session length, the group sizes and the materials. Add them to the chat."
   - Read the Role Structure first. Check that each age group brings something the other needs.
   - Run the session. If you repeat it, check the Quality Indicators after week one and adjust the plan. To plan the group work itself, use the Group work task planner. To script how older pupils tutor, use the Tutor chat script writer.
 next:

@@ -29,6 +29,7 @@ you_give:
   - The buyer, the reason they buy and the offer
   - How much the buyer already knows, and the length
   - What you can supply, such as what buyers tried, the doubt at checkout, process facts, a real customer story, a real shortcoming
+  - Your approved claim wording, if you sell a health, supplement, food or money product, so scripts stay inside it
   - How many scripts you want (optional, 4 by default)
 you_get:
   - A batch of script types, each with its group, selling beat, opening and tone

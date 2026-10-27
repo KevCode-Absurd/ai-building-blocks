@@ -10,12 +10,19 @@ explain: |
   Know how much signal your RF board part loses, reflects and radiates before you build it. You get S-parameters, insertion loss and field plots from a solver chosen to match the shape of your design.
 
   The skill helps you choose between the method-of-moments and finite-element solvers, set mesh density to trade accuracy for speed, and use interpolating sweeps so a wide frequency range does not take hours. You can plot electric and magnetic fields, surface currents and charge. For fast early estimates it can use simple analytic models instead of a full solve. It runs in MATLAB with the RF PCB Toolbox and needs a component already built.
+
+  Terms in plain words. S-parameters are numbers that say how much signal a part passes, reflects and loses. The method-of-moments (MoM) solver suits flat metal layouts and is the quicker choice. The finite-element method (FEM) solver suits full 3D shapes and is slower. WSL is the Linux add-on for Windows that the FEM solver runs on.
+
+  This is for an RF engineer who is comfortable with MATLAB and S-parameters. For a rough check without MATLAB, use a simple online loss calculator first.
+
+  Licence: this is MathWorks' skill, copied unchanged. The LICENSE.md file in this item applies (BSD 2-Clause), and you may use it only with MathWorks products such as MATLAB. The skill file links a different MathWorks licence page, which is MathWorks' own upstream terms and also says MathWorks products only.
 when:
   - Your filter or line is built and you need its insertion loss across a band.
   - A full solve takes too long and you want a faster sweep method.
   - You want to see where current crowds on a trace.
   - You are unsure which solver suits your structure.
 not_for:
+  - "You are not an RF engineer, or you do not use MATLAB: this needs both, so start with a simple online loss calculator for a rough number."
   - "You still need to design or build the board part: use the matching design skill for your part first, then come back here."
   - "You only need to set up the board material or stackup: do that step first with a materials skill, or ask a PCB engineer."
   - "You want to tune dimensions to hit a target or check power delivery: use an optimization step or a power analysis tool, not this one."
@@ -35,6 +42,8 @@ how_to_use:
   - Paste your component code or describe it, then give your frequency range and port impedance.
   - Say if you want speed or accuracy. Ask your AI to explain its solver and mesh choice.
   - Check the S-parameter plots and the loss at your key frequencies before you build the board.
+  - The answer comes in order: S-parameters with a table of loss at your key frequencies, the solver choice, the sweep setup, the mesh and memory check, then fields and currents.
+  - If the loss misses your spec, tune the dimensions with the PCB design optimizer. To join the part into a larger circuit, use the PCB circuit combiner. To release the board, use the PCB Gerber exporter.
 output_sample:
   input:
     - Your RF PCB component, already built in MATLAB
@@ -48,7 +57,7 @@ output_sample:
     - A component built first, from a design skill or a custom layout
   output:
     - name: S-parameter extraction
-      contains: S-parameters over your band, with insertion and return loss, plus a way to pull out the numbers.
+      contains: S-parameters over your band, with insertion and return loss at your key frequencies shown as a table, plus a way to pull out the numbers.
     - name: Solver selection
       contains: A choice between the method-of-moments and finite-element solvers, with the reason for it.
     - name: Interpolating sweep
@@ -61,3 +70,5 @@ output_sample:
       contains: Plots of surface current and charge, and feed current across frequency.
     - name: Behavioral S-parameters
       contains: Fast analytic estimates for early checks, with notes on where they lose accuracy.
+
+next: [pcb-circuit-combiner, pcb-gerber-exporter]

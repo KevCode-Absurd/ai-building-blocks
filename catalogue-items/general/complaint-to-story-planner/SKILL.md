@@ -30,6 +30,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+The "Before you start" list asks for a question and customer reviews. Here, the complaint is your question. You do not need a set of reviews.
+
 - **The complaint** (required): what went wrong, in the customer's words if you have them.
 - **The fix** (required): what you are already doing (refund, reship, repair) and when.
 - **What you know about them** (advised): anything they mentioned (a kid's birthday, a long wait, a first order).

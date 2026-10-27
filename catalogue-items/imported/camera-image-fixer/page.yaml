@@ -34,7 +34,8 @@ how_to_use:
   - Open an AI that can run MATLAB code and paste in this skill. It needs MATLAB tool access to run its checks (detect_matlab_toolboxes and check_matlab_code). Without that, type ver in MATLAB to list your toolboxes, and ask your AI to read the code before you run it.
   - Say what looks wrong, and name your camera if you know it.
   - Read the diagnosis, then try the camera settings it suggests before any processing.
-  - Keep the .m function it writes for later captures. If the before and after numbers do not improve, change one camera setting at a time and measure again. Run the before and after check again after any camera, firmware or resolution change.
+  - Save the .m function it writes in your MATLAB project folder, so you can run it again for later captures. Run the before and after check again after any camera, firmware or resolution change. If the numbers do not improve, change one camera setting at a time and measure again. For repeat captures, pair it with the MATLAB camera capture helper. For lens distortion, use MATLAB's Camera Calibrator app, which is a separate tool.
+  - "No AI tool that can run MATLAB? Do it by hand. 1. In MATLAB, type ver to list your toolboxes. 2. Run imaqhwinfo to see your camera. 3. Open one preview with preview(vid) after vid = videoinput(adaptor, deviceID, format), using the names imaqhwinfo gave you. 4. Take one capture with getsnapshot(vid). 5. Change one setting on the video source, such as exposure, and capture again. Ask any chat AI to explain each result or write the function, then run it yourself from the MATLAB command window."
 output_sample:
   input:
     - What looks wrong, such as too dark, blurry, noisy or washed out

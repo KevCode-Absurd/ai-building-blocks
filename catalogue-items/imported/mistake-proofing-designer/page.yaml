@@ -11,7 +11,7 @@ explain: |
 
   It uses mistake-proofing from Toyota. A comment, a wiki page or a review checklist is only training, and training fades. A real fix is a device: a type, a database constraint, a lint rule, a state machine. It ranks fixes on a ladder. Best is control, where the mistake cannot happen. Next is warning, where it is flagged at once. Then detection, where something finds it later. Docs rank at zero.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (rainmanjam) says MIT. Credit goes to rainmanjam and sickn33.
+  The licence that applies to this copy is CC BY 4.0, as the LICENSE-CONTENT file in this item says. The MIT line in the skill file is the author's own header (rainmanjam) for the author's own work, and it does not change the licence of this copy. Keep the credit if you reuse it. Credit goes to rainmanjam and sickn33.
 when:
   - The same bug has bitten your team for the third time.
   - You handle money, permissions or deletion and failures are silent.
@@ -31,8 +31,8 @@ you_get:
   - Concrete changes such as types or constraints
   - A note on which fixes rely only on memory
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
-  - Paste the code, form or process that keeps going wrong. Say what mistake keeps happening.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. The examples in the skill are about software, but the method works the same on a process or a form: ask your AI to treat each step or field as something that can be made impossible to get wrong.
+  - "Have ready: the code, form or process that keeps going wrong, the list of callers or users, the history of the repeat mistakes, and what checks or limits exist now. Paste them in and say what mistake keeps happening."
   - Add how costly the mistake is, if you know (optional).
   - Read the hazards and fixes. Your AI will propose changes first and wait for your go-ahead.
   - Approve the fixes you want, then ask your AI to write them. Check each one against real callers before you ship.

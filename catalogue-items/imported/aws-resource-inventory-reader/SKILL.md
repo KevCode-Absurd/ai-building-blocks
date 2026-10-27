@@ -5,6 +5,8 @@ description: 'Query AWS resources using natural language. Covers EC2, S3, RDS, L
 
 # AWS Resource Query
 
+**When not to use:** not for creating, changing or deleting anything (use the AWS console or your cloud engineer), and not for audits across many accounts (this checks one account at a time).
+
 Answer natural language questions about AWS resources by translating intent into read-only AWS CLI commands. This skill **never** runs commands that create, modify, or delete resources.
 
 ## Safety Contract
@@ -16,8 +18,9 @@ Answer natural language questions about AWS resources by translating intent into
 - `aws sts get-caller-identity`
 - `aws configure get`
 - `aws resourcegroupstaggingapi get-resources`
-- `aws ce get-*`
 - `aws support describe-*`
+
+Environment variables on a Lambda function can hold secrets. Never print the `Environment` field of a function's configuration.
 
 **NEVER** run any of the following, regardless of what the user asks:
 `create-*`, `run-*`, `start-*`, `stop-*`, `reboot-*`, `delete-*`, `terminate-*`, `put-*`, `update-*`, `modify-*`, `attach-*`, `detach-*`, `send-*`, `publish-*`, `invoke-*`, `execute-*`
@@ -96,7 +99,8 @@ aws lambda list-functions \
   --query 'Functions[].[FunctionName,Runtime,MemorySize,Timeout,LastModified]' --output table
 
 # "Lambda function details for <name>"
-aws lambda get-function-configuration --function-name <name>
+# Leave out the Environment field: Lambda environment variables can hold secrets.
+aws lambda get-function-configuration --function-name <name>   --query '{FunctionName:FunctionName,Runtime:Runtime,Handler:Handler,MemorySize:MemorySize,Timeout:Timeout,LastModified:LastModified,Role:Role}'
 
 # "Lambda event source mappings" / "Lambda triggers"
 aws lambda list-event-source-mappings \

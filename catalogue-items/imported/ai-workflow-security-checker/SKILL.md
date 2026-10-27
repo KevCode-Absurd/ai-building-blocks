@@ -168,7 +168,7 @@ After identifying AI action steps, check for `uses:` references that may contain
 2. **Job-level `uses:`**: Resolve the reusable workflow (local or remote) and analyze it through Steps 2-4
 3. **Depth limit**: Only resolve one level deep. References found inside resolved files are logged as unresolved, not followed
 
-For the complete resolution procedures including `uses:` format classification, composite action type discrimination, input mapping traces, remote fetching, and edge cases, see optional upstream `cross-file-resolution.md` (not bundled).
+For the complete resolution procedures including `uses:` format classification, composite action type discrimination, input mapping traces, remote fetching, and edge cases, that file is not available here. Use the "Inline cross-file procedure" section below instead.
 
 ### Step 3: Capture Security Context
 
@@ -252,7 +252,7 @@ Then check each vector against the security context captured in Step 3:
 | H | Dangerous Sandbox Configs | `danger-full-access`, `Bash(*)`, `--yolo`, `safety-strategy: unsafe` | optional upstream `vector-h-dangerous-sandbox-configs.md` (not bundled) |
 | I | Wildcard Allowlists | `allowed_non_write_users: "*"`, `allow-users: "*"` | optional upstream `vector-i-wildcard-allowlists.md` (not bundled) |
 
-For each vector, apply the inline quick check and inspect the actual data flow and action implementation. The optional absent reference files cannot be required or counted as reviewed. For each finding, record: the vector letter and name, the specific evidence from the workflow, the data flow path from attacker input to AI agent, and the affected workflow file and step.
+The upstream vector files named in the table are not available here. For each vector, apply the inline quick check and inspect the actual data flow and action implementation. The optional absent reference files cannot be required or counted as reviewed. For each finding, record: the vector letter and name, the specific evidence from the workflow, the data flow path from attacker input to AI agent, and the affected workflow file and step.
 
 ### Step 5: Report Findings
 
@@ -269,7 +269,7 @@ Each finding uses this section order:
 - **Impact:** One sentence stating what an attacker can achieve
 - **Evidence:** YAML code snippet from the workflow showing the vulnerable pattern, with line number comments
 - **Data Flow:** Annotated numbered steps (see 5c for format)
-- **Remediation:** Action-specific guidance. For action-specific remediation details (exact field names, safe defaults, dangerous patterns), consult optional upstream `action-profiles.md` (not bundled) to look up the affected action's secure configuration defaults, dangerous patterns, and recommended fixes.
+- **Remediation:** Action-specific guidance. For action-specific remediation details (exact field names, safe defaults, dangerous patterns), the upstream `action-profiles.md` is not available here. Give general remediation from the inline checks, and tell the user to confirm the affected action's secure settings in that action's official documentation. Mark any action-version detail as unverified.
 
 #### 5b. Severity Judgment
 

@@ -31,13 +31,26 @@ you_get:
   - Follow-up sequence
   - Ways to judge event return
 how_to_use:
+  - "Start here, in this order: 1. Choose your role (host, sponsor, speaker or attendee). 2. Set one goal. 3. Build a target list of 15 to 30 named people. 4. Book meetings 1 to 3 weeks ahead. 5. Follow up within 48 hours."
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
   - "Say your role: host, sponsor, speaker or attendee."
   - Add your main goal, the buyers you want to meet, your budget and your team size.
   - Answer any questions your AI asks. It needs no code, files or paid tools.
   - Check the target list and follow-up tiers, then fix anything that does not fit your buyers.
-  - Before the event, write down the one number to track first: cost per qualified meeting. Record your budget and your meeting target in a note you will see again after the event.
+  - "Before the event, write down the one number to track first: cost per qualified meeting. Record your budget and your meeting target in a note you will see again after the event."
+  - The skill mentions related skills that are not in this library, such as launch, co-marketing and revops. Handle those parts by hand, so do not go looking for them.
   - Book meetings before you go, and send your follow-up within 48 hours. For the outreach, use Cold email writer. For the follow-up emails, use Email sequence writer.
+terms:
+  - term: ICP
+    meaning: Your ideal customer profile, the kind of company and person who buys from you.
+  - term: ACV
+    meaning: Annual contract value, what one customer pays you in a year.
+  - term: Pipeline
+    meaning: The list of deals that may close, with their expected value.
+  - term: Qualified meeting
+    meaning: A meeting with someone who fits your ideal customer and has a real need.
+  - term: Cost per qualified meeting
+    meaning: What you spent on the event divided by the number of qualified meetings it booked.
 output_sample:
   input:
     - "Your role: host, sponsor, speaker or attendee"

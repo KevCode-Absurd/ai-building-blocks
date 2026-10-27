@@ -50,7 +50,7 @@ All three use only Python's standard library and make no AI calls, so the same i
 ## Hard rules
 
 1. **WCAG AA body-text contrast must pass.** `brand_palette_validator.validate()` runs after every change. Body text on bg must reach 4.5:1; link on bg must reach 4.5:1. If either fails, `onboard.py` refuses to save (exit code 4) and tells the user to pick a darker primary, blank `brand.bg`/`brand.text` to let derivation pick a safe pair, or override `brand.text` directly. Canon: WCAG 2.2 §1.4.3.
-2. **Output directory must be writable.** `onboard.py` walks up the path to find an existing ancestor and checks `os.W_OK`. Empty or unwritable path → exit code 3. The orchestrator's `output_path_resolver.py` honors the same rule per-conversion.
+2. **Output directory must be writable.** `onboard.py` walks up the path to find an existing ancestor and checks `os.W_OK`. Empty or unwritable path → exit code 3. The converters apply the same rule per conversion. (The resolver script they use, `output_path_resolver.py`, belongs to the separate converter items and is not in this folder.)
 3. **Customization must change behavior, not sit as decoration.** Every consumer (md-document, md-review, md-slides) must read the config and render differently when the user changes `design_style`, `brand.primary`, `code_theme`, or `toc.behavior`. Decorative-only fields fail the design discipline.
 4. **Precedence is fixed.** Project > global > defaults. The deep-merge preserves nested keys (e.g. you can override `brand.primary` in a project config without losing `typography.heading_font` from global).
 5. **Bypass env exists for a reason.** `MARKDOWN_HTML_NO_CONFIG=1` is for headless CI and short-lived test containers. Never set it silently for an interactive user.
@@ -76,13 +76,13 @@ Once the user's brand is captured, `brand_palette_validator.derive_palette()` pr
 
 ## Question guide
 
-Ask one question at a time. Give a recommended answer and the source it comes from.
+Ask one question at a time. Give a recommended answer and the plain reason for it.
 
-1. **What's your brand primary color?** Recommended: a HEX you already use in your product or docs — not a stock blue. Canon: Aarron Walter, *Designing for Emotion* (color carries brand affect).
-2. **Should accent be derived or set?** Recommended: derive on first run (hue-shift + lighten produces a coherent companion); set explicitly only if your brand kit specifies one. Canon: Adobe Spectrum, *Color Foundations*.
-3. **Editorial, technical, minimal, or playful?** Recommended: `technical` for engineering specs/reports, `editorial` for long-read narratives, `minimal` for sparse reference docs, `playful` for marketing/landing content. Canon: Ellen Lupton, *Thinking with Type* (style serves the rhetorical purpose).
-4. **Sticky-sidebar TOC, or inline?** Recommended: `sticky-sidebar` for documents over 800 words, `inline` for short reads. Canon: Nielsen-Norman, *Table of Contents Best Practices* (2023).
-5. **Save to global or per-project?** Recommended: global by default (consistent across your work); use `--scope project` only when this repo has a different brand. Canon: research-ops onboarding pattern, `research-ops/CLAUDE.md` §8.
+1. **What's your brand primary color?** Recommended: a HEX you already use in your product or docs — not a stock blue. Reason: a colour you already use keeps new pages looking like the rest of your brand.
+2. **Should accent be derived or set?** Recommended: derive on first run (hue-shift + lighten produces a coherent companion); set explicitly only if your brand kit specifies one. Reason: a companion colour built from your main one usually looks balanced, and you skip a choice.
+3. **Editorial, technical, minimal, or playful?** Recommended: `technical` for engineering specs/reports, `editorial` for long-read narratives, `minimal` for sparse reference docs, `playful` for marketing/landing content. Reason: the look should fit what the page is for.
+4. **Sticky-sidebar TOC, or inline?** Recommended: `sticky-sidebar` for documents over 800 words, `inline` for short reads. Reason: a side contents list helps on long pages and gets in the way on short ones.
+5. **Save to global or per-project?** Recommended: global by default (consistent across your work); use `--scope project` only when this repo has a different brand. Reason: one saved style keeps all your pages consistent, and a project file only overrides it where a project needs its own brand.
 
 ## Customization in use (worked example)
 
@@ -147,10 +147,11 @@ python3 .../brand_palette_validator.py --primary "#FF6B35" --accent "#00D4AA"
 
 ## References
 
+The original author's reading list and file paths below are unchecked and mostly point to files that are not in this folder (the converters, `research-ops/`, `marketing/landing/`). You do not need any of them to run the wizard.
+
 - WCAG 2.2 — §1.4.3 (contrast), §1.4.4 (resize), §1.4.11 (non-text contrast)
 - Aarron Walter — *Designing for Emotion* (A Book Apart)
 - Ellen Lupton — *Thinking with Type*
 - Adobe Spectrum — *Color Foundations*
 - Nielsen-Norman — *Table of Contents Best Practices* (2023)
-- research-ops onboarding pattern: `research-ops/CLAUDE.md` §8
 - Brand palette math source: `marketing/landing/skills/landing/scripts/brand_palette_validator.py`

@@ -154,7 +154,7 @@ improve:
 works_best_with:
   tools:
     - name: Claude Code
-      why: It can keep one file per belief and the register between months and run on the first Friday.
+      why: It can keep one file per belief and the register between months. You start the run on the first Friday of each month. It does not run on a timer unless you set up a scheduled task or connect a scheduler.
     - name: Any good chat AI
       why: Paste the agent, your beliefs and the month's evidence. Keep the register in a note yourself.
   inputs:

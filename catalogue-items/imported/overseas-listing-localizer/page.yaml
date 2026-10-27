@@ -5,11 +5,11 @@ name: Overseas listing localizer
 summary: Localize your product listing for other countries. Get local-language copy, converted sizes, image checks and label reminders for each market.
 job: run-your-store
 headline: Overseas listing localizer
-subhead: Your product listing rewritten for each country you sell in, not just translated. You get local-language copy, converted sizes, correct image rules and reminders about labels the market expects.
+subhead: Your product listing rewritten for each country you sell in, not just translated. You get local-language copy, converted sizes, image rules as of the import date and reminders about labels the market expects.
 explain: |
-  Your product listing rewritten for each country you sell in, not just translated. You get local-language copy, converted sizes, correct image rules and reminders about labels the market expects.
+  Your product listing rewritten for each country you sell in, not just translated. You get local-language copy, converted sizes, image rules as of the import date and reminders about labels the market expects.
 
-  The skill rewrites text to match local habits: dense selling points for China, short scene-based copy for North America, polite detailed copy for Japan. It converts clothing sizes across CN, US, UK, EU and JP charts, lays out main images with local-language text where allowed, and fits each marketplace's picture rules. A common mistake it avoids is pasting dense text onto an Amazon main image, which gets rejected. It lists likely compliance labels as hints only. This is not legal advice, and a native speaker should check the final copy.
+  The skill rewrites text to match local habits: dense selling points for China, short scene-based copy for North America, polite detailed copy for Japan. It converts clothing sizes across CN, US, UK, EU and JP charts, lays out main images with local-language text where allowed, and checks each image against the picture rules in the author's notes. Those notes date from October 2026 and may be out of date. A common mistake it avoids is pasting dense text onto an Amazon main image, which gets rejected. It lists likely compliance labels as hints only. This is not legal advice, and a native speaker should check the final copy.
 when:
   - You sell on a China platform and are opening a US store.
   - Your listing was rejected for text on the main image.
@@ -31,12 +31,12 @@ you_get:
   - Platform image specs
   - Label reminders
 how_to_use:
-  - Open your AI. Paste or upload the skill, then add your product images and copy.
+  - Open your AI. Paste or upload the skill, then add your product images and copy. The skill file body is in Chinese. The English summary at the top and the English steps in section 6 are the ones to follow.
   - Tell it which countries and platforms you sell on. Don't say "worldwide".
   - Add your size chart if you have one. It adds centimeters to every size.
   - Let it make the text-free main image first. Then ask for each country's version.
   - Check all foreign text with a native speaker. Confirm current platform rules and label rules on each platform's own seller help page before you upload. The rules in the skill are the author's notes and may be out of date.
-  - Upload the images that pass and the approved copy for each region. Check again whenever a platform changes its rules. To write the listing text itself first, use the Product listing writer.
+  - Upload the images that pass and the approved copy for each region. Check again whenever a platform changes its rules. Run the Product listing writer first if you do not have finished listing text yet, then localize it here. Run the Listing completeness scorer last, on each finished version.
   - Image making and checks need an AI that can run code on your computer, such as Claude Code, Codex or Cursor, with Python 3 and Node.js installed. You also need your own image model key (OpenAI, Gemini, fal or Replicate), which is a paid service. Copy and size tables work in any chat.
   - The size table in the skill is a rough guide. Swap in your brand's own size chart before you publish.
 output_sample:

@@ -94,7 +94,7 @@ The runbook has 7 phases: **Plan → Extract → Transform → Load → Validate
 
 If any of these happen within 24 hours of cutover, **rollback**:
 
-- **Data corruption** discovered (>5% of records missing or broken)
+- **Data corruption** discovered (more than about 5% of records missing or broken; a rule of thumb, set your own limit)
 - **Critical integration failure** that can't be fixed within 4 hours
 - **Customer-facing breakage** (invoices not sending, support tickets lost)
 - **Financial totals don't reconcile** and can't be explained
@@ -102,14 +102,16 @@ If any of these happen within 24 hours of cutover, **rollback**:
 
 ### Preserve post-cutover work before reverting
 
-Treat a trigger as a decision to start recovery assessment, not permission to discard the target. Record the source-freeze and target-live timestamps and the target change-log cursor at cutover. Before cutover, test a reverse mapping for new records, edits, deletions and relationships; name the recovery owner and record unsupported objects.
+In short: do not throw away work done in the new tool. Pause both tools, save copies of both, work out what changed in the new tool since the switch, put those changes back into the old tool once, and only then reopen it.
 
-1. Quiesce user writes, integrations, background jobs and queued deliveries in both systems. Record the recovery cutoff and final event cursor; keep both systems intact and restrict writes while deciding the recovery path.
-2. Preserve restorable snapshots/exports of both systems and a complete ordered target change log from cutover through recovery cutoff. Include new records, updates, deletion tombstones, attachments, relationships and external side effects. Verify export completeness and restoration. A current-record export alone cannot prove which records were deleted.
-3. Compare source-freeze state, target-at-cutover state and target changes. Build a reverse reconciliation ledger with stable source/target IDs, before/after values, dependencies and a disposition for every change. Resolve conflicts with the business owner; do not silently overwrite source-side changes. Map newly issued identifiers, payments, messages and downstream effects without issuing them a second time.
-4. Rehearse the approved recovery in a copy of the source. Apply changes once in dependency order; preserve deletion evidence and resolve dependent records. Reconcile record counts, relationships, monetary totals and business events, including target-only invoices. Have finance/operations owners verify the reconciled state and integration routing.
-5. Reopen the recovered source only when the ledger is complete and owners approve the verified recovery. Route queued work exactly once. If capture, reverse mapping, conflict resolution or reconciliation is incomplete, keep both states preserved and writes paused or use an owner-approved forward recovery; report the blocker instead of declaring rollback complete.
-6. Retain the target and recovery evidence read-only until recovery validation, downstream checks and the agreed retention period are complete. Target deletion is a separate authorized decommission decision after a tested retained recovery copy exists. Resume operations, then record the retrospective and re-plan.
+Before the switch, record when the old tool was frozen and when the new tool went live. Test how you would copy new records, edits and deletions back. Name one person who owns recovery.
+
+1. Pause writes. Stop users, integrations and background jobs from changing data in both tools. Note the exact time you paused. Keep both tools as they are while you decide what to do.
+2. Save copies. Export both tools. Also save the full list of changes made in the new tool since the switch: new records, edits, deletions, attachments and links between records. Check the exports open and are complete. A list of current records cannot show what was deleted.
+3. List what changed. Compare the old tool at the freeze, the new tool at the switch and the new tool now. Make a table with one row per change: the record ID in both tools, the value before and after, and what to do with it. Settle any clash with the business owner. Never overwrite an old-tool change without asking. Do not send the same invoice, payment or message twice.
+4. Practise on a copy. Apply the changes to a copy of the old tool, in an order that keeps linked records intact. Check that counts, links, money totals and events match. Include invoices that exist only in the new tool. Have finance or operations check the result.
+5. Reopen the old tool only when every change in the table has an answer and the owners approve. Send queued work out once. If any part is unfinished, keep both copies saved and writes paused, or agree a fix-forward plan with the owner. Report what is blocking you. Do not call the rollback done.
+6. Keep the new tool and your evidence read-only until the checks are done and the agreed retention time has passed. Deleting the new tool is a separate decision, made only after you have a tested copy. Then restart normal work and write down what you learned.
 
 The runbook is a plan. A snapshot or a passing record-count check alone does not establish a completed, lossless rollback.
 
@@ -126,6 +128,8 @@ The runbook is a plan. A snapshot or a passing record-count check alone does not
 - **Integration assumptions** — "Stripe will just work with the new tool." Test.
 
 ## Typical Small-Org Migration Examples
+
+Example timelines and the 5% rollback line above are rough rules of thumb from the original author, not typical facts. Check them against your own data, your team size and your contract before you plan around them.
 
 ### QuickBooks Online → NetSuite
 

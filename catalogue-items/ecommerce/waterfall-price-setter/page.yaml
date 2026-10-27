@@ -21,6 +21,7 @@ not_for:
   - "You want to price a subscription: the skill does not price subscriptions, so work it out with your accountant or a simple spreadsheet."
   - "You want to price a whole catalogue at once: run this once per product, because CAC and shipping differ for each one."
   - "You only want to check the margin at a price you already chose: use the product margin checker."
+  - "Your cost stack is already settled and you only need a plan to test a price: use the Price test planner instead."
 
 you_give:
   - Your net profit target and operating expense share, as percents of price

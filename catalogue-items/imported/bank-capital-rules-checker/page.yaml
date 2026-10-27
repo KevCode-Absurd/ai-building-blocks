@@ -36,7 +36,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in this skill. Use an AI that can run Python if you can, as the skill includes a script for the maths.
   - Paste your figures in one currency and one date. Name the regulator whose buffers apply. The risk weights in the skill are illustrative: replace them with your regulator's table before you rely on any figure.
   - If your AI cannot run Python, it works the sums step by step and shows each formula. Check the sums yourself in a spreadsheet.
-  - If a figure is missing, say so. The AI should mark it MISSING and skip that ratio, not guess. If you do not know the regulator or the buffers, the AI should stop and ask you, not apply a default.
+  - If a figure is missing, say so. The AI should mark it MISSING and skip that ratio, not guess. If you do not know the regulator or the buffers, the AI should ask you. If you still cannot say, it checks CET1 against the 4.5% base minimum only and marks it "buffers not applied". It never applies a default buffer.
   - Check the inputs list in the result first. Then read the table, starting with any shortfall.
   - Give the result to your compliance officer to check against your regulator's own rules before you rely on it.
 output_sample:

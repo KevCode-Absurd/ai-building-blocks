@@ -145,8 +145,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Klaviyo", why: "It builds segments from email and site activity with OR rules, and shows complaint and bounce rates for each send."}
-    - {name: "Shopify", why: "Order and checkout events from the store feed the engaged segment."}
+    - {name: "Klaviyo", why: "A paid service that needs an account. It builds segments from email and site activity with OR rules, and shows complaint and bounce rates for each send."}
+    - {name: "Shopify", why: "A paid platform that needs an account. Order and checkout events from the store feed the engaged segment."}
   inputs:
     - "An export of your last eight campaigns with opens, clicks, bounces and complaints"
     - "Your list size by signup source"

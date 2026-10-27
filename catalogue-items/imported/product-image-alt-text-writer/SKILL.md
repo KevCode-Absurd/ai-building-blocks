@@ -29,7 +29,7 @@ All skills accept these universal parameters:
 |-----------|--------|----------|---------|-------------|
 | store     | string | yes      | —       | Store domain (e.g., mystore.myshopify.com) |
 | format    | string | no       | human   | Output format: `human` (default) or `json` |
-| dry_run   | bool   | no       | false   | Preview mutations without executing |
+| dry_run   | bool   | no       | true    | Preview mutations without executing. For this skill the default is true: switch it to false only after the user approves the preview |
 
 Skill-specific parameters:
 
@@ -42,7 +42,7 @@ Skill-specific parameters:
 
 ## Safety
 
-> ⚠️ Step 3 (`fileUpdate`) writes alt text to live media. With `overwrite: true` it replaces existing alt text, which is not bulk-reversible. Run `dry_run: true` first and review the proposed alt text per image. Default (`overwrite: false`) only fills blanks and is low-risk.
+> ⚠️ Step 4 (`fileUpdate`) writes alt text to live media. With `overwrite: true` it replaces existing alt text, which is not bulk-reversible. Run `dry_run: true` first and review the proposed alt text per image. Default (`overwrite: false`) only fills blanks and is low-risk.
 
 ## Workflow Steps
 
@@ -50,9 +50,11 @@ Skill-specific parameters:
    **Inputs:** `first: 250`, optional collection/tag filter; fields `title`, `productType`, `tags`, `options`, `media{ MediaImage{ id image{ altText } } }`; paginate until done.
    **Expected output:** Product media with current alt text + the product context needed to generate good alt text.
 
-2. **COMPUTE (no API):** for each image with blank (or, if `overwrite`, placeholder) alt text, compose alt text from `title` + relevant option values (color/material/style) + product type, trimmed to `max_chars`. Emit a preview table (image id → proposed alt).
+2. **COMPUTE (no API):** for each image with blank (or, if `overwrite`, placeholder) alt text, compose alt text from `title` + relevant option values (color/material/style) + product type, trimmed to `max_chars`. Start with the product noun. Use only colour, material or style words that appear in the product options, type or tags. If the product data does not give an attribute (for example, no colour), leave it out. Do not guess the view (front, back, worn) because you cannot see the photo. Emit a preview table (image id → proposed alt), and mark each line whose colour, material or view is not backed by the product data as "CHECK AGAINST PHOTO".
 
-3. **OPERATION:** `fileUpdate` — mutation
+3. **APPROVAL (required):** show the preview table. The proposed lines come from product data, not from the photo, so tell the user to check colour, material and view against each image. Do not run step 4 until the user says yes in chat. Then set `dry_run` to false.
+
+4. **OPERATION:** `fileUpdate` — mutation
    **Inputs:** `files: [{ id: <MediaImage id>, alt: <generated alt> }]` in batches (≤ 25).
    **Expected output:** Updated files; collect `userErrors`.
 

@@ -12,11 +12,16 @@ description: Create standardized metadata for data assets. Use when documenting 
 - Onboarding new team members who need to understand available data assets
 - Auditing catalog completeness to find undocumented tables
 
+# When not to use
+- A one-off scratch table or an unpublished draft: add a short note in the file or sheet instead.
+- Your team has no data catalog: put the entry on a wiki page or in a shared data dictionary.
+- You need the table built or fixed: ask your data engineer. This only writes the documentation.
+
 # Process
 1. **Extract technical metadata** — pull schema, column names, types, primary keys, foreign keys, and row count from `INFORMATION_SCHEMA` or the source system. Use `scripts/catalog_extractor.py` to automate this for database tables.
 2. **Collect business context** — interview the data owner to capture the business purpose, owning team, criticality (critical / high / medium / low), and known use cases. Record the business-friendly display name.
 3. **Write column descriptions** — for each column, write a one-sentence plain-language description, note example values, and document any business rules (valid values, constraints, format requirements).
-4. **Assess data quality** — calculate or estimate completeness, freshness (hours since last update), and duplicate rate. Document known issues and how they affect downstream use.
+4. **Assess data quality** — calculate from the data completeness, freshness (hours since last update), and duplicate rate. Write "not measured" for any figure you could not check against the data. Never estimate a quality figure. Document known issues and how they affect downstream use.
 5. **Document lineage** — record upstream sources (where the data comes from) and downstream consumers (dashboards, models, reports that depend on it).
 6. **Add governance details and publish** — specify access level (public/restricted/confidential), sensitivity (PII, financial, health), compliance tags, retention policy, and access instructions. Complete `assets/catalog_entry_template.md` and submit to the catalog.
 

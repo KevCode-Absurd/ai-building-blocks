@@ -1,6 +1,6 @@
 ---
 name: web-scraper
-description: Web scraping inteligente multi-estrategia. Extrai dados estruturados de paginas web (tabelas, listas, precos). Paginacao, monitoramento e export CSV/JSON.
+description: Pull structured data (tables, lists, prices) from web pages into a CSV or JSON file, following page numbers and rating how far to trust the result. Original description (Portuguese) says the same. Checks site rules first and stops at login walls and CAPTCHAs.
 risk: safe
 source: community
 date_added: '2026-03-06'
@@ -26,6 +26,10 @@ Read [the detailed guide](references/detailed-guide.md) before executing this sk
 
 ## Before you start (plain steps)
 
+**Gather these first:** the page links, the fields wanted as columns, how many result pages to follow, and the output format (CSV or JSON).
+
+**Stop rules:** wait between requests (at least a second or two, longer if the site is slow). Stop and tell the user at a login wall, a CAPTCHA or a bot-block page. Do not try to get around any of them, and do not log in for the user. Prefer the site's official API or export when there is one. Scraping can be against a site's terms and can touch personal data, so the user must check the terms, and you must not collect personal data the user did not ask for.
+
 1. Ask for anything missing, once: the page links and the data wanted. Never guess a field.
 2. Check the site's terms and robots.txt allow this. If they forbid it, stop and say so. Suggest an official API or export instead.
 3. Pull the data, validate it, and rate the result High, Medium or Low.
@@ -35,16 +39,16 @@ Read [the detailed guide](references/detailed-guide.md) before executing this sk
 
 ## When to Use This Skill
 
-- When the user mentions "scraper" or related topics
-- When the user mentions "scraping" or related topics
-- When the user mentions "extrair dados web" or related topics
-- When the user mentions "web scraping" or related topics
-- When the user mentions "raspar dados" or related topics
-- When the user mentions "coletar dados site" or related topics
+- Building a price list from several product pages on one site
+- Copying a long table or results list from a web page into a spreadsheet
+- Collecting every job, event or listing from a paginated results page
+- Tracking what changed on a page since a saved file (new, removed and changed rows)
+- The user says "scrape", "extract data from a web page" or "get this table into a sheet" (also "raspar dados" or "coletar dados de site")
 
 ## Do Not Use This Skill When
 
 - The task is unrelated to web scraper
+- The site has an official API or a download button: use that instead
 - A simpler, more specific tool can handle the request
 - The user needs general-purpose assistance without domain expertise
 

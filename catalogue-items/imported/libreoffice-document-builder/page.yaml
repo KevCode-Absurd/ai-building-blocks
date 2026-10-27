@@ -30,15 +30,17 @@ you_give:
 you_get:
   - A new ODT document
   - Copies in DOCX, PDF, HTML, RTF, TXT or EPUB
-  - One filled file per row, for a mail merge
+  - One filled file per row, for a mail merge, saved as letter-1.odt, letter-2.odt and so on in a "merged" folder
   - The commands it ran, so you can repeat the job
+next: [pdf-toolkit]
 how_to_use:
   - Install LibreOffice and check it opens. Use an AI that can run commands and save files, such as Claude Code, or ask for the commands and run them yourself.
   - Start a chat and add the skill. Say what you want, such as "make a one-page offer letter and save it as a PDF".
   - For a mail merge, attach your template and your list. Check that the template markers match your list columns.
   - Open one or two of the files it made. Check the text, the layout and that no ${...} markers are left.
   - For a folder, ask it to convert a few files first. Then run the whole folder once you are happy.
-  - If a conversion hangs, close LibreOffice, then ask your AI to find and stop any leftover LibreOffice process and try again.
+  - If a conversion hangs, save your work and close LibreOffice from its own menu. Then ask your AI to find and stop any leftover LibreOffice process and try again. Stopping the process by force loses unsaved work in any open LibreOffice window.
+  - Next, check the finished PDFs with the PDF toolkit. Then send or file the results. Mail merge files hold your contacts' names and details, so keep them somewhere private.
 output_sample:
   input:
     - What the document should say

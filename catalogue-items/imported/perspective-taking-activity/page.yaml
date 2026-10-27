@@ -18,7 +18,7 @@ when:
 not_for:
   - "You want a quick recall quiz: write the questions yourself, since this builds a multi-step activity."
   - "Your topic has no documented sources: use a plain class discussion with clear ground rules instead."
-  - "You need to teach pupils to talk through ideas in class: pair this with the dialogic-teaching-move-generator, or ask a colleague for a discussion protocol."
+  - "You need to teach pupils to talk through ideas in class: use the Follow-up question writer, or the Class discussion format picker for a discussion protocol."
 you_give:
   - The topic and the people involved
   - Student age or level
@@ -30,11 +30,14 @@ you_get:
   - Guards against projection
   - An assessment guide focused on reasoning
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill instructions from the skill file.
+  - Before you start, gather three things. The subject and topic, what you want students to learn from it, and the sources you have for the people involved. Also note the year level of your students.
+  - Open Claude, ChatGPT or Gemini. In the skill file, find the section headed "Prompt". Paste the text inside its grey text block (it starts "You are an expert in social perspective-taking research"). Leave out the settings block at the top of the file. Setting up takes you about 5 to 10 minutes.
   - Type your subject and topic, and what you want students to learn from it.
   - Add student age, class sensitivities and what students already know, if you have them.
   - Read the Safety Check first. Change the plan if it flags a concern for your class.
   - Run the four phases with your students. Use the Assessment Criteria to grade their reasoning.
+  - Next, plan the class talk with the Class discussion format picker, and write follow-up questions with the Follow-up question writer. The Socratic question sequence writer and the Hidden belief mapper also pair with it.
+next: [class-discussion-format-picker, follow-up-question-writer]
 output_sample:
   input:
     - Your subject and topic, such as a history unit or a community debate

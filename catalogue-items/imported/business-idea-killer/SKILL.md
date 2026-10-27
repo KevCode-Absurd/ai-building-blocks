@@ -70,7 +70,7 @@ Demand evidence, not optimism. One hard NO = dead.
 1. **Real pain?** 2am-problem, or a nice-to-have "vitamin"?
 2. **Buyer has money?** Right now — not after the product helps them.
 3. **Proven demand?** Can the user name a single live competitor ad?
-4. **Legal to charge for?** Regulated, licensed, or illegal in the target market? Name the law if suspicion exists.
+4. **Legal to charge for?** Regulated, licensed, or illegal in the target market? Name the law if suspicion exists. To check, look up the target country's licensing regulator or the official rules for that sector, and tell the user to confirm with a local lawyer. Do not state a law you cannot name.
 5. **A moat?** What stops the 50th copycat next month?
 
 ### Step 3: The free-AI test

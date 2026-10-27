@@ -11,7 +11,7 @@ explain: |
 
   It writes the trl command with learning rate, epochs, packing and dataset settings, and explains why each is set that way. It is built on Hugging Face Transformers and Accelerate. You need Python, the TRL package and a GPU, and larger models need more memory.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Hugging Face) says Apache-2.0, which covers the code. Credit goes to Hugging Face and sickn33.
+  Licence: the one licence for the skill text in this copy is CC BY 4.0, as the LICENSE-CONTENT file says. The Apache-2.0 line in the skill's file header is Hugging Face's own declaration, and it covers any code you copy from it. Credit goes to Hugging Face and sickn33.
 when:
   - You want a small model to follow your company's instruction style.
   - You have pairs of good and bad answers and want to train on the preference.
@@ -31,6 +31,7 @@ you_get:
   - A ready trl command
   - Settings with a short reason for each
   - Next steps to check results
+next: [copilot-eval-driven-dev, llm-fine-tuning-guide]
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into the chat.
   - Tell it your base model, your dataset and what the model should do better.
@@ -38,8 +39,11 @@ how_to_use:
   - Check that your dataset columns match the method you picked. SFT, DPO and the others each expect different columns.
   - Read the method choice and the reasons for each setting before you run anything.
   - The commands leave out --push_to_hub. Add it only if you want to upload your trained model to the Hugging Face Hub, and use a private repo. A public repo shares your model with everyone.
+  - The sample config sets report_to to none, so no training numbers leave your machine. If you pick trackio or wandb for tracking, your training numbers (loss and speed, not your data) go to an outside service.
+  - Before you run any command, check it against the docs for the TRL version you have installed. Run pip show trl to see your version.
   - Run the command on your own machine. The AI cannot train for you unless it can run code on a GPU.
   - Check the result against the checklist. Do a short test run first, with a small max_steps value on a slice of data, because GPU time costs money.
+  - Next, test the trained model on questions it has not seen, side by side with the base model, before anyone relies on it. Then open the AI app evaluation planner to make that test repeatable.
 output_sample:
   input:
     - The base model you want to train

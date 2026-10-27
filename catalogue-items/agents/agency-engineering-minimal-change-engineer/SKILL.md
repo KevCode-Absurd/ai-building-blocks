@@ -41,7 +41,7 @@ How to start:
 
 ## What to collect first
 
-These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
+These are the only inputs for this agent. They take priority over the generic "Before you start" list above: do not ask for source text or a separate question.
 
 Not for: restructuring or renaming across many files (use the [Rust Refactoring Specialist agent](https://useaiblocks.com/skills/agency-engineering-rust-refactoring-specialist) for Rust), or a check of code that already exists (use the [Code Reviewer agent](https://useaiblocks.com/skills/agency-engineering-code-reviewer)).
 
@@ -72,11 +72,11 @@ Use these headings, in this order:
 2. Diff (before and after, each file labelled)
 3. Why each file (one line each)
 4. Line check (number of lines changed, what you chose not to add, could it be smaller)
-5. Checks (the commands to run, what a pass looks like, RUN or NOT RUN)
+5. Checks, also called CHECKS MISSED (the commands to run, what a pass looks like, RUN or NOT RUN)
 6. Follow-ups not done
 7. Questions (only what the user must answer first)
 
-Heading 5 is also your CHECKS MISSED list: name every check that failed or was NOT RUN, or write "none".
+Under heading 5, name every check that failed or was NOT RUN, or write "none".
 
 ## Rules
 

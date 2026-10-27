@@ -35,6 +35,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill instructions into a new chat. This skill needs no code, files or paid tools.
   - Paste your account code list first, if you have one. Say it is your chart of accounts so the codes match your books.
   - Paste your invoice text or CSV. Add the matching purchase orders (optional) and your vendor records (optional).
+  - For a duplicate check, also paste the last 90 days of invoice records. Without them the duplicate check is not done, and the result will say so.
   - Ask your AI to process the invoice or batch. Check the math and the flags before you trust any code.
   - Ask for a CSV you can import into your accounting software. Send blocked invoices to your accounts payable person for manual review.
   - Have your bookkeeper or accountant review the coded lines before anything is posted or paid.

@@ -11,9 +11,11 @@ The original author calls this method a "Vela 3-layer pipeline" with "ADHD 4-fra
 
 ## What you need first
 
+**Privacy first.** The optional token count reads the user's local Claude Code logs, which hold past chats. Those can contain keys, passwords or client names. This step is **off by default**. Skip it, and write `cache:n/a` and `tok:n/a`, unless the user clearly says yes after you explain this.
+
 1. **A git repository** with at least a few commits from the session. Layer 01 reads `git log` and `git diff`. If there is no git, say "No git history found" and work from the conversation alone. Write "files changed: unknown" and do not use the file-count rules.
 2. **The conversation from the session.** The decisions and reasons come from what was said here. If the conversation is short or missing, write less. Do not fill the gap.
-3. **Claude Code with local session logs** in `~/.claude/projects`, and `python3`, but only for the optional token count in Layer 03. Skip that step if either is missing, or if the user does not want local logs read. Write `cache:n/a` and `tok:n/a`.
+3. **Claude Code with local session logs** in `~/.claude/projects`, and `python3`, but only for the optional token count in Layer 03, and only if the user opts in (see Privacy first). Skip that step if either is missing. Write `cache:n/a` and `tok:n/a`.
 
 The scores below are a judgement call by you, the AI, using the rubric. They are not measurements. Say so when you show them.
 
@@ -70,7 +72,7 @@ Score each frame 0.0–1.0 using the rubric below. Then apply pruning and classi
 - `0.1` Typo fix, comment change, plain text edit
 
 **Frame B — Uncertainty** (developer doubt signals)
-- `1.0` Code written then fully rolled back, explicit doubt expressed ("이게 맞나?" meaning "is this right?", "동작 안 하네" meaning "it does not work"), `git revert`
+- `1.0` Code written then fully rolled back, explicit doubt expressed ("is this right?", "it does not work"), `git revert`
 - `0.5` Advice sought from Claude mid-implementation, 2+ revision requests on same area
 - `0.0` Uninterrupted directive execution — developer knew exactly what to build
 
@@ -215,7 +217,7 @@ Fields:
 - `tok:[total]` — total tokens this session (input + cache_read + cache_create + output, in K e.g. `45K`)
 - verb phrase — what shipped, grounded in git log
 
-**Collect token usage** (optional). This script reads your local Claude Code session logs in `~/.claude/projects`, which hold your past chats. It prints only counts and the first 80 characters of up to three prompts. The newest log file may belong to another session or another project. So first list the 5 newest `.jsonl` files in the folder for this project under `~/.claude/projects` (names and times only), and let the user pick the one for this session. Do not read any file's contents before they choose. Pass the chosen path to the script as its first argument. Ask the user before you run it. If they say no, write `cache:n/a` and `tok:n/a`. Run in bash and capture the output:
+**Collect token usage** (optional, off unless the user opts in). Warning for the user first: your past prompts can hold secrets or private text, such as keys, passwords or client names. The script prints the first 80 characters of up to three prompts, and those snippets could end up in the chat and in the HTML page. Skip this step for sensitive projects, or say that you will leave the prompt text out of the HTML page and show counts only. This script reads your local Claude Code session logs in `~/.claude/projects`, which hold your past chats. It prints only counts and the first 80 characters of up to three prompts. The newest log file may belong to another session or another project. So first list the 5 newest `.jsonl` files in the folder for this project under `~/.claude/projects` (names and times only), and let the user pick the one for this session. Do not read any file's contents before they choose. Pass the chosen path to the script as its first argument. Ask the user before you run it. If they say no, write `cache:n/a` and `tok:n/a`. Run in bash and capture the output:
 ```bash
 python3 -c "
 import json, sys
@@ -278,7 +280,7 @@ Parse the output and include token stats in the session narrative. Then:
       <div class="signal-fill">             <!-- width % driven by signal score -->
 
 <div class="section">                       <!-- frames -->
-  <div class="section-title"> ... <span class="count">Layer 02 · ADHD tree-of-thought</span>
+  <div class="section-title"> ... <span class="count">Layer 02 · four-frame scoring</span>
   <div class="frames-grid">
     <div class="frame-card">               <!-- pruned: class="frame-card pruned" -->
       <div class="frame-label">            <!-- Frame A / B / C / D -->

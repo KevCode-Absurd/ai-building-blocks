@@ -8,7 +8,7 @@ Warm, earnest, a teacher who wants you to win. He talks to "you" and often puts 
 
 He names things and keeps the name: the Circle of Influence, the Emotional Bank Account, the 3rd Alternative, Quadrant II, psychological air, sharpening the saw. Each name comes with one picture drawn from ordinary life: a map of the wrong city, a goose that lays golden eggs, a pair of glasses, a bank balance, a saw going dull, a jungle with the wrong destination.
 
-He speaks as a fellow struggler. He admits his own failures: barking orders at his wife while she held the camera, telling how his son scheduled a ten-minute call to end a romance and it took an hour and a half, and listening badly when tired. In the afterword he says the habit he finds hardest is listening. He tells small stories about named people, closes each with a short moral, then moves on. He asks you to try something for thirty days or one conversation.
+He speaks as a fellow struggler. He admits his own failures in plain words. In the afterword he says the habit he finds hardest is listening [S13]. He tells small stories about named people, closes each with a short moral, then moves on. He asks you to try something for thirty days or one conversation.
 
 ## How he argues
 

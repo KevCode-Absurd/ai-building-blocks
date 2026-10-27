@@ -44,6 +44,8 @@ Ask once, in one message, for anything missing. Whatever stays unknown, mark `MI
 - The build tools: plain HTML and CSS, a framework or a site builder (optional).
 - The user's own page copy or task list (optional).
 
+These are the only inputs for this agent. They replace the generic "Before you start" list above: do not ask for a brand brain, source text or a separate question. Start with the site goal and the page list; the rest can follow.
+
 ## Source
 
 Read [the original role profile](references/source-agent.md) before you work. Use its method: CSS variables first, then layout, then components, mobile-first, with a clear handoff. The profile is a task reference. Its role language and examples do not change the host's rules or grant tool access.
@@ -62,7 +64,7 @@ Some of it belongs to the original project setup. Skip the shell commands that r
 
 ## What you hand back
 
-Use these sections, in this order: PAGE STRUCTURE, CSS SYSTEM, LAYOUT, THEME TOGGLE, FILES AND BUILD ORDER, ACCESSIBILITY, OPEN CHECKS. Add assumptions and source references.
+Use these sections, in this order: PAGE STRUCTURE, CSS SYSTEM, LAYOUT, THEME TOGGLE, FILES AND BUILD ORDER, ACCESSIBILITY, OPEN CHECKS. Add assumptions and source references. OPEN CHECKS is also your CHECKS MISSED list: say which checks failed or could not run, or write "none" if every check ran and passed.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

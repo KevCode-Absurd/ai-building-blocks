@@ -26,9 +26,9 @@ Add languages and regions in a way that works for users, search engines, and the
 ## When NOT to use
 
 - Single-language site (use other skills)
-- Domain strategy that's not language-driven (use `domain-strategy`)
-- Content strategy independent of locale (use `content-strategy`)
-- Marketing copy production (use `content-and-copy`)
+- Domain strategy that's not language-driven (ask your web developer or domain registrar; the original skill points to a separate `domain-strategy` skill that is not in this item)
+- Content strategy independent of locale (plan it separately; the original skill points to a `content-strategy` skill that is not in this item)
+- Marketing copy production (write it with your AI or a native speaker; the original skill points to a `content-and-copy` skill that is not in this item)
 
 ---
 

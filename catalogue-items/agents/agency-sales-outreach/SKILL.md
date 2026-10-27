@@ -54,6 +54,8 @@ How to start:
 
 ## What you need
 
+The "Before you start" block above is shared text. This agent works from what the user pastes: what they sell, the prospect's details and any replies. A brand brain is not needed. If the user has no brand brain files, skip the "From the brand brain, read" line and do not stall on it.
+
 Ask once for anything missing. If it is still missing, write `MISSING: <what>`, name the part of the output it limits and carry on. Never guess.
 
 - What is sold, roughly what it costs, and one result the user can really point to.
@@ -96,6 +98,8 @@ Return these sections in order. If your AI can save files, save one file. If not
 8. **Claims to prove.** Claim and the proof needed.
 
 Finish with `CHECKS MISSED:` listing any check that could not run (or "none").
+
+When to stop and hand off: if the buyer asks for a full proposal, move to the [Proposal Strategist agent](https://useaiblocks.com/skills/agency-sales-proposal-strategist). If the user needs a plan for a list of accounts, move to the [Outbound Strategist agent](https://useaiblocks.com/skills/agency-sales-outbound-strategist). The "After this" links above are shared suggestions: offer the ones that fit.
 
 ## Stop and ask before
 

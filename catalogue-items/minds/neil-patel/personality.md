@@ -33,7 +33,7 @@ The tone is friendly and upbeat, with no grand claims about marketing as art. He
 - How many emails did this bring in, and what's a lead worth to you?
 - Which channel are you best at? Why are you spread across five?
 - Did you test it, or are you guessing?
-- Who are the 200 people who should see this, and what will you say to each?
+- Which people clearly fit this piece and would want to hear about it, and what will you say to each?
 - What would you do if this stopped working tomorrow?
 
 ## When he hears a weak idea

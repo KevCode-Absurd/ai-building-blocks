@@ -58,7 +58,7 @@ Adaptable templates for incident response runbooks covering detection, triage, m
 
 ## Runbook prerequisites
 
-Bind service, namespace, cluster context, database, owners, approved incident authority, evidence sources and rollback revision before adapting these templates. Thresholds, financial amounts, impact percentages and resolution messages are illustrative, never observed incident facts. The endpoints, environment variables and script paths in these templates (the feature-flag API, `STRIPE_CIRCUIT_BREAKER_ENABLED`, `RATE_LIMIT_ENABLED`, `scripts/smoke-test-payments.sh`, `scripts/db-rollback.sh`) are placeholders. They do not exist in your stack by default and the scripts are not included. Replace each with your own tested equivalent, or remove the step. Read-only triage comes first; mutations require an approved service-specific response. Verify actual smoke/rollback scripts in the target project before using them. No script is bundled or implied by this template.
+Bind service, namespace, cluster context, database, owners, approved incident authority, evidence sources and rollback revision before adapting these templates. Thresholds, financial amounts, impact percentages and resolution messages are illustrative, never observed incident facts. The endpoints, environment variables and script paths in these templates (the feature-flag API, `STRIPE_CIRCUIT_BREAKER_ENABLED`, `RATE_LIMIT_ENABLED`) are placeholders, and no smoke test or rollback script is included. They do not exist in your stack by default. Write "your tested smoke test (not included)" and "your tested rollback (not included)" where a step needs one. Replace each with your own tested equivalent, or remove the step. Read-only triage comes first; mutations require an approved service-specific response. Verify actual smoke/rollback scripts in the target project before using them. No script is bundled or implied by this template.
 
 ## Runbook Templates
 
@@ -133,11 +133,11 @@ kubectl logs -n payments -l app=payment-service --tail=100
 # Step 3: Check recent deployments
 kubectl rollout history deployment/payment-service -n payments
 
-# Step 4: ROLLBACK if recent deploy is suspect
+# Step 4: ROLLBACK if recent deploy is suspect (CHANGES THE SYSTEM: needs owner approval)
 kubectl rollout undo deployment/payment-service -n payments
 
-# Step 5: Scale up if resource constrained
-kubectl scale deployment/payment-service -n payments --replicas=10
+# Step 5: Scale up if resource constrained (CHANGES THE SYSTEM: needs owner approval)
+kubectl scale deployment/payment-service -n payments --replicas=[NUMBER]
 
 # Step 6: Verify recovery
 kubectl rollout status deployment/payment-service -n payments
@@ -163,7 +163,7 @@ psql -h $DB_HOST -U $DB_USER -c "
 # Step 4: Check external dependency latency
 curl -w "@curl-format.txt" -o /dev/null -s https://api.stripe.com/v1/health
 
-# Step 5: Enable circuit breaker if dependency is slow
+# Step 5: Enable circuit breaker if dependency is slow (CHANGES THE SYSTEM: needs owner approval)
 kubectl set env deployment/payment-service \
   STRIPE_CIRCUIT_BREAKER_ENABLED=true -n payments
 ```
@@ -177,7 +177,7 @@ kubectl logs -n payments -l app=payment-service --tail=500 | \
 # Step 2: Check error tracking
 # Go to Sentry: https://sentry.io/payments
 
-# Step 3: If specific endpoint, enable feature flag to disable
+# Step 3: If specific endpoint, enable feature flag to disable (CHANGES THE SYSTEM: needs owner approval; placeholder endpoint, use your own tested one)
 curl -X POST https://api.company.com/internal/feature-flags \
   -d '{"flag": "DISABLE_PROBLEMATIC_FEATURE", "enabled": true}'
 
@@ -193,13 +193,13 @@ psql -h $DB_HOST -c "
 # Step 1: Check current request rate
 kubectl top pods -n payments
 
-# Step 2: Scale horizontally
-kubectl scale deployment/payment-service -n payments --replicas=20
+# Step 2: Scale horizontally (CHANGES THE SYSTEM: needs owner approval)
+kubectl scale deployment/payment-service -n payments --replicas=[NUMBER]
 
-# Step 3: Enable rate limiting
+# Step 3: Enable rate limiting (CHANGES THE SYSTEM: needs owner approval)
 kubectl set env deployment/payment-service \
   RATE_LIMIT_ENABLED=true \
-  RATE_LIMIT_RPS=1000 -n payments
+  RATE_LIMIT_RPS=[LIMIT] -n payments
 
 # Step 4: If attack, block suspicious IPs at your approved edge or WAF
 # Do not apply a broad NetworkPolicy to the whole payments namespace during an incident:
@@ -224,13 +224,13 @@ curl -s "http://prometheus:9090/api/v1/query?query=histogram_quantile(0.99,sum(r
 
 ## Rollback Procedures
 ```bash
-# Rollback Kubernetes deployment
+# Rollback Kubernetes deployment (CHANGES THE SYSTEM: needs owner approval)
 kubectl rollout undo deployment/payment-service -n payments
 
 # Rollback database migration (if applicable)
 [YOUR TESTED DB ROLLBACK STEP: no script is included in this skill, supply and test your own, with $MIGRATION_VERSION]
 
-# Rollback feature flag
+# Rollback feature flag (CHANGES THE SYSTEM: needs owner approval; placeholder endpoint)
 curl -X POST https://api.company.com/internal/feature-flags \
   -d '{"flag": "NEW_PAYMENT_FLOW", "enabled": false}'
 ```
@@ -269,31 +269,31 @@ Updates in #payments-incidents
 📊 UPDATE: Payment Service Incident
 
 Status: Mitigating
-Impact: Reduced to ~5% failure rate
-Duration: 25 minutes
+Impact: Reduced to [X%] failure rate
+Duration: [MINUTES] minutes
 
 Actions Taken:
-- Rolled back deployment v2.3.4 → v2.3.3
-- Scaled service from 5 → 10 replicas
+- [ACTION TAKEN, from your incident log]
+- [ACTION TAKEN, from your incident log]
 
 Next Steps:
 - Continuing to monitor
 - Root cause analysis in progress
 
-ETA to Resolution: ~15 minutes
+ETA to Resolution: [ETA, only if the incident commander has given one]
 ```
 
 ### Resolution Notification
 ```
 ✅ RESOLVED: Payment Service Incident
 
-Duration: 45 minutes
+Duration: [MINUTES] minutes
 Impact: [N] affected transactions
-Root Cause: Memory leak in v2.3.4
+Root Cause: [ROOT CAUSE, confirmed by the team]
 
 Resolution:
-- Rolled back to v2.3.3
-- Transactions auto-retried successfully
+- [WHAT FIXED IT]
+- [RESULT, confirmed from your records]
 
 Follow-up:
 - Postmortem scheduled for [DATE]

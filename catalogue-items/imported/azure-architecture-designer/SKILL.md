@@ -42,7 +42,7 @@ python scripts/architecture_designer.py \
 {
   "recommended_pattern": "app_service_web",
   "service_stack": ["App Service", "Azure SQL", "Front Door", "Key Vault", "Entra ID"],
-  "estimated_monthly_cost_usd": 280,
+  "estimated_monthly_cost_usd": "[ESTIMATE FROM THE AZURE PRICING CALCULATOR]",
   "pros": ["Managed platform", "Built-in autoscale", "Deployment slots"],
   "cons": ["Less control than VMs", "Platform constraints", "Cold start on consumption plans"]
 }
@@ -67,7 +67,7 @@ Create infrastructure-as-code for the selected pattern:
 python scripts/bicep_generator.py --arch-type web-app --output main.bicep
 ```
 
-**Example Bicep output (core web app resources). The P1v3 Premium plan below costs much more than a small web app needs; use a Basic plan such as B1 for a low-cost start:**
+**Example Bicep output (core web app resources). The plan below is set to Basic B1, the low-cost start. Move to a Premium plan such as P1v3 only when load needs it, because it costs much more:**
 
 ```bicep
 @description('The environment name')
@@ -84,8 +84,8 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2023-01-01' = {
   name: '${environment}-${appName}-plan'
   location: location
   sku: {
-    name: 'P1v3'
-    tier: 'PremiumV3'
+    name: 'B1'
+    tier: 'Basic'
     capacity: 1
   }
   properties: {
@@ -144,6 +144,8 @@ resource sqlDatabase 'Microsoft.Sql/servers/databases@2023-05-01-preview' = {
 **Bicep is the recommended IaC language for Azure.** Prefer Bicep over ARM JSON templates: Bicep compiles to ARM JSON, has cleaner syntax, supports modules, and is first-party supported by Microsoft.
 
 ### Step 4: Review Costs
+
+The helper scripts (architecture_designer.py, bicep_generator.py and cost_optimizer.py) are in this item's scripts folder. They are not part of the pasted skill text, so upload the folder if you want them run.
 
 Analyze estimated costs and optimization opportunities:
 
@@ -239,7 +241,7 @@ Validate security posture before production:
 - **Network**: NSGs on all subnets, Private Endpoints for PaaS services, Application Gateway with WAF
 - **Encryption**: TLS 1.2+ in transit, Azure-managed or customer-managed keys at rest
 - **Monitoring**: Microsoft Defender for Cloud enabled, Azure Policy for guardrails
-- **Compliance**: Azure Policy assignments for SOC 2 / HIPAA / ISO 27001 initiatives
+- **Compliance**: Azure Policy assignments for SOC 2 / HIPAA / ISO 27001 initiatives. AI Blocks note: this is a starting design only. Regulated data such as health records or personal data needs review by a qualified compliance adviser and a check in Azure Policy before launch. Do not say a design is compliant.
 
 **If deployment fails:**
 
@@ -319,7 +321,7 @@ python scripts/bicep_generator.py --arch-type microservices --output main.bicep
 
 ## Quick Start
 
-Every price range and budget band below is a rough guess, not a quote. Check real prices in the Azure pricing calculator before you use them.
+Every price range and budget band below is a rough guess, not a quote. Front Door, Azure SQL and AKS costs may be left out of a band or may push the real cost above the stated range, so check each service in the pricing calculator. Check real prices in the Azure pricing calculator before you use them.
 
 ### Web App Architecture (< $100/month)
 

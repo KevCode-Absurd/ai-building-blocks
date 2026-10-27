@@ -103,7 +103,7 @@ tweaks:
   - what: Which page you test
     how: Name your busiest page. Weeks needed use visitors who reach that page, not all your traffic.
   - what: Sessions source
-    how: Paste sessions from GA4 if you have them. Shopify sessions include bots, so the weeks come out too short.
+    how: Paste sessions from GA4 if you have them. Shopify sessions can include bot visits, so if the numbers differ a lot from GA4 the weeks come out too short.
   - what: The main metric
     how: Say if you want revenue per visitor or gross profit. The skill will tell you what that costs in traffic.
 

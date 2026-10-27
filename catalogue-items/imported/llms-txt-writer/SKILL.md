@@ -124,6 +124,8 @@ Rules for page entries:
 
 **5. Key Facts Section (Recommended)**
 
+Every value in this block is a placeholder. Fill it only from facts your live site states.
+
 ```markdown
 ## Key Facts
 - Founded in [year] by [founder(s)]
@@ -288,8 +290,8 @@ For each selected page:
    - Uses factual, informative language
 
 **Good description examples:**
-- `Explains the three pricing tiers (Free, Pro, Enterprise) with feature comparison and annual/monthly costs.`
-- `Details the company's founding in 2018, team of 45 employees, and office locations in Austin and London.`
+- `Explains the [NUMBER] pricing tiers ([TIER NAMES]) with feature comparison and annual/monthly costs.`
+- `Details the company's founding in [YEAR], team of [TEAM SIZE] employees, and office locations in [CITY] and [CITY].`
 - `Covers integration setup for Slack, Salesforce, and HubSpot with step-by-step guides and API endpoints.`
 
 **Bad description examples:**
@@ -337,15 +339,15 @@ Construct the llms.txt following this template:
 - [Guide Title](https://example.com/guide): Comprehensive guide covering [topic] with [X] sections and practical examples.
 - [Blog Post](https://example.com/blog/post): Analysis of [topic] with original data from [source].
 
+Before you write Key Facts: every line below is a placeholder. Fill a line only from what your live site states, and check it against the live site before you publish. If the site does not state a fact, leave the line out.
+
 ## Key Facts
 
 - Founded in [year] by [name(s)]
 - Headquartered in [City, Country]
+- Industry: [Classification]
 - [Specific metric, only if your site states it: YOUR REAL FIGURE]
 - [Key differentiator, only if your site states it: YOUR REAL CLAIM]
-
-Every Key Facts line must be checked against the live site before you publish. If the site does not state a fact, leave the line out.
-- Industry: [Classification]
 
 ## Contact
 

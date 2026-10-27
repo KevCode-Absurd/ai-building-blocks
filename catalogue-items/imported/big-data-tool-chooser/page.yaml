@@ -2,16 +2,18 @@ thinking: medium
 thinking_why: It weighs a few options against your data.
 new_slug: big-data-tool-chooser
 name: Big data tool chooser
-summary: Find the right MATLAB tool for files too big for memory. Give it your file details. You get one clear path and code for your big data task.
+summary: Pick one MATLAB path for files too big for memory. You get a pre-flight verdict, code and parallel settings. Needs paid MATLAB.
 job: build-software
 headline: Big data tool chooser
-subhead: "One clear MATLAB path for working with files too big for memory, not a menu of options. Describe your data: CSV, Parquet, text or spreadsheet files, how many and how big, and what you want to do with them."
+subhead: "One clear MATLAB path for working with files too big for memory, not a menu of options. Describe your data: CSV, Parquet, text or spreadsheet files, how many and how big, and what you want to do with them. It only works with MATLAB, a paid MathWorks product."
 explain: |
   One clear MATLAB path for working with files too big for memory, not a menu of options. Describe your data: CSV, Parquet, text or spreadsheet files, how many and how big, and what you want to do with them.
 
-  The AI runs a pre-flight check and follows a decision flowchart. Continuous data across files points to a datastore with tall arrays. Files to process one at a time point to a datastore with transform. Parquet can be handled per row group. It also covers running reads in parallel, when mapreduce is actually needed, formats with no built-in datastore, and how to write a custom datastore. You need MATLAB.
+  The AI runs a pre-flight check and follows a decision flowchart. Continuous data across files points to a datastore with tall arrays. Files to process one at a time point to a datastore with transform. Parquet can be handled per row group. It also covers running reads in parallel, when mapreduce is actually needed, formats with no built-in datastore, and how to write a custom datastore. You need MATLAB, which is paid. Some paths need paid add-ons, listed in the requirements.
 
-  Licence: this is a copy of MathWorks' public skill matlab-choose-big-data-solution, under BSD 2-Clause (see LICENSE.md). The skill file also links MathWorks' own reuse licence, which means you may use it only with MathWorks products such as MATLAB.
+  You get one result in this order: a pre-flight verdict, the recommended path, the code, parallel settings if they help, and caveats.
+
+  Licence: you may use this only with MathWorks products such as MATLAB. It is a copy of MathWorks' public skill matlab-choose-big-data-solution, and its BSD 2-Clause licence (see LICENSE.md) carries that condition. The skill file also links MathWorks' own reuse licence.
 when:
   - readtable crashes with an out-of-memory error.
   - You have a folder of two hundred CSV files to treat as one dataset.
@@ -33,7 +35,9 @@ you_get:
   - A custom datastore outline (if needed)
 how_to_use:
   - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
+  - "Before you start, check which paid MATLAB add-ons you have: Parallel Computing Toolbox, Database Toolbox, Vehicle Network Toolbox and MATLAB Parallel Server. Then gather a small sample of your files, and note the file type, count and total size."
   - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - If your description is vague, the skill asks one short question first, such as whether your files are one dataset or processed one at a time. It gives no code until you answer.
   - It works best when your AI can run MATLAB.
   - Run the code in MATLAB on a small slice of your files first and check the result. Then run it on everything. For reading and writing files, pair it with the Data file reader and writer or the DuckDB big file query helper.
 next: [data-file-reader-and-writer, duckdb-big-file-query-helper]

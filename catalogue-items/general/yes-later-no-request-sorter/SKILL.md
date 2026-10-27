@@ -7,6 +7,8 @@ description: "Paste this above a list of feature requests and your product focus
 
 Starts every request at "not now" and makes yes earn its place with repeat demand, a cost list and a fit test.
 
+When to use: a long request list, or a big customer pushing for a change, and you need a yes, later or no with a reply. When not to use: for work for one customer only (talk to that customer or your sales lead and quote it as a separate job), for a request list you do not have yet (ask a few customers first), or when you want every check run on a request (use the [Feature request screener](https://useaiblocks.com/skills/feature-request-screener)). This one is the quick ruling with a draft reply; the screener is the full check.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -25,6 +27,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+The "customer words" and "question" in the block above mean the requests, your product focus and what is planned, listed here. No files or coding assistant are needed.
+
 - **The requests** (required): each with who asked and when.
 - **Your product focus** (required): what it is for and who it is not for.
 - **What is already planned** (required).

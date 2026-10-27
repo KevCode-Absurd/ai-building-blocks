@@ -19,6 +19,7 @@ when:
   - You worry two agents will edit the same files.
   - You want a handoff note a person could follow too.
 not_for:
+  - "You cannot install or run command line tools: the terminal agent steps assume you can. Write the brief here, then give it to a developer or a person on your team."
   - "You want one AI to do the whole job yourself: just ask your AI directly, no handoff needed."
   - "You have not approved handing work to another agent: get your own sign-off first, because this skill only delegates when you allow it."
   - "You need to give an AI access to a remote server: set that up with your IT person, since this skill will not assume access."
@@ -33,6 +34,7 @@ you_get:
   - A polling plan with sensible gaps
   - A report of changes and open issues
 how_to_use:
+  - "The brief alone is a complete result. If you are not a developer, stop after the brief. Write the brief in chat, check it, and hand it to a developer or a teammate. Use a terminal agent only if you can install and run command line tools."
   - Open your AI chat, such as Claude, ChatGPT or Gemini, and paste in the skill text.
   - Describe the work to pass on and name the agent that will take it.
   - List the files or areas the agent may touch, and say what is off limits.

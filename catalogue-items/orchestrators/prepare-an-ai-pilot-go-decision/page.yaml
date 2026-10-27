@@ -53,8 +53,10 @@ output_shape: |-
   DATA GAPS       <gap | what it affects | how to close it>
   CHECKLIST       <item | evidence | pass, fail or unknown>
   CALL            <go, wait or stop | reason | the fact that would change it>
+  FILES           <each saved file>
   MISSING         <each gap and the item it stops>
   CHECKS MISSED   <one line each, or none>
+  NEXT STEP       <one step>
 output_sample:
   input:
     - The pilot goal, in one or two sentences

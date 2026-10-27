@@ -66,7 +66,7 @@ Check the five death-traps below and flag any that apply.
 
 ### Step 4: Calculate next runs and annual fire count
 
-If code can run, use `node scripts/cli.js next "<expression>" 5` for exact dates. If code cannot run, work the dates out by hand and label them "estimate, check in your scheduler". Compute the next 5 fire times as concrete dates so the user can verify the
+If code can run, use `node scripts/cli.js next "<expression>" 5` for exact dates. If code cannot run, work the dates out by hand and label every date "estimate, check in your scheduler" and never present them as confirmed run times. Compute the next 5 fire times as concrete dates so the user can verify the
 schedule behaves as expected. Estimate annual fire count — a schedule that fires
 365×/year vs. 12×/year is a ~30× cost and load difference.
 
@@ -104,7 +104,9 @@ day-of-week are restricted (neither is `*`), cron uses OR logic, not AND.
 script:
 
 ```bash
-0 0 * * 1 [ "$(date +%d)" = "01" -o "$(date +%d)" = "15" ] && your-command
+# Runs only on Mondays that fall on the 1st or the 15th (day-of-week is the schedule, day-of-month is the check).
+# In a crontab line, every % must be written \%, because a bare % ends the command.
+0 0 * * 1 [ "$(date +\%d)" = "01" -o "$(date +\%d)" = "15" ] && your-command
 ```
 
 ### 3. Midnight spike — the "everything at once" bug
@@ -156,7 +158,7 @@ const { describe, validate, nextRuns, formatNextRuns } = require('./scripts/cron
 
 // Parse + describe -> returns { text, error, parsed }
 const d = describe('0 0 30 2 *');
-console.log(d.text);   // "At 00:00, on day-of-month 30 in in FEB"
+console.log(d.text);   // "At 00:00, on day-of-month 30 in in FEB" (the script prints "in" twice; read it as "in FEB")
 
 // Deep validation -> catches the traps
 const result = validate('0 0 30 2 *');

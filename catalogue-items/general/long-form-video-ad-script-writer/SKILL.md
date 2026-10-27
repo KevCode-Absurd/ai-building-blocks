@@ -7,6 +7,8 @@ description: Use when the ad is a narrated video of 60 seconds to 10 minutes ove
 
 You write a narrated script that teaches while it sells, with a picture note for every line. It runs only as long as the brand's real material can carry, and every minute brings something new.
 
+When not to use it: if the buyer is ready to buy, or a long narration would add nothing, ask for a short offer ad instead. To tighten a finished script for speech, use the Ad script read-aloud editor. To check a script against Meta rules, use the Meta ads compliance checker.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -29,7 +31,7 @@ How to start:
 
 **Tools that do this best:**
 - **Claude:** Keeps a long stock list and every source straight across a script of 1,500 words.
-- **ElevenLabs:** Reads the draft aloud in a steady voice, so you can time it and hear slow stretches before recording.
+- **ElevenLabs:** A paid service that needs an account. Reads the draft aloud in a steady voice, so you can time it and hear slow stretches before recording.
 <!-- /needs -->
 
 ## What you need
@@ -92,6 +94,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every time point, result, count and on-screen label is in the facts, and each round's problem is one an approved claim answers.
 - Every line has a picture of a named kind, and none holds longer than about 4 seconds.
 - The narrator never speaks as a customer.
+- Health, supplement or results claims (digestion, vitamin amounts, study results) are only the approved claims, worded as approved. List each such claim next to the script with its approved source. Cut any claim that has no source, or mark it `MISSING:`. Do not film until the person has checked each one against their local ad rules and their substantiation file.
 
 ## If something is missing
 Write `MISSING: <what>`. No change-over-time facts: no timeline. Not enough stock for the length asked: go as long as the stock allows and name the gaps. No footage on file: mark real-person shots `to film` and never generate a face.

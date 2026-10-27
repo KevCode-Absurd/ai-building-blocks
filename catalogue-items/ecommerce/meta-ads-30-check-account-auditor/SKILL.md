@@ -11,9 +11,9 @@ Paste your Meta Ads exports and tracking screenshots. You get 30 checks marked P
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Plan what to test** with the [Ad production brief planner](https://useaiblocks.com/skills/creative-gap-to-brief-queue-planner). It takes the audit report.
-- **Plan what to test** with the [Ad variant change auditor](https://useaiblocks.com/skills/ad-variant-change-auditor). It takes the audit report.
-- **Write the ad copy** with the [Video hook review checklist writer](https://useaiblocks.com/skills/winning-hook-rubric-builder). It takes the audit report.
+- **Turn gaps into ad briefs** with the [Ad production brief planner](https://useaiblocks.com/skills/creative-gap-to-brief-queue-planner). It takes the audit report.
+- **Check which ad variants really differ** with the [Ad variant change auditor](https://useaiblocks.com/skills/ad-variant-change-auditor). It takes the audit report.
+- **Make a hook checklist for video ads** with the [Video hook review checklist writer](https://useaiblocks.com/skills/winning-hook-rubric-builder). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -21,12 +21,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Your results** (yours): an export from Meta Ads Manager, Google Ads or your store, for set dates.
+- **Your results** (yours): an export from Meta Ads Manager, for set dates. Google Ads exports are not used.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In "Missing evidence and assumptions" and NOT RUN, list checks that could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Meta Ads Manager and Events Manager:** These are the sources of your export and your tracking screenshots. Export at ad level, and use the same attribution window throughout.
@@ -162,4 +162,4 @@ Severity: A01, A02 HIGH (3). A03, A04 MEDIUM (1.5).
 
 ## Final check
 
-Before you hand back, confirm: every score shows its coverage, no category was filled with a guess, the C03 result follows the rule above, every fix names a check ID and a way to confirm it, and nothing says the account was changed. List any check you could not run in section 7, Missing evidence and assumptions, marked `INSUFFICIENT_DATA`. That is the list the start block calls CHECKS MISSED. Write "none" if every check ran.
+Before you hand back, confirm: every score shows its coverage, no category was filled with a guess, the C03 result follows the rule above, every fix names a check ID and a way to confirm it, and nothing says the account was changed. List any check you could not run in section 7, Missing evidence and assumptions, marked `INSUFFICIENT_DATA`. Put checks you could not run on the NOT RUN line too. Write "none" if every check ran.

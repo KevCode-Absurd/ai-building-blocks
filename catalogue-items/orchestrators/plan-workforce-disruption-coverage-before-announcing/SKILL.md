@@ -18,6 +18,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Nonprofit resale store shift planner](https://useaiblocks.com/skills/nonprofit-retail-coverage-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+Of the next steps above, only the Employee data privacy checker fits this plan. Skip the other two.
 
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -41,18 +42,18 @@ These four inputs replace the generic list above. Type DISRUPTION and ESSENTIAL_
 
 - DISRUPTION: state confirmed facts, affected sites, horizon and incident decision owner.
 - ESSENTIAL_COVERAGE: list service windows, roles, skills and minimum safe coverage.
-- AVAILABILITY: attach a pseudonymized roster, confirmed availability and approved work limits.
+- AVAILABILITY: attach a pseudonymized roster, confirmed availability and the approved working limits and rest rules (required). If the limits are missing, the run stops after the gap map in step 2 and asks the incident owner for them. It drafts no assignments.
 - COMMUNICATION_RULES: give approved contacts, escalation routes and shareable facts.
 
 ## Setup and tool limits
 Open the included SKILL.md and required references for each named skill before its stage. Inherit source requirements, approvals, local-only handling and action boundaries. The pack holds START_HERE.txt and three skill folders: `workforce-crisis-playbook-writer`, `shift-schedule-planner` and `executive-action-register`. If a skill folder is absent, stop at that step, mark it `MISSING:` and ask the user to attach it. A chat without tools can use pasted skill instructions and source records for draft text and tables, but must mark unavailable conversion, rendering, API calls or tests NOT RUN. Never fabricate files, access or download links.
 
 ## Work in this order
-1. **Assign authority and immediate priorities** Use `workforce-crisis-playbook-writer`. Use confirmed disruption facts for workforce priorities, decision owners, communication routes and staff support. Pass approved essential-service priorities and safety constraints to scheduling.
+1. **Assign authority and immediate priorities** Use `workforce-crisis-playbook-writer`. Use confirmed disruption facts for workforce priorities, decision owners, communication routes and staff support. Pass approved essential-service priorities and safety constraints to scheduling. It returns a priority list, a named decision owner for each area, the communication routes and the staff support steps.
 
-2. **Draft feasible coverage options** Use `shift-schedule-planner`. First list the hours and roles each service window needs. Then subtract confirmed availability, within approved working limits and rest rules. Then record each remaining gap, and any unconfirmed availability, before drafting any option. Draft the coverage options from what is left. Mark gaps, rest constraints and unconfirmed availability rather than impossible assignments. Hand exceptions and proposed choices to the action register.
+2. **Draft feasible coverage options** Use `shift-schedule-planner`. First list the hours and roles each service window needs. Then subtract confirmed availability, within approved working limits and rest rules. Then record each remaining gap, and any unconfirmed availability, before drafting any option. Draft the coverage options from what is left. Mark gaps, rest constraints and unconfirmed availability rather than impossible assignments. Hand exceptions and proposed choices to the action register. It returns a table with one row per service window: required hours, confirmed hours and the remaining gap. Options and their trade-offs follow it.
 
-3. **Track choices and exceptions** Use `executive-action-register`. Capture gaps, decisions, owner, deadline, escalation trigger and message approval. Link draft schedules to their facts and approvals; return pending actions for incident lead review. Treat proposed assignments as proposals, not accepted commitments; never guess an owner or due date.
+3. **Track choices and exceptions** Use `executive-action-register`. Capture gaps, decisions, owner, deadline, escalation trigger and message approval. Link draft schedules to their facts and approvals; return pending actions for incident lead review. Treat proposed assignments as proposals, not accepted commitments; never guess an owner or due date. It returns the register: gap, decision, owner, deadline, escalation trigger and message approval status.
 
 ## When not to use
 A layoff, not a short disruption (use the Layoff plan writer). An outage, a product failure or a public problem that is not a staffing gap (use the Crisis response planner). A regular rota for a normal week (use the Shift schedule builder).

@@ -20,10 +20,10 @@ not_for:
   - "You want to fix your cart or checkout form: use the Checkout page auditor."
   - "You need help with prices, discounts, shipping, returns or loyalty: this audit does not cover them. Use the Post-purchase experience or the Pricing strategist."
 you_give:
-  - What you sell and who buys
-  - Company size
+  - What you sell and who buys, with your store link or pasted homepage text if you have it
+  - Company size, and whether your product is high-tech
   - Current channels and homepage layout
-  - Gross margin
+  - Gross margin and your product category
 you_get:
   - A store classification
   - Ranked marketing channel calls
@@ -33,7 +33,7 @@ how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. No code or paid tools are needed.
   - Describe what you sell, who buys it, your size, channels, homepage and margin. Say so if you do not know something.
   - Read the store classification first. Check that it matches how your buyers see your product.
-  - Some numbers are measured findings and some are practitioner tips. Check the sources in reference.md before you rely on a figure.
+  - Some numbers are measured findings and some are practitioner tips. The sources are listed in reference.md in the skill folder. The warranty figure has no named authors, and the perfume and sustainability figures have no source on file, so treat them as tips and do not quote them. State a sustainability claim only if you hold evidence, and check local advertising rules first.
   - Only offer a warranty or guarantee you can honour. Check any claim against your real product results.
   - Use "Our expert's pick" only if a real expert reviewed the picks. Then work the priority table from the top, one change at a time, and use the Product page auditor or Checkout page auditor for the weak areas.
 output_sample:

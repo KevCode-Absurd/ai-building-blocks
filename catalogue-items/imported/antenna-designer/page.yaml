@@ -10,6 +10,8 @@ explain: |
   Tell it the frequency and what the antenna must do, and you get a working design with its radiation pattern, impedance and fit checked. It can cover a single antenna, a circuit board antenna or a whole array.
 
   The skill drives MATLAB's Antenna Toolbox, so you need MATLAB with that toolbox. For standard types such as dipoles, patches and horns, it picks a catalogue design and analyses gain, beamwidth and return loss. For odd shapes it builds a custom design from basic shapes. For printed boards it sets up the layers and can export files for manufacture. For arrays it handles beam steering and grating lobes. It can also optimise size for gain or bandwidth.
+
+  Licence: BSD 2-Clause, as the LICENSE.md file says, with one extra condition: you may use it only together with MathWorks products such as MATLAB. The skill file also links MathWorks' own reuse licence. MATLAB and Antenna Toolbox are paid products from MathWorks.
 when:
   - You must design a patch antenna for a specific band.
   - You want to see the pattern and return loss before building anything.
@@ -35,6 +37,7 @@ how_to_use:
   - Tell it your frequency and goals. Add the antenna type and board material if you know them.
   - "Check the plots and numbers it returns: return loss, gain and beamwidth."
   - Ask for changes or an optimised version, then ask for Gerber files if you plan to print the board.
+  - Before you order a board, have an RF engineer review the pattern, return loss and board layers. Build one test board and measure it before you make more.
 output_sample:
   input:
     - Your target frequency or band

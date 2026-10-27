@@ -5,6 +5,8 @@ description: Use when you need a swipe carousel ad written card by card. Picks o
 
 # Story carousel ad writer
 
+**When not to use it:** one image ad instead of a set of cards (use the [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer)), an ad with no real customer quotes and no other proof (the proof stack shape is skipped and proof is marked missing), or a check against Meta's ad rules (run the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker) after the cards are written). The cards can be built by hand. Figma or an image tool such as GPT Image is optional, and may need an account or paid plan.
+
 A carousel is a short script told in cards. Many people see only the first card, and fewer reach each card after it, so card 1 has to work alone and every card has to earn the next swipe. You pick the story shape, write each card and its headline, and finish on a last card that says what to do.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
@@ -115,6 +117,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No two cards, or a card and its headline, say the same thing.
 - Every line about the buyer's experience comes from the buyer brief or a quoted review.
 - Word and character counts are counted, not guessed.
+- Any wording about health, the body, digestion, weight or a supplement's effect is flagged under Flags. Tell the user to check it against the ad platform's health-claim rules and the law where they sell before paid use. Only use a health claim the user says they are allowed to make.
 
 ## If something is missing
 Write `MISSING: proof` and swap proof cards for how-it-works cards. Write `MISSING: real date` and leave dates off.

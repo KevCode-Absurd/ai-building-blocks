@@ -31,7 +31,7 @@ How to start:
 This skill runs on its own. All it needs to start is the rival's monthly visits and its price. Everything else makes the range tighter. If something is missing, ask once in one short message, then carry on and mark each gap `MISSING:`.
 
 - **The rival's store link** (advised).
-- **Monthly visits** (required): from a free traffic tool. One browser extension gives about three free searches a day. Ask which tool and what date range.
+- **Monthly visits** (required): from a free traffic tool. Free plans cap how many lookups you get. Ask which tool and what date range.
 - **Price on their page, plus any bundles and upsells you saw** (required for the order-value step).
 - **Your guess of their conversion rate by price point** (optional).
 - **Your revenue bar** (optional): the least monthly revenue that makes a rival worth chasing. If none is given, use $300,000 a month and say it is the default from one video.
@@ -50,11 +50,17 @@ Orders per month = visits x conversion rate. Revenue = orders x average order va
 
 ## 2. Pick cautious conversion rates
 - Baseline is 2% for a mid-priced item and about 1.5% for a high-ticket item. The range is 1.5% to 3.5%. The higher the price, the lower the rate.
+- These rates come from one creator's video. They are unvalidated assumptions, not tested against store data and not market benchmarks. Say so in the answer.
 - In the source, a $70 product was treated as mid-priced at 2%. Ask the person to say which side their rival's price falls on.
-- Cases for the range:
-  - **Low**: 1.5%.
-  - **Mid**: 2% for a mid-priced item, 1.5% for high-ticket.
-  - **High**: up to 3.5% for a lower-priced item, 2% for a high-ticket item.
+- Rate for each case:
+
+| Case | Mid-priced item | High-ticket item |
+|---|---|---|
+| Low | 1.5% | 1.5% |
+| Mid | 2% | 1.5% |
+| High | 3.5% | 2% |
+
+For a high-ticket item the low and mid rates are the same, so those two cases differ only by order value.
 
 ## 3. Pick a cautious order value
 Be conservative on average order value. Look at their bundles and upsells and take the low end of the stack. Example from the source: price $70, an offer stack, average order value set at $90.
@@ -63,16 +69,16 @@ Be conservative on average order value. Look at their bundles and upsells and ta
 - **High**: the upper end of the stack you saw.
 
 ## 4. Work out the three cases
-Show the sums line by line. Worked example from the source, to check the maths only (the figures are an illustration, not a real store): 1.5 million visits x 2% = 30,000 orders. 30,000 x $90 = $2.7 million a month. Paid traffic can inflate visits, so say whether the rival runs ads, and note that this is revenue, not profit.
+Show the sums line by line. Check the maths with placeholders: [VISITS] x [CONVERSION RATE] = [ORDERS]. [ORDERS] x [AVERAGE ORDER VALUE] = [REVENUE PER MONTH]. Paid traffic can inflate visits, so say whether the rival runs ads, and note that this is revenue, not profit.
 
 ## 5. Walk their funnel
 Open the funnel as a shopper: the first page (product page or an article-style page), the price, the bundle and the upsell. Record the page type, offer and price. This tells you what kind of page you would need to build to compete.
 
 ## 6. Compare with the bar
-The default bar is at least $300,000 a month. The same video also calls anything above $200,000 to $300,000 the bare minimum. The bar suits stores that can compete with a better offer. A small store with a small test budget may set a lower bar. Ask which they want, and use their number if they give one.
+The default bar is at least $300,000 a month. It has no market source: it is an unvalidated default from one video. Tell the person to set their own bar before they rely on a PASS verdict. That video also calls anything above $200,000 to $300,000 the bare minimum. The bar suits stores that can compete with a better offer. A small store with a small test budget may set a lower bar. Ask which they want, and use their number if they give one.
 
 ## 7. Score and decide
-Score = mid case revenue divided by the bar, times 100, capped at 100. Show the sum.
+Score = mid case revenue divided by the bar, times 100, capped at 100. Show the sum. The score uses the mid case. The verdict below uses the low case for STRONG PASS and the mid case for PASS and FAIL, so a high score can still be a PASS and not a STRONG PASS.
 - **STRONG PASS**: the low case also clears the bar.
 - **PASS**: the mid case clears the bar but the low case does not. Say what would have to be true for the low case.
 - **FAIL**: the mid case is under the bar.
@@ -116,6 +122,11 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [New product line checker](https://useaiblocks.com/skills/new-product-line-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+## Next steps to offer
+
+Offer this first. The link in "After this" is optional:
+- Weigh a big rival against how crowded the field is with the [Competitor saturation checker](https://useaiblocks.com/skills/competitor-saturation-checker).
 
 ## Checks
 Before you hand it back, check each one and fix any that fail.

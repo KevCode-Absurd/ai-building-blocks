@@ -54,7 +54,7 @@ How he applied it: from the mid-1960s to the late 1980s, the Basses largely left
 
 ### Logos built to last
 
-His firm's corporate marks were unusually long-lived. A 2011 analysis found they had lasted more than 34 years on average [S4]. The list includes the Bell System (1969), the AT&T globe, United Airlines (1974), Continental Airlines, Kleenex, Quaker Oats, Hanna-Barbera and Geffen Records [S4].
+Many of his firm's corporate marks were long-lived. A reference page lists them, but we did not see the 2011 analysis it mentions, so we give no average lifespan [S4]. The list includes the Bell System (1969), the AT&T globe, United Airlines (1974), Continental Airlines, Kleenex, Quaker Oats, Hanna-Barbera and Geffen Records [S4].
 
 ### A metaphor, not a scene from the film
 

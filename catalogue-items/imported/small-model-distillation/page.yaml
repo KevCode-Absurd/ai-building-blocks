@@ -9,7 +9,7 @@ subhead: Name the large teacher model, the small student model and your task. Yo
 explain: |
   A large AI model can be too slow or too costly to run all day. Model distillation trains a small model, the student, to copy a large one, the teacher. You pay for the large model once, to teach, and then run the small one. This skill plans that job and writes the code.
 
-  It covers three common methods. Response distillation trains the student on text the teacher wrote. Soft-target and logit distillation train it on the teacher's full set of probabilities, which carries more than the top answer. Reverse KL, from the MiniLLM paper, is aimed at models that write free text. It also covers settings like temperature and loss weight.
+  It covers three common methods. Response distillation trains the student on text the teacher wrote. Soft-target and logit distillation train it on the teacher's full set of probabilities, which carries more than the top answer. A simplified reverse KL, based on an idea from the MiniLLM paper, is aimed at models that write free text. It is not the full MiniLLM method. It also covers settings like temperature and loss weight.
 
   This needs Python, a GPU and real training time. Some models are gated and need an access request. How much quality the student keeps depends on your models and data, so the skill always ends with a test on prompts held out from training.
 when:
@@ -35,6 +35,7 @@ you_get:
   - A comparison script that scores student and teacher on your test prompts
   - Notes on cost, model access and the teacher's terms of use
 how_to_use:
+  - This skill is adapted from Orchestra Research's public AI-research-SKILLs (MIT licence). Our changes: cost and memory warnings, a dataset set-up step and a tokenising step so the code runs.
   - Pick your teacher and student models. Check that you can get both, because some need an access request on Hugging Face. Set aside prompts for training and a separate set for testing.
   - Open Claude, ChatGPT or Gemini. Paste the skill text. Then give the model names, your task, and how many prompts you have.
   - Read the plan first. Check the memory and cost of your model pair before you run anything. The large example in the skill (a 70B teacher and a 7B student) needs a lot of GPU memory and rented GPUs cost real money. If the teacher is a hosted model, check its terms of use before you generate training data.

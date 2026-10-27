@@ -9,6 +9,8 @@ subhead: "A blunt review of your product or feature that says what to cut and wh
 explain: |
   A blunt review of your product or feature that says what to cut and what to fix, with a score out of ten. It judges your work the way Steve Jobs ran product reviews: start with the customer, then subtract.
 
+  The review uses Steve Jobs' documented practices as a style lens. It does not say what he would think of your product.
+
   A quick diagnostic checks seven things and counts passes. Seven is a ten, six is a nine, and two or fewer is a three or lower. Areas include simplicity, focus, what you refuse to do, whether the whole experience works from first run to daily use, and whether it demos well. It asks if a need was designed away or just hidden. You get the failed checks and the cuts needed to reach ten.
 when:
   - Your product feels too complicated and you cannot say why.
@@ -16,9 +18,9 @@ when:
   - You want an honest answer to whether a feature is good enough to ship.
   - You need to test a first-run flow before launch.
 not_for:
-  - "You need a usability audit of screens and flows: use ux-heuristics, which SKILL.md names for that job."
+  - "You need a usability audit of screens and flows: use the Usability heuristic reviewer."
   - "You need a pricing, legal or compliance review of a finished product: ask a specialist in that area."
-  - "You only want to polish visual style or small details: use refactoring-ui for visual design or microinteractions for detail polish."
+  - "You only want to polish visual style or small details: use the Visual hierarchy fixer for visual design or the Small interface details designer for detail polish."
 you_give:
   - A description, screenshots or link to the product or feature
   - Who the customer is
@@ -30,10 +32,14 @@ you_get:
   - Specific fixes to reach ten
 how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini. No code running or paid tool is needed.
-  - Paste the full text of SKILL.md into the chat.
+  - Paste the full text of SKILL.md into the chat. The core review works from that text alone. The reference files in the skill folder (simplicity-and-focus.md, review-protocol.md, end-to-end-experience.md) add depth. Paste or attach them too if you want a fuller review.
+  - "Gather first: a short description of the product, who the target customer is, and the one-sentence promise of the product. Add screenshots or a feature list if you have them."
   - "Add your brief: what the product does, who the customer is, and your screenshots or feature list."
   - Write out the first-run steps yourself. Your AI cannot use the product, so it only knows what you tell it.
   - Read the score and the failed rows first. Then pick which cuts and fixes you will act on.
+  - The skill's Further Reading links go to Amazon with the original author's affiliate tag. The author may earn a fee if you buy through them. You do not need them to use the review.
+  - "Next: after you apply the cuts, run the same review on the cut version to see whether the score rose. For screen-level fixes, use the Usability heuristic reviewer."
+next: [usability-heuristic-reviewer, visual-hierarchy-fixer]
 output_sample:
   input:
     - A description, screenshots or link to your product or feature

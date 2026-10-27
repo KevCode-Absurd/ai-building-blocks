@@ -75,9 +75,9 @@ Generates an evidence-based lesson opening comprising three components: a retrie
 
 ## Evidence Foundation
 
-AI Blocks note: this section is the original author's summary of the research, without page references. Check each source before you quote it to others, and do not add new citations or quotes of your own.
+AI Blocks note: this section is the original author's summary of the research, without page references. The two direct quotes it once held are now paraphrases, because they were not checked against the sources. Check each source and page before you quote it to others or rely on its claims, and do not add new citations or quotes of your own. Do not state any effect size or time benefit as proven. Your AI cannot open these sources from this file.
 
-Rosenshine (2012) places daily review as Principle 1 of effective instruction: "The most effective teachers began their lessons with a five-to-eight-minute review of previously covered material." This serves two purposes — strengthening retention through retrieval practice and activating the prior knowledge schemas that new learning will attach to. Ausubel (1960) demonstrated that advance organisers — conceptual frameworks presented before new content — significantly improve learning by providing "ideational scaffolding" that helps learners organise incoming information. Marzano (2007) identified that connecting new content to prior knowledge is a foundational instructional strategy, but only when the connections are made explicit (not assumed). Agarwal et al. (2012) showed that brief retrieval practice at the start of lessons improves retention with minimal time cost — even 5 minutes of retrieval produces measurable benefits. Hattie (2009) identified prior knowledge as a major influence on new learning — what a student already knows shapes what they can learn next.
+Rosenshine (2012) places daily review as Principle 1 of effective instruction, and describes the most effective teachers as starting lessons with a short review of earlier material (about five to eight minutes, in this summary). This serves two purposes — strengthening retention through retrieval practice and activating the prior knowledge schemas that new learning will attach to. Ausubel (1960) demonstrated that advance organisers — conceptual frameworks presented before new content — improve learning by giving learners a scaffold for organising new information. Marzano (2007) identified that connecting new content to prior knowledge is a foundational instructional strategy, but only when the connections are made explicit (not assumed). Agarwal et al. (2012) showed that brief retrieval practice at the start of lessons improves retention with minimal time cost — the author reports a benefit even from a short retrieval task (check this claim in the source). Hattie (2009) identified prior knowledge as a major influence on new learning — what a student already knows shapes what they can learn next.
 
 ## Input Schema
 
@@ -86,10 +86,11 @@ The teacher must provide:
 - **Previous learning:** What was recently taught that connects. *e.g. "Last lesson: equivalent fractions. Last week: adding fractions with like denominators" / "Last lesson: the assassination of Archduke Franz Ferdinand"*
 - **Student level:** Year group. *e.g. "Year 8"*
 
-Optional (injected by context engine if available):
+Optional. The context engine named in the original is not available here. These fields are used only if the teacher pastes them in:
 - **Opening time:** Minutes available (default 10)
 - **Student profiles:** Retention data, gaps from prior lessons
 - **Lesson objectives:** Specific learning objectives for today
+- **Assessment data:** Exit ticket results from last lesson
 - **Assessment data:** Exit ticket data from the last lesson
 
 ## Prompt
@@ -214,7 +215,7 @@ But what if I asked you: what is 1/3 + 1/4? The pieces are DIFFERENT sizes — a
 
 We need to make the denominators the same — which means we need EQUIVALENT FRACTIONS. That skill you just practised in Q1 and Q2? That's exactly what we need now. Today, we're combining two skills you already have — finding equivalent fractions AND adding fractions — to solve a new type of problem."
 
-### Learning Intention (1 minute)
+### Learning Intention (about 30 seconds)
 
 "By the end of this lesson, you will be able to add two fractions that have different denominators by finding a common denominator first.
 

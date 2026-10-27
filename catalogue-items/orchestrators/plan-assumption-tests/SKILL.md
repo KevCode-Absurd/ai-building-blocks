@@ -37,7 +37,7 @@ How to start:
 - **Who you think your customers are** (required)
 - **Notes from your customer talks, written straight after each talk** (required for step 3, so you add them after the pause)
 
-This run does not need a buyer brief or brand brain files. Ignore that line in the generic list above. It needs the four items here.
+This run uses these four items only: the plan, your decision, your customers and your talk notes. It does not use a buyer brief or brand brain files, so do not ask for them.
 
 ## When not to use
 - If you already have customer evidence and want one test, use the Smallest test picker (`smallest-test-picker`).
@@ -54,7 +54,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Business model guess tester.** Use the skill `business-model-guess-tester`. Give it your business plan. It turns each box of the plan (customers, value, channels, revenue, costs) into a guess on one page, orders the guesses by risk and gives each a cheap test and a pass line.
-2. **Customer discovery interview planner.** Use the skill `customer-discovery-plan`. Give it the step 1 file. It says who to talk to for each guess, writes questions about what people do now (not about your product) and sets a way to record the answers.
+2. **Customer discovery interview planner.** Use the skill `customer-discovery-plan`. Give it the step 1 file. It says who to talk to for each guess, writes questions about what people do now (not about your product) and sets a way to record the answers. Plan at least five talks for each of the top three guesses before you go to step 3. If you can only reach fewer people, say so in the notes and carry on with what you have, marked as thin.
 
 Pause here: Talk to customers about each guess and write notes after each talk.
 
@@ -70,7 +70,7 @@ Pause here: Talk to customers about each guess and write notes after each talk.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Minimum experiment planner](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
+- The [Smallest test picker](https://useaiblocks.com/skills/smallest-test-picker). It takes the plan.
 - The [Business assumption test planner](https://useaiblocks.com/prompts/plan-guess-ranker). It takes the plan.
 - The [Business assumption stress tester](https://useaiblocks.com/skills/assumption-stress-test). It takes the plan.
 - **Understand your buyers** with the [Customer switching journey mapper](https://useaiblocks.com/skills/switch-story-mapper). It takes the plan.

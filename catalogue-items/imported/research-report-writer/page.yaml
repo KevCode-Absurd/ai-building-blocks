@@ -9,6 +9,8 @@ subhead: A research report that opens with the conclusion, ranks every source by
 explain: |
   A research report that opens with the conclusion, ranks every source by trust, and states what remains unknown. Readers can see how you got there and how sure you are.
 
+  Licence: this copy is under CC BY 4.0, as the LICENSE-CONTENT file in this item says. The skill file's own header says MIT, which is the original author's label. Both allow reuse with credit. Credit goes to alapha888.
+
   First you write the question in one sentence, with at most three sub-questions. Then sources are tiered before searching: primary ones such as official documents and original papers, secondary ones such as reputable press, and tertiary ones such as forums, which count as leads only. Key claims are cross-checked against more than one source. The report puts the answer first, then the evidence, then the gaps and uncertainty. It suits topic studies and competitor analysis.
 when:
   - You need a report for a decision and must defend the sources.
@@ -35,6 +37,8 @@ how_to_use:
   - Add any sub-questions, sources you already trust, and who will read the report (optional).
   - Check the sources list first. Make sure no core claim rests on a forum or social post.
   - Read the uncertainty section before you share the report. Fix or cut any number that has no source.
+  - "Next: turn the \"not found\" list into a short plan for what to look up next, or pass the conclusions to the narrative decision memo writer."
+next: [narrative-decision-memo-writer, research-brief-writer]
 output_sample:
   input:
     - Your research question, in one sentence

@@ -15,6 +15,8 @@ tools: [claude]
 argument-hint: "quick | deep [--budget-minutes N] [--max-mutants N] [path]"
 ---
 
+<!-- Licence note: this copy is shared under CC BY 4.0 (see LICENSE-CONTENT). The MIT line in the header above is the original author's, kept as the upstream source. -->
+
 # Audit a test suite
 
 ## Overview
@@ -29,7 +31,7 @@ does not change tests. Upstream source:
 
 - Use when the user asks to audit, review, speed up, prune or strengthen their pytest tests.
 - Use when the user asks which tests are useful, flaky or slow.
-- Use `@agentic-verify` instead to check a single change.
+- Use `@agentic-verify` instead to check a single change. That skill is not in this library yet, so for a single change ask your AI to review that change by hand.
 
 ## How It Works
 
@@ -42,6 +44,8 @@ suite is a good check: whether it would notice broken code, whether it is fast a
 to run on every change, and which tests cost time without adding detection.
 
 ### Runner
+
+Safety: the runner is downloaded from GitHub with `uvx` and runs code on the user's machine, with access to the project files. Tell the user this before the first run, and run it only in a project they trust.
 
 ```bash
 AV='uvx --from git+https://github.com/timini/agentic-verification@v0.3.0#subdirectory=runner agentic-verification'

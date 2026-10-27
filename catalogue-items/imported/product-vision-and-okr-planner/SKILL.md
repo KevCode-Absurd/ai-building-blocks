@@ -22,6 +22,8 @@ Strategic toolkit for Head of Product to drive vision, alignment, and organizati
 
 ## Quick Start
 
+> **Warning (added by AI Blocks).** The default `--metrics` and `--teams` values are placeholders, such as 100,000 to 150,000 users and "expand to 3 new markets". Replace them with your own figures and team names before you share any output.
+
 ```bash
 # Growth strategy with default teams
 python scripts/okr_cascade_generator.py growth
@@ -128,6 +130,8 @@ python scripts/okr_cascade_generator.py [strategy] [options]
 ### Output Examples
 
 #### Dashboard Output (`growth` strategy)
+
+This is a sample of the layout. Every number and goal in it is a placeholder, not a real result.
 
 ```
 ============================================================

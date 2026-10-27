@@ -9,6 +9,8 @@ description: "Check ad copy, landing pages, VSLs, and emails for platform compli
 
 # Compliance Checker Skill
 
+> **AI Blocks note (read first):** the score out of 10 is a rough self-check of how risky the copy looks. It is not a platform approval or legal clearance, and a platform can still reject copy that scores 10. The rules in this skill are the original author's. They carry no date and no source links, and AI Blocks has not checked them. Say this in your report.
+
 This skill checks direct response copy (ads, landing pages, VSLs, emails) against platform compliance rules. Built on real-world compliance knowledge from practitioners who've been banned 300+ times and learned what actually triggers rejections.
 
 The goal: catch compliance issues BEFORE your ad gets rejected or your account gets banned, while preserving persuasive power through compliant rewrites.
@@ -100,13 +102,9 @@ Run through each category. Report PASS / FAIL / WARN for each.
 
 **Required modifiers:** helps, supports, can, may, promotes, aids in, assists with
 
-**Disease names the author says platforms flag (these are how the author words them, not a way round the rules):**
-- "Diabetes" → "type two" (without the word "diabetes")
-- "Alzheimer's/dementia" → "memory," "brain health," "brain fog"
-- "Cancer" → cannot mention, must reframe entirely
-- "Arthritis" → "joint health," "joint comfort"
+> **Warning:** the list below is how the author words things. It is NOT a way round the rules. Renaming a condition does not make a claim compliant. The claim underneath must be true and supportable, and a platform can still reject copy that implies a disease. Never suggest a swap that hides a disease claim. Tell the user to fix the claim first, to check the wording against the platform's current policy, and to get a compliance review for health claims.
 
-**Rewording is not a fix by itself:** renaming a condition does not make a claim compliant. The claim underneath must be true and supportable, and a platform can still reject copy that implies a disease. Never suggest a swap that hides a disease claim. Tell the user to fix the claim first and to check the wording against the platform's current policy.
+**Disease names:** platforms flag copy that names a disease, and also copy that hints at one. Do not rename the condition to get past a review. Tell the user to fix the claim underneath, then check the wording against the platform's current policy and get a compliance review before launch.
 
 ### 4. Income & Financial Claims
 - [ ] No guaranteed income promises
@@ -256,7 +254,7 @@ After both phases, calculate:
 
 # Platform-Specific Rules
 
-> **AI Blocks note:** the rules below are the original author's, with no date and no source links, and they may be out of date. Treat every rule as undated. Say so in your report. Tell the user to confirm each rule against the platform's current policy before relying on it (Meta: the Advertising Standards page in Meta's Business Help Centre; Google: Google Ads policies; TikTok: TikTok Advertising Policies; YouTube: YouTube ad policies; ClickBank: ClickBank's affiliate and vendor policies). This is a check for common risks, not legal advice.
+> **AI Blocks note:** rules last checked: the author gave no date. We imported them on 2026-10-20 and have not re-checked them. The rules below are the original author's, with no date and no source links, and they may be out of date. Treat every rule as undated. Say so in your report. Tell the user to confirm each rule against the platform's current policy before relying on it (Meta: the Advertising Standards page in Meta's Business Help Centre; Google: Google Ads policies; TikTok: TikTok Advertising Policies; YouTube: YouTube ad policies; ClickBank: ClickBank's affiliate and vendor policies). This is a check for common risks, not legal advice.
 
 ## Meta / Facebook (Deep Coverage)
 

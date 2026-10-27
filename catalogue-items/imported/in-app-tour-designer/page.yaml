@@ -39,7 +39,7 @@ how_to_use:
   - Paste your notes and your success measure. Answer any question your AI asks. Skipped inputs are marked MISSING.
   - Read the verdict first. If it says do not build a tour, try the fix it suggests before you build anything.
   - Check each trigger against how your users really move through the app. Cut any tip you cannot tie to a real moment.
-  - Give the tip plan to whoever builds the tour. Review feature use after a few weeks, not just tip clicks.
+  - Give the tip plan to whoever builds the tour. Review feature use after a few weeks, not just tip clicks. Run this review again after any big product change. For the spec, use the Feature spec writer.
 output_shape: |
   Verdict: <build / build small / do not build> and <2 to 3 reasons>
   Tip plan (one row per tip, up to 7):
@@ -47,6 +47,7 @@ output_shape: |
   Wording: <one draft line per tip>
   Tracking plan: <events to record and the feature-use event>
   Upkeep: <who reviews tips and how often>
+  Next: <who gets the tip plan, and when to run this review again, such as after a big product change>
   Missing: <inputs not given>
 output_sample:
   input:

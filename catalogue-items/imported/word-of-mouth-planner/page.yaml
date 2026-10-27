@@ -9,7 +9,7 @@ subhead: Ideas that make people talk about your product, each checked against si
 explain: |
   Ideas that make people talk about your product, each checked against six reasons things spread. You see which parts of your idea are likely to be shared and which are weak.
 
-  The skill uses the STEPPS model from Jonah Berger: social currency, triggers, emotion, public visibility, practical value and stories. It scores each driver from 0 to 2 for your product or message, reports a total and names the drivers to raise next. A strong plan has at least three strong drivers, including one that shows in public or makes people look good. It also notes that most talk happens offline, so it does not lean only on social media.
+  The skill uses the STEPPS model from Jonah Berger: social currency, triggers, emotion, public visibility, practical value and stories. It scores each driver from 0 to 2 for your product or message, reports a total and names the drivers to raise next. A strong plan has at least three strong drivers, including one that shows in public or makes people look good. It also notes that most talk happens offline, so it does not lean only on social media. The skill itself says the offline share it quotes from Berger has not been checked, so treat it as a rough guide.
 when:
   - You are launching and have no ad budget.
   - Your product is good but nobody mentions it.
@@ -18,7 +18,7 @@ when:
 not_for:
   - You have no clear message yet. Write down what your product does and who it is for first, then come back.
   - You need reach this week. Run a small paid ad test, because word of mouth builds slowly.
-  - You want to push people to buy with pressure tactics. Use a sales or persuasion guide instead.
+  - You want to push people to buy with pressure tactics. Use the Memorable message writer for sticky messaging, or the Honest persuasion advisor for persuasion.
 you_give:
   - Your product or message
   - Who you want to reach
@@ -32,7 +32,7 @@ you_get:
   - Overall sharing score
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
-  - Have ready a one-paragraph description of your product, and a list of how customers describe it now in their own words.
+  - Have ready a one-paragraph description of your product with its price range, a list of how customers describe it now in their own words (real phrases you have heard), and the channels where people already talk about you.
   - Describe your product or message in a few lines.
   - Say who you want to reach. Add how people hear about you now and any ideas you are weighing (optional).
   - Read the six scores first. Then look at the driver it says to raise next.
@@ -54,3 +54,4 @@ output_sample:
       contains: The weak driver or drivers to fix first to reach a higher score.
     - name: Ideas to raise weak drivers
       contains: Specific ideas for triggers, public visibility and a story people can retell.
+next: [memorable-message-writer, honest-persuasion-advisor]

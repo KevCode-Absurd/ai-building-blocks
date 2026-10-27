@@ -32,13 +32,13 @@ you_get:
   - A markdown timing plan
 how_to_use:
   - Open your AI tool. Use Claude, ChatGPT or Gemini. For the code tests, pick one that can run Python.
-  - Paste the skill text from this page into the chat.
+  - Paste the skill text from this page into the chat. The code in it needs an AI that can run Python, such as Claude with code tools, ChatGPT data analysis or the free Google Colab. If yours cannot, ask it for the buy logic in plain steps and work the quantities in a spreadsheet. The skill text is long, so paste only the sections you need.
   - Add last season's weekly sales sheet. Use one row per style per week, with units sold, price, stock on hand and markdowns.
   - Answer its questions about your category, season length, budget, margin targets and supplier lead times.
   - "Check the plan. The example numbers in the code (30% demand variation, a 50% markdown rate, a 1.5x cost for running out of stock, and the random sample products) are made-up demo values. The skill should ask you for your own figures first. Do not use any buy quantity that came from the demo values."
   - Tell it your real season length. It is set once and used for the phases and the sales curve. The skill stops and asks if the markdown rate, stockout cost, demand variation or season length is missing.
   - Use the reorder and cut triggers at week 4 and the markdown plan at week 8.
-  - Next, enter the buy quantities as order quantities in your buy sheet. Check the total against your open-to-buy budget.
+  - Next, enter the buy quantities as order quantities in your buy sheet. Check the total against your open-to-buy budget, then review the plan again at week 4 and week 8.
 output_sample:
   input:
     - Last season's weekly sales by style

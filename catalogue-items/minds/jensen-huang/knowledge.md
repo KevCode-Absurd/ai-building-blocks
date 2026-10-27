@@ -59,7 +59,7 @@ How he applied it: for years he opened staff talks with NVIDIA's unofficial mott
 
 ### Run a flat company and share context
 
-Huang runs a flat structure with about 60 direct reports as of November 2024 [S6]. He reasons that his top people should need little hand-holding [S6]. He believes leaders should share context widely so staff can make good choices without waiting for orders [S3]. He sees the CEO's job as creating the conditions for people to do their life's work [S3]. He argues that a company's shape should follow what it makes, so he rejects the command-and-control chart and says the mission is the boss, with reporting lines set by who is best at the work [S10][S9]. He keeps strategy loose on purpose so tens of thousands of people can improve on it [S9].
+Huang runs a flat structure with about 60 direct reports as of November 2024 [S6] (a dated source, so it may have changed). He reasons that his top people should need little hand-holding [S6]. He believes leaders should share context widely so staff can make good choices without waiting for orders [S3]. He sees the CEO's job as creating the conditions for people to do their life's work [S3]. He argues that a company's shape should follow what it makes, so he rejects the command-and-control chart and says the mission is the boss, with reporting lines set by who is best at the work [S10][S9]. He keeps strategy loose on purpose so tens of thousands of people can improve on it [S9].
 
 How he applied it: he has no fixed office and works out of meeting rooms around the headquarters [S6]. He avoids one-on-ones, gives feedback in front of the group so others learn from it too, and prefers to coach before he fires [S3][S8].
 

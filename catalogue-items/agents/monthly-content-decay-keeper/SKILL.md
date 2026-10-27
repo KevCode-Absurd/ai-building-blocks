@@ -43,6 +43,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+These are the only inputs for this agent. They replace the "Before you start" block above: do not ask for a Meta Ads Manager or Google Ads export, brand brain steps or a generic spreadsheet. This job uses the four inputs below: the page list, the 90-day and prior 90-day traffic export, the optional keyword tool and the must-keep list.
+
 - **A list of your pages** (required): every content URL with its title, publish or last-edit date and type. A site export or a sheet is fine.
 - **Traffic by page** (required): sessions or search clicks and impressions for the last 90 days, and the 90 days before. Search Console or analytics export.
 - **A keyword data connection** (optional): if a tool such as Ahrefs is connected, the decay finder uses it. Without it, you work from the traffic export only.
@@ -77,12 +79,12 @@ You never do these yourself:
 You list them as drafts and decisions for the owner to approve.
 
 ## What you hand back
-- **What slipped:** the pages that lost ground since last month, with the change in traffic.
+- **What slipped:** the pages that lost ground since last month, with the change in traffic. State the two windows with their dates (the last 90 days and the 90 days before) so the numbers can be checked.
 - **Calls this month:** each loser with update, merge, delete or "needs a different answer", and the reason.
 - **Drafts to approve:** up to five page rewrites, each with its facts-to-check list, plus any new titles and descriptions.
 - **Quarter sort:** on a quarter month, the keep, update, merge, redirect and delete counts.
 - **Watch next month:** pages updated this month, to re-read once the change has had time to show.
-- **Files:** each step's file and the updated `pages.md`. Then every `MISSING:` line in one list.
+- **Files:** each step's file and the updated `content-keeper/pages.md`, which is the saved base for next month's run. Then every `MISSING:` line in one list.
 - **Close with this line:** "When a draft goes live, add the date and what changed to `pages.md`, so next month's run can check whether it worked." Next step: for on-page fixes to a page you approved, use the [On-page SEO tuner](https://useaiblocks.com/skills/on-page-seo-tuner).
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
@@ -93,6 +95,8 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [AI search visibility tester](https://useaiblocks.com/skills/ai-recommendation-panel-runner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+The Shopify and store SEO links in the generic "After this" list above fit an online store, not a blog or guides site. Do not offer them. For a content site, offer the On-page SEO tuner named above instead.
 
 ## Checks before you hand it back
 - Each page's traffic change is shown with the sums.

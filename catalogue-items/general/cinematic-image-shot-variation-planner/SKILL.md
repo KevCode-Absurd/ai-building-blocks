@@ -25,12 +25,15 @@ How to start:
 
 ## What to have ready
 
-A short brief with:
+Not for: a flat logo, icon or chart with no camera, or when you want the finished picture. Describe a flat style straight to your image tool.
+
+A subject, a moment and a look are enough to start. If lens or camera details are missing, the skill assumes them and labels them as assumed. A fuller brief has:
 
 - the subject and the moment you want to show;
 - the look you want (for example documentary, glossy, painted) and the medium (photo, illustration, 3D);
 - anything that must stay the same in all four, such as a product or a character;
-- reference images or style notes, if you have them (optional).
+- reference images or style notes, if you have them (optional). With none, say so and the skill works from the look you describe;
+- how many versions you want. The default is four. Say if you want a different number.
 
 This skill writes the prompts. It cannot draw. Paste a prompt into an image tool such as ChatGPT, Gemini or Higgsfield to get the picture. ChatGPT and Gemini have free tiers with limits. Higgsfield is optional and runs on paid credits, so check its current plans before you rely on it. Nothing in this skill spends money for you.
 
@@ -77,7 +80,7 @@ MISSING / NOT RUN
 
 ## What to do next
 
-Paste the prompt you like best into an image tool. If the picture is close, ask for one change at a time and repeat the continuity locks so the approved parts stay fixed.
+Paste the prompt you like best into an image tool. The Multi-provider image maker is the next step if you want to run the same prompt through more than one image tool: bring the prompt you chose and the continuity locks. If the picture is close, ask for one change at a time and repeat the continuity locks so the approved parts stay fixed.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

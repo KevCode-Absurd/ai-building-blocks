@@ -40,6 +40,8 @@ input_schema:
     - field: "system_constraints"
       type: "string"
       description: "Technical or practical constraints on the feedback — character limits, timing requirements, or format restrictions"
+# AI Blocks note: the prompt returns these headings. Diagnosis = feedback_evaluation. Feedback Type Analysis = feedback_type_analysis.
+# Improved Feedback Design and Design Rationale = improved_feedback. Implementation Notes = implementation_guidance.
 output_schema:
   type: "object"
   fields:

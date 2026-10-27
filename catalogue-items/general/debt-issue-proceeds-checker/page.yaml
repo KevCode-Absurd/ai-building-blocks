@@ -68,19 +68,20 @@ output_sample:
     - name: MISSING and CHECKS MISSED
       contains: Inputs not supplied and checks that failed or could not run, or none.
 how_it_works:
-  - title: 1. Separate legal principal from cash issue price; identify withheld fees and already-netted charges
-    text: Separate legal principal from cash issue price; identify withheld fees and already-netted charges.
-  - title: 2. Multiply face by issue-price fraction; reconcile face less funded cash as original issue discount
-    text: Multiply face by issue-price fraction; reconcile face less funded cash as original issue discount.
-  - title: 3. Deduct distinct cash fees once and tie net cash to actual funding evidence while keeping principal at face
-    text: Deduct distinct cash fees once and tie net cash to actual funding evidence while keeping principal at face.
+  - title: Separate principal from cash
+    text: Keep principal at face value. Find fees already taken out.
+  - title: Work out the discount
+    text: Face times issue price gives gross cash. Face less gross cash is the discount (OID).
+  - title: Take off each fee once
+    text: Net proceeds are gross cash less each fee. Compare with your funding statement.
 output_shape: |-
   Original issue discount, gross cash and usable net proceeds.
   Scope and dated sources
   Inputs and assumptions
   Model calculations and reconciliations
   Actual file verification
-  MISSING: and CHECKS MISSED
+  MISSING:
+  CHECKS MISSED
 tweaks:
   - what: "Funding date"
     how: "Take the funding date from the signed debt terms and the list of upfront fees. Use one currency and scale on every line."

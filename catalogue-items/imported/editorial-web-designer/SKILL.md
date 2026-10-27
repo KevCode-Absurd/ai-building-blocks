@@ -29,7 +29,7 @@ Ask once for anything missing. Never invent it.
 
 ## Rules that conflict (added by AI Blocks)
 
-Section 2 bans gradients, but Section 6 and Section 7 suggest radial gradients for backgrounds. Follow Section 2 and skip those gradient options. For section depth, use a flat tint from the palette, a very low-opacity photo or a thin line pattern instead of a gradient. Where a brand system already sets fonts or colours, the brand wins over Section 3 and Section 4.
+Section 2 bans gradients, but Section 6, Section 7 and Section 8 (step 6) suggest radial or ambient gradients for backgrounds and motion. Follow Section 2 and skip every gradient option, including the drifting gradient blob in Section 7 and the "ambient gradients" in Section 8 step 6. For section depth, use a flat tint from the palette, a very low-opacity photo or a thin line pattern instead of a gradient. Where a brand system already sets fonts or colours, the brand wins over Section 3 and Section 4.
 
 Lyon Text, the first serif named in Section 3, is a paid font that needs a licence. Use Newsreader or Instrument Serif (both free) as the default, and name Lyon Text only if the user already has a licence.
 
@@ -142,5 +142,5 @@ When tasked with writing frontend code (HTML, React, Tailwind, Vue) or designing
 3. Apply the custom typographic hierarchy and monochromatic color variables immediately.
 4. Ensure every card, divider, and border adheres strictly to the `1px solid #EAEAEA` rule.
 5. Add scroll-entry animations to all major content blocks.
-6. Ensure sections have visual depth through imagery, ambient gradients, or subtle textures — no empty flat backgrounds.
+6. Ensure sections have visual depth through imagery, flat tints, or subtle textures (no gradients, see the conflict note above) — no empty flat backgrounds.
 7. Provide code that reflects this high-end, uncluttered, editorial aesthetic natively without requiring manual adjustments.

@@ -19,6 +19,8 @@ metadata:
   version: '1.0'
 ---
 
+<!-- Licence note: this copy is shared under CC BY 4.0 (see LICENSE-CONTENT). The MIT line in the header above is the original author's, kept as the upstream source (BagelHole/DevOps-Security-Agent-Skills, author field: devops-skills). -->
+
 # Threat Modeling
 
 Identify and mitigate security threats during system design.
@@ -53,6 +55,8 @@ Use this skill when:
 | **E**levation of Privilege | Gaining unauthorized higher access | Authorization | RBAC, principle of least privilege, input validation |
 
 ## STRIDE Worksheet Template
+
+The entries below are a made-up example of the layout. They are not findings for the user's system. Fill in the user's own components, threats, controls and owners, and never copy these values.
 
 ```yaml
 # stride-worksheet.yaml - Fill out one per component/trust boundary crossing

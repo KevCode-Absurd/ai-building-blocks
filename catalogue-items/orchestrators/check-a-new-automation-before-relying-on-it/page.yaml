@@ -44,7 +44,7 @@ how_it_works:
   - title: Repeatable AI loop designer
     text: "Audits the automation you pasted. Checks the trigger, scope, inputs, exceptions, saved state, duplicate protection, retries, approval points and stopping rules. Repairs only what is weak. Hands step 2 the repaired design. Check before moving on: every weak part has a fix or a reason it was left."
   - title: Process and SOP writer
-    text: "Writes the procedure from the repaired design. It has a purpose, who does what, the steps, the exceptions, a test checklist and recovery steps. Marks anything you did not tell it as MISSING."
+    text: "Writes the procedure from the repaired design. It has a purpose, who does what, the steps, the exceptions, a test checklist and recovery steps. Marks anything you did not tell it as MISSING. You run the checklist yourself before you rely on the procedure."
 output_shape: |-
   DESIGN CHECK    <part | sound or weak | what is wrong | fix>, for nine parts
   REPAIRED DESIGN <the automation after the accepted fixes>

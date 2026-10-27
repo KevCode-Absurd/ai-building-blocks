@@ -20,7 +20,7 @@ npx skills add nexscope-ai/eCommerce-Skills --skill brand-protection-amazon -g
 This skill has no live data feed and does not watch Amazon. You supply the seller, price and review details for each listing, and it checks what you give it. The detector script runs on built-in sample data until your own details are put in.
 
 - **Hijacker Detection** — Spot unauthorized sellers in the seller list you supply
-- **Price Check** — Flag prices below MAP in the prices you supply
+- **Price Check** — Flag prices below your minimum advertised price (MAP) in the prices you supply
 - **Counterfeit Signals** — Flags reviews that use words like fake or not authentic. A keyword match is weak evidence. Confirm with a test buy before you send any complaint
 - **Trademark Abuse** — Title/keyword infringement detection
 - **Complaint Templates** — Brand Registry, C&D letters
@@ -75,11 +75,16 @@ python3 scripts/detector.py
 python3 scripts/templates.py complaint
 
 # Cease & Desist letter
-python3 scripts/templates.py cease-desist
+python3 scripts/templates.py cease
 
 # Test buy guide
 python3 scripts/templates.py testbuy
+
+# Notice to a seller pricing below your minimum advertised price (MAP)
+python3 scripts/templates.py map
 ```
+
+The template script also fills its letters with sample brand details. Before you send anything, open `scripts/templates.py`, find `main()` and replace the brand, seller, evidence and contact details with yours.
 
 ## Output Example
 
@@ -117,7 +122,7 @@ Recommendation: Order test buy
 | Brand Registry | Report to Amazon |
 | Cease & Desist | Direct seller contact |
 | Test Buy Report | Evidence documentation |
-| DMCA Takedown | Copyright infringement |
+| MAP Notice | Seller pricing below your minimum advertised price |
 
 ## Action Workflow
 

@@ -39,7 +39,7 @@ how_to_use:
   - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
   - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
   - Paste your worked example, the skill, the level and the mistakes you see. Say how many problems you want.
-  - Solve two of the AI's problems yourself and check them against its answers before you print anything.
+  - Read the stages from step 1 before the problems are used, and check that each stage takes away the steps the plan says. Then solve two of the AI's problems yourself and check them against its answers before you print anything.
   - Run the understanding check with learners, then bring their answers back to choose the next practice.
 how_it_works:
   - title: Worked example to practice sequence builder

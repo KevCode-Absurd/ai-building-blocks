@@ -34,6 +34,8 @@ how_to_use:
   - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can read your accounts and files.
   - Where the skill points to ../../shared/, use the shared folder inside it. We copied it in so the skill works on its own.
+  - This is an Apache-2.0 copy of a skill from Anthropic's knowledge-work-plugins collection. See the LICENSE file in this item.
+  - Accounting tools such as QuickBooks, Xero and NetSuite, and connectors such as Ramp and Expensify, need your own paid accounts. Connecting a tool the skill does not list may need a paid Zapier account.
 output_sample:
   input:
     - Your bills from an email folder, PDFs or phone photos

@@ -59,11 +59,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Show the draft to one expert and one newcomer, and write down what each did and said.
 
-6. **Sort what each group said.** Use the skill `reader-feedback-sorter`. Give it the notes your testers send back after the pause (not step 5's plan) and the draft from step 4. It makes a ranked rewrite list that says which group each change serves.
+6. **Sort what each group said.** Use the skill `reader-feedback-sorter`. Give it the notes your testers send back after the pause (not step 5's plan) and the draft from step 4. It makes a ranked rewrite list that says which group each change serves. If the testers' notes are not back yet, stop at step 6, write `MISSING: testers' notes` and hand back steps 1 to 5. Do not invent feedback. If a run has no honest way to serve one of the two groups, say so in the summary rather than forcing a draft.
 7. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
-6 step files and the summary. Step 4's file is the trimmed draft. Step 6's file is the ranked rewrite list, which says which group each change serves.
+6 step files and the summary. Step 4's file is the trimmed draft with the cuts listed. Step 5's file is the test plan: who to try it on, what to ask each and what counts as a pass. Step 6's file is the ranked rewrite list, which says which group each change serves. The summary lists every `MISSING:` line and any check that did not run, or says none.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

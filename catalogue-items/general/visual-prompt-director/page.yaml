@@ -52,6 +52,8 @@ output_sample:
       contains: One controlled change to try if the result was bad or needs work.
     - name: NOT RUN
       contains: Anything that was not checked or made, such as image generation or a reference it could not see.
+    - name: CHECKS MISSED
+      contains: One line for each check that failed or could not run, or none.
 how_it_works:
   - title: Reads what you gave it
     text: An idea becomes a prompt. A detailed brief is tidied into one. A rough prompt is repaired. A bad result is diagnosed, then fixed with one change.

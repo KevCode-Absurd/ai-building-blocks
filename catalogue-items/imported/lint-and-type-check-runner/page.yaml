@@ -19,6 +19,7 @@ not_for:
   - "You need to test how the code behaves when it runs: use your project's own test runner instead."
   - "You want a full audit of a whole repository or its security: ask a developer or use your project's CI."
   - "Your project has no lint or type check set up: add one first, or ask a developer to set it up."
+  - "You need a full code review or a check that the code is safe: ask a developer, or rely on your project's CI. This skill does not install tools or review design."
 you_give:
   - The project folder
   - The files you changed
@@ -30,6 +31,7 @@ you_get:
   - A list of checks that did not run
   - The commands used and their exit results
 how_to_use:
+  - Gather two things first: the list of files you changed, and which lint or type check commands your project already has (look in package.json or your project settings, or ask a developer).
   - Commit or stash your work first, so you can undo any automatic fix.
   - Open your AI tool in your project folder. It needs to run commands, so use a tool that can, such as Claude Code.
   - Paste this skill, or add it to your tool's skills.
@@ -37,8 +39,12 @@ how_to_use:
   - Ask it to read your scripts first, and to list each script it plans to run.
   - For each script, read what it may change or fetch. A script named lint can change files or use the network. Your AI must wait for your yes before it runs any script that could change files or reach the network.
   - Read the report. Look at the checks that did not run before you trust a pass.
+  - The two helper scripts in the skill folder (lint_runner.py and type_coverage.py) are optional. Your AI must show you the exact command first and wait for your yes. type_coverage.py only reads files. lint_runner.py starts your project's own checks.
+  - The skill is marked critical risk in its own file because it runs your project's commands, which can change files or use the network. That is why it must wait for your yes. It does not install anything for you, so missing tools are reported, not fetched.
   - Run this only on projects you trust. It runs your project's own commands, and those can change your files or reach the network.
+  - The run has two phases. Phase one only checks and reports. Phase two fixes errors, and starts only after you approve each change.
   - After a pass, commit your change. After a fail, ask your AI to fix the listed errors and run the checks again.
+  - Next, run your project's own test runner for runtime bugs, and let your CI (the automatic checks that run when you push code) cover security and the full build. A lint pass does not replace either.
 output_sample:
   input:
     - Your project folder

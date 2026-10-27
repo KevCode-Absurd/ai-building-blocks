@@ -6,7 +6,7 @@ argument-hint: "<vendor name or proposal>"
 
 # /vendor-review
 
-> The `~~knowledge base` and `~~procurement` names below stand for a document store and a purchasing system the user may have connected to their AI. If none is connected, skip the "If Connectors Available" section and work from what the user pastes or uploads. (The CONNECTORS.md file from the original project is not included here.)
+> The `~~knowledge base` and `~~procurement` names below stand for a document store and a purchasing system the user may have connected to their AI. If none is connected, skip the "If Connectors Available" section and work from what the user pastes or uploads.
 
 Evaluate a vendor with structured analysis covering cost, risk, performance, and fit.
 
@@ -50,6 +50,8 @@ Evaluate a vendor with structured analysis covering cost, risk, performance, and
 When comparing vendors, produce a side-by-side matrix covering: pricing, features, integrations, security, support, contract terms, and references.
 
 ## Output
+
+**Cost rule:** use only costs that appear in the documents the user gave you. If a cost is not there, write "not provided" or "estimate, to confirm with vendor" in that cell. Never show a guessed cost as a specific figure, and never total a column that has a missing cost without saying the total is partial.
 
 ```markdown
 ## Vendor Review: [Vendor Name]

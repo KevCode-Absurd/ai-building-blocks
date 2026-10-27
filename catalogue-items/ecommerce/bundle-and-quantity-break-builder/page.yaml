@@ -11,7 +11,7 @@ subhead: Give it your hero product, its cost, price and shipping weight. It buil
 explain: |
   A quantity break is a price ladder: the more a shopper buys, the less each unit costs. Done well, it lifts order value and uses your shipping savings to pay for the discount. Done badly, it gives away margin and confuses shoppers.
 
-  This skill bundles the same product in more units, flavors, sizes or colors, because mixed bundles tend to fail when buyers only want two of the three items. It picks a middle tier as the star and pre-selects it, ties each tier to a real use, shows the price per unit and the money saved, and scales gifts with quantity. It counts the shipping you save in bigger packs, so the discount is funded, not guessed. It also finds your entry offer and the pack size that brings buyers back sooner. It works for products used in more than one unit, not for one-off items like a chair.
+  This skill bundles the same product in more units, flavors, sizes or colors, because some sellers report that mixed bundles do worse when buyers only want two of the three items. That is untested, so test it before you rule mixed bundles out. It picks a middle tier as the star and pre-selects it, ties each tier to a real use, shows the price per unit and the money saved, and scales gifts with quantity. It counts the shipping you save in bigger packs, so the discount is funded, not guessed. It also finds your entry offer and the pack size that brings buyers back sooner. It works for products used in more than one unit, not for one-off items like a chair.
 
 when:
   - You sell one product at one price and want a bigger first order.
@@ -134,7 +134,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "It does the tier maths and writes the lines from the numbers you paste."}
-    - {name: "Shopify", why: "Shopify has bundle features, and apps add quantity breaks and pack builders. Check what your theme supports."}
+    - {name: "Shopify", why: "Shopify has bundle features, and apps add quantity breaks and pack builders. Bundle and pack-builder apps may need a paid plan or a monthly fee, so check cost against your store's plan. Check what your theme supports."}
   inputs:
     - "Real shipping quotes for one, three and six units"
     - "Order history showing which units people buy together"

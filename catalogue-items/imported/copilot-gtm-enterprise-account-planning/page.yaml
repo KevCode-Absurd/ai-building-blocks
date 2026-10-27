@@ -34,6 +34,7 @@ you_get:
   - "A personal win map of what each buyer gains"
   - "A yes or no on sending the proposal now, with reasons"
 how_to_use:
+  - Two terms. MEDDICC is a sales checklist: metrics, economic buyer, decision criteria, decision process, identified pain, champion and competition. A MAP (mutual action plan) is a shared plan of steps and dates that you and the buyer both keep.
   - Gather the account facts: the account name, what you sell, the deal size, how long the cycle has run, and the people involved with their titles.
   - Find your mutual action plan and the date it was last updated. If you have none, say so.
   - Open Claude, ChatGPT or Gemini and paste in the skill. Paste your facts, the plan and its last update date.

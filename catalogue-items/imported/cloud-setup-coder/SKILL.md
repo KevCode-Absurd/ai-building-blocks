@@ -27,7 +27,7 @@ Ask once for anything missing. Never guess a value, and never put a real passwor
 4. Preferred tool (optional; if none, recommend one with a reason).
 5. A project folder the AI can write to. Without file access, show each file in the chat under its file name.
 
-Running `plan` or `apply` needs the tool installed and a cloud login. Only run `plan` yourself, and only if the user says the login is set up. Never run `apply` unless the user approves the plan.
+Running `plan` or `apply` needs the tool installed and a cloud login. Who runs what: the AI may run `plan` (or `preview`) only when the user says the tool is installed and the cloud login is set up. Otherwise the user runs it and pastes the result back. Nobody runs `apply` until the user has read the plan and says yes.
 
 ## Workflow
 
@@ -39,9 +39,9 @@ Running `plan` or `apply` needs the tool installed and a cloud login. Only run `
 
 4. **Configure State Management:** The agent sets up remote state storage (e.g., S3 + DynamoDB for Terraform, Pulumi Cloud for Pulumi) with state locking to prevent concurrent modifications. State files contain sensitive data and are never committed to version control. The agent configures state encryption at rest and strict access controls on the state backend.
 
-5. **Execute Plan and Apply:** The agent runs the plan step (`terraform plan`, `pulumi preview`) to generate a detailed diff of proposed changes, then presents the plan for user review before applying. The agent verifies that no unexpected resources are being destroyed or recreated. Only after explicit approval does the agent execute the apply step to provision infrastructure.
+5. **Execute Plan and Apply:** The plan step (`terraform plan`, `pulumi preview`) is run by the agent only under the rule in "Before you start", or by the user. It generates a detailed diff of proposed changes, then presents the plan for user review before applying. The agent verifies that no unexpected resources are being destroyed or recreated. Only after explicit approval does the agent execute the apply step to provision infrastructure.
 
-6. **Detect and Remediate Drift:** The agent periodically runs drift detection (`terraform plan`, `pulumi refresh`) to compare actual infrastructure state against the declared configuration. Any out-of-band changes made via the console or CLI are flagged and either reconciled back to the IaC definition or explicitly imported into state. This ensures the IaC code remains the single source of truth.
+6. **Detect and Remediate Drift:** The agent runs drift detection (`terraform plan`, `pulumi refresh`) whenever the user asks, or on a schedule if the user sets up a scheduled CI job. The agent cannot run on a timer by itself. The check compares actual infrastructure state against the declared configuration. Any out-of-band changes made via the console or CLI are flagged and either reconciled back to the IaC definition or explicitly imported into state. This ensures the IaC code remains the single source of truth.
 
 ## Output (added by AI Blocks)
 
@@ -52,14 +52,14 @@ Hand back, in this order:
 3. **Secrets list.** Every value the user must supply (passwords, key names, address ranges), and where to keep each one. None is filled in.
 4. **State plan.** Where state is stored, how it is locked and who can read it.
 5. **Plan summary.** What `plan` or `preview` is expected to create, change and destroy, in plain words. If it was not run, say "not run".
-6. **Next step.** Review the plan in a pull request before anyone applies it. Pair the code with a CI plan-review tool such as Atlantis or Spacelift, or the CI of your choice.
+6. **Next step.** Review the plan in a pull request before anyone applies it. Pair the code with a CI plan-review tool such as Atlantis (free) or Spacelift (a paid service), or the CI of your choice.
 
 ## Supported Technologies
 
 - **IaC Tools:** Terraform (HCL), Pulumi (TypeScript, Python, Go, C#), AWS CloudFormation (YAML/JSON), AWS CDK (TypeScript, Python), Ansible
 - **Cloud Providers:** AWS, Google Cloud Platform, Microsoft Azure, DigitalOcean, Cloudflare
 - **State Backends:** S3 + DynamoDB, Terraform Cloud, Pulumi Cloud, GCS, Azure Blob Storage
-- **CI/CD Integration:** Atlantis, Spacelift, Terraform Cloud, GitHub Actions, GitLab CI
+- **CI/CD Integration:** Atlantis (free), Spacelift (paid), Terraform Cloud, GitHub Actions, GitLab CI
 
 ## Usage
 
@@ -96,7 +96,7 @@ terraform {
 
   backend "s3" {
     bucket         = "my-terraform-state"
-    key            = "prod/terraform.tfstate"
+    key            = "prod/terraform.tfstate"  # change per environment, for example "dev/terraform.tfstate"
     region         = "us-east-1"
     dynamodb_table = "terraform-locks"
     encrypt        = true
@@ -319,7 +319,7 @@ export const tableName = table.name;
 - **Never store state locally in production:** Always use a remote backend with state locking (S3 + DynamoDB, Terraform Cloud, Pulumi Cloud). Local state files can be lost, corrupted, or create conflicts when multiple team members run applies concurrently.
 - **Use modules for reusability:** Extract common patterns (VPC, security groups, ECS services) into versioned modules. This reduces duplication and ensures that infrastructure standards are enforced consistently across all environments and teams.
 - **Treat secrets as sensitive variables:** Mark database passwords, API keys, and tokens as `sensitive` in Terraform or use Pulumi's secret encryption. Never hardcode secrets in IaC files. Integrate with AWS Secrets Manager or HashiCorp Vault for runtime secret injection.
-- **Run plan in CI, apply with approval:** Integrate IaC into your CI/CD pipeline so that every pull request shows the plan diff. Use tools like Atlantis or Spacelift for automated plan comments and require manual approval before apply runs in production.
+- **Run plan in CI, apply with approval:** Integrate IaC into your CI/CD pipeline so that every pull request shows the plan diff. Use tools like Atlantis (free) or Spacelift (a paid service) for automated plan comments and require manual approval before apply runs in production.
 - **Tag all resources consistently:** Apply standard tags (Project, Environment, Team, ManagedBy) to every resource. Tags enable cost allocation, access control, and automated cleanup of orphaned resources.
 - **Use workspaces or stacks for environments:** Maintain separate state per environment (dev, staging, production) using Terraform workspaces or Pulumi stacks. Share the same code with environment-specific variable files to ensure parity.
 

@@ -35,9 +35,9 @@ you_get:
   - "A page-by-page check log: one line per page, each passed, failed or not run"
   - A hand-back summary with MISSING facts and one next step
 how_to_use:
-  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack from this page. It is a zip with HANDOFF.md and every skill file this workflow uses.
   - Use an AI that can run code and save files. It needs Node.js, LibreOffice and a PDF page-to-picture tool installed.
-  - Give it the folder and say "Follow HANDOFF.md". Then share your notes and say who the handout is for.
+  - Give it the folder and say "Follow HANDOFF.md". Then paste or attach your notes before the first step, and say who the handout is for.
   - Read the edited text first. Fix any MISSING line, then let it build the Word file.
   - Open the Word file and the check log. Look at any page marked not run, then send or print.
 how_it_works:

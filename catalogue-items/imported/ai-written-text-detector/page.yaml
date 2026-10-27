@@ -11,13 +11,14 @@ explain: |
 
   You send a file or pasted text to a detection service. It returns a lean of AI, human or unsure, a probability between 0 and 1, the phrases and patterns it flagged, such as stock openers and sentences of the same length, and its reasoning. Forms, tables and scans are refused instead of guessed. Treat the result as one signal for triage, never a verdict, because people write plainly and AI can too. It needs an API key for the service.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Sketchjar) says Apache-2.0. Credit goes to Sketchjar and sickn33.
+  Licence: CC BY 4.0 applies to this copy, as its LICENSE-CONTENT file says. Reuse it with credit to Sketchjar and sickn33. The author's own file header says Apache-2.0, which also allows reuse with credit. The LICENSE-CONTENT file governs this copy, and the Apache-2.0 notice stays visible in the skill file.
 when:
   - You teach and want a first look at a suspicious student essay.
   - You review inbound articles or guest posts and need to triage them.
   - You read CVs or cover letters and want to flag, not reject, AI drafts.
   - You want to see which phrases make a text read like AI.
 not_for:
+  - "You would use the result alone to grade, hire, publish or discipline someone: it can wrongly flag non-native English, templated, coached or accessibility-assisted writing, so never make it the only basis for a decision."
   - "You need proof of who wrote a document: no tool can give that, so ask the writer to explain their work in person."
   - "You want to know if a document is fake or edited: use a document check that looks at the file itself, not its style."
   - "Your document is a form, table, payslip or scan: the service refuses these, so read it by hand."
@@ -31,12 +32,13 @@ you_get:
   - The flagged phrases and patterns
   - A note on what the result cannot show
 how_to_use:
-  - Get consent from the writer first. Your document is sent to a hosted third party, so remove private details you do not need.
+  - Get consent from the writer first. Your document is sent to a hosted third party, and we do not know how long Stipple keeps it. Read its privacy rules, and remove private details you do not need.
   - Open an AI that can run a web request, such as Claude with code tools. Paste the skill instructions.
-  - Add your Stipple API key, then give it your file, link or pasted text. You get a key from the Stipple website (stipple.sh). We do not know if it is free or paid, or what the allowance is, so read Stipple's current terms and privacy rules on that site before you sign up. Keep the key out of the chat and out of shared files.
-  - Read the lean, the flagged phrases and the limits note. If it says the document is not prose, stop there.
+  - Sign up on the Stipple website (stipple.sh) and copy your API key first. Your AI cannot send a file without it. We have not tested Stipple's endpoint or its response fields, so expect to fix a detail or two. Add your key, then give it your file, link or pasted text. You get a key from the Stipple website (stipple.sh). We do not know if it is free or paid, or what the allowance is, so read Stipple's current terms and privacy rules on that site before you sign up. Keep the key out of the chat and out of shared files.
+  - First check whether the reply says applicable is false. That means Stipple refused the document because it is not prose, such as a form, table or scan. Stop there. Do not read a lean from a refused document. Otherwise read the lean, the flagged phrases and the limits note.
   - Treat the result as one signal. Talk to the writer before you act on it.
   - If the result is unsure or cannot tell, do not treat it as a no. Talk to the writer, or use a document check that looks at the file itself.
+  - Before any decision, keep the original document, write down the result and what the writer said, and give the writer a way to appeal.
 output_sample:
   input:
     - Your document as a file, link or pasted text

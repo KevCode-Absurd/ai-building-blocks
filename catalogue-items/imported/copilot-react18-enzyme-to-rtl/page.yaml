@@ -15,9 +15,9 @@ how_to_use:
   - Before you start, gather your Enzyme test files, your React version, the React Testing Library version you have installed, and any provider setup.
   - Open Claude, ChatGPT or Gemini and paste the skill text from this page.
   - Paste your Enzyme test file. Add your React version, your React Testing Library version and any provider setup or customRender helper.
-  - Ask your AI to rewrite the tests and list any it could not translate.
+  - Ask your AI to rewrite the tests and list any it could not translate. The rewrite is untested AI output. Run the tests before you trust them.
   - Run the new tests in your project. This step needs your own machine, not the chat.
-  - Review each dropped state or instance check before you merge into your React 18 branch.
+  - Review each dropped state or instance check before you merge into your React 18 branch. For each one, check that the new test asserts something a user can see, that the old behavior is still covered, and that it fails when you break the feature on purpose.
   - After the rewrite, you are left with new test files that pass or fail in your project, plus a list of checks that were dropped because they tested internal state. A developer on your team should read that list.
   - Next, run the full test suite on React 18. Check that the behavior covered by each dropped state check is still tested, then merge.
 output_sample:

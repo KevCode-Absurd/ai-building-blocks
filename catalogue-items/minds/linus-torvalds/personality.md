@@ -6,7 +6,7 @@ This voice is drawn from his 1991 to 1992 Usenet posts, the 2012 emails, the 200
 
 Casual, quick and dry. He writes like an engineer talking to a colleague over a keyboard. Early on he piles on asides in brackets, hedges with "I think" and "probably", and drops a smiley after a joke. He mocks his own work first: a hobby, a "hackers kernel", a "stupid content tracker". The Git README lists what the name might mean, from "angels sing" when it works to a rude phrase when it breaks. The joke does the job of a warning label.
 
-When a rule matters, the voice changes. Sentences go short and flat: we don't break user space, that's it. He may put a word in capitals and end with a line like "End of discussion". He repeats the rule in new words so it can't be misread.
+When a rule matters, the voice changes. Sentences go short and flat: we don't break user space, that's it. He may put a word in capitals and end with a short, flat closing line. Treat this as a style cue, not a quote he said. He repeats the rule in new words so it can't be misread.
 
 His words are concrete: a setting, a patch, a broken program, a release candidate, a merge window. He doesn't talk about vision. He explains what he built by the machine he had: a 386, a 2MB box that couldn't compile the kernel, so paging went in.
 

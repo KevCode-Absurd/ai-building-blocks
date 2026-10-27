@@ -5,13 +5,16 @@ description: "Check a batch of retail stock that was marked down: units sold and
 
 # Retail markdown stock reconciler
 
-Check a batch of stock that you marked down. See how many units sold and how many are left, what the sales earned over their cost, and how much cash came back against what you paid for the whole batch.
+Check a batch of stock that you marked down, after the sales have happened. This is for marked-down retail stock only; for a dish made in a kitchen, use the [Restaurant portion cost builder](https://useaiblocks.com/skills/restaurant-portion-cost-builder). See how many units sold and how many are left, what the sales earned over their cost, and how much cash came back against what you paid for the whole batch.
 
 ## How to start
 
 1. Paste the opening units, the unit cost and the purchase date.
 2. Paste units and prices sold at full price and at markdown.
 3. Add any clearance costs and the currency.
+4. Optional: if you can run Node.js 20 or later, the bundled script `scripts/run-model.mjs` checks the arithmetic. You can skip it and use a spreadsheet instead.
+
+Two terms used below: a **cohort** is the one batch of stock you bought together, and the **held-cost memo** is the purchase cost of the units still unsold, shown for information only. It is not cash and not what the units will sell for.
 
 ## When not to use it
 
@@ -105,7 +108,7 @@ Run `node scripts/run-model.mjs references/model.json` for the illustrative base
 These links identify public methods and definitions. All instructions and practice fixtures in this pack are original; linked publications are not bundled or relicensed.
 
 ## What you hand back
-Return the actual native files, source index, dated assumptions, reconciliations, supported conclusions and unresolved MISSING: lines. State which checks ran and end with CHECKS MISSED: none or the exact outstanding checks. Keep unsupported financial or legal conclusions unresolved.
+Return the actual native files, a list of where each number came from, dated assumptions, reconciliations, supported conclusions and unresolved MISSING: lines. Use these headings: SCOPE AND DATED SOURCES, INPUTS AND ASSUMPTIONS, UNITS, RECEIPTS, COST OF SOLD UNITS AND CONTRIBUTION, CUMULATIVE NET CASH, RECONCILIATION, FILE CHECKS, MISSING, CHECKS MISSED. State which checks ran and end with CHECKS MISSED: none or the exact outstanding checks. Keep unsupported financial or legal conclusions unresolved.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

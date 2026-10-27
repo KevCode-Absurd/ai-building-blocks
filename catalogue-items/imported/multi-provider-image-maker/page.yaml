@@ -7,8 +7,6 @@ job: make-images
 headline: Multi-provider image maker
 subhead: An image made by the image service you choose, in the size you pick, from a single prompt. You can switch services without relearning anything.
 explain: |
-  An image made by the image service you choose, in the size you pick, from a single prompt. You can switch services without relearning anything.
-
   The skill runs a script that connects to many services, including OpenAI, Google, Azure, Replicate, Alibaba, MiniMax and Seedream. On first use it asks you to save your preferences: default service, model and size. Then it takes your prompt, asks for the service, model, quality and image shape, and calls the service with your own API key. Batches are possible, so you can run many prompts together. It needs Bun or Node to run and an API key for the service you pick. Each image is billed to your own account, so check that service's pricing first.
 when:
   - You want to try the same prompt on two image services.
@@ -36,7 +34,7 @@ how_to_use:
   - "Add the skill folder and say: Make an image with the image maker skill. Give your prompt, service and size."
   - On the first run, answer the setup questions. Your default service, model and size are saved for next time.
   - Add your API key for the service when asked, or set it as an environment variable first.
-  - Open the image file at the path in the reply. For many images, give a batch file (a list of prompts and file names) and the number of jobs (how many images to make at the same time).
+  - Open the image file at the path in the reply. For many images, give a batch file (a list of prompts and file names) and the number of jobs (how many images to make at the same time). A higher number is faster but sends more paid requests at once.
   - Next, open the saved file and check the image. Rerun with another service or size to compare, or give it a batch file to make many images at once. Before you drop an image into a post, deck or ad, check the service's licence terms and that it fits your brand.
 terms:
   - term: EXTEND.md
@@ -62,7 +60,7 @@ output_sample:
     - name: Image file
       contains: The picture made from your prompt, saved at the file path you give with --image.
     - name: Reply message
-      contains: The saved file path and the service and size used, or a note about a missing setting.
+      contains: The saved file path and the service and size used, or a note about a missing setting. If the file path is missing, the image was not saved, so check the note and run it again.
     - name: Batch file (optional)
       contains: A list of prompts and file names, built from an outline and a prompts folder.
     - name: Batch images (optional)

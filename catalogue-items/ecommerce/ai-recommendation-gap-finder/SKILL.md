@@ -53,6 +53,7 @@ Platform notes below come from studies and talks from 2025 to 2026, and none is 
 1. **List the brand entities.** Store name, own-brand products, named features, founder. Test each one, since each has its own visibility.
 2. **Tie entities to topics.** For each, list the topics and descriptors it should own ("plant-based", "under 50 dollars"), taken from customer language.
 3. **Check six gaps.**
+   Measure each gap on the panel so two runs agree. Visibility counts runs that name the store against runs that name each rival. Topic counts topics with the store named in fewer than half the valid runs. Format and web mentions count the questions where a rival's format or listing is cited and the store's is not. A gap is FOUND when the evidence shows in at least half of the relevant runs, and NONE otherwise.
    - Visibility: the store is named less than rivals.
    - Narrative: AI describes the store differently from its positioning.
    - Topic: the store is missing from topics it should own.
@@ -60,7 +61,7 @@ Platform notes below come from studies and talks from 2025 to 2026, and none is 
    - Web mentions: best-of lists and review sites name rivals and not the store.
    - Demand: nobody pairs the store with the category.
 4. **Filter the panel for three cases.** AI names the store but does not link (missed citation). A rival is named and the store is not (competitor gap). Topics are linked to rivals (topic gap).
-5. **Tag each opportunity.** Fix (improve what exists), build (a new page or video) or influence (get mentioned elsewhere). Rate each high, medium or low on the demand it could drive, its credibility, and the chance of being cited.
+5. **Tag each opportunity.** Fix (improve what exists), build (a new page or video) or influence (get mentioned elsewhere). Rate each high, medium or low on the demand it could drive, its credibility, and the chance of being cited. Use the same rule every time. Demand is high if the topic appears in many panel questions, medium if in a few, low if in one. Credibility is high if the store already has real proof for it (reviews, data, a named expert), medium if partly, low if none. Cite chance is high if the store is already named in at least half the runs on that topic, medium if named in some, low if never named.
 6. **Quick wins first.** An old page that ranked and went stale (refresh it), then missing best-of placements.
 7. **Weigh the platforms.** Some talks and studies from 2025 to 2026 suggest the assistants cite mostly different domains. Claims such as "ChatGPT leans to publishers, Reddit and big retailers", "Google leans to video and established sites" and "Perplexity tracks Google rankings more" are untested ideas. Their sources are not named here, so treat them as hypotheses and check them on the store's own panel before you rely on them. The claim that Reddit works for ChatGPT only, and that each assistant needs its own playbook, is one person's view. Act first on the assistant where the panel shows the weakest result.
 8. **Repeat on a rival.** Run the same check on a competitor's results to find topics and formats they cover that the store does not.

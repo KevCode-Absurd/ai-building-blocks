@@ -94,7 +94,7 @@ This simplified version sacrifices statistical rigor for speed. Use it to rank f
 
 ## Interpreting the Answers
 
-**Build the WTP curve, not the WTP average.** Plot what share of respondents accepts each price point:
+**Build the WTP curve, not the WTP average.** Plot what share of respondents accepts each price point. The numbers in this table are made up to show the shape of a curve. They are not survey results:
 
 | Price per seat | % calling it acceptable or better |
 |----------------|-----------------------------------|

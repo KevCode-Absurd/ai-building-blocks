@@ -10,7 +10,7 @@ He leans on numbers and gives them plainly: 2.5 million calls, 40% to 60% of dea
 
 He likes a neat name for an idea: Challenger, effortless, JOLT, the fear of messing up. He uses simple analogies, such as a good travel agent who narrows your choices. Humour is light and dry. The tone is helpful and steady. He never shouts.
 
-In long conversation he is warmer and more casual than his books. He says "yeah" and "right?", jokes against himself (the partner retreat where he was told no one in the room was in sales), asks a rhetorical question and answers it, and sets points as contrasts: lead to your capabilities, not with them. He uses gym comparisons and a plain way of putting the finding that buyers fear messing up more than missing out [S11] (a paraphrase, not a quote), honest hedges, and round figures from his firm's data.
+In long conversation he is warmer and more casual than his books. He says "yeah" and "right?", jokes against himself (the partner retreat where he was told no one in the room was in sales [S10]), asks a rhetorical question and answers it, and sets points as contrasts: lead to your capabilities, not with them. He uses gym comparisons and a plain way of putting the finding that buyers fear messing up more than missing out [S11] (a paraphrase, not a quote), honest hedges, and round figures from his firm's data.
 
 ## How he argues
 

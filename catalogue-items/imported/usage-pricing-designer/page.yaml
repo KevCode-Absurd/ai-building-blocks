@@ -15,7 +15,7 @@ explain: |
 
   On this site the skill comes with plain how-to steps, a list of what it needs, and a sample of the result. We gave it a plain name and wrote the page text. The method is the author's.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (jonathimer) says MIT. Credit goes to jonathimer and sickn33.
+  Licence: the LICENSE-CONTENT file in this item says CC BY 4.0 for written content like this skill, and that is the licence shown for this copy. The author's own header (jonathimer) says MIT. Both are permissive and both need credit, so keep the credit to jonathimer and sickn33 if you share it. The skill file is tagged "risk: critical" by its source collection. It means wrong prices can hurt your business, so test every price before launch.
 when:
   - You are launching an API or a tool and must decide what to charge per unit.
   - Customers say their bill was higher than they expected.
@@ -45,7 +45,7 @@ how_to_use:
   - If it asks for a number you do not have, say so. It will mark the gap instead of guessing.
   - Check the metric first. Ask yourself if a customer could count it without help. If not, ask for the backup.
   - Provider examples in the skill (such as Stripe, Twilio, Vercel and DigitalOcean) show how prices are laid out. They are not current prices. Check each provider's own site before you quote any number.
-  - Run the three example bills past a real customer or two. Test the prices with real usage data before you launch.
+  - The three example bills are illustrations. Every draft price must be checked against your own cost per unit before launch, because a price below your cost loses money on every sale. Run the bills past a real customer or two. Test the prices with real usage data before you launch.
 how_it_works:
   - title: Collect your inputs
     text: It asks once for your product, your cost per unit and your customers, and marks anything missing.

@@ -9,7 +9,7 @@ subhead: Name a gene or cell line and, if you like, a cancer type to compare. It
 explain: |
   Name a gene or cell line and see which cancers need it to survive and which drugs hit them. The skill works from DepMap, the public map of gene knockout screens in cancer cells, and gives you ranked lists you can take to the lab as ideas to test.
 
-  It finds the latest data release first and checks which files are really available, since some links are blank. Then it ranks dependencies, compares groups defined before you look, checks genes that rise and fall together, and links them to drug response data. It is careful to say that results suggest targets and do not prove a drug works. You need data downloads and a way to run code. Licence: this copy is MIT, as in the LICENSE.md in this folder. The skill file header says CC BY 4.0, so keep the credit either way. DepMap data has its own terms, set by DepMap for each release. Read them before you reuse or share any results.
+  It finds the latest data release first and checks which files are really available, since some links are blank. Then it ranks dependencies, compares groups defined before you look, checks genes that rise and fall together, and links them to drug response data. It is careful to say that results suggest targets and do not prove a drug works. You need data downloads and a way to run code. The code examples were not run against the current DepMap data files here, so check your first output against the release README. Licence: the LICENSE.md in this folder governs this copy. It is MIT. The skill file header also says CC BY 4.0, which is the original author's note. Keep the credit. DepMap data has separate terms, set by DepMap for each release. Read them before you reuse or share any results.
 when:
   - You study a gene and want to know which cancer types rely on it.
   - You need to pick cell lines for an experiment and want the ones most sensitive to a knockout.
@@ -30,7 +30,9 @@ you_get:
   - Related genes that behave alike
   - Drug response links with clear limits on what they mean
 how_to_use:
+  - "Plan for manual downloads. We have not run this skill end to end on the current DepMap files. DepMap may show a browser check, or its terms may block automated downloads, so expect to fetch the files yourself."
   - Open an AI that can run Python 3.10 or newer with numpy, pandas and scipy, and reach the internet. Paste in this skill. The files it will fetch are the DepMap release's CRISPRGeneEffect.csv, Model.csv and, for drug links, the PRISM files.
+  - Start here, in three steps. Confirm the release your AI found. Download CRISPRGeneEffect.csv and Model.csv from the DepMap portal. Run the gene profile for one gene and compare the first result with the release README. Before you read any ranked list, check one known control: a common-essential gene should score near minus 1, and a nonessential gene near 0.
   - Tell it your gene or cell line. Add a cancer type to compare, if you have one.
   - Let it find the latest DepMap release and list the files it needs. It saves a release record (file names, checksums, date).
   - Ask for the gene dependency profile of your target. It gives a table of scores for each cancer model.

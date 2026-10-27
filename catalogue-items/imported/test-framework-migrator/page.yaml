@@ -21,7 +21,7 @@ when:
 not_for:
   - You have one small test. Rewrite it by hand, or read the docs of the framework you are moving to.
   - Your tests stay in the same framework. Keep them as they are, or ask your AI for a plain code review.
-  - Your pair is not supported, such as WebdriverIO. Ask for the closest supported move, then adjust by hand.
+  - Your pair is not supported, such as tests that need WebdriverIO. Ask for the closest supported move, then adjust by hand.
 you_give:
   - The existing test files
   - The framework you want
@@ -33,7 +33,7 @@ you_get:
   - Items needing manual review
   - Notes on setup differences
 how_to_use:
-  - Before you start, find the guide for your pair, such as Selenium to Playwright, in the source repo. The conversion rules live in that guide, and the conversion cannot be checked without it.
+  - "Before you start, find the guide for your pair in the source repo. The guide address is https://github.com/LambdaTest/agent-skills/tree/main/test-framework-migration-skill/reference/ followed by the pair. The supported pairs are selenium-to-playwright.md, playwright-to-selenium.md, selenium-to-puppeteer.md, puppeteer-to-selenium.md, puppeteer-to-playwright.md, playwright-to-puppeteer.md, cypress-to-playwright.md, playwright-to-cypress.md, selenium-to-cypress.md and cypress-to-selenium.md. The conversion rules live in that guide, and the conversion cannot be checked without it. A conversion without its guide is a draft only."
   - Open your AI tool and paste the skill instructions. If it can read files, point it at your test folder.
   - Paste or attach the test files you want to convert.
   - Say which framework you use now and which one you want. Add your language if it matters.

@@ -11,7 +11,7 @@ subhead: Give it 12 to 36 months of daily spend and new-customer revenue, your m
 explain: |
   Most store forecasts are one number pulled from last year with a growth rate on top. New customers and returning customers do not respond to the same levers, so they need separate models. New revenue follows ad spend and its efficiency. Returning revenue follows the customers you already have and how often they come back.
 
-  This skill fits a line through daily new-customer efficiency against daily spend, and reads efficiency at the spend you plan. For returning revenue it multiplies each past monthly cohort by its repeat rate at its age. It adds seasonality and the events on your calendar, sized from past launches, promos and emails. The two speakers claim the cohort method is fairly accurate, and more so with seasonality. Those are their claims, so test the error bars on your own past months.
+  This skill fits a line through daily new-customer efficiency against daily spend, and reads efficiency at the spend you plan. For returning revenue it multiplies each past monthly cohort by its repeat rate at its age. It adds seasonality and the events on your calendar, sized from past launches, promos and emails. Two speakers claim the cohort method works well, but that is untested for your store. Run it on your own past months first and check the error before you rely on it.
 
 when:
   - You must give your board or team a revenue number for next quarter.
@@ -75,7 +75,7 @@ how_it_works:
   - title: Fits the spend curve
     text: It plots daily efficiency against daily spend over a year, fits a straight or log line, and drops sale days, Black Friday and days with very low spend.
   - title: Back-solves spend
-    text: Pick the new-customer revenue and efficiency you need, find the spend, and ask whether you can really spend it.
+    text: Pick the new-customer revenue and efficiency you need, find the spend, and ask whether you can really spend it. Spend above anything in your history is marked unsized, not forecast.
   - title: Decays the cohorts
     text: For each monthly cohort, customers times the repeat rate at their age times returning order value, summed across cohorts.
   - title: Adds seasonality
@@ -89,7 +89,7 @@ output_shape: |
   DATA USED  <months> of daily data | cohorts <n> | dropped days: <sale days, low-spend days>
 
   NEW-CUSTOMER MODEL
-  line: <linear | log> fit of new-customer efficiency vs daily spend | fit quality <note>
+  line: <linear | log> fit of new-customer efficiency vs daily spend | held-out error: linear <x>, log <x> | low-spend cut-off <value, set by the person or assumed>
   at spend <$> a day, expected efficiency <x>, new revenue <$> a day
 
   RETURNING MODEL
@@ -110,7 +110,7 @@ tweaks:
   - what: How much history you give
     how: The spend curve needs 12 months of daily data. A new account should skip it and use a plain spend-times-efficiency guess marked as weak.
   - what: Which days you drop
-    how: Drop sale days, Black Friday and days under about 1,000 of spend. They bend the line.
+    how: Drop sale days, Black Friday and days below a low-spend cut-off you set for your store. They bend the line.
   - what: The calendar
     how: Keep it in the plan. If a product launch is missing this year, last year's lift should not be repeated.
   - what: New products

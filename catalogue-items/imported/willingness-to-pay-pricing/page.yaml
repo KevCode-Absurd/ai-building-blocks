@@ -9,7 +9,9 @@ subhead: A price and plan structure built on what buyers say they will pay, set 
 explain: |
   A price and plan structure built on what buyers say they will pay, set while your product is still changeable. Most new products miss revenue targets because price came last.
 
-  The skill applies the Monetizing Innovation method. It helps you ask the right questions: what feels acceptable, expensive and too much, plus trade-off questions that reveal real priorities, scored with top-box purchase intent only. It then groups buyers by value, shapes good, better and best tiers and moves killer features out of the base plan. It scores your current pricing from 0 to 10 and lists the changes needed to reach 10.
+  The skill applies the Monetizing Innovation method. It helps you ask the right questions: what feels acceptable, expensive and too much, plus trade-off questions that reveal real priorities, scored with top-box purchase intent only. It then groups buyers by value, shapes good, better and best tiers and moves killer features out of the base plan. It scores your current pricing from 0 to 10 and lists the changes needed to reach 10. That score is a judgement by your AI, not a validated measure.
+
+  Source and licence: this is an unchanged copy of the Monetizing Innovation skill from Wondel.ai, shared under the MIT licence (see the LICENSE file).
 when:
   - You are designing a new product and have no price yet.
   - Your price came from costs or a competitor's page.
@@ -17,7 +19,7 @@ when:
   - You need to decide between tiers, freemium or one flat price.
 not_for:
   - "Your product has months of live sales data: start with that data, then come back to test a change."
-  - "You want to design a guarantee or a stronger offer: use offer-designer, not a pricing plan."
+  - "You want to design a guarantee or a stronger offer: use offer-builder, not a pricing plan."
   - "You want to know what customers value or why they buy: study customer jobs first with jobs-to-be-done-framer."
 you_give:
   - Product description
@@ -32,12 +34,13 @@ you_get:
   - Suggested price metric
   - Pricing score with next fixes
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste the skill instructions into a new chat. The skill sends you to four reference files (wtp-conversations, four-failures, packaging-tiers and monetization-models), so paste those in too, or run it from the main file alone. No code or paid tool is needed.
+  - Open Claude, ChatGPT or Gemini. Paste the skill instructions into a new chat. The skill points to five reference files in its references folder: wtp-conversations, four-failures, packaging-tiers, monetization-models and case-studies. Paste or attach them too. Without them it still runs, but you lose the exact question scripts, the tier scoring steps and the worked cases. No code or paid tool is needed.
+  - "Which file feeds which part: wtp-conversations gives the survey questions and how to read the answers. four-failures gives the diagnosis of what is wrong with a current price. packaging-tiers gives the tier table and the leader, filler and killer labels. monetization-models gives the price metric. case-studies gives worked cases."
   - Paste your product description and your target customer groups.
   - Add your current price, plans, competitor prices and any research you have. Skip what you lack.
   - Ask for the survey questions first, and run them with real buyers if you can.
   - Paste the answers back. Ask for the segments, tier table, price metric and 0 to 10 score.
-  - Check that no killer feature sits in your base plan before you set prices.
+  - Test the tier table with real buyers before you set prices, and check that no killer feature sits in your base plan. For guarantees and stronger offers, move on to offer-builder. Expect one report with the five sections listed under "What you get". The 0 to 10 score is your AI's judgement from what you gave it, not a tested scale.
 output_sample:
   input:
     - Your product description
@@ -56,4 +59,4 @@ output_sample:
       contains: The unit you charge by, chosen to track the value buyers get.
     - name: Pricing score
       contains: A 0 to 10 score for your current pricing, with the changes needed to reach 10.
-next: [pricing-strategist]
+next: [pricing-strategist, offer-builder]

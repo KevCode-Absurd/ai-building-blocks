@@ -15,7 +15,7 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 Segments lapsed customers — those who placed at least one order but have not purchased again within a configurable window — and tags them for re-engagement. This skill handles the Shopify-native data layer; sending re-engagement emails requires an external tool.
 
 ## Prerequisites
-- Authenticated Shopify CLI session: `shopify auth login --store <domain>`
+- Authenticated Shopify CLI session for the store. Use the login command in Shopify's current CLI docs, since it changes between CLI versions. The GraphQL calls below run through that logged-in session, which supplies the access token. Never paste a token into the chat.
 - API scopes: `read_customers`, `write_customers`
 
 ## Parameters
@@ -24,7 +24,7 @@ Segments lapsed customers — those who placed at least one order but have not p
 |-----------|------|----------|---------|-------------|
 | store | string | yes | — | Store domain |
 | format | string | no | human | `human` or `json` |
-| dry_run | bool | no | false | Preview without tagging |
+| dry_run | bool | no | true | Preview without tagging. A run tags live customers only when you set this to false, after you have checked the preview. |
 | inactive_days | integer | no | 90 | Days since last order to qualify as lapsed |
 | min_orders | integer | no | 1 | Minimum lifetime order count to include |
 | tag | string | no | win-back | Tag applied to lapsed customers |
@@ -33,8 +33,8 @@ Segments lapsed customers — those who placed at least one order but have not p
 ## Workflow Steps
 
 1. **OPERATION:** `customers` — query
-   **Inputs:** a search `query` for orders count of at least `min_orders` and without the tag (add a `-tag:<tag>` clause using the `tag` parameter), `first: 250`, pagination. Work out the cutoff date as today minus `inactive_days`, then keep only customers whose `lastOrder.processedAt` is before it. Use Shopify's customer search syntax for your `api_version` for any date filter. If you are not sure a filter name is valid, leave it out and apply the date check yourself on the results.
-   **Skip these customers before you tag them:** anyone who already carries the `tag`, and anyone whose `defaultEmailAddress.marketingState` is not `SUBSCRIBED`. Do not tag or list a customer whose consent you could not read. If you cannot read that field at all, say so, and tell the person to remove non-subscribed people before they email the list.
+   **Inputs:** a search `query` for orders count of at least `min_orders` and without the tag (add a `-tag:<tag>` clause using the `tag` parameter), `first: 250`, pagination. Work out the cutoff date as today minus `inactive_days`, then keep only customers whose `lastOrder.processedAt` is before it. Use this exact query string and no date filter: `orders_count:>=<min_orders> -tag:<tag>`. Apply the date check yourself on `lastOrder.processedAt` in the results.
+   **Skip these customers before you tag them:** anyone who already carries the `tag`, and anyone whose `defaultEmailAddress.marketingState` is not `SUBSCRIBED`. Do not tag or list a customer whose consent you could not read. If you cannot read that field at all, stop. Tag nobody, write no CSV and list no one. Tell the person to check email consent in Shopify before any export or email.
    **Expected output:** List of customer objects with `id`, `defaultEmailAddress { emailAddress marketingState }`, `firstName`, `lastName`, `ordersCount`, `lastOrder.processedAt`; paginate until `hasNextPage: false`
 
 2. **OPERATION:** `tagsAdd` — mutation

@@ -21,7 +21,7 @@ steps:
   - {uses: refund-speed-checker, note: "Every month: days from return request to refund, and the returns that ran late. Uses your store connection, not the exchange split. Passes on the list of late refunds."}
   - {uses: return-cost-calculator, note: "Only when a product's refund rate is far above the store's, or one reason dominates: the true cost over 90 days. Uses your store connection and product costs for the standout products. Passes on the money lost per product, which ranks the fix. It does not use step 4's result; the two are independent and can run in either order."}
   - {uses: repeat-partial-refund-spotter, note: "Every month: orders with several partial refunds, which can point to fraud or a staff habit. Uses your store connection over 90 days, not the cost report. Passes on the flagged orders for you to review."}
-schedule: "On the 3rd of each month, once last month's returns are closed"
+schedule: "Run by hand on the 3rd of each month, once last month's returns are closed. Nothing starts on a timer unless you connect a scheduler."
 asks_before: [refunding or cancelling any order, tagging a customer, pausing or changing a product listing, contacting a supplier or a customer]
 origin: own
 version: 1.0.0

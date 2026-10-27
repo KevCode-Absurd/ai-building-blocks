@@ -12,7 +12,7 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
 ## Purpose
-Applies inventory quantity corrections to specific variants at specific locations — the programmatic equivalent of manually editing inventory in the Shopify admin. Use after a cycle count reveals discrepancies, after a 3PL return batch posts late, or after the `multi-location-inventory-audit` skill identifies Available/Committed drift. Replaces manual row-by-row inventory editing in the Shopify admin.
+Applies inventory quantity corrections to specific variants at specific locations — the programmatic equivalent of manually editing inventory in the Shopify admin. Use after a cycle count reveals discrepancies, after a 3PL return batch posts late, or after a stock check, such as the Stock sync error finder, finds Available/Committed drift. Replaces manual row-by-row inventory editing in the Shopify admin.
 
 ## Prerequisites
 - `shopify auth login --store <domain>`
@@ -24,7 +24,7 @@ Applies inventory quantity corrections to specific variants at specific location
 |-----------|------|----------|---------|-------------|
 | store | string | yes | — | Store domain (e.g., mystore.myshopify.com) |
 | format | string | no | human | Output format: `human` or `json` |
-| dry_run | bool | no | false | Preview operations without executing mutations |
+| dry_run | bool | no | true | Preview operations without executing mutations. Set it to false only after the user has seen the preview and said yes |
 | adjustments | array | yes | — | Array of `{sku, location_id, delta}` objects. `delta` is the signed quantity change (e.g., `+5` to add 5 units, `-3` to remove 3) |
 | reason | string | no | `correction` | Adjustment reason logged to audit trail: `correction`, `cycle_count`, `damaged`, `received`, `reservation_created`, `reservation_deleted`, `shrinkage` |
 | reference_document_uri | string | no | — | URI to link the adjustment to a PO, return, or cycle count document |
@@ -33,7 +33,7 @@ The adjustments can come from a sync error report, such as one from the Stock sy
 
 ## Safety
 
-> ⚠️ Step 2 executes `inventoryAdjustQuantities` which immediately changes live inventory quantities. Incorrect adjustments can cause overselling (if you reduce too far) or inflated stock counts (if you add incorrectly). Run with `dry_run: true` to see the before/after quantities per SKU before committing. The `reason` field is logged permanently in Shopify's inventory activity history.
+> ⚠️ Step 3 executes `inventoryAdjustQuantities` which immediately changes live inventory quantities. Incorrect adjustments can cause overselling (if you reduce too far) or inflated stock counts (if you add incorrectly). Run with `dry_run: true` to see the before/after quantities per SKU before committing. The `reason` field is logged permanently in Shopify's inventory activity history.
 
 ## Workflow Steps
 
@@ -41,7 +41,9 @@ The adjustments can come from a sync error report, such as one from the Stock sy
    **Inputs:** For each `{sku}` in `adjustments`: look up the variant by SKU to get its `inventoryItem.id`; also fetch current `inventoryQuantity` for before/after comparison
    **Expected output:** Map of `{sku → inventoryItemId, currentQuantity}` for all adjustment targets; abort if any SKU is not found
 
-2. **OPERATION:** `inventoryAdjustQuantities` — mutation
+2. **Confirm before writing:** show the before and after quantity for every SKU and location. Do not run step 3 until the user clearly says yes to that exact preview.
+
+3. **OPERATION:** `inventoryAdjustQuantities` — mutation
    **Inputs:** `changes` array of `{inventoryItemId, locationId, delta, ledgerDocumentUri}` using the reason and reference_document_uri parameters
    **Expected output:** `inventoryAdjustmentGroup.changes` with `quantityAfterChange` per item; `userErrors`
 
@@ -141,7 +143,7 @@ For `format: json`, emit a JSON object with this schema:
   "store": "<domain>",
   "started_at": "<ISO8601>",
   "completed_at": "<ISO8601>",
-  "dry_run": false,
+  "dry_run": true,
   "steps": [
     {
       "step": 1,
@@ -168,7 +170,7 @@ CSV file `inventory-adjustments-<YYYY-MM-DD>.csv` with columns: `sku`, `product_
 ## Error Handling
 | Error | Cause | Recovery |
 |-------|-------|----------|
-| SKU not found | SKU doesn't exist in store | Verify SKU spelling; use `low-inventory-restock` to browse valid SKUs |
+| SKU not found | SKU doesn't exist in store | Verify SKU spelling; look the SKU up in the Shopify admin product list |
 | `inventoryItem.tracked: false` | Variant has inventory tracking disabled | Enable tracking in Shopify admin before adjusting |
 | `userErrors` from mutation | Invalid delta, invalid location, or permission issue | Check `write_inventory` scope and verify location GID |
 | Delta would push quantity below 0 | Adjustment removes more than available | Confirm correct delta value; use negative delta only for known stock removals |
@@ -177,5 +179,5 @@ CSV file `inventory-adjustments-<YYYY-MM-DD>.csv` with columns: `sku`, `product_
 1. Always run `dry_run: true` first — the before/after CSV preview lets you confirm every change before it hits live inventory.
 2. Use `reason: cycle_count` with a `reference_document_uri` pointing to your count sheet — this creates a permanent audit trail in Shopify's inventory activity log.
 3. Batch all corrections from a single count session into one command rather than applying one-at-a-time — the audit trail groups them under a single `inventoryAdjustmentGroup`.
-4. After adjusting, run `multi-location-inventory-audit` again to confirm all discrepancies are resolved.
+4. After adjusting, check each location's quantity again in the Shopify admin, or run the Stock sync error finder, to confirm the differences are gone.
 5. For 3PL return batches, use `reason: received` and link the return batch document URI — this makes reconciliation with your 3PL invoice straightforward.

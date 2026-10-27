@@ -16,6 +16,7 @@ when:
   - A developer wants a CSS base with variables and a grid, not only a mockup.
   - You are fixing a site where every page has its own spacing and widths.
   - You need a plan for phone, tablet and desktop widths before you build.
+  - You want one reply that holds the page order, the CSS variables, the layout rules and the theme toggle code.
 not_for:
   - You want finished visual design, such as colours and how each part looks. Use the UI Designer agent.
   - You want a text sketch of one page's layout. Use the Wireframe drafter.
@@ -35,7 +36,7 @@ you_get:
   - Accessibility notes on keyboard use, focus and contrast
 how_to_use:
   - Add the pack to your AI as a skill. If you cannot, start a new chat and paste SKILL.md, then references/source-agent.md.
-  - Describe the site goal and your visitors. List the pages or sections you want.
+  - Describe the site goal and your visitors. List the pages or sections you want. These two come first; the rest can follow.
   - Add brand colours and fonts if you have them. If not, say so. It marks any it picks as proposed.
   - Check the page structure before the CSS. Is the order right for a visitor who knows nothing about you?
   - Copy the CSS and toggle code into a test page and open it on a phone and on a desktop. A chat cannot test it for you.

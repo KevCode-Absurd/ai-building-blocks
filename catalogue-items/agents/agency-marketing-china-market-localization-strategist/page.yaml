@@ -58,7 +58,7 @@ you_get:
   - A launch checklist in phases, with a go or no-go point at each phase
 how_to_use:
   - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md after it.
-  - Collect your data first. Open the hot charts in each app, screenshot or copy the top entries for your category, and note the date. Repeat on two or three different days, because one snapshot cannot show which way a trend is moving. Copy 20 to 30 comments from the top posts. You can attach screenshots and the AI reads the Chinese text.
+  - Collect your data first, by hand or from data you are allowed to use. Open the hot charts in each app, screenshot or copy the top entries for your category, and note the date. Repeat on two or three different days, because one snapshot cannot show which way a trend is moving. Copy 20 to 30 comments from the top posts. You can attach screenshots and the AI reads the Chinese text.
   - Paste your product facts, budget and team size with the data, and type "Write the China market entry brief."
   - Check each signal against the screenshot it came from. A trend seen on only one platform stays marked unconfirmed, so treat it as a test and not a plan.
   - Before you publish, check advertising rules and claims with someone who knows Chinese law. The AI publishes and spends nothing.
@@ -127,7 +127,7 @@ works_best_with:
     - name: Claude, ChatGPT or Gemini with image upload
       why: You can attach screenshots of Chinese hot charts and comments and it reads them directly.
     - name: An AI with web search
-      why: It can look up current trends itself. You still check each source it names.
+      why: It can look up current trends itself. You still check each source it names. Do not ask it to scrape the apps or get around a login. Platform terms of use can forbid automated collection, so collect by hand if unsure.
   inputs:
     - Screenshots of the same chart taken on two or three different days, to show direction.
     - Comments from your rivals' posts as well as your own category.

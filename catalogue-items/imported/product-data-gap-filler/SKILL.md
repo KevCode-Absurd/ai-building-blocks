@@ -30,7 +30,7 @@ All skills accept these universal parameters:
 |-----------|--------|----------|---------|-------------|
 | store     | string | yes      | —       | Store domain (e.g., mystore.myshopify.com) |
 | format    | string | no       | human   | Output format: `human` (default) or `json` |
-| dry_run   | bool   | no       | false   | Preview mutations without executing |
+| dry_run   | bool   | no       | true    | Preview mutations without executing. In this skill the default is true: write to the store only after the user has seen the preview, confirmed a backup and clearly asked for a real run (dry_run: false). |
 
 Skill-specific parameters:
 
@@ -45,7 +45,9 @@ Skill-specific parameters:
 
 ## Safety
 
-> ⚠️ Step 3 (`productUpdate`) and Step 4 (`productVariantsBulkUpdate`) write live product/variant data. Barcodes and SKUs are matched from your `barcodes_csv`; a wrong mapping mislabels a product's identity to every agent. Always run `dry_run: true` first and verify the change set CSV. This skill never overwrites a field that already has a value — it only fills blanks.
+> **Back up first.** Before the first real run, ask the user to export their products from the Shopify admin (Products, then Export) and keep the file. Say how to restore: import the file again and overwrite existing products with the same handle. Do not run the real write until they confirm they have a backup.
+
+> ⚠️ Step 3 (`productUpdate`) and Step 4 (`productVariantsBulkUpdate`) write live product/variant data. Barcodes and SKUs are matched from your `barcodes_csv`; a wrong mapping mislabels a product's identity to every agent. Always run `dry_run: true` (the default) first and verify the change set CSV. This skill never overwrites a field that already has a value — it only fills blanks.
 
 ## Workflow Steps
 

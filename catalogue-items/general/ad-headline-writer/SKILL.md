@@ -32,7 +32,6 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Any good chat AI:** Short lines built from your facts come out well in any strong chat AI with this skill.
 - **Meta Ads Manager:** Its ad preview shows whether each headline fits under the image on every placement.
 <!-- /needs -->
 
@@ -68,7 +67,7 @@ How to start:
 8. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
 
 ## What you hand back
-The level and what it allows. Then a numbered list: the line, its way in, who it's aimed at, its character count, and the glance test result. Then the move each line makes (with a stage brief), the line to test first, a second line that uses a different way in or move to test against it, the ways in skipped for lack of material, and `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
+The level and what it allows. Then a numbered list: the line, its way in, who it's aimed at, its character count, and the glance test result. Then the move each line makes (with a stage brief), the line to test first, a second line that uses a different way in or move to test against it, the ways in skipped for lack of material, a PLATFORM CHECK note for any line that makes a health, nutrition, money or child-directed claim, and `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
@@ -84,7 +83,8 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every number, date and quote comes from what was supplied.
 - Every question line is answered by a fact on file.
 - Every line fits its limit.
-- Health, nutrition, money and child-directed claims are flagged. Tell the user to check each one against the ad platform's rules before the line runs.
+- Health, nutrition, money and child-directed claims are marked "PLATFORM CHECK" beside the line, and the user is told to check each one against the ad platform's rules before the line runs. Such a line is written only if the facts state the claim and its conditions.
+- Character counts are estimates. Tell the user to recount the final lines in their ad tool.
 
 ## If something is missing
 Write `MISSING: <material> for <way in>` and skip that way in. With no awareness given, write `MISSING: awareness` and write for the less aware level.

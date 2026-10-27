@@ -44,6 +44,7 @@ how_to_use:
   - Type "Plan my next step with this contact. Say when you are unsure. Do not guess names or titles."
   - Read the relationship read and the timing first. Correct anything you know is wrong, then ask again.
   - Have a Korean speaker read each message draft before you send it.
+  - Check that the skills in the After this list are added in your library before you follow them. If one is not, use its link.
   - Send the message yourself. After they reply, paste the reply and ask what it may mean.
 how_it_works:
   - title: Place the relationship
@@ -72,6 +73,7 @@ output_shape: |-
 
   WHAT THEIR WORDS MAY MEAN
     <phrase> | <literal meaning> | <what it may mean here> | <your next step>
+    Label an unsure reading like this: may mean <reading> | clue <what points that way> | confirm with a Korean colleague
 
   TIMING
     <stage of approval> | <rough time> | <when to follow up>

@@ -7,6 +7,12 @@ description: Use when you have a decision to make and a written checklist for it
 
 A checklist works only when every item is answered, in order, with a fact. This skill runs your list on a live decision: it writes the evidence for each item, treats unknowns as fails, stops at a failed stop item, and records the call so you can judge the decision later by how it was made. To build or fix the list, use "Decision checklist builder".
 
+## When not to use
+
+- You have no written checklist yet. Build one first with the Decision checklist builder.
+- Your checklist is out of date or has vague items. Fix it with the Checklist upkeep planner.
+- The choice is routine, with no deadline and little at stake. Just decide, or ask a friend.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.

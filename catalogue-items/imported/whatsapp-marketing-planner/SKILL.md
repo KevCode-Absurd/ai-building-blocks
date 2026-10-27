@@ -17,7 +17,7 @@ Check if `.agents/brand-context.md` exists. Read it. WhatsApp marketing must mat
 
 ## WhatsApp Marketing Overview
 
-WhatsApp has **2.5 billion active users** globally. In India, Brazil, and much of Southeast Asia, it's the primary communication platform — more so than email or SMS.
+WhatsApp is widely used worldwide. In India, Brazil, and much of Southeast Asia, it's a primary communication platform, often more than email or SMS (check current figures for your market before you quote any).
 
 *The figures in this file (open, response and conversion rates, user counts) are rough estimates from the original author. They are not verified. Do not present them as data, and give no benchmark unless the user supplies a source.*
 
@@ -200,30 +200,30 @@ WhatsApp content is different from email or social. Rules:
 - Long paragraphs — won't be read
 - Multiple products in one message — confusing
 - Over-formal corporate language — kills the channel's intimacy
-- Sending too frequently — 2–4 broadcast messages per month max
+- Sending too frequently — start with a low number of broadcasts per month, watch your unsubscribe rate, and set your own limit from it
 - Sending without clear value — immediate unsubscribes
 
 **Rich media usage:**
 - Images: product photos, offers, event invites
 - Video: product demos, tutorials, brand stories (30 sec max)
-- Voice notes: Founder messages, personal touches (surprisingly effective)
+- Voice notes: Founder messages, personal touches (test them on a small group first)
 - PDFs: Lookbooks, menus, price lists, certificates
 
 ---
 
 ### 06 — WHATSAPP METRICS
 
-*These benchmarks are rough estimates, not verified data. Use them as starting guesses and replace them with the user's own results.*
+**The original author's benchmark figures were unverified guesses, so they are removed. Do not invent benchmarks. Leave the "Your baseline" column blank until the user has their own campaign results, and use only figures the user supplies with a source.**
 
-| Metric | Benchmark | What it shows |
+| Metric | Your baseline (fill from your own campaigns) | What it shows |
 |--------|-----------|--------------|
-| Delivery rate | 95%+ | List health |
-| Open rate | 85–95% | Message timing + list quality |
-| Read rate | 70–85% | Headline and preview quality |
-| Reply rate | 30–50% | Message relevance + CTA clarity |
-| Click rate (links) | 20–40% | Offer and CTA strength |
-| Unsubscribe rate | <2% | Frequency + relevance (above 2% = problem) |
-| Conversion rate | 5–15% (campaign) | Offer + funnel quality |
+| Delivery rate | [YOUR RATE] | List health |
+| Open rate | [YOUR RATE] | Message timing + list quality |
+| Read rate | [YOUR RATE] | Headline and preview quality |
+| Reply rate | [YOUR RATE] | Message relevance + CTA clarity |
+| Click rate (links) | [YOUR RATE] | Offer and CTA strength |
+| Unsubscribe rate | [YOUR RATE] | Frequency + relevance (a rising rate is a problem) |
+| Conversion rate | [YOUR RATE] | Offer + funnel quality |
 
 **Monitor weekly:**
 - Unsubscribe rate per campaign (if spiking, messaging is off)
@@ -234,14 +234,14 @@ WhatsApp content is different from email or social. Rules:
 
 ### 07 — PLATFORM RECOMMENDATIONS BY SCALE
 
-*Monthly costs below are rough estimates from the original author. Check each provider's current price before you decide.*
+*Check current pricing with each provider before you decide. The original author's dollar figures were unverified and are removed. These tools are paid services (the API route needs a paid account with a Business Solution Provider, and each message may cost extra).*
 
 | Business size | Platform | Monthly cost |
 |--------------|----------|-------------|
 | <500 contacts | WhatsApp Business App | Free |
-| 500–5,000 | Wati / AiSensy | $40–100/month |
-| 5,000–50,000 | Interakt / Zoko | $100–500/month |
-| 50,000+ | Twilio / custom API | Custom pricing |
+| 500–5,000 | Wati / AiSensy | [CHECK PROVIDER PRICE] |
+| 5,000–50,000 | Interakt / Zoko | [CHECK PROVIDER PRICE] |
+| 50,000+ | Twilio / custom API | [CHECK PROVIDER PRICE] |
 
 **India-specific BSPs** (best support, pricing in INR):
 - **Interakt** — strong for DTC and e-commerce

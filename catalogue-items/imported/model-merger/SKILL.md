@@ -469,12 +469,14 @@ tokenizer.push_to_hub("username/my-merged-model")
 
 ### Quantize Merged Model
 
-```bash
-# Quantize with GGUF
-python convert.py ./merged-model --outtype f16 --outfile merged-model.gguf
+The scripts for this step are not part of this item and are not part of mergekit. They come from other projects, so get them from the project's own page and check its current docs before you run anything:
 
-# Quantize with GPTQ
-python quantize_gptq.py ./merged-model --bits 4 --group_size 128
+```bash
+# GGUF: use the convert and quantize tools from the llama.cpp project (https://github.com/ggml-org/llama.cpp)
+python convert_hf_to_gguf.py ./merged-model --outtype f16 --outfile merged-model.gguf
+./llama-quantize merged-model.gguf merged-model-q4.gguf Q4_K_M
+
+# GPTQ: use a GPTQ library such as GPTQModel or AutoGPTQ. Follow that library's own quantize example.
 ```
 
 ## Common Pitfalls

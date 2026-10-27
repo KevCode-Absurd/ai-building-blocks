@@ -6,7 +6,7 @@ argument-hint: "<entry type> [period]"
 
 # Journal Entry Preparation
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Catalogue note (added by AI Blocks): CONNECTORS.md is not in this copy. The `/je` command is a shortcut from the original author's tool. In a plain chat, type your request in words instead, such as "AP accrual for 2024-12". Connecting an accounting system is optional and may need setup or a paid plan. This skill works without it, when you paste your numbers.
 
 **Important**: This command assists with journal entry workflows but does not provide financial advice. All entries should be reviewed by qualified financial professionals before posting.
 
@@ -32,14 +32,14 @@ Prepare journal entries with proper debits, credits, supporting detail, and revi
 
 ### 1. Gather Source Data
 
-If ~~erp or ~~data warehouse is connected:
+If your accounting system or data warehouse is connected to this tool:
 - Pull the trial balance for the specified period
 - Pull subledger detail for the relevant accounts
 - Pull prior period entries of the same type for reference
 - Identify the current GL balances for affected accounts
 
 If no data source is connected:
-> Connect ~~erp or ~~data warehouse to pull GL data automatically. You can also paste trial balance data or upload a spreadsheet.
+> Ask the user to paste the trial balance data or upload a spreadsheet. (Pulling it automatically needs a connected accounting system, which is optional.)
 
 Prompt the user to provide:
 - Trial balance or GL balances for affected accounts
@@ -52,24 +52,24 @@ Based on the JE type:
 
 **AP Accrual:**
 - Identify goods/services received but not invoiced by period end
-- Calculate accrual amounts from PO receipts, contracts, or estimates
+- Calculate accrual amounts from PO receipts, contracts, or estimates. Use the received but not yet invoiced amount, for example [RECEIVED VALUE] minus [AMOUNT ALREADY INVOICED]
 - Debit: Expense accounts (or asset accounts for capitalizable items)
 - Credit: Accrued liabilities
 
 **Fixed Assets:**
 - Pull the fixed asset register or depreciation schedule
-- Calculate period depreciation by asset class and method (straight-line, declining balance, units of production)
+- Calculate period depreciation by asset class and method (straight-line, declining balance, units of production). For straight-line, the formula is (cost minus salvage value) divided by useful life in periods, for example [COST], [SALVAGE VALUE] and [LIFE IN MONTHS]
 - Debit: Depreciation expense (by department/cost center)
 - Credit: Accumulated depreciation
 
 **Prepaid:**
 - Pull the prepaid amortization schedule
-- Calculate the period amortization for each prepaid item
+- Calculate the period amortization for each prepaid item. For straight-line, the formula is the prepaid amount divided by the number of periods it covers, for example [PREPAID AMOUNT] divided by [NUMBER OF MONTHS]
 - Debit: Expense accounts (by type — insurance, software, rent, etc.)
 - Credit: Prepaid expense accounts
 
 **Payroll:**
-- Calculate accrued salaries for days worked but not yet paid
+- Calculate accrued salaries for days worked but not yet paid. The formula is the pay for one working day times the unpaid days, for example [DAILY PAY] times [UNPAID DAYS]
 - Calculate accrued benefits (health, retirement contributions, PTO)
 - Calculate employer payroll tax accruals
 - Calculate bonus accruals (if applicable, based on plan terms)
@@ -78,7 +78,7 @@ Based on the JE type:
 
 **Revenue:**
 - Review contracts and performance obligations
-- Calculate revenue to recognize based on delivery/performance
+- Calculate revenue to recognize based on delivery/performance. For straight-line over the contract term, the formula is total contract value divided by the months in the term, for example [CONTRACT VALUE] divided by [MONTHS]
 - Adjust deferred revenue balances
 - Debit: Deferred revenue (or accounts receivable)
 - Credit: Revenue accounts (by stream/category)

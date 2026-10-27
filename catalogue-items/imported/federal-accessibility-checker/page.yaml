@@ -30,12 +30,13 @@ you_get:
   - Draft conformance report remarks
   - Procurement wording if needed
 how_to_use:
+  - "Gather first: the site or document address, who uses it, which agency buys it, any earlier audit results, and your deadline."
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
-  - Describe your site, app or document. Say who uses it and who buys it.
-  - Add any earlier audit results and your deadline if you have them. Have ready the site or document address, who uses it, which agency buys it, and any earlier audit.
-  - "Say what you want: a gap list, an audit table, a fix plan, VPAT notes or purchase wording. If you are not sure, ask for the gap list first, then the fix plan."
-  - Read the result and check each criterion against your real product. Your AI works from your description and does not run tests.
-  - Treat any suggested fix deadlines as examples. Agree the real ones with the agency. Check any law dates the result gives on ada.gov or section508.gov before you use them. The skill says its dates and its note on how much automated tools catch are not sourced.
+  - Describe your site, app or document. Say who uses it and who buys it. Add earlier audit results and your deadline if you have them.
+  - "Ask for outputs in this order. First the gap table. Then the issue table. Then the fix plan. Ask for VPAT notes or purchase wording last, only if you need them."
+  - Read each result and check every criterion against your real product. Your AI works from your description and does not run tests.
+  - Treat any suggested fix deadlines as examples. Agree the real ones with the agency.
+  - "Confirm these before you rely on them: the 30-day VPAT timing and the FAR clause 52.239-2 reference in the procurement part are the author's and are unverified. Check them with the contracting officer or on section508.gov. Check any law dates the result gives on ada.gov or section508.gov too. The skill also says its note on how much automated tools catch is not sourced."
   - Then fix the gaps with the WCAG accessibility fixer, and run a scan with a tool such as axe or WAVE.
 output_sample:
   input:

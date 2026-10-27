@@ -7,9 +7,8 @@ description: Draft anonymous one-page company teasers for sell-side M&A processe
 
 ## India
 
-This skill operates on **Indian markets**. The two rules below are the market
-rules it needs. The longer convention and data files named in the original are
-not included here, so use only these rules and the figures the user gives you.
+This skill operates on **Indian markets**. The two rules below are the full set of
+market rules this version uses. Use only these rules and the figures the user gives you.
 Two rules cause most Indian errors:
 
 - **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
@@ -23,9 +22,17 @@ Two rules cause most Indian errors:
 If a US term or measure has no Indian equivalent, name the gap. Never
 substitute a proxy and present it as the real thing.
 
+## When not to use
+
+- Not for a public listing or an ad for a company that can be named.
+- Not once a buyer has signed an NDA: share the full information memorandum instead.
+- Not for buy-side work. This writes the seller side only.
+
 ## Workflow
 
 ### Step 1: Gather Inputs
+
+Use only the figures the user supplies. If a figure is missing, leave a bracketed gap such as [REVENUE] and ask for it. Mark any estimate as an estimate, never as market data.
 
 - Company description (what they do, how they make money)
 - Sector / industry
@@ -76,7 +83,7 @@ One page, professionally formatted:
 
 Ensure the teaser doesn't inadvertently identify the company:
 - No company name, brand names, or product names
-- No specific city (use region: "Southeast US", "Midwest")
+- No specific city (use region: "West India", "South India")
 - No named customers or partners
 - No employee count if it's too distinctive
 - Revenue ranges instead of exact figures if the sector is small

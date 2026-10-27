@@ -5,7 +5,7 @@ source: https://github.com/jonathimer/devmarketing-skills/tree/main/skills/open-
 source_repo: jonathimer/devmarketing-skills
 source_type: community
 date_added: 2026-07-01
-license: MIT
+license: CC-BY-4.0 # AI Blocks: the licence for this copy is CC BY 4.0 (see LICENSE-CONTENT). The author's own header said MIT.
 license_source: https://github.com/jonathimer/devmarketing-skills/blob/main/LICENSE
 ---
 
@@ -318,6 +318,8 @@ Return the plan in this order:
 5. Launch plan: a numbered sequence with the first action named
 6. Follow-up schedule
 7. How to track results
+
+Shape of the plan: seven sections in this order, each under its own heading. Put the launch plan in a table with one row per step (day, action, where, who). Keep the whole plan to about three to five pages. Mark any number you were not given as a placeholder.
 
 ## Launch Strategies
 

@@ -9,7 +9,7 @@ subhead: Give it your selling points and a product photo. It writes a shot scrip
 explain: |
   A 15 to 30 second ad with a shot script, built shot by shot and joined with captions. If one shot fails, only that shot gets redone.
 
-  Claude writes the script from your selling points. A 15 second ad follows four parts: a hook in the first 3 seconds, selling points, proof, then a call to action. Each shot lists its length, picture and caption. Shots are generated one at a time. ffmpeg joins them, re-encoding if formats differ, and makes subtitles from the shot lengths. A brand setting keeps color and camera moves the same across the ad. Voice and music are added in an editor. You need a video model.
+  Claude writes the script from your selling points. The 15 second length is the skill author's own experience, with no source, so test lengths against your own ad data. A 15 second ad follows four parts: a hook in the first 3 seconds, selling points, proof, then a call to action. Each shot lists its length, picture and caption. Shots are generated one at a time. ffmpeg joins them, re-encoding if formats differ, and makes subtitles from the shot lengths. A brand setting keeps color and camera moves the same across the ad. Voice and music are added in an editor. You need a video model.
 when:
   - You need video creative for paid social ads.
   - You have selling points but no video yet.
@@ -31,13 +31,14 @@ you_get:
   - A joined ad in upright 9:16 format with captions
   - A list of any failed shots to redo
 how_to_use:
-  - "Before you start: you need a paid video model key (fal or Replicate). Each shot you make costs money."
-  - The detailed guide in the skill file (SKILL.md) is written in Chinese. It starts with an English summary of the steps. The scripts need the skill folder, Node and ffmpeg on your computer.
+  - "Before you start: you need a paid video model key (fal or Replicate). Each shot you make costs money. Check your video model's price list first, and use the dry run to count the shots before you pay."
+  - "Gather these first: a product photo, your selling points, your audience, the platform and your brand notes. If you only want the shot script, you can stop after the script. The Node and ffmpeg steps are optional."
+  - The detailed guide in the skill file is written in Chinese. It starts with an English summary of the steps. Ask your AI to translate the workflow into English first. The scripts need the skill folder, Node and ffmpeg on your computer.
   - Open an AI that can run code and use files. Paste the skill and your selling points, audience and platform.
   - Read the shot script your AI writes. Fix it in chat before anything is made.
   - Ask for a dry run first. It shows the plan for each shot and costs nothing.
   - Run it. Redo any failed shot on its own, then join the clips again.
-  - Check every price, discount and claim in the captions against your real offer before you run the ad.
+  - Check every price, discount and claim in the captions against your real offer before you run the ad. The ad platform's claim rules apply to captions too, such as rules on health, income or before and after claims.
   - Next, add voice and music in a video editor. Then upload the ad to your paid social account, where it goes through the platform's ad review. For a real person talking to camera, use the Talking product video ad workflow instead.
 output_sample:
   input:

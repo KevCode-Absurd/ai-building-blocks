@@ -9,7 +9,9 @@ subhead: A working audio effect or sound generator that you can export as a VST 
 explain: |
   A working audio effect or sound generator that you can export as a VST or AU plugin for use in music software. Describe the sound you want, such as a warm compressor, a delay or a synth tone, and the AI writes the MATLAB class that does it.
 
-  Each plugin has tunable settings, a processing step and a reset step, written so it can be turned into compiled code. The skill covers the traps that make export fail: buffers and state, settings with options of different lengths, values worked out from settings, and calls that only work at runtime. It then runs MATLAB's own validation and builds the plugin. You need MATLAB with Audio Toolbox.
+  Each plugin has tunable settings, a processing step and a reset step, written so it can be turned into compiled code. The skill covers the traps that make export fail: buffers and state, settings with options of different lengths, values worked out from settings, and calls that only work at runtime. It then runs MATLAB's own validation and builds the plugin. You need MATLAB with Audio Toolbox, which are paid MathWorks products with their own licence cost. AU is a Mac format, so you need a Mac to build and use an AU plugin.
+
+  Licence: BSD 2-Clause, as the LICENSE.md file says, with one extra condition: you may use it only together with MathWorks products such as MATLAB. The skill file also links MathWorks' own reuse licence. MATLAB and Audio Toolbox are paid MathWorks products.
 when:
   - You have a MATLAB audio idea and want it inside your music software.
   - Your plugin fails validation and you can't see why.
@@ -34,9 +36,10 @@ how_to_use:
   - Before you start, decide your list of settings, your sample rate and your format, VST or AU.
   - Paste in the skill text, then describe the effect or sound you want.
   - Give it the settings list and the format.
-  - Let the AI write the plugin class, then run the validation commands it gives you.
+  - Let the AI write the plugin class (a classdef, which is a MATLAB class file), then run the validation commands it gives you. Exporting the plugin uses MATLAB's code generator, called codegen.
   - Send any validation errors back to the AI and ask it to fix them.
   - When validation passes, run the build command to export the plugin and load it in your music software. Test it there by ear before you share it.
+  - After the music software test, log the validation and checkcode results. Run validateAudioPlugin again after every change you make to the code. To use the plugin, copy the exported file into your music software's plugin folder and rescan plugins in that software.
 output_sample:
   input:
     - A description of the effect or sound you want

@@ -37,8 +37,8 @@ works_best_with:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill, or upload its folder if your AI can read files.
   - Paste your notes, facts and sources. Say who will read the folder and what each topic should be called.
-  - Ask your AI to write the folder. Check that each file has a type and that links point to real files.
-  - The checker is optional. A business user can get a usable folder by pasting notes into an AI tool and skipping it. To run the checker, you need Python 3.8 or newer with PyYAML. Without Python, your AI can still write the folder, and you check the links by hand. Create each folder before you add files to it.
+  - Ask your AI to write the folder. It must be able to create files. If it cannot, ask it to return the file list and the text of each file, then save each file by hand. Check that each file has a type and that links point to real files.
+  - The bash steps in the skill and the Python checker are for developers. A business user can skip them and ask the AI to write the files. The checker is optional. To run the checker, you need Python 3.8 or newer with PyYAML. Without Python, your AI can still write the folder, and you check the links by hand. Create each folder before you add files to it.
   - Next, save the folder in a repo or shared drive. Point your AI tool's file access at its index.md. Choose the notes wiki builder if your notes grow over time, the company wiki planner for team processes with owners, or the text to knowledge graph builder to pull links out of one long document.
 output_sample:
   input:

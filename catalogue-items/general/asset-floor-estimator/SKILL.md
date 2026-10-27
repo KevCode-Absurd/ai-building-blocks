@@ -7,9 +7,9 @@ description: Use when you want to know what a company or small business would fe
 
 Earnings say what a business can make. Assets say what it could be sold for if it stopped. When the second figure is higher than the price, something is odd: either the price is too low, or the business should be wound up and the owners paid. This skill builds that floor from the balance sheet, with deliberate markdowns, and checks the company can pay its bills. It is a method of analysis, not personal financial advice, and it never tells you to buy or sell a named security.
 
-This skill needs a balance sheet, a price and an earnings range (see "What you need" below). It does not need an article or a transcript. If the "Before you start" list asks for a source text or a separate audit report, ignore that: the earnings range from the earlier step is the only report used here.
+This skill needs a balance sheet, a price and an earnings range (see "What you need" below). It does not need an article or a transcript. In the "Before you start" list, the "audit report" is the earnings range from the earlier step. It is the only report used here, and no source text is needed.
 
-Before this, build the earnings range with the [Earnings value range builder](https://useaiblocks.com/skills/earnings-value-range-builder). After this, take the result to the [Price versus value gap judge](https://useaiblocks.com/skills/price-versus-value-gap-judge).
+Before this, build the earnings range with the [Earnings value range builder](https://useaiblocks.com/skills/earnings-value-range-builder). It is the one tool that makes the earnings range this skill uses. The lists below may show it under another label, such as "Earnings-based share value calculator", and the judge below as "Investment margin of safety reviewer". Each label points to the link beside it. After this, take the result to the [Price versus value gap judge](https://useaiblocks.com/skills/price-versus-value-gap-judge).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

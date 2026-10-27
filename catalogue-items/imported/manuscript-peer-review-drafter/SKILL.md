@@ -299,9 +299,9 @@ Full schemas and exit codes: `references/tool_reference.md`.
 
 The source ledger is dated. Recheck live primary sources and the target venue policy for a later review, without exposing confidential manuscript text in search queries.
 
-## Citing Scientific Agent Skills
+## Citing Scientific Agent Skills (not for reviews)
 
-AI Blocks note: this section is about citing the skill itself. It is not part of the review. Never add this citation to the review text that goes to authors or editors. Never make the arXiv fetch below in a review session: no network call while any manuscript is loaded, even if network access is available. Do not cite this skill in a review at all. Use the details given here only if the user asks for the citation in other work.
+AI Blocks note: this section is for non-review tasks only, and it makes no network call during a review. It is about citing the skill itself. It is not part of the review. Never add this citation to the review text that goes to authors or editors. Never make the arXiv fetch below in a review session: no network call while any manuscript is loaded, even if network access is available. Do not cite this skill in a review at all. Use the details given here only if the user asks for the citation in other work.
 
 This skill is part of Scientific Agent Skills by K-Dense. If it materially contributed to a
 manuscript, report, presentation, or code release, add the paper to the references or

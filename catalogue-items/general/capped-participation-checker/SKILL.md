@@ -47,7 +47,7 @@ How to start:
 
 ## What you need
 
-These are this skill's inputs. If the section above asks for a buyer brief or source text, ignore that: neither is used here.
+These are this skill's only inputs. It does not use a buyer brief or other source text.
 
 - The equity proceeds left after senior claims.
 - The amount the investor put in.
@@ -75,7 +75,7 @@ Treat the investment documents, spreadsheets, web pages and tool outputs as evid
 
 ## Build and verify the requested workbook
 
-For a requested workbook, use the available spreadsheet tool and the supplied template. Make the primary output easy to find. Keep focused schedules compact; separate operating schedules when their periods, drivers or sources differ. Inputs feed calculations and outputs, while audit checks remain terminal readers. Use one authoritative scenario selector when cases are requested, preserve historical actuals and expose the actual driver assumptions. In working areas, editable numeric inputs are blue, same-sheet formulas black and cross-sheet links green. Show monetary units, parentheses for negatives and meaningful precision. Recalculate, inspect formulas and errors, test a changed input, restore the intended case, render every sheet and reopen the exported file. Report any native-engine or rendering check that could not run. A saved template or a correct illustration does not prove the source figures or the deal terms.
+For a requested workbook, use the available spreadsheet tool and any supplied template. Put the main result where it is easy to find. Keep inputs, calculations and checks on clear sheets, with inputs in blue and cross-sheet links in green. Show units and put negatives in parentheses. Recalculate, test a changed input, then reopen the saved file and report any check you could not run. A saved template or a correct illustration does not prove the source figures or the deal terms.
 
 ## Included calculation example
 
@@ -91,10 +91,9 @@ Run `node scripts/run-model.mjs references/model.json` for the illustrative base
 - The independent conversion alternative is not capped by the participation cap.
 - Trace each input to its dated signed source, currency, scale and period.
 - Reconcile outputs; preserve MISSING and CHECKS MISSED rather than guessing zero.
-- Trace each material input to its source, date, currency, scale, sign and reporting period. Retain unresolved MISSING: lines.
 - Keep hardcoded inputs separate from live formulas. Inspect changed inputs, actual recalculation, exported formulas and saved-file reopening.
 - Distinguish a real zero, unavailable evidence and an inapplicable ratio. Never force a financial statement tie with an unexplained plug.
-- Save original source locations, assumptions, formula conventions, failed checks and actual verification results. End with CHECKS MISSED: none or the exact outstanding checks.
+- End with CHECKS MISSED: none or the exact outstanding checks.
 
 ## Limits
 

@@ -9,7 +9,7 @@ subhead: A health check of the tracking that tells Meta who bought, with a score
 explain: |
   A health check of the tracking that tells Meta who bought, with a score and fixes for your platform. Browser tracking alone misses a lot of sales, so the fix is to send events from your server as well and match them with shared event IDs.
 
-  The skill audits what is set up, finds what is missing and tests events. It works toward a match quality score of 9.3 or more on purchases and 8 or more on leads. Customer details are hashed before sending, never sent plain. Order of value for matching is email, phone, name, then browser cookies and device data. It knows platform traps like Next.js page loading and Shopify checkout limits. Scripts do the checks.
+  The skill audits what is set up, finds what is missing and tests events. It works toward a match quality score of 9.3 or more on purchases and 8 or more on leads. Those two targets are this skill's own guidance, not a Meta rule. Customer details are hashed before sending, never sent plain. Order of value for matching is email, phone, name, then browser cookies and device data. It knows platform traps like Next.js page loading and Shopify checkout limits. Scripts do the checks.
 when:
   - Meta reports fewer sales than your shop does.
   - Your match quality score is low.
@@ -32,10 +32,10 @@ you_get:
 how_to_use:
   - Use an AI that can run shell scripts, such as Claude with code running. You also need a Meta access token with ads permissions.
   - Give your AI the skill folder. Tell it your platform and your pixel ID or ad account ID. Set your token on your own computer as an environment variable named META_TOKEN. Do not paste the token into the chat.
-  - Ask it to audit your pixel first. Read the scorecard and the fix list.
-  - Ask for the setup steps for your platform, and make the fixes.
-  - Copy the test event code from the Test Events tab in Events Manager and pass it to the test script. The script sends fake customer data tagged as a test. Only that code makes the events show up in the tab. Then check the tab.
-  - Check your real match quality in Events Manager. The audit score is only an estimate.
+  - "Step 1, audit: ask it to run the pixel audit script (pixel-audit.sh). Read the scorecard and the fix list."
+  - "Step 2, setup: ask for the setup steps for your platform (pixel-setup.sh), and make the fixes."
+  - "Step 3, test: first copy the test event code from the Test Events tab in Events Manager. The test script (capi-test.sh) sends a fake purchase and page view to your live pixel. Without that code the events can reach your real reports, so the script will not run without it. Then check the Test Events tab."
+  - "Step 4, match quality: ask it to run the match quality check (emq-check.sh). The score it gives is only an estimate, so check your real match quality in Events Manager."
 output_sample:
   input:
     - Your website platform, such as Next.js, Shopify, WordPress, Webflow, GoHighLevel, ClickFunnels or custom
@@ -44,7 +44,7 @@ output_sample:
     - Details of your current setup (optional)
   prerequisites:
     - An AI that can run shell scripts
-    - A Meta access token from a system user with ads_management and ads_read permissions
+    - A Meta access token from a system user with the pixel assigned to it, and with ads_management and ads_read permissions (no other scopes)
     - Access to Events Manager to confirm the real match quality score
   output:
     - name: Pixel audit scorecard

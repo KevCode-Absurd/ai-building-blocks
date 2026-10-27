@@ -45,6 +45,8 @@ If you have a server plan from an earlier step, take the GPU count and budget fr
 
 ## Installation
 
+Cost note (added by AI Blocks): MoE training needs several GPUs. If you rent them from a cloud provider, you pay by the hour. Work out hours times GPU count times the hourly price before you start, and run the short test first.
+
 ```bash
 # DeepSpeed with MoE support
 pip install deepspeed>=0.6.0
@@ -57,6 +59,24 @@ pip install -r requirements.txt
 # Alternative: HuggingFace Transformers
 pip install transformers accelerate
 ```
+
+## Before you run (do these first)
+
+1. Run `--help` on the training script you install, and compare every flag below with what it lists. The flag and key names in this file were not checked against any one DeepSpeed or Megatron-DeepSpeed version, and the entry point `pretrain_gpt_moe.py` is not confirmed for every checkout.
+2. Estimate the cost: GPU-hours times the hourly price per GPU times the number of GPUs.
+3. Run a short test of a few hundred steps and watch the loss and expert usage before you start a long run.
+
+**Flag and config names (they refer to the same settings; use the form your tool accepts):**
+
+| Command-line flag | JSON key in the DeepSpeed config |
+|---|---|
+| `--num-experts` | `moe.num_experts` |
+| `--moe-expert-parallel-size` | `moe.expert_parallel_size` |
+| `--moe-loss-coeff` | `moe.moe_loss_coeff` |
+| `--moe-train-capacity-factor` | `moe.train_capacity_factor` |
+| `--moe-eval-capacity-factor` | `moe.eval_capacity_factor` |
+
+The short config in "Expert Parallelism" below uses simplified key names for illustration (`capacity_factor`). For a real run, use the keys from "DeepSpeed MoE Config" under Training Configuration and confirm them against your version's docs.
 
 ## Quick Start
 
@@ -125,7 +145,7 @@ class MoELayer(nn.Module):
 
 ### DeepSpeed MoE Training
 
-Flag names below follow the Megatron-DeepSpeed examples. They change between versions, so check them against the repo you install. The entry-point name (`pretrain_gpt_moe.py` here, `pretrain_moe.py` in a later example) also differs between versions: use the one that exists in your checkout, and treat both commands as outlines until `--help` confirms every flag.
+Flag names below follow the Megatron-DeepSpeed examples. They change between versions, so check them against the repo you install. This file uses one entry point, `pretrain_gpt_moe.py`, for every command. If your checkout of Megatron-DeepSpeed names it differently, use the name that exists there, and treat each command as an outline until `--help` confirms every flag.
 
 ```bash
 # Training script with MoE
@@ -296,13 +316,13 @@ total_loss = lm_loss + 0.01 * aux_loss + 0.001 * router_z_loss(gate_logits)
 
 ### Training Script
 
-This file uses two entry-point names, `pretrain_gpt_moe.py` above and `pretrain_moe.py` below. They come from different Megatron-DeepSpeed versions. Use the entry-point script that exists in the version you install, and check each flag against its `--help`.
+Same entry point as above (`pretrain_gpt_moe.py`). Check each flag against its `--help` in the version you install.
 
 ```bash
 #!/bin/bash
 
 # Mixtral-style MoE training
-deepspeed --num_gpus 8 pretrain_moe.py \
+deepspeed --num_gpus 8 pretrain_gpt_moe.py \
   --model-parallel-size 1 \
   --num-layers 32 \
   --hidden-size 4096 \
@@ -515,7 +535,9 @@ num_experts = 8  # Better for small datasets
 
 ## Inference Optimization
 
-### Sparse Inference
+### Sparse Inference (outline only, not runnable)
+
+The code below will not run as written, because `model.load_expert` does not exist. It shows the idea only. Write that function yourself before you try it.
 
 ```python
 # Only activate top-k experts (huge memory savings)
@@ -538,7 +560,7 @@ def moe_inference(x, model, top_k=2):
     for i in range(top_k):
         expert_idx = topk_indices[:, i]
         # Load expert from disk/offload if needed
-        expert = model.load_expert(expert_idx)
+        expert = model.load_expert(expert_idx)  # TODO: write this function yourself; it does not exist
         output += topk_scores[:, i:i+1] * expert(x)
 
     return output

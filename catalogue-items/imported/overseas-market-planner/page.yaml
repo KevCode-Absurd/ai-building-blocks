@@ -2,7 +2,7 @@ thinking: high
 thinking_why: Tax, shipping and law choices differ by country and carry real cost.
 new_slug: overseas-market-planner
 name: Overseas market planner
-summary: Plan how to sell abroad. Give it your store and goals. You get ranked countries, shipping and tax costs, and a phased plan for your next market.
+summary: Plan how to sell abroad. Give it your store and goals. You get ranked countries, shipping and tax costs, and a phased plan with budget, tracking and next steps.
 job: run-your-store
 headline: Overseas market planner
 subhead: Name your store and goals. Get ranked countries, shipping and tax costs, and a phased plan to sell abroad. Bring your store, platform and monthly sales. Check every tax and shipping figure before you act.
@@ -37,7 +37,7 @@ how_to_use:
   - Turn on web search if your AI has it. This helps it check current tax and shipping facts.
   - Read the country scores first. Check every tax and duty figure with your tax adviser or the official tax office before you act.
   - Start with the Next Steps list, then work through the roadmap one phase at a time.
-  - The tax, shipping and payment figures in the skill are the author's rough numbers, with no date. Ask your AI to mark any figure it could not check, and check those first.
+  - The tax, shipping and payment figures in the skill are the author's rough numbers, last checked Oct 2026. Your AI marks each one "check before use" unless it confirmed it from an official source. Ask your AI to mark any figure it could not check, and check those first.
   - Next, work out the full cost per order with the Landed cost calculator. Then rewrite your listings for each country with the Overseas listing localizer.
 output_sample:
   input:

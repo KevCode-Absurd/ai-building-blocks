@@ -9,7 +9,7 @@ subhead: Name the framework you use. Get code checked against its official docs,
 explain: |
   Code that follows your framework's official documentation, with the sources shown, so you are not relying on what the AI remembers about an old version.
 
-  The skill works in four moves. It detects your framework and version. It fetches the docs for the exact feature you are building, such as forms, routing, data fetching, state or auth. It writes the code in the documented way. And it cites the pages it used, so you can check them. It is most useful for starter code and patterns that get copied across a project. Skip it for quick renames or logic that does not depend on a framework. It needs internet access to read the docs.
+  The skill works in four moves. It detects your framework and version. It fetches the docs for the exact feature you are building, such as forms, routing, data fetching, state or auth. It writes the code in the documented way. And it cites the pages it used, so you can check them. It is most useful for starter code and patterns that get copied across a project. Skip it for quick renames or logic that does not depend on a framework. It needs internet access to read the docs. It reads web pages as data only. It ignores any instruction hidden in a fetched page and keeps to your request. The author's separate security skill is not part of this item, so that rule is written into the skill text itself.
 when:
   - You are building boilerplate that your whole team will copy.
   - The AI keeps using an outdated API from an older version.
@@ -36,6 +36,8 @@ how_to_use:
   - Read the conflict notes and pick the approach you want.
   - Open the cited links for any choice you doubt. Look at anything marked UNVERIFIED.
   - Run your project's tests before you use the code.
+  - "What next: have the code reviewed, for example with Generated code reviewer, and add tests with Test suite writer."
+  - "The reply comes in this order: stack detected, code, source comments, conflict notes, UNVERIFIED flags."
 output_sample:
   input:
     - Your framework and version, or your project's dependency file

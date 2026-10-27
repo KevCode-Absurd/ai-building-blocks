@@ -28,6 +28,10 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+This list is the inputs for this workflow. The "Before you start" block above is shared text: use this list instead. Ask for these first: the file or tab that holds the weekly history, the name of its date column, the metric names, and the period each run covers (for example one week, Monday to Sunday). If the history has no date column, stop at step 1 and ask for dates. Do not guess them from row order.
+
+**Tool access needed:** your AI must be able to read your files and make a spreadsheet and a web page. Add the three skills (`recurring-kpi-report-maker`, `trend-and-forecast-analyst`, `dashboard-builder`) to your AI, or download the workflow's handoff pack, before the run starts. If your AI cannot make files, say which steps give text only.
+
 - **A plain description of the report** (required): the numbers you check each week, the groups, the comparison and the period each run covers.
 - **Your weekly history** as a spreadsheet or export, with a date and one number per date (optional but best). Twelve weeks is the least that gives a forecast worth reading. Seasonal patterns need about two seasons. If some weeks are missing, say which, and step 2 fills short gaps and marks them. Long gaps are marked `MISSING:` and left out of the seasonal read.
 - **How far ahead to forecast.**
@@ -42,9 +46,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Recurring KPI report maker.** Use the skill `recurring-kpi-report-maker`. Give it the report description and the data. It returns each metric with its formula, grouping, comparison and period, a workbook and a saved definition to rerun. Save as `outputs/step-01-recurring-kpi-report-maker.md`, and name the workbook in it. Every later step reads these definitions.
-2. **Trend and forecast analyst.** Use the skill `trend-and-forecast-analyst`. Give it the weekly series from the workbook in `outputs/step-01-recurring-kpi-report-maker.md`, how far ahead to forecast, and the known events. It returns trend, seasons, spikes and dips with likely causes, and a forecast table with ranges and its test error on held-back weeks. Save as `outputs/step-02-trend-and-forecast-analyst.md`. With too little history it says so and gives no seasonal read.
-3. **Dashboard builder.** Use the skill `dashboard-builder`. Give it the workbook from step 1 and the forecast table from `outputs/step-02-trend-and-forecast-analyst.md`. It returns one page with headline cards, a trend chart, a forecast chart and filters. Save as `outputs/step-03-dashboard-builder.md`.
+1. **Recurring KPI report maker.** Use the skill `recurring-kpi-report-maker`. Give it the report description and the data. It needs the report description and the weekly data, and returns each metric with its formula, grouping, comparison and period, a workbook and a saved definition to rerun. Save as `outputs/step-01-recurring-kpi-report-maker.md`, and name the workbook in it. Every later step reads these definitions.
+2. **Trend and forecast analyst.** Use the skill `trend-and-forecast-analyst`. Give it the weekly series from the workbook in `outputs/step-01-recurring-kpi-report-maker.md`, how far ahead to forecast, and the known events. It needs the weekly series, the forecast distance and the known events, and returns trend, seasons, spikes and dips with likely causes, and a forecast table with ranges and its test error on held-back weeks. Save as `outputs/step-02-trend-and-forecast-analyst.md`. With too little history it says so and gives no seasonal read.
+3. **Dashboard builder.** Use the skill `dashboard-builder`. Give it the workbook from step 1 and the forecast table from `outputs/step-02-trend-and-forecast-analyst.md`. It needs the workbook and the forecast table, and returns one page with headline cards, a trend chart, a forecast chart and filters. Save as `outputs/step-03-dashboard-builder.md`.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

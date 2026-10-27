@@ -180,7 +180,7 @@ Return your output in this exact format:
 ### Phase 1 — Preparation (Indoor, 30 minutes, previous lesson)
 
 **Mini-lesson: Sensory vocabulary audit.**
-Give students a chart with five columns: See, Hear, Touch, Smell, Taste. Challenge: "Describe this classroom using ALL five senses. Write at least three specific details per sense." Students will find that: sight is easy, hearing is possible, touch is limited, smell is limited, taste is almost impossible. This reveals the problem: generic environments produce generic descriptions.
+Give students a chart with five columns: See, Hear, Touch, Smell, Taste. This is an indoor chart only. In this classroom exercise the Taste column is a thought exercise: students write what the room would taste like in theory, and nobody tastes anything. Outdoors, never taste. Challenge: "Describe this classroom using ALL five senses. Write at least three specific details per sense." Students will find that: sight is easy, hearing is possible, touch is limited, smell is limited, taste is almost impossible to describe. This reveals the problem: generic environments produce generic descriptions.
 
 **Model text analysis.** Read a short extract of powerful descriptive writing (e.g., from a Robert Macfarlane nature essay or a Ted Hughes poem). Students identify: which senses are used? Which details are SPECIFIC (not just "green" but "the sharp green of new nettles")? Which use figurative language?
 

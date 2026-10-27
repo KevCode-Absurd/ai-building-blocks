@@ -1,8 +1,8 @@
 # Check contracts and rules: AI Blocks
 
-> 99 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 100 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [Accessibility standards checker](https://useaiblocks.com/skills/accessibility-standards-checker): Check your site against WCAG accessibility rules. Give it your page code or screenshots. You get gaps by level, fixes ranked first, and statement notes.
+- [Accessibility standards checker](https://useaiblocks.com/skills/accessibility-standards-checker): Check your site against WCAG accessibility rules. Give it your page code or screenshots. You get gaps by level, ranked fixes and draft statement notes. Not legal advice.
 - [Ad claim sorter](https://useaiblocks.com/prompts/ad-claim-sorter): Paste your ad or page copy. Get each claim sorted as fine, needs proof or cut, with safer wording.
 - [AI impact assessment writer](https://useaiblocks.com/skills/ai-impact-assessment-writer): Describe your AI system and affected people for a draft assessment, risks, and deployment conditions.
 - [AI law gap checker](https://useaiblocks.com/skills/new-ai-rule-gap-checker): Share the AI rule and company practices. Check scope, compare requirements and plan gaps for legal review with owners and due dates.
@@ -43,6 +43,7 @@
 - [EU network security rules checker](https://useaiblocks.com/skills/eu-network-security-check): Check firm size, services, countries, and records for gaps under NIS2, the EU network security law.
 - [Facilities contract cost comparison reviewer](https://useaiblocks.com/workflows/compare-facilities-service-contract-options): Compare facilities service coverage and full costs. Summarise contract duties and questions for review, using the same basis for each offer.
 - [Federal accessibility checker](https://useaiblocks.com/skills/federal-accessibility-checker): Share federal site, app, or document details for Section 508 gap guidance and ranked fixes.
+- [Federal security controls planner](https://useaiblocks.com/skills/federal-security-controls): Describe your system and security needs. Get a NIST control baseline, tailoring notes and draft control write-ups.
 - [FedRAMP and RMF compliance planner](https://useaiblocks.com/agents/agency-specialized-fedramp-rmf-compliance): Plan FedRAMP or NIST RMF authorization for a cloud system. Get its impact level, scope notes, control gaps and a fix list for your assessor.
 - [FedRAMP readiness planner](https://useaiblocks.com/skills/federal-cloud-approval-planner): Describe your cloud service. Get a likely path, required documents and gaps to review.
 - [Import and export paperwork checker](https://useaiblocks.com/skills/import-export-paperwork): Describe your goods and route. Check official tariff and customs sources, then list supported options and open questions.

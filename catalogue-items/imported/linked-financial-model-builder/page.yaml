@@ -33,10 +33,12 @@ you_get:
 how_to_use:
   - Collect your income statement, balance sheet and cash flow for at least 3 years. A spreadsheet or pasted table works.
   - Write down your main drivers, such as growth, margins, capex and payment days. Say how far ahead you want to forecast and why.
-  - Open Claude, ChatGPT or Gemini. Use one that can run code if you want the checks run for you. Paste the skill text.
+  - Open Claude, ChatGPT or Gemini. Use one that can run code if you want the checks run for you. Code tools are not free in every chat app, so check your plan. If yours cannot run code, ask for a spreadsheet with formulas and check the balance row yourself. Paste the skill text.
   - Paste your accounts and drivers. Add debt and equipment details if you have them.
   - Check the balance check row is zero in every period. Ask your AI to explain any forecast ratio that differs from your history.
   - "Test it: ask for zero growth and a big capex jump. The balance sheet should still balance."
+  - "Next: if every balance check is zero, use the free cash flow in the Company fair value modeler for a valuation. If a check is not zero, do not use the model. Ask your AI to trace the first period that fails, and have your accountant look at it."
+next: [company-fair-value-modeler]
 output_sample:
   input:
     - Your income statement, balance sheet and cash flow for the last 3 years or more

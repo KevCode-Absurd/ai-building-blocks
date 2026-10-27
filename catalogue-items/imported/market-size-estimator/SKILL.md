@@ -51,7 +51,7 @@ Market sizing provides the foundation for startup strategy, fundraising, and bus
 - Realistic market share achievable in 3-5 years
 - Accounts for competition, resources, and market dynamics
 - Used for financial projections and fundraising
-- Example: 2-5% of SAM based on competitive landscape
+- Example: 2-5% of SAM, as a starting scenario assumption (not a benchmark). Source your own share from the competitive landscape.
 
 ### When to Use Each Methodology
 
@@ -89,7 +89,7 @@ Start with total market size and narrow to addressable segments.
 ```
 TAM = Total Market Category Size
 SAM = TAM × Geographic % × Segment %
-SOM = SAM × Realistic Capture Rate (2-5%)
+SOM = SAM × Realistic Capture Rate ([YOUR SCENARIO ASSUMPTION, with a reason; 2-5% is a starting guess, not a benchmark])
 ```
 
 **When to use:** Established markets with available research (e.g., SaaS, fintech, e-commerce)
@@ -129,13 +129,13 @@ Calculate based on value created and willingness to pay.
 1. Identify problem being solved
 2. Quantify current cost of problem (time, money, inefficiency)
 3. Calculate value of solution (savings, gains, efficiency)
-4. Estimate willingness to pay (typically 10-30% of value)
+4. Estimate willingness to pay (10-30% of value is a starting guess to test with real buyers, not a benchmark)
 5. Multiply by addressable customer base
 
 **Formula:**
 ```
 Value per Customer = Problem Cost × % Solved by Solution
-Price per Customer = Value × Willingness to Pay % (10-30%)
+Price per Customer = Value × Willingness to Pay % ([YOUR SCENARIO ASSUMPTION; 10-30% is a starting guess, not a benchmark])
 TAM = Total Potential Customers × Price per Customer
 SAM = TAM × % Meeting Buy Criteria
 SOM = SAM × Realistic Adoption Rate
@@ -228,12 +228,12 @@ Narrow TAM to serviceable addressable market.
 SAM = TAM × (% matching all filters)
 ```
 
-**Example:**
-- TAM: $10B global email marketing
-- Geographic filter: 40% (North America)
-- Product filter: 30% (e-commerce focus)
-- Feature filter: 60% (need AI capabilities)
-- SAM = $10B × 0.40 × 0.30 × 0.60 = $720M
+**Example (replace every bracket with your own sourced figure):**
+- TAM: [TAM, with source and date]
+- Geographic filter: [GEOGRAPHY %] ([REGION])
+- Product filter: [PRODUCT %] ([WHAT YOUR PRODUCT COVERS TODAY])
+- Feature filter: [FEATURE %] ([WHICH BUYERS NEED YOUR FEATURES])
+- SAM = [TAM] × [GEOGRAPHY %] × [PRODUCT %] × [FEATURE %]
 
 ### Step 5: Calculate SOM
 
@@ -241,22 +241,22 @@ Determine realistic obtainable market share.
 
 **Consider:**
 - Current market share of competitors
-- Typical market share for new entrants (2-5%)
+- Market share for new entrants (an assumption to source and label as a scenario; the original text suggests 2-5% as a starting guess, not a benchmark)
 - Resources available (funding, team, time)
 - Go-to-market effectiveness
 - Competitive advantages
-- Time to achieve (3-5 years typically)
+- Time to achieve (3-5 years is a common planning window, so say it is an assumption)
 
-**Conservative Approach:**
+**Conservative Approach (scenario assumptions, not benchmarks):**
 ```
-SOM (Year 3) = SAM × 2%
-SOM (Year 5) = SAM × 5%
+SOM (Year 3) = SAM × [YEAR 3 SHARE %]
+SOM (Year 5) = SAM × [YEAR 5 SHARE %]
 ```
 
-**Example:**
-- SAM: $720M
-- Year 3 SOM: $720M × 2% = $14.4M
-- Year 5 SOM: $720M × 5% = $36M
+**Example (replace every bracket with your own figure):**
+- SAM: [SAM]
+- Year 3 SOM: [SAM] × [YEAR 3 SHARE %] = [RESULT]
+- Year 5 SOM: [SAM] × [YEAR 5 SHARE %] = [RESULT]
 
 ### Step 6: Validate and Triangulate
 
@@ -369,7 +369,7 @@ TAM = Total Target Companies × Average Deal Size × Deals per Year
 - Be honest about serviceable market
 
 **Mistake 2: Overly Aggressive SOM**
-- New entrants rarely capture > 5% in 5 years
+- Many founders assume new entrants rarely capture more than about 5% in 5 years. That is a rule of thumb, so test it against your own market
 - Account for competition and resources
 - Show realistic ramp timeline
 

@@ -9,7 +9,7 @@ headline: "Unboxing insert and gift planner"
 subhead: Give it your average order value, margin, packaging cost and order volume. It plans what goes in the box for all orders, big orders and VIPs, costs each tier per order, and checks how many extra repeat orders you need to cover the cost.
 
 explain: |
-  The box is the one moment a customer holds your brand in their hands. Many stores either ship it bare or add cards, tissue and freebies with no idea what they cost or what they bring back. At 2,000 orders a month, an insert stack of 60 to 80 cents per order adds up to $1,200 to $1,600.
+  The box is the one moment a customer holds your brand in their hands. Many stores either ship it bare or add cards, tissue and freebies with no idea what they cost or what they bring back. The cost adds up fast: your insert cost per order times your orders each month.
 
   This skill sets a tier for each kind of order, with a cost per order and a payback check. Every order gets a card with a thank-you, a link to a short setup video and one next step. Big orders and VIPs get a note that names the item they bought. Gifts are small, relevant and given with no strings. It first checks that delivery and returns work, since a note in a late parcel feels wrong, and it never asks for a review in return for a gift.
 
@@ -66,7 +66,7 @@ how_it_works:
   - title: Fixes effort first
     text: It checks delivery and returns are working. A note in a late parcel creates unease, not loyalty.
   - title: Sets cost bands
-    text: It uses typical costs, such as a sticker at 4 to 5 cents and a card near 10 cents, then asks for your real quotes.
+    text: It uses rough cost bands from undated vendor estimates, clearly marked as bands and not prices, then asks for your real quotes.
   - title: Does the volume math
     text: It multiplies the insert stack by your monthly orders, so the cost is clear.
   - title: Designs the card

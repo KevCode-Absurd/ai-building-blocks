@@ -9,9 +9,9 @@ Give it your offer and buyer. Get a page, a review, a test design and a ship or 
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
-**When to use it:** You are about to launch a page, or you have a list of page fixes and no way to tell which ones work, and you get a few hundred visits a week or more.
+**When to use it:** You are about to launch a page, or you have a list of page fixes and no way to tell which ones work, and you get about 300 visits a week or more and about 10 sign-ups or sales a week or more. This is a rough guide: step 3 gives the exact sample size and run time for your numbers.
 
-**When not to use it:** Not when you get under a few hundred visits a week. A test would take too long, so use the Landing page auditor on its own and fix the top items by hand. Not when you only want a review of a page you already have: use the Landing page auditor. Not when you already have test counts and only want them read: use the A/B test verdict maker.
+**When not to use it:** Not when you get under about 300 visits or about 10 sign-ups or sales a week. A test would take too long, so use the Landing page auditor on its own and fix the top items by hand. Not when you only want a review of a page you already have: use the Landing page auditor. Not when you already have test counts and only want them read: use the A/B test verdict maker.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -45,13 +45,13 @@ How to start:
 
 ## What you need
 
-These inputs replace the general "Before you start" list above. You start with your offer, price, buyer and success action. The counts spreadsheet is not needed at the start: it arrives at the second pause.
+This list is the inputs for this workflow. The "Before you start" block above is shared text: skip its lines for a buyer brief, ad copy, an objection map, a spreadsheet and a question. You start with your offer, price, buyer and success action. The counts sheet is not needed at the start: it arrives at the second pause.
 
 - **Your offer, price and buyer** (required): what you sell, what it costs and who it is for.
 - **What counts as success on the page** (required): a sale, a signup or a call.
 - **Your weekly visits** (advised): step 3 sizes the test from them and warns you if it will take too long.
 - **Your brand brain** (optional): so the copy uses your voice and facts.
-- **A page tool** (needed for step 3 on): somewhere you can publish the page and run a two-version test. Without one, stop after step 2 and use the review as your fix list.
+- **A page tool** (needed for step 3 on): somewhere you can publish the page and split visitors between two versions. Many page builders and testing tools do this only on a paid plan, so check the plan and its cost before you start; this workflow does not name or require one tool. Without one, stop after step 2 and use the review as your fix list.
 - **Visits and conversions for the last few weeks** (needed at the first pause): the baseline step 3 sizes the test against.
 - **The counts for each version, in a sheet** (needed at the second pause): visitors and conversions for the control and the new version, exported after the test has run its full time.
 

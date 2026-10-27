@@ -41,6 +41,7 @@ how_to_use:
   - After step 2, check that the share count was built for the whole period and not added up from quarters, and that closing shares match the filing.
   - After steps 3 to 5, check that adjusted EPS, cash tax and OCI each point to a filing note, and that no item is counted twice.
   - Read the change log and every MISSING line before you pass the model on.
+  - This workflow is under the MIT licence in its LICENSE file. It checks arithmetic and is not investment, tax or accounting advice.
 how_it_works:
   - title: Trailing-period financial bridge
     text: Builds trailing figures as last full year plus current year to date, less the matching prior year to date. Keeps balances, margins and EPS out of that sum. Hands step 2 the period dates and ordinary profit.

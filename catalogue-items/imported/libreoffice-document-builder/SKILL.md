@@ -70,9 +70,7 @@ Use this skill when:
 ### Creating a New Document
 
 #### Method 1: Command-Line
-```bash
-soffice --writer template.odt
-```
+`soffice --writer template.odt` only opens a LibreOffice window for you to edit by hand. It does not build a file from a description. To build files without a window, use Method 2 (UNO), Method 3 (odfpy), the template method below, or the headless conversion commands.
 
 #### Method 2: Python with UNO
 
@@ -83,6 +81,13 @@ soffice --headless --accept="socket,host=localhost,port=8100;urp;"
 Then run the script with the Python that ships with LibreOffice (or one with `python3-uno` installed). If the connection is refused, the listener is not running: start it and retry.
 ```python
 import uno
+from com.sun.star.beans import PropertyValue
+
+def make_prop(name, value):
+    prop = PropertyValue()
+    prop.Name = name
+    prop.Value = value
+    return prop
 
 def create_document():
     local_ctx = uno.getComponentContext()
@@ -93,11 +98,14 @@ def create_document():
         "uno:socket,host=localhost,port=8100;urp;StarOffice.ComponentContext"
     )
     smgr = ctx.ServiceManager
-    doc = smgr.createInstanceWithContext("com.sun.star.text.TextDocument", ctx)
+    # Open a new, empty Writer document through the Desktop service
+    desktop = smgr.createInstanceWithContext("com.sun.star.frame.Desktop", ctx)
+    doc = desktop.loadComponentFromURL("private:factory/swriter", "_blank", 0, (make_prop("Hidden", True),))
     text = doc.Text
     cursor = text.createTextCursor()
-    text.insertString(cursor, "Hello from LibreOffice Writer!", 0)
-    doc.storeToURL("file:///path/to/document.odt", ())
+    text.insertString(cursor, "[YOUR TEXT HERE]", 0)
+    # Save as ODT. Change the path to where you want the file.
+    doc.storeToURL("file:///path/to/document.odt", (make_prop("FilterName", "writer8"),))
     doc.close(True)
 ```
 
@@ -161,6 +169,27 @@ def generate_from_template(template_path, variables, output_path):
 
 Read the CSV with Python's `csv.DictReader`. For each row, call `generate_from_template` with that row as `variables` and save as `letter-<row number>.odt`. Convert the finished files to PDF or DOCX with the batch command above. Check one or two outputs by eye before telling the user the run is done.
 
+```python
+import csv, subprocess
+from pathlib import Path
+
+# Uses generate_from_template from the section above.
+template = "template.odt"      # your template with ${name}-style markers
+rows_file = "list.csv"         # one header row, one row per letter
+out_dir = Path("merged")
+out_dir.mkdir(exist_ok=True)
+
+with open(rows_file, newline="", encoding="utf-8") as f:
+    for number, row in enumerate(csv.DictReader(f), start=1):
+        generate_from_template(template, row, str(out_dir / f"letter-{number}.odt"))
+
+# Convert every merged file to PDF. Close LibreOffice windows first.
+for odt in sorted(out_dir.glob("letter-*.odt")):
+    subprocess.run(["soffice", "--headless", "--convert-to", "pdf", "--outdir", str(out_dir), str(odt)], check=True)
+```
+
+Before the run, check that every column name in the CSV matches a marker in the template.
+
 ## Format Conversion Reference
 
 ### Supported Input Formats
@@ -206,6 +235,7 @@ pip install ezodf     # Easier ODF handling
 A leftover LibreOffice process is the usual cause. Close LibreOffice, then check for a stuck process (`ps aux | grep soffice` on Mac and Linux, Task Manager on Windows) and stop it. Run the command again.
 
 ### Cannot open socket
+Warning: the next command stops every LibreOffice process, so unsaved work in any open LibreOffice document is lost. Save and close your documents first, and use it only as a last resort.
 ```bash
 killall soffice.bin
 soffice --headless --accept="socket,host=localhost,port=8100;urp;"
@@ -236,7 +266,7 @@ soffice --headless --convert-to pdf:writer_pdf_Export document.odt
 ## What you hand back
 
 - The finished file or files, with full paths (ODT, plus any DOCX, PDF, HTML, RTF, TXT or EPUB copies asked for).
-- For a batch or merge: the count of files made and a list of any that failed.
+- For a batch or merge: the count of files made and a list of any that failed. A mail merge writes one `letter-<row number>.odt` per row into a `merged` folder, and the PDF copies go in the same folder.
 - The exact commands you ran, so the user can repeat them.
 - A list of checks you did not run (for example, "did not open the DOCX in Word").
 

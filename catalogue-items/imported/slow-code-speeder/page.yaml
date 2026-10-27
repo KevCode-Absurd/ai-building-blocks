@@ -7,11 +7,11 @@ job: test-and-fix-code
 headline: Slow code speeder
 subhead: Faster code that still gives the same answers. You hand over code that works but is too slow on big inputs, and the skill cuts its time or memory cost one change at a time.
 explain: |
-  Faster code that still gives the same answers. You hand over code that works but is too slow on big inputs, and the skill cuts its time or memory cost one change at a time.
+  The rule that matters most: tests must pass before and after every change, so the answers stay the same.
 
   Its firm rule is that tests must pass before and after every change. If you have no tests, it first writes one from a sample input and the current output. Then it makes a single transformation, such as replacing a nested scan with a lookup table or running independent awaits together, and runs the tests. A failed test means the change is reverted and the work stops. It also fixes N+1 queries in common ORMs. No change goes in without proof.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The skill file header (morsechimwai) says Apache-2.0. Credit goes to morsechimwai and sickn33.
+  Licence: the skill text in this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this item says. The author's own file header (morsechimwai) says Apache-2.0 for the original. Both allow reuse if you keep the credit, so keep it. Credit goes to morsechimwai and sickn33.
 when:
   - A function times out when the list gets large.
   - Nested loops are slowing a report that used to be quick.
@@ -31,11 +31,12 @@ you_get:
   - One change at a time, each tested
   - A note on the time or memory saved
 how_to_use:
-  - Open a chat with an AI that can run code and read files, such as Claude. No install is needed.
+  - "Have ready: an AI that can run code and read your project (such as Claude), your slow code, existing tests or a sample input, and how big the data gets. No install is needed."
   - Paste the skill text into the chat, or upload the skill file.
   - Paste your slow code. Add your tests if you have them, and say how big the data gets.
   - Let it run the tests first. If you have none, it writes one from a sample input and the current result.
   - Check each change it proposes. If a test fails, it undoes that change and stops.
+  - The skill does not run benchmarks for you. Give it a typical input and the command you use to time it, or the before and after ratio will be a guess.
   - Apply the final diff only after your own tests pass.
   - Next, commit the change with the before and after timings in the commit message, and run your full test suite in your build system.
   - For new code, plan the approach first. For math-level changes, such as a Bloom filter or an FFT, ask a developer.

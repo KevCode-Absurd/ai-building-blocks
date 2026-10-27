@@ -15,6 +15,8 @@ metadata:
   version: "1.0"
 ---
 
+> AI Blocks licence note: the LICENSE.md file in this folder (BSD 2-Clause, for use with MathWorks products only) governs this copy. The licence link in the front matter above is superseded.
+
 # Analyze Signal Spectra in MATLAB
 
 Compute, visualize, and extract measurements from signal spectra using Signal Processing Toolbox. Choose the right spectral estimator, avoid common FFT pitfalls, and use built-in measurement functions instead of reinventing them.

@@ -11,9 +11,9 @@ explain: |
 
   It writes Python using the pymoo library. It sets up your goals, settings and limits, picks a method such as NSGA-II or NSGA-III, runs it and draws the curve. It also runs the same method on a known test problem first, so you can tell the setup works before you trust it on yours.
 
-  You need a way to score a design, as formulas or as code. It does not guess your model. Without that, it stops and asks. If you have no formulas, it can write a placeholder scorer. Its numbers mean nothing, so replace it with your real formulas before you use any result.
+  You need a way to score a design, as formulas or as code. It does not guess your model. Without that, it stops and asks first. If you have no formulas, it writes a placeholder scorer only if you agree. Its numbers mean nothing and every output is labelled as a placeholder, so replace it with your real formulas before you use any result.
 
-  Licence: MIT, as the LICENSE.md file in this item says. The skill file's own header names Apache-2.0, which is the licence of the pymoo library it describes. Credit goes to K-Dense.
+  Licence: MIT (Copyright 2025 K-Dense Inc.), as the LICENSE.md file in this item says. The skill file's own header names Apache-2.0, which is the upstream header and the licence of the pymoo library it describes. LICENSE.md is the one that applies to this copy. Credit goes to K-Dense.
 
   Compared with the plain pymoo skill it came from, this version checks your inputs first, runs the test-problem check, and ends with a note on which solution suits which priority.
 when:
@@ -40,6 +40,7 @@ how_to_use:
   - Use an AI that can run Python 3.10 or newer, such as Claude Code or Codex. Add this skill or paste it into the chat.
   - Write down your goals and which way is better for each, your settings and their ranges, and any hard limits.
   - Paste the formulas that score a design, or point your AI at your code. Without them it must stop and ask.
+  - Check how long one score takes. A typical run scores designs thousands of times (a group of 100 over 100 rounds is about 10,000 scores). If one score takes minutes, build a faster stand-in first.
   - Ask your AI to set up pymoo and run the optimization. It saves the chart as an image file.
   - Open the table and chart. Read the note on which solution suits which priority, and pick one.
   - Check that no solution breaks your hard limits. Rerun with other random seeds to see the front hold. Then pass your pick to the engineering or costing review that owns the limits, and test it in your normal tools before you use it.

@@ -49,7 +49,7 @@ For each prospect, find the specific hook. Use only the prospect's own website, 
 
 If no hook exists beyond category fit, write a shorter, plainly cold message and say it is cold. A fake-warm opener is worse than an honest cold one, because it reads as a mail merge and destroys credibility in the first line.
 
-**Apollo or Clay, when connected, can fill in the contact and company detail that makes a thin hook usable** — role, tenure, company size, tech stack — the kind of specific that keeps a message from reading as generic. Enrichment data, not a hook on its own.
+**Apollo or Clay, when connected, can fill in the contact and company detail that makes a thin hook usable** — role, tenure, company size, tech stack — the kind of specific that keeps a message from reading as generic. Enrichment data, not a hook on its own. This data comes from the person's own Apollo or Clay account, which is a paid service. Some contacts come back marked "inferred", meaning the tool guessed the address from a pattern. Check every inferred address by hand before you use it. Collect only business contact details that the person can use under the opt-out rules where they send. Do not collect private details.
 
 ## Step 3 — Write the sequence
 

@@ -75,6 +75,7 @@ output_shape: |
   REPAIRED DRAFT
   <reply>
   BEFORE YOU SEND: <what to confirm>
+  CHECKS MISSED: <one line per check not run, or none>
 
 tweaks:
   - what: "Policy text"

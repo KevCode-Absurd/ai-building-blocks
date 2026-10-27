@@ -10,6 +10,8 @@ explain: |
   If you work with a New Zealand government agency, this tells you which security rules from the NZISM apply to your system and where you fall short. It uses the real control numbers, not made-up ones, so you can check each answer against the manual.
 
   First it fixes the classification of your system, from Unclassified up to Top Secret, and assumes Restricted if you do not say. It then matches controls to your setup and builds a gap table with status, evidence needed and notes. It can also lay out the certification and accreditation steps, write policy documents, and explain supplier duties. Incident answers name the right New Zealand bodies to tell.
+
+  Licence: MIT, as the LICENSE file in this item says. Credit goes to the author, Hemant Naik.
 when:
   - You supply software to a New Zealand agency and need to know which controls reach you.
   - Your agency system is heading for certification and you need the steps and paperwork list.
@@ -30,12 +32,14 @@ you_get:
   - Policy text with control references
   - Classification handling guidance
 how_to_use:
+  - "Have ready: a description of your system, what information it handles, the classification level if you know it, whether you are an agency or a supplier, and any evidence of controls you already have."
   - Open Claude, ChatGPT or Gemini. Paste in the skill instructions. If your AI accepts files, also add the three reference files in the skill folder.
   - Describe your system in plain words. Say what information it holds and whether you are an agency or a supplier.
   - Add the classification level if you know it. If you skip it, the skill assumes Restricted.
   - "Ask for what you need: a gap table, certification steps, a policy or help with one control."
   - Check each control number against the official NZISM before you act on it.
-  - Ask a qualified assessor to confirm the results before any certification decision. You can use the gap table as the base for your plan of action or your system security plan outline.
+  - Ask a qualified assessor to confirm the results before any certification decision. Next, turn the gap table into a plan of action and milestones, or an outline of your system security plan.
+  - The skill gives general guidance from the NZISM text in its reference files. It does not confirm the current wording of any control, so check control IDs at nzism.gcsb.govt.nz.
 output_sample:
   input:
     - A short description of your system and what information it handles

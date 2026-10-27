@@ -49,6 +49,8 @@ Do not run any of the code below, and do not give buy quantities, until the user
 3. Stockout cost: how much more a lost sale costs than the margin on it (a multiplier)
 4. Demand variation: how far sales usually miss the forecast, from their own history
 
+What a finished buy looks like: a table with one row per style (or SKU) showing the early buy quantity, the reserve quantity, the reorder trigger week and the markdown week, plus a total that you check against the open-to-buy budget. A season of a few hundred styles gives a table of a few hundred rows, so ask for it by category if it is long.
+
 The code raises an error if the markdown rate or the stockout cost is left out. The numbers in the code examples are made up so the code can run. They are not benchmarks.
 
 ---
@@ -94,6 +96,8 @@ The phase weeks below are written for a selling season of 12 weeks, with plannin
 ### Seasonal Buy Quantity Optimization
 
 ```python
+# DEMO WARNING: every example number in this code (season weeks, demand variation, markdown rate, stockout cost, random sales, sample products) is made up so the code runs.
+# Replace every one with the user's own figure before you use any quantity from it.
 import numpy as np
 import pandas as pd
 from scipy.optimize import minimize
@@ -313,7 +317,7 @@ season_config = {
     'season_name': '[SEASON NAME]',
     'start_date': '[START DATE]',
     'end_date': '[END DATE]',
-    'season_weeks': 16  # set once from the user's answer; reused below
+    'season_weeks': None  # [SET YOUR SEASON WEEKS from the user's answer. The code fails until you do]
 }
 
 optimizer = SeasonalBuyOptimizer(season_config)
@@ -324,8 +328,8 @@ buy_decision = optimizer.calculate_optimal_buy(
     sku_forecast=sku_forecast,
     unit_cost=25,
     retail_price=60,
-    markdown_rate=0.50,            # DEMO: use the user's markdown rate
-    stockout_cost_multiplier=1.5   # DEMO: use the user's stockout cost
+    markdown_rate=None,            # [USER'S MARKDOWN RATE: the code stops until this is set]
+    stockout_cost_multiplier=None  # [USER'S STOCKOUT COST: the code stops until this is set]
 )
 
 print("Optimal Buy Analysis:")
@@ -365,6 +369,8 @@ print(f"Expected total profit: ${assortment['expected_profit'].sum():,.0f}")
 ### Seasonal Demand Modeling
 
 ```python
+# DEMO WARNING: every example number in this code (season weeks, demand variation, markdown rate, stockout cost, random sales, sample products) is made up so the code runs.
+# Replace every one with the user's own figure before you use any quantity from it.
 class SeasonalDemandForecaster:
     """
     Forecast seasonal demand patterns
@@ -629,6 +635,8 @@ print(f"  Mean stockout rate: {summary['mean_stockout_rate']:.1f}%")
 ### Chase & Markdown Strategy
 
 ```python
+# DEMO WARNING: every example number in this code (season weeks, demand variation, markdown rate, stockout cost, random sales, sample products) is made up so the code runs.
+# Replace every one with the user's own figure before you use any quantity from it.
 class InSeasonManager:
     """
     Manage in-season performance

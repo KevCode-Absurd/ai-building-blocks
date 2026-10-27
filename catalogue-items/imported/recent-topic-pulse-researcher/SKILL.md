@@ -90,6 +90,7 @@ Asked only if Q1 + Q2 suggest some platforms are clearly off-target (e.g., consu
 
 Before any phase fires:
 
+0. **Check the rules first.** Tell the user to check Reddit's terms and each web source's terms. If a site blocks access or its terms forbid automated reading, stop on that site and say so. Do not work around it. Grok and browser automation are optional extras that may need paid accounts. The run works without them.
 1. **Compute the time window** with `scripts/time_window_calculator.py --window <Nd>`. Get back the Unix timestamp for `created_at_i>` (HN) and the `t=` parameter (`hour|day|week|month|year|all`) for Reddit.
 2. **Generate the output slug** with `scripts/topic_slug_generator.py --topic "<topic>" --date $(date +%Y-%m-%d)`. Detect if `${RESEARCH_DIR}/pulse/<slug>-<date>.md` already exists; if yes, append `-v2` suffix or warn user.
 3. **Start the three-count audit log** with `scripts/citation_tracker.py --action start --session pulse-<date>-<slug>`. This file at `~/.pulse_sessions/<session>.json` persists across the run.

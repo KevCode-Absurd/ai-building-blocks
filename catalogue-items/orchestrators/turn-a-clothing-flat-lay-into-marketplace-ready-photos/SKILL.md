@@ -40,7 +40,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **The garment stays true.** Never change colour, pattern, stitching or fit. Never add a pocket, logo or detail the garment does not have.
 - **Stop** if there is no flat-lay photo, or if the inspector rates a picture high risk and the person will not redo it. Leave that picture out of the final set and go to the hand-back summary.
 - **Nothing is uploaded to a marketplace.** Nothing is sent, published or paid for without a clear yes.
-- **Buyers must not be misled.** The photos must show the garment as it really is. Some marketplaces limit AI-edited images or ask you to label them, so tell the person to check their marketplace's current rules.
+- **Buyers must not be misled.** The worn-shape photo and close-ups are for the listing preview only. They must match the garment you send, in fit, length and fabric. Some marketplaces limit AI-edited images or ask you to label them, so tell the person to check their marketplace's current rules, and to label the worn-shape photo and close-ups as AI-edited where the marketplace asks.
 
 ## Steps
 1. **Product photo retoucher.** Use the skill `product-photo-retoucher`. It takes the person's flat-lay photo. Starts the chain from your phone photo and hands a cleaner flat-lay photo to step 2. Saves the instructions and a note of what changed in `outputs/step-01-product-photo-retoucher.md`.
@@ -49,7 +49,7 @@ Pause here: Pick the retouched photo that looks most like your real garment and 
 
 2. **Ghost mannequin photo maker.** Use the skill `ghost-mannequin-photo-maker`. It takes the retouched photo from step 1 that you chose, not every option in `outputs/step-01-product-photo-retoucher.md`. Reads the retouched photo from step 1 that you chose, shapes it as if worn, and hands that worn-shape photo to step 3. Saves a note of what was kept unchanged in `outputs/step-02-ghost-mannequin-photo-maker.md`.
 
-Pause here: Save the worn-shape photo you like best. The next step zooms into it.
+Pause here: Before you save the worn-shape photo, hold the real garment beside it and compare sleeve length, hem and collar against the real measurements. Redo the picture if any differ. Save the one you like best. The next step zooms into it.
 
 3. **Fabric close-up maker.** Use the skill `fabric-close-up-maker`. It takes the worn-shape photo from step 2 and one named area, such as the collar or cuff. Zooms into the fabric of the worn-shape photo from step 2 and hands the close-ups on with the other photos. Saves each close-up and the area it shows in `outputs/step-03-fabric-close-up-maker.md`.
 
@@ -59,7 +59,7 @@ Pause here: Put the retouched photo, the worn-shape photo and the close-ups you 
 
 Pause here: Redo or retouch any picture the inspector flagged, then save the final set.
 
-5. **Marketplace photo rule checker.** Use the skill `marketplace-photo-rule-checker`. It takes the final set of pictures that passed step 4's check, with `outputs/step-04-ai-product-photo-inspector.md`, and the marketplace the person named. Uses the pictures that passed step 4's check, with step 4's report, and checks them against marketplace rules. Marks each rule pass or reject, with a fix for every reject. Saves `outputs/step-05-marketplace-photo-rule-checker.md`.
+5. **Marketplace photo rule checker.** Use the skill `marketplace-photo-rule-checker`. It takes the final set of pictures that passed step 4's check, with `outputs/step-04-ai-product-photo-inspector.md`, and the marketplace the person named. Uses the pictures that passed step 4's check, with step 4's report, and checks them against marketplace rules. Marks each rule pass or reject, with a fix for every reject. The rules come from the marketplace's own seller help pages, which change. The person checks the current page before relying on a pass. Saves `outputs/step-05-marketplace-photo-rule-checker.md`.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

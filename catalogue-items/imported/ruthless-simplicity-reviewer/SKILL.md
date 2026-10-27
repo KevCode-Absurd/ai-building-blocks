@@ -254,7 +254,7 @@ Steve Jobs (1955-2011) co-founded Apple and led it to create the Mac, iPod, iPho
 
 ## Further Reading
 
-This skill is based on documented accounts of Steve Jobs' product and design review practices:
+This skill is based on documented accounts of Steve Jobs' product and design review practices. Note: the three book links below carry the original author's Amazon affiliate tag (tag=wondelai00-20), so the author may earn a fee if you buy through them. Tell the user this if you share them.
 
 - [*"Steve Jobs"*](https://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537?tag=wondelai00-20) by Walter Isaacson
 - [*"Insanely Simple: The Obsession That Drives Apple's Success"*](https://www.amazon.com/Insanely-Simple-Obsession-Drives-Success/dp/1591846218?tag=wondelai00-20) by Ken Segall

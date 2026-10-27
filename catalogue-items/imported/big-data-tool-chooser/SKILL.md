@@ -13,7 +13,7 @@ description: >
   subclassing matlab.io.Datastore, implementing a custom reader, building an
   extensible datastore, or integrating a new file format with tall arrays or
   parallel computing. Do NOT use for MAT files (use matfile instead).
-license: https://www.mathworks.com/content/dam/mathworks/license/pmrl/license.md
+license: "BSD-2-Clause with a MathWorks-products-only condition (see LICENSE.md). MathWorks' own reuse terms: https://www.mathworks.com/content/dam/mathworks/license/pmrl/license.md"
 metadata:
   author: MathWorks
   version: "2.0"

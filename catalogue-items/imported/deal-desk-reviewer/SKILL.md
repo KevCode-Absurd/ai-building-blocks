@@ -35,7 +35,7 @@ Invoke this skill when:
 
 **The sibling skills named in this file (`commercial-policy`, `contract-and-proposal-writer`, `general-counsel-advisor`, `pricing-strategist`, `cfo-advisor`) come from the original collection and are not in this folder.** In AI Blocks, use the Contract and proposal drafter, the Contract risk reviewer or the Discount policy designer instead, or ask a person. Never say you ran a skill you do not have.
 
-**Do NOT use this skill to**: author the proposal (use `business-growth/contract-and-proposal-writer`), redesign the discount matrix (use the `commercial-policy` sibling skill), or do deep legal redline of full contract text (use `c-level-advisor/skills/general-counsel-advisor`).
+**Do NOT use this skill to**: author the proposal (use the Contract and proposal drafter), redesign the discount matrix (use the Discount policy designer), or do deep legal redline of full contract text (use the Contract risk reviewer, or your lawyer).
 
 ## Workflow
 
@@ -57,13 +57,15 @@ All three: stdlib-only, `--help`, `--sample`, `--input <json>`, `--output {human
 
 ## References
 
+The named sources below (authors, firms and benchmarks) are unchecked background reading from the original author. Do not cite them as proof or quote their numbers as fact.
+
 - `references/deal_desk_canon.md` — Deal-desk operating practice: SaaStr playbooks (Jason Lemkin), Winning by Design (van der Kooij + Reichl), Forrester research, RevOps Co-op, OpenView benchmarks, Bridge Group AE comp, Salesforce Deal Desk best practices.
 - `references/discount_economics.md` — Discount math + LTV impact: David Skok (For Entrepreneurs), Bessemer State of the Cloud, Tomasz Tunguz, OpenView NRR research, Pacific Crest + KeyBanc SaaS surveys, Insight Partners revenue ops. Includes worked margin math (a 30% discount on an 80% gross-margin product loses 37.5% of margin, not 30%).
 - `references/contract_landmines.md` — 10+ named landmine patterns with example counter-language: YC startup library, Robert Klingberg (Founder's Guide to SaaS Agreements), Bowman + Brooke redline guides, IACCM/WorldCC commercial management research, Practical Law contracts library, Bradley Tusk on enterprise contracts, GC100 guidance.
 
 ## Assumptions
 
-- The skill assumes the **commercial policy already exists** (discount bands, payment-terms norms, indemnity caps). It applies the policy; it does not design it. See the `commercial-policy` sibling skill for policy design.
+- The skill assumes the **commercial policy already exists** (discount bands, payment-terms norms, indemnity caps). It applies the policy; it does not design it. See the Discount policy designer for policy design.
 - Industry profiles bake in *customary* thresholds. If your company has a documented discount matrix, pass it via `policy_thresholds` in the input JSON to override.
 - The terms redliner detects the 10 most common landmines. It is **not** a substitute for General Counsel review on the full contract.
 - Scoring weights (margin 30%, risk 20%, strategic 15%, commercial 20%, term 15%) reflect a CFO-leaning bias. RevOps-led shops may want to reweight; the weights are constants at the top of `score_deal()` and are easy to tune.
@@ -73,7 +75,7 @@ All three: stdlib-only, `--help`, `--sample`, `--input <json>`, `--output {human
 - **Auto-approving deals.** This skill never says "approved". Every verdict (including `APPROVE`) names the human(s) who must sign. The output is a recommendation.
 - **Skipping the redline scan** because the score is high. A high composite with `UNCAPPED_INDEMNITY` is still a DECLINE — critical signals override composite.
 - **Using this for legal review of arbitrary contract text.** This skill takes a *structured* terms JSON. For prose redlining of full contract text, use a general counsel or contract review skill if you have one, or send it to your lawyer. Neither is part of this folder.
-- **Treating the discount router as a discount calculator.** It routes a discount the AE/customer has already proposed; it does not calculate the right discount. Pricing logic lives in `commercial/skills/pricing-strategist`.
+- **Treating the discount router as a discount calculator.** It routes a discount the AE/customer has already proposed; it does not calculate the right discount. Pricing logic lives in the Discount policy designer, or with your finance lead.
 - **Routing every deal to CFO.** The router stops at the lowest-authority hop that can sign the deal. Over-escalation slows the funnel and trains AEs to over-discount.
 - **Hand-editing the chain to skip a hop.** Modifiers (enterprise floor, SMB fast-lane) are explicit; hidden skips defeat the audit trail.
 
@@ -81,11 +83,11 @@ All three: stdlib-only, `--help`, `--sample`, `--input <json>`, `--output {human
 
 | Sibling | Scope | Difference |
 |---|---|---|
-| `commercial/skills/pricing-strategist` | Sets the pricing **model** (per-seat vs usage vs tiered, list prices, packaging) | Operates at the strategy layer — not per deal |
-| `business-growth/contract-and-proposal-writer` | **Authors** proposals, SOWs, MSAs | Output is a document; deal-desk is the gate **before** signing |
-| `commercial/skills/commercial-policy` (sibling) | Designs the discount matrix and approval thresholds | Deal-desk **applies** that policy to one deal at a time |
-| `c-level-advisor/skills/general-counsel-advisor` | Deep legal redline + term-sheet analysis | Operates on full contract prose; deal-desk uses structured terms JSON |
-| `c-level-advisor/skills/cfo-advisor` | Burn rate, unit economics, fundraising models | Strategic finance; deal-desk is one-deal granularity |
+| Pricing strategy (not in this folder; use the Discount policy designer) | Sets the pricing **model** (per-seat vs usage vs tiered, list prices, packaging) | Operates at the strategy layer — not per deal |
+| Contract and proposal drafter | **Authors** proposals, SOWs, MSAs | Output is a document; deal-desk is the gate **before** signing |
+| Discount policy designer | Designs the discount matrix and approval thresholds | Deal-desk **applies** that policy to one deal at a time |
+| Contract risk reviewer, or your lawyer | Deep legal redline + term-sheet analysis | Operates on full contract prose; deal-desk uses structured terms JSON |
+| Your finance lead (no matching item in this folder) | Burn rate, unit economics, fundraising models | Strategic finance; deal-desk is one-deal granularity |
 
 ## Quick examples
 

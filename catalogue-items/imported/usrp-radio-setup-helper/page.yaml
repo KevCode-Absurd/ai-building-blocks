@@ -7,7 +7,7 @@ job: build-software
 headline: USRP radio setup helper
 subhead: A USRP radio that is connected, configured and proven to work in MATLAB, so you can start sending and capturing signals. It covers the models E320, N300, N310, N320, N321, X300, X310 and X410. It needs licensed MATLAB, and the licence lets you use this copy only with MathWorks products.
 explain: |
-  A USRP radio that is connected, configured and proven to work in MATLAB, so you can start sending and capturing signals. It covers the models E320, N300, N310, N320, N321, X300, X310 and X410.
+  Licence: this copy is BSD 2-Clause (LICENSE.md) plus a MathWorks-only use term. You may use it only with MathWorks products such as MATLAB. The SKILL.md header also links MathWorks' own reuse licence (the PMRL page). Read both before you reuse it.
 
   The skill first checks your computer: operating system, network card type and speed, and packet size. It then finds the radio with the discovery commands findsdru and probesdru and checks the driver version matches. It sets up the radio in code, or with the setup wizard, and runs a transceiver test to confirm samples flow. A separate troubleshooting guide covers radios that are not found, connection errors and dropped samples. It needs MATLAB with the Wireless Testbench add-on, and the radio on your desk.
 when:
@@ -35,9 +35,9 @@ how_to_use:
   - Connect and power on your USRP radio.
   - Open your AI tool and add the skill folder, or paste in the SKILL.md text.
   - Tell your AI your USRP model, how it connects, and your MATLAB release. Add any error message.
-  - Let your AI run each step and show you the results. It runs MATLAB and shell commands on your computer, so read each command before you approve it, especially network and firewall changes. Network changes need an admin terminal, which you open yourself.
-  - If your AI turns off Windows Firewall, that is for the radio network card only, and only for this test. Turn it back on as soon as the connection test passes.
-  - The code route for saving the radio uses an undocumented MATLAB function that can change between releases. If it fails, use the setup wizard, which is the safer route.
+  - Let your AI run each step and show you the results. It runs MATLAB commands on your computer, so read each command before you approve it. Any firewall change and any sudo or admin command must be run by you, in your own admin terminal. Your AI should give you the command, not run it.
+  - Windows Firewall may need to be off for the radio network card only, and only for this test. That lowers your computer's security. You make that change yourself, and you turn the firewall back on as soon as the connection test passes.
+  - The code route for saving the radio is for experienced users only. Before you let your AI write anything, note the names of your saved radio configurations by running radioConfigurations. It uses an undocumented MATLAB function that can change between releases. A bad write can corrupt the saved radio settings. If it fails, close MATLAB tools, follow the recovery steps in the skill, and use the setup wizard, which is the safer route.
   - When the connection test passes, move on to the matlab-detect-capture-usrp skill to capture your first real signal.
 output_sample:
   input:

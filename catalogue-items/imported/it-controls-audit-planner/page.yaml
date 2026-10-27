@@ -31,8 +31,8 @@ you_get:
   - A note on which SOX rules apply to you
   - A fix plan
 how_to_use:
-  - Gather your filer status, a list of the finance systems with an owner for each, your last audit findings and your fiscal year-end date.
-  - Open a chat in Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Before you start, you need your fiscal year-end date and your filer status. Gather those, a list of the finance systems with an owner for each, your last audit findings and your fiscal year-end date.
+  - Open a chat in Claude, ChatGPT or Gemini and add the skill. Upload the SKILL.md file from the skill folder, or paste its text. The reference files in the same folder help if your AI takes files.
   - Paste your list of finance systems, who runs each one, and your company size or filer status.
   - Add your current controls, policies and any test exceptions if you have them.
   - Ask for the system inventory first. Check it matches your real systems before you go on.

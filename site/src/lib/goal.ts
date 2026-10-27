@@ -76,6 +76,25 @@ function named(c: Library, t: string): number {
   return value;
 }
 
+// A goal names the thing it wants, then often says what it is for, from or about: "an infographic | from my blog post",
+// "a chatbot | on my website that answers questions", "a business plan | for my food truck so I can show the bank".
+// Words only in that second part are context: they still count, for less, so the thing asked for leads.
+// "Turn my post into an infographic" names the thing after "into".
+const CONTEXT = /\b(?:(?:for|from|on|in|at|to|with|about)\s+(?:my|our|your|their|his|her)\b|so\s+(?:that\s+)?(?:i|we|they|people)\b|that\b|which\b|because\b)/i;
+const GENERIC = new Set(["write", "create", "generate", "build", "make", "get", "help", "need", "want", "find", "tell", "give", "set", "up", "keep", "start", "put", "do"].flatMap(w => searchTokens(w)));
+const CONTEXT_WEIGHT = 0.4, ALIAS_CREDIT = 0.6;
+function goalParts(text: string): { core: string; context: Set<string>; coreWords: Set<string> } {
+  const core: string[] = [], rest: string[] = [];
+  for (const sentence of text.split(/[.?!;\n]+/)) {
+    const into = sentence.match(/^(.*?)\binto\s+(.+)$/i);
+    if (into) { core.push(into[2]); rest.push(into[1]); continue; }
+    const at = sentence.search(CONTEXT);
+    if (at > 0) { core.push(sentence.slice(0, at)); rest.push(sentence.slice(at)); } else core.push(sentence);
+  }
+  const coreWords = new Set(queryTokens(core.join(" ")).sequence);
+  return { core: core.join(" ").trim(), coreWords, context: new Set(queryTokens(rest.join(" ")).sequence.filter(t => !coreWords.has(t))) };
+}
+
 export type GoalMatch = { b: Part; score: number; share: number; words: number; pair: boolean };
 const MATCHES = new Map<string, { c: Library; found: GoalMatch[] }>();
 /** Library items for a goal, best first. `share` is the part of the goal's subject (by rarity) the item's name and
@@ -86,25 +105,35 @@ export function goalMatches(c: Library, text: string, limit = 60): GoalMatch[] {
   const words = queryTokens(key);
   // A number says how many or how long ("300 pages", "60 days"), not what the goal is about.
   const hard = words.hard.filter(t => !/^\d+$/.test(t)), sequence = words.sequence.filter(t => !/^\d+$/.test(t));
+  const parts = goalParts(key);
   const subject = hard.filter(t => !PLACE.has(t)), setting = sequence.filter(t => SETTING.has(t));
+  // When the thing asked for is only setting or plain words ("a business plan"), those words are its subject.
+  if (parts.context.size && !subject.some(t => parts.coreWords.has(t))) subject.push(...[...parts.coreWords].filter(t => !GENERIC.has(t) && !/^\d+$/.test(t) && !subject.includes(t)));
   const fused = new Map<string, number>(), paired = new Set<string>();
   const run = (query: string, weight: number, pair = false) => searchParts(c, query).slice(0, 40).forEach((b, i) => {
     fused.set(b.slug, (fused.get(b.slug) ?? 0) + weight / (i + 6));
     if (pair && i < 15) paired.add(b.slug);
   });
   run(key, 3);
+  // The thing asked for, on its own (without "write", "put", numbers: the search wants every word it is given).
+  const asked = [...parts.coreWords].filter(t => !GENERIC.has(t) && !/^\d+$/.test(t));
+  if (parts.context.size && asked.length) run(asked.join(" "), 3);
   for (let i = 0; i + 1 < sequence.length; i++) {
     const [a, b] = [sequence[i], sequence[i + 1]];
-    if ((subject.includes(a) || subject.includes(b)) && !(PLACE.has(a) && PLACE.has(b))) run(`${a} ${b}`, 2, true);
+    // A pair inside the context ("blog post" in "from my blog post") is weaker evidence than one in the thing asked for.
+    const aside = parts.context.has(a) && parts.context.has(b);
+    if ((subject.includes(a) || subject.includes(b)) && !(PLACE.has(a) && PLACE.has(b))) run(`${a} ${b}`, aside ? 1 : 2, !aside);
   }
   if (sequence.length > 1) for (const t of subject) run(t, 1);
   // A subject word counts by how rare it is and whether it names a kind of work.
-  const weightOf = (t: string) => rarity(c, t) * named(c, t);
+  const weightOf = (t: string) => rarity(c, t) * named(c, t) * (parts.context.has(t) ? CONTEXT_WEIGHT : 1);
   const total = subject.reduce((s, t) => s + weightOf(t), 0);
   const found = [...fused].map(([slug, value]) => {
     const b = c.bySlug[slug], own = wordsOf(b);
-    const said = subject.filter(t => covers(own, t)), share = total ? said.reduce((s, t) => s + weightOf(t), 0) / total : 0;
-    const pair = paired.has(slug) && sequence.some((t, i) => i + 1 < sequence.length && covers(own, t) && covers(own, sequence[i + 1]));
+    // A word met only by one of its everyday stand-ins ("stolen cards" for fraud) counts, for less than the word itself.
+    const met = (t: string) => covers(own, t) ? 1 : words.alternatives[t]?.some(a => covers(own, a)) ? ALIAS_CREDIT : 0;
+    const said = subject.filter(t => met(t) > 0), share = total ? said.reduce((s, t) => s + weightOf(t) * met(t), 0) / total : 0;
+    const pair = paired.has(slug) && sequence.some((t, i) => i + 1 < sequence.length && !(parts.context.has(t) && parts.context.has(sequence[i + 1])) && covers(own, t) && covers(own, sequence[i + 1]));
     const fits = setting.length ? setting.filter(t => covers(own, t)).length / setting.length : 0;
     return { b, share, words: said.length, pair, score: value * (0.25 + share) * (pair ? 1.3 : 1) * (1 + 0.3 * fits) };
   }).sort((a, b) => b.score - a.score || a.b.slug.localeCompare(b.b.slug));

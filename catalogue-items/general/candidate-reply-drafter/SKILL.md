@@ -59,4 +59,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Nothing is invented about the candidate.
 - Hiring rules differ by place. Check with a qualified person before you publish or send.
 
-For the full version with every check, use the [Candidate message drafter](https://useaiblocks.com/skills/candidate-message-drafter).
+What next: log the decision and the timeline you promised in your hiring folder, and keep to that date. For the full version with every check, use the [Candidate message drafter](https://useaiblocks.com/skills/candidate-message-drafter).

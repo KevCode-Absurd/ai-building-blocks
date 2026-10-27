@@ -11,7 +11,7 @@ explain: |
 
   The prompts come in four kinds. Planning prompts help pick a strategy and a first step. Monitoring prompts test whether they really understand or just recognise the words. Evaluating prompts check the answer against the criteria. Debugging prompts locate where understanding broke. They are worded for the age group and the subject, and with no phase given, you get all three phases, weighted to where they matter most.
 
-  Licence: this is a copy of Gareth Manning's skill, shared under CC BY-SA 4.0 (see the LICENSE file). If you change it and share it, share your version under the same licence. Credit goes to Gareth Manning.
+  Licence: this is a copy of Gareth Manning's skill, shared under CC BY-SA 4.0 (see the LICENSE file). If you change it and share it, share your version under the same licence. Credit goes to Gareth Manning. The research the skill cites (Flavell, Veenman, Hattie, Schraw, Tanner) is not linked in the skill. Look up the originals before you quote any finding.
 when:
   - Students say they understand, then cannot do the problem.
   - You want a card of self-check questions for word problems.

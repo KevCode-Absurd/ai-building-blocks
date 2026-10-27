@@ -9,7 +9,9 @@ subhead: "A class worksheet set that teaches students to read an AI answer close
 explain: |
   A class worksheet set that teaches students to read an AI answer closely instead of trusting how smooth it sounds. It is built around six standards for judging claims: clear, accurate, precise, relevant, deep and broad.
 
-  People spot weak writing by clues like bad grammar or an odd source. AI text has none of those, so students need a new reading habit. The kit has a markup guide where students underline claims stated with too much confidence, numbers with no source and expert-sounding words with little behind them. A scoring grid rates each standard weak, medium or strong. It adds push-back sentence starters and a teacher script that models the first read aloud.
+  People spot weak writing by clues like bad grammar or an odd source. AI text has none of those, so students need a new reading habit. The kit has a markup guide where students underline claims stated with too much confidence, numbers with no source and expert-sounding words with little behind them. A scoring grid rates each standard weak, moderate or strong. It adds push-back sentence starters and a teacher script that models the first read aloud.
+
+  In plain words, the six standards are: clear (you can tell what is claimed), accurate (it matches reality), precise (it is specific enough to test), relevant (it answers the question), deep (it deals with the real difficulty) and broad (it looks at other views). They come from the thinking researcher Robert Ennis.
 when:
   - Your students copy AI answers and never question them.
   - You need a ready activity on judging AI text for your subject.
@@ -26,16 +28,16 @@ you_give:
   - Time available for the lesson (optional)
 you_get:
   - A markup guide for students
-  - A weak, medium, strong scoring grid
+  - A weak, moderate, strong scoring grid
   - Sentence starters for pushing back
   - A teacher modelling script
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
-  - Paste the full SKILL.md text into the chat.
+  - Paste the full SKILL.md text into the chat. It has fill-in fields in double curly brackets, such as {{ai_output_sample}} and {{student_level}}. Replace each one with your own details before you send it, or give the details in your next message and ask your AI to use them.
   - Add your subject, your students' year level, and the AI answer you want them to audit. If you have no answer yet, describe the kind you want.
   - Say which standards to focus on, or ask for all six.
   - Read the result. Check that the failure modes fit your subject, then print the rubric and stems for class.
-  - Next, plan follow-up tasks with the critical-thinking-task-designer, and check facts with the ai-hallucination-fact-check-protocol.
+  - Next, plan follow-up tasks with the Critical thinking task writer, and check facts with the AI answer fact-checker.
 output_sample:
   input:
     - Your subject and year level
@@ -48,7 +50,7 @@ output_sample:
     - name: Annotation Protocol
       contains: Step-by-step instructions for how students mark up the AI answer.
     - name: Audit Rubric
-      contains: A grid that rates each of the six standards as weak, medium or strong.
+      contains: A grid that rates each of the six standards as weak, moderate or strong.
     - name: Push-Back Stems
       contains: Sentence starters students use to question the AI answer.
     - name: Teacher Modelling Script

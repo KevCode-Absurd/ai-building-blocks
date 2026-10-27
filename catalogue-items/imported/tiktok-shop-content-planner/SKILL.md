@@ -103,10 +103,11 @@ Optimize content for maximum impact:
 
 **1. Hook Strategies (First 3 seconds):**
 - **Problem/Solution:** "If you struggle with [pain point], try this..."
-- **Shocking Statement:** "This $X product does what $XXX brands can't..." (use only if you can prove the comparison; see the claims rule below)
 - **Before/After:** "POV: You've been using [product] for X days..."
 - **Trending Audio:** Popular sounds adapted with product integration
 - **Question Hook:** "Is this why your [problem] never goes away?"
+
+**Optional hook, not in the default schedule:** the comparison hook, "This [PRICE] product does what [HIGHER PRICE] brands can't...". Use it only if you can prove the comparison with your own records. Comparison and result claims must follow TikTok Shop's ad rules. If you cannot show the proof, leave this hook out.
 
 **2. Content Formats by Goal:**
 
@@ -128,7 +129,7 @@ Optimize content for maximum impact:
 | Tuesday | Entertainment | Trend + Product | Trending Audio | "Check our shop" |
 | Wednesday | Educational | Tips/Tricks | Question Hook | "Save for later" |
 | Thursday | Social Proof | UGC/Review | Before/After | "Shop the look" |
-| Friday | Entertainment | Fun/Lifestyle | Shocking Statement | "Weekend vibes" |
+| Friday | Entertainment | Fun/Lifestyle | Question Hook | "Weekend vibes" |
 | Saturday | Behind-Scenes | Process/Team | Authentic story | "Support small biz" |
 | Sunday | Inspiration | Lifestyle/Goals | Aspirational | "Monday motivation" |
 
@@ -142,18 +143,22 @@ Optimize content for maximum impact:
 
 **Example for Skincare Brand:**
 - #GlowySkincare (Branded)
-- #SkincareRoutine #AntiAging (Category)
+- #SkincareRoutine #[CategoryKeyword] (Category)
 - #MorningMotivation #SkinTok (Trending)
-- #AcneSolutionThatWorks (Long-tail)
+- #[SpecificProblemSolution] (Long-tail)
+
+Health, skin or body-result claims in videos and hashtags need proof and must follow TikTok Shop's ad rules. Do not use words that promise a cure or a result you cannot show.
 
 ### Hook Development Templates
 
 **Template 1: Problem-Agitation-Solution**
+Use the personal story lines only if they are true and you can prove them. Never invent a story or a testimonial.
+
 ```
 "Still dealing with [problem]? 
-I used to [struggle description] until I found this...
+[YOUR OWN TRUE EXPERIENCE with the problem, only if it really happened and you can show it]...
 [Product demonstration]
-Now I [positive result]
+Now I [A REAL RESULT YOU CAN PROVE]
 Try it: [shop link in bio]"
 ```
 

@@ -13,7 +13,7 @@ when:
 not_for:
   - "You want to create, change or delete AWS resources: use the AWS console or your cloud engineer. This skill only reads."
   - "You need to audit many AWS accounts at once: ask your cloud admin for a cross-account report. This skill checks one account at a time."
-  - "You need the value of a secret or a parameter: read it yourself in AWS with the right access. This skill shows names and details only."
+  - "You need the value of a secret or a parameter: read it yourself in AWS with the right access. This skill shows names and details only. It also leaves out Lambda environment variables, which can hold secrets."
 you_give:
   - Your question about AWS resources.
   - The AWS account or profile to use.

@@ -20,6 +20,8 @@ description: Structured, reproducible analysis documentation. Use when documenti
 5. **Record results** — include key metrics and statistics, embed or link visualisations with descriptive captions, and present findings in order of importance.
 6. **Write the insights, recommendations, and reproducibility section** — connect each finding to a business implication and a next action. Document the steps required to reproduce the analysis (data access, environment, execution order). Use `assets/analysis_doc_template.md` as the structure.
 
+7. **Never guess a detail.** If a row count, date range, tool version or data quality issue is not in the material the user pasted, write MISSING in its place and list it for the user to fill in. Do not estimate it.
+
 # Inputs the skill needs
 - Final code (SQL, Python, notebook) and outputs (charts, tables)
 - Business question and stakeholder context

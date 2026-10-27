@@ -9,14 +9,14 @@ subhead: One long document that an AI coding agent can build your product from, 
 explain: |
   One long document that an AI coding agent can build your product from, epic by epic, without stopping to guess. It starts from an idea that may be only two or three lines.
 
-  The skill asks intake questions, then researches the web and benchmarks competitors. It writes a single markdown blueprint with the design approach, a tech stack with pinned versions and evidence, a quality gate, user personas, flows, screen copy and edge cases. Work is split into epics and stories with Given, When, Then checks and tests. A built-in session routine tells Claude Code or Codex to build one epic per fresh session. Needs web search and, for a full run, a paid plan of your AI. Legal, tax and rules questions (including sanctions and blocked services) come back as open questions for a professional, not answers. This is an MIT-licensed copy of the upstream idea-to-blueprint skill, with our name and page text.
+  The skill asks intake questions, then researches the web and benchmarks competitors. It writes a single markdown blueprint with the design approach, a tech stack with pinned versions and evidence, a quality gate, user personas, flows, screen copy and edge cases. Work is split into epics and stories with Given, When, Then checks and tests. A built-in session routine tells Claude Code or Codex to build one epic per fresh session. Needs web search and, for a full run, a paid plan of your AI. Legal, tax and rules questions (including sanctions and blocked services) come back as open questions for a professional, not answers. Compared with the Feature spec writer (one feature) and the Idea to dev brief writer (a short brief), this one does the research and writes the whole build plan. This is an MIT-licensed copy of the upstream idea-to-blueprint skill, with our name and page text.
 when:
   - You have a product idea and want a full spec before building.
   - You want competitor research and a tech stack recommendation with reasons.
   - You plan to have an AI agent build the app and need clear instructions.
   - You need a backlog with acceptance criteria for a small team.
 not_for:
-  - "You only need one screen of copy or a short feature note: write it by hand or ask your AI for a one-page brief."
+  - "You only need one screen of copy or a short feature note: use the Feature spec writer for one feature, or the Idea to dev brief writer for a short brief."
   - "You already have a spec and want it reviewed: ask your AI to review it, since this skill writes new blueprints."
   - "You have no way to search the web or save files: use a plain chat for a rough outline, not this skill."
 you_give:
@@ -31,8 +31,11 @@ you_get:
   - Epics and stories with acceptance criteria
   - A build protocol for AI agents
 how_to_use:
-  - Open an AI that can search the web and save files, such as Claude Code or Codex. Set it to its highest thinking setting. A full run takes 20 to 60 searches, so a paid plan may be needed. If your AI cannot search the web, it marks every outside fact UNVERIFIED and warns you on the cover. Treat those as guesses until you check them.
+  - "You need two things before you start: an AI that can search the web and save files, such as Claude Code or Codex, and a plan that can handle a long session. Set it to its highest thinking setting. A full run takes 20 to 60 searches and a long writing phase, so a paid plan may be needed."
+  - If the session runs out before it finishes, ask your AI to save the approved decision brief and its progress notes, then start a new session and say continue from the saved brief.
+  - If your AI cannot search the web, it marks every outside fact UNVERIFIED and warns you on the cover. Treat those as guesses until you check them.
   - Add this skill's instructions to your AI, or upload the skill folder.
+  - Gather first: your idea in a few lines, your budget, the platform (web, phone, bot), any deadline and the competitors you know.
   - Tell your AI your product idea in a few lines. Add your budget, platform, deadline and known competitors if you have them.
   - Answer the intake questions. Then check the decision brief and approve it or ask for changes.
   - Read the finished blueprint. Open the Sources list and check every claim tagged VERIFIED before you trust a competitor or market figure. Fix anything that is wrong for your product. Ask a lawyer or accountant about any rules, tax or availability-by-country question it flags.

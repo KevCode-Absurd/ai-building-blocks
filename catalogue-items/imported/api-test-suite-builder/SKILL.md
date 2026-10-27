@@ -44,7 +44,7 @@ uploads, and rate limiting. Outputs ready-to-run test files for Vitest+Supertest
 
 ## Route Detection
 
-The commands below are starting points and were not checked against every framework version. Always compare the route map with your code before you trust it.
+First confirm with the user which framework (Next.js, Express, FastAPI or Django REST) and which test tool they use. The commands below are starting points and were not checked against every framework version. Always compare the route map with your code before you trust it.
 
 ### Next.js App Router
 ```bash

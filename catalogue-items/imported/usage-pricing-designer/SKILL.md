@@ -10,6 +10,8 @@ license: MIT
 license_source: https://github.com/jonathimer/devmarketing-skills/blob/main/LICENSE
 ---
 
+<!-- Licence note: this copy is shown under CC BY 4.0 (see LICENSE-CONTENT). The MIT line in the header above is the original author's, kept as the upstream source. -->
+
 # Usage-Based Pricing
 
 ## Detailed Guide
@@ -189,9 +191,9 @@ Some companies:
 
 ### Punishing Success
 
-Some user-based pricing:
-- Free tier: 100 users
-- Paid tier: $0.10/user
+Some user-based pricing (a made-up pattern, not a real price list):
+- Free tier: [FREE USERS]
+- Paid tier: [PRICE]/user
 - Viral success = immediate $$$
 - Discourages growth
 

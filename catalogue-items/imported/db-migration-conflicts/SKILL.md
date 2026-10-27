@@ -16,6 +16,8 @@ license_source: "https://github.com/chaunsin/agent-skills/blob/master/LICENSE"
 
 # Drizzle Migration Conflict
 
+(Added by AI Blocks. Licence of this copy: CC BY 4.0, per the LICENSE-CONTENT file. The Apache-2.0 label in the header above is the author's original label.)
+
 Use this skill to help a user diagnose, repair, and prevent Drizzle Kit migration conflicts in a
 multi-developer repository. Drizzle migrations encode both SQL and migration snapshots, so the safe
 answer depends on the current migration directory shape, the Drizzle Kit version, and the git state.

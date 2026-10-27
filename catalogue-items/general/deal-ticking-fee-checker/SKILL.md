@@ -25,7 +25,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## Read first
 
-This skill needs only the four figures in "What you need". Ignore any line below that asks for a buyer brief or source text, or says to run another skill first.
+This skill needs only the four figures in "What you need". It does not use a buyer brief or source text, and you do not need to run another skill first.
 
 A chat is enough. Do the sums yourself and show each one. Run the bundled script or build a workbook only when you have code or file tools and the person wants one. If you cannot run something, say so. Never claim you ran a check you did not run.
 

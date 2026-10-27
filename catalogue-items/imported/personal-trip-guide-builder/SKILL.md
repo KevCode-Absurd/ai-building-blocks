@@ -43,7 +43,7 @@ Use this skill when the traveler wants one or more of the following:
 - For visa, immigration, medical, safety, or legal decisions that require an
   authoritative professional or government source.
 - For a generic destination summary when there is no concrete traveler or trip.
-- For extracting text from an existing document. Route that to `anydoc`; it reads
+- For extracting text from an existing document. Use a document reader for that; it reads
   documents but does not author or validate them.
 
 ## Progressive routing
@@ -157,7 +157,7 @@ python3 scripts/render-travel-guide.py "$WORK/trip-brief.json" \
 ```
 
 The renderer embeds the bundled CSS and local image assets when possible. Use a
-print-capable browser or the repository's `documents` skill to turn the dossier
+print-capable browser (open the HTML and use print to PDF) or any other print-to-PDF tool to turn the dossier
 HTML into a PDF. The PDF is not complete until it has been structurally checked
 and visually inspected. Read the PDF reference for the exact gate.
 

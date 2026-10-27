@@ -30,12 +30,13 @@ you_get:
   - A control gap list
   - What your attestation needs
 how_to_use:
-  - "Verify before acting: the skill was last checked by its author on 14 September 2026. Dates, the 32-control list and the consequences it states are the author's reading. Confirm each one in the SWIFT Knowledge Centre (swift.com) and the KYC-SA portal."
-  - Open Claude, ChatGPT or Gemini. Paste the skill text from this page into a new chat. Also paste the two reference files from this item, references/swift-controls.md and references/swift-assessment.md. Without them the chat will be missing control detail. Keep your KYC-SA login and the current control list open, as the skill cannot confirm the latest version.
+  - "To confirm before you act (the author's reading, last checked 14 September 2026): the attestation dates, who can see your attestation status, whether Swift reports non-compliant users to their supervisor, when assessor capacity tightens, and which architecture type a B user falls under. Check each one in the SWIFT Knowledge Centre (swift.com) and the KYC-SA portal."
+  - Gather first: a diagram of how you connect to SWIFT, a list of your SWIFT-connected systems, your current control evidence and your access to the KYC-SA attestation portal.
+  - Open Claude, ChatGPT or Gemini. Paste the contents of SKILL.md from this item into a new chat. Also paste the two reference files from this item, references/swift-controls.md and references/swift-assessment.md. Without them the chat will be missing control detail. Keep your KYC-SA login and the current control list open, as the skill cannot confirm the latest version.
   - Describe how you connect to SWIFT. Say who runs the messaging and communication interfaces. Add your current security controls and the back-office systems that send messages.
   - Ask for your architecture type first. Check it is right before you go on.
   - Ask for a gap assessment, then an attestation checklist.
-  - Check the control list and dates against the SWIFT Knowledge Centre before you act. Then book your independent assessor and fix the red controls first. This tool needs no code running, but it does need the reference files above.
+  - Check the control list and dates against the SWIFT Knowledge Centre before you act. Then move the red controls into a brief for your independent assessor, fix them first, and book the assessor early, as capacity may tighten late in the year. Control 2.4 does not apply to architecture B, but some B users are reclassified as A4, so confirm your type first. This tool needs no code running, but it does need the reference files above.
 next: [financial-it-resilience-checker, it-controls-audit-planner]
 output_sample:
   input:

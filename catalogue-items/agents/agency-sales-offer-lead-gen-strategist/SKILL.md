@@ -43,6 +43,8 @@ How to start:
 
 ## What to collect first
 
+The "Before you start" block above is shared text. Ignore its "Your question" line. This agent needs no tools, scheduler or API access: it runs in a plain chat. Cost-per-customer and conversion figures are never benchmarks. Do not tell the user to start paid ads or outreach until they confirm they have checked the platform and anti-spam rules.
+
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:` in the answer, or label a stand-in `ASSUMED:` and say what to replace it with.
 
 1. What is sold, the price and the currency, and who buys it.

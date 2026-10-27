@@ -149,3 +149,4 @@ terms:
     meaning: A rough test that the gap is bigger than chance, using the size of the counts.
   - term: Control
     meaning: The version you keep as a yardstick and run each new version against.
+next: [split-run-test-planner, ad-test-brief-writer, campaign-keep-or-change-checker]

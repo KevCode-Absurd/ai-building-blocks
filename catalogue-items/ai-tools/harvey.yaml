@@ -21,13 +21,13 @@ best_for:
   - In-house legal teams.
   - Teams with large volumes of contracts.
 not_for:
-  - "Small businesses without a legal team, since it is sold to firms by demo. Use Claude or ChatGPT for a first read, then see a lawyer."
+  - "Small businesses without a legal team, since it is sold to firms by demo. Use Claude or ChatGPT for a first read, then see a lawyer. For that first read, paste redacted or dummy text only: remove names, amounts and anything confidential. Do not upload real client documents to any AI tool unless your firm's rules and the tool's data terms allow it."
   - "Final legal advice. A lawyer still has to review every result."
   - "Teams that want to try it today for free. No free trial is stated."
 pricing:
   model: enterprise
   from: Check the maker's site
-  note: "No public prices and no free trial stated (checked 26 Oct 2026). The page asks you to request a demo. It lists regional sign-in for the US, EU and Australia."
+  note: "No public prices and no free trial stated (checked 26 Oct 2026). It is sold to law firms and in-house legal teams, so ask in the demo what price applies to a team of your size. The page asks you to request a demo. It lists regional sign-in for the US, EU and Australia."
 works_with:
   - "Custom connectors (MCP is a standard way to link tools; who sets these up is not stated, so ask in the demo)"
 runs_in: [web]
@@ -37,12 +37,12 @@ last_checked: 2026-10-26
 checked: 26 Oct 2026
 first_result:
   - "Use the Request a Demo link at harvey.ai. No self-serve sign-up is described."
-  - "Bring the kind of work you want to try, such as a batch of vendor contracts, and roughly how many you handle."
+  - "Before the demo, list what you want to test: the kind of work, such as a batch of vendor contracts, and roughly how many you handle."
   - "Before you share any client documents, ask in writing how Harvey stores them, whether they are used to train models, and who its sub-processors are. Put the answers in the contract."
-  - "Ask to see it on one batch of your own documents, with your lawyers in the room."
+  - "In the demo, upload one small batch of your own documents (only if you have permission to share them), with your lawyers in the room. Time how long the review takes and record what it returns."
   - "Ask what each answer links back to, so a lawyer can check it against the source."
   - "Agree who reviews the output before it goes to a client."
-  - "You end with a list of findings for each contract: the clause text, a link back to the source passage if the demo shows one, and a sign-off line for the reviewing lawyer. What the tool actually returns is not confirmed, so ask to see it. Next: for a first read before you see a lawyer, try Claude or ChatGPT."
+  - "Result: what Harvey returns is not confirmed, so ask to see it. Ask the vendor for this format (a suggestion from us, not confirmed by Harvey): per contract, the clause text, a link back to the source passage, and a sign-off line for the reviewing lawyer. Next: for a first read before you see a lawyer, try Claude or ChatGPT with redacted or dummy text only."
 needs:
   - "A firm or company plan agreed through a demo."
   - "A set of your own documents to test, with permission to share them."

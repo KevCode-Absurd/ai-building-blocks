@@ -9,7 +9,7 @@ subhead: Spoken audio of your text in a natural voice, in over 90 languages, sav
 explain: |
   Spoken audio of your text in a natural voice, in over 90 languages, saved as a sound file you can use in videos, courses or apps.
 
-  The skill uses the ElevenLabs text-to-speech service. It first checks that an API key is set, and helps you sign in if not. Then you choose a voice and a model, trading quality against speed. It writes short code in Python, JavaScript or a command line call that sends your text and saves the returned audio as an MP3. You can also pipe text straight into a command to hear it right away. It needs an ElevenLabs account, and usage may cost money. This is a copy of ElevenLabs' own text-to-speech skill (MIT licence), so updates come from them. One setup step runs ElevenLabs' command line tool through npx, so read that command before you let your AI run it.
+  The skill uses the ElevenLabs text-to-speech service. It first checks that an API key is set, and helps you sign in if not. Then you choose a voice and a model, trading quality against speed. It writes short code in Python, JavaScript or a command line call that sends your text and saves the returned audio as an MP3. You can also pipe text straight into a command to hear it right away. It needs an ElevenLabs account, and usage may cost money. This is a copy of ElevenLabs' own text-to-speech skill (MIT licence), so updates come from them. One setup step runs ElevenLabs' command line tool through npx, so read that command before you let your AI run it. The skill asks you to pick a version number from the package's page on npm and use it, instead of running the newest version blind.
 when:
   - You need a voiceover for a video and have only a script.
   - You want your course lessons read aloud in Spanish and French.
@@ -31,13 +31,15 @@ you_get:
   - Setup steps for your ElevenLabs key
   - The character count used by each request
 how_to_use:
-  - This uses ElevenLabs, a paid service. Check your plan's price and character limit before you start. Your text is sent to ElevenLabs.
+  - This uses ElevenLabs, a paid service. Check your plan's price and character limit before you start. Your text is sent to ElevenLabs, so do not paste confidential text.
+  - If you have no key yet, the setup runs ElevenLabs' command line tool with npx on your computer. Your AI shows you the command and waits for your OK. Open the package page on npm, pick a version number and give it to your AI. Never let it run a version you have not chosen.
   - Count the characters in your script (most word processors show this). Compare it with the character limit on your ElevenLabs plan, because each request uses credits.
   - Make an ElevenLabs account and open a chat with an AI that can run code and use the internet.
   - Paste the skill into the chat, then paste the text you want read aloud.
   - "A prompt you can paste: Use the text to speech skill to read this aloud in [language] and save it as output.mp3."
   - Tell your AI the language and any voice you like. If you have no key yet, let it walk you through sign-in.
   - Play the MP3 and check numbers, dates and names sound right. Ask for another voice or model if not.
+  - "Have a person listen to the whole audio before you publish it. Next, add captions with the Branded video captions item."
   - Drop the file into your video editor or course platform. Each request uses character credits on your ElevenLabs plan.
 next: [branded-video-captions]
 output_sample:
@@ -51,7 +53,7 @@ output_sample:
     - An ElevenLabs account, which may cost money for each request
   output:
     - name: Setup steps
-      contains: How to sign in and store your ElevenLabs key for the project, if it is not set yet.
+      contains: How to sign in and store your ElevenLabs key for the project, if it is not set yet. The setup command is shown for your OK first.
     - name: Voice and model pick
       contains: A voice and a model chosen for your text, with the trade-off between quality and speed.
     - name: Narration code
@@ -59,4 +61,4 @@ output_sample:
     - name: output.mp3
       contains: The spoken audio of your text, saved as an MP3 by default.
     - name: Character count
-      contains: How many characters the request used, so you can watch your plan credits.
+      contains: How many characters the request used, so you can watch your plan credits. The reply lists these parts in order, ending with the MP3 file name and the count.

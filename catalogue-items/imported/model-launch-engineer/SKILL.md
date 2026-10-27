@@ -96,16 +96,13 @@ def predict(request: PredictionRequest):
 
 **Dockerfile:**
 
+A plain single-stage build. It has not been tested here, so build it and run a smoke test before you rely on it. It copies `model.pkl` into the image, which is fine for this simple case. For a model you update often, load it from versioned storage at startup instead (see Best Practices).
+
 ```dockerfile
-FROM python:3.11-slim AS builder
+FROM python:3.11-slim
 WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-
-FROM python:3.11-slim
-WORKDIR /app
-COPY --from=builder /usr/local/lib/python3.11/site-packages /usr/local/lib/python3.11/site-packages
-COPY --from=builder /usr/local/bin/uvicorn /usr/local/bin/uvicorn
 COPY app.py model.pkl ./
 EXPOSE 8000
 CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]

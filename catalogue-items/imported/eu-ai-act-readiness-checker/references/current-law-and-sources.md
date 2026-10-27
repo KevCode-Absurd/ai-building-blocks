@@ -1,6 +1,8 @@
 # Current law and official sources
 
-**Last verified:** 2026-08-09
+> AI Blocks note: the "Last verified" date and the amending act number (Regulation (EU) 2026/1744) below come from the original author. They have not been checked here. Treat them and every date in the table as unverified until you confirm them on EUR-Lex and write down the date you checked.
+
+**Last verified (by the original author, not checked here):** 2026-08-09
 **Purpose:** operational research aid, not legal advice. Re-check every source on each use. Official legislation and binding decisions control over this summary.
 
 ## Source hierarchy

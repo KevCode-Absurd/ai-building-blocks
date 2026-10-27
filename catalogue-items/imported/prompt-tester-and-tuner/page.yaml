@@ -9,7 +9,7 @@ subhead: A prompt improved by results, not opinion. You get scores for each vers
 explain: |
   A prompt improved by results, not opinion. You get scores for each version against your test cases, so you can see which edits helped and by how much.
 
-  The skill will not touch a prompt without a baseline. It builds a set of 10 to 20 test cases with expected answers if you lack one, measures the current prompt, then tests each change against the same set. It prefers built-in features such as structured output over wording tricks, and adds scaffolding only when the scores show a gain. Three small Python tools handle prompt analysis, RAG quality checks and agent configuration checks. You supply your provider's prices for cost figures.
+  The skill will not change a prompt before it saves a baseline. The script's baseline holds a clarity score and a token count only. Your pass or fail results on the test cases come from your own runs. It builds a set of 10 to 20 test cases with expected answers if you lack one, measures the current prompt, then tests each change against the same set. It prefers built-in features such as structured output over wording tricks, and adds scaffolding only when the scores show a gain. Three small Python tools handle prompt analysis, RAG quality checks and agent configuration checks. You supply your provider's prices for cost figures.
 when:
   - You keep tweaking a prompt and cannot tell if it is improving.
   - You need to compare several prompt versions with numbers.
@@ -27,13 +27,13 @@ you_give:
 you_get:
   - Baseline score
   - Scores for each new version
-  - Improved prompt with proof
+  - An improved prompt, with a pass or fail result per test case from your own runs
   - Token and cost estimate
 how_to_use:
-  - Open Claude, ChatGPT or Gemini with a tool that can run Python code and read files. Upload the skill folder.
+  - Before step 3 you need access to the model you are testing, such as an API key. It is a paid service, so calls cost money. Open Claude, ChatGPT or Gemini with a tool that can run Python code and read files. Upload the skill folder.
   - Paste your current prompt and your test cases. If you have no test cases, ask your AI to help you write 10 to 20 first.
   - Ask your AI to follow the skill. It will score your current prompt before it changes anything.
-  - Ask your AI to run each revised prompt on every test case and record pass or fail for each in eval_results.json. Accept only results from those real runs, not guesses.
+  - Ask your AI to run each revised prompt on every test case and record pass or fail for each in eval_results.json. Your AI must not fill in eval_results.json without real calls to the model. If it cannot call the model, run the cases yourself and paste the outputs. Ask it for the expected cost first and say yes before it runs.
   - Add your provider's price per million tokens if you want cost figures in dollars. Running the test cases needs access to the model you are testing, and API calls may cost money. A rough cost is test cases times tokens per call times your provider's price.
   - Read the comparison. The script's check covers only clarity and token count, so compare the pass or fail results in eval_results.json with the baseline's by hand. Ship a new version only if it keeps every case that passed before.
   - Save the version you ship as your new baseline.json, so the next change is tested against it.

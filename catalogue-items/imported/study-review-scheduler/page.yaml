@@ -33,6 +33,9 @@ how_to_use:
   - "Answer each question before your AI shows the answer. Then score yourself: Failed, Hard, Good or Easy."
   - Retry the failed cards at the end of the session.
   - Save the updated dates and the 7-day list. Paste them back next time.
+  - "Interval is the number of days until you see a card again. Ease factor is how fast that gap grows: a card you find easy grows faster, a card you fail goes back to 1 day. Easy and Good lengthen the gap, Hard keeps it, Failed resets it."
+  - "The intervals follow a simplified SM-2 method, a common spaced repetition rule. They are a guide, not a promise of how much you will remember."
+  - To make cards from your notes, use the flashcard maker. If you fail a card three sessions in a row, your AI tells you, re-explains that topic and restarts the card at 1 day.
 output_sample:
   input:
     - Your study cards, one per line

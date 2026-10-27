@@ -1,5 +1,7 @@
 # Report Structure and Templates
 
+> India note (AI Blocks): this file keeps some wording from the US original. Where it says 10-Q, 10-K, SEC or EDGAR, use the BSE or NSE results filing, the results press release, the investor presentation and the concall transcript. Show amounts in ₹ crore. All company names, prices and figures in examples here are made-up illustrations, not data.
+
 This document provides complete page-by-page templates and formatting requirements for the earnings update DOCX report.
 
 ## Complete Report Structure
@@ -325,7 +327,7 @@ Source: [Firm Name] estimates
 - Use E for estimate (Q4'24E)
 
 ### 5. Writing Style
-- Lead with numbers ("Revenue grew 15% to $1.2B" not "Strong revenue growth")
+- Lead with numbers ("Revenue grew [PERCENT]% to ₹[AMOUNT] crore" not "Strong revenue growth")
 - Use "vs." not "versus"
 - Be direct and concise
 - Focus on what's NEW
@@ -341,28 +343,28 @@ Source: [Firm Name] estimates
 
 ### For Beat/Miss Analysis:
 ```
-Revenue of $2.45B beat consensus of $2.39B by $60M (2.5%)¹
+Revenue of ₹[AMOUNT] crore beat consensus of ₹[AMOUNT] crore by ₹[AMOUNT] crore ([PERCENT]%)¹
 
-¹ Bloomberg consensus as of market close November 6, 2024; Company earnings release November 7, 2024
-  [Hyperlink "earnings release" to: https://investor.company.com/news/q3-2024-earnings]
+¹ [Consensus source] as of [DATE]; Company results press release [DATE]
+  [Hyperlink "results press release" to the company page you opened]
 ```
 
 ### For Guidance:
 ```
-Management raised FY2024 revenue guidance to $9.8-10.0B from prior $9.5-9.7B²
+Management raised FY[YY] revenue guidance to ₹[AMOUNT] crore from prior ₹[AMOUNT] crore²
 
-² Q3 2024 Earnings Call, November 7, 2024, CFO prepared remarks
-  [Hyperlink "Earnings Call" to: https://seekingalpha.com/article/...]
-  Prior guidance from Q2 earnings call August 8, 2024
-  [Hyperlink "Q2 earnings call" to August transcript]
+² Q[N] FY[YY] concall, [DATE], CFO prepared remarks
+  [Hyperlink "concall" to the transcript page you opened]
+  Prior guidance from Q[N-1] concall, [DATE]
+  [Hyperlink "prior concall" to that transcript]
 ```
 
 ### For Key Metrics:
 ```
-Enterprise customers grew 23% YoY to 845, with net revenue retention at 128%³
+[METRIC] grew [PERCENT]% YoY to [VALUE], with [OTHER METRIC] at [VALUE]³
 
-³ Q3 2024 10-Q, page 23
-  [Hyperlink "10-Q" to: https://www.sec.gov/cgi-bin/viewer?accession=...]
-  Q3 2024 Investor Presentation slide 8
+³ Q[N] FY[YY] BSE or NSE results filing, page [N]
+  [Hyperlink "results filing" to the exchange page you opened]
+  Q[N] FY[YY] Investor Presentation slide [N]
   [Hyperlink "Investor Presentation" to PDF]
 ```

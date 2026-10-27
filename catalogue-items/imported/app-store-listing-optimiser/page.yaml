@@ -20,7 +20,8 @@ not_for:
   - You want to improve a web landing page. Use a landing page audit or a conversion review instead, as this works only on store pages.
   - You need search volume or exact rankings. Use a paid app store keyword tool, because this audit cannot see those numbers.
 you_give:
-  - Your App Store or Google Play link
+  - Your App Store or Google Play link, plus a screenshot of the listing if your chat cannot browse
+  - Your promotional text and keyword field, copied from App Store Connect or Google Play Console (optional)
   - Competitor apps (optional)
   - Target countries and keywords (optional)
   - Product notes (optional)

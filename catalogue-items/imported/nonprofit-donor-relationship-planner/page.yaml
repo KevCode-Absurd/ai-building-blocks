@@ -30,12 +30,13 @@ works_best_with:
   inputs:
     - Moves management runs on donor records and personal information.
 how_to_use:
-  - Open a chat AI such as Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Open a chat AI such as Claude, ChatGPT or Gemini. Paste in the skill text from this page. It names other skills, such as major gifts and donor retention. They are not included, so your AI will skip those hand-offs.
   - Prepare your records first. Replace names and contact details with IDs, and check your data policy before you paste anything.
   - Paste your records, your fundraising goal and your team's available time. A spreadsheet export pasted as text works.
   - Ask your AI to build the stage matrix, the move plan and the pipeline report.
   - Check the stalled list and the next moves. Fix any stage that looks wrong before your team uses the plan.
-  - Run it again each quarter with fresh records to see which stage is slowing you down.
+  - The numbers in the skill (a 30 to 50 percent close rate, 100 to 150 prospects per officer, 60 to 90 days stalled) are rules of thumb. Swap in your own figures when you have them.
+  - Hand stalled prospects to a major-gifts fundraiser, or move them to a low-touch appeal list. Run it again each quarter with fresh records to see which stage is slowing you down.
 output_sample:
   input:
     - Your donor and prospect records, with IDs instead of names (a spreadsheet export works)

@@ -57,13 +57,13 @@ Once connected, ask in plain words:
 - [Run your online store](https://useaiblocks.com/llms/run-your-store.txt): 111 skills and workflows, such as 3PL bill auditor and Live auction show planner
 - [Hire and look after your people](https://useaiblocks.com/llms/hire-people.txt): 108 skills and workflows, such as Candidate comparison table builder and Candidate reply drafter
 - [Write and tell stories](https://useaiblocks.com/llms/write-and-tell-stories.txt): 106 skills and workflows, such as Case study story planner and Closed story setting planner
+- [Check contracts and rules](https://useaiblocks.com/llms/check-contracts.txt): 100 skills and workflows, such as Ad claim sorter and Business insurance needs checker
 - [Track your numbers](https://useaiblocks.com/llms/track-numbers.txt): 100 skills and workflows, such as Raw material price impact calculator and Revenue growth currency checker
-- [Check contracts and rules](https://useaiblocks.com/llms/check-contracts.txt): 99 skills and workflows, such as Ad claim sorter and Business insurance needs checker
 - [Understand your customers](https://useaiblocks.com/llms/understand-customers.txt): 98 skills and workflows, such as Customer community finder and Best customer finder
 - [Get found in search and AI answers](https://useaiblocks.com/llms/get-found-in-search.txt): 98 skills and workflows, such as Customer question keyword finder and Customer FAQ writer
-- [Keep your code secure](https://useaiblocks.com/llms/secure-code.txt): 93 skills and workflows, such as Code change security reviewer and Security alert rule builder
 - [Ship and host your app](https://useaiblocks.com/llms/ship-and-host.txt): 93 skills and workflows, such as Domain and redirect layout planner and Release day rollback planner
 - [Set up AI to work for you](https://useaiblocks.com/llms/set-up-ai.txt): 92 skills and workflows, such as AI coding agent rules writer and AI model training debugger
+- [Keep your code secure](https://useaiblocks.com/llms/secure-code.txt): 92 skills and workflows, such as Code change security reviewer and Security alert rule builder
 - [Lead and manage people](https://useaiblocks.com/llms/lead-people.txt): 89 skills and workflows, such as Difficult conversation repair planner and Feedback notes writer
 - [Make documents, sheets and slides](https://useaiblocks.com/llms/work-with-files.txt): 87 skills and workflows, such as Document proofreader and Excel workbook handover writer
 - [Plan stock, shipping and suppliers](https://useaiblocks.com/llms/plan-supply-chain.txt): 87 skills and workflows, such as Supplier quote comparison planner and Warehouse bid and agreement terms builder

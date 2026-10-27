@@ -62,7 +62,7 @@ vercel deploy [path] --prod -y
 
 ## Output
 
-Show the user the deployment URL. For fallback deployments, also show the claim URL. Tell the user to open the link and check the site themselves, and to claim or delete a no-login deployment if it should not stay live.
+Show the user the deployment URL. For fallback deployments, also show the claim URL. Tell the user to open the link and check the site themselves, and to claim a no-login deployment with the claim link if it should stay live. This skill has no way to delete a no-login deployment. If the user wants it gone, they can claim it and remove it in their own Vercel account.
 
 **Do not** curl or fetch the deployed URL to verify it works. Just return the link.
 

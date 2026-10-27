@@ -22,7 +22,7 @@ How he applied it: he said he spent about nine months as a peacetime CEO and abo
 
 In 2012 he described "the struggle": the stretch when the plan fails, people quit, cash runs low and the founder starts to doubt everything [S6]. He wrote that most people aren't strong enough to get through it, but that every great entrepreneur has been there [S6]. His advice was to share the load with your team, remember there is almost always another move, keep your eyes on the road instead of the wall, survive long enough to get lucky, and don't grade yourself too harshly [S6].
 
-How he applied it: at Opsware he told the whole company they would die if they kept losing deals, and the team rallied [S6]. He took Loudcloud public in 2001, a terrible time for tech listings, with about six weeks of cash left [S6].
+How he applied it: at Opsware, by his own account, he told the whole company they would die if they kept losing deals, and the team rallied [S6]. Most of his own-words claims here rest on excerpts and titles, not full text. He took Loudcloud public in 2001, a terrible time for tech listings, with about six weeks of cash left [S6].
 
 ### There are no silver bullets, only lead bullets
 

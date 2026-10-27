@@ -11,7 +11,7 @@ explain: |
 
   Give it a file and it checks against a firm baseline. For each problem it quotes the exact line, says in one short sentence why it matters, and offers a code-level fix. The baseline leans on Tailwind defaults, uses motion libraries only when script animation is needed, and respects your existing design, accessibility needs and framework choices. It is aimed at quick clean-up passes, not redesigns.
 
-  Licence: the written text of this skill is shared under CC BY-4.0 (the LICENSE-CONTENT file). The "MIT" line in the SKILL.md header is the original author's own note. Keep the credit to the author.
+  Licence: this skill is by ibelick. The one licence for the written text is CC BY-4.0 (the LICENSE-CONTENT file). The "MIT" line in the SKILL.md header is the author's own declaration for their own code repo, not the licence for this text. Keep the credit to the author.
 when:
   - A page works but looks slightly off and you cannot say why.
   - You want a fast review before a launch.
@@ -34,7 +34,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code running, web access or paid tool is needed.
   - "Paste the skill text into the chat, then write: Apply this baseline to the file below. (The /baseline-ui slash form only works in tools that support custom commands.)"
-  - Paste your page or component code below it. Add your framework and any design rules to keep.
+  - Paste your page or component code below it. Add your framework and any design rules to keep. Name every rule you want to override, such as gradients or custom letter-spacing, so the check does not flag your brand choices.
   - Read each quoted line, the reason and the fix. Skip any fix that clashes with your existing design.
   - Apply the fixes you agree with, then paste the updated code and run the check again. Have a developer apply the fixes inside your project and test the page. Do not paste fixes in blindly.
 output_sample:

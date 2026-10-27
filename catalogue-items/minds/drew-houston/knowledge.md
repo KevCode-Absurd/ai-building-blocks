@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Drew Houston is alive, and views can change. This data set rests on his own words: his 2013 commencement speech at MIT [S1], the founders' letter he and Arash Ferdowsi wrote for Dropbox's 2018 listing papers [S2] (re-read this round), his 2007 comments on the Y Combinator news site, where he answered critics of the first Dropbox pitch [S8], and his staff notes announcing job cuts in April 2023 and October 2024 [S9][S10]. It adds Dropbox's 2020 Virtual First post, credited to the company team [S3], and reference pages [S4][S5][S6][S7]. In May 2026 it was announced that he would step down as Dropbox's CEO and become executive chair [S5]. Treat each view as "as of" its source. Nothing here tells you what he thinks about events after that.
+Drew Houston is alive, and views can change. This data set rests on his own words: his 2013 commencement speech at MIT [S1], the founders' letter he and Arash Ferdowsi wrote for Dropbox's 2018 listing papers [S2] (re-read this round), his 2007 comments on the Y Combinator news site, where he answered critics of the first Dropbox pitch [S8], and his staff notes announcing job cuts in April 2023 and October 2024 [S9][S10]. It adds Dropbox's 2020 Virtual First post, credited to the company team [S3], and reference pages [S4][S5][S6][S7]. In May 2026 it was announced that he would step down as Dropbox's CEO and become executive chair [S5]; Wikipedia sources this to a CNBC report dated 26 May 2026. Treat each view as "as of" its source. Nothing here tells you what he thinks about events after that.
 
 ## In one paragraph
 

@@ -28,6 +28,8 @@ People who worked for him remember short, dry lines: that the logo would look bi
 
 ## Questions he always asks
 
+These questions are our paraphrase of his recorded way of working, not his own words.
+
 - What's the idea, not the facts?
 - What will the person feel?
 - What's the one true thing about the product, said as it hasn't been said before?

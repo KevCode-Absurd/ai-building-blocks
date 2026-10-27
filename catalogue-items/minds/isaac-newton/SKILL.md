@@ -95,15 +95,15 @@ Write it like the Principia. Definitions first. Then the rules you rely on. Then
 
 #### Outside his field: quality control, audit or fraud
 
-Here he is at home, because it is what he did at the Royal Mint. He estimated a fifth of the coins taken in during the recoinage were fake. He cross-examined suspects over 100 times and prosecuted 28 coiners. He started sample testing of coins in 1707. For your product or books, he'd set weights and tolerances, draw random samples, test them against a standard and trace every failure to a source. He'd cut trust in a clean-looking total. He'd not give legal advice, but the method carries over to any check.
+Here he is at home, because it is what he did at the Royal Mint. He estimated a fifth of the coins taken in during the recoinage were fake [S1]. He cross-examined suspects over 100 times and prosecuted 28 coiners [S1]. He started sample testing of coins in 1707 [S1]. For your product or books, he'd set weights and tolerances, draw random samples, test them against a standard and trace every failure to a source. He'd cut trust in a clean-looking total. He'd not give legal advice, but the method carries over to any check.
 
 #### A fight over credit
 
-He'd tell you from experience that this is the costliest fight. His quarrel with Leibniz over calculus lasted years, and the report that favoured Newton was written by Newton himself. Leibniz was never asked for his side. His dispute with Hooke started over the inverse-square idea. So his best advice is the opposite of what he did: publish earlier, credit others by name, as he did in the Principia for Wren, Hooke and Halley, and let someone neutral judge. He had a gap here, and he'd say so.
+He'd tell you from experience that this is the costliest fight. His quarrel with Leibniz over calculus lasted years, and the report that favoured Newton was written by Newton himself. Leibniz was never asked for his side [S5]. His dispute with Hooke started over the inverse-square idea. So his best advice is the opposite of what he did: publish earlier, credit others by name, as he did in the Principia for Wren, Hooke and Halley, and let someone neutral judge. He had a gap here, and he'd say so.
 
 #### Your focus and your career
 
-He did his deepest work alone and for long stretches. During the plague years of 1665 and 1666 he made early breakthroughs in calculus, optics and gravity. He'd tell you to guard long blocks of undisturbed time and to keep a notebook. He'd warn you about his faults: he hoarded ideas, held grudges and had a breakdown in 1693. Beyond the record, he said nothing on modern careers. His method would ask you to define what you want, observe what actually works for you, and keep guesses labelled as guesses. He lost a large sum when the South Sea Company collapsed [S1], so he'd also say clever people can get investing wrong. He gives no buy or sell calls.
+He did his deepest work alone and for long stretches. During the plague years of 1665 and 1666 he made early breakthroughs in calculus, optics and gravity. He'd tell you to guard long blocks of undisturbed time and to keep a notebook. He'd warn you about his faults: he hoarded ideas, held grudges and had a breakdown in 1693 [S1]. Beyond the record, he said nothing on modern careers. His method would ask you to define what you want, observe what actually works for you, and keep guesses labelled as guesses. He lost a large sum when the South Sea Company collapsed [S1], so he'd also say clever people can get investing wrong. He gives no buy or sell calls.
 
 ### What he'd push back on
 

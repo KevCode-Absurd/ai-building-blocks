@@ -117,7 +117,7 @@ improve:
 works_best_with:
   tools:
     - name: Claude Code
-      why: It can keep the returns folder and run on the 3rd of each month.
+      why: It can keep the returns folder. You start the run on the 3rd of each month. It does not run on a timer unless you connect a scheduler.
     - name: Shopify
       why: The skills read refunds and returns from the store connection.
   inputs:

@@ -5,7 +5,11 @@ description: Use when you have a narrated knitted-wool ad script (ideally with i
 
 # Knitted wool video clip prompt writer
 
-You take a knitted-wool script through six stages, in order. Stop for approval after stages 1, 3 and 4, and never move on from a stage that isn't approved. One material sentence keeps the whole world the same wool, and one doll card keeps the doll the same. Each clip prompt describes only what moves, the way yarn moves.
+This skill is for one look only: a world and a doll made of knitted and crocheted wool. You take a knitted-wool script through six stages, in order. Stop for approval after stages 1, 3 and 4, and never move on from a stage that isn't approved. One material sentence keeps the whole world the same wool, and one doll card keeps the doll the same. Each clip prompt describes only what moves, the way yarn moves.
+
+**Not for:** an ad with real people, a real product shot on camera or a speaking character (write a live-action script with the [Phone video ad scriptwriter](https://useaiblocks.com/skills/phone-video-ad-scriptwriter) and shoot it), or a look other than wool (use the [Watercolor video clip prompt writer](https://useaiblocks.com/skills/watercolor-video-prompts) or another style's video prompt skill).
+
+**Cost:** this skill writes prompts only. Making the clips needs a paid video tool (Higgsfield, Veo or Kling, on credits or a paid plan) and often an image tool with its own plan or API key. Paid image or video credits are billed to you. Know this before stage 0. The image and clip limits in the tools list (reference images, clip lengths) were true when listed and can change, so check each vendor's site.
 
 **Approvals given ahead.** If the person asked for every stage in one go, or their message already approves stages (for example "take the card and sheets as approved and write every stage"), run them all, marking each checkpoint "(approve)", or `[approved ahead]` where they already said yes. Hand back every stage you reached, in order.
 
@@ -33,7 +37,7 @@ How to start:
 - **Nano Banana:** Takes up to 14 reference images and keeps up to four characters the same, so your sheets and frames match.
 - **Veo:** Starts each clip from your approved frame and can end on a second frame, in 8-second clips.
 - **Kling:** Takes up to 7 reference images in one video job, so figures and product stay the same from shot to shot.
-- **ElevenLabs:** Reads the narration in a stock voice from its library, with tags for pauses and pace.
+- **ElevenLabs:** A paid service that needs an account. Reads the narration in a stock voice from its library, with tags for pauses and pace.
 <!-- /needs -->
 
 ## What you need
@@ -102,8 +106,8 @@ Attach the sheets to later prompts and name each by its job ("image 1 is the wom
    Name what the yarn does, never a tool: a written "needle" or "hook" tends to bring one, and a maker's hand, into view.
 2. **Takes.** Make 2 or 3 takes of each clip and pick one.
 3. **Voice.** Record the narrator separately, in a real or stock voice, never a cloned one. Dolls never speak, so there is no lip-sync. If your video tool makes sound, add one separate sentence of ambient sound (a quiet kitchen, a soft rustle of wool) and "ambient sound only".
-4. **Edit.** Lay the clips on the narration in script order and cut between them. Add captions. If a label line came out wrong, place the real label from the photo over the held product shot. Put the offer on the end card as text. Keep all words inside the platform's safe zone, clear of its buttons and caption area. Music only if the brand uses it, low under the voice.
-5. **Final check** against the script and claims: every line said, every claim word for word, nothing showing a body getting better.
+4. **Edit.** Lay the clips on the narration in script order and cut between them. Add captions. If a label line came out wrong, place the real label from the photo over the held product shot. Put the offer on the end card as text. Take every price, offer term and claim word for word from the brand file or the script you were given, never from an example. If the brand file lacks one, write `MISSING:` and leave it off the card. Keep all words inside the platform's safe zone, clear of its buttons and caption area. Music only if the brand uses it, low under the voice.
+5. **Final check** against the script and claims: every line said, every claim word for word, nothing showing a body getting better. Health-adjacent claims (a supplement, fibre or daily pack) stay inside the brand's approved claims; check them against the ad rules for your market and platform before the ad runs.
 
 ### If a result misses
 | You see | Change |

@@ -14,6 +14,10 @@ license: "Apache-2.0"
 license_source: "https://github.com/Sketchjar/stipple-agent-skills/blob/main/LICENSE"
 ---
 
+> **AI Blocks note (licence):** this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says. The `license:` line in the front matter above is the original author's own label (Apache-2.0). The LICENSE-CONTENT file governs here, and the author's Apache-2.0 notice stays visible. Keep the credit to the author.
+>
+> **AI Blocks note (data and testing):** the whole document is sent to Stipple, an outside service. We do not know its cost, allowance or how long it keeps documents. Tell the user to read Stipple's terms and privacy rules before the first upload. We have not tested the endpoint or the response fields below.
+
 # AI-Text Detection
 
 Inspect a provider’s uncalibrated AI-style signal for a document’s prose, with the specific linguistic tells and an honest abstention when the document isn't prose. Uses an external Stipple API; verify current access, cost and privacy terms.

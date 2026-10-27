@@ -9,7 +9,9 @@ subhead: "Tell your AI about your cloud service and your federal customers. It n
 explain: |
   A FedRAMP path for your cloud service: what level you aim for, which documents you need, and which gaps to close before you start. You get a gap table, a target class and a document checklist in one pass.
 
-  The skill reflects the current rules, including the new certification classes and the faster 20x route built on key security indicators. You describe your service, customers and cloud setup. It checks readiness, defines the system boundary, maps NIST 800-53 controls, and lists the papers: the system security plan, assessment plan, assessment report, and the plan of action and milestones. It then covers ongoing monitoring after approval. Rules change often. The dates in this skill were last checked on 3 October 2026 and describe the rules as of August 2026, so check every date against fedramp.gov.
+  The skill covers the new certification classes and the faster 20x route built on key security indicators, as the author described them in August 2026. You describe your service, customers and cloud setup. It checks readiness, defines the system boundary, maps NIST 800-53 controls, and lists the papers: the system security plan, assessment plan, assessment report, and the plan of action and milestones. It then covers ongoing monitoring after approval. Rules change often. The dates come from the author's file, which says it was last verified on 3 October 2026 and describes the rules as of August 2026. AI Blocks did not check them again, so check every date against fedramp.gov.
+
+  This plan is general guidance, not legal advice. A qualified lawyer or an accredited assessor must confirm any filing.
 when:
   - A federal agency wants to buy your software and asks if you have FedRAMP.
   - You do not know which approval level fits your product.
@@ -35,7 +37,7 @@ how_to_use:
   - Gather these first. Your current system boundary diagram (if you have one), the list of data types you hold, and the cloud region you run in. Paste your service description first, then add your cloud setup, your customers and the data types, such as controlled unclassified information.
   - Paste any security documents you already have (optional). Then ask for a gap assessment.
   - Check the gap table and the target class. Ask for the document checklist or control map next.
-  - Compare every date and class name with fedramp.gov before you act. Put the text into the official FedRAMP templates.
+  - Compare every date and class name with fedramp.gov before you act. The older Word and Excel templates are being retired for Rev 5, so check fedramp.gov for the format it requires now (OSCAL or another approved machine-readable format) before you draft anything.
   - Then use the federal security controls planner to draft the control write-ups.
 output_sample:
   input:
@@ -67,4 +69,4 @@ terms:
     meaning: Plan of action and milestones. A list of known security gaps, with owners and fix dates.
   - term: Continuous monitoring
     meaning: The monthly and yearly checks you must keep up after you are approved.
-next: [federal-security-controls, federal-accessibility-checker]
+next: [federal-security-controls, soc-2-readiness-checker]

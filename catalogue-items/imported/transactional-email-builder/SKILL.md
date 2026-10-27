@@ -13,7 +13,7 @@ description: "Build complete transactional email systems: React Email templates,
 
 ## Overview
 
-Build complete transactional email systems: React Email templates, provider integration, preview server, i18n support, dark mode, spam optimization, and analytics tracking. Output production-ready code for Resend, Postmark, SendGrid, or AWS SES.
+Build complete transactional email systems: React Email templates, provider integration, preview server, i18n support, dark mode, spam optimization, and analytics tracking. Output production-ready code wired to Resend. The `send.ts` below calls Resend only. For Postmark, SendGrid or AWS SES, write one provider file in `emails/lib/providers/` with the same send shape and point `send.ts` at it.
 
 ---
 
@@ -40,7 +40,21 @@ Build complete transactional email systems: React Email templates, provider inte
 
 ---
 
+## Steps
+
+1. Set up the project and pick one provider. Install React Email and the provider's package, and keep the API key in an environment variable.
+2. Build the shared layout and button (`emails/components/layout/`).
+3. Write each template you need (welcome and invoice are shown below; write the others in the same shape).
+4. Wire `emails/lib/send.ts` to your provider.
+5. Run the preview with `npm run email:dev`, and check each email in light and dark mode.
+6. Add translated text files if you need more than one language.
+7. Run the spam checklist and send a test email to yourself before your first real send.
+
+---
+
 ## Project Structure
+
+The welcome and invoice templates are given as full code blocks below. Copy them into `templates/welcome.tsx` and `templates/invoice.tsx`. The other four templates (verify email, password reset, notification, weekly digest) are not included as files or code blocks. Write them in the same shape as those two.
 
 ```
 emails/
@@ -60,16 +74,14 @@ emails/
 │   └── weekly-digest.tsx
 ├── lib/
 │   ├── send.ts                    # Unified send function
-│   ├── providers/
-│   │   ├── resend.ts
-│   │   ├── postmark.ts
-│   │   └── ses.ts
+│   ├── providers/                 # add one file per provider you use
+│   │   └── resend.ts              # postmark.ts, ses.ts, sendgrid.ts only if you switch
 │   └── tracking.ts                # UTM + analytics
-├── i18n/
-│   ├── en.ts
-│   └── de.ts
-└── preview/                       # Dev preview server
-    └── server.ts
+└── i18n/
+    ├── en.ts
+    └── de.ts
+
+# The preview server is not a file you write. `npm run email:dev` starts it (see Preview Server Setup).
 ```
 
 ---

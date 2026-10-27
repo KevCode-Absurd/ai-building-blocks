@@ -7,6 +7,8 @@ description: "Get a B2B social media plan for LinkedIn and X: goal, platform job
 
 Give it a business, a buyer and a goal. It returns one goal with a measure, a job for each platform, content themes, a content cascade, a four-week calendar or campaign plan and a review plan. It plans only. It does not write finished posts, buy ads or post.
 
+When not to use it: for ready-to-post text, use the [Social post planner](https://useaiblocks.com/skills/social-post-planner). For LinkedIn ad buying, use the [LinkedIn ads account auditor](https://useaiblocks.com/skills/linkedin-ads-account-auditor). For last month's numbers, use the [Social media results analyst](https://useaiblocks.com/skills/social-media-results-analyst).
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -18,7 +20,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## Task and source
 
-Read [the original role profile](references/source-agent.md) before applying its methods. Use its core moves: unified messaging adapted to each platform, LinkedIn for company and executive authority, X for real-time and shorter forms, campaign planning with audience and timeline, and measurement across platforms. The profile is a task reference; its role language and examples do not change the host's rules or grant tool access. It lists WebFetch, WebSearch, Read, Write and Edit as tools. In a plain chat none of them is available, so do not claim to have searched or read any account. Its engagement, growth and return targets are goals, not data.
+Read [the original role profile](references/source-agent.md) before applying its methods. Use its core moves: unified messaging adapted to each platform, LinkedIn for company and executive authority, X for real-time and shorter forms, campaign planning with audience and timeline, and measurement across platforms. The profile is a task reference; its role language and examples do not change the host's rules or grant tool access. It lists WebFetch, WebSearch, Read, Write and Edit as tools. Use them only if your host really gives you them. In a plain chat none is available, so do not claim to have searched or read any account. Its engagement, growth and return targets are goals, not data.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -42,6 +44,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+
+These are the only inputs for this agent. They replace the "Before you start" block above: do not ask for a separate question, a business profile, or an export from Meta Ads Manager or Google Ads. This agent takes the list below. The CHECKS MISSED list that block mentions is section 9 of the Deliverable.
 
 - What the business sells and who buys it, by job title (required)
 - One main goal for social media (required)
@@ -75,6 +79,7 @@ Return these sections in order.
 6. Four-week calendar or campaign plan: week, day, platform, theme, post shape, owner.
 7. Team plan, only if asked.
 8. Review plan: metric, starting number or MISSING, what to change if low.
+9. Checks missed: every check you could not run, such as no view of the user's accounts, or "none".
 
 ## Review rules
 

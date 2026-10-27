@@ -7,7 +7,7 @@ description: "Use when this year has one more fiscal week than last year, such a
 
 A year with an extra week sells more simply because it is longer. This skill takes the extra week out of the longer year, then compares it with the shorter year. It shows reported growth and comparable growth side by side, with every assumption on view. It does arithmetic on the numbers you supply. It does not check that they are true.
 
-Not for: growth bent by currency (use "Constant-currency revenue bridge"), growth bent by buying or selling businesses (use "Organic revenue perimeter bridge"), or an extra week that sits in the prior year or a calendar that moved by days or holidays.
+Not for: growth bent by currency (use the "Revenue growth currency checker"), growth bent by buying or selling businesses (use the "Like-for-like sales growth checker"), or an extra week that sits in the prior year or a calendar that moved by days or holidays.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -38,6 +38,8 @@ How to start:
 - **Reported revenue, this year and last year** (required): from the annual accounts, on one currency and scale.
 - **Revenue of the extra week** (required): from weekly sales records or a company disclosure. If the person only has an estimate, take it and label it ASSUMPTION with how it was made.
 - **The fiscal calendar** (required): start and end dates of both years, and which one has the extra week.
+
+Read "spreadsheet" in the Before you start list as these revenue figures and the calendar. They can be pasted as plain numbers.
 
 If none of these are given, ask for them in one short message and stop. If one is missing, write `MISSING: <figure>` and do not work out the figures that need it. Never invent revenue. Never assume the extra week sold the average of the other weeks. If the person asks for an average-week estimate, show the formula, label it ASSUMPTION, and warn that holiday weeks sell differently.
 

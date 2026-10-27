@@ -9,7 +9,7 @@ subhead: Your card payment setup is checked against the PCI standard so you know
 explain: |
   Your card payment setup is checked against the PCI standard so you know your level, the right self-assessment form, and the gaps to fix. Describe how you take cards, such as online checkout, in person or by phone, and you get a clear route.
 
-  The skill assumes the current version of the standard unless you say otherwise. Output matches your task: a gap table with requirement number, status and priority; a form choice with reasoning; a scope of systems that touch card data; or a fix plan with owners and dates. It works through the 12 requirements under six goals and cites each one. It is advice, so a qualified assessor must confirm.
+  The skill assumes the current version of the standard unless you say otherwise. Output matches your task: a gap table with requirement number, status and priority; a form choice with reasoning; a scope of systems that touch card data; or a fix plan with owners and dates. It works through the 12 requirements under six goals and cites each one. It is advice, so a qualified assessor must confirm. The form control counts and the FAQ 1331 note are the original author's, with no check date of ours, so confirm them at pcisecuritystandards.org. This is a copy of Hemant Naik's pci-compliance skill, under the MIT licence.
 when:
   - You take card payments and have never been told which form to fill in.
   - Your bank or processor asked for proof of compliance.
@@ -32,11 +32,13 @@ you_get:
   - A fix plan with owners and dates
 how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini. Paste the full text of the skill, or upload the skill folder if your AI accepts files.
+  - "Gather first: your yearly card volume by channel (online, in person, phone), your payment provider's name, and a list of the systems that receive card data. Your merchant level and form depend on these."
   - "Say which task you want: gap check, form choice, scope map, fix plan or policy draft."
   - Describe how you take cards, which provider you use, and which systems touch card data. Add your yearly card volume if you know it.
   - Say which PCI DSS version you use. If you skip this, the skill assumes version 4.0.1, the current one.
   - Read the result and check each gap against your real setup. Then ask your bank or a QSA to confirm before you act on it.
-  - Take the form choice and the gap table to your bank or QSA first. They decide which form you file.
+  - Take the form choice and the gap table to your bank or QSA first. They decide which form you file. The skill's FAQ 1331 note, its check date and its control counts per form are the original author's and are not checked by us. Confirm them at pcisecuritystandards.org.
+  - Next, turn the fix plan into tracked tasks with owners and dates, and run the gap check again once the fixes are made.
 output_sample:
   input:
     - "How you take card payments: online checkout, in person or by phone"

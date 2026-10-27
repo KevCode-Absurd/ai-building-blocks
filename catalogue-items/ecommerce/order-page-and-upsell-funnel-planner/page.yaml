@@ -71,7 +71,7 @@ how_it_works:
   - title: Sets the offer page
     text: A video sales letter or a text sales letter. The top line states the order is placed and what the offer is, in true words.
   - title: Sets the order page
-    text: Plain, fast, with an obvious card field and button. Quantity breaks and one or two order bumps. A $10 to $20 bump taken by 50% adds about $5 to AOV.
+    text: Plain, fast, with an obvious card field and button. Quantity breaks and one or two order bumps. This is arithmetic with a guessed take rate, not a forecast. A $10 to $20 bump taken by 50% of buyers would add about $5 to $10 per customer. Use your own take rate.
   - title: Plans the tests
     text: The order page first, since its drop-off is usually the largest. Then each offer. Review conversion at each step, AOV, refund rate and profit per customer after each change.
 output_shape: |

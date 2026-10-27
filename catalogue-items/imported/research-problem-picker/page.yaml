@@ -30,12 +30,12 @@ you_get:
   - Plans for setbacks and ways around obstacles
   - Advice on which problem to pursue and what to do next
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or files are needed.
+  - "Open Claude, ChatGPT or Gemini and paste in the skill text. Also paste the nine reference files (01 to 09) that sit next to it in the folder, because the steps depend on them. No code is needed."
   - "Pick a start: pitch an idea, share a problem in a current project, or ask a strategic question."
   - Write the short version in 1 to 2 sentences.
   - Check the summary your AI gives back. Correct anything it got wrong.
   - Add the detail it asks for, then answer its questions one at a time.
-  - Ask it to sum up the risks and your next step before you decide.
+  - Ask it to sum up the risks and your next step before you decide. For one document to keep, ask for a plan of one to two pages with the idea summary, risks, success measures, what to fix and what to keep flexible, and your next step.
 output_sample:
   input:
     - A 1 to 2 sentence pitch of your idea, problem or question

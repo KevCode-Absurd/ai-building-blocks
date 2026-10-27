@@ -9,7 +9,7 @@ subhead: Name the request, such as a data access request or an NDA request. You 
 explain: |
   A first draft of the reply to a common legal request, with a clear signal when a lawyer must look before it goes out. Name the request type: data subject request, discovery hold, vendor question, NDA request, privacy question, subpoena or insurance notice. The skill finds your saved template for that type, fills in the details and adds escalation triggers.
 
-  If the type is unclear, it asks and shows the options. You can also use your own template. It saves time on repeat requests while keeping the sensitive ones in front of the right person. Replies are drafts only and not legal advice, so a qualified person should check them. No reply templates come with this item, so bring your own or use the default structure the skill offers. It is a copy of Anthropic's legal-response skill under the Apache 2.0 licence.
+  If the type is unclear, it asks and shows the options. You can also use your own template. It saves time on repeat requests while keeping the sensitive ones in front of the right person. Replies are drafts only and not legal advice, so a qualified person should check them. No reply templates come with this item, so bring your own or use the default structure the skill offers. The skill includes a starting structure for a data request reply and for an NDA request reply. It is a copy of Anthropic's legal-response skill under the Apache 2.0 licence. What changed here: the plain name, the page text, a note that no templates come with it, a default structure for data and NDA replies, and extra lawyer-review rules for subpoenas and regulator letters.
 when:
   - Someone has asked to see or delete their personal data.
   - A business team wants an NDA and keeps asking the same questions.
@@ -30,11 +30,11 @@ you_get:
   - Escalation flags
   - A note on what a lawyer must check
 how_to_use:
-  - Open a chat in Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Before you paste anything, do not put privileged, personal or confidential case details into a public AI chat unless your organisation has approved that tool.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste in the text of SKILL.md from this item's folder, or upload the folder if your AI takes files. The full skill is in SKILL.md, not on this page.
   - Say which type of request it is, such as data access request, NDA request, subpoena or vendor question.
   - Paste the request and your reply template for that type (optional). Add the facts of this case. For a data request, give who asked, what they asked for, which law applies and the deadline. For an NDA, give the other party, the purpose and whether it runs one way or both.
   - Subpoenas and letters from a regulator or from law enforcement always need a lawyer first. Do not send any draft for these before a lawyer has read it.
-  - Do not paste privileged, personal or confidential case details into a public AI chat unless your organisation has approved that tool.
   - Read the escalation check first. If it flags a risk, send the draft to a lawyer before anything else.
   - Check the draft reply and fill any gaps it marks. Have a qualified person approve it, then send it.
 output_sample:

@@ -15,7 +15,7 @@ Video is the highest-trust content format. A viewer who watches 10 minutes of yo
 
 ## Before Starting
 
-**Check for context first:** If `.claude/product-marketing-context.md` exists, read it before asking questions. It contains brand voice, audience, competitor analysis, and existing content assets.
+**Check for context first:** If you have a brand voice or product context note, paste it in before answering the questions. It can hold brand voice, audience, competitor analysis, and existing content assets. If your AI can read project files and finds a `.claude/product-marketing-context.md`, it should read that first. If there is none, carry on with the questions.
 
 Gather this context (ask in one shot):
 

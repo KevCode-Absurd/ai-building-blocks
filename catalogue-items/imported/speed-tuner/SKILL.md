@@ -7,7 +7,7 @@ description: Optimizes application performance across frontend, backend, queries
 
 This catalog copy does not include these files:
 
-- `../../references/performance-checklist.md`
+- `../../references/performance-checklist.md` (its steps are covered in Steps 1 to 5 and the Verification section below)
 
 Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
 
@@ -221,7 +221,7 @@ npx lhci autorun
 
 ## See Also
 
-The detailed checklist file is not included in this copy. Use the steps above and the patterns in `references/optimization-patterns.md`.
+The detailed checklist file is not included in this copy. In this copy, Step 1 covers measuring, Step 2 the bottleneck, Step 3 the usual fixes, Step 4 keep or revert, Step 5 the guard, and the Verification section at the end is the final check. The worked patterns are in `references/optimization-patterns.md`.
 
 
 ## Common Rationalizations

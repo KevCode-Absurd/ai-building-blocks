@@ -49,18 +49,18 @@ Does not fit:
 - A product that is costly to ship or has a thin margin that cannot take free samples.
 - Brands that cannot yet make a good ad themselves. One speaker (Ridge) says to learn this first, then outsource.
 - Roster sizes in the sources come from large brands. Ridge spends over $100,000 a day on ads and keeps a roster of 30 to 50. A small store needs 5 to 10 creators.
-- Some figures are single operators' claims: about 2 in 100 gifts become usable ads, 5 to 30% lift from partnership ads, half of Q4 spend on partner ads, up to 40% of account spend in some accounts. These may shrink as more brands do the same.
+- The yield and partnership figures in the steps are single operators' claims. They may shrink as more brands do the same, so treat them as ratios to test, not targets.
 - Tool names in the sources are left out. Use any tool that does the job.
 
 ## Steps
-1. **Check the fit.** Confirm the product ships cheaply and the margin takes free samples. One operator's view is that creators from the buyer's own region perform better than creators with imported accents or settings; test it on your own results. If it fails, say so and stop.
+1. **Check the fit.** Confirm the product ships cheaply and the margin takes free samples. Check that the creator's audience matches your buyers: where they live, the language they use and what they care about. Choose on audience fit, never on a creator's accent, looks or background. If the product fails the fit check, say so and stop.
 2. **Plan the gifting funnel.** Gift widely first. In Ridge's funnel, about 2 in every 100 free products turn into content worth running as an ad, and those people join the paid roster. A bigger example from an agency: 100,000 invites in 60 days gave about 6,000 creators and about 5,800 videos. That was a mass seeding program run through an automation tool, mostly on TikTok. For a small store, work the same ratios with your own numbers. Ask for 2 to 3 videos per sample. Allow 1 to 4 weeks from sample to video. Shipping alone is about 7 days.
 3. **Size the roster.** Ridge keeps about 30 to 50 creators at its scale. Over 100 is more than you can keep busy, and each creator needs steady work. A small store needs 5 to 10. Give the person a number from their ad volume, not Ridge's.
-4. **Set the pay rule.** Pay flat fees: one for the content and one for access to their account to run ads. Do not pay a percent of revenue or spend. It brings extra emails and audits for little gain (Ridge). Get usage rights and account access in writing before you pay.
+4. **Set the pay rule.** Pay a flat fee for the content. Ad access is opt-in: add a second fee for it only if the platform's own partnership tool allows it and the creator authorises it in writing. Do not pay a percent of revenue or spend. It brings extra emails and audits for little gain (Ridge). Get usage rights in writing before you pay. Paying for access to a creator's ad account, or running ads from it, can break the ad platform's terms and risk bans or disputes over who owns the account. Use the platform's own partnership or permission tools, never a shared login or password. Read the platform's current rules first, and have a qualified person review the agreement before any payment.
 5. **Write the creator brief.** Ask for raw clips, not finished ads. A document of about 50 hooks and 3 to 4 body clips lets editors cut many versions. Use two brief types: a wide brief that leaves creative freedom, and a specific brief that shows your top ads with real results to copy the idea of, not the exact words.
 6. **Make the brief placement-ready.** Design for 4x5 and 9x16, not squares. Keep captions and focus inside the safe area. Tell the creator the placement, the length, the framing and the core look (for example, sunlit). Give examples of winners and examples of what did not work. The source says most brands skip the second.
 7. **Set review rules in two tiers.** Tier one is your normal review of each clip. Tier two is a short set of rules (claims, banned words, disclosure) for content you let through without a clip-by-clip review, so everyone knows the limits. Keep claims on both tiers true and within ad rules. For key creators, prefer longer deals (several episodes) over one-offs, so people see them more than once.
-8. **Plan partnership ads.** Partner ads run under the creator's handle with yours beside it. One operator says Meta pushes them, and that delivery has more signal with two handles. They may feel less like an ad. Treat both as claims to test, not facts. One operator expects half of Q4 spend on partner ads. Another saw up to 40% of account spend in some accounts. The advantage may fade. Expect about 5 to 30% better than the brand page when the creator's page has content relevant to your buyers. If the page is empty or off topic, skip it.
+8. **Plan partnership ads.** Partner ads run under the creator's handle with yours beside it. One operator says Meta pushes them, and that delivery has more signal with two handles. They may feel less like an ad. Treat both as claims to test, not facts. One operator reports a large share of spend going to partner ads and a gain of about 5 to 30% over the brand page when the creator's page has content relevant to your buyers. These are single claims and the advantage may fade. If the page is empty or off topic, skip it.
 9. **Use accounts you own too.** Ridge found famous accounts did not beat an account they created and owned, and follower count made no clear difference. So consider running ads from an account you own as well as the creator's. Check the ad platform's rules on multiple accounts and business verification first, because running many accounts can get them banned. Keep brand identity clear so buyers follow the brand and not the person.
 10. **Use organic as the filter.** Post everything on organic first and move only what gets traction into paid. About 70% of Ridge's best ads came from top organic posts.
 11. **Run the winner loop.** Run creator videos on TikTok first, move winners to Meta (one brand launched over 800 collaborator ads), and tell the community which videos win so they make more of them. A free group chat does the job. Tag every asset to the creator who made it, so you can find them again.
@@ -74,7 +74,7 @@ Units gifted <n> -> expected usable creators <n> (about 2 per 100, one operator'
 Timeline: ship 7 days + 1 to 4 weeks to video
 
 ROSTER      target <n creators> for <ad volume>; reason: <scale>
-PAY RULE    flat fee for content <$> + flat fee for account access <$>; no percent of spend; usage and access in writing: <yes/no>
+PAY RULE    flat fee for content <$> + <fee for platform-approved ad access, only if the platform's rules allow it>; no percent of spend; usage in writing: <yes/no>; agreement reviewed by a qualified person: <yes/no>; paid and gifted disclosure required in the brief: <yes/no>
 
 CREATOR BRIEF
 Wide brief: <...>
@@ -103,7 +103,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 ## Checks
 - The roster size fits the store's scale, not Ridge's.
 - The funnel yield is shown as a ratio with its source and marked as one operator's claim.
-- Pay is flat, with usage and account access in writing.
+- Pay is flat, with usage in writing, and any account access goes through the platform's own tools after a rules check and a qualified person's review.
 - The brief asks for raw clips, with a hook list and body clips.
 - The brief gives placement, length, framing and look, plus winners and what did not work.
 - Disclosure of paid and gifted content is stated.
@@ -114,5 +114,5 @@ Write `MISSING: <product price | sample budget | ad volume | editing capacity | 
 
 ## Avoid
 - Copying a large brand's roster size or yields for a small store.
-- Running ads through a creator's page with no written account access.
+- Running ads through a creator's page with no written permission set up through the platform's own tools.
 - Setting up several accounts without checking the platform's rules on them.

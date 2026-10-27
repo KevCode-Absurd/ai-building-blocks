@@ -36,6 +36,10 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+This list is the inputs for this workflow: your product list, the weekly Shopping report, the search terms and your current titles. The "Before you start" block above is shared text. Skip its brand brain and "Your results" lines; a brand brain is not needed here. The download pack opens with HANDOFF.md, which lists these steps. If you only have this file, follow the steps below.
+
+**Label:** this needs a Google Ads account with Shopping set up. Building the tiers means spending real ad money, and you make every change in your account yourself. Nothing here changes your account or budget for you.
+
 - **Your product list** (required): price, gross margin, 90-day spend, return on ad spend and conversions for each product. Real margins, not guesses. Any margin you guessed is marked.
 - **How much time you have each week** to manage the account, and whether you run Standard Shopping or Performance Max.
 - **After two weeks of running the tiers: the weekly Shopping report** at product level for the last 7 and 30 days, plus the search terms report and impression share (required for step 2).
@@ -56,7 +60,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Build the tiers in Google Ads and run them for two weeks. Then export the weekly Shopping report with search terms.
 
-2. **Shopping campaign tuner.** Use the skill `shopping-campaign-tuner`. Give it the weekly report and search terms you exported, and the tier targets from `outputs/step-01-margin-tier-shopping-builder.md`. It returns a call on each product with enough clicks (cut, feed, bid up or fund), search terms to block, impression share, a waste score and this week's edit. Save as `outputs/step-02-shopping-campaign-tuner.md`. Products with too few clicks get no call.
+2. **Shopping campaign tuner.** Use the skill `shopping-campaign-tuner`. Give it the weekly report and search terms you exported, and the tier targets from `outputs/step-01-margin-tier-shopping-builder.md`. It returns a call on each product with enough clicks (cut, feed, bid up or fund), search terms to block, impression share, a waste score and this week's edit. The waste score is 100 minus the share of total spend, in percent, that went to products with about 100 or more clicks and no sale and to search terms listed as irrelevant; it shows the sum. Save as `outputs/step-02-shopping-campaign-tuner.md`. Products with too few clicks get no call.
 
 Pause here: Export the converting search terms for the products it said to feed, and list those products with their current titles.
 

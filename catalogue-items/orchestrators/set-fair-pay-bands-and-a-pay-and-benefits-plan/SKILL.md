@@ -31,7 +31,9 @@ How to start:
 
 ## What you need
 
-This is a pay job. The general "Before you start" list above mentions a buyer brief. This job does not use one. This workflow needs your roles, headcount and budget.
+This is a pay job. This workflow needs your roles, headcount and budget. It does not use a buyer brief.
+
+**Web access, before you start:** market ranges need a live web source or market pay data you supply. Without either, the AI cannot source a range. It then marks every market range `unverified` and `MISSING: source`, and it never fills one in from memory. The bands that follow are then only a worked shape, not a market-based answer, until you confirm each range against a source you name.
 
 - **Your roles** (required): each with its level and place, plus your industry.
 - **How many people are in each role** (required): step 3 uses it to cost the plan.
@@ -65,7 +67,7 @@ Use these instead of the general "After this" list above:
 
 ## What you hand back
 3 step files and the summary. The last file holds the pay and benefits plan.
-- **Step 1, market benchmarks:** pay range by role with source and date, outliers against your pay, and equity models if asked.
+- **Step 1, market benchmarks:** pay range by role with source and date, outliers against your pay, and equity models if asked. End with one line: how many ranges were sourced and how many are unverified, for example `[N] sourced, [N] unverified`, so you can see how much to check.
 - **Step 2, pay bands:** a low, middle and high by role, where your pay sits, a method note in plain words and where bands overlap.
 - **Step 3, pay and benefits plan:** a pay philosophy, grades, a bonus plan, a benefits list, a total rewards outline and the total cost against budget with the maths. It ends with your assumptions, missing data and what needs HR or legal review.
 

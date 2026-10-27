@@ -34,6 +34,8 @@ python scripts/term_sheet_analyzer.py
 python scripts/term_sheet_analyzer.py path/to/term_sheet.json
 ```
 
+**When not to use:** not for a signed contract that is in dispute (go to a licensed lawyer) and not a substitute for a lawyer on any binding deal. The figures below (12 months of fees, 5-year renewals, 60-day notice) are common examples. They are not legal norms and change by country and deal.
+
 ## Key Questions (ask these first)
 
 - **Who owns the IP being created or shared?** (Founders forget that contractors don't auto-assign IP without a written clause.)
@@ -57,7 +59,7 @@ Standard contracts a startup signs in its first 5 years:
 - **Contractor / 1099 Agreement** — IP assignment is critical; misclassification risk
 - **Equity Agreements** — option grants, RSU agreements, advisor grants (FAST template, YC SAFE for advisors)
 
-**Run** `contract_risk_scanner.py` on the text. It flags the 12 most common founder-killer clauses.
+**Run** `contract_risk_scanner.py` on the text. It flags 12 common founder-risk clauses using simple text-pattern checks. It is a prompt to read closely, not a legal verdict. If you cannot run code, read the text for each of these clauses yourself.
 
 ### 2. IP Strategy
 
@@ -78,7 +80,7 @@ When a term sheet arrives, the difference between a founder-friendly and founder
 - **Pre-money vs post-money option pool** — pre-money pool dilutes founders; post-money dilutes everyone proportionally
 - **Anti-dilution** — broad-based weighted average is standard; full ratchet is hostile
 
-**Run** `term_sheet_analyzer.py` to get a 0-100 founder-friendliness score with flags.
+**Run** `term_sheet_analyzer.py` to get a 0-100 founder-friendliness score with flags. The score is a rough guide from simple rules, not a legal judgement. If you cannot run code, skip the score and review each clause by hand.
 
 ### 4. Regulatory Landscape
 
@@ -102,19 +104,21 @@ See `references/ip_and_regulatory.md` for sequencing.
 ## Workflows
 
 ### Workflow 1: Contract Review
+
+(Workflows 1 and 2 need the Python scripts and Python 3, so they need an AI that can run code. Without it, read the document yourself using the questions and clause lists above, and say no scan was run.)
 1. Save the contract as plain text
 2. Run `contract_risk_scanner.py path/to/contract.txt`
 3. For each HIGH risk finding, draft a counter-proposal
 4. Bring the redline + counter-proposals to outside counsel
-5. Log the decision via `/cs:decide`
+5. Write down the decision and the date, in your own notes
 
 ### Workflow 2: Term Sheet Response
-1. Save the term sheet as a JSON file matching the schema in `term_sheet_analyzer.py --help`
+1. Save the term sheet as a JSON file. The schema is not supplied as a separate file: build it from the output of `term_sheet_analyzer.py --help`, and do not guess field names
 2. Run `python scripts/term_sheet_analyzer.py path/to/term_sheet.json`
-3. Review the founder-friendliness score and per-clause flags
-4. Negotiate the worst 3 clauses (don't try to win all 20)
-5. Always have a securities/venture attorney review before signing
-6. Log via `/cs:decide` with `/cs:freeze 30` to prevent regret-driven re-opening
+3. Review the founder-friendliness score and per-clause flags. The score is a rough pattern check. Never use it as the reason to sign or not sign
+4. Pick the worst 3 clauses to raise (don't try to win all 20), and take them to a securities/venture attorney
+5. Have that attorney review the whole term sheet before you negotiate, decide or sign
+6. Write down the decision and the date, then wait 30 days before you re-open it, so the choice is not undone in the heat of the moment
 
 ### Workflow 3: IP Hygiene Audit
 1. Confirm every employee and contractor (past 12 months) signed invention assignment
@@ -130,14 +134,17 @@ See `references/ip_and_regulatory.md` for sequencing.
 4. Document the regulatory roadmap and budget alongside the product roadmap
 5. Pair with `cs-ciso-advisor` for ISO 27001 / SOC 2 sequencing
 
-## Output Standard (when invoked via `/cs:gc-review`)
+## Output Standard
+
+Return these five sections in this order, in under 800 words in total. Add a sixth, "Founder-friendliness score", only for a term sheet and only if the script was run. The Bottom Line is a view to discuss with a lawyer, not a legal verdict.
 
 ```
-**Bottom Line:** [sign / negotiate / do not sign]
-**The Risks:** [3 highest-severity issues]
+**Bottom Line:** [sign / negotiate / do not sign, in one sentence]
+**The Risks:** [3 highest-severity issues, each in plain words]
 **Counter-Proposals:** [specific language]
 **Outside Counsel Action Items:** [what to bring to the attorney]
 **Your Decision:** [the call only the founder can make]
+**Founder-friendliness score (term sheets only):** [0-100 and per-clause flags, marked as a rough guide]
 ```
 
 ## Adjacent Skills
@@ -146,7 +153,7 @@ See `references/ip_and_regulatory.md` for sequencing.
 - `c-level-advisor/skills/cfo-advisor/` — Term sheet → dilution math
 - `c-level-advisor/skills/ma-playbook/` — Acquisition agreements, integration playbooks
 - `ra-qm-team/` — ISO 13485, MDR, FDA 510(k), GDPR execution
-- `c-level-agents/skills/gc-review/SKILL.md` — `/cs:gc-review` slash command
+- The original package also had a `/cs:gc-review` slash command. It is not part of this copy. Ask for the Output Standard above in plain words instead.
 
 ## References
 

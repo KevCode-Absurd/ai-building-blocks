@@ -39,8 +39,11 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+This list replaces the shared "Before you start" block above. The ad-specific inputs are the ad image, its copy and, if you have it, the landing page. Skip the block's lines for video ads, video scripts and image prompts.
+
 - **A finished picture** (required)
-- **A draft of any copy (ad, page, email or script) that a check or edit pass works on** (required)
+- **The ad copy** (required): the headline and text that run with the picture.
+- **The ad platform and placement** (required for step 4): for example Facebook feed or Instagram story. Step 4 checks the sizes and the policy rules of that placement. If it is missing, write `MISSING: ad platform` and give the ship call as "not cleared".
 - **A landing page or advertorial: sections, copy, layout notes** (optional)
 - **One product's facts: price, variants, ingredients or materials, how it is used, photos by job** (optional)
 - **Rendered static or carousel ads with the brief and QA notes** (optional)
@@ -55,10 +58,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Critique the ad.** Use the skill `static-ad-critic`. Starts the chain: scores the ad and hands step 2 the ad copy with two rewrites.
-2. **Match it to the buyer's awareness.** Use the skill `ad-awareness-stage-checker`. Give it the rewritten ad copy from step 1. Checks it speaks to one stage and hands step 3 the ad copy with its awareness-stage rewrites.
-3. **Check the five jobs of the ad.** Use the skill `five-part-ad-checker`. Give it the rewritten ad copy from step 2. Tests the rewritten copy for proof and a clear ask, which the earlier steps do not score.
-4. **Run the stop-ship check.** Use the skill `pre-launch-ad-checker`. Give it the ad copy with the fixes from steps 1 to 3 applied by you, not step 3's report itself. Runs the last check and gives the ship call.
+1. **Critique the ad.** Use the skill `static-ad-critic`. Give it the ad image and its copy. It checks clarity or curiosity, the eye path (where a viewer looks first, second and third), how the image and headline pair, awareness fit and page match. It scores the ad out of 100 and writes two rewritten headlines. Save it as `outputs/step-01-static-ad-critic.md` and hand step 2 the ad copy with the two rewrites.
+2. **Match it to the buyer's awareness.** Use the skill `ad-awareness-stage-checker`. Give it `outputs/step-01-static-ad-critic.md`, the rewritten ad copy. It names the awareness stage of the hook, visual and copy, flags mismatches, scores out of 100 and writes rewrites. Save it as `outputs/step-02-ad-awareness-stage-checker.md` and hand step 3 the copy with those rewrites.
+3. **Check the five jobs of the ad.** Use the skill `five-part-ad-checker`. Give it `outputs/step-02-ad-awareness-stage-checker.md`, the rewritten ad copy. It marks the five jobs of an ad (attention, advantage, proof, persuasion and the ask) at 20 points each, which tests the proof and the clear ask that the earlier steps do not score. It returns a ranked fix list. Save it as `outputs/step-03-five-part-ad-checker.md`. Apply the fixes yourself before step 4.
+4. **Run the stop-ship check.** Use the skill `pre-launch-ad-checker`. Give it the ad copy with the fixes from steps 1 to 3 applied by you, not step 3's report itself. It walks the ad as a viewer meets it on a phone, splits stop-ship mistakes from ones worth a look, and gives a readiness score, a verdict and one next action. Save it as `outputs/step-04-pre-launch-ad-checker.md`. This is a quality check, not an approval from the ad platform: check the platform's ad policies yourself before you run the ad, and have a person confirm any claim about health, money or results.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
@@ -70,6 +73,9 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Shopping feed title writer](https://useaiblocks.com/skills/shopping-feed-title-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+## After this (for this job)
+Use this section, not the shared "After this" list above, whose Shopping feed title writer is about product listings, not ads. Suggest one next step as a short question: run the best rewrite against the original ad in a small test, then read the result with the [A/B test results reader](https://useaiblocks.com/skills/split-run-result-reader). Bring the final ad copy and the ship call.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

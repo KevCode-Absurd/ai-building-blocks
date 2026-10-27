@@ -368,12 +368,24 @@ print(f"Shortage: {order['shortage']}")
 
 ### Dynamic Markdown Optimization
 
+**Fill in this table before you suggest any markdown day.** The function has no built-in demand, stock or price figures. Each one comes from the user's own sales and stock data. If the user cannot give one, say so, ask, and do not run it.
+
+| Input | What it is | Your value |
+|---|---|---|
+| current_rsl_days | Days of shelf life left | [DAYS LEFT] |
+| regular_price | Normal selling price | [PRICE] |
+| cost | Cost per unit | [UNIT COST] |
+| demand_elasticity | How strongly sales rise when the price falls (a negative number, from the user's own sales history) | [ELASTICITY] |
+| daily_demand_full | Units sold per day at full price | [UNITS PER DAY] |
+| starting_units | Units in stock now | [UNITS IN STOCK] |
+
 ```python
 import numpy as np
 from scipy.optimize import minimize_scalar
 
 def optimize_markdown_timing(current_rsl_days, regular_price, cost,
-                              demand_elasticity=-2.0):
+                              demand_elasticity, daily_demand_full,
+                              starting_units):
     """
     Optimize when to markdown product to minimize waste
 
@@ -382,6 +394,8 @@ def optimize_markdown_timing(current_rsl_days, regular_price, cost,
     - regular_price: normal selling price
     - cost: product cost
     - demand_elasticity: price elasticity of demand
+    - daily_demand_full: units sold per day at full price
+    - starting_units: units in stock now
 
     Returns:
     - optimal markdown timing and price
@@ -397,7 +411,6 @@ def optimize_markdown_timing(current_rsl_days, regular_price, cost,
         days_markdown = max(0, current_rsl_days - markdown_day)
 
         # Demand curves (simplified)
-        daily_demand_full = 10  # Base demand at full price
         markdown_pct = min(0.5, days_markdown / current_rsl_days)  # Up to 50% off
         markdown_price = regular_price * (1 - markdown_pct)
 
@@ -419,7 +432,7 @@ def optimize_markdown_timing(current_rsl_days, regular_price, cost,
 
         # Penalty for waste (unsold inventory)
         # Assume some units don't sell even with markdown
-        waste = max(0, 100 - units_sold)  # Assume started with 100 units
+        waste = max(0, starting_units - units_sold)
         waste_cost = waste * cost
 
         return profit - waste_cost
@@ -446,12 +459,14 @@ def optimize_markdown_timing(current_rsl_days, regular_price, cost,
     }
 
 
-# Example
+# Example: replace each placeholder with the value from the table above
 markdown_strategy = optimize_markdown_timing(
-    current_rsl_days=30,
-    regular_price=10.00,
-    cost=6.00,
-    demand_elasticity=-2.0
+    current_rsl_days=DAYS_LEFT,
+    regular_price=PRICE,
+    cost=UNIT_COST,
+    demand_elasticity=ELASTICITY,
+    daily_demand_full=UNITS_PER_DAY,
+    starting_units=UNITS_IN_STOCK
 )
 
 print(f"Start markdown in: {markdown_strategy['days_until_markdown']} days")

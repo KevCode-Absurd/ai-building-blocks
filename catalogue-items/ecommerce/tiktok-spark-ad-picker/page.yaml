@@ -130,7 +130,7 @@ improve:
 works_best_with:
   tools:
     - {name: "TikTok Ads Manager", why: "Needs a TikTok ads account with a payment method, and boosting costs ad spend. Where you add a post under TikTok post and paste the creator's code."}
-    - {name: "TikTok Creator Marketplace", why: "A place to find creators and agree on terms before you ask for a code."}
+    - {name: "TikTok Creator Marketplace", why: "A place to find creators and agree on terms before you ask for a code. It needs a TikTok account, and access and any fees can change, so check TikTok's current terms before you plan around it."}
   inputs:
     - "The creator's signed agreement or message thread showing what they agreed to"
     - "A screenshot of each post's analytics"

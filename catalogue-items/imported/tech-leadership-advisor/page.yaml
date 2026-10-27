@@ -38,6 +38,9 @@ how_to_use:
   - Check each result with your lead engineer. Costs and dates are estimates, and your AI does not know your code.
   - The two Python scripts are optional. They only run in an AI that can run code. Skip them in a plain chat.
   - Your AI marks each figure as "from your input" or "estimate, check with your lead". It asks for numbers you have not given instead of quoting benchmarks it cannot source.
+  - "The advice looks about one to three years ahead. The hiring and cost figures are only usable if you give your team size, current pay range and budget. Without them your AI will mark each figure as an estimate."
+  - "The health measure targets (such as debt ratio, deploy speed and uptime) are generic starting points, not benchmarks. Set them from your own baseline."
+  - "This is a copy of the cto-advisor skill by Alireza Rezvani (MIT). The source link is in the credits. Nothing in the skill was changed except the plain page text and safer wording on numbers."
   - Next, take the hiring plan to your budget review, log the health measures in a monthly check, and run the debt review again after the first sprint. Write each big decision down with the decision record writer.
 next: [tech-debt-prioritiser, decision-record-writer]
 output_sample:

@@ -116,7 +116,7 @@ improve:
 works_best_with:
   tools:
     - name: Claude Code
-      why: It can read a whole folder of docs, keep the register and report, and run on a monthly timer.
+      why: It can read a whole folder of docs, keep the register and report. You start each run. A timer is possible only if you set one up yourself.
     - name: Notion
       why: Export your SOP pages as Markdown. Publishing the rewrites stays with you.
   inputs:

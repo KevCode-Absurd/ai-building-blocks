@@ -31,11 +31,13 @@ you_get:
   - A win-chance estimate and bid call
   - Draft answers
 how_to_use:
+  - RFPs and security questionnaires are often confidential. Before you paste, remove client names, confidential pricing and personal details. Check that your AI provider's data terms allow business documents, and that your buyer's rules allow it.
   - Paste the RFP or questionnaire text into your AI, along with this skill's instructions.
   - "Add your proof points: case studies, certificates and references. Say where each one can be checked."
   - Answer the seven check questions the skill asks one at a time, such as whether there is an incumbent. Set your bid threshold before you see the results.
   - Let it sort the requirements, build the fit matrix and draft win themes. Read the gap audit first.
-  - Read the win-chance estimate as a rough guide only. Its weights and percentages are editable assumptions, not research results, so change them to match your own deals.
+  - The canon files in the skill list the general sources it was built from (books and research). They hold no checked quotes or figures, so do not quote them as evidence.
+  - Read the win-chance estimate as a rough guide only. Its default weights, the late-entry drop, the 20% no-bid line and the 70% strong-fit rule on must-haves are placeholders, not research results. Replace them with your own deal history before you rely on any bid call.
   - Next, make the bid call. If you bid, take the win themes and the fit matrix into the sales proposal writer. If not, log the reasons and the gap list for your next review.
   - This skill includes three Python scripts. They need an AI that can run code. In a plain chat, your AI can follow the same steps by hand.
 output_sample:
@@ -50,13 +52,13 @@ output_sample:
     - name: Parsed requirements
       contains: Every requirement tagged must have, weighted or nice to have, plus sections, scoring rules, deadline and format limits.
     - name: Proof-point matrix
-      contains: Each requirement rated strong, partial or gap, tied to the proof that backs it.
+      contains: "A table with one row per requirement and these columns: requirement, tag (must have, weighted or nice to have), fit (strong, partial or gap), proof source, and where the proof can be checked."
     - name: Win themes
       contains: Three to five buyer-side themes, showing which requirements each one runs through. Themes in fewer than two are flagged.
     - name: Gap audit
       contains: A plain list of requirements you cannot back up, left open for your team to decide.
     - name: Win-chance estimate
-      contains: A percentage with a confidence range and the factors that moved it.
+      contains: A percentage with a confidence range and the factors that moved it. It uses placeholder weights, so treat it as a discussion aid only.
     - name: Bid call
       contains: Bid, partner-bid or no-bid, with the named factors behind the call.
 next: [sales-proposal-writer]

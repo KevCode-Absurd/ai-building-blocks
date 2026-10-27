@@ -26,7 +26,10 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
+**When not to use it.** You run an online store and want cash and stock planned: use the Store financial model builder or the Inventory cash planner. You want a short forecast of a few weeks only: use the Cash forecast builder (https://useaiblocks.com/skills/cash-forecast-builder). This is a plan for you and an adviser to review, not legal, tax or investment advice.
+
 ## What you need
+This list replaces the general one above. The question is: when does cash run out, and what do we tell the board?
 - **Your plan:** prices, how many customers you expect each month and how long they stay (required)
 - **Your team plan and fixed costs:** hires with start months and pay (required)
 - **Your bank balance** and any money already promised (required)
@@ -46,7 +49,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Startup financial model builder.** Use the skill `startup-financial-model-builder`. Give it the plan, team plan, bank balance and hires. It builds a monthly model: revenue from customers won and kept, the cost of making and selling, team and fixed costs, and cash flow in a best, base and worst case, with every assumption listed. Saved as `outputs/step-01-startup-financial-model-builder.md`.
-2. **Startup runway forecaster.** Use the skill `startup-runway-forecaster`. Give it the monthly cash in `outputs/step-01-startup-financial-model-builder.md` and your real monthly bank history if you have it. It splits trend from season, adjusts for hiring and finds the month cash reaches zero as a range, with the window in which to raise. Saved as `outputs/step-02-startup-runway-forecaster.md`.
+2. **Startup runway forecaster.** Use the skill `startup-runway-forecaster`. Give it the monthly cash in `outputs/step-01-startup-financial-model-builder.md` and your real monthly bank history if you have it. It splits trend from season, adjusts for hiring and finds the month cash reaches zero as a range. Build the range from the three cases in step 1: the earliest zero-cash month comes from the worst case, the likely month from the base case and the latest from the best case. Add odds only when you gave 12 or more months of real cash, taking them from how far the forecast missed past months. Otherwise say there are no odds and label every figure `assumption`. It also gives the window in which to raise, counted back from the earliest zero-cash month by the raise lead time you stated. Ask for the lead time and the hiring start months before step 1 if they are missing. Saved as `outputs/step-02-startup-runway-forecaster.md`.
 3. **Startup finance advisor.** Use the skill `startup-finance-advisor`. Give it `outputs/step-01-startup-financial-model-builder.md` and `outputs/step-02-startup-runway-forecaster.md`. It asks the hard questions, works out unit economics and payback, sets the cash levels at which to cut or raise, lays out the raise steps with dilution and assembles the board pack. Not legal or investment advice. If it uses a sample script, its output is a demonstration, never the company's numbers. Saved as `outputs/step-03-startup-finance-advisor.md`.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list. The model, the forecast and the pack must use the same numbers. Say the pack is a draft for an accountant or adviser to review.
 

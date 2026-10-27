@@ -26,9 +26,11 @@ Never mix the two - don't reach for `requests`/`fetch` in a Python or TypeScript
 
 **Never guess SDK usage.** Function names, class names, namespaces, method signatures, and import paths must come from explicit documentation - either the `{lang}/` files in this skill or the official SDK repositories or documentation links listed in `shared/live-sources.md`. If the binding you need is not explicitly documented in the skill files, WebFetch the relevant SDK repo from `shared/live-sources.md` before writing code. Do not infer Ruby/Java/Go/PHP/C# APIs from cURL shapes or from another language's SDK.
 
-**If WebFetch or repository access fails** (network restricted, timeouts, clone blocked): do not keep retrying - write code from the patterns and namespace/package tables in the `{lang}/` file, run the compiler or interpreter on it, and iterate on the error output. For statically-typed SDKs (C#, Java, Go) a compile-fix loop against local errors reaches working code faster than blocked network research.
+**If WebFetch or repository access fails** (network restricted, timeouts, clone blocked): do not keep retrying - write code from the patterns and namespace/package tables in the `{lang}/` file, run the compiler or interpreter on it, and iterate on the error output. For statically-typed SDKs (C#, Java, Go) a compile-fix loop against local errors reaches working code faster than blocked network research. (Added by AI Blocks: when you could not check the docs, say so in your reply and list the names, imports and settings that are unchecked, so the user tests them before relying on the code.)
 
 ## Defaults
+
+(Added by AI Blocks: running the code calls the user's paid API key. Before you run anything that calls the API, tell the user it will bill their account and wait for a yes.)
 
 Unless the user requests otherwise:
 

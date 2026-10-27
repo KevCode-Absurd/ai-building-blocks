@@ -13,6 +13,8 @@ explain: |-
 
   Remittances still pending stay out of the ladder until they land. It works from totals and deidentified records only, and it plans administrative cash. It does not approve a payment and it does not set clinical priorities. It is not billing, legal or financial advice.
 
+  This is for a clinic's claims and bank cash only. It does not value a business or a group of companies.
+
   Licence: MIT. The licence text is in the download.
 when:
   - A payer says a claim was paid but the bank shows less.

@@ -20,7 +20,6 @@ evidence_sources:
   - "Bannert (2007) — Metakognition beim Lernen mit Hypermedien (metacognitive prompting in hypermedia learning)"
   - "Bannert (2009) — Promoting self-regulated learning through prompts"
   - "Winne & Hadwin (1998) — Studying as self-regulated learning (COPES framework)"
-  - "Frontiers in Education meta-analysis (2025) — AI-supported self-regulated learning (no link or DOI was recorded for this source, so check it before you quote it)"
 input_schema:
   required:
     - field: "subject_or_topic"

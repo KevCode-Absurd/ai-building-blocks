@@ -9,6 +9,8 @@ subhead: A plan for how a company you just bought will make more profit, with ea
 explain: |
   A plan for how a company you just bought will make more profit, with each idea tied to a number and an owner. You get a profit bridge and a clear list of what to do in the first 100 days.
 
+  It is written for people who have just bought a company, such as buyers, investors and their operating partners. It is not for small business owners who only need a budget. Three terms: EBITDA is profit before interest, tax and write-offs. An operating partner is the experienced person who helps run the company after the deal. The holding period is how many years you plan to own it before selling.
+
   The skill starts with a baseline: revenue, profit, margins, team and quick wins from the deal review. Then it lists levers in three groups. Revenue levers include pricing, cross-selling, new markets and add-on purchases. Strategic levers include a shift to recurring revenue and stronger management. Each lever gets a start point, target, dollar effect, timing, cost and confidence. They roll into an annual profit bridge, with KPI targets and a named person responsible for each.
 when:
   - You are closing a deal and need a plan the board will sign off on.
@@ -16,9 +18,10 @@ when:
   - An operating partner wants the first 100 days laid out.
   - You need to rank ideas by size, cost and confidence.
 not_for:
-  - "You have not yet reviewed the company's books and risks: finish diligence first, or use a simple budget for now."
+  - "You have not yet reviewed the company's books and risks: finish diligence first, or use the Budget and forecast builder for now."
   - "You have no planned holding period: a plan needs an end date, so set one with your partners before you start."
-  - "You only need a one page summary of a deal: write a short memo with the diligence findings instead."
+  - "You only need a one page summary of a deal: use the Deal screening memo writer instead."
+  - "You only need a simple yearly budget: use the Budget and forecast builder instead."
 you_give:
   - Current revenue, profit and margins
   - Findings from diligence
@@ -30,7 +33,7 @@ you_get:
   - A 100 day priority list
   - KPI targets with owners
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Open Claude, ChatGPT or Gemini. Copy the full SKILL.md from the skill folder and paste it in, or add the skill to your AI. The page only holds a summary, so the steps are in that file.
   - "Paste your numbers as text, or upload a spreadsheet if your AI takes files. Include: last full year revenue, EBITDA and margins, headcount by function, the findings and quick wins from your diligence report, and the holding period in years. Add team notes if you have them."
   - Ask for the plan. Your AI works through the baseline, the levers, the EBITDA bridge, the 100-day plan and the KPIs.
   - Check the timing and the dollar effects. Most gains take 12 to 24 months to show, so push back on anything faster.

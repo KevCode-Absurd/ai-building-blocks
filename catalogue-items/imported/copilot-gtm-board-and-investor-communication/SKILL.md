@@ -9,6 +9,15 @@ metadata:
 
 # Board and Investor Communication
 
+## Start here (added by AI Blocks)
+
+1. Gather your own numbers: ARR, burn, runway, targets against actuals, and your last investor update. Never guess a figure. Mark any you lack as [NEEDED].
+2. Write down the decisions you need from the board, and any bad news.
+3. Paste this skill and your numbers, and ask for a board plan, an investor update, or both.
+4. Read the sections below that match your request. You do not need to apply every framework.
+5. Figures in the examples below are placeholders. Replace each [BRACKET] with your own number and never reuse an example figure.
+6. Source: this copy came from github/awesome-copilot. The original author is Smit Patel (github.com/beingsmit/technical-product-gtm), under the MIT licence.
+
 Structure board meetings, investor updates, and executive communication that builds trust and drives decisions — not slide decks that nobody reads.
 
 Start from the decisions due and your company facts. If you have a metrics sheet or an evidence map for those decisions, add them and use them for the numbers and the case behind each decision.
@@ -105,7 +114,7 @@ Be specific. Not "sales are going well" but "closed first six-figure enterprise 
 - Community/ecosystem milestones
 
 **What's Not Working (1-2 areas):**
-Be equally specific. Not "we had some challenges" but "self-serve conversion is weak — strong awareness but 0.1% conversion rate." Board needs to understand the actual problem, not a euphemism.
+Be equally specific. Not "we had some challenges" but "self-serve conversion is weak — strong awareness but [CONVERSION RATE] conversion." Board needs to understand the actual problem, not a euphemism.
 
 **What We're Doing About It (for each "not working"):**
 Articulate specific changes. What product changes? What org changes? What's the timeline? What resources are committed?
@@ -120,13 +129,13 @@ Board members read dozens of updates. The Three Things model gives them a mental
 
 **The Pattern:**
 
-It doesn't matter if you hit 100K users if you were aiming for 50K — or if you missed 200K. Context is everything. Show progress toward your goal, not just the number.
+It doesn't matter if you hit [NUMBER] users if you were aiming for a lower number, or if you missed a higher one. Context is everything. Show progress toward your goal, not just the number.
 
 **How to Frame Progress:**
 
-- **On track:** "Target 100K active developers. Currently 70K. All initiatives performing as planned. Confidence: High."
-- **At risk:** "Target 100K active developers. Currently 50K. Acquisition cost higher than expected. Testing new channels. Adjusted target: 85K. Confidence: Medium."
-- **Ahead:** "Target 100K active developers. Currently 95K. Exceeding acquisition forecasts. New partnerships accelerating growth. Confidence: Very high."
+- **On track:** "Target [TARGET] active users. Currently [CURRENT]. All initiatives performing as planned. Confidence: High."
+- **At risk:** "Target [TARGET] active users. Currently [CURRENT]. Acquisition cost higher than expected. Testing new channels. Adjusted target: [NEW TARGET]. Confidence: Medium."
+- **Ahead:** "Target [TARGET] active users. Currently [CURRENT]. Exceeding acquisition forecasts. New partnerships accelerating growth. Confidence: Very high."
 
 **The Rules:**
 1. Set the goal upfront (every metric needs a target)
@@ -136,7 +145,7 @@ It doesn't matter if you hit 100K users if you were aiming for 50K — or if you
 
 **Common Mistake:**
 
-Changing goals when you miss them. Boards track this. If Q1 target was 100K and you hit 60K, don't make Q2 target 75K and call it "revised guidance." State the miss, explain why, show the recovery plan. Credibility compounds faster than metrics.
+Changing goals when you miss them. Boards track this. If the Q1 target was [TARGET] and you hit [ACTUAL], don't quietly lower the Q2 target and call it "revised guidance." State the miss, explain why, show the recovery plan. Credibility compounds faster than metrics.
 
 ---
 
@@ -220,10 +229,10 @@ For every piece of bad news, four elements:
    - Own it: "We misread the demand signal" not "the market shifted"
 
 3. **What's the impact** (honest about severity)
-   - "Affects Q1 ARR by ~$50K, pushing us below original guidance"
+   - "Affects Q1 ARR by about [AMOUNT], pushing us below original guidance"
 
 4. **What we're doing about it** (specific actions, owners, timeline)
-   - "Changed sales motion to qualify on product readiness upfront; revised Q2 target to 15 (including Q1 backlog of 7)"
+   - "Changed sales motion to qualify on product readiness upfront; revised Q2 target to [NUMBER] (including a Q1 backlog of [NUMBER])"
 
 **How NOT to Communicate a Miss:**
 - "We didn't hit Q1 goals, but the pipeline is strong"
@@ -325,7 +334,7 @@ The best financial communication shows: "We're burning less while growing faster
 
 **Common Mistake:**
 
-Conflating burn with growth. A board that hears "we're growing fast" while burn rate climbs thinks you're buying growth. A board that hears "we cut burn by 40%" while growth stalls thinks you're in survival mode. Tell both stories, separately, and then connect them.
+Conflating burn with growth. A board that hears "we're growing fast" while burn rate climbs thinks you're buying growth. A board that hears "we cut burn by [PERCENT]" while growth stalls thinks you're in survival mode. Tell both stories, separately, and then connect them.
 
 ---
 

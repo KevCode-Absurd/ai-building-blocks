@@ -12,6 +12,8 @@ allowed-tools: Bash, Read, Write, Glob, WebSearch, Task
 
 ## Workflow
 
+There are five steps, run in this order: (1) find the outline, (2) check which items are done, (2b) check site terms, a required step before any agent runs, (3) run a batch of agents, (4) wait and show progress, (5) write the summary. The files you need are described first.
+
 ## Inputs
 
 Two files, in a folder in your working directory. The names and values below are placeholders.
@@ -29,7 +31,16 @@ execution:
   output_dir: ./results
 ```
 
-`fields.yaml`: one entry for each fact to fill in for every item, such as [FIELD NAME] with a short description of what to put there.
+`fields.yaml`: one entry for each fact to fill in for every item. Example shape, with placeholders:
+```yaml
+fields:
+  - name: [FIELD NAME]
+    description: [WHAT TO PUT IN THIS FIELD]
+  - name: [FIELD NAME]
+    description: [WHAT TO PUT IN THIS FIELD]
+```
+
+In the steps below, `{project_dir}` means the folder that holds `outline.yaml` and `fields.yaml`, and `{output_dir}` means the results folder named in the outline (default `{project_dir}/results`).
 
 Batch size is optional. If you leave it out, the skill asks you.
 
@@ -41,6 +52,11 @@ The outline needs a topic, a list of items (name, category, description) and an 
 - Check completed JSON files in output_dir
 - Skip completed items
 
+### Step 2b: Check site terms (required before Step 3)
+This skill sends agents to scrape websites. Before any agent runs, tell the user which sites are likely to be read, and ask them to check each site's terms and robots.txt. The skill cannot enforce this. It relies on the user's answer. Do not start Step 3 until the user says yes.
+
+Also tell the user before Step 3: a run launches many agents in parallel, and each one searches the web. This uses a lot of a paid Claude plan's allowance or API credit. Suggest a small first batch.
+
 ### Step 3: Batch Execution
 - Batch by batch_size (need user approval before next batch)
 - Each agent handles items_per_agent items
@@ -51,10 +67,10 @@ The outline needs a topic, a list of items (name, category, description) and an 
 - `{item_name}`: item's name field
 - `{item_related_info}`: item's complete yaml content (name + category + description etc.)
 - `{output_dir}`: execution.output_dir from outline.yaml (default: ./results)
-- `{fields_path}`: absolute path to {topic}/fields.yaml
+- `{fields_path}`: absolute path to {project_dir}/fields.yaml
 - `{output_path}`: absolute path to {output_dir}/{item_name_slug}.json (slugify item_name: replace spaces with _, remove special chars)
 
-**Hard Constraint**: The following prompt must be strictly reproduced, only replacing variables in {xxx}, do not modify structure or wording. The one exception: if `validate_json.py` is not on the machine, use the by-hand check described in the note below the template.
+**Hard Constraint**: Reproduce the following prompt, replacing only the variables in {xxx}. Do not change its structure or wording. The Validation section is written for this copy, which has no validation script, so it asks for a by-hand check.
 
 **Prompt Template**:
 ```python
@@ -74,22 +90,19 @@ Read {fields_path} to get all field definitions
 {output_path}
 
 ## Validation
-After completing JSON output, run validation script to ensure complete field coverage:
-python ~/.claude/skills/research/validate_json.py -f {fields_path} -j {output_path}
-Task is complete only after validation passes.
+After completing JSON output, check by hand that every field in {fields_path} has a value or is marked [uncertain].
+Task is complete only after this check passes.
 """
 ```
 
-Note for the catalogue copy: validate_json.py is not in this folder, and its path above names a different skill folder. If the script is not on your machine, drop the two validation lines and check by hand that every field in fields.yaml has a value, then say you did it by hand.
-
-Before agents fetch pages, tell the user which sites will be read, and check each site's terms and robots.txt.
+No validation script comes with this copy. Say in your summary that the field check was done by hand.
 
 **One-shot Example** (the item name, category and description below are placeholders; use your own):
 ```
 ## Task
 Research name: [ITEM NAME]
 category: [CATEGORY]
-description: [ONE LINE ABOUT THE ITEM FROM YOUR OUTLINE], output structured JSON to {project_dir}/results/[ITEM_NAME].json
+description: [ONE LINE ABOUT THE ITEM FROM YOUR OUTLINE], output structured JSON to {output_dir}/[ITEM_NAME].json
 
 ## Field Definitions
 Read {project_dir}/fields.yaml to get all field definitions
@@ -101,12 +114,11 @@ Read {project_dir}/fields.yaml to get all field definitions
 4. All field values must be in English
 
 ## Output Path
-{project_dir}/results/[ITEM_NAME].json
+{output_dir}/[ITEM_NAME].json
 
 ## Validation
-After completing JSON output, run validation script to ensure complete field coverage:
-python ~/.claude/skills/research/validate_json.py -f {project_dir}/fields.yaml -j {project_dir}/results/[ITEM_NAME].json
-Task is complete only after validation passes.
+After completing JSON output, check by hand that every field in {project_dir}/fields.yaml has a value or is marked [uncertain].
+Task is complete only after this check passes.
 ```
 
 ### Step 4: Wait and Monitor

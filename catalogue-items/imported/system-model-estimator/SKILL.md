@@ -7,6 +7,9 @@ metadata:
   author: MathWorks
   version: "1.0"
 ---
+
+<!-- Needs paid products: MATLAB and the System Identification Toolbox (both MathWorks). Without them this skill cannot run. -->
+<!-- Licence note: the licence line in the header above links a MathWorks reuse page. The licence that governs this copy is LICENSE.md in this folder: BSD 2-Clause, for use with MathWorks products only. -->
 # Linear Model Identification
   Estimate a linear dynamic model from measurement data using MATLAB System Identification Toolbox. This skill selects the right model type, determines model order, estimates parameters, and validates results — following the methodology a System Identification Toolbox expert would use.
 

@@ -9,6 +9,8 @@ subhead: A plain model of what each marketing channel adds to your weekly sales,
 explain: |
   A plain model of what each marketing channel adds to your weekly sales, with its limits stated up front. It stops you from reading a correlation as proof that a channel works.
 
+  Three terms you may see. OLS contribution is what a plain weekly regression says a channel adds to sales. A Hill curve is a shape that shows returns shrinking as spend grows. MTA is multi-touch attribution, a way of sharing credit across the ads a buyer saw. If you do not code, you can ignore the response-curve step and read only the status lines and the share comparison.
+
   You supply weekly spend and outcomes by channel. The skill sets the scope, week range, time zone and currency first, then keeps unknown values as unknown instead of turning them into zero. It runs a weekly regression and compares the modeled share of each channel with the share your CRM reports. Every result comes back with its assumptions and a status. It does not allocate budget. It tells you what the data can and cannot say. It needs Python.
 when:
   - You spend across several channels and want to know what each one adds.
@@ -32,11 +34,13 @@ you_get:
   - Assumptions and status flags
   - Plain statement of what is not proven
 how_to_use:
+  - "Gather these first: weekly spend and weekly sales (or conversions) for each channel, one row per week per channel, with the week start date, channel, spend and outcome. Also your time zone, currency and week range. For the share comparison, your CRM totals per channel over the same weeks, with the columns source_system, source_scope, row_key, channel_key, spend and outcome_quantity (details in references/framing-contract.md)."
   - Open a chat with an AI that can run Python and read files. Claude or ChatGPT with code running turned on both work.
   - Upload the whole skill folder, with its references and scripts folders, and requirements.txt. Pasting SKILL.md alone is not enough, because it calls the scripts and contract files in the folder.
-  - Add your weekly spend and sales by channel as a spreadsheet or CSV. Use one row per week per channel, with the week start date, channel, spend, and the outcome count or revenue. Also give your time zone, currency and week range.
-  - Add your CRM numbers and any spend scenarios you want to test (optional).
+  - Add your weekly spend and sales by channel as a spreadsheet or CSV, with your time zone, currency and week range.
+  - Add your CRM totals and any spend scenarios you want to test (optional). The share comparison is a separate step from the regression. Its rows hold the modeled contribution (model side), or spend and outcome_quantity (CRM side), already added up over your declared weeks.
   - Ask your AI to follow the skill. Check the status lines before you read any channel result.
+  - "If the status is no usable result, or insufficient_input, rank_deficient, ill_conditioned or numerical_failure: fix the data first (more weeks, channels that do not always move together, no blank cells). If it still fails with clean data, stop and ask a person who knows statistics. Do not read any channel number from a failed run."
   - Take the modeled share versus CRM share into a lift-test plan or a human budget review. Do not treat it as a budget decision.
 output_sample:
   input:
@@ -70,4 +74,4 @@ output_shape: |
   SCENARIOS <spend change by channel> | assumed response: <low to high>
   ASSUMPTIONS <list>
   NOT PROVEN: <what these numbers cannot show>
-next: [ad-spend-analyst]
+next: [ad-spend-analyst, incrementality-test-planner]

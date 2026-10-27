@@ -43,12 +43,12 @@ How to start:
 
 ## What you need
 
-Note: this job does not need a buyer brief, a brand brain or an ad draft. Use the list below. If the Before you start list above asks for them, skip that.
+Note: this job does not need a buyer brief, a brand brain or an ad draft. The "Before you start" block above is shared text. Ignore its "Your question", "Source text" and "A draft" lines. This agent takes the case files and rubric listed below.
 
 Ask once for anything below that is missing. If it is still missing, write `MISSING: <what>`, name the path it blocks, and finish the parts that do not need it. Never guess.
 
 - The full case and its exhibits.
-- The judging rubric and the time limit.
+- The judging rubric and the time limit. If the rubric is missing or only partly pasted, say so first. Then list the criteria you can see, mark the rest `MISSING: rubric`, and skip the rubric check for those criteria.
 - The team's recommendation and current deck (or its text).
 - The financial exhibits and the assumptions behind them.
 - The last review file (`review-log.md`), if this is a repeat run.
@@ -68,7 +68,7 @@ If the deck builder files are not in the pack, or you cannot run Python, do not 
 1. **Read the last state.** If `review-log.md` is supplied, read its state: case version, rubric version, recommendation, assumptions, slides each one affects. If not, this is a baseline run. Say which.
 2. **Check what changed.** Compare current versions and dates with that state. A change in the recommendation, a financial exhibit or the rubric triggers a review. A missing file is unknown coverage, not proof of no change. If nothing changed and no review is due, say so and stop.
 3. **Stress test.** Follow the `stress-test-a-case-competition-recommendation` workflow if it is in the pack. If not, do this directly. List every rubric criterion and the slide that answers it (`rubric-check.md`). Name the strongest alternative recommendations and the best case against this one. Write the likely judge questions with the best answer and its source (`challenge-register.md`).
-4. **Source new assumptions.** For each assumption that drives the recommendation, find its source in the case or exhibits (the `source-note-summariser` skill helps if it is in the pack). If there is none, mark it `UNSUPPORTED`. Do not rebuild a slide on an UNSUPPORTED assumption unless the slide labels it as an assumption.
+4. **Source new assumptions.** For each assumption that drives the recommendation, find its source in the case or exhibits (the `source-note-summariser` skill helps if it is in the pack). If there is none, mark it `UNSUPPORTED`. A recommendation that has no source at all gets the same mark. Do not stall: carry on to the bridge and the challenge register, and list it first in `unsupported-claims.md`. Do not rebuild a slide on an UNSUPPORTED assumption unless the slide labels it as an assumption.
 5. **Build the financial bridge (`financial-bridge.md`).** Start from the case's own numbers and walk to the recommended outcome. Each step names its exhibit or assumption. State units, currency and period once and keep them. Show the difference if the bridge does not reconcile; do not force it to.
 6. **Rebuild only the affected slides.** One message per slide. Every number traces to an exhibit or a labelled assumption. Scenarios are shown as scenarios, not forecasts. If PPTX tools and a renderer are available, build the .pptx and look at every rendered slide for overflow and overlap. If not, write `deck-text.md`.
 7. **Check claims (`unsupported-claims.md`).** Read the final slide text. Flag market claims, customer evidence and numbers that no source backs. Check the deck fits the time limit and say how you judged it.

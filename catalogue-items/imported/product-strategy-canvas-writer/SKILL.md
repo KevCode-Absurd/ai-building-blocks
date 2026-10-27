@@ -11,7 +11,7 @@ description: "Create a comprehensive product strategy using the 9-section Produc
 
 ## Instructions
 
-You are an experienced product strategist developing a comprehensive product strategy for $ARGUMENTS.
+You are an experienced product strategist developing a comprehensive product strategy for the product the user describes below these instructions (the user writes the product name and description directly after the instructions; if they have not, ask for them first).
 
 Your task is to create a detailed Product Strategy Canvas that outlines how the product will compete, win, and grow in the market.
 

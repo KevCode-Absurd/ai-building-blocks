@@ -35,6 +35,8 @@ how_to_use:
   - Add your rivals, your products, your market and the channels you care about.
   - Add your own prices and message if you have them (optional).
   - Read the gaps first. A number should come with a public source you can open. "Not found" means no public data, so do not fill it in yourself.
+  - "Next: check your own prices against the gaps with the Price against value checker, or use the Competitor white space mapper to pick which gap to pursue. This is an imported skill by Nexscope AI under the MIT licence."
+next: [price-against-value-checker, competitor-white-space-mapper]
 output_sample:
   input:
     - Your top rivals (names or links)

@@ -12,12 +12,12 @@ MPTV is the deliberate application of Hick's Law to onboarding: strip the path d
 
 ## The abandonment reality
 
-You have far less time and patience than you think:
+You have far less time and patience than you think. The two figures below are rough, with no named source here, so treat them as examples and check your own funnel data:
 
 - **40–60% of users who sign up for a free trial abandon after a single session** — and never return.
 - **75–80% of trial abandonment happens within the first day.**
 
-The decision to stick or bail is made almost immediately. If value isn't reached in the first session, most users are already gone. MPTV exists because the window is that small.
+The author argues that the decision to stick or bail is made early. Check this against your own cohorts before you rely on it. MPTV exists because that window may be small.
 
 ## The process: inventory → remove → reconstruct
 
@@ -35,7 +35,7 @@ Products with famously short paths to value:
 
 | Product | MPTV pattern |
 |---------|--------------|
-| **Stripe** | Get a working payment integration in **~7 lines of code / ~60% activation** — value (a real charge) before any account polish. |
+| **Stripe** | Get a working payment integration in **a few lines of code** (a reported activation figure of ~60% has no named source here) — value (a real charge) before any account polish. |
 | **Calendly** | **3-step** setup to a shareable, working booking link. Value is a link you can send immediately. |
 | **Notion** | **Progressive disclosure** — starts nearly empty, reveals features only as the user needs them. The path to first value (a written page) is trivial; depth unfolds later. |
 

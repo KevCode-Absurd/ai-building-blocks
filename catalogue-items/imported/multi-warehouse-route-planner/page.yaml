@@ -32,14 +32,14 @@ you_get:
   - Trucks used and average load by depot
   - A solving method matched to your problem size
 how_to_use:
-  - Open an AI that can run code, such as Claude or ChatGPT with code tools on. Paste in the skill text.
-  - Put your depots and customers in a table with coordinates. Add demand per customer and trucks per depot. Paste it as CSV.
+  - Open an AI that can run code, such as Claude or ChatGPT with code tools on. Paste in the skill text as your first message.
+  - Put your depots and customers in a table with coordinates. Add demand per customer and trucks per depot. Paste it as CSV in a second message, or attach the CSV file.
   - The sample code models distance, truck counts and capacity only. Time windows and depot fixed costs are not in it unless you ask your AI to add them.
-  - Install ortools, numpy and scikit-learn first. The solver gives a good answer within its time limit, not a proven best one.
+  - Install ortools, numpy and scikit-learn first. The code uses the ortools 9 routing calls (RoutingIndexManager), so other versions may need small changes. The solver gives a good answer within its time limit, not a proven best one.
   - "Tell your AI your goal: least distance, balanced loads or shortest longest route. Say if trucks must return to their own depot."
-  - Ask it to run the solver and report the result. It may need to install OR-Tools and scikit-learn first.
+  - Ask it to run the solver on a small test case first, such as 3 depots and 10 customers. Check that every customer is assigned once. The code stops with an error if a route passes through a depot as a middle stop. Then run your full data.
   - Check the depot loads. If one depot is overloaded, ask it to re-run with balanced workload as the goal.
-  - Next, brief your drivers from the checked routes or send them to your routing or dispatch tool. To compare options, rerun with a different number of depots.
+  - Next, ask your AI to export the checked routes as a CSV (depot, truck, stop order). Use it to brief your drivers or load it into your dispatch tool. To compare options, rerun with a different number of depots.
 output_sample:
   input:
     - Your depot locations, truck counts and capacities

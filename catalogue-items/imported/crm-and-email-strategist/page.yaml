@@ -36,7 +36,9 @@ you_get:
   - For a test, the idea, the metric, the sample size you need and how long it will take
   - A plan to measure what email earns, with a control group where it can
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Choose a mode that can open web pages if you can.
+  - "Gather first: a report export from your email platform, your sending domain check results (SPF, DKIM, DMARC) and a few bounce messages if you have them."
+  - This is a third-party skill under the MIT licence, from the CRM Open Knowledge Wiki. We copied it as it is and gave it a plain name.
+  - Open Claude, ChatGPT or Gemini. Choose a mode that can open web pages if you can. Without web access it uses the short notes in the folder. The compliance and tracking-consent wiki pages are not in the folder, so without web access the answers on consent and email law are only a summary. Treat them as an overview, not legal advice.
   - Paste this skill, then your question. Add your platform and any numbers you have.
   - Say what you want back, such as an audit, a flow table or a spam diagnosis.
   - Check each finding against what you know. Ask it to mark guesses where it lacked data.
@@ -48,7 +50,7 @@ output_sample:
     - Recent metrics and current flows (optional)
     - Sending domain checks, such as SPF, DKIM and DMARC results (optional)
   prerequisites:
-    - Web access helps, so it can read the wiki. Without it, bundled notes are used.
+    - Web access helps, so it can read the wiki. Without it, the bundled notes are used, and the fallback is partial: the full compliance and tracking-consent pages are online only.
   output:
     - name: Executive summary
       contains: The 3 to 5 biggest gaps in your email program, in plain words.

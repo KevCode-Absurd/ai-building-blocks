@@ -11,6 +11,8 @@ explain: |
 
   It checks the contract against your own rules, not a rule of its own. If you have no written rules, it asks you what you will accept on each point and records your answer. It does not apply a fixed number from the skill.
 
+  This is an adapted copy of Anthropic's saas-msa-review skill, under the Apache 2.0 licence. The chat version differs from the original: the plugin steps, file paths and slash commands are left out or ignored, and your pasted rules stand in for the team playbook.
+
   It also looks at AI training rights, liability caps and which law governs. Auto-renewal rules in California, New York and the EU are not the same. Where the contract points to one place and you work in another, it flags that and does not quietly guess. It is a first pass for you or your lawyer, not legal advice.
 when:
   - A vendor sent a software contract and you must reply before it renews.
@@ -36,9 +38,10 @@ you_get:
   - A record you can copy into a renewal tracker
 how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini. Paste the skill instructions. No code, web search or paid tool is needed.
+  - "Gather first: the contract text, the notice window you will accept before renewal, the biggest yearly price rise you will accept, and the law the contract names (its governing law)."
   - Paste the contract text. Say if you are the customer or the vendor, and where you operate. Add your own rules for what you accept, if you have them. If not, answer the questions it asks.
   - Read the bottom line and the auto-renewal block first. Put the cancel-by date in your calendar.
-  - Check any law or case it names against an official source before you rely on it. If a note says verify, it came from the AI's memory.
+  - Check any law or case it names against an official source before you rely on it. If a note says verify, it came from the AI's memory. This check does not replace a lawyer for a large or cross-border deal.
   - Send the suggested changes to your lawyer or the vendor. For a large deal, ask a lawyer to review the whole contract first.
   - Give the renewal record to the Monthly contract renewal keeper, so you get a reminder before the cancel-by date.
 how_it_works:

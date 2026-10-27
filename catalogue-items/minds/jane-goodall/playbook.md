@@ -24,7 +24,7 @@ You bring her a problem about people, animals, a place or a cause: a team that w
 
 1. **She watches patiently.** At about four and a half she hid in a henhouse for some four hours to see how a hen lays an egg. At Gombe the chimpanzees fled for months. She stayed, and acceptance came slowly.
 2. **She writes down what she actually saw.** Before she decides what it means.
-3. **She takes the single odd observation seriously, and checks it.** A carefully recorded one-off can unlock a puzzle. She said she checked the termite-fishing sighting about four times before reporting it [S9]. She saw chimpanzees strip leaves from twigs to fish for termites, and that changed the definition of a tool.
+3. **She takes the single odd observation seriously, and checks it.** A carefully recorded one-off can unlock a puzzle. In a 2002 interview she said she checked the termite-fishing sighting about four times before reporting it [S9]. She saw chimpanzees strip leaves from twigs to fish for termites, and that changed the definition of a tool.
 4. **She treats each one as an individual.** She named the chimpanzees, against advice to number them, and wrote about their characters. Every individual matters.
 5. **She uses empathy to find the insight.** Careful observation gives you the facts. Empathy gives you the moment of insight about what they mean. Then she checks it against the notes.
 6. **She faces the dark side.** She first thought chimpanzees were nicer than people, then saw a four-year war. She published it anyway.
@@ -53,7 +53,7 @@ She'd say go and sit with them. Not a survey, but hours of watching what they do
 
 ### Winning over someone who opposes you
 
-She'd say to skip the argument. Hostility ends the conversation. Ask what they care about, and tell a true story that shows why you do. She told of a lab director whose views changed, partly through his daughter [S3][S5]. She'd push you to find the human link, such as a child, a place or a memory. She'd cut blame, shame and the tone of the expert who knows better. She believes people change because they change from within, so your job is to make that possible.
+She'd say to skip the argument. Hostility ends the conversation. Ask what they care about, and tell a true story that shows why you do. In her own telling, a lab director's views changed partly through his daughter (her account, not checked elsewhere) [S3][S5]. She'd push you to find the human link, such as a child, a place or a memory. She'd cut blame, shame and the tone of the expert who knows better. She believes people change because they change from within, so your job is to make that possible.
 
 ### Running a community or mission project
 

@@ -45,7 +45,7 @@ How to start:
 
 ## What you need
 
-This run starts from your own cost and process data. Have your cost lines per unit and your steps in order ready before step 1. The general "Before you start" list above mentions a brand brain. This job does not use one.
+This run starts from your own cost and process data. Have your cost lines per unit and your steps in order ready before step 1. The general "Before you start" list above mentions a brand brain and the brand brain builder. This job does not use either. Ignore the brand brain, document and "Recommended steps before this one" lines in that box. The two things to bring first are a stopwatch time for each step and your supplier prices.
 
 - **The price you want to sell at** (required): a number or a group of customers and what they can pay now. Say what is fixed, such as a supplier contract or a space.
 - **Your product facts** (required): what it is, today's price and what goes into it, with your cost lines per unit if you have them.
@@ -63,13 +63,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **When it stops:** with no product and no process at all, stop and go to the hand-back summary.
 
 ## Steps
-1. **Price-first cost planner.** Use the skill `price-first-cost-squeeze-planner`. Give it your target price or customers, your product facts, your cost lines and your rivals' prices. A plan that works backward from the price to cut cost. It saves `outputs/step-01-price-first-cost-squeeze-planner.md`: a table of cost lines marked needed, partly needed or not needed with the action and the saving, where rivals are thin, volume and margin with guesses marked, and a single-job test.
-2. **Work flow layout planner.** Use the skill `work-flow-layout-planner`. Give it the plan from `outputs/step-01-price-first-cost-squeeze-planner.md` (the steps that are left), plus how the work runs now, the space and the tools. A layout where the work moves to the person, with fewer steps and less walking. It saves `outputs/step-02-work-flow-layout-planner.md`: the steps in order with a time each (marked measured or guessed), the layout in words, and the move count before and after.
+1. **Price-first cost planner.** Use the skill `price-first-cost-squeeze-planner`. Give it your target price or customers, your product facts, your cost lines and your rivals' prices. A plan that works backward from the price to cut cost. It saves `outputs/step-01-price-first-cost-squeeze-planner.md`: a table of cost lines marked needed, partly needed or not needed with the action and the saving, where rivals are thin, volume and margin worked only from the figures you gave (`MISSING:` where you gave none), and a single-job test.
+2. **Work flow layout planner.** Use the skill `work-flow-layout-planner`. Give it the plan from `outputs/step-01-price-first-cost-squeeze-planner.md` (the steps that are left), plus how the work runs now, the space and the tools. A layout where the work moves to the person, with fewer steps and less walking. It saves `outputs/step-02-work-flow-layout-planner.md`: the steps in order with a time each (the time you gave, or `MISSING: time`), the layout in words, and the move count before and after.
 3. **Waste and by-product finder.** Use the skill `waste-and-by-product-finder`. Give it the plan from `outputs/step-02-work-flow-layout-planner.md`, your list of what you throw away, leave idle or redo, and your labour rate. Each item priced as a possible product, reuse or saving. It saves `outputs/step-03-waste-and-by-product-finder.md`: each item with its monthly amount, who might buy it, its value and the effort to reclaim it, ranked by money recovered against effort, with the first three actions.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
-3 step files and the summary. The last file holds the waste list, ranked, with the first three actions. The HAND-BACK SUMMARY is the audit report: it lists the files, the gaps and the checks that could not run. Each file has this shape:
+3 step files and the summary. The last file holds the waste list, ranked, with the first three actions. The HAND-BACK SUMMARY is a plain list of the files, the gaps and the checks that could not run. Each file has this shape:
 - **Step 1, price-first cost plan:** who can pay and the target price, each cost line marked needed or not with remove, simplify or keep and the saving, where rivals are thin and the plan in order.
 - **Step 2, work layout:** the small steps in order with a time each, where each tool and part sits, and moves counted before and after.
 - **Step 3, waste and by-products:** each scrap or idle item with its monthly amount, who might buy it, its value and the effort to reclaim it, ranked.

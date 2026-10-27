@@ -27,7 +27,7 @@ not_for:
   - "Heavy daily use on a free plan. Third-party sites report caps, which xAI's pages we could open do not confirm."
 pricing:
   model: freemium
-  from: "grok.com plan prices could not be confirmed. API use is priced per token and per call (see note)"
+  from: "grok.com plan prices and the free tier could not be confirmed. API use is priced per token and per call and needs a funded balance before the first call (see note)"
   note: "Checked 26 Oct 2026 on docs.x.ai. API prices per 1 million tokens for the grok-4.3 model are US$1.25 for input and US$2.50 for output, and grok-4.7 is US$2.00 and US$6.00, for prompts under 200K tokens. Images cost US$0.02 to US$0.05 each. Web Search is US$5 per 1,000 calls. X Search is US$5 per 1,000 posts or US$10 per 1,000 profiles, billed per item returned. Token charges apply on top. The grok.com app plans are not confirmed. Third-party sites list a free plan with caps, SuperGrok at US$30 a month and SuperGrok Heavy at US$300 a month, and they disagree on details."
 works_with:
   - X
@@ -43,19 +43,19 @@ first_result:
     - "Pick a mode from the chat box. The page showed one called Fast, and we could not see the others."
     - "Ask about a recent topic you already know well, such as an event you followed this week."
     - "Check the answer against two sources you trust before you use it. Posts on X can be one-sided."
-    - "You end with a short written answer. Ask it for a dated list of sources with links, and for a note of what it could not verify. Then open the sources yourself. Next: for a topic scan use the Recent topic pulse researcher, or compare Perplexity for answers with numbered sources."
+    - "Result: a written answer. That is the only reply shape we can confirm. Ask it for a short summary, the sources it used, and the claims it could not verify. A chat model can name a link that does not exist, so open each source yourself and mark any you could not open. Do not rely on a claim whose source you could not open. Next: for a topic scan use the Recent topic pulse researcher, or compare Perplexity for answers with numbered sources."
   api:
-    - "Open docs.x.ai and follow its steps to get an API key. We did not check the sign-up steps."
+    - "Open docs.x.ai and follow its steps to make a developer account, add credit and get an API key. We did not check these sign-up steps or the fields they ask for, so read each page as you go."
     - "Send one short test prompt through the Responses API with the model you chose. Add the web_search tool if you want current results."
     - "Read the token counts in the reply and work out the cost from the price table on docs.x.ai."
 needs:
-  - "Chat: a Grok account. We could not confirm plan rules."
+  - "Chat: a Grok account. Whether a free account works could not be confirmed, so read what the sign-up page asks. If it asks for payment, stop and use another assistant."
   - "API: an xAI developer account, an API key and a funded balance."
   - "A clear question or topic."
 example:
   task: "Ask about something that happened this week, in your own words."
   cost: "In the API, Web Search costs US$5 per 1,000 calls plus token charges, and X Search costs US$5 per 1,000 posts returned. A single image costs US$0.02 to US$0.05, depending on the model."
-  reply: "A written answer. We could not confirm whether chat answers list their sources, so ask for sources and open them yourself."
+  reply: "A written answer. We could not confirm whether chat answers list their sources, so ask for the sources it used, open each one yourself and mark any you could not open."
 not_verified:
   - "grok.com plan prices and the free plan's caps. xAI's pages we could open did not show them."
   - "That X Premium plans include Grok."

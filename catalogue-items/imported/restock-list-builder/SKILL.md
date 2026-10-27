@@ -23,7 +23,7 @@ Queries all tracked product variants at or below a configurable stock threshold 
 |-----------|------|----------|---------|-------------|
 | store | string | yes | — | Store domain (e.g., mystore.myshopify.com) |
 | format | string | no | human | Output format: `human` or `json` |
-| dry_run | bool | no | false | Preview operations without executing mutations |
+| dry_run | bool | no | false | Has no effect. This skill only reads your store and never changes it |
 | threshold | integer | no | 10 | Variants at or below this quantity are included |
 | include_zero_stock | bool | no | true | Include variants with 0 quantity. If false, variants with 0 are dropped in Step 2 |
 
@@ -32,6 +32,7 @@ Queries all tracked product variants at or below a configurable stock threshold 
 1. **OPERATION:** `productVariants` — query
    **Inputs:** `first: 250`, `query: "inventory_quantity:<= <threshold>"`, pagination cursor
    **Expected output:** List of variant objects with inventoryQuantity, product title, vendor, SKU; paginate until `hasNextPage: false`
+   **Negative counts:** a variant with a negative count (oversold) is below the limit, so it is included. It is only dropped if it is untracked.
 
 2. Keep only variants where `inventoryItem.tracked` is true. Drop untracked variants, because their count is not meaningful. If `include_zero_stock` is false, also drop variants whose `inventoryQuantity` is 0 (equivalent to adding `inventory_quantity:>0` to the query). Then sort by vendor, then product title, and write the CSV.
 

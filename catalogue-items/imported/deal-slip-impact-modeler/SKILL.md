@@ -5,6 +5,8 @@ description: Model what happens to your number if a deal slips, shrinks, or dies
 
 # Deal Slip Scenario
 
+**In a plain chat (added by AI Blocks).** You do not need a CRM connector. If the user has none, ask them to upload their pipeline export and their quota as files, and run the skill on those files alone. The Page and Slides rules below do not apply in a chat: give the result as text and tables in the reply. Any connector or rendering rule that your chat cannot follow can be skipped, and you should say so.
+
 **Rules (apply to every step of this skill):**
 - Work silently between tool calls and batch independent reads. When the user asks for an action (update a record, send an email, post to chat, book a meeting), take it through the connector. When the skill suggests a change the user did not ask for, show the change and its evidence and let the user decide. Permissions live in each connector's own settings (allow, ask or block per tool): never add a restriction the connector does not impose, and never refuse an action the user asked for on the plugin's own authority.
 - Ground field, stage and picklist names on the live CRM's own schema. Never assume one vendor's shapes on another.
@@ -36,10 +38,13 @@ team rollup.
 
 ## Step 1 - Ground
 
-Check which tools are connected (plus any org facts the user or the project instructions already gave). Ground the stage-to-bucket mapping (Commit /
-Best Case / Pipeline), field names, and the quota source from the live
-crm schema and org context (inferred from what is connected or uploaded; if the answer depends on a fact no one has given, ask ONE question, use the answer for this conversation and suggest adding it to the project instructions; otherwise use a clearly labeled default and continue). Every
-figure in the output ties to a record actually read.
+Check which tools are connected. Then gather:
+
+- The stage-to-bucket mapping (which stages count as Commit, Best Case and Pipeline).
+- The quota and where it comes from.
+- The close date and amount of the named deal.
+
+Take them from the live CRM or the uploaded files. If one is missing and no one has given it, ask ONE question, use the answer for this conversation, and suggest adding it to the project instructions. Otherwise use a clearly labelled default and continue. Every figure in the output ties to a record actually read.
 
 ## Step 2 - Establish the baseline
 
@@ -97,5 +102,5 @@ tiers:
                 stated quota
   read-only:    live crm baseline and closed-won pull
   gated-writes: none - this skill only models; any resulting date or
-                category change hands off to update-opportunity
+                category change is made by the user in their own CRM
 ```

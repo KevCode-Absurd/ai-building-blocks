@@ -23,7 +23,7 @@ you_give:
   - Screenshots or a description of each scene
   - The main message of the demo
   - Preferred length and tone (optional)
-  - Playwright, ffmpeg and a text-to-speech tool (optional)
+  - Playwright, edge-tts (text to speech) and ffmpeg (all optional, each has a fallback file)
 you_get:
   - A scene plan with narration
   - A rendered demo video or GIF
@@ -31,9 +31,9 @@ you_get:
   - Fallback files if a tool is missing
 how_to_use:
   - Open your AI chat and paste this skill's instructions. If you use a tool with files, add the skill folder.
-  - Add your screenshots or a short note for each scene. Say the main message and how long the video should be.
+  - Add your screenshots or a short note for each scene. Say the main message and how long the video should be. If you want a customer quote or rating in the video, paste the real one. Without it, that scene is left out.
   - Check which tools your AI has. To make the video itself it needs code running, file saving, Playwright, edge-tts and ffmpeg.
-  - Read the scene plan and narration first. Ask for changes before it renders anything.
+  - Read the scene plan and narration text first. Confirm both, then say "render" to start the build. Nothing is rendered until you say so.
   - If a tool is missing, run the build.sh commands yourself or use the scene images and narration in any video editor.
   - Check the finished clip has sound, is 1920x1080 and has no black frames. Then add it to your launch page or email.
 output_sample:

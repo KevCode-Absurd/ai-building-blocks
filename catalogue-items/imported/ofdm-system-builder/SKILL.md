@@ -242,7 +242,7 @@ See `references/ofdm-ldpc-coding.md` for OFDM+LDPC workflow and multi-codeword f
 See `references/ofdm-system-guide.md` for:
 - **Variable CP length** — per-symbol CP via row vector `cpLens`
 - **Common OFDM configurations** — WiFi-like, LTE-like, 5G-like parameter sets
-- **SNR conversion** — see `matlab-add-awgn` skill for all `convertSNR` patterns
+- **SNR conversion** — see the Noise level code helper (a separate item, not in this folder) for all `convertSNR` patterns, or the SNR notes in `references/ofdm-system-guide.md`
 - **Noise variance for soft demodulation** — scaling after `ofdmdemod`
 
 ## Output format (added by AI Blocks)

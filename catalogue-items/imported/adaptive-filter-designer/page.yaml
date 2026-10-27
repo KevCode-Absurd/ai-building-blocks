@@ -12,6 +12,8 @@ explain: |
   You get an adaptive filter built and tested on your own signal, ready to cancel noise or echo. The skill shows whether it settles on the right answer and gives you the final filter weights.
 
   It starts by studying the problem: what is the signal, what is the interference, and what reference do you have. It then picks the filter type and update method that suits, such as a simple one that nudges its settings a little with each sample for light work, or one that works on blocks of the signal for long filters. It sets the step size (how big each nudge is) and the filter length, runs the filter in a streaming loop, and checks that the error falls. It needs MATLAB with the right signal toolbox.
+
+  Licence: the LICENSE.md file in this folder governs (BSD 2-Clause plus a MathWorks term that limits use to MathWorks products). The skill file header links MathWorks' own licence page, which says the same kind of thing. MATLAB and the DSP System Toolbox are paid MathWorks products.
 when:
   - You need to remove an echo from a recording.
   - Engine or fan noise is hiding your signal.
@@ -36,10 +38,11 @@ you_get:
 how_to_use:
   - Open a chat with an AI that can run MATLAB code. You need MATLAB R2024b or newer with the DSP System Toolbox, which needs a MATLAB licence.
   - Paste the skill into the chat, or upload the skill folder.
-  - Add your signal file, your reference signal, your sample rate and a short note on the noise or echo.
+  - Gather these first. The signal file format, a reference signal recorded at the same sample rate as the signal, and the delay of the echo or noise if you know it. Then add your signal file, your reference signal, your sample rate and a short note on the noise or echo.
   - Ask your AI to design and run the adaptive filter, then show the error curve and the final weights.
   - Check that the error curve falls and levels off. If it does not, ask for a smaller step size or a different filter type.
   - Apply the weights to new data, or keep the code to run the filter on live signals.
+  - Next, save the weights for reuse, and check the filter on recordings it has not seen before.
 output_sample:
   input:
     - Your signal, such as a recording with echo or noise

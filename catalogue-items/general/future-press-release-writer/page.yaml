@@ -15,9 +15,9 @@ when:
   - Your team agrees on features but cannot say why anyone will care.
   - You need a one-page picture of the product before you spend.
 not_for:
-  - "You only have an idea and no need statement yet: use the Durable customer need finder first."
+  - "You only have an idea and no need statement yet: use the Customer need and skills gap planner first."
   - "You want ad or sales copy for a product that already exists: use the Sales copy editor."
-  - "You want the hard questions customers will ask: use the Hard questions FAQ writer."
+  - "You want the hard questions customers will ask: use the Product launch FAQ writer."
 you_give:
   - A need statement, or your idea and who it is for
   - The price and how a customer would start (optional)
@@ -30,10 +30,10 @@ you_get:
   - MISSING notes on every claim you cannot back
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
-  - Paste the need statement from "Durable customer need finder", or describe your idea and who it is for.
+  - Paste the need statement from the Customer need and skills gap planner, or describe your idea and who it is for.
   - Add the price and facts you can back, if you know them.
   - Read the release as a customer. Mark any line you would not believe.
-  - Take the release to "Hard questions FAQ writer".
+  - Take the release to the Product launch FAQ writer.
 output_sample:
   input:
     - Your need statement, or your idea and who it is for
@@ -129,13 +129,13 @@ improve:
   - Add your brand voice rules to the skill, so the release sounds like you.
   - Add a line on the proof you are able to show, such as tests or pilot numbers.
   - Save the released version in your project notes and update it after each change of plan.
-  - Pair it with "Hard questions FAQ writer" for the next step.
+  - Pair it with the Product launch FAQ writer for the next step.
 works_best_with:
   tools:
     - name: Any good chat AI
       why: Drafting plain customer-facing text is work any strong chat AI does well with this skill.
   inputs:
-    - A need statement from the Durable customer need finder
+    - A need statement from the Customer need and skills gap planner
     - Your price and costs
     - Early feedback from real customers
     - Your brand voice notes

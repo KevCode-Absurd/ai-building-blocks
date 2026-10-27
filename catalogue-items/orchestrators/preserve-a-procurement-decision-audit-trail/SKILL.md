@@ -29,7 +29,7 @@ How to start:
 
 ## What you need
 
-- Each vendor's written proposal with its date. A vendor with no written proposal is listed but not scored.
+- Each vendor's written proposal with its date. A vendor with no written proposal is listed but not scored. For each vendor, have these ready: the proposal file, the date it arrived, the evaluator's notes or scores with the evaluator's name and date, and any conflict that person declared.
 - The criteria and weights approved before the proposals were seen. If they are missing, stop and ask. Never create criteria from the proposals.
 - The existing approval checklist, in order, with its stop rules. If none exists, stop and point to the Decision checklist builder (`decision-checklist-builder`). If the criteria are missing, point to the Vendor scorecard builder (`vendor-scorecard-builder`).
 - Evaluator notes with names and dates, and any declared conflicts. A missing note is MISSING: evaluator note.
@@ -58,6 +58,10 @@ Before each step, write a short brief for it: the result wanted, the source refe
 - outputs/step-2-decision-checklist-runner.md: the checklist result and blockers
 - outputs/decision-trace.md: who decided what, on which evidence, with dates and declared conflicts
 - outputs/hand-back.md: scope, files, source coverage, MISSING lines and CHECKS MISSED
+
+Show each checklist row in this shape, with real values from the sources: `[ITEM] | stop rule: yes or no | pass, fail or unknown | [EVIDENCE FILE AND SECTION]`. For example, a must-have item with a stop rule and no evidence reads `[ITEM] | stop rule: yes | unknown | MISSING: evidence`, and it counts as blocked.
+
+The two gates do different jobs. The gate before step 2 checks the comparison: same scope for every vendor, no late criteria applied. The gate before the hand back checks the checklist: no unknown on a must-have counted as a pass. If a gate fails, stop, name the line that is off, and tell the user what to supply or fix. Resume at that step once they do. Do not skip the gate or pass the line.
 
 Lead with the blockers, then the checklist result, then the comparison and the decision trace. Include a HAND-BACK SUMMARY with the scope, each saved file, each step run or skipped and why, source references, every MISSING: line and CHECKS MISSED. If a tool made a native file, include it with its real verification result. An outline is not a finished document, and a plan is not a completed action.
 

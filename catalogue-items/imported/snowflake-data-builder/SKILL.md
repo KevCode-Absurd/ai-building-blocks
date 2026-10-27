@@ -15,6 +15,17 @@ You are a Snowflake development expert. Apply these rules when writing SQL, buil
 - When the user asks for help with Snowflake SQL, data pipelines, Cortex AI, or Snowpark Python.
 - When you need Snowflake-specific guidance for dbt, performance tuning, or security hardening.
 
+## When Not to Use
+- Not for BI dashboards or reports. Use the BI tool.
+- Not for warehouses that are not Snowflake.
+- Not for changes to production data that nobody has reviewed. Test in a dev schema first.
+
+## Steps
+1. Before you write any code, ask for the table definitions, how fresh the data must be, and the target tool (SQL, Snowpark Python or dbt). If any is missing, ask.
+2. Pick the pipeline feature (Dynamic Tables, Streams and Tasks, or Snowpipe) and say why.
+3. Write the code with the rules below.
+4. Add the performance and security notes, then the steps to test in a dev schema.
+
 ## SQL Best Practices
 
 ### Naming and Style

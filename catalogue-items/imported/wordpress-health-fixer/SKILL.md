@@ -103,7 +103,7 @@ a turn.
 ## Phase 2 — Risk-tiered triage
 
 Classify every non-passed item into one of three tiers before touching anything. Present this triage table
-to the user first for anything above Tier 1 count of 3+ items — don't silently start deactivating plugins.
+to the user first whenever there is any Tier 2 item, or three or more Tier 1 items. Don't silently start deactivating plugins.
 
 **Tier 1 — Safe, reversible, auto-fixable in wp-admin or via WP-CLI**
 No data loss risk, no downtime, fully reversible. Still back up per the Safety section before deleting
@@ -217,12 +217,14 @@ Back up `wp-config.php` first, lint after editing:
 // wp-config.php
 define( 'WP_DEBUG', false );         // set to true only while actively debugging
 define( 'WP_DEBUG_DISPLAY', false ); // never show errors to visitors
-define( 'WP_DEBUG_LOG', true );      // logs to wp-content/debug.log instead
+// To keep a log while you debug, set WP_DEBUG to true and add:
+// define( 'WP_DEBUG_LOG', true );   // WordPress writes the log only when WP_DEBUG is true
 ```
 
 ### REST API / loopback requests / background updates failing — Tier 2
 Usually a security plugin, firewall, or `.htaccess` rule blocking internal requests. Steps:
-1. Temporarily deactivate security/firewall plugins one at a time, re-check Site Health after each.
+Warning: while a security or firewall plugin is off, your site is less protected. Turn each one off only briefly, and turn it back on before you move to the next.
+1. Temporarily deactivate security/firewall plugins one at a time, re-check Site Health after each, and re-activate each one straight away.
 2. Check hosting-level firewall (Cloudflare, Sucuri, host WAF) isn't blocking the site from calling itself.
 3. Verify `wp-config.php` doesn't have `define('DISALLOW_FILE_MODS', true)` set incorrectly for background
    updates specifically, if that's the failing item. Back up before removing/editing that line.

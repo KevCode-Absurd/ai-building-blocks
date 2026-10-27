@@ -10,6 +10,8 @@ explain: |
   Ways to raise drive in your team or product that rely on choice, skill growth and purpose instead of bonuses and threats. Each idea comes with a score so you can see where you stand.
 
   The skill uses the autonomy, mastery and purpose model. It starts at 5, adds a point for each of five yes answers about your setup, and subtracts 2 if an if-then reward is doing the motivating, since those can crowd out interest in the work itself. A score of 9 or 10 means all three are present. At 3 or below, rewards and orders are doing the work. You get the score, the failed checks and specific fixes.
+
+  The score is a rule of thumb from Daniel Pink's Drive, not a tested measure of how much drive people have. Use it to start a talk with your team, not to judge anyone. The skill's examples (such as Wells Fargo, Duolingo, Atlassian and the candle problem) come from Pink's book and public reporting, and they are not linked in the skill. Sources it draws on: Pink's Drive; Deci and Ryan on self-determination; Csikszentmihalyi on flow; Dweck on mindset. Check any example before you repeat it.
 when:
   - Your sales contest got short bursts of effort and then a slump.
   - Your team does the minimum and you have only bonuses to offer.
@@ -30,12 +32,13 @@ you_get:
   - Fixes for autonomy, skill growth and purpose
   - What to drop or change in your rewards
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. It needs no code, files or paid tools.
+  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. It needs no code, files or paid tools. The skill works from SKILL.md alone. If your AI takes files, also attach the references folder (autonomy, mastery, purpose, extrinsic rewards, applications, case studies and type-i) for the deeper checklists.
   - "Write a short brief with four parts: who the people are, how you reward them now, the behavior you want more of, and any limits (optional)."
   - "Ask your AI to score it. Say: 'Use the Drive motivation skill on my brief.'"
   - Check the answers to the six quick checks. Fix any that are wrong for your setup and ask for a new score.
   - Read the fixes for choice, skill growth and purpose. Pick one or two to try first.
   - Look at the rewards to drop or change. Remove if-then rewards before you add anything new.
+  - What to do next: take the one or two chosen fixes into your team or product plan, try them for a set period such as a quarter, then ask your AI to score the same brief again and compare.
 output_sample:
   input:
     - A short description of your team, product or program

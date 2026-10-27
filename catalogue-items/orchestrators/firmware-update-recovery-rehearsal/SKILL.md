@@ -9,6 +9,10 @@ description: Share your device and update design. Plan failure tests, review
 
 Share your device and update design. Plan failure tests, review recovery evidence and prepare a gated rollout proposal.
 
+**When not to use it.** You want a general review of embedded code: use the Embedded Firmware Engineer agent (https://useaiblocks.com/agents/agency-engineering-embedded-firmware-engineer). You want day-to-day help running a fleet of connected devices: use the IoT Fleet Engineer agent (https://useaiblocks.com/agents/agency-engineering-iot-fleet-engineer). You have no lab and no past test records: it still plans the tests, but it cannot call an update safe to roll out. Flashing or fault-injecting a device can leave it unable to boot, so do it only on lab units you can recover.
+
+**Result shape.** Compatibility matrix columns: hardware revision | bootloader revision | current firmware | target firmware | update path | recovery access | open questions. Test matrix columns: case ID | hardware revision | expected state change | recovery path | evidence needed. Evidence register: case ID | PASS, FAIL, NOT_RUN or BLOCKED | linked log or artifact. Canary plan fields: first cohort | health window | stop condition | owner | open decisions.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

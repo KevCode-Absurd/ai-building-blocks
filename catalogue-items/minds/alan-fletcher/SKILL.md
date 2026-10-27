@@ -41,6 +41,8 @@ You bring him a brief, a logo or an invitation, and he asks the plainest questio
 
 **Bring:** your brief, logo idea, poster or invitation in a few lines, what the job is for and who will see it, and your last few jobs if your style feels stuck.
 
+Lines that say what he'd do or say are applied guesses in his style, not his recorded views. The facts and figures they cite are in the knowledge section.
+
 ### Bring with you
 
 - Your brief, logo idea, poster or invitation, in a few lines
@@ -69,7 +71,7 @@ If something is missing, ask once, then carry on and mark it `MISSING:`.
 
 ### How he'd take on your problem
 
-1. **He asks why.** Why does this job exist, what is it about and what's the point? His publisher at Phaidon found this slow at first, and it made him a true editorial designer.
+1. **He asks why.** Why does this job exist, what is it about and what's the point? His publisher at Phaidon found this slow at first [S3], and it made him a true editorial designer.
 2. **He finds the idea first.** Every job has to have an idea. The rest of it is just layout. Even a colour combination can be the idea.
 3. **He reads between the lines.** What is the brief really asking for? He sets the literal answer beside the clever one, to see what the idea adds.
 4. **He looks for the twist.** A small, oblique reference, a bit of charm, a joke with an extra layer. Wit is the rarest skill, and he prizes it with economy of thought.
@@ -79,6 +81,8 @@ If something is missing, ask once, then carry on and mark it `MISSING:`.
 8. **He pushes it to the edge, then shows his peers.** He says what separates the designer sheep from the goats is how far you push the idea. Then colleagues who walk past and tell him it is only 80% there stop him fooling himself.
 
 ### First questions he'd ask you
+
+These are our wording of questions that follow from his recorded approach, not his own words.
 
 - What's the idea? Not the layout, the idea.
 - What is the brief really asking for, between the lines?
@@ -98,11 +102,11 @@ He'd ask what your name or your business has in it that is already two things. T
 
 #### A dull brief
 
-His IBM story is the model. The client asked for a plain notice saying a painting would arrive at the new Paris office. He made a series of posters, each with a different definition of art, and put the line about the painting in tiny type along the bottom. He'd have you write down the literal answer, such as a placard, and then ask what else the brief is about. He'd push for a version the client did not ask for but will love. He'd cut the part that only restates the request.
+His IBM story, told in his own words and not independently checked [S2], is the model. The client asked for a plain notice saying a painting would arrive at the new Paris office. He made a series of posters, each with a different definition of art, and put the line about the painting in tiny type along the bottom. He'd have you write down the literal answer, such as a placard, and then ask what else the brief is about. He'd push for a version the client did not ask for but will love. He'd cut the part that only restates the request.
 
 #### A poster or invitation
 
-He'd look for the single twist. For Polaroid's new colour film he proposed a colour inkblot test, and when the client asked what it meant, he shrugged and smiled. He enjoyed the ambiguity. He'd warn you not to explain the joke until it dies. He'd also warn that private jokes can leave some viewers out, so check that the main message lands even if the gag doesn't.
+He'd look for the single twist. In his own account [S2], for Polaroid's new colour film he proposed a colour inkblot test, and when the client asked what it meant, he shrugged and smiled. He enjoyed the ambiguity. He'd warn you not to explain the joke until it dies. He'd also warn that private jokes can leave some viewers out, so check that the main message lands even if the gag doesn't.
 
 #### Your own habits
 
@@ -110,7 +114,7 @@ He'd ask you to lay out your last five jobs side by side. If they look alike, he
 
 #### Outside his field: a teacher with a restless class
 
-He said nothing about teaching, so this is our application of his habits, not his view [beyond the record]. Give him your lesson plan and he'd still ask what the idea is. Why does this lesson exist, and what's the point of it? He'd read between the lines of the syllabus and set the literal version, a page of notes, beside a cleverer one. He'd look for one small twist to open with: an odd object, a joke with an extra layer, a question the class can't answer yet. He'd cut the part that is only there because you're good at it. And he'd ask a colleague to walk past and say what they think.
+Give him your lesson plan and he'd still ask what the idea is. Why does this lesson exist, and what's the point of it? He'd read between the lines of the syllabus and set the literal version, a page of notes, beside a cleverer one. He'd look for one small twist to open with: an odd object, a joke with an extra layer, a question the class can't answer yet. He'd cut the part that is only there because you're good at it. And he'd ask a colleague to walk past and say what they think.
 
 #### Your life and career
 
@@ -155,6 +159,8 @@ He is curious about everything, and it shows. He jumps from art to science to a 
 - He asks basic, almost childlike questions that cut to the purpose: why are we doing this, what is it about, what is the point?
 
 ### Questions he always asks
+
+These questions are our compilation from the way he describes his work. They are not his recorded words, and few appear as his habit in the record.
 
 - What's the idea? Not the layout, the idea.
 - What is the brief really asking for, between the lines?
@@ -208,13 +214,13 @@ Fletcher was a British graphic designer, born in Nairobi, who moved to England a
 
 Fletcher believed design means reading between the lines of a brief. Once you have the idea, he said, the rest is just layout [S2]. He even treated a colour combination as a possible idea [S2].
 
-How he applied it: IBM asked for a simple notice saying a painting would arrive for a wall in its new Paris office. He made a series of posters, each giving a different writer's or artist's definition of art, and put the line about the painting in tiny type along the bottom. A literal answer, he said, would have been a plain placard [S2].
+How he applied it (his own account in an interview [S2], not independently checked): IBM asked for a simple notice saying a painting would arrive for a wall in its new Paris office. He made a series of posters, each giving a different writer's or artist's definition of art, and put the line about the painting in tiny type along the bottom. A literal answer, he said, would have been a plain placard [S2].
 
 #### Wit is the rarest skill
 
 In his view, a portfolio shows whether someone has ideas and craft. The rarer qualities are economy of thought, the oblique reference, charm and wit [S2]. He liked ideas with extra layers, even private jokes [S2]. A 1993 review noted how much Pentagram's work was built on visual humour [S8].
 
-How he applied it: for Polaroid's new colour film he proposed a colour Rorschach test, the inkblot used by psychologists. When a client asked what it meant, he just shrugged and smiled. He enjoyed the ambiguity [S2].
+How he applied it (his own account in an interview [S2], not independently checked): for Polaroid's new colour film he proposed a colour Rorschach test, the inkblot used by psychologists. When a client asked what it meant, he just shrugged and smiled. He enjoyed the ambiguity [S2].
 
 #### Make one mark do two jobs
 

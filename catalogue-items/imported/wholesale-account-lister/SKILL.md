@@ -16,7 +16,7 @@ Queries all B2B company accounts and their associated locations, price lists, an
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_customers`
-- API scopes: `read_customers`. This is the scope the skill was written for. Before the first run, check the current Shopify Admin API docs for the `companies` and `companyLocations` queries at your `api_version`. If they name a different or extra scope, use that one in the auth command above.
+- API scope: `read_customers` only. Use exactly this scope in the auth command above. We have not confirmed against Shopify's current docs that this one scope covers the B2B `companies` and `companyLocations` queries. If the first run fails with an access error that names a different read scope, stop, show the user the exact error, and let the store owner decide. Never request a write scope.
 - Store must be on Shopify Plus with B2B enabled
 
 ## Parameters
@@ -33,8 +33,8 @@ Queries all B2B company accounts and their associated locations, price lists, an
 ## Workflow Steps
 
 1. **OPERATION:** `companies` — query
-   **Inputs:** `first: 250`, select `name`, `locationsCount`, `contactsCount`, `createdAt`, the latest order, pagination cursor
-   **Expected output:** All B2B company accounts (with counts of locations and contacts); paginate until `hasNextPage: false`. This query gives counts only, so Step 2 fills in the detail.
+   **Inputs:** `first: 250`, select `name`, `locationsCount`, `contactsCount`, `createdAt`, the latest order (date and value), pagination cursor
+   **Expected output:** All B2B company accounts (with counts of locations and contacts, and the date and value of the latest order); paginate until `hasNextPage: false`. This query does not return payment terms or catalogs, so Step 2 fills those in, once per company ID from this step.
 
 2. **OPERATION:** `companyLocations` — query, run once for each company ID from Step 1
    **Inputs:** `first: 250` per company, select `name`, `buyerExperienceConfiguration { paymentTermsTemplate, checkoutToDraft }`, `catalogsCount`
@@ -170,13 +170,19 @@ CSV file `b2b_companies_<YYYY-MM-DD>.csv` with columns:
 
 A company with no orders still gets a row. Its `last_order_date`, `last_order_value` and `currency` are left empty.
 
+One row per company, so a company with several locations needs one rule: `payment_terms` lists each different terms name found across its locations, joined with "; " (for example "Net 30; Net 60"), and `has_catalog` is true if any location has a catalog. If a company has no payment terms on any location, write "none". Tell the user to check multi-location companies in Shopify admin.
+
 ## Error Handling
 | Error | Cause | Recovery |
 |-------|-------|----------|
 | `THROTTLED` | API rate limit exceeded | Wait 2 seconds, retry up to 3 times |
 | Empty companies list | B2B not configured or no accounts | Exit with 0 companies, note B2B Plus requirement |
 | `companies` query not available | Store not on Shopify Plus | Return clear error: B2B requires Shopify Plus |
-| Access denied or partial data | The `read_customers` scope may not cover B2B company data on your store | Check the access scopes in the current Shopify Admin API docs for the `companies` query, add any scope it names, then re-authenticate and run again |
+| Access denied or partial data | The store did not grant `read_customers`, or your login cannot see B2B company data | Stop and show the user the exact error text. Do not add other scopes yourself. The store owner can grant access or confirm which read scope Shopify names in its error |
+
+## What next
+
+After the CSV is saved: (1) list accounts with no orders in 90 days and plan outreach; (2) check each account's catalog before a price change. Both are done by reading the CSV, not by this skill.
 
 ## Best Practices
 - Run monthly as a wholesale account health check — companies with no orders in 90+ days may need outreach.

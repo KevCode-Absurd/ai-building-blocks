@@ -26,7 +26,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-In "Before you start", "your question" means the bug inputs below. Ignore any request for a long source text such as an article or transcript. In this prompt, a gap goes under WHAT I CANNOT TELL; there is no separate CHECKS MISSED section.
+In "Before you start", "your question" means the bug inputs below. No article or transcript is needed. In this prompt, any gap or check you could not run goes under WHAT I CANNOT TELL. Use that section wherever "Before you start" mentions MISSING or CHECKS MISSED.
 
 - **What you expected and what happened** (required): include the exact error text.
 - **How to trigger it** (required): steps, or "it happens sometimes" and when.

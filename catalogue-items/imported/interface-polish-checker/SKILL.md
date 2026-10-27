@@ -1,6 +1,6 @@
 ---
 name: baseline-ui
-description: Quickly deslop UI code by fixing spacing, hierarchy, typography, and small layout issues. Use when the interface needs a fast cleanup or polish pass.
+description: Quickly remove generic styling from UI code by fixing spacing, hierarchy, typography, and small layout issues. Use when the interface needs a fast cleanup or polish pass.
 risk: critical
 source: https://github.com/ibelick/ui-skills/tree/main/skills/baseline-ui
 source_repo: ibelick/ui-skills
@@ -11,12 +11,14 @@ license_source: https://github.com/ibelick/ui-skills/blob/main/LICENSE
 ---
 
 
-> Licence note (added by AI Blocks): the written text of this copy is shared under CC BY-4.0 (see `LICENSE-CONTENT`). The `license: MIT` line in the header above is the original author's own declaration for their repo. Keep the credit to the author either way.
+> Licence note (added by AI Blocks): this skill is by ibelick (repo ibelick/ui-skills). The one licence that applies to the written text of this copy is CC BY-4.0 (file `LICENSE-CONTENT`). The `license: MIT` line in the header above is the author's own declaration for their own code repo. It is not the licence for this text. Keep the credit to the author.
+
+> **When not to use (added by AI Blocks):** not for redesigns or new design systems, not for sites that do not use Tailwind CSS, and not for bug, speed or security checks. For those, work with a designer or a developer.
 
 # Baseline UI
 ## When to Use
 
-Use this skill when you need quickly deslop UI code by fixing spacing, hierarchy, typography, and small layout issues. Use when the interface needs a fast cleanup or polish pass.
+Use this skill when you need to quickly clean up generic-looking UI code by fixing spacing, hierarchy, typography, and small layout issues. Use when the interface needs a fast cleanup or polish pass.
 
 
 Applies an opinionated baseline for a scoped polish pass. Existing product design, accessibility requirements, framework choices and explicit user preferences take precedence; do not migrate the stack or add dependencies just to satisfy this list.

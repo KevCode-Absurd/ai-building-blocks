@@ -11,16 +11,16 @@ license_source: LICENSE-CONTENT
 ---
 
 # Interactive Debugger
+
+**Risk label.** This skill is marked "critical" because it runs your program and a debugger that can read and change live values. Run it only on code you trust, and let it install tools or attach to a running process only after the user says yes. It works best for a developer, or with a developer reading the results.
+
 ## When to Use
 
 Use this skill when you need to debug source code interactively: set breakpoints, step through execution line by line, inspect live variable state, evaluate expressions against the running program, and navigate the call stack to trace root causes. Use it when a program crashes, raises unexpected exceptions, or produces wrong output.
 
 
-Use when a program crashes, produces wrong output, or you need to understand exactly
-how execution reached a particular state — and running it again with more print statements
-won't give you the answer fast enough.
-
-You can pause a running program at any point, read live variable values and the call stack
+Running it again with more print statements won't always give you the answer fast enough.
+This skill is for that case. You can pause a running program at any point, read live variable values and the call stack
 at that exact moment, step forward line by line or jump to the next breakpoint, and
 evaluate arbitrary expressions against the live process — all without restarting.
 
@@ -30,25 +30,13 @@ This skill uses `dap`, a command-line tool that runs a background process. It ta
 
 If `dap` isn't installed (check: `command -v dap`), ask the user first. Install it only after they say yes.
 
-From Homebrew (macOS)
+Install from sources, with a release you have checked:
 
 ```bash
-brew install AlmogBaku/tap/dap
+go install github.com/AlmogBaku/debug-skill/cmd/dap@[VERSION YOU HAVE CHECKED]
 ```
 
-Installer script:
-
-```bash
-bash scripts/install-dap.sh
-```
-
-Install from sources:
-
-```bash
-go install github.com/AlmogBaku/debug-skill/cmd/dap@latest
-```
-
-This tool is open source and available on [GitHub](https://github.com/AlmogBaku/debug-skill). It is a third-party tool that AI Blocks has not reviewed, so read its page before you install it. `go install ...@latest` fetches the newest version, so pin a version you have checked if you can.
+This tool is open source and available on [GitHub](https://github.com/AlmogBaku/debug-skill). It is a third-party tool that AI Blocks has not reviewed, so read its page before you install it. No version of it has been reviewed here. Pick a release tag from its GitHub releases page, read that release's notes, and put that tag in place of the bracketed text. Do not use `@latest`. The upstream Homebrew line and installer script (`scripts/install-dap.sh`) fetch the newest release unseen, so this copy does not offer them. Do not run the installer script unless the user has read it and the release it fetches.
 
 Supports natively Python, Go, Node.js/TypeScript, Rust, C/C++, and any other language that supports DAP.
 
@@ -70,12 +58,11 @@ Choose your starting strategy based on what you know:
   startup code is noisy; bisect with breakpoints instead)
 - **Exception, location unknown** — `dap debug script.py --break-on-exception raised` (Python) / `all` (Go/JS)
 - **Remote process** — `dap debug --attach host:port --backend <name>`
-- **Process already running (stuck server, live issue)** — attach without restarting:
+- **Process already running (stuck server, live issue)** — attach without restarting. Do this only on a copy, a test server or a process the user has approved you to pause. Pausing a live production program stops it for real users, and the user must say yes first:
   `dap debug --pid <PID> --backend <name>`
   > **macOS + Go gotcha:** attaching with `dlv --pid` needs macOS system protection (SIP) turned off. **Do not turn SIP off.** It weakens the security of the whole computer. Start the program under the debugger instead, or attach to a remote debugger.
 
-**Session isolation:** `--session <name>` keeps concurrent agents from interfering.
-Tip: You might want to use your session id(${CLAUDE_SESSION_ID}) if available.
+**Session isolation:** `--session <name>` keeps concurrent agents from interfering. Pick a unique session name, such as `debug-1`, and use the same name in every command.
 
 Run `dap debug --help` for all flags, backends, and examples.
 
@@ -270,7 +257,7 @@ behavior at the same breakpoint where you found the bug.
 
 ## Cleanup
 
-The `dap` session is usually automatically terminated when the program exits or after an idle timout.
+The `dap` session is usually automatically terminated when the program exits or after an idle timeout.
 When the app is not closed properly (e.g. you killed it while debugging), you can terminate it manually: `dap stop`.
 
 ## Limitations

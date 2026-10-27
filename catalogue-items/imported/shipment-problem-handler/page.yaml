@@ -7,7 +7,7 @@ job: plan-strategy
 headline: Shipment problem handler
 subhead: Tell it what went wrong with a late, lost or damaged shipment. It sorts the problem, lists what to photograph and file, and drafts your freight claim, carrier message and customer update. You decide what to send.
 explain: |
-  When a freight shipment goes wrong, the first few hours decide whether you get paid. A late pallet, crushed boxes or a missing delivery each follow different rules. Most people lose a claim because they signed the receipt clean, took no photos or filed too late.
+  When a freight shipment goes wrong, the first few hours decide whether you get paid. A late pallet, crushed boxes or a missing delivery each follow different rules. Claims are often weakened when the receipt is signed clean, no photos are taken or the filing is late.
 
   You describe what happened. The skill sorts it into a type: transit delay, visible damage, hidden damage, shortage, loss or refused delivery. For that type it lists what to do now, what proof to gather, and whether the fault looks like the carrier's or an event outside their control. Then it drafts the claim, the carrier email and the customer update.
 

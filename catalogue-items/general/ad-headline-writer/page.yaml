@@ -153,6 +153,10 @@ example:
 
     Test first: line 1. It answers the doubt buyers already have.
 
+    PLATFORM CHECK
+    Lines 1 and 3 touch food and child-directed claims. Check them
+    against the ad platform's rules before they run.
+
     SKIPPED
     News: nothing new and dated on file.
 
@@ -164,7 +168,7 @@ tweaks:
   - what: How aware the buyer is
     how: This sets what a line may say. If you're unsure between two levels, say so. It writes for the less aware one, so expect plainer lines with no product name.
   - what: The limits
-    how: Give exact character limits. About 40 characters fits the headline under a Facebook image. On-image words can run longer, but fewer is better.
+    how: Give exact character limits. Placement limits change, so check the current ones in the ad preview in Meta Ads Manager (or your ad platform) before you set them. On-image words can run longer, but fewer is better.
   - what: Customer quotes
     how: Paste real quotes word for word. Without them it skips the their-words way in, because it never invents what a customer said.
   - what: Health, food or child-directed claims
@@ -195,7 +199,6 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Any good chat AI", why: "Short lines built from your facts come out well in any strong chat AI with this skill."}
     - {name: "Meta Ads Manager", why: "Its ad preview shows whether each headline fits under the image on every placement."}
   inputs:
     - "Ten to twenty reviews in your buyers' own words, so the their-words and their-question lines use real phrases"

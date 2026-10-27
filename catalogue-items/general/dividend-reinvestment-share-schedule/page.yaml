@@ -21,6 +21,7 @@ not_for:
   - "You want total return from a price series: use an adjusted-price return calculation in a spreadsheet, and do not add dividends twice."
   - "Your plan fees or withholding are unknown: get the plan statement from your broker first, then run this."
   - "You want a forecast of future dividends or prices: ask a licensed adviser, because this schedule only uses prices you supply."
+  - "You want to know if the company can afford its dividend and buybacks: use the Shareholder distribution coverage instead."
   - "You need EPS and share counts restated after a stock split: use the Stock-split EPS restatement instead."
 you_give:
   - Shares you held before the dividend.
@@ -63,26 +64,27 @@ output_sample:
     - name: MISSING and CHECKS MISSED
       contains: Inputs that were not supplied and checks that failed or could not run.
 how_it_works:
-  - title: 1. Confirm payment date, eligible shares and actual reinvestment execution price; use unadjusted prices when dividends are modeled explicitly
-    text: Confirm payment date, eligible shares and actual reinvestment execution price; use unadjusted prices when dividends are modeled explicitly.
-  - title: 2. Compute dividend cash, deduct any supplied fees or withholding separately, and divide eligible net cash by the actual reinvestment price
-    text: Compute dividend cash, deduct any supplied fees or withholding separately, and divide eligible net cash by the actual reinvestment price.
-  - title: 3. Add fractional or permitted whole shares according to the plan and compare ending wealth with the cash-held case
-    text: Add fractional or permitted whole shares according to the plan and compare ending wealth with the cash-held case.
+  - title: Confirm the inputs
+    text: Check the payment date, eligible shares and the actual reinvestment price. Use unadjusted prices.
+  - title: Turn cash into shares
+    text: Dividend cash less fees and withholding, divided by the reinvestment price, gives new shares.
+  - title: Compare with holding cash
+    text: Compare ending value with and without reinvesting.
 output_shape: |-
   A dividend cash-to-shares schedule with a no-reinvestment comparator.
   Scope and dated sources
   Inputs and assumptions
   Model calculations and reconciliations
   Actual file verification
-  MISSING: and CHECKS MISSED
+  MISSING:
+  CHECKS MISSED
 tweaks:
   - what: "Ending price"
     how: "Change the ending price in your inputs and ask your AI to recalculate the schedule. You see at which price reinvesting beats keeping the cash. Use one currency and scale on every line."
   - what: "Reinvestment price"
     how: "Change the reinvestment price and have your AI recalculate. Keep the actual figures you supplied."
-  - what: Acceptance
-    how: An adjusted total-return price series is not combined with explicit dividends.
+  - what: "Dividend per share"
+    how: "Change the dividend per share and have your AI recalculate the dividend cash and the new shares. Keep the actual figures you supplied."
 judge:
   - An adjusted total-return price series is not combined with explicit dividends.
   - Residual cash and fractional-share restrictions are disclosed rather than silently rounded away.

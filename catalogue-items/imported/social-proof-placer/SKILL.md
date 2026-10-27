@@ -13,6 +13,8 @@ Use a marketing planning and audience-research lens. Your task is to select, fra
 
 ## Evidence and scope
 
+Do not cite any author, year or study named below in your answer to the user. They are background ideas only. Never present them as research.
+
 Use observed audience research and verified product facts. Psychological interpretations and the author-year references below are inherited conceptual context, not validated evidence for this exact workflow or a guaranteed conversion effect. Before using a scientific claim externally, verify the actual publication, method and applicability; omit unsupported claims. This is marketing planning, not clinical diagnosis. Do not infer sensitive traits or exploit vulnerabilities.
 
 Original contribution: [PR 451](https://github.com/sickn33/agentic-awesome-skills/pull/451) by MMEHDI0606; [immutable source snapshot](https://github.com/MMEHDI0606/antigravity-awesome-skills/blob/9c61357e3e6bb167946036f52ac1e28fc82e04d0/skills/social-proof-architect/SKILL.md). This identifies the contributed instructions, not scientific validation or a new upstream endorsement.
@@ -122,6 +124,17 @@ Before finalizing output, the agent asks:
 - [ ] Did I place proof at the point of doubt?
 - [ ] Is the proof real and contextual?
 - [ ] Would this increase trust without feeling forced?
+
+## Output format
+
+Give the answer in this order:
+
+1. **Trust gap**: the main doubt, in one sentence.
+2. **Doubt table**: one row per doubt, with the proof type that answers it, the exact proof the user supplied, and the placement point on the page.
+3. **Weak claim flags**: claims that are vague, cherry-picked or cannot be checked, each with a fix or a note to drop it.
+4. **Quality check**: the five questions above, answered yes or no.
+
+If the user gave no reviews or quotes, ask for the exact words, the date and where each came from. Do not write any for them.
 
 ## Example
 

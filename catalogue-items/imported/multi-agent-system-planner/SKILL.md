@@ -35,7 +35,7 @@ Single agents face inherent ceilings in reasoning capability, context management
 Multi-agent architectures address these limitations by partitioning work across multiple context windows. Each agent operates in a clean context focused on its subtask. Results aggregate at a coordination layer without any single context bearing the full burden.
 
 **The Token Economics Reality**
-Multi-agent systems consume significantly more tokens than single-agent approaches. Production data shows:
+Multi-agent systems consume significantly more tokens than single-agent approaches. The figures below are the original author's, taken from the upstream repo, and are not linked to a source here. Treat them as rough and check them before you rely on them:
 
 | Architecture | Token Multiplier | Use Case |
 |--------------|------------------|----------|
@@ -43,7 +43,7 @@ Multi-agent systems consume significantly more tokens than single-agent approach
 | Single agent with tools | ~4× baseline | Tool-using tasks |
 | Multi-agent system | ~15× baseline | Complex research/coordination |
 
-Research on the BrowseComp evaluation found that three factors explain 95% of performance variance: token usage (80% of variance), number of tool calls, and model choice. This validates the multi-agent approach of distributing work across agents with separate context windows to add capacity for parallel reasoning.
+The original author reports, without a source link here, that research on the BrowseComp evaluation found that three factors explain 95% of performance variance: token usage (80% of variance), number of tool calls, and model choice. Treat this as unverified. This validates the multi-agent approach of distributing work across agents with separate context windows to add capacity for parallel reasoning.
 
 Critically, upgrading to better models often provides larger performance gains than doubling token budgets. Claude Sonnet 4.5 showed larger gains than doubling tokens on earlier Sonnet versions. GPT-5.2's thinking mode similarly outperforms raw token increases. This suggests model selection and multi-agent architecture are complementary strategies.
 
@@ -73,7 +73,7 @@ Advantages: Strict control over workflow, easier to implement human-in-the-loop 
 Disadvantages: Supervisor context becomes bottleneck, supervisor failures cascade to all workers, "telephone game" problem where supervisors paraphrase sub-agent responses incorrectly.
 
 **The Telephone Game Problem and Solution**
-LangGraph benchmarks found supervisor architectures initially performed 50% worse than optimized versions due to the "telephone game" problem where supervisors paraphrase sub-agent responses incorrectly, losing fidelity.
+The original author reports, without a source link here, that LangGraph benchmarks found supervisor architectures initially performed 50% worse than optimized versions (unverified; do not quote it) due to the "telephone game" problem where supervisors paraphrase sub-agent responses incorrectly, losing fidelity.
 
 The fix: implement a `forward_message` tool allowing sub-agents to pass responses directly to users:
 

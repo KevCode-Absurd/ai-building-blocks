@@ -30,6 +30,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+In the lines above, "Product data" means the cost inputs listed here (price, unit cost, carrier and warehouse quotes, payment fee percent, and your last 90 days of refund and discount rates). It does not mean variants, ingredients or photos. "Your results" means your current ROAS or CAC, not a full ad export.
+
 - **Selling price** (required). Excluding tax. If the person gives a tax-inclusive price, take the tax out first and say so.
 - **Unit cost** (required), plus freight and duty per unit.
 - **Shipping to the customer, pick and pack, packaging** per order (required). Real quotes from the carrier or warehouse, not memory.
@@ -86,6 +88,7 @@ margin level <n>/50 | room for ads <n>/30 | evidence <n>/20
 
 FLAG <go | fix | no-go>
 NEXT <first change>
+CHECKS MISSED: <none | list>
 MISSING: <cost line | rate | quote>
 ```
 End with: "Planning numbers only. Check with your accountant."

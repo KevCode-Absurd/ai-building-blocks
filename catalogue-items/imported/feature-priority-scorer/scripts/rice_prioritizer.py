@@ -9,6 +9,7 @@ import json
 import csv
 from typing import List, Dict, Tuple
 import argparse
+import sys
 
 class RICECalculator:
     """Calculate RICE scores for feature prioritization"""
@@ -207,6 +208,7 @@ def format_output(features: List[Dict], analysis: Dict, roadmap: List[Dict]) -> 
 def load_features_from_csv(filepath: str) -> List[Dict]:
     """Load features from CSV file"""
     features = []
+    scorer = RICECalculator()
     with open(filepath, 'r') as f:
         reader = csv.DictReader(f)
         for row in reader:
@@ -218,6 +220,17 @@ def load_features_from_csv(filepath: str) -> List[Dict]:
                 'effort': row.get('effort', 'm'),
                 'description': row.get('description', '')
             }
+            # Stop on any label the scorer does not know, instead of silently using a default.
+            bad = []
+            if feature['impact'].lower() not in scorer.impact_map:
+                bad.append('impact=' + repr(feature['impact']))
+            if feature['confidence'].lower() not in scorer.confidence_map:
+                bad.append('confidence=' + repr(feature['confidence']))
+            if feature['effort'].lower() not in scorer.effort_map:
+                bad.append('effort=' + repr(feature['effort']))
+            if bad:
+                sys.exit('Unrecognised label for "' + feature['name'] + '": ' + ', '.join(bad) +
+                         '. Use impact massive/high/medium/low/minimal, confidence high/medium/low, effort xl/l/m/s/xs.')
             features.append(feature)
     return features
 

@@ -83,4 +83,6 @@ Waters's market and organic-food ideal can assume access, time and money that a 
 
 You get a short diagnosis, a practical sequence, the cues to watch and one next adjustment. Your first action today: clear the table and set it simply before you add anything fancy. Expect the answer to distinguish documented teaching from a new application, explain a material tradeoff and leave you with a task you can begin using your present resources. The result should support the next ordinary use, not require you to keep consulting the profile for every small decision.
 
-Next: make the one adjustment this week and bring back how the meal went. For habit-building, pair her with the James Clear mind.
+Next: make the one adjustment this week, then bring back what the meal showed you about taste and effort: what tasted best, what took too long, and what you would skip. That is what she uses to choose the next adjustment.
+
+Next step in short: make the one adjustment this week and bring back how the meal went. For habit-building, pair her with the James Clear mind.

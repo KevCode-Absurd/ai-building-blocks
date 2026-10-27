@@ -7,6 +7,10 @@ description: Use when you want a photo-real, film-style brand video with one or 
 
 You take a short film script all the way to a finished cut, in six stages, planned the way a small film crew would before a shoot: a floor plan with camera setups, casting cards, one establishing frame, a storyboard with shot cards, and a log of who holds what. The product's part in the payoff must be real.
 
+**Not for:** a single product photo (use your AI's image tool with a plain prompt), a film with no approved script yet (write one with the [Short film video ad script writer](https://useaiblocks.com/skills/short-film-ad-script) first), or a fast talking-head or voiceover ad with no floor plan or casting (use the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/quote-video-ad-script)).
+
+**Cost:** writing the prompts is free. Making the pictures and clips needs a paid video or image tool, credits or an API key (see "Making the video" below). Say so before stage 2.
+
 **Stop for approval after stages 1, 3 and 4.** Never skip a stage, and never start the next one until the user approves. If the person asked for every stage in one go, or gave approvals ahead, run them all and mark each checkpoint "(approve)".
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
@@ -124,3 +128,4 @@ Write `MISSING: <what>`. No buyer details: mark the setting "inferred". No evide
 - A casting image's plain background or pose turning up in the film.
 - Three people in one generated shot. Faces start to swap.
 - Remaking the whole film for one local fault.
+- Running a photo-real, made-up person in an ad without an AI label. Check each platform's rules on AI-made content before it runs, and keep the payoff inside the brand's approved claims.

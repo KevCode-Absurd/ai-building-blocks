@@ -1,6 +1,6 @@
 ---
 name: complexity-cuts
-description: "Lower Big-O on existing code via a one-transformation-at-a-time playbook with verify-revert-stop. For new code use lemmaly; for math-level wins escalate to mathguard."
+description: "Lower Big-O on existing code via a one-transformation-at-a-time playbook with verify-revert-stop. For new code plan the approach first; for math-level wins ask a developer."
 risk: safe
 source: community
 source_repo: morsechimwai/lemmaly
@@ -15,7 +15,7 @@ license_source: "https://github.com/morsechimwai/lemmaly/blob/main/LICENSE"
 
 # complexity-cuts — Lower Big-O on Existing Code
 
-`lemmaly` prevents bad complexity before code is written. **complexity-cuts** fixes it after the fact: code already exists, it works, but its time or space complexity is worse than necessary.
+Planning the approach before you write code prevents bad complexity. **complexity-cuts** fixes it after the fact: code already exists, it works, but its time or space complexity is worse than necessary.
 
 **Violating the letter of these rules is violating the spirit of the skill.** Adapting "just a little" is how a faster-but-wrong rewrite ships.
 
@@ -249,8 +249,8 @@ Cannot check every box? The optimization is not done. Either revert or finish th
 
 ## Related Skills
 
-`lemmaly`, `invariant-guard` and `mathguard` below are separate skills. They are not in this library.
+The original named three separate skills (lemmaly, invariant-guard and mathguard). They are not in this library. In plain words:
 
-- `lemmaly` — prevention gateway; use when writing new code instead of refactoring existing.
-- `invariant-guard` — escalation target when 3+ transformations have failed tests — the missing piece is a contract, not an optimization.
-- `mathguard` — escalation when the classical floor is reached and an approximate or math-heavy structure could win.
+- For new code, plan the approach before you write it instead of refactoring later.
+- If 3 or more changes in a row fail the tests, stop. The missing piece is a written rule for what the code must keep doing, not another speed-up.
+- When the usual fixes are used up and an approximate or math-heavy structure could win, ask a developer.

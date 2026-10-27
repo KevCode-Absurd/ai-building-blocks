@@ -33,6 +33,11 @@ reporting collision clusters where one skill shadows another.
 - Use after writing or installing a new SKILL.md, to confirm it will actually be picked
 - Use in CI to fail a PR that adds a skill with empty/duplicate/colliding metadata
 
+## When Not to Use This Skill
+
+- Do not use it to check one skill by hand: read its description and make sure it has a clear "use when" line.
+- Do not use it to test how well a skill does its real task. Run the skill on a real task and read the result.
+
 ## How It Works
 
 Install the CLI (`npm i -g @misha_misha/skill-issue`, `brew install mishanefedov/skill-issue/skill-issue`, or `npx @misha_misha/skill-issue`), then:

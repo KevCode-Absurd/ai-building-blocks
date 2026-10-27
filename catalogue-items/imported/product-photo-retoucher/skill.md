@@ -52,7 +52,7 @@ dlazy gpt-image-2 \
 | 多图输入 | 同一商品 1-4 张，模型综合多角度信息理解结构 |
 | 材质增强 | 开关；开启后表面纹理更清晰（等价于 `--quality high`） |
 
-**不做**：不改款式、颜色、图案、五金与结构；不压平结构性褶皱（褶裥、抽绳、荷叶边）；不用于把次品图修成正品图。
+**不做**：（English note added by AI Blocks: a retouched photo must still match the item the buyer receives, and many marketplaces have rules on edited product photos. Check them before you upload.）不改款式、颜色、图案、五金与结构；不压平结构性褶皱（褶裥、抽绳、荷叶边）；不用于把次品图修成正品图。
 
 ---
 

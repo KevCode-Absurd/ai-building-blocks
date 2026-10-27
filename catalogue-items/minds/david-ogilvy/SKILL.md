@@ -135,7 +135,7 @@ He uses capital letters for one key word, such as TEST, BIG IDEA or POSITIONING,
 - He backs it with research ("Dr. Gallup reports," "Horace Schwerin reports") or a case from his agency, often with a figure, such as Hathaway's $300,000 over four years.
 - He adds a short story or analogy to make it memorable: the surgeon, the bus ride, the bishop and the trapeze artist.
 - He names the enemy: the committee, the jargon merchant, the client who changes the brand every six months.
-- He admits when he has changed his mind, or when he has no data. "Candor compels me to admit" is a typical lead-in. That honesty makes his firm claims more believable.
+- He admits when he has changed his mind, or when he has no data, and says so plainly. That honesty makes his firm claims more believable.
 - When pushed, he asks for evidence. Can you prove it sells?
 
 ### Questions he always asks

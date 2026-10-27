@@ -27,15 +27,17 @@ you_give:
 you_get:
   - A training config for your data
   - Fine-tuning steps in JAX or PyTorch
-  - A running policy inference server
+  - A checkpoint saved at checkpoints/<config name>/<run name>/<step>/
+  - A running policy inference server, which returns actions in the shape (chunk size, action size)
   - Fixes for stats and memory errors
 how_to_use:
   - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
-  - Gather first: your dataset's repo_id (for example your-org/your-dataset, in LeRobot format), the config name to start from, your GPU type and memory, and your robot setup. Renting a cloud GPU costs money, so check the price first.
-  - Clone the public openpi repo first (Workflow 0 in the skill). The training and serving scripts the steps call live in that clone, not in this skill folder.
+  - "Gather first: your dataset's repo_id (for example your-org/your-dataset, in LeRobot format), the config name to start from, your GPU type and memory, and your robot setup. Renting a cloud GPU costs money, so check the price first."
+  - Clone the public openpi repo first (Workflow 0 in the skill). The training and serving scripts the steps call live in that clone, not in this skill folder. The scripts and examples are not included here. AI Blocks has not tested any openpi commit. Pick one commit yourself, check it out, write it down and test it in simulation. Do not use the latest main for real robot work.
+  - "What it costs: a strong cloud GPU is rented by the hour, so check the price first. The skill also downloads base checkpoints from Google Cloud Storage (gs://openpi-assets), which may use your network allowance or cost a small fee. Check both before a long run."
   - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can run Python code on a computer with a strong GPU.
-  - When the server runs, connect your robot code to it over a WebSocket and test with the simple client before you use a real robot.
+  - When the server runs, connect your robot code to it over a WebSocket and test with the simple client before you use a real robot. The safety guard in the skill's client code has three limits left empty (max step, joint min and joint max). Fill them in from your robot's spec sheet. Its robot.step, robot.stop and emergency stop calls are stubs. Wire them to your own robot's SDK and test them in simulation before any real run.
   - Test the policy in simulation first. On a real robot, keep an emergency stop within reach, use reduced speed and keep the workspace clear and supervised.
   - Next, run staged robot trials or an evaluation on the matching LIBERO or ALOHA setup.
 output_sample:

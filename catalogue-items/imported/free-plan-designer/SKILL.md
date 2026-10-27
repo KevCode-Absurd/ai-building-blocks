@@ -24,7 +24,7 @@ The advice below is the original author's and is unchanged. This section tells y
 
 The "Before You Start" step points to a separate audience skill in the author's own repository. You do not need it. Ask the questions above instead.
 
-If an item is missing, write `MISSING: <item>`, continue with what you have, and do not invent costs, prices or usage numbers. Without a cost per free user, give the model pick and the feature split, and leave the limit amounts open.
+If an item is missing, write `MISSING: <item>`, continue with what you have, and do not invent costs, prices or usage numbers. A cost per free user is needed to set limit amounts. Without it, give only the model pick and the feature split, and leave the limit amounts open.
 
 **What you hand back**, in this order:
 1. Model pick (free trial, free tier, freemium or open core) with the reason, tied to how the product is sold.
@@ -415,6 +415,8 @@ Every pricing page needs:
 
 ## Examples: Free Tiers That Work
 
+> Dated figures. The fees, record counts and limits in these examples (Stripe, Cloudflare, MongoDB Atlas, Algolia) are the author's and are not checked or dated. Do not quote them as current. Check each vendor's pricing page.
+
 ### Stripe
 
 - No monthly fee for free tier
@@ -463,6 +465,8 @@ Free users get AI chatbot only, can't access any human help even for bugs.
 Previously free features moved behind paywall without grandfathering.
 
 ## Tools
+
+These tools are optional examples. Lago, Flagsmith and PostHog have open source or free options. Stripe Billing, Metronome, Orb, LaunchDarkly, Amplitude, Mixpanel and ProfitWell are paid services or have paid plans. You do not need any of them to design a free plan, and a spreadsheet works as a free alternative. Check each vendor's pricing page before you rely on it.
 
 ### Usage Tracking and Limits
 

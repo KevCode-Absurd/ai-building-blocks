@@ -7,7 +7,9 @@ job: run-your-store
 headline: Wholesale account lister
 subhead: "A single view of every wholesale customer in your Shopify store: companies, their locations, price lists and payment terms. You stop clicking through admin pages one account at a time."
 explain: |
-  The skill queries your B2B companies and their locations, then joins each with its catalog and payment terms. The output is a readable table or JSON you can drop into a spreadsheet. It only reads data, so you can run it any time without changing anything. It needs a Shopify Plus store with B2B turned on, an authenticated Shopify CLI session and the read_customers scope. Check Shopify's current docs to confirm that scope covers company data for your API version. A company with no orders still gets a row in the CSV, with the order columns left empty.
+  The skill queries your B2B companies and their locations, then joins each with its catalog and payment terms. The output is a readable table or JSON you can drop into a spreadsheet. It only reads data, so you can run it any time without changing anything. It needs a Shopify Plus store with B2B turned on, an authenticated Shopify CLI session and the read_customers scope. The CSV has one row per company. For a company with several locations, the payment_terms column lists each different terms name, joined with a semicolon, and has_catalog is true if any location has a catalog. Check those accounts in Shopify admin. We have not confirmed that read_customers alone covers the B2B company queries. If Shopify names another read scope in an error, show it to the store owner and do not widen the permission yourself. A company with no orders still gets a row in the CSV, with the order columns left empty.
+
+  Source and licence: this is an unchanged copy of a skill by 40rty AI, shared under the MIT licence (see the LICENSE file). Before the first run, check on your own store that B2B is on and that you can open the company list in Shopify admin.
 when:
   - You need to check which wholesale accounts have which price list.
   - A sales rep asks for the terms on an account.
@@ -30,12 +32,12 @@ you_get:
   - Readable table or JSON
 how_to_use:
   - Check that your store is on Shopify Plus with B2B turned on.
-  - Log in with the Shopify CLI and allow the read_customers permission for your store. First check Shopify's current docs for the scope the companies query needs at your API version. If it names a different one, use that scope instead.
+  - Log in with the Shopify CLI and allow the read_customers permission for your store. That is the only permission it asks for.
   - Open your AI tool with the skill loaded. Use one that can run commands and save files, such as Claude Code, Cursor, Codex or Gemini CLI.
   - Give it your store domain. Say if you want JSON instead of the readable text.
   - Open the CSV it saves. Look for accounts with no recent orders or with a missing catalog.
   - Next, sort out accounts with no orders in 90 days for outreach, and check each catalog before a price change.
-  - If the run fails with an access error, check which scope Shopify needs for company data in its current docs, then log in again with it.
+  - If the run fails with an access error, your AI shows you the exact error. Ask the store owner to grant access, and do not widen the permission beyond reading.
 output_sample:
   input:
     - Your store domain, like yourstore.myshopify.com

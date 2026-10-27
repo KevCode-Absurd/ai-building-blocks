@@ -73,7 +73,7 @@ Feed deal context (fit %, incumbent strength, relationship, decision-criteria al
 python scripts/winrate_predictor.py --input deal_context.json --profile enterprise-software --output markdown
 ```
 
-The percentage is a discussion aid, not a forecast. **No-bid threshold:** estimate < 20% triggers automatic no-bid recommendation. Leadership makes the final call.
+The percentage is a discussion aid, not a forecast. The default weights, the late-entry drop and the 20% no-bid line are placeholders in the script, not research results. Ask the team for its own no-bid threshold and use that instead. **No-bid threshold:** with the script's default, an estimate below 20% gives a no-bid recommendation. Leadership makes the final call. Label every estimate "placeholder weights, discussion aid only" when you show it.
 
 ### Step 5 — Decide
 
@@ -91,6 +91,7 @@ All scripts: stdlib only (argparse, json, sys, pathlib, re, collections, statist
 
 ## References
 
+- Note on the canon files below: they list the general sources the skill was built from. They do not hold checked quotes or figures. Do not present any source as proof or quote a number from it.
 - `references/shipley_method_canon.md` — Shipley Proposal Guide v6, Shipley Capture Guide, APMP BoK, Tom Sant, Tom Searcy + Henry DeVries, Strategic Proposals research, Larry Newman
 - `references/rfp_strategy_canon.md` — FAR, GSA, Forrester, Gartner, Bain, McKinsey, B2B International on RFP win-rates and buyer behavior
 - `references/rfp_anti_patterns.md` — Shipley failure modes, APMP cases, Strategic Proposals research, federal loss reviews, MIT Sloan, Bain commercial-discipline, Gartner
@@ -149,7 +150,7 @@ Walked one at a time before any script runs. Recommended answer per question. Ne
    Canon: APMP Body of Knowledge, on backing each claim with evidence (general idea only).
 
 6. **"What's the bid / no-bid threshold you committed to BEFORE seeing this RFP?"**
-   Recommended: pre-committed threshold (e.g., winrate ≥ 25%, STRONG ≥ 70% on MANDATORY, named champion). Post-hoc rationalization is how teams end up bidding 5% pursuits.
+   Recommended: pre-committed threshold (e.g., winrate at or above the script's 20% no-bid line, or higher if your own deal history says so; STRONG ≥ 70% on MANDATORY; a named champion). Post-hoc rationalization is how teams end up bidding 5% pursuits.
    Canon: the general case for a bid / no-bid gate set before you see the RFP.
 
 7. **"What does the buyer's evaluation team actually score on?"**

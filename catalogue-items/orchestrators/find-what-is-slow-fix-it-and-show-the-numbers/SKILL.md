@@ -40,7 +40,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-This list replaces the general one above. The "results" here are your timing logs, not an ad export.
+This list replaces the shared "Before you start" block above. Skip its "Your results" line, which names Meta Ads Manager, Google Ads and store exports: no ad data is needed. Your timing logs are the only results this job uses. Its test report line is optional.
 - **A coding AI that can open your project folder and run commands** (required). Tools such as Claude Code need a paid plan or an API key, so check the cost first.
 - **The slow moment** (required): what is slow, when it happens and about how long it takes.
 - **Your project code** (required): in a folder or repo the AI can open. Say where the slowness is if you know: the browser, the server or the database.

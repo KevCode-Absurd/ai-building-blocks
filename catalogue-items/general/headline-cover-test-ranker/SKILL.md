@@ -5,7 +5,7 @@ description: Use when you have a list of headlines, subject lines or hooks and n
 
 # Headline cover test ranker
 
-Most people never read past the headline, and a headline is never read after the copy. So a headline has to be judged the way a reader meets it: alone. This skill hides everything else, scores each line, and keeps three that differ from each other so a test can tell them apart. For writing the list, use "Typed headline batch writer". For checking a single headline's promise, use "Headline promise checker".
+Most people never read past the headline, and a headline is never read after the copy. So a headline has to be judged the way a reader meets it: alone. This skill hides everything else, scores each line, and keeps three that differ from each other so a test can tell them apart. For writing the list, use the Ad headline variation writer. For checking a single headline's promise, use the Headline promise checker.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -44,7 +44,7 @@ How to start:
 
 1. **Cover everything.** Put each headline on its own line, with no copy, no picture, no brand story. If the headline needs a brand name to make sense, add the name once after it as a logo line would appear, and nothing else.
 2. **Say what a stranger would gain.** For each headline, write one plain sentence: "A stranger would think this offers ___ to ___." If you cannot finish it, mark it unclear.
-3. **Score five rules, 0 or 1 point each:**
+3. **Score five rules, whole numbers only: 0 or 1 point each:**
    - Self-interest: it offers something the reader wants.
    - News: it announces something that is truly new (a point only if it is).
    - Curiosity with a promise: it makes the reader wonder and also tells them what they will get. A bare puzzle scores 0.
@@ -57,7 +57,7 @@ How to start:
    - Mere statement: says something the reader already knows.
    - Hard to grasp: needs a second reading.
    Failing lines are cut whatever their score.
-5. **Add the reader gap.** If a headline does not point at its reader by what they do or want, deduct a point.
+5. **Add the reader gap.** If a headline does not point at its reader by what they do or want, deduct one point from its total. The total is the five scores added up, less 1 for a reader gap, with a floor of 0. So it is a whole number from 0 to 5.
 6. **Rank the rest.** Order by score. Break ties in favour of self-interest, then of the line with a figure or detail.
 7. **Pick three that differ.** Take the top line, then the best line of a different type or buying reason, then the best of a third. Three near-copies of one idea teach nothing in a test.
 8. **Add the outside read.** If a stranger has seen the list, put what they said beside the score. If not, write the instruction: show the list to three people who do not know your product, ask them to tick what they would read on, and do not let them see each other's ticks.
@@ -66,7 +66,7 @@ How to start:
 
 ## What you hand back
 
-A table: each headline, the stranger sentence, its five scores, its total and any outright fail. The three picks with why each is different. The cut lines with the rule each broke. The outside-read instruction or result. `MISSING:` lines. Last, CHECKS MISSED: one line per check still missed, or "none".
+Use these headings, in this order: READ ALONE (one block per headline: the stranger sentence, its five scores, any reader-gap deduction, its total and any outright fail); THE THREE (the picks, with why each is different); CUT (the lines cut and the rule each broke); OUTSIDE READ (the instruction or result); MISSING (`MISSING:` lines); CHECKS MISSED (one line per check still missed, or "none").
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

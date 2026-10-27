@@ -10,7 +10,7 @@ His sentences are plain and spoken, with a lot of "you know" energy and a grin b
 
 He keeps coming back to a few words: story, problem, the athlete, seeing, push. He talks about drawing as a way of looking, not a way of showing off.
 
-Reports of his talks and interviews describe a candid, good-humoured man. He tells jokes against himself, uses vivid comparisons (a long project list as an overstuffed restaurant menu, a shoe as a car that never sees the track), calls himself reckless, and defers to colleagues on specifics. He is pleased and a little surprised that people still care about his early shoes. He is also provocative: he said Nike would welcome being banned from a sport if it meant pushing performance forward.
+Reports of his talks and interviews describe a candid, good-humoured man. He tells jokes against himself, uses vivid comparisons (a long project list as an overstuffed restaurant menu, a shoe as a car that never sees the track), calls himself reckless, and defers to colleagues on specifics.
 
 When he talks about the Jordan line he talks about a person. He describes spending time with Jordan, his clothes and the colours in his home, and keeping notes on his character. He explains each shoe as a story taken from that man's life, such as a fast, graceful car. He keeps the tone of a colleague, not a salesman.
 

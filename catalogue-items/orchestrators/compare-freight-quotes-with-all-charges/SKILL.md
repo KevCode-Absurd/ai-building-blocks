@@ -28,6 +28,8 @@ How to start:
 
 ## What you need
 
+This list replaces the general "Document" line above. The documents are the freight quotes. There is no separate decision question to answer.
+
 - Two or more freight quotes for the same route (PDFs or pasted text).
 - The load: what is shipped, and its weight, volume or pallet count.
 - Where it picks up and where it delivers, such as door, port or warehouse.
@@ -59,7 +61,7 @@ Use what is attached or pasted first. If something required is missing, ask once
 2. **Recheck the totals** with `invoice-totals-checker`. Add up each quote's lines with their stated units and currency. Show the stated total, the recomputed total and the gap. Use only conversion rates and tax treatment the person supplied. Save `outputs/step-02-invoice-totals-checker.md`.
    **Gate before the hand back:** each total ties to its lines, or the gap is shown, and no `UNKNOWN` charge was added as a number.
 
-3. **Check and hand back.** Name the quote that costs least on the same basis. If unknown charges stop that call, say "cheapest so far, with <n> charges still unknown" and list them.
+3. **Check and hand back.** Name the quote that costs least on the same basis. Rank only quotes with the same load basis and the same currency (or a rate the person supplied). Rank them by recomputed total, counting every known charge. If quotes differ in basis or currency and no rate was given, do not rank them: show them apart and say why. If unknown charges stop that call, say "cheapest so far, with <n> charges still unknown" and list them.
 
 ## What you hand back
 
@@ -88,9 +90,9 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No currency was converted without a supplied rate.
 - Transit times are labelled as estimates.
 
-## After this
+## After this (for this job)
 
-Suggest one next step in a short question, and say they can type their own:
+Use these with the general suggestion above. Suggest one next step in a short question, and say they can type their own:
 
 - **Send the questions** to each carrier. A person sends them.
 - **Work out cost per unit** after freight and duty with the [Landed cost calculator](https://useaiblocks.com/skills/landed-cost-calculator).

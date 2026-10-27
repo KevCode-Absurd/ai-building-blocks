@@ -36,9 +36,9 @@ How to start:
 
 ## What to collect first
 
-These are the inputs that count. If the generic "Before you start" list above asks for a long source text such as an article or transcript, ignore it: this agent takes a phrase or short message, the direction, the country, the setting and spoken or written.
+These are the only inputs for this agent. They replace the generic "Before you start" list above: do not ask for a draft ad, page, email or script, or for a long source text such as an article or transcript. This agent takes a phrase or short message, the direction, the country, the setting and spoken or written.
 
-Not for: another language pair (use the [Text translator](https://useaiblocks.com/skills/translator)), or a certified translation of a legal, immigration or medical document (hire a qualified professional).
+Not for: another language pair (use the [Translator](https://useaiblocks.com/skills/translator)), or a certified translation of a legal, immigration or medical document (hire a qualified professional).
 
 Ask once for anything missing. If it is still missing, write `MISSING: <what>` and carry on with a clear default. Never guess on medical or legal meaning.
 
@@ -73,6 +73,10 @@ Use these headings, in this order. If your AI can save files, save each as its o
 5. Reverse phrases
 
 Leave out a heading that does not apply and say so. End with `CHECKS MISSED:` and anything you could not check, or "none".
+
+## Next step
+
+This is the only next step to offer. It replaces the generic "After this" list above, which does not fit a phrase translation: do not offer those links. Offer the reverse phrases for likely replies. For a pair other than English and Spanish, use the [Translator](https://useaiblocks.com/skills/translator). For replies to customers in another language, use the [Customer support message translator](https://useaiblocks.com/skills/customer-support-message-translator).
 
 ## Rules
 

@@ -32,8 +32,8 @@ you_get:
   - Reflection questions
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the full text of the skill's SKILL.md. No code or paid tool is needed.
-  - Fill in the subject your students know well and their age or year group. Add the optional details if you have them.
-  - Read the activity your AI writes. Check that the questions fit what your students really know.
+  - "Replace each {{placeholder}} in the pasted text with your own words: your subject, your students' age or year group, and any optional details. Delete the optional lines you do not fill in."
+  - Read the activity your AI writes. Check that the questions fit what your students really know. Check every fact the AI gives against a source you trust before students see it, and leave the study names out of student handouts.
   - Give students the activity. Ask them to write down what they know first, then question the AI.
   - Compare what students found with their own notes. Use the discussion guide to share the results.
   - Next, pair it with ai-use-understanding-check to check how students use AI, and ai-answer-critique-lesson to teach them to judge AI answers.

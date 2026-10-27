@@ -154,7 +154,7 @@ works_best_with:
 
 terms:
   - term: Cash collected
-    meaning: Net sales plus shipping charges. The money that came in at checkout, without tax.
+    meaning: Net sales plus shipping charges. The money you keep from checkout. Tax you collect and pass on is left out.
   - term: AOV
     meaning: Average order value. The mean order size, so a few big orders can pull it up.
   - term: Cohort

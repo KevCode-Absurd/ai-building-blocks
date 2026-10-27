@@ -14,6 +14,8 @@ metadata:
 
 # Instrument MATLAB Code with OpenTelemetry Tracing
 
+(Added by AI Blocks: the licence that applies to this copy is the LICENSE.md file in this folder. The link in the header above is where MathWorks states its term that the software is for use with MathWorks products.)
+
 Add OpenTelemetry tracing spans to MATLAB functions with correct implicit context
 propagation, RAII lifecycle, and semantic conventions.
 

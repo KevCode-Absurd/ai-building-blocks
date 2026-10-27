@@ -12,6 +12,10 @@ explain: |
   The split follows a few rules. Each piece has one owner and a named output. Quick read-only scouts gather facts first, so they cannot break anything. Helpers that change things each get their own files, so two never edit the same one. Small jobs stay with the lead, because helpers add cost.
 
   It needs an AI tool that can start helper agents, such as Codex or Claude Code. Without one, it still gives you the plan and runs the lanes one after another.
+
+  Low, medium and high effort settings only apply if your tool lets you set them. If it does not, the lead uses its normal setting for every helper.
+
+  Licence: the written text is shared under CC BY 4.0 (see LICENSE-CONTENT). The skill file's own header says MIT, the author's licence for the code. Keep the credit to the original author either way.
 when:
   - A task has several independent parts, such as research, review and edits.
   - You want results faster by running parts side by side.

@@ -10,6 +10,8 @@ explain: |
   Working Excel VBA macros that send your sheet data into MATLAB, run MATLAB commands and bring the results or charts back into cells, so Excel stays your front end and MATLAB does the heavy maths.
 
   It uses MathWorks Spreadsheet Link, which links the two programs on one Windows computer. You choose between two styles: range-based calls that move whole blocks of cells, or variable-based calls that move VBA values. It can also use worksheet formulas instead of macros, and bring MATLAB figures in as images. It needs MATLAB installed and running, plus Excel. It does not cover Python or web deployment.
+
+  Licence: the licence that applies is the LICENSE.md file in this item, BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. The skill file's header links a MathWorks licence page instead. Follow LICENSE.md.
 when:
   - You have data in Excel and need a MATLAB calculation on it.
   - You want a button in a workbook that runs a MATLAB script.
@@ -35,7 +37,7 @@ how_to_use:
   - Say what data moves, which MATLAB command to run and where results should land.
   - Copy the VBA code into a new module in your workbook. Your AI does not run it for you.
   - Test the macro on a copy of the workbook with a small range of data.
-  - Check the results in the cells, then run it on your live data.
+  - Check the results in the cells, then run it on your live data. If a cell shows #COMMAND!, MATLAB returned an error. Ask your AI to add MLShowMatlabErrors "yes" at the start of the macro, so the real MATLAB error shows in Excel, then fix it and test again.
   - Next, add a button or a keyboard shortcut for the macro, and keep a copy of the workbook before you extend it.
 output_sample:
   input:

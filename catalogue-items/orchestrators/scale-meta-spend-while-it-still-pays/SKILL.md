@@ -11,7 +11,7 @@ Use it when: your Meta ads are profitable and you want to spend more without los
 
 Not for: a new Meta account with no closed-date results, campaigns below break-even (fix the offer or ads first), or when you only want to know why sales dropped.
 
-This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow chains skills from the library. What it adds is the order and the gates: the real return comes first, the break-even is written down before any budget moves, the owner approves the plan, and the delivery check only runs on your own scale-test numbers. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -40,6 +40,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+These replace the generic list above. This run is Meta-only. It uses Meta results, store totals and your costs, and nothing from Google Ads.
+
 - **Meta results** (required): spend, platform return and 7-day click return for dates that have closed.
 - **Store totals for the same dates** (required): new-customer revenue (first-time orders only), new-customer count and total ad spend.
 - **Your costs** (required): average order value, product cost, shipping, fees and returns rate.
@@ -54,7 +56,7 @@ This workflow plans spend. It changes no budget itself. Any change in the ad acc
 ## How the run works
 Save each step's result as `outputs/step-NN-<skill>.md` before the next step starts.
 - **A question:** if the person is there, ask for missing costs, dates or the break-even return, and wait. If not, write `MISSING: <what>` and carry on.
-- **Two pauses.** After step 1 the person writes down the return they need to break even and picks the campaign to scale. After step 3 the person scales, in small steps, with stop and rollback rules, and brings back the results.
+- **Two pauses.** After step 1 the person writes down the return they need to break even and picks the campaign to scale. After step 3 the owner first approves the budget plan in writing, then the person scales, in small steps, with stop and rollback rules, and brings back the results. No budget changes before that approval.
 - **Set the observation window first.** Agree the dates and the evidence needed before spending the extra budget. One to two weeks is a starting point, not a guarantee of a clear answer.
 - **Nothing is spent, changed or published** without the owner's clear yes.
 - **A stop:** stop if there are no closed-date results or store totals, or if a step's own checks fail. Go to the hand-back summary and say which step. Without scale-test results, return the plan and mark step 4 as not run.
@@ -87,6 +89,10 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Read your ad results** with the [Ad results report writer](https://useaiblocks.com/skills/ad-results-report-writer). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+## What to do with the result
+
+Ignore the "After this" list above, whose TikTok items do not fit a Meta scaling plan. Offer one next step as a short question: read the scale-test numbers with the [Ad results report writer](https://useaiblocks.com/skills/ad-results-report-writer), or come back with the test results for step 4. Raising ad spend risks real money, so the owner approves every budget change and the stop and rollback rules apply from the first day.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

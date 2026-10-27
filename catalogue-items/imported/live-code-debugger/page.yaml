@@ -18,6 +18,7 @@ when:
 not_for:
   - Your AI cannot run code or install tools. Paste the error and the code into a chat and ask for a read-through instead.
   - You need a security review or a production change signed off. Ask a developer to check the fix first.
+  - You are not comfortable in a terminal. This works at the command line, so ask a developer to run it or read the results with you.
   - You want to write new code from scratch. Ask your AI to write it, then use this when something breaks.
 you_give:
   - The program or script
@@ -32,10 +33,11 @@ you_get:
 how_to_use:
   - Use an AI that can run code and commands on your computer, such as Claude Code. A plain chat window cannot run the debugger.
   - Give your AI the skill and your program. Say how to trigger the bug, what you expected and what happens.
-  - If the dap tool is missing, your AI asks before it installs it. Say yes only if you are happy with that.
+  - If the dap tool is missing, your AI asks before it installs it. It is a third-party tool the catalogue has not reviewed. Read its GitHub page and pick a release you have checked before you say yes. Do not install the newest version unseen.
   - Watch each stop. Check the values and the call stack against what you expected.
   - Ask your AI to test its fix on the paused program, then restart and run the same case again.
   - Once the fix is confirmed, apply it to your code, add a test for the same case, and remove any temporary debug code.
+  - Only attach to a running program on a copy or test server, or with approval. Pausing a live production program stops it for real users.
   - On a Mac with Go, do not turn off system protection to attach to a running program. Start the program under the debugger or attach remotely instead, and get approval first.
 output_sample:
   input:

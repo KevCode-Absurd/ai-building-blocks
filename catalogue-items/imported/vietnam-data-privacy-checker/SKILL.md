@@ -5,7 +5,7 @@ description: "Expert Vietnam Personal Data Protection Law (PDPL) compliance advi
 
 # Vietnam Personal Data Protection Law (PDPL) Skill
 
-> **Last verified:** 2026-09-05
+> **Last verified by the author:** 2026-09-05. AI Blocks did not re-check it. The effective dates, the 72-hour breach rule and every deadline in this file are the author's summary of Law 91/2025 and Decree 356/2025. They are not checked against the official text. Ask the user to confirm each one on vbpl.vn or with Vietnamese counsel before relying on it, and to paste the official law text if they want a precise check.
 
 ## Overview
 
@@ -163,11 +163,104 @@ The law applies to:
 
 ---
 
-## Penalties — Decree 330/2026/ND-CP (effective August 19, 2026)
+## Penalties (violation types only, no figures)
+
+This copy does not carry fine amounts, percentages or penalty dates. The author's penalty figures were an unchecked summary and were taken out. Do not state a fine, a percentage or a penalty date, even as an example.
+
+If the user asks about penalties, name the kinds of violation the author lists, and say that exact amounts are given only if the user pastes the official decree text. Point them to Vietnam's official legal database (vbpl.vn) or the Official Gazette (congbao.chinhphu.vn), or to Vietnamese counsel.
+
+Violation types the author lists:
+
+- Failing to file, concealing or misdeclaring a cross-border transfer impact assessment, especially where data is lost or breached.
+- Unlawful trading of personal data.
+- Consent violations, such as treating silence as consent or processing after consent is withdrawn.
+- Falsifying a data protection impact assessment, or refusing to cooperate with the authority.
+- Failing to appoint a data protection officer, or appointing one who does not meet the rules.
+
+Other measures the author lists besides fines: suspension of processing or transfers, compulsory data destruction, and loss of unlawful proceeds. The author also names a separate penalties decree (330/2026). Treat that name and its date as unchecked, and mention it only if the user asks about penalties.
+
+---
+
+## SME Exemptions Applicable (if any)
+```
+
+### Workflow 2 — Data Subject Rights Fulfilment
+
+**When to use:** Handling data subject requests or building a rights fulfilment process.
+
+**Steps:**
+1. Identify the right being exercised (one of 6 from Article 4).
+2. Verify identity of the requestor.
+3. Confirm the applicable response deadline from Decree 356 Article 5.
+4. Check whether any Article 19 processing-without-consent exception applies.
+5. Draft acknowledgement (within 2 working days) and fulfilment response.
+6. Document the request and response for audit trail.
+
+**Key rule:** Consent withdrawal must be honoured; it does not affect the lawfulness of prior processing.
+
+### Workflow 3 — Impact Assessments (DPIA & Cross-Border Transfer)
+
+**When to use:** Starting new processing activities or planning to transfer data outside Vietnam.
+
+**Domestic DPIA (Article 21):**
+- Mandatory within 60 days of first processing
+- SMEs (small and micro) exempt for 5 years unless processing sensitive data or at large scale
+- Must include: data categories, purpose, retention period, security measures, risk assessment
+
+**Cross-Border Transfer Impact Assessment (Article 20):**
+- Submit dossier to Ministry of Public Security within 60 days of first transfer
+- Update every 6 months or on: change in purpose, data types, recipient, or security measures
+- Ministry may suspend transfer if national/public security risk identified
+- Exceptions: state agencies exercising statutory functions; employee HR data in cloud storage; data subject initiating own transfer
+
+**Output:** Provide a structured impact assessment template pre-filled with client's specific facts.
+
+### Workflow 4 — Privacy Notices and Internal Policies
+
+**When to use:** Drafting or reviewing privacy notices, consent forms, data processing policies.
+
+**Privacy Notice must include:**
+- Identity and contact details of controller/processor
+- Purposes and legal basis for each processing activity
+- Categories of data processed (basic vs sensitive — note separately)
+- Recipients and third parties
+- Cross-border transfer details (if any)
+- Retention periods
+- Data subject rights and how to exercise them
+- Breach notification procedures
+- DPO contact (if appointed)
+
+**Consent form rules (Decree 356 Article 6):** Consent may be given in writing, recorded telephone call, SMS syntax, email, website/app form, or other verifiable electronic format. **Silence, pre-ticked boxes, and inaction do not constitute consent.**
+
+**Sector-specific overlays:** Read `references/decree-356-implementation.md` for finance/banking, AI, cloud, blockchain, and big data requirements.
+
+### Workflow 5 — Breach Notification and Response
+
+**When to use:** A personal data breach has occurred or is suspected.
+
+**Response sequence:**
+1. Contain — isolate affected systems, prevent further exposure.
+2. Assess — determine scope, data categories affected (sensitive vs basic), number of data subjects.
+3. Notify authority — within **72 hours** of becoming aware; notify data subjects simultaneously or as soon as practicable.
+4. Document — maintain an internal breach register.
+5. Remediate — patch root cause, update controls.
+6. Review — post-incident lessons learned and control improvements.
+
+**Breach notification content:**
+- Nature of the breach
+- Categories and approximate number of data subjects affected
+- Categories and approximate number of records affected
+- Contact details of DPO or responsible officer
+- Likely consequences of the breach
+- Measures taken or proposed to address the breach
+
+---
+
+## Penalties (UNVERIFIED. Do not quote the table below as fact)
 
 **UNVERIFIED SUMMARY.** The decree name, the effective date and every fine figure in the table below come from the skill author's summary. They have not been checked against the official decree text, and this item does not link that text. Never state a fine, percentage or date as fact. Say "the skill's own summary, not checked" each time, and tell the user to read the decree on Vietnam's official legal database (vbpl.vn) or the Official Gazette (congbao.chinhphu.vn), or ask Vietnamese counsel, before they quote any figure to a client, a regulator or a board. If the user has not pasted the official text, do not give exact amounts at all: give the violation types only.
 
-**The sanctions regime is now operative.** Decree No. 330/2026/ND-CP (issued and effective **August 19, 2026**; 82 articles, 33 on personal data protection) implements the penalty framework of Law 91/2025 (Article 8) and Decree 356/2025. State this decree in every penalties answer, and say the fine figures are not checked here against the official decree text and must be confirmed before use. The same goes for the other dates in this file: confirm them against the official text.
+**The sanctions regime is now operative.** Decree No. 330/2026/ND-CP (issued and effective **August 19, 2026**; 82 articles, 33 on personal data protection) implements the penalty framework of Law 91/2025 (Article 8) and Decree 356/2025. Only name this decree if the user asks about penalties, and then say it is the skill author's summary and the figures are not checked against the official text. Do not add it to answers that are not about penalties. The same goes for the other dates in this file: confirm them against the official text.
 
 | Violation | Penalty (organisations; individuals = half) |
 |---|---|

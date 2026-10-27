@@ -17,6 +17,15 @@ Confidence is neither a measured probability of correctness nor binding affinity
 Use this skill for one pair, batches, or separate receptor conformations; treat
 library-wide confidence sorting as pose triage, not hit identification.
 
+## Quick start
+
+1. Set up DiffDock and run the checker (see "Set up the upstream environment").
+2. Dock one protein and one molecule (see "Single pair").
+3. Read the confidence band for each pose. It is not a probability and not binding strength.
+4. Run the pose checks on every pose you keep (see "Inspect completion and poses").
+
+The longer notes, limits and citations are below.
+
 ## Verified scope
 
 Targets the current [v1.1.3 release](https://github.com/gcorso/DiffDock/releases/tag/v1.1.3).

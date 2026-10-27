@@ -5,6 +5,11 @@ description: "Persistent browser and Electron interaction through `js_repl` for 
 
 # Playwright Interactive Skill
 
+> **AI Blocks note (added to the original).**
+> **Not for:** anyone who is not using OpenAI Codex with its `js_repl` tool. The cells below are written for `js_repl`. If you use another tool, see "Using this outside Codex" at the end before you start.
+> **Local apps only.** Point it at an app running on this computer (127.0.0.1 or localhost). Never at a live site or a page with real customer data, and never at an app that holds real customer data on this machine.
+> **Sandbox.** It needs the sandbox turned off, so use a disposable setup. When you finish, end the session and start the next one with the normal sandbox settings, without `--sandbox danger-full-access`. If you set it in `~/.codex/config.toml`, remove that line again. There is no safer sandboxed way to run these cells yet.
+
 Use a persistent `js_repl` Playwright session to debug local web or Electron apps, keep the same handles alive across iterations, and run functional plus visual QA without restarting the whole toolchain unless the process ownership changed.
 
 ## Preconditions
@@ -715,3 +720,12 @@ Added by AI Blocks. The method above is unchanged.
 5. **Not tested**: anything left out, and why.
 
 **Next:** tell the user to run their own tests and look at the code changes before saving them.
+
+## Using this outside Codex (AI Blocks note)
+
+Other tools do not have `js_repl`, so the browser will not stay open between steps. Turn the cells into a script instead:
+
+1. Save a file such as `check.mjs` in the project. Start it with `import { chromium } from "playwright";` in place of the `await import` bootstrap.
+2. Put the launch and one flow in it: `const browser = await chromium.launch({ headless: false }); const page = await browser.newPage(); await page.goto("http://127.0.0.1:3000");`, then the clicks and typing for the bug, then `await page.screenshot({ path: "after.png" });` and `await browser.close();`.
+3. Run it with `node check.mjs` after each code change. Each run opens a fresh browser, so it is slower than the Codex loop.
+4. Do the same functional and visual checks as above, and report the same five parts.

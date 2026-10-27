@@ -164,7 +164,7 @@ jobs:
         run: python scripts/compliance_checker.py . --framework soc2
 ```
 
-Each step fails the pipeline on its respective exit code — no deployment proceeds past a critical finding.
+Each step fails the pipeline on its respective exit code — no deployment proceeds past a critical finding. The package step in this gate uses the script's small built-in list of known flaws only, with no live lookup. Also run your package manager's own audit command in CI (for example `npm audit` or `pip-audit`). A passing gate is a pre-check for your team. It is not compliance proof or certification.
 
 ### Workflow 3: CVE Triage
 
@@ -177,7 +177,7 @@ Respond to a new CVE affecting your application.
    - Determine CVSS environmental score for your context
    - STOP if CVSS 9.0+ on internet-facing system — escalate immediately
 
-2. PRIORITIZE
+2. PRIORITIZE (the times below are example targets only. Set your own from your policy, contracts and legal advice. They are not compliance advice)
    - Critical (CVSS 9.0+, internet-facing): 24 hours
    - High (CVSS 7.0-8.9): 7 days
    - Medium (CVSS 4.0-6.9): 30 days
@@ -412,6 +412,12 @@ app.use((req, res, next) => {
   next();
 });
 ```
+
+---
+
+## Optional background
+
+The core of this skill is the three scans above. Everything from here down to Reference Documentation is optional background: a quick OWASP check, secret scanning tools and supply-chain notes. Use it only if the user asks.
 
 ---
 

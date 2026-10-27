@@ -44,7 +44,7 @@ How to start:
 - **What you sell and who buys it** (required)
 - **Your question**, such as where growth could come from (required)
 - **Your notes from watching and talking to people**, in their own words, with where, when and what they were doing (required for steps 2 to 4)
-- **Product facts, reviews or support emails** (optional)
+- **Product facts, reviews or support emails** (optional). Also optional: a brand brain and a customer needs list, if you have them.
 - **Rivals you already track** (optional)
 - **Two or three real moments when you struggled to get something done** (optional; they often make the best first leads)
 
@@ -61,9 +61,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Go and watch the top leads in real life, and talk to the people in them. Keep notes in their own words, with where, when and what they were doing. Ask people before you record or quote them, and leave out names in anything you share.
 
-2. **Write the job as a situation.** Use the skill `job-spec-writer`. Give it the ranked leads in outputs/step-01-job-hunting-spot-finder.md and your notes from watching. It writes one job for one circumstance, with practical, social and emotional sides, the trade-offs and who it is not for. If your notes show no real struggle, it stops and says so. Saves outputs/step-02-job-spec-writer.md.
-3. **Name the rivals and what they must beat.** Use the skill `job-rival-mapper`. Give it the job in outputs/step-02-job-spec-writer.md and any rivals you track. Rivals are anything hired for the same job in the same circumstance, not only products in your category. It includes doing nothing and homemade fixes, and gives each a short resume and what a customer must give up to choose you.
-4. **Find where nobody does the job well.** Use the skill `competitor-white-space-mapper`. Give it the job and the rival list in outputs/step-03-job-rival-mapper.md. It rates every rival, and you, on what the job cares about, not on the category's usual criteria, and shows where nobody is strong. The ratings come from your notes and the facts you gave, not from market data. Mark any rating with no evidence as a guess.
+2. **Write the job as a situation.** Use the skill `job-spec-writer`. Give it the ranked leads in outputs/step-01-job-hunting-spot-finder.md and your notes from watching. It writes one job for one circumstance, with practical, social and emotional sides, the trade-offs and who it is not for. A real struggle is a moment in the notes where a person tried to get something done, hit a problem and did something about it (a workaround, a purchase or giving up). If the notes hold none, it stops and says so. Saves outputs/step-02-job-spec-writer.md.
+3. **Name the rivals and what they must beat.** Use the skill `job-rival-mapper`. Give it the job in outputs/step-02-job-spec-writer.md and any rivals you track. Rivals are anything hired for the same job in the same circumstance, not only products in your category. It includes doing nothing and homemade fixes, and gives each a short resume and what a customer must give up to choose you. Saves outputs/step-03-job-rival-mapper.md.
+4. **Find where nobody does the job well.** Use the skill `competitor-white-space-mapper`. Give it the job and the rival list in outputs/step-03-job-rival-mapper.md. It rates every rival, and you, on what the job cares about, not on the category's usual criteria, and shows where nobody is strong. The ratings come from your notes and the facts you gave, not from market data. Mark any rating with no evidence as a guess. Saves outputs/step-04-competitor-white-space-mapper.md.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then `CHECKS MISSED:` (the checks that failed or could not run, or "none").
 
 ## What you hand back
@@ -80,7 +80,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 <!-- /next -->
 
 ## Check before you hand it back
-- Each step passed its own checks, or the run stopped at the step that failed and says why.
+- Step 1 has leads with evidence, and hunches kept apart. Step 2 has one job for one circumstance, built on a real struggle from your notes. Step 3 lists doing nothing and homemade fixes as rivals. Step 4 marks every rating without evidence as a guess. If one is missing, the run stopped at that step and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.

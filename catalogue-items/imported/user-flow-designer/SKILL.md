@@ -18,13 +18,12 @@ Use this skill when you need design user flows and navigation structure followin
 
 ## When NOT to use
 
-- For implementing a single page → use `/ss-page` after the flow is settled
-- For copy on each step → use `/ss-copy` after the structure is settled
+- For building a single page → ask your AI to build that page once the flow is settled
+- For copy on each step → write the copy after the structure is settled (see the Interface microcopy writer item)
 - For information architecture of an entire product — narrow scope to one flow first
 - For high-fidelity mockups — this produces a flow map, not pixel-perfect designs
 
-Design a user flow: **$0**
-Description: $ARGUMENTS
+Design one user flow for the goal the user describes.
 
 ## Instructions
 
@@ -42,7 +41,7 @@ Description: $ARGUMENTS
 ### Navigation Patterns
 - **Hub & Spoke**: Dashboard → detail pages → back to dashboard (default for mobile apps)
 - **Linear Flow**: Step 1 → Step 2 → Step 3 (for forms, onboarding, checkout)
-- **Tab Navigation**: 3-5 top-level sections via BottomNav
+- **Tab Navigation**: 3-5 top-level sections in a bottom tab bar
 
 ### Screen Flow Rules
 - Every flow must have a **clear entry point** and **clear exit point**
@@ -61,9 +60,11 @@ Description: $ARGUMENTS
    - **Flow diagram** in ASCII showing screen connections
    - **Screen inventory** listing each screen's purpose and key components
    - **Edge cases** (empty states, errors, loading) for each screen
-   - **Scaffolded pages** using `PageShell`, `TopBar`, `BottomNav` patterns
+   - **Scaffolded pages** (only if relevant): starter page files with a top bar and bottom navigation, written to the project's own parts. If the user has no such parts, skip this item and say so.
 
-5. Only if the user's project uses the same parts, generate the page files. The `/ss-page` command is not part of this item, so write them by hand to the project's own conventions.
+   Give the result in this order, so the user checks the most important part first: 1) flow diagram, 2) screen inventory, 3) edge cases, 4) page files only if relevant.
+
+5. Only if the user's project uses the same parts, generate the page files, written by hand to the project's own conventions.
 
 ## Example
 

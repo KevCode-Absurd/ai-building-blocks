@@ -11,7 +11,7 @@ subhead: Paste a script or ad text. It says every line the way it will be delive
 explain: |
   A script can be right in every detail and still sound wrong. The presenter trips on a knotted sentence, gasps through a long one, or reads three fragments that sound like a robot. Viewers hear it at once, even if they couldn't say why.
 
-  This skill works only on sound. Each line faces one test: would a person say this to a friend, in one breath? It puts back small words that were cut, splits sentences where a breath falls, joins choppy lists and brings verbs forward. It adds contractions and strips habits that sound machine-made. Who it speaks to, the tense and your brand's own phrases stay as they are. It never touches a claim, number, price, guarantee or product name. If one looks wrong, it flags it for your claims check.
+  This skill works only on sound. Each line faces one test: would a person say this to a friend, in one breath? It puts back small words that were cut, splits sentences where a breath falls, joins choppy lists and brings verbs forward. It adds contractions and strips habits that sound machine-made. Who it speaks to, the tense and your brand's own phrases stay as they are. It never touches a claim, number, price, guarantee or product name. If one looks wrong, it flags it for your claims check. The worked example uses sample Sprout text. Its prices and claims show the layout only, so do not quote them.
 
 when:
   - Your script reads fine on paper but sounds stiff when someone says it.
@@ -39,7 +39,7 @@ how_to_use:
   - Say whether it will be spoken or read, and who it's for.
   - Paste two or three of your brand's own lines, so it keeps your phrases.
   - Say each fixed line aloud yourself. Keep the ones that sound like you.
-  - Send the flags to whoever checks your claims.
+  - This skill checks sound only. Check every flagged claim and every number against your source before you publish. Send the flags to whoever checks your claims.
 output_sample:
   input:
     - Your finished script or ad text

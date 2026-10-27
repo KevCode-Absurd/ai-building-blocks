@@ -13,6 +13,8 @@ license_source: https://github.com/czlonkowski/n8n-skills/blob/main/LICENSE
 
 # n8n Sub-workflows
 
+**In plain words (added by AI Blocks).** This is an instruction file for an AI that is connected to n8n through MCP tools. If those tools are not connected (the first call, `n8n_list_workflows`, returns nothing or an error), stop and tell the user to connect them first. Without them you can only write the plan and edit list for the user to build in n8n by hand.
+
 ## When to Use
 
 Use this skill when shared or multi-step logic should become a typed reusable workflow, when an existing workflow is growing difficult to reason about, or when an agent needs a workflow exposed as a tool.

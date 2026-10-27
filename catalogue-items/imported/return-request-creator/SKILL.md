@@ -32,6 +32,8 @@ Initiates a formal Shopify Return on a delivered order — specifying which line
 
 ## Safety
 
+> ⚠️ Show the dry-run preview and wait for the user's explicit yes before setting `dry_run` to false. Never turn it off, create the return or email the customer without that yes.
+
 > ⚠️ Step 2 executes `returnCreate` which creates a formal return record and — if `notify_customer: true` — sends an email to the customer. This is appropriate only after verifying with the customer that a return is expected. Run with `dry_run: true` to preview the return line items and quantities before committing.
 
 ## Workflow Steps

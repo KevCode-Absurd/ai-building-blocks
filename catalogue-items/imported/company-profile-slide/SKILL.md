@@ -24,14 +24,14 @@ Ask once, in one message, for anything missing. Workflow step 1 then needs no se
 
 **Scope.** The slide format below is written for listed companies with public filings. For a private company with no filings, say what is not available and offer a slide made from the facts the user gives you.
 
-**Tools.** The build step runs code (PptxGenJS for the slides, `officecli` to render an image). If you cannot run code, give the finished slide content as a table per quadrant that the user can paste into PowerPoint, and say you could not check the layout.
+**Tools.** Install PptxGenJS (for the slides) and `officecli` (to render an image) before the build step. The paid market-data terminals named below are optional. The build step runs code. If you cannot run code, give the finished slide content as a table per quadrant that the user can paste into PowerPoint, and say you could not check the layout.
 
 **Currency and scale.** Use one currency and one scale on the slide. For Indian companies use ₹ crore, and follow these two rules:
 
 - **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
 - **Units are lakh (10⁵) and crore (10⁷).** Never use the Excel format `#,##0,," Cr"`: it shows lakh under a crore label (a 100× error). Divide by `10000000` and label the column `Revenue (₹ Cr)`.
 
-(The companion files this skill once pointed to, `india-market-conventions`, `india-market-data` and `NOT-ADAPTABLE.md`, are not in this folder. The rules above are the part that matters.)
+(No Indian companion files are bundled. The rules above are the full guidance.)
 
 ## Workflow
 
@@ -101,13 +101,13 @@ Ask once, in one message, for anything missing. Workflow step 1 then needs no se
 
 ### Information Density is Critical
 
-**The #1 goal is MAXIMUM information density, using only sourced facts.** A busy executive should understand the entire company story in 30 seconds. Fill each quadrant as far as your sources allow. If a quadrant is thin, shorten it or mark rows `n/a`. Never pad it with estimates or guesses.
+**The #1 goal is high information density, using only sourced facts.** A busy executive should understand the entire company story in 30 seconds. Fill each quadrant as far as your sources allow. If a quadrant is thin, shorten it or mark rows `n/a`. Never pad it with estimates or guesses.
 
-**Per quadrant targets:**
-- **Company Overview**: 6-8 bullets minimum (HQ, founded, employees, CEO/CFO, market cap, ticker, industry, key stat)
-- **Business & Positioning**: 6-8 bullets (revenue drivers, products, market share %, competitive moat, customer count, geographic mix)
+**Per quadrant targets (use 4-5 bullets in each text quadrant everywhere in this skill, never more than 6 and only if each fits on one line; fewer is fine when the sources give fewer facts):**
+- **Company Overview**: 4-5 bullets (HQ, founded, employees, CEO/CFO, market cap, ticker, industry, key stat)
+- **Business & Positioning**: 4-5 bullets (revenue drivers, products, market share %, competitive moat, customer count, geographic mix)
 - **Key Financials**: Table with 8-10 rows OR chart + 4-5 key metrics (Revenue, EBITDA, margins, EPS, FCF, growth rates, valuation multiples)
-- **Fourth quadrant**: 5-7 bullets (ownership %, recent M&A, developments, catalysts)
+- **Fourth quadrant**: 4-5 bullets (ownership %, recent M&A, developments, catalysts)
 
 **Information packing techniques:**
 - Combine related facts: "HQ: <city>; Founded: <year>; <n> employees"

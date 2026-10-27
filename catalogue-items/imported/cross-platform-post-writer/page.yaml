@@ -29,13 +29,13 @@ you_get:
   - A LinkedIn post with the context readers expect there
   - A short note on what changed and why
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. It needs no code, files, web access or paid account.
-  - Paste your idea, notes or draft. Add any facts, numbers or a sample of your own posts.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page. The skill itself needs no code, files, web access or paid account. Only the optional VoiceMoat connector at the end needs a paid Pro or Enterprise plan, and you can skip it.
+  - Paste your idea, notes or draft. A rough draft or one sentence of notes is enough to start. Add any facts, numbers or a sample of your own posts.
   - Check the one-sentence idea your AI gives back. If it asks which part is the point, answer it.
   - Read the X post and the LinkedIn post. Look for lines that appear in both, and ask for a rewrite if you find one.
-  - Licence: the collection's LICENSE-CONTENT file puts written content under CC BY 4.0, so we follow that, with credit to the author. The skill file's own header says MIT.
+  - "Licence: this copy is under CC BY 4.0, as set by the LICENSE-CONTENT file. Credit the author when you reuse it. The MIT label in the skill file's header is the original upstream label and is not the licence we apply."
   - Edit to your voice, then post. Posting is by hand. The last section of the skill is about the optional VoiceMoat connector (paid plan). Your AI can skip it.
-  - After a few days, see which post got more replies. Tell your AI what worked and ask it to use that shape next time.
+  - After a few days, note which post got more replies and what the first line said. Paste that note into your next session and ask your AI to use that shape.
 output_sample:
   input:
     - Your idea, rough notes or a draft

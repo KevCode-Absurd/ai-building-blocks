@@ -1,13 +1,13 @@
 ---
 name: position-name-launch
-description: Use when you are launching or extending a brand and want to own one clear idea. It runs 3 skills in order: pick one position, check whether your brand name can stretch to a new product, then plan a launch that starts with press. It checks each result before the next step starts.
+description: "Use when you are launching or extending a brand and want to own one clear idea. It runs 3 skills in order: pick one position, check whether your brand name can stretch to a new product, then plan a launch that starts with press. It checks each result before the next step starts."
 ---
 
 # Choose a position, check a name stretch, launch with press
 
 Paste your product and rivals. Get one position to own, a name check for the new product and a press-first launch.
 
-This workflow is inspired by The Positioning Era Cometh by Al Ries and Jack Trout. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow draws on ideas about positioning, brand names and press-first launches from The Positioning Era Cometh by Al Ries and Jack Trout. How the three steps fit together is this workflow's own design, not a method taken from them. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -34,6 +34,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+Where each input goes: your product and rivals feed step 1. Your brand file and the new product feed step 2. Your price, benefits, proof, budget and dates feed step 3.
+
 Required means the steps need it for a real result. A required item that is missing becomes a `MISSING:` line, never an invented fact.
 
 - **Your product and who it is for, with price, benefits and proof** (required)
@@ -51,6 +53,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **An approval** (nothing is sent, published or paid for without the person's clear yes).
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
+## When not to use
+- You sell one product with no rivals to compare against. Use the Positioning statement writer (`positioning-statement-writer`) on its own.
+- You want to know how far a brand reaches before you pick a position. Use the Brand reach audit (`brand-reach-audit`).
+- You have a vague idea and need a creative brief, not a position or a launch. Use the Creative brief writer (`creative-brief-writer`).
+
 ## Steps
 1. **Positioning statement writer.** Use the skill `positioning-statement-writer`. Give it your product, your rivals and what you can truthfully claim. It maps who tops each category in buyers' minds and what each rival owns, finds a true weak spot you can use and picks one attribute to own. It writes the position as one plain line. The step 1 file holds the ladders, the weak spot, your position, the one-line statement and a short brief for your team.
 2. **Brand name stretch checker.** Use the skill `brand-name-stretch-checker`. Give it your brand file, the new product and the step 1 file. It compares what your name means today with what the new product would mean, gives a stretch score out of 100 with its working, and makes a call: use the name, make a new one, or skip. It also says what the core product risks if the stretch fails. The step 2 file holds the call.
@@ -58,7 +65,9 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
-3 step files and the summary.
+3 step files and the summary. Before you use the step 3 plan, check the weak spot you plan to claim against a real source. Do not use it in public until you have.
+
+First next step: run the Go or no-go launch checker (`go-or-no-go-launch-checker`) on the step 3 plan. Bring the step 3 file and the HAND-BACK SUMMARY, so it can see which gaps are still open.
 - Step 1 file: the ladders of top brands, what each rival owns, the weak spot you can use, your position and the one-line statement.
 - Step 2 file: what your name means now, the stretch score, and the call to use the name, make a new one or skip, with the cost to the core if it fails.
 - Step 3 file: the idea to own, the news angle, the press and third-party plan, and when ads begin. This is the plan.

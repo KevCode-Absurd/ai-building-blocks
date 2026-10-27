@@ -9,7 +9,7 @@ subhead: Clear alt text on every product image, so AI tools know what each one s
 explain: |
   Clear alt text on every product image, so AI tools know what each one shows. Shopping agents cannot see pixels. They read the alt text to judge color, material and style, and a file name like IMG_2931 tells them nothing.
 
-  Claude finds product images with blank or low-value alt text. For each, it writes a short, specific line covering what the product is, its color and material, and how it is shown. You review the lines before anything is saved. The change updates live files, so you need an authenticated Shopify CLI session with product and file write access.
+  Claude finds product images with blank or low-value alt text. For each, it writes a short, specific line covering what the product is, its color and material, and how it is shown. The lines come from the product title, options, type and tags. Your AI does not look at the photo. Check the colour, material and view against each image before you approve. You review the lines before anything is saved. The change updates live files, so you need an authenticated Shopify CLI session with product and file write access.
 when:
   - Your product images have no alt text.
   - Alt text on your store is just file names.
@@ -33,9 +33,11 @@ how_to_use:
   - Open an AI that can run Shopify CLI commands and sign in to your store.
   - Paste this skill and give your store domain. Add a collection or tag if you want a smaller run.
   - Ask for a dry run first. Nothing is saved on a dry run.
-  - Read the preview table. Fix any line that is wrong or vague.
+  - Dry run is the default. Your AI saves nothing until you say yes.
+  - Read the preview table. Lines marked CHECK AGAINST PHOTO use a colour, material or view that is not in the product data. Open each image and compare. Fix any line that is wrong or vague.
   - Approve the run. Your AI saves the alt text to your live images.
   - Keep the option to rewrite existing alt text off at first. That change cannot be undone in bulk.
+  - Afterward, open a few product pages on your live store to check the alt text reads right. Then run the AI shopping readiness checker again to confirm your alt text coverage improved.
 output_sample:
   input:
     - Your store domain

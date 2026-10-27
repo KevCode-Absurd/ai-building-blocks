@@ -98,7 +98,7 @@ output_shape: |
 
 tweaks:
   - what: Mobile screenshots
-    how: Attach mobile maps first. Most store traffic is on phones, and a blended view hides mobile problems.
+    how: Attach mobile maps first. Check your own analytics for your mobile share, because a blended view can hide mobile problems.
   - what: The date window
     how: Give 3 to 6 months of data, or at least about 90 days. Short windows show noise.
   - what: Money per page
@@ -128,7 +128,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Microsoft Clarity", why: "Free heatmaps, area maps and recordings with the rage and dead click insights this skill reads."}
-    - {name: "GA4", why: "Free funnels in the Explore tab, and sessions with fewer bots than platform dashboards."}
+    - {name: "GA4", why: "Free funnels in the Explore tab, and sessions you can compare with your platform dashboards."}
     - {name: "A store survey app", why: "Gives you the 'why' behind what the heatmap shows, tied to order data."}
   inputs:
     - "Screenshots of the same page on mobile and desktop"

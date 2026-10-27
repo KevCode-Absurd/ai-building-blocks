@@ -34,7 +34,7 @@ Generate high-converting landing pages from a product description. Output comple
 Follow these steps in order for every landing page request:
 
 1. **Gather inputs** — collect product name, tagline, audience, pain point, key benefit, pricing tiers, design style, and copy framework using the trigger format below. Ask only for missing fields.
-2. **Analyze brand voice** (recommended) — if the user has existing brand content (website copy, blog posts, marketing materials), run it through `marketing-skill/skills/content-production/scripts/brand_voice_analyzer.py` (that script is not included here, so skip it and read the tone and formality from the pasted copy yourself) to get a voice profile (formality, tone, perspective). Use the profile to inform design style and copy framework selection:
+2. **Analyze brand voice** (recommended) — if the user has existing brand content (website copy, blog posts, marketing materials), read the tone and formality from the pasted copy yourself (no analyzer script is included) to get a voice profile (formality, tone, perspective). Use the profile to inform design style and copy framework selection:
    - formal + professional → **enterprise** style, **AIDA** framework
    - casual + friendly → **bold-startup** style, **BAB** framework
    - professional + authoritative → **dark-saas** style, **PAS** framework
@@ -174,6 +174,8 @@ Inject `FAQPage` JSON-LD via `<script type="application/ld+json" dangerouslySetI
 
 ## Performance Targets
 
+These figures are goals to measure after the page is published. The generated code does not guarantee them. Test the live page and report what you measure.
+
 | Metric | Target | Technique |
 |---|---|---|
 | LCP | < 1s | Preload hero image, use `priority` on Next/Image |
@@ -196,6 +198,6 @@ Inject `FAQPage` JSON-LD via `<script type="application/ld+json" dangerouslySetI
 
 ## Related Skills
 
-- **Brand Voice Analyzer** (`marketing-skill/skills/content-production/scripts/brand_voice_analyzer.py`, not included here and optional) — Run before generation to establish voice profile and ensure copy consistency
-- **UI Design System** (`product-team/ui-design-system/`) — Generate design tokens from brand color before building the page
-- **Competitive Teardown** (`product-team/competitive-teardown/`) — Competitive positioning informs landing page messaging and differentiation
+- **Brand voice check** (do it by reading the pasted copy; no analyzer script is included) — Do this before generation to set the voice profile and keep copy consistent
+- **UI Design System** (`product-team/ui-design-system/`, from the author's full pack, not included here) — Generate design tokens from brand color before building the page
+- **Competitive Teardown** (`product-team/competitive-teardown/`, from the author's full pack, not included here) — Competitive positioning informs landing page messaging and differentiation

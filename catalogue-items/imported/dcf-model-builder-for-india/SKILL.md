@@ -17,7 +17,7 @@ Ask once for anything missing. Never invent a financial figure. Mark an unsource
 
 **Tools.** The workbook is built with the `officecli` command line tool, so the AI must be able to run commands and save files. Opening the result needs Excel or a compatible app. If you cannot run commands, give the model as a table of cell, label and formula for the user to type in, and say no file was built.
 
-**Web sources.** The risk-free rate comes from a government bond yield page (CCIL, below). Reading that page is web scraping. It can change or fail. If it does, ask the user for the 10-year G-sec yield and its date. Do not hardcode a remembered number.
+**Web sources.** The risk-free rate comes from a government bond yield page (CCIL, below). Reading that page is web scraping. It can change or fail. Check CCIL's terms of use before reading the page automatically. If the terms do not allow it, or if the page fails, ask the user for the 10-year G-sec yield and its date. Do not hardcode a remembered number.
 
 **Not investment advice.** The result is a research model. The implied price depends on judgement inputs such as the equity risk premium, growth and margins. It is not a recommendation to buy or sell. Say so in the summary.
 
@@ -26,7 +26,7 @@ Ask once for anything missing. Never invent a financial figure. Mark an unsource
 - **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` = Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year. Never annualise a quarter without stating the fiscal offset.
 - **Units are lakh (10⁵) and crore (10⁷).** Never use the Excel format `#,##0,," Cr"`: each trailing comma divides by 1,000, so two commas divide by 1,000,000, but a crore is 10,000,000 (the figure shows 10× too large). Divide by `10000000` in a live formula and label the column `Total Revenue (₹ Cr)`.
 
-The companion files this skill once pointed to (`india-market-conventions`, `india-market-data`, `NOT-ADAPTABLE.md`, `references/sec-filings.md`, and the helper skills `xlsx-author` and `officecli-xlsx`) are not in this folder. If something has no Indian equivalent or you cannot source it, say so. Never put in a stand-in and present it as the real thing.
+The companion files this skill once pointed to (`india-market-conventions`, `india-market-data`, `NOT-ADAPTABLE.md`, `references/sec-filings.md`, and the helper skills `xlsx-author` and `officecli-xlsx`) are not in this folder. Where a step names one of them, ask the user for the exact input instead (for example, the filing figures or the bond yield), or treat the step as optional. If something has no Indian equivalent or you cannot source it, say so. Never put in a stand-in and present it as the real thing.
 
 ## Overview
 
@@ -118,10 +118,10 @@ projection, terminal value, valuation summary, sensitivity tables).
 
 ### Step 1: Data Retrieval and Validation
 
-Fetch data from MCP servers, user provided data, and the web.
+Fetch data from MCP servers, user provided data, and the web. Do not read the CCIL yield page automatically until you have checked its terms of use (see Web sources above). If you cannot check, ask the user to paste the yield and its date.
 
 **Data Sources Priority:**
-1. **MCP Servers** (if configured) - Structured financial data from providers like Daloopa
+1. **MCP Servers** (paid and optional, only if the user already has one) - Structured financial data from providers like Daloopa. These need their own account and key. The model works from filings and user figures without them, so ask for those if no server is connected.
 2. **User-Provided Data** - Historical financials from their research
 3. **Web Search/Fetch** - Current prices, beta, debt and cash when needed
 

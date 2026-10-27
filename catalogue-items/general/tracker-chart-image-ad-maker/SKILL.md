@@ -43,7 +43,7 @@ How to start:
 
 **Tools that do this best:**
 - **Google Sheets:** Builds the real chart from your story's numbers, so every figure in the photo is true.
-- **Nano Banana:** Google's image model, which Google recommends for accurate text, so dates and labels come out right.
+- **Nano Banana:** Google's image model, which draws readable text well, so dates and labels are likelier to come out right. Check every character.
 - **Your phone's photo editor:** Drawing the mark yourself looks rough and human, which image tools rarely manage.
 <!-- /needs -->
 
@@ -69,7 +69,7 @@ If an image tool is connected, offer to make the picture with it, and ask before
 1. **Follow the house rules.**
 2. **Run the gate.** All three must pass:
    - **Does the buyer take this reading themselves,** at home or on their phone, in the story or the research?
-   - **Can the brand back what the story says about it,** with a source on the claims list?
+   - **Can the brand back what the story says about it,** with a source on the claims list? A test strip or a sleep reading that carries a health meaning (for example a result that means something about the body) passes only if the claims list covers that meaning. If it does not, pick a non-health reading, such as a habit streak or a step count, or fail the gate.
    - **Can it stay ordinary?** A normal amount of the problem, no condition named, no clinic letterhead, no alarm colours.
    If an answer fails, say which in one line and name the picture skill that fits better (see "If something is missing"). Then hand back what you can: the gate answers, and what's needed to finish this picture.
 3. **Name the reading and where it sits:** "a habit calendar on a phone, held over a kitchen counter", "a test strip beside its colour card on the edge of the sink".
@@ -107,7 +107,7 @@ MARK STEP         <by hand, or one fallback prompt line>
 CHECKS MISSED     <one line per check still missed, or none>
 ```
 
-Next: paste the IMAGE PROMPT into ChatGPT or Gemini to make the photo, add the LINE UNDER IMAGE as the caption, draw the mark by hand, then check the finished ad with the Pre-launch ad checker. Skip health readings such as blood pressure or glucose.
+Next: paste the IMAGE PROMPT into ChatGPT or Gemini to make the photo, add the LINE UNDER IMAGE as the caption, draw the mark by hand, then check the finished ad with the [Meta ad policy checker](https://useaiblocks.com/skills/meta-ads-compliance-checker). Skip health readings such as blood pressure or glucose.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

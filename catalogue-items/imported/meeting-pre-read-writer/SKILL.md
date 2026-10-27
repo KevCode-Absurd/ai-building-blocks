@@ -12,6 +12,8 @@ Before you start: this skill uses Codex CLI and a Notion login (see step 0). Eit
 Prep meetings by pulling Notion context, tailoring agendas/pre-reads, and enriching with Codex research.
 
 ## Quick start
+Tool names such as `Notion:notion-search` are the Notion connection's own tools (search, fetch, create page, update page). They only work after the connection in step 0 is set up.
+
 1) Confirm meeting goal, attendees, date/time, and decisions needed.
 2) Gather context: search with `Notion:notion-search`, then fetch with `Notion:notion-fetch` (prior notes, specs, OKRs, decisions).
 3) Pick the right template via `reference/template-selection-guide.md` (status, decision, planning, retro, 1:1, brainstorming).
@@ -50,7 +52,7 @@ After successful login, the user will have to restart codex. You should finish y
 - Assign owners for each agenda item; call out timeboxes and expected outputs.
 
 ### 4) Enrich with research
-- Add concise Codex research where helpful: market/industry facts, benchmarks, risks, best practices.
+- Add concise Codex research where helpful: market/industry facts, benchmarks, risks, best practices. "Codex research" means searching the web for sources and opening each one. If your AI cannot browse, skip this step and say so in the pre-read.
 - Keep claims cited with source links; separate fact from opinion.
 - Cite only a URL you actually opened in this session. Drop any figure you cannot link to a source you checked. Never write a number or quote from memory.
 

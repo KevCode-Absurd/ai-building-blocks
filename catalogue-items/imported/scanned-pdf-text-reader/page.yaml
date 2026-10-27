@@ -11,7 +11,7 @@ explain: |
 
   A tool called LiteParse reads the file and returns layout-aware text, structured JSON or rough markdown. For scans it runs OCR with a bundled engine, so pages with no real text still come out. Each piece of text carries a bounding box, so you can cite exactly where something was found. It can also save page images so another model can look at charts or handwriting, and it runs on whole folders. You need Python, and LibreOffice for Office formats.
 
-  Licence: this copy is under the MIT licence, as the LICENSE.md file in this item says. The skill file's own header says Apache-2.0. Both allow reuse with credit. Credit goes to K-Dense.
+  Licence: the licence that applies to this copy is MIT, as the LICENSE.md file in this item says. The Apache-2.0 label in the skill file's header is the upstream label. Reuse needs credit. Credit goes to K-Dense.
 when:
   - You have scanned contracts and need text you can search.
   - You want to feed a folder of papers into a search tool and keep page positions.
@@ -34,14 +34,16 @@ you_get:
   - Page images for charts or handwriting (optional)
   - A list of any pages that failed
 how_to_use:
+  - No API key or paid service is needed. You only need one if you choose LlamaParse or an HTTP OCR server.
   - Have ready the file or folder path, the output type you want (text, JSON or Markdown), any page range, and the OCR language code if the scan is not in English.
   - Open an AI that can run Python code and save files, such as Claude with code tools. Paste this skill in.
   - "Ask it to run: uv pip install liteparse==2.15.0. For Word, Excel or PowerPoint files, install LibreOffice too."
+  - "Before the first scan in a language, check that the computer can reach the internet. The first OCR run for each language downloads its files from GitHub. If you set up an HTTP OCR server, it receives your page images, so use only a server you trust."
   - "Upload your file and ask it to run: lit parse yourfile.pdf --format json -o out.json."
   - For a scan in another language, add --ocr-language with the language code, such as fra.
   - Ask it to check the total page count and any page errors, so you know no pages were skipped.
   - Compare one page image with the text to check columns and tables.
-  - Next, pass the JSON to a chunking or search tool. If figures or handwriting matter, keep the page images beside it.
+  - Next, pass the JSON to a chunking or search tool that reads each item's page number and box position, so every chunk keeps its page. For a folder, the skill's scripts/batch_parse_dir.py writes one JSON file per document. If figures or handwriting matter, keep the page images beside it.
 output_sample:
   input:
     - Your PDF, Office file or image, or a folder of them

@@ -50,7 +50,19 @@ How to start:
 
 ## What you hand back
 
-The list of arguments with proof marked. The buyer types. The research list. The honest reason. For each type: the lead argument, the backup, why, and the first question. The stop rule. Unproven arguments and the proof needed. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
+These headings, in this order:
+
+- ARGUMENTS: each fact with its proof, or UNPROVEN.
+- BUYER TYPES: what each pays for and worries about.
+- RESEARCH BEFORE A CALL.
+- HONEST REASON YOU CAME.
+- LEAD ARGUMENT BY BUYER TYPE: the lead, the backup, why, the first question, what to listen for and when to change the lead.
+- STOP RULE.
+- UNPROVEN ARGUMENTS: the proof each one needs.
+- MISSING.
+- CHECKS MISSED: one line per check missed, or "none".
+
+A brand brain is not needed. Product facts are the only required input.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

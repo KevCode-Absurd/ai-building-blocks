@@ -9,7 +9,7 @@ subhead: A clear picture of the job market for one role in one place, so you kno
 explain: |
   A clear picture of the job market for one role in one place, so you know what to offer and how long it will take. Name the role, level and location. The skill gathers public pay data from sources like job postings, salary sites and surveys, and tells you which ones to trust most.
 
-  It breaks pay into base, bonus, equity and sign-on, and splits it by city, company stage and seniority. It estimates talent supply from pool sizes, candidates open to offers and application volume, and demand from open roles and posting growth. The ratio tells you if candidates or employers hold the power, and how hard the hire will be. It reads public web pages only.
+  It breaks pay into base, bonus, equity and sign-on, and splits it by city, company stage and seniority. It estimates talent supply from pool sizes, candidates open to offers and application volume, and demand from open roles and posting growth. The ratio tells you if candidates or employers hold the power, and how hard the hire will be. It reads public web pages only. The original skill could be read as web scraping. This copy does not scrape, never logs in and uses only pages you can open without a login or numbers you paste. The catalogue still shows a scrapes label, because the original could be read that way. LinkedIn, Glassdoor and Blind figures come only from numbers you paste.
 when:
   - You need to set a salary range for a role you have not hired before.
   - A hiring manager thinks the budget is enough and you disagree.
@@ -33,6 +33,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini with web search turned on. Paste in the skill instructions.
   - Type the role, seniority and place. Add your budget and company stage if you have them.
   - Tell it which sources you can use, such as paid pay surveys, or paste in numbers you already have. It does not scrape. It reads public pages only. Never give it a login. Pool sizes come only from numbers you paste or pages you can open without a login. Respect each site's terms.
+  - Ask for a source table. Every pay range, pool size and time-to-fill figure must show its source, date, sample size and whether it is base or total pay. A figure with no source must read "not found".
   - Read the summary first. Check the date and source of each pay range.
   - Treat pool sizes and pay ranges as estimates. Check them with a recruiter before you set an offer.
 output_sample:

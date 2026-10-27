@@ -50,7 +50,7 @@ Source: copied from tuanductran/hr-skills under the MIT licence. This catalogue 
 1. "Write an employee-facing disclosure explaining how AI is used in the hiring process."
 2. "Draft training content for HR staff on responsible and compliant AI use."
 3. "Create talking points for a manager asked about AI use in performance reviews."
-4. "Summarize regulatory requirements for automated employment decision tools in [jurisdiction]." (Replace [jurisdiction] with your country or state.)
+4. "Summarize regulatory requirements for automated employment decision tools in [jurisdiction]." (Replace [jurisdiction] with your country or state.) List each law or source you rely on. Mark any point you cannot confirm as "verify with counsel". Never state a law you are not sure exists.
 5. "Draft a candidate notice required before using an AI assessment tool in hiring."
 
 ## What you get

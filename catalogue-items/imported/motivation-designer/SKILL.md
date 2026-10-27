@@ -17,6 +17,8 @@ Design motivation systems for products, teams, and organizations using the scien
 
 ## Scoring
 
+**Note (added by AI Blocks): the score is a rule of thumb, not a validated measure of drive.** Use it to start a conversation about your setup, not to judge people. The company and study examples below (Wells Fargo, Duolingo, Atlassian, the candle problem) come from Pink's book and public reporting. They are not linked here, so check them before you repeat them.
+
 **Goal: 10/10.** Score any motivation system (product features, team incentives, gamification, engagement loops) against the [Quick Diagnostic](#quick-diagnostic): start at 5, add 1 for each of the first five rows answered "yes," then **subtract 2 if the sixth row is also "yes"** — an "if-then" reward doing the motivating crowds out the rest. Bands:
 
 - **9-10** — autonomy, mastery, and purpose all present; no if-then crowding-out.
@@ -34,6 +36,8 @@ Always state the current score, which diagnostic rows failed, and the specific f
 | **3.0** | Humans seek autonomy, mastery, purpose | Intrinsic motivation | Knowledge economy |
 
 ### The Seven Deadly Flaws of Extrinsic Rewards
+
+The examples in this table (the drawing kids, the candle problem, commissioned art, the day-care late fee, Wells Fargo) are illustrations taken from Pink's book and public reporting. They are not linked here. Treat them as examples to verify before you repeat them to anyone.
 
 "If-then" rewards ("If you do X, then you get Y"):
 
@@ -136,7 +140,7 @@ See [references/purpose.md](references/purpose.md) when wiring impact, community
 | **Mastery** | Points for everything, trivial badges | Skill-based progression, meaningful milestones |
 | **Purpose** | Pointless competition, discouraging leaderboards | Community contribution, personal growth |
 
-**Example — Duolingo:** autonomy (choose language, pace, topics), mastery (adaptive difficulty, skill levels), purpose ("learn a language to connect with people"). Caution: streaks can shift from intrinsic mastery to extrinsic loss aversion.
+**Example — Duolingo (an illustration from public reporting; check it before you repeat it):** autonomy (choose language, pace, topics), mastery (adaptive difficulty, skill levels), purpose ("learn a language to connect with people"). Caution: streaks can shift from intrinsic mastery to extrinsic loss aversion.
 
 ### Team Motivation
 
@@ -192,8 +196,8 @@ Audit any motivation system:
 
 Based on Daniel Pink's research on motivation science:
 
-- [*"Drive: The Surprising Truth About What Motivates Us"*](https://www.amazon.com/Drive-Surprising-Truth-About-Motivates/dp/1594484805?tag=wondelai00-20) by Daniel H. Pink
-- [*"To Sell Is Human"*](https://www.amazon.com/Sell-Human-Surprising-Moving-Others/dp/1594631905?tag=wondelai00-20) by Daniel H. Pink (applying motivation to sales and persuasion)
+- [*"Drive: The Surprising Truth About What Motivates Us"*](https://www.amazon.com/Drive-Surprising-Truth-About-Motivates/dp/1594484805) by Daniel H. Pink
+- [*"To Sell Is Human"*](https://www.amazon.com/Sell-Human-Surprising-Moving-Others/dp/1594631905) by Daniel H. Pink (applying motivation to sales and persuasion)
 
 ## About the Author
 

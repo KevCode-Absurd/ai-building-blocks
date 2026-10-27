@@ -30,11 +30,14 @@ you_get:
   - Time-tracking system settings
   - A staff announcement and a manager guide
 how_to_use:
+  - Before you start, gather recent lateness logs, your current overtime rule, headcount per shift and the time clock you use. Never paste staff names or personal records into the chat.
   - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
   - Describe your shifts, your industry and your country or region.
   - Say what hurts most, such as lateness, overtime disputes or no-shows.
   - Ask for the policy first. Then ask for overtime rules, time clock settings, the staff message and the manager guide.
+  - The time clock settings and points thresholds in the draft are starting suggestions. Test them against your own time records before you use them.
   - Check the draft against your local labour law. Have a lawyer or HR adviser review it before you share it.
+  - Then match your time clock settings to the policy, send the staff announcement with notice before the change starts, and brief your managers.
 output_sample:
   input:
     - Your shift patterns and industry
@@ -43,7 +46,7 @@ output_sample:
     - The time clock or system you use (optional)
   output:
     - name: Attendance policy draft
-      contains: Plain rules for clocking in, lateness, breaks, absences and no-call, no-show cases.
+      contains: Plain rules for clocking in, lateness, breaks, absences and no-call, no-show cases. Expect about one to two pages, with one short section for each topic. Review it against local rules before you share it.
     - name: Overtime rules
       contains: How overtime is worked out and who approves it, matched to your country's labour rules.
     - name: Time-tracking settings

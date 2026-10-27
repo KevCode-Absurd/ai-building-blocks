@@ -29,7 +29,9 @@ how_to_use:
   - Say if you want the CRT-screen view or the real-camera view. Attach a reference image if you have one.
   - Copy the prompt into your image tool. It needs an image tool that can make pictures.
   - If you gave a reference, attach the image itself in that tool. A text description is not enough.
-  - Run the checklist on the result. If two tries fail, change the shot rather than add more darkness.
+  - Run the checklist on the result. It passes when the subject is still recognizable, hands and limbs look right, shapes are correct and every visible label is spelled as you intended. If a check fails, change one thing (the framing or the light) and run the prompt again, or use your image tool's variation or edit feature. If two tries fail, change the shot rather than add more darkness.
+  - This item writes a prompt for still images only. Video needs a separate video tool.
+  - When the image passes, save it. If a check still fails after two tries, write down the open limits, pick a new capture view and run the prompt again. To use the image in an ad or on a page, bring it to the ad or page item you are working in.
 output_sample:
   input:
     - Your subject, such as an object, person or place

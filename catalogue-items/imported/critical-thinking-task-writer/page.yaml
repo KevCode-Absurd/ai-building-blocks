@@ -33,11 +33,12 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
   - Add your subject and topic, the thinking skill, your students' year level and how they think now.
   - Add the time you have and your preferred format, such as written or discussion (optional). Confirm the level and the time with your class before you start.
-  - Pick the stimulus for the task from a named textbook or primary source, and keep the reference. The worked example's figures are placeholders, so fill each from a source.
+  - Pick the stimulus for the task from a named textbook or primary source, and write down the source so students can find it. Claims that historians dispute should be labelled as claims to test, not facts. The worked example's figures are placeholders, so fill each from a source.
   - Read the task and the answer guide. Check the guide matches what you want students to show.
   - Change the task wording or level if it feels too easy or too hard, then ask your AI to revise it.
   - Use the follow-up prompts in class and the assessment indicators when you mark the work.
   - If your task uses real figures or quotes, check each one against a source before it reaches students.
+  - "Licence: this skill is shared under CC BY-SA 4.0 (see its LICENSE file). Credit the original author, and share any changes you make under the same licence. The method text is the original author's. We changed the name and the page text, and we edited the worked example. Its figures became bracketed placeholders, and its two disputed claims (the intercepted cables and the Cold War motive) are marked as claims for students to test with a named source."
 next: [socratic-questions, online-source-check-lesson]
 output_sample:
   input:

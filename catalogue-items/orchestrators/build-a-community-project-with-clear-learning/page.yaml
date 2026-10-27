@@ -24,9 +24,9 @@ not_for:
   - You are planning a volunteer programme for adults. Use the Nonprofit volunteer program planner.
 you_give:
   - The local need, in the words of the partner who stated it
-  - The curriculum goal or skill the project should cover
+  - The curriculum goal or skill the project should cover (needed before step 1 starts; without it the run stops)
   - The learners' age or year, and the length of the project
-  - Limits in your community, such as travel, time, cost or safety
+  - Limits in your community, such as travel, time, cost or safety. If you give none, every task stays inside school.
   - The approvals you already have, such as school consent (optional)
   - The name of the community partner (optional)
 you_get:

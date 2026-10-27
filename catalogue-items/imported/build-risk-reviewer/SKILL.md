@@ -36,7 +36,17 @@ Restate the product or feature in one concrete sentence. Name the intended user,
 
 ### Step 2: Check the Main Risks
 
-Review the idea across demand, workflow fit, willingness to switch, distribution, pricing, data access, and operational burden. Prefer specific doubts over generic brainstorming.
+Go through these seven risk areas one at a time. For each, write one specific doubt about this idea, or say it is low risk:
+
+1. Demand: does anyone need this enough to act?
+2. Workflow fit: does it fit how they already work?
+3. Willingness to switch: why would they leave what they use today?
+4. Distribution: how will they find it?
+5. Pricing: will they pay, and how much?
+6. Data access: can you get the data it needs?
+7. Operational burden: what will it cost you to run?
+
+Prefer specific doubts over generic brainstorming. Then rank the top three by how much each could sink the build.
 
 ### Step 3: Decide the Next Small Test
 
@@ -107,5 +117,5 @@ Before coding, check:
 
 ## Related Skills
 
-- `@saas-mvp-launcher` - Use when moving from validation into MVP planning and launch execution.
-- `@ux-research-methodology` - Use when the next step needs structured user research.
+- `@saas-mvp-launcher` - Use when moving from validation into MVP planning and launch execution (in this library: SaaS MVP roadmap planner).
+- `@ux-research-methodology` - Use when the next step needs structured user research (in this library: User research planner).

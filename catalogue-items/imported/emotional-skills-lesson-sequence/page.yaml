@@ -7,9 +7,11 @@ job: teach-and-train
 headline: Emotional skills lesson sequence
 subhead: A short run of lessons that teach students to name feelings and handle them, based on the RULER approach from Yale. Describe the situation in your class, and you get a plan you can teach.
 explain: |
-  A short run of lessons that teach students to name feelings and handle them, based on the RULER approach from Yale. Describe the situation in your class, and you get a plan you can teach. This is classroom practice, not medical or clinical advice.
+  A short run of lessons that teach students to name feelings and handle them, based on the RULER approach from Yale. Describe the situation in your class, and you get a plan you can teach. This is classroom practice, not medical or clinical advice. Any student with safeguarding worries or lasting distress needs sign-off and support from your pastoral lead or school counsellor before and during these lessons. Stop any calming exercise if a student feels unwell.
 
-  The plan builds on four tools. The Charter sets class agreements. The Mood Meter helps students label feelings by energy and pleasantness. The Meta-Moment is a pause before reacting. The Blueprint walks through conflict. You give the context, such as exam anxiety, and the year group. Optional details are time available, subject and past use of RULER.
+  The plan builds on four tools. The Charter sets class agreements. The Mood Meter helps students label feelings by energy and pleasantness. The Meta-Moment is a pause before reacting. The Blueprint walks through conflict. You give the context, such as exam anxiety, and the year group. Optional details are time available, subject and past use of RULER. The reply uses five headings in this order: RULER Sequence, Teacher Modelling, Sequence Steps, Academic Integration and Sustaining the Practice. The field names in the skill file's header are internal labels for the same parts.
+
+  Licence: CC BY-SA 4.0, as the LICENSE file says. This is Gareth Manning's skill, copied as it is, with a plain name from us. If you share a plan built from it, credit him and share it under the same licence.
 when:
   - Year 8 students are anxious before mock exams.
   - Conflict keeps erupting at break time.
@@ -31,11 +33,11 @@ you_get:
   - Teacher notes
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page. No code or paid tool is needed.
+  - Gather what you need first: a way to show the Mood Meter to the class (a wall chart or a slide), sticky notes or paper for students to place themselves, and the length of your tutor time or lesson. Tell your AI the length.
   - Describe what is happening in your class and name the year group. Do not paste student names or identifying details into Claude, ChatGPT or Gemini. Describe the situation in general terms, and follow your school's data-protection policy.
   - Add your time, your subject and what students know about RULER, if you wish.
   - Read the plan. Check it fits your school's wellbeing policy before you teach it.
   - After the first step, look at how students placed themselves on the Mood Meter. Use that to adjust later lessons. Pair it with Classroom belonging planner or Restorative conversation planner.
-  - This skill is adapted from Gareth Manning's work (GarethManning/education-agent-skills) under CC BY-SA-4.0. Anything you build from it must keep that licence.
 output_sample:
   input:
     - The situation in your class, such as anxiety before exams or conflict

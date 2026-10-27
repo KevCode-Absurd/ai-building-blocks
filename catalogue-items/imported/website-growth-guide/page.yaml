@@ -30,7 +30,8 @@ you_get:
   - A clearer message and offer
   - A tracker file to resume later
 how_to_use:
-  - Add the eight skills this guide runs to your AI tool. The names, and the AI Blocks items that match them, are in the list of what to have ready. Missing ones are run from a short built-in brief.
+  - The default route needs no install. If a skill the guide names is missing in your AI, the guide runs that phase from a short built-in brief. Seven of the eight skills have matching items in AI Blocks, listed under what to have ready. The guide comes from the wondelai/skills collection.
+  - "Optional: the guide may offer an npx install command for a missing skill. That command downloads third-party code from GitHub. It is not a normal step. Check the source before you run it, or skip it and use the built-in brief."
   - Start a new chat in a project where your AI can save files. Paste in this skill.
   - "Say: I want to grow my website. Then answer its questions about your site, traffic, offer and audience."
   - Work one phase at a time. At each choice, your AI asks you before it decides.
@@ -45,7 +46,7 @@ output_sample:
     - Customer feedback or reviews (optional)
   prerequisites:
     - An AI that can read and save files in a project folder, so the tracker can be saved
-    - "The eight skills it runs. Seven are in AI Blocks under plain names: conversion-problem-finder (phase 1), quiz-funnel-builder (2), customer-as-hero-message-planner (3), memorable-message-writer (4), honest-persuasion-advisor (5), word-of-mouth-planner (7) and one-page-marketing-plan-builder (8). For phase 6 use offer-designer, which is the closest item here. If one is missing in your AI, the guide runs that phase from a short built-in brief."
+    - "The eight skills it runs. Seven are in AI Blocks under plain names (not yet in AI Blocks: the original phase 6 skill, hundred-million-offers, which is why offer-designer is the closest match; any other skill you cannot find here comes from the wondelai/skills collection on GitHub): conversion-problem-finder (phase 1), quiz-funnel-builder (2), customer-as-hero-message-planner (3), memorable-message-writer (4), honest-persuasion-advisor (5), word-of-mouth-planner (7) and one-page-marketing-plan-builder (8). For phase 6 use offer-designer, which is the closest item here. If one is missing in your AI, the guide runs that phase from a short built-in brief."
   output:
     - name: docs/WEBSITE.md
       contains: What you learned about your site and why visitors leave, plus the lead capture idea added in phase 2.

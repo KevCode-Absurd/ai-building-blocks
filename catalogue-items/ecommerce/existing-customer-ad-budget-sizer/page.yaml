@@ -73,7 +73,7 @@ how_it_works:
   - title: Sets a lower CPA target
     text: Existing customers should cost less per sale than new ones. The source example is $40 for new and $20 or lower for existing.
   - title: Plans the overspend test
-    text: Cut spend about 30 percent and watch sales. In the example, $1,000 a day gave 50 sales and $700 gave 47, so the last $300 bought 3 sales at about $100 each.
+    text: Cut spend about 30 percent and watch sales. Agree a sales floor first, and put the spend back if sales fall below it. In one source example, $1,000 a day gave 50 sales and $700 gave 47, so the last $300 bought 3 sales at about $100 each.
   - title: Plans a lift test
     text: A 30-day conversion lift test on the existing-customer campaign. The source says results are usually far lower than expected.
   - title: Fits the category

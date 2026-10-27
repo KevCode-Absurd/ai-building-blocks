@@ -9,6 +9,8 @@ subhead: Ideas to make your room calmer using light, plants, natural materials a
 explain: |
   Ideas to make your room calmer using light, plants, natural materials and views, scaled to your budget. You describe the room and what feels off, and you get a plan you can do in stages. It is not medical advice.
 
+  Any named study or percentage in the plan comes from the AI's memory. Check it at the original source before you use it.
+
   The skill looks at what you have now: windows, lighting, surfaces and any plants. It asks what you want, such as better focus or less restlessness. It then suggests ways to bring in daylight, move desks toward views, add plants that suit your rules, use wood and soft colours, and bring in nature sounds or images when real plants are not allowed.
 when:
   - Your room feels harsh and students are restless.
@@ -16,6 +18,7 @@ when:
   - You have almost no money to spend.
   - You want a quiet corner that helps students settle.
 not_for:
+  - "You need curriculum design or a behaviour policy: this item only changes the room, so plan those with your team."
   - "You need a school-wide policy or a building plan: ask your head teacher or a facilities manager."
   - "A student has medical or sensory needs that need expert advice: ask your school SENCO or an occupational therapist."
   - "You want lessons held outdoors: plan them yourself or with a colleague, as this item only changes the room."
@@ -34,7 +37,7 @@ how_to_use:
   - Write a short description of your room. Add the windows, lights, floor, walls and any plants.
   - Say what you want to improve, such as focus or a calmer feel. Add your budget and any plant or landlord rules.
   - Open Claude, ChatGPT or Gemini and paste in the skill. Then paste your room details. A photo or sketch can help if your AI can read images.
-  - Read the ranked changes first. Pick the free ones to try this week.
+  - Read the ranked changes first. The plan has a ranked list of changes with a cost level for each, then a staged plan, and it is short enough to read in a few minutes. Pick the free ones to try this week.
   - Check the free changes against your school's sensory and allergy policy before you make the first change, and check the plan against your school rules before you buy anything. Ask your SENCO about students with sensory needs.
   - Any study or figure in the plan comes from your AI's memory and is not checked. Look up the original source before you share it with staff or parents.
   - Take the ranked changes and cost levels to your head teacher or facilities manager for any later-phase change that needs approval.

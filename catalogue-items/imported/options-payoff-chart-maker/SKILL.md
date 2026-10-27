@@ -31,21 +31,21 @@ When the user provides a screenshot or text, extract:
 | Field | Where to find it | Default if missing |
 |---|---|---|
 | Strategy type | Title bar / leg description | "custom" |
-| Underlying | Ticker symbol | SPX |
+| Underlying | Ticker symbol | none: ask the user. Never assume an index or ticker |
 | Strike(s) | K1, K2, K3... in title or leg table | nearest round number |
-| Premium paid/received | Filled price or avg price | 5.00 |
-| Quantity | Position size | 1 |
+| Premium paid/received | Filled price or avg price | none: required, ask the user. Never use a made-up premium |
+| Quantity | Position size | none: required, ask the user |
 | Multiplier | 100 for equity options, 100 for SPX | 100 |
 | Expiry | Date in title | 30 DTE |
 | Spot price | Current underlying price shown in the screenshot or text | live quote (see below); middle strike only if no quote is available |
 | IV | Shown in greeks panel, or estimate from vega | 20% |
 | Risk-free rate | — | 4.3% |
 
-**Ask before you guess.** If the premium or quantity is missing, ask the user for the real number first. Use a default only if they cannot give one, and then show a visible "DEFAULTS USED" banner on the chart that lists each guessed value (premium, IV, spot, days to expiry). Never present a defaulted number as the user's real figure. When any default is used, also mark the stats cards "based on guessed values" and put "Educational only, not advice. Check every figure with your broker before you trade." on the chart.
+**Ask before you guess.** Premium and quantity are required. If either is missing, stop and ask the user for the real number before you draw anything. For the other fields, use a default only if the user cannot give one, and then show a visible "DEFAULTS USED" banner on the chart that lists each guessed value (premium, IV, spot, days to expiry). Never present a defaulted number as the user's real figure. When any default is used, also mark the stats cards "based on guessed values" and put "Educational only, not advice. Check every figure with your broker before you trade." on the chart.
 
 **Spot for screenshots**: spot is the underlying's current price, and broker screenshots often omit it or show it far from the strikes — don't read it off the strike labels. Use the price shown, else a live quote (the SPX probe below, or yfinance for other underlyings). Fall back to the middle strike only when no quote is available, and tell the user you did.
 
-**Current SPX reference price** (optional; this needs Python with yfinance, which reads an unofficial Yahoo data feed that may change or block requests. If it fails, ask the user for the spot price):
+**Current SPX reference price** (run this probe ONLY when the user has named SPX as the underlying. For any other ticker, do not run it: ask the user for the spot price, or run the same yfinance call with their ticker only if they ask for a live quote) (optional; this needs Python with yfinance, which reads an unofficial Yahoo data feed that may change or block requests. If it fails, ask the user for the spot price):
 ```
 !`python3 -c "exec('try:\n import yfinance as yf\n p=yf.Ticker(\'^GSPC\').fast_info[\'lastPrice\']\n print(f\'SPX ≈ {p:.0f}\')\nexcept Exception:\n print(\'SPX price unavailable — check market data\')')"`
 ```

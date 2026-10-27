@@ -30,12 +30,13 @@ you_get:
   - Checks the agent must pass
   - A review path for the result
 how_to_use:
-  - Open your AI (Claude, ChatGPT or Gemini) and paste in the skill text. It needs no code running or paid tool.
+  - Open your AI (Claude, ChatGPT or Gemini) and paste in the skill text. Writing the note needs no code running. The coding agent that runs it (Claude Code, Codex or Cursor) usually needs a paid plan or an API key, and that is billed to you.
   - Paste your plan or spec. Add the repo link, its default branch and whether it is public or private.
   - Add the commands that prove the work, such as tests, lint and build. Say who merges and who cleans up.
   - Ask your AI to write the handoff. It saves it as dispatch-short-name-date.md, with the pull request body format set in the note.
   - Read the note as the agent would. Answer any question it leaves open, or turn it into a stop rule.
   - Give the note to your coding agent. Read the diff and the pasted check results before you merge. This skill is a copy of RampStack's dispatch-authoring skill, shared under the MIT licence.
+  - After you review the draft pull request, merge it, or write a corrected note and send the agent again. Log the date and outcome so you can compare runs.
 output_sample:
   input:
     - Your plan or spec

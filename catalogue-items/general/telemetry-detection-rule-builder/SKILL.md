@@ -41,7 +41,7 @@ How to start:
 - **Your list of log fields and known log gaps** (optional, but the rule is better with it).
 - **Permission** to monitor the systems the rule covers.
 
-The "question" and "source text" in the block above mean the behaviour and your redacted events.
+The "question" and "data" in the block above mean the behaviour and your redacted events. Leave out real usernames, hostnames, IP addresses and other personal data before you paste events.
 
 **Not for:** deploying a rule or switching off alerts (use your SIEM team’s change process), running an attack or testing on a live system (use an approved test lab), or when you have no logs or field list yet (ask your logging team first).
 
@@ -74,7 +74,7 @@ Keep TLS verification enabled for any later authorized remote validation. This t
 
 ## Hand back
 
-Return the rule, field map, fixtures, prerequisite gaps and an evidence table: fixture ID | expected | observed | PASS/FAIL/NOT_RUN | rule/fixture revision. Include unresolved false-positive assumptions. Test results describe only the supplied cases; never invent a production false-positive rate. Last, say the next step: send the rule and evidence table to your SIEM team for peer review before anything is deployed.
+Return the rule, field map, fixtures, prerequisite gaps and an evidence table: fixture ID | expected | observed | PASS/FAIL/NOT_RUN | rule/fixture revision. Include unresolved false-positive assumptions. Test results describe only the supplied cases; never invent a production false-positive rate. Last, say the next step: send the rule and evidence table to your SIEM team for peer review before anything is deployed. The code-review links under "After this" are general security reviewers. Use them only if you also wrote code, such as a log parser.
 
 ## Task boundaries
 

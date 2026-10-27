@@ -35,7 +35,7 @@ Build the external signals that earn rankings: backlinks, brand mentions, citati
 
 - The site or brand getting the links
 - The audience and category
-- A backlink tool (Ahrefs, Semrush, Moz, Majestic, or similar) for prospecting and monitoring
+- A backlink tool (Ahrefs, Semrush, Moz, Majestic, or similar) for prospecting and monitoring. These are paid services. If the person has none, do not guess backlink numbers: say which data is missing, and plan from what they can see themselves (their own site, search results and competitor pages).
 - A target outcome (rank for X, build authority in Y, recover from Z)
 
 ---
@@ -112,9 +112,11 @@ Local and category-specific listings that establish entity legitimacy.
    - Toxic links (spam directories, link farms, irrelevant categories)
    - Lost links (referring domains that disappeared)
 
+   **If you have no backlink tool:** do these free checks by hand. Search Google for the site's name in quotes, and for `link:`-style mentions of the brand. Open each main competitor's "press", "partners" and "resources" pages and note who links out to them. Check which sites already mention the brand but do not link. Then say plainly that referring domains, domain rating, anchor mix, toxic links and lost links are unknown, and leave those items out of the plan until a tool gives the numbers.
+
 2. **Define the goal.** "Rank top 3 for X by Q4" requires a different tactic mix than "build category authority."
 
-3. **Pick the strategy mix.** Allocate effort across the 4 strategies. A new site typically goes 70/20/10/0 (assets/citations/partnerships/earned) for the first year. An established site can lean more toward earned media.
+3. **Pick the strategy mix.** Allocate effort across the 4 strategies. This split is an unsourced starting guess, not a benchmark. A simpler rule to apply: start with the asset you can build this quarter, then add the other strategies as results come in. As a guess to adjust, a new site might go 70/20/10/0 (assets/citations/partnerships/earned) for the first year. An established site can lean more toward earned media.
 
 4. **Build the prospecting list.**
    - For earned media: relevant journalists, podcast hosts, publication beats
@@ -170,5 +172,5 @@ This skill's output depends on data, measurements, or tool results it cannot gen
 
 ## Reference files
 
-- [`references/outreach-templates.md`](references/outreach-templates.md) - Templates for guest posting, expert quotes, broken-link outreach, podcast pitches.
+- `references/outreach-templates.md` - Not included in this copy. Write the guest post, expert quote, broken-link and podcast pitches yourself in the plan, each one personal and based on facts the user gave.
 - [`references/linkable-assets-guide.md`](references/linkable-assets-guide.md) - Categories of linkable assets with examples and effort estimates.

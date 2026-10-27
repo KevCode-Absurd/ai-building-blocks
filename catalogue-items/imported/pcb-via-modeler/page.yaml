@@ -10,14 +10,20 @@ explain: |
   A via is where signals on a board often go wrong. Describe the layer change and get a model of it, with pads, antipads and ground return vias set, and a check of its signal quality.
 
   The skill builds a single-ended via model, sets which layers carry signal and which carry ground, and places signal and return vias by position and layer span. You can view and edit pad and antipad shapes per layer. It then computes S-parameters, finds barrel resonances, and judges ground via spacing against the critical wavelength. Results can be cascaded with trace models or used to tune pad sizes. It runs in MATLAB with the RF PCB Toolbox.
+
+  This is for RF or signal-integrity engineers who already run MATLAB with the RF PCB Toolbox. If that is not you, skip it and ask your board maker or use your PCB tool's own via checker.
+
+  Licence: this is MathWorks' skill, copied unchanged. The LICENSE.md file in this item governs (BSD 2-Clause), and you may use it only with MathWorks products such as MATLAB. The skill file and its manifest link a different MathWorks licence page, which is MathWorks' own upstream terms and also says MathWorks products only.
+
+  The skill gives an antipad rule of thumb (antipad radius at least pad radius plus 0.1 mm). It is a general guideline, so confirm it against your fabricator's design rules.
 when:
   - A fast signal changes layers and you need to know the loss at the via.
   - You are deciding where to place ground return vias.
   - You suspect a resonance in a thick board stackup.
   - You want to try different pad and antipad sizes.
 not_for:
-  - "You need to design a trace or control impedance: use the matlab-design-pcb-transmission-line skill or a plain trace calculator."
-  - "You want to check power delivery on an imported board: use the matlab-analyze-pcb-pdn skill."
+  - "You need to design a trace or control impedance: use the PCB trace designer or a plain trace calculator."
+  - "You want to check power delivery on an imported board: use the PCB power network checker."
   - "You have no MATLAB with the RF PCB Toolbox: ask a signal integrity engineer or use your board tool's own via checker."
 you_give:
   - Your layer stackup and materials
@@ -32,10 +38,11 @@ you_get:
 how_to_use:
   - Open an AI that can run MATLAB code. You also need MATLAB with the RF PCB Toolbox, which is a paid add-on.
   - Paste the skill text into the chat, or upload the skill folder.
+  - Check that the substrate and conductor values match the stackup from the PCB material setup helper before you run the S-parameter check.
   - Give your AI your layer stackup, materials, signal via position and layers, and frequency range. Add ground via spots if you have them.
   - Ask it to build the via model and run the S-parameter check.
   - Look at the resonances and the ground via spacing note. Change pad sizes or ground vias and run it again.
-  - Next, cascade the via with trace or connector models using the matlab-integrate-pcb-circuit skill.
+  - Next, cascade the via with trace or connector models using the PCB circuit combiner.
 output_sample:
   input:
     - Your layer stackup and materials
@@ -45,7 +52,7 @@ output_sample:
   prerequisites:
     - An AI that can run MATLAB code
     - MATLAB with the RF PCB Toolbox, which needs its own licence
-    - Substrate and conductor set up first with the matlab-manage-pcb-material skill
+    - Substrate and conductor set up first with the PCB material setup helper
   output:
     - name: Via model
       contains: A single-ended via with signal layers, ground layers, signal via position and ground return via positions set.
@@ -54,7 +61,7 @@ output_sample:
     - name: Pad and antipad tables
       contains: The pad and antipad shape for each layer, which you can view and edit.
     - name: S-parameters
-      contains: Loss and reflection of the via across your frequency range, with plots.
+      contains: Loss and reflection of the via across your frequency range, as plots with the resonance frequencies marked. There is no automatic pass or fail, so you read the plots against your own limit.
     - name: Resonance check
       contains: Barrel resonances found in the result, so you can see where the via misbehaves.
     - name: Ground via spacing check

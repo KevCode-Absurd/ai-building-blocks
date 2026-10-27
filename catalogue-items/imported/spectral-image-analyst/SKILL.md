@@ -15,6 +15,8 @@ metadata:
   version: "1.0"
 ---
 
+> AI Blocks licence note: the LICENSE.md file in this folder (BSD 2-Clause, for use with MathWorks products only) governs this copy. The licence link in the front matter above is superseded.
+
 # Spectral Imaging Skill
 
 Generate MATLAB code for working with hyperspectral and multispectral data using the Hyperspectral Imaging Library for Image Processing Toolbox. Requires desktop MATLAB (not MATLAB Online or MATLAB Mobile) and the Hyperspectral Imaging Library add-on.

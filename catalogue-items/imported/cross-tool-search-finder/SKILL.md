@@ -6,7 +6,7 @@ argument-hint: "<query>"
 
 # Search Command
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Words that start with ~~ (such as ~~chat or ~~email) stand for whichever app of that kind the user has connected, such as Slack, Gmail or Google Drive. To see what is connected, look at the tools your AI lists, or ask the user.
 
 Search across all connected MCP sources in a single query. Decompose the user's question, run parallel searches, and synthesize results.
 
@@ -26,7 +26,7 @@ Before searching, determine which MCP sources are available. Attempt to identify
 If no MCP sources are connected:
 ```
 To search across your tools, you'll need to connect at least one source.
-Check your MCP settings to add ~~chat, ~~email, ~~cloud storage, or other tools.
+Check your AI's connector settings to add ~~chat, ~~email, ~~cloud storage, or other tools.
 
 Supported sources: ~~chat, ~~email, ~~cloud storage, ~~project tracker, ~~CRM, ~~knowledge base,
 and any other MCP-connected service.

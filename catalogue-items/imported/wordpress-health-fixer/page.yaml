@@ -36,7 +36,7 @@ how_to_use:
   - Paste your report. Say how you can reach your files (SFTP, host file manager or WP-CLI) and whether you have a full backup.
   - Know that the commands need WP-CLI or SFTP access, and that you run them yourself. Your AI shows the rollback command before any delete or edit.
   - Make the backup your AI asks for before you change any file. Some commands, such as the UpdraftPlus backup or Redis cache steps, only work if that plugin is installed. Host-level changes, such as PHP settings or an object cache, may need a paid host plan or a support ticket.
-  - Make one change at a time. Check that your home page and wp-admin still load after each one.
+  - Make one change at a time. Check that your home page and wp-admin still load after each one. If a fix asks you to switch off a security or firewall plugin, do it only briefly and turn it back on straight after, because your site is less protected while it is off.
   - Run Site Health again to see which warnings have cleared.
   - If the site breaks after a change, restore the backed-up file using the rollback command, then contact your host. Tier 2 items may need your host's support.
 output_sample:

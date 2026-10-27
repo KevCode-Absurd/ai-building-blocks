@@ -7,7 +7,7 @@ job: check-contracts
 headline: Health data privacy checker
 subhead: A first check of whether your handling of patient information meets HIPAA, with gaps listed and fixes drafted. Say how your app, clinic or process uses health data.
 explain: |
-  This is an imported copy of a community HIPAA skill by Hemant Naik, released under the MIT licence. We gave it a plain name.
+  This is an imported copy of the MIT-licensed hipaa-compliance skill by Hemant Naik (source link in the credits). We gave it a plain name. It is not a legal tool and it is not affiliated with the author.
 
   A first check of whether your handling of patient information meets HIPAA, with gaps listed and fixes drafted. Say how your app, clinic or process uses health data. The skill works out whether you are a covered entity or a business associate, then checks the privacy rule, the security rule and breach notification.
 
@@ -33,8 +33,10 @@ you_get:
   - Draft notices, agreements or policies
   - Plain explanations of the rules that apply
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - "Open Claude, ChatGPT or Gemini. Paste in the skill instructions (SKILL.md) together with the four files in the references folder: privacy-rule, security-rule, breach-notification and templates. Or upload the whole folder if your AI takes files. The checks and drafts rely on those four files. No code or paid tool is needed."
+  - "Gather first: your role, the data flows (where health data comes in, is stored and goes out), your existing policies, and who has access."
   - Describe your app, clinic or process. Say your role and who handles the health data. Use placeholders such as [PATIENT NAME] or [RECORD ID]. Never paste real patient names, IDs or record numbers into Claude, ChatGPT or Gemini.
+  - "Start with a first message like this: My role is [provider, vendor or developer]. Our app or clinic does [what it does]. Health data comes in through [source], is stored in [place] and goes out to [who]. These people have access: [roles]. Our current policies are [list, or none]. Use placeholders, never real patient details."
   - Paste any policies, notices or architecture notes you have (optional).
   - Read the gap table first. Fix the high risk items before the rest.
   - Ask for any drafts you need, such as a business associate agreement or privacy notice.

@@ -11,6 +11,8 @@ argument-hint: "<--send | --respond | --counter> [context or path to incoming no
 
 # /takedown
 
+**Not legal advice. US law only.** Say this at the top of every draft. Stop and send the draft to a lawyer before anything goes out: the notice is sworn under penalty of perjury, and a close fair-use call or a non-US case needs a lawyer first.
+
 Three modes. Pick one:
 
 - Send mode — draft a §512(c)(3) takedown notice. Fair-use gate (*Lenz*) + loud perjury / §512(f) gate before delivery.
@@ -19,7 +21,7 @@ Three modes. Pick one:
 
 ## Instructions
 
-1. **Collect the facts in plain words.** This works in a plain chat. No plugin, saved profile or setup interview is needed. Ask for: who must approve a notice before it goes out; the work, who owns it and any registration; the exact web addresses of the copies; and the user's own read on fair use. Use those answers wherever the steps below mention a practice profile or approval matrix, and say so at the top of the draft. Ignore any step below that mentions slash commands, `~/.claude` paths, `CLAUDE.md`, matter workspaces or the setup interview. Save files named notice-v1.md, submission.md and so on only if the AI can save files; in a chat, give the text in the reply.
+1. **Collect the facts in plain words.** This works in a plain chat. No plugin, saved profile or setup interview is needed. Ask for: who must approve a notice before it goes out; the work, who owns it and any registration; the exact web addresses of the copies; and the user's own read on fair use. Use those answers wherever the steps below mention a practice profile or approval matrix, and say so at the top of the draft. Ignore any step below that mentions slash commands, `~/.claude` paths, `CLAUDE.md`, matter workspaces or the setup interview. Save files named notice-v1.md, submission.md and so on only if the AI can save files; in a chat, give the text in the reply. Wherever a step mentions a "plugin config", a "work-product header" or a "matter folder", use the plain line "Draft for lawyer review. Not legal advice." at the top and keep the text in the reply or in one folder the user names.
 
 2. **Ask whether the user is a lawyer.** If not, give a one-page brief for the lawyer conversation before the final gate clears.
 
@@ -196,17 +198,15 @@ Most service providers publish a preferred form or a web intake (YouTube Content
 │       this draft); your conclusion is on the record.        │
 │    4. Whoever has authority to sign approves sending.       │
 │                                                             │
-│  Approver per your practice profile: [approver from         │
-│  Enforcement posture → Approval matrix → DMCA takedown      │
-│  (ordinary) row]                                            │
+│  Approver (named by the user in step 1): [approver]         │
 │                                                             │
-│  Automatic escalations that apply here: [list any from      │
-│  the practice profile that this matter triggers]            │
+│  Escalations that apply here: [list any rules the user      │
+│  named in step 1 that this matter triggers]                 │
 │                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```
 
-If the user is a non-lawyer (per `## Who's using this`), add:
+If the user is a non-lawyer (from the user's answer to step 2), add:
 
 > A DMCA takedown is sworn under penalty of perjury and creates §512(f) exposure for bad-faith or overbroad use. Have you reviewed this with an attorney? If not, here's a brief to bring to them: [generate a short summary: work, ownership, accused use, licensing check, fair-use analysis, signer, service provider]. A few thousand dollars of attorney time now is materially cheaper than a §512(f) suit.
 >
@@ -216,7 +216,7 @@ Do not write the final output without explicit engagement with the gate.
 
 ### Step 8: Output
 
-**Primary:** `<matter-folder>/takedown/<slug>/notice-v<N>.md` (or .docx if the service provider accepts it — most accept pasted text or web-form submission). The notice content, ready to paste into the service provider's DMCA intake form or send to its designated agent.
+**Primary:** `notice-v<N>.md`, saved in a folder the user names, or shown in the reply if you cannot save files (or .docx if the service provider accepts it — most accept pasted text or web-form submission). The notice content, ready to paste into the service provider's DMCA intake form or send to its designated agent.
 
 **In-chat:** show the notice as plain text for review before writing. Iterate before committing to disk.
 
@@ -226,7 +226,9 @@ Do not write the final output without explicit engagement with the gate.
 
 **Citation verification.** Any case or statutory citation included (for example, in internal memoranda around the notice) must be verified on a legal research tool. Source-tag each — `[Westlaw]`, `[CourtListener]`, `[user provided]`, `[model knowledge — verify]`, `[web search — verify]`. Citations tagged `verify` get checked first. No silent supplement from web or model knowledge if a configured research tool comes up thin — present options to the user.
 
-**Post-send record.** After submission, write `<matter-folder>/takedown/<slug>/submission.md`: service provider, designated agent used (address or web form URL), date submitted, confirmation ID if returned, URLs targeted, counter-notice watch date (generally 10–14 business days), legal hold refreshed.
+**What to do next.** After the lawyer has reviewed and approved the notice, send it through the service provider's DMCA form or to its designated agent. Then record the send (see below) and note the date to watch for a counter-notice.
+
+**Post-send record.** After submission, write `submission.md` (in the folder the user names, or in the reply): service provider, designated agent used (address or web form URL), date submitted, confirmation ID if returned, URLs targeted, counter-notice watch date (generally 10–14 business days), legal hold refreshed.
 
 ## Respond mode — triaging a takedown you received
 
@@ -278,10 +280,10 @@ Recommend one with two sentences of rationale.
 
 ### Step 4: Write triage memo
 
-Output: `<matter-folder>/takedown/inbound/<slug>/triage.md`.
+Output: `triage.md`, saved in a folder the user names, or shown in the reply if you cannot save files.
 
 ```markdown
-[WORK-PRODUCT HEADER — per plugin config ## Outputs]
+[WORK-PRODUCT HEADER — "Draft for attorney review", or the wording the user's lawyer prefers]
 
 > **Privilege inheritance.** This triage records our first-pass assessment of an adverse takedown. It is attorney-client and/or work-product material. Do not forward outside the privilege circle or attach to counter-notice submissions without scrubbing.
 
@@ -329,7 +331,7 @@ Output: `<matter-folder>/takedown/inbound/<slug>/triage.md`.
 
 - [ ] Legal hold issued on the accused work and our related content — [yes/no]
 - [ ] Business impact assessed (revenue, account strikes, SEO) — [yes/no]
-- [ ] Matter created in log — [yes/no/TBD]
+- [ ] Matter noted in your own records — [yes/no/TBD]
 - [ ] Counsel assigned — [who]
 ```
 
@@ -405,10 +407,9 @@ Structure:
 │       tolerance are all set.                                │
 │    4. An attorney has reviewed this before it is sent.      │
 │                                                             │
-│  Approver per your practice profile: [approver from         │
-│  Enforcement posture → Approval matrix — counter-notices    │
-│  generally route above the DMCA takedown (ordinary)         │
-│  approver because of the federal-jurisdiction admission]    │
+│  Approver (named by the user in step 1): [approver, usually │
+│  a more senior person than for a takedown, because of the   │
+│  federal-jurisdiction admission]                            │
 │                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -421,7 +422,7 @@ Do not write the final output without explicit engagement.
 
 ### Step 4: Output
 
-**Primary:** `<matter-folder>/takedown/<slug>/counter-notice-v<N>.md` — the counter-notice content, ready to submit via the service provider's counter-notice intake.
+**Primary:** `counter-notice-v<N>.md`, saved in a folder the user names, or shown in the reply if you cannot save files — the counter-notice content, ready to submit via the service provider's counter-notice intake.
 
 **In-chat:** present as plain text for review before committing.
 
@@ -429,11 +430,11 @@ Do not write the final output without explicit engagement.
 
 > This is a draft counter-notice for attorney review, not a counter ready to send. Sending it is a sworn statement and consents to federal court jurisdiction in the claimant's district. A licensed attorney reviews before submission. Do not send this unreviewed.
 
-**Post-submission record.** After submission, write `<matter-folder>/takedown/<slug>/counter-submission.md`: service provider, date submitted, confirmation ID, 10–14 business-day watch window end date calendared, watch for suit filing in the claimant's district, plan if content is restored, plan if suit is filed.
+**Post-submission record.** After submission, write `counter-submission.md` (or add it to the reply): service provider, date submitted, confirmation ID, 10–14 business-day watch window end date calendared, watch for suit filing in the claimant's district, plan if content is restored, plan if suit is filed.
 
 ## Decision posture
 
-Per `## Decision posture on subjective legal calls` in the practice profile: when uncertain whether the use is fair, whether the rights holder is us, whether the work is actually ours, whether fair use defeats the claim on the receiving side — do not silently decide. Fair use is the paradigmatic uncertain call. Flag for attorney review; surface the factors. Sending a takedown or a counter-notice on an assumption is a one-way door.
+Decision posture on subjective legal calls: when uncertain whether the use is fair, whether the rights holder is us, whether the work is actually ours, whether fair use defeats the claim on the receiving side — do not silently decide. Fair use is the paradigmatic uncertain call. Flag for attorney review; surface the factors. Sending a takedown or a counter-notice on an assumption is a one-way door.
 
 ## What this skill does not do
 

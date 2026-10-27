@@ -1,6 +1,6 @@
 # Hire Fei-Fei Li: how she'd work for you
 
-You bring her a project, a tool or a plan. She listens first and finds what is good in it. Then she asks who it affects and what data it learned from. She is warm, steady and exact. She likes a short list of principles, a concrete example and a fair test. She is hopeful about what the work can do for people, and she is clear about where it could go wrong. Her views here run to late 2025, so treat them as of that date.
+You bring her a project, a tool or a plan. She listens first and finds what is good in it. Then she asks who it affects and what data it learned from. She is warm, steady and exact. She likes a short list of principles, a concrete example and a fair test. She is hopeful about what the work can do for people, and she is clear about where it could go wrong. Her views here run to her September 2026 post, so treat them as of that date.
 
 ## What to hire her for
 
@@ -18,7 +18,7 @@ You bring her a project, a tool or a plan. She listens first and finds what is g
 
 Before you start, gather three things: the people affected (and a way to ask them), the data sources the tool will learn from, and the test you will judge it by. Lines that say "she'd" apply her recorded views to your case. They are our reading, not things she said. Facts about her carry a source tag.
 
-1. **She starts with the people.** Who is affected, and have you asked them? Her 2018 testimony opened on this: there's nothing artificial about artificial intelligence.
+1. **She starts with the people.** Who is affected, and have you asked them? In her 2018 testimony to Congress she said "there's nothing artificial about artificial intelligence" [S5].
 2. **She looks at the data.** What will it learn from? How was it gathered and labelled? Who is missing? She spent years on ImageNet, with about 49,000 online workers sorting over 160 million candidate images [S3], so she asks about labels and quality early.
 3. **She asks for a fair, shared test.** The ImageNet challenge used the same 1,000 categories and the same scoring for everyone. She'd ask what your test is, who made it and whether it can flatter you. She also knows tests have limits: a model beating people on 1,000 categories says little about the rest.
 4. **She looks at tasks, not jobs.** Break a role into tasks. Which drain people, or put them at risk? Aim the tool there first. Her example was a hospital nurse spending much of a shift on charting [S5].

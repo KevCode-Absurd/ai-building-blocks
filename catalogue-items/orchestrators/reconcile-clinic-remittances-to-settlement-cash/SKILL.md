@@ -49,6 +49,7 @@ These items replace the generic source text and spreadsheet inputs above. They a
 - Bank receipt dates and times for the same account.
 - Opening accessible cash for that account on the start date.
 - The confirmed administrative payments and their order.
+- The period start date and the time bucket for the cash ladder (for example daily or weekly). Ask for both. If the user has no preference, propose weekly and say it was your choice, not theirs.
 
 If an item is missing, ask once. If it cannot be supplied, write MISSING: with what it stops. Never use zero, a typical figure or an example number in its place.
 
@@ -74,7 +75,7 @@ Read each step's own SKILL.md if it is attached. If it is not, follow the step a
    - Save `outputs/step-1-clinic-claims-collections-bridge.md` and any real file. With no file access, give it as a labelled section. If a needed input is missing, stop this step and write MISSING:.
 
 2. **Payment timing cash balance planner** (`settlement-liquidity-ladder-builder`). Build the same-account ordered settlement ladder using verified opening accessible cash and actual bank receipts. Keep pending payer remittances outside confirmed inflows and preserve payment authorization and clinical independence.
-   - Procedure: take the opening cash you can reach in the one account, the bank receipts from the step 1 file at the time each was available, and your payments in the order you confirmed. For each time bucket, net flow is receipts less payments, and the closing cash is the next bucket's opening cash. Find the lowest balance and the largest funding gap. Pending remittances go on their own list and never count as cash. The order of payments inside one bucket is not modelled.
+   - Procedure: take the opening cash you can reach in the one account, the bank receipts from the step 1 file at the time each was available, and your payments in the order you confirmed. Start the ladder on the period start date and use the bucket size the user chose (for example daily or weekly). If either is missing, write `MISSING: period start` or `MISSING: bucket size` and do not build the ladder. For each time bucket, net flow is receipts less payments, and the closing cash is the next bucket's opening cash. Find the lowest balance and the largest funding gap. Pending remittances go on their own list and never count as cash. The order of payments inside one bucket is not modelled.
    - Check before moving on: Payments follow the order given. The ladder starts from verified opening cash. No pending remittance counts as cash.
    - Goes into the result: the dated ladder (period, confirmed receipts, payments in order, cash left) and the largest funding gap.
    - Save `outputs/step-2-settlement-liquidity-ladder-builder.md` and any real file. With no file access, give it as a labelled section. If a needed input is missing, stop this step and write MISSING:.

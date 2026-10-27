@@ -55,12 +55,12 @@ output_sample:
     - name: CHECKS MISSED
       contains: Checks that failed or could not run, or the word none.
 how_it_works:
-  - title: 1. Check the mandate is an illustrative scenario or historical review; distinguish announced authorization from actual executed repurchases
-    text: Check the mandate is an illustrative scenario or historical review; distinguish announced authorization from actual executed repurchases.
-  - title: 2. Compute shares retired from executed cash and price; calculate the after-tax earnings forgone on that cash for the same period
-    text: Compute shares retired from executed cash and price; calculate the after-tax earnings forgone on that cash for the same period.
-  - title: 3. Reconcile lower earnings and lower weighted shares to EPS; isolate timing, transaction costs and financing assumptions before interpreting accretion
-    text: Reconcile lower earnings and lower weighted shares to EPS; isolate timing, transaction costs and financing assumptions before interpreting accretion.
+  - title: Check what was executed
+    text: Decide if this is a scenario or a past review. For a past review, use the executed buyback record, not the announced authorization.
+  - title: Count shares and lost earnings
+    text: Shares retired is cash spent divided by the price paid. Earnings lost is the cash spent times the after-tax return it was earning.
+  - title: Bridge old EPS to new EPS
+    text: Show the profit effect, the share-count effect and the EPS difference. Timing, costs and funding that are not given are marked MISSING.
 output_shape: |-
   Before-and-after EPS and a cash opportunity-cost reconciliation.
   Scope and dated sources

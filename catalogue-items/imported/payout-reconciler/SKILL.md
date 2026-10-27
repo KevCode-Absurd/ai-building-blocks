@@ -36,7 +36,7 @@ Checks each Shopify Payments payout against its charges, refunds, adjustments an
 
 1. **OPERATION:** `shopifyPaymentsAccount` — query
    **Inputs:** select `payouts(first: 100, query: "issued_at:>='<NOW - days_back days>'")` with `id`, `issuedAt`, `status`, `net`, `gross`, `summary { chargesGross, chargesFee, refundsFeeGross, refundsFee, adjustmentsGross, adjustmentsFee, retriedPayoutsGross, retriedPayoutsFee }`
-   **Expected output:** All payouts in the window. If account is null, exit — store does not use Shopify Payments.
+   **Expected output:** All payouts in the window. If account is null, exit — store does not use Shopify Payments. **Pagination:** this query returns at most 100 payouts per page. If `pageInfo.hasNextPage` is true, run it again with `$payoutAfter` set to `endCursor`, and repeat until `hasNextPage` is false, so no payout in the window is missed. Say how many pages you read.
 
 2. For each payout, compute reconciliation expectation:
    ```
@@ -46,9 +46,10 @@ Checks each Shopify Payments payout against its charges, refunds, adjustments an
                 + adjustmentsGross - adjustmentsFee
                 + retriedPayoutsGross - retriedPayoutsFee
    ```
+   **Signs:** every summary value is read as a positive number. Fixed signs then apply: charges gross and adjustments gross and retried payouts gross are added; all fees (charges fee, adjustments fee, retried payouts fee) are subtracted; the refunded amount (`refundsFeeGross`) is subtracted; and the fee Shopify gives back on a refund (`refundsFee`) is added. `delta = reported_net - expected_net`: positive means the payout paid more than expected, negative means less.
    `delta = reported_net - expected_net`
 
-   **Sign check, before the full run.** Work out the formula for ONE sample payout first. Compare it with the reported net and with the payout detail in the Shopify admin. If the delta is large, a sign is wrong. Fix the one term that explains it, tell the user which term you flipped, then run the full window. If almost every payout still shows a large delta, stop and say so. Do not report every payout as a discrepancy.
+   **Sign check, before the full run.** Work out the formula for ONE sample payout first. Compare it with the reported net and with the payout detail in the Shopify admin. If the delta is large, a sign may be wrong, or the payout may hold something the formula does not cover. Stop. Tell the user which term you suspect and why, and ask them to confirm before you run the full window. Never change the formula to make the payouts match. If you cannot explain a large delta, report the gap as it is. Do not report every payout as a discrepancy.
 
 3. **OPERATION:** `orders` — query (only for flagged payouts to drill down)
    **Inputs:** `query: "transactions:'gateway:shopify_payments processed_at:>=<payout.issuedAt - 7d> processed_at:<=<payout.issuedAt + 1d>'"`, `first: 250`
@@ -175,7 +176,7 @@ For `format: json`, emit:
 
 ## Output Format
 CSV file `payout_reconciliation_<YYYY-MM-DD>.csv` with columns:
-`payout_id`, `issued_at`, `status`, `reported_net`, `expected_net`, `delta`, `currency`, `charges_gross`, `charges_fee`, `refunds_gross` (from `refundsFeeGross`), `refunds_fee`, `adjustments_gross`, `verdict`. The retried payout amounts and `adjustments_fee` are used in `expected_net` but are not written to the CSV.
+`payout_id`, `issued_at`, `status`, `reported_net`, `expected_net`, `delta`, `currency`, `charges_gross`, `charges_fee`, `refunds_gross` (this is the `refundsFeeGross` field, the gross amount refunded), `refunds_fee`, `adjustments_gross`, `verdict` (`ok`, `discrepancy`, or `currency_mismatch` for a payout in a different currency than the account). The retried payout amounts and `adjustments_fee` are used in `expected_net` but are not written to the CSV.
 
 ## Error Handling
 | Error | Cause | Recovery |
@@ -187,7 +188,7 @@ CSV file `payout_reconciliation_<YYYY-MM-DD>.csv` with columns:
 
 ## Best Practices
 - Run weekly on the morning after a payout is scheduled — same-day reconciliation catches discrepancies while transactions are easy to investigate.
-- For any flagged discrepancy, drill in: refunds processed inside the payout window often show up in the next payout's `refundsGross`, which can look like an underpayment if you forget to reconcile across windows.
+- For any flagged discrepancy, drill in: refunds processed inside the payout window often show up in the next payout's `refundsFeeGross`, which can look like an underpayment if you forget to reconcile across windows.
 - Use this skill alongside your accounting export — these numbers should match your bookkeeping software's deposit records to the cent.
 - Tolerance > $0.01 should be used cautiously: anything above a few cents typically reflects a real fee or adjustment that deserves an explanation.
 - This skill does not detect fraud; it detects accounting deltas. If you suspect fraud, escalate via the Shopify admin's payout detail view.

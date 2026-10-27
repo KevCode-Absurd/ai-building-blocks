@@ -11,9 +11,9 @@ explain: |
 
   It uses semantic versioning. A fix bumps the last number, a new feature bumps the middle number and a breaking change bumps the first. Commits follow the conventional style, such as feat: add search or fix: stop crash on empty cart.
 
-  You choose how much runs on its own. Semantic-release runs from GitHub Actions on every push to your release branch. Standard-version is a command you run yourself, then review before you push. There are also notes for git-cliff and for repos with many packages.
+  You choose how much runs on its own. Semantic-release runs from GitHub Actions. By default you start each release by hand, and you can switch it to run on every push to your release branch. Standard-version is a command you run yourself, then review before you push. There are also notes for git-cliff and for repos with many packages.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (BagelHole) says MIT. Credit goes to BagelHole and sickn33.
+  Licence: the code and config snippets are MIT, as the author's file header (BagelHole) says. The written text is CC BY 4.0, as the LICENSE-CONTENT file in this item says. Keep one credit line to BagelHole and sickn33 if you share it.
 when:
   - You release often and forget to bump the version.
   - Your changelog is empty, or you write it by hand the night before a release.
@@ -40,6 +40,7 @@ how_to_use:
   - Your AI first tells you the version your recent commits would produce. Check that it matches what you expected.
   - Read the config before you save it. The semantic-release example is set to not publish to npm. Turn that on only if you want packages published.
   - Run the dry run first, such as npx standard-version --dry-run. Nothing is released until you run it for real or push to your release branch.
+  - Know what the semantic-release workflow does. By default a person starts each release by hand, from the Actions tab in GitHub. If you want a release on every push to main instead, change the trigger only on a protected branch, where pushes need a reviewed pull request.
   - Node must be installed. The release workflow needs a GitHub token with write access (the workflow sets this), and an NPM_TOKEN secret if you publish. Use only one config file, either .releaserc.json or release.config.js, and replace every owner/repo with your own.
 output_sample:
   input:
@@ -57,7 +58,7 @@ output_sample:
     - name: Release config
       contains: A .releaserc.json or .versionrc.json file with your branch rule and changelog sections.
     - name: Release workflow
-      contains: A GitHub Actions file that runs the release when you push to your release branch.
+      contains: A GitHub Actions file that runs the release when you start it by hand. You can switch it to run when you push to your release branch.
     - name: CHANGELOG.md format
       contains: How changes are grouped, such as Features and Bug Fixes, with commit links.
     - name: Commit guide
@@ -79,6 +80,6 @@ terms:
   - term: Changelog
     meaning: A file that lists what changed in each release.
   - term: semantic-release
-    meaning: A tool that releases for you whenever you push to your release branch.
+    meaning: A tool that works out the version and releases for you from your commit messages.
   - term: standard-version
     meaning: A tool you run yourself to bump the version and write the changelog.

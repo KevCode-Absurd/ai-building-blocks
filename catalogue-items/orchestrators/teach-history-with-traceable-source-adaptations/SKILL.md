@@ -34,19 +34,19 @@ How to start:
 
 ## Fill these inputs
 - SOURCES: attach primary texts with original wording, author, date, context and permissions.
-- INQUIRY: give the central question and tensions learners should investigate.
-- LEARNERS: give age, reading level, prior knowledge, access needs and lesson duration.
+- INQUIRY: give the central question as one sentence, and the tensions learners should investigate.
+- LEARNERS: give age, reading level, prior knowledge, access needs and lesson length in minutes.
 - ASSESSMENT_GOAL: name sourcing, close reading, context or corroboration as target.
 
 ## Setup and tool limits
-Open the included SKILL.md and required references for each named skill before its stage. Inherit source requirements, approvals, local-only handling and action boundaries. If a skill folder is absent, ask the user to attach it. A chat without tools can use pasted skill instructions and source records for draft text and tables, but must mark unavailable conversion, rendering, API calls or tests NOT RUN. Never fabricate files, access or download links.
+Open the included SKILL.md and required references for each named skill before its stage. Inherit source requirements, approvals, local-only handling and action boundaries. The three skills are `history-source-simplifier`, `primary-source-lesson` and `history-thinking-quiz-designer`. All three must be in the folder. If one is absent, ask the user to attach it and stop at that stage. A chat without tools can use pasted skill instructions and source records for draft text and tables, but must mark unavailable conversion, rendering, API calls or tests NOT RUN. Never fabricate files, access or download links.
 
 ## Work in this order
-1. **Adapt without answering for learners** Use `history-source-simplifier`. Use originals, learner level and target skills. Preserve attribution, meaningful author language and evidence tensions. Mark cuts and changes; supply a definition-only word bank. Hand both versions and change log to lesson planning.
+1. **Adapt without answering for learners** Use `history-source-simplifier`. Use originals, learner level and target skills. Preserve attribution, meaningful author language and evidence tensions. List each cut as a numbered item with its reason. Keep every author sentence you did not change in a separate column. Write the word bank as term plus definition only. Hand both versions and the change log to lesson planning.
 
-2. **Build the inquiry lesson** Use `primary-source-lesson`. Use source pairs and central question for background, investigation, discussion and evidence-based writing. Pass target thinking skills, source features and observation opportunities to assessment design.
+2. **Build the inquiry lesson** Use `primary-source-lesson`. Use source pairs and central question for background, investigation, discussion and evidence-based writing. Give each phase a time in minutes that adds up to the lesson length. Pass target thinking skills, source features and observation opportunities to assessment design.
 
-3. **Check the thinking transfer** Use `history-thinking-quiz-designer`. Create source-based diagnostics and scoring guide tied to the target skill. Use a supplied fresh source for transfer; otherwise flag familiarity limits. Allow verbal explanation where writing could hide understanding.
+3. **Check the thinking transfer** Use `history-thinking-quiz-designer`. Write one source-based task for each target skill, with a scoring guide that names the evidence a good answer cites. Use a supplied fresh source for transfer; otherwise flag familiarity limits. Allow verbal explanation where writing could hide understanding.
 
 ## Missing inputs and boundaries
 Without attribution or original wording, ask before adapting. Without an independent assessment source, return an in-lesson practice check and disclose that transfer was not tested. A teacher reviews sensitive content for this group. Never manufacture a historical quote or remove the source’s perspective for easier reading.

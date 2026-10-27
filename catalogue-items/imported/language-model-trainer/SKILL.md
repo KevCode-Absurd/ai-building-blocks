@@ -11,6 +11,8 @@ license_source: https://github.com/huggingface/skills/blob/main/LICENSE
 ---
 
 # TRL Training Skill
+
+> **Licence note (added by AI Blocks):** the one licence for the written text of this copy is CC BY 4.0 (file `LICENSE-CONTENT`). The `license: Apache-2.0` line in the header above is Hugging Face's own declaration, and it covers any code you copy from this skill. **Check first:** the commands and options here are for the TRL version the author wrote against. Before you run anything, check each command and flag against the docs for the TRL version you have installed (`pip show trl`).
 ## When to Use
 
 Use this skill when you need train and fine-tune transformer language models using TRL (Transformers Reinforcement Learning). Supports SFT, DPO, GRPO, KTO, RLOO and Reward Model training via CLI commands.
@@ -199,7 +201,7 @@ output_dir: ./sft_output
 use_peft: true
 lora_r: 16
 lora_alpha: 16
-report_to: trackio
+report_to: none   # trackio, wandb and tensorboard record your training numbers (loss, speed) in a tracking tool, and trackio and wandb send them to an outside service
 ```
 
 **Launch with config:**
@@ -305,7 +307,7 @@ trl sft --config sft_config.yaml --accelerate_config zero3
 
 1. **Start with SFT**: Always fine-tune base models with SFT before preference alignment
 2. **Use LoRA for efficiency**: Enable `--use_peft` for faster training and lower memory
-3. **Monitor training**: Use `--report_to trackio` (or `--report_to wandb` or `--report_to tensorboard`) for tracking
+3. **Monitor training**: Use `--report_to none` by default. Only use `--report_to trackio`, `wandb` or `tensorboard` if the user agrees to record their training numbers in that tool
 4. **Save checkpoints**: TRL automatically saves checkpoints in `--output_dir`
 5. **Test on small datasets first**: Verify pipeline works before full training
 6. **Use configuration files**: Create YAML configs for reproducibility

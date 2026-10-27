@@ -12,15 +12,19 @@ description: >
 
 > **Plain-chat note (added by AI Blocks).** What to have ready: a description of the feature, the data it uses, who the users are and where they live, and any earlier review notes. No config files are needed.
 >
-> The `~/.claude/plugins/...` paths and the `/product-legal`, `/ai-governance-legal` and `/privacy-legal` commands below belong to other plugins you may not have. Ignore them. Use any company risk notes the user pastes; otherwise ask for their risk appetite and past legal issues. Skip the matter-workspace step and the saving step. Return the 2-4 page assessment in the chat. Where the text says to run another command, say it as a next step instead (for example, "also write a privacy impact assessment").
+> Use any company risk notes the user pastes; otherwise ask for their risk appetite and past legal issues. Return the 2-4 page assessment in the chat. Where the text suggests another assessment, say it as a next step (for example, "also write a privacy impact assessment").
 >
 > Never invent a case, law, fine or enforcement action. If you cannot name a real one, write "no citation found". For checking, Westlaw is a paid service and CourtListener is free. If the user has neither, they can check the regulator's own website.
 >
 > This is a first check, not legal advice.
 
-## Matter context
+## How to run it in chat
 
-**Matter context.** Check `## Matter workspaces` in the practice-level CLAUDE.md. If `Enabled` is `✗` (the default for in-house users), skip the rest of this paragraph — skills use practice-level context and the matter machinery is invisible. If enabled and there is no active matter, ask: "Which matter is this for? Run `/product-legal:matter-workspace switch <slug>` or say `practice-level`." Load the active matter's `matter.md` for matter-specific context and overrides. Write outputs to the matter folder at `~/.claude/plugins/config/claude-for-legal/product-legal/matters/<matter-slug>/`. Never read another matter's files unless `Cross-matter context` is `on`.
+1. Gather the feature description, the data it uses, who the users are and where they live, and any earlier review notes.
+2. Ask for the company's risk appetite and any past legal trouble. If the user has none, say so in the result.
+3. Write the sections in this order: What we're assessing, The risks, Regulatory landscape (only if relevant), Precedent (only if known), Options, Recommendation.
+4. Tag every case, law or fine as unchecked, then stop and ask the user to check each one (see Citation check) before the result goes to a decision maker.
+5. End with next-step choices for the user.
 
 ---
 
@@ -117,35 +121,35 @@ Pick one. Explain why. Acknowledge what you're trading off.
 
 ## Calibration check
 
-Before finalizing, check against `~/.claude/plugins/config/claude-for-legal/product-legal/CLAUDE.md` → Risk calibration:
+Before finalizing, check against the company risk notes the user pasted. If there are none, ask these first: What is your company's risk appetite? Have you had past legal trouble or a regulator contact? Has the Launch legal reviewer already looked at this feature?
 
 - Is this risk assessment calibrated to *this company*, or is it generic?
 - A risk that's "High" at a company under a consent decree might be "Medium" at one that isn't
-- The assessment should reflect the actual regulatory posture, litigation history, and risk appetite captured in the practice profile
+- The assessment should reflect the actual regulatory posture, litigation history, and risk appetite the user gave you
 
 ## Handoffs
 
 - **To AI governance:** If the deep-dive was triggered by an AI feature — which
-  it often is — run `/ai-governance-legal:aia-generation [feature]` in parallel or
+  it often is — suggest an AI impact assessment as a next step, in parallel or
   immediately after. The feature risk assessment frames the decision; the AIA
   documents the AI system specifically in the format AI governance needs. They're
   not duplicates: the FRA is a product-legal decision doc; the AIA is the
   governance record.
 - **To privacy:** If the feature involves new data collection or processing,
-  run `/privacy-legal:pia-generation [feature]`. The FRA's risk section
+  suggest the Privacy impact assessment writer as a next step. The FRA's risk section
   will likely overlap with the PIA's — flag that overlap so work isn't duplicated,
   but both docs need to exist.
 - **To AI governance vendor review:** If the feature uses a new AI vendor,
-  run `/ai-governance-legal:vendor-ai-review [vendor agreement]` if not already done
+  suggest a vendor AI review as a next step if not already done
   during the launch review.
 
 ## Output format
 
-Standalone doc, 2-4 pages. Prepend the work-product header from `~/.claude/plugins/config/claude-for-legal/product-legal/CLAUDE.md` `## Outputs` (it differs by user role — see `## Who's using this`).
+Standalone doc, 2-4 pages. If the user pasted setup notes with a work-product header, put it at the top. If not, start with the line "First check, not legal advice."
 
 Not a slide deck, not a memo to file — a decision document someone reads and then decides.
 
-Save where `~/.claude/plugins/config/claude-for-legal/product-legal/CLAUDE.md` → Launch review process says review docs go. If the doc is going to be shared with anyone outside the privileged loop (e.g., posted to a broadly-shared ticket), drop the work-product header only for that externally-facing copy and keep the privileged original in the matter file.
+Return it in the chat. If the doc will be shared widely, such as in a broad ticket, ask the user's lawyer first whether the header should stay.
 
 ## Citation check
 
@@ -159,7 +163,7 @@ If the assessment cites cases, statutes, regulations, or enforcement actions —
 
 ## Close with the next-steps decision tree
 
-End with the next-steps decision tree per CLAUDE.md `## Outputs`. Customize the options to what this skill just produced — the five default branches (draft the X, escalate, get more facts, watch and wait, something else) are a starting point, not a lock-in. The tree is the output; the lawyer picks.
+End with a short list of next-step choices. Customize the options to what this skill just produced — the five default branches (draft the X, escalate, get more facts, watch and wait, something else) are a starting point, not a lock-in. The tree is the output; the lawyer picks.
 
 ## What this skill does not do
 

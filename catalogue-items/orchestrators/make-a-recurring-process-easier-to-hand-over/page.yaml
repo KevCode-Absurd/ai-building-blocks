@@ -24,9 +24,10 @@ you_give:
   - The intended reader, deadline and limits on what may be changed.
   - Earlier work and approved examples, if available.
 you_get:
-  - An evidence-based procedure, exception guide and handover checklist.
-  - Step files with evidence, unresolved facts and actual checks completed.
-  - A hand-back summary and one practical next step.
+  - A procedure that names who does each step, the checks and when it is done.
+  - An exception guide that says who handles each thing that goes wrong.
+  - A handover note with what breaks first, what is due, where things live and practice tasks for the new owner.
+  - A hand-back summary that lists every fact still missing.
 how_to_use:
   - Download the complete pack and add its governing file and component skills to your AI.
   - Share the sources listed above and say which result you need.
@@ -55,11 +56,12 @@ how_it_works:
   - title: Handover note writer
     text: Uses the procedure and your brain dump to write what will break first, what is due and where things live, then lists practice tasks for the replacement.
 output_shape: |-
-  Scope and source coverage
-  An evidence-based procedure, exception guide and handover checklist.
-  Step files and evidence references
-  Unresolved facts and checks missed
-  Proposed next action and approval status
+  SCOPE        <which run and records were used, with dates>
+  PROCEDURE    <step | who does it | inputs | check | definition of done>
+  EXCEPTIONS   <what goes wrong | who handles it | what to do>
+  HANDOVER     <what breaks first | what is due | where things live | who to ask | practice tasks>
+  MISSING      <each gap and what it stops>
+  CHECKS MISSED <one line each, or none>
 tweaks:
   - what: Scope
     how: Choose one project, team, period or decision so the sources are comparable.

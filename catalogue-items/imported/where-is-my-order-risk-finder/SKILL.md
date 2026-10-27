@@ -11,7 +11,7 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
 ## Purpose
-Generates a bulk report of orders most likely to generate "Where Is My Order?" (WISMO) support tickets — shipped orders whose tracking hasn't updated in N days, and unfulfilled orders sitting past a configurable SLA. Finding these orders early can cut the number of tracking tickets your support team gets. Read-only. Replaces manual order-by-order admin scanning or helpdesk searches. The CSV output can be used to proactively contact customers before they contact you.
+Generates a bulk report of orders most likely to generate "Where Is My Order?" (WISMO) support tickets — shipped orders whose order record has not changed in N days (a stand-in for stale tracking), and unfulfilled orders sitting past a configurable SLA. Finding these orders early can cut the number of tracking tickets your support team gets. Read-only. Replaces manual order-by-order admin scanning or helpdesk searches. The CSV output can be used to proactively contact customers before they contact you.
 
 ## Prerequisites
 - `shopify auth login --store <domain>`

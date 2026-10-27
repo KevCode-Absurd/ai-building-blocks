@@ -83,7 +83,7 @@ When the user asks for a general update, cover these sections — a line each wh
 
 ### Risk assessment
 
-Based on the data, provide a brief risk assessment. `insurance.level` values come back uppercase:
+Based on the data, provide a brief risk assessment. The risk labels (NORMAL to EXTREME) and all figures come from the dashboard. This skill does not check them, so tell the reader to verify them on the site. `insurance.level` values come back uppercase:
 
 | Insurance Level | Interpretation |
 |---|---|

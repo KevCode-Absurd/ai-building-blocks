@@ -80,13 +80,13 @@ Templates and tone in `reference/candidate_comms.md`. Rejections go out fast; a 
 
 **Nothing sends without approval.** Show the drafts, get an explicit yes, then send. A misdirected rejection is not recoverable.
 
-**Name the recipients in the batch summary, not just the count.** "31 declines" hides the one person who should have been in the interview group; "31 declines — Alvarez, Brennan, Cho, …" is checkable in ten seconds, which is the only moment a mis-sort gets caught.
+**Name the recipients in the batch summary, not just the count.** "[N] declines" hides the one person who should have been in the interview group; "[N] declines — [NAME], [NAME], [NAME], …" is checkable in ten seconds, which is the only moment a mis-sort gets caught.
 
 **Without Gmail, the drafts are the deliverable.** Hand the owner every message, labelled with who it goes to, ready to paste. That is a complete outcome, not a partial one.
 
 ## Step 6 — Schedule the interviews
 
-With Google Calendar connected, find real open slots against the owner's actual availability, and offer two or three per candidate.
+Google Calendar is optional and needs the owner's own account. With it connected, find real open slots against the owner's actual availability, and offer two or three per candidate.
 
 Every invite is approved before it goes out — the owner sees who, when, how long, and what the invite says. Then send, with the interview guide from `job-post-builder` attached for the interviewer.
 
@@ -95,6 +95,8 @@ Without Calendar, propose times from what the owner tells you and let them send.
 ## Step 7 — Onboarding and the payroll handoff
 
 When the owner picks someone, generate the onboarding checklist: paperwork, accounts and access, equipment, first-week schedule, who they shadow, and the 30-day check-in. Structure in `reference/onboarding.md`.
+
+Gusto, DocuSign and Trello are optional. Each needs the owner's own account and may need a paid plan. The skill works without them.
 
 **Trello, when connected, can carry the hiring funnel and the onboarding checklist as boards** — a list per stage (applied, shortlist, interviewing, offer, hired), a card per candidate, and the onboarding items as a checklist on the hire's card. Offer once; create with approval; never delete a card.
 

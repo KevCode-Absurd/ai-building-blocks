@@ -35,7 +35,7 @@ How to start:
 - **A shared place to work** (advised): paper or a shared document where you can both see the ladder.
 - **Whether you are present or the learner works alone** (optional): alone, the hints get a little more scaffolding.
 
-The list under Before you start is generic (a brief and a source text). Use the learner's work and the items above instead.
+The general list under Before you start asks for a lesson plan and a question. Ignore it. The "lesson plan" here is the learner's attempts, the task, what the learner can already do and the weekly practice time above, and the "question" is why they keep getting stuck. What this workflow adds to its four skills is the handoff: the diagnosis steers the hints, the hints set the top of the ladder, and the ladder sets the goal of each session.
 
 Not for: a learner with a learning difficulty or a health need that needs a specialist. This plans practice, it does not assess. For a plain study schedule with no stuck point, use the Study session planner and review skill alone.
 

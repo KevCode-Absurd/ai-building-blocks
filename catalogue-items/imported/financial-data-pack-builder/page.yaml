@@ -9,7 +9,7 @@ subhead: Give it a deal document, annual report or filing. It pulls the income s
 explain: |
   A clean Excel data pack with income statement, balance sheet and cash flow pulled from a deal document or filing, with every number traced to its page. It follows the layout used in private equity and banking.
 
-  The skill reads the source and puts each figure into a standard template. Rules cover formats, such as currency with negatives in brackets, and totals as live formulas rather than typed values. It checks that assets equal liabilities plus equity, that subtotals add up, and that cash flow ties to the balance sheet. It uses Indian conventions: April to March fiscal years, and crore figures divided in a formula. It builds the workbook through the spreadsheet skill.
+  The skill reads the source and puts each figure into a standard template. Rules cover formats, such as currency with negatives in brackets, and totals as live formulas rather than typed values. It checks that assets equal liabilities plus equity, that subtotals add up, and that cash flow ties to the balance sheet. You choose US dollar or Indian rupee first. For a rupee pack it uses April to March fiscal years, and crore figures divided in a formula. It builds the workbook through the spreadsheet skill.
 when:
   - You have a 100-page offering document and need the numbers in Excel.
   - Your team needs a data pack before a deal meeting.
@@ -22,7 +22,7 @@ not_for:
 you_give:
   - The deal document, annual report or filing
   - The periods to include
-  - Company name and currency
+  - Company name and whether the pack is in US dollars or Indian rupees
   - A template to follow (optional)
 you_get:
   - An Excel workbook with income statement, balance sheet and cash flow
@@ -30,14 +30,14 @@ you_get:
   - A source page for each figure
   - Checks that show whether the statements balance
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Use one that can read files and save spreadsheets.
-  - Paste the skill text into the chat, or upload the skill folder.
+  - Open Claude, ChatGPT or Gemini. Use one that can read files and save spreadsheets. The skill names an xlsx skill for building the workbook. If you do not have it, these steps still work. Your AI builds the workbook with its own spreadsheet tools and follows the layout and format rules in the skill text.
+  - Paste the skill text into the chat, or upload the skill folder. Say first whether the pack is in US dollars (USD) or Indian rupees (INR). The skill's $ format rules are for USD. Rupee packs use the rupee sign and lakh and crore labels instead.
   - Upload your deal document or filing. Say which periods and which currency you want.
   - Tell your AI to follow the skill and build the Excel data pack.
   - Open the workbook. Check the balance sheet check first, then spot-check a few figures against their source pages.
   - If the pack has Base or Downside cases, treat those figures as the AI's
     assumptions. Check and change them, and keep the "Assumption" label.
-  - Next, send the checked workbook to your team before the deal meeting.
+  - Next, send the checked workbook to your team before the deal meeting. To test the deal's numbers, run the Deal EBITDA addback checker on it.
 output_sample:
   input:
     - Your deal document, annual report or filing
@@ -46,7 +46,7 @@ output_sample:
     - A template to follow (optional)
   prerequisites:
     - An AI that can read files and save Excel spreadsheets
-    - "The skills india-market-conventions, india-market-data and xlsx, which this skill names. They are not in this folder or in the AI Blocks library. If you do not have them, your AI follows the fiscal year and lakh and crore rules written at the top of the skill instead"
+    - "The skills india-market-conventions, india-market-data and xlsx, which this skill names. They are not in this folder or in the AI Blocks library. If you do not have them, nothing in your result changes. Your AI follows the fiscal year and lakh and crore rules written at the top of the skill, and builds the workbook with its own spreadsheet tools"
   output:
     - name: Executive Summary
       contains: Key figures and highlights from the company, set out for a first read.

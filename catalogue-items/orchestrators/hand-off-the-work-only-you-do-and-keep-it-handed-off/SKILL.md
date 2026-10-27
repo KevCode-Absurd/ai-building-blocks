@@ -23,13 +23,18 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **How you spend a typical week:** the main jobs and the hours each takes (required). A week of calendar notes is enough.
+- **How you spend a typical week:** the main jobs and the hours each takes (required). A week of calendar notes is enough. Write one line per job, such as "job | hours a week | who could take it", for example "[JOB] | [HOURS] | [NAME OR NONE]".
 - **The people who could take on more**, and what each does now (required)
 - **How much experience each person has with the work** (strongly advised). It changes the agreement and the meeting rhythm.
 - **What worries you about handing off** (optional)
 - **Jobs you want to keep, and why** (optional)
 
-Not for: a person who is not doing the job well now (that is a performance talk, not a hand-off), or a job nobody on your team could learn. For the weekly meeting alone, use the One-on-one meeting planner skill.
+**When not to use it:**
+- A person who is not doing the job well now. That is a performance talk, not a hand-off. Talk to them directly, or ask your HR adviser.
+- A job nobody on your team could learn. Keep it, or hire for it first.
+- One small task. Write a short handover note instead.
+- Only the weekly meeting. Use the [One-on-one meeting planner](https://useaiblocks.com/skills/one-on-one-meeting-planner).
+- A team that needs shared goals, not one hand-off. Use the [Team goals, one-on-ones and decisions](https://useaiblocks.com/workflows/team-goals-one-on-ones) workflow.
 
 The three skills this workflow uses must be available before the run starts: `founder-leadership-coach`, `results-agreement-writer` and `one-on-one-meeting-planner`. If one is missing, stop before step 1, name the missing skill and ask the person to add it. Do not do its job from memory.
 
@@ -62,8 +67,13 @@ When you've handed it back, suggest what they could do next in one short questio
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
+## After this (for this job)
+Use this section, not the shared "After this" list above, whose links (partner screener, pay plan checker, review theme sorter) do not fit a hand-off. Suggest one next step as a short question:
+- Send the one-page agreement to the person taking the job yourself, and book the first one-on-one. Nothing here sends it.
+- Check the agreement against the real week after the first review date, and move the next job across.
+
 ## Check before you hand it back
-- Each step passed its own checks, or the run stopped at the step that failed and says why.
+- Step 1 names one first job to hand off, with the hours it takes. Step 2 has a results line, limits, a review date and a named owner. Step 3 has a meeting day, an agenda and a follow-up rule. If one is missing, the run stopped at that step and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.

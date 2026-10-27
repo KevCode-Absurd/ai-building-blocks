@@ -10,6 +10,8 @@ explain: |
   Your supply chain emissions, worked out by source, with a ranked list of ways to cut them. You can see where most of the carbon sits and which fix pays off most.
 
   Give it shipping, energy and supplier data. The skill follows the GHG Protocol and sorts emissions into direct, energy and value-chain scopes. It calculates each using emission factors, collects supplier data with a priority on the largest sources, and builds a report. It then scores reduction ideas by size and cost, and lays out a roadmap. Python code does the sums. Emission factors you use must come from a source you trust.
+
+  Licence: MIT, copied from Kishor Kukreja's awesome-supply-chain repository (https://github.com/kishorkukreja/awesome-supply-chain).
 when:
   - A customer asks for your carbon footprint and you have only raw data.
   - You need to know whether freight or suppliers cause more emissions.
@@ -30,13 +32,14 @@ you_get:
   - Ranked reduction ideas
   - A reduction roadmap
 how_to_use:
+  - "Do this first: list your emission factors with source, year and unit. The factor table in the code is blank on purpose, so every factor you use must come from a published source you can cite."
   - Open Claude, ChatGPT or Gemini. Pick a mode that can run code, or the sums may be rough.
-  - Paste the skill text from this page into the chat.
-  - "First, list your emission factors with source and year. Then add your shipping, energy and supplier data. The sums are not reliable without factors you can cite."
+  - Paste your factor list and then the skill text from this page into the chat.
+  - Then add your shipping, energy and supplier data.
   - Tell your AI your goal, such as a customer request, a target or a baseline.
   - Check which numbers are real and which are estimates, and check each factor's source and unit.
   - Use the ranked ideas to pick your first cuts. Do not use the result for audited filings.
-  - The emission factors built into the code are example values with no year or version. Replace any factor you cannot cite with one from a published source, and note its year and unit.
+  - If your AI says a factor is blank, that is the code working as intended. Add a cited factor for it and run again.
   - Next, turn the top cuts into a data request to your biggest suppliers, or into a reduction target and plan.
 next: [supply-chain-dashboard-designer]
 output_sample:

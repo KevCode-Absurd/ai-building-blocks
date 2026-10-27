@@ -91,7 +91,7 @@ Before running, ask:
    - **Quick answer** - Display top few results in chat (no file saved)
    - **CSV** - Full export with all fields
    - **JSON** - Full export in JSON format
-2. **Number of results**: Based on character of use case
+2. **Number of results**: Default to 20 posts unless the user asks for more. Start small to keep the cost low.
 
 ### Step 4: Run the Script
 

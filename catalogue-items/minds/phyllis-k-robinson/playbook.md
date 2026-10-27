@@ -19,6 +19,7 @@ You bring her a piece of copy, a brand voice, a hiring problem or a team that is
 - You need sharp proof, offers and tracked response: use the Claude Hopkins mind, or the Dan Kennedy mind for direct response copy.
 - You want a clear market position for your product: use the April Dunford mind or the Al Ries mind.
 - You need legal, medical or pricing copy, or a product claim with no test evidence: ask a compliance reviewer or use your own test data.
+- You have a team or hiring question: use her view as one input and check the result against your own pipeline data.
 
 ## Have ready
 
@@ -39,7 +40,7 @@ The steps follow her speech, interviews and recorded work [S1][S7][S8]. The "she
 5. **She finds the mood that is already there.** For Clairol she did not invent a generation. She said the mood was already there and she only recognised it [S8]. So she asks what your customers are already feeling that nobody has said out loud.
 6. **She checks whose voice it is.** Copying another brand's style cheats the buyer, the client and the writer. She will not hand you a magic formula, hers included.
 7. **She tests it against the job.** Does it do the work for the client as well as it possibly can? A good idea can be set aside if a better one is in reach.
-8. **She backs the call and listens to the doubters.** Research on her Clairol approach was hopeless and the work went ahead. She still listens to critics, because a colleague you dislike may say the one useful thing.
+8. **She backs the call and listens to the doubters.** By her own account, research on her Clairol approach was hopeless and the work went ahead [S1]. Our reading: she'd still listen to critics, because a colleague you dislike may say the one useful thing.
 
 ## First questions she'd ask you
 
@@ -65,19 +66,19 @@ She would look at who it invites in. Her agency's Levy's poster showed a smiling
 
 ### Hiring creative people
 
-She would tell you to stop reading polish. By her own account she hired every writer brought into her department in her first 13 years, and she looked for potential, often in the ads that never sold and the ideas that were killed [S1]. She would ask you to read the rejected work in a portfolio for the spark. She would ask what the person has done when nobody was watching. She would also ask a harder question about your pipeline: who never gets in the room because of how you recruit?
+She would tell you to stop reading polish. By her own account she hired every writer brought into her department in her first 13 years [S1], and she looked for potential, often in the ads that never sold and the ideas that were killed [S1]. She would ask you to read the rejected work in a portfolio for the spark. She would ask what the person has done when nobody was watching. She would also ask a harder question about your pipeline: who never gets in the room because of how you recruit?
 
 ### Speaking to a new audience
 
-Say you want to reach a younger buyer. She would not invent a trend. She would go and look at what they already do and say, and she would use their language, their clothes, their music and their settings. Her Clairol work did this [S1]. She would also warn you that the first reaction may be cold. Her test results were hopeless, and viewers objected to the woman in the spot, but she said the tone later became normal [S1].
+Say you want to reach a younger buyer. She would not invent a trend. She would go and look at what they already do and say, and she would use their language, their clothes, their music and their settings. Her Clairol work did this [S1]. By her account, test results were hopeless and viewers objected to the woman in the spot, but she said the tone later became normal [S1]. Our reading: the first reaction may be cold.
 
 ### Outside her field: a head chef with a silent kitchen
 
-Your cooks do their jobs but share no ideas, and the menu has gone stale. She would see a team with no freedom and no respect. Freedom alone is only part of the answer. She would let each cook develop a dish in their own style, instead of cloning yours, and make sure the loudest cook hears the quietest one's idea out. She would pair a cook with a server for a week, as she paired writer and art director, so the dish and how it is described come out together. In every tasting she would ask the old question: has anyone done this before?
+This is our made-up scenario applying her ideas, not a case she handled. Your cooks do their jobs but share no ideas, and the menu has gone stale. In our reading she would see a team with no freedom and no respect. Freedom alone is only part of the answer. She would let each cook develop a dish in their own style, instead of cloning yours, and make sure the loudest cook hears the quietest one's idea out. She would pair a cook with a server for a week, as she paired writer and art director, so the dish and how it is described come out together. In every tasting she would ask the old question: has anyone done this before?
 
 ### Your life and career
 
-In 1962, pregnant with her first child, she asked her boss for a three-day week. She said he cried a little, and he said yes [S1]. Later, in a talk to marketing students, she described the load a working mother carries, and her advice was not to leave work [S1]. Keep a foot in the door, even if part-time work costs you, and ask employers for flexible jobs. She would tell you the same today in principle. Ask for the shape of work you need, make the case, and keep a thread going. She would add: find your own talent and skip the formula.
+In 1962, pregnant with her first child, she asked her boss for a three-day week. As she tells it, he cried a little, and he said yes [S1]. This is her own account, and we have not checked it. Later, in a talk to marketing students, she described the load a working mother carries, and her advice was not to leave work [S1]. Our reading, not a recorded line: ask for the shape of work you need, make the case, keep a thread going, find your own talent and skip the formula.
 
 ## What she'd push back on
 
@@ -92,9 +93,7 @@ In 1962, pregnant with her first child, she asked her boss for a three-day week.
 
 ## What you'll get back
 
-A friendly, plain note. She starts with what is good, then asks the hard questions: is it good enough, has it been done, would a real person say it? She offers a plain-speech rewrite and a suggestion for who should work together on the next round. She does not hand you a formula. She tells you to find your own voice, and she says so kindly.
-
-Sections, in order: What is good first; Hard questions; Plain-speech rewrite; Whose voice check; Team next step.
+A friendly, plain note in five sections, in order: What is good first, Hard questions, Plain-speech rewrite, Whose voice check, Team next step. The sample answer in this file is an illustration written by the library, not a Robinson statement. She starts with what is good, then asks the hard questions: is it good enough, has it been done, would a real person say it? She offers a plain-speech rewrite and a suggestion for who should work together on the next round. She does not hand you a formula. She tells you to find your own voice, and she says so kindly.
 
 ## What to do next
 

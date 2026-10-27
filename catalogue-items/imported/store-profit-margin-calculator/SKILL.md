@@ -1,7 +1,7 @@
 ---
 name: shopify-admin-profit-margin-calculator
 role: finance
-description: "Read-only: calculates true net profit per order and per product by factoring in COGS, shipping costs, transaction fees, discounts, refunds, and taxes."
+description: "Read-only: calculates estimated net profit per order and per product by factoring in COGS, shipping costs, transaction fees, discounts, refunds, and taxes."
 toolkit: shopify-admin, shopify-admin-execution
 api_version: "2025-01"
 graphql_operations:
@@ -13,7 +13,7 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
 ## Purpose
-Calculates true net profit and margin at both order-level and product-level granularity. Unlike basic revenue reports, this skill deducts all cost components — COGS (from inventoryItem.unitCost), shipping costs, transaction/payment processing fees, applied discounts, refund amounts, and duties/taxes — to surface actual margin percentages. Read-only — no mutations.
+Calculates estimated net profit and margin at both order-level and product-level granularity. Unlike basic revenue reports, this skill deducts all cost components — COGS (from inventoryItem.unitCost), shipping costs, transaction/payment processing fees, applied discounts, refund amounts, and duties/taxes — to surface actual margin percentages. Read-only — no mutations.
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_orders,read_products,read_inventory`
@@ -39,7 +39,7 @@ Calculates true net profit and margin at both order-level and product-level gran
 
 1. **OPERATION:** `orders` — query
    **Inputs:** `query: "created_at:>='<NOW - days_back days>'"`, `first: 250`, select `id`, `name`, `createdAt`, `totalPriceSet`, `subtotalPriceSet`, `totalShippingPriceSet`, `totalTaxSet`, `totalDiscountsSet`, `currentTotalPriceSet`, `displayFinancialStatus`, `refunds { totalRefundedSet }`, `lineItems { variant { id, inventoryItem { id, unitCost { amount, currencyCode } } }, quantity, originalTotalSet, discountedTotalSet }`, pagination cursor
-   **Expected output:** All orders in window with full cost breakdown. Keep requesting pages with the `endCursor` until `hasNextPage` is false, so no orders are missed.
+   **Expected output:** All orders in window with full cost breakdown. Keep requesting pages with the `endCursor` until `hasNextPage` is false, so no orders are missed. Line items are read 50 per order. If an order's `lineItems.pageInfo.hasNextPage` is true, read the remaining line items with their cursor, or mark the order "incomplete" and leave it out of the totals. Never total a partial order as if it were complete.
 
 2. **OPERATION:** `inventoryItems` — query
    **Inputs:** Batch of `inventoryItemIds` from line item variants for any missing unitCost data
@@ -48,16 +48,16 @@ Calculates true net profit and margin at both order-level and product-level gran
 3. For each order, calculate:
    - **Revenue** = `totalPriceSet.shopMoney.amount` (the total before refunds, because refunds are taken off once below. Do not use `currentTotalPriceSet`, which already has refunds removed)
    - **COGS** = Σ(lineItem.quantity × variant.inventoryItem.unitCost)
-   - **Shipping Cost** = `totalShippingPriceSet.shopMoney.amount` (merchant-paid portion estimate)
+   - **Shipping Cost** = what the merchant pays the carrier for this order. Shopify does not return this. `totalShippingPriceSet` is what the customer was charged, and that money is already inside Revenue, so do not subtract it. Ask the user for a carrier cost per order (a flat average is fine). If they give none, set Shipping to 0 and label the report "shipping cost not included".
    - **Discounts** = `totalDiscountsSet.shopMoney.amount`
    - **Transaction Fee** = estimated at 2.9% + $0.30 of total (configurable)
    - **Refunds** = Σ(refunds.totalRefundedSet.shopMoney.amount)
    - **Tax** = `totalTaxSet.shopMoney.amount` (collected for the tax office, so it is not profit)
-   - **Net Profit** = Revenue - Tax - COGS - Shipping - Transaction Fee - Refunds
+   - **Net Profit** = Revenue - Tax - COGS - Shipping Cost - Transaction Fee - Refunds. Use this one formula for every order. Revenue is always the pre-refund total and refunds are taken off once, here.
    - If a line item has no unitCost, leave its cost out of COGS, show its profit as "unknown", and list it under unknown costs. Never count a missing cost as zero.
    - **Margin %** = (Net Profit / Revenue) × 100
 
-4. If `group_by: product` or `variant`, aggregate profits by product/variant across all orders
+4. If `group_by: product` or `variant`, aggregate profits by product/variant across all orders. `totalPriceSet` is already after discounts, so do not take discounts off again. Split each order's shipping cost, tax and fees across its products in proportion to each line's `discountedTotalSet`, and say so in the report.
 
 5. **OPERATION:** `productVariants` — query (enrichment)
    **Inputs:** Variant IDs from profitable/unprofitable items for product title context
@@ -85,6 +85,7 @@ query OrdersWithCosts($query: String!, $after: String) {
           totalRefundedSet { shopMoney { amount currencyCode } }
         }
         lineItems(first: 50) {
+          pageInfo { hasNextPage endCursor }
           edges {
             node {
               quantity
@@ -212,7 +213,7 @@ For product grouping: `product_id`, `product_title`, `vendor`, `units_sold`, `re
 |-------|-------|----------|
 | `THROTTLED` | API rate limit exceeded | Wait 2 seconds, retry up to 3 times |
 | Missing unitCost | Product COGS not set | Flag as "unknown COGS" — list in the report, exclude from margin calc, and do not count as $0 cost |
-| Refunded orders | Fully refunded | Include if `include_refunded: true`. Revenue stays at the pre-refund total and the refund is subtracted once in the Net Profit formula, so revenue after refunds is $0 and the costs still count against profit |
+| Refunded orders | Fully refunded | Include if `include_refunded: true`. Revenue stays at the pre-refund total and the refund is subtracted once in the Net Profit formula. A fully refunded order shows revenue minus refund of $0, so its costs show as a loss |
 
 ## Best Practices
 - Populate `inventoryItem.unitCost` on all products for accurate COGS. Without it, margins cannot be calculated.

@@ -19,6 +19,7 @@ when:
   - You want a calm image ad that people new to you can read in a glance.
 not_for:
   - "Your product needs proof or real texture to sell: use a plain product photo instead."
+  - "You want cut-paper layers with crisp edges and shadows: use the paper craft image ad maker."
   - "You want a moving ad: use the watercolor ad script skill, which plans a video."
   - "You need food that looks tasty or a believable human face: use a real photo shoot or a photographer."
 
@@ -208,7 +209,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Nano Banana", why: "Works from your product photos as references, so the painted pack keeps its true shape."}
+    - {name: "Nano Banana", why: "Google's image model, free in Gemini with daily limits, or billed per picture through Google's API. Works from your product photos as references, so the painted pack keeps its true shape."}
     - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all follow this skill well, so use the one you already have."}
   inputs:
     - "A scan of a real watercolor you like, so the paper and edges look painted"

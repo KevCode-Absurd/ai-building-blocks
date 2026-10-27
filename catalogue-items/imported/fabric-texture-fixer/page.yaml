@@ -30,10 +30,10 @@ you_get:
 how_to_use:
   - Check both photos show the same item. Each file should be over 400 by 400 pixels and between 20KB and 15MB. The skill file is written in Chinese. Your AI can read it and answer in English.
   - Use an AI that can run code. You also need the dlazy tool set up with credits. Chat alone will only write the prompt.
-  - Give your AI both photos, with the blurry one first, and the garment type.
-  - Ask it to follow this skill. It writes the prompt and runs the image model with two variants.
+  - Give your AI both photos, with the blurry one first, and the garment type. Results save to one default path, docs/material-enhancement/output-<sku>-enhanced.jpg, apart from your original.
+  - Ask it to follow this skill. It writes the prompt and runs the image model. Ask for two variants with --batch 2, because the default is one image.
   - Compare each result with your sharp photo. Check the face, background and colour did not change.
-  - The image model can invent texture the real garment does not have. Before you publish, check the result against the real item. Do not use it to prove fabric quality, and do not show detail your customers will not receive.
+  - The image model can invent texture the real garment does not have. Before you publish, check the result against the real item. Do not use it to prove fabric quality, and do not show detail your customers will not receive. Say the image is AI-made where your store or the law requires it.
   - If the result is only sharper, ask your AI to add the fix-up line and run it again.
   - Then use the fabric swap sample maker if you want to try a different fabric, or the product photo retoucher for light and wrinkles.
 output_sample:
@@ -52,7 +52,7 @@ output_sample:
     - name: Second variant
       contains: A second version from the batch, so you can pick the more believable fabric.
     - name: Saved file
-      contains: The result is saved as output-<sku>-enhanced.jpg in docs/material-enhancement, apart from your original, so you can compare the two. If you use the skill's unified script, it saves to output/material-enhancement-<sku>.jpg instead.
+      contains: The result is saved as output-<sku>-enhanced.jpg in docs/material-enhancement, apart from your original, so you can compare the two.
     - name: Fix-up lines
       contains: Extra sentences to add to the prompt if the result is only sharper, changed colour, or altered the face.
 next: [fabric-swap-sample-maker, product-photo-retoucher, ai-product-photo-inspector]

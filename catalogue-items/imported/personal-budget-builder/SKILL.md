@@ -84,7 +84,7 @@ A savings rate below 10% is a warning sign. Target ≥ 20% for long-term wealth 
 ---
 
 ## Scripts
-- [calculate.py](./scripts/calculate.py): Deterministic functions for this skill's core computations. Run `python3 scripts/calculate.py` to self-test; import the functions instead of doing mental math.
+- [calculate.py](./scripts/calculate.py): Optional. If your tool can run Python, use these functions for the arithmetic. If it cannot (a plain chat), do the arithmetic inline: write each sum out step by step, show the totals, and check that Needs + Wants + Savings equals income before you answer.
 
 ---
 

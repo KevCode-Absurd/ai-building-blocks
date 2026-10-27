@@ -30,6 +30,7 @@ you_get:
   - A compliance check
   - A results table to fill in
 how_to_use:
+  - Before step 1, know the setup. The commands need Node and Python with the Pillow library, and an image API key. The skill's links to its platform-compliance and brand-kit skills point to items that are not included here, so ignore them. The bundled check script (scripts/check_listing.py) covers the compliance step, and your marketplace's own image help page is the final word on its rules.
   - Open Claude, ChatGPT or Gemini and paste in the skill text. The skill file is mostly in Chinese and starts with an English summary, so your AI can follow it in English. This skill makes images by running code, so use an AI that can run code and has files.
   - Add an image API key from OpenAI, Gemini, fal or Replicate. Each image may cost money.
   - Add your product photo and your selling points. Say which metric you care about, clicks or sales. The commands in the skill use sample file names and a sample product. Your AI should swap in yours. The brand file is optional.
@@ -37,6 +38,7 @@ how_to_use:
   - Read and confirm the hypothesis for each version before any image is made.
   - Check the images and the compliance result (it needs Python with the Pillow library). Then run the test in your store.
   - Fill in the review sheet after about two weeks. Do not call a winner on low traffic.
+  - Then keep the winning image as your new control and queue the next round, changing one thing again. Record each finished test (what you changed, which won, your numbers and the date) in one place you can find later.
 next:
   - marketplace-photo-rule-checker
 output_sample:

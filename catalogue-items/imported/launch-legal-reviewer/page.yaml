@@ -9,7 +9,7 @@ subhead: A review memo that checks your product plan against each legal area you
 explain: |
   A review memo that checks your product plan against each legal area your team cares about, before you ship. Share the plan, a PRD, a Drive link or a ticket. The skill reads your team's own framework and risk settings, then goes through every category one by one and rates each finding against what really blocks a launch in your company.
 
-  Novel questions are flagged clearly. The memo follows your house format, and a summary can be posted to the ticket. It can pass marketing claims to the Marketing claims checker, and deeper risk questions to the Feature legal risk assessor. It is a first check, not legal advice, and a qualified lawyer should review the result. It needs your setup file filled in.
+  Novel questions are flagged clearly. The memo follows your house format, and a summary can be posted to the ticket. It can pass marketing claims to the Marketing claims checker, and deeper risk questions to the Feature legal risk assessor. It is a first check, not legal advice, and a qualified lawyer should review the result. It needs your setup file filled in. This is a copy of Anthropic's launch-review skill under the Apache 2.0 licence. The setup interview and the seven-category framework file are included in this item's folder.
 when:
   - Product wants to know if a feature can ship next week.
   - You received a PRD and need a legal issues list by category.
@@ -19,6 +19,7 @@ not_for:
   - "You only need to check ad or marketing copy: use the Marketing claims checker, not this one. This review covers every legal area, and the Marketing claims checker covers only the claims in your copy."
   - "You need one risk studied in depth: use the Feature legal risk assessor, since this review gives each area only a first check."
   - "Your launch is in a sector with its own rules, such as children's products, health or finance, or is outside the US: the base eight areas are not enough. The skill adds a sector overlay for these, so name the sector. Have a local lawyer check the result."
+  - "Your launch is outside the US: the base eight areas do not cover other countries' rules. Talk to a local lawyer first, then use the memo to prepare your questions for them."
   - "You need a final legal opinion or sign-off: ask a qualified lawyer. This memo is a first check."
 you_give:
   - The product plan or PRD
@@ -31,12 +32,14 @@ you_get:
   - Flags on new or unclear issues
   - A summary for the ticket
 how_to_use:
-  - Before you start, know that a lawyer must review any Clear to ship call. This memo is a first check, not sign-off.
-  - Open your AI tool and add the skill. Use one that can read files. The skill reads a setup file named CLAUDE.md in the product-legal folder of your Claude settings, so your AI needs to reach that folder. A legal research tool is optional, and Westlaw is paid while CourtListener is free.
-  - "Fill in your team's legal setup file first. It needs three things: the legal areas to check, what counts as a blocker and what is only a note, and the format you want the memo in. The folder includes a setup interview that asks for these. The skill stops if placeholders remain."
+  - Do not rely on the memo for any launch decision until a qualified lawyer has reviewed it. The case names, laws and rules in it come from an AI's memory and may be wrong or invented, so check every one against the official source.
+  - Before you start, know that a Clear to ship call in the memo is a first view for your own team. Do not show it to a launch owner as sign-off until a lawyer has signed it off.
+  - What you need first is a filled-in setup file. It is a file named CLAUDE.md in the product-legal folder of your Claude plugin settings, so your AI must be able to read that folder. The skill stops if any placeholder is left in it.
+  - "To fill it in, run the setup interview in this item's setup-interview folder. Your AI asks you questions and writes the file. It needs three things: the legal areas to check, what counts as a blocker and what is only a note, and the format you want the memo in."
+  - Open your AI tool and add the skill. Use one that can read files. A legal research tool is optional. Westlaw is paid and CourtListener is free. Without one, the skill can fall back to web search and marks those sources "verify". Treat them as unchecked.
   - Paste your PRD, Drive link or ticket ID. Add related documents if you have them.
   - Ask your AI to run the launch review. It checks each legal area in turn and rates each finding.
-  - Read the bottom line and any flagged new questions. Send those to a lawyer. If you are not a lawyer, do not treat a Clear to ship call as sign-off until a lawyer has reviewed the memo.
+  - Read the bottom line and any flagged new questions. Send those to a lawyer. If you are not a lawyer, a Clear to ship call is not sign-off. It stays an internal first view until a lawyer has reviewed the memo.
   - Keep the full memo private. Post only the safe tracker note to your ticket, then run the Marketing claims checker on your marketing copy and run the Feature legal risk assessor on any deep risk. Check every legal citation in the memo against the official source before you rely on it.
 output_sample:
   input:

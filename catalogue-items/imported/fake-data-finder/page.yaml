@@ -11,7 +11,7 @@ explain: |
 
   You give a live URL. A browser walks the page, takes a full screenshot, and lists every heading, button, card, stat and table cell. With your approval it clicks tabs and safe buttons, and watches network calls and console errors. Each value is labelled real, mocked, hardcoded, generated or broken. Warning signs include round numbers, clustered timestamps and values that never change. You confirm ownership and which actions are allowed before it starts.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (CodeShuX) says MIT. Credit goes to CodeShuX and sickn33.
+  Licence: for reuse, follow the MIT licence the author names in the skill file header. That covers the skill text. Our LICENSE-CONTENT file (CC BY 4.0) covers only the rest of this page. Credit CodeShuX and sickn33 if you reuse it.
 when:
   - You built a dashboard with an AI tool and are unsure what is connected.
   - A contractor delivered an app and you need a check before you pay.
@@ -32,12 +32,13 @@ you_get:
   - Notes on network and console problems
   - A short fix list
 how_to_use:
-  - Use an AI that can run code and open a browser with Playwright, such as Claude Code or Codex with Playwright set up. A plain chat window cannot do this.
+  - Use an AI that can run code and open a browser with Playwright, such as Claude Code or Codex with Playwright installed. Those tools usually need a paid plan or API access, and you must install Playwright before the first run. A plain chat window cannot do this.
   - Give your AI the skill file by hand, as a normal skill. We do not offer it as a one-click plugin for Claude or Codex, because it drives a real browser and can click real buttons. Then give it your page link.
+  - Run it on a staging copy or a test account first. It can click and submit real controls if the approval steps are skipped, so never point it at live customer data.
   - Say whether the page is public or needs a login. Offer a test account, never your real one.
   - Name the buttons and forms that are safe to click. Say which are off limits.
   - Your AI must ask before every click or form submit. Check each action it proposes against your safe list, and say no to anything on live customer data.
-  - Read the report. Fix the hardcoded and mock values by connecting the real data source, then run it again on a fresh test account with no data. Pair the fixes with the test writer or code reviewer you already use.
+  - Read the report. Fix the hardcoded and mock values by connecting the real data source, then run it again on a fresh test account with no data. Pair the fixes with the test writer or code reviewer you already use. After the fixes, re-run the audit on a fresh test account and compare the two reports.
 output_sample:
   input:
     - The link to your live page

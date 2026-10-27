@@ -33,7 +33,7 @@ you_get:
 how_to_use:
   - "Gather three things: the age or year group of your learners, the type of source, and why they are checking it."
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. No code or paid tools are needed.
-  - Type your three details. Add the topic and any mistakes you have seen, if you like (optional).
+  - Type your three details. The source gives about 3 minutes of teacher time to get the lesson, and the checking routine takes learners 3 to 5 minutes per source in class. Add the topic and any mistakes you have seen, if you like (optional).
   - "Read what comes back: the steps, a script for you to model, red and green flags, and a student checklist."
   - Check the example source in the script. The sample in the skill uses a made-up website, trade body and study. Do not teach them as facts. Replace them with a source you have checked yourself.
   - Check the lesson against the four moves: Stop, Investigate the source, Find better coverage, Trace claims. If the AI's version drifts from them, ask it to rewrite the lesson around those four moves.

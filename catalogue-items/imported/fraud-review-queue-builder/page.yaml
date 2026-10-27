@@ -31,9 +31,10 @@ you_get:
   - Order values and dates
   - Readable or JSON output
 how_to_use:
-  - Use an AI that can run commands, such as Claude Code, with the Shopify command line tool installed.
+  - Use an AI that can run commands, such as Claude Code, with the Shopify command line tool installed. That kind of AI tool may need a paid plan, and Shopify CLI access to your store is required. No separate API key is needed beyond your store sign-in.
   - Sign in to your store with read access to orders. Run this command, shopify store auth --store your-store.myshopify.com --scopes read_orders
   - Paste the skill into your AI and give it your store address. Say how many days to look back (the default is 7). The minimum risk level is high unless you say otherwise, and the minimum order value is 0 unless you set one.
+  - The CSV holds customer names and emails. Keep it private and delete it when you are done.
   - Open the ranked list each morning. Check the flagged orders by hand in your Shopify admin before you cancel or hold anything.
   - Orders from repeat customers can be false alarms, so look at their history first. The minimum order value is 0 unless you set one. A figure such as $50 is only a starting point to test on your own orders.
   - To set up automatic rules, use the fraud rules setter. To follow up on lost disputes, use the chargeback customer tagger.

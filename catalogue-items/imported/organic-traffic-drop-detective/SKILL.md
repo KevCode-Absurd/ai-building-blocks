@@ -32,6 +32,8 @@ Diagnose why organic traffic moved (down, flat, or unexpectedly up) using Ahrefs
 
 ---
 
+> Added by AI Blocks: this skill needs a paid Ahrefs account and Search Console access. Similarweb is optional and also paid. If your AI cannot connect to them, ask the person to paste or upload exports from each, and say plainly what is missing and what it limits.
+
 ## Required inputs
 
 - Description of the symptom (what changed, when, magnitude)

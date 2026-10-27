@@ -35,7 +35,7 @@ how_to_use:
   - "Say the topic you want to learn and your goal: adopt it at work, start research, or understand the basics."
   - Add what you already know. Paste or upload any course notes or slides.
   - Turn on web search if your AI has it. It uses search to confirm each reading is real. Without it, readings are marked unverified.
-  - Check the readings marked unverified yourself before you rely on them.
+  - Check the readings marked unverified yourself before you rely on them. Without web search, your AI should leave unverified readings out of the main path and give you search terms instead.
   - Work through one milestone at a time. Use the Understanding check to test each checkpoint.
 output_sample:
   input:
@@ -51,7 +51,7 @@ output_sample:
     - name: Prerequisites
       contains: What you need to know first, why it matters, and how to fill each gap.
     - name: Milestones
-      contains: Three to six steps in dependency order, each with a short intro, readings and a checkpoint.
+      contains: Three to six steps in dependency order, each with a rough hours estimate, a short intro, readings and a checkpoint.
     - name: Checkpoint
       contains: Concrete things you should be able to do before moving to the next milestone.
     - name: Where the field is now

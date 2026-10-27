@@ -11,6 +11,10 @@ metadata:
 
 # Shopify Functions
 
+> The code samples below are starting points. Several parts are placeholders you must write or replace before the code runs (`cart_weight_exceeds_limit`, `is_restricted_product`, `YOUR_FUNCTION_ID`, the free gift ID and the example limits). Test on a development store only until a developer has reviewed the code. Rules that block checkout, hide payment methods or limit regions affect every order, so check them against your legal and shipping terms before going live.
+>
+> The result shape differs by target. `FunctionRunResult` is generated from your target's schema: `discounts` and `discount_application_strategy` for discount targets, `operations` for delivery, payment and cart transform targets, and `errors` for validation. The examples below each use the shape for their own target, so use the generated types for yours.
+
 ## When to use this skill
 
 Use this skill when:
@@ -260,7 +264,12 @@ use shopify_function::Result;
 fn run(input: input::ResponseData) -> Result<output::FunctionRunResult> {
     let mut operations = vec![];
 
-    for method in input.cart.delivery_groups[0].delivery_options.iter() {
+    // Do nothing if there are no delivery groups, so an empty cart cannot cause a panic.
+    let Some(group) = input.cart.delivery_groups.first() else {
+        return Ok(output::FunctionRunResult { operations });
+    };
+
+    for method in group.delivery_options.iter() {
         // Hide express shipping for heavy orders
         // cart_weight_exceeds_limit is a helper you write: sum the line weights and compare with your limit
         if method.title.contains("Express") && cart_weight_exceeds_limit(&input) {
@@ -308,13 +317,16 @@ export function run(input) {
     }
   }
 
-  // Reorder payment methods
-  operations.push({
-    move: {
-      paymentMethodId: input.paymentMethods[0].id,
-      index: 2,
-    },
-  });
+  // Reorder payment methods. Only run this when the list is not empty,
+  // so a cart with no payment methods cannot crash the Function.
+  if (input.paymentMethods.length > 0) {
+    operations.push({
+      move: {
+        paymentMethodId: input.paymentMethods[0].id,
+        index: 2,
+      },
+    });
+  }
 
   return { operations };
 }

@@ -9,7 +9,7 @@ subhead: Give it a protein and a small molecule. It sets up DiffDock and ranks t
 explain: |
   Predicted ways a small molecule could sit in a protein, ranked and labelled with how far to trust them. Give it a protein and a molecule, and you get candidate binding poses with confidence scores and checks on each.
 
-  The skill runs DiffDock, a published docking model, from its official code. It sets up the exact environment the model needs, runs one pair or a batch, and can try several protein shapes. It states plainly that confidence is not a measured probability and not binding strength. Sorting a large library by score is treated as rough triage, not finding hits. You need a GPU-ready setup, and some steps are untested recipes.
+  The skill runs DiffDock, a published docking model, from its official code. It sets up the exact environment the model needs, runs one pair or a batch, and can try several protein shapes. It states plainly that confidence is not a measured probability and not binding strength. Sorting a large library by score is treated as rough triage, not finding hits. You need a GPU-ready setup. The pretrained docking run, Docker, GNINA and the hosted demo were not run in the skill's own review, so those steps are untested recipes.
 when:
   - You want likely binding poses for one protein and one molecule.
   - You have a batch of molecules to dock against one target.
@@ -22,7 +22,7 @@ not_for:
 you_give:
   - Your protein as a PDB file or a full amino-acid sequence
   - Your molecule as a SMILES string or a ligand file (SDF, MOL2, PDB or PDBQT)
-  - A computer with a GPU, or the DiffDock Docker image, and room for model downloads
+  - A computer with a GPU, or the DiffDock Docker image, and room for model downloads (the pretrained docking, Docker and GNINA steps are untested recipes)
   - Extra protein shapes, one row each (optional)
 you_get:
   - Ranked poses, each with a confidence score
@@ -33,7 +33,7 @@ you_get:
 how_to_use:
   - Use an AI that can run code and read files, on a computer with a GPU. Or use the DiffDock Docker image.
   - Give your AI the skill, your protein file or sequence, and your molecule.
-  - Ask it to set up DiffDock v1.1.3 and run one pair or a batch. Note that the pretrained docking run, Docker, GNINA and the hosted demo were not run in the skill's own review, so treat those commands as untested recipes.
+  - Ask it to set up DiffDock v1.1.3 and run one pair or a batch. Treat the setup and docking commands as untested recipes, as noted above, and be ready to fix errors.
   - Check that every complex finished. Match the output names to your input list.
   - Read the confidence bands, then run the pose checks on each pose you keep.
   - Use independent validation before you act on a result.
@@ -48,6 +48,7 @@ output_sample:
     - The DiffDock v1.1.3 code and its environment, or its Docker image
     - Disk space and internet to download the model weights on first use
     - An AI that can run code and read files
+    - Acceptance that the pretrained docking, Docker, GNINA and hosted-demo steps are untested recipes
   output:
     - name: rank1.sdf
       contains: A copy of the top-ranked pose for each complex.

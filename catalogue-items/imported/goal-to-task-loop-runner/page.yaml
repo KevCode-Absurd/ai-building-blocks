@@ -28,14 +28,17 @@ you_get:
   - Results verified task by task
   - "A clear stop: finished or stuck"
 how_to_use:
-  - Use an AI that can run Python and read and write files, such as Claude Code. A plain chat window cannot run the loop.
-  - Download the skill folder and open your AI inside it, so it can find the scripts and the 18 ready-made setups. The first file to use is scripts/goal_compiler.py, which turns your goal into plan.json. The setups are the .json files in assets/harnesses (for example engineering.json).
+  - Before you start, know this. Each task's check runs as a shell command on your own computer, with no sandbox. Read every check command before the loop begins. Run it only in a folder you trust.
+  - "Use an AI that can run Python and read and write files, such as Claude Code. A plain chat window cannot run the loop. You need Python 3. The scripts are free and need no API key. The AI tool that runs them may cost money: Claude Code needs a paid Claude plan or an API key, and other tools that run code have their own plans, some with a free tier. Check the price before you install."
+  - Download the skill folder and open your AI inside it, so it can find the scripts and the 18 ready-made setups. The first file to use is scripts/goal_compiler.py, which turns your goal into plan.json. The setups are the .json files in assets/harnesses (for example engineering-team.json).
   - Tell your AI your goal and name the finished result so it can be checked. A vague goal is refused with questions.
   - Pick the setup that fits your work, or point it at your own folder of skills.
-  - Let it compile the plan. Read each task and its check command before it starts. The checks run on your computer, so run this only in a folder you trust. The plan.json file lists each task with its skill, its checks and what done means. The state.json file records each task's status, number of attempts and evidence.
+  - Let it compile the plan. Read each task and its check command before it starts. A safe check only reads or tests, such as running your tests or confirming a file exists. Do not allow a check that deletes files, installs software or calls an address you do not know. The checks run on your computer, so run this only in a folder you trust. The plan.json file lists each task with its skill, its checks and what done means. The state.json file records each task's status, number of attempts and evidence.
   - It runs one task at a time and checks each one before the next. Stop when it says finished or stuck.
+  - When it says finished, give state.json and the evidence log to the reviewer you named. If it says stuck, send them the same files so they can decide what to fix or waive.
   - Only use plan and state files you made yourself. They run commands on your computer, so never run ones from someone else.
 not_for:
+  - Your goal has no check a machine can run, such as a judgement call or a writing task. Use a plain chat workflow with your AI instead, and review the result yourself.
   - You want to design a repeatable loop on paper, with no code running. Use the Agent loop designer.
   - You only want to keep one to-do list up to date. Use the Task list keeper.
   - Your goal is one small step. Just ask your AI to do it.
@@ -51,9 +54,9 @@ output_sample:
     - name: Sharpening questions
       contains: Asked when your goal is too vague, before any plan is made.
     - name: plan.json
-      contains: The list of tasks, each with a check that a machine can run.
+      contains: "The list of tasks, each with a check that a machine can run. Top-level fields: schema, goal, domain, compiled_at, skill_match_report, tasks and loop. Each task has an id, a skill, an objective, verification checks, a done_when line and max_attempts."
     - name: state.json
-      contains: The saved status of every task, so a new session can pick up where the last stopped.
+      contains: "The saved status of every task, so a new session can pick up where the last stopped. Top-level fields: schema, goal, domain, plan_file, created_at, iteration, max_loop_iterations, status and tasks. Each task keeps its attempts, status and evidence."
     - name: Next-task directive
       contains: The one task to do now, which skill to open and what to do next.
     - name: Evidence log

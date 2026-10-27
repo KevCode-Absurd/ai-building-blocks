@@ -97,7 +97,7 @@ output_shape: |
   "<the sentence that says what the buyer gets>"
 
   LEDGER
-  <n>. <part> | <promise / skim / slide / doubt / ad>
+  <n>. <part> | <promise / skim / line-by-line / doubt / ad>
      Was:  "<old text>"
      Now:  "<new text>"
      Gain: <fewer words / stop removed / term in full / claim backed>

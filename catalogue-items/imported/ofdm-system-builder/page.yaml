@@ -11,7 +11,7 @@ explain: |
 
   Before writing anything it asks about FFT size, cyclic prefix, subcarrier layout, channel type, pilots, coding and synchronisation. Then it follows firm rules. It uses the built-in OFDM modulate and demodulate functions rather than raw FFT calls. It sets the symbol offset by hand. It gives the noise function an explicit signal power, because the modulator output is not one watt. It uses the dedicated channel response function, and it shows how each parameter was worked out. It also checks that your MATLAB release supports the functions used. It is for engineers who already know MATLAB and OFDM, not for general business users. This is a MathWorks skill.
 
-  Licence: we share this copy under the BSD 2-Clause licence in the LICENSE.md file, which adds that you may use it only with MathWorks products such as MATLAB. The skill file header links MathWorks' own reuse licence as well.
+  Licence: this is a copy of MathWorks' work, shared under the BSD 2-Clause licence in the LICENSE.md file. That licence adds that you may use it only with MathWorks products such as MATLAB. The skill file header links MathWorks' own reuse licence as well. The terms in LICENSE.md are the ones that apply to this copy.
 when:
   - You are building a custom OFDM transmitter and receiver and your bit error rate looks wrong.
   - You need to add noise at a chosen signal-to-noise ratio without getting the power wrong.
@@ -32,7 +32,7 @@ you_get:
   - Correct noise and channel handling
   - A list of questions if your brief has gaps
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the text of this skill.
+  - This is a copy of MathWorks' skill, and its script needs MATLAB with Communications Toolbox, a paid add-on. Open Claude, ChatGPT or Gemini and paste in the text of this skill.
   - "Describe your OFDM link: sizes, channel, pilots, coding and sync. Say which MATLAB release you use."
   - Answer the questions it asks. It will not write code until the gaps are filled.
   - Copy the script into MATLAB. You need Communications Toolbox, a paid add-on, to run it.

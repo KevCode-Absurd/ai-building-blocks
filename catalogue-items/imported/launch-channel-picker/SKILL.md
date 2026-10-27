@@ -31,7 +31,7 @@ If an item is missing, write `MISSING: <item>`, continue with what you have, and
 - Tool names in this skill are examples, not a ranking. Tell the person to check each tool's current price and fit before buying. Do not state prices.
 - Choose two to four motions at most. Name what you are leaving out and why.
 - The tips at the end (such as "2 to 4 motions work best") are the author's view. Label them that way.
-- This skill needs no code, files or paid tools.
+- This skill needs no code or files. Several tools it names, such as ZoomInfo, 6sense, Demandbase and Terminus, are paid products. Say so when you name them, and tell the person to check plans and prices first. The skill works without any of them.
 
 ## Overview
 Identify and evaluate the best go-to-market motions for your product. This skill analyzes seven proven GTM approaches with specific tools and tactics to help you build a balanced acquisition strategy.
@@ -145,7 +145,7 @@ Create 90-day implementation roadmap:
 - Budget and resource allocation
 
 ## Input Format
-Use $ARGUMENTS to pass:
+Paste these into the chat, in the order listed under "What you need" at the top:
 - Product description and positioning
 - Target customer profile and market
 - Price point and sales cycle

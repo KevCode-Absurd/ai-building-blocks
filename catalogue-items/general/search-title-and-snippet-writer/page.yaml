@@ -54,6 +54,8 @@ output_sample:
       contains: One short line to use when the page is shared on social media.
     - name: Pick
       contains: The option that fits best, with one reason for the choice.
+    - name: Checks missed
+      contains: One line for each check the options still fail, or none.
 
 how_it_works:
   - title: "Title"
@@ -73,6 +75,7 @@ output_shape: |
   OPTION 3 ...
   SOCIAL LINE: <...>
   PICK: <n> because <...>
+  CHECKS MISSED: <one line per check, or none>
 
 tweaks:
   - what: "Search phrase"

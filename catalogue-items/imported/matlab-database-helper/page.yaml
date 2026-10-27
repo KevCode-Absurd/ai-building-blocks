@@ -18,7 +18,7 @@ when:
   - Your code has a password typed into the connection line.
   - You are setting up an ODBC connection for the first time.
 not_for:
-  - "You work with DuckDB: use the matlab-use-duckdb skill, which is built for it."
+  - "You work with DuckDB: use the DuckDB big file query helper, which is built for it."
   - "You use MongoDB, Cassandra or Neo4j: they are not relational databases, so use each tool's own MATLAB support."
   - "You only read a CSV or Excel file: use readtable or a datastore in MATLAB, no database needed."
   - "You want to use the code outside MATLAB or other MathWorks products: the licence does not allow it."
@@ -37,8 +37,9 @@ how_to_use:
   - Tell it your database type, data source name or connection string, table and column names, and MATLAB release.
   - "Say what you want: read, add, change or delete rows. Add any filter, such as only active orders."
   - Read the code it gives you. Check that passwords use secrets and filters run in the database.
-  - Run it in MATLAB with Database Toolbox. Your AI can only test it if it can run MATLAB.
+  - Run it in MATLAB with Database Toolbox. Your AI can only test it if it can run MATLAB. If it cannot, copy the code into MATLAB yourself, run it a block at a time, and paste any error back into the chat.
   - If it shows a delete or drop statement, check it carefully before you say yes.
+  - "What you get back: one MATLAB script per task, with comments. It has a connection block, read and write blocks, and any delete or drop SQL shown to you first for approval."
   - Test the code on a copy of the table first. Once it works, use it on the real table. For Databricks, use the MATLAB Databricks connection skill if your library has it.
 next:
   - duckdb-big-file-query-helper
@@ -51,7 +52,7 @@ output_sample:
     - What you want to read, add, change or delete
     - Your MATLAB release
   prerequisites:
-    - MATLAB R2021a or later with Database Toolbox
+    - MATLAB R2021a or later with Database Toolbox. Both are paid MathWorks products, so you need a licence or a free trial before the code can run.
     - An AI that can run MATLAB (optional, to test the code)
     - MATLAB R2023b or later, only if you want ORM
     - MATLAB R2026a and Parallel Computing Toolbox, only for multithreaded reads and writes

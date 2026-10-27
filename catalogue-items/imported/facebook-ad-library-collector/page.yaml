@@ -5,11 +5,15 @@ name: Facebook ad library collector
 summary: Find the live ads any brand runs on Facebook and Instagram. Give it a Page link or keyword and get one row per ad from the Ad Library.
 job: study-competitors
 headline: Facebook ad library collector
-subhead: Give it a brand or keyword. Get its live Facebook ads from the public Ad Library. It runs a paid Apify scraper on Meta's public Ad Library. Use the rows for a swipe file or a teardown.
+subhead: Give it a brand or keyword. Get its live Facebook ads from the public Ad Library. It runs a paid third-party Apify scraper on Meta's public Ad Library, which may not fit Meta's terms, so check them first. Use the rows for a swipe file or a teardown.
 explain: |
   A spreadsheet of every ad a competitor is running on Facebook and Instagram, with the creative links and start dates, so you can see which ads have stayed live the longest. Long-running ads may be working, but run length is a guess, not proof.
 
-  You give it a Page link or a keyword. For a Page, it uses the page URL. For a keyword, it builds a public Ad Library search link with your country, words and active status. It then runs an Apify scraper and returns one row per ad. For political ads it also pulls the reach and spend figures that are disclosed. It needs an Apify account and token, and the scraper charges per result.
+  You give it a Page link or a keyword. For a Page, it uses the page URL. For a keyword, it builds a public Ad Library search link with your country, words and active status. It then runs an Apify scraper and returns one row per ad. For political ads it also pulls the reach and spend figures that are disclosed. It needs an Apify account and token, and the scraper charges per result. It is a scraper run by a third party, so check Meta's Ad Library terms before you use it.
+
+  This copy is the community skill as its author wrote it, shared in sickn33's collection. We only gave it a plain name. The original is at github.com/harshmaur/apify-facebook-ads-library-scraper.
+
+  Licence: CC BY 4.0 (see the LICENSE-CONTENT file). Credit goes to harshmaur, who wrote the skill, and to sickn33, who shared it.
 when:
   - You want to see what ads a rival brand is running right now.
   - You are testing a product idea and want to know who already advertises for the same keyword.
@@ -32,6 +36,7 @@ you_get:
   - Disclosed reach and spend for political ads
   - A sorted export you can open in a spreadsheet
 how_to_use:
+  - Before you run anything, read Meta's Ad Library terms. This scraper may not fit them, and your AI should stop until you say yes. Apify prices change, so check apify.com/pricing too.
   - Open your AI. Use one that can run code, such as Claude with code tools. You also need an Apify account and token.
   - Paste the skill, or upload its folder, and say "Follow this skill".
   - Give it a Page link or a keyword. Add the country and whether you want active ads.

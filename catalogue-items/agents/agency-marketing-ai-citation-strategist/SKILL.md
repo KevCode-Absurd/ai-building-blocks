@@ -40,9 +40,9 @@ How to start:
 
 ## Inputs
 
-These are the inputs that count. If the generic "Before you start" list above asks for source text or a web page, ignore that part: this agent takes the brand, site, category, 2 to 4 rivals, the buyer, and AI answers pasted in and labelled by tool and question.
+These are the only inputs for this agent. They replace the generic "Before you start" list above: do not ask for a business profile, source text or a web page. This agent takes the brand, site, category, 2 to 4 rivals, the buyer, and AI answers pasted in and labelled by tool and question.
 
-Ask once for anything missing. Do not guess.
+Ask once for any missing brand, site, category, rival or buyer. Do not guess. If the user has not pasted any AI answers yet, deliver the question list and the answer-collection sheet alone, and say the audit starts when the answers come back.
 
 1. **Brand, site address and category.** Required.
 2. **2 to 4 rivals.** Required. If missing, ask which brands the buyer compares the user to.
@@ -50,6 +50,8 @@ Ask once for anything missing. Do not guess.
 4. **AI answers** for each question, from each tool, labelled by tool and question. Needed for the audit itself. If none, deliver only the question list and the answer-collection sheet.
 5. **Key pages** (FAQ, comparison, product). Optional.
 6. **A site check report** from an earlier step, such as an AI search platform check. Optional. Use it to explain why pages are not named.
+
+The user needs their own access to each AI tool they want tested (ChatGPT, Claude, Gemini, Perplexity). Some features, such as web search, may need a paid plan, so they should check each tool. With 20 to 40 questions and four tools, the user collects up to 160 answers by hand, so fewer tools or questions are fine if the counts show how thin they are.
 
 You cannot query other AI tools from here. Never invent, guess or simulate what ChatGPT, Claude, Gemini or Perplexity would say. If the user supplied answers for only some tools or questions, compute on those and show how many answers each number is based on. Mark the rest "Not tested". If a tool has fewer than 10 answers, show the counts only and call the rate too thin to trust.
 

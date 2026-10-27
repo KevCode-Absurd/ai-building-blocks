@@ -7,6 +7,17 @@ description: "Check a currency forward at settlement. Get the locked payment, th
 
 Checks one forward contract to buy foreign currency, on its settlement date, against a bill owed in that currency. It works out the locked payment under the forward, compares it with buying the same amount at the settlement spot rate, buys any leftover foreign units at spot, adds fees, and ties total cash back to its parts. It does not value an open forward, decide hedge accounting, or say where rates will go. To net several currency exposures first, use the Currency exposure netting checker. To compare a whole cash forecast with what happened, use the Treasury forecast backtest checker.
 
+## When to use and when not to use
+
+Use it when a forward to buy foreign currency has settled and you need the cash cost tied to the contract, the gain or loss against spot, and how much of the bill is still uncovered.
+
+Do not use it for:
+- a forward that has not settled yet (it gives no fair value)
+- collateral, close-out or hedge accounting (take those to your accountant or treasury adviser)
+- a forward that sells foreign currency (this version covers buying only)
+- netting several exposures (use the Currency exposure netting checker)
+- comparing a cash forecast with what happened (use the Treasury forecast backtest checker)
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
@@ -16,7 +27,7 @@ When you've handed it back, suggest what they could do next in one short questio
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
-## Before you start
+## How to work
 
 A chat is enough. Do the sums yourself and show each one. Run the bundled script or build a workbook only when you have code or file tools and the person wants one. If you cannot run something, say so. Never claim you ran a check you did not run.
 
@@ -137,7 +148,9 @@ The script `scripts/run-model.mjs` needs Node.js 20 or later. Run `node scripts/
 
 The link names a public method. The instructions and practice numbers in this pack are original. The linked page is not bundled or relicensed.
 
-## After this
+## What next
+
+The generated "After this" list above names items that do not fit a currency forward. Use the two items below instead. The "Foreign currency exposure checker" in the "Before you start" list is the same item as the Currency exposure netting checker.
 
 Hand back the result, then suggest one next step in a short question. If they are done, that is fine. Offer these, and say they can type their own:
 

@@ -7,7 +7,7 @@ description: Use when you need an about-me or origin story that holds up and doe
 
 Give it the true facts of how you started. Get a mapped story, its shape checked, a 10% cut and plain wording.
 
-This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next. The four skill files (`hero-story-mapper`, `story-shape-mapper`, `ten-percent-cutter`, `plain-english-editor`) come in the handoff pack with HANDOFF.md.
 
 ## Not for
 
@@ -38,6 +38,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+- In the general "Before you start" list above, "Your question" means the facts and goal below. The brand brain is optional. The five-file reading list there applies only if you have one.
 - **The true facts of how you started** (required). Who you are, what pushed you to begin, the hard moment, what changed, and where you are now. Give dates and numbers only if they are real. Say what the story is for (about page, pitch, post) and how long it should be.
 - **Your brand brain** (optional). Its voice file helps the final wording.
 
@@ -53,7 +54,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 1. **Hero story mapper.** Use the skill `hero-story-mapper`. Maps your facts to the stages of the story and drafts it without inventing anything.
 2. **Story shape mapper.** Use the skill `story-shape-mapper`. Give it the story draft from step 1. Reads that draft and shows where the story goes flat.
 
-Pause here: Make the one change it suggests and rewrite the flat spots. Keep the facts true.
+Pause here: Make the one change it suggests and rewrite the flat spots. Keep the facts true. Bring back your reworked draft: step 1's story with the shape fix made and the flat spots rewritten. If you skip the pause, step 3 cuts the unreworked draft with the flat spots still in, and says so.
 
 3. **Ten percent cutter.** Use the skill `ten-percent-cutter`. Give it your reworked draft (step 1's story with your step 2 fixes made) and the plan from step 1. Cuts your reworked draft by a tenth and keeps a log of what went. It can use the story map from step one.
 4. **Plain English editor.** Use the skill `plain-english-editor`. Give it the cut draft from step 3. Takes the cut draft and puts it in words you would say out loud.

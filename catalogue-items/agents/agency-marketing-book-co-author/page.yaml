@@ -53,7 +53,7 @@ you_get:
   - Three questions for your next review, and the exact next task
 how_to_use:
   - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md after it.
-  - Paste the book's reader and argument, then your notes for one chapter. Add a sample of your voice if you can.
+  - Your first message must hold the chapter notes and who the book is for. It cannot draft without them. Add the book's argument, and a sample of your voice if you can.
   - Type "Build the blueprint for Chapter 3" and approve it. Then type "Draft Chapter 3".
   - Read the editorial notes before the draft. Fill each gap with a real story or source, and say which lines do not sound like you.
   - Ask for the next version and repeat. Keep each version labelled.

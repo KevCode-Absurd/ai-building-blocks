@@ -150,8 +150,8 @@ improve:
 works_best_with:
   tools:
     - {name: "Google Sheets", why: "A shared sheet lets the buyer and owner read the same rules at the same time."}
-    - {name: "Meta Ads Manager", why: "Its export gives daily spend and 1-day and 7-day click results for the lag gap."}
-    - {name: "Triple Whale", why: "Shows blended results and several attribution windows next to your store orders."}
+    - {name: "Meta Ads Manager", why: "Free to use. Its export gives daily spend and 1-day and 7-day click results for the lag gap."}
+    - {name: "Triple Whale", why: "Paid subscription, optional. Shows blended results and several attribution windows next to your store orders."}
   inputs:
     - "Last year's hourly spend and orders from your store, so the hour multipliers are your own"
     - "Your inventory by product, so a push does not sell what you cannot ship"

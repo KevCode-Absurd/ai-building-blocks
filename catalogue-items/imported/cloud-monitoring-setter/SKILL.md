@@ -17,7 +17,7 @@ This skill enables the agent to design and configure comprehensive monitoring an
 
 2. **Select Monitoring Tools and Instrumentation:** Based on the cloud provider and application architecture, the agent recommends an appropriate monitoring stack. This may include Prometheus for metrics collection, Grafana for visualization, Loki or CloudWatch Logs for log aggregation, and Jaeger or AWS X-Ray for distributed tracing. The agent configures OpenTelemetry SDKs in application code to emit standardized telemetry data.
 
-3. **Configure Metrics Collection and Dashboards:** The agent defines and deploys metric scrapers, exporters, and custom metrics. It builds dashboards that visualize the golden signals (latency, traffic, errors, saturation) and infrastructure metrics (CPU, memory, disk, network). Dashboards are organized by service tier so teams can quickly triage issues.
+3. **Configure Metrics Collection and Dashboards:** The agent writes the config for metric scrapers, exporters, and custom metrics. The user, or an agent with cloud access, applies it. It builds dashboards that visualize the golden signals (latency, traffic, errors, saturation) and infrastructure metrics (CPU, memory, disk, network). Dashboards are organized by service tier so teams can quickly triage issues.
 
 4. **Establish Alerting Rules:** The agent configures alerts that trigger on meaningful conditions — such as error budget burn rate exceeding thresholds, sustained latency spikes, or pod restarts — rather than raw metric thresholds alone. Multi-window, multi-burn-rate alerting is used to balance detection speed with false-positive suppression. Alert routing is configured to send critical alerts to PagerDuty or Opsgenie and warnings to Slack.
 
@@ -157,7 +157,7 @@ groups:
         "AlarmName": "api-high-latency",
         "MetricName": "TargetResponseTime",
         "Namespace": "AWS/ApplicationELB",
-        "Statistic": "p99",
+        "ExtendedStatistic": "p99",
         "Period": 300,
         "EvaluationPeriods": 3,
         "Threshold": 0.5,

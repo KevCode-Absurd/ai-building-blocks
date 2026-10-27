@@ -10,6 +10,8 @@ explain: |
   Find out if what you plan to build is worth building, before you write any code. You get the biggest risks named and the smallest test to try first.
 
   The skill restates your idea in one sentence: who it is for, the job they need done and what they do now. It then checks the main risks: real demand, fit with their workflow, willingness to switch, how people will find it, pricing, data access and running costs. It prefers specific doubts to vague brainstorming. It proposes one small test, like a buyer chat, a landing page or a manual version. If risk is low it moves on to build with the assumptions written down. If high, it says stop.
+
+  Licence: the licence file in this folder (LICENSE-CONTENT) says CC BY 4.0, and that is the licence we apply to this copy. The skill's own header says MIT, from its original author, bin1874. Both allow reuse with credit, so keep the credit.
 when:
   - You are about to ask an AI to build an app and are unsure anyone wants it.
   - A feature sounds good but you cannot say why users would switch.
@@ -31,10 +33,18 @@ you_get:
   - A continue or stop call
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. It needs no code, files or paid tools.
+  - Gather first: who the buyer is, what they do today to solve the problem, a rough idea of what they would pay, and how you would reach them.
   - Describe what you plan to build and who it is for. Add what they use today and how you will reach them, if you know.
   - Read the risks it names. Check that each one is a real doubt about your idea, not a generic list.
   - Run the smallest test it suggests before you build anything.
   - If it says stop, do the smaller test first. If it says continue, keep the written assumptions and start building.
+  - Next, plan the first version with the SaaS MVP roadmap planner, or plan the buyer chats with the User research planner.
+next: [saas-mvp-roadmap-planner, user-research-planner]
+output_shape: |
+  BUILD BET     <one sentence: who, the job, what they use today>
+  MAIN RISKS    <the top three, ranked by how much each could sink the build>
+  SMALLEST TEST <one cheap step to run before building>
+  CALL          <continue with assumptions written down, or stop and run a smaller test>
 output_sample:
   input:
     - What you plan to build

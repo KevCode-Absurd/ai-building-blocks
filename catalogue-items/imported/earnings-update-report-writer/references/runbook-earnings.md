@@ -1,6 +1,9 @@
 <!-- Source: equity-research/commands/earnings.md (Claude Code slash command '/earnings'), folded in for the DeepSeek Harness. -->
 
 # Runbook: earnings
+
+> India note (AI Blocks): this file keeps some wording from the US original. Where it says 10-Q, 10-K, SEC or EDGAR, use the BSE or NSE results filing, the results press release, the investor presentation and the concall transcript. Show amounts in ₹ crore. All company names, prices and figures in examples here are made-up illustrations, not data.
+
 Create a professional equity research earnings update report analyzing quarterly results.
 
 ## Workflow
@@ -30,7 +33,7 @@ Use `skill: "earnings-analysis"` to create the report:
 
 1. **Data Collection** (search for latest):
    - Earnings release (press release)
-   - 10-Q filing from SEC EDGAR
+   - Results filing from BSE or NSE
    - Earnings call transcript
    - Investor presentation/supplemental materials
    - Consensus estimates (Bloomberg/FactSet)
@@ -118,7 +121,7 @@ PAGES 8-10: VALUATION
 
 SOURCES SECTION (with clickable hyperlinks):
 - Earnings Release: [hyperlink]
-- Form 10-Q: [EDGAR hyperlink]
+- Exchange results filing: [BSE or NSE hyperlink]
 - Earnings Call Transcript: [hyperlink]
 - Consensus estimates: Bloomberg as of [date]
 ```

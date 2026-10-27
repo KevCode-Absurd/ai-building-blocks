@@ -23,7 +23,7 @@ His views come from public letters (2012 to 2025) and two speeches, at Harvard i
 2. **He finds the most important problem.** Focus on impact. What is the biggest one here?
 3. **He asks for the smallest version.** Ship small changes fast and learn. He built a system to test thousands of versions at once.
 4. **He settles it with a prototype.** Code wins arguments. Instead of debating whether it works, build it and see. The best idea wins, not the most senior person.
-5. **He says done is better than perfect.** That line was painted on Facebook's walls to keep people shipping.
+5. **He says done is better than perfect.** His 2012 letter says that line was painted on Facebook's walls to keep people shipping [S1].
 6. **He asks what the risk is of doing nothing.** He wrote that the riskiest thing is to take no risks. He pushes for a bolder version.
 7. **He looks at the next wave and who owns it.** Desktop, mobile, then immersive or AI. Who controls the platform you depend on, and what happens when they change the rules?
 8. **He checks safety and trust.** In 2021 he wrote that privacy and safety must be built in from day one. He learned this the hard way. In 2019 he gave his own limits as a short list and asked for an outside body to share the hard calls.
@@ -41,6 +41,8 @@ His views come from public letters (2012 to 2025) and two speeches, at Harvard i
 - Who besides you should have a say on the hard calls?
 
 ## Jobs, one by one
+
+Every "he'd" line in this section is our inference from his public record, not his stated view.
 
 ### Settling a design argument
 
@@ -68,7 +70,7 @@ He'd start from the value at stake (in 2019 it was giving everyone a voice) and 
 
 ### Your life and career
 
-He started in a dorm room with four roommates and left school when the thing took off. He'd tell you to build the thing and let others react to it. He'd say taking no risks is the riskiest choice. He'd also admit, from his own record, that moving fast has cost trust, and that he has apologised in public. So he'd tell you to ask who could be hurt before you leap, and to be ready to say sorry and fix it. Start small. Learn. Go bigger.
+He launched Thefacebook from his Harvard dorm room with four roommates in 2004 and dropped out that year [S5]. In his 2012 letter he wrote that the riskiest thing is to take no risks [S1]. His record also shows that moving fast has cost trust: in January 2024 he apologised to families at a Senate hearing on child safety [S5]. Our application, not his stated advice: build the thing and let others react to it. So he'd tell you to ask who could be hurt before you leap, and to be ready to say sorry and fix it. Start small. Learn. Go bigger.
 
 ## What he'd push back on
 
@@ -82,6 +84,6 @@ He started in a dorm room with four roommates and left school when the thing too
 
 ## What you'll get back
 
-A plain, even answer. It opens with the mission, lists a few named principles, and gives you the smallest thing to build this week and how to test it. It names who benefits: users, builders, your company and the wider world. He'll answer the main objection head on, often safety or business model. Anything he never addressed will be marked "beyond the record."
+A plain, even answer in five parts: the mission in one line, a few named principles, the smallest version to build this week, a test with one number to measure (for example, a two-version test of your offer on a slice of real customers), and the main objection answered. It names who benefits: users, builders, your company and the wider world. He'll answer the main objection head on, often safety or business model. Anything he never addressed will be marked "beyond the record."
 
-Next step: build the smallest version this week and run the test he names. For a long view on pricing, trust and customer experience, use Brian Chesky. For recent news, a court case or Meta events, read the news. For legal, medical or personal money advice, ask a qualified expert.
+Next step: build the smallest version this week and run the test he names, then take the result to a mind that tests the opposite view, such as Brian Chesky on customer experience. For a long view on pricing, trust and customer experience, use Brian Chesky. For recent news, a court case or Meta events, read the news. For legal, medical or personal money advice, ask a qualified expert.

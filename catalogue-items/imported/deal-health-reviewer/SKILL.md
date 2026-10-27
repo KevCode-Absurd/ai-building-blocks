@@ -30,11 +30,13 @@ next.
 
 ## Step 1 - Ground
 
-Check which tools are connected (plus any org facts the user or the project instructions already gave). Ground pipeline stage definitions + exit
-criteria, the qualification framework (BANT/MEDDIC/whatever the org
-runs), and common objections from the live crm schema and org context
-(inferred from what is connected or uploaded; if the answer depends on a fact no one has given, ask ONE question, use the answer for this conversation and suggest adding it to the project instructions; otherwise use a clearly labeled default and continue). Link the opportunity and cite the
-source behind every signal.
+Check which tools are connected. Then get these three things:
+
+- The stage rules (what must be true to leave each stage).
+- The qualification method (BANT, MEDDIC or the org's own).
+- The common objections.
+
+Take them from the live CRM or what the user pasted. If one is missing, ask ONE question, use the answer for this conversation, and suggest adding it to the project instructions. If the user has none, use a clearly labelled default and continue. Link the opportunity and cite the source behind every signal.
 
 ## Step 2 - Gather deal signals
 
@@ -55,7 +57,7 @@ not "budget seems fine") citing the field, transcript line, or email.
 
 ## Step 4 - Signal-adjusted probability
 
-Start from the crm probability (or stage default). Adjust:
+Start from the crm probability (or stage default). Adjust using these default weights. They are not tested figures. Replace them with the org's own win-loss figures when those exist, and say in the output that defaults were used:
 
 | Signal | Adjustment |
 |---|---|
@@ -72,7 +74,7 @@ Start from the crm probability (or stage default). Adjust:
 | Open pricing gap between the customer's ask and our stated position (email, transcript or doc evidence) | -10% |
 | Open dispute, held invoice or SLA breach on the account | -10% |
 
-Floor 5%, ceiling 95%. Show the math. Flag a binding contract date (notice or renewal deadline) inside 45 days even when the close date is later. Weights flex to the org's
+Floor 5%, ceiling 95%. Show the math, and label the result "signal-adjusted with default weights, not tested" unless the user gave their own win data. Flag a binding contract date (notice or renewal deadline) inside 45 days even when the close date is later. Weights flex to the org's
 historical win patterns when win-loss data exists.
 
 ## Step 5 - Stage reality check
@@ -90,9 +92,7 @@ qualification table with evidence; activity timeline with last-touch
 gap; strengths; risks (each with evidence and mitigation); what's
 missing; recommended next actions (highest-leverage first, who/what/by
 when); and suggested crm updates (stage if mismatched, next step, close
-date if evidence says slip) - the ones the user accepts are applied via
-`update-opportunity`, or manually when writes are not available. This skill itself
-only reads.
+date if evidence says slip). This skill itself only reads. Give the suggested updates as paste-ready text, and the user applies the ones they accept in their own CRM (or with the CRM deal updater item in this library).
 
 ## How it adapts (guidance for Claude; never show these labels to the user)
 
@@ -101,5 +101,5 @@ tiers:
   files-only:   review from book row + pasted transcript/notes; signal
                 adjustments limited to visible signals, noted
   read-only:    live crm/email/transcripts/chat evidence
-  gated-writes: none - suggestions hand off to update-opportunity
+  gated-writes: none - suggestions are paste-ready text for the user to apply
 ```

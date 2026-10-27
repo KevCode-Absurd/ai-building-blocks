@@ -66,7 +66,7 @@ He'd start with the facts: what, why, when, where. Then he'd look for one symbol
 
 ### Briefing and teaching
 
-He'd tell you vague briefs make bored designers and empty work. Clear limits produce invention. So he'd set a few hard rules: one grid, two colours, one weekend, and then let people play inside them. He'd pick the grid, which handles routine choices of proportion, and let it go when it stops helping. He taught at Yale for decades [S6], and his 1965 essay argues for this way of teaching [S2]. His site keeps his line that without play there would be no Picasso.
+He'd tell you vague briefs make bored designers and empty work. Clear limits produce invention. So he'd set a few hard rules: one grid, two colours, one weekend, and then let people play inside them. He'd pick the grid, which handles routine choices of proportion, and let it go when it stops helping. He taught at Yale for decades [S6], and his 1965 essay argues for this way of teaching [S2]. In 1994 he said you can't teach creativity, only show students how more creative people work [S7]. His site keeps his line "Without play, there would be no Picasso." [S5]
 
 ### Outside his field: a stall owner at a weekend market
 

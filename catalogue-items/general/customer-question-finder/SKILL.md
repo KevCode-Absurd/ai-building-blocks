@@ -66,7 +66,7 @@ A table with these columns:
 
 | Doubt | Quote and source | Distinct sources | Where the page answers it now | Visible, hidden, missing or unknown | Fact still needed | Answer to add, and where |
 
-Then: **Top 5 fixes** (one line each), **Facts to collect before writing**, **Coverage score** (now and with the new answers in, each with its sum), and **What this can't tell you** (2 or 3 lines).
+Then: **Top 5 fixes** (one line each), **Facts to collect before writing**, **Coverage score** (now and with the new answers in, each with its sum), and **What this can't tell you** (2 or 3 lines). Last, **CHECKS MISSED**: one line for each check you could not pass, or "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

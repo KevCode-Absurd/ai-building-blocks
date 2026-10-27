@@ -17,7 +17,8 @@ when:
   - A new tech lead needs the architecture fast.
 not_for:
   - "You only need to fix one line in the README: edit the README by hand."
-  - "Your repository is private or unreadable to your AI: ask a current teammate to write the guide."
+  - "Your repository is private or unreadable to your AI, has no runnable setup, or holds code you may not share: ask a current teammate to write the guide."
+  - "You only want to check that a README works on a fresh machine: use the README first-run tester."
   - "You need a deep design review of the code: ask a senior engineer to review it."
 you_give:
   - The path to your repository
@@ -29,14 +30,16 @@ you_get:
   - Setup and common task steps
   - A debugging and contribution checklist
 how_to_use:
+  - "Have ready: the path to your repo, who the guide is for, and a clean machine with Python 3 to test the setup steps on."
   - Open an AI that can run code and read files. Python must be installed on your computer.
+  - Do not give your AI .env files, key files or other files that hold passwords. Keep them out of the folder you share. The guide must leave out any values found in them.
   - Give it this skill and the path to your repository. The AI reads your code, so check your company policy first if the code is confidential. The template files and the scan script come with the skill folder. If you paste only the text, also paste references/onboarding-template.md.
   - "Say who the guide is for: a junior, a senior, a tech lead or a contractor."
   - Let it scan the project, then read the guide it writes from the template. The guide follows the template order: what the project is, quick start, architecture, key files, common developer tasks, debugging, contribution rules and notes for each reader. The scan results fill the stack and key file parts.
   - Check the guide for secrets and private details copied from config files, such as passwords, keys, internal hostnames and customer data. Remove them before you share it.
   - The AI writes the setup commands from code it has only read, so do not trust them yet. Ask a new hire to run the setup steps on a clean machine and fix anything that fails.
-  - Send the guide to your tech lead for review before you share it.
-  - "The template has these parts: what the project is, quick start, architecture, key files, common developer tasks and a debugging guide."
+  - Send the guide to your tech lead for review before you share it. Then ask a new hire to follow it. The README first-run tester checks the quick start the same way.
+  - "The guide is a markdown file that follows the template: what the project is, quick start, architecture, key files, common developer tasks, a debugging guide and a contribution checklist."
 next: [readme-first-run-tester]
 output_sample:
   input:

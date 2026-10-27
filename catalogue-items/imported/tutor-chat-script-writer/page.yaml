@@ -31,10 +31,10 @@ you_get:
   - A closing check for understanding
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
-  - Paste the prompt from SKILL.md into a new chat.
+  - Paste the prompt from SKILL.md into a new chat. It has {{placeholders}} in curly brackets. Replace each one with your own text, and delete the optional lines you do not need, before you send it.
   - "Fill in the two required parts: what students should learn, and where they get stuck. Add level and subject if you know them."
   - Run it and read the Example Dialogue first. Check that each wrong turn gets a reply that helps, not just the answer.
-  - Fix any reply that is too easy or too hard for your students, then use the script in your chatbot or lesson.
+  - Fix any reply that is too easy or too hard for your students. Then test the script with a few real student answers before you use it in your chatbot or lesson. To go further, pair it with the Step-by-step hint writer for the hint ladder, or the Self-explanation question writer for questions that ask students to explain.
 output_sample:
   input:
     - The skill or idea students should master

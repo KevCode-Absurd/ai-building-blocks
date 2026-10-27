@@ -62,6 +62,8 @@ python3 scripts/calculator.py '{"selling_price": [PRICE], "ad_spend_ratio": [AD 
 
 ## Output Example
 
+Show the rows in this order: product cost, fulfillment, card fee, advertising, returns and other costs, then net profit. The rows must add up to the net profit. After the table, add one line for max affordable CAC and one for LTV/CAC. Write "not enough data" for LTV/CAC if the person gave no repeat rate.
+
 ```
 💰 **Shopify/DTC Profit Analysis Report**
 

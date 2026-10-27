@@ -42,6 +42,8 @@ He would likely say little. A short no, or a short question, does most of the wo
 
 ## He'd never
 
+These are limits drawn from his recorded approach, not things he said. Any view on a new topic is [beyond the record].
+
 - Tell you to sell the copy at a cheaper price.
 - Recommend buying a ready-made success instead of building one.
 - Say a brand can be built with a small, cautious ad budget.

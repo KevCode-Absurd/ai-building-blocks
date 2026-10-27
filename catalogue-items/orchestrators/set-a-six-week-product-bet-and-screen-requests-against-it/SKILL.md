@@ -33,7 +33,7 @@ How to start:
 
 ## What you need
 
-This is a product job. Ignore any buyer brief mentioned above. This workflow needs your plan and your request list.
+This is a product job. No buyer brief is used. The generic "Document" line above means your request list here, and the generic "Your question" line does not apply. This workflow needs your plan and your request list. Do not ask for anything else before step 1.
 
 - **Your product plan** (required): the goal and who it is for.
 - **Your team size and any fixed date** (required): the bet is sized to them.
@@ -58,9 +58,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Next steps to offer
 
-Ignore the suggestions in "After this" that do not fit a product bet. Offer these instead:
+Use these in place of the generic "After this" list above. Offer them in one short question:
+- Review the "later" and "not now" pile every six weeks. Run step 3 again on that pile against the next bet.
 - If the plan is set and you must hit a launch date, use [Launch a smaller product on the date you set](https://useaiblocks.com/workflows/smaller-product-launch).
-- To turn the bet into a task list for a sprint, use the Sprint Prioritizer agent.
+- To turn the bet into a task list for a sprint, use the [Sprint prioritizer agent](https://useaiblocks.com/agents/agency-product-sprint-prioritizer).
+
+The three skills named in the steps come in the downloaded pack. Keep them in the same folder as this file before you start. If one is missing, fetch it from https://useaiblocks.com/skills/<slug> or ask for the file.
 
 ## What you hand back
 3 step files and the summary. The last file holds the rulings and the replies.

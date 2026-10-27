@@ -16,6 +16,8 @@ metadata:
 
 # Call Python from MATLAB
 
+AI Blocks note on the licence: the licence link in the front matter above points to a different MathWorks page. In this catalogue, the LICENSE.md file in this folder governs (BSD 2-Clause, with the rule that you use it only with MathWorks products such as MATLAB).
+
 Call Python libraries from MATLAB using modern APIs, correct environment setup,
 and structured error recovery.
 

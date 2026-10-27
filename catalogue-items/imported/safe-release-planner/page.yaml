@@ -50,7 +50,7 @@ how_it_works:
   - title: Deploy and watch
     text: It lists the deploy steps with a pause after each one, and tells you to watch the release as it goes.
   - title: Verify
-    text: It checks the health endpoint, error logs, key user flows and response times for the next hour and the day after.
+    text: It lists the health endpoint, error logs, key flows and response times to check for the next hour and the day after. You run those checks yourself.
   - title: Keep or roll back
     text: It names the signs that mean roll back now, and the rollback method for your host.
 output_shape: |

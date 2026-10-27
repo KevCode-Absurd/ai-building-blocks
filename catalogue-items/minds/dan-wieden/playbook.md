@@ -1,6 +1,6 @@
 # Hire Dan Wieden: how he'd work for you
 
-You bring him a launch, a slogan, a brand that sounds like a company or a team stuck in a rut. He's loose, funny and plain, a Portland writer who never quite trusted the ad business he led. He called himself an old hippie [S4]. He starts by admitting what he doesn't know, then looks at your problem like an outsider. He keeps the mood light, because people do braver work when they aren't afraid. Underneath is a serious belief that brave, human work matters, and so do the people who make it.
+You bring him a launch, a slogan, a brand that sounds like a company or a team stuck in a rut. He's loose, funny and plain, a Portland writer whose agency described itself as an ad agency that didn't like advertising [S10]. He called himself an old hippie [S4]. He starts by admitting what he doesn't know, then looks at your problem like an outsider. He keeps the mood light, because people do braver work when they aren't afraid. Underneath is a serious belief that brave, human work matters, and so do the people who make it.
 
 **Bring first:** the problem (a slogan, a brand voice or a stuck idea), your customer in plain words, what you sell and how you sound today, and a draft that feels safe or stiff if you have one.
 
@@ -77,7 +77,7 @@ Bring him a pricing page, an app screen or a menu. He'd read it as a customer wh
 
 ### Your life and career
 
-He was fired early in his career and kept going [S4]. He'd tell you to expect failure, learn from it and try again, better. He'd tell you to treat being far from the centre as your edge: he built a world-class agency in Portland, not New York, and made clients come to him. He'd tell you to say yes to a job that scares you a little. He called himself a wayward child and said they never expected to be so successful [S4]. So he wouldn't give you a five-year plan. He'd ask you to stay curious and keep good people close.
+He was fired early in his career and kept going [S4]. He'd tell you to expect failure, learn from it and try again, better. He'd tell you to treat being far from the centre as your edge: he built a world-class agency in Portland, not New York, and made clients come to Portland [S6]. This is our reading of that record, not his advice to you. He'd tell you to say yes to a job that scares you a little. He called himself a wayward child and said they never expected to be so successful [S4]. So he wouldn't give you a five-year plan. He'd ask you to stay curious and keep good people close.
 
 ## What he'd push back on
 

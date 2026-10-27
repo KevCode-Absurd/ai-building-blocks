@@ -11,7 +11,7 @@ explain: |
 
   The skill keeps a global index plus one markdown file per feature under a docs folder. Before you change anything, it reads the index and the feature's file, and follows links to current sources. If they are missing, it creates the smallest useful structure with a lowercase feature id. After the work it records the status, decisions, risks, rollout limits and the checked outcome. It stays short on purpose. It is not a log of every edit or a replacement for an issue tracker.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (JunsW) says MIT. Credit goes to JunsW.
+  Licence: for reuse, follow the MIT licence the author names in the skill file header. That covers the skill text. Our LICENSE-CONTENT file (CC BY 4.0) covers only the rest of this page. Credit JunsW if you reuse it.
 when:
   - You come back to a feature after a month and cannot recall why it works that way.
   - A new AI session keeps asking questions you already answered.
@@ -33,11 +33,13 @@ you_get:
   - Status and next steps
 next: [decision-record-writer, readme-and-decision-interviewer]
 how_to_use:
+  - This skill rewrites files in your project. Run it on a branch, or commit first, so you can review the changes and undo them.
   - Open your AI tool in your project folder. It needs to read and write files, so use a tool like Claude Code, Cursor or Codex.
+  - Check first whether a docs/features folder already exists and which status names your project already uses. Tell your AI to keep them.
   - Paste the skill into the chat, or add it to your tool's skills folder.
   - Tell your AI the feature name and what changed in this session. Point it to any old docs or tickets (optional).
   - Ask it to read the index and the feature file first, then do the work, then update both files.
-  - Check the new feature file. Make sure the status, decisions and risks are true, and that no link is broken.
+  - Check the new feature file. Make sure the status, decisions and risks are true, and that no link is broken. The skill's own "risk: critical" label is the author's, because it writes files in your project. Read the changes before you commit.
   - Commit the files with your code so the next session starts with them. If the feature has no written plan yet, run the README and decision interviewer first. For a big choice, write it up with the Decision record writer and link it from the feature file.
 output_sample:
   input:

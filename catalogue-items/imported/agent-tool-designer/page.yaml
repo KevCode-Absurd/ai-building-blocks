@@ -35,7 +35,7 @@ how_to_use:
   - Ask your AI to review the tool set and cut or merge tools that overlap. Ask for the result as a short table of tools (keep, merge or cut), then a description block for each tool, then a list of error messages.
   - Read each new description. Check that a person could tell which tool fits which task.
   - Test the new tools with real requests to your agent. Fix any call that still goes wrong.
-  - Keep a log of failing calls. Run the skill again with that log, or check your agent with the agent system tester.
+  - Keep a log of failing calls. Run the revised tools against a set of real requests, then run the skill again with that log, or check your agent with the agent system tester.
 output_sample:
   input:
     - The tools your agent has now, or the jobs it must do

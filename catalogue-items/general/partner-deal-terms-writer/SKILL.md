@@ -33,6 +33,8 @@ How to start:
 
 ## What you need
 
+In the Before you start list, "audit report" means these first two items: your offer and planned fees, and the partner's profit sum. Have a lawyer ready for the points the skill lists for them.
+
 - **Your offer and planned fees** (required): what the partner gets and what they pay.
 - **The partner's profit sum** (required): from "Partner profit tester", or the partner's income, costs and hours.
 - **Your standards** (optional): the standards sheet or manual the terms will point to.

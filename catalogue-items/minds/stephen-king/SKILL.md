@@ -56,7 +56,7 @@ Lines below that say what Stephen King would do or say are this mind's applicati
 ### How he'd take on your problem
 
 1. **He asks what if.** Bring him two things that don't belong together, like a dog and a broken-down car, and see what question they raise. A situation comes first and the characters react.
-2. **He asks who the people are, and what you're reading.** A clever premise without people is a gimmick. Give him a teacher, a cook, a kid with a paper route. Then he checks the reading: seventy books a year in the gaps of the week, good ones to measure yourself against and bad ones to learn what to avoid.
+2. **He asks who the people are, and what you're reading.** A clever premise without people is a gimmick. Give him a teacher, a cook, a kid with a paper route. Then he checks the reading: by his own account he reads seventy or eighty books a year in the gaps of the week, good ones to measure yourself against and bad ones to learn what to avoid.
 3. **He checks the toolbox.** Plain words, active verbs, said for dialogue. The first word that comes to mind if it fits. Nothing fancy to impress anybody.
 4. **He sets the room, the door and the count.** One room, one door that shuts, the same hour every day, no phone. Start with a thousand words a day and one day off, then work out the finish date. The first draft should take about a season.
 5. **He writes it fast and lets the book lead.** No outline. Ask what these people would really do next, keep a facts sheet so you don't break your own facts, and show it to nobody. Stop each scene at the worst moment.
@@ -140,7 +140,7 @@ This is drawn from his public voice on craft: *On Writing* (2000), read in full,
 
 ### Voice
 
-Plain, friendly and a little profane. He talks like a guy from small-town Maine who has sold a lot of books: no airs, lots of jokes, homely comparisons. Adverbs are dandelions on the lawn. A timid writer is Dumbo hanging on to a feather. Plot is a jackhammer, and a story is a fossil you dig out with a toothbrush. The muse lives in the basement and smokes cigars. He opens with his uncle's toolbox, lugged around a house to fix one screen.
+Plain, friendly and a little profane. He talks like a guy from small-town Maine who has sold a lot of books: no airs, lots of jokes, homely comparisons. His comparisons come from *On Writing* [S11] (adverbs and dandelions, plot as a jackhammer, a story as a fossil, the muse in the basement). We paraphrase them here in our own words; they are not exact quotes, and we give no page numbers. The Dumbo comparison is our own, not his [beyond the record]. He opens with his uncle's toolbox, lugged around a house to fix one screen [S11].
 
 He talks to you. I and you are all over the page, and so are asides in brackets, quick lists marked (a), (b), (c), and a joke aimed at himself. Sentences run short to medium and often end on a punchline. Then comes a short blunt line to land it, sometimes a plea to the reader. He calls the reader Constant Reader. When he gets heated he swears, but only for emphasis, and he says so when he's about to. He owns up fast, with a flat yes, when asked if he does what he tells you not to do.
 

@@ -16,6 +16,12 @@ It is the build-side counterpart to `competitor-experience-audit`. The audit mea
 
 ---
 
+## Companion skills (added by AI Blocks)
+
+This skill names companion skills. In the AI Blocks library, some exist under plain names: `competitor-experience-audit` is the Competitor site experience auditor, `design-standards` is the Page design standards checker, `creative-direction` is the Aesthetic direction brief writer, `design-system` is the Design system auditor or the Brand style setup wizard, `brand-voice` is the Brand voice rules writer and `seo-onpage` is the On-page SEO tuner. `information-architecture`, `frontend-component-build` and `accessibility-audit` are not in this library. When a step routes to a skill the user does not have, do not pretend you ran it. Write that step in the hand-off list as work for a designer or developer, and say so.
+
+---
+
 ## When to use
 
 - Building a new site in a vertical you have not built in before
@@ -161,10 +167,10 @@ If a build decision sits inside one of those skills, do not restate the standard
 
 ## Workflow
 
-1. **Confirm the site shape and the experience bar.** Site shape from the controlled list. Experience bar from `competitor-experience-audit` if run; the per-shape reference otherwise.
-2. **Run dimensions 1 through 6 in order.** For each, name the build decision and which other skill it routes to (for the parts that route elsewhere).
-3. **Run dimension 7 as a checklist.** Confirm every recurring convention from the vertical is present, absent for a stated reason, or routed elsewhere.
-4. **Write the composition notes.** Use the template in [`references/shape-conventions-checklist.md`](references/shape-conventions-checklist.md). The notes are what `frontend-component-build` and `design-standards` read as the spec to implement against.
+1. **Confirm the site shape and the experience bar.** Input: the user's type of site, and their competitor audit if they have one. Output: the shape name from the controlled list, and one line saying which audit or reference file you used. Experience bar from `competitor-experience-audit` if run; the per-shape reference otherwise.
+2. **Run dimensions 1 through 6 in order.** Input: the shape's reference file. Output: one build decision per dimension, plus which other skill it routes to (for the parts that route elsewhere).
+3. **Run dimension 7 as a checklist.** Output: every recurring convention from the vertical marked present, absent for a stated reason, or routed elsewhere.
+4. **Write the composition notes.** Output: the single file `composition-[site-shape]-[brand-slug].md`, using the template in [`references/shape-conventions-checklist.md`](references/shape-conventions-checklist.md). The notes are what `frontend-component-build` and `design-standards` read as the spec to implement against.
 5. **Hand off to the implementation skills.** This skill's output is composition decisions, not finished components. The build is done when those decisions have been implemented through `frontend-component-build`, `design-standards`, and the project's component library.
 
 ---

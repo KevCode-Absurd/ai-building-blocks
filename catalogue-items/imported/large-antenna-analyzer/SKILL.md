@@ -53,9 +53,9 @@ If an antenna was designed in an earlier step, use that MATLAB code as the excit
 
 ## When NOT to Use
 
-- Designing standalone antenna elements or arrays (no platform) — use `matlab-design-antenna`
-- Optimizing antenna dimensions with SADEA/TR-SADEA — use `matlab-design-antenna`
-- Impedance matching, measured antenna objects, RF propagation, or SAR — use `matlab-integrate-antenna`
+- Designing standalone antenna elements or arrays (no platform) — use `matlab-design-antenna` (the Antenna designer item in this library)
+- Optimizing antenna dimensions with SADEA/TR-SADEA — use `matlab-design-antenna` (the Antenna designer item)
+- Impedance matching, measured antenna objects, RF propagation, or SAR — use `matlab-integrate-antenna` (the Antenna matching helper item in this library)
 - A flat `reflector` backing a dipole — use `matlab-design-antenna` (catalog element)
 
 ## Must-Follow Rules

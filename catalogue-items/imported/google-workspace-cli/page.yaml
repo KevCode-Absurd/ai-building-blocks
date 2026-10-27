@@ -9,7 +9,9 @@ subhead: "Tell your AI what to do in Gmail, Drive, Sheets, Calendar, Docs, Chat 
 explain: |
   Some Google Workspace jobs are slow by hand. Moving 200 Drive files, searching a year of email, or checking who has outside access to your documents all take many clicks. This Google Workspace command line helper turns each job into commands that your AI runs for you.
 
-  It uses gws, an open source tool from the Google Workspace team that builds its commands from Google's own list of APIs. The tool is still before version 1.0, and its commands can change. So the skill checks a command's real options with a help call before it uses it, and does not run a command it has not checked.
+  It uses gws, an open source tool from the Google Workspace team that builds its commands from Google's own list of APIs. The tool is still before version 1.0, and its commands can change. So the skill checks a command's real options with a help call before it uses it, and does not run a command it has not checked. Where a command in the skill shows a <FLAGS FROM --help> marker, your AI fills it in from that help call.
+
+  Licence: the gws tool is Apache-2.0. The text and scripts in this skill are MIT.
 
   The skill adds five small Python helpers. One checks that gws is set up and signed in. One guides sign-in. One lists ready-made recipes. One runs a security audit. One turns raw results into tables.
 when:
@@ -25,6 +27,7 @@ not_for:
 you_give:
   - What you want done, in plain words, such as "list my 50 biggest Drive files"
   - A Google account to sign in with
+  - A Google Cloud project and an OAuth client for the first sign-in. The tool is free, but this setup takes time in the Google Cloud Console
   - Node 18 or newer installed on your computer
   - Admin rights, for admin tasks and the security audit (optional)
   - The names of the people, files or sheets involved (optional)
@@ -37,7 +40,8 @@ you_get:
 how_to_use:
   - Use an AI that can run commands on your computer, such as Claude Code or Codex. Install Node 18 or newer first.
   - Say what you want done and in which Google service. Name the people, files or sheets you mean.
-  - Let the AI install gws and run the doctor check. Then sign in with only the permissions your job needs, using gws auth login on your own computer. Do not export your credentials to a file unless the machine cannot sign in itself.
+  - The command examples in the skill were not run against a specific gws release. Your AI must check each command with a help call before it runs it. It must never run one that still has a <FLAGS FROM --help> marker in it.
+  - Let the AI install gws and run the doctor check. Then sign in with only the permissions your job needs, using gws auth login on your own computer. Do not export your credentials to a file unless the machine cannot open a browser to sign in. If you must, keep the file out of shared drives, synced folders and git, and delete it when the job is done.
   - Start with a read-only job, such as a list. Check the table it shows before you ask for any change.
   - For anything that sends, shares, moves or deletes, ask for a dry run first and read it. Say yes only when it matches what you meant.
   - If the job will repeat, ask for a saved script and run it on a small test first.

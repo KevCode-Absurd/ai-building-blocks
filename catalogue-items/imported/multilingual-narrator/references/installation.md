@@ -103,7 +103,7 @@ elevenlabs text-to-speech convert --voice-id JBFqnCBsd6RMkjVDRZzb \
 
 ## Getting an API Key
 
-Run `npx -y @elevenlabs/cli@latest onboard init` from the app's folder and follow what it prints: it signs the user in and stores a key for the project. For an existing key that stopped working or was issued by an administrator, use the `setup-api-key` skill. To do it by hand instead:
+Run `npx -y @elevenlabs/cli@[VERSION] onboard init` from the app's folder (replace [VERSION] with a version number you checked on npmjs.com/package/@elevenlabs/cli; do not use `latest`) and follow what it prints: it signs the user in and stores a key for the project. For an existing key that stopped working or was issued by an administrator, use the `setup-api-key` skill. To do it by hand instead:
 
 1. Sign up at [elevenlabs.io](https://elevenlabs.io)
 2. Go to [API Keys](https://elevenlabs.io/app/settings/api-keys)

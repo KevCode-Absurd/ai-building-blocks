@@ -21,6 +21,7 @@ not_for:
   - You want to forecast future cash. Use a cash-flow forecast, because this bridge only looks back at past periods.
   - You need to decide if revenue was recognized correctly. Ask your accountant or auditor, because this tool does not test contract recognition.
   - "You are tracking customer advances and deferred revenue, not unbilled revenue: use the Contract-liability release bridge instead."
+  - "You want a trailing-year flow built from annual and year-to-date statements: use the Trailing-period financial bridge instead."
 you_give:
   - Contract-asset and receivable opening/closing balances, new unbilled revenue, direct invoices and all noncash adjustments.
   - "The period end, plus the currency and scale used for the contract asset to cash bridge."
@@ -58,19 +59,20 @@ output_sample:
     - name: "MISSING: and CHECKS MISSED"
       contains: Unresolved inputs and any check that failed or could not run, or the word none.
 how_it_works:
-  - title: 1. Read the conditional-payment terms and distinguish contract assets from unconditional receivables
-    text: Read the conditional-payment terms and distinguish contract assets from unconditional receivables.
-  - title: 2. Reconcile opening contract assets plus new unbilled revenue less closing contract assets to transfers into receivables, adjusting all noncash movements separately
-    text: Reconcile opening contract assets plus new unbilled revenue less closing contract assets to transfers into receivables, adjusting all noncash movements separately.
-  - title: 3. Add direct invoices to transfers and roll receivables from opening to closing to infer collections; reconcile write-offs, FX, factoring and tax differences before accepting the result
-    text: Add direct invoices to transfers and roll receivables from opening to closing to infer collections; reconcile write-offs, FX, factoring and tax differences before accepting the result.
+  - title: Separate contract assets
+    text: Tell contract assets from receivables you can already bill.
+  - title: Find what moved to invoices
+    text: Opening contract assets plus new unbilled revenue, less closing, less noncash items.
+  - title: Infer collections
+    text: Roll receivables forward with direct invoices. Show write-offs, currency and tax apart.
 output_shape: |-
   A contract-asset-to-billings-to-collections schedule with explicit completeness gates.
   Scope and dated sources
   Inputs and assumptions
   Model calculations and reconciliations
   Actual file verification
-  MISSING: and CHECKS MISSED
+  MISSING:
+  CHECKS MISSED
 tweaks:
   - what: "Period end"
     how: "Take the period end from the opening and closing balances and the billing records. Use one currency and scale on every line."

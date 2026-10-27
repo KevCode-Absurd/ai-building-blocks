@@ -21,7 +21,7 @@ you_give:
   - Your Google Ads customer ID
   - The report dates and a comparison period
   - Your account timezone and currency
-  - A Google Ads export, or read-only API access
+  - A Google Ads export (a CSV from the reports page), or read-only API access. API access needs a developer token, OAuth credentials and read permission on the account.
   - Your code folder and what the report should show
   - Your conversion actions and attribution rules (optional)
 you_get:
@@ -37,6 +37,7 @@ how_to_use:
   - Ask for the coding brief and check that the dates, currency and conversion actions match your account.
   - Fix any gap it lists, then hand the brief to your developer or your coding AI.
   - Run the tests it proposes in your own project. The prompt does not run code or call Google Ads.
+  - To get an export, open Reports in Google Ads, build a table with the columns you need, then download it as CSV. The API route needs more setup, so start with the export.
   - No code yet? Paste the Google Ads export and a short description of the report, and ask for a brief that starts with the data checks.
 output_sample:
   input:

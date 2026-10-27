@@ -46,6 +46,8 @@ A cybersecurity incident is reportable if it results in — or is reasonably lik
 
 ### CISA Reporting Channels (24/7)
 
+**Confirm these contacts on cisa.gov before you rely on them.** They are the author's, not checked by AI Blocks, and may be out of date.
+
 | Channel | Contact |
 |---------|---------|
 | **Phone** | 1-888-282-0870 (CISA 24/7 Operations Center) |

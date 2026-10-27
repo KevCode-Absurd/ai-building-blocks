@@ -10,6 +10,8 @@ license: MIT
 license_source: https://github.com/expo/skills/blob/main/LICENSE
 ---
 
+> Licence note (AI Blocks): this copy of the skill text is covered by CC BY 4.0, as the LICENSE-CONTENT file says. The "MIT" in the header above is the original author's claim. Keep the credit to Expo and sickn33.
+
 ## When to Use
 
 Use this skill when you need guidelines for upgrading Expo SDK versions and fixing dependency issues.
@@ -39,7 +41,8 @@ npx expo install expo@next --fix  # install beta
 1. Upgrade Expo and dependencies
 
 ```bash
-npx expo install expo@latest
+# Use the target version the user gave you, not "latest"
+npx expo install expo@<TARGET VERSION>
 npx expo install --fix
 ```
 

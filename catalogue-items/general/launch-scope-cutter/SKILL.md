@@ -5,7 +5,7 @@ description: Use when a launch is slipping, the plan has more items than the tea
 
 # Launch scope cutter
 
-When a launch runs late, people move the date or add money. Both cost something real. Scope is the one thing that can move without harm, because a first customer needs a working core, not every idea. This skill fixes the date and budget, cuts the list down to the core and parks the rest. It does not decide what your product is; you confirm the core sentence. To screen new requests afterwards, use "Feature request screener".
+When a launch runs late, people move the date or add money. Both cost something real. Scope is the one thing that can move without harm, because a first customer needs a working core, not every idea. This skill fixes the date and budget, cuts the list down to the core and parks the rest. It does not decide what your product is; you confirm the core sentence. To screen new requests afterwards, use the Feature request screener. For a quick first pass with fewer checks, use the [Minimum launch scope planner](https://useaiblocks.com/prompts/launch-scope-halver). This skill goes further: it adds a promise check, a ranked core with a time line, and a parked list.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

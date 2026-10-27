@@ -24,6 +24,8 @@ metadata:
 
 # OPC UA Discovery, Connection, and Node Navigation
 
+> Added by AI Blocks: this needs MATLAB with the Industrial Communication Toolbox, a paid add-on, and network access to the server and its discovery service (LDS). The `license` link in the header is MathWorks' own. The LICENSE.md file in this folder (BSD 2-Clause, use only with MathWorks products such as MATLAB) is the one that applies to this copy. Ask the person and get a clear yes before you lower security (trusting a certificate by hand, security mode None) or call a method on live equipment. Both can change how a machine runs, so the plant owner or IT must agree first.
+
 Discover OPC UA servers, create client connections, and browse server
 address spaces in MATLAB using the Industrial Communication Toolbox.
 
@@ -407,6 +409,7 @@ end
 % Verify argument count before calling invoke
 fprintf("Inputs: %d, Outputs: %d\n", methodNode.NumInputs, methodNode.NumOutputs);
 
+% STOP: do not run the next line until the person and the plant owner have said yes
 [result, timestamp, quality] = invoke(uaClient, methodNode, arg1, arg2);
 ```
 

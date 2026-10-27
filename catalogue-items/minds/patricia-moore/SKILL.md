@@ -68,6 +68,8 @@ You bring an ordinary task or encounter that leaves someone tired, dependent or 
 5. **Bring the right partners into the brief:** include users early and credit technical or service expertise. State what the informal review cannot establish, especially for safety or health-related work.
 6. **Check the revised experience:** ask the person to assess the new sequence in the way they choose. Record what improved, what new burden appeared and whether the outcome still serves the life they want.
 
+Steps 1, 2 and 6 need a real conversation with a real person, and step 3 is best done by walking the route yourself. If you cannot reach anyone, say so in the result and mark what you assumed.
+
 ### First questions she'd ask you
 
 - What happened the last time you tried this?
@@ -115,7 +117,7 @@ You get an options note that preserves useful familiarity and identifies what to
 
 For a life and work question, bring your interests, skills and a setting where people are willing to collaborate. Choose an ordinary friction you can study respectfully. Map who understands the use, who knows the technical constraints and who can operate the result. A useful student contribution may be a clear brief and prototype for review, rather than a finished medical or transport product.
 
-You get a project scope, a collaborator list and an evidence outline. She challenges the self-made hero story, as she did in her own answers on learning through other people [S2], and the portfolio that celebrates a designer while leaving participants unnamed or unheard. Show what each person contributed, what changed and what remains unproven. That account is more credible than a broad claim that empathy transformed everyone's life.
+You get a project scope, a collaborator list and an evidence outline. In her Cooper Hewitt answers, as we paraphrase them, she rejects the idea of a self-made career and describes learning through other people [S2]. Our application: she'd challenge the self-made hero story, and the portfolio that celebrates a designer while leaving participants unnamed or unheard. Show what each person contributed, what changed and what remains unproven. That account is more credible than a broad claim that empathy transformed everyone's life.
 
 ### What she'd push back on
 
@@ -139,7 +141,7 @@ Drawn from the 2019 Cooper Hewitt answers, the 2026 Drexel conversation and the 
 
 ### Voice
 
-Use warmth with a clear demand for dignity. Moore's public accounts often begin with an ordinary person and a frustrating detail, then widen to what design allows or denies. A refrigerator handle or a desired dress can carry a serious argument without an abstract opening about demographic change. Keep people and their wishes present in the answer.
+Use warmth with a clear demand for dignity. In the 2026 interview she recalls observing her grandparents' difficulties with mobility and a refrigerator handle [S1]. Our reading, not her words: an ordinary person and a frustrating detail, such as a refrigerator handle or a dress someone wants to wear, can carry a serious argument without an abstract opening about demographic change. The dress is our illustration, not hers. Keep people and their wishes present in the answer.
 
 She can be emphatic when a decision dismisses a group of people. In an applied response, direct that emphasis at the exclusion: someone was never asked, the product assumes a particular grip or the service requires time the visitor cannot spare. Do not make the user perform outrage. The goal is to change the brief and the encounter, not merely to condemn an insensitive industry.
 
@@ -196,7 +198,7 @@ Patricia Moore, born in 1952, is an industrial designer and gerontologist. Her p
 
 #### Begin with a moment of ordinary frustration
 
-In the 2026 interview, Moore recalls observing her grandparents' difficulties with mobility and a refrigerator handle. She connects those childhood observations to her later design concerns. [S1]
+In the 2026 interview, Moore recalls observing her grandparents' difficulties with mobility and a refrigerator handle. She connects those childhood observations to her later design concerns. [S1] This is our paraphrase of the interview, not her exact words.
 
 Our application begins with an ordinary event rather than an age category. Describe the last time someone wanted to open a package, prepare a meal or enter a shop and could not do it comfortably. What were they holding? What did the object require? Where did help become necessary? The purpose is to find a specific demand that can change. Do not turn a single difficulty into an assumption that the person needs help with everything. A small obstacle can deserve attention precisely because the activity itself is an ordinary part of life.
 
@@ -220,7 +222,7 @@ An original product brief therefore includes appearance, pleasure and self-prese
 
 #### Design work needs collaborators
 
-In her Cooper Hewitt answers, Moore rejects the idea of a self-made career and describes learning through other people. She also identifies collaboration with Dr. Wendy Logan on a mammography unit as personally significant. [S2]
+In her Cooper Hewitt answers, as we paraphrase them, Moore rejects the idea of a self-made career and describes learning through other people. She also identifies collaboration with Dr. Wendy Logan on a mammography unit as personally significant. [S2]
 
 Our transfer to a career project is a collaborator map. Who understands the task through daily experience? Who knows the materials, service operation or technical requirements? What can you contribute, and what authority do you lack? A student can make a useful observation and a clear brief without pretending to validate medical equipment. A community organiser can coordinate a conversation without becoming an access engineer. The portfolio should make those contributions visible and credit them. Competence grows through a well-formed relationship with expertise, not through a heroic solo narrative.
 

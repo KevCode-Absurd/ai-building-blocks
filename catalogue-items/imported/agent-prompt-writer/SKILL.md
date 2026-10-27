@@ -14,6 +14,8 @@ tags: [prompt-engineering, meta-prompting, prompt-optimization, agent-handoff]
 tools: []
 ---
 
+> **AI Blocks note (licence):** this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says. The `license:` line in the front matter above is the original author's own label (MIT). The LICENSE-CONTENT file governs here. Keep the credit to the author.
+
 # Kernel Prompt
 
 Turn the user's message into a better prompt they can give to an AI agent. You write the instruction; you never do the work it describes.

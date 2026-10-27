@@ -11,7 +11,7 @@ explain: |
 
   The notes are sorted into three groups. Decisions are written as "Decided to do X", never "Discussed X". Action items need an owner and a date, and when the notes lack one, the gap is marked [unassigned] or [TBD] rather than guessed. Open questions say what blocks them and who moves next. A final check confirms every item is complete, and the minutes stay under a third of the length of the notes.
 
-  This is a copy of a community skill written by alapha888, not an original AI Blocks skill. Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (alapha888) says MIT. Credit goes to alapha888 and sickn33.
+  This is a copy of a community skill written by alapha888, not an original AI Blocks skill. The licence that applies to this copy is CC BY 4.0, as the LICENSE-CONTENT file in this item says. The MIT line in the skill file is the author's own header (alapha888), and the original repository is alapha888/agent-skills-en. We copied it from sickn33's collection. Keep the credit if you reuse it. Credit goes to alapha888 and sickn33.
 when:
   - You have a page of messy notes from a team call and need to send a summary.
   - Your action items keep going out without owners or dates.
@@ -32,10 +32,12 @@ you_get:
   - Action items with owner and date
   - Open questions with a next step
 how_to_use:
+  - Gather first: the attendee list, the meeting date and any deadlines already agreed.
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code, files or paid tools are needed.
-  - Paste your rough notes or transcript below it. Add attendee names and known deadlines if you have them.
+  - Paste your rough notes or transcript below it. The meeting must already have happened: this works from notes you have, not from a live call. Add attendee names and known deadlines if you have them.
   - Send it and read the bottom line first. Check it matches what the meeting decided.
-  - Look for [unassigned], [TBD] and [to confirm] marks. Fill in each gap yourself, because the AI will not guess.
+  - Look for [unassigned] (no owner), [TBD] (no date) and [to confirm] (any other missing detail) marks. Fill in each gap yourself, because the AI will not guess.
+  - Pair it with the Rough notes to minutes writer, which does a similar job. Pick this one when you want a short bottom line, a fixed three-bucket list and a self-check on each item. Pick the Rough notes to minutes writer when you want one pass from messy notes to a full set of minutes.
   - Send the minutes to the attendees. Copy the open questions into your task list, and run the skill again when one gets an answer.
 output_sample:
   input:
@@ -52,4 +54,4 @@ output_sample:
     - name: Open questions
       contains: Each undecided issue, what blocks it, and who owns the next step.
     - name: Self-check flags
-      contains: A note on any item that still lacks an owner, a deadline or a next step.
+      contains: A note in the reply on any item that still lacks an owner, a deadline or a next step.

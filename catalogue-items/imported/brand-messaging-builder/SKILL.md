@@ -92,7 +92,7 @@ Each message:
 - Proof point (one specific fact, feature, or example that makes it credible)
 
 **Level 4 — Proof Points** (a bank of 6–8 specific facts):
-[List concrete claims: stats, features, credentials, social proof]
+[List concrete claims: stats, features, credentials, social proof. Use only facts the user gave you or pasted. Never invent a number, award, customer name or quote. Where a claim has no proof yet, write "needs proof" and say what evidence would back it.]
 
 ---
 

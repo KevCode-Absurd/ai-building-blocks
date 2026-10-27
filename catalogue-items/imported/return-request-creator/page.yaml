@@ -32,12 +32,12 @@ you_get:
   - A short report of what was created
 how_to_use:
   - Use an AI that can run code and reach your Shopify admin. A plain chat window cannot do this.
-  - Log in to your store and allow it to read orders and write returns.
-  - Find the order ID in your Shopify admin. Open the order, then copy the long ID that starts with gid://shopify/Order/ (your AI can read it for you from the order number if it can reach your store).
+  - Log in to your store and allow it to read orders and write returns (the read_orders and write_returns permissions). Check first that your login is allowed to grant them. If it is not, ask the store owner. No extra Shopify app is named in the skill.
+  - Give your AI the order number, such as #1234, and ask it to look up the order through your store connection. Or open the order in Shopify admin and copy the number at the end of the page address. Your AI then builds the full ID, which is gid://shopify/Order/ followed by that number.
   - Paste the skill and give your AI the order ID, the items and the reason.
   - The preview (dry run) is on by default, so nothing is created until you say so. Check the items and quantities in the preview.
   - Check with the customer that a return is expected. The customer gets an email unless you turn it off.
-  - Tell your AI to run it for real, then check the report for errors.
+  - Your AI must show you the preview and wait for your clear yes. Only then does it turn the dry run off, create the return and send any email. Then check the report for errors.
   - Once the item arrives, check it over. Then open the order in Shopify admin and use Refund to pay the customer back.
 output_sample:
   input:
@@ -48,7 +48,7 @@ output_sample:
     - A note on the reason (optional)
   prerequisites:
     - An AI that can run code and reach your Shopify admin
-    - Shopify permission to read orders and write returns
+    - Shopify permission to read orders and write returns (read_orders and write_returns), granted when you sign in
     - A login to your store
   output:
     - name: Order check

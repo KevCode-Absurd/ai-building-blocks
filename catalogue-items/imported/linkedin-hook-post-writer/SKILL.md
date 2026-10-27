@@ -26,7 +26,7 @@ This is the flagship skill from [sergebulaev/linkedin-skills](https://github.com
 
 - Use when the user says "write me a LinkedIn post about X"
 - Use when the user has a topic and a rough angle but needs a hook and structure
-- Use when the user wants to pick from proven post formats instead of improvising
+- Use when the user wants to pick from post formats drawn from the author's own experience instead of improvising
 - Use when a draft exists but the hook is weak and needs a formula-based rebuild
 - Not for replying to comments or optimizing profiles; this skill only drafts posts
 
@@ -47,9 +47,9 @@ Ask (or infer) what the post should earn, then shortlist:
 | Likes | emotional stories, celebrations, status-strip | F11 Emotional Cold-Open, F13 Bait-and-Switch Reversal, F16 Status-Strip Humility |
 | Saves | simplifications, exact how-to, frameworks | F15 Explain-to-Kids, F7 Odd-Precision Money Ledger, F8 Paid-vs-Free Reversal |
 
-The full set of 16, with reference engagement:
+The full set of 16, with the author's own reference numbers. **Read this first: every figure in this table is one author's own unverified observation from their own posts, not a tested or proven result. Do not quote them to the user as expected results.** F1-F10 references are engagement counts or format multipliers against the author's own baseline; F11-F16 references are raw corpus reach, often inflated by a famous author or a reshare. The two groups measure different things, so never rank formulas across groups by number.
 
-| Code | Formula | Reference | Best for |
+| Code | Formula | Author's reference (unverified) | Best for |
 |---|---|---|---|
 | F1 | Platform Risk Anaphora | 4,240 eng | Category and platform-risk arguments |
 | F2 | R.I.P. Obituary | 3,822 eng | Era-ending claims, industry pivots |
@@ -67,8 +67,6 @@ The full set of 16, with reference engagement:
 | F14 | Named Gratitude / Tribute | repost-heavy | Thanking mentors, teams, departing colleagues |
 | F15 | Explain-to-Kids | save-heavy | Demystifying jargon into a reference post |
 | F16 | Status-Strip Humility | like-heavy | Senior voices trading prestige for warmth |
-
-Important caveat: F1-F10 references are engagement counts or format multipliers against the author's own baseline; F11-F16 references are raw corpus reach, often inflated by a famous author or a reshare. The two groups measure different things, so never rank formulas across groups by number.
 
 The full skeletons for all 16 formulas are bundled with this skill in [references/hook-formulas.md](references/hook-formulas.md), along with per-formula warnings and the "Never do" list.
 
@@ -90,7 +88,9 @@ Before showing the draft: strip em dashes, AI vocabulary ("game-changer", "deep 
 
 ### Step 5: Present the result
 
-Show the user: formula used, full draft, character count, and a suggested posting window (the original author's guess: Tuesday to Thursday, 7:30-9:00 AM local time for B2B audiences; check it against the user's own post data).
+Show the user these five sections, in this order: (1) formula pick, with a short reason it fits the goal; (2) full draft; (3) character count; (4) the AI-tell scrub, meaning the draft after the wording clean-up; (5) a suggested posting window (the original author's guess: Tuesday to Thursday, 7:30-9:00 AM local time for B2B audiences; check it against the user's own post data).
+
+**Next steps:** ask the user to replace any placeholder with a real detail, then post it themselves. For carousels or newsletters, pair it with `@linkedin-content-generator`. For replies to comments on the post, use a plain chat with your AI. After posting, log the results as described in "After you post".
 
 ## Examples
 

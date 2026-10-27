@@ -31,6 +31,10 @@ The skill wraps the [commit.show](https://commit.show) audit engine via the publ
 - Use before a public launch / Show HN post / investor demo.
 - Use when `git log` shows >20 commits since the last `.commitshow/audit.md` was written.
 
+### If you do not want data sent out
+
+The audit sends the repo address, the public GitHub data and the live link to api.commit.show. If the user does not accept that, do not run the command above. The author lists a `--no-network` option for local-only checks (see Common Pitfalls). It is not tested here, it skips the live URL and GitHub checks, and the score will be partial. Say so, and let the user decide.
+
 ### Skip when
 
 - During active in-session coding — use `security-review` / OWASP-style for line-level patterns. This skill is for post-merge / pre-ship review.
@@ -83,14 +87,13 @@ Concerns are sorted by decision-impact, not severity. Position 1 is the bullet t
 Lead with score + trajectory in **one sentence**, then the top concerns. Do not dump the full JSON. Format:
 
 ```
-Score: 82/100 (+5 since yesterday) · band: strong
+Score: [SCORE]/100 ([CHANGE] since the last audit) · band: [BAND]
 
-Top concerns:
-  ↓ [Security] No API rate limiting on /auth — IP cap missing
-  ↓ [Infrastructure] webhook handler at api/stripe.ts — signature verified, but no
-    idempotency-key check (replay attack window open)
+Top concerns (use the exact bullets from the audit, never these examples):
+  ↓ [Security] [CONCERN FROM THE AUDIT]
+  ↓ [Infrastructure] [CONCERN FROM THE AUDIT]
 
-Want me to fix the webhook idempotency gap first?
+Want me to fix [NAMED CONCERN] first?
 ```
 
 Rules:
@@ -130,15 +133,13 @@ npx commitshow@0.3.23 audit . --json \
 Then surface:
 
 ```
-Score: 67/100 · band: mid
+Score: [SCORE]/100 · band: [BAND]
 
 Top concerns:
-  ↓ [Security] members table uses column-level GRANT but paid_audits_credit
-    column lacks SELECT grant — silent 42501 on every read
-  ↓ [Infrastructure] stripe.checkout.sessions.create called without
-    idempotencyKey — duplicate-charge surface
+  ↓ [Security] [CONCERN FROM THE AUDIT]
+  ↓ [Infrastructure] [CONCERN FROM THE AUDIT]
 
-Want me to fix the column GRANT first? Single SQL line.
+Want me to fix [NAMED CONCERN] first?
 ```
 
 ### Example 2: Cross-check a specific concern

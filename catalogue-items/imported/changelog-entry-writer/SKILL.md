@@ -2,10 +2,11 @@
 name: changelog-entry
 description: Generate a properly formatted CHANGELOG.md entry in Keep a Changelog format from a commit range or PR. Groups changes into Added/Changed/Deprecated/Removed/Fixed/Security categories and outputs a ready-to-paste block.
 risk: safe
-source: self
-source_type: self
+source: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/changelog-entry
+source_type: community
+license: CC-BY-4.0 (see LICENSE-CONTENT)
 date_added: "2026-09-29"
-author: community
+author: sickn33
 tags:
 - git
 - changelog
@@ -57,7 +58,7 @@ git log --no-merges --pretty=format:"%h|%s" <last-tag>..HEAD
 git diff --stat <last-tag> HEAD
 ```
 
-If the user supplies a PR number, a branch name, or explicit `from..to` refs, use those instead. If an earlier step handed you a code change (a commit or pull request), write the entry for that change.
+If the user supplies a PR number, a branch name, or explicit `from..to` refs, use those instead. If the user gave no range, no PR and no branch, and there is no version tag, ask for a range (for example the last 20 commits, or the commits since a date) before you write anything. Do not guess one.
 
 ### 2. Filter noise
 

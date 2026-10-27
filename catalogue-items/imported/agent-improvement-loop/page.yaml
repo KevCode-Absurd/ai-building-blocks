@@ -31,8 +31,8 @@ you_get:
 how_to_use:
   - Install the package with pip install a-evolve. Add the Claude extra with pip install a-evolve[anthropic].
   - Set your ANTHROPIC_API_KEY, or set up AWS credentials for Bedrock. Both are paid model services.
-  - Point the loop at your agent folder and your test tasks. Choose how many rounds to run. For your own test set, write a small Python class with get_tasks and evaluate methods (a BenchmarkAdapter).
-  - Start the loop from a short Python script, as in the skill's Quick Start (ae.Evolver(...).run(cycles=N)). Or open the agent's folder in Claude Code and ask it to run that script. It needs Python and web access to the model.
+  - Point the loop at your agent folder and your test tasks. Choose how many rounds to run. A custom agent needs a BaseAgent class with a solve() method that returns a Trajectory, and a reload_from_fs() method so it re-reads its files after each round. A custom test set needs a BenchmarkAdapter class with get_tasks and evaluate methods.
+  - Start the loop from a short Python script, as in the skill's Quick Start (ae.Evolver(...).run(cycles=N)). Note that the Quick Start example runs the built-in swe seed on SWE-bench, not your own agent. To use your agent, give ae.Evolver your agent folder, as in the skill's Workflow 1. Or open the agent's folder in Claude Code and ask it to run that script. It needs Python and web access to the model.
   - Each round makes many paid model calls. Run 1 or 2 rounds first to see what it costs, then raise the number of rounds.
   - Read the score table, then check the git log to see which files changed in each round.
   - Roll back to an earlier tag, such as evo-2, if a later round made things worse.

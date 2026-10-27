@@ -5,7 +5,13 @@ description: "Paste your product link. Get the buyer, offer, growth goal and mis
 
 # Traction business profile builder
 
+**You get:** one file, business-profile.md, with ten headings: source ledger, mode, buyer and market, offer, motion, stage and evidence, goal, limits, tracking and history, and MISSING.
+
+**Gather first:** your product link (or its page text), your growth goal and deadline, your cash cap, your hours a week and any past tests. Only the product link or page text is required. Without the rest, those headings are marked MISSING.
+
 Needs no account, API key or paid tool, and no scraping. Paste your product URL or page text, then add your goal, cash cap and weekly hours if you know them. If your AI cannot browse, paste your page text. It saves business-profile.md, which the Growth channel test picker reads next.
+
+When not to use: if you have no public product page and no text to paste, write a short sales plan with someone who knows your buyers first. If you already have a profile and want channels ranked, use the Growth channel shortlist planner (traction-channel-ranker).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
@@ -38,6 +44,8 @@ Default to SaaS: identify the buyer, costly problem, product value, self-serve v
 Separate observed facts, user-provided facts, hypotheses and missing inputs. Public pricing is not average revenue, retention, gross margin or acquisition cost. Mark private metrics unknown. Verify changing platform rules, fees, publication availability and execution settings from current official sources before relying on them.
 
 ## Make one bounded experiment
+This skill builds the profile only. Use this section to record the limits, caps and tracking facts the profile needs. Do not propose a pilot here: the channel pickers named in "After this" do that. The "website" in "Before you start" is the same product link or pasted page text.
+
 
 Explain this channel's fit for the current business and the strongest reason it might fail. Use evidence to propose one cheap pilot, its audience, offer, deliverable, owner, time window, cash cap, labour cap, tracking and go / revise / stop rules. If caps or thresholds were not supplied, label proposed values as assumptions for approval. Check long sales cycles and slow channels before choosing a review date. A short pilot can test an early assumption without proving long-term acquisition.
 
@@ -45,6 +53,24 @@ Use the funnel qualified visitor or account -> useful product action -> paying c
 
 ## Build the reusable profile
 
-Save business-profile.md. Record the product URL and source ledger; software or general-business mode; buyer role and market; problem and alternative; offer and observed price; activation event; sales motion and sales cycle; stage; current customer and retention evidence; traction goal and deadline; cash and time caps; team skills; geographic limits; tracking readiness; past tests and exclusions. Separate public price from revenue per acquired account. A blocked URL produces a provisional profile with explicit MISSING fields, not an invented company description.
+Save business-profile.md with these headings, in this order:
+1. Source ledger: the product URL and access date for each fact, and whether it is observed, given by you or a guess.
+2. Mode: software or general business.
+3. Buyer and market: buyer role, market, the problem and the alternative they use now.
+4. Offer: what you sell and the observed public price.
+5. Motion: activation event, sales motion and sales cycle.
+6. Stage and evidence: stage, current customers and retention evidence.
+7. Goal: traction goal and deadline.
+8. Limits: cash cap, hours per week, team skills, geographic limits.
+9. Tracking and history: tracking readiness, past tests and exclusions.
+10. MISSING: every private fact still unknown.
 
-Use one dated quantitative growth goal and work backwards to the next bottleneck. If retention is poor, propose a bounded learning test and identify the product issue before recommending larger acquisition spend. Ask only the questions that would materially change the next decision. Hand the saved profile to the ranker.
+Separate public price from revenue per acquired account. A blocked URL produces a provisional profile with explicit MISSING fields, not an invented company description.
+
+Use one dated quantitative growth goal and work backwards to the next bottleneck. If retention is poor, propose a bounded learning test and identify the product issue before recommending larger acquisition spend. If browsing fails, ask for these, and nothing else, before you go on:
+1. The page text for your product, pricing and who it is for.
+2. Your growth goal and deadline.
+3. Your cash cap and hours per week.
+4. Any past tests and their results.
+
+Mark anything not supplied as MISSING. Hand the saved profile to the ranker.

@@ -133,7 +133,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Shopify", why: "Net sales, shipping collected, tax, discounts and orders come from its reports."}
+    - {name: "Shopify", why: "A paid plan. Net sales, shipping collected, tax, discounts and orders come from its reports."}
     - {name: "GA4", why: "Sessions with fewer bots, and traffic split by source."}
   inputs:
     - "Twelve weeks of weekly numbers, to see the trend"

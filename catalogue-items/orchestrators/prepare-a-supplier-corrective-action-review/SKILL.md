@@ -30,7 +30,7 @@ How to start:
 
 ## What to gather first
 
-These replace the generic list above, which asks for source text and a question. This run needs the records below. Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
+These replace the generic list above, which asks for source text and a question. This run needs the records below. Use what is attached or pasted first. Then ask once, in one short message, for any of the four items under "You need" that are still missing. Do not ask for the generic items above. If the acceptance standard or the supplier's reply is still missing after that, follow "If something is missing" below. Do not ask a second time.
 
 **You need:**
 - The defects or late deliveries in scope, each with a date and a lot.

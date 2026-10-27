@@ -12,6 +12,10 @@ explain: |
   It first sorts the brief by funnel position and by how much the buyer knows, from unaware to most aware, and the less they know, the longer the copy. Then it picks a strategy. Sell the click uses a short caption and curiosity and sends people to an advertorial. Sell the solution shows and proves the product in the ad, then sends people to the product page. It warns against sending a viewer who has seen the product to a blind sales video.
 
   This is a copy of Rob Palmer's ad-copy skill, shared under CC BY 4.0 (see the LICENSE file). Credit goes to Rob Palmer.
+
+  What AI Blocks changed from the original: a real-facts notice at the top, and sample lines turned into [placeholders] so no made-up number, quote or claim is left to copy. The method is Rob Palmer's.
+
+  Health, weight-loss, body image and before-and-after ads face strict Meta ad rules, so check the current policy before you launch. Every number and result in your ad must come from your own real data.
 when:
   - You are launching a cold-traffic Facebook ad and need several angles.
   - You need a UGC video script for Reels.
@@ -27,7 +31,7 @@ you_give:
   - Where the ad sends people
   - Past ads that worked (optional)
 you_get:
-  - Primary text variations
+  - 3 to 5 labelled variations, each with primary text, a headline and a description
   - Headlines and descriptions
   - Hooks to test
   - UGC or video ad scripts

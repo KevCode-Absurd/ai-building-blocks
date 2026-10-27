@@ -16,7 +16,7 @@ For a quick rice bowl, choose a base and a familiar topping whose preparation fi
 
 When a trial disappoints, return to the first point where it diverged from the reference. Was the surface still wet, was the pan crowded or was the preparation incomplete when cooking began? Select the most relevant variable for another attempt. Avoid a long list of disconnected fixes that makes the next result impossible to interpret.
 
-## Questions they always ask
+## Questions this mind asks
 
 These are sample prompts written for this profile, not recorded quotations or a claim of literal repetition.
 

@@ -15,11 +15,11 @@ Discover and track emerging trends using Apify Actors to extract data from multi
 - **What you need from the user.** A topic or niche and the platforms to scan. If either is missing, ask once. Do not guess a topic. If the user names no platform, suggest Google Trends plus one social site and ask them to confirm.
 - **This needs code running.** The steps below run a Node.js script and the `mcpc` tool, and read `APIFY_TOKEN` from a `.env` file. If you cannot run code, say so. Offer a no-tools fallback: ask the user to open Google Trends themselves, compare the topic over the last 12 months, and paste the numbers or a screenshot description. Then summarise only what they paste.
 - **Cost.** Apify runs can use paid credits. Before step 4, tell the user which Actor you will run and ask for a small result count for the first run. Never raise the count without asking.
-- **Platform rules.** Scraping Instagram, Facebook, TikTok and YouTube may go against those sites' terms of service. This skill reads public pages only. Remind the user once to check the terms before they use the data. Never ask for a login or a private account.
+- **Platform rules.** Scraping Instagram, Facebook, TikTok and YouTube may go against those sites' terms of service. This skill reads public pages only. Before each run, ask the user to confirm they have checked that site's terms for the data they will collect, and do not run until they say yes. Never ask for a login or a private account.
 - **Never ask the user to paste the Apify token into the chat.** It lives in the `.env` file.
 - **Skip the Facebook groups and Marketplace scrapers** unless the user confirms the data is public and allowed by the platform's terms. Group content can be private to its members.
-- **Ask for a spend limit.** Before the first run, ask how much Apify credit the user will allow, and stop when it is reached.
-- **Script path.** In the commands below, `${CLAUDE_PLUGIN_ROOT}` is the folder that holds this skill. The script is `reference/scripts/run_actor.js` inside it. If the variable is empty, use that relative path.
+- **Ask for a spend limit.** The run script has no cost setting of its own, so the limit has to be set elsewhere. Before the first run, ask how much Apify credit the user will allow. Ask them to set a usage limit in their Apify account (in its billing or limits settings, if their plan has one) and to use the Actor's own result-count setting, which you read from its schema in step 2. Keep the first run small, check the cost in the Apify console after each run, and do not start another run if the limit is reached.
+- **Script path.** In the commands below, `${CLAUDE_PLUGIN_ROOT}` is the folder that holds this skill. The script is `reference/scripts/run_actor.js` inside it. If the variable is empty, use that relative path. The usage comments inside the script say `scripts/run_actor.js`. That is the original author's shorter path. In this copy the real path is `reference/scripts/run_actor.js`.
 - **Do not invent trends.** A trend needs a change over time. Report only what the returned data shows. If a run returns one snapshot with no earlier period to compare, say "this shows what is popular now, not what is rising" and suggest a second run next month. Quote counts exactly as returned. If a run fails or returns nothing, say so and stop.
 - **Why the front matter says `risk: critical`.** The skill uses an API token, can spend money on Apify, and reads other sites' data. Take care with each of those.
 
@@ -58,9 +58,9 @@ Select the appropriate Actor based on research needs:
 | Comprehensive tracking | `apify/instagram-scraper` | Full data |
 | API-based trends | `apify/instagram-api-scraper` | API access |
 | Engagement trends | `apify/export-instagram-comments-posts` | Comment tracking |
-| Product trends | `apify/facebook-marketplace-scraper` | Marketplace data. Skip unless the data is public and the site's terms allow it |
+| Product trends | `apify/facebook-marketplace-scraper` | Marketplace data. OFF by default. Skip unless the data is public and the site's terms allow it |
 | Visual analysis | `apify/facebook-photos-scraper` | Photo trends |
-| Community trends | `apify/facebook-groups-scraper` | Group monitoring. Skip unless the data is public and the site's terms allow it |
+| Community trends | `apify/facebook-groups-scraper` | Group monitoring. OFF by default. Skip unless the data is public and the site's terms allow it |
 | YouTube Shorts | `streamers/youtube-shorts-scraper` | Short-form trends |
 | YouTube hashtags | `streamers/youtube-video-scraper-by-hashtag` | Hashtag videos |
 | TikTok hashtags | `clockworks/tiktok-hashtag-scraper` | Hashtag content |
@@ -72,10 +72,10 @@ Select the appropriate Actor based on research needs:
 
 ### Step 2: Fetch Actor Schema
 
-Fetch the Actor's input schema and details dynamically using mcpc:
+This step is optional. The safest way is to read the Actor's input fields on its Apify page (apify.com) and skip the command, because then no token is used at all. If you must fetch the schema with mcpc, the token is read from the `.env` file for this one command only. It is never typed into the command, never exported into the shell, and never pasted in chat. It can still show in the process list on a shared computer, so run it only on your own machine, and revoke the token in Apify if it may have leaked:
 
 ```bash
-export $(grep APIFY_TOKEN .env | xargs) && mcpc --json mcp.apify.com --header "Authorization: Bearer $APIFY_TOKEN" tools-call fetch-actor-details actor:="ACTOR_ID" | jq -r ".content"
+env $(grep APIFY_TOKEN .env | xargs) sh -c 'mcpc --json mcp.apify.com --header "Authorization: Bearer $APIFY_TOKEN" tools-call fetch-actor-details actor:="ACTOR_ID"' | jq -r ".content"
 ```
 
 Replace `ACTOR_ID` with the selected Actor (e.g., `apify/google-trends-scraper`).
@@ -92,7 +92,7 @@ Before running, ask:
    - **Quick answer** - Display top few results in chat (no file saved)
    - **CSV** - Full export with all fields
    - **JSON** - Full export in JSON format
-2. **Number of results**: Based on character of use case. If the user gives no answer, use 10 results per scraper for the first run, and a spend cap of 1 US dollar of Apify credit. Never go above the default without a yes
+2. **Number of results**: Based on character of use case. If the user gives no answer, use 10 results per scraper for the first run, and aim to keep spend under 1 US dollar of Apify credit (you cannot enforce this in the script, so check the cost in the Apify console). Never go above the default without a yes
 
 ### Step 4: Run the Script
 

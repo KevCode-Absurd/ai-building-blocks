@@ -32,6 +32,7 @@ you_get:
 how_to_use:
   - Use an AI that can edit your files and run code, such as Claude Code. Add this skill to it.
   - "Type the command with your goal, for example: /obsess over this toggle and make the transition smooth."
+  - Gather first: the path of the file or component, your goal in one line, a browser or screenshot tool for UI work, or a profiler timing for speed work. If you have none of these, expect one unchecked suggestion.
   - Name one target only. If your AI asks which one you mean, answer in one line.
   - Let it run. It stops when the goal is met or the attempt limit is reached.
   - Read the report and review the changes to your files before you keep them. For a speed problem, measure with a profiler first so you know the real slow spot.

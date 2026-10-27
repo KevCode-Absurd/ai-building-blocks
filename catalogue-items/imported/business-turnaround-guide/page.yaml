@@ -30,11 +30,12 @@ you_get:
   - A weekly operating rhythm
   - Repriced offers tied to real value
 how_to_use:
-  - Check that your AI can read and write files. The skill uses eight linked skills: Real strategy checker, traction-eos (not in this library yet), Manager output coach, Team layout planner, Motivation designer, Startup metrics picker, Negotiation prep coach and Willingness to pay pricing planner. If one is not installed, the skill runs that phase from its own brief, and says so.
+  - Check that your AI can read and write files. The skill calls eight linked skills by the names in its SKILL.md. Here is what each is called in this library. good-strategy-bad-strategy is the Real strategy checker. high-output-management is the Manager output coach. team-topologies is the Team layout planner. drive-motivation is the Motivation designer. lean-analytics is the Startup metrics picker. negotiation is the Negotiation prep coach. monetizing-innovation is the Willingness to pay pricing planner. traction-eos is not in this library, so phase 2 runs from the skill's own brief without it. Any other linked skill you have not added is handled the same way, and the skill says so.
+  - If your AI offers to install a missing skill with an npx skills add command, know that it pulls code from an outside GitHub repository. Read what it will install and run the command yourself, or skip it.
   - Paste the skill into a chat, or load it in your AI tool.
   - Describe your business, your customers, your team and your numbers when it asks.
   - Answer each question and confirm the diagnosis in phase 1 before it moves on.
-  - Stop any time. Your choices are saved in the docs folder, so you can pick up in a later session.
+  - Stop any time. Your choices are saved in the docs folder, so you can pick up in a later session. The files include STRATEGY.md and OPERATIONS.md, plus docs/CUSTOMER.md and docs/OFFER.md, which phases 7 and 8 write or extend.
   - Share the strategy note with your team when the plan is done. Set a review date about 90 days out, and start that review from the weekly operating rhythm.
 output_sample:
   input:
@@ -53,5 +54,9 @@ output_sample:
       contains: Your weekly rhythm, plus a management section with 1:1 timing and tasks to hand off.
     - name: METRICS.md
       contains: The one number that tells you the truth about how the business is doing.
+    - name: CUSTOMER.md
+      contains: What customers truly value and the real drivers behind price pushback, added in phase 7.
+    - name: OFFER.md
+      contains: Your offers and pricing tied to the value you deliver, added in phase 8.
     - name: IMPROVE-BUSINESS-PLAN.md
       contains: A tracker of all eight phases, with your choices and what is done.

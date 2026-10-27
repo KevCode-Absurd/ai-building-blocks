@@ -9,14 +9,17 @@ subhead: MATLAB cannot see your GPU, and this finds out why. It checks whether a
 explain: |
   MATLAB cannot see your GPU, and this finds out why. It checks whether a compatible GPU is available, tests that it works, and points at what is broken when it does not.
 
+  This is a copy of MathWorks' matlab-setup-gpu skill. The only change is the plain name.
+
   It relies on MATLAB's own checks, including canUseGPU, which also covers licence and toolbox state, and only uses nvidia-smi for facts MATLAB cannot give. In a multi-GPU machine it helps you pick the right one. If a driver update is the fix, it checks the driver policy on the GPU requirements page for your MATLAB release. It sets up and diagnoses only. It does not write or speed up GPU code.
 
-  Licence: BSD 2-Clause plus a MathWorks term, as the LICENSE.md file says. You may use it only with MathWorks products. The skill file links MathWorks' own reuse licence page, which says the same.
+  Licence: BSD 2-Clause plus a MathWorks term, as the LICENSE.md file says. That one licence applies, and it lets you use this only together with MathWorks products. The skill file links MathWorks' own reuse licence page, which says the same.
 when:
   - gpuDevice throws an error and you do not know why.
   - MATLAB says no GPU found but you own one.
   - You have several GPUs and need to select one.
   - You want to confirm a machine is ready before GPU work.
+  - "Last resort only: raising the Windows TDR timeout. It edits the Windows Registry, needs administrator rights and your agreement, and a wrong edit can break Windows."
 not_for:
   - "You want to write or speed up GPU code: this checker only finds and tests your GPU, so ask your AI for help with the code itself."
   - "You want to watch GPU memory or use while code runs: read the gpuDevice properties in MATLAB or use NVIDIA's own tools."
@@ -36,8 +39,10 @@ how_to_use:
   - Tell it your MATLAB release. Add any error message, your GPU model or your nvidia-smi output if you have them.
   - Let your AI run the checks in MATLAB on the computer with the GPU. If it cannot run MATLAB, run each command yourself and paste back the results.
   - Read the diagnosis and the fix steps. Check any driver advice against the GPU requirements page for your release.
-  - Only if your AI suggests raising the Windows TDR timeout, know that this edits the Windows Registry and needs administrator rights. Make a restore point and export the registry key first, as your AI will tell you. A wrong edit can break Windows.
+  - Only if your AI suggests raising the Windows TDR timeout, know that this edits the Windows Registry and needs administrator rights. You make that edit yourself. Your AI must never run it for you. Make a restore point and export the registry key first, as your AI will tell you. A wrong edit can break Windows.
+  - For any driver advice, open the GPU Computing Requirements page in MathWorks' documentation for your MATLAB release and check that your GPU is still supported before you install a new driver.
   - Run the check again to confirm MATLAB now sees your GPU.
+  - "The result always comes back in this order: GPU ready yes or no, a table of the devices MATLAB sees, the failed layer and its cause, then an ordered fix list."
 output_sample:
   input:
     - Your MATLAB release

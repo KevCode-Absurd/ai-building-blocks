@@ -7,6 +7,8 @@ job: build-websites
 headline: Shareable tool builder
 subhead: Say what to build. Get a quiz, name generator or calculator designed so people share it. Bring the tool idea and audience. Use the result to plan your next step.
 explain: |
+  A note on the "risk: critical" label in the skill file: it was copied from the original author's catalogue. This skill only plans a tool and builds nothing. The label matters when your tool shows money or health results. Have a qualified person check those results before you publish.
+
   A quiz, name generator, avatar maker or calculator designed so people want to share the result. It follows one pattern: minimal input, a clever step in the middle, and a result worth showing off.
 
   It helps you choose the input, such as a name, a birthday or five quiz answers, trading friction against personal feel. It picks a result type that gets shared: identity ("You are a..."), comparison, prediction, score or visual. It designs for the screenshot, with clear text on mobile and subtle branding, then adds share buttons. For quizzes it plans five to ten questions with weighted scoring that lands on one of several results.
@@ -31,14 +33,14 @@ you_get:
   - Screenshot and share button advice
 how_to_use:
   - Before you start, have your tool idea, who it is for, your brand and topic, and the one thing you can ask the user for (a name, a birthday or five answers).
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code running or paid tool is needed.
-  - Give it your idea, audience and topic. You get back the input design: what the user types or picks.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code running or paid tool is needed. Your first message is your tool idea, your audience and your topic. The reply should be an input design, which is what the user types or picks.
+  - "Give it your idea, audience and topic. You get back the input design: what the user types or picks."
   - Ask for the result type. You get one of identity, comparison, prediction, score or visual, with the reason it fits.
   - For a quiz, ask for the questions and scoring. You get five to ten questions and four to eight results.
   - Ask for the result page and share card. Check that each result feels good to share and looks clear on a phone.
-  - Hand the plan to a developer or a coding AI to build it. For the landing page, the sharing copy and the result images, you can use other skills, such as a landing page designer and a viral hooks skill. They are optional, separate items.
+  - Hand the plan to a developer or a coding AI to build it. For the landing page, use static-html-landing-page-builder. For the hooks, use short-video-hook-writer. For search, use seo-site-auditor. All three are in this library and optional. The skill file also names landing-page-design, viral-hooks, seo, frontend and ai-image-generation, which are not in this library.
   - Any average, percentile or savings figure the tool shows must come from a source you can name. Mark sample numbers as placeholders.
-  - The skill file carries a "risk: critical" label copied from the original author's catalogue. This skill only plans a tool and builds nothing. The label matters when your tool gives money or health results, so get a qualified person to check those.
+  - "The skill file carries a \"risk: critical\" label copied from the original author's catalogue. This skill only plans a tool and builds nothing. The label matters when your tool gives money or health results, so get a qualified person to check those."
 output_sample:
   input:
     - Your tool idea (quiz, name generator, calculator or avatar maker)

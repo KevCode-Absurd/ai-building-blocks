@@ -9,9 +9,9 @@ subhead: A code change that touches motion gets a strict review and a clear verd
 explain: |
   A code change that touches motion gets a strict review and a clear verdict, Approve or Block, so nothing sluggish or jarring ships. The review comes as a table of findings, each with a suggested fix.
 
-  The skill acts as a picky motion designer. It checks each animation against ten fixed standards from Emil Kowalski's craft rules: easing curves, durations, where an element appears from, whether it can be interrupted, how often it fires, frame drops, and what happens for people who choose reduced motion. It starts from doubt, so a transition that merely works still gets flagged if it feels wrong. It reviews only motion and does not edit your code unless you ask.
+  You must attach STANDARDS.md (it comes with this item) when you run it. The review depends on its exact values and does not work well without it. The skill acts as a picky motion designer. It checks each animation against ten fixed standards from Emil Kowalski's craft rules: easing curves, durations, where an element appears from, whether it can be interrupted, how often it fires, frame drops, and what happens for people who choose reduced motion. It starts from doubt, so a transition that merely works still gets flagged if it feels wrong. It reviews only motion and does not edit your code unless you ask.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. Emil Kowalski's own file says MIT. Credit goes to him and sickn33.
+  Licence: CC BY 4.0 applies to this copy, as its LICENSE-CONTENT file says. Reuse it with credit to Emil Kowalski and sickn33. His own file header says MIT, which also allows reuse with credit.
 when:
   - A pull request changes transitions, modals, drawers or toasts and you want a second opinion.
   - An interface feels slow and you cannot say why.
@@ -34,7 +34,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. Also paste or attach STANDARDS.md from this item. It holds the exact easing, duration and spring values the review uses. Without it your AI will guess them.
   - Add the change. Paste the git diff, a PR link, or the changed file paths with the line ranges.
   - Add the nearby CSS or component code. Your AI needs it to judge where motion starts and whether it can be interrupted.
-  - Say your animation library and target devices if you know them.
+  - Say your animation library and target devices if you know them. Framer Motion is a React animation library. WAAPI is the browser's built-in Web Animations API. A cubic-bezier is the curve that sets how an animation speeds up and slows down. If you use none of these, the review still covers plain CSS motion.
   - Read the findings table first, then the verdict.
   - If your AI can read your project files, point it at the folder. If not, paste the code.
   - Fix the items marked Block first, then run the review again on the updated change before release.

@@ -25,11 +25,13 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Claude Code:** It can keep one file per belief and the register between months and run on the first Friday.
+- **Claude Code:** It can keep one file per belief and the register between months. You start the run on the first Friday of each month. It does not run on a timer.
 - **Any good chat AI:** Paste the agent, your beliefs and the month's evidence. Keep the register in a note yourself.
 <!-- /needs -->
 
 ## What you need
+The "Before you start" block above is shared text. Its "Your question" and "Your idea" lines mean the beliefs below. The only required input is the list of beliefs. The new evidence is advised.
+
 - **The beliefs** (required): the five to ten beliefs your plan rests on, each in one sentence. "Our buyer is the person who quit greens powders" is one. Fewer than five means some are hidden; ask.
 - **New evidence this month** (advised): customer talks, reviews, numbers, a lost deal, a rival's move, anything that bears on a belief. Say where each came from.
 - **The log** (once it exists): the register of beliefs, predictions, evidence and verdicts from last month. The "Your lessons" line in the block above means this log. You do not need the AI visual feedback editor or a brand brain to track beliefs.

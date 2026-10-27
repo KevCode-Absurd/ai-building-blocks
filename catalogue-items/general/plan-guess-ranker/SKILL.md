@@ -7,6 +7,12 @@ description: Paste this above your business or product plan to get the few guess
 
 Turns a plan into a ranked list of guesses, each with a number, so you know what to test first.
 
+## When to use it
+
+- You have a plan and do not know what to test first.
+- You are about to spend money on something you have not checked.
+- Your plan leans on lines such as "it will be the next big thing".
+
 ## When not to use it
 
 - You want the full check with every test: use the Leap-of-faith assumption finder.
@@ -54,6 +60,7 @@ RANKED GUESSES
 RISKIEST: <guess> because <reason>
 TEST ON: <who, and where to find ten this week>
 MISSING: <figures not in the plan>
+CHECKS MISSED: <one line per check below that failed or could not run, or none>
 ```
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->

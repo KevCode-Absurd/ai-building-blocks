@@ -10,6 +10,8 @@ explain: |
   A power splitter or coupler designed for your band and split ratio, with its response plotted so you can see if it works. It runs in MATLAB.
 
   It covers Wilkinson splitters, branchline and ratrace couplers, corporate dividers for arrays, directional couplers, and beamforming designs such as SIW splitters and Rotman lenses. You set the centre frequency and split. It builds the board model on your substrate, estimates the mesh and memory before the full solve, then reports S-parameters. It expects the board material to be set first. You need MATLAB with RF PCB Toolbox.
+
+  Licence: this is MathWorks' skill, copied unchanged from MathWorks, not written for this library. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause, plus a rule that you may use it only with MathWorks products such as MATLAB. The skill file and its manifest link a different MathWorks licence page, which is MathWorks' own upstream terms. LICENSE.md supersedes it for this copy, and the MathWorks-products-only rule applies to all use.
 when:
   - You need to divide a signal equally or unequally.
   - You are building a feed network for an antenna array.
@@ -30,8 +32,9 @@ you_get:
   - Mesh and memory estimate
   - Next steps for checking and tuning
 how_to_use:
-  - Open an AI that can run MATLAB code. You need MATLAB with RF PCB Toolbox.
-  - Set up your board material first, using the material setup skill.
+  - Open an AI that can run MATLAB code. You need MATLAB with RF PCB Toolbox. Both are paid licensed products.
+  - Catalog couplers solve with the method of moments (MoM) by default. The finite element method (FEM) needs the IDMF solver, which runs through WSL on Windows. If it is missing, stay with MoM.
+  - Set up your board material first, using the material setup skill. The design call sizes the lines for the board material it sees when you call it. If you change the board afterwards, such as the multi-layer example, check the response again and re-run the design if it moved.
   - Paste this skill into your AI. Add your centre frequency, bandwidth and split ratio.
   - Ask your AI to check the mesh and memory estimate before the full solve.
   - Read the S-parameter plots and check they meet your target across the band.
@@ -43,7 +46,8 @@ output_sample:
     - Your board material and conductor settings
     - The coupler or splitter type you want
   prerequisites:
-    - MATLAB with RF PCB Toolbox
+    - MATLAB with RF PCB Toolbox, both paid licensed products
+    - For FEM solves only, the IDMF solver (WSL on Windows). MoM needs nothing extra.
     - An AI that can run MATLAB code
     - Your board material set up first, using the material setup skill
   output:
@@ -52,7 +56,7 @@ output_sample:
     - name: Mesh and memory estimate
       contains: A check of the mesh density and memory needed, run before the full solve.
     - name: S-parameter response
-      contains: Plots of how the part behaves across your band, so you can see if it works.
+      contains: Plots of S-parameter size in dB against frequency across your band, with a legend that names each one, such as S11 or S21, so you can see if it works.
     - name: Port numbering
       contains: Which port is which on a 3-port splitter or 4-port coupler, so you read the plots right.
     - name: Next steps

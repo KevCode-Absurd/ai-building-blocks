@@ -9,7 +9,7 @@ subhead: A way to measure how well your AI agent works, so you can tell if a cha
 explain: |
   A way to measure how well your AI agent works, so you can tell if a change made it better or worse. Agents answer differently each run and can reach a goal by several paths, so one pass or fail test is not enough.
 
-  The skill builds a rubric with several parts, such as accuracy, completeness, source quality and effort spent. It judges the final result and allows different routes to get there. An AI judge gives volume, and a person checks the tricky cases. It also suggests a realistic token budget, since that drives much of the result, and sets pass marks you can use as a gate before release.
+  The skill builds a rubric with several parts, such as accuracy, completeness, source quality and effort spent. It judges the final result and allows different routes to get there. An AI judge gives volume, and a person checks the tricky cases. It also suggests a realistic token budget to test with, and sets pass marks you can use as a gate before release.
 when:
   - You changed a prompt and cannot tell whether the agent got better.
   - You want to catch regressions before you ship an update.
@@ -20,8 +20,10 @@ not_for:
   - "You want to fix bugs in ordinary code: use a normal unit test or ask your AI to review the code directly."
   - "You want live monitoring with alerts and dashboards: use your own monitoring tool, since this gives you a plan, not a running service."
 you_give:
-  - A description of what your agent does
+  - A description of what your agent does, and the tools it can use
   - Example tasks and good answers (optional)
+  - A current baseline run of your agent on a few tasks, if you have one
+  - Any scoring guide you already use (optional)
   - The changes you want to compare
   - Your token or cost limits (optional)
 you_get:
@@ -32,6 +34,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the full text of the skill file (SKILL.md) from the download.
   - If you have no baseline yet, run your current agent on the test tasks first. The scores of the changed agent need something to be compared with.
+  - The rubric and test tasks work in a free chat tool. Automated judging needs code and an API key. Without them, paste your agent's results back into the chat by hand and ask your AI to score them.
   - Describe what your agent does. Add example tasks and good answers if you have them (optional).
   - Say which changes you want to compare, and your token or cost limits (optional).
   - Read the rubric and test tasks it gives you. Change any part that does not fit your agent.

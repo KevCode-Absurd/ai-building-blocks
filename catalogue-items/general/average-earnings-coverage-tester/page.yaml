@@ -11,7 +11,7 @@ subhead: "Paste the borrower's debts and several years of earnings. It totals ev
 explain: |
   A lender gets a fixed payment and none of the upside. The only question that matters is whether the borrower can keep paying when business is poor. A single good year says very little. A pledge of property says little too, because pledged assets lose value just when they are needed.
 
-  This skill lists every claim on the borrower, adds up all the yearly charges and divides average earnings by that total. It shows the average with loss years left in and with loss years set to zero. The bar goes up as the business gets less steady, and goes up again for a preferred share. It also redoes the sum at the rate the borrower would pay to refinance. It is a method of analysis, not financial advice, and it never says buy or sell.
+  This skill lists every claim on the borrower, adds up all the yearly charges and divides average earnings by that total. It shows the average with loss years left in and with loss years set to zero. The bar goes up as the business gets less steady, and goes up again for a preferred share. It also redoes the sum at the rate the borrower would pay to refinance. The call follows one rule: pass only if cover meets the bar on both bases and at the refinancing rate and nothing in the trend is poor; borderline if it meets the bar on one basis only or the trend is poor; fail if it misses on both. It is a method of analysis, not financial advice, and it never says buy or sell.
 
 when:
   - You are about to lend to a business and want a test beyond "they seem solid".

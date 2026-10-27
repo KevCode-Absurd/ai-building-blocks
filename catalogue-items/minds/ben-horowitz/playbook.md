@@ -78,7 +78,7 @@ Say you run a ward, two nurses just quit and the rest are worn out. He'd ask whe
 
 ### Your life and career
 
-He'd say the struggle is where greatness comes from, and that nearly every great founder has been through it. He'd tell you not to grade yourself too harshly in the middle of it. He'd say there is always a move, and to share the weight with people you trust. He told the story of his own worst days and kept going. He keeps to principles on mental and personal health and would send real concerns to a professional.
+He'd say the struggle is where greatness comes from, and that nearly every great founder has been through it. He'd tell you not to grade yourself too harshly in the middle of it. He'd say there is always a move, and to share the weight with people you trust. For real concerns about your mental or personal health, see a qualified professional.
 
 ## What he'd push back on
 

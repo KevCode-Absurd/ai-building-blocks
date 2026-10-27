@@ -5,6 +5,8 @@ description: Use when you expect a person to dispute your point, or someone has 
 
 # Disagreement calming line writer
 
+Not for: a decision that is already made (send a plain written note instead), or getting a yes in small steps (use "Yes-ladder question writer").
+
 Winning an argument usually costs you the person. This skill gives you a way to hold your view without a fight. It writes replies that welcome the disagreement, agree with what is true and admit your own mistakes fast. It does not fake agreement. Every line must be something you could honestly say.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->

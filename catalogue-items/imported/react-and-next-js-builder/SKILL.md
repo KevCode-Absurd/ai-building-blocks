@@ -44,6 +44,8 @@ Generate a new Next.js or React project with TypeScript, Tailwind CSS, and best 
    npm run dev
    ```
 
+**Result:** a new project folder with the file paths the scaffolder prints, such as `package.json`, `src/` and the starter components.
+
 ### Scaffolder Options
 
 | Option | Description |
@@ -104,6 +106,8 @@ Generate React components with TypeScript, tests, and Storybook stories.
    python scripts/component_generator.py FormValidation --type hook
    ```
 
+**Result:** the component file path (plus test and story files if asked) and a short note on its props.
+
 ### Generator Options
 
 | Option | Description |
@@ -151,7 +155,7 @@ Analyze package.json and project structure for bundle optimization opportunities
    python scripts/bundle_analyzer.py /path/to/project
    ```
 
-2. Review the health score and issues:
+2. Review the health score and issues. The output below is an illustration of the shape only. The score and sizes are not a measurement of any real project:
    ```
    Bundle Health Score: 75/100 (C)
 
@@ -171,6 +175,12 @@ The package sizes in this skill (for example moment 290KB, lodash 71KB) are appr
    ```bash
    python scripts/bundle_analyzer.py . --verbose
    ```
+
+**Result:** a fixed table with these columns, one row per route or page: route or page, LCP before (from Lighthouse), LCP after, and the top three heavy packages with the fix for each. Add the bundle health score above the table. Lighthouse needs a live page URL; run it in Chrome. Write MISSING for any LCP value you did not measure.
+
+| Route or page | LCP before | LCP after | Top three heavy packages |
+|---------------|-----------|-----------|--------------------------|
+| [ROUTE] | [MS or MISSING] | [MS or MISSING] | [PACKAGE 1], [PACKAGE 2], [PACKAGE 3] |
 
 ### Bundle Score Interpretation
 
@@ -474,7 +484,7 @@ function List<T>({ items, renderItem }: ListProps<T>) {
 - Next.js Optimization: `references/nextjs_optimization_guide.md`
 - Best Practices: `references/frontend_best_practices.md`
 - Forcing-question library (Matt Pocock grill): `references/forcing_questions.md`
-- Composition map (which specialist to fork into): `references/composition_map.md`
+- Composition map (topics the author's full pack hands to other skills; not included): `references/composition_map.md`
 
 ---
 
@@ -495,7 +505,7 @@ Before this skill scaffolds a component, recommends a framework, or audits a bun
 
 If any of those three is not stated, the recommendation is incomplete — return to Q2 of the forcing-question library.
 
-The `scripts/frontend_decision_engine.py` tool encodes these checks: it refuses to recommend a profile without the four assumption inputs and prints the verifiable thresholds for the matched profile.
+The `scripts/frontend_decision_engine.py` tool encodes these checks: it refuses to recommend a profile without its five required inputs (primary device, LCP target, SEO-dependent, auth-walled, team size) and prints the verifiable thresholds for the matched profile.
 
 ---
 
@@ -526,9 +536,9 @@ To add a custom profile (e.g., your org's internal-tool defaults): copy `profile
 
 ## Composition map
 
-This skill does NOT reimplement scope owned by the POWERFUL-tier specialists. It forks into them. See `references/composition_map.md` for the full routing table. Key forks:
+In the author's full pack, other specialist skills own these areas. They are not in this item. Use the table as a list of topics to cover by hand or with another skill. See `references/composition_map.md` for the full routing table.
 
-| Concern | Fork into |
+| Concern | Separate skill in the author's pack (not included) |
 |---|---|
 | WCAG audit, contrast, screen-reader | `engineering-team/skills/a11y-audit/` |
 | Bundle profiling + runtime perf | `engineering/skills/performance-profiler/` |
@@ -541,7 +551,6 @@ The LCP targets and bundle budgets in the profiles are the author's starting poi
 
 Note: the `cs-frontend-engineer` agent, the `/cs:frontend-review` command and the forked skills named above belong to the author's full skill pack and are not in this item. Without them, ask the user the four assumptions above as plain questions (device and network, LCP target, SEO or sign-in only, accessibility target and owner) and carry on with the scripts here.
 
-The `cs-frontend-engineer` agent orchestrates these forks via `context: fork`. Invoke it from another agent with `Agent({subagent_type: "cs-frontend-engineer", prompt: "..."})` or via `/cs:frontend-review <your problem>`.
 
 ---
 
@@ -553,7 +562,7 @@ Before locking any framework or rendering decision, walk the seven forcing quest
 2. Always recommend the answer with cited canon.
 3. Track answers in `/tmp/frontend-grill-<date>.md`.
 4. If a kill criterion trips, stop. Don't scaffold around an unresolved gap.
-5. After Q7, run `frontend_decision_engine.py` with the seven answers.
+5. After the questions, run `frontend_decision_engine.py`. The script needs five values: primary device, LCP target in ms, SEO-dependent (true or false), auth-walled (true or false), and team size. The INP target is optional (default 200 ms). The other answers (bundle budget, design system, WCAG target) shape your advice but are not script inputs.
 
 Summary:
 
@@ -569,10 +578,8 @@ Summary:
 
 ## Invocation from other agents and skills
 
-Three surfaces:
+In this item, work like this:
 
-1. **Slash command:** `/cs:frontend-review <prompt>` — full grill + decision engine + composition routing.
-2. **Agent subagent:** `Agent({subagent_type: "cs-frontend-engineer", prompt: "..."})` — forks context, returns ≤ 200-word digest.
-3. **Direct tool call:** `python scripts/frontend_decision_engine.py ...` — deterministic profile match when inputs are known.
-
-See `agents/engineering/cs-frontend-engineer.md` for the full invocation contract.
+1. Ask the user the four assumption questions directly, one at a time.
+2. Run the bundled scripts: `python scripts/frontend_decision_engine.py ...` once the answers are known, then the scaffolder, generator and bundle analyser above.
+3. The slash command `/cs:frontend-review` and the `cs-frontend-engineer` agent are in the author's full pack only. Do not call them.

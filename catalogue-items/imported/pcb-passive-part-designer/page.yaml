@@ -7,11 +7,13 @@ job: build-software
 headline: PCB passive part designer
 subhead: Say which part you need, such as an inductor or balun. Get it designed and checked. You get one report you can check before a full solve.
 explain: |
+  Licence: LICENSE.md in this item applies (BSD 2-Clause). Use it only with MathWorks products such as MATLAB. The skill file links a different MathWorks licence page, which is MathWorks' own upstream terms and also says MathWorks products only.
+
   Tell it the part, such as a spiral inductor, interdigital capacitor, ring resonator or balun, and get a design you can measure instead of guess at. It pulls out the numbers that matter: inductance, capacitance and self-resonant frequency.
 
   The skill creates the part from a catalogue object, tunes it for your target frequency, and then reads its values at that frequency. It can use fast behavioural S-parameters for quick estimates. Before a full solve it checks the mesh and memory need, so you do not start a run that will not finish. After design you move on to full-wave checks, tuning and circuit work. It runs in MATLAB with the RF PCB Toolbox, and needs a substrate set first.
 
-  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
+  This is MathWorks' skill, copied unchanged.
 when:
   - You need a spiral inductor for a given inductance on your board.
   - You want to check where a capacitor stops acting like a capacitor.
@@ -25,21 +27,22 @@ you_give:
   - The part type, such as spiral inductor, interdigital capacitor, balun, ring resonator, phase shifter or radial stub
   - Your target frequency
   - Your substrate and metal, set up first with the PCB material setup helper
-  - Size limits (optional)
+  - "Size limits (optional), such as a target inductance of [VALUE] nH and a largest footprint of [WIDTH] by [LENGTH] mm"
 you_get:
   - A designed part object
   - Inductance, capacitance or resonance values
   - Quick behavioural S-parameters
   - A memory and mesh estimate before the full solve
 how_to_use:
-  - Check you have MATLAB with the RF PCB Toolbox. Both are paid products and need a license.
-  - Set up your substrate and metal first with the PCB material setup helper.
-  - "Expect one report: a table of part dimensions, the L or C value at your target frequency, the self-resonant frequency, then the mesh and memory estimate. There is no automatic pass or fail. You read the estimate and decide."
-  - Give your AI the skill text, the part type and your target frequency.
-  - Work in this order. First, set the substrate and metal. Second, pick the part. Third, set its dimensions, or tune them for your frequency. Fourth, run the quick behavioural check. Fifth, run the memory estimate (memoryEstimate) and read it.
-  - Let your AI run the MATLAB code. It builds the part and reads L or C at your frequency.
-  - If the memory estimate is more than your computer has, ask your AI to coarsen the mesh before you approve a full-wave solve.
-  - Compare the quick estimate with the full result, since they differ near resonance.
+  - "1. Check you have MATLAB with the RF PCB Toolbox. Both are paid products and need a license. Open an AI that can run MATLAB code."
+  - "2. Set up your substrate and metal first with the PCB material setup helper."
+  - "3. Paste the skill text, then give your AI the part type and your target frequency. Add size limits if you have them."
+  - "4. Work in this order. Set the substrate and metal. Pick the part. Set its dimensions, or tune them for your frequency. Run the quick behavioural check. Run the memory estimate (memoryEstimate) and read it."
+  - "5. Expect one report: a table of part dimensions, the L or C value at your target frequency, the self-resonant frequency, then the mesh and memory estimate. There is no automatic pass or fail. You read the estimate and decide."
+  - "6. Let your AI run the MATLAB code. It builds the part and reads L or C at your frequency."
+  - "7. If the memory estimate is more than your computer has, ask your AI to coarsen the mesh before you approve a full-wave solve."
+  - "8. Compare the quick estimate with the full result, since they differ near resonance."
+  - The skill file points to other MathWorks skills by their original names. Each has a match in this library: matlab-manage-pcb-material is the PCB material setup helper, matlab-analyze-em is the PCB signal loss analyzer, matlab-optimize-pcb-design is the PCB design optimizer, matlab-integrate-pcb-circuit is the PCB circuit combiner, matlab-design-pcb-filter is the PCB RF filter designer and matlab-design-pcb-coupler is the PCB coupler designer. The layout-assembly skill (matlab-assemble-pcb-layout) is not in this library yet. Paste the related skills into the same chat if you want your AI to follow them.
 output_sample:
   input:
     - The part type, such as spiral inductor, balun or ring resonator

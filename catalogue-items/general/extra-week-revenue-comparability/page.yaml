@@ -21,8 +21,8 @@ when:
   - A reviewer wants to trace a comparable growth figure back to its inputs.
 
 not_for:
-  - "Growth is bent by currency, not by a calendar week. Use the Constant-currency revenue bridge."
-  - "Growth is bent by buying or selling businesses. Use the Organic revenue perimeter bridge."
+  - "Growth is bent by currency, not by a calendar week. Use the Revenue growth currency checker."
+  - "Growth is bent by buying or selling businesses. Use the Like-for-like sales growth checker."
   - "The extra week sits in last year, or the calendar moved by days or holidays. This only removes one extra week from the current year. Ask your accountant."
 
 you_give:

@@ -74,6 +74,7 @@ For every customer segment, calculate:
 ```
 Value Ratio = Customer's alternative cost / Your price
 
+(These bands are the author's rules of thumb, not tested thresholds. Check them against your own buyers.)
 If Value Ratio > 10x → You're massively underpriced
 If Value Ratio > 5x  → You're underpriced (the author's view that most startups are here; not measured)
 If Value Ratio 3-5x  → Healthy pricing
@@ -209,7 +210,7 @@ Enterprise pricing isn't a page on your website. It's a conversation. The "Conta
 - On-prem commands 2-5x premium over cloud (support complexity). These multiples are the author's rules of thumb, not benchmarks
 
 **2. Usage scale** (seats, API volume, data volume)
-- Volume discounts should never go below cost to serve + 40% margin
+- Volume discounts should never go below cost to serve + 40% margin (the author's rule of thumb; set your own margin floor)
 - Discount off list price, not off already-discounted price
 
 **3. Support level** (community, standard, premium, dedicated)
@@ -298,7 +299,7 @@ Pricing for the customer you have instead of the customer you want. If your road
 **Timing Signals:**
 
 - Value ratio > 5x for most customers
-- Win rates above 40% (you're not losing on price)
+- Win rates above 40% (the author's rule of thumb, not a benchmark; use your own win rate history)
 - No customer pushback on pricing in last 6 months
 - Customers expanding faster than expected
 - Competitors raised prices and didn't lose share
@@ -347,6 +348,8 @@ Does usage vary >5x between customers?
 ```
 
 ### Should We Raise Prices?
+
+(The 5x and 40% cut-offs below are the author's rules of thumb. Replace them with your own figures when you have them.)
 
 ```
 Is value ratio > 5x for most customers?

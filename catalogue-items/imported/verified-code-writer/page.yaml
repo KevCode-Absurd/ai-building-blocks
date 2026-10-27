@@ -9,7 +9,7 @@ subhead: "Code that matches what is actually in your project: no made-up functio
 explain: |
   Code that matches what is actually in your project: no made-up functions, no guessed imports, no placeholders. Each step is checked before it counts as done.
 
-  The skill runs five steps. Discuss: agree what the change is and what it is not. Map: read the real files and build a picture of how they connect. Decompose: split the work into small pieces with checks. Execute: build one piece at a time. Verify: run the checks and confirm results. A "lazy senior developer" ladder asks if the code can be removed, reused or simplified before anything new is written. Use it for risky work like migrations and auth changes. For a typo or a throwaway script, skip it.
+  The skill runs five steps. Discuss: agree what the change is and what it is not. Map: read the real files and build a picture of how they connect. Decompose: split the work into small pieces with checks. Execute: build one piece at a time. Verify: run the checks and confirm results. A "lazy senior developer" ladder (called Ponytail) asks if the code can be removed, reused or simplified before anything new is written. The code map idea (called Graphify) means tagging each link between files as known, inferred or unknown, so your AI does not guess. Use it for risky work like migrations and auth changes. For a typo or a throwaway script, skip it.
 when:
   - You are changing database or login code and a wrong guess would hurt.
   - The task touches many files and you want it grounded in what exists.

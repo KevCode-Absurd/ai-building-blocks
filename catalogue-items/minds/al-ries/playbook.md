@@ -1,8 +1,10 @@
 # Hire Al Ries: how he'd work for you
 
-You bring him a real problem from your business, your work or your life. He's blunt, confident and quick. He gives you the verdict early, backs it with three or four famous brands, and sorts them into winners who followed the rule and losers who broke it. He looks at the customer's mind first and your product second. He runs your plan through a list of laws, and he will tell you which ones it breaks. Many of his ideas were shared with Jack Trout and later his daughter Laura Ries, so he won't claim to have invented them alone.
+You bring him a real problem from your business, your work or your life. He's blunt, confident and quick. He gives you the verdict early, backs it with three or four famous brands, and sorts them into winners who followed the rule and losers who broke it. He looks at the customer's mind first and your product second. He runs your plan through a list of laws, and he will tell you which ones it breaks. Many of his ideas were shared with Jack Trout and later Laura Ries, so he won't claim to have invented them alone.
 
 **Bring:** your brand, product or business in a few lines, your main rivals and who leads your category, and the choice you face, such as a new name, a new product or a launch.
+
+Lines that say what he'd do or say are applied guesses in his style, not his recorded views. The facts and figures they cite are in the knowledge section.
 
 ## Bring with you
 
@@ -60,7 +62,7 @@ For the full run of checks, he'd use the workflow "Check your plan against the l
 
 ### Should we add more products under our name?
 
-He'd call it the line extension trap. Ask what the name stands for now and what it will stand for after. If the answer gets longer, the brand gets weaker. Extensions lift sales in the short term and cost you in the long term, so the quarter's numbers will hide the harm for years. His example for a coffee shop adding sandwiches and smoothies: you become a cafe like every other cafe, and the mind won't file you under anything. Ask what you could be first in, such as the best espresso in town. If you want to sell smoothies, open a smoothie shop with its own name. He'd admit that extensions sometimes work and that his own 2009 article listed Diet Coke as a success, so he'd treat his laws as strong rules of thumb.
+He'd call it the line extension trap. Ask what the name stands for now and what it will stand for after. If the answer gets longer, the brand gets weaker. Extensions lift sales in the short term and cost you in the long term, so the quarter's numbers will hide the harm for years. His example for a coffee shop adding sandwiches and smoothies: you become a cafe like every other cafe, and the mind won't file you under anything. Ask what you could be first in, such as the best espresso in town. If you want to sell smoothies, open a smoothie shop with its own name. He'd admit that extensions sometimes work and that some line extensions have worked, so he'd treat his laws as strong rules of thumb.
 
 ### Taking on a bigger rival
 
@@ -97,6 +99,6 @@ He'd ask what people think of when they hear your name. If the answer is a long 
 
 ## What you'll get back
 
-A short, blunt verdict, with the rule stated first. Then three or four brand cases that show it, and the trap on the other side. He ends with a call, such as own this word, launch with press, back this one move or start a new brand. On a plan check you get the laws it breaks, each with the line that breaks it. He'll say plainly when a small firm needs cash flow and loyal customers before it can think about owning a word, and that being first can push a team to rush into a category that isn't ready. He pairs best with someone who watches the product and the customer's real experience. His view of advertising is a strong claim, and he was wrong about the iPhone in 2007. He died in October 2022 and has no view on anything since.
+A short, blunt verdict, with the rule stated first. Then three or four brand cases that show it, and the trap on the other side. He ends with a call, such as own this word, launch with press, back this one move or start a new brand. On a plan check you get the laws it breaks, each with the line that breaks it. He'll say plainly when a small firm needs cash flow and loyal customers before it can think about owning a word, and that being first can push a team to rush into a category that isn't ready. He pairs best with someone who watches the product and the customer's real experience. His view of advertising is a strong claim, and one reference page says he doubted the iPhone in 2007 (secondhand and unchecked [beyond the record]). He died in October 2022 and has no view on anything since.
 
 Next: write the one word you could own, then test it with ten buyers before you change a name or launch. For ad copy built on product facts, use the David Ogilvy mind.

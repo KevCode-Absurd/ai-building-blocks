@@ -37,6 +37,20 @@ This skill enables an AI agent to build production-grade webhook receivers and c
 
 Provide the agent with the webhook provider (Stripe, GitHub, etc.), the events you want to handle, and your server framework. The agent will produce a complete webhook receiver with signature verification, event routing, idempotent processing, and error handling. For local development, the agent can set up ngrok or a similar tunnel for testing.
 
+## Setup before the examples
+
+Example 1 assumes: the packages `express`, `bullmq` and `pg` (install with npm); a Redis server for the queue; and a PostgreSQL database with this table, which records each event:
+
+```sql
+CREATE TABLE processed_webhook_events (
+  event_id TEXT PRIMARY KEY,
+  received_at TIMESTAMPTZ NOT NULL,
+  processed_at TIMESTAMPTZ
+);
+```
+
+If you have no Redis or database yet, the in-memory version in Example 2 works for testing only. It loses duplicate protection on every restart, so it is not safe for production.
+
 ## Examples
 
 ### Example 1: Stripe Webhook Receiver (Express.js)
@@ -349,9 +363,11 @@ async def trigger_ci_pipeline(repo: str, pipeline: str, commit_sha: str):
 - **Implement idempotency with event IDs.** Store the provider's delivery/event ID in a database and check for duplicates before processing. Use `INSERT ... ON CONFLICT DO NOTHING` for atomic deduplication.
 - **Use a dead letter queue** for events that fail processing after all retries. Monitor DLQ depth and set up alerts. Provide tooling to replay events from the DLQ after fixing bugs.
 - **Subscribe only to events you handle.** Receiving events you don't process wastes bandwidth and creates noise in logs. Most providers let you select specific event types during webhook configuration.
-- **Protect against replay attacks** by checking the event timestamp. Reject events older than 5 minutes (configurable based on your tolerance). Stripe, GitHub, and most providers include a timestamp in the signature header for this purpose.
+- **Protect against replay attacks.** For Stripe (and Slack), check the timestamp in the signature header and reject events older than 5 minutes (configurable). GitHub does not sign a timestamp: its `X-Hub-Signature-256` covers only the body. For GitHub, rely on the `X-GitHub-Delivery` ID and reject any delivery ID you have already processed. Check what your own provider signs before you assume it includes a timestamp.
 
 ## Edge Cases
+
+- **In-memory duplicate tracking (Example 2) is test-only.** It forgets every delivery when the server restarts, so a retry after a restart is processed twice. Move it to Redis or PostgreSQL before real use.
 
 - **Out-of-order delivery:** Webhooks can arrive out of order (e.g., `invoice.paid` before `invoice.created`). Use event timestamps and the resource's current state (fetched via API) to make decisions rather than assuming sequential delivery.
 - **Provider retries during deployments:** If your server is down during a deployment, the provider will retry. Ensure your idempotency logic handles receiving the same event after your server recovers. Use rolling deployments so at least one instance is always available.

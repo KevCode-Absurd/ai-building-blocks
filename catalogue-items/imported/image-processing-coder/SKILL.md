@@ -22,6 +22,8 @@ metadata:
 
 # Image Processing
 
+> **Note for the person using this (added by AI Blocks):** this file is written for your AI, so the routing tables below are not for you to read. Describe your image problem in plain words, and bring your MATLAB release, your toolbox list, how many images you have and the known size of one object.
+
 Process, analyze, and transform images using MATLAB Image Processing Toolbox (IPT). This skill routes you to the correct reference for your task and provides core conventions that apply across all IPT work.
 
 ## When to Use
@@ -31,7 +33,7 @@ morphology, segmentation, measurement, geometric transforms, color, texture,
 quality metrics, deep learning on images, and image apps.
 Non-medical microscopy — cell and particle counting on plain IPT — is in scope.
 
-Hand off (and co-load) instead of answering alone: see the handoff table under `## Routing`. The sibling skills named there are not included in this library. If one is needed, say so, and do the part you can with plain Image Processing Toolbox code.
+Hand off (and co-load) instead of answering alone: see the handoff table under `## Routing`. The sibling skills named there are separate items in the AI Blocks library. Their library names are: Medical scan reader (`matlab-read-medical-data`), Spectral image analyst (`matlab-analyze-spectral-images`), Huge image processor (`matlab-process-large-images`), Machine vision inspector builder (`matlab-use-visual-inspection`), Image viewer builder (`matlab-display-image`), 3D image viewer builder (`matlab-display-volume`), Image text reader (`matlab-recognize-text`), Python vision model connector (`matlab-integrate-pytorch-vision`) and Optical system designer (`matlab-model-optics`). If the user's AI does not have the one it needs, say so, and do the part you can with plain Image Processing Toolbox code.
 
 ## When NOT to Use
 
@@ -75,7 +77,7 @@ Always use `imageshow` instead of `imshow` (R2024b+). `imageshow` handles sub-bi
 
 ### Code Execution
 
-**Execute code blocks via `evaluate_matlab_code` before presenting them to the user. If you do not have that tool, say so and tell the person to run the code in MATLAB and check it on an image they know.** If it errors, fix and re-run. This catches type mismatches, wrong argument orders, and nonexistent functions before the user sees them. If execution requires user data or toolboxes not available in the current session, present the code with a note that it should be run with the user's own data — do not loop trying to synthesize stand-in data.
+**If you have the `evaluate_matlab_code` tool, run code blocks with it before presenting them to the user. If you do not have that tool (most plain chats do not), say so and tell the person to paste the code into MATLAB, run it on an image they know, and report back what happened.** If it errors, fix and re-run. This catches type mismatches, wrong argument orders, and nonexistent functions before the user sees them. If execution requires user data or toolboxes not available in the current session, present the code with a note that it should be run with the user's own data — do not loop trying to synthesize stand-in data.
 
 ### Error Recovery
 
@@ -164,6 +166,17 @@ This skill targets R2024b+ but some features require newer releases. References 
 - **R2026b:** `bwvolumefilt`, `bwpropfilt3`, `uiannotate`
 
 If targeting an older release, check with `isMATLABReleaseOlderThan("R2026a")` and use the fallback patterns documented in the references. To check release notes for a specific function, load `matlab-read-documentation`.
+
+## What you hand back (added by AI Blocks)
+
+Give the person these sections, in this order:
+
+1. **Method:** the method you chose and why it fits their image problem.
+2. **Code:** a MATLAB script that reads their images, processes them and shows or saves the result. Say whether you ran it.
+3. **Data type notes:** the data types and the row and column order the code uses.
+4. **Masks or measurements:** the masks, counts or measurements the code produces, with units only if the person gave a pixel size.
+5. **Figures:** plots of before and after, so they can check the result by eye.
+6. **Next step:** a sibling skill to use, if the task belongs to one.
 
 ----
 

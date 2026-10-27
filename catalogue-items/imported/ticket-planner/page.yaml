@@ -32,9 +32,10 @@ you_get:
   - A review round with you before posting
   - Tickets posted to your tracker in order
 how_to_use:
-  - Have ready: your spec file or issue link, the name of your tracker, your repo or project key, and how small each ticket should be.
+  - "Have ready: your spec file or issue link, the name of your tracker, your repo or project key, and how small each ticket should be. To post to a real tracker you also need the tracker type, a login or access token for it, and the names of your triage labels. Without these, choose local files: the skill then saves one file per ticket."
+  - Note up front that the setup step the skill names is not in this copy. If you do not have it, choose local files and skip posting to a tracker.
   - Paste your plan or spec into your AI, or give it a link to the issue. Paste the skill text first.
-  - Say if you want tickets posted to a tracker. It needs access to the tracker and the setup step the skill names, /setup-matt-pocock-skills, which is not in this folder. If you do not have it, tell your AI to skip it. It then saves one file per ticket and you copy them into your tracker by hand. For a real tracker, the setup step needs to supply two things: the tracker type and the triage labels you use. The skill adds a ready-for-agent label by default. Remove it if your tracker has no such label.
+  - "Say if you want tickets posted to a tracker. It needs access to the tracker and the setup step the skill names, /setup-matt-pocock-skills, which is not in this folder. If you do not have it, tell your AI to skip it. It then saves one file per ticket and you copy them into your tracker by hand. For a real tracker, the setup step needs to supply two things: the tracker type and the triage labels you use. The skill applies a ready-for-agent label only after you confirm that label exists in your tracker. If it does not, leave the label off or pick another one. Your AI should ask you to confirm the label before it posts."
   - Let your AI read your codebase if it can. This helps titles match your own words.
   - Read the numbered list. Say if tickets are too big, too small or wrongly linked.
   - Repeat until the list feels right, then approve it.
@@ -56,6 +57,6 @@ output_sample:
     - name: Approved tickets
       contains: Each ticket written out with what to build, a checklist of what done looks like, and its blockers.
     - name: Local ticket files
-      contains: If you have no tracker, one numbered file per ticket with blockers first, saved under a scratch folder.
+      contains: If you have no tracker, one numbered file per ticket with blockers first, saved in .scratch/<feature-name>/issues/ in your project (for example 01-first-ticket.md).
     - name: Tracker issues
       contains: If you have a tracker, one issue per ticket, posted in order, with blocking links or a blocked-by list.

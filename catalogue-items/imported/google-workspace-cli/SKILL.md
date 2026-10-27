@@ -7,8 +7,24 @@ description: "Google Workspace administration via the gws CLI (github.com/google
 
 Expert guidance and automation for Google Workspace administration using the open-source `gws` CLI ([github.com/googleworkspace/cli](https://github.com/googleworkspace/cli), Apache-2.0). The CLI builds its command surface dynamically from Google's Discovery Service, so it covers every supported Workspace API plus `+`-prefixed helper commands. This skill adds local Python tools (doctor, auth guide, recipe catalog, security audit, output analyzer).
 
-> **Verify before scripting:** `gws` generates commands at runtime from Google's API discovery documents, and the CLI is pre-v1.0. Always confirm a command's exact surface with `gws --help`, `gws <service> --help`, or `gws schema <service>.<resource>.<method>` before putting it in automation. Commands in this skill marked *(verify)* are illustrative of the `gws <service> <resource> <method>` pattern and must be checked against your installed version.
+> **Licence:** the `gws` tool is a separate project under Apache-2.0. The text and scripts in this skill are MIT, as set out in the LICENSE file here.
 
+> **Verify before scripting:** `gws` generates commands at runtime from Google's API discovery documents, and the CLI is pre-v1.0. Always confirm a command's exact surface with `gws --help`, `gws <service> --help`, or `gws schema <service>.<resource>.<method>` before putting it in automation. The commands in this skill were not run against a specific release, so no version number is given as checked. Commands in this skill marked *(verify)* are illustrative of the `gws <service> <resource> <method>` pattern and must be checked against your installed version.
+
+
+## When not to use this skill
+
+- For one small edit or a single email, use Google's own app. It is faster than setting up a tool.
+- For admin changes without Workspace admin rights, ask an admin. Those commands will fail.
+- For Microsoft 365, use the Microsoft 365 admin helper.
+- To plan an automation without running anything, use the No-code automation planner.
+
+## Inputs to gather first
+
+- What the person wants done, in plain words, and in which service (Gmail, Drive, Sheets, Calendar, Docs, Chat or Tasks).
+- Which account type they use (personal Google account or Workspace) and whether they have a Workspace admin role.
+- The people, files or sheets involved.
+- Whether a Google Cloud project and an OAuth client exist. The first sign-in needs both. The tool is free, but this setup takes time in the Google Cloud Console.
 
 ## Rules for running commands (read first)
 
@@ -17,7 +33,7 @@ This skill acts on real Gmail, Drive, Calendar and admin data. Follow these rule
 1. **Ask what the job is, once.** If the person has not said which service, which files, people or sheets, or what outcome, ask. Do not guess.
 2. **Read first, change later.** Start with a read-only command (a list or a search) and show the result. Only then move to a change.
 3. **Confirm before any change.** Before anything that sends an email, shares or unshares a file, moves, archives or deletes items, edits a Sheet or calendar, or changes an admin setting: show the exact command, say how many items it will touch, run it with `--dry-run` if the command supports it, and wait for a clear yes. To find out whether a command supports `--dry-run`, run `<command> --help`. If it does not, first run a read-only command that lists exactly the items the change would touch, show that list, and ask for the yes. A yes to one command is not a yes to the next.
-4. **Never run a command that still has `...` in it.** Where this skill shows `...`, run `<command> --help` first, then write the full command from what the help says. Commands marked *(verify)* get the same treatment: run `gws schema <service>.<resource>.<method>` or `--help` first.
+4. **Never run a command that still has a <FLAGS FROM --help> marker in it.** Where this skill shows that marker, run `<command> --help` first, then write the full command from what the help says. Commands marked *(verify)* get the same treatment: run `gws schema <service>.<resource>.<method>` or `--help` first.
 5. **Smallest permissions.** Sign in with only the services the job needs (for example `-s drive`), not everything.
 6. **Admin work needs admin rights.** If a command fails for lack of rights, say so and stop. Do not try to work around it.
 7. **No tools, no run.** If you cannot run commands in this chat, write the commands for the person to run and ask them to paste the result back. Do not invent results.
@@ -39,7 +55,7 @@ This sends real email. Under rules 2 and 3 above, start with a read-only command
 
 ```bash
 gws gmail +send --to "team@company.com" \
-  --subject "Weekly Update" --body "Here's this week's summary..."
+  --subject "Weekly Update" --body "<MESSAGE TEXT>"
 ```
 
 ### List Drive Files
@@ -100,24 +116,6 @@ gws auth setup
 gws auth login -s drive,gmail,sheets
 ```
 
-### Headless/CI
-
-This is not the default. Use it only when the machine cannot open a browser to sign in. Ask the user before you write any credentials file.
-
-> **Caution:** `gws auth export --unmasked` writes your secrets to a plain file. Use it only for a headless machine that cannot sign in itself. Keep the file private, keep it out of any shared folder or git, and delete it when the job is done. On your own computer, sign in with `gws auth login` so no secrets sit in a file you made.
-
-```bash
-# Generate setup instructions
-python3 scripts/auth_setup_guide.py --guide service-account
-
-# Export credentials from an interactive machine, then point the CLI at them
-gws auth export --unmasked > credentials.json
-export GOOGLE_WORKSPACE_CLI_CREDENTIALS_FILE=/path/to/credentials.json
-
-# When the job is done, delete the file
-rm credentials.json
-```
-
 ### Environment Variables
 
 ```bash
@@ -141,6 +139,24 @@ python3 scripts/auth_setup_guide.py --validate --json
 # Tests each service endpoint
 ```
 
+## Headless sign-in (only for machines that cannot open a browser)
+
+This is not the default. Use it only when the machine cannot open a browser to sign in. Ask the user before you write any credentials file. Never save it in a shared drive, a synced folder, a git repository, an email or a chat.
+
+> **Caution:** `gws auth export --unmasked` writes your secrets to a plain file. Use it only for a headless machine that cannot sign in itself. Keep the file private, keep it out of any shared folder or git, and delete it when the job is done. On your own computer, sign in with `gws auth login` so no secrets sit in a file you made.
+
+```bash
+# Generate setup instructions
+python3 scripts/auth_setup_guide.py --guide service-account
+
+# Export credentials from an interactive machine, then point the CLI at them
+gws auth export --unmasked > credentials.json
+export GOOGLE_WORKSPACE_CLI_CREDENTIALS_FILE=/path/to/credentials.json
+
+# When the job is done, delete the file
+rm credentials.json
+```
+
 ---
 
 ## Workflow 1: Gmail Automation
@@ -152,13 +168,13 @@ python3 scripts/auth_setup_guide.py --validate --json
 ```bash
 # Send a new email
 gws gmail +send --to "client@example.com" \
-  --subject "Proposal" --body "Please find attached..."
+  --subject "Proposal" --body "<MESSAGE TEXT>"
 
 # Reply to a message (auto-threading); check exact flags with: gws gmail +reply --help
-gws gmail +reply ...
+gws gmail +reply <FLAGS FROM --help>
 
 # Forward a message; check exact flags with: gws gmail +forward --help
-gws gmail +forward ...
+gws gmail +forward <FLAGS FROM --help>
 
 # Unread inbox summary
 gws gmail +triage
@@ -234,10 +250,10 @@ gws drive permissions list --params '{"fileId": "<FILE_ID>"}'
 
 ```bash
 # Read values (helper); check exact flags with: gws sheets +read --help
-gws sheets +read ...
+gws sheets +read <FLAGS FROM --help>
 
 # Append a row (helper); check exact flags with: gws sheets +append --help
-gws sheets +append ...
+gws sheets +append <FLAGS FROM --help>
 
 # Or use discovery methods (verify):
 gws schema sheets.spreadsheets.values.update
@@ -254,7 +270,7 @@ gws sheets spreadsheets values get --params '{"spreadsheetId": "<SHEET_ID>", "ra
 
 ```bash
 # Create an event (helper); check exact flags with: gws calendar +insert --help
-gws calendar +insert ...
+gws calendar +insert <FLAGS FROM --help>
 
 # Upcoming events (helper, timezone-aware)
 gws calendar +agenda
@@ -269,7 +285,7 @@ gws calendar events list --params '{"calendarId": "primary", "maxResults": 10}'
 ```bash
 # Free/busy via the Calendar API (verify schema first)
 gws schema calendar.freebusy.query
-gws calendar freebusy query --json '{"timeMin": "...", "timeMax": "...", "items": [{"id": "alice@co.com"}]}'
+gws calendar freebusy query --json '{"timeMin": "<START TIME>", "timeMax": "<END TIME>", "items": [{"id": "alice@co.com"}]}'
 ```
 
 ### Standup Report (workflow helpers)

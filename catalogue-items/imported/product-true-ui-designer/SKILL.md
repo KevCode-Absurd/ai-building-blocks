@@ -16,6 +16,8 @@ license_source: https://github.com/uizze/uizze/blob/main/LICENSE
 
 # Stop Making UI Slop
 
+> Licence note (added by AI Blocks): the author's header says MIT for the original. This copy is shared under CC BY 4.0, set by the LICENSE-CONTENT file in this folder. Credit UIZZE and sickn33.
+
 Build product-specific UI. UIZZE (https://uizze.com), the author, says its catalogue holds 800,000+ real web and iOS screens. That figure is theirs and is not checked here.
 
 ## Overview

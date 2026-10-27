@@ -11,6 +11,8 @@ explain: |
 
   It works from a strict rulebook. It bans Inter, Roboto and Open Sans, thin icon packs, heavy shadows, gradients, neon colours, pill-shaped big buttons, emojis and filler names like John Doe. It asks for a serif and sans-serif mix, soft pastel accents, 1px borders and a lot of white space. Motion is slow and light.
 
+  This is a licensed imported copy with AI Blocks additions, so it differs from Interface designer (a fresh direction per brief) and Interface upgrader (fixes to your existing system).
+
   You can also hand it a screen you already have. It names the biggest problems first and gives you the change for each. The look is deliberately flat, so always check contrast and keyboard use on your real text before you ship.
 when:
   - You are building a dashboard or docs site and want it to feel clean and adult.
@@ -41,6 +43,7 @@ how_to_use:
   - Hand the design direction to your developer or designer with your real text, so they build from the same page.
   - Check the design direction first, before you read the code. Ask for changes there, then ask for the code again.
   - Copy the code into your project. Test contrast, keyboard use and a phone screen with your real content.
+  - "What next: build your next screen in the same direction, and run a contrast check on your real text with the Interface polish checker."
 output_sample:
   input:
     - A description of the screen or product

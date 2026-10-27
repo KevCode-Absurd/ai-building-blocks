@@ -45,7 +45,7 @@ A playful, joyful, two-color risograph print aesthetic — built on a single war
 ## Style Foundations
 - Visual style: clean, high-contrast
 - Typography scale: 12/14/16/20/24/32 | Fonts: primary=Space Grotesk, display=Space Grotesk, mono=Overpass Mono | weights=100, 200, 300, 400, 500, 600, 700, 800, 900
-- Color palette: primary, secondary | Tokens: primary=#F237A1, secondary=#2C40A7, success=#16A34A, warning=#D97706, danger=#DC2626, surface=#FFFFFF, text=#111827
+- Color palette: primary, secondary | Tokens: primary=#F237A1, secondary=#2C40A7, success=#16A34A, warning=#D97706, danger=#DC2626, surface=[WARM OFF-WHITE PAPER VALUE: choose one and name it; the original author used #FFFFFF], text=#111827
 - Spacing scale: 4/8/12/16/24/32
 
 ## Accessibility

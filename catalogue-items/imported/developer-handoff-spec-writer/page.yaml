@@ -35,8 +35,9 @@ how_to_use:
   - Add your design. Paste a Figma link, upload a screenshot or describe the screen in plain words.
   - Add your token names, breakpoints and known edge cases if you have them (optional). Say which tech stack you use.
   - Send it. If you have a Figma connector, your AI can read exact measurements. In a plain chat, it works from your image or description.
+  - From a screenshot or a description, measurements and colours are estimates. Your AI should label them as estimates. Check them against the design file before you send the spec.
   - Read the spec. Fill any gap your AI marked, such as a missing token name or a state you did not show.
-  - Send the finished spec to your developer.
+  - Send the finished spec to your developer. After they build the screen, compare it with the spec's states and breakpoints, and send any gaps back as a short change note.
 output_sample:
   input:
     - A Figma link, a screenshot or a written description of the screen

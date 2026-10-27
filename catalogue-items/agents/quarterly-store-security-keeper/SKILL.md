@@ -26,12 +26,12 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Claude Code:** It can keep the history folder and remind you each quarter.
+- **Claude Code:** It can keep the history folder between quarters. It runs only when you ask, so set your own quarterly reminder.
 - **Your platform's admin pages:** Staff, apps and sign-in details are copied from there.
 <!-- /needs -->
 
 ## What you need
-The first required input is the store capture: the three lists below (admin list, apps, sign-in), copied from your store admin. The question input holds anything else you tell the agent. The agent needs those lists, not ad reports or other exports.
+These are the only inputs for this agent. They replace the generic "Before you start" list above. "Store capture" here means the three lists below (admin list, apps, sign-in), copied from your store admin. It does not mean storefront screenshots or page text. Do not ask for a separate question, ad reports (Meta Ads Manager, Google Ads) or other exports.
 
 - **Admin list** (required): everyone with staff or admin access, their role, and whether they are staff or a contractor, with end dates for contractors.
 - **Installed apps** (required): names and the data each can read, copied from the apps page.
@@ -74,7 +74,8 @@ If the owner approves a change in clear words, make only that change and write w
 - **Fix list:** do today, do this month, do this quarter. Each fix names the check it comes from and takes minutes or hours, not days.
 - **Deeper checks run:** which ones ran, which were skipped, and why.
 - **Next quarter:** the 1 to 3 things that decide which checks run next time.
-- **Files:** each step's file. Then every `MISSING:` line in one list.
+- **Files:** each step's file, and `security/history.md`, where this quarter's line is saved so the next run can find the baseline. Then every `MISSING:` line in one list.
+- **About the score:** it only measures how many of the basics are covered. A high score does not mean the store is safe.
 - **Next:** when a contractor or staff member leaves, run the admin list and the sign-in check again that week, not at quarter end, and tell the agent which fixes you made so the next run starts from them.
 
 This is a checklist of the basics you control, not a security test of your store. For a suspected break-in, contact your platform and a qualified security professional.

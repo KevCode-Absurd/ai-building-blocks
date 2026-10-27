@@ -2,11 +2,13 @@ thinking: medium
 thinking_why: It writes code that builds exact shapes and checks fit.
 new_slug: lab-hardware-designer
 name: Lab hardware designer
-summary: Design a lab part like a mount, chip mold or plate holder. Get a parametric CAD model with STEP, STL or DXF files, checked against fixed sizes.
+summary: Design a lab part like a mount, chip mold or plate holder. Get a parametric CAD model as STEP, STL or DXF files, with size checks.
 job: build-software
 headline: Lab hardware designer
 subhead: A lab part you can fabricate, built as code so you can change one number and rebuild. Describe the mount, chip mold, holder or fixture.
 explain: |
+  Safety first: the model files this skill makes are Python code that runs on your own computer. Run only files your AI wrote in this session, and read any file that came from somewhere else. Parts that touch cells or biological samples need a tested material and assay checks. The skill's checks cannot prove a part is safe for samples.
+
   A lab part you can fabricate, built as code so you can change one number and rebuild. Describe the mount, chip mold, holder or fixture. The skill sorts it into a device family, such as microfluidics or optomechanics, and loads the matching standards, because the hard part is fitting equipment with fixed sizes. A holder 0.5 mm too wide will not fit the plate reader.
 
   It writes parametric Python with build123d, exports STEP as the master file plus STL or DXF, then checks the dimensions with numbers and a rendered picture before anything is made. You need Python and the build123d package installed, and you should only run model files you trust.
@@ -27,14 +29,17 @@ you_give:
 you_get:
   - Parametric Python model
   - STEP, STL or DXF files
-  - Dimension checks against the standard
+  - A check that the sizes you declared match the standard or vendor drawing, and separate geometry checks on the built shape
   - A preview image to inspect
 how_to_use:
+  - You need Python and the build123d package set up. If you do not code, ask an engineer or a machinist to help you run it first.
+  - Before you start, gather the vendor drawing or measurement for anything the part must fit, such as the plate model number or the bolt pattern spec. Also note the material and how you will make it.
   - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can run Python code and save files.
   - Model files are run as Python on your computer. Run only files your AI wrote in this session. If a model came from the internet, a shared drive or a colleague, read it before you run it.
   - Look at the preview image and the check results before you make anything. Give your AI the vendor drawing for any size it could not check.
+  - You get three files to keep, the STEP master file, the check report and the preview PNG. The report lists the process, material, clearances, what the preview showed and every size nobody could check.
   - Next, send the STEP file and the report to a machinist or fabrication shop to review. Print or cut from the STL or DXF.
 output_sample:
   input:

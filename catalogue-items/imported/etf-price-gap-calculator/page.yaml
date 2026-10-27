@@ -30,12 +30,14 @@ you_get:
   - Plain reason for the gap
   - Breakdown of a sudden move
 how_to_use:
+  - "Before you run it: the data comes from Yahoo through an unofficial package, yfinance. That may breach Yahoo's terms, and it can break or be blocked. Check the fund issuer's NAV page first."
   - Open Claude, ChatGPT or Gemini in a mode that can run Python code and use the web. The skill cannot fetch prices without this.
   - Paste the skill text into the chat, or upload the skill folder if your AI accepts files.
   - Type your ticker, for example one fund to check, several to compare, or a list to scan for the widest gaps.
   - Let your AI install the data packages if it asks. Then read the premium or discount percent and the reason given.
   - The skill's NAV figure (navPrice) is an end-of-day number, so an intraday premium can be stale. Check the issuer's NAV page first.
-  - Compare the result with the issuer's published NAV page and check the fund's bid-ask spread. Repeat over several days, since one day can mislead. The size labels are rules of thumb, not sourced limits. The output is research, not a trading signal.
+  - Compare the result with the issuer's published NAV page and check the fund's bid-ask spread. Repeat over several days, since one day can mislead. The size labels, the call-to-put ratio cut-off and the implied volatility ranges in the deeper analysis are unsourced rules of thumb. The "gamma squeeze" wording describes positioning, not a prediction. The output is research, not a trading signal.
+  - "What next: compare the premium with the issuer's NAV page over several days, and check the bid-ask spread before you act."
 output_sample:
   input:
     - One or more ETF tickers

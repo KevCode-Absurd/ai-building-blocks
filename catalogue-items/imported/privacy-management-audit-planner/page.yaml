@@ -12,6 +12,8 @@ explain: |
   The skill handles both the 2019 add-on edition and the 2025 standalone one, and picks the right one for you. It runs a gap assessment against controller, processor and shared security controls, helps write a Statement of Applicability, and supports data protection impact assessments and records of processing. It also maps the standard to GDPR, CCPA, LGPD and PIPEDA, and plans the path to certification.
 
   The result is a planning draft, not an audit result or legal advice. The skill itself says its transition dates (certification bodies finishing around 31 October 2026, 2019 certificates moving by 2028) and its claim that ISO 27701 is not an approved GDPR certification scheme are not sourced. Check them with your certification body and the official ISO and data protection authority sources before you rely on them. Your team must also check each gap against real evidence.
+
+  This is an MIT-licensed import from Hemant Naik's repository (Sushegaad/Claude-Skills-Governance-Risk-and-Compliance, commit aab13e1). The body text is the source's own wording.
 when:
   - A customer asks if you hold ISO 27701.
   - You process personal data and want to test your controls.
@@ -32,6 +34,7 @@ you_get:
   - Statement of Applicability draft
   - Audit plan
 how_to_use:
+  - "Before you start, write down in plain words how personal data moves through your business: what you collect, where it is kept, who sees it and who you share it with. The skill cannot work without this. The result is a planning draft, not an audit or a legal opinion."
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
   - Say which edition you are on (2019 or 2025), and whether you are a controller, processor or both.
   - Describe your three main flows of personal data, such as what you collect, where it is kept and who sees it.

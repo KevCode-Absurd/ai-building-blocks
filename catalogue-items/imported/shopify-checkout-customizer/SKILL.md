@@ -171,6 +171,7 @@ function Extension() {
 ### UI Components
 
 ```jsx
+import { useState } from "react";
 import {
   Banner,
   BlockStack,
@@ -189,7 +190,6 @@ import {
   Icon,
 } from "@shopify/ui-extensions-react/checkout";
 
-// Also add: import { useState } from "react";
 function Extension() {
   const [checked, setChecked] = useState(false);
   const [note, setNote] = useState("");
@@ -273,10 +273,10 @@ function AgeVerification() {
     if (!verified && canBlockProgress) {
       return {
         behavior: "block",
-        reason: "Age verification required",
+        reason: "Tick box not ticked",
         errors: [
           {
-            message: "Please verify your age to continue",
+            message: "Please tick the box to continue",
           },
         ],
       };
@@ -319,6 +319,7 @@ import {
   TextContainer,
 } from "@shopify/post-purchase-ui-extensions-react";
 
+// WARNING: this extension will throw an error until you write fetchUpsellProduct.
 // STUB: replace this with a call to your own app that returns the offer product,
 // for example { variantId, title, price, imageUrl }. It does not exist until you write it.
 async function fetchUpsellProduct() {
@@ -362,7 +363,7 @@ function App() {
 
   return (
     <BlockStack spacing="loose">
-      <CalloutBanner title="Special Offer!">
+      <CalloutBanner title="[YOUR OFFER TITLE]">
         Add this item to your order [YOUR OFFER, only if you apply it in the changeset]
       </CalloutBanner>
 
@@ -412,8 +413,8 @@ function CustomAccountPage() {
     <Page title="Rewards">
       <Card padding>
         <BlockStack spacing="loose">
-          <Text size="large">Your Points: 500</Text>
-          <Text>Earn points with every purchase!</Text>
+          <Text size="large">Your Points: [POINTS BALANCE FROM YOUR APP]</Text>
+          <Text>[YOUR REWARDS MESSAGE]</Text>
         </BlockStack>
       </Card>
     </Page>
@@ -507,4 +508,4 @@ shopify app dev
 - [Customer Account Extensions](https://shopify.dev/docs/api/checkout-ui-extensions/extension-targets-overview#customer-account-targets)
 - [Extension Targets Reference](https://shopify.dev/docs/api/checkout-ui-extensions/extension-targets-overview)
 
-For backend logic, see the [shopify-functions](../shopify-functions/SKILL.md) skill.
+For backend logic such as discounts or shipping rules, you need a Shopify Function. That skill is not in this copy, so ask a Shopify developer or read Shopify's docs.

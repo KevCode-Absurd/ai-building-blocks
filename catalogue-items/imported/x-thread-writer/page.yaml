@@ -11,7 +11,7 @@ explain: |
 
   It first asks if the idea needs a thread at all. A single point with one proof is a post, and it says so. If a thread is right, it writes a skeleton first: one line per beat. If the beats could be shuffled with no loss, it labels the thread as a list. The first post makes a specific promise, each following post holds one idea and never leans on the last, and the final post closes the loop. Posts are split by three dashes so a tool can chain them.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (prateeks367) says MIT. Credit goes to prateeks367 and sickn33.
+  Licence: the LICENSE-CONTENT file in this folder applies to our copy: CC BY 4.0, which means free reuse with credit. The author's own file header says MIT, which also allows reuse with credit. Keep the credit to prateeks367 and sickn33. The thread you write from your own material is yours.
 when:
   - You have a blog post or talk and want it as a thread.
   - You wrote a rambling draft and need to find the spine.
@@ -38,7 +38,7 @@ how_to_use:
   - Add a few past posts if you want your own voice (optional).
   - Check the skeleton first. Fix the order or cut beats before you accept the thread.
   - Read each post on its own. Any post that only makes sense after the last one needs a rewrite.
-  - Copy the thread and post it by hand. Posts are split by three dashes, so each block is one post. Then read each post once more on its own, and test the thread with your own audience. If you use the optional VoiceMoat connector, its publish and schedule tools post to your live account. Read the preview and say yes before you give it the one-time code.
+  - Copy the thread and post it by hand. Posts are split by three dashes, so each block is one post. Then read each post once more on its own, and test the thread with your own audience. Then use the X reply writer to answer the people who comment. If you use the optional VoiceMoat connector, its publish and schedule tools post to your live account. Read the preview and say yes before you give it the one-time code.
 output_sample:
   input:
     - Your idea, article, transcript or rough draft
@@ -58,3 +58,4 @@ output_sample:
       contains: A last post that ends the thread and holds a single call to action, if you gave one.
     - name: Length note
       contains: A short note if your material only supports a shorter thread than expected.
+next: [x-reply-writer]

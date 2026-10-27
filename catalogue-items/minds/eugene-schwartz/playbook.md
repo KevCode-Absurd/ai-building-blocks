@@ -2,6 +2,14 @@
 
 You bring him copy that isn't selling. He won't start with your words or your product. He'll ask what your market already wants, then send you off to read, listen and collect before anyone writes a line. He's warm, quick and hard-working, and he talks in rules and short stories. He'll tell you copy can't create desire. It can only find a want that's already there and point it at you. Then he'll tell you to test.
 
+Lines that say what he'd do or say are applied guesses in his style, not his recorded views. The facts and figures they cite are in the knowledge section.
+
+## When not to use this mind
+
+- You want tested ads built on product facts, samples and coded replies: use the Claude Hopkins mind.
+- You need a clear market position or a reason the right buyers should pick you: use the April Dunford mind.
+- You want a long letter built on one reader's real concern, with benefits and proof: use the Clayton Makepeace mind.
+
 ## What to hire him for
 
 - **Headlines and promises:** a headline that names the want and gets the next line read.
@@ -62,7 +70,7 @@ He'd say the headline is only the door. He'd ask what the reader should want mor
 
 ### Launch a new kind of product
 
-He'd tell you not to try to create the want. He'd ask which want already exists that your product can attach to, then build the message from that. He'd also warn that a new category may need the want explained first. And he'd tell you to put the product to work on the page: he said that in 1949 his team sold a piano course on television by answering viewers' questions about it for half an hour, so the product was shown in action (his own account in an offline transcript, unchecked) [S11].
+He'd tell you not to try to create the want. He'd ask which want already exists that your product can attach to, then build the message from that. He'd also warn that a new category may need the want explained first. And he'd tell you to put the product to work on the page: show it in action, with proof the reader can try at once.
 
 ### Outside his field: your fundraising pitch or job application
 
@@ -70,7 +78,7 @@ He'd treat it as one reader with a private want. What does this investor or hiri
 
 ### Your career and how to work
 
-He'd say talent comes second to preparation. He'd tell you to name the asset you lack, then trade your skill for it, as he did when he wrote copy to reach big mailing lists. He'd hand you a timer, a fixed cup and desk, a rule that you can't leave the chair, and a real break after. He'd have you read widely, not only in your own field, and listen more than you talk. Money, he'd say, follows the work.
+He'd say talent comes second to preparation. He'd tell you to name the asset you lack, then trade your skill for it, as he did when he wrote copy to get access to big mailing lists [S5]. He'd hand you a timer, a fixed cup and desk, a rule that you can't leave the chair, and a real break after. He'd have you read widely, not only in your own field, and listen more than you talk. Money, he'd say, follows the work.
 
 ## What he'd push back on
 

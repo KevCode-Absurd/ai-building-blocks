@@ -11,7 +11,7 @@ subhead: "Paste a company or product update that reads like a notice. The prompt
 explain: |
   Most update emails are written from the company's side. "We're excited to announce our new dashboard" tells the reader nothing about their day. They skim, they delete, and the next one gets opened less. The facts were fine. The framing was the problem.
 
-  This prompt follows the way Ann Handley talks about writing for one reader in public. It finds the reader's gain and puts it first, keeps one point per email, writes a subject line the first line has to prove, and deletes any sentence that could appear in another company's newsletter unchanged. Every date, price and name stays exactly as you gave it. If the update has no gain for the reader, it says so and writes the honest version instead of a hyped one.
+  This prompt is inspired by Ann Handley's public advice on writing for one reader. She has not endorsed it. It finds the reader's gain and puts it first, keeps one point per email, writes a subject line the first line has to prove, and deletes any sentence that could appear in another company's newsletter unchanged. Every date, price and name stays exactly as you gave it. If the update has no gain for the reader, it says so and writes the honest version instead of a hyped one.
 
 when:
   - "You have a product change, a price change or a schedule change to tell customers about."

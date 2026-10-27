@@ -65,7 +65,8 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The stage is named as early or finished.
 - Each challenger has relevant knowledge.
 - There is a question that asks for the case against.
-- A change is decided in advance for each answer.
+- A change is decided in advance for each answer, with a date to decide by.
+- Each challenger has a source check written (use, use with care or set aside).
 
 ## If something is missing
 Write `MISSING: <fact> for <part>`. Never invent who a person is or what they know.

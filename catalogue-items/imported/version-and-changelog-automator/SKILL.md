@@ -17,9 +17,13 @@ metadata:
   version: '1.0'
 ---
 
+<!-- Licence note: the code and config snippets here are MIT (the author's header above). The written text is CC BY 4.0 (see LICENSE-CONTENT). -->
+
 # Semantic Versioning
 
 Automate version management and changelog generation following SemVer principles.
+
+> The `risk: critical` label in the header is the author's. It means a release changes your repo, tags and maybe your npm package. So the defaults here are safe: npm publishing is off and releases start by hand.
 
 ## Prerequisites
 
@@ -124,6 +128,8 @@ npm install --save-dev semantic-release \
 
 This config does not publish to npm (npmPublish is false). Set it to true only if you publish packages, and then add an NPM_TOKEN secret to your CI. The release workflow below passes that token, so it does publish once npmPublish is true.
 
+**Before you copy any config below:** replace every `[OWNER]/[REPO]` with the user's own GitHub owner and repo name. Do not save a config with those placeholders still in it.
+
 ```json
 // .releaserc.json
 {
@@ -185,13 +191,14 @@ module.exports = {
 
 ### GitHub Actions Integration
 
+**Default: a person starts each release.** This workflow uses the `workflow_dispatch` trigger, so nothing is released until someone presses the button in GitHub Actions. If the user wants a release on every push to `main`, change the trigger to `push` only after a dry run, and only on a protected branch (so pushes need a reviewed pull request). A push trigger tags the commit, writes the changelog and may publish. You must not run a real release for the user.
+
 ```yaml
 # .github/workflows/release.yml
 name: Release
 
 on:
-  push:
-    branches: [main]
+  workflow_dispatch:   # a person starts each release. To release on every push, use: push: { branches: [main] }
 
 permissions:
   contents: write        # push tags and the changelog commit

@@ -55,7 +55,7 @@ output_sample:
     - name: Risk flags
       contains: Deals older than twice the usual time in their stage, and any single deal over 40 percent of the pipeline.
     - name: Forecast accuracy
-      contains: The average miss in percent (MAPE), whether you over- or under-forecast, and a rating.
+      contains: "The average miss in percent (MAPE), whether you over- or under-forecast, and a rating. Excellent is under 10%, Good is 10 to 15%, Fair is 15 to 25% and Poor is over 25%."
     - name: Cost efficiency
       contains: Customer acquisition cost and payback numbers with a rating, if you gave spend and customer data.
 next: [outbound-sales-team-planner]

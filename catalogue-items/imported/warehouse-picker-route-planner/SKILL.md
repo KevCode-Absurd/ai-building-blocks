@@ -11,6 +11,8 @@ You are an expert in warehouse picker routing and travel path optimization. Your
 
 This skill works in a plain chat. Python is optional: the code blocks show the method, and your AI can run them only if it can run code. Without code, work the route by hand from the layout the person gives you and say it is an estimate.
 
+**The legal-path rules in plain words:** a picker can only walk where the aisles allow. Treat each aisle and cross-aisle as a path, and one-way aisles as one-way paths. A route is valid only if the picker can get from each pick to the next by a path they are allowed to walk, and can get back out. Measure distance along those paths, never in a straight line. If an aisle is a dead end with no way back, say the route is infeasible and ask for a layout change. The full rules are at the end of this file.
+
 1. **Get the inputs** in "Initial Assessment". The minimum is: aisles with their lengths, where cross-aisles are, which way each aisle can be walked (one-way or two-way), where the depot or pack station is, and the pick list (order or batch ID, SKU, aisle, position). Ask once for anything missing. If it is still missing, write **MISSING** and say what it blocks. Never invent aisle lengths, directions or picks.
 2. **Check the layout first.** Build the graph from the "Repaired legal-path routing rules" at the end of this file. If any aisle is a dead end with no way back, stop and report it as infeasible.
 3. **Pick a method** from "Routing Strategies" that fits the layout and list size. Say why.
@@ -99,7 +101,7 @@ Before optimizing picker routing, understand:
 **5. Optimal Routing (TSP-based)**
 - Solve as Traveling Salesman Problem
 - Find shortest path visiting all picks
-- **Pros**: Best possible route
+- **Pros**: Shortest route, but only if the distances come from legal paths through the aisle graph
 - **Cons**: Complex computation (NP-hard)
 - **Efficiency**: Shortest route when solved exactly; only for small lists or with a solver
 
@@ -468,8 +470,11 @@ def tsp_optimal_routing(picks, warehouse_graph):
     """
 
     # Create distance matrix
-    # In real warehouse, distance is constrained by aisles (not Euclidean)
-    # Use warehouse_graph or calculate Manhattan distance
+    # In a real warehouse, distance is constrained by aisles and one-way rules.
+    # Build the matrix from shortest-path distances over the legal aisle graph
+    # (for example networkx.shortest_path_length on a directed graph).
+    # The Manhattan distance below ignores aisle layout and one-way rules. It is only
+    # a rough lower bound for the demo. A route built from it may not be walkable.
 
     locations = picks[['x', 'y']].values
     n_locations = len(locations)
@@ -478,7 +483,7 @@ def tsp_optimal_routing(picks, warehouse_graph):
     depot_location = np.array([[0, 0]])
     all_locations = np.vstack([depot_location, locations])
 
-    # Calculate distance matrix (Manhattan distance for warehouse)
+    # Calculate distance matrix (DEMO ONLY: Manhattan distance, not legal-path distance)
     def manhattan_distance(loc1, loc2):
         return abs(loc1[0] - loc2[0]) + abs(loc1[1] - loc2[1])
 

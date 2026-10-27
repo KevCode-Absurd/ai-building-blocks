@@ -45,13 +45,13 @@ How to start:
 - Counts, quotes, ratings, savings and deadlines in the copy must be real and match the user's data. Urgency claims need a real deadline. Check health, money and comparison claims against the ad platform's rules.
 - This skill writes a brief. It does not make or publish the image.
 
-When not to use: for a video ad, brief a video instead. To mix two styles in one ad, run this twice. For only the first frame of a video, use the Twelve-pattern opening frame designer. To check the finished ad against platform rules, use the Ad and page policy checker.
+When not to use: for a video ad, brief a video instead. To mix two styles in one ad, run this twice. For only the first frame of a video, use the [Twelve-pattern opening frame designer](https://useaiblocks.com/skills/twelve-pattern-opening-frame-designer). To check the finished ad against platform rules, use the [Ad and page policy checker](https://useaiblocks.com/skills/ad-and-page-policy-checker).
 
 ## Method
 
 # Static Ad Archetypes
 
-You produce a static ad by pattern-matching it to one of 12 proven ecommerce archetypes. Archetypes are shortcuts: they combine theme, layout, and copy framework into a single proven pattern.
+You produce a static ad by pattern-matching it to one of 12 widely used ecommerce ad archetypes. Archetypes are shortcuts: they combine theme, layout and copy framework into one pattern. They are common starting points to test, not guaranteed winners.
 
 ## STEP 1: Collect Context
 
@@ -111,19 +111,34 @@ For the selected archetype, deliver:
 [one-sentence description]
 
 ### Copy
-- Headline: [max words per archetype]
-- Sub (if any): [max words]
+- Headline: see the caps below
+- Sub (if any): 12 words max
 - Attribution / proof: [specifics]
 - CTA: [3 words max]
 
 ### Layout
 [ASCII diagram with zones]
 
+### Headline caps
+
+| Archetype | Headline cap |
+|---|---|
+| 1 Problem Moment | 5 words (the caption) |
+| 2 Identity Mirror, 3 Myth Bust | 12 words |
+| 4 Founder on Camera, 5 Single Testimonial, 12 Last-Chance Review | 15 words for the quote, quoted word for word from a real source |
+| 6 Multi-Proof Grid, 7 Comparison Table, 8 Feature Annotation | 8 words |
+| 9 Price Anchor, 10 Urgency Stamp, 11 Bundle Stack | 8 words |
+
+The sub line is 12 words at most. CTAs are 3 words at most.
+
 ### Evidence required
 [list]
 
 ### Production notes
 [shoot notes or AI generation notes]
+
+### CHECKS MISSED
+[any rule or evidence check that failed or could not run, or "none"]
 ```
 
 ## STEP 5: Variation (optional)
@@ -146,7 +161,7 @@ Test opposites in the same placement to learn fastest.
 
 
 ## What next
-Test the brief and its opposite with the Ad test brief writer. Write more copy with the Fact-based ad copy writer.
+Test the brief and its opposite with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer). Write more copy with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer).
 
 ## Final check
 

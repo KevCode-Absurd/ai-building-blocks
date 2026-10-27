@@ -30,11 +30,12 @@ you_get:
   - A reference plan and one reference file
   - A test plan with prompts that should and should not trigger it
 how_to_use:
-  - Open a chat in Claude, ChatGPT or Gemini and paste this skill. No code or paid tool is needed.
+  - "This guide is written for Claude skills. Open a chat in Claude and paste it. No code or paid tool is needed. In ChatGPT or Gemini you can still use it to draft the text, but save the result as custom instructions or a saved prompt, since there is no skill folder to install."
+  - "Have ready: the task you repeat, the situations that should trigger it, past prompts or good examples, and any skill folder or audit report you already have."
   - Describe the task you repeat, who will use it, and any past prompts or good examples.
   - "Read the first answer: does a skill fit? If not, use a plain prompt."
   - Review the description draft and the SKILL.md body. Fix anything that does not match how you work.
-  - Install the skill folder in your AI tool. Run the trigger tests in a fresh chat, then improve the description. This guide is general, so it does not know your tool or setup.
+  - Install the skill folder in your AI tool. Run the trigger tests in a fresh chat, then improve the description. This guide is general, so it does not know your tool or setup. If the skill does not trigger, go to the common fixes list in phase 6 of the guide.
 output_sample:
   input:
     - The task or workflow you want to turn into a skill

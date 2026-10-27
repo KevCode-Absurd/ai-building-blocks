@@ -6,7 +6,7 @@ argument-hint: "<Figma URL or design description>"
 
 # /design-handoff
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Words that start with ~~ (such as ~~design tool or ~~project tracker) stand for whichever app of that kind the user has connected, such as Figma or a task tracker. If none is connected, work from the screenshot or description the user gives.
 
 Generate comprehensive developer handoff documentation from a design.
 
@@ -21,6 +21,8 @@ Generate handoff specs for: @$1
 If a Figma URL is provided, pull the design from Figma. Otherwise, work from the provided description or screenshot.
 
 ## What to Include
+
+Exact Figma values need a connected design tool. Without one, the spec is an estimate from the image or description, and every value must say so.
 
 ### Visual Specifications
 - Exact measurements (padding, margins, widths)
@@ -55,10 +57,10 @@ If a Figma URL is provided, pull the design from Figma. Otherwise, work from the
 
 ## Principles
 
-1. **Don't assume** — If it's not specified, the developer will guess. Specify everything.
+1. **Don't assume** — If it's not specified, the developer will guess. Specify everything the design shows. Any measurement, hex value, token name or design reason that you did not read from the design file must be marked "estimate" or "TBD". Never state it as confirmed, and never invent one to fill a gap.
 2. **Use tokens, not values** — Reference `spacing-md` not `16px`.
 3. **Show all states** — Default, hover, active, disabled, loading, error, empty.
-4. **Describe the why** — "This collapses on mobile because users primarily use one-handed" helps developers make good judgment calls.
+4. **Describe the why** — "This collapses on mobile because users primarily use one-handed" helps developers make good judgment calls. Give a reason only when the designer stated it or the design makes it plain. Otherwise write "reason: ask the designer".
 
 ## Output
 
@@ -116,11 +118,11 @@ If a Figma URL is provided, pull the design from Figma. Otherwise, work from the
 
 ## If Connectors Available
 
-If **~~design tool** is connected:
+If a design tool such as Figma is connected:
 - Pull exact measurements, tokens, and component specs from Figma
 - Export assets and generate a complete spec sheet
 
-If **~~project tracker** is connected:
+If a project tracker is connected:
 - Link the handoff to the implementation ticket
 - Create sub-tasks for each section of the spec
 

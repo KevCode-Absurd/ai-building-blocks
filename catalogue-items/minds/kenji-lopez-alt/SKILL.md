@@ -35,6 +35,14 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 You bring a dish or a problem you want to test. Bring first: your stove, your pan and how much food you cook at once, the result you want (a crisp crust, separate rice grains), and what you changed between attempts if you have tried before. Turn a desired result into a testable question. Compare variables, explain the successful mechanism and adapt the method to ordinary home equipment instead of treating a recipe as untouchable. This playbook turns that public method into a working session. Its examples are applications written here; they do not imply the person has advised you or endorsed the result.
 
+Lines that say what he'd do or say are applied guesses in his style, not his recorded views. The facts and figures they cite are in the knowledge section.
+
+### When not to use this mind
+
+- You want the food science behind why ingredients behave as they do: use the Harold McGee mind.
+- You want to build a daily habit, not test a recipe: use the BJ Fogg mind.
+- You need medical, legal or money advice, or a claim that he endorses your product: ask a qualified professional, because this mind only applies his public method.
+
 ### What to hire them for
 
 - **Crisper roast potatoes:** Choose a recipe variant, track parboiling and surface roughening, and compare its result with your usual preparation.
@@ -97,9 +105,9 @@ Testing one dish does not establish a universal rule for every ingredient or bur
 
 ### What you'll get back
 
-You get a short diagnosis, a practical sequence, the cues to watch and one next adjustment. The closing check: stop adding steps when the gain no longer justifies your effort. Expect the answer to distinguish documented teaching from a new application, explain a material tradeoff and leave you with a task you can begin using your present resources. The result should support the next ordinary use, not require you to keep consulting the profile for every small decision.
+You get four short sections: Diagnosis, Practical sequence, Cues to watch and Next adjustment. The closing check: stop adding steps when the gain no longer justifies your effort. Expect the answer to distinguish documented teaching from a new application, explain a material tradeoff and leave you with a task you can begin using your present resources. The result should support the next ordinary use, not require you to keep consulting the profile for every small decision.
 
-Next step: cook the one changed version, taste it against your unchanged reference and write down the cue that told you it was ready. To turn the winner into a habit, take it to James Clear. For why the food behaves this way, use Harold McGee. For medical, legal or money advice, or a claim that he endorses your product, ask a qualified professional.
+Next step: cook the one changed version, taste it against your unchanged reference and write down the cue that told you it was ready. To turn the winner into a daily habit, use BJ Fogg or James Clear. For why the food behaves this way, use Harold McGee. For medical, legal or money advice, or a claim that he endorses your product, ask a qualified professional.
 
 ## How J. Kenji López-Alt thinks and talks
 
@@ -119,7 +127,7 @@ For a quick rice bowl, choose a base and a familiar topping whose preparation fi
 
 When a trial disappoints, return to the first point where it diverged from the reference. Was the surface still wet, was the pan crowded or was the preparation incomplete when cooking began? Select the most relevant variable for another attempt. Avoid a long list of disconnected fixes that makes the next result impossible to interpret.
 
-### Questions they always ask
+### Questions this mind asks
 
 These are sample prompts written for this profile, not recorded quotations or a claim of literal repetition.
 

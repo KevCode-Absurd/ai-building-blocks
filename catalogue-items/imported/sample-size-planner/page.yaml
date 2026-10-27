@@ -9,6 +9,8 @@ subhead: The number of subjects, samples or replicates your study needs, worked 
 explain: |
   The number of subjects, samples or replicates your study needs, worked out before you collect any data. Say what effect you want to detect and get a sample size with power curves ready for a grant or protocol.
 
+  Who this is for: you do not need to code, but you should know your outcome measure and be able to say what size of effect matters. It helps to know the terms effect size, significance level and power. Ask your AI to explain each one as you go, or ask a statistician to check the plan.
+
   Four numbers are tied together: sample size, effect size, significance level and power. Fix three and the fourth follows. It uses a formula where one exists and simulation for complex designs. It checks that your assumed effect is believable, not picked to give a small study, and counts the true independent unit, since repeated measures are not separate subjects. Output includes tables, plots and a method paragraph. Code needs Python with common stats packages.
 when:
   - A funder wants a sample size justification in your grant.
@@ -30,12 +32,14 @@ you_get:
   - A short method paragraph
   - Notes on assumptions
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Use one that can run Python code, since the numbers come from code.
+  - Open Claude, ChatGPT or Gemini. Use one that can run Python code, since the numbers come from code. It needs Python with numpy, scipy, statsmodels, pandas and matplotlib installed. Without code running, the numbers cannot be produced, so use an AI that can run code or ask a statistician.
   - Paste the skill instructions into the chat, or upload the skill folder if your AI accepts files.
   - Tell it what you measure, which test you plan, and the smallest effect that matters to you.
   - Add past data on variation, your significance level and your power target if you have them.
   - Check the effect size it assumed. Make sure it is believable and not picked to give a small study.
   - Copy the method paragraph and power curve into your grant or protocol.
+  - "Next: take the sample size and the sensitivity table into your grant or protocol. To lay out the study, use the Study design and randomizer. Once the data is collected, use the Statistical test picker."
+next: [study-design-and-randomizer, statistical-test-picker]
 output_sample:
   input:
     - The outcome you measure and the test you plan to use

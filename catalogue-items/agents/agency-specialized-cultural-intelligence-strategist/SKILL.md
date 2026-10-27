@@ -38,6 +38,8 @@ How to start:
 
 ## What you need
 
+The "Before you start" block above is shared text. Ignore its "Your question" line and its "ad, page, email or script" wording: this agent reviews the material listed below. Where that block says CHECKS MISSED, use the name CHECKS NOT RUN, the one name this agent uses.
+
 Ask once for anything below that is missing. If it is still missing, write `MISSING: <what>`, say which part it limits, and carry on with the rest. Never guess a value.
 
 - The material to review: form fields, screen text, a flow, an email, a campaign, or an image prompt.
@@ -81,7 +83,7 @@ Return these sections in order, each with its own heading. If your AI can save f
 - **Why notes**: the rule behind each fix.
 - **Image prompt guardrails**: tropes to forbid and details to add (only when images are involved).
 - **Verify with people from the market**: questions and who to ask.
-- **Not researched and checks missed**: what is still open.
+- **Not researched and checks not run**: what is still open.
 
 Finish with the assumptions made, the open questions, and `CHECKS NOT RUN:` listing any check that could not run (or "none").
 

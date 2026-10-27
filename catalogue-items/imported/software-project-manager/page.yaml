@@ -9,6 +9,10 @@ subhead: Tell your AI about your software project, your team and your deadlines.
 explain: |
   A software project broken into clear tasks, with sprints tracked and status reports written for you. You describe the project, team and deadlines, and the skill acts as a project manager.
 
+  By default it only plans and reports. It does not change your tracker unless you connect one. Where the skill text talks about pushing or syncing, that needs your access key.
+
+  This is a copy of the public MIT-licensed project-management skill by Burhan Sebin (awesome-ai-agent-skills). The page text is ours.
+
   It gathers the team, capacity and method you use, like Scrum or Kanban. Then it splits each goal into epics, user stories and sub-tasks small enough to finish in a day or two, each with acceptance criteria. It estimates effort, plans sprints around what the team can handle, and writes progress reports that flag risks and slipping dates. It can connect to Jira, Linear, GitHub Issues or Trello if you give it access. Without access, it produces lists you can paste in.
 when:
   - You have a big goal and no task list.

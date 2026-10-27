@@ -13,6 +13,8 @@ Analyze open-source license compatibility and obligations across a project's dep
 
 ## Workflow
 
+> Added by AI Blocks: you can only read the files the person pasted. If a lock file is missing, mark every package you cannot see as unverified. Do not guess a license from a package name.
+
 1. **Scan Dependencies** — Parse the project's dependency manifest (package.json, requirements.txt, go.mod, Cargo.toml, pom.xml, etc.) and resolve the full transitive dependency tree. Identify every direct and indirect dependency, including optional, dev, and peer dependencies. Note any dependencies without declared licenses or with SPDX expressions indicating dual licensing.
 
 2. **Identify Licenses** — For each dependency, extract the license from the SPDX identifier in the package metadata, the LICENSE file in the package, or the license field in the manifest. Normalize license names to SPDX identifiers. Flag packages with no license (all rights reserved by default), custom/proprietary licenses, or ambiguous multi-license declarations that require choice.
@@ -36,19 +38,16 @@ Analyze the licenses in my Node.js project. Here's my package.json dependencies.
 
 ### Example 1: Node.js Dependency Tree Analysis
 
-_Illustration only. Every package count and result below is made up to show the layout. It is not a real scan. Never copy these numbers into a real report._
+_Layout only. Every package, version, licence and risk below is a placeholder. It is not a real scan. Fill each one from the files the person pasted, and never copy placeholder text into a real report._
 
-**Input:** A Node.js REST API distributed as an open-source MIT-licensed npm package. Key dependencies from package.json:
+**Input:** A [PROJECT TYPE] distributed as [DISTRIBUTION MODEL] under [YOUR PROJECT LICENSE]. Key dependencies from package.json:
 
 ```json
 {
   "dependencies": {
-    "express": "^4.18.2",
-    "lodash": "^4.17.21",
-    "pg": "^8.11.3",
-    "sharp": "^0.33.2",
-    "leaflet": "^1.9.4",
-    "jsdom": "^24.0.0"
+    "[PACKAGE 1]": "[VERSION RANGE]",
+    "[PACKAGE 2]": "[VERSION RANGE]",
+    "[PACKAGE 3]": "[VERSION RANGE]"
   }
 }
 ```
@@ -59,24 +58,19 @@ _Illustration only. Every package count and result below is made up to show the 
 
 | Package | Version | License | Category | Risk |
 |---------|---------|---------|----------|------|
-| express | 4.18.2 | MIT | Permissive | None |
-| lodash | 4.17.21 | MIT | Permissive | None |
-| pg | 8.11.3 | MIT | Permissive | None |
-| sharp | 0.33.2 | Apache-2.0 | Permissive | None |
-| leaflet | 1.9.4 | BSD-2-Clause | Permissive | None |
-| jsdom | 24.0.0 | MIT | Permissive | None |
-| *libvips* (sharp native) | 8.15.1 | LGPL-2.1 | Weak Copyleft | Medium |
-| *canvas* (jsdom optional) | 2.11.2 | MIT | Permissive | None |
+| [PACKAGE 1] | [VERSION] | [SPDX ID or "unverified"] | [Permissive / Weak copyleft / Strong copyleft / Unknown] | [None / Low / Medium / High] |
+| [PACKAGE 2] | [VERSION] | [SPDX ID or "unverified"] | [CATEGORY] | [RISK] |
+| [PACKAGE 3] | [VERSION] | [SPDX ID or "unverified"] | [CATEGORY] | [RISK] |
 
-**Transitive Dependency Summary:** [TOTAL] packages scanned. [COUNT] MIT, [COUNT] Apache-2.0, [COUNT] BSD-2-Clause, [COUNT] ISC, [COUNT] LGPL-2.1, [COUNT] unlicensed.
+**Transitive Dependency Summary:** [TOTAL] packages scanned. [COUNT] MIT, [COUNT] Apache-2.0, [COUNT] BSD-2-Clause, [COUNT] ISC, [COUNT] LGPL-2.1, [COUNT] unlicensed, [COUNT] unverified.
 
 **Risk Flags:**
 
-- **LGPL-2.1 — libvips (via sharp), Severity: Medium** — libvips is dynamically linked by the sharp package via native bindings. Dynamic linking under LGPL-2.1 is permitted without copyleft infection, but you must: (1) include the LGPL-2.1 license text in your distribution, (2) provide attribution, and (3) allow users to replace the LGPL component with a modified version. Since sharp uses prebuilt binaries, document this in your NOTICES file.
+- **[LICENSE] — [PACKAGE], Severity: [LEVEL]** — [How the package is used (linked, separate process, network), what the licence requires, and what to document.]
 
-- **Unlicensed package: colors@1.0.3 (transitive via debug), Severity: High** — No license file or SPDX identifier found. Without a license, no permission to use is granted. Action: verify if this is an outdated version (colors@1.4.0 is MIT-licensed) and pin to the licensed version, or find an alternative.
+- **Unlicensed or unverified package: [PACKAGE], Severity: [LEVEL]** — No license file or SPDX identifier found in the pasted files. Without a license, no permission to use is granted. Action: check the package's own LICENSE file, pin a version that has a clear license, or find an alternative.
 
-**Required Attributions:** Include LICENSE files or notices for all [TOTAL] packages. Use `license-checker` or `legally` npm packages to auto-generate a THIRD-PARTY-NOTICES file.
+**Required Attributions:** Include LICENSE files or notices for all [TOTAL] packages. License-scanning tools can help generate a THIRD-PARTY-NOTICES file. Check the tool's own terms and any account or cost first.
 
 ### Example 2: Mixed License Compatibility Analysis
 
@@ -92,6 +86,8 @@ _Illustration only. Every package count and result below is made up to show the 
 | **Apache-2.0** | Compatible | Compatible | Compatible with GPL-3.0 only | Compatible |
 | **GPL-3.0** | Can use MIT code in GPL | Can use Apache in GPL-3.0 | Compatible | **INCOMPATIBLE** |
 | **Proprietary** | Can use MIT | Can use Apache-2.0 | **INCOMPATIBLE** | — |
+
+*Note: Apache-2.0 and GPL-2.0 are not compatible, so this table lists Apache-2.0 with GPL-3.0 only. If a dependency is GPL-2.0-only, treat it as incompatible with Apache-2.0 code.*
 
 **Analysis:**
 

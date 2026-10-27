@@ -35,11 +35,11 @@ How to start:
 - **Any good chat AI that reads files, such as Claude, ChatGPT or Gemini:** It must hold the FAQ and the approved facts side by side.
 <!-- /needs -->
 
-## Before you start
+## What to have ready for this job
 
 Use what is attached or pasted first. If something is missing, say what you can finish and what must wait, and mark each gap `MISSING:`. Never invent it. Ask once, in one short message, for only what you cannot work without.
 
-**What you need for this job.** This list replaces the general one above. You do not need a brand brain or a buyer brief.
+**What you need.** This list replaces the general "Before you start" list above. You do not need a brand brain, a buyer brief or an ad export.
 - **The clinic's FAQ or service page**: the text.
 - **Approved facts**: services, hours, booking steps, fees if listed, contact details.
 - **Eligibility rules**: who can book each service.
@@ -47,7 +47,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 **Makes it better (optional)**
 - The name of the person who signs off clinical wording.
 
-The pack holds this file and the skills it names. Read each skill's full instructions before its step. If one is missing, open https://useaiblocks.com/skills/<slug> when you can browse, or ask for the file. Never replace a missing skill with instructions you made up.
+This workflow cannot run without its two skills: `unsupported-claim-spotter` (https://useaiblocks.com/skills/unsupported-claim-spotter) and `plain-english-editor` (https://useaiblocks.com/skills/plain-english-editor). The pack holds them. Read each skill's full instructions before its step. If one is missing, open its link when you can browse, or ask for the file. Never replace a missing skill with instructions you made up.
 
 ## Ground rules
 

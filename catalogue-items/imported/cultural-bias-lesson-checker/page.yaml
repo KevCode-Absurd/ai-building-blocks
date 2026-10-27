@@ -34,12 +34,15 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
   - Paste your task or lesson in full.
   - Say who your learners are and where you teach. Add any worries you have, and where the task came from if you know.
+  - This is an imported skill and was not tested in this catalogue. Its output is an unverified AI reading, not research.
+  - Read the Honest Caveats section before you share any assumption with colleagues or parents.
+  - Ask the AI to label which claims come from a named study and which are its own reading. Check the named studies yourself before you use a claim.
   - Read each assumption the AI lists. Talk it over with a colleague or with your students.
   - Pick one adapted version and try it with your class. Change the whole unit only after it works.
   - The cultural claims in the example are the AI's own reading. Check them against the cited studies and do not take them as findings. Ask the AI to say which claims come from a named study and which are its own inference.
   - Treat the regional examples as ideas to check. Your own students may be different. Cultural patterns describe tendencies across groups, not any one student.
   - Before you quote a finding to colleagues or parents, read the original study named in the result.
-next: [overloaded-lesson-checker]
+next: [overloaded-lesson-checker, culturally-responsive-lesson, classroom-belonging-planner]
 output_sample:
   input:
     - The task, lesson or teaching practice, pasted in full

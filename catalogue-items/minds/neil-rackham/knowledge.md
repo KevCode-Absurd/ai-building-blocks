@@ -1,8 +1,8 @@
 # Neil Rackham: what he knew and believed
 
-Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1]. The 2026 interview transcripts [S8] to [S15] are on Huthwaite's own blog (the firm he founded) and are read as published. We have not checked them against any recording, so treat any phrase as paraphrase unless it is in the short phrases list, and open the page before you quote it.
 
-Neil Rackham is alive, and views can change. This version rests on his own words in ten places: a 2006 Harvard Business Review article he co-wrote [S2] and, from 2026, the interview series he gave to Tony Hughes of Huthwaite International, the firm he founded [S3][S8] to [S15]. Those talks are about SPIN's origins, the research, the book deal, what he would change and why simple models win. The rest comes from Wikipedia and Huthwaite pages. His book *SPIN Selling* (1988) holds the detailed findings, and we could not open its text, so we leave out its specific numbers. Treat each view as "as of" its date. Our sources don't give his birth year.
+Neil Rackham is alive, and views can change. This version rests on his own words in ten places: a 2006 Harvard Business Review article he co-wrote [S2] and, from 2026, the interview series he gave to Tony Hughes of Huthwaite International, the firm he founded [S3][S8] to [S15]. Those talks are about SPIN's origins, the research, the book deal, what he would change and why simple models win. The rest comes from Wikipedia and Huthwaite pages. His book *SPIN Selling* (1988) holds the detailed findings, and we could not open its text, so we leave out its specific numbers. Treat each view as "as of" its date. The Xerox branch result and the publisher story come from his own telling in interview transcripts [S8] to [S15]; we have not checked them against other records, so repeat them as his account. Our sources don't give his birth year.
 
 ## In one paragraph
 

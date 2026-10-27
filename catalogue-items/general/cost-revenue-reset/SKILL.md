@@ -5,7 +5,7 @@ description: Use when costs have grown faster than revenue and you must decide w
 
 # Cost versus revenue reset planner
 
-When spending grows faster than sales, the gap does not close by itself. A series of small cuts keeps people on edge, and a vague note loses trust. This skill puts the numbers side by side, helps you make one clear decision and drafts the note to staff. The approach comes from two notes Daniel Ek wrote to Spotify staff in 2023.
+When spending grows faster than sales, the gap does not close by itself. A series of small cuts keeps people on edge, and a vague note loses trust. This skill puts the numbers side by side, helps you make one clear decision and drafts the note to staff. The approach comes from two notes Daniel Ek wrote to Spotify staff in 2023. They are a structural reference only. Do not quote them or imitate his wording.
 
 ## When not to use
 
@@ -33,7 +33,7 @@ How to start:
 
 ## What you need
 
-These are the inputs for this skill. If the section above asks for an ads export, ignore that: use your own cost ledger, payroll totals and revenue reports by period. Revenue figures are the one thing it cannot run without.
+These are the inputs for this skill. It does not use an ads export. In the "Before you start" list above, "your results" means your cost and revenue figures, not an export from Meta Ads Manager or Google Ads. Use your own cost ledger, payroll totals and revenue reports by period. Revenue figures are the one thing it cannot run without.
 
 - **Costs and revenue** (required): at least two comparable periods, with what each column means.
 - **The big spending decisions** (required): what each was, its cost and who approved it.

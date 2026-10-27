@@ -37,7 +37,7 @@ how_to_use:
   - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
   - "Paste your notes within a day of the meeting."
   - "Add the date, the place and anything you promised."
-  - "Save the card in a sheet or notes app, one card per person."
+  - "Save the card in a sheet or notes app, one card per person. Set the next-touch reminder in your own calendar. The skill only writes the date and the reminder text."
   - "Read the card before you contact them again."
 output_sample:
   input:

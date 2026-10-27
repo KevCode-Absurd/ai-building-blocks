@@ -15,6 +15,14 @@ metadata:
 
 Build RoadRunner HD Map (`.rrhd`) entities directly using the `roadrunnerHDMap` API in MATLAB. Provides the **generic building blocks** for constructing RRHD from any source — synthetic scenes, converted map data, or custom formats.
 
+## Cost and licence (added by AI Blocks)
+
+This skill needs paid MathWorks products: MATLAB R2025a or newer, RoadRunner, RoadRunner Scene Builder and Automated Driving Toolbox. You may use it only together with MathWorks products. Before you start, tell the user this and ask them to confirm they hold the licences.
+
+## Output format (added by AI Blocks)
+
+You hand back MATLAB `.m` scripts and a RoadRunner HD Map file (`.rrhd`). Before writing the file, report pass or fail for each enforcement check (alignment, spatial fit, geometry sizes). Do not write the file if a check fails.
+
 ## When to Use
 
 - Building RRHD maps from scratch (synthetic scenes, test roads)

@@ -65,7 +65,9 @@ You bring him something you need people to say yes to: a sales page, a pitch, a 
 
 ### How he'd take on your problem
 
-Every figure below is a result he reports from a study, tagged to its source. Each comes from a specific place and time, so treat it as an example, not a promise for your audience. The "he'd" lines in the jobs are our reading of how his work applies to your case.
+Every figure below is a result he reports from a study, tagged to its source. Some come from studies run by other researchers that he reports, so check the original study and its authors before you quote a number as his finding. [S3] is a summary page on his own site that does not name every study (towel cards, mints, receptionists, common ground), so look the study up before you use its figure. Each comes from a specific place and time, so treat it as an example, not a promise for your audience.
+
+Run order: take in your goal and audience (step 1), check which principle is at work (step 2), draft the rewrite using steps 3 to 7, then run the ethics check (step 8) before anything goes out. The "he'd" lines in the jobs are our reading of how his work applies to your case.
 
 1. **He asks what is on their mind right before they decide.** Pre-suasion: you often don't have to change a mind, only what is on it at the moment of choice. Before the message, he points attention at your real strength, such as a question or an image tied to it. In one study, asking "Do you consider yourself a helpful person?" first lifted survey agreement from 29% to about 77% [S10][S12].
 2. **He asks which principle is at work.** People can't think through every choice, so they use shortcuts. The seven are reciprocity, commitment and consistency, social proof, authority, liking, scarcity and unity.
@@ -90,6 +92,8 @@ Every figure below is a result he reports from a study, tagged to its source. Ea
 
 ### Jobs, one by one
 
+Every "he'd" line in these jobs is an applied guess from his published work, not a recorded view `[beyond the record]`.
+
 #### Your sales page
 
 He'd read it with a pen and mark each principle. Is there a true social proof line, such as most popular, with a real count? Is expertise shown before the ask? Does the page give something away first, like a useful guide? He'd push for one or two principles done well. Piling all seven on one page reads as pushy. He'd cut fake testimonials, made-up countdown clocks and any scarcity that isn't real. Fake proof works for the same reason real proof does, and that is why it's a problem.
@@ -112,7 +116,7 @@ Persuasion does not fix a bad product, and he'd say the principles tell you why 
 
 #### Your life and career
 
-By his own account he started as an easy mark who bought things he didn't want [S4]. He'd turn that into a practical habit: before you say yes to anything, ask which principle is pulling you. Did they give you something first? Are you being consistent with an old promise that no longer fits? Is that scarcity real? For a career move, he'd ask you to find real common ground with the people you want to work with and to give first, with useful information being the best gift at work. He'd say being a good persuader and a hard person to fool are the same skill. He'd also share his own TV story: he said he got fooled, checked the claim afterward, and wrote a good review once it proved honest [S10]. His rule: reward honest persuaders and punish deceptive ones [S10].
+By his own account he started as an easy mark who bought things he didn't want [S4]. In a 2018 interview he says he was fooled into buying a TV by a scarcity line, despite knowing his own research [S10]. He'd turn that into a practical habit: before you say yes to anything, ask which principle is pulling you. Did they give you something first? Are you being consistent with an old promise that no longer fits? Is that scarcity real? For a career move, he'd ask you to find real common ground with the people you want to work with and to give first, with useful information being the best gift at work. He'd say being a good persuader and a hard person to fool are the same skill. In a 2018 interview he told his own TV story: he said he got fooled, checked the claim afterward, and wrote a good review once it proved honest [S10]. It is his own account, in one interview, and we have not checked it elsewhere. His rule: reward honest persuaders and punish deceptive ones [S10].
 
 ### What he'd push back on
 

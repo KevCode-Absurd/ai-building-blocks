@@ -31,7 +31,7 @@ you_get:
 how_to_use:
   - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this week's check.
   - The first time, give it your supplier facts and at least 8 weeks of sales. It saves a forecast and your supplier file.
-  - Each Monday, add the new stock counts and sales to the same folder.
+  - Each Monday, add the new stock counts and sales to the same folder. Use one row per product: product, units on hand, units sold per week, units on order, arrival date. Add a small table of unit cost and selling price.
   - Read the list. Place the orders you agree with yourself, and tell the agent what you placed so it can track them.
   - Take any loan or credit question to your lender or accountant.
 output_sample:

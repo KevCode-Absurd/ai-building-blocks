@@ -6,12 +6,12 @@ thinking: low
 thinking_why: "It follows fixed set-up steps for your tools, so a fast model is enough."
 
 headline: "AI traffic tracking set-up"
-subhead: Tell it your analytics and checkout setup. It gives the steps to add an AI traffic channel in GA4, a "how did you hear about us" question for your order page, a sheet for AI sessions and orders, and a redirect list for AI links that hit 404 pages.
+subhead: Tell it your analytics and checkout setup. The numbers will be an undercount, so read them as a trend and wait 2 to 3 months before you judge. It gives the steps to add an AI traffic channel in GA4, a "how did you hear about us" question for your order page, a sheet for AI sessions and orders, and a redirect list for AI links that hit 404 pages.
 
 explain: |
   Some shoppers find your store through ChatGPT, Gemini or Perplexity. Your analytics shows only part of them. Some AI tools pass no referral data, and others land buyers who then type your name into Google. Those visits show up as direct or branded search.
 
-  This skill covers both sides. It adds a custom AI channel in GA4 so you can see the visits that do carry a source. It adds a post-purchase question so buyers can tell you where they heard of you. Treat the channel number as an undercount and use it as a trend. The survey is the highest-value part. AI traffic is small in most data, about 0.25% of sessions on average in one 2025 data set, so wait 2 to 3 months before you judge.
+  This skill covers both sides. It adds a custom AI channel in GA4 so you can see the visits that do carry a source. It adds a post-purchase question so buyers can tell you where they heard of you. Treat the channel number as an undercount and use it as a trend. The survey is the highest-value part. AI traffic is small in most stores, so wait 2 to 3 months before you judge. Measure your own share, and do not compare it with other stores.
 
 when:
   - You think AI assistants send you buyers and you cannot see them.
@@ -19,7 +19,7 @@ when:
   - AI tools send people to pages that no longer exist.
 not_for:
   - "You only sell in a physical shop with no online orders: use your till reports or ask customers at the counter."
-  - "You want general purchase and conversion tracking: set up your store's built-in GA4 events first, then come back."
+  - "You want general purchase and conversion tracking: use the GA4 store set-up checker first, then come back."
   - "You want to judge results in the first few weeks: wait 2 to 3 months, as AI traffic is small and the count is low."
 
 you_give:
@@ -113,7 +113,7 @@ output_shape: |
 
 tweaks:
   - what: Your analytics tool
-    how: Say GA4 or another tool. The steps change. Ahrefs Web Analytics has a built-in AI search channel in one source.
+    how: Say GA4 or another tool. The steps change. Ahrefs Web Analytics may have a built-in AI search channel. Check that in the tool before you rely on it.
   - what: Your order page
     how: "Say where you can add a question: checkout, order confirmation or a thank-you page. The skill then places it there."
   - what: Your survey options
@@ -145,7 +145,7 @@ works_best_with:
     - {name: "GA4", why: "Free. Holds the custom channel group and the traffic acquisition report."}
     - {name: "Google Tag Manager", why: "A no-developer way to add store events if your platform's own events are missing."}
     - {name: "Shopify", why: "Your order status page or a post-purchase survey app can hold the survey question."}
-    - {name: "Ahrefs Web Analytics", why: "Has a built-in AI search channel and splits unknown traffic from direct."}
+    - {name: "Ahrefs Web Analytics", why: "May have a built-in AI search channel and may split unknown traffic from direct. Check this in the tool."}
   inputs:
     - "Your current GA4 channel group settings"
     - "A list of landing pages from AI sources that show 404"

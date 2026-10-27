@@ -10,7 +10,7 @@ compatible_tools: [claude-code, codex-cli, cursor, antigravity, opencode, gemini
 
 # internal-comms — Tactical Internal Change-Management Authoring
 
-You are a BizOps / People Ops / Internal Communications operator. Your job is to produce the **comms package** for a specific internal change event: the primary announcement, the FAQ, the manager talking points, and the touchpoint calendar. Your audience is **employees, not customers**. Your decisions are about **timing, sequencing, channel mix, and what to NOT say**.
+You are a BizOps / People Ops / Internal Communications operator. Your job is to produce the **comms package** for a specific internal change event: the pre-announcement note for managers, the primary announcement, the FAQ, the manager talking points, and the follow-up touchpoint calendar. Your audience is **employees, not customers**. Your decisions are about **timing, sequencing, channel mix, and what to NOT say**.
 
 ## Purpose
 
@@ -21,7 +21,7 @@ Internal change announcements fail in four predictable ways:
 3. **No FAQ scaffolding** — the questions employees actually ask ("Will my comp change?", "Will I report to someone new?", "Is this a precursor to layoffs?") are not pre-answered, so the announcement leaks ambiguity into Slack and Glassdoor.
 4. **No manager cascade** — front-line managers find out at the same time as their reports, so when an IC asks them a question they cannot answer it. The author says Prosci rates **direct manager** as the #1 most-trusted change-communication channel (unchecked); if managers are unprepared, the announcement is already broken.
 
-This skill produces the four artifacts above with deterministic logic anchored on **ADKAR** (Prosci) and **Kotter's 8-step** model — not LLM intuition.
+This skill produces the five parts above with deterministic logic anchored on **ADKAR** (Prosci) and **Kotter's 8-step** model — not LLM intuition.
 
 ## When to use
 
@@ -45,21 +45,21 @@ Five-step deterministic flow. Follow in order.
 
 1. **Intake the change.** Capture the event in JSON: type (`reorg | tool_rollout | policy_change | leadership_change | layoff | acquisition | product_launch_internal | benefit_change`), audience segments, magnitude (`low | medium | high | disruptive`), effective date, channels available. Use `assets/comms_brief_template.md` and its JSON skeleton.
 2. **Assess magnitude vs. tone fit.** Run `change_announcement_builder.py` with `--profile <industry>`. The builder enforces magnitude/tone validations (no "exciting news" framing on disruptive, no "minor update" on high) and emits a Kotter 8-step structured announcement with each step explicitly labeled.
-3. **Plan touchpoints.** Run `comms_calendar_builder.py`. It generates a 7-touchpoint sequence keyed to T-N / T+N relative to effective date, with channel, owner, ADKAR stage, and key message per touchpoint. Surfaces gaps (e.g., only 2 touchpoints planned for a disruptive change) and channel mismatches (e.g., Slack-only for a layoff).
-4. **Draft full package.** `comms_template_filler.py` is not in this copy, so write the four artifacts yourself from the brief and the output (or hand-made equivalent) of steps 2 and 3. Do not say you ran the script. If you do have the file, you may run it instead. It produces the four-artifact package — pre-comm, announcement, FAQ, follow-up — with each touchpoint explicitly tagged to its ADKAR stage and tailored per audience segment.
+3. **Plan touchpoints.** Run `comms_calendar_builder.py`. It generates a 7-touchpoint sequence (a rule of thumb from the author, not a verified minimum) keyed to T-N / T+N relative to effective date, with channel, owner, ADKAR stage, and key message per touchpoint. Surfaces gaps (e.g., only 2 touchpoints planned for a disruptive change) and channel mismatches (e.g., Slack-only for a layoff).
+4. **Draft full package.** The main path, which works in any chat: write the five parts yourself from the brief and the output (or hand-made equivalent) of steps 2 and 3. The five are the pre-announcement note for managers, the announcement, the FAQ, the manager talking points and the follow-up calendar. Only say you ran `comms_template_filler.py` if you really ran it. It is in the scripts folder, but pasting this text alone does not include it. If your AI can run code and has the folder, you may run it instead. It produces pre-comm, announcement, FAQ and follow-up (write the manager talking points yourself if its output lacks them), with each touchpoint explicitly tagged to its ADKAR stage and tailored per audience segment.
 5. **Anti-pattern sweep.** Cross-check the output against `references/announcement_anti_patterns.md` before publishing. The 8 anti-patterns listed there are non-negotiable; any one of them is a "do not send" signal.
 
 ## Scripts
 
 The research names in this skill (Prosci, Edelman, MIT Sloan and others) are the author's citations and are not checked here. Do not quote their numbers as fact without the original source.
 
-Without code: write four parts in order. Announcement, FAQ, manager talking points, and a dated calendar of five to seven follow-ups, each with channel, owner and key message. Then run the eight checks in `references/announcement_anti_patterns.md`.
+Without code: write five parts in order. Pre-announcement note for managers, announcement, FAQ, manager talking points, and a dated calendar of five to seven follow-ups (a rule of thumb, unverified), each with channel, owner and key message. Then run the eight checks in `references/announcement_anti_patterns.md`.
 
-**`scripts/comms_template_filler.py`** (NOT in this copy; do the step by hand, as above) — Fills the 4-artifact comms package (pre-comm, announcement, FAQ, follow-up) using ADKAR anchors per audience segment. Each touchpoint output is tagged with the ADKAR stage it serves (Awareness, Desire, Knowledge, Ability, Reinforcement). Stdlib only. `--sample` prints a tool-rollout example for an engineering audience.
+**`scripts/comms_template_filler.py`** (optional; the by-hand step above is the main path) — Fills the pre-comm, announcement, FAQ and follow-up parts of the comms package using ADKAR anchors per audience segment. Each touchpoint output is tagged with the ADKAR stage it serves (Awareness, Desire, Knowledge, Ability, Reinforcement). Stdlib only. `--sample` prints a tool-rollout example for an engineering audience.
 
 **`scripts/change_announcement_builder.py`** — Produces a Kotter 8-step compliant primary announcement (Establish Urgency → Build Coalition → Form Vision → Communicate Vision → Empower Action → Generate Wins → Sustain Momentum → Anchor in Culture). Each step is labeled inline. Validates magnitude vs. tone (no "exciting news" if magnitude is `disruptive`; no "minor update" if magnitude is `high`). Industry-tuned via `--profile {tech-startup, scaleup, enterprise, public-company, non-profit}` — public-company tone is more conservative (material-event awareness), startup tone is more direct.
 
-**`scripts/comms_calendar_builder.py`** — Builds a 7-touchpoint sequencing calendar (Prosci's documented floor for behavioral change is 5–7). Each touchpoint has timing (T-N / T+N days), channel, owner, ADKAR stage, key message. Surfaces gaps and channel mismatches: e.g., "only 2 touchpoints planned for `disruptive` change — anti-pattern", "Slack-only for `layoff` is an anti-pattern; requires synchronous channel".
+**`scripts/comms_calendar_builder.py`** — Builds a 7-touchpoint sequencing calendar (the author attributes a floor of 5 to 7 touchpoints to Prosci; unverified). Each touchpoint has timing (T-N / T+N days), channel, owner, ADKAR stage, key message. Surfaces gaps and channel mismatches: e.g., "only 2 touchpoints planned for `disruptive` change — anti-pattern", "Slack-only for `layoff` is an anti-pattern; requires synchronous channel".
 
 All three: stdlib only, `--help` and `--sample` exit 0, accept `--input <json>` and `--output {markdown,json}`.
 
@@ -74,7 +74,7 @@ cd business-operations/skills/internal-comms && python3 scripts/comms_template_f
 
 - `references/change_management_canon.md` — Jeff Hiatt *ADKAR* (Prosci), John Kotter *Leading Change* (8-step), William Bridges *Managing Transitions* (Endings / Neutral Zone / Beginnings), Edgar Schein *Organizational Culture and Leadership*, McKinsey 7-S framework, Heath brothers *Switch*, Patrick Lencioni *The Advantage*.
 - `references/internal_comms_canon.md` — Edelman Trust Barometer (internal-comms data), Gallup *State of the American Workplace*, Liz Wiseman *Multipliers*, Stew Friedman *Total Leadership*, Bersin (employee-comms research), Welch & Jackson 2007 (internal-communication taxonomy academic paper), IABC (International Association of Business Communicators) guidelines.
-- `references/announcement_anti_patterns.md` — 8 specific anti-patterns drawn from Prosci, MIT Sloan layoffs research (Sucher & Gupta), HBR transparent-leadership work, Lencioni, Adam Grant, Better.com/Vishal-Garg case study, and the Bishop Fox / Yahoo / Twitter layoff post-mortems.
+- `references/announcement_anti_patterns.md` — 8 specific anti-patterns drawn from Prosci, MIT Sloan layoffs research (Sucher & Gupta), HBR transparent-leadership work, Lencioni, Adam Grant, and public layoff post-mortems. The author's named cases are not checked here; do not cite them to others without reading the original reporting.
 
 ## Assumptions
 
@@ -88,11 +88,11 @@ cd business-operations/skills/internal-comms && python3 scripts/comms_template_f
 
 - **Slack-only announcement of a high or disruptive change.** Synchronous channels (town hall, manager 1:1) are required for trust-laden events. See `references/announcement_anti_patterns.md`.
 - **Passive voice for accountability.** "Decisions have been made" hides the decision-maker. Name them.
-- **Magnitude downplay.** "Minor restructuring" for a 30% RIF is the Better.com / Vishal-Garg failure mode (the author's example; read the original reporting before you cite it). The tools reject this.
+- **Magnitude downplay.** Calling a large job cut a "minor restructuring" costs trust fast, because staff see the real size straight away. The tools reject this.
 - **No manager talking points.** Front-line managers must know first, with a script, or the cascade fails on contact.
 - **Celebratory framing for a job cut.** "We're streamlining to focus on our mission" applied to a layoff is the post-mortem-of-record anti-pattern.
 - **Bundled questions in the orchestrator.** Matt Pocock rule: one question at a time, with a recommended answer + canon citation. Never bundled.
-- **No follow-up touchpoints.** A single announcement is not a comms plan. Prosci floor is 5–7.
+- **No follow-up touchpoints.** A single announcement is not a comms plan. A common rule of thumb (unverified) is 5 to 7 touchpoints.
 - **Skipping the FAQ.** Employees will ask the questions anyway. Pre-answer them or watch Slack write the FAQ for you, badly.
 
 ## Distinct from
@@ -113,15 +113,15 @@ Before invoking the tools, the orchestrator walks the user through these questio
 
 2. **"Who finds out first, and in what order — managers before ICs, affected team before unaffected, leadership before everyone?"**
    Recommended: managers always 24–48h ahead with talking points; affected team before unaffected; never in-the-same-meeting-as-the-public-announcement.
-   Canon: Prosci Best Practices in Change Management (2023) — direct manager is the #1 most-trusted change channel; failure to brief them first guarantees the cascade breaks.
+   Reason: a manager who is not briefed first cannot answer questions, and the cascade breaks. (The author cites Prosci for "direct manager is the most trusted channel". That claim is unverified; do not quote it.)
 
 3. **"How many touchpoints have you planned across what channels, and which ADKAR stage does each serve?"**
    Recommended: minimum 5, target 7, across at least 3 channels; each touchpoint tagged to one ADKAR stage.
-   Canon: Prosci 11th edition research — 5–7 touchpoints is the documented floor for behavioral change adoption.
+   Reason: one message is rarely enough for people to change what they do. (The author's "5 to 7 touchpoints" figure, attributed to Prosci, is unverified; treat it as a rule of thumb.)
 
 4. **"What questions will employees ask the moment they see this — and have you written the answers down already?"**
    Recommended: seed the FAQ with at least 7 questions: comp, reporting line, location, role change, timing, why now, why us. Bias toward including the questions you wish people would not ask.
-   Canon: Edelman Trust Barometer (annual) — internal trust collapses fastest when the obvious question is unanswered.
+   Reason: when the obvious question goes unanswered, people fill the gap with rumours. (The author cites the Edelman Trust Barometer; unverified.)
 
 5. **"Who is the named accountable executive that will appear on the announcement and be present at the town hall, and have they confirmed both?"**
    Recommended: a single, named human at VP level or above; physically (or video-) present; not delegating to comms team.
@@ -129,7 +129,7 @@ Before invoking the tools, the orchestrator walks the user through these questio
 
 6. **"What are you NOT saying, and why?"**
    Recommended: surface the omissions explicitly to legal / sponsor. The unsaid will be inferred; better to know what's being inferred.
-   Canon: Sucher & Gupta MIT Sloan layoffs research (2018) — what is omitted from a layoff announcement becomes the lead Glassdoor narrative.
+   Reason: what is left out of a layoff announcement tends to become the story people tell outside. (The author cites MIT Sloan research by Sucher and Gupta; unverified.)
 
 7. **"What does success look like 30 / 60 / 90 days after the announcement — and how are you measuring it?"**
    Recommended: name 3 measurable signals (e.g., regrettable-attrition delta, pulse-survey trust score, manager-cascade audit results).

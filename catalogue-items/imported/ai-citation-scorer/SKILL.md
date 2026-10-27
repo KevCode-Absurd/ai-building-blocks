@@ -21,11 +21,13 @@ allowed-tools:
 - Write
 ---
 
+> **AI Blocks note (licence):** this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says. The `license:` line in the front matter above is the original author's own label (MIT). The LICENSE-CONTENT file governs here. Keep the credit to the author.
+
 # AI Citability Scoring Skill
 
 ## Core Insight
 
-AI language models cite passages that meet specific structural criteria. Research from Princeton, Georgia Tech, and IIT Delhi (2024) reported that GEO-optimized content achieves higher visibility in AI-generated responses (we have not checked the figures). The key finding: AI systems preferentially extract and cite passages that are **134-167 words long**, **self-contained** (understandable without surrounding context), **fact-rich** (containing specific statistics, dates, or named entities), and **directly answer a question** in the first 1-2 sentences.
+AI language models cite passages that meet specific structural criteria. Research from Princeton, Georgia Tech, and IIT Delhi (2024) reported that GEO-optimized content achieves higher visibility in AI-generated responses (we have not checked the figures). The key finding, as reported by those studies and not checked by us: AI systems may prefer to extract and cite passages that are **134-167 words long**, **self-contained** (understandable without surrounding context), **fact-rich** (containing specific statistics, dates, or named entities), and **directly answer a question** in the first 1-2 sentences.
 
 This is fundamentally different from traditional SEO copywriting, which optimizes for keyword density and user engagement metrics. GEO citability optimizes for **extractability** -- the ease with which an AI system can pull a passage from your content and present it as a direct answer.
 
@@ -118,7 +120,7 @@ This measures the structural formatting that helps AI systems parse and segment 
 - **Heading hierarchy:** H1 (page title) > H2 (major sections) > H3 (subsections). Never skip levels.
 - **Question-based headings:** "What is [topic]?" and "How does [topic] work?" are directly matchable to AI queries.
 - **Paragraph length:** 2-4 sentences per paragraph. AI systems parse short paragraphs more reliably.
-- **Tables:** Use for any comparison of 3+ items. AI systems extract table data with high accuracy.
+- **Tables:** Use for any comparison of 3+ items. The original author says AI systems extract table data well. We have not checked that claim.
 - **Lists:** Use ordered lists for sequential processes, unordered lists for non-sequential items.
 - **Bold key terms:** Bold the first use of important terms. This aids AI entity recognition.
 
@@ -312,7 +314,7 @@ Write the report as text in the chat. If your AI can save files, also save it as
 
 ### Optimal Passage Characteristics (from GEO Research)
 
-These figures are the cited studies' own claims. We have not checked them and they may be out of date. Do not state them as fact in your report. Call them "reported by" the study, or leave them out.
+The scoring weights in this skill (30, 25, 20, 15 and 10 percent) are the author's own design choice. They have not been tested against how AI tools actually cite pages. These figures are the cited studies' own claims. We have not checked them and they may be out of date. Do not state them as fact in your report. Call them "reported by" the study, or leave them out.
 
 - **Optimal length for AI citation:** 134-167 words (Bortolato 2025 analysis of AI Overview passages)
 - **Definition patterns increase citation rate by:** 2.1x (Georgia Tech 2024)

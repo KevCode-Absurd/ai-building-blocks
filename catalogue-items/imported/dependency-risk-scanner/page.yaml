@@ -33,9 +33,12 @@ how_to_use:
   - Open your AI in a tool that can run code and read files. Give it internet access.
   - Paste this skill into the chat, or load the skill folder. Install the audit tool for your language first, such as npm audit for Node or pip-audit for Python.
   - Point it at your project folder, or at one manifest file.
-  - Add your licence policy and build system if you have them.
+  - Add your licence policy and build system if you have them. Confirm your project's licence policy first. Without one, the licence check cannot say much.
+  - Run the audit command for your language, for example npm audit --json for Node or pip-audit -r requirements.txt for Python, and let your AI read the result.
+  - Your AI will propose changes to your manifest and lock files as a diff. Approve each one before it writes anything. It must never write a file without your yes.
   - Read the report from the top. Fix Critical and High items first.
-  - Run your tests after any upgrade it suggests. Upgrades can break things.
+  - Run your tests after any upgrade it suggests. Upgrades can break things. Check each CVE ID and fixed version against NVD or OSV before you change a package.
+  - Next, send the bill of materials to your security person, and log each upgrade before you merge it.
 output_sample:
   input:
     - Your project folder with manifest and lock files

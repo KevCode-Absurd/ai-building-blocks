@@ -37,8 +37,8 @@ Not for stores outside Shopify (copy your order tax totals into a spreadsheet an
 ## Workflow Steps
 
 1. **OPERATION:** `orders` — query
-   **Inputs:** `query: "financial_status:paid created_at:>='<NOW - days_back days>'"`, `first: 250`, select `totalPriceSet`, `taxLines { title, rate, priceSet }`, `refunds { totalRefundedSet }`, pagination cursor
-   **Expected output:** All paid orders with tax lines; paginate until `hasNextPage: false`
+   **Inputs:** `query: "(financial_status:paid OR financial_status:partially_refunded OR financial_status:refunded) created_at:>='<NOW - days_back days>'"`, `first: 250`, select `totalPriceSet`, `taxLines { title, rate, priceSet }`, `refunds { totalRefundedSet }`, pagination cursor
+   **Expected output:** All paid, partly refunded and fully refunded orders with tax lines; paginate until `hasNextPage: false`. Partly refunded orders must be in this list, or the "Partly refunded orders" block in step 2 will always be empty
 
 2. Check each order's refunds:
    - Fully refunded (the sum of `refunds[].totalRefundedSet` equals the order's `totalPriceSet`): if `exclude_refunded` is true, leave its tax out of the totals.
@@ -142,9 +142,9 @@ TAX LIABILITY SUMMARY  (<days_back> days)
 For `format: json`, emit:
 ```json
 {
-  "skill": "tax-liability-summary",
+  "skill": "sales-tax-summary-builder",
   "store": "<domain>",
-  "period_days": 90,
+  "period_days": <days_back>,
   "orders_analyzed": 0,
   "total_tax_collected": 0,
   "currency": "USD",

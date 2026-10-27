@@ -7,7 +7,7 @@ subhead: Plan a database change that preserves existing agent data. Get a schema
 explain: |-
   Changing a database that already holds your agent data is where data gets lost. A quick reset fixes the schema and wipes the rows.
 
-  This skill plans the change so the data stays. It maps your current tables to the ones your agents need, orders the steps so old and new code both keep working, and plans a rehearsal on a test copy. It also says plainly what a rollback cannot bring back. It plans only. A developer runs it on your servers.
+  This skill plans the change so the data stays. It maps your current tables to the ones your agents need, orders the steps so old and new code both keep working, and plans a rehearsal on a test copy. It also says plainly what a rollback cannot bring back. It plans, and writes change files only if you allow it. It never runs the migration. A developer runs it on your servers.
 when:
   - Your agents already store data, and you need to change the tables without losing it.
   - Your agent tables do not match your project's tables, and you need a map from one to the other.

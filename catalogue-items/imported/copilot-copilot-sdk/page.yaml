@@ -22,11 +22,11 @@ not_for:
   - "You have no GitHub Copilot access: set that up first, or use a no-code tool instead."
   - "You want to build a tool server for other AI apps to call: ask a developer, as this skill is for building agents, not general servers."
 you_give:
-  - "What your agent app should do"
-  - "Your language: TypeScript, Python, Go or .NET"
-  - "The tools your agent needs to call (optional)"
-  - "Your existing project files and dependency file, such as go.mod, package.json or requirements.txt (optional)"
-  - "A GitHub Copilot account that is signed in"
+  - "Required: what your agent app should do"
+  - "Required: your language, TypeScript, Python, Go or .NET"
+  - "Required: a GitHub Copilot account that is signed in"
+  - "Optional: the tools your agent needs to call"
+  - "Optional: your existing project files and dependency file, such as go.mod, package.json or requirements.txt"
 you_get:
   - "Install commands for your language"
   - "A short program that opens a session, sends one prompt and prints the reply"
@@ -36,11 +36,12 @@ you_get:
   - "Code to save, resume, list and delete sessions, with error handling and a clean shutdown"
 how_to_use:
   - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
-  - Ask your AI to follow this skill. Include the files and details listed on this page.
+  - Ask your AI to follow this skill. Paste your app goal and language first. Add your tools and project files after, if you have them.
   - It works best when your AI can read the files you provide and use the named tools when the job requires them.
   - Before you run anything, check that your GitHub Copilot subscription is active and that you are signed in on this computer.
+  - The examples let the agent do anything it asks, with no review (approveAll). That is for local testing only. Before real use, replace it with a permission handler that limits which actions the agent may take.
   - A good first run prints one reply from the agent to your terminal. If you see that, the setup works.
-  - Next, run the quick start, then test the custom tool and the MCP link one at a time. In Go, fill in the MCP server fields from the SDK's own documentation, because the skill leaves them empty.
+  - After the first working reply, add one custom tool, then the MCP link, one at a time. The output is code for you or a developer to run, so it pairs with your own app project. Next, run the quick start, then test the custom tool and the MCP link one at a time. In Go, fill in the MCP server fields from the SDK's own documentation, because the skill leaves them empty.
 output_sample:
   input:
     - What your agent app should do

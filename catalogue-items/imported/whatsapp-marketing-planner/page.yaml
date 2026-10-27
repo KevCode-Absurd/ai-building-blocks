@@ -36,10 +36,12 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
   - Have ready your customer count, your main goal, and the app or API you use now. Send these to your AI first, along with your business, products and country.
   - Add your brand voice notes and budget if you have them (optional).
+  - If you plan to use the Business API, know the cost first. You need a paid account with a WhatsApp Business Solution Provider (BSP) such as Wati or Twilio, and WhatsApp must approve each message template before you can send any broadcast. The free Business app does not need this. Plan for the approval time.
   - Work through sections 01 to 07 in order. Start with setup and opt-in, and send no broadcast until opt-in is in place.
   - Read the setup pick first. Check it fits your list size.
-  - Treat all benchmarks and tool prices as rough estimates. Check them with the tool maker before you buy. Confirm each template category (marketing or utility) with your WhatsApp provider before you send, and check opt-in wording against WhatsApp's policy and your local law.
-  - Copy the welcome flow and opt-in wording into your WhatsApp tool. No code or files are needed.
+  - The plan gives no benchmark figures or prices. Fill the baseline column from your own campaigns, and get prices from the tool maker before you buy. Confirm each template category (marketing or utility) with your WhatsApp provider before you send, and check opt-in wording against WhatsApp's policy and your local law.
+  - After the plan, check each template category and the opt-in wording with your provider before the first broadcast.
+  - Copy the welcome flow and opt-in wording into your WhatsApp tool. Planning needs no code or files. The API route also needs the paid BSP account and template approval described above.
 output_sample:
   input:
     - Your business and products
@@ -59,7 +61,7 @@ output_sample:
     - name: 05 Content strategy
       contains: What to send, what to avoid, how often, and how to use images, video and voice notes.
     - name: 06 WhatsApp metrics
-      contains: The numbers to track each week, with rough benchmarks and what a spike in unsubscribes means.
+      contains: The numbers to track each week, with a blank column for your own baseline, and what a spike in unsubscribes means.
     - name: 07 Platform recommendations by scale
-      contains: Which tool suits your list size, with approximate monthly costs you should check yourself.
+      contains: Which tool suits your list size, with prices left for you to check with each provider.
 next: [whatsapp-support-reply-assistant]

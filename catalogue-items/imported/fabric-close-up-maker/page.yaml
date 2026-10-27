@@ -9,13 +9,14 @@ subhead: Close-up fabric shots for a clothing product page, made from the photo 
 explain: |
   Close-up fabric shots for a clothing product page, made from the photo you already have. Buyers see the weave, stitching and collar detail that proves quality, without a macro lens or a photo studio.
 
-  You give one garment image and pick the area: collar, cuff, hem, buttons, zip, pocket, embroidery, print or fabric weave. The skill writes a prompt that zooms into that part and keeps the colors and thread direction true to the garment, then sends it to an image model. You can add a reference image to copy an angle and lighting. It uses the dlazy command line tool, which needs an account and credits.
+  You give one garment image and pick the area: collar, cuff, hem, buttons, zip, pocket, embroidery, print or fabric weave. The skill writes a prompt that zooms into that part and keeps the colors and thread direction true to the garment, then sends it to an image model. You can add a reference image to copy an angle and lighting. It uses the dlazy command line tool, which needs an account and credits. Cost and access: each run is paid, and --dry-run shows the cost first without a charge.
 when:
   - Your product page has no detail images and you suspect that costs sales.
   - You want 2 or 3 close-ups per garment without extra photography.
   - You want your detail shots to match the angle of a reference image.
   - You need weave or stitching visible for a premium product.
 not_for:
+  - You want to use the AI close-ups in place of real detail photos, or as proof of quality or fabric content. Take a real macro photo of the garment. If you do use AI close-ups, label them as AI-made on the product page.
   - Your source photo is blurry, small or hides the area you want. Retake the photo first, because the AI will invent the detail.
   - You need proof of quality, fabric content or a certification. Use a real macro photo of the garment taken by a photographer.
   - You want the whole garment on a model or a clean background. Use a product photographer or a simple photo of the garment laid flat.
@@ -29,14 +30,15 @@ you_get:
   - Prompt used, for repeat runs
   - Several area options per garment
 how_to_use:
-  - Pick your sharpest photo of the garment. Make sure the area you want is clear and not covered.
-  - Choose one area per close-up, such as the collar, cuff or weave. Plan two or three shots per garment.
-  - You need three things first. An AI that can run commands, a dlazy account with credits, and the dlazy command line tool installed. Each image costs credits. The skill's own example used 60 credits for one 1024 by 1024 image, so check current prices before you run many. The skill text is in Chinese, so ask your AI to reply in English.
-  - Open your AI tool and paste the skill.
-  - Add your photo and the area. Add a reference image if you want to copy an angle (optional).
-  - Check each result against the real garment. Look for plastic-looking texture, wrong color or stitching that is not on the garment.
-  - Keep two or three close-ups for the product page. Save the prompt with the product code so you can repeat the shot.
-  - Before you publish, check every close-up against the physical garment. AI close-ups can show weave, stitching or trim that the real garment does not have. Label them as illustrative, so buyers are not misled about quality. Where your store, your sales platform or the law requires it, say the images are AI-made. Never use them as proof of quality or fabric content.
+  - "Know the cost and access first. You need a dlazy account with credits, the dlazy command line tool, and an AI that can run commands. Every image costs credits and is paid. The skill's own example used 60 credits for one 1024 by 1024 image, so check current prices. Run with --dry-run first. It shows the cost and charges nothing."
+  - "Install and sign in. Ask your AI to install the dlazy command line tool (npm package @dlazy/cli, as the skill's references/provider-cli.md says) and run dlazy login. Never paste your key into the chat. If your AI needs a key, store it with dlazy auth set."
+  - Pick your sharpest photo of the garment, at least 400 by 400 pixels, with the area you want clear and not covered. Choose one area per close-up, such as the collar, cuff or weave. Plan two or three shots per garment.
+  - Paste the skill into your AI. The skill file body is in Chinese, and an English summary at the top of skill.md has the prompt template, the settings and the fix lines. Ask your AI to reply in English.
+  - "Do a dry run first: add your photo and the area, and ask your AI to run the command with --dry-run. Check the cost."
+  - "Do the first run. Ask for the real run with quality high, as the skill says. Add a reference image if you want to copy an angle (optional)."
+  - "Quality check. Compare each result with the real garment. Look for plastic-looking texture, a wrong color, or stitching, a zip or embroidery that is not on the garment. If something is wrong, ask your AI to add one of the skill's four fix lines and run again."
+  - "Files to expect: one image per run in your working folder, named output-SKU-area.jpg (for example output-SKU123-collar.jpg), plus the prompt text to save beside it. Save the prompt with the product code so you can repeat the shot."
+  - "Before you publish, label every close-up as AI-made or illustrative on the product page itself, so buyers are not misled about quality. Never let AI close-ups replace real detail photos of the garment, and never use them as proof of quality or fabric content. Where your store, your sales platform or the law requires it, say the images are AI-made."
   - Next, save the close-ups you keep beside the main product photos for that listing, and add them to the product page in that order.
 output_sample:
   input:

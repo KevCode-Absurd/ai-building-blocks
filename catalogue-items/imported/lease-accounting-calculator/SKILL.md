@@ -56,7 +56,7 @@ Short-term (≤ 12 months, no purchase option) and low-value assets (IFRS only, 
 
 ### Lease Accounting Memo
 
-**Conclusion**: lease/not a lease; classification (US GAAP); exemptions applied.
+**Conclusion**: lease/not a lease; classification under the standard the person chose (IFRS 16 or ASC 842); exemptions applied.
 
 **Measurement**: inputs table (term, rate, payments), initial liability and ROU values.
 

@@ -83,8 +83,6 @@ tweaks:
     how: "Take the equity value date from the incentive terms and the net equity value. Use one currency and scale on every line."
   - what: "Net equity value"
     how: "Change the net equity value and have your AI recalculate. Keep the actual figures you supplied."
-  - what: Acceptance
-    how: Hurdle is an equity-value threshold after debt and prior claims.
 judge:
   - Hurdle is an equity-value threshold after debt and prior claims.
   - Purchased rollover proceeds are not included again as free management participation.

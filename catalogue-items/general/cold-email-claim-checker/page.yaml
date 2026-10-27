@@ -11,7 +11,7 @@ subhead: "Paste a cold email and the text of the page it mentions. The prompt te
 explain: |
   A cold email loses trust fast when one line is wrong about the reader. "I loved your new range" fails if they have no new range. This prompt checks every claim against text you paste, line by line, so you find the miss before they do.
 
-  It also checks the shape: a short honest subject, one ask, and a body that gets to the point. It checks the basics of commercial email, but it is not legal advice. Rules differ by country, so check with a qualified person.
+  It checks claims and the basics only. The Cold email pre-send checker runs every check. It also checks the shape: a short honest subject, one ask, and a body that gets to the point. It checks the basics of commercial email, but it is not legal advice. Rules differ by country, so check with a qualified person.
 
 when:
   - "You wrote a cold email and want it checked before it goes out."
@@ -26,6 +26,7 @@ you_give:
   - "The draft with its subject"
   - "Text from the prospect's page (advised)"
   - "What you can prove about yourself (advised)"
+  - "Your postal address and opt-out line, if the email is commercial (needed for the basics check)"
 you_get:
   - "A claims table with evidence or status"
   - "A ranked list of issues"
@@ -76,6 +77,7 @@ output_shape: |
   TIGHTENED VERSION
   <draft with [CONFIRM: ...] where needed>
   BEFORE YOU SEND: <what to add or confirm>
+  CHECKS MISSED: <one line per check not run, or none>
 
 tweaks:
   - what: "Their text"

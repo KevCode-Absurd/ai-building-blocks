@@ -11,7 +11,7 @@ explain: |
 
   The skill maps where untrusted text enters: chat input, retrieved documents, tool results, shared context and displayed markup. Then it adds layers. System rules rank above user text, and tool output is treated as data only. Untrusted text is kept apart from control instructions. Each tool gets an allow-list for the task. Replies are checked for format, secrets and unsafe actions. High-impact steps need human approval. Starter Python code screens for common attack phrases, and you test it with sample attacks.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (BagelHole) says MIT. Credit goes to BagelHole and sickn33.
+  Licence: CC BY 4.0 applies to this copy, as the LICENSE-CONTENT file in this folder says. That file governs. The author's own file header (BagelHole) says MIT, which is the author's label for the original. Credit goes to BagelHole and sickn33. We added a first-step note, an Output section and this licence note to the author's file.
 when:
   - Your app reads web pages or documents and you worry about hidden instructions.
   - Someone reported that your bot can be tricked.
@@ -37,8 +37,8 @@ how_to_use:
   - Paste your app's code, or describe how it works. Say where it reads outside text and which tools it can use.
   - Ask your AI to list the entry points where untrusted text can get in. Check the list against what you know.
   - Ask it to pick the defence layers that fit, then add the screening and output check code.
-  - Run the red-team tests on a test copy. The skill gives the test cases as a list with the expected result for each, but no runner. Ask your AI to write a small Python script that sends each test input to your test copy and marks pass or fail against the expected result. Or go through them by hand.
-  - Fix any test that fails and run the tests again before you launch. The attack phrases in the starter code are a sample. A new attack can slip past them, so keep the other layers on.
+  - Run the red-team tests on a test copy. The skill gives the test cases as a list with the expected result for each, but no runner. Either go through them by hand. Send the test input, read the reply, and tick pass or fail against the expected result. Or ask your AI to write a small Python script that does the same.
+  - A pass means the app did what the expected result says, such as refusing or ignoring the injected command. A fail means the attack got through. Fix any test that fails, then re-run all the tests after each code change, and run them again before you launch. The attack phrases in the starter code are a sample. A new attack can slip past them, so keep the other layers on.
   - Treat any failing test as a hole to close. For a wider review, pair this with the Code security reviewer.
 output_sample:
   input:
@@ -54,13 +54,13 @@ output_sample:
     - name: Attack surface
       contains: "The places untrusted text can enter: user input, retrieved documents, tool results, shared context and displayed markup."
     - name: Defense-in-depth pattern
-      contains: "Five layers: rule ranking, separating untrusted text, tool allow-lists, output checks and human approval."
+      contains: "Five defence layers: rule ranking, separating untrusted text, tool allow-lists, output checks and human approval. The settings file adds a sixth layer for logging and alerts."
     - name: prompt_sanitizer.py
       contains: Starter Python code that screens input for common attack phrases.
     - name: Canary token system
       contains: Code that plants a hidden marker and alerts you if it shows up in a reply.
     - name: Multi-layer defense configuration
-      contains: A settings file that turns on each layer and sets tool permissions.
+      contains: A settings file that turns on all six layers (the five defences plus monitoring) and sets tool permissions.
     - name: output_validator.py
       contains: Starter Python code that checks replies for leaked secrets, prompt leaks and overlong text.
     - name: Red-team test cases

@@ -10,6 +10,8 @@ explain: |
   Backlog items that start from the customer's situation instead of a made-up persona. Describe the product, the feature, and the moments when people need it. The skill turns each into a job story in the form: when this happens, I want to do this, so I can reach that result.
 
   Each story gets a title and acceptance criteria that you can watch and measure. The criteria check three things: the situation is recognised, the product supports the motivation, and the outcome is reached. You can link design files so developers see the screen next to the story. Stories focus on the job to be done, not who the person is.
+
+  Source note: this is a copy of the job-stories skill from Pawel Huryn's pm-skills repo, shared under the MIT licence (see the LICENSE file). We renamed it and rewrote the page text. The method is unchanged.
 when:
   - User stories with generic roles are not telling your team enough.
   - You must split a big feature into small, testable pieces.
@@ -31,7 +33,7 @@ you_get:
   - Design links attached to the stories
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
-  - "Paste the prompt below into the chat. Fill in the four brackets: Product, Feature, Situations, Design link. Delete the design line if you have none."
+  - "Paste the prompt below into the chat. Fill in the four fields: Product ($PRODUCT), Feature ($FEATURE), Situations ($CONTEXT) and Design link ($DESIGN). Delete the design line if you have none."
   - "Prompt: Write job stories in the format When [situation], I want to [motivation], so I can [outcome]. Product: [your product]. Feature: [your feature]. Situations: [when people need it]. Design: [link]. Give each story a title and 6 to 8 acceptance criteria I can observe and measure."
   - Check that each story starts from a situation, not a type of person. Fix any criterion you could not test.
   - Paste the stories into your backlog tool. Link each acceptance criterion to a test or QA checklist.

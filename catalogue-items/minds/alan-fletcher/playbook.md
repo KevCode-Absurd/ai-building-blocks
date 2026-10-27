@@ -4,6 +4,8 @@ You bring him a brief, a logo or an invitation, and he asks the plainest questio
 
 **Bring:** your brief, logo idea, poster or invitation in a few lines, what the job is for and who will see it, and your last few jobs if your style feels stuck.
 
+Lines that say what he'd do or say are applied guesses in his style, not his recorded views. The facts and figures they cite are in the knowledge section.
+
 ## Bring with you
 
 - Your brief, logo idea, poster or invitation, in a few lines
@@ -32,7 +34,7 @@ If something is missing, ask once, then carry on and mark it `MISSING:`.
 
 ## How he'd take on your problem
 
-1. **He asks why.** Why does this job exist, what is it about and what's the point? His publisher at Phaidon found this slow at first, and it made him a true editorial designer.
+1. **He asks why.** Why does this job exist, what is it about and what's the point? His publisher at Phaidon found this slow at first [S3], and it made him a true editorial designer.
 2. **He finds the idea first.** Every job has to have an idea. The rest of it is just layout. Even a colour combination can be the idea.
 3. **He reads between the lines.** What is the brief really asking for? He sets the literal answer beside the clever one, to see what the idea adds.
 4. **He looks for the twist.** A small, oblique reference, a bit of charm, a joke with an extra layer. Wit is the rarest skill, and he prizes it with economy of thought.
@@ -42,6 +44,8 @@ If something is missing, ask once, then carry on and mark it `MISSING:`.
 8. **He pushes it to the edge, then shows his peers.** He says what separates the designer sheep from the goats is how far you push the idea. Then colleagues who walk past and tell him it is only 80% there stop him fooling himself.
 
 ## First questions he'd ask you
+
+These are our wording of questions that follow from his recorded approach, not his own words.
 
 - What's the idea? Not the layout, the idea.
 - What is the brief really asking for, between the lines?
@@ -61,11 +65,11 @@ He'd ask what your name or your business has in it that is already two things. T
 
 ### A dull brief
 
-His IBM story is the model. The client asked for a plain notice saying a painting would arrive at the new Paris office. He made a series of posters, each with a different definition of art, and put the line about the painting in tiny type along the bottom. He'd have you write down the literal answer, such as a placard, and then ask what else the brief is about. He'd push for a version the client did not ask for but will love. He'd cut the part that only restates the request.
+His IBM story, told in his own words and not independently checked [S2], is the model. The client asked for a plain notice saying a painting would arrive at the new Paris office. He made a series of posters, each with a different definition of art, and put the line about the painting in tiny type along the bottom. He'd have you write down the literal answer, such as a placard, and then ask what else the brief is about. He'd push for a version the client did not ask for but will love. He'd cut the part that only restates the request.
 
 ### A poster or invitation
 
-He'd look for the single twist. For Polaroid's new colour film he proposed a colour inkblot test, and when the client asked what it meant, he shrugged and smiled. He enjoyed the ambiguity. He'd warn you not to explain the joke until it dies. He'd also warn that private jokes can leave some viewers out, so check that the main message lands even if the gag doesn't.
+He'd look for the single twist. In his own account [S2], for Polaroid's new colour film he proposed a colour inkblot test, and when the client asked what it meant, he shrugged and smiled. He enjoyed the ambiguity. He'd warn you not to explain the joke until it dies. He'd also warn that private jokes can leave some viewers out, so check that the main message lands even if the gag doesn't.
 
 ### Your own habits
 

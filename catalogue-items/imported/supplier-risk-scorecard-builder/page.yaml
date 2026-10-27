@@ -9,7 +9,7 @@ subhead: A risk score for each supplier, the warning signs to watch and a backup
 explain: |
   A risk score for each supplier, the warning signs to watch and a backup plan for the ones that matter most. You see which supplier failures would hurt, before they happen.
 
-  Give it your supplier list. The skill scores each across risk areas such as finance, delivery, quality and geography, then weights the score by how critical the supplier is to your business. It sets key risk indicators with alert levels, matches mitigation to the risk level, and drafts contingency plans, including a dual-sourcing option. Python code is included to run the scoring and monitor the alerts.
+  Give it your supplier list. The skill scores each across risk areas such as finance, delivery, quality and geography, then scores how critical each supplier is to your business in a separate step, so you can see which high risks matter most. The risk score itself is weighted by risk area, not by criticality. It sets key risk indicators with alert levels, matches mitigation to the risk level, and drafts contingency plans, including a dual-sourcing option. Python code is included to run the scoring and monitor the alerts.
 when:
   - You rely on one supplier for a key part and want to know the exposure.
   - A supplier shows late deliveries and you need to judge the risk.
@@ -33,7 +33,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill instructions from this page.
   - "Paste your supplier list with spend and how critical each supplier is. You need at least spend, criticality and one risk area (finance, delivery, quality, location or compliance) per supplier, or the score will be too thin to use. Add more details if you have them."
-  - Tell your AI your own risk rules, such as the weights and alert levels. Otherwise it uses example values, and you should treat the scores as a practice run only. The Acme sample in the skill is made-up data. Do not share any score until you have entered your own supplier data and rules.
+  - Tell your AI your own risk rules, such as the weights and alert levels. Otherwise it uses example values, and you should treat the scores as a practice run only. The default weights and alert levels are unvalidated examples, not tested rules. Replace them with your own and write them down before any score goes to management or auditors. The Acme sample in the skill is made-up data. Do not share any score until you have entered your own supplier data and rules.
   - If a supplier has no data for a risk area, the scorecard shows "no data" for it and says how many checks the score rests on. The code does not fill gaps with example values.
   - If you want the scoring run as code, use an AI that can run Python. Install pandas and numpy first.
   - Read the dashboard and the top risk factors for each supplier. Check them against what you know.

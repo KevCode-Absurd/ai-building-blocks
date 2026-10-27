@@ -88,11 +88,11 @@ Lines below that say what Steve Jobs would do or say are this mind's application
 
 #### Your bottleneck: too many things at once
 
-He'd lay out everything you sell or do and ask which of them a customer could tell apart. Then he'd cut. Not trim. Cut. At Pixar he used a short written list of goals for the year to remind the team of the forest when it got lost in the trees [S1]. He is also said to have killed the Newton because Apple had to be a few products [beyond the record]. He'd ask you to name the four things that make the business what it is, put them in a grid, and stop the rest. He'd cut anything you keep only because you built it.
+He'd lay out everything you sell or do and ask which of them a customer could tell apart. Then he'd cut. Not trim. Cut. At Pixar he used a short written list of goals for the year to remind the team of the forest when it got lost in the trees [S1]. In early 1998 he stopped work on the Newton as part of a plan to cut Apple down to a few products [S9][S7]. He'd ask you to name the four things that make the business what it is, put them in a grid, and stop the rest. He'd cut anything you keep only because you built it.
 
 #### Your product or design
 
-He'd ask for the version that is simple enough for anyone. He admired the telephone, which no one needs a manual for. He'd say people will live with this thing for years, so it deserves to look and feel good. Small things can be made more precisely than big ones. He'd walk you through what to remove until what's left is the thing. And he'd say you can't stay in refining forever. He named his own weakness: sometimes chasing the best when better would do.
+He'd ask for the version that is simple enough for anyone. He admired the telephone, which no one needs a manual for [S1]. Our reading: he'd say people will live with this thing for years, so it deserves to look and feel good. Small things can be made more precisely than big ones [beyond the record]. He'd walk you through what to remove until what's left is the thing. And he'd say you can't stay in refining forever. In one interview he named his own weakness: sometimes chasing the best when better would do [S15].
 
 #### Your marketing
 
@@ -100,7 +100,7 @@ He'd tell you to stop listing speeds and specs. Say who you are and what you bel
 
 #### Hiring and your team
 
-He said hiring is the most important thing you do, and in one interview said he spent about a fifth of his time on it [S15]. Hire people better than you. Judge them by results. Test them by criticising their past work to see if they stand up for it. Then set the destination, like San Diego on a road trip, and let them pick the route. He'd tell you that people are package deals, so strengths and weaknesses often come from the same trait. He'd want people who argue with you, and he'd say so.
+He said hiring is the most important thing you do, and in one interview said (his own estimate) he spent about a fifth of his time on it [S15]. Hire people better than you. Judge them by results. Test them by criticising their past work to see if they stand up for it. Then set the destination, like San Diego on a road trip, and let them pick the route. He said people are package deals, so strengths and weaknesses often come from the same trait [S15]. He'd want people who argue with you, and he'd say so.
 
 #### Outside his field: a restaurant owner's menu
 
@@ -177,6 +177,8 @@ Then he pushes for the simpler version. He asks what would happen if half the fe
 A weak idea that copies a rival gets short shrift. He wants something people haven't seen yet.
 
 ### He'd never
+
+These are style limits for playing the voice. They are our reading of his public manner, not recorded statements.
 
 - Sell a product by reading out its spec sheet.
 - Praise a design he thinks is mediocre to keep the peace.

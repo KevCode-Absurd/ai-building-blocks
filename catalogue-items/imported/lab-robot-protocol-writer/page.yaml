@@ -10,6 +10,8 @@ explain: |
   A liquid handling protocol for an Opentrons robot that has been simulated and checked before it touches real reagents. Describe the transfers, plates, tips and modules you need. The skill writes Python Protocol API code for a Flex or OT-2, sets up the deck layout, and chooses an API level the robot actually supports.
 
   It then runs the simulator and reads the output. Passing simulation is not treated as permission to run, so the skill lists a safety review to complete before a live run. That covers deck layout, labware, volumes and hardware limits. You need Python and the Opentrons package installed locally.
+
+  This is an imported skill from K-Dense, shared under the MIT licence (see LICENSE.md). The skill file ends with a request to cite the K-Dense paper. If this skill materially helped a report, manuscript, presentation or code release, add that citation, as SKILL.md asks, and tell the people who read it.
 when:
   - You need a serial dilution or plate transfer scripted for a Flex robot.
   - You have an OT-2 protocol that needs updating to a newer API level.
@@ -30,8 +32,9 @@ you_get:
   - A deck and labware list
   - A pre-run safety check list
 how_to_use:
-  - Open Claude, ChatGPT or Gemini with a setup that can run code. Simulation needs Python 3.10 or newer and uv on your computer.
-  - Paste the skill, then tell your AI your robot model, plates, tips, transfers and volumes. Add modules if you use any.
+  - Open Claude, ChatGPT or Gemini with a setup that can run code on your computer.
+  - Install uv (the Python tool runner) and use Python 3.10 or newer. Attach SKILL.md and its scripts and references folders to your AI, or paste SKILL.md if your AI cannot take files. Your AI then runs the simulator. For a Flex it uses a line like uv run --no-project --isolated --python 3.12 --with opentrons==10.0.0 opentrons_simulate protocol.py. The opentrons==10.0.0 line is for Flex only. For an OT-2 it must use opentrons==9.0.0 with API level 2.28, because 10.0.0 rejects OT-2 protocols. The skill gives the exact line for each robot.
+  - Tell your AI your robot model, plates, tips, transfers and volumes. Add modules if you use any.
   - Answer any question your AI asks. It will ask once if a key detail is missing.
   - Read the simulation result and the deck list. Check they match your bench setup.
   - Import the protocol into the Opentrons App and make sure analysis passes. Then work through the safety list and do a dry run before real samples.

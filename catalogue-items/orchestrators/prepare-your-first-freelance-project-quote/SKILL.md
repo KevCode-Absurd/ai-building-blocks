@@ -30,7 +30,7 @@ How to start:
 
 ## What to gather first
 
-These four items replace the generic brief above. Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
+These four items replace the generic "Your question" and "Your idea" lines above. The client's request is the question and the idea. The deal terms are your own payment terms. The block above lists them as optional, but this workflow needs them: a quote with no payment terms gets a `MISSING: payment terms` line. Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
 
 **You need:**
 - The client's request: an email, call notes or a short brief.
@@ -103,7 +103,7 @@ Write `MISSING: <what>` next to the affected line. Carry on with work that does 
 
 ## What to do with the result
 
-Suggest one next step as a short question, and say the user can type their own. These fit a first quote better than the generic suggestions above:
+Suggest one next step as a short question, and say the user can type their own. Ignore the "After this" list in the generated block above and offer only the two below. Do not offer the store pricing, price ending, currency forward or shipping inspection items in the generated list above, because they do not fit a freelance quote:
 - **Price tiers.** If the client wants options, offer the [Three-tier price ladder drafter](https://useaiblocks.com/skills/three-tier-price-ladder-drafter).
 - **A change after signing.** When the client later asks for more, use the [Prepare a client scope change brief](https://useaiblocks.com/workflows/prepare-a-client-scope-change-brief) workflow.
 Nothing is sent for them. If they pick one and it is added here, carry on with what you just made. If not, give the link and say what to bring.

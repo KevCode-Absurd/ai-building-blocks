@@ -136,7 +136,7 @@ For `format: json`, emit:
 {
   "skill": "order-risk-report",
   "store": "<domain>",
-  "period_days": 7,
+  "period_days": [DAYS_BACK],
   "orders_reviewed": 0,
   "high_risk_count": 0,
   "medium_risk_count": 0,

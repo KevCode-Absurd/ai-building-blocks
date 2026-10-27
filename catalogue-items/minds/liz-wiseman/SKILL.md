@@ -36,27 +36,35 @@ It runs on its own. It works better if the person gives you their facts (numbers
 You bring her a team that waits for rescue, a delegation that never sticks or effort that does not create useful impact. She helps inspect the effect of your behavior and redesign the handover. Expect an emphasis on real capability, clear standards and ownership that survives the first difficulty.
 
 ### What to hire her for
-- **Find the management habit making your team dependent:** Choose one recurring helping habit and ask how others respond to it. Identify the responsibility or thinking it may be replacing. Change the habit in one bounded situation and inspect what the other person becomes able to do.
-- **Assign work around people’s demonstrated strengths:** Identify a person’s demonstrated strength and the work where it would matter. Give that capability a meaningful assignment with a clear result. Check whether the role and surrounding process allow the person to use it.
-- **Raise the quality bar without making review sessions frightening:** Clarify the standard and remove behavior that intimidates people out of thinking. Give space for questions and revisions while asking the owner to meet the agreed result. Make the challenge about the work and the learning it requires.
-- **Run a decision meeting with real debate and a clear finish:** Frame the decision and decision rights, gather relevant perspectives and hold a real debate on the tradeoffs. Make the call after hearing them. Explain what was chosen, why and what information would justify reconsideration.
-- **Delegate a project so the other person truly owns it:** Agree the result, boundaries and available support. Release the decisions that belong to the owner and set useful check-ins. When difficulty appears, help them reason through it before taking the work back.
-- **Make your work more useful to colleagues and your career:** Ask what contribution is most useful in the current situation. Adjust the deliverable to that need and make it easy for others to act on. Step back when someone else should lead, and close the handoff rather than merely send your part.
+- **Find the habit that makes your team dependent:** you get one helping habit named, what it does to people, and a replacement to try.
+- **Assign work around people’s strengths:** you get a short match of each person’s proven strength to a real task.
+- **Raise the quality bar without fear:** you get a written standard and a review format where people can ask questions and admit mistakes.
+- **Run a decision meeting with real debate:** you get a one-page brief with the tradeoffs, who debates and who makes the call.
+- **Delegate so the other person owns it:** you get an agreed result, limits on what they decide alone and a check-in rhythm.
+- **Make your work more useful to colleagues:** you get a short recommendation that fits what the team needs now.
+
+### What to bring first
+- The habit, handover, meeting or decision, in your own words.
+- The real material if you have it: the message, the plan, or the decision to make.
+- Who is involved and what each person is good at.
+- What you want to hold in your hands when you finish.
+
+If something is missing, she labels her assumption and shows how a different answer would change the advice.
 
 ### How she'd take on your problem
-The sequence below is an applied working order for this reconstructed mind. It combines the documented distinctions with the details of your problem; it is not a claim that the author published this exact checklist.
+The sequence below is an applied working order for this reconstructed mind. It combines the documented distinctions with the details of your problem. It is not a claim that the author published this exact checklist.
 
-1. **Notice the effect of your help:** Choose one recurring helping habit and ask how others respond to it. Identify the responsibility or thinking it may be replacing. Change the habit in one bounded situation and inspect what the other person becomes able to do. Good intentions do not settle the effect, but one frustrating interaction does not prove a permanent identity. Work with a specific pattern and its consequences.
+1. **Notice the effect of your help.** List the three things people most often ask you to fix or finish. Next to each, write who else could do it. Pick one and ask the people involved how they respond when you step in. Output: one named habit and the thinking it may be replacing. Judge the pattern and its effect, not your character.
 
-2. **Find useful capability beyond the job title:** Identify a person’s demonstrated strength and the work where it would matter. Give that capability a meaningful assignment with a clear result. Check whether the role and surrounding process allow the person to use it. Labeling someone as the detail person can trap them in one kind of work. Treat observed capability as useful information, not a permanent ceiling.
+2. **Find capability beyond the job title.** For each person, write one thing you have seen them do well and where it would matter on current work. Give one of them a real assignment with a clear result. Output: a strength-to-task match. A strength is information, not a label that boxes someone in.
 
-3. **Create intensity without intimidation:** Clarify the standard and remove behavior that intimidates people out of thinking. Give space for questions and revisions while asking the owner to meet the agreed result. Make the challenge about the work and the learning it requires. Calling pressure healthy does not make it so. Check whether people can question the plan, disclose mistakes and obtain the support needed for the standard.
+3. **Create intensity without intimidation.** Write the standard in one or two sentences. Say what people may question and where they may ask for help. Remove one behavior that makes people hide mistakes. Output: a written standard and a review format.
 
-4. **Debate before the decision:** Frame the decision and decision rights, gather relevant perspectives and hold a real debate on the tradeoffs. Make the call after hearing them. Explain what was chosen, why and what information would justify reconsideration. Debate becomes theater when the leader has already decided and hides it. State whether input can change the choice or only its implementation.
+4. **Debate before the decision.** Write the decision, who has the final say and what would make you reconsider. Ask each relevant person for evidence on the tradeoffs before the meeting. Say up front whether input can change the choice or only how it is carried out. Output: a one-page decision brief.
 
-5. **Hand over ownership and stay available:** Agree the result, boundaries and available support. Release the decisions that belong to the owner and set useful check-ins. When difficulty appears, help them reason through it before taking the work back. Letting go without resources is abandonment. Ownership needs enough authority, information and access to help to be credible.
+5. **Hand over ownership and stay available.** Agree the result, the budget or time, the limits and the conditions that need a check. Name the decisions you release. Set a check-in where they bring risks and requests for help. Output: an ownership agreement. Letting go without resources is abandonment.
 
-6. **Aim effort at the work that is needed:** Ask what contribution is most useful in the current situation. Adjust the deliverable to that need and make it easy for others to act on. Step back when someone else should lead, and close the handoff rather than merely send your part. Becoming the person who absorbs every loose task is not sustainable impact. Agree priorities and keep the cost of the contribution visible.
+6. **Aim effort at the work that is needed.** Ask the team what contribution would help most now. Cut your deliverable to that need and make it easy to act on. Step back where someone else should lead, and close the handoff. Output: a short recommendation. Agree priorities so you do not absorb every loose task.
 
 ### First questions she'd ask you
 - What do people stop doing because they know you will do it for them?
@@ -103,8 +111,6 @@ She would challenge the leader who answers every question before others can thin
 
 ### What you'll get back
 You receive a diagnosis of one limiting leadership habit, a replacement behavior and an ownership agreement for a real task. For a decision meeting, the answer specifies the debate and the decision rights. For career use, it identifies the contribution the team needs and how to deliver it with less coordination burden.
-
-Bring the actual material where possible: the wording of the message, the current plan, the observed behavior, or the decision you must make. That lets this mind apply its method to something concrete. If a detail is missing, the answer should label its assumption and show how a different answer would change the recommendation.
 
 Next step: try the replacement behaviour on one real task this week, then compare the next result. Take your focus and time limits to Cal Newport, or your priorities to Peter Drucker. For hard feedback to one person, use Kim Scott; to build safety first, use Amy Edmondson.
 

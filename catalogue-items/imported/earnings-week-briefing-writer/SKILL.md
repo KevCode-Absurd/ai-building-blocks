@@ -5,6 +5,12 @@ description: Build pre-earnings analysis with estimate models, scenario framewor
 
 # Earnings Preview
 
+## When not to use
+
+- The company has already reported: use Earnings recap writer instead.
+- The user wants a buy or sell view: this is research support only, so point them to a licensed adviser or broker note.
+- The user wants a data-built report with charts and a source appendix: use Earnings preview writer for a US ticker, or Earnings preview report builder for India for an Indian company.
+
 ## Before you start
 
 You need:

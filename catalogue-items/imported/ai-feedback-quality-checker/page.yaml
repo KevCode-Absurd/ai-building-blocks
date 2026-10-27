@@ -10,6 +10,8 @@ explain: |
   A check of the feedback your AI tool gives students, with a better version written for you. Vague feedback such as "good effort" changes nothing. Feedback that does the thinking for the student teaches nothing.
 
   You paste what the student did and what the AI said back. The check compares it with what research says works. It looks at timing, whether the comment is about the task, the method or the student's own self-checking, and whether it avoids praising the person. The report says what works and why. Then it writes a rebuilt reply, specific enough to act on that leaves the effort with the student.
+
+  Licence: CC BY-SA 4.0 applies to this copy, as the LICENSE file in this folder says. The skill is by Gareth Manning. We renamed it and wrote this page text for the catalogue. The method is the author's. What this page adds is a plain-words guide to filling in the prompt and what to do with the result.
 when:
   - Your AI tutor gives replies like "great job" that do not help.
   - Your AI feedback gives away the answer.
@@ -30,10 +32,8 @@ you_get:
   - The reasons behind each change
   - Set-up tips for timing and tone
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the instructions from this skill.
-  - Paste what the student wrote or did.
-  - Paste the reply your AI tool gave the student.
-  - Add the year group and subject. Add the learning goal if you have one (optional).
+  - Before you paste anything, remove student names and any details that identify them. Check your school's data policy before you put student work into an outside AI tool.
+  - Open Claude, ChatGPT or Gemini. Copy the Prompt block from the skill file (SKILL.md) and fill in four fields. They are the student's work, the AI's reply, the year group and subject, and the learning goal (optional). Then send it.
   - Read the diagnosis first, then the rewritten reply.
   - Check the rewrite fits your class before you reuse it.
 output_sample:

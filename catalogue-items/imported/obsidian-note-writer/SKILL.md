@@ -8,6 +8,8 @@ date_added: "2026-03-21"
 
 # Obsidian Flavored Markdown Skill
 
+> Added by AI Blocks: the `risk: critical` label in the header is the collection's own tag. This skill only writes a Markdown note and runs nothing. The note's length follows the text the person gives you. Do not add facts of your own.
+
 Create and edit valid Obsidian Flavored Markdown. Obsidian extends CommonMark and GFM with wikilinks, embeds, callouts, properties, comments, and other syntax. This skill covers only Obsidian-specific extensions -- standard Markdown (headings, bold, italic, lists, quotes, code blocks, tables) is assumed knowledge.
 
 ## When to Use

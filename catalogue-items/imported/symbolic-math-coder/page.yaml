@@ -11,7 +11,7 @@ explain: |
 
   The skill follows the correct Symbolic Math Toolbox patterns. It declares symbolic variables with the right assumptions, then differentiates, integrates, solves or takes transforms. It simplifies or rewrites the result, and uses variable precision when you need digits. It converts answers with matlabFunction, and can go on to C code, transfer functions or state space form. You need MATLAB with the Symbolic Math Toolbox to run it. Both are paid MathWorks products.
 
-  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. The licence line inside the skill file (SKILL.md) links a different MathWorks licence page. LICENSE.md is the licence that governs this copy. Follow LICENSE.md.
 when:
   - You have a differential equation and need its exact solution, not an approximation.
   - You derived a long formula and want it simplified or rewritten into a cleaner form.
@@ -34,7 +34,7 @@ you_get:
   - Notes on assumptions used
 how_to_use:
   - Open MATLAB with the Symbolic Math Toolbox installed. Check that it is there before you start.
-  - Open your AI chat and paste in the skill instructions from this page.
+  - Open your AI chat and paste in the text of the SKILL.md file from the download. This page shows only a summary.
   - Describe your equation in plain words. Add known values and any assumptions, such as a variable being positive.
   - "Say what form you want back: exact answer, numeric function, or transfer function."
   - Copy the MATLAB code your AI returns and run it. Check the exact result first, then the numeric function, then the assumptions.
@@ -57,3 +57,5 @@ output_sample:
       contains: A fast function made from the symbolic result with matlabFunction, ready to run on real data.
     - name: Assumptions used
       contains: A short note on the variable assumptions and choices the code relies on.
+    - name: Reply layout
+      contains: One MATLAB script with labelled sections in this order, setup, exact result, numeric function and assumptions.

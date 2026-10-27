@@ -11,7 +11,7 @@ explain: |
 
   It writes one Lighthouse config file holding every limit, with a set of budgets for load time, layout jumps and blocking time, plus minimum scores for performance, search, accessibility and best practice. It tests the real production build, never the dev server, and takes the median of several runs so the check does not fail at random. A workflow file runs the same setup locally and in your build pipeline and saves reports. It needs Node and a build pipeline. The 200 ms limit for click response (INP) is checked through Total Blocking Time, a lab stand-in. It is not a measure of real visitors.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (stareezy-1) says MIT. Credit goes to stareezy-1 and sickn33.
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (stareezy-1) said MIT. We relabelled it in the skill file, so the one licence that applies to this whole copy is CC BY 4.0. Credit goes to stareezy-1 and sickn33.
 when:
   - You keep shipping changes that quietly slow the site.
   - You want a failing check when load time passes a set limit.
@@ -34,8 +34,9 @@ you_get:
 how_to_use:
   - Open your AI tool in a place where it can read your project files and run code.
   - Paste this skill and tell it to add the page speed gate to your app.
-  - Give it your build and start commands. List every page you want checked, not just the home page, such as a product page and a blog post. The app must build and start with those commands before the check can run.
-  - Run the check on your computer first and read the report.
+  - Say which framework you use: Next.js, Remix, Astro, SvelteKit or Vite. The skill has a start command and a ready line for each one, so it picks the right pair. Give it your build and start commands. List every page you want checked, not just the home page, such as a product page and a blog post. The app must build and start with those commands before the check can run.
+  - The sample config uses port 3100 and pnpm commands. If you use npm or yarn, or your app starts on another port, ask your AI to change the start command, the port and the workflow file before you run anything.
+  - Run the check on your computer first and read the report. The config uses whichever @lhci/cli version your package manager installs. Some audit names change between Lighthouse versions, so if a limit names an audit the report does not have, ask your AI to fix the name.
   - Commit the config and workflow file, then open a pull request to see the check run in your pipeline. When the gate fails, open the saved report and fix the audit it flags. Do not raise the limit to make it pass. A failed gate means a real slowdown: fix the cause the report names, push again, and keep the limit. Once it passes, use the Page metadata fixer and the Page SEO optimizer for the search side.
 output_sample:
   input:
@@ -58,4 +59,6 @@ output_sample:
       contains: The @lhci/cli package added to your project to run the check.
     - name: Saved reports
       contains: HTML and JSON speed reports uploaded from each run.
+    - name: Final reply
+      contains: The AI lists the files it changed and the result of the first local run, so you can check them before you commit.
 next: [page-metadata-fixer]

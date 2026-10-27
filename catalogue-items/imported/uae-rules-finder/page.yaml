@@ -30,8 +30,8 @@ you_get:
   - Steps for each requirement
   - A mapping to ISO 27001 or similar
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
-  - "Tell your AI where your business sits: mainland, DIFC, ADGM or another free zone."
+  - Open Claude, ChatGPT or Gemini. No code or paid tools are needed. Paste in the skill text and all six files from its references folder (cbuae, cyber-ia, difc-adgm, federal-pdpl, health-data, jurisdiction-map), or upload them. The gap and sector steps get their detail from those files, so without them you only get the routing table.
+  - "Tell your AI where your business sits: mainland, DIFC, ADGM or another free zone. Give one location per run. If you have more than one, run it again for each, so a mainland answer is not mixed with DIFC or ADGM rules."
   - Add your organisation type, emirate, the data you hold and where it is stored.
   - Add any certifications you have, such as ISO 27001 (optional).
   - Read the rules table first. Check it matches your licence and setup before you act on the gaps.

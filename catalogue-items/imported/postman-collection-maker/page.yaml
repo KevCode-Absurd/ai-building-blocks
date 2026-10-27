@@ -11,7 +11,7 @@ explain: |
 
   The skill pulls out each endpoint's name, method, URL, headers, authentication, body and query parameters. It puts the host in a base_url variable so you can switch between environments. It then writes a valid Collection v2.1 JSON file with folders for related requests. When something is unclear, it follows common REST habits and lists its guesses at the end so you can correct them. You can mix described endpoints and cURL in one request.
 
-  Licence: this copy comes from the sickn33 collection under CC BY 4.0 (LICENSE-CONTENT). The skill file's own header names LambdaTest and the MIT licence. Both are open licences, and both authors are credited.
+  Licence: LambdaTest wrote the skill and marked it MIT in the skill file's header. sickn33 collected it, and the LICENSE-CONTENT file in this item sets CC BY 4.0 for the written text. Both let you reuse it if you give credit. Credit LambdaTest (author) and sickn33 (collection) on any copy you share.
 when:
   - You have a dozen cURL commands and want them organised.
   - A new teammate needs a way to try your API.
@@ -35,9 +35,9 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. No code running or paid tool is needed.
   - Paste the skill text into the chat.
   - Paste your cURL commands or describe your API. Add your base URL and sign-in type.
+  - Read the assumptions list first and fix anything the AI guessed wrong, such as a method or a placeholder. A wrong guess can break a request after import.
   - Copy the collection.json and environment.json blocks into two files.
   - In Postman, choose File, then Import, and add both files.
-  - Read the assumptions list and fix anything the AI guessed wrong.
   - Do not paste real passwords, tokens or API keys into the chat. Fill them in inside Postman after you import.
   - Next, ask for an OpenAPI file of the same API, or add tests in Postman.
 output_sample:

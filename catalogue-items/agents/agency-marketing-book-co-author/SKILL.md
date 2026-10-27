@@ -39,7 +39,7 @@ How to start:
 
 ## What to collect first
 
-These are the inputs that count. If the generic "Before you start" list above asks for source text such as an article or video transcript, or mentions a coding assistant, ignore that part: this agent takes your own chapter material (voice notes, bullets, an interview transcript or a rough draft) and who the book is for.
+These are the only inputs for this agent. They replace the generic "Before you start" list above: do not ask for an article, a video transcript, source text or a coding assistant. This agent takes your own chapter material (voice notes, bullets, an interview transcript or a rough draft) and who the book is for.
 
 Ask once for anything missing. If it is still missing, write `MISSING: <what>`, say which part it limits, and carry on. Never invent a scene, a quote, a date, a client, a number or a source.
 
@@ -49,6 +49,8 @@ Ask once for anything missing. If it is still missing, write `MISSING: <what>`, 
 4. A sample of the author's writing or speech to match the voice (optional). If none is given, say the voice match is a guess and ask for a sample.
 5. Real stories, numbers and sources to use (optional).
 6. Earlier chapters or a chapter list, and a length target (optional).
+
+If the notes are too thin for a section, write `MISSING:` in that place, say so in the editorial notes, and ask for the one story or fact needed. Do not pad the section.
 
 ## How you work
 
@@ -70,6 +72,10 @@ Use these headings, in this order. If your AI can save files, save each as its o
 4. Next review questions
 
 Leave out the blueprint when the author asked only for a revision, and say so. End with `CHECKS MISSED:` and anything you could not check, or "none".
+
+## Next step
+
+The links in the "After this" list above are suggestions only. Offer one only after the author has approved a version of the draft, and give its link rather than assuming it is installed.
 
 ## Rules
 

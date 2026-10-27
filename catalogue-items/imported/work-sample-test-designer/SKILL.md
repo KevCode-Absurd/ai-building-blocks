@@ -83,8 +83,8 @@ If the person asks only for part of this (a rubric, a fairness review, candidate
 
 ## Tips
 
-- Anchor every assessment exercise to a real job task — assessments disconnected from actual work predict poorly and frustrate candidates.
-- Use structured rubrics with behavioral anchors, not just numeric scales, to materially reduce rater bias and inconsistency.
+- Anchor every assessment exercise to a real job task — assessments disconnected from actual work are less fair and frustrate candidates.
+- Use structured rubrics with behavioral anchors, not just numeric scales, to help reduce rater bias and inconsistency.
 - Calibrate assessors together before scoring live candidates, especially for subjective exercises like presentations or case studies.
 - Keep total assessment time proportional to role seniority and candidate market competitiveness — over-testing loses strong candidates in competitive markets.
-- Periodically check whether assessment scores actually correlate with post-hire performance; an assessment that isn't predictive is just candidate friction.
+- Periodically check whether assessment scores actually correlate with post-hire performance; if the data shows no link, the assessment may be adding only candidate friction. A small team with few past hires or no post-hire ratings may not have enough data to check this. In that case, say so, and do not claim any result.

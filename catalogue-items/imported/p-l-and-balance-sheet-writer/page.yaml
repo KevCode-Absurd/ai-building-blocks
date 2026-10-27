@@ -21,7 +21,7 @@ not_for:
   - "You want financial advice or tax filing help: ask a qualified accountant."
 you_give:
   - Period type and date
-  - Trial balance or accounting data
+  - "Trial balance or accounting data: one row per account, with account name, account number (if any), debit and credit (or one net balance), and the period. Export the comparison period in the same format"
   - Comparison period or budget (optional)
   - Account groupings (optional)
 you_get:
@@ -30,11 +30,11 @@ you_get:
   - Flagged large variances
   - Notes on adjustments to check
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
+  - This is an Anthropic skill, imported under the Apache 2.0 licence. Open Claude, ChatGPT or Gemini and paste in the full SKILL.md text, since ChatGPT and Gemini cannot load it as a file. Export your trial balance from your accounting system as a CSV or spreadsheet first.
   - Say which statement you want and the period, such as monthly for December 2024.
-  - Paste your trial balance, or upload a spreadsheet. Add last period or budget numbers if you have them.
+  - Paste your trial balance, or upload a spreadsheet. Check first that debits equal credits. Add last period or budget numbers in the same layout if you have them.
   - Add any adjustments you already know about, such as accruals.
-  - Read the flagged swings first and answer the follow-up questions where you can.
+  - Read the flagged swings first and answer the follow-up questions where you can. A cause marked "unverified" is a question for you, not a finding.
   - Send the draft to your accountant to review before you use it.
 output_sample:
   input:

@@ -9,7 +9,9 @@ subhead: Name the topic, the age group and your background with it. It maps the 
 explain: |
   A topic guide for the lesson you feel least ready to teach. Knowing a subject is one thing. Knowing where learners get stuck, and which example clears it up, is another skill, and it is the one this guide builds.
 
-  You name the topic, the age group and your own background. The skill then maps the mistakes learners commonly make, why they make them, and what each mistake tells you. It suggests the best analogies, models, examples and demonstrations, and explains which suits which type of confusion. It also checks your likely strengths and gaps with this topic, based on your training. The ideas come from research on pedagogical content knowledge, in plain language.
+  You name the topic, the age group and your own background. The skill then maps the mistakes learners commonly make, why they make them, and what each mistake tells you. It suggests the best analogies, models, examples and demonstrations, and explains which suits which type of confusion. It also checks your likely strengths and gaps with this topic, based on your training. The ideas come from research on pedagogical content knowledge (PCK), which means knowing how to teach a topic, not just knowing the topic. The research is background only. Check any source your AI names before you quote it to colleagues. The last part of the result, the Developmental Action Plan, is your own to-do list for building the knowledge you lack, in order.
+
+  Licence: CC BY-SA 4.0, as the LICENSE file says. Credit Gareth Manning if you reuse it, and share any changes under the same licence.
 when:
   - You are teaching a topic outside your main subject and feel unsure.
   - Students keep making the same mistake and you are not sure how to fix it.
@@ -31,8 +33,8 @@ you_get:
   - A read on your likely strengths and gaps
   - Questions to check understanding mid-lesson
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste in the skill text, or upload the skill file if your AI takes files.
-  - Type the topic, the age group and your own background with the topic.
+  - Open Claude, ChatGPT or Gemini. The skill file is long. For a first try, paste only the text under the "Prompt" heading in the skill file, then add your details. Or upload the whole file if your AI takes files.
+  - "Type the three things it needs: the topic or unit, the age group or year, and your own background with the topic."
   - Add the mistakes you already see and your curriculum framework, if you have them (optional).
   - Send it. No code, web access or paid tool is needed. If your chat has a short length limit, paste only the Prompt block from the skill file.
   - Read the mistakes map first. Check it against what you see in class.

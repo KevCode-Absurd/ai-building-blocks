@@ -31,12 +31,13 @@ you_get:
   - Print preflight check
   - Notes on layout fixes
 how_to_use:
-  - Check that LaTeX is installed, or use an AI that can run it. It also needs to save files.
-  - Paste this skill into your AI, or attach the skill folder.
+  - "Gather these first: your results text, your figure files with their sizes, your venue's poster dimensions, and any template. Your AI must be able to run LaTeX and save files, or you must have LaTeX installed yourself."
+  - "Attach the skill folder to your AI, and say: \"Follow SKILL.md. Build my poster, compile it, and run the print preflight in one go.\" If your AI cannot take files, paste the text of SKILL.md into the chat instead."
   - Add your results, figures, poster size and any template.
   - Ask for a poster in beamerposter, tikzposter or baposter. Say which fits your template.
   - Open the PDF and check every edge, label and figure. Ask your AI to fix what is wrong.
-  - Run the print check, then send the PDF and source files to your printer.
+  - Run the print check, then send the PDF and source files to your printer. If the print check fails, fix the item it names and run it again before you send anything.
+  - Pair the poster with a short handout or a QR link to the paper, so visitors can take the details away.
 output_sample:
   input:
     - Your results and key text

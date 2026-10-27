@@ -9,6 +9,8 @@ subhead: A tricky function gets its rules written down before any code, so off-b
 explain: |
   A tricky function gets its rules written down before any code, so off-by-one and empty-input bugs get caught early. Tests alone often miss these, because the bug lives in the contract, not the loop body.
 
+  Licence: this copy is shared under CC BY 4.0, as set out in its LICENSE-CONTENT file. The skill file's own header names the author's Apache-2.0 licence for the original repo. Credit the author either way.
+
   Before writing a loop or a recursive call, it states the invariant (what stays true on each pass), the base case, why the loop must end, and the awkward inputs: empty, duplicates, boundaries, overflow. Only then does it write the code, and it checks the code keeps each rule it stated. The firm rule is no loop or recursion without a written invariant and a reason it stops.
 when:
   - You are writing binary search, partition or in-place dedup.
@@ -17,11 +19,12 @@ when:
   - You think "I know this algorithm" and want a second check.
 not_for:
   - "You need a one-line change or simple code: ask your AI to write it plainly, with no extra steps."
-  - "You have not picked an algorithm yet: choose one first, then come back to check it."
+  - "You have not picked an algorithm yet: choose one first, then come back to check it. The skill's companion skills lemmaly (picks the algorithm) and mathguard (checks the maths) are not in this library, so choose it yourself."
   - "You want tests for code that already works: ask your AI to write unit tests or property-based tests instead."
 you_give:
   - The function you want written or reviewed
   - The chosen algorithm (optional)
+  - What the function must return for each case, in plain words
   - Known awkward inputs (optional)
 you_get:
   - Written invariants
@@ -34,6 +37,7 @@ how_to_use:
   - Add the algorithm you chose and any awkward inputs you know of (optional).
   - Read the contract, invariant and edge cases first. Fix any rule that is wrong before you read the code.
   - Run the final code on your own tests. Then add property-based tests to cover more inputs.
+  - The skill mentions two companion skills, lemmaly (picks the algorithm) and mathguard (checks the maths). They are not in this library. Pick the algorithm yourself first, and ask your AI to state error bounds for any approximate maths.
 output_sample:
   input:
     - The function you want written or checked, with its language

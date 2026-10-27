@@ -26,7 +26,7 @@ How to start:
 
 ## What you need
 
-The inputs are the six items below, not a general "question". Read what the user already provided before asking anything. Ask once, in one short message, only for what changes the result.
+The inputs are the six items below, not a general "question". The worked example in references/worked-example.md is a fictional practice case, and every output of this workflow is a plan, not evidence of real results. Ignore the generic "After this" list above: it is for sales teams. Use "Next steps for this workflow" below instead. Read what the user already provided before asking anything. Ask once, in one short message, only for what changes the result.
 
 - **The one deliverable** (required): product images, ad visuals, creator-style content or short video.
 - **The one customer type** (required): for example small ceramic makers.
@@ -99,7 +99,7 @@ Write `MISSING: <what>` next to the affected line and carry on with the parts th
 
 ## Next steps for this workflow
 
-Use this list, not the generic list above. Suggest one next step as a short question, and say the user can type their own:
+This is the only next-step list for this workflow. The deal tools in the generic list above (Mutual action plan builder, Deal health reviewer, Deal payment checker) are for sales teams and do not apply, so do not offer them. This workflow is one planning run with no sub-skills. Suggest one next step as a short question, and say the user can type their own:
 - **A client asked for a price.** Use the [Prepare your first freelance project quote](https://useaiblocks.com/workflows/prepare-your-first-freelance-project-quote) workflow.
 - **A client wants more after signing.** Use the [Prepare a client scope change brief](https://useaiblocks.com/workflows/prepare-a-client-scope-change-brief) workflow.
 - **Polish one pitch.** Use the [Capability pitch letter writer](https://useaiblocks.com/skills/capability-pitch-letter-writer).

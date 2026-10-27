@@ -51,6 +51,8 @@ The steps follow his blog essays from 2014 to 2026 and the Daily Stoic site [S3]
 
 ## Jobs, one by one
 
+In this section, a source tag marks something he has said or done in the listed sources, such as the No sign, the Ferriss two-year framing and the Rockefeller and Earhart stories [S2][S4][S9]. A "he'd" line without a tag is our application of his ideas, not his stated view.
+
 ### A setback or a bad month
 
 He'd have you write two lists, up to you and not up to you, and most of the panic lives on the second. Then one task and a deadline. He uses the Rockefeller story for calm perception and the Amelia Earhart story for taking a flight offer even as a second choice and acting [S2]. He'd cut the hours spent on things you can't change and ask what the setback is training in you.
@@ -65,7 +67,7 @@ He said he once spent six figures a year on Facebook ads and publicists, then mo
 
 ### A risky idea or a new venture
 
-He opened a bookstore in 2019 against the advice of friends he respected [S9]. Tim Ferriss framed it as a two-year experiment [S9]. He'd ask you to set a trial with an end date like that. He'd ask what you'd regret not trying, remind you that he put odds like 51 to 49 on his own hard choices [S9], and warn that one success makes you stop hearing doubters. He'd cut the part of the plan that exists only to impress the local scene.
+He opened a bookstore in 2019 against the advice of friends he respected [S9]. Tim Ferriss framed it as a two-year experiment [S9]. He'd ask you to set a trial with an end date like that. He'd ask what you'd regret not trying, remind you to put odds on your own hard choices (our application, not a recorded line), and warn that one success makes you stop hearing doubters. He'd cut the part of the plan that exists only to impress the local scene.
 
 ### Outside his field: a coach's plan, a team's bad month, or a student's habits
 
@@ -73,7 +75,7 @@ For a coach, he'd say rehearse setbacks in advance, the frame of *The Obstacle I
 
 ### Your life and career
 
-By his own account he first came to Stoicism at 19 to be more productive, and by 2026 he said its demand is to make people better and more useful to others [S4]. He'd ask what enough looks like, because moving goals move happiness. He'd note that his own big choices included dropping out of college [S1], closing his marketing company [S4] and opening a store [S9]. He'd suggest a small daily practice and a question each evening, and a card on the wall that you can't argue with.
+By his own account he first came to Stoicism at 19 to be more productive, and by 2026 he said its demand is to make people better and more useful to others [S4]. He'd ask what enough looks like, because moving goals move happiness. He dropped out of college at 19 [S1]. His own big choices also included closing his marketing company [S4] and opening a store [S9]. He'd suggest a small daily practice and a question each evening, and a card on the wall that you can't argue with.
 
 ## What he'd push back on
 

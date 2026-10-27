@@ -10,6 +10,8 @@ license: MIT
 license_source: https://github.com/LambdaTest/agent-skills/blob/main/LICENSE
 ---
 
+> **AI Blocks note (licence):** this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says. The `license:` line in the front matter above is the original author's own label (MIT). The LICENSE-CONTENT file governs here. Keep the credit to the author. The `source:` line above is the author's original (LambdaTest). This copy comes from sickn33's collection: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/openapi-spec-generator
+
 # OpenAPI / Swagger Specification Generator
 ## When to Use
 
@@ -38,7 +40,7 @@ If the user provides code (Express routes, FastAPI, Django URLs, Spring controll
 
 ### Step 2 — Build the Spec
 
-Follow the structure guide for the chosen version. Always produce a **complete, valid spec** — never leave placeholder comments like `# TODO: add schema`.
+Follow the structure guide for the chosen version. Always produce a **complete, valid spec** — never leave placeholder comments like `# TODO: add schema`. Replace every `<...>` in the skeletons below with the user's answers. If the user gave no value for something you cannot know, such as a contact email or server URL, use a clearly marked example value and list it under a short "Fill in before publishing" note. Never invent real-looking details.
 
 #### OpenAPI 3.x Skeleton
 

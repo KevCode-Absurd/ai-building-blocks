@@ -275,5 +275,7 @@ if __name__ == "__main__":
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     if not args:
         sys.exit(__doc__)
+    if "--owner-confirmed" not in sys.argv:
+        sys.exit("Stopped: this script reads live store pages. Run it only on a store you own or have permission to check, then add --owner-confirmed.")
     R = check(args[0])
     print(json.dumps(R, indent=1) if "--json" in sys.argv else text(R))

@@ -13,6 +13,8 @@ license: "Apache-2.0"
 license_source: "https://github.com/morsechimwai/lemmaly/blob/main/LICENSE"
 ---
 
+> **AI Blocks note (licence):** this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says. The `license:` line in the front matter above is the original author's own label (Apache-2.0). The LICENSE-CONTENT file governs here. Keep the credit to the author. The author's Apache-2.0 notice stays visible here.
+
 # runaway-guard — $-Cost is the Third Complexity Dimension
 
 Every loop has time complexity and space complexity. A loop that calls a paid API has a third: **dollars per execution**. The model tracks the first two automatically. It does not track the third, so it ships code where a single bug — a retry without bound, a stream reconnect storm, an agent that re-queues itself, a webhook that fires the same job twice — silently spends real money.
@@ -49,8 +51,10 @@ A cap only in code can be bypassed by a bug in that code. A cap only at the prov
    - **Max $ per day:** the provider-side hard cap that backstops the code-side bound.
 
    Examples:
-   - "Fal flux-pro at $0.05/image; max 20 images per job; max $1 per job; provider Spend Limit $50/day."
-   - "Anthropic Sonnet at ~$0.015 per request (cached); max 50 requests per agent run; max $0.75 per run; Workspace Budget hard cap $30/day."
+   - "[PROVIDER AND MODEL] at [UNIT COST] per image; max [MAX CALLS] images per job; max [MAX DOLLARS] per job; provider Spend Limit [DAILY CAP] per day."
+   - "[PROVIDER AND MODEL] at [UNIT COST] per request; max [MAX CALLS] requests per agent run; max [MAX DOLLARS] per run; Workspace Budget hard cap [DAILY CAP] per day."
+
+   Take each unit cost from the provider's own price page. Never use a remembered price.
 
    If you cannot fill in all three numbers, you have not designed the call site.
 
@@ -82,9 +86,11 @@ A cap only in code can be bypassed by a bug in that code. A cap only at the prov
 
 5. **Every paid API has a matching provider-side hard cap, configured out of band.** Defense in depth: if the code is wrong, the provider stops the bleeding. Document the cap in the same file as the call site so future readers know it exists.
 
+   Last checked: not dated. These dashboard paths are the original author's and change often. Open the provider's own site and confirm each path and number before you rely on it.
+
    | Provider | Where to set the hard cap |
    |---|---|
-   | **Fal.ai** | Dashboard → Billing → **Spend Limit** (e.g. $50/day). Hard stop on exceed. |
+   | **Fal.ai** | Dashboard → Billing → **Spend Limit** (e.g. [DAILY CAP] per day). Hard stop on exceed. |
    | **Anthropic** | Console → Workspaces → **Workspace Budget** with hard limit. Per-workspace, per-month. |
    | **OpenAI** | Org → Settings → **Usage limits** (org-level hard limit blocks requests). ⚠️ Per-*project* monthly budgets are **soft thresholds only** — they alert but do not block. For a real hard cap use the org-level Usage limit, a billing gateway, or your own fail-closed budget check. |
    | **Replicate** | Account → Billing → **Spend limit**. Per account. |
@@ -107,7 +113,7 @@ A cap only in code can be bypassed by a bug in that code. A cap only at the prov
 
 Before producing code that calls a paid API, your message must contain — in this order:
 
-1. **Provider + unit cost.** "Fal flux-pro: $0.05/image, billed per success."
+1. **Provider + unit cost.** "[PROVIDER AND MODEL]: [UNIT COST] per image, billed per success."
 2. **Max calls per run.** A literal integer that will appear as a constant in the code.
 3. **Max $ per run.** `max_calls × unit_cost`. Compute it.
 4. **Max $ per day (provider hard cap).** The dashboard setting that backstops the code.
@@ -157,10 +163,10 @@ export const generateCampaign = inngest.createFunction(
 
 ```ts
 // cost contract:
-//   provider: Fal flux-pro @ $0.05/image
+//   provider: [PROVIDER AND MODEL] @ [UNIT COST]/image
 //   max calls per run: 50
-//   max $ per run: $2.50
-//   provider hard cap: $50/day (set in Fal dashboard 2026-05-22)
+//   max $ per run: [MAX CALLS x UNIT COST]
+//   provider hard cap: [DAILY CAP]/day (set in the provider dashboard on [DATE YOU SET IT])
 //   concurrency: 3 (Inngest + p-limit, matching)
 //   idempotency: key = `${campaignId}:${sha1(prompt)}` — provider-side dedup window 24h
 const MAX_IMAGES_PER_RUN = 50;
@@ -268,7 +274,7 @@ Code you emit must:
 - Pass an idempotency key for every mutating / charging call.
 - Set queue-level concurrency and retries in the same file or document it.
 - Reject `4xx` retries via `NonRetriableError` or equivalent.
-- Reference the provider hard-cap setting by name ("Fal Spend Limit $50/day, set 2026-05-22") so a future reader knows it exists.
+- Reference the provider hard-cap setting by name ("Fal Spend Limit $50/day, set on [DATE YOU SET IT]") so a future reader knows it exists.
 
 ## Related Skills
 

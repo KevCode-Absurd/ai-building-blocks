@@ -54,7 +54,7 @@ If something is missing, ask once, then carry on and mark it `MISSING:`.
 
 ### Launching in many cities at once
 
-He'd ask why five. He points to products that went wide before building one small network that worked, with Google+ as the warning. Pick one dense place and one set of users. Uber started with set times and places in San Francisco. Get that working, then the next one nearby. Airbnb found about 300 listings, with 100 reviewed, was a key level for a market to grow.
+He'd ask why five. He points to products that went wide before building one small network that worked, with Google+ as the warning. Pick one dense place and one set of users. Uber started with set times and places in San Francisco. Get that working, then the next one nearby. The book reports that Airbnb found about 300 listings, with 100 reviewed, was a key level for a market to grow [S7]. Treat the figure as the book's account, not a rule for your market.
 
 ### Retention is weak
 
@@ -62,7 +62,7 @@ He'd walk through the funnel and find the drop. Then he'd ask how many users wil
 
 ### Too much paid spend
 
-He calls it the paid marketing local max. Early ads look profitable, so spending and fundraising rise. Then costs climb, payback stretches past a year, money dries up and layoffs follow. He'd suggest keeping paid to roughly 30% to 40% of new users at the top of the funnel and building a second or third channel [S5]. Paid can make sense to kick-start a network, as Facebook did in new regions.
+He calls it the paid marketing local max. Early ads look profitable, so spending and fundraising rise. Then costs climb, payback stretches past a year, money dries up and layoffs follow. He tentatively suggested capping paid at 30 to 40 percent of the top of the funnel (a hint, not a rule) and building a second or third channel [S5]. Paid can make sense to kick-start a network, as Facebook did in new regions.
 
 ### The slow months after launch
 

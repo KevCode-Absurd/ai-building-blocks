@@ -16,7 +16,9 @@ The instructions below are in Chinese. This summary is in English.
 - Every product claim in the script must be true for your product and checked by you. The Chinese sample lines in this file are placeholders only, such as 「[你核实过的具体说法]」 ("a claim you have checked"). Replace them with your own checked facts.
 - Only use a face image of a person who gave written consent. If you have none, leave the face out and use hand and product shots.
 
-**Requirements.** To make video you need an AI that can run code, Node.js, and a paid video-model key from fal or Replicate (the original skill is set up for the dLazy service). Each clip costs money. The `--dry-run` step is free: it only prints what would be sent. The paths assets/model/face-a.jpg and docs/flat-lay/... are examples, so point them at your own files. The brand-kit skill the original links to is not included here.
+**When not to use.** Do not use this for health, medical, financial or other regulated products, or any claim that needs proof. Have your compliance reviewer write and approve the claims, and use a real, consented buyer video instead.
+
+**Requirements.** To make video you need an AI that can run code, Node.js, and a paid video-model key from fal or Replicate (the original skill is set up for the dLazy service). Each clip costs money, so set a spending limit in your fal or Replicate account first. The `--dry-run` step is free: it only prints what would be sent. The paths assets/model/face-a.jpg and docs/flat-lay/... are examples, so point them at your own files. The brand-kit skill the original links to is not included here. The command reads the shot list in examples/ugc-board.json. Its image fields (examples/face.jpg and examples/shot-detail.jpg) are not included: change each one to the path of your own file, and use a face image only if the person gave written consent. The --brand option and model.reference setting are optional. If you skip them, the clips will not share one face.
 
 **Steps.**
 1. Decide the persona: who is speaking, in what setting, and why a viewer would trust them.
@@ -24,6 +26,7 @@ The instructions below are in Chinese. This summary is in English.
 3. Lock one face: use the same reference image in every talking shot (or leave the face out).
 4. Run `--dry-run`, read the plan and the cost, then run it for real.
 5. Join the clips, add captions, and add a voiceover, because lip sync is weak.
+6. Next, have a person check the captions and every claim, and check the platform's ad policy and AI-label rule before you publish.
 
 投流素材里转化最好的一类往往不是精致广告，而是**看起来像真人随手拍的推荐**。
 

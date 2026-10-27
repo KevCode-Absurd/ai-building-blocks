@@ -252,7 +252,13 @@ These are MANDATORY in every output:
 </section>
 ```
 
-The full hero boilerplate files are not in this copy. Build the page from the markup pattern above and the techniques in `references/`.
+The full hero boilerplate files are not in this copy. Build the page like this instead:
+
+1. Write one `<section class="scene">` per section, using the markup pattern above.
+2. Add the CSS for `.layer` (position absolute, full size) and one `.depth-N` class per level from Step 3.
+3. Load GSAP and ScrollTrigger from the CDN in the Output Format section, then add the scroll effects chosen in Step 2. Copy their code from `references/`.
+4. Add the reduced-motion block from Step 4.
+5. Tell the user the hero boilerplate files were not used.
 
 ---
 

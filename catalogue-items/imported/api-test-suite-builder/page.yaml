@@ -16,6 +16,7 @@ when:
   - You need to confirm every route has at least a smoke test before release.
   - You are preparing for a security review.
 not_for:
+  - Your API uses GraphQL or gRPC. This only covers REST routes in the four frameworks above, so use the test tools made for GraphQL or gRPC instead.
   - Your project has no API, only a front end. Use a browser test tool instead, because this reads route code.
   - You do not own the API or have no access to its code. Ask the team that owns it for its tests.
   - You want to attack a live site. Run the injection and burst tests only on a test copy, never on your real site.
@@ -31,9 +32,9 @@ you_get:
   - Test data fixtures
 how_to_use:
   - Open your AI tool and paste this skill, or upload it with your project folder.
-  - Tell it which test tool you use and how sign-in works. Add test accounts and any routes to skip.
+  - First confirm your framework (Next.js, Express, FastAPI or Django REST) and your test tool. Then tell it how sign-in works. Add test accounts and any routes to skip.
   - Ask it to list your routes first. The skill's route-finding commands are starting points and were not checked against every framework version. Check the list against your code before you trust the tests.
-  - Let it write the test files. Save them in your project and run them with Vitest or Pytest.
+  - Let it write the test files. You get a route map, one test file per route group and fixtures, as files in your project. Run them with Vitest or Pytest. Each route shows as passed or failed.
   - Run the injection and burst tests only on a test copy of your API, never your live site.
   - Fix any failing test or real bug, then run the suite again.
   - Next, run the suite on every pull request in your build pipeline, and fix any route a failing test flags before release.

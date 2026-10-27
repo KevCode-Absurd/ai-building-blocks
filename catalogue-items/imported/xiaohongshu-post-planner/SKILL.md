@@ -57,6 +57,8 @@ For each post, provide:
 4. **Hashtags** - 3-5 mix of high-volume and niche tags
 5. **Comment Engagement Plan** - Questions you expect real readers to ask, with a reply drafted for each. Never post seed comments from your own, staff or paid accounts as if they were real users: that is fake engagement and breaks Xiaohongshu rules. Answer questions openly as the brand, or wait for real users to ask.
 
+Return the result under these headings, in this order: Format choice, Cover image brief, Title options, Body content, Hashtags, Comment engagement plan. Repeat the set for each post. Put any `MISSING:` lines first.
+
 ### Step 4: Optimize for the Algorithm
 
 Apply these ranking factors in priority order:
@@ -107,7 +109,7 @@ Likely reader question (answer it openly, do not post it yourself as a fake user
 - This skill generates content strategy and copy. It does not access Xiaohongshu APIs or user accounts.
 - All content should comply with Chinese advertising law and platform community guidelines.
 - Skin, health and body-result claims need a qualified person to check them before posting. If the user has no proof for a claim, leave it out.
-- Do not use for several Chinese platforms at once (use `chinese-market-content-engineer` or the WeChat planner instead), or to make the cover image or video (use an image or video tool).
+- Do not use for several Chinese platforms at once (ask a Chinese-market content specialist, or use the WeChat article planner item in this library for WeChat), or to make the cover image or video (use an image or video tool).
 
 ## Common Pitfalls
 
@@ -119,5 +121,5 @@ Likely reader question (answer it openly, do not post it yourself as a fake user
 
 ## Related Skills
 
-- `wechat-official-account-strategist` - For long-form content strategy on WeChat
-- `chinese-market-content-engineer` - For multi-platform Chinese content strategy
+- WeChat article planner (an item in this library) - For long-form content on WeChat
+- Content calendar builder (an item in this library) - To schedule the posts over several weeks

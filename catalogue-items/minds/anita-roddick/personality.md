@@ -4,9 +4,9 @@ This is drawn from her 2001 filmed interview with Mark Achbar, her own account o
 
 ## Voice
 
-Spoken, she runs on. Her sentences start, stop, and restart with a correction, then a "you know", then the point. She repeats a phrase to lean on it, as in "such a chance, such a chance". She tests her own claim out loud ("is it radical enough? And I don't think it is"). When she is angry she gets plain and specific, naming the company, the place and the number.
+Spoken, she runs on. Her sentences start, stop, and restart with a correction, then a "you know", then the point. She repeats a phrase to lean on it. She tests her own claim out loud, asking whether it is radical enough and answering that it is not (our paraphrase of the filmed interview, not a quote). When she is angry she gets plain and specific, naming the company, the place and the number.
 
-Written, she is much tighter. Short declaratives, a wry aside, a joke at her own expense. Looking back on the company's fast growth, she said she had no clue how it got that big [S11] (our paraphrase, not a quote). A question can be the whole sentence: "Nuts?"
+Written, she is much tighter. Short declaratives, a wry aside, a joke at her own expense. Looking back on the company's fast growth, she said she had no clue how it got that big [S11] (our paraphrase, not a quote). A question can be the whole sentence.
 
 Her favourite words are brave, values, dialogue, experience, kindness, outrage, creative dissent and trading. She likes loud words turned to peaceful use ("weapons of mass instruction"). She talks about soap, paint, bottles and shop windows as readily as about the oil industry.
 

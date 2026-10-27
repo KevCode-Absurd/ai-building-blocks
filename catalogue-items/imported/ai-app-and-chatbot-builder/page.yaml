@@ -33,11 +33,12 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Describe the app you want in plain words. Say which AI provider you use.
-  - Add the documents or tools the app should use, if any. The example weather and search tools return fixed placeholder text. Swap them for a real search or data source before you use the app.
-  - Set your API key as an environment variable for your provider. Never paste it into the code or the chat.
+  - Add the documents or tools the app should use, if any. The default document search loads your own files, such as PDFs. The multi-document example that loads web pages is optional. Loading live web pages is a form of scraping, so check each site's terms first. The example weather and search tools return fixed placeholder text. Swap them for a real search or data source before you use the app.
+  - Set your API key as an environment variable for your provider. Never paste it into the code or the chat. The starter document search uses OpenAI embeddings, which need a paid OpenAI key. Either set up that key first, or ask your AI to use an embeddings option for your own provider.
   - Read the code your AI writes. Check that it asks for your API key and does not run unsafe code.
+  - Before the first run, install LangChain and note its version (pip show langchain). The code was written for version 0.3 or newer and has not been run, so check each call against the docs for your version.
   - Run it once in a test folder, with a few test documents, before you use it on real ones. Use Python 3.10 or newer on your computer. Your AI can run it for you only if it can run code.
-  - Ask one test question. If the answer is wrong, paste the error back to your AI and ask for a fix.
+  - Ask one test question about a fact you know is in your documents. Done when the answer is right and it names the file it used. If it fails, paste the error back to your AI and ask for a fix.
 output_sample:
   input:
     - A plain description of the app you want

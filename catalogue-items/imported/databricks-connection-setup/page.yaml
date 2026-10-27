@@ -7,9 +7,11 @@ job: build-software
 headline: Databricks connection setup helper
 subhead: MATLAB gets connected to Databricks and proven to work, whether you use Spark or JDBC. First time setup of this link is fiddly, and this walks through each piece.
 explain: |
-  MATLAB gets connected to Databricks and proven to work, whether you use Spark or JDBC. First time setup of this link is fiddly, and this walks through each piece.
+  This is for MATLAB users who need to read or write data in Databricks. If you do not use MATLAB, skip it.
 
   The skill helps you pick the path. Spark through Databricks Connect suits reading large Unity Catalog tables with filtering done on the server. JDBC through Database Toolbox suits cluster or SQL Warehouse connections. It sets up the .databrickscfg file and sign in using browser login, machine credentials or a personal access token. It creates the session or connection, picks a JDBC driver, tests a read, and shows how to write data back. You need MATLAB, a Databricks workspace and your own credentials.
+
+  Licence: BSD 2-Clause, plus a rule that you may use it only with MathWorks products and services such as MATLAB (see the LICENSE file).
 when:
   - You are linking MATLAB to Databricks for the first time.
   - You need to read a huge table without loading all of it.
@@ -35,6 +37,8 @@ how_to_use:
   - Say how big your data is, so your AI can pick Spark or JDBC for you.
   - Run the MATLAB code your AI gives you on your own computer. Your AI cannot run MATLAB in a chat, so paste back any error you see.
   - Check that the test read works before you build on it. Never paste your token into the chat.
+  - "Licence: the LICENSE file in this item governs. It is BSD 2-Clause plus a rule that you may use it only with MathWorks products and services such as MATLAB. The licence link in the skill file points to MathWorks' own licence page, which says the same."
+  - Also paste the three reference files (authentication.md, driver-selection.md and standalone-jdbc.md from the references folder). The skill text links to them, and the sign-in and driver details live there.
   - You need a paid Databricks workspace, a MATLAB licence and Database Toolbox. The Spark route also needs the MATLAB Interface for Databricks package.
 output_sample:
   input:

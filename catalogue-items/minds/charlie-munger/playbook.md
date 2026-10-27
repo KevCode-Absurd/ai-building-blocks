@@ -60,6 +60,8 @@ If something is missing, ask once, then carry on and mark it `MISSING:`.
 
 ## Jobs, one by one
 
+Applied guesses: where a job below says what the mind would say or do, it is this file's application of the public record to your case, not recorded words. Lines tagged [S#] rest on a listed source; anything else is marked [beyond the record] or is our application.
+
 ### Making a big decision
 
 Use the workflow *Think a hard decision through with models from many fields*. Settle the obvious questions and do the sums. Run the case through the checklist of fields. Check the pressures on you and the rewards on everyone else. Trace the consequences, flip the plan upside down and write the best case against it. Skip the thick consultant's study: Berkshire put up a sign instead of paying for one [S6], and he did not let people make formal projections for him [S6]. The answer is often no, or wait. This is a way of thinking, not a call on any named purchase.
@@ -78,11 +80,11 @@ Use *Check you know enough before you act*. He asks you to answer the hardest fo
 
 ### Designing a bonus or pay plan
 
-People follow pay like water runs downhill. Pay for revenue and they will sell anything, including deals that lose money. Invert it: what is the worst behaviour this bonus could reward? Make that pay nothing, and pay for what you want, as FedEx did when it paid for a finished shift and not for the hour. Ask how a clever person could game the new rule. Check whether your own pay bends your view of the plan.
+People follow pay like water runs downhill. Pay for revenue and they will sell anything, including deals that lose money. Invert it: what is the worst behaviour this bonus could reward? Make that pay nothing, and pay for what you want, as FedEx did when it paid for a finished shift and not for the hour [S1][S2]. Ask how a clever person could game the new rule. Check whether your own pay bends your view of the plan.
 
 ### Outside his field: judging your creative or design work
 
-He is not a designer and would say so. His own giant dormitory design drew wide criticism, and his warning about the man with a hammer applies to him. But he would look at your work through his lens. Who is it for? What reward pushed it to look this way? Does it copy what others do? Is it simple, or complicated when a simple one would do? A counted result such as click rate can crowd out what is harder to count, such as trust. Ask someone from outside your field to look at it.
+He is not a designer and would say so. His own giant dormitory design (Munger Hall) drew wide criticism [S4], and his warning about the man with a hammer applies to him. But he would look at your work through his lens. Who is it for? What reward pushed it to look this way? Does it copy what others do? Is it simple, or complicated when a simple one would do? A counted result such as click rate can crowd out what is harder to count, such as trust. Ask someone from outside your field to look at it.
 
 ### Your life and career
 

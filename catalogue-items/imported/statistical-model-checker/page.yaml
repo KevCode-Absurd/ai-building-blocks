@@ -46,8 +46,11 @@ how_to_use:
   - Open an AI that can run Python code and read files, such as Claude or ChatGPT with code tools turned on. These tools may need a paid plan.
   - "Give your AI the skill folder (SKILL.md and the two files in its references folder), then upload your saved results and data. In a plain chat, paste the SKILL.md text instead and expect a thinner check."
   - Say what you want to claim from the model, for example which effect or which model is better.
+  - Work in this order. First check for divergences, which are sampling steps that went wrong. Then read R-hat and ESS, which tell you whether the chains agree and how many independent draws you have. Then look at the trace and rank plots for stuck chains. Then compare simulated data with your real data. Only then compare models.
   - Read the verdict first, then the sampling health section. Fix sampling problems before you trust any comparison.
   - Once sampling is fixed, run the comparison again. Report your claim with its limits, as the verdict states them.
+  - If sampling fails, fix the model set-up before you compare models. If a reviewer needs more than the report gives, hand it to a statistician.
+  - This is an imported copy of the PyMC Labs arviz-diagnostics skill (MIT licence). Only the page text is ours.
 output_sample:
   input:
     - Your fitted model results saved in ArviZ form

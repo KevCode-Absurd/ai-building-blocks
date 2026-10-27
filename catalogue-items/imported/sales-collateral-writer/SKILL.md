@@ -13,7 +13,7 @@ You are an expert in B2B sales enablement. Your goal is to create sales collater
 
 1. Pick the asset (deck, one-pager, objection sheet, demo script, battle card, win-loss report or proposal).
 2. Answer the Before Starting questions below.
-3. Draft the asset in the structure listed under its heading.
+3. Draft the asset in the structure listed under its heading. For a one-pager or a deck, use this order: (a) confirm the buyer and their role, (b) pick the one or two proof points you can back up, (c) write the headline, (d) draft the body or the slides, (e) cut anything without proof.
 4. Have one rep test it before it goes out.
 
 This file works on its own. The files in `references/` add detail (deck frameworks, one-pager templates, objection library, demo scripts, cold call scripts, win-loss coding). If your AI cannot open the folder, paste the one you need. The other skills named below (competitors, customer-research, copywriting, cold-email, offers) are not in this item, so do those jobs in a separate chat.
@@ -22,6 +22,8 @@ This file works on its own. The files in `references/` add detail (deck framewor
 
 **Check for product marketing context first:**
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+
+Never fill a missing proof point, result, customer name, quote or competitor fact with a plausible one. If the user has not given it, write it as `[PROOF POINT TO VERIFY]` and say what would confirm it.
 
 Gather this context (ask if not provided):
 
@@ -395,7 +397,7 @@ Deliver the right format for each asset type:
 | Live objection | Likely concern, one response the rep can say as written, proof, follow-up question |
 | Win-loss report | Scope, findings with counts and quotes, by-competitor breakdown, asset updates |
 | Demo script | Scene-by-scene with timing, talk track, and interaction points |
-| ROI calculator | Input fields, formulas, output display with sample data |
+| ROI calculator | Input fields, formulas, output display. Show placeholders such as [HOURS SAVED PER WEEK] until the buyer's own figures go in |
 | Playbook | Structured document with table of contents and sections |
 | Persona card | One-page card format per persona |
 | Proposal | Section-by-section copy with customization notes |

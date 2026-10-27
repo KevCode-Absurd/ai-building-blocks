@@ -51,7 +51,7 @@ how_it_works:
   - title: Check the inputs
     text: Confirm results for 7, 14 and 30 days, your targets, your margin, and what changed and when. Mark anything missing.
   - title: Set the baseline
-    text: Use your own thresholds first, then your account's rolling average, then set starting values, and only then industry rules of thumb.
+    text: Use your own thresholds first, then your account's rolling average, then set starting values marked as placeholders. If none exist it asks for your team's targets. It does not use industry benchmarks from memory.
   - title: Run the profit check
     text: If the campaign still beats break-even ROAS and your CPA target, it hides the click and reach warnings and flags only frequency and fatigue.
   - title: Match the six patterns

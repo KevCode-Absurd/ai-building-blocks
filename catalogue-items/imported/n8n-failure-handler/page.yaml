@@ -13,7 +13,7 @@ explain: |
 
   A retry must never send an email or take a payment twice. The skill checks every retried step for that, and it keeps passwords, personal data and system details out of alerts and replies.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Romuald Czlonkowski) says MIT. Credit goes to Romuald Czlonkowski and sickn33.
+  This is an imported copy of Romuald Czlonkowski's n8n skill, shared by sickn33. It was not written for this catalogue. We added a "Before you start" list, a rule that no step that sends or charges is retried unless it is safe, and a plain edit list for people without n8n tools. The licence that applies to this copy is CC BY 4.0, as the LICENSE-CONTENT file in this item says. Keep the credit if you reuse it.
 when:
   - A webhook workflow returns an empty error and you cannot tell why.
   - A scheduled workflow stopped weeks ago and no one noticed.
@@ -36,7 +36,7 @@ you_get:
   - Error replies for webhook callers, with the right status code and no private detail
   - The one setting you must switch on yourself in the n8n screen
 how_to_use:
-  - Open an AI that can use n8n tools, such as Claude Code with the n8n MCP set up. You need an n8n instance (n8n Cloud is paid, or you can host it yourself) with API access turned on. Without that, the AI can write the changes for you to make in n8n by hand.
+  - Open an AI that can use n8n tools, such as Claude Code with the n8n MCP set up. You need an n8n instance (n8n Cloud is paid, or you can host it yourself) with API access turned on. Claude Code and the n8n MCP tools may have their own setup steps or costs too. Without that, the AI can write the changes for you to make in n8n by hand.
   - Paste the skill and your workflow JSON. Say where alerts should go, and which steps send emails or take payments.
   - Read the list of risky steps it found. Check the retry plan, and confirm nothing that sends or charges will run twice.
   - Let it make the changes, or follow its edit list in n8n. Then ask it to read the workflow back and confirm each error path is both switched on and wired.

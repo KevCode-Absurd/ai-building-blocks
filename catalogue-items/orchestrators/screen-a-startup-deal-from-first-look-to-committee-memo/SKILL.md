@@ -39,7 +39,7 @@ How to start:
 
 ## What you need
 
-This is an investment job. Ignore any buyer brief mentioned above. This workflow needs the deal documents below.
+This is an investment job. These deal documents replace the generic list above (business plan, meeting notes, source text and deal terms): the deck and data room files, your call notes with the asking terms, and the fund's thesis, cheque size and stage. No buyer brief is used. Ask once, in one short message, for any of these that are missing.
 
 - **The pitch deck and any data room files, as text** (required): paste what the founders shared.
 - **Your call notes** (required): what the founders told you, with their asking valuation and terms.
@@ -59,7 +59,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Review the company.** Use the skill `startup-due-diligence-reviewer` on the deck, data room text and call notes. It reviews team, market, product and traction as a diligence lead would, lists the claims to check and the questions for the founders. Saves `outputs/step-01-startup-due-diligence-reviewer.md`, which goes to step 2.
-2. **Estimate a valuation range.** Use the skill `early-stage-valuation-estimator` on `outputs/step-01-startup-due-diligence-reviewer.md` and the asking terms from the call notes. It gives a range for this stage with the method shown, so the founder's number is one input among several. Saves `outputs/step-02-early-stage-valuation-estimator.md`, which goes to step 3.
+2. **Estimate a valuation range.** Use the skill `early-stage-valuation-estimator` on `outputs/step-01-startup-due-diligence-reviewer.md` and the asking terms from the call notes. It gives a range for this stage with the method shown, so the founder's number is one input among several. Use the same method each time for the same stage. For a company with no revenue, use a venture method (an exit value you can source, a target return and the share needed) and check it against comparable rounds the user supplies. For a company with revenue, use comparable companies' revenue multiples that the user supplies. Never invent a comparable, a multiple or an exit value. With none supplied, write `MISSING: comparables` and give only the method and the inputs it needs. Saves `outputs/step-02-early-stage-valuation-estimator.md`, which goes to step 3.
 
 Pause here: Ask the founders the open questions. Paste their answers before going on.
 
@@ -69,7 +69,7 @@ Pause here: Ask the founders the open questions. Paste their answers before goin
 
 ## Next steps to offer
 
-Ignore the suggestions in "After this" that do not fit a deal. Offer these instead:
+Use these in place of the generic "After this" list above. Offer them:
 - Test the idea with real people with the [Seven-question startup scorer](https://useaiblocks.com/skills/seven-question-startup-scorer).
 - When the term sheet arrives, use [Review a contract and get edits and a plain summary](https://useaiblocks.com/workflows/review-a-contract-and-get-edits-and-a-plain-summary).
 

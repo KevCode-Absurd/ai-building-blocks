@@ -31,7 +31,7 @@ you_get:
   - Event details for any issue you pick
   - A short plain summary of what is going wrong
 how_to_use:
-  - Install the Sentry command line tool on your computer and run "sentry auth login". Set your access token on your own machine, never in chat.
+  - Install the Sentry command line tool from Sentry's official install page, https://cli.sentry.dev. Read any install script before you run it. Then run "sentry auth login". Set your access token on your own machine, never in chat.
   - Open an AI that can run commands, such as Claude Code or Codex, and add this skill.
   - Ask a plain question, such as "What broke in production in the last 24 hours?"
   - Read the issue list. Pick one issue by its short ID and ask for its details.

@@ -9,7 +9,7 @@ subhead: Tax collected, grouped the way you file it. Pick a period and get your 
 explain: |
   Tax collected, grouped the way you file it. Pick a period and get your sales tax split by state, province or rate, ready for whoever prepares your return. This is prep for a professional, not tax advice.
 
-  It is built for Shopify. It reads paid orders in your lookback window, ninety days by default to fit a quarter, and collects the tax lines on each. You choose to group by jurisdiction or by rate. By default it removes tax from fully refunded orders. Partly refunded orders stay in the totals and are listed on their own, so you can adjust them by hand. It sums each group and shows totals as text or JSON. It only reads data. You sign in with the Shopify command line and allow order read access.
+  It is built for Shopify. It reads paid, partly refunded and fully refunded orders in your lookback window, ninety days by default to fit a quarter, and collects the tax lines on each. You choose to group by jurisdiction or by rate. By default it removes tax from fully refunded orders. Partly refunded orders stay in the totals and are listed on their own, so you can adjust them by hand. It sums each group and shows totals as text or JSON. It only reads data. You sign in with the Shopify command line and allow order read access.
 when:
   - A quarterly filing is due and you need totals by state.
   - Your accountant asks for tax collected by rate.

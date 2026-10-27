@@ -32,6 +32,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+This replaces the generic "Document" and "Your idea" lines above: the one thing you need is a pasted plan. The biggest worry, your spend and who you can reach are optional.
+
 - **Your plan** (required): a paragraph or a pasted plan. It should say what you make, for whom, how you expect people to find it and what you expect in return (money, time, a changed habit). Paste it as it stands, comparisons and all. Bring the numbers you have (price, reach, sign-up rate). Where the plan gives none, step 1 writes a placeholder marked `GUESS`. Treat each `GUESS` as a question to check, not a fact.
 - **Your biggest worry** (optional): the decision you face, or the part you doubt most.
 - **What you can spend and who you can reach this week** (optional): days, money and a real group. They decide which test form comes out on top.
@@ -49,7 +51,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 1. **Find the guesses your plan rests on.** Use the skill `leap-of-faith-assumption-finder`. Takes your plan and your worry. Saves `outputs/step-01-leap-of-faith-assumption-finder.md`: the comparisons restated as plain facts, the value guess and the growth guess, the ranked list (guess, number, damage, evidence, score) with the riskiest first, and the group to test on.
 2. **Pick the smallest test that teaches.** Use the skill `smallest-test-picker`. Takes the ranked guesses in `outputs/step-01-leap-of-faith-assumption-finder.md`, starting from the top one, and your limits. Saves `outputs/step-02-smallest-test-picker.md`: what counts as yes, the cheapest test form and a runner-up, who to try it on, the list to leave out, the ask and the fail line.
 3. **Set the numbers and the next move.** Use the skill `mvp-experiment-planner`. Takes the test in `outputs/step-02-smallest-test-picker.md` and the top guess from step 1, and starts from them. Saves `outputs/step-03-mvp-experiment-planner.md`: pass, fail and in-between numbers set before the run, the sample and time limit, the run plan by group, how results are read, and a rule for a pass, a fail and a middle result.
-4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then `CHECKS MISSED:` (each step check that failed or could not run, or `none`).
 
 ## What you hand back
 3 step files and the summary. The last file holds the plan. Each file holds:

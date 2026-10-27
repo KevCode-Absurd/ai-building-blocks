@@ -98,7 +98,7 @@ Page led the $50 million purchase of Android because he wanted Google to reach p
 
 ### Changing how a big company talks to itself (2004)
 
-Weekly Friday TGIF meetings worked when Google had about 50 people but broke down at around 1,000 staff across time zones [S10]. Weekly email summaries replaced them, and he admitted they were "not the same" [S10]. He said much of management was improvised and borrowed from other companies [S10]. It shows his habit of changing a process when size breaks it.
+Weekly Friday TGIF meetings worked when Google was small but broke down as staff grew and spread across time zones [S10]. Weekly email summaries replaced them, and he admitted they were "not the same" [S10]. He said much of management was improvised and borrowed from other companies [S10]. It shows his habit of changing a process when size breaks it.
 
 ### Closing products and unifying the rest (2011 to 2013)
 

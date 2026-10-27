@@ -20,6 +20,7 @@ not_for:
   - "You need to value a company or read financial statements: use the Aswath Damodaran mind, or an accountant for tax and legal questions."
   - "You need a hard call on a failing company, such as layoffs or cash running out: use the Ben Horowitz mind."
   - "You want stock picks, legal advice or medical advice: ask a licensed professional, because this mind gives principles only."
+  - "Your pitch is for something other than a tech or consumer product, such as a local service or a grant: his rules come from that field, so use the Seth Godin mind for a general story and offer."
 output_sample:
   input:
     - Your idea, product or draft pitch, in a few lines

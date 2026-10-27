@@ -14,6 +14,10 @@ Master comprehensive evaluation strategies for LLM applications, from automated 
 
 - The task is unrelated to llm evaluation
 - You need a different domain or tool outside this scope
+- You only want to compare an old prompt with a new one on the same cases. Use the Prompt change tester.
+- You need test cases and a repeatable pass or fail run for a Python app. Use the AI app evaluation planner.
+
+This skill gives a plan only. It does not run tests. For large, regulated or high-stakes decisions (health, legal, money, hiring), the plan needs expert review before anyone relies on it.
 
 ## What to ask for first
 
@@ -105,6 +109,7 @@ Use stronger LLMs to evaluate weaker model outputs.
 > **AI Blocks note:** the code in this file is a pattern to adapt, not code that runs as written. Names such as `llm_eval`, `check_groundedness` and `call_judge_model` are placeholders that you or a developer must write. In a plain chat, the output is a plan and needs no code.
 
 ```python
+# PATTERN ONLY, NOT RUNNABLE: llm_eval and check_groundedness do not exist here.
 from llm_eval import EvaluationSuite, Metric
 
 # Define evaluation suite

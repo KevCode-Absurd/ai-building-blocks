@@ -36,6 +36,20 @@ Comprehensive guide to running ML workloads on Lambda Labs GPU cloud with on-dem
 - **RunPod**: For cheaper spot instances and serverless endpoints
 - **Vast.ai**: For GPU marketplace with lowest prices
 
+## What you hand back
+
+Give the user these six items, in this order:
+1. GPU choice: the GPU type and region, with the hourly price per GPU and the total per hour.
+2. Launch step: the console clicks or the API call, with the SSH key and filesystem attached.
+3. SSH connection: the `ssh ubuntu@<INSTANCE-IP>` command.
+4. Persistent filesystem: the folder where data and checkpoints are saved.
+5. Training command: the command to start the run, saving to the persistent folder.
+6. Terminate command: the call that ends the server, for the user to run.
+
+## Cost check before launch (added by AI Blocks)
+
+Lambda is a paid service that bills while a server runs. Before any launch step, add up the cost: the number of GPUs times the price per GPU per hour, then times the hours the user expects. Show the user the hourly total and the run total, and ask for a clear yes. An 8x H100 server can cost many times what a single GPU costs. Do not call `launch_instance` or the launch curl until the user says yes. Prices in the table below are the author's snapshot, so check Lambda's current price page.
+
 ## Quick start
 
 ### Account setup
@@ -185,7 +199,7 @@ for instance in instances.data:
 
 ### Terminate instance
 
-The skill never stops the server for you. Give the user this command and remind them to run it themselves when they finish. The key stays in the `LAMBDA_API_KEY` environment variable. Never ask the user to paste it into the chat.
+The skill never stops the server for you. Give the user this command and remind them to run it themselves when they finish. After it runs, tell the user to open the Lambda dashboard and confirm the instance no longer shows as running. A server that is still running keeps billing. The key stays in the `LAMBDA_API_KEY` environment variable. Never ask the user to paste it into the chat.
 
 ```python
 from lambda_cloud_client.models import TerminateInstanceRequest

@@ -24,7 +24,7 @@ The percentages in this guide (for example 30-50% versus 3-10% conversion, 3% of
 | Phase | Skill | Question it answers | Artifact |
 |---|---|---|---|
 | 1. Discover why visitors leave | cro-methodology | Why do visitors not convert, and what is worth testing? | Extends docs/WEBSITE.md, docs/METRICS.md, docs/EXPERIMENTS.md |
-| 2. Capture the not-ready 97% | scorecard-marketing | How do we keep the leads who aren't ready to buy? | Extends docs/WEBSITE.md, docs/MARKETING.md |
+| 2. Capture the visitors not ready to buy | scorecard-marketing | How do we keep the leads who aren't ready to buy? | Extends docs/WEBSITE.md, docs/MARKETING.md |
 | 3. Clarify the message | storybrand-messaging | Can a stranger tell what we do in five seconds? | Extends docs/POSITIONING.md |
 | 4. Make the message stick | made-to-stick | Will they remember it when they are ready to buy? | Extends docs/POSITIONING.md, docs/WEBSITE.md |
 | 5. Add proof and triggers | influence-psychology | Why should they believe us, and act now? | Extends docs/WEBSITE.md |
@@ -37,13 +37,15 @@ The percentages in this guide (for example 30-50% versus 3-10% conversion, 3% of
 1. **Resume first.** Before anything else, read `docs/GROW-WEBSITE-PLAN.md` and every artifact in the Journey Map. If the tracker exists, summarize the journey state in 3-5 lines and ask which phase to enter. Done when the user has confirmed an entry point. A journey with a tracker is resumed, never restarted.
 2. **Intake on first run only.** No tracker: run the Intake below, then create `docs/GROW-WEBSITE-PLAN.md` with every phase statused `pending | in-progress | awaiting-evidence | done | deferred: reason | skipped: reason`. Done when the tracker exists and the user has confirmed the phase plan.
 3. **Phase entry.** Announce: what the phase does, the decision it forces, the artifact it produces, rough effort. Offer proceed / skip / defer — phases marked GATE may be deferred, never skipped. Mark the phase `in-progress` on proceed. Done when the user chose.
-4. **Skill invocation and fallback.** Load the phase's skill and use it: each phase's Invoke line names the skill by slug — use that skill to run the phase. If it is not available, offer: `npx skills add wondelai/skills/<slug> --global`. If the user declines, run the phase from its Brief — the minimum viable method. State which mode you are in.
+4. **Skill invocation and fallback.** Load the phase's skill and use it: each phase's Invoke line names the skill by slug — use that skill to run the phase. If it is not available, you may offer the install command `npx skills add wondelai/skills/<slug> --global`. Tell the user first that it downloads third-party code from the GitHub collection wondelai/skills, and that they should look at the source before they run it. If the user declines, run the phase from its Brief — the minimum viable method. State which mode you are in.
 5. **In-phase decisions.** Ask every question under "Decide with the user" — with concrete options and your recommendation. Record the choice in the tracker's Key Decisions. A decision made silently is a defect.
 6. **Phase exit.** Present the draft artifact content for sign-off before writing. On approval: write or extend the docs/ files, update the tracker (status, Key Decisions, Next Actions). Done when the files are written and the phase row shows `done`.
 7. **Artifact discipline.** Read before writing; create a file only if missing, otherwise extend — add or update your sections, preserve everyone else's. Files are UPPERCASE in `docs/`. Every recommendation lands as a checkbox or a table row with owner and priority. See [references/artifact-templates.md](references/artifact-templates.md) when creating a docs/ file for the first time — create it from the full skeleton (all section headings), then fill the sections your phase names.
 8. **Every scarcity claim, testimonial, and share incentive must be true.** When a persuasion tactic needs inventing evidence, replace it with a tactic that uses evidence you have. A countdown that resets, a "only 2 left" that never changes, or a fabricated review poisons every honest claim that follows it.
 
 ## Intake
+
+The journey works without the other skills installed. Each phase has a built-in brief that runs when its skill is missing. The percentages in this guide are untested rules of thumb (see "About the numbers").
 
 Ask these before creating the tracker:
 
@@ -79,7 +81,7 @@ Queue bold experiments — not button colors — scored by ICE.
 
 **Done when:** the funnel is mapped with the blocked artery named, WEBSITE.md holds an O/CO table with counters placed at their friction point, and two ICE-scored experiment cards exist with pre-committed primary, secondary, and guardrail metrics.
 
-### Phase 2 — Capture the 97% who are not ready to buy (scorecard-marketing)
+### Phase 2 — Capture the visitors who are not ready to buy (scorecard-marketing)
 
 **Purpose:** Keep the visitors who will not buy today with an interactive assessment instead of losing them at exit.
 

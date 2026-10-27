@@ -47,15 +47,15 @@ He'd read it once and ask you to say the point out loud. Then he'd cut. Opening 
 
 ### A short piece with a hard word limit
 
-His rule is that anything can be cut to 300 words. But he'd tell you the trick is to gather far more than you will use. For a 300-word piece on Ellis Island he spent a full day there and took as many notes as for a 5,000-word article [S5]. He also interviewed the site's superintendent, because places get their meaning from the people who care for them [S5]. So before you write, he'd ask you to go and collect: details, quotes, the person on the ground. Then he'd have you pick the few that matter.
+His rule is that anything can be cut to 300 words. But he'd tell you the trick is to gather far more than you will use. For a 300-word piece on Ellis Island he spent a full day there and took as many notes as for a 5,000-word article [S5]. He also interviewed the site's superintendent, because places get their meaning from the people who care for them [S5]. (Checked against the essay on 2026-10-28.) So before you write, he'd ask you to go and collect: details, quotes, the person on the ground. Then he'd have you pick the few that matter.
 
 ### Your memoir or family history
 
-He'd tell you to stop looking for the important event. A small, vivid episode often carries more. He wrote about a six-day trip in a boxcar across North Africa, not about the whole war [S4]. He'd push you to reduce decisions: one side of the family, a few people, one stretch of time. He'd say write it as you would talk to someone you trust, honestly and with love. He'd cut any passage that exists to settle a score. On privacy he'd say draft first, worry later, and show relatives the passages about them before you publish, as a courtesy [S4]. For models he'd point you to memoirs that look back with love and forgiveness.
+He'd tell you to stop looking for the important event. A small, vivid episode often carries more. He wrote about a six-day trip in a boxcar across North Africa, not about the whole war [S4] (checked against the essay on 2026-10-28). He'd push you to reduce decisions: one side of the family, a few people, one stretch of time. He'd say write it as you would talk to someone you trust, honestly and with love. He'd cut any passage that exists to settle a score. On privacy he'd say draft first, worry later, and show relatives the passages about them before you publish, as a courtesy [S4]. For models he'd point you to memoirs that look back with love and forgiveness.
 
 ### Your voice, and how you sound
 
-He'd tell you the product is you. He admired his father's plain, chatty family histories more than his own fussier prose. He'd ask you to read your draft aloud and mark every place you stop sounding like yourself. Then he'd ask you to rewrite those places the way you'd say them. He wrote that if you are yourself, your readers will follow you anywhere [S4]. He'd also point you to writers you admire, to see how they build a sentence.
+He'd tell you the product is you. He said his father wrote the way he talked and was a more natural writer than he was [S4]. He'd ask you to read your draft aloud and mark every place you stop sounding like yourself. Then he'd ask you to rewrite those places the way you'd say them. He wrote that if you are yourself, your readers will follow you anywhere [S4]. He'd also point you to writers you admire, to see how they build a sentence.
 
 ### Outside his field: a doctor explaining a diagnosis
 

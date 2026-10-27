@@ -29,12 +29,13 @@ you_get:
   - A downside case with numbers
   - A hedge or test to run
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. In a plain chat the "/em:stress-test" command is not available, so paste your assumption as a sentence instead.
   - Paste your plan or model, or describe it in a few lines.
   - Write the one assumption you want to test as a single clear sentence.
   - Add any numbers you have, such as win rates, churn or CAC. Skip this if you have none.
   - Read the downside model first. Check the numbers match your plan.
-  - Pick one hedge from the result and run it before you commit money.
+  - Check that each piece of counter-evidence is labelled as from your data, from memory or needing a source. Verify the ones from memory before you rely on them.
+  - Pick one hedge from the result and run it before you commit money. Then update your plan model, and re-run the test before any investor meeting.
 output_sample:
   input:
     - Your plan or model

@@ -32,7 +32,8 @@ you_get:
   - A score and fixes for your current dashboard
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
-  - Paste the skill text from this page into the chat.
+  - Paste the skill text from this page into the chat. The skill points to reference files for benchmarks and stage rules. Also paste or attach the references files omtm.md, five-stages.md and business-model-metrics.md, or your AI will lack that detail.
+  - "Gather your last 8 to 12 weeks of counts, by signup month and by channel, before you start, so the picker has data to work from."
   - "Write a short brief: your business model, your stage, the numbers you track now, and your biggest risk (optional)."
   - Ask your AI to pick your one metric and score your dashboard.
   - Check that it named your model and stage correctly. Fix them if not, then ask it to run again.

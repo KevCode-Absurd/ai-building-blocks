@@ -10,6 +10,8 @@ license: MIT
 license_source: https://github.com/bitjaru/styleseed/blob/main/LICENSE
 ---
 
+> **AI Blocks note (licence):** this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says. The `license:` line in the front matter above is the original author's own label (MIT). The LICENSE-CONTENT file governs here. Keep the credit to the author.
+
 # StyleSeed Design Review
 
 ## Overview

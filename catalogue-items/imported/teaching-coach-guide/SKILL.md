@@ -176,103 +176,48 @@ Return your output in this exact format:
 
 ## Example Output
 
-**Scenario:** *Coaching focus: "I want to improve my questioning — I know I ask too many closed questions and don't give students enough think time, but when I try to change, I revert to my old habits within minutes" / Teacher context: "3rd year teacher, History, genuinely motivated to improve, self-aware about the problem but frustrated that they can't fix it" / Observation data: "In a recent observation, the coach recorded 23 questions in 15 minutes. 19 were closed (yes/no or one-word answer). Average wait time after a question was 1.8 seconds. The same 5 students answered 80% of the questions." / Coaching phase: "Identify — first coaching conversation on this focus"*
+This is a shortened outline. The scenario is made up to show the layout. Use your own focus, teacher notes and observation data.
+
+**Scenario:** *Coaching focus: "[WHAT THE TEACHER WANTS TO IMPROVE]" / Teacher context: "[YEARS TEACHING, SUBJECT, HOW THEY FEEL ABOUT IT]" / Observation data: "[WHAT THE COACH COUNTED OR NOTED]" / Coaching phase: "Identify, first conversation on this focus"*
 
 ---
 
-## Coaching Conversation: Questioning and Think Time
+## Coaching Conversation: [Focus Area]
 
-**Focus:** Improving questioning — more open questions, longer think time, wider participation
-**Teacher:** 3rd year, History, self-aware and motivated, frustrated by reversion to old habits
+**Focus:** [What the teacher is working on]
+**Teacher:** [Brief context]
 **Phase:** Identify
 
 ### Conversation Plan
 
-**Opening (5 minutes):**
-"Thanks for making time for this. Before we start — how's things? How's the week going?" [Genuine check-in. Build rapport. Do not rush into the data.]
+**Opening (5 minutes):** A real check-in, then: "Before I share what I noticed, I'd like to hear your view. What's your sense of how [FOCUS] goes in your lessons?"
+*Why:* Asking the teacher's view first honours the partnership. If their view differs from the data, that gap is the discussion.
 
-Then: "You mentioned you wanted to work on questioning. Before I share what I noticed in the observation, I'd love to hear your perspective. What's your sense of how questioning goes in your lessons?"
+**Exploration (15 minutes):** Look at the data together. Ask, "What do you notice?" Then, "What do you think is behind that?" Let the teacher name the cause.
 
-*Why this question:* Asking the teacher's perspective FIRST honours the partnership principle. It also reveals their self-awareness — if they already know the issue, the coach doesn't need to "reveal" it. If their perception differs from the data, that gap becomes a discussion point.
+**Action Planning (10 minutes):** Ask the teacher to pick one strategy to try. Ask what would tell them it worked.
 
-*Anticipated response:* "I know I ask too many closed questions. I've tried to change but I keep reverting. It's really frustrating." — The teacher is self-aware. Affirm this and build on it.
-
-*Coach move:* "That self-awareness is really valuable — a lot of teachers don't notice their questioning patterns at all. You've identified the pattern. What I'd like to do is look at some data together and see if we can figure out WHY the reversion happens and what we can do about it."
-
-**Exploration (15 minutes):**
-
-Question 1: "Can I share what I saw in the observation? I recorded some data on your questions — would you like to look at it together?"
-*Why:* Introduces the data with permission. Maintains partnership — the teacher agrees to look at data, rather than having it delivered.
-
-[Share the data: 23 questions in 15 minutes, 19 closed, 1.8 second wait time, 5 students answering 80%.]
-
-Question 2: "What do you notice when you look at this data?"
-*Why:* Lets the teacher interpret the data themselves rather than the coach telling them what it means. This builds analytical capacity.
-
-*Anticipated response:* "That's worse than I thought. 19 out of 23 closed — and 1.8 seconds wait time is nothing."
-
-*Coach move:* Paraphrase: "So the pattern is even more pronounced than you expected. 19 out of 23 is about 83% closed questions. And the wait time — 1.8 seconds — what do you think that means for students?"
-
-Question 3: "You said you try to change but revert within minutes. Can you walk me through what happens? What does the reversion feel like?"
-*Why:* This is the crucial question. Most coaching focuses on WHAT to change. This question focuses on WHY the change doesn't stick — which is where the real leverage is.
-
-*Anticipated response:* "I plan open questions before the lesson. I ask one or two at the start. But then students give a short answer, or there's silence, and I panic and fill the space. Before I know it, I'm doing 'Does everyone understand?' and 'What's the answer to number 3?'"
-
-*Coach move:* "So the silence is the trigger. You ask an open question, students don't respond immediately, and the discomfort of the silence pushes you back to closed questions. Is that right?"
-
-Question 4: "What do you think students are doing during that silence? Is silence necessarily a bad thing?"
-*Why:* Challenges the assumption that silence = failure. Silence after an open question may mean students are THINKING — which is exactly what think time is for.
-
-*Anticipated response:* "I know they're probably thinking. But it doesn't FEEL like that in the moment. It feels like they're confused or I've asked a bad question."
-
-*Coach move:* "So there's a gap between what you KNOW (silence is thinking time) and what you FEEL (silence means something's gone wrong). That's really common. The feeling is the enemy here, not the students."
-
-Question 5: "If you could change just ONE thing about your questioning — not everything, just one thing — what would have the biggest impact?"
-*Why:* Moves from analysis to action. Forces prioritisation — the teacher can't change everything at once. The coach's job is to help the teacher choose one specific, achievable change.
-
-*Anticipated response:* "Probably the think time. If I could just WAIT after an open question, everything else might follow — students would have time to think, more students would be ready to answer, and I wouldn't need to fill the silence with closed questions."
-
-**Action Planning (10 minutes):**
-
-Question 6: "OK — think time. Let's make that really specific. How many seconds of silence would feel like progress?"
-*Why:* Turns a vague goal into a measurable one.
-
-*Anticipated:* "Five seconds? That sounds doable but it would feel like an eternity."
-
-Question 7: "What would help you hold the silence? Some teachers count silently. Some hold up a hand to signal 'I'm waiting on purpose.' Some use a visual timer. What would work for you?"
-*Why:* Provides options without directing. The teacher chooses the strategy that fits their style.
-
-Question 8: "Here's what I'd suggest. In your next lesson, pick 3 moments where you'll ask an open question and wait 5 full seconds before taking any response. Just 3 moments — not the whole lesson. Would you be willing to try that?"
-*Why:* Small, specific, achievable. Three moments is not overwhelming. The teacher can plan the 3 questions in advance, which makes the silence feel more manageable.
-
-**Closing (5 minutes):**
-
-"Let me summarise what we've agreed. You're going to plan 3 open questions for your next Year 8 lesson and wait a full 5 seconds after each one before accepting any response. I'll come and observe that lesson — not the whole lesson, just those 3 moments — and I'll record the wait time and who responds. We'll meet again next week to look at what happened. Does that feel right?"
+**Closing (5 minutes):** The teacher says the agreed step back in their own words.
 
 ### Key Coaching Moves
 
-**Pausing:** After asking a question, wait. Don't fill the silence. The same think-time principle that applies to students applies to coaching conversations — the teacher needs time to think. Count to 5 in your head before speaking again.
-
-**Paraphrasing:** Reflect the teacher's words back in slightly different language: "So what you're saying is that the silence feels uncomfortable, and that discomfort is what triggers the reversion to closed questions." This confirms understanding and helps the teacher hear their own thinking.
-
-**Probing:** When the teacher gives a surface answer, go deeper: "You said 'I try but I can't change it.' What specifically happens in the moment when you revert? What are you feeling?" Probing is not interrogation — it's gentle curiosity that helps the teacher examine their practice more closely.
-
-**Providing data (not opinion):** "I counted 1.8 seconds average wait time" is data. "Your wait time is too short" is opinion. Data invites reflection; opinion invites defensiveness.
+- **Pause.** After a question, wait. Count to five in your head before you speak.
+- **Paraphrase.** Say the teacher's words back in slightly different language to check you understood.
+- **Probe.** When the answer is on the surface, ask what specifically happens in the moment.
+- **Give data, not opinion.** Say what you recorded, not what you think of it.
 
 ### If the Conversation Gets Stuck
 
-**If the teacher deflects:** ("It's not just me — the students don't want to answer open questions.") Acknowledge the frustration, then redirect to what's within the teacher's control: "You're right — student participation is partly about them. But the thing you CAN control is the type of question and the time you give them. Let's focus there."
-
-**If the teacher becomes defensive:** ("Are you saying I'm a bad teacher?") Reassure immediately: "Not at all. You identified this as something you want to work on — that shows real professional awareness. The data is just a starting point so we can measure progress. This is about growth, not judgement."
-
-**If the teacher gives only surface answers:** ("I just need to ask better questions.") Probe: "What would a 'better' question sound like? Can you give me an example?" This moves from abstract ("better") to concrete (an actual question they could ask).
+- **The teacher deflects:** Acknowledge the frustration, then move to what the teacher can control.
+- **The teacher gets defensive:** Say the data is a starting point, and the focus is growth, not judgement.
+- **Only surface answers:** Ask for a concrete example, such as what a better version would sound like.
 
 ### Next Steps Template
 
-**What:** Plan 3 open questions and hold 5 seconds of think time after each.
-**When:** Next Year 8 History lesson (specify date).
-**Support:** The coach will observe the 3 moments and record wait time + student response data.
-**Follow-up:** Coaching meeting next week (specify date) to review what happened.
+**What:** [One small thing the teacher will try]
+**When:** [Date of the lesson]
+**Support:** [What the coach will do, such as observe and record]
+**Follow-up:** [Date of the next meeting]
 
 ---
 

@@ -17,7 +17,7 @@ This skill enables an AI agent to produce polished, data-driven reports from str
 
 2. **Select or customize the report template.** Match the data to a report template based on the report type specified by the user. Built-in templates include: `sprint_retrospective`, `financial_summary`, `analytics_dashboard`, `incident_postmortem`, and `weekly_status`. Each template defines the section order, required data mappings, chart types, and tone (analytical for financial reports, constructive for retros, urgent for postmortems). Users can customize templates by overriding sections, adding fields, or changing the visual theme.
 
-3. **Compute metrics and generate insights.** Derive computed metrics from the raw data — percentage changes, averages, rankings, trend directions, and anomaly flags. For a sprint retro, calculate velocity variance and commitment accuracy. For an analytics report, compute conversion rates and segment-level breakdowns. Then generate narrative insights: not just "conversion rate was 3.2%" but "conversion rate dropped 0.8pp from last period, driven primarily by a 15% decline in mobile traffic."
+3. **Compute metrics and generate insights.** Derive computed metrics from the raw data — percentage changes, averages, rankings, trend directions, and anomaly flags. For a sprint retro, calculate velocity variance and commitment accuracy. For an analytics report, compute conversion rates and segment-level breakdowns. Then generate narrative insights: not just "conversion rate was [RATE]" but "conversion rate changed by [CHANGE]pp from last period". **State a cause only when the source data shows it** (for example, a mobile traffic column that fell by [PERCENT]). If the data does not show a cause, say the cause is not in the data and list it as a question for the owner.
 
 4. **Populate the report structure.** Fill the template sections with the computed metrics, narrative insights, and formatted data tables. Generate chart specifications (bar, line, pie, or table) for each visualization slot in the template. Use Markdown table syntax for inline tables and a chart spec format (e.g., Mermaid, Vega-Lite, or Chart.js JSON) for visual charts. Add section headers, executive summary, and any appendices.
 
@@ -127,15 +127,14 @@ Estimates and the plan for the next sprint: [not in the data].
 
 ## What Went Well
 
-- Checkout redesign shipped 2 days ahead of the sprint end date, allowing
-  extra time for integration testing.
+- Checkout redesign shipped 2 days ahead of the sprint end date.
 - Zero P1 bugs in the production release.
 - Effective pairing sessions between frontend and backend teams.
 
 ## What Could Improve
 
 - **Mid-sprint scope creep:** 3 unplanned tickets were added after sprint
-  planning, consuming capacity and contributing to the 2 carried-over stories.
+  planning. The data does not say whether they caused the 2 carried-over stories: ask the team.
 - **QA bottleneck:** A QA bottleneck on Thursday caused idle time for 2
   developers.
 - **Standup duration:** Standups exceeded 15 minutes on 3 of 10 days.

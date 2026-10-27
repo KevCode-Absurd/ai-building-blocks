@@ -33,11 +33,12 @@ you_get:
 how_to_use:
   - Use an AI that can run code and read files, such as Claude with code tools. Make sure Node and Python are installed.
   - Add the skill folder to your AI, or paste the skill text into the chat.
-  - The agent, slash command and extra skills named in the skill file are not included. Answer the four questions yourself when your AI asks, and carry on with the scripts.
-  - Describe the screen you want. Say if you have a project folder or need a new one. Your AI will also ask four things first. They are the main device and network, the load-time target, whether the pages must rank in search or sit behind a sign-in, and your accessibility target.
+  - The agent, slash command and extra skills named in the skill file are not included. Answer your AI's questions yourself and carry on with the scripts.
+  - Describe the screen you want. Say if you have a project folder or need a new one. Your AI will also ask first. The decision script needs five answers before it runs: the main device and network, the load-time target in milliseconds, whether the pages must rank in search, whether the whole site sits behind a sign-in, and your team size. The skill also asks about your bundle budget, design system and accessibility target, but the script does not need those.
   - Let your AI build the project and the component. Run it on your computer with npm run dev.
   - Ask for the bundle check. Fix the heavy packages it lists, then run the check again.
-  - Open your site in the Chrome browser and run Lighthouse to measure real load speed. The bundle check alone does not show it.
+  - Open your site in the Chrome browser and run Lighthouse to measure real load speed. Lighthouse needs a live page URL, so run your site first. The bundle check alone does not show load speed.
+  - Before you swap any package, check its real size on bundlephobia. The sizes in the skill are rough.
   - After each fix, run the bundle check again and compare the Lighthouse scores before and after. Keep the change only if the score improves.
 output_sample:
   input:

@@ -277,13 +277,18 @@ print(f"Price Elasticity: {elasticity['elasticity']:.2f}")
 print(f"Interpretation: {elasticity['interpretation']}")
 print(f"R-squared: {elasticity['r_squared']:.2f}")
 
+# SET THIS FIRST: your own lowest acceptable margin, as a number such as 30 for 30 percent.
+# The code stops with an error until you replace the value below.
+MY_MARGIN_LIMIT_PCT = None  # <- put your own number here
+assert MY_MARGIN_LIMIT_PCT is not None, "Set MY_MARGIN_LIMIT_PCT to your own margin limit first"
+
 # Find optimal markdown
 optimization = analyzer.find_optimal_markdown(
     sku='SKU123',  # sample data only: replace every number with your own
     cost=40,
     current_price=80,
     current_inventory=500,
-    min_margin_pct=[YOUR MARGIN LIMIT %],  # the user's own limit, required
+    min_margin_pct=MY_MARGIN_LIMIT_PCT,  # your own limit, set above
     weeks_remaining=6
 )
 
@@ -350,7 +355,7 @@ class MarkdownScheduler:
 
         current_inventory = sku_data['current_inventory']
         weekly_sales_rate = sku_data['weekly_sales_rate']
-        target_str = sku_data.get('target_str', 70)  # Target 70% sell-through
+        target_str = sku_data.get('target_str', 70)  # ASSUMPTION: 70% target sell-through. Replace with the user's own target.
 
         # Calculate current trajectory
         projected_str = (weekly_sales_rate * self.weeks_remaining) / sku_data['initial_inventory'] * 100
@@ -962,59 +967,48 @@ print(transfer_candidates)
 
 ### Markdown Optimization Report
 
+(Every figure below is a placeholder to show the shape. Fill each one from the user's own stock and sales data. Never copy a placeholder as a result.)
+
 **Executive Summary:**
-- Total inventory at risk: $8.2M retail value (42,000 units)
-- Current markdown rate: 28% of sales
-- Target markdown rate: <22%
-- Recommended markdown strategy: Progressive, targeted approach
-- Expected markdown cost: $1.8M (22% of inventory value)
-- Expected revenue recovery: $6.4M (78%)
+- Total inventory at risk: [RETAIL VALUE] ([UNITS] units)
+- Current markdown rate: [CURRENT %] of sales
+- Target markdown rate: [TARGET %]
+- Recommended markdown strategy: [ONE LINE]
+- Expected markdown cost: [COST]
+- Expected revenue recovery: [REVENUE]
 
 **SKU-Level Markdown Recommendations:**
 
 | SKU | Category | Inventory | Weeks Supply | Current STR | Recommended Action | Discount % | New Price | Expected Revenue |
 |-----|----------|-----------|--------------|-------------|-------------------|-----------|-----------|------------------|
-| SKU001 | Outerwear | 850 | 18 | 42% | Markdown now | 40% | $59.99 | $41K |
-| SKU002 | Dresses | 1,200 | 22 | 38% | Markdown now | 50% | $39.99 | $38K |
-| SKU003 | Tops | 650 | 12 | 58% | Markdown week 3 | 30% | $34.99 | $18K |
-| SKU004 | Bottoms | 420 | 8 | 68% | Monitor, no action | 0% | $49.99 | $21K |
-| SKU005 | Accessories | 2,100 | 25 | 35% | Transfer to outlet | 60% | $15.99 | $27K |
+| [SKU] | [CATEGORY] | [UNITS] | [WEEKS] | [%] | [Markdown now / Markdown week N / Monitor / Transfer] | [%] | [PRICE] | [REVENUE] |
 
 **Markdown Cadence by SKU:**
 
 | SKU | Stage 1 | Stage 2 | Stage 3 | Clearance |
 |-----|---------|---------|---------|-----------|
-| SKU001 | 30% off (Now) | 50% off (Week 3) | 60% off (Week 6) | Liquidate remainder |
-| SKU002 | 40% off (Now) | 60% off (Week 2) | 70% off (Week 5) | Donate remainder |
-| SKU003 | 20% off (Week 2) | 40% off (Week 5) | - | - |
+| [SKU] | [% off, when] | [% off, when] | [% off, when] | [what to do with the remainder] |
 
 **Store-Level Variations:**
 
 | Store Cluster | Chain Markdown | Local Adjustment | Rationale |
 |---------------|----------------|------------------|-----------|
-| High-volume urban | Follow chain | None | On track for sell-through |
-| Suburban malls | Follow chain | +10% deeper | Excess inventory, competitive pressure |
-| Small format | Follow chain | Transfer to larger stores | Limited space, small quantities |
-| Outlets | Aggressive | 60-70% off | Clearance destination |
+| [CLUSTER] | [Follow chain / deeper] | [ADJUSTMENT] | [WHY, from the user's data] |
 
 **Financial Impact:**
 
-| Metric | Without Optimization | With Optimization | Improvement |
-|--------|---------------------|-------------------|-------------|
-| Total revenue recovery | $5.8M | $6.4M | +$600K |
-| Markdown cost | $2.4M (29%) | $1.8M (22%) | -$600K |
-| Units cleared | 28,000 (67%) | 34,000 (81%) | +14 pts |
-| Weeks to clear | 12 weeks | 8 weeks | -4 weeks |
+| Metric | Without Plan | With Plan | Difference |
+|--------|--------------|-----------|------------|
+| Total revenue recovery | [VALUE] | [VALUE] | [VALUE] |
+| Markdown cost | [VALUE] | [VALUE] | [VALUE] |
+| Units cleared | [VALUE] | [VALUE] | [VALUE] |
+| Weeks to clear | [VALUE] | [VALUE] | [VALUE] |
 
 **Implementation Plan:**
 
 | Week | Action | SKUs | Expected Impact |
 |------|--------|------|-----------------|
-| Week 1 | First markdown wave (30-40% off) | 15 SKUs | Clear 8,000 units, $480K revenue |
-| Week 2 | Second markdown wave (20-30% off) | 12 SKUs | Clear 6,000 units, $340K revenue |
-| Week 3 | Deepen discounts on slow movers | 8 SKUs | Clear 5,000 units, $180K revenue |
-| Week 4-6 | Transfer excess to outlets | 5 SKUs | Clear 10,000 units, $250K revenue |
-| Week 7-8 | Final clearance (60-70% off) | All remaining | Clear 5,000 units, $120K revenue |
+| [WEEK] | [ACTION] | [WHICH SKUs] | [UNITS AND REVENUE, from the model] |
 
 ---
 

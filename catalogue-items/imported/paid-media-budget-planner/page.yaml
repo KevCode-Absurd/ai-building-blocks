@@ -10,6 +10,8 @@ explain: |
   A paid media plan built on testable bets instead of habit. It tells you where your budget should go, what to test, and which spend to cut.
 
   Each plan starts with a clear hypothesis: who you reach, the offer, the channel, the result you measure and the size of the change. You also decide in advance what number means keep going and what means stop. It then compares channels like search, shopping, Meta, TikTok and LinkedIn by fit with your buyer, splits budget, picks audiences and bid style, and explains why platform reports overstate results. It also names what not to buy.
+
+  Source: this is a copy of the RampStack paid media skill, under the MIT licence (see the LICENSE file). We changed only the name, the page text and the check-before-use notes. The figures in it are the author's rules of thumb, so check them against your own data.
 when:
   - You inherited ad accounts that run on autopilot.
   - You must split a budget across several platforms.
@@ -37,7 +39,7 @@ how_to_use:
   - Add your current results from each ad platform if you have them (optional).
   - Paste the skill into Claude, ChatGPT or Gemini, then paste your details. No code or paid tool is needed to read the plan. To act on it you need a live ad account with conversion tracking, and ad spend is paid to the platforms.
   - Read the test table first. Check that each test has a stop number and a scale number you can measure.
-  - Compare any benchmarks in the plan with your own data. Treat them as rules of thumb.
+  - Compare any benchmarks in the plan with your own data. Treat them as unverified rules of thumb, and check platform limits on the platform's current help pages before you set stop and scale numbers.
   - Start with one or two tests. Review them against the stop and scale numbers before you move more budget.
   - After the first tests run, check results in your own sales numbers, not only the ad platform. Bring them back for the next round.
 output_sample:

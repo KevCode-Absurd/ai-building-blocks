@@ -9,7 +9,7 @@ subhead: A lesson series that trains students to ask who wrote a source, when an
 explain: |
   A lesson series that trains students to ask who wrote a source, when and why before they read a word. It builds the habit expert historians use, instead of treating each document as plain fact.
 
-  The method follows Wineburg's research on sourcing. You describe your topic, your students and what they do now when handed a document. The skill returns a progression from novice to proficient, a three-part teaching sequence (you model, they practise with help, they work alone) and guiding questions suited to your source type, such as testimony, official papers or photographs. It also lists the common ways students fail and how to respond. The research notes in the skill come from the original author and were not checked here.
+  The method follows Wineburg's research on sourcing. You describe your topic, your students and what they do now when handed a document. The skill returns a progression from novice to proficient, a three-part teaching sequence (you model, they practise with help, they work alone) and guiding questions suited to your source type, such as testimony, official papers or photographs. It also lists the common ways students fail and how to respond. The research notes in the skill come from the original author. We have not checked the citations (Wineburg 1991, 1998, 2007; Gottlieb and Wineburg 2012; Reisman 2012; Wineburg and Reisman 2015) or their findings against the original papers. Check them before you quote them to colleagues, parents or inspectors.
 
   Source and licence: the skill is by Gareth Manning. The skill file also names Sean Hu as a contributor. We share it under the licence in the LICENSE file (CC BY-SA 4.0), so keep the credit and share any changes under the same licence.
 when:
@@ -17,6 +17,7 @@ when:
   - You are starting a unit built on primary sources.
   - You want a clear way to show growth in source skills.
   - Your students read first and ask questions later.
+  - You teach history to students of about 11 to 18 (the skill's own examples run from Year 7 to Year 12). For younger students, tell your AI their age and ask it to simplify.
 not_for:
   - Your students already check who wrote a source every time. Move on to a harder skill, such as comparing sources, with your own plan.
   - You have no documents yet. Pick your sources first, then come back to build the lessons.
@@ -35,12 +36,13 @@ you_get:
   - Signs of progress to watch for
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code or paid tool is needed.
-  - Paste the whole skill text into the chat. It is long (about 16,000 characters), so check that none of it was cut off.
+  - Paste the whole skill text into the chat. It is long (about 16,000 characters), so check that none of it was cut off. If your chat cuts it off, attach the file instead, or paste from "What This Skill Does" down to "Known Limitations" and skip the front matter at the top.
   - Have three things ready, because the plan needs them: your topic or period, your students' age and level, and what they do now with sources.
   - Add your source type and documents if you have them (optional).
   - Read the plan. Check that the questions fit your sources, then edit anything that does not suit your class.
   - Expect a long plan, roughly several pages, with every part in the list above.
-  - Use the plan to teach. Pair it with a lesson on comparing sources if you want to go further.
+  - Use the plan to teach. Next, build a Compare sources lesson, or a History close reading lesson to go with it. Bring the sourcing plan you just made.
+next: [compare-sources-lesson]
 output_sample:
   input:
     - Your topic, period or question

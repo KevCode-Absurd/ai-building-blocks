@@ -25,6 +25,9 @@ If the user's first win is unclear, ask before proceeding.
 ## PSYCHOLOGICAL FRAMEWORK: IDENTITY-TO-HABIT ONBOARDING
 
 ### Mechanism
+
+> **About the citations.** The author names, years and "Research basis" lines in this skill are background only. They have not been checked here and carry no links. Do not quote them as proof or tell the user a study found a specific result. If the user wants evidence, say what the idea is called and suggest they look it up themselves.
+
 People commit when they feel early progress, competence, and ownership. Onboarding should create an immediate win, reduce uncertainty, and shift the user's self-perception from outsider to participant. Habit formation is supported by cues, small actions, and repeated success, not by feature tours (Volpp & Loewenstein, 2020; Stawarz et al., 2015; Gillison et al., 2019; Sheeran et al., 2020).
 
 ### Execution Steps
@@ -93,6 +96,8 @@ This skill must:
 The line between persuasion and manipulation is helping the user experience genuine progress versus engineering compulsive engagement detached from user benefit. Never cross it.
 
 ## SKILL CHAINING
+
+The skills named below are not in the AI Blocks library, and they are optional. If the user does not have them, skip this step. Ask the user for the same facts instead: who the customer is, what job they hire the product for, and what would persuade them without pressure.
 
 Before invoking this skill, the agent should have completed:
 - [ ] `@customer-psychographic-profiler`

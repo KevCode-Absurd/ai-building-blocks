@@ -113,7 +113,7 @@ improve:
 works_best_with:
   tools:
     - name: Claude Code
-      why: It can open the code, keep the debt folder and run every step on a schedule.
+      why: It can open the code, keep the debt folder. You start each run. It does not run on a timer. Claude Code is a paid tool (a paid plan or an API key), and you should check whether your plan allows a scheduled run.
   inputs:
     - A list of the bugs or outages from the last month and the files they touched
     - The tickets your team closed last month

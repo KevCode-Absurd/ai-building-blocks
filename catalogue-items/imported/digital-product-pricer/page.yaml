@@ -11,14 +11,14 @@ explain: |
 
   First, it classifies your product as bought for pleasure or for practical use. Then it applies a short set of rules. An unknown seller should use a rounded price, such as $100 rather than $97. A buyer who already tried a sample can see a just-below price. Pre-orders far out get a bonus instead of a percentage off. Lead magnets are "for $0", never "FREE". Pick-your-price offers use three or four fixed options, not pay what you want.
 
-  These are rules of thumb from published pricing studies, named in the skill's reference.md file. They are not guarantees, and results differ by audience. Test any price on your own buyers. This is Checkout Page's digital-product-pricing skill, shared under the MIT licence.
+  These are rules of thumb from published pricing studies. The skill's reference.md file names them, for example Wadhwa and Zhang (2015) and Schindler (2006), so you can check them. They are not guarantees, and results differ by audience. Test any price on your own buyers. This is Checkout Page's digital-product-pricing skill, shared under the MIT licence.
 when:
   - You are about to price your first course or ebook and cannot choose between $97 and $100.
   - You plan a pre-order and are unsure if you should discount or add a bonus.
   - Your free download page uses the word FREE and you wonder if that hurts.
   - You want to offer a few price tiers and need to set them well.
 not_for:
-  - You sell a membership or monthly plan. Use the Membership plan pricer instead.
+  - You sell a membership or monthly plan. This skill does not cover it. Build a simple tier table of your own instead.
   - You do not yet know how much people will pay. Ask 5 to 10 likely buyers first, because this skill sets digits and wording, not demand.
   - You sell a physical product. Shipping and materials change the price signals, so do not use this page for it.
 you_give:
@@ -36,10 +36,10 @@ how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
   - Paste the skill text from this page into the chat.
   - "Gather your numbers first: planned price, launch date, weeks until launch, and whether buyers get a free sample."
-  - Tell your AI what you sell and whether you are an individual or a known publisher.
+  - Tell your AI what you sell and whether you are an individual or a known publisher. If you have no planned price or launch date yet, say so. Your AI will state an assumption and label it as one, so replace it with your real figure.
   - Read each price choice and its reason. Ask your AI to explain any you doubt.
   - Before you change your full price, test it. Compare two prices on your launch page for a fixed period, record sales at each, and keep the one that sold more.
-  - Then put the chosen prices and wording on your launch page and run the two-price test. If your digital product is a membership, use the Membership plan pricer next.
+  - Then put the chosen prices and wording on your launch page and run the two-price test. If your product is a membership or monthly plan, this skill does not cover it. Build a simple tier table of your own.
 output_sample:
   input:
     - What you sell and the price you plan

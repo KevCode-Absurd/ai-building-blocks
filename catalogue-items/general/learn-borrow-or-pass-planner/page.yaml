@@ -20,7 +20,7 @@ not_for:
   - "You want a named expert, product or course picked for you: this tool will not name one, so ask a trusted person in that field."
 you_give:
   - Your list of gaps, from the Real knowledge tester or written in your own words
-  - The decision you face, how costly it is and when it is due (optional)
+  - The decision you face, how costly it is and when it is due (optional; with no deadline, the skill asks you to set one)
   - The time and money you can spend on learning (optional)
 you_get:
   - "A choice: learn, borrow, start small or pass, with reasons"

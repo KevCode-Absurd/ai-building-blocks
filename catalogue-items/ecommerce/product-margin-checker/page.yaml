@@ -100,6 +100,7 @@ output_shape: |
 
   FLAG <go | fix | no-go>
   NEXT <first change>
+  CHECKS MISSED: <none | list>
   MISSING: <cost line | rate | quote>
 
 tweaks:

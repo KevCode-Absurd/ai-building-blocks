@@ -10,6 +10,8 @@ metadata:
   skill-author: K-Dense Inc.
 ---
 
+> AI Blocks licence note: the LICENSE.md file in this folder (MIT, K-Dense Inc.) governs this copy. The BSD-3-Clause licence named in the front matter above is superseded.
+
 # Scanpy: Single-Cell Analysis
 
 ## Overview

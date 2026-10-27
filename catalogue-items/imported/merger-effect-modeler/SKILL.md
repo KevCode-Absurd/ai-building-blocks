@@ -7,8 +7,9 @@ description: Build accretion/dilution analysis for M&A transactions. Models pro 
 
 ## India
 
-This skill operates on **Indian markets**. Load **`india-market-conventions`**
-before building anything, and **`india-market-data`** for sources. Two rules cause
+This skill operates on **Indian markets**. The author's files `india-market-conventions`
+and `india-market-data` are **not in this folder**, so do not look for them. Use the two
+rules below, and list every other convention you assumed in the output. Two rules cause
 most Indian errors:
 
 - **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
@@ -19,10 +20,9 @@ most Indian errors:
   **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
   formula and label the column `Total Revenue (₹ Cr)`.
 
-The files `india-market-conventions`, `india-market-data` and `NOT-ADAPTABLE.md` are not in this folder. Without them, follow the two rules above, say which Indian conventions you assumed, and name anything you could not check.
+The author's `NOT-ADAPTABLE.md` is also not included. If something has no Indian equivalent, name the gap. Never substitute a proxy and present it as the real thing.
 
-What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
-never substitute a proxy and present it as the real thing.
+Required: the workbook must carry a short "Assumed conventions and unchecked items" section that lists the conventions you assumed (fiscal year, units, tax rate, share counts) and anything you could not check.
 
 ## Workflow
 
@@ -89,9 +89,9 @@ Calculate year-by-year (Year 1-3):
 
 ### Step 5: Sensitivity Analysis
 
-**Accretion/Dilution vs. Synergies and Offer Premium** (change the steps to fit the deal size):
+**Accretion/Dilution vs. Synergies and Offer Premium.** Default steps: offer premium from 15% to 30% in 5-point steps, and synergies from nil to 100% of the user's base-case saving in four equal steps. Show the ₹ Cr value for each step. The column labels below are shares of that base case, not data.
 
-| | ₹0 Cr syn | ₹25 Cr syn | ₹50 Cr syn | ₹75 Cr syn | ₹100 Cr syn |
+| | 0% of base case | 25% of base case | 50% of base case | 75% of base case | 100% of base case |
 |---|---------|----------|----------|----------|-----------|
 | 15% premium | | | | | |
 | 20% premium | | | | | |
@@ -120,6 +120,7 @@ Breakeven pre-tax synergies = (standalone EPS × pro forma shares − pro forma 
   - Accretion/dilution summary
   - Sensitivity tables
   - Breakeven analysis
+  - Assumed conventions and unchecked items
 - One-page merger consequences summary for pitch book
 
 ## Important Notes

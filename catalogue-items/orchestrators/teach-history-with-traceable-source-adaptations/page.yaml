@@ -38,15 +38,15 @@ output_sample:
 
 you_give:
   - "SOURCES: attach primary texts with original wording, author, date, context and permissions."
-  - "INQUIRY: give the central question and tensions learners should investigate."
-  - "LEARNERS: give age, reading level, prior knowledge, access needs and lesson duration."
+  - "INQUIRY: give the central question as one sentence, and the tensions learners should investigate."
+  - "LEARNERS: give age, reading level, prior knowledge, access needs and lesson length in minutes."
   - "ASSESSMENT_GOAL: name sourcing, close reading, context or corroboration as target."
 you_get:
   - Original/adapted source pairs and change log
   - Timed inquiry lesson, diagnostic tasks and scoring guide
 how_it_works:
   - title: Adapt without answering for learners
-    text: Use originals, learner level and target skills. Preserve attribution, meaningful author language and evidence tensions. Mark cuts and changes; supply a definition-only word bank. Hand both versions and change log to lesson planning.
+    text: Use originals, learner level and target skills. Preserve attribution, meaningful author language and evidence tensions. List each cut as a numbered item with its reason. Keep every author sentence you did not change in a separate column. Write the word bank as term plus definition only. Hand both versions and the change log to lesson planning.
   - title: Build the inquiry lesson
     text: Use source pairs and central question for background, investigation, discussion and evidence-based writing. Pass target thinking skills, source features and observation opportunities to assessment design.
   - title: Check the thinking transfer

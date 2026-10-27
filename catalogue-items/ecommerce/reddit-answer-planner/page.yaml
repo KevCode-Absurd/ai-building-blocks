@@ -21,6 +21,7 @@ not_for:
   - "Your category is never cited on Reddit in AI answers: run your buyer questions in AI tools first, or use the AI citation source finder to find where AI looks."
   - "You want fake accounts, hidden brand posts or the same comment in many threads: this plan will not do that, and those posts get banned."
   - "You need fast results: Reddit is a slow signal, so work on your own site pages and the best-of page writer first."
+  - "You sell in a regulated area (health, money or legal): replies on Reddit can read as advice. Skip Reddit unless a qualified reviewer clears each answer."
 
 you_give:
   - Your buyer questions and the Reddit links AI tools cited for them
@@ -61,7 +62,9 @@ output_sample:
     - name: Weekly routine
       contains: What the poster does each week and how long it takes.
     - name: Expectations
-      contains: How long results take and what Reddit can and cannot change.
+      contains: How long results take, with any timing figure labelled as one account's and not checked, and what Reddit can and cannot change.
+    - name: Care
+      contains: The health, money and legal line, and the ban risk of posting from a team account.
     - name: Do not list
       contains: Things to avoid, such as fake accounts and copied comments.
 
@@ -92,7 +95,8 @@ output_shape: |
   HONEST COMPARISON TEMPLATE  <where we work with X, where X is better>
   ALERTS  <keywords for category and brand>
   WEEKLY ROUTINE  <what, how long>
-  EXPECTATIONS  <delay, what Reddit does and doesn't do>
+  EXPECTATIONS  <delay, what Reddit does and doesn't do; any timing figure labelled "one account's figures, not checked">
+  CARE  <health, money or legal topics: "check with a qualified person before posting"; posting from a team account risks a ban if the rules are broken>
   DO NOT  <list>
   CHECKS MISSED: <none, or list>
   MISSING: <anything not given>

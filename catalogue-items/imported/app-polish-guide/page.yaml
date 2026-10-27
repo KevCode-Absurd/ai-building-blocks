@@ -16,9 +16,9 @@ when:
   - Your in-app wording is vague, bossy or unclear.
   - You can't tell which fix to make first.
 not_for:
-  - "You want code fixes, tests or hardening: use a code cleanup skill such as improve-code-quality or remove-technical-debt."
-  - "You have no app yet: start with create-app, then come back when you have users."
-  - "You only need to fix one leaking sign-up or checkout flow: use conversion-optimization."
+  - "You want code fixes, tests or hardening: use the tech debt prioritiser."
+  - "You have no app yet: build a first version with the single file app builder, then come back when you have users."
+  - "You only need to fix one leaking sign-up or checkout flow: use the conversion problem finder."
 you_give:
   - A short description of your app, or screenshots of its screens
   - Who uses it and what they use it for
@@ -31,12 +31,14 @@ you_get:
   - Saved docs files you can pick up again in a later session
   - A final review that cuts what is not needed
 how_to_use:
+  - Plan for several sessions. The nine phases take more than one sitting, and the first phase (the job your app is hired for) must be confirmed before anything else.
   - Open Claude, ChatGPT or Gemini. Paste the skill, or upload its folder if your AI takes files.
+  - Each phase uses its own method skill. If your AI does not have it, the skill offers to install it with "npx skills add" (free). If you decline, it runs the phase from its short built-in brief instead and tells you so.
   - Tell your AI about your app, its users and where they get stuck.
   - Answer its questions at each phase. It asks before it decides anything.
   - Check each phase's notes before you move on. The first phase is a gate, so confirm the job your app is hired for.
   - Saving the docs files needs an AI that can write files. In a plain chat, copy each file into your own docs folder.
-  - Finish with the review, then work through the fix list from the top.
+  - Finish with the review. Then work through the fix list in IMPROVE-APP-PLAN.md from the top, and keep the backlog of tests to run in docs/EXPERIMENTS.md.
 output_sample:
   input:
     - A short description of your app, or its screens

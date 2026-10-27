@@ -356,14 +356,21 @@ class ProcessCapability:
     Measures how well process meets specifications
     """
 
-    def __init__(self, data, lsl, usl, target=None):
+    # d2 constants for estimating within-subgroup sigma as R-bar / d2
+    D2 = {2: 1.128, 3: 1.693, 4: 2.059, 5: 2.326, 6: 2.534, 7: 2.704, 8: 2.847, 9: 2.970, 10: 3.078}
+
+    def __init__(self, data, lsl, usl, target=None, subgroup_size=None):
         """
         Parameters:
-        - data: array of process measurements
+        - data: array of process measurements, in time order
         - lsl: lower specification limit
         - usl: upper specification limit
         - target: target value (optional, default is midpoint)
+        - subgroup_size: readings per subgroup (2 to 10). Give it when the data
+          was taken in subgroups. Without it, Cp and Cpk cannot be short-term
+          and are reported as overall figures.
         """
+        self.subgroup_size = subgroup_size
         self.data = np.array(data)
         self.lsl = lsl
         self.usl = usl
@@ -376,9 +383,19 @@ class ProcessCapability:
         mean = self.data.mean()
         std = self.data.std(ddof=1)  # Sample standard deviation
 
-        # Within-subgroup variation (short-term capability)
-        # For simplicity, using overall std; ideally use R-bar/d2 method
-        sigma_within = std
+        # Within-subgroup variation (short-term capability) uses R-bar / d2.
+        # Overall variation (long-term) uses the overall standard deviation.
+        n = self.subgroup_size
+        if n and n in self.D2 and len(self.data) >= 2 * n:
+            usable = len(self.data) // n * n
+            groups = self.data[:usable].reshape(-1, n)
+            r_bar = (groups.max(axis=1) - groups.min(axis=1)).mean()
+            sigma_within = r_bar / self.D2[n]
+            short_term = True
+        else:
+            # No subgroup size: Cp and Cpk fall back to overall sigma and are NOT short-term.
+            sigma_within = std
+            short_term = False
 
         # Specification width
         spec_width = self.usl - self.lsl
@@ -393,7 +410,7 @@ class ProcessCapability:
         cpl = (mean - self.lsl) / (3 * sigma_within)
         cpk = min(cpu, cpl)
 
-        # Pp and Ppk (overall/long-term capability, using total variation)
+        # Pp and Ppk (overall/long-term capability, always using total variation)
         sigma_total = std  # Overall standard deviation
         pp = spec_width / (6 * sigma_total)
         ppu = (self.usl - mean) / (3 * sigma_total)
@@ -422,6 +439,7 @@ class ProcessCapability:
             'target': self.target,
             'cp': cp,
             'cpk': cpk,
+            'cp_is_short_term': short_term,
             'pp': pp,
             'ppk': ppk,
             'defects_ppm': total_defects_ppm,
@@ -483,7 +501,7 @@ class ProcessCapability:
 
 # Example usage
 np.random.seed(42)
-# Simulate process data
+# Simulated process data, only to show the layout. Use the user's real measurements.
 data = np.random.normal(50, 2, 200)
 
 # Specification limits
@@ -491,7 +509,8 @@ lsl = 42
 usl = 58
 target = 50
 
-pc = ProcessCapability(data, lsl, usl, target)
+# Pass subgroup_size (for example 5) only if the data really was taken in subgroups of that size.
+pc = ProcessCapability(data, lsl, usl, target, subgroup_size=None)
 capability = pc.calculate_capability()
 
 print("Process Capability Analysis:")

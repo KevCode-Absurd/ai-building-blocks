@@ -26,7 +26,7 @@ not_for:
 pricing:
   model: freemium
   from: "Free plan available; paid prices in US dollars are not confirmed (see grammarly.com/plans)"
-  note: The free plan includes spelling and grammar checks and 100 AI prompts a month. A paid individual plan adds full rewrites and more prompts. Enterprise is priced on request. The page showed local currency, so no US dollar price was confirmed.
+  note: The free plan includes spelling and grammar checks and 100 AI prompts a month. A paid individual plan adds full rewrites and more prompts. Enterprise is priced on request. The page showed local currency, so no US dollar price was confirmed. Before you pay, read the current price on grammarly.com/plans. You can finish the steps below on the free plan.
 works_with:
   - Google Docs
   - Microsoft Office
@@ -36,20 +36,20 @@ blocks: []
 alternatives: [jasper, copy-ai, chatgpt, claude]
 last_checked: 2026-10-21
 first_result:
-  - "Go to grammarly.com and sign up for the free plan. The sign-up and install steps here were not checked, so follow the current page if it differs."
-  - "Add the browser extension or the desktop app, so it checks where you already write. We did not check the install steps."
+  - "Go to grammarly.com and sign up for the free plan. Follow the steps on the page as they are today."
+  - "Add the browser extension or the desktop app from the Grammarly site, so it checks where you already write. Follow the install steps on the page. Skip this step if you only paste drafts into the editor."
   - "Paste a draft, such as a customer email, into the editor. Accept or reject each suggestion one by one."
-  - "Pick a tone for the message, such as friendly or confident, and read the rewrite."
+  - "Pick a tone for the message, such as friendly or confident, and read the rewrite. If it asks you to upgrade, skip the rewrite. The corrected draft from the step before still counts."
   - "Read the final text aloud once. Grammarly checks spelling and style. It does not check whether your facts are true."
-  - "You end with a corrected draft in the tone you picked, plus the suggestions you accepted and rejected one by one."
+  - "Result: the corrected draft as one block of text, then the list of suggestions you accepted and rejected. If the rewrite needed a paid plan, the draft is corrected for spelling and grammar only."
   - "Next: for a first draft from nothing, write it in ChatGPT or Claude, then polish it here."
 needs:
   - "A draft to check. English works best."
-  - "A free account."
+  - "A free account. The free plan covers spelling and grammar checks and 100 AI prompts a month, which is enough for the steps above. The tone rewrite may need a paid plan."
   - "The browser extension or app, if you want it in Google Docs or Microsoft Office."
 not_verified:
   - "Paid plan prices in US dollars."
-  - "Which AI features the free plan includes beyond 100 prompts a month."
+  - "Which AI features the free plan includes beyond 100 prompts a month, including whether the tone rewrite is free."
   - "How the AI-written text flag works, and how accurate it is."
 sources:
   - https://www.grammarly.com

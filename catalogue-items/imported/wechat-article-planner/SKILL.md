@@ -58,8 +58,8 @@ Keep the whole plan to about one page.
 ### Step 1: Account Type Analysis
 
 Identify the account type and its constraints:
-- **Subscription Account (订阅号)**: 1 push per day, folded in subscription folder
-- **Service Account (服务号)**: 4 pushes per month, appears in main chat list
+- **Subscription Account (订阅号)**: about 1 push per day, folded in subscription folder (rule of thumb, confirm with WeChat)
+- **Service Account (服务号)**: about 4 pushes per month, appears in main chat list (rule of thumb, confirm with WeChat)
 - **Enterprise Account**: Internal communication and CRM
 
 ### Step 2: Title Engineering
@@ -68,7 +68,7 @@ Apply proven title formulas for WeChat:
 
 1. **Curiosity Gap**: "为什么XXX却YYY？" (Why X but Y?)
 2. **Counter-intuitive**: "一直以为XXX，原来YYY" (Always thought X, turns out Y)
-3. **Social Proof**: "XXX万人都在用的..." (X million people use this; only use a number the user can prove)
+3. **Social Proof**: "XXX万人都在用的..." (X million people use this). The number must come from the user's own records. If the user has no real number, drop this formula and use another.
 4. **Urgency**: "再不看就晚了！" (Read before it's too late)
 5. **Value Promise**: "看完这篇，你就懂了..." (After reading this, you'll understand)
 6. **Identity**: "XXX的人，都有一共性" (People who X share this trait)
@@ -107,16 +107,16 @@ Structure:
 
 ### Example 2: E-commerce Product Launch
 
-*Layout example only. The one-month use and the third-week moment are placeholders. Use only results and experiences the user supplies. Never invent testimonials or before-and-after results.*
+*Layout example only. Every bracket is a placeholder. Use only results and experiences the user supplies. Never invent testimonials or before-and-after results, and never write a title that promises a result you cannot prove.*
 
 ```
-Title: 用了这款面霜一个月，同事问我是不是做了医美
+Title: [A TITLE THAT NAMES THE PRODUCT AND ONE TRUE, SOURCED BENEFIT, WITH NO RESULT CLAIM]
 Structure:
-  首屏: 真实使用对比图描述
-  铺垫: 皮肤困扰和选品过程
-  核心: 成分分析+使用感受+效果时间线
-  高潮: "最让我惊喜的是第三周..."
-  CTA: 点击小程序链接，限时优惠
+  首屏: [REAL PRODUCT PHOTO OR USE DESCRIPTION]
+  铺垫: [THE CUSTOMER PROBLEM AND HOW YOU CHOSE THE PRODUCT]
+  核心: [INGREDIENTS OR FEATURES + THE USER'S OWN REAL EXPERIENCE, ONLY IF SUPPLIED]
+  高潮: [A REAL MOMENT OR FACT FROM THE USER, NOT AN INVENTED RESULT]
+  CTA: [CLICK THE MINI-PROGRAM LINK, WITH A REAL OFFER AND REAL END DATE IF ANY]
 ```
 
 ## Best Practices

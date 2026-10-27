@@ -117,7 +117,7 @@ To optimize your warehouse operations, I need:
 ```
 Inventory Turnover = Cost of Goods Sold (COGS) / Average Inventory Value
 ```
-- **Benchmark:** 4-6x/year for most e-commerce (higher = better)
+- **Benchmark:** 4-6x/year for most e-commerce (higher = better). This is a general rule of thumb with no source or date, not sector data.
 - **Low turnover (<4):** Excess inventory, capital tied up
 - **High turnover (>8):** Risk of stockouts, tight supply chain
 
@@ -134,7 +134,7 @@ DOI = (Average Inventory / COGS) × 365
 Stockout Rate = (Days Out of Stock / Total Days) × 100
 ```
 - **Target:** <2%
-- **Impact:** Each 1% stockout ≈ 1% lost revenue
+- **Impact:** Each 1% stockout ≈ 1% lost revenue (a rough rule of thumb, not a measured figure)
 
 **Perfect Order Rate:**
 ```
@@ -211,7 +211,7 @@ CPO = (Storage + Labor + Packaging + Shipping) / Total Orders
 
 **Inventory Carrying Cost:**
 ```
-Carrying Cost = Average Inventory Value × Carrying Rate (typically 20-30%/year)
+Carrying Cost = Average Inventory Value × Carrying Rate (a common rule of thumb is 20-30%/year; unsourced, so use your own rate)
 
 Includes: Storage, insurance, obsolescence, opportunity cost
 ```
@@ -278,7 +278,7 @@ Prioritize by impact and effort:
 
 **Storage Fee Calendar:**
 - **Jan-Sep:** Standard rates
-- **Oct-Dec:** Peak rates (3x higher)
+- **Oct-Dec:** Peak rates (about 3x higher in the source; unsourced, so check Amazon's current fee page)
 - **Aged inventory surcharge:** 181+ days
 
 ### FBA Restock Calculation

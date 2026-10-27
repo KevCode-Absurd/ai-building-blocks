@@ -11,7 +11,7 @@ explain: |
 
   It starts with one round of questions, usually two to five. First it reads the files and notes you point to, so it only asks what you alone can decide: what better means, what is out of scope, what the agent may change, and what done looks like. Each question comes with a suggested answer you can accept. Then it returns only the prompt, with exact names and paths filled in. If you say no questions, it skips straight to writing.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (codegiveness) says MIT. Credit goes to codegiveness and sickn33.
+  Licence: CC BY 4.0 applies to this copy, as the LICENSE-CONTENT file in this folder says. That file governs. The author's own file header (codegiveness) says MIT, which is the author's label for the original. Credit goes to codegiveness and sickn33.
 when:
   - You have a rough idea and need a prompt an agent will not misread.
   - You want an agent to improve a file, and you need the instruction, not the edit.
@@ -33,7 +33,7 @@ you_get:
   - Up to three assumptions for you to check
 how_to_use:
   - Have your rough request ready, plus the file paths or links the agent should read. Exact names and paths are filled in only if your AI can open your files or links. If it cannot, the prompt uses placeholders you must fill in.
-  - Open a chat in Claude, ChatGPT or Gemini. Paste in the skill instructions from the SKILL.md file.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste in the skill instructions from the SKILL.md file. You get it from this item, or from the source repo (sickn33/agentic-awesome-skills on GitHub, in skills/kernel-prompt).
   - Send your rough request. Add any files, links or notes the agent should know. Say so if it should skip the questions.
   - Answer the questions. Say yes to accept a suggested answer.
   - Copy the prompt from the code block. Check the assumptions listed under it.

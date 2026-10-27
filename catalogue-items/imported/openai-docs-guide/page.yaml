@@ -29,10 +29,11 @@ you_get:
   - A model recommendation
   - Migration and prompt upgrade steps
 how_to_use:
+  - "Gather first: your exact question, the OpenAI product or API you use, and the model you use now."
   - Use an AI agent that can run tools and reach the OpenAI developer docs server (a connection to OpenAI's official docs), such as Codex. A plain chat window cannot run the lookup tools. Agents like Codex may need their own account or paid plan.
   - The skill can run small scripts that come with it. They save a temporary copy of the Codex manual in your computer's temp folder. The agent needs permission to run commands for that. If it has none, it uses the docs server instead.
   - Connect the OpenAI docs server in your agent's settings. Check your tool's own guide for the exact steps.
-  - Add this skill to your agent, or paste its text into the chat. The skill file is written for your AI. You only need to read the answer and its links. Your agent asks you before it installs the docs server, and installing it is your choice.
+  - Add this skill to your agent, or paste its text into the chat. This is an imported OpenAI skill file, written for your AI agent, not for you to read as a guide. Paste or install it, then read only the answer and its links. You get the answer, the links, then the model advice, API check and upgrade steps if your question needs them. Your agent asks you before it installs the docs server, and installing it is your choice.
   - Ask your question. Say what you are building and which model you use now, if any.
   - Check the links in the answer. Open the main page to confirm it matches what you asked.
   - If you cannot connect the docs server, ask your AI to search only official OpenAI sites. Treat the answer with more care.

@@ -44,7 +44,7 @@ How to start:
 
 ## What you need
 
-This is a hiring job. Ignore any buyer brief or brand brain mentioned above. Start from the role below. If you also need the job post and the offer letter, run [Hire fairly, from job post to a checked offer letter](https://useaiblocks.com/workflows/hire-fairly-from-job-post-to-a-checked-offer-letter) before or after this one.
+This is a hiring job. The brand brain, buyer brief and "From the brand brain, read" lines above do not apply here: do not read brand files or pull offer facts, buyer quotes or voice lines into a hiring run. Hiring prerequisites are the role brief, the must-have list and the interview schedule, below. Ask for them once, in one short message, and ask only for what is missing; the "Check what's missing" step above works the same way. If you also need the job post and the offer letter, run [Hire fairly, from job post to a checked offer letter](https://useaiblocks.com/workflows/hire-fairly-from-job-post-to-a-checked-offer-letter) before or after this one.
 
 Before step 1, have the role brief and the must-have list. Before step 4, have every interviewer's filled-in scorecard and the interview schedule you ran.
 
@@ -73,8 +73,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 Pause here: Run the interviews and the work test. Every interviewer fills in their scorecard before they talk to anyone else about a candidate.
 
 4. **Compare on evidence.** Use the skill `fair-candidate-comparer`. Takes the filled-in scorecards and test results you bring after the pause, and any transcripts, rated against the scorecards in `outputs/step-02-interview-scorecard-builder.md` and the scoring guide in `outputs/step-03-work-sample-test-designer.md`. Compare the candidates on the scorecards alone, and flag any note that rests on feel or on something unrelated to the job. You make the call. Saves `outputs/step-04-fair-candidate-comparer.md`. Hand step 5 the comparison.
-5. **Draft every reply.** Use the skill `candidate-message-drafter`. Takes your hiring decision and the comparison in `outputs/step-04-fair-candidate-comparer.md` for the real reasons. Writes the offer call for the person you chose and a clear, kind reply for everyone else, with the real reason where you can give one. Nothing is sent until you say so. Saves `outputs/step-05-candidate-message-drafter.md`.
-6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Draft every reply.** Use the skill `candidate-message-drafter`. Takes your hiring decision and the comparison in `outputs/step-04-fair-candidate-comparer.md` for the real reasons. Writes the offer call for the person you chose and a clear, kind reply for everyone else, with the real reason where you can give one. Each rejection reason must come from the scorecard evidence in step 4. If no reason is recorded for a candidate, write no reason and say that the reply gives none. Nothing is sent until you say so. Saves `outputs/step-05-candidate-message-drafter.md`.
+6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then `CHECKS MISSED:` (each step check that failed or could not run, or `none`). This is not legal advice. Hiring and anti-discrimination rules differ by country, so the person should check the plan, test and replies against their own rules.
 
 ## What you hand back
 5 step files and the summary. The fourth file holds the comparison and the bias flags; the last holds the replies. Each file holds:
@@ -84,6 +84,8 @@ Pause here: Run the interviews and the work test. Every interviewer fills in the
 - Step 4: for each candidate, stage scores, evidence for and evidence against, bias flags (a note that rests on feel or an unrelated trait), and a line for your decision.
 - Step 5: for each candidate, the offer call or the reply, with the real reason where you can give one.
 - Summary: each step's file and every `MISSING:` line in one list.
+
+Next step: read the replies, send them yourself, then record each candidate's reply and the offer date in your hiring tool. Ignore the "After this" list below unless one item fits what you need.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

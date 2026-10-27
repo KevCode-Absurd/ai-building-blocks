@@ -15,7 +15,8 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 Scans all store pages and blog articles for missing or thin content (short body, missing SEO title/description, empty body). Thin pages can rank poorly and give customers little to read. Read-only — no mutations. Complements `seo-metadata-audit` (which covers products and collections; on AI Blocks this is the Store SEO gap finder).
 
 ## Prerequisites
-- Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_content`
+- A paid or account-based AI tool that can run commands (a plain chat cannot run this), and a Shopify store you can sign in to as staff.
+- Authenticated Shopify CLI session (the `read_content` scope lets the skill read pages and blog posts, and change nothing): `shopify store auth --store <domain> --scopes read_content`
 - API scopes: `read_content`
 
 ## Parameters
@@ -151,6 +152,8 @@ For `format: json`, emit:
 ## Output Format
 CSV file `content_audit_<YYYY-MM-DD>.csv` with columns:
 `type`, `id`, `title`, `handle`, `published_at`, `body_length`, `has_seo_title`, `has_seo_description`, `issue`
+
+The `issue` column holds one or more of these flags: "empty body" (nothing to read), "short body" (under `min_body_length` characters), "missing SEO title" and "missing SEO description". Fix empty bodies first, then short ones, then the missing search fields.
 
 ## Error Handling
 | Error | Cause | Recovery |

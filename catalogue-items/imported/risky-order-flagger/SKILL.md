@@ -13,11 +13,12 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
 ## Purpose
-Queries recent high-risk orders and takes two protective actions: tags the order for staff visibility and optionally places a fulfillment hold to prevent the order from shipping until reviewed. Complements `order-risk-report` (which only reads) with write actions that create a reviewable queue.
+Queries recent high-risk orders and takes two protective actions: tags the order for staff visibility and optionally places a fulfillment hold to prevent the order from shipping until reviewed. Complements `order-risk-report` (in this library: Fraud review queue builder), which only reads, with write actions that create a reviewable queue.
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_orders,write_orders,write_fulfillments`
 - API scopes: `read_orders`, `write_orders`, `write_fulfillments`
+- Before the first live run, confirm in the dry run that the `risk_level:high` query filter works on your store's API version (the files here are written for 2025-01). If the dry run returns no orders when you expect some, or an error, stop and fix the query before turning holds on.
 
 ## Parameters
 
@@ -27,14 +28,14 @@ Queries recent high-risk orders and takes two protective actions: tags the order
 | days_back | integer | no | 1 | Lookback window (default: last 24 hours) |
 | min_order_value | float | no | 0 | Only flag orders above this value |
 | tag | string | no | fraud-review | Tag applied to flagged orders |
-| hold_fulfillment | bool | no | true | Also place a fulfillment hold on flagged orders |
+| hold_fulfillment | bool | no | false | Also place a fulfillment hold on flagged orders. Off by default: the first run only tags. Turn it on only when the user asks for holds |
 | hold_reason | string | no | UNKNOWN_PAYMENT_RISK | Fulfillment hold reason |
 | dry_run | bool | no | true | Preview without executing mutations |
 | format | string | no | human | Output format: `human` or `json` |
 
 ## Safety
 
-> ⚠️ `fulfillmentOrderHold` prevents orders from being fulfilled until the hold is explicitly released. Customers will experience a shipping delay while on hold. Use `hold_fulfillment: false` if you only want to tag without blocking fulfillment. Run with `dry_run: true` to confirm the order list before committing. Release holds with the `order-hold-and-release` skill after review.
+> ⚠️ `fulfillmentOrderHold` prevents orders from being fulfilled until the hold is explicitly released. Customers will experience a shipping delay while on hold. Holds are off by default (`hold_fulfillment: false`), so the first run only tags. Set `hold_fulfillment: true` only when the user clearly asks for holds. Run with `dry_run: true` to confirm the order list before committing. Release holds with the Order hold manager (skill name `order-hold-and-release`) after review.
 
 ## Workflow Steps
 
@@ -189,5 +190,5 @@ CSV file `risk_tagging_<YYYY-MM-DD>.csv` with columns:
 ## Best Practices
 - Run within 1–2 hours of order placement — most fraud orders are placed and expected to ship same-day.
 - After a hold is placed, use `order-risk-report` to review the risk indicators in detail before deciding to cancel or release.
-- Release legitimate orders with the `order-hold-and-release` skill to minimize shipping delay.
-- Orders from repeat customers (`numberOfOrders > 3`) are unlikely to be fraudulent — consider filtering them out with `min_order_value` or a separate query.
+- Release legitimate orders with the Order hold manager (`order-hold-and-release`) to minimize shipping delay.
+- `min_order_value` only filters by the order total. It cannot filter by customer history. Repeat customers are less likely to be fraudulent, but to leave them out you need a separate query on `numberOfOrders` or a new parameter. Until then, check repeat customers' orders by hand before you release or cancel them.

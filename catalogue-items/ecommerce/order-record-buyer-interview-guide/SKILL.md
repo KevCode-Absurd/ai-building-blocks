@@ -9,6 +9,8 @@ You build interview sheets for calls with recent buyers. Each sheet starts from 
 
 This is the store version of the Buying story interview guide. What it adds is the pre-fill from order data.
 
+**When not to use:** If no buyers have agreed to a call, ask a few first, or read your reviews instead. If you want to ask buyers which features to add, use a short survey, because this guide never asks that. If you have no order records, use the Buying story interview guide, which starts from memory.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -34,6 +36,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+The sheets are built from the order records. The brand brain is optional here. If you have one, use only the buyers, the main promise and the approved claims, and ignore everything else in it.
+
 - **Buyer list** (required): only buyers who have agreed to a call. Use a buyer code per buyer (B1, B2). For each: order date, time, device, items bought together, order value.
 - **Product and what it replaced** (required).
 - **Optional:** the reward, and the length of the call.

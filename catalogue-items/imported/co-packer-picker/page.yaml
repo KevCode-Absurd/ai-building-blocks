@@ -32,7 +32,9 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text (the full skill file at the bottom of this page). The Python code in it is optional. Without code skills, ask your AI for plain-language answers.
   - Tell your AI what you need made or packed and why you need a co-packer.
+  - No code? Ask your AI to follow the scorecard in plain words. Score each candidate from 1 to 10 on quality, capacity, cost, expertise, certifications, lead times and track record. Count quality, cost, capacity and certifications double or more. Add up and rank.
   - Add your product details, rules, volumes, peaks and minimum orders.
+  - For the cost comparison, add your own unit cost and yearly fixed costs, and each co-packer's quoted unit price, setup fees and minimum order. The numbers in the code are placeholders, not real quotes.
   - Add your current co-packers and problems, if you have any.
   - Read the make-or-buy view first. Then check the scorecard and the questions for each candidate.
   - Fix any gaps with your AI before you share the plan. Mark anything you do not know as missing.
@@ -45,7 +47,7 @@ output_sample:
     - Your current co-packers and any issues (optional)
   output:
     - name: Executive Summary
-      contains: The co-packer's name, location, products, evaluation date, overall score, grade and a clear recommendation.
+      contains: The co-packer's name, location, products, evaluation date, overall score, grade and a clear recommendation. All values come from your own audit and quotes.
     - name: Scoring Detail
       contains: A table scoring quality, delivery, cost and service, with weights, targets and a pass or warning status.
     - name: Strengths

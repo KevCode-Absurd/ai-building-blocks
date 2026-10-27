@@ -28,6 +28,9 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
+## When to use and when not to
+Use it to test that your app can talk to Slack, in a sandbox workspace. Do not use it for a live company workspace, for real team work, or without a Slack app and both tokens. For real work, plan the bot as its own project once this test passes.
+
 ## Working rules
 
 - Use the supplied product, brand, account and evidence; no invented claims, testimonials, revenue or observations.
@@ -56,7 +59,7 @@ I already have SLACK_BOT_TOKEN and SLACK_APP_TOKEN in my .env.local.
 
 Do these things:
 
-1. Install the required packages: @slack/bolt
+1. Ask me to confirm before you install anything. Then install the required packages: @slack/bolt
 
 2. Create lib/slack/app.ts:
    - Import the Bolt App from @slack/bolt
@@ -90,7 +93,8 @@ Keep explanations simple. I'm not a developer.
 Before running this, you need:
 - A Slack App created at api.slack.com/apps
 - Socket Mode enabled
-- Bot Token Scopes: `chat:write`, `channels:history`, `app_mentions:read`
+- Bot Token Scopes: `chat:write`, `channels:history` (the bot reads every message in channels it is in, so it does not need the @mention scope `app_mentions:read`)
+- Event Subscriptions on, with the bot event `message.channels`
 - App-Level Token with `connections:write` scope
 - Both tokens in `.env.local`
 
@@ -103,7 +107,7 @@ npx tsx scripts/test-slack-bot.ts
 Then in Slack:
 1. Invite the bot to a channel: `/invite @YourBotName`
 2. Type: `ping`
-3. The bot replies: `Pong! I'm alive. Channel: #general, User: Chris`
+3. The bot replies: `Pong! I'm alive. Channel: [channel name], User: [who sent it]`
 
 ## What You Just Built
 
@@ -113,9 +117,10 @@ The Slack connection is the interface. Everything else plugs into it.
 
 
 ## What you get
+In this order:
+- The install step for `@slack/bolt`, run only after you say yes.
 - `lib/slack/app.ts`: the bot. It starts in Socket Mode and replies in the thread to any message containing "ping".
 - `scripts/test-slack-bot.ts`: the script that starts it, with a clean shutdown.
-- The install step for `@slack/bolt`, run only after you say yes.
 - A short plain explanation of Socket Mode, the two tokens and how to invite the bot.
 - The exact reply: `Pong! I'm alive. Channel: <channel name>, User: <who sent it>`.
 

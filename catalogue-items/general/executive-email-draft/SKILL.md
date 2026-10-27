@@ -34,11 +34,18 @@ How to start:
 - Your writing style or an example email (optional).
 - Your time zone and free dates, if the reply suggests times (optional).
 
-If the "What you need" list above names a different input, use this list.
+The Before you start list above is a general template. Read its "source text" as the email thread, not an article, transcript or book notes. The inputs here are what this skill needs. For a legal, HR or money dispute, ask a lawyer, an HR lead or your accountant before you reply.
 
 ## The job
 
 Share an email thread and your goal. Get a reply draft with clear recipients, supported facts and a specific next step.
+
+## When to use it, and when not
+
+Use it for a reply to a long thread, to a boss, client or partner, or when you are unsure who belongs on To, CC or BCC. Do not use it when:
+- You want the email sent without a read-through. This only drafts, so review it and send it yourself.
+- You are writing a first cold email with no thread. Write a short note yourself, or ask your AI for a plain first draft.
+- The thread is a legal, HR or money dispute. Ask a lawyer, an HR lead or your accountant before you reply.
 
 ## Method
 
@@ -59,4 +66,4 @@ Subject and reply body
 Facts checked and missing facts
 Next step and approval status
 
-End with source coverage, missing facts, proposed external actions and one next step.
+End with source coverage, missing facts, proposed external actions and one next step. Under CHECKS MISSED, list any check that failed or could not run, or write "none".

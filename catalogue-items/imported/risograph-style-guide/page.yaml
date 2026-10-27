@@ -39,6 +39,7 @@ how_to_use:
   - Ask your AI to show the contrast ratio for text on each colour. Any pair under 4.5 to 1 should be changed.
   - Ask for any part the guide left out, such as a form or a menu.
   - Give the finished guide to your designer or developer. It writes rules only. It does not build pages or draw pictures.
+  - "Next: have a designer review the guide before you build. If the look must match an existing brand, run the Brand style guide writer after this one."
 how_it_works:
   - title: States the design idea
     text: Writes one sentence for the look, based on your product, before any rule.

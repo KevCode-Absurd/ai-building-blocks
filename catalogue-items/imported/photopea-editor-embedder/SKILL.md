@@ -5,7 +5,7 @@ risk: safe
 source: community
 source_repo: yikuansun/PhotopeaAPI
 source_type: community
-license: MIT
+license: MIT # AI Blocks: MIT covers the code and scripts in this skill. The written text is CC BY 4.0 (see LICENSE-CONTENT). Keep the credit to yikuansun and sickn33.
 license_source: "https://github.com/yikuansun/PhotopeaAPI/blob/master/LICENSE"
 date_added: 2026-05-20
 ---
@@ -129,7 +129,7 @@ app.preferences.rulerUnits = Units.PIXELS;
 var doc = app.activeDocument;
 
 // Open watermark as smart object layer
-app.open("[YOUR LOGO URL]", null, true);  // placeholder: use a link to your own logo
+app.open("[YOUR LOGO URL]", null, true);  // placeholder: use a link to your own logo, hosted where the browser may load it from another site (cross-origin)
 var wm = doc.activeLayer;
 
 // Resize to 20% of document width

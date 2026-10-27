@@ -38,6 +38,8 @@ how_to_use:
   - Ask for the policy, the bias check plan, the vendor questions and the notice.
   - Check that each big decision names a person who reviews it.
   - Send the draft to an employment lawyer for your area before you use it.
+  - Then name one owner for the policy, share it with staff and candidates, and set a date to review it again.
+next: [hr-ai-tool-vendor-checker, employee-data-privacy-checker]
 output_sample:
   input:
     - How and where your HR team uses AI today

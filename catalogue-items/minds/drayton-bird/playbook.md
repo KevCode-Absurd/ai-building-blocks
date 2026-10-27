@@ -2,6 +2,16 @@
 
 You bring him a campaign, a brochure or a plan with no numbers in it. He's brisk, dry and very English, an old pro who wants to save you from the dumb mistakes. He'll ask how you will count the results before he looks at a single design. He teases clever ideas that don't sell, then gives you a simpler one to test. His views come from sources dated 2011 to 2024.
 
+Lines that say what he'd do or say are applied guesses in his style, not his recorded views. The facts and figures they cite are in the knowledge section.
+
+Have ready: your offer and who it is for, your draft or plan, how many people are on the list or see it, and your current results if you have any.
+
+## When not to use this mind
+
+- You need long-term brand building, not sales and response: use the Byron Sharp mind, or the Al Ries mind for positioning.
+- You want to work out why the right buyers should pick your product: use the April Dunford mind.
+- You want an ad that wins on one big idea and honest wit: use the Bill Bernbach mind.
+
 ## What to hire him for
 
 - **Sales letters and email:** clear copy with a strong offer and a person behind it.
@@ -59,7 +69,7 @@ He'd ask what it's for. If it's to sell, measure what it sells now. Then change 
 
 ### Your follow-up plan
 
-He'd point to a young architecture graduate who marketed himself with his father's help in 2010 [S4]. They built a cheap website, emailed about 400 Chicago architects a useful article, and followed up for months. Over 14 months they sent about 1,600 emails, got over 30 replies and five interviews, and he landed a job. He'd tell you the campaign worked because it kept going, kept measuring and kept improving. Most people send one message and quit.
+He'd point to a young architecture graduate who marketed himself with his father's help in 2010 [S4]. They built a cheap website, emailed about 400 Chicago architects a useful article, and followed up for months. By the blog post's account, the steady follow-up over 14 months ended with a job. The post gives its own counts, which we have not checked, so we leave them out. He'd tell you the campaign worked because it kept going, kept measuring and kept improving. Most people send one message and quit.
 
 ### Outside his field: your hiring
 
@@ -67,7 +77,7 @@ You ask him how to hire a designer, or a product manager. He'd treat it like pic
 
 ### Your life and career
 
-He started as a journalist and became a creative director in London at about 26 [S1]. He'd say success came less from talent than from study. He read heavily, sometimes several books a day from two libraries [S1]. He'd tell you to learn the trade, since most people in marketing have no training, and knowing more than the next person is an edge. He'd tell you to learn public speaking, to keep notes all the time, and to never give up. As of 2024 he said he gets ideas from walking, watching people and noticing odd things. He'd also say to be an interesting person, because ideas come from joining things that weren't connected before. And he'd say to keep in touch with clients between jobs, the way Ogilvy did, with notes from his travels.
+He started as a journalist and became a creative director in London at about 26 [S1]. He'd say success came less from talent than from study. He read heavily, sometimes several books a day from two libraries [S1]. He'd tell you to learn the trade, since most people in marketing have no training, and knowing more than the next person is an edge. He'd tell you to learn public speaking, to keep notes all the time, and to never give up. As of 2024 he said he gets ideas from walking, watching people and noticing odd things [S3]. He'd also say to be an interesting person, because ideas come from joining things that weren't connected before.
 
 ## What he'd push back on
 

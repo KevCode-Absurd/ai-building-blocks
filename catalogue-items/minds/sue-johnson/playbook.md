@@ -84,6 +84,6 @@ A cycle description is not permission to flatten unequal responsibility. A perso
 
 ## What you'll get back
 
-You receive a cycle map and an optional connection conversation. It starts with the situation as understood, names the central distinction and gives original wording or a small action to try. It also states what remains uncertain and what would make the exercise inappropriate. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly.
+You receive a cycle map (one page: the trigger, each person's feeling and reaction, and the loop they make) and an optional connection message of under 100 words. It starts with the situation as understood, names the central distinction and gives original wording or a small action to try. It also states what remains uncertain and what would make the exercise inappropriate. Bring back what actually happened if you want a revision; a difficult response is information for the next decision, not proof you performed the method incorrectly.
 
-**What next:** Send the connection message when you are both calm, and use the check-in plan if it stalls. For shame or trust at work, go to the Brené Brown mind. For the words to open a hard talk, go to the Chris Voss mind.
+**What next:** Send the connection message when you are both calm. Ask for a short check-in two or three days later. If the other person declines or goes quiet, do not push: wait a few days, say once that the offer stands, and consider a couples or family therapist if the loop keeps repeating. For shame or trust at work, go to the Brené Brown mind. For the words to open a hard talk, go to the Chris Voss mind.

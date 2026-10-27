@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: It applies a long rule set but each rule is checkable.
 new_slug: agent-friendly-cli-designer
 name: Agent-friendly CLI designer
-summary: Check your command-line tool against clear safety rules, so AI agents can run it with clean JSON output and clear errors. Get a fix plan.
+summary: Check your command-line tool against clear design rules, so AI agents can run it with clean JSON output and clear errors. Get a fix plan.
 job: build-software
 headline: Agent-friendly CLI designer
 subhead: Your command-line tool, reshaped so an AI agent can run it without breaking things. You get a clear rule set and a way to check each rule, so you know what is already safe and what still needs work.
@@ -10,6 +10,8 @@ explain: |
   Your command-line tool, reshaped so an AI agent can run it without breaking things. You get a clear rule set and a way to check each rule, so you know what is already safe and what still needs work.
 
   The core idea is to treat the agent like an untrusted caller. Output defaults to structured JSON, with a plain-text option for humans. Errors carry a code and a reason the agent can act on. Exit codes mean the same thing every time. Risky commands need an explicit confirmation, and any input is checked before it runs. The rules come in three levels, so you can adopt a small core first and add more later.
+
+  Limit: the rules are a design checklist from one contributor's proposal. They are not a safety certification. A confirmation flag such as --yes is not a person approving the action. Access and argument checks must be enforced in your code.
 when:
   - You are building a command-line tool that scripts or AI agents will call.
   - An agent keeps misreading your tool's messy text output.
@@ -33,6 +35,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text. No code needs to run.
   - Paste your tool's help text and the list of commands that change or delete things.
   - Add a sample of its current output and an error message. Say who or what will call it, such as a script or an AI agent.
+  - Tell your AI to keep your existing flags and output as they are unless you agree to a change.
   - Ask your AI to check the 20 Level 1 rules first and list every failure.
   - Fix the top priority failures from the plan, then paste your updated help text and output.
   - Ask your AI to run the same check again and confirm each fix.

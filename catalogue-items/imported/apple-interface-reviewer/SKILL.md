@@ -13,6 +13,12 @@ metadata:
 
 Design and audit apps against the Apple Human Interface Guidelines (HIG, [developer.apple.com/design/human-interface-guidelines](https://developer.apple.com/design/human-interface-guidelines)), including the **Liquid Glass** design language. HIG content evolves with each OS release — when a claim matters, verify against the live HIG pages cited in `references/`.
 
+## When not to use
+
+- Web pages or Android apps. Apple's rules do not apply there.
+- Reusable colour and spacing tokens. Use the design system auditor or design system file writer.
+- Real user research or personas. Talk to real users.
+
 ## Before Starting
 
 If `product-context.md` or `ios-design-context.md` exists, read it before asking questions. Then gather:
@@ -101,8 +107,6 @@ Surface these WITHOUT being asked: low contrast over translucent layers; interac
 - **What + Why + How** — "Expand the hit region (What) because 32 pt targets fail the HIG minimum (Why); pad to 44x44 via contentShape (How)."
 - **Confidence tagging** — 🟢 tool-verified / 🟡 needs device test / 🔴 assumed.
 
-## Related Skills
+## What next
 
-- **ui-design-system**: token-based component systems (not platform HIG rules).
-- **ux-researcher-designer**: persona/research validation (not visual styling).
-- **landing-page-generator**: web marketing pages, not native apps.
+Hand the fix list to a developer. After the fixes, run the batch check again, then test any glass surfaces on a real device with Reduce Transparency on.

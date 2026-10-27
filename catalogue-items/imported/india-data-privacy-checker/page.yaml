@@ -7,9 +7,9 @@ job: check-contracts
 headline: India data privacy checker
 subhead: Share your data use, purpose and role in India; get a dated map of possible duties and open questions.
 explain: |
-  Share your data, purpose and role. The skill checks current Indian sources, maps possible duties by start date and flags unknowns.
+  Share your data, purpose and role. If your AI can browse the web, the skill checks official Indian sources, maps possible duties by start date and flags unknowns. If it cannot browse, you get a list of unknowns, not confirmed duties.
 
-  The skill checks the 2023 Act and 2025 Rules, which have phased start dates. It uses terms such as data fiduciary and data principal. You describe how you collect and use data, and it maps supported provisions and gaps by effective date.
+  The skill works from the 2023 Act and 2025 Rules, which have phased start dates. Section numbers, penalty amounts and dates in the skill file are not verified by us. Match each one to the official notices before you rely on it. It uses terms such as data fiduciary and data principal. You describe how you collect and use data, and it maps supported provisions and gaps by effective date.
 when:
   - You collect customer data in India and need to know your duties.
   - You already follow GDPR and want to see what differs in India.
@@ -21,7 +21,7 @@ not_for:
   - "Your records are on paper only and never turned digital: the Act does not cover them, so no check is needed."
   - "You only need EU rules: ask a privacy lawyer or use the official GDPR text, as this checks India's law."
 you_give:
-  - How you collect, store and share personal data
+  - How you collect, store and share personal data, ideally as a simple data-flow map (what is collected, where it is stored, who receives it)
   - Where your users and servers are
   - Your current privacy notice and consent forms (optional)
   - Any children's data you handle (optional)
@@ -33,6 +33,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Use one that can browse the web, so it can check current Gazette dates and other official sources. Without web access the result is only a list of unknowns, because the skill will not state a duty as confirmed.
   - Paste the skill instructions into the chat, or upload the skill folder if your AI accepts files.
+  - "Before you start, write a simple data-flow map: what personal data you collect, where it is stored, and who receives it (staff, vendors, other countries). Paste it in. It saves guesswork on the first run."
   - Describe how you collect, store and share personal data. Say who your users are and where your servers are.
   - Add your privacy notice and consent forms if you have them. Mention any children's data.
   - Read the source list and dates first. Record the web address and the date you checked each source. Answer any questions about missing facts.

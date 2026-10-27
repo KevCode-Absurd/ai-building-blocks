@@ -11,7 +11,7 @@ subhead: Name a big brand and the tactic you want to copy, and paste its ads and
 explain: |
   When a big brand's ads look great, it is easy to copy them and see nothing happen. The ads may be working because people already know the brand, because it has shops and famous faces, or because outside funding pays for acquisition. Your ads have none of that.
 
-  This skill separates the ad account from what surrounds it. It asks if the ads would work from a cold start with no awareness, how many ads are aimed at people who already know the brand, what you cannot see (spend per ad, margins, funding), and whether a headline number is observed or modelled. It lists what the brand depends on, what carries over, and what claim risk comes with it. Each tactic gets a verdict and a fit score shows how much still works for you. Public data hides spend, so it judges structure, not performance.
+  This skill separates the ad account from what surrounds it. It asks if the ads would work from a cold start with no awareness, how many ads are aimed at people who already know the brand, what you cannot see (spend per ad, margins, funding), and whether a headline number is observed or modelled. It lists what the brand depends on, what carries over, and what claim risk comes with it. Each tactic gets a verdict and a fit score shows how much still works for you. Public data hides spend, so it judges structure, not performance. The teardowns credited for this skill are one speaker's unchecked opinion. They shaped the questions it asks, and no result relies on them as evidence about any named company.
 
 when:
   - You saw a big brand's ad library and want to copy what it does.
@@ -20,7 +20,7 @@ when:
 not_for:
   - The brand runs no public ads or pages. Study a competitor's own site and reviews by hand instead.
   - You have no budget for even a small test. Save the result and wait until you can fund one.
-  - You only want a count of a brand's ads by format. Do an ad library teardown by hand first, then come back.
+  - You only want a count of a brand's ads by format. Use the Ad library teardown counter first, then come back.
 
 you_give:
   - The brand and the tactic you want to copy
@@ -72,7 +72,7 @@ how_it_works:
   - title: Runs the cold start test
     text: Asks if these same ads would work with no brand awareness. One speaker's view is that the same ads would likely do far worse for a new brand. That is an opinion, not a measurement.
   - title: Checks the awareness mix
-    text: If almost all ads aim at people who already know the brand (one speaker counted over 90 percent for one brand, which is unverified), the account is a way to reach known buyers, not to find new ones.
+    text: If most of the brand's ads aim at people who already know it, the account is a way to reach known buyers, not to find new ones. Use your own count.
   - title: Lists what you cannot see
     text: Spend per ad, offer margin and funding are hidden. Ad library "winners" are guesses.
   - title: Checks observed against modelled

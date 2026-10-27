@@ -2,14 +2,16 @@ thinking: medium
 thinking_why: It builds many linked parts from a clear description.
 new_slug: biology-model-builder
 name: Biology model builder
-summary: Build a SimBiology model in MATLAB code from your list of species and reactions, with an optional diagram. Edit existing models the same way.
+summary: Build a SimBiology model in MATLAB code from your species and reactions, with an optional diagram. Needs paid MATLAB and SimBiology.
 job: build-software
 headline: Biology model builder
 subhead: Describe the reactions and species. Get a SimBiology model built in code, with a clear diagram. Bring the species and reactions to model. Then simulate or fit the saved model.
 explain: |
   Describe the species and reactions in your biological system, and get a working SimBiology model written as MATLAB code, with a diagram if you want one. You no longer need to click through the Model Builder by hand or guess function names.
 
-  The skill covers compartments, species, reactions, parameters, rules, events, doses and variants. It loads helper scripts first, then builds the model in steps. It only opens the Model Builder app when you ask for a visual, or when you hand it a project file whose layout must be kept. Modifying an existing model works the same way. It needs MATLAB with SimBiology.
+  The skill covers compartments, species, reactions, parameters, rules, events, doses and variants. It loads helper scripts first, then builds the model in steps. It only opens the Model Builder app when you ask for a visual, or when you hand it a project file whose layout must be kept. Modifying an existing model works the same way. It needs MATLAB with SimBiology, both paid MathWorks products.
+
+  Licence: you may use this only together with MathWorks products such as MATLAB. The BSD 2-Clause licence in LICENSE.md carries that condition, and the skill file also links MathWorks' own reuse licence.
 when:
   - You have a set of reactions on paper and need them as a SimBiology model.
   - You want to add a compartment, species or reaction to an existing model in code.
@@ -32,7 +34,8 @@ you_get:
   - A saved model file you can reopen
   - The result is a MATLAB script, a saved .mat or .sbproj file and a layout check count for the diagram
 how_to_use:
-  - Open an AI that can run MATLAB with SimBiology. Add the skill folder or paste its text into the chat.
+  - Gather first: your species list, the units for each, the form of each rate law, the compartment each species sits in, and starting values.
+  - Open an AI that can run MATLAB with SimBiology. Add the whole skill folder, and tell your AI the folder path so it can add the helper scripts to the MATLAB path. Pasting the text alone is not enough.
   - Paste your species, reactions, rate laws, starting values and units. Add a .sbproj file if you have one.
   - Say if you want a diagram. Without that request, the model is built in code only.
   - Run the code your AI writes and check the model has the parts you listed.

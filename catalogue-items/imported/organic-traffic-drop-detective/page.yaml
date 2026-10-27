@@ -31,12 +31,14 @@ you_get:
   - Pages and keywords hit hardest
   - An action plan
 how_to_use:
+  - "Before you start, gather: the dates, your deploy and site-change history, and exports from Ahrefs and Search Console. Paste the Required inputs list from the skill into the chat first. You need a paid Ahrefs account and Search Console access. Similarweb is optional and paid."
   - Open Claude, ChatGPT or Gemini. Paste the skill text from this page into a new chat.
   - "Describe the drop: what changed, by how much, the start date, and what you changed on the site lately."
   - Connect Ahrefs and Search Console if your AI can. If not, paste or upload exports from both. A paid Ahrefs account is needed.
   - Answer its questions. It works through five layers and stops when it has enough evidence.
   - Read the cause and the proof first. Check that the dates line up before you act on the plan.
   - If a data source is missing, the result says what is missing and what it affects. It will not guess numbers.
+  - Next, send technical findings to the SEO site auditor and track each fix with the SEO change tracker. Send tracking problems to whoever owns your analytics setup.
 output_sample:
   input:
     - What changed and by how much

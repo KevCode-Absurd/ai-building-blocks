@@ -20,13 +20,13 @@ argument-hint: "[describe the use case or system, or pass a triage result]"
 
 # /aia-generation
 
-1. Read `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md`. Confirm impact assessment house style is populated.
+1. Plain-chat intake. Ask the user for the countries where the system will run, their AI policy, their role (provider, deployer or both), and a past assessment to copy the format from. Use the default format if they have none.
 2. Determine risk track (fast or full) from governance tier and use case characteristics, using the framework below.
 3. Run intake — conversational, not a form.
-4. Regulatory classification for each regime in the footprint — research tier, prohibited-practice exposure, and applicable obligations; cite primary sources.
+4. Regulatory classification for each regime in the countries the user named — research tier, prohibited-practice exposure, and applicable obligations. Cite primary sources where you can find them. If you have no legal research tool, mark every citation and article number as unverified until the user checks the official text.
 5. Write assessment in house style (from seed doc, or default if none captured).
-6. Policy diff against `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md` AI policy commitments.
-7. Output: assessment doc + conditions list + handoff flags (privacy PIA, vendor review if needed).
+6. Policy diff against the AI policy the user pasted in step 1.
+7. Output: assessment doc + conditions list + handoff flags (privacy PIA, vendor review if needed). It is a draft for a lawyer to check, not a sign-off.
 
 ```
 /ai-governance-legal:aia-generation "AI résumé screening for HR"

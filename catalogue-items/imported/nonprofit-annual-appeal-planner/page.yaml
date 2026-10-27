@@ -43,7 +43,7 @@ works_best_with:
     - Solicitation copy goes to your whole donor file at once.
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
-  - Paste your donor group counts, gift history, goal, channel and send dates. Remove donor names if you can.
+  - Paste your donor group counts, gift history, goal, channel and send dates. Send no names, emails, addresses or other identifiers. Use group counts and donor ID numbers only. Check your data-protection policy and your AI tool's terms before you paste any donor records.
   - Give real cost data for what a gift pays for. If you have none, your AI will leave a bracketed blank to fill in.
   - Check the gift amounts, the impact lines and the story before anything goes out.
   - Have a person review the full appeal, because it goes to your whole donor list at once.

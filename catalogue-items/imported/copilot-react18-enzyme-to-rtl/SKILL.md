@@ -16,7 +16,9 @@ Before you start, ask the user to paste this skill into the AI first, then to ga
 3. A list of tests that cannot be translated 1:1 (tests of internal state or instance methods), each with the visible outcome you checked instead.
 4. A note on how the providers are wrapped (inline, or with the project's customRender helper).
 
-The new tests have not been run. Tell the user to run them in their own project.
+The new tests have not been run, and the AI output is untested. Tell the user to run them in their own project.
+
+Next steps to tell the user: run the full test suite on React 18, have a developer read the list of untranslated tests, and only then merge.
 
 ## The Philosophy Shift (Read This First)
 
@@ -37,7 +39,7 @@ This is not a 1:1 translation. Enzyme tests that verify internal state or instan
 
 ## API Map
 
-For complete before/after code for each Enzyme API, read:
+For complete before/after code for each Enzyme API, read these files if they are in the folder. If they are not, use the core template below and say which Enzyme calls you were unsure about:
 - **`references/enzyme-api-map.md`** - full mapping: shallow, mount, find, simulate, prop, state, instance, configure
 - **`references/async-patterns.md`** - waitFor, findBy, act(), Apollo MockedProvider, loading states, error states
 
@@ -93,6 +95,8 @@ const wrapper = mount(
 
 // RTL equivalent (use your project's customRender or wrap inline):
 import { render } from '@testing-library/react';
+import { MockedProvider } from '@apollo/client/testing';
+// ThemeProvider comes from your own theme library (for example styled-components or MUI).
 render(
   <MockedProvider mocks={mocks} addTypename={false}>
     <ThemeProvider theme={theme}>

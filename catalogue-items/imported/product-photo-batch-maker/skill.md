@@ -11,6 +11,18 @@ description: 多商品批量生图流水线。商品清单 CSV → 整批统一�
 
 > **For English readers (added by AI Blocks).** This file is written in Chinese. Keep one fixed style block word for word the same for every product, and change only the product details. Cost figures in this file (about 5 credits per image, "about 7 折" meaning roughly 30% off at batch scale, about 500 credits for 100 products, and about 6 times the cost for the second model) are the author's own figures for the dLazy service. Check them against dLazy's current price list. The script shows a price check with `--dry-run` but does not stop on its own when spending hits a cap, so watch the total yourself. The last step named a separate skill (detect-task) that is not included, so we replaced it with a manual check of a 10% sample. This copy has no automatic spending stop and does not build a contact sheet. report.csv has one row per product, marked ok or fail. English prompt template: "Product photo for a catalogue. Image 1 is the product: [category, colour, material, key details]. Keep its colour, material texture and style details exactly as in image 1. [FIXED STYLE BLOCK, the same word for word for every product: background, light, camera angle, shadow]. Realistic commercial product photography, no text, no watermark."
 >
+> **English version of the batch loop (added by AI Blocks).** Same method as the Chinese loop in section 3. The style block is fixed for the whole batch. Only the product description changes per row.
+>
+> ```bash
+> SPEC='Placed in one shared look: [BACKGROUND], [LIGHT], [CAMERA ANGLE], a consistent product shadow below, and the same framing and spacing across the whole set. Realistic commercial product photography, no text, no watermark.'
+>
+> while IFS=, read -r SKU IMG DESC; do
+>   dlazy seedream-5.0 >     --prompt "Product photo for a catalogue. Image 1 is the product: ${DESC}. Keep its colour, material texture and style details exactly as in image 1. ${SPEC}" >     --images "$IMG" --size 1:1 --resolution 2k >     --save "out/${SKU}.jpg"
+> done < manifest.csv
+> ```
+>
+> Change nothing in SPEC once the batch has started. If you change it, rerun the whole batch.
+>
 > **Set a spending cap first.** The loop below has no spending stop. Before the full run, work out price per image times number of products, write down the most you accept, and run in chunks (for example 20 products at a time) while you check your credit balance between chunks.
 
 ---
@@ -52,10 +64,10 @@ done
 
 | 能力 | 说明 |
 | --- | --- |
-| 批量规模 | 一批最多 100 个商品（对应企业功能的规格） |
-| 成本优势 | 批量场景下单图算力成本可降至约 7 折 |
-| 协作 | 多人在线协作、出片进度实时追踪 |
-| 资产共享 | 共享模特 / 参考图 / 作品 / 算力点 |
+| 批量规模 | 一批最多 100 个商品（对应企业功能的规格）。Not part of this skill: this describes dLazy's paid enterprise tier. |
+| 成本优势 | 批量场景下单图算力成本可降至约 7 折。Not part of this skill: the author's claim for dLazy's enterprise tier; check the current price list. |
+| 协作 | 多人在线协作、出片进度实时追踪。Not part of this skill: enterprise tier only. |
+| 资产共享 | 共享模特 / 参考图 / 作品 / 算力点。Not part of this skill: enterprise tier only. |
 | 本技能落地 | 清单驱动循环 + 并发控制 + 失败重试 + 按 SKU 归档 + 汇总报告 |
 
 **不做**：不在同一批里混用不同视觉规范（那不是一批）；不跳过抽样质检直接全量上架；不因为批量就放宽商品保真要求。

@@ -18,6 +18,8 @@ metadata:
 
 # Read and Write Medical Data
 
+AI Blocks note on the licence: the licence link in the front matter above points to a different MathWorks page. In this catalogue, the LICENSE.md file in this folder governs (BSD 2-Clause, with the rule that you use it only with MathWorks products such as MATLAB).
+
 Read, write, and manipulate medical imaging data in MATLAB. This skill covers both Image Processing Toolbox (IPT) functions and Medical Imaging Toolbox (MIT) enhanced APIs.
 
 ## When to Use

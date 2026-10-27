@@ -40,6 +40,8 @@ How to start:
 
 ## What to collect first
 
+The "Before you start" block above is shared text. Ignore its "Your question" and "Source text" lines. This agent takes the discovery notes and product facts listed below.
+
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:` in the answer, or label a stand-in `ASSUMED:` and say what to replace it with.
 
 1. The buyer's problem in their words, with any numbers they gave. If there are no numbers, write `MISSING: buyer's numbers` and do not make up a cost.
@@ -72,7 +74,9 @@ Use these headings, in this order:
 5. Competitive notes (only if rivals are named)
 6. Doubt decoder
 7. Known limits
-8. Still to check
+8. Still to check (also list every check that failed or could not run, the CHECKS MISSED list, or write "none")
+
+The "After this" links above are shared suggestions. Offer them only if they fit the deal, and give the link if the skill is not added yet.
 
 ## Rules
 

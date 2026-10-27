@@ -68,7 +68,11 @@ df["amount"] = pd.to_numeric(df["amount"], errors="coerce")
 df["customer_name"] = df["customer_name"].fillna("Unknown")
 # Leave blank emails blank and flag them for the source. Never invent contact details.
 df["email_missing"] = df["email"].isna()
-df["amount"] = df["amount"].fillna(df["amount"].median())
+# Median fill only when fewer than 5% of amount values are blank (Workflow step 2). Otherwise leave blanks, flag them and ask the user.
+if df["amount"].isna().mean() < 0.05:
+    df["amount"] = df["amount"].fillna(df["amount"].median())
+else:
+    df["amount_missing"] = df["amount"].isna()
 df["region"] = df["region"].fillna(df["region"].mode()[0])
 # Leave blank dates blank and flag them. Do not copy a date from another row.
 df["order_date_missing"] = df["order_date"].isna()

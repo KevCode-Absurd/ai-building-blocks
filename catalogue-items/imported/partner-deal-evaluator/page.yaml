@@ -30,13 +30,14 @@ you_get:
   - 90-day joint plan
   - Revenue share band with stop criteria
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. For the scripts, use an AI that can run Python code and read files.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. For the scripts, use an AI that can run Python code and read files. The three scripts (partner_tier_classifier.py, joint_gtm_planner.py, revshare_modeler.py), the intake template and the reference files must be in the skill folder. If any are missing, your AI works through the same steps by hand in chat and says the result is by hand.
   - Tell your AI who the partner is, what they ask for, and what they bring. Add your product, price and margin.
   - Answer its questions one at a time. It first checks whether the partner has their own customers. You must supply the partner's proof of demand and your own margin yourself. Without them, the tier call cannot be trusted, and your AI writes "unknown".
   - Without Python, your AI works through the same steps by hand in chat. The answer is less exact.
   - The skill names researchers, companies and case studies. The author did not check these. Treat them as the author's rules of thumb, not as research results.
   - Read the tier call, the 90-day plan and the revenue share range. Check them against your own numbers.
   - Put the stop criteria into the contract before you sign. You make the final call.
+  - The tier call and the revenue share band carry over to the Partner profit tester (to check the money) and the Partner deal terms writer (to draft the terms). Copy the tier, the revenue share range and the stop criteria across.
   - Take the tier call and revenue share band to whoever approves partner deals. Ask your sales operations or deal desk to handle pricing questions after the deal is signed.
 output_sample:
   input:

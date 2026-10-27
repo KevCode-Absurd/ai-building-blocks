@@ -20,7 +20,9 @@ Calculates the premium or discount of an ETF's market price relative to its Net 
 
 **Why this matters:** An ETF's market price can diverge from the value of its underlying holdings (NAV). When you buy at a premium, you're overpaying relative to the assets; at a discount, you're getting a bargain. This divergence is typically small for liquid US equity ETFs but can be significant for bond ETFs, international ETFs, leveraged/inverse products, and crypto ETFs — especially during periods of market stress.
 
-**Important**: For research and educational purposes only. Not financial advice. yfinance is not affiliated with Yahoo, Inc.
+**Important**: For research and educational purposes only. Not financial advice. yfinance is not affiliated with Yahoo, Inc. It is an unofficial package that reads Yahoo's web pages, so it can be delayed, break or be blocked without notice, and using it may not suit Yahoo's terms. Tell the user this before you fetch anything. For the official fund value, send the user to the fund issuer's published NAV page.
+
+**Have ready (ask for anything missing):** an AI that can run Python and reach the web, one or more ETF tickers, and optionally a list of tickers to scan and a time period. If a ticker or period is missing, ask. Do not guess a ticker.
 
 ---
 
@@ -159,7 +161,7 @@ Use this framework to explain whether the premium/discount is meaningful:
 | +/- 1.0% to 3.0% | Significant — common for less liquid, international, or specialty ETFs |
 | Beyond +/- 3.0% | Large — may indicate stress, illiquidity, or structural issues |
 
-**Context matters by category.** The bands here and in the size table above are rules of thumb from the skill's author. They are not sourced limits. Say so when you use them.
+**Context matters by category.** The bands here, the size table above and the category figures below are rules of thumb from the skill's author. They are not sourced limits. Say so when you use them.
 - **US large-cap equity** (SPY, QQQ, IVV): premiums > 0.10% are unusual
 - **Bond ETFs** (AGG, HYG, LQD, TLT): discounts of 0.5-2% happen during volatility
 - **International/EM** (EEM, VWO, KWEB): time-zone mismatch causes regular 0.3-1% deviations
@@ -290,6 +292,8 @@ After gathering data, explain the premium/discount using this diagnostic framewo
 
 **In plain words:** use this only when an ETF has just jumped or dropped hard and you want to know how much of the move comes from the fund's holdings and how much from other forces, such as options trading. It gives a rough, upper-bound estimate with stated assumptions. It cannot predict price, and it cannot show what dealers actually hold. For a normal premium or discount check, use Sub-Skill A.
 
+**Research only.** Nothing here is a reason to buy or sell. Do not present dealer positioning or a gamma squeeze as a trade idea, and do not guess what happens next.
+
 **Goal**: When an ETF has just experienced a dramatic intraday move that diverges from its underlying holdings, decompose the move into (1) a fundamental NAV-driven component and (2) an "excess premium" driven by structural forces — most commonly options dealer gamma hedging, AP arbitrage breakdowns, or sentiment surges. Then assess how long the premium will likely take to converge.
 
 This sub-skill is appropriate when the user reports or asks about:
@@ -323,8 +327,8 @@ Interpret the output:
 
 - **`net_gex_squeezemetrics_$` highly negative** → dealers are short gamma; rallies will be amplified by their hedging buys. A setup that can feed a gamma squeeze. This describes positioning, not a prediction or a trade idea.
 - **Concentration on a single near-dated strike** (e.g., heavy open interest in one strike of next month's calls) → squeeze is fragile and concentrated. When that strike expires or the spot moves past it, the gamma decays sharply.
-- **ATM IV well above the recent average** (e.g., 78% against a typical 30–40%) → market is pricing in continued large moves; option premium decay alone will provide some convergence pressure over days.
-- **Call/Put OI ratio > 2.5** → call-heavy positioning, consistent with a bullish gamma squeeze setup.
+- **ATM IV well above the recent average** (for example, IV of [CURRENT IV]% against a typical [USUAL RANGE]%; any threshold is an unsourced rule of thumb) → market is pricing in continued large moves; option premium decay alone will provide some convergence pressure over days.
+- **Call/Put OI ratio well above 1** (the 2.5 cut-off is an unsourced rule of thumb) → call-heavy positioning, consistent with a bullish gamma squeeze setup. This describes positioning only. It is not a trading signal.
 
 ### E3: Compare structural buying pressure to actual volume
 
@@ -386,6 +390,16 @@ Format the answer in this order:
 - Premium/discount can change rapidly during market hours — this is a snapshot, not a live feed
 - Small premiums/discounts (< bid-ask spread) are **market microstructure noise**, not real mispricing
 - Don't recommend buying or selling on premium/discount alone — present the data and let the user decide
+
+### Output shape
+
+Pick the one that matches the sub-skill you ran:
+
+- **Snapshot (A):** headline line (ticker, name, premium or discount %), then Market price, NAV, the formula with numbers, a size label, a small peer table (ticker, premium %), and caveats.
+- **Comparison (B) and screener (C):** one table with columns ticker, name, price, NAV, premium %, bid-ask spread %, category. Sorted from deepest discount to highest premium, then a short note on patterns and how many tickers had no NAV.
+- **Deep dive (D):** the snapshot, then a data table (volatility, volume, assets, expense ratio), then likely causes of the gap and whether it should persist.
+- **Surge decomposition (E):** the five parts listed in E5.
+- Always end with the caveats below.
 
 ### Formatting
 - Use markdown tables for multi-ETF comparisons

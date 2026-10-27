@@ -6,7 +6,7 @@ This is drawn from transcripts of his talks (Stanford 2011, TEDxBerkeley 2014), 
 
 Funny, quick and punchy. He talks in numbered lists: ten commandments, eleven steps, a "top 10" format. In 2011 he explained why: most tech executives speak badly and go long, so a list lets the room know how much longer the pain will last. Each rule gets a catchy name, often a pun or a song title: "Don't worry, be crappy", "Churn, baby, churn", "Roll the DICEE".
 
-He tells short, vivid stories: ice cut from frozen lakes, a car key that stops his teenage son speeding, a washing machine photo sent from Brazil, villagers adding shrimp to meals. He teases big companies, long mission statements, Windows and himself, including the $2 billion he passed up at Yahoo and quitting law school after two weeks.
+He tells short, vivid stories: ice cut from frozen lakes, a car key that stops his teenage son speeding, a washing machine photo sent from Brazil, villagers adding shrimp to meals. He teases big companies, long mission statements, Windows and himself, including the $2 billion he says he passed up at Yahoo (his own estimate, unverified) and quitting law school after about two weeks (by his own account).
 
 Spoken, he rambles on purpose. In 2011 he said a great speaker goes all over the place and comes back. He interrupts himself with asides, says "arguably", "I would argue" and "here's the thing", and often follows a candid anecdote with a general lesson. He swears lightly and calls people who ignore his rules "bozos". His 2011 stage humour leans on stereotypes that don't age well, so a fair voice keeps the energy and drops those.
 

@@ -2,12 +2,14 @@ thinking: medium
 thinking_why: It follows the extension rules, with a few design choices.
 new_slug: shopify-checkout-customizer
 name: Shopify checkout customizer
-summary: "Build a Shopify checkout customizer: say what checkout should add, like a gift note field or upsell, and get working extension code."
+summary: "Build a Shopify checkout customizer: say what checkout should add, like a gift note field or upsell, and get starter extension code to finish."
 job: build-software
 headline: Shopify checkout customizer
-subhead: Working checkout code for the change you want, such as a gift note field, a post-purchase upsell or a rule that blocks bad orders. It stays safe when Shopify updates checkout.
+subhead: Starter checkout code for the change you want, such as a gift note field, a post-purchase upsell or a rule that blocks bad orders. You fill in the placeholders before it runs. It stays safe when Shopify updates checkout.
 explain: |
-  Working checkout code for the change you want, such as a gift note field, a post-purchase upsell or a rule that blocks bad orders. It stays safe when Shopify updates checkout.
+  Starter checkout code that needs your placeholders filled in, for the change you want, such as a gift note field, a post-purchase upsell or a rule that blocks bad orders. It stays safe when Shopify updates checkout.
+
+  The sample upsell throws an error until you write the function that fetches your offer product. The age example is a tick box, not a legal age check.
 
   It picks the right extension type: checkout screen add-ons, post-purchase offers, customer account pages, thank-you page and order status changes. It scaffolds the extension with the Shopify CLI, writes the interface code, wires in custom fields, and adds validation rules where you need them. Extensions run in a sandbox, so they keep working with Shop Pay and new features. You need the Shopify CLI, a Partner account, and Shopify Plus or checkout extensibility.
 when:
@@ -17,8 +19,9 @@ when:
   - You want to add content to the customer account or order status page.
 not_for:
   - Your store has no Shopify Plus or checkout extensibility. Ask a Shopify developer to change the theme or Liquid files instead.
-  - You need backend rules, such as discounts or shipping logic that run on Shopify's servers. Use the Shopify Functions skill for that.
+  - You need backend rules, such as discounts or shipping logic that run on Shopify's servers. Ask a Shopify developer to write a Shopify Function for that.
   - You need real legal age checks. The age example here is a tick box the buyer fills in, so use a proper age check service.
+  - You want a discount on an upsell. Ask a Shopify developer to add the discount to the order change, and do not show a discount in the banner until it is applied.
 you_give:
   - The change you want at checkout, such as a gift note field or an upsell
   - The page it should appear on, such as checkout, thank-you page or customer account

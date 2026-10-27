@@ -6,6 +6,8 @@ summary: Run an agent readiness check on your repo and get a dashboard of what s
 job: set-up-ai
 headline: Agent readiness dashboard builder
 subhead: Give your AI access to your code repo. It runs the AgentRC readiness scan and builds one web page from the results. The page shows your score, each weak spot and a fix plan.
+explain: |
+  Source: an MIT-licensed copy of the acreadiness-assess skill from github/awesome-copilot (commit 613efc8). We only gave it a plain name.
 not_for:
   - "You cannot run Node 20 or newer, or cannot share the repo with an outside tool: ask a developer to run the scan, or skip it."
   - "You want a quick, plain report with no custom look: run the built-in agentrc readiness command with its visual option instead."
@@ -13,7 +15,7 @@ not_for:
 how_to_use:
   - Before you start, check your company's rules with IT. The scan reads your repo files, and a cloud AI tool may send them off your machine.
   - Use an AI that can run code and edit files in your repo, such as Claude Code or GitHub Copilot. A plain chat window will not work.
-  - Check that Node 20 or newer is installed. Your AI can run node --version to confirm. The scan downloads AgentRC from GitHub with npx, so it needs web access. Pin a release tag or commit from github.com/microsoft/agentrc when your AI asks, so you know which version runs. Without a pin it runs the latest upstream code. The scan reads your repo files and passes them, and the scanner output, to your AI tool. Check that this is allowed before you run it on private code.
+  - Check that Node 20 or newer is installed. Your AI can run node --version to confirm. The scan downloads AgentRC from GitHub with npx, so it needs web access. Pick a release tag or commit from github.com/microsoft/agentrc before you start. Do not run the scan without a pin. If you cannot choose one, stop and ask a developer. The scan downloads and runs code from GitHub, and a pin makes sure you know which version runs. The scan does not skip .env files, keys or other secrets, so remove them from the repo copy or skip this scan. The scan reads your repo files and passes them, and the scanner output, to your AI tool. Check that this is allowed before you run it on private code.
   - Install the skill using your AI tool's steps for adding skills. The ai-readiness-reporter agent is optional. If you do not have it, your AI builds the page from report-template.html itself.
   - Ask your AI to run the acreadiness-assess skill. Add your policy file if you have one.
   - Open reports/index.html in your browser and read the fix-first list.

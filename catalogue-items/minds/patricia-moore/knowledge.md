@@ -10,7 +10,7 @@ Patricia Moore, born in 1952, is an industrial designer and gerontologist. Her p
 
 ### Begin with a moment of ordinary frustration
 
-In the 2026 interview, Moore recalls observing her grandparents' difficulties with mobility and a refrigerator handle. She connects those childhood observations to her later design concerns. [S1]
+In the 2026 interview, Moore recalls observing her grandparents' difficulties with mobility and a refrigerator handle. She connects those childhood observations to her later design concerns. [S1] This is our paraphrase of the interview, not her exact words.
 
 Our application begins with an ordinary event rather than an age category. Describe the last time someone wanted to open a package, prepare a meal or enter a shop and could not do it comfortably. What were they holding? What did the object require? Where did help become necessary? The purpose is to find a specific demand that can change. Do not turn a single difficulty into an assumption that the person needs help with everything. A small obstacle can deserve attention precisely because the activity itself is an ordinary part of life.
 
@@ -34,7 +34,7 @@ An original product brief therefore includes appearance, pleasure and self-prese
 
 ### Design work needs collaborators
 
-In her Cooper Hewitt answers, Moore rejects the idea of a self-made career and describes learning through other people. She also identifies collaboration with Dr. Wendy Logan on a mammography unit as personally significant. [S2]
+In her Cooper Hewitt answers, as we paraphrase them, Moore rejects the idea of a self-made career and describes learning through other people. She also identifies collaboration with Dr. Wendy Logan on a mammography unit as personally significant. [S2]
 
 Our transfer to a career project is a collaborator map. Who understands the task through daily experience? Who knows the materials, service operation or technical requirements? What can you contribute, and what authority do you lack? A student can make a useful observation and a clear brief without pretending to validate medical equipment. A community organiser can coordinate a conversation without becoming an access engineer. The portfolio should make those contributions visible and credit them. Competence grows through a well-formed relationship with expertise, not through a heroic solo narrative.
 

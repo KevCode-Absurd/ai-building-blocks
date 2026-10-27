@@ -6,9 +6,9 @@ job: keep-customers
 thinking: high
 thinking_why: It must weigh mixed signals, show its reasoning and not invent usage or goals. Use a model that reasons well and marks every gap.
 explain: >-
-  Most accounts that leave gave signs weeks earlier. Logins fell. A key
-  contact went quiet. Support tickets piled up. By the time a renewal is
-  close, it is late to fix. This customer success manager agent reads the facts
+  The role profile says that accounts which leave often show signs weeks
+  earlier. Logins fall. A key contact goes quiet. Support tickets pile up. By
+  the time a renewal is close, it is late to fix. This customer success manager agent reads the facts
   you have on one account and shows you which signs matter and what to do about
   them.
 

@@ -7,6 +7,8 @@ job: build-software
 headline: SerDes link modeler
 subhead: Give it a data rate and a channel. Your AI writes MATLAB code that builds the link model and tunes the equalizers. You get eye diagrams, jitter results and IBIS-AMI files.
 explain: |
+  This is for MATLAB signal integrity engineers. It needs paid MATLAB and SerDes Toolbox licences before you start, and you may use it only with MathWorks products.
+
   A working model of a high-speed serial link, with equalisation tuned and eye diagrams plotted. It uses MATLAB's SerDes Toolbox and covers NRZ and PAM links from PAM3 to PAM16.
 
   Start from a target data rate and channel loss, or from a reference design such as PCIe, USB4, DDR5 or UCIe. Load a Touchstone channel file, or model crosstalk. Then tune FFE, CTLE and DFE settings, sweep parameters, and check eye height, eye width, bathtub curves and jitter parts. The skill also builds IBIS-AMI models for transmitters, receivers, redrivers and retimers, and tests them against the behavioural model. It includes rules that avoid silent setup errors.

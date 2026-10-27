@@ -9,7 +9,7 @@ subhead: A market pay check for a role, a scan of your pay data for outliers and
 explain: |
   A market pay check for a role, a scan of your pay data for outliers and a model of stock grants. It helps you set offers and plan raises. It is not pay or tax advice.
 
-  There are three ways to use it. Ask what to pay a role in a city. Upload a sheet of your pay bands and see who sits too high or low. Or model an equity grant, such as 10,000 shares over four years at a given price. It looks at base, bonus, equity and benefits together, and at role, level and location. You verify the figures before acting.
+  There are three ways to use it. Ask what to pay a role in a city. Upload a sheet of your pay bands and see who sits too high or low. Or model an equity grant: shares, vesting years and a share price. It looks at base, bonus, equity and benefits together, and at role, level and location. You verify the figures before acting.
 when:
   - You need an offer number for a new hire.
   - You want to find people paid far off their band.
@@ -32,7 +32,7 @@ how_to_use:
   - Gather the role, level and city. If you have a pay sheet, have the file ready.
   - Open Claude, ChatGPT or Gemini and paste the skill instructions.
   - "Pick one option: ask what to pay a role, upload your pay bands, or ask for an equity grant model."
-  - Add your details. For a pay file, use an AI that can read uploads.
+  - Add your details. For a pay file, use an AI that can read uploads. Before you upload, remove employee names or swap them for IDs, and check your AI tool's data-retention settings.
   - Check every figure against a named source before you act. Ask your AI to label each range as web-sourced, supplied by you, or "no source found". It should leave out any range it cannot source.
   - Take the result to your hiring manager or pay committee as a starting point, not a final answer.
 output_sample:
@@ -42,6 +42,7 @@ output_sample:
     - Market pay data you trust (optional)
   prerequisites:
     - An AI that can read an uploaded file, if you share a pay sheet
+    - Market data note. Tell your AI which country and currency your benchmarks use. The skill is written around US-style pay examples.
     - A paid pay-data or HR system connection is optional; without it, your AI uses web research and what you provide
   output:
     - name: Market Benchmarks

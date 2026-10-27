@@ -9,7 +9,7 @@ subhead: A number you can defend when someone asks how big a change could be. Yo
 explain: |
   A number you can defend when someone asks how big a change could be. You get a low, base and high estimate, never a single figure, plus a list of every assumption behind it.
 
-  First the skill sorts your idea into one of four types: more revenue, lower cost, less risk or saved time. Each type uses its own formula. It then collects your baseline, how many people or orders are affected, the expected lift, the time frame and how sure you are. It builds the point estimate, adds the range, and writes the result in plain words so a boss or client can act on it or rank it against other ideas.
+  The skill sorts your idea into one of four types: more revenue, lower cost, less risk or saved time. Each type uses its own formula. It builds the point estimate, adds the range, and lists every assumption, so a boss or client can act on it or rank it against other ideas.
 when:
   - You found a gap in your data and need to say what fixing it is worth.
   - You have ten ideas and need to rank them by likely payoff.
@@ -36,7 +36,7 @@ how_to_use:
   - Paste your baseline number, who is affected, the change you expect and your time frame.
   - Say how sure you are of each number. Your AI will mark the weak ones as assumptions.
   - Check the low, base and high figures and the assumption log. Change any input that looks wrong and run it again.
-  - Use the plain summary to share the estimate, or rank it against your other ideas.
+  - Use the plain summary to share the estimate, or rank it against your other ideas. Take the low, base and high figures into that ranking. Use the business case template only for decisions above a size you set.
 output_sample:
   input:
     - Your current baseline number

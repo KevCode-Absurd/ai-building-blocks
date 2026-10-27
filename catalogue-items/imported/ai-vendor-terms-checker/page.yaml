@@ -9,6 +9,8 @@ subhead: Spot the risky clauses in an AI vendor's contract before you sign. You 
 explain: |
   Spot the risky clauses in an AI vendor's contract before you sign. You get the key issues first, then a clause by clause review and suggested wording changes. It is a first pass and is not legal advice.
 
+  This is Anthropic's vendor-ai-review skill under the Apache 2.0 licence. We changed it for plain chats: the references to its plugin config files, matter workspaces and slash commands are removed. The review method is the original.
+
   You supply the AI addendum, the main agreement or the terms of service. It checks whether your inputs can be used to train the vendor's models, how confidential your data stays, what happens when the vendor changes the model, who owns outputs, liability limits, incident notice, your right to human review, and use limits. It also compares the terms with your own AI policy and notes where they disagree. A missing AI addendum is flagged.
 when:
   - You are about to sign with an AI tool and want to know what you are agreeing to.
@@ -34,7 +36,7 @@ how_to_use:
   - Paste your AI policy. If you have none, say so and accept provisional mode, where the check runs on common positions.
   - Ask your AI to review the terms. Read the bottom line first, then the term-by-term review.
   - Check the redlines and the policy differences. Take the summary to a lawyer before you sign anything important.
-  - The setup interview and the plugin config files named in the skill are not needed, and you can ignore any reference to them in a plain chat. In a plain chat, paste your AI policy instead, or say "provisional". The skill then reviews against common positions and tags every finding as provisional.
+  - Without an AI policy, the skill reviews against common positions and tags every finding as provisional.
 output_sample:
   input:
     - The vendor's AI addendum, main agreement or terms of service

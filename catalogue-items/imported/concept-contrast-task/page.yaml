@@ -10,6 +10,8 @@ explain: |
   A learning task that shows students the difference between two ideas they keep mixing up, by putting the right examples side by side. It follows variation theory, which says people notice a feature only when they see it change.
 
   You name the concept and the common confusion, such as students thinking a bigger shape always has a longer perimeter. Claude finds the one critical feature to notice, then uses four moves: contrast the idea with what it is not, vary that feature while holding the rest fixed, show it in different settings, and bring features together. The result is a short task with worked examples and teacher questions. It is built for any subject.
+
+  Source and licence: this is Gareth Manning's variation-theory-task-designer skill, shared under CC BY-SA 4.0. If you reuse or adapt the skill text, keep his credit and share your version under the same licence.
 when:
   - Students mix up two ideas such as area and perimeter, or affect and effect.
   - Your explanation is clear to you but the same error keeps coming back.

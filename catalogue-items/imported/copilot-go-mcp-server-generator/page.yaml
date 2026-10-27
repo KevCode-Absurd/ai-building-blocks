@@ -2,10 +2,10 @@ thinking: high
 thinking_why: It compares evidence and checks changes against the goal.
 new_slug: copilot-go-mcp-server-generator
 name: Go MCP server starter builder
-summary: Build a Go MCP server project from a plain description of your tools, with a starting layout, config, README and tests to run before you connect it.
+summary: "Build a Go MCP server project from a plain description of your tools, with layout, config, README and tests. The code is untested, so run go build and fix any SDK calls."
 job: connect-tools
 headline: Go MCP server starter builder
-subhead: "Describe the tools you want your AI to call, and the data behind them. You get a Go MCP server project with a clear folder layout, typed tools, a README and a first test. You need Go installed and an AI that can write files."
+subhead: "Describe the tools you want your AI to call, and the data behind them. You get a Go MCP server project with a clear folder layout, typed tools, a README and a first test. You need Go installed and an AI that can write files. The code has not been compiled against go-sdk v1.0.0, so expect to fix some SDK calls before go build passes."
 explain: |
   An MCP server is a small program that lets an AI use your tools or data, such as a customer list or an order lookup. This Go MCP server builder writes the starting project for you, using the official Go SDK from the Model Context Protocol team.
 
@@ -35,16 +35,18 @@ you_get:
   - A README with install, run and tool descriptions
   - A main_test.go with a first test for each tool
 how_to_use:
+  - Know this first. The code targets go-sdk v1.0.0 and has not been compiled yet. You must run go build and go test and fix any SDK calls that have been renamed before you rely on it.
   - Install Go on your computer. Use an AI that can create files and run commands, such as Claude Code or Codex.
   - "Write down the tools you want in plain words. For each one give a name, what it needs and what it returns. Two or three tools is a good start."
   - Paste the skill and your tool list. Say the project name, and your module path if you have one.
   - Run go mod tidy and then go test ./... in the new folder. Ask your AI to fix any error it shows.
   - Add the server to your AI app's MCP settings, and try each tool with a real question.
+  - Connect the server to one real tool and check its output against an answer you already know before you add more tools.
   - Replace the sample logic in each tool with your own, and keep the tests passing.
   - The code pins go-sdk v1.0.0. Check that your Go and SDK versions match, and fix any call the newer SDK renamed.
 how_it_works:
   - title: Gather the facts
-    text: It asks for the name, the tools, the data source and the module path, and does not guess them.
+    text: "It asks for anything missing: the name, the tools, the data source and the module path. If you give no tools, it builds two tools labelled SAMPLE for you to replace."
   - title: Lay out the project
     text: It creates the folder tree, go.mod, config and README from the template.
   - title: Write the tools

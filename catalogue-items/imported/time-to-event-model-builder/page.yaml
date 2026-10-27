@@ -15,7 +15,7 @@ explain: |
 
   It will not present results as clinical advice. You need Python 3.11 or later.
 
-  Licence: MIT, as the LICENSE.md file in this item says. Credit goes to K-Dense.
+  Licence: the skill is MIT, as the LICENSE.md file in this item says. The scikit-survival library it uses is GPL-3.0-or-later, so check that licence before you redistribute anything built on it. Credit goes to K-Dense.
 when:
   - You have customer or patient follow-up data where many people have not yet had the event.
   - You want to compare several survival models fairly.
@@ -38,7 +38,7 @@ you_get:
   - A reproducible script
 how_to_use:
   - Download the skill folder and add it to your AI that can run code, such as Claude Code. A plain chat can explain the steps but cannot fit the models.
-  - Use only data with names and IDs removed, and only data you are allowed to use. Do not paste patient records.
+  - "Use only data you have written permission to use, with names and IDs removed. Follow your own rules for patient or customer data. Never paste patient records into a chat."
   - Ask your AI to set up a Python 3.11 or later environment with uv, and to install scikit-survival there.
   - Before you fit anything, check three things: the time column, the event column coded 1 (the event happened) or 0 (cut off), and the feature columns. Ask it to check your table with validate_survival_csv.py. It must pass before any model is trained, so fix any error first.
   - Tell it your time column, event column and features, and the question you want answered. It then trains the models with train_survival_model.py and scores them with evaluate_survival_metrics.py.
@@ -63,8 +63,10 @@ output_sample:
     - name: Scores
       contains: Concordance and time-based error for each model, built to account for people who were cut off.
     - name: Risk and survival curves
-      contains: Plots of how risk grows over time for a group or for individuals.
+      contains: Risk and survival values over time for a group or for individuals, written as numbers in a JSON file by the bundled scripts. They do not draw plots. Ask your AI to plot the numbers with its own code if you want pictures.
     - name: Cumulative incidence curves
-      contains: Competing-risk curves when your data has more than one possible event.
+      contains: Competing-risk curve values (as numbers in a JSON file from competing_risk_cif.py) when your data has more than one possible event.
     - name: Reproducible script
       contains: The code used, so you can rerun the same steps on new data.
+    - name: Report layout
+      contains: model_report.py writes a Markdown text report with sections for outcome checks and a model comparison table of concordance and Brier scores at the time points you named. It writes text only. The curves and training results are separate JSON files.

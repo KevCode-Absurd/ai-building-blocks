@@ -21,6 +21,7 @@ not_for:
   - "You want to forecast future bookings or revenue: build that in your own spreadsheet, as this only looks back."
   - "You only have a receivables balance with no deferred revenue: check it with a simple aging report in your accounting tool."
   - "You are tracking unbilled revenue turning into invoices and collections: use the Contract asset billing cash bridge instead."
+  - "You are bridging gross sales to net revenue after discounts, returns and rebates: use the Gross-to-net revenue bridge instead."
 you_give:
   - Opening/closing contract liabilities, new advances or deferred billings, signed non-revenue changes and disclosed releases.
   - "The period end, plus the currency and scale used for the contract liability roll-forward."
@@ -56,19 +57,20 @@ output_sample:
     - name: MISSING and CHECKS MISSED
       contains: Inputs still needed and checks that failed or did not run, or the word none.
 how_it_works:
-  - title: 1. Separate contract liabilities from receivables, refundable deposits and other payables; verify whether new additions are billings or cash advances under the source definition
-    text: Separate contract liabilities from receivables, refundable deposits and other payables; verify whether new additions are billings or cash advances under the source definition.
-  - title: 2. Start with opening liability, add new deferred consideration and signed acquisition/FX/other changes, then deduct closing liability to infer revenue release
-    text: Start with opening liability, add new deferred consideration and signed acquisition/FX/other changes, then deduct closing liability to infer revenue release.
-  - title: 3. Compare with the disclosed release and total recognized revenue; distinguish revenue from opening balances from all releases during the period
-    text: Compare with the disclosed release and total recognized revenue; distinguish revenue from opening balances from all releases during the period.
+  - title: Separate liabilities
+    text: Keep contract liabilities apart from receivables, deposits and other payables.
+  - title: Infer the release
+    text: Opening plus new advances plus other signed changes, less closing, is the revenue released.
+  - title: Compare with the disclosure
+    text: Show any gap against the release the company discloses.
 output_shape: |-
   A historical contract-liability roll-forward with inferred release and reconciliation residual.
   Scope and dated sources
   Inputs and assumptions
   Model calculations and reconciliations
   Actual file verification
-  MISSING: and CHECKS MISSED
+  MISSING:
+  CHECKS MISSED
 tweaks:
   - what: "Period end"
     how: "Take the period end from the opening and closing liabilities and the disclosed releases. Use one currency and scale on every line."

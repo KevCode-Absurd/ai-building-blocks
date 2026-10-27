@@ -6,6 +6,8 @@ metadata: {"nexscope":{"emoji":"📝","category":"ecommerce"}}
 
 # Product Description Generator 📝
 
+> **Before you start.** Keyword scores in this skill are rough comparisons from the competitor text the user pastes or you can read. They are not search volume or market data, so never present a score or a coverage percentage as market data. Gather first: the product specs, proof papers for each claim, the platform, and 1 to 3 competitor listings pasted as text.
+
 Generate platform-optimized product copy — titles, bullet points, descriptions, and backend keywords — for any major e-commerce platform. No API key required.
 
 ## Installation
@@ -114,14 +116,16 @@ Which mode?
 
 > **No web tools?** `web_fetch` below means "open the page and read it", and `web_search` means "search the web". If your AI cannot do either (some ChatGPT or Gemini chats), ask the user to open each competitor page and paste its title, bullets and description into the chat. Work from that text.
 
+> **Before you start.** Web reading and web search are optional. The skill works from text the user pastes. Do not collect or copy reviews. Do not quote review text. Where a marketplace's terms limit automated reading, ask the user to paste competitor copy by hand. Exact search volumes are not available from this skill: keyword scores are rough comparisons from the competitor text you can see, not market data.
+
 > **Rules for facts and for reading competitor pages.** Every number, certification, test result and review claim in the listing must come from the user's own documents. If you cannot confirm one, write it as [confirm] and never as fact. Open competitor pages only where the marketplace's terms allow it. If they do not, or your AI cannot browse, ask the user to paste the title, bullets and description by hand. This is not a scraping tool.
 
-**If competitor URLs provided:**
+**If competitor URLs provided** (and the marketplace's terms and your tools allow reading them; otherwise use text the user pastes):
 
-1. Fetch each competitor page:
+1. Read each competitor page:
    ```
    Use web_fetch on each competitor URL.
-   Extract: title, bullets/features, description, price, review count, brand name.
+   Extract: title, bullets/features, description, price, brand name. Do not extract review text or review counts.
    ```
 
 2. If `web_fetch` fails or returns incomplete data:
@@ -140,7 +144,7 @@ Which mode?
 4. Expand beyond competitors:
    ```
    web_search: "[product type]" best seller features what buyers want
-   web_search: "[product type]" review complaints common issues
+   web_search: "[product type]" common buyer questions and sizing or fit issues
    web_search: site:[platform].com "[product type]"
    ```
 
@@ -149,7 +153,7 @@ Which mode?
 1. Discover keywords via web search:
    ```
    web_search: "[product name]" best seller [platform] features
-   web_search: "[product name]" review what customers love
+   web_search: "[product name]" key features buyers look for
    web_search: "[product name]" vs alternatives comparison
    web_search: site:[platform].com "[product name]"
    ```
@@ -167,6 +171,8 @@ Score each keyword (1-9 points):
 | **Frequency** | In 3+ competitor titles = 3 pts / In 1-2 = 2 pts / Bullets only = 1 pt |
 | **Relevance** | Core descriptor = 3 pts / Feature = 2 pts / Peripheral = 1 pt |
 | **Opportunity** | Few competitors use = 3 pts / Most use = 2 pts / All use = 1 pt |
+
+Worked rule: a keyword found in the titles of 3 or more competitors scores 3 for frequency. If it is the core descriptor, it scores 3 for relevance. If every competitor uses it, it scores 1 for opportunity. Total 7, so it is Primary and goes in the title. A niche feature that only one competitor uses might score 2 + 2 + 3 = 7 as well. Show the points beside each keyword so the user can check them.
 
 Assign to tiers:
 ```

@@ -28,17 +28,18 @@ you_give:
   - Existing MATLAB code to update (optional)
   - Whether you need a Simulink export (optional)
 you_get:
+  - A reply in this order: the route chosen, the trained network, the test table, the updated code, the export and a speed-up note
   - MATLAB code that trains the network
   - A table of test results on data the network has not seen
   - Updated code using current functions
   - An exported model (optional)
 how_to_use:
-  - Open an AI that can run MATLAB code, and check that you have the toolboxes listed above.
+  - Open an AI that can run MATLAB code. You need MATLAB R2024a or later (R2026a to speed up a custom loss). Type ver in MATLAB to check that Deep Learning Toolbox and Statistics and Machine Learning Toolbox are installed.
   - Paste the skill text into the chat, or add the skill file if your AI takes files.
   - Add your data, say what you want to predict, and paste any old code you want updated.
   - Say if you want a Simulink export. Skip this if you do not.
   - Read the test results first. Check them before you use the network.
-  - Next, export the model to Simulink, or ask for dlaccelerate on a slow inference loop.
+  - Next, export a small dlnetwork to Simulink with exportNetworkToSimulink, or use the Predict block for a large one. Or ask for dlaccelerate on a slow inference loop.
 output_sample:
   input:
     - "Your data: a table, images or signals"

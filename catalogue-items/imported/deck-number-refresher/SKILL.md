@@ -7,9 +7,7 @@ description: Updates a presentation with new numbers — quarterly refreshes, ea
 
 ## India
 
-This skill operates on **Indian markets**. The helper files it once pointed to
-(`india-market-conventions`, `india-market-data` and `NOT-ADAPTABLE.md`) are not in this folder.
-Only the two rules below apply. They cause most Indian errors:
+This skill operates on **Indian markets**. Two rules apply. They cause most Indian errors:
 
 - **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
   Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
@@ -119,9 +117,9 @@ Still flagged — did NOT change:
   Slide 7 — "12% market share"
 ```
 
-The user, or whoever owns the deck, signs off the change report before the deck goes out. If a flagged number is later confirmed or recalculated, make that edit as a new, small change and add it to the report.
+The user, or whoever owns the deck, signs off the change report before the deck goes out. Save the signed-off report next to the deck file, and tell the deck owner where it is. If a flagged number is later confirmed or recalculated, make that edit as a new, small change and add it to the report.
 
-Run standard visual verification checks on every edited slide. A number that got longer (`$485M` → `$1,205M`) might now overflow its text box or push a table column width. Catch it before the user does.
+Run standard visual verification checks on every edited slide. A number that got longer (for example `[OLD VALUE]` → `[LONGER NEW VALUE]`) might now overflow its text box or push a table column width. Catch it before the user does.
 
 ## What you're not doing
 

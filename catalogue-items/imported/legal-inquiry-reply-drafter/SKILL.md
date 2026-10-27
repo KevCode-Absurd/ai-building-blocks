@@ -6,7 +6,7 @@ argument-hint: "[inquiry-type]"
 
 # /legal-response -- Generate Response from Templates
 
-> The CONNECTORS.md file this skill points to is not in this copy. No reply templates ship with this skill either, so use the person's own templates if they have them, or the default structure below. Subpoenas, regulator letters and requests that involve a minor always go to a lawyer before any reply is sent.
+> This copy needs no connector setup file. No reply templates ship with this skill either, so use the person's own templates if they have them, or the default structure below. Subpoenas, regulator letters and requests that involve a minor always go to a lawyer before any reply is sent.
 
 Generate a response to a common legal inquiry using configured templates. Customizes the response with specific details and includes escalation triggers for situations that should not use a templated response.
 
@@ -295,6 +295,21 @@ Contact {{legal_contact}} with any questions.
 - Standard terms summary
 - Execution instructions
 - Timeline expectations
+
+**Example template structure** (a starting point only; have a lawyer approve your own version):
+```
+Subject: NDA request - {{counterparty_name}}
+
+Hi {{requester_name}},
+
+Thanks for your request. For {{purpose}}, we use our standard {{one_way_or_mutual}} NDA, attached.
+
+[Short summary of the main terms, taken from your own approved form]
+
+To sign: [execution steps]. We can usually turn this around by {{target_date}}.
+
+If {{counterparty_name}} wants changes, send their markup to {{legal_contact}}.
+```
 
 ### 6. Subpoena / Legal Process
 

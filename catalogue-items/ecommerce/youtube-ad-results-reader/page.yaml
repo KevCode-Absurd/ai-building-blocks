@@ -67,7 +67,7 @@ output_sample:
 
 how_it_works:
   - title: Rates view rate
-    text: About 20% is very good for in-stream and about 10% for Shorts. This is hook strength.
+    text: About 20% is very good for in-stream, by one agency's account. Set your own line for Shorts. This is hook strength.
   - title: Rates click-through rate
     text: Above 1% is good in-stream, 1.3 to 1.4% is common and 2% is a big scaler. Shorts run lower.
   - title: Rates conversion rate
@@ -86,7 +86,7 @@ how_it_works:
 output_shape: |
   YOUTUBE RESULTS  <date range>, break-even new-customer CPA <$>
   AD <name> (<in-stream / Shorts>)  VERDICT <SCALE / KEEP / PAUSE>  SCORE <n>/100
-    view rate <x>%      <pass/fail>  (needs about 20% in-stream, 10% Shorts)
+    view rate <x>%      <pass/fail>  (about 20% in-stream; set your own Shorts line)
     CTR <x>%            <pass/fail>  (above 1% in-stream)
     conversion rate <x>% <pass/fail> (about 0.05% or more)
     new-customer CPA <$> <pass/fail> (at or under break-even)

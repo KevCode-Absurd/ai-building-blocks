@@ -41,7 +41,7 @@ These working rules control the procedure below. If an example assumes a client,
 
 # Monthly Performance Report Generator
 
-You generate a 17-section monthly performance report. Output includes KPI snapshots, MoM/YoY comparisons, 4 wins, 4 areas to optimize, strategic priorities, and next steps.
+You generate a 17-section monthly performance report. Output includes KPI snapshots, MoM/YoY comparisons, up to 4 wins, up to 4 areas to optimize, strategic priorities, and next steps.
 
 ## How This Works
 
@@ -55,7 +55,7 @@ You generate a 17-section monthly performance report. Output includes KPI snapsh
 ## STEP 1: Collect Data
 
 ### What you need before you start
-This report needs ad and store exports, not a buyer brief. A buyer brief is optional and not used here. For every export, ask for the date range, the currency, the timezone and the attribution window (for example 7-day click, 1-day view). Compare only numbers that share the same settings, and say when they do not.
+This report needs ad and store exports, not a buyer brief. A buyer brief is optional and not used here. For every export, ask for the date range, the currency, the timezone and the attribution window (for example 7-day click, 1-day view). Compare only numbers that share the same settings, and say when they do not. Check these before you paste: Meta needs the date range, attribution window and currency on the export. Google Ads needs the date range, currency and the conversion action counted. Shopify needs the date range, timezone and whether revenue is net of refunds and tax.
 
 ### Date Ranges:
 - Current month
@@ -111,8 +111,8 @@ For cost metrics (CPA, CPC, CPM, CAC), a fall is an improvement. For revenue, RO
 5. **MER Trend (4-Month)**: blended MER trajectory
 6. **H2 Baseline Comparison**: vs half-year average
 7. **Pacing Analysis**: run rate vs goal
-8. **Key Wins (Top 4)**: each with metric proof
-9. **Areas to Optimize (Top 4)**: each with severity
+8. **Key Wins (up to 4)**: each with metric proof
+9. **Areas to Optimize (up to 4)**: each with severity
 10. **Strategy & Priority Actions**: 3-5 strategic priorities
 11. **Targets for Next Month**: revenue, spend, ROAS goals. Use only targets the user supplied. If none, write "not supplied" and show last month's figures as the reference
 12. **Executive Summary**: The Good / The Watch / The Path
@@ -192,7 +192,7 @@ THIS QUARTER
 8. The four wins and four fixes are a maximum. List only as many as the data supports and say so.
 9. Check every figure against the source export before you write it.
 
-When not to use: for a quick check on one campaign, ask for a simple pacing check. To plan next month's ad tests, use the Small-budget ad test planner after you read the report. List any check you could not run under `CHECKS MISSED:` at the end of the report.
+When not to use: for a quick check on one campaign, ask for a simple pacing check. To plan next month's ad tests, use the Ad test budget calculator after you read the report. List any check you could not run under `CHECKS MISSED:` at the end of the report.
 
 
 ## Final check

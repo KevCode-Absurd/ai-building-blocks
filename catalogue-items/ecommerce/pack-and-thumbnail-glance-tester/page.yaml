@@ -85,7 +85,7 @@ output_shape: |
   GLANCE TEST: <product> | strangers: <n> | rivals in view: <n>
   Source: <strangers | AI read, not strangers>
 
-  SCORE <n>/100 (each question 25 x share correct)
+  SCORE <n>/100 (each question 25 x share correct, with the rule for "correct" shown)
   What is it:            <n> of <n> right -> <points>
   Which type or flavour: <n> of <n> right -> <points>
   What it is not:        <n> of <n> right -> <points>

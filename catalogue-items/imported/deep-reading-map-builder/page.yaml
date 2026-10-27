@@ -11,7 +11,7 @@ explain: |
 
   The map has typed nodes such as claim, data, example and assumption, joined by labelled links like supports or contradicts. Source locations stay attached so you can find the page again. Then the Feynman check has you explain the idea simply and shows where your explanation is thin. If you give it several documents, it compares them without blending their disagreements into one answer. It stops and asks for the text if it cannot read your source, and it never fills gaps from memory.
 
-  The licence that applies to this copy is the one in the LICENSE-CONTENT file in this item, CC BY 4.0. The skill file's header also names the author xiehuan123's own MIT licence. Both allow reuse with credit.
+  The licence that governs this copy is CC BY 4.0, from the LICENSE-CONTENT file in this item. Credit the author, xiehuan123. The MIT label in the skill file's header is the author's original label, and the original MIT licence stays with the author's source.
 when:
   - You want study notes that show how ideas connect.
   - You are comparing three reports that disagree.
@@ -34,11 +34,12 @@ you_get:
   - A plain-language check with recall questions
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the full text of this skill, or add it with the buttons on this page.
-  - Add your source. Claude, ChatGPT and Gemini can read a text PDF you upload. A web page needs an AI with browsing turned on. If your AI cannot open the file or page, paste the text in. That always works.
+  - Add your source. Many chat AIs can read a text PDF you upload, but this depends on your plan and settings, so check yours. A web page needs an AI with browsing turned on. If your AI cannot open the file or page, paste the text in. That always works.
   - "Say which mode you want: quick, deep, map, feynman or book. Also say your reading question."
   - Check that each main claim has evidence or a note that none was given.
   - For the Feynman check, close the source and explain the idea in your own words before your AI corrects you.
   - Scanned PDFs need OCR first. If your AI cannot read the source, it should stop and ask for the text.
+  - No file or web tools? Paste the text in sections of a few pages at a time. The map and the Feynman check work in plain text, and you keep the page numbers by typing them in with each section.
   - Next, save the map and the recall questions and test yourself a few days later. To find more sources to read, use the Cited research assistant. If your sources disagree, use the Research contradiction review assistant.
 output_sample:
   input:

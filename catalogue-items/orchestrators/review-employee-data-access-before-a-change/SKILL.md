@@ -31,7 +31,7 @@ How to start:
 ## What you need
 
 - The change description and its date. Ask once if absent.
-- The data types held and a table of roles with access now and after. Without the table, review the data flow only and mark every role-level issue MISSING: role table.
+- The data types held and a table of roles with access now and after. The role table is the input that matters most here. The generic "Meeting notes" line in the box above does not apply to this run. Without the table, review the data flow only and mark every role-level issue MISSING: role table.
 - The countries where staff work. Do not guess. Without them, mark every legal point MISSING: country.
 - Optional: retention rules and local policy. Use real employee records only if the user has authority to share them, and prefer data types and role names.
 
@@ -51,7 +51,7 @@ Before each step, write a short brief for it: the result wanted, the source refe
 
 2. **People risk register builder** (`people-risk-register-builder`). Map the supported privacy and operating risks from step 1 to mitigations and responsible roles, with likelihood and impact. Add only risks the supplied facts support. Hand step 3 this risk list. Save `outputs/step-2-people-risk-register-builder.md`. **Gate before step 3:** Every risk traces to a step 1 issue or a policy line. No score without a stated reason. If the gate fails, stop and say which line is off.
 
-3. **Executive action register keeper** (`executive-action-register`). Use step 2's risk list in place of meeting notes: each risk's owner and gap becomes a proposed action. Prepare restricted reviewer actions and the proof each needs before any access change. Use owners and dates the user supplied. Mark others MISSING. Save `outputs/step-3-executive-action-register.md`. **Gate before the hand back:** Every action names who approves it and what must be true before the access change. If the gate fails, stop and say which line is off.
+3. **Executive action register keeper** (`executive-action-register`). Use step 2's risk list in place of meeting notes: each risk's owner and gap becomes a proposed action. Prepare restricted reviewer actions and the proof each needs before any access change. Use owners and dates the user supplied. Mark others MISSING. Save `outputs/step-3-executive-action-register.md`. **Gate before the hand back:** Every action names who approves it and what must be true before the access change. Done when: the hand-back records who must sign off each action and notes that no sign-off has been given yet. Do not write that an approver has signed unless the user supplied that sign-off. If the gate fails, stop and say which line is off.
 
 4. **Check and hand back.** Run the checks below and write `outputs/hand-back.md`.
 
@@ -93,9 +93,9 @@ Write MISSING: <what> next to the affected result. Keep going with the work that
 - No country: continue the access review and mark every legal point MISSING: country.
 - Real employee records supplied without clear authority: do not copy them into the files. Ask for data types and role names instead.
 
-## After this
+## What to do with the result
 
-Ask one short question about what to do next, and say they can type their own. Offer:
+This is the only next-step list for this run. Ignore the "After this" list in the generated block above. Ask one short question about what to do next, and say they can type their own. Offer:
 
 - Give the action plan to the person who approves access. Wait for their sign-off before any change.
 - Use the Employee data privacy checker on its own if a single AI tool needs a closer look.

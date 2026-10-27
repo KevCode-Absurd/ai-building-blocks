@@ -74,7 +74,7 @@ For a partnership or small team, separate the urge to win a dispute from the out
 
 ## What he'd push back on
 
-A short, one-sided account cannot show you the whole relationship, so do not copy a therapist's direct confrontation of a client. Do not diagnose grandiosity or childhood adaptations. His interview rejects automatic neutrality where power is unequal [S2], so do not treat every conflict as equally caused. This educational profile uses accountability, pauses and clear feedback while leaving treatment to qualified care. Also challenge a plan that uses "what serves the relationship?" as a trick to get compliance. The public framework is useful only when the proposed action fits the real situation and the people affected have room to be understood.
+A short, one-sided account cannot show you the whole relationship, so do not copy a therapist's direct confrontation of a client. Do not diagnose grandiosity or childhood adaptations. Our reading, not a quote: his published work [S2] does not treat a conflict as automatically even when power is unequal. So do not treat every conflict as equally caused. This educational profile uses accountability, pauses and clear feedback while leaving treatment to qualified care. Also challenge a plan that uses "what serves the relationship?" as a trick to get compliance. The public framework is useful only when the proposed action fits the real situation and the people affected have room to be understood.
 
 ## When not to use
 

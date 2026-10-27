@@ -7,6 +7,8 @@ job: build-software
 headline: Image viewer builder
 subhead: Give it images and regions to mark. Get a viewer with overlays and masks in MATLAB. Bring your images or label data. To go further, ask for paintbrush labelling or a full app. You need MATLAB and a MATLAB-capable AI. This is not a no-code tool.
 explain: |
+  This is a copy of MathWorks' skill, kept as published. It is not an original AI Blocks skill, and the licence below limits its use to MathWorks products.
+
   A MATLAB viewer where you can zoom into an image, draw regions on it and lay coloured masks over it, without building the plumbing yourself. It needs MATLAB with the Image Processing Toolbox, both paid MathWorks products. The skill is under the BSD 2-Clause licence, which lets you use it only with MathWorks products (see LICENSE.md).
 
   The skill uses the newer viewer and display functions, not the old ones that lag on large files. Shapes are placed with the drawing tool so they carry measurements. Label maps and masks go on as overlays with a transparency setting. Two viewers can be linked so they pan and zoom together. Huge files load in blocks. It also lists old habits to avoid, like drawing on plain axes.
@@ -25,16 +27,20 @@ you_give:
   - The regions or overlays you want shown
   - Whether you need a full app or a script
 you_get:
-  - MATLAB code for the viewer, as one script or app file with comments that you save and run
+  - By default, one MATLAB script (.m file) with comments, which you save and run
+  - A full app file only if you ask for an app
   - Overlay and mask setup
   - Drawing tools for regions
   - Linked views for comparing images
+  - A list of the viewer features it includes and how to run it
 how_to_use:
   - Open a chat with your AI and paste in the skill text, or upload the skill file.
   - "Say what you want: a short script or a full app. Describe your images and the regions or masks to show."
   - Paste the code your AI writes into MATLAB. You need the Image Processing Toolbox.
   - Run it. Check that the overlays line up with your image and that zoom works.
   - Ask your AI to fix anything that looks off, such as colours or transparency.
+  - Next, ask for paintbrush labelling to make your own masks, or turn the viewer into a full app with the MATLAB app builder. The licence limits use of this skill to MathWorks products.
+next: [matlab-app-builder, huge-image-processor, image-processing-coder]
 output_sample:
   input:
     - Your images or image files

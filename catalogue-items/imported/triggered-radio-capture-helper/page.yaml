@@ -7,11 +7,15 @@ job: build-software
 headline: Triggered radio capture helper
 subhead: A software radio that saves data only when your signal shows up, instead of recording all the time. You tell it what to catch, and it writes the capture code and checks it works. It needs a USRP radio, paid MATLAB and Wireless Testbench, and use is limited to MathWorks products.
 explain: |
+  Who this is for: MATLAB and USRP lab users only. The paid tools and the MathWorks-only licence rule it out for most business readers.
+
+  Licence: the LICENSE.md file in this item governs (BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB). The SKILL.md file links a different MathWorks licence page. Follow LICENSE.md.
+
   A software radio that saves data only when your signal shows up, instead of recording all the time. You tell it what to catch, and it writes the capture code and checks it works.
 
   The skill works with NI USRP radios and MATLAB Wireless Testbench. It picks between energy detection, for any strong signal, and preamble detection, for a known pattern. It chooses from seven ready capture patterns, checks every setting against the API limits, and runs a sanity ratio on the result to see if it caught a real signal. If nothing fires, or it fires on noise, it switches to a step-by-step threshold tuning routine. You need the radio, MATLAB and the toolbox, all paid products. The capture runs only when the detector fires, so how much it saves depends on your signal.
 
-  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
+  Three terms. Energy detection means the radio records when the signal gets stronger than the background noise. Preamble detection means it records when it hears a known starting pattern that a device sends before its data. The sanity ratio r compares the strength of the capture to the noise around it, so a low r means you probably recorded noise.
 when:
   - You want to record a burst signal without storing hours of noise.
   - Your detector never fires, or fires on every bit of noise.
@@ -33,7 +37,7 @@ you_get:
   - Tuning steps if detection fails
 how_to_use:
   - "Set up first: an NI USRP radio, MATLAB and Wireless Testbench. These are paid products, and the licence allows this skill only with MathWorks products (BSD 2-Clause plus MathWorks terms, see LICENSE.md). Note your radio model, centre frequency and bandwidth."
-  - Open a chat with an AI that can read the skill folder, including its references folder. The skill needs those files, so paste them in too if your AI cannot read files.
+  - Open a chat with an AI that can read the skill folder, including its references folder. The skill needs those files to run (the patterns and API limits are in them), so paste them in too if your AI cannot read files.
   - Tell it which signal to catch. Add a known preamble if you have one.
   - Answer any questions it asks. It will not guess missing values.
   - Run the MATLAB code on your radio. This needs the radio and MATLAB, so a plain chat cannot run it.

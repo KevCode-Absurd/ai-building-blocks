@@ -21,6 +21,7 @@ Within one week of completing a significant analysis project — while the detai
 - Completed analysis project (name, scope, timeline)
 - Original plan or brief (for comparison)
 - An analysis plan from an earlier step works as the plan to compare the actual work against
+- Planned dates and effort, and actual dates and effort (step 2 compares them; gather these before you start)
 - Participants (solo or team members involved)
 
 # Output

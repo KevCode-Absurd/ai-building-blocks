@@ -9,9 +9,9 @@ subhead: A system-level wireless simulation of your nodes and traffic, with thro
 explain: |
   This is for network engineers and researchers who already have MATLAB and write MATLAB code, or can ask someone who does. Nothing here runs without MATLAB.
 
-  A system-level wireless simulation of your nodes and traffic, with throughput results you can compare. You see how the network behaves under load before building anything.
+  The skill sets up the simulator with your nodes, then adds traffic sources such as on-off, file transfer, voice and video conference. It can move nodes using random waypoint or custom paths, schedule actions during the run, log events and IQ samples and write packet captures. It also covers parameter sweeps, so you can see how results change as a setting changes, and viewers for the traffic and the layout. It needs MATLAB with the wireless networking toolboxes, which are paid MathWorks products.
 
-  The skill sets up the simulator with your nodes, then adds traffic sources such as on-off, file transfer, voice and video conference. It can move nodes using random waypoint or custom paths, schedule actions during the run, log events and IQ samples and write packet captures. It also covers parameter sweeps, so you can see how results change as a setting changes, and viewers for the traffic and the layout. It needs MATLAB with the wireless networking toolboxes, which are paid MathWorks products. The skill comes from MathWorks under the BSD 2-Clause licence, which lets you use it only with MathWorks products.
+  Licence: the LICENSE.md file in this folder governs our copy. It is the BSD 2-Clause licence with one added rule: you may use the skill only with MathWorks products. The licence link inside the skill file is the author's own header, and we follow LICENSE.md.
 when:
   - You want to check throughput before deploying a network.
   - You need to see how moving devices affect performance.
@@ -38,7 +38,7 @@ how_to_use:
   - Gather these first: how many nodes you have and where each one sits (with units, such as metres), the traffic each node sends and its rate (for example in Kbps), how long to run the simulation, and any settings you want to sweep with their start, end and step.
   - Open your AI tool and paste in the skill, or upload the skill folder.
   - Describe your nodes, where they sit and what traffic each one sends. Add movement or sweep settings if you need them.
-  - Ask your AI to write and run the simulation, then check the throughput results per node and flow.
+  - Ask your AI first to confirm that MATLAB, the Wireless Network Toolbox and any other toolbox it needs are installed. Then ask it to define your nodes and one traffic flow, and run it for a short duration. Check the per-node throughput table. Only then add more flows, movement or sweeps and run longer.
   - Compare the sweep results with your target load, and change one setting at a time to see its effect. Send the throughput results to a network planner or engineer. For a Bluetooth scenario, use the Bluetooth network simulation skill.
 output_shape: |
   Throughput table: one row per node and per flow, with columns for the node, the flow, the traffic type, the sent rate and the received throughput

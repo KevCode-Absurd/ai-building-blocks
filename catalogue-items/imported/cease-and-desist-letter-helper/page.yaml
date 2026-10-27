@@ -7,9 +7,11 @@ job: check-contracts
 headline: Cease-and-desist letter helper
 subhead: Either a draft demand letter for someone copying your work, or a plain options memo for a letter you received. Describe the infringement or paste the letter, and you get a first version a lawyer can review and finish.
 explain: |
+  Do not send any draft from this skill until a lawyer has reviewed it. A letter that asserts legal rights and threatens a lawsuit can cause real harm if it is wrong.
+
   Either a draft demand letter for someone copying your work, or a plain options memo for a letter you received. Describe the infringement or paste the letter, and you get a first version a lawyer can review and finish.
 
-  It has two modes. Sending mode works out who the right target is, what they did, your relationship with them and what you want, then drafts a letter at the firmness your enforcement approach calls for, with a check before delivery. Receiving mode reads the letter, assesses the claim, notes your exposure and lays out choices with a recommendation. Every draft carries a "draft for attorney review" header. It needs your enforcement approach first. It is not legal advice, and a letter is a legal step, so have a lawyer review it before it goes out.
+  It has two modes. Sending mode works out who the right target is, what they did, your relationship with them and what you want, then drafts a letter at the firmness your enforcement approach calls for, with a check before delivery. Receiving mode reads the letter, assesses the claim, notes your exposure and lays out choices with a recommendation. Every draft carries a "draft for attorney review" header. It needs your enforcement approach first. The original skill expects a setup step from its ip-legal plugin (a setup interview and a config file). That plugin is not included here. If your AI has no saved setup, it asks you the setup questions in the chat, and you answer them there. It is not legal advice, and a letter is a legal step, so have a lawyer review it before it goes out.
 when:
   - A competitor is using your logo or text and you want to demand they stop.
   - You received a threatening letter and do not know your options.
@@ -30,12 +32,14 @@ you_get:
   - A recommended response
   - A checklist before sending or replying
 how_to_use:
+  - "In plain chat, answer three setup questions first. How firm do you want to be? Who must approve a letter? Where are your rights registered? Your AI uses your answers in place of the plugin setup that the original skill expected."
   - Have your enforcement approach ready: how firm you want to be, who must approve a letter, and where your rights are registered. If your AI has no saved setup, it will ask you for these in the chat.
   - Open your AI tool that can read files and make Word documents. Add the skill and say whether you are sending a letter or got one.
   - Describe what happened, or paste the letter you received. Add who the other party is and what you want.
   - Read the draft in the chat. Fix anything marked VERIFY or CITE.
-  - Look up court and trademark records yourself. Some need an account, such as Westlaw, PACER or a marketplace brand portal. Without them, the citations stay as placeholders to check.
+  - Look up court and trademark records yourself. These lookups are optional. Westlaw is a paid service, PACER charges per page, and a marketplace brand portal needs an account. If you skip them, the draft still works, with citations left as placeholders to check.
   - Give the draft to your lawyer. This is not legal advice, and you must not send the draft unreviewed.
+  - "What we changed from Anthropic's original: a plain name, no plugin needed, and a chat path for the setup questions. The letter method is theirs."
 output_sample:
   input:
     - A description of what the other party did, or the letter you received

@@ -14,7 +14,7 @@ Intake answers, date started, project specifics.
 | Phase | Skill | Status | Artifact | Date |
 |---|---|---|---|---|
 | 1. Discover why visitors leave | cro-methodology | pending | WEBSITE.md, METRICS.md, EXPERIMENTS.md | |
-| 2. Capture the not-ready 97% | scorecard-marketing | pending | WEBSITE.md, MARKETING.md | |
+| 2. Capture the visitors not ready to buy | scorecard-marketing | pending | WEBSITE.md, MARKETING.md | |
 | 3. Clarify the message | storybrand-messaging | pending | POSITIONING.md | |
 | 4. Make the message stick | made-to-stick | pending | POSITIONING.md, WEBSITE.md | |
 | 5. Add proof and triggers | influence-psychology | pending | WEBSITE.md | |

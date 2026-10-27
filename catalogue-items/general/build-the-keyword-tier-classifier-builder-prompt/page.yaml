@@ -26,6 +26,7 @@ you_give:
   - Your target ROAS or CPA (needed for the hero and volume driver tiers)
   - Your brand terms, so brand keywords are not called zombies
   - The date range to review, and the last run to compare with (optional)
+  - Google Ads API read access. It is free, but it needs a developer token that Google approves. The Google Ads token and access check planner shows how to set it up. Without it the module is written but cannot run.
 you_get:
   - A list of setup gaps before any code is written
   - A read-only module that sorts keywords into five tiers

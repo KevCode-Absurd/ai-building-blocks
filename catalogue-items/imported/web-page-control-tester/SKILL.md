@@ -1,6 +1,6 @@
 ---
 name: assay
-description: "Run assay on a web page you just wrote or changed. It opens the page in a real browser, drives every control, and reports where the page contradicts itself. Deterministic, no API key, no network."
+description: "Run assay on a web page you just wrote or changed. It opens the page in a real browser, drives every control, and reports where the page contradicts itself. Deterministic, no API key. Needs network once to install and download the browser; the test run itself makes no network calls."
 category: testing
 risk: safe
 source: "https://github.com/awss1i/assay"
@@ -14,11 +14,13 @@ license: MIT
 license_source: "https://github.com/awss1i/assay/blob/main/LICENSE"
 ---
 
+<!-- Licence note: this copy is shown under CC BY 4.0 (see LICENSE-CONTENT). The MIT line in the header above is the original author's, kept as the upstream source. -->
+
 # Assay
 
 ## Overview
 
-A page you have just written has no tests yet. `assay` serves the page locally, opens it in a real Chromium browser through Playwright, finds every control on it, uses all of them, and reports where the page contradicts itself. There are no tests to write, no LLM, no API key, and no network. The same page gives the same result every time.
+A page you have just written has no tests yet. `assay` serves the page locally, opens it in a real Chromium browser through Playwright, finds every control on it, uses all of them, and reports where the page contradicts itself. There are no tests to write, no LLM and no API key. The test run makes no network calls. Installing assay with pip, and the first-run Chromium download, do need network access. The same page gives the same result every time.
 
 Use this skill after you create or change a web page, to run assay on that page and report the one line it prints. The skill reports the result and does not change code because of it unless you ask.
 
@@ -28,6 +30,12 @@ Use this skill after you create or change a web page, to run assay on that page 
 - Use when you changed a page, or the JavaScript or CSS that a page loads, and want to confirm the page still holds together.
 - Use when the user asks you to check, QA, or smoke-test a local web page.
 - Run it once at the end, after the last edit, on each page you changed. Do not run it while you are still making changes.
+
+### When not to use
+
+- A live production site. assay clicks every control and can trigger a real backend, so test a safe copy instead.
+- Accessibility-only checks. assay checks whether controls work, not whether the page is accessible.
+- Checking whether numbers on screen are true. assay does not check numeric truth.
 
 ## How It Works
 
@@ -49,7 +57,7 @@ Point assay at the page itself and ask for the one-line summary.
 assay <the page you changed> --one-line
 ```
 
-Point it at a file such as `todo.html` or `dist/index.html`. A folder also works and opens the `index.html` inside it. The page is often a folder or two above the file you edited, so a change to a script or stylesheet still means running assay on the page that loads it. assay needs no key, network, or configuration. A small page takes seconds, and a busy one can take a minute or more.
+Point it at a file such as `todo.html` or `dist/index.html`. A folder also works and opens the `index.html` inside it. The page is often a folder or two above the file you edited, so a change to a script or stylesheet still means running assay on the page that loads it. assay needs no key or configuration, and the test run needs no network (only the install and the first Chromium download do). A small page takes seconds, and a busy one can take a minute or more.
 
 ### Step 3: Report the one line assay printed, verbatim
 
@@ -134,7 +142,7 @@ Say that assay did not run, name the page, and quote the message. Do not report 
 
 ## Security & Safety Notes
 
-- assay runs locally, needs no API key, and makes no network calls of its own. It serves the folder over loopback rather than opening the file directly.
+- assay runs locally, needs no API key, and makes no network calls of its own during a test run. The pip install and the first Chromium download need network access. It serves the folder over loopback rather than opening the file directly.
 - assay drives every control it finds in the browser, so if the page is wired to a live backend, a click can trigger that backend. Point assay at a local page or a local build, not at a production URL.
 - assay is read-only toward your code. It does not edit your files and writes nothing to disk unless you pass `--report` to save an HTML report.
 - assay will not run a project's build or install steps, because installing dependencies runs their setup scripts and this is a tool for checking code nobody has read yet.

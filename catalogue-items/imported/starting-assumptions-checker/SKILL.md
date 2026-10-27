@@ -16,6 +16,8 @@ Do not say you read or ran them. Do those steps by hand, or ask the user for the
 
 # Prior elicitation
 
+Plain words for the terms below. Estimand: the exact number you want to learn. Support: the values the number can take, such as only positive. MCSE: the error left from using a finite number of samples. SBC: a test that a whole fitting method works, which this skill does not do. DataTree: the ArviZ container that holds the simulated results. Optional extras steps that need the missing pymc-modeling file are unavailable in this copy.
+
 A prior is a scientific assumption, not a scale-free default. Work from the
 quantity's meaning to a distribution, then check its observable implications.
 

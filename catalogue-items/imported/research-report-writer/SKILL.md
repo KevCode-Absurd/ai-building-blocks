@@ -23,6 +23,8 @@ Produce a report whose "conclusions are trustworthy, process is traceable, and t
 - Use when the user asks for a research report, topic investigation, or competitive analysis.
 - Use when sources need tiering and cross-verification before writing conclusions.
 
+Do not use it for a quick fact or a single-source check (a plain web search is enough), for an opinion with no sources (ask your AI directly), or when your AI cannot search the web (gather the sources first, or expect every outside fact to be marked unverified).
+
 ## Workflow
 
 1. **Define the question**: write in one sentence what the report must answer. Add at most 3 sub-questions. Starting before the question is clear guarantees the research will sprawl.

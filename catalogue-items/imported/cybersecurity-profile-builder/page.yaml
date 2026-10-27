@@ -5,11 +5,13 @@ name: Cybersecurity profile builder
 summary: Build a NIST CSF profile from your security today and your goals. You get gaps, an implementation tier and a step by step plan.
 job: secure-code
 headline: Cybersecurity profile builder
-subhead: A written picture of where your security stands now, where you want it to be, and the steps between. It follows the NIST Cybersecurity Framework, the common standard used by auditors and insurers.
+subhead: A written picture of where your security stands now, where you want it to be, and the steps between. It follows the NIST Cybersecurity Framework, a widely used framework from NIST.
 explain: |
-  A written picture of where your security stands now, where you want it to be, and the steps between. It follows the NIST Cybersecurity Framework, the common standard used by auditors and insurers.
+  A written picture of where your security stands now, where you want it to be, and the steps between. It follows the NIST Cybersecurity Framework, a widely used framework from NIST.
 
   You describe your current setup and goals. The skill works through the six areas of the framework: Govern, Identify, Protect, Detect, Respond and Recover. It builds a current profile and a target profile, then lists gaps by area with a priority for each. It rates your implementation tier (a measure of how your risk practices are set up, not a maturity score) and turns the gaps into an action plan sorted by effort and impact. It can also map controls to ISO 27001 or CIS Controls. It assumes the 2.0 version unless you ask for the older one.
+
+  Control mappings to ISO 27001, CIS Controls and NIST SP 800-53 are approximate. Check them against the NIST, ISO and CIS sources before you use them.
 
   The result is guidance, not an audit or legal advice. It cannot see your systems, so every rating comes from what you tell it. Have a qualified security professional check it before you rely on it for a regulator, insurer or contract. This is Hemant Naik's NIST CSF skill, shared under the MIT licence.
 when:
@@ -33,7 +35,7 @@ you_get:
   - Step by step action plan
 how_to_use:
   - "Gather what you have first: current security policies, a list of your systems and data, and any recent incident or audit findings."
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, web access or paid tool is needed.
+  - "Open Claude, ChatGPT or Gemini and paste in the skill text. No code, web access or paid tool is needed. The skill also relies on three reference files in its folder: the CSF 2.0 categories, the 1.1 to 2.0 mapping and the implementation tiers. Paste them in too, or upload the folder."
   - Do not paste passwords, IP addresses, client data or unredacted incident reports into a consumer AI tool. Describe them in general terms instead.
   - Describe your security today and your goals in a few lines. Add your industry and size, and say if you want CSF 2.0 or 1.1.
   - Start with one area, such as Govern, then do the rest one area at a time. A first pass of one area is usually a short chat. All six areas take several rounds of answering questions.

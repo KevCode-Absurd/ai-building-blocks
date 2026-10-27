@@ -5,11 +5,11 @@ name: Vietnam data privacy checker
 summary: Check your Vietnam data privacy duties under the 2026 law. Describe your data and get a gap list, transfer checks and a fix plan.
 job: check-contracts
 headline: Vietnam data privacy checker
-subhead: A clear list of what Vietnam's new personal data law asks of you, with gaps marked and a plan to close them. It matters because the law took effect on 1 January 2026 and reaches foreign firms that handle data about people in Vietnam.
+subhead: A clear list of what Vietnam's new personal data law asks of you, with gaps marked and a plan to close them. According to the skill's own summary, the law took effect on 1 January 2026 and reaches foreign firms that handle data about people in Vietnam. Confirm the date on vbpl.vn.
 explain: |
-  A clear list of what Vietnam's new personal data law asks of you, with gaps marked and a plan to close them. It matters because the law took effect on 1 January 2026 and reaches foreign firms that handle data about people in Vietnam.
+  A clear list of what Vietnam's new personal data law asks of you, with gaps marked and a plan to close them. According to the skill's own summary, the law took effect on 1 January 2026 and reaches foreign firms that handle data about people in Vietnam. Confirm the date on vbpl.vn.
 
-  You describe what personal data you collect and where it goes. The skill sorts it into basic and sensitive data, checks your consent and notices, and tests any transfer abroad. It then covers breach reporting, sector rules for finance, AI and cloud, and what your data protection officer needs. It reads the law and its decree text before it drafts any advice.
+  You describe what personal data you collect and where it goes. The skill sorts it into basic and sensitive data, checks your consent and notices, and tests any transfer abroad. It then covers breach reporting, sector rules for finance, AI and cloud, and what your data protection officer needs. It works from the skill author's summary of the law and its decree, not from the official text. Paste the official text from vbpl.vn if you want your AI to check against it.
 when:
   - You sell to customers in Vietnam and need to know what the new law requires of you.
   - You send Vietnamese user data to servers or vendors in another country.
@@ -30,12 +30,13 @@ you_get:
   - Gaps in consent, notices and policies
   - A step-by-step fix plan
 how_to_use:
-  - Open a chat in Claude, ChatGPT or Gemini. Paste in the skill text. No code or paid tool is needed.
+  - Open a chat in Claude, ChatGPT or Gemini. Paste in the skill text. No code or paid tool is needed. For a precise check, also paste the official texts of Decree 356/2025 and Law 91/2025 from Vietnam's legal database (vbpl.vn) so the duties, deadlines and the 72-hour rule can be checked against them.
   - Have ready a list of the data you collect, your vendors and the countries data goes to, the date you first sent data abroad, and your headcount. Describe where it is kept and who gets it.
+  - "Before you act, confirm these dates and rules on vbpl.vn: the 72-hour breach rule, the 60-day filing for impact assessments, the 6-month update, and the small business exemption period. Your AI also needs your headcount and revenue so it can test the size rules for a small or micro business, and you must confirm that status with counsel."
   - Add your business type and sector, such as finance, AI or cloud.
   - Paste your current privacy notice or consent wording, if you have one (optional).
-  - Read the gap list and check each point against the official law text. Duties, deadlines and the 72-hour breach rule come from the skill's summary of Law 91/2025 and Decree 356/2025. The penalty table and its dates are an unchecked summary, so your AI should give you violation types without exact fines unless you paste the official decree.
-  - Take the plan to your data protection officer or Vietnamese counsel before you act. The skill does not link the official law text, so find it yourself on Vietnam's official legal database (vbpl.vn) or the Official Gazette (congbao.chinhphu.vn) and check every fine and date against Decree 330/2026 before you quote it. The author's last check was on 5 September 2026, and none of the figures were rechecked here. This is general information, not legal advice.
+  - Read the gap list and check each point against the official law text. Duties, deadlines and the 72-hour breach rule come from the skill's summary of Law 91/2025 and Decree 356/2025. This copy has no fine amounts. Your AI gives you violation types only, and exact fines only if you paste the official decree.
+  - Take the plan to your data protection officer or Vietnamese counsel before you act. The skill does not link the official law text, so find it yourself on Vietnam's official legal database (vbpl.vn) or the Official Gazette (congbao.chinhphu.vn) and check every date, and any fine, against the official text before you quote it. The author's last check was on 5 September 2026, and none of the dates were rechecked here. This is general information, not legal advice.
   - Next, use privacy-impact-assessment-writer for the transfer and data protection assessments the gap list calls for, and agency-data-privacy-officer for ongoing privacy work. Run the breach response steps with your counsel before you need them.
 output_sample:
   input:

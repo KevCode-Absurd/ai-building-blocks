@@ -11,7 +11,7 @@ explain: |
 
   It keeps a wiki: a folder of linked pages with an index that outlives the chat. Every claim in the wiki carries a date, and old claims are marked superseded, not rewritten. That way a future session reads history, not guesses.
 
-  It also thinks on two tracks. One is how to finish the task in front of it. The other is how to make the next task easier, such as clearer rules, checklists and access to the data your helpers need. The skill was written for software projects, so some examples are about code.
+  It also thinks on two tracks. One is how to finish the task in front of it. The other is how to make the next task easier, such as clearer rules, checklists and access to the data your helpers need. This is an imported MIT skill, adapted from Matt Pocock's chief-of-staff. It was written for software projects, so some examples are about code. Change them to fit your goal.
 when:
   - Your project will take days or weeks and one chat cannot hold it all.
   - You want helpers running in the background while you keep talking to your AI.
@@ -34,12 +34,13 @@ you_get:
   - Suggested schedules, such as a weekly wiki check
   - A list of changes that will make the next task easier
 how_to_use:
-  - Use an AI that can run background helpers and set schedules, such as Claude Code. In a plain chat, you will run the helper steps yourself in new chats.
+  - Use an AI that can run background helpers and set schedules, such as Claude Code. Background helpers and schedules need a paid plan or API access with tools like that, so check yours first. A plain chat works without them. In a plain chat, you will run the helper steps yourself in new chats.
   - Add this skill to your AI, or paste its text. Say your goal, your deadline and where the wiki folder should be.
   - Check the first plan. It should list helper tasks, each with a name, a job and the notes it should read. Fix anything wrong before it starts.
   - Let it run. Reply when it asks about the wiki location, decisions or schedules. Do not paste long notes. Point to pages instead.
   - Open index.md every few days. Check that new claims have dates and that nothing contradicts an older page.
   - Approve or decline each schedule it suggests. It will not run recurring jobs without a clear yes.
+  - Next, file the wiki index where your team can find it, then approve or decline each suggested schedule. When the goal turns into many separate decisions, open the Big project mapper.
 how_it_works:
   - title: Own the goal
     text: "It treats the goal as its own and thinks on two tracks: finish the task now, and improve the setup for the next one."

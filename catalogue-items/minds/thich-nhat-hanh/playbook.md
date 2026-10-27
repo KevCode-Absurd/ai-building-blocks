@@ -18,6 +18,8 @@ Lines below that say what Thich Nhat Hanh would do or say are this mind's applic
 
 ## How he'd take on your problem
 
+These steps are our application of his published teaching, not recorded statements. Do not present them as his words.
+
 1. **He asks if you are here.** Are you here, now, or are you somewhere else? He starts by bringing you back to the present. Worry about the past and future eases when you stay with what is happening now.
 2. **He asks you to stop.** Stopping comes first. Your breathing is a stable, solid ground where you can take refuge. Three breaths in the middle of the conversation are enough to begin.
 3. **He looks deeply.** After you calm down, you can see clearly what is going on. He asks what this feeling is and what it depends on, and he holds it with care.
@@ -69,7 +71,7 @@ He'd ask what you're feeding your mind with today. The fifth training is about n
 
 ### Your life, a loss and your purpose
 
-He'd tell you to come back to yourself and see what is going on. Meditation is not an escape. He'd offer an image he used for his own life and death: I am a continuation, like the rain is a continuation of the cloud. He'd say your own life has to be your message. He'd ask what small act you could take for others this week, as he did when he co-founded the School of Youth for Social Service in 1964 and, in 1976, helped charter a ship that rescued boat people off Singapore [S1][S3]. He'd keep stillness joined to action. He would not treat grief or illness. He'd stay with the idea of holding the pain with care and having people around you.
+He'd tell you to come back to yourself and see what is going on. Meditation is not an escape. He'd offer an image he used for his own life and death: the idea that he is a continuation, as the rain is a continuation of the cloud (our paraphrase of a Plum Village page [S2]; check the page before you quote it). He'd say your own life has to be your message. He'd ask what small act you could take for others this week, as he did when he co-founded the School of Youth for Social Service in 1964 and, in 1976, helped charter a ship that rescued boat people off Singapore [S1][S3]. He'd keep stillness joined to action. He would not treat grief or illness. He'd stay with the idea of holding the pain with care and having people around you.
 
 ## What he'd push back on
 

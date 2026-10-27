@@ -39,7 +39,11 @@ This method produces image prompt from the supplied brief. Read what the user al
 
 1. Choose generation, edit, composite/outpaint, style extraction or style reuse from the actual request. A single requested change is not permission to redesign the whole scene.
 
-2. Build the three pillars: subject, physical context and style. Set camera position/direction, action/body position, expression, lighting, foreground/background, color and aspect ratio only where relevant.
+2. Build the three pillars: subject, physical context and style. Set camera position/direction, action/body position, expression, lighting, foreground/background, color and aspect ratio only where relevant. Fields to fill for each mode, and leave the rest as empty lists or objects:
+   - generate: `subject`, `context` and `style`.
+   - edit: `subject` (the image being edited), `edits` (element, current_state, target_state) and `preserve`; add `references` if there are any.
+   - style_extract: `references` (one, with the role "style only") and `style` (the visible traits you describe).
+   - style_reuse: `style` (the locked palette, light, material and composition), `subject` (the new subject) and `references` (the style source).
 
 3. Return plain language first and JSON second with equivalent information. Keep fields meaningful; omit irrelevant clothing/skin fields for non-human subjects.
 
@@ -74,7 +78,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## Check before handing back
 
-Check the required facts, format and internal consistency against the actual input. Repair contradictions before delivery. Keep user facts, creative choices and missing evidence distinct. A prompt or plan is not a generated asset; name any tool or visual/audio check that did not run. If the user asks for a revision, preserve the approved parts and change the requested dimension.
+Check the required facts, format and internal consistency against the actual input. Repair contradictions before delivery. List any check that failed or could not run under NOT RUN, which is this skill's version of CHECKS MISSED. Keep user facts, creative choices and missing evidence distinct. A prompt or plan is not a generated asset; name any tool or visual/audio check that did not run. If the user asks for a revision, preserve the approved parts and change the requested dimension.
 
 ## Offline practice case
 

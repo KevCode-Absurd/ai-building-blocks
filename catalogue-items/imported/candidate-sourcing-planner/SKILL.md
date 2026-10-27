@@ -70,18 +70,19 @@ Rank channels by expected effectiveness for this specific role:
 
 ### Step 4: Map Target Companies
 
-Using the talent-mapping skill, create a prioritized target company list:
-- Circle 1: Direct competitors
-- Circle 2: Adjacent companies
-- Circle 3: Transferable talent sources
+Build a prioritized target company list as three circles. You do not need another skill for this. For a deeper map, use the Talent pool mapper.
+- Circle 1: Direct competitors. Companies that sell to the same buyers or build the same product. List 5 to 10 the user names or you can name from what they told you.
+- Circle 2: Adjacent companies. Same industry or customers, different product. List 5 to 10.
+- Circle 3: Transferable talent sources. Companies in other sectors with the same skills or the same kind of job. List 3 to 5.
+- For each company, note in one line why people there might move (size, pay, growth, recent news the user gave you). Do not invent news.
 
 ### Step 5: Define Search Strategy
 
 For each prioritized channel:
 - Specific search approach
-- Boolean strings or search queries to use
-- Expected volume and quality
-- Time investment estimate
+- One sample search string per channel, built from the persona's titles, skills and locations. For example: ("job title" OR "similar title") AND (skill 1 OR skill 2) AND "city". Check the syntax on each platform.
+- Expected volume and quality: say it is an estimate, based on the user's own past results if they have them. Never state a number as fact.
+- Time investment estimate: hours per week for that channel (searching, reading profiles, noting leads). Add them up for the week and say if it fits the user's time.
 
 ### Step 6: Create Timeline
 

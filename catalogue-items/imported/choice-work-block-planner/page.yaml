@@ -30,11 +30,15 @@ you_get:
   - Notes on how to open and close the session
   - Ways to support students who struggle to choose
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste in the skill text from this page.
+  - Licence: this skill is by Gareth Manning, under CC BY-SA 4.0. Keep the credit, and share any changes you publish under the same licence.
+  - Open Claude, ChatGPT or Gemini. Paste in the full skill text from the SKILL.md file in this item. It has fields in double curly brackets, such as {{available_time}} and {{learning_activities}}. Your AI fills each one from what you say next.
   - Tell your AI the real length of your time block.
-  - List the activities students can choose from. Add class size, age and your worries if you like.
+  - List the activities students can choose from. Add class size, age and your worries if you like. Anything you skip is marked not provided.
+  - The research names and timings in the skill, such as how long settling takes, are the original author's summary and are not checked. Do not quote them to parents or staff as confirmed findings.
   - Read the plan. Check that the timing fits your real timetable.
-  - Adjust anything that does not fit your room. Then plan your shelves with the prepared-environment-designer skill and your short lessons with the three-part-lesson-designer skill.
+  - Adjust anything that does not fit your room. Two related skills by the same author (prepared-environment-designer for shelves and three-part-lesson-designer for short lessons) are not in this library yet. For now, ask your AI to plan your shelves and short lessons from the plan.
+  - Next, record what students do with the Learning documentation planner.
+next: [learning-documentation-planner]
 output_sample:
   input:
     - The real length of your time block

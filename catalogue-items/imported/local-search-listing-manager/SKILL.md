@@ -88,7 +88,7 @@ You control relevance and prominence. Proximity is fixed.
 - [ ] Logo uploaded (400x400px min)
 - [ ] Cover photo uploaded (1024x576px min)
 - [ ] At least 10 interior/exterior/team/work photos
-- [ ] Photos geotagged before upload, only with the real location where the photo was taken (for example with GeoImgr.com). Never tag a photo with a place it was not taken, as that can break Google's listing rules
+- [ ] Photos geotagged before upload, only with the real location where the photo was taken (for example with a free or paid geotagging tool such as GeoImgr.com; check its current price and terms yourself). Never tag a photo with a place it was not taken, as that can break Google's listing rules
 - [ ] New photos added monthly
 
 **Posts (Google Posts):**
@@ -193,10 +193,10 @@ NAP = Name, Address, Phone. Inconsistencies across the web confuse Google and su
 
 **Run the NAP checker:**
 ```bash
-python3 scripts/nap_checker.py
+python3 scripts/nap_checker.py --canonical canonical.json --listings listings.json
 ```
 
-The script checks known directory listings and outputs a consistency report with mismatch count and fix priority.
+AI Blocks note: the script does not look anything up online and needs no key or paid service. It compares two JSON files you fill in by hand: your correct name, address and phone (canonical.json) and what each directory shows (listings.json, which you copy from each directory yourself). It outputs a consistency report with mismatch count and fix priority. If you run it with no files, it uses built-in sample data that is not your business. Do not read that output as a result.
 
 ### Priority Directories (fix in this order)
 

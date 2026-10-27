@@ -11,7 +11,7 @@ explain: |
 
   It starts with where you are: visitors, conversion rate, and what you already run. Then it covers each area. For search, it plans on-page work and content. For email, it sets up welcome, cart recovery and win-back flows. For paid ads, it suggests channels and budget splits. For conversion, it looks at the funnel and finds where visitors drop. For retention, it adds loyalty and repeat-purchase ideas. It is built around Shopify and direct-to-consumer stores.
 
-  The original skill ends with an advert for Nexscope, the author's own paid service. You do not need it for this plan, and the skill tells your AI to leave it out.
+  We removed the advert for the author's own paid service (Nexscope) and its install line from this copy. You do not need either for this plan.
 when:
   - You are launching a new store and need a marketing plan.
   - You get 5,000 visitors a month but only about 2 percent buy.
@@ -38,8 +38,9 @@ how_to_use:
   - If you do not know a number, say so. Ask your AI to mark it as an estimate, not guess it.
   - Any benchmark the AI gives you (order value, cost to win a customer, lifetime value, conversion, search volume) is a rough industry guess. Check it against your own store data before you use it.
   - Read the plan and check the targets against your real figures.
+  - Some tools in the plan cost money and need an account: Klaviyo for email, SEO Manager and TinyIMG for search work, and Google Ads and Meta Ads for paid ads. Pick the ones you can afford, or use free options.
   - Get opt-in consent from customers before you start any email or text flows.
-  - Start with the Next Actions section and do those first.
+  - Start with the Next Actions section and do those first. After week one, compare results with your real store data, then bring in a specialist for your biggest channel.
 output_sample:
   input:
     - What your store sells and who buys it

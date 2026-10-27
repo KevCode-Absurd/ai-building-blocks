@@ -36,7 +36,7 @@ how_to_use:
   - Read the dashboard. Check each colour against the number and threshold shown beside it.
   - Start with the top priorities. Give each one an owner and a date.
   - Save the result and run it again next quarter to compare.
-  - If the benchmark file or the Python script is not available in your AI, it uses the thresholds written in the skill and tells you.
+  - If the benchmark file or the Python script is not available in your AI, it uses the thresholds written in the skill and tells you. Without the benchmark file there is no overall score, only the eight area scores. The thresholds are the skill author's rules of thumb. They are not an official standard, so do not quote them as published benchmarks to a board or investor.
 output_sample:
   input:
     - Your company stage, such as Seed or Series A

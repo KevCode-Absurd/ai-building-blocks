@@ -69,6 +69,8 @@ Document the JSON policy in the CLI README or equivalent: API pass-through versu
 
 ## Auth and Config
 
+(Added by AI Blocks: before you automate a web app, admin tool or any service, ask the user to check its terms. Do not automate a service whose terms forbid scripted access, or an internal app the user is not allowed to script. Tokens are kept only in the environment variable or the config file named below. Live writes need the user's approval each time.)
+
 Support the boring paths first, in this precedence order:
 
 1. Environment variable using the service's standard name, such as `GITHUB_TOKEN`.

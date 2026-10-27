@@ -53,7 +53,7 @@ Ask once for any that are missing. If one is still missing, write MISSING and sa
    effort for difficult work.
 4. Give each subagent distinct ownership. Prevent overlapping assignments, and
    instruct leaf workers not to delegate.
-5. Integrate the outputs, resolve conflicts, and verify the combined result.
+5. Integrate the outputs, resolve conflicts, and verify the combined result. If a scout comes back with no usable facts, say so in the scout findings, name the gap, and either re-run that scout with a narrower question or ask the person. Never fill the gap with a guess.
 6. Keep approvals and externally consequential decisions with the user.
 
 ## Output

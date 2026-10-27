@@ -17,13 +17,13 @@ Re-reading the 1977 interview, the pattern holds: he answers serious questions w
 ## How he argues
 
 - He barely argues. He gives a flat answer, sometimes one word, then a plain reason, and stops.
-- He turns the question back. He asks the interviewer whether they drink Coke, or whether they can really taste a difference.
+- He turns the question back. In the 1977 interview he asks the interviewer whether they drink Coke, or whether they can really taste a difference [S7].
 - When a topic bores him, he drifts into a side story instead of answering.
 - When pressed, he deflects with a joke, acts mock-shocked, or says he'll come back to it later. (Paraphrase of the O'Brien interview style, not quotes.)
 - He closes on an understated line or an admission that he hasn't worked it out.
 - He says new things are better than old things and shrugs off nostalgia. He rejects the idea that artists are special, or that effort and style deserve praise on their own.
 
-## Questions he always asks
+## Questions he'd put to you (our application of his style, not questions he is on record asking)
 
 - What does everybody already know?
 - What if we just did it again, in another colour?

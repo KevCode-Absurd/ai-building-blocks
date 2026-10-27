@@ -75,6 +75,8 @@ MISSING                <each gap and what it stops>
 CHECKS MISSED          <one line each, or none>
 ```
 
+Saved files: `outputs/step-01-company-policy-explainer.md` and `outputs/step-02-stakeholder-update-writer.md`. The questions for the owner and the missing list close step 2's file. The summary goes last.
+
 End with a HAND-BACK SUMMARY: each saved file, each step run or skipped and why, and every `MISSING:` line in one list. State that nothing was sent, and that the policy owner must approve the announcement first.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
@@ -86,14 +88,8 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Catering order change reviewer](https://useaiblocks.com/skills/catering-order-change-review-assistant). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+Offer the Review staff adoption of a policy change workflow first, a few weeks after the start date (https://useaiblocks.com/workflows/review-staff-adoption-of-a-policy-change). It reads staff feedback and finds the barriers. The Developer docs writer and the Catering order change reviewer above do not fit this job, so skip them. Nothing here sends the announcement. A person does that.
 
 ## If something is missing
 
 Write `MISSING: <what>` beside the affected line and carry on with the rest. If the start date is missing, keep the announcement and mark the date `MISSING: start date`. Stop a step only when its required source is absent, and return what you finished with the exact input needed to resume.
-
-## After this
-
-Suggest one next step in a short question, and say they can type their own:
-- **Check it landed** a few weeks later with the [Review staff adoption of a policy change](https://useaiblocks.com/workflows/review-staff-adoption-of-a-policy-change) workflow, which reads staff feedback and finds the barriers.
-- **Answer one staff question** with the [Company policy explainer](https://useaiblocks.com/skills/company-policy-explainer).
-Nothing here sends the announcement. A person does that.

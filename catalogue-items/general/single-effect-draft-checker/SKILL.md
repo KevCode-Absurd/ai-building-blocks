@@ -5,7 +5,7 @@ description: Use when you have a draft story, speech, ad, email or page and want
 
 # Single-effect draft checker
 
-A draft can have good lines and still not work, because the lines pull in different directions. This skill checks every part against one stated feeling and says where it holds, where it slips, and what to cut. It marks each failure at an exact line. It talks about the work, not the writer. For planning a piece from scratch, use "Ending-first story planner".
+A draft can have good lines and still not work, because the lines pull in different directions. This skill checks every part against one stated feeling and says where it holds, where it slips, and what to cut. It marks each failure at an exact line. It talks about the work, not the writer. For planning a piece from scratch, use the [Ending-first story planner](https://useaiblocks.com/skills/ending-first-story-planner). For plainer wording line by line, use the [Plain English editor](https://useaiblocks.com/skills/plain-english-editor).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

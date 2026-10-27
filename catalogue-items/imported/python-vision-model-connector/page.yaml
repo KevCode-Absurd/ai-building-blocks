@@ -31,10 +31,13 @@ you_get:
   - Notes on what goes in and what comes out
   - A report of what works and what needs attention, if a test run fails
 how_to_use:
+  - "Licence: the LICENSE.md in this item applies. It is BSD 2-Clause plus a rule that you may use the code only with MathWorks products such as MATLAB. The skill file links a different MathWorks licence page. Follow LICENSE.md."
+  - MATLAB is commercial software and needs its own licence from MathWorks. Python and MPyReq are also needed.
   - Install MPyReq from the MATLAB File Exchange. Open the .mltbx file in MATLAB to add it.
-  - Open your AI and paste in this skill. If it can run MATLAB, say so. If not, it gives you the code to run yourself.
+  - Open your AI and paste in this skill. The test-run steps need an AI connected to a MATLAB MCP server (a link that lets your AI run MATLAB on your computer). If yours is not, it gives you the code and you run each script in MATLAB yourself and paste back any error.
   - Paste the GitHub link or package name. Add your sample image and say which MATLAB and Python versions you have.
-  - Run the setup script first. Then run the demo script on your sample image.
+  - "Before you run the setup section, read the GitHub repo and its requirements file. The generated setup auto-accepts downloads, so it installs packages and downloads model weights from that repo without asking you again. Only run it if you trust the repo."
+  - You get one demo file, named demo plus the model name. Its first section sets up Python. Run that section first, then the later sections on your sample image.
   - If something fails, read the handoff report. It lists what works and what to fix next.
   - When the demo works, call the MATLAB function from your own MATLAB code.
 output_sample:
@@ -49,12 +52,13 @@ output_sample:
     - An AI that can run MATLAB, for the test step (optional)
   output:
     - name: Setup script
-      contains: MPyReq code that builds the Python environment and installs the model package, its needs and its weights.
+      contains: The first section of the demo file. MPyReq code that builds the Python environment and installs the model package, its needs and its weights.
     - name: MATLAB inference function
       contains: A function that sends your image to the Python model and returns the result as MATLAB data.
     - name: Demo script
-      contains: A script that runs the model on your sample image and shows the result.
+      contains: The rest of the same demo file. It loads the model, runs it on your sample image and shows the result.
     - name: Notes on inputs and outputs
       contains: What image format goes in and what kind of data comes back.
     - name: Handoff report
       contains: If a test run fails, a list of what works, what needs attention and next steps.
+next: [matlab-app-builder, matlab-code-reviewer]

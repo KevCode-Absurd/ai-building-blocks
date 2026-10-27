@@ -35,7 +35,7 @@ you_get:
   - "A missing documents list: what to get, which claim it backs and who can supply it"
   - A hand-back summary with one next step
 how_to_use:
-  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. The site builds it as a zip with HANDOFF.md and every skill file this workflow uses. If you cannot download it, paste the steps from this page into your AI in order.
   - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
   - Paste your draft and the funder's rules. Add your records. Remove ID numbers and anything private you do not need to share.
   - Read the evidence map first. Every MISSING row is a document to find or a claim to cut.

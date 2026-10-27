@@ -7,16 +7,17 @@ job: work-with-files
 headline: Lab instrument data converter
 subhead: Give it instrument output files from a plate reader, cell counter or similar device. You get Allotrope JSON or flat CSV back, ready to load into your lab systems.
 explain: |
-  Instrument output files turned into a format your lab systems accept. Give it files from a plate reader, cell counter or similar device. The skill detects the instrument type, reads the file with the allotropy library, and writes Allotrope Simple Model JSON, a flat CSV with one row per measurement, or both.
+  Instrument output files turned into a format your lab systems accept. The checks only warn, so a QA reviewer or data engineer should look at flagged items before any regulated LIMS load. Give it files from a plate reader, cell counter or similar device. The skill detects the instrument type, reads the file with the allotropy library, and writes Allotrope Simple Model JSON, a flat CSV with one row per measurement, or both.
 
-  It keeps raw readings apart from calculated values, and links every calculated value back to its source data so results stay traceable. If a field is unclear, such as whether a number is a setting or a reading, it asks you instead of guessing. It can also write the Python parser code for your data engineers. You need Python and a few packages installed.
+  It keeps raw readings apart from calculated values. For instruments the allotropy library supports, it links every calculated value back to its source data so results stay traceable. For other instruments it uses a fallback parser. The fallback keeps less detail and does not add that traceability. If a field is unclear, such as whether a number is a setting or a reading, it asks you instead of guessing. It can also write the Python parser code for your data engineers. You need Python and a few packages installed.
 when:
   - Your LIMS only accepts Allotrope JSON and your instrument exports CSV.
   - You want a flat table of instrument results to open in Excel.
   - A data engineer needs parser code to repeat the conversion on every run.
-  - You need calculated values to stay traceable to the raw data.
+  - You need calculated values to stay traceable to the raw data. This works for instruments on the supported list.
 not_for:
   - "Your instrument is not on the supported list: use the maker's own export or software instead."
+  - "Your files are PDF only, or the instrument is unsupported: use the maker's own export, because the fallback parser returns less detail."
   - "You only need to tidy or chart a spreadsheet: use Excel or Google Sheets."
   - "You cannot run Python and have no one who can: ask your data engineer or LIMS vendor to run the conversion."
 you_give:
@@ -30,12 +31,13 @@ you_get:
   - Parser code for handoff
   - A short summary of what was converted
 how_to_use:
+  - Gather first. You need the raw output files, the instrument model, a reference ASM file from your LIMS vendor if you have one, and any notes on how your fields are classified.
   - Check your instrument is on the supported list in the skill folder. If it is not, stop and use the maker's own export.
   - "Set up Python in a virtual environment, then run: pip install allotropy pandas openpyxl pdfplumber."
   - Open an AI that can run code and add the skill instructions.
   - Upload your files (CSV, Excel, TXT or PDF). Say which instrument and whether you want JSON, CSV or both.
   - Answer any questions about unclear fields. Your AI asks instead of guessing.
-  - Check the summary and validation result before you load the files into your LIMS.
+  - Check the summary and validation result before you load the files into your LIMS. The validator only warns. For regulated or GxP data, a QA reviewer or data engineer must check every flagged item before the load.
   - Next, load the checked JSON or CSV into your LIMS. Give the parser script to your data engineer so they can repeat the run on the next batch.
 output_sample:
   input:
@@ -48,7 +50,7 @@ output_sample:
     - Python with the allotropy, pandas, openpyxl and pdfplumber packages installed
   output:
     - name: ASM JSON file
-      contains: The full Allotrope Simple Model result, with raw readings kept apart from calculated values and linked to their sources.
+      contains: The full Allotrope Simple Model result, with raw readings kept apart from calculated values. Calculated values link to their sources only for supported instruments.
     - name: Flattened CSV
       contains: One row per measurement, with sample, well, value, unit and instrument details repeated on each row.
     - name: Parser script

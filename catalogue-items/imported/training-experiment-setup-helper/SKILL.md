@@ -11,11 +11,15 @@ metadata:
   version: "1.0"
 ---
 
+<!-- Licence note: the licence line in the header above links a MathWorks reuse page. The licence that governs this copy is LICENSE.md in this folder: BSD 2-Clause, for use with MathWorks products only. -->
+
 # Experiment Manager Assistant
 
 Create experiments from user code or problem descriptions AND keep the Experiment Manager (EM) UI
 in sync — adding/deleting/editing experiments updates the browser tree and editor live,
 without restarting EM.
+
+**What you get:** a new experiment in Experiment Manager, built from your script, with its strategy set and your settings listed as named parameters with their sweep values. Edits, renames, copies and deletes show in the app live.
 
 ## When to Use
 
@@ -63,7 +67,7 @@ Pick the one operation that matches the request:
 
 | # | Task | Reference |
 |---|------|-----------|
-| 1 | **Create** — from code or description, generate function, open in EM | [create.md](references/create.md) |
+| 1 | **Create** — from code or description, generate function, open in EM. In short: ask about the code, goal, settings and metrics; write the experiment function; create or extend the project; open it in Experiment Manager. | [create.md](references/create.md) |
 | 2 | **Load Project** — open project in EM, list experiments, offer actions | [load-project.md](references/load-project.md) |
 | 3 | **Update** — modify parameters, strategy, functions, supporting files | [update.md](references/update.md) |
 | 4 | **Delete** — remove experiment tab, results, tree entry, and file | [delete.md](references/delete.md) |

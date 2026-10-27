@@ -39,7 +39,7 @@ Calculates the repeat purchase rate — the percentage of customers who return t
    **Expected output:** Customers acquired in window
 
 2. **OPERATION:** `orders` — query
-   **Inputs:** `query: "created_at:>='<acquisition start>'"` where acquisition start = today minus `days_back` days (no end date, so every order from then until today is read), `first: 250`, select `customer { id }`, `createdAt`, `lineItems { product { id, title } }`, pagination cursor
+   **Inputs:** `query: "created_at:>='<acquisition start>'"` where acquisition start = today minus `days_back` days (no end date, so every order from then until today is read), `first: 250`, select `customer { id }`, `createdAt`, `totalPriceSet { shopMoney { amount currencyCode } }` (for `total_spent`), `lineItems { product { id, title } }`, pagination cursor
    **Expected output:** Orders to build per-customer purchase history and first-product mapping
 
    Keep paging with `hasNextPage` and `endCursor` for both queries until `hasNextPage` is false, so no customer or order is missed.
@@ -60,9 +60,6 @@ query AcquiredCustomers($query: String!, $after: String) {
         id
         createdAt
         numberOfOrders
-        defaultEmailAddress {
-          emailAddress
-        }
       }
     }
     pageInfo {
@@ -81,6 +78,12 @@ query CustomerOrderHistory($query: String!, $after: String) {
       node {
         id
         createdAt
+        totalPriceSet {
+          shopMoney {
+            amount
+            currencyCode
+          }
+        }
         customer {
           id
         }
@@ -160,6 +163,8 @@ For `format: json`, emit:
 ## Output Format
 CSV file `repeat_purchase_<YYYY-MM-DD>.csv` with columns:
 `customer_id`, `first_order_date`, `first_product`, `total_orders`, `is_repeat`, `days_to_repeat`, `total_spent`
+
+`total_orders` is the count of that customer's dated orders in the step 2 data. `total_spent` is the sum of `totalPriceSet` on those orders. The file holds customer IDs, which are personal data. Do not read customer emails: they are not needed. Tell the user to store the file safely and share it only with people who need it.
 
 ## Error Handling
 | Error | Cause | Recovery |

@@ -15,7 +15,7 @@ description: "Use when the user asks to inspect Sentry issues or events, summari
 - Use `sentry schema <resource>` to discover API endpoints quickly.
 
 If the CLI is not installed, give the user these steps:
-1. Install the Sentry CLI: `curl https://cli.sentry.dev/install -fsS | bash` (this downloads and runs a script, so the user should read it first or use Sentry's other install options)
+1. Install the Sentry CLI from Sentry's official install page, https://cli.sentry.dev. Do not run a download piped straight into a shell. Tell the user to read any install script first.
 2. Authenticate: `sentry auth login`
 3. Confirm authentication: `sentry auth status`
 - Never ask the user to paste the full token in chat. Ask them to set it locally and confirm when ready.
@@ -113,11 +113,6 @@ sentry schema issues
 - Redact PII in output (emails, IPs). Do not print raw stack traces.
 - Never echo auth tokens.
 
-## Golden test inputs
+## What a good answer looks like
 
-- Org: `{your-org}`
-- Project: `{your-project}`
-- Issue short ID: `{ABC-123}`
-
-Example prompt: "List the top 10 open issues for prod in the last 24h."
-Expected: ordered list with titles, short IDs, counts, last seen.
+A good answer is an ordered list of open production issues, newest first, each with its title, short ID, count and last seen time. If nothing was found, it says so plainly.

@@ -21,6 +21,7 @@ Discover and analyze influencers across multiple platforms using Apify Actors.
 - Scraping must follow each platform's terms of service and the user's local privacy law. The data names real people. Collect only public profile metrics, keep the list for outreach planning, and do not collect private data or contact details beyond what each creator publishes.
 - Keep the collected creator data only for this campaign and delete it afterwards. Take contact details only from the creator's own published profile.
 - Never ask the user to paste their Apify token into the chat. It belongs in a local `.env` file.
+- **Confirm before any collection starts.** Ask the user: "Have you checked each platform's terms and your local privacy law for this campaign?" Do not run any Actor until they say yes. If they say no, offer the no-tools route below.
 - If the user cannot run code or has no Apify account, use the no-tools route: ask them to paste the public numbers for each creator (followers, average likes and comments on recent posts, niche, link). Then do Step 5 on those numbers. Say clearly that the data is theirs, not collected by you.
 - Ask once for the niche, the target platforms and what a good fit looks like. Mark any answer you do not get as MISSING. Do not guess.
 
@@ -70,11 +71,19 @@ Select the appropriate Actor based on user needs:
 
 Fetch the Actor's input schema and details dynamically using mcpc:
 
+First load the token from the `.env` file into the shell, so its value is never typed into a command:
+
 ```bash
-export $(grep APIFY_TOKEN .env | xargs) && mcpc --json mcp.apify.com --header "Authorization: Bearer $APIFY_TOKEN" tools-call fetch-actor-details actor:="ACTOR_ID" | jq -r ".content"
+set -a; . ./.env; set +a
 ```
 
-The command above puts the token in the command line, which can end up in shell history. Prefer a method where `mcpc` reads the token from an environment variable or a config file, so it never appears in the command text. If that is not possible, run it in a private terminal, then clear the shell history for that session. Never print the token or paste it into the chat. Run the scripts from the skill folder so `reference/scripts/run_actor.js` resolves.
+Then run the command. It refers to the variable `$APIFY_TOKEN`, not the token itself:
+
+```bash
+mcpc --json mcp.apify.com --header "Authorization: Bearer $APIFY_TOKEN" tools-call fetch-actor-details actor:="ACTOR_ID" | jq -r ".content"
+```
+
+Never type the token value into a command, print it, echo it, or paste it into the chat. Do not turn on shell tracing (`set -x`) or save command output to a log while the token is loaded, because that can write the token to a file. Close the shell when the run is done. If your `mcpc` version can read the token from its own config file, use that instead. Run the scripts from the skill folder so `reference/scripts/run_actor.js` resolves.
 
 Replace `ACTOR_ID` with the selected Actor (e.g., `apify/instagram-profile-scraper`).
 
@@ -90,7 +99,7 @@ Before running, ask:
    - **Quick answer** - Display top few results in chat (no file saved)
    - **CSV** - Full export with all fields
    - **JSON** - Full export in JSON format
-2. **Number of results**: Based on character of use case
+2. **Number of results**: Default to 10 creators. Tell the user a larger run uses more of their Apify credits, and let them choose a bigger number.
 
 ### Step 4: Run the Script
 
@@ -125,12 +134,12 @@ After completion, report:
 - Number of influencers found
 - File location and name
 - Key metrics available (followers, engagement rate, etc.)
-- Suggested next steps (filtering, outreach, deeper analysis)
+- Suggested next steps (filtering, outreach, deeper analysis). Always include: save the ranked table, and set a date to delete the collected creator data.
 
 Then rank the creators. Use only fields that came back from the data:
 
 - **Engagement rate** = average likes plus comments on recent posts, divided by followers. Show the sums so the user can check. If a field is missing, write MISSING.
-- **Authenticity flags** are warnings, not verdicts. Flag a creator when likes are very low next to followers, when comments are mostly short or repeated, or when followers jump with no matching engagement. Say "worth checking by hand" and never say "fake".
+- **Authenticity flags** are warnings, not verdicts. Flag a creator when likes are very low next to followers, when comments are mostly short or repeated, or when followers jump with no matching engagement. Say "worth checking by hand" and never say "fake". The flags are prompts for a manual check. Never use a flag alone to exclude a creator.
 - **Fit** = how closely the creator's bio, hashtags and recent posts match the niche and the fit description the user gave.
 
 Return a table, ranked best first, then a short note on the top three:

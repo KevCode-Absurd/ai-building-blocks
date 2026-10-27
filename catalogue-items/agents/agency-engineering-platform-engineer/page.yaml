@@ -156,7 +156,7 @@ works_best_with:
     - name: Claude, ChatGPT or Gemini with file upload
       why: They can read your ticket lists and survey answers together.
     - name: Backstage
-      why: The profile uses it as the front door for services and templates.
+      why: The profile uses it as the front door for services and templates. It is optional. It is free and open source, but you host and run it yourself, which takes engineering time. You need no access to it to start; the plan works from your tickets and notes.
   inputs:
     - Last quarter's platform request tickets.
     - Short interviews with five to eight developers.

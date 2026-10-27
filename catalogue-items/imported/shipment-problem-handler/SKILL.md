@@ -58,7 +58,7 @@ Every exception falls into a classification that determines the resolution workf
 
 - **Delay (transit):** Shipment not delivered by promised date. Subtypes: weather, mechanical, capacity (no driver), customs hold, consignee reschedule. A common exception type. Resolution hinges on whether delay is carrier-fault or force majeure.
 - **Damage (visible):** Noted on POD at delivery. Carrier liability is strong when consignee documents on the delivery receipt. Photograph immediately. Never accept "driver left before we could inspect."
-- **Damage (concealed):** Discovered after delivery, not noted on POD. Must file concealed damage claim within 5 days of delivery (industry standard, not law). Burden of proof shifts to shipper. Carrier will challenge — you need packaging integrity evidence.
+- **Damage (concealed):** Discovered after delivery, not noted on POD. Example: file a concealed damage claim within 5 days of delivery (an industry habit, not law; check your contract). Burden of proof shifts to shipper. Carrier will challenge — you need packaging integrity evidence.
 - **Damage (temperature):** Reefer/temperature-controlled failure. Requires continuous temp recorder data (Sensitech, Emerson). Pre-trip inspection records are critical. Carriers will claim "product was loaded warm."
 - **Shortage:** Piece count discrepancy at delivery. Count at the tailgate — never sign clean BOL if count is off. Distinguish driver count vs warehouse count conflicts. OS&D (Over, Short & Damage) report required.
 - **Overage:** More product delivered than on BOL. Often indicates cross-shipment from another consignee. Trace the extra freight — somebody is short.
@@ -74,23 +74,23 @@ Understanding how different carrier types operate changes your resolution strate
 
 - **LTL carriers** (FedEx Freight, XPO, Estes): Shipments touch 2-4 terminals. Each touch = damage risk. Claims departments are large and process-driven. Expect 30-60 day claim resolution. Terminal managers have authority up to ~$2,500.
 - **FTL/truckload** (asset carriers + brokers): Single-driver, dock-to-dock. Damage is usually loading/unloading. Brokers add a layer — the broker's carrier may go dark. Always get the actual carrier's MC number.
-- **Parcel** (UPS, FedEx, USPS): Automated claims portals. Strict documentation requirements. Declared value matters — default liability is very low ($100 for UPS). Must purchase additional coverage at shipping.
+- **Parcel** (UPS, FedEx, USPS): Automated claims portals. Strict documentation requirements. Declared value matters — default liability is very low (about $100 for UPS in the author's example; check the carrier's current terms). Must purchase additional coverage at shipping.
 - **Intermodal** (rail + drayage): Multiple handoffs. Damage often occurs during rail transit (impact events) or chassis swap. Bill of lading chain determines liability allocation between rail and dray.
-- **Ocean** (container shipping): Governed by Hague-Visby or COGSA (US). Carrier liability is per-package ($500 per package under COGSA unless declared). Container seal integrity is everything. Surveyor inspection at destination port.
-- **Air freight:** Governed by Montreal Convention. Strict 14-day notice for damage, 21 days for delay. Weight-based liability limits unless value declared. Fastest claims resolution of all modes.
+- **Ocean** (container shipping): Governed by Hague-Visby or COGSA (US). Carrier liability is per-package (an example of $500 per package under COGSA unless declared; check the current rule). Container seal integrity is everything. Surveyor inspection at destination port.
+- **Air freight:** Governed by Montreal Convention. Example notice times: 14 days for damage, 21 days for delay (check the current rule and your air waybill). Weight-based liability limits unless value declared. Fastest claims resolution of all modes.
 
 ### Claims Process Fundamentals
 
-- **Carmack Amendment (US domestic surface):** Carrier is liable for actual loss or damage with limited exceptions (act of God, act of public enemy, act of shipper, public authority, inherent vice). Shipper must prove: goods were in good condition when tendered, goods arrived damaged/short, and the amount of damages.
-- **Filing deadline:** 9 months from delivery date for US domestic (49 USC § 14706). Miss this and the claim is time-barred regardless of merit.
+- **Carmack Amendment (US domestic surface only, not legal advice):** Carrier is liable for actual loss or damage with limited exceptions (act of God, act of public enemy, act of shipper, public authority, inherent vice). Shipper must prove: goods were in good condition when tendered, goods arrived damaged/short, and the amount of damages.
+- **Filing deadline (example for US domestic, check your contract):** 9 months from delivery date (49 USC § 14706). Miss this and the claim is time-barred regardless of merit.
 - **Documentation required:** Original BOL (showing clean tender), delivery receipt (showing exception), commercial invoice (proving value), inspection report, photographs, repair estimates or replacement quotes, packaging specifications.
-- **Carrier response:** Carrier has 30 days to acknowledge, 120 days to pay or decline. If they decline, you have 2 years from the decline date to file suit.
+- **Carrier response (example, check your contract):** Carrier has 30 days to acknowledge, 120 days to pay or decline. If they decline, you have 2 years from the decline date to file suit.
 
 ### Seasonal and Cyclical Patterns
 
 - **Peak season (Oct-Jan):** Exception rates rise. Carrier networks are strained. Transit times extend. Claims departments slow down. Build buffer into commitments.
 - **Produce season (Apr-Sep):** Temperature exceptions spike. Reefer availability tightens. Pre-cooling compliance becomes critical.
-- **Hurricane season (Jun-Nov):** Gulf and East Coast disruptions. Force majeure claims increase. Rerouting decisions needed within 4-6 hours of storm track updates.
+- **Hurricane season (Jun-Nov):** Gulf and East Coast disruptions. Force majeure claims increase. Rerouting decisions may be needed within hours of storm track updates (the author's example is 4-6 hours; check with your carrier).
 - **Month/quarter end:** Shippers rush volume. Carrier tender rejections spike. Double-brokering increases. Quality suffers across the board.
 - **Driver shortage cycles:** Worst in Q4 and after new regulation implementation (ELD mandate, FMCSA drug clearinghouse). Spot rates spike, service drops.
 
@@ -132,7 +132,7 @@ Assess every exception on three axes and take the highest severity. The dollar l
 
 This is the most common judgment call. The dollar bands and settlement percentages below are illustrative examples, not rules. Tell the user to set their own thresholds from their margins, claim costs and carrier contract:
 
-- **< $500 and carrier relationship is strong:** Absorb. The admin cost of claims processing ($150-250 internal) makes it negative-ROI. Log for carrier scorecard.
+- **< $500 and carrier relationship is strong:** Absorb. The admin cost of claims processing (example only, about $150-250 internal; use your own figure) makes it negative-ROI. Log for carrier scorecard.
 - **$500 - $2,500:** File claim but don't escalate aggressively. This is the "standard process" zone. Accept partial settlements above 70% of value.
 - **$2,500 - $10,000:** Full claims process. Escalate at 30-day mark if no resolution. Involve carrier account manager. Reject settlements below 80%.
 - **> $10,000:** VP-level awareness. Dedicated claims handler. Independent inspection if damage. Reject settlements below 90%. Legal review if denied.
@@ -143,7 +143,7 @@ This is the most common judgment call. The dollar bands and settlement percentag
 When multiple exceptions are active simultaneously (common during peak season or weather events), prioritize:
 
 1. Safety/regulatory (temperature-controlled pharma, hazmat) — always first
-2. Customer production shutdown risk — financial multiplier is 10-50x product value
+2. Customer production shutdown risk — financial multiplier can be many times the product value (an example range of 10-50x from the author; check it against your own contracts)
 3. Perishable with remaining shelf life < 48 hours
 4. Highest financial impact adjusted for customer tier
 5. Oldest unresolved exception (prevent aging beyond SLA)

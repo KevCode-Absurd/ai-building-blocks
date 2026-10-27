@@ -36,6 +36,7 @@ how_to_use:
   - Read the plan and config files your AI writes. Check that names and limits match your setup.
   - Apply the config in your cloud, or hand it to a developer. Your AI cannot apply it for you in a plain chat.
   - After two weeks, check which alerts fired. Ask your AI to remove or adjust the noisy ones.
+  - Next, ask for a runbook for each alert with incident-runbook-writer. For a simple site, a free uptime checker is enough.
 output_sample:
   input:
     - Your cloud provider, such as AWS, Google Cloud or Azure

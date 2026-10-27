@@ -341,57 +341,13 @@ const SEARCH_QUERY = `#graphql
 `;
 ```
 
-### Customer Authentication
+### Customer Authentication (not covered here)
 
-```tsx
-// app/routes/account.login.tsx
-// LOGIN_MUTATION is not shown here. Take it from Shopify's current docs.
-// Newer Hydrogen projects sign customers in through Shopify's hosted
-// Customer Account login instead of a custom password form, so check which one your project uses.
-import { type ActionFunctionArgs, redirect } from "@remix-run/cloudflare";
+This skill does not include a working sign-in. Do not write a custom form that collects a customer's email and password. For customer accounts, use Shopify's hosted Customer Account login and follow Shopify's current docs for your Hydrogen version. Tell the user this, and do not present any login code as ready to deploy.
 
-export async function action({ request, context }: ActionFunctionArgs) {
-  const { customerAccount } = context;
-  const formData = await request.formData();
-  const email = formData.get("email");
-  const password = formData.get("password");
+### Localization (not covered here)
 
-  const { customerAccessTokenCreate } = await customerAccount.mutate(
-    LOGIN_MUTATION,
-    { variables: { input: { email, password } } },
-  );
-
-  if (customerAccessTokenCreate.customerAccessToken) {
-    // Store token in session
-    return redirect("/account");
-  }
-
-  return { errors: customerAccessTokenCreate.customerUserErrors };
-}
-```
-
-### Localization
-
-```tsx
-// Multi-currency and language support
-// LOCALIZATION_QUERY is not shown here. Take it from Shopify's current docs.
-import { type LoaderFunctionArgs } from "@remix-run/cloudflare";
-
-export async function loader({ params, context }: LoaderFunctionArgs) {
-  const { storefront } = context;
-  const { handle } = params;
-
-  // Get localized data
-  const { localization } = await storefront.query(LOCALIZATION_QUERY);
-
-  // Query with localization context
-  const { product } = await storefront.query(PRODUCT_QUERY, {
-    variables: { handle, country: "CA", language: "FR" },
-  });
-
-  return { product, localization };
-}
-```
+This skill does not include working code for multiple currencies or languages. Point the user to Shopify's current Hydrogen localization docs and write the code from those. Tell the user it is not covered here, and do not present any localization code as ready to deploy.
 
 ## Oxygen Deployment
 

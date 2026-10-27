@@ -13,6 +13,8 @@ metadata:
 
 # LiteParse — Local Document Parsing
 
+> **Licence note:** the licence that applies to this copy is MIT, as the `LICENSE.md` file in this item says. The `license: Apache-2.0` line in the header above is the upstream label.
+
 ## Overview
 
 LiteParse is an open-source document parser (Rust core, Python/Node bindings) for **local, layout-aware text extraction**. It produces layout text, structured JSON, or heuristic Markdown. Spatial text items may span several words; Python `emit_word_boxes=True` adds word boxes when needed.

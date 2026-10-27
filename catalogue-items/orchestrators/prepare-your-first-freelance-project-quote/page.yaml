@@ -35,7 +35,7 @@ you_get:
   - A contract review list of unclear terms on acceptance, payment, ownership and revisions
   - A hand-back summary that names every gap and one next step
 how_to_use:
-  - Download the pack and give it to your AI, such as Claude, ChatGPT or Gemini. Add the three skills it names.
+  - Download the pack and give it to your AI, such as Claude, ChatGPT or Gemini. The three skills it names come in the pack. If one is missing, your AI can fetch its page on useaiblocks.com, and if it cannot, it stops at that step and tells you.
   - Paste the client's request, then your hours, rate, costs and payment terms. Say where you are based and where the client is.
   - Read the scope list first. Fix anything the client has not agreed to, because the quote and the contract review both build on it.
   - Check each price line against your own hours and rate. Fill every MISSING line before you send anything.

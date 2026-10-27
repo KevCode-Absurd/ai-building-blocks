@@ -128,8 +128,8 @@ Apply these evidence-based design principles:
    - Students who don't understand should reliably choose the distractor that matches their specific misconception.
    - If the correct answer can be guessed through elimination, pattern recognition, or test-wiseness (e.g., "the longest answer is usually right"), the question fails.
 
-4. **Design for immediate action (Black & Wiliam, 1998):**
-   - The response pattern should tell the teacher exactly what to do next:
+4. **Design for immediate action (Black & Wiliam, 1998 on acting on assessment information):**
+   - The response pattern should tell the teacher exactly what to do next. The percentages below are a suggested rule of thumb, not a finding from that research. Change them to suit your class:
      - 80%+ correct → proceed to practice.
      - 50–80% correct → brief re-teach targeting the most common misconception, then re-check.
      - Below 50% → significant re-teach needed before proceeding.

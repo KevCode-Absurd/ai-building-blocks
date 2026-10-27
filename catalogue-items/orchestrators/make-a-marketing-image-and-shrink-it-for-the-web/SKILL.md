@@ -34,6 +34,7 @@ How to start:
 ## What you need
 - **What the image is for and where it will appear** (required): for example a blog header or a social card. Size and crop differ for each, so name the placement.
 - **A way to draw the picture** (required for step 2): an API key for an image service, or a chat AI that can draw. A service key may cost money for each picture. Claude alone writes the prompt but cannot draw it.
+- **Where it goes, its pixel size and the file format you want** (strongly advised): for example 1200 by 630 pixels as WebP. If you do not know, step 1 proposes a size for the placement.
 - **Your brand colours, style or logo** (optional).
 - **A goal, buyer and offer** (optional): a short creative brief makes the prompt fit better.
 
@@ -47,7 +48,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Marketing image maker.** Use the skill `marketing-image-maker`. Starts the chain. Saves the image prompt, the size and shape for the placement, and the file names.
-2. **Multi-provider image maker.** Use the skill `multi-provider-image-maker`. Give it the prompt, size and file names from the step 1 file. Draws the picture at that size and saves it. The skill supports image services such as OpenAI, Google, OpenRouter and Replicate. Supply the key as an environment variable (for example `OPENAI_API_KEY` or `GOOGLE_API_KEY`) and ask before spending, since each picture is billed. With no key, a chat AI that can draw (ChatGPT or Gemini) draws it from the step 1 prompt: paste the prompt there, save the picture and give it to step 3. Check the crop for the placement before step 3.
+2. **Multi-provider image maker.** Use the skill `multi-provider-image-maker`. Give it the prompt, size and file names from the step 1 file. Draws the picture at that size and saves it. The skill supports image services such as OpenAI, Google, OpenRouter and Replicate. Supply the key as an environment variable (for example `OPENAI_API_KEY` or `GOOGLE_API_KEY`) and ask before spending, since each picture is billed. With no key, a chat AI that can draw (ChatGPT or Gemini) draws it from the step 1 prompt: paste the prompt there, save the picture and give it to step 3. If your chat AI cannot save files, right-click and save the picture yourself, then attach it for step 3. Check the crop for the placement before step 3.
 3. **Image compressor.** Use the skill `image-compressor`. Give it the picture saved in step 2. Compresses it to WebP or PNG at a quality you set, keeps the original, and reports the size before and after.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
@@ -70,6 +71,6 @@ If they pick one and that skill is added here, carry straight on with what you j
 ## Check before you hand it back
 - The picture matches what you asked for and the placement, and the crop is right at real size.
 - Any text in the picture is spelled right.
-- The compressed file looks the same as the original at normal size, and is clearly smaller.
+- Open the original and the compressed file side by side at 100% zoom, at the size the placement really shows. You see no difference in edges, text or colour, and the new file is clearly smaller. If you do see one, rerun step 3 at a higher quality.
 - File names and sizes match the step 1 plan.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line. Nothing was paid for without a clear yes.

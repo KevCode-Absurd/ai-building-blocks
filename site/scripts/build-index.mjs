@@ -392,6 +392,22 @@ const renamedFile = path.join(ROOT, "renamed.json");
 const renamed = fs.existsSync(renamedFile) ? Object.fromEntries(Object.entries(JSON.parse(fs.readFileSync(renamedFile, "utf8"))).filter(([, to]) => blocks.some((b) => b.slug === to))) : {};
 // The whole roster goes too, so /minds can show who's coming before their files are built.
 const minds = { areas: roster.areas ?? {}, roster: roster.minds.map((m) => ({ slug: m.slug, name: m.name, identity: bySlug[m.slug]?.identity ?? m.identity, area: m.area, seat: m.seat, living: !!m.living, built: !!bySlug[m.slug], face: faces[m.slug] ?? {}, labels: labelsOf(m.slug), useCases: mindUseCases.get(m.slug) ?? [] })), labels: labelFile.labels ?? {} };
+// How people ask for each item in their own words (catalogue-items/search-asks.json, written per item without sight of
+// any test requests): the words they use that the item's own text does not are added to its cues, so the builder and
+// plan_workflow meet "nobody leaves reviews" or "stolen cards" by keyword. Only the new single words travel.
+const ASKS_FILE = path.join(ROOT, "search-asks.json"), ASK_WORDS = 30;
+if (fs.existsSync(ASKS_FILE)) {
+  const asks = JSON.parse(fs.readFileSync(ASKS_FILE, "utf8")).asks ?? {};
+  const STOPWORDS = new Set("a an and are as at be but by can do does for from get got have how i if in into is it its just me my no not of on or our so some than that the their them then there they this to too up us want was we what when where which who why will with would you your".split(" "));
+  const wordsIn = (text) => (text.toLowerCase().match(/[a-z0-9][a-z0-9'-]*/g) ?? []).map((w) => w.replace(/'s$/, ""));
+  for (const b of blocks) {
+    const said = asks[b.slug];
+    if (!Array.isArray(said) || !said.length) continue;
+    const known = new Set(wordsIn(`${b.name} ${(b.aliases ?? []).join(" ")} ${b.headline ?? ""} ${b.summary} ${b.slug.replace(/-/g, " ")} ${b.cues ?? ""}`));
+    const extra = [...new Set(said.flatMap((s) => wordsIn(String(s))))].filter((w) => !known.has(w) && !STOPWORDS.has(w) && w.length > 1).slice(0, ASK_WORDS);
+    if (extra.length) b.cues = [b.cues, extra.join(" ")].filter(Boolean).join(" ");
+  }
+}
 // blocks.json is loaded by every page, so each block is sent as small as it can be: fields the list, search, home page and
 // builder never read are left out, and a value equal to its default is left out too. loadCatalogue (lib/data.ts) puts them back.
 const DEFAULTS = { category: "general", type: "skill", role: "make", job: "ops", level: "intermediate", thinking: "medium", origin: "own", version: "1.0.0", usedIn: 0 };

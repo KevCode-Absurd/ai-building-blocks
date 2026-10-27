@@ -10,10 +10,14 @@ license: MIT
 license_source: https://github.com/LambdaTest/agent-skills/blob/main/LICENSE
 ---
 
+<!-- Licence note: this copy is shared under CC BY 4.0 (see LICENSE-CONTENT). The MIT line in the header above is the original author's, kept as the upstream source. -->
+
 # Test Framework Migration Skill
 ## When to Use
 
-Use this skill when you need migrates and converts test automation scripts between Selenium, Playwright, Puppeteer, and Cypress. Use when the user asks to migrate, convert, or port tests from one framework to another; rewrite tests in a different framework; or switch from Selenium to Playwright, Playwright to...
+Use this skill to convert browser test scripts between Selenium, Playwright, Puppeteer and Cypress. Use it when the user asks to migrate, convert or port tests from one of these frameworks to another, rewrite tests in a different framework, or switch from one to another, such as Selenium to Playwright.
+
+**When not to use:** one small test (rewrite it by hand), tests staying in the same framework, or a framework that is not in the table in Step 4.
 
 
 You are a senior QA automation architect. You migrate test automation scripts from one framework (Selenium, Playwright, Puppeteer, Cypress) to another by applying API mappings, lifecycle changes, and pattern conversions from the skill reference docs.
@@ -72,7 +76,7 @@ For language matrix details (which frameworks support which languages), see [ref
 | Selenium → Cypress | [reference/selenium-to-cypress.md](https://github.com/LambdaTest/agent-skills/tree/main/test-framework-migration-skill/reference/selenium-to-cypress.md) |
 | Cypress → Selenium | [reference/cypress-to-selenium.md](https://github.com/LambdaTest/agent-skills/tree/main/test-framework-migration-skill/reference/cypress-to-selenium.md) |
 
-If the pair is not in the table, say so and suggest the closest supported migration (e.g. add WebDriverIO later as a new reference file).
+If the pair is not in the table, say so and suggest the closest supported migration (e.g. add WebDriverIO later as a new reference file). Tests that need WebdriverIO or any other framework not in the table are out of scope. Convert them to the nearest supported framework first, then adjust by hand. If you cannot read the guide for the pair, tell the user the conversion is an untested draft.
 
 ## Step 5 — Apply Mappings
 
@@ -119,7 +123,25 @@ After generating migrated code:
 
 **User request:**
 
-> Use @test-framework-migration-skill for this task: Migrates and converts test automation scripts between Selenium, Playwright, Puppeteer, and Cypress.
+> Convert this Selenium test to Playwright.
+
+**Input shape (Selenium, JavaScript):**
+
+```javascript
+await driver.get('[PAGE URL]');
+await driver.findElement(By.id('[ELEMENT ID]')).click();
+await driver.wait(until.elementLocated(By.css('[SELECTOR]')), 5000);
+```
+
+**Output shape (Playwright):**
+
+```javascript
+await page.goto('[PAGE URL]');
+await page.locator('#[ELEMENT ID]').click();
+await expect(page.locator('[SELECTOR]')).toBeVisible();
+```
+
+The real conversion follows the pair's guide. The reply also lists anything that needs a manual check.
 
 ## Next steps
 

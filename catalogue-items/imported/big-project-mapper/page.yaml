@@ -30,8 +30,8 @@ you_get:
   - A running list of decisions so far
   - A clear hand-off point when the route is clear
 how_to_use:
-  - Set up first. Your AI needs your issue tracker, or it can use local markdown files if you have none. It also needs four helper skills: the Plan stress-tester, Project glossary writer, Source-based researcher and Throwaway prototype builder in this library.
-  - Tell your AI to ask you before it claims, closes or pushes anything on your tracker.
+  - Set up first. Your AI needs your issue tracker. If you have not run the author's setup-matt-pocock-skills command (it is not in this library), tell your AI to use local markdown files as the tracker. It also needs four helper skills, all in this library: the plan stress-tester, project glossary writer, source-based researcher and throwaway prototype builder.
+  - Know what to expect. By default the skill claims a ticket first by assigning it, closes it when answered, and pushes research notes to a throwaway branch, all without asking. If you want to approve each of those first, tell your AI so before you start.
   - Paste this skill into your AI and describe your big idea. Say where you want to end up.
   - Answer the questions your AI asks. It names the destination, then creates the map and the first tickets. This first session settles no tickets by hand.
   - Start a new session with the map link. Your AI picks the next open ticket, claims it, and works it with you.

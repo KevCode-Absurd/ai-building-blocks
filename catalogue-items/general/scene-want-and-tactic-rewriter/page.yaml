@@ -18,9 +18,9 @@ when:
   - Two speakers in your dialogue sound the same.
   - A role play, sketch or video script has facts but no pull.
 not_for:
-  - "You need plain factual copy, like a help page or a report: use a plain editor or a colleague to tidy it."
+  - "You need plain factual copy, like a help page or a report: use the Plain English editor."
   - "Your characters have no conflict and no one wants anything from anyone: keep the scene as it is, or cut it."
-  - "You only want rhythm and word fixes on a scene that already works: use a line editor or read it aloud with a friend."
+  - "You only want rhythm and word fixes on a scene that already works: use the Dialogue editor, or read it aloud with a friend."
 
 you_give:
   - The scene or dialogue as it stands

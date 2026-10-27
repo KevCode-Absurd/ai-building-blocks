@@ -9,6 +9,8 @@ subhead: Describe the site, its mood, your colours and any 3D models. It writes 
 explain: |
   A high-end 3D website needs more than a model on a page, and this skill writes the code for custom shader effects, smooth motion, a loading screen and phone tuning.
 
+  Plain words for the terms: WebGL is how a browser draws 3D. R3F is React Three Fiber, a way to build 3D scenes in React. GLSL is the small program language that shapes how a surface looks. Draco is a way to shrink 3D model files.
+
   The work goes in four steps. First, a render loop with a resize handler and a pixel ratio capped at two, so high-density screens do not choke. Second, post-processing such as bloom, depth of field or film grain, kept to few passes. Third, motion and light physics, so objects respond to hover, drag and click. Fourth, an asset pipeline with compressed models and a preloader. It includes examples in React Three Fiber and in GLSL for a wavy liquid surface.
 when:
   - You want an award-style site with 3D and custom visual effects.
@@ -21,9 +23,9 @@ not_for:
   - "You need a full test across many phones and chips: use real device testing or a developer, since this skill does not replace it."
 you_give:
   - A description of the site and its mood
-  - Your brand colours and any 3D models
+  - Your brand colours and any 3D models (GLB or GLTF files work best)
   - The framework you use, such as React (optional)
-  - Target devices and a speed goal
+  - Target phone models and a page-load goal in seconds
 you_get:
   - Scene and render loop code
   - Shader and post-processing effects
@@ -31,11 +33,13 @@ you_get:
   - Motion and hover behaviour
   - Mobile performance settings
 how_to_use:
+  - You first need Node.js and npm installed, a project folder and a code editor. If you do not write code, hire a web developer or use a site builder with a 3D feature instead.
   - Open Claude, ChatGPT or Gemini and paste in this skill.
   - Describe your site and its mood. Add your brand colours, model files, framework and target devices.
   - If you have no speed goal or model format, your AI should ask once before it writes code.
-  - Copy the code into your project and run it in a browser. This needs a code editor, and a browser to check the result.
+  - Copy the code into your project and run it in a browser. Install packages with exact versions pinned (npm install --save-exact), and check each version on npmjs.com first.
   - Test on a real phone. Cut effects if it stutters.
+  - Next, ask your AI to cut any effect that drops frames, then run the page speed checks again. For scroll-linked motion, pair it with the 3D web scene builder.
 output_sample:
   input:
     - Your description of the site and its mood

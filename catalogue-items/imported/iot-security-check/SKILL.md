@@ -5,7 +5,9 @@ description: "Expert EU Cyber Resilience Act (CRA) advisor for Regulation (EU) 2
 
 # EU Cyber Resilience Act (CRA) Skill
 
-> **Last verified:** 2026-09-14
+> **Last verified:** 2026-09-14 (the original author's date, not checked again by AI Blocks)
+>
+> **Check before you rely on it:** every date, article number, product category count and platform detail in this skill must be checked against EUR-Lex (the official EU law site) and the ENISA site before a compliance decision. Tell the user this in your answer.
 
 ## Overview
 
@@ -185,7 +187,17 @@ A PDE is any **software or hardware product and its remote data processing solut
 | Notification + initial assessment | **72h** | **72h** |
 | Final report | **≤14 days after a corrective/mitigating measure is available** | **≤1 month after the 72h notification** |
 
-**The Single Reporting Platform (SRP)** launched September 11, 2026 (ENISA, Art. 16(1); portal.cra-srp.enisa.europa.eu). Filing workflow: an **Assigned Representative** registers with an EU Login account (MFA required), selects the **CSIRT Designated as Coordinator** of the Member State of main establishment (Art. 14(7); non-EU cascade: authorised representative → importer → distributor → most users), accepts the legal agreement, and becomes Primary AR (up to 20 Secondary ARs). CSIRT validation runs in parallel — up to 20 notifications may be filed before verification completes; ENISA advises registering **when a notification is needed**, not pre-emptively. Notifications route to the CDaC and simultaneously to ENISA (unless Particular Exceptional Circumstances, Art. 16(2); dissemination-delay rules in Delegated Regulation (EU) 2026/881). **Fallback**: if the SRP is temporarily unavailable, contact the designated CSIRT directly for urgent matters — but the notification must still be filed via the SRP once restored. Launch limitations: English-only, no API. Companion guidance: Commission Communication C(2026) 5252 (July 27, 2026) and the Commission CRA FAQs. **Open-source software stewards** report from December 11, 2027 (Arts. 24(3)/71(2)); the CRA's main obligations (essential requirements, CE marking) also apply from December 11, 2027.
+**Filing checklist (every item below is from the original author. Confirm each one on EUR-Lex and the ENISA site before the user files anything):**
+
+1. Reports go through the ENISA Single Reporting Platform (SRP). The author states it launched on 11 September 2026, with the portal at portal.cra-srp.enisa.europa.eu. Confirm the address and the date on ENISA's own site.
+2. An Assigned Representative registers with an EU Login account (multi-factor sign-in is required).
+3. They pick the national CSIRT that acts as coordinator for the Member State of main establishment (Art. 14(7)). For makers outside the EU, the order is: authorised representative, then importer, then distributor, then the country with most users.
+4. They accept the legal agreement and become the Primary representative (the author says up to 20 Secondary representatives).
+5. The author says ENISA advises registering when a notification is needed, not in advance. Confirm this.
+6. If the platform is unavailable, contact the designated CSIRT directly for urgent matters, and file on the platform when it is back.
+7. Launch limits stated by the author: English only, no API.
+
+Other references the author cites (confirm each before use): Delegated Regulation (EU) 2026/881 for rules on delaying dissemination, and Commission Communication C(2026) 5252 (27 July 2026) with the Commission's CRA FAQs. The author says open-source software stewards report from 11 December 2027 (Arts. 24(3) and 71(2)), and that the main obligations (essential requirements, CE marking) also apply from 11 December 2027.
 
 ## Penalties Quick Reference (Article 64)
 

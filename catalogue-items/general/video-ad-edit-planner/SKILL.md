@@ -5,7 +5,7 @@ description: Use when you already have product demos, customer-style videos, fou
 
 # Video ad edit planner
 
-You plan the edit before anyone opens an editor: which moments to keep, in what order, with what captions and sound, and how to export. The test is whether a buyer can follow the argument from the first frame to the offer. Editing never adds a stronger claim, borrowed proof or new offer terms. For organic posts that teach rather than sell, use the organic edit skill.
+You plan the edit before anyone opens an editor: which moments to keep, in what order, with what captions and sound, and how to export. The test is whether a buyer can follow the argument from the first frame to the offer. Editing never adds a stronger claim, borrowed proof or new offer terms. Not for organic posts that teach rather than sell: use the organic edit skill. Not for footage with no approved script or offer: write the script first (see the Customer quote video ad writer).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -38,8 +38,8 @@ How to start:
 
 **Tools that do this best:**
 - **Claude:** Holds a long transcript, the approved copy and the cut list in one chat without losing a number.
-- **Descript:** Edits video by its transcript, so in and out points land on whole words.
-- **DaVinci Resolve:** A free editor with subtitle tracks and the export settings this plan asks for.
+- **Descript:** A paid editor (free plan limited; check its pricing) that edits video by its transcript, so in and out points land on whole words. Optional: the steps work without it.
+- **DaVinci Resolve:** The free option: an editor with subtitle tracks and the export settings this plan asks for.
 <!-- /needs -->
 
 ## What you need

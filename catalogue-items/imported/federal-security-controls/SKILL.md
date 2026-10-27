@@ -78,12 +78,14 @@ Use SP 800-60 Volume II to determine impact levels for specific information type
 
 The three control baselines are defined in **NIST SP 800-53B** (October 2020):
 
-| Baseline | System Category | Controls (approx.) |
+| Baseline | System Category | Where to find the controls |
 |----------|-----------------|-------------------|
-| **Low** | Low impact (FIPS 199 Low) | ~156 controls/enhancements |
-| **Moderate** | Moderate impact | ~323 controls/enhancements |
-| **High** | High impact | ~422 controls/enhancements |
+| **Low** | Low impact (FIPS 199 Low) | The Low baseline table in SP 800-53B |
+| **Moderate** | Moderate impact | The Moderate baseline table in SP 800-53B |
+| **High** | High impact | The High baseline table in SP 800-53B |
 | **Privacy** | Systems processing PII | Overlaps all baselines; PT family |
+
+The author's file gave approximate counts for each baseline. They were not sourced, so they are left out here. Do not quote a control count from memory. If the user needs one, tell them to take it from the tables in SP 800-53B.
 
 **Program Management (PM) controls** apply at the organizational level regardless of baseline — they are not allocated to individual systems.
 

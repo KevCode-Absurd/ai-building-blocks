@@ -33,7 +33,7 @@ How to start:
 ## What you need
 This list replaces the general one above. You do not need an article or a transcript.
 - **Your answers about your inbox** (required): who your senders are, what you always say yes or no to, how you sound and what goes to someone else. Step 1 asks you these.
-- **The backlog** (required): an export or paste of the unanswered emails, with sender, date, subject and body.
+- **The backlog** (required): an export or paste of the unanswered emails as text your AI can read, with sender, date, subject and body. Paste about 50 emails at a time so a long backlog is not cut off. Work through the batches oldest first and keep one running list.
 - **The promise list** (optional): anything you have already promised in writing, so no draft contradicts it.
 
 **When not to use it:** you only missed the last week of messages (use the Weekly catch-up and focus planner). Do not paste emails that hold passwords or card numbers.
@@ -48,8 +48,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Learn your inbox rules.** Use the skill `inbox-rules-interviewer`. An interview about your email: who your senders are, what you always say yes or no to, how you sound, what goes to someone else, saved as a guide you reuse. Save it as `outputs/step-01-inbox-rules-interviewer.md`.
-2. **Clear the backlog.** Use the skill `email-backlog-clearer`. Give it the guide and the backlog. Every email given a call from the guide: a drafted reply, a forward with a note, a one-line decision or an archive, oldest first, with the ones only you can answer marked. Save it as `outputs/step-02-email-backlog-clearer.md`.
-3. **Fix the drafts.** Use the skill `email-mistake-fixer`. Give it the drafts. Each draft checked for a wrong name, a promise you did not make, a date you cannot keep or a tone that is off, and fixed. Nothing is sent until you say so. Save it as `outputs/step-03-email-mistake-fixer.md`.
+2. **Clear the backlog.** Use the skill `email-backlog-clearer`. Give it the guide and the backlog. Every email given a call from the guide: a drafted reply, a forward with a note, a one-line decision or an archive, oldest first, with the ones only you can answer marked. Every email gets one call, and every email that needs you carries the "Only you" marker, so none are missed. Save it as `outputs/step-02-email-backlog-clearer.md`.
+3. **Fix the drafts.** Use the skill `email-mistake-fixer`. Give it the drafts. Each draft checked for a wrong name, a promise you did not make, a date you cannot keep or a tone that is off, and fixed. If a promise list was given, check every draft against it. Nothing is sent until you say so. Save it as `outputs/step-03-email-mistake-fixer.md`.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then a `CHECKS MISSED` list (checks that failed or could not run, or "none").
 
 ## What you hand back
@@ -75,3 +75,5 @@ Use these first. Suggest one next step as a short question:
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
 - No email was sent or archived by the workflow. Every action is a draft for the person.
+- Every email in the backlog has one call, and every email only the person can answer has the "Only you" marker.
+- Every draft was checked against the promise list, when one was given.

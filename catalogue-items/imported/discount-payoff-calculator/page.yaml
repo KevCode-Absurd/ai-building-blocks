@@ -9,7 +9,7 @@ subhead: "Give it your Shopify store and a time window. It compares the revenue 
 explain: |
   The return on every discount you run, before product cost: the revenue it brought in set against what the discount cost you. Some codes pay for themselves, and others only give margin away.
 
-  The skill reads all your discount codes and automatic discounts in your Shopify store, then keeps those used at least a minimum number of times in your chosen window (90 days by default). For each one, it pulls the orders and works out revenue, order count, average order size and money given away. It only reads data, so it is safe to run anytime. It needs a signed-in Shopify CLI with read access to orders, discounts and customers. Output comes as a table or JSON. The revenue counted is all revenue from orders that used the code, so it overstates what the discount truly added. This is 40rty AI's discount-roi skill, shared under the MIT licence.
+  The skill reads all your discount codes and automatic discounts in your Shopify store, then keeps those used at least a minimum number of times in your chosen window (90 days by default). For each one, it pulls the orders and works out revenue, order count, average order size and money given away. It only reads data, so it is safe to run anytime. It needs a signed-in Shopify CLI with read access to orders, discounts and customers. Output comes as a table or JSON. The "buyers may have bought anyway" flag uses a rule of thumb (under 20% new customers and a lower order size). It is a prompt to check the code, not proof. When one order used two discounts, it is counted under both and marked, so revenue overlaps. The revenue counted is all revenue from orders that used the code, so it overstates what the discount truly added. This is 40rty AI's discount-roi skill, shared under the MIT licence.
 when:
   - You run many codes and do not know which ones are worth it.
   - Your margins feel thin and you suspect discounts are the cause.
@@ -28,14 +28,15 @@ you_get:
   - Average order value for each discount, next to orders with no discount
   - What each discount cost you
   - The share of new customers for each discount
-  - A ranking of which discounts paid off, with a warning on codes that may only give away margin
+  - A ranking of which discounts paid off, with a prompt to check codes that may only give away margin
   - A CSV file you can open in a spreadsheet
 how_to_use:
   - This needs an AI that can run code, like Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot read your store.
-  - Sign in to the Shopify CLI with permission to read orders, discounts and customers.
-  - Give your AI the skill and say which store to check. Add how many days back to look if you do not want 90.
+  - Sign in to the Shopify CLI with permission to read orders, discounts and customers. Confirm the sign-in command in the current Shopify CLI docs, because the skill's own command has not been checked.
+  - Give your AI the skill and say which store to check. Add how many days back to look if you do not want 90. Without the read_all_orders permission, Shopify may return only the last 60 days of orders, so a 90 day window can be cut short. Your AI should tell you if that happens.
+  - Automatic discounts are matched by their exact title against each order's discount applications. A search by code alone would miss them.
   - Wait for the report. Look at the underperformers first.
-  - Before you retire a code, check your product costs. This report shows revenue against discount cost only. To put two codes side by side, use Discount code comparer.
+  - Before you retire a code, check your product costs. This report shows revenue against discount cost only. The "ROI" column in the CSV means revenue against discount cost. It is not profit. To put two codes side by side, use Discount code comparer.
 output_sample:
   input:
     - Your Shopify store domain
@@ -53,6 +54,6 @@ output_sample:
     - name: Top performers
       contains: The codes with the best return, with their revenue, cost and share of new customers.
     - name: Underperformers
-      contains: Codes with the weakest revenue against their discount cost, with a warning when buyers would likely have bought anyway.
+      contains: Codes with the weakest revenue against their discount cost, with a prompt to check whether buyers may have bought anyway (a rule of thumb, not proof).
     - name: Baseline comparison
       contains: Average order value without a discount next to the average order value with discounts, and the gap.

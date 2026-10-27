@@ -21,8 +21,7 @@ sued over marks that passed a knockout search.
 
 ## Instructions
 
-1. Read `~/.claude/plugins/config/claude-for-legal/ip-legal/CLAUDE.md`. If it
-   contains `[PLACEHOLDER]`, stop and direct to `/ip-legal:cold-start-interview`.
+1. If a practice profile file exists, read it. If it is missing or still holds `[PLACEHOLDER]`, do not stop: ask the user to type the mark, goods or services, countries and look of the name, and run in provisional mode (US defaults, tagged `[PROVISIONAL]`).
 2. Follow the workflow below.
 3. Run intake (mark, goods/services, classes, jurisdictions, visual/stylization).
 4. Knockout check for intrinsic bars — generic, descriptive, deceptive,
@@ -31,9 +30,8 @@ sued over marks that passed a knockout search.
    connected, say so in the output and proceed with the factor analysis only.
 6. Walk the applicable circuit's likelihood-of-confusion factors — du Pont /
    Polaroid / Sleekcraft / other. Flag each; never conclude.
-7. Write the triage memo to the matter folder (if a matter is active) or the
-   practice outputs folder. Apply the work-product header per role.
-8. End with recommended next steps and the non-lawyer gate if the role is
+7. Write the triage memo in the chat, or save it as a file if you can. Skip the matter folder and work-product header when they are not set up.
+8. End with recommended next steps, the citation note and the non-lawyer gate if the role is
    non-lawyer.
 
 This skill never concludes a mark is clear. If uncertain, flag — the attorney
@@ -41,15 +39,7 @@ decides.
 
 ## Examples
 
-```
-/ip-legal:clearance "APEXLEAF for an outdoor apparel line, planned launch US + EU"
-```
-
-```
-/ip-legal:clearance
-```
-
-(And the skill will ask for the mark, goods, classes, and jurisdictions.)
+Say: "Check [YOUR NAME] for [WHAT YOU SELL], planned launch in [COUNTRIES]." Or just say "check a name" and the skill will ask for the mark, goods, classes and jurisdictions.
 
 ---
 
@@ -265,12 +255,11 @@ do not silently skip the sweep.
 The relevant circuit's test determines the factors to walk through. Cite the
 test that applies:
 
-- **TTAB / Federal Circuit:** *In re E. I. du Pont de Nemours & Co.*, 476 F.2d
-  1357 (C.C.P.A. 1973) (13 factors).
-- **Second Circuit:** *Polaroid Corp. v. Polarad Electronics Corp.*, 287 F.2d 492
-  (2d Cir. 1961) (8 factors).
-- **Ninth Circuit:** *AMF Inc. v. Sleekcraft Boats*, 599 F.2d 341 (9th Cir. 1979)
-  (8 factors).
+Name the test only. Do not write out court citations (volume, page, year) from memory. The user or their lawyer looks the citation up in a legal database.
+
+- **TTAB / Federal Circuit:** the *du Pont* test (13 factors).
+- **Second Circuit:** the *Polaroid* test (8 factors).
+- **Ninth Circuit:** the *Sleekcraft* test (8 factors).
 - **Other circuits:** walk through the circuit's named multi-factor test (e.g.,
   *Frisch's Restaurants* in the Sixth Circuit, *Scotch Whisky Association* in the
   Seventh, *Lapp* in the Third).
@@ -334,7 +323,7 @@ triage found:
 
 ## Output format
 
-Prepend the work-product header from `~/.claude/plugins/config/claude-for-legal/ip-legal/CLAUDE.md` `## Outputs`.
+If a work-product header is set up in the plugin config, prepend it. If not, skip it.
 
 ```markdown
 [WORK-PRODUCT HEADER]
@@ -426,6 +415,8 @@ each way.
 
 ## Citation verification
 
+**The test names in this memo (du Pont, Polaroid, Sleekcraft and the others) come from memory, not from a search. This skill does not give case citations.** Check each named case in a legal database before the memo is used, and remove any you cannot verify.
+
 Every case, registration number, statute, and database result in this memo must
 be verified against the authoritative source before relying on it. Registration
 numbers, class designations, and first-use dates are the most common sites of
@@ -461,9 +452,9 @@ Deliver the full triage memo alongside the brief. Do not withhold the analysis.
 
 If matter workspaces are enabled and a matter is active, write the output to
 `~/.claude/plugins/config/claude-for-legal/ip-legal/matters/<matter-slug>/outputs/clearance-<mark-slug>-YYYY-MM-DD.md`.
-Otherwise write to
+Otherwise, if you can save files, write to
 `~/.claude/plugins/config/claude-for-legal/ip-legal/outputs/clearance-<mark-slug>-YYYY-MM-DD.md`
-and surface the path to the user.
+and surface the path to the user. If you cannot, show the memo in the chat.
 
 Append a one-line entry to the matter's `history.md` if a matter is active.
 
@@ -471,7 +462,7 @@ Append a one-line entry to the matter's `history.md` if a matter is active.
 
 ## Close with the next-steps decision tree
 
-End with the next-steps decision tree per CLAUDE.md `## Outputs`. Customize the options to what this skill just produced — the five default branches (draft the X, escalate, get more facts, watch and wait, something else) are a starting point, not a lock-in. The tree is the output; the lawyer picks.
+If the plugin config is not there, end with the recommended next steps above. Otherwise end with the next-steps decision tree per CLAUDE.md `## Outputs`. Customize the options to what this skill just produced — the five default branches (draft the X, escalate, get more facts, watch and wait, something else) are a starting point, not a lock-in. The tree is the output; the lawyer picks.
 
 ## What this skill does not do
 

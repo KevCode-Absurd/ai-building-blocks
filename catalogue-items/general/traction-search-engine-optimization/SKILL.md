@@ -46,9 +46,11 @@ Use the funnel qualified visitor or account -> useful product action -> paying c
 
 ## Search Engine Optimization
 
+Gather first: the public product URL, your cash cap, your weekly hours, and one past search or content result if you have one.
+
 Decision to resolve: Do searchable buyer problems connect to useful pages the company can credibly publish and maintain?
 
-1. List 5 to 10 query clusters: broad category terms apart from detailed problem, integration, alternative and use-case searches. Use observed search results and dated demand evidence.
+1. List 5 to 10 query clusters: broad category terms apart from detailed problem, integration, alternative and use-case searches. Use two kinds of source and write the date next to each: the search results page you actually looked at, and an export from a keyword tool (name the tool and the export date). If you have neither, say so and mark demand as MISSING.
 2. Pick one pilot cluster: the one with the clearest buyer problem and pages you can credibly write. Map it to pages with original product knowledge and a clear next step. Check indexability, page purpose and whether generated pages would have distinct useful content.
 3. Write the page briefs. Plan earned links through useful resources and distribution. Distinguish a technical crawl issue from weak demand or weak content.
 
@@ -74,6 +76,7 @@ Measurement: <events, cohort, denominators, attribution>
 Decision: <continue / revise / stop rule>
 Risks and next action: <...>
 MISSING: <unknowns>
+CHECKS MISSED: <checks that failed or could not run, or none>
 
 ## Check the answer
 

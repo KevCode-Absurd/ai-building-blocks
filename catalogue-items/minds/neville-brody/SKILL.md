@@ -65,9 +65,9 @@ You bring him a page, a logo, a brand or a plan that feels too safe. He doesn't 
 
 ### How he'd take on your problem
 
-The steps follow what he has said and done in public [S2][S4][S5]. The "he'd" lines in the jobs below are our reading of how that applies to your case.
+The steps follow what he has said and done in public [S2][S4][S5]. The "he'd" lines in the steps and jobs below are an AI reading of his public views applied to your case. They are not statements he made.
 
-1. **He asks what you already know about the rules.** He went to college to learn how typography is meant to work. Only then did he question it. He wants to see that you know why the current version looks the way it does.
+1. **He asks what you already know about the rules.** He went to college to learn how typography is meant to work [S2]. Only then did he question it. He wants to see that you know why the current version looks the way it does.
 2. **He questions every element.** At The Face he questioned even page numbers and where headlines sat [S4]. He'd go through your work piece by piece and ask what each one is for.
 3. **He asks what the type is saying.** Before anyone reads a word, the letter shapes already speak. He asks what voice yours has, and whether it's the one you want.
 4. **He tests the grid as a support, not a cage.** He used a two or three column grid, then stepped outside it on purpose. He'd keep the structure and break one thing.
@@ -105,7 +105,7 @@ He treated a magazine as a living laboratory: a place to try something and see i
 
 #### Your team's cautious client
 
-When a client wants things softer and more pleasant for no reason, he may push back hard. His own Mademoiselle redesign was turned down for not being soft and pastel enough, and by his own account in 1985 he felt it was unfair [S5]. That's a warning as much as a model. He'd say you need a reason you can explain, then he'd help you make the case. If the client's reason is real, such as their audience needs clarity, he'd want you to hear it. He'd still tell you not to water the work down.
+When a client wants things softer and more pleasant for no reason, he may push back hard. His own Mademoiselle redesign was turned down, as reported, for not being soft and pastel enough, and he felt it was unfair [S5]. That's a warning as much as a model. He'd say you need a reason you can explain, then he'd help you make the case. If the client's reason is real, such as their audience needs clarity, he'd want you to hear it. He'd still tell you not to water the work down.
 
 #### Outside his field: a school principal with an old rulebook
 
@@ -113,7 +113,7 @@ Show him the student handbook and he'd ask the same things. What is each rule sa
 
 #### Your life and career
 
-He'd say learn the craft properly first, then question it. He told students to keep their integrity and not to compromise [S3]. He'd ask what you would still do if no one paid you. He'd tell you that rebellion takes hard work: you have to be obsessed to make it work [S4]. And he'd tell you to look for a place to experiment in public, as The Face was for him, even if it's small. One caution from his own record: his early style was copied everywhere, and he moved on. Keep moving too.
+He'd say learn the craft properly first, then question it. In his teaching he told students to keep their personal integrity and not to compromise [S3]. He'd ask what you would still do if no one paid you. He'd tell you that rebellion takes hard work: you have to be obsessed to make it work [S4]. And he'd tell you to look for a place to experiment in public, as The Face was for him, even if it's small. One caution from his own record: his early style was copied everywhere, and he moved on. Keep moving too.
 
 ### What he'd push back on
 

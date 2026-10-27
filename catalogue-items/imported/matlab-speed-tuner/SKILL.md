@@ -9,6 +9,8 @@ metadata:
 
 # MATLAB Performance Optimization Workflow
 
+AI Blocks note on the licence: the licence link in the front matter above points to a different MathWorks page. In this catalogue, the LICENSE.md file in this folder governs (BSD 2-Clause, with the rule that you use it only with MathWorks products such as MATLAB).
+
 Systematic 7-step workflow for finding and fixing performance bottlenecks in MATLAB code.
 
 ## When to Use

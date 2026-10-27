@@ -9,7 +9,7 @@ headline: "Hand-drawn story image ad maker"
 subhead: Paste your story ad. It plans one to four wordless panels of the same place, drawn in pen, that show the bad moment and the habit, then stop before any answer. You get the image prompt, the panels and the line under the picture.
 
 explain: |
-  Some problems can't be photographed, or shouldn't be: a stomach that won't settle, a mind that won't switch off at 2am. A drawing shows them without showing a body, and a short row of panels asks to be followed, so the eye runs on into your story.
+  Some problems can't be photographed, or shouldn't be: a stomach that won't settle, a mind that won't switch off at 2am. A drawing is a creative choice for them, and a short row of panels asks to be followed, so the eye runs on into your story. It does not change what your ad platform's health policy allows, so check that policy first.
 
   This skill draws the same place from the same angle in every panel and changes only one or two things, such as the clock or the pile of things tried. Readers fill in the time between panels and feel the habit repeating. The panels follow your story's order, the moment it got bad and then what they kept doing, and the last panel stays unresolved. No words are drawn, because image tools misspell them and your story carries the words.
 
@@ -17,6 +17,7 @@ when:
   - Your buyer's problem is private, inside the body, or likely to be flagged as a photo.
   - Your story has a clear bad moment and a habit that kept repeating.
   - Your photo ads look like every other ad in the feed.
+  - You have checked your ad platform's health and personal-attribute policy for a body problem. A drawn symptom can still be flagged.
 not_for:
   - "Your problem is safe to show in a photo: use a photo ad skill, or a camera and a real setting."
   - "You want words, a logo or the product in the picture: ask a designer or use a design tool instead."

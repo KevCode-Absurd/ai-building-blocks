@@ -10,6 +10,8 @@ explain: |
   A first read on whether a person should be treated as an employee or a contractor, with the risk points marked. Describe how they will work for you, and you get the tests that apply and where your plan does not fit. This is not legal advice. For existing relationships, talk to a lawyer.
 
   The skill uses what you give and asks only about gaps. It runs the classification tests for the place involved, then flags where real working life clashes with the contractor label. Examples are your tools, set hours, working in a team, working only for you, and pay by project. Use it before the work starts.
+
+  Credit: this is Anthropic's worker-classification skill from its claude-for-legal collection, copied as it is under the Apache 2.0 licence (see the LICENSE file). We only gave it a plain name.
 when:
   - You want to hire a freelancer for six months.
   - You have a recruiter who works only for you.
@@ -31,9 +33,11 @@ you_get:
   - Questions to settle before starting
   - A short summary of the risk areas
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
-  - If you are not using Claude Code, tell your AI to skip loading the config file, which only exists there. Keep the first question ("Has this work already started?") and stop if the answer is yes. Give your country or state, and say the work is not started yet.
-  - Start with three facts: the role and daily work, the hours and tools, and the pay and place. Then paste your answers about the rest.
+  - "The full skill is written for Claude Code and uses a saved config file that only exists there. In Claude Code, paste it in as it is. In Claude, ChatGPT or Gemini, use the short version instead. Paste the skill, then say: ask whether the work has already started and stop if it has; gather the facts; look up the tests for my country or state; apply each test to my facts; flag the gaps and give a bottom line, the points for a lawyer and the next steps. Tag every law as unverified."
+  - "Warning: without a legal research tool, the tests, laws and cases it names come from the AI's memory and may be wrong. Check each one on the official government site before you act on the bottom line."
+  - If you are not using Claude Code, tell your AI to skip loading the config file. Keep the first question ("Has this work already started?") and stop if the answer is yes. Give your country or state, and say the work is not started yet.
+  - "Places covered: the skill has no fixed list of countries or states. It looks up the tests for the place you name, and its examples lean on the US (such as California). Say your country or state, and treat anything outside the US as less certain."
+  - "Start with three facts: the role and daily work, the hours and tools, and the pay and place. Then paste your answers about the rest."
   - The legal research step works best with a paid tool like Westlaw or CourtListener. Without one, ask your AI to tag every cited law as unverified, then check each one on the official government site before you rely on it.
   - Read the bottom line and the flagged items first.
   - Take the red flags to an employment lawyer before you sign anything. For a close call, a single consultation with an employment lawyer is the cheaper next step.

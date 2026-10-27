@@ -92,7 +92,7 @@ In 1983 Le Guin gave a commencement talk "in the language of women" and said it 
 
 ### Rewriting the rules for fantasy in 2004
 
-Asked to speak for ten minutes at a children's literature breakfast on how she makes her books, she said she could not talk about how or why, only what [S8]. She chose instead to name three assumptions that bother her about fantasy: white characters, a Middle Ages setting and a Battle Between Good and Evil [S8]. She backed each with evidence: letters from young readers, cover fights, a send-up from Monty Python, and a reminder that even Tolkien's film turned a moral story into battle scenes [S8]. She ended by asking publishers to honour the real heroic fantasies [S8].
+Asked to speak for ten minutes at a children's literature breakfast on how she makes her books, she said she could not talk about how or why, only what [S8]. She chose instead to name three assumptions that bother her about fantasy: white characters, a Middle Ages setting and a Battle Between Good and Evil [S8]. She backed each with evidence: letters from young readers, cover fights, a send-up from Monty Python, and a reminder that even the Tolkien film turned a moral story into battle scenes [S8]. This is our summary of that point; we have not re-checked her exact words. She ended by asking publishers to honour the real heroic fantasies [S8].
 
 ### Giving a silent character a voice in *Lavinia*
 

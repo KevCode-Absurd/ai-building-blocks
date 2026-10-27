@@ -6,6 +6,11 @@ summary: "Get a book writing plan for your stage: an outline, session plan, revi
 job: write-and-tell-stories
 headline: Book writing project coach
 subhead: Share your writing project, current stage, audience, and goal. It chooses the right help for planning, drafting, revision, or approaching publishers. You get a focused outline, session plan, edit, or submission draft that protects your voice and keeps research gaps visible.
+when:
+  - You have a book idea and need a one-page outline or a pitch line.
+  - You are stuck in a draft and want prompts matched to where the story is.
+  - Your draft is done and you need a revision plan.
+  - You are ready to approach agents or publishers and need a query letter or proposal.
 not_for:
   - "You need your book put into a Word, PDF or EPUB file: use a file tool such as Word, Google Docs or an EPUB maker."
   - "You are writing release notes, help pages or other business documents: ask your AI for plain documentation help, not a book coach."
@@ -28,11 +33,13 @@ works_best_with:
     - name: A chat AI that can read the bundled reference files
       why: Use the supplied references and templates for the chosen task. Scripts are optional unless that task specifically needs them.
 how_to_use:
+  - Before you ask, write down your stage (idea, drafting, revising or submitting), your word target and your deadline. A specific first request gets a better result.
   - Open a chat in Claude, ChatGPT or Gemini and add the skill files, or paste in the skill text.
   - Tell your AI your project type, stage, audience, goal and any limits.
   - Paste your draft or idea if you have one.
   - Ask for the one thing you need now, such as an outline, a session plan, a revision plan or a query letter. For a first result in about ten minutes, ask for a one-page outline of your idea.
   - Read the result and change anything that does not sound like you. Your voice comes first.
+  - Then ask for the next piece in order. After an outline, ask for a session plan to start drafting. After a draft, ask for a revision plan. When the book is done, ask for a query letter or proposal. The skill never sends a submission for you.
   - Run the optional scripts only if your AI can run code. The page works without them.
 output_sample:
   input:

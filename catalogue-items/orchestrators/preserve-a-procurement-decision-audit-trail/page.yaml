@@ -38,6 +38,7 @@ how_to_use:
   - Download the pack and give the whole folder to Claude, ChatGPT or Gemini.
   - Attach the proposals, your criteria, your checklist and the evaluator notes. Say which purchase this record is for.
   - Check the comparison first. Every vendor must be measured on the same scope. A proposal that leaves something out must show an exclusion, not a lower price.
+  - Two gates protect the record. The first checks the comparison, meaning same scope for every vendor and no late criteria applied. The second checks the checklist, meaning no unknown on a must-have counted as a pass. If a gate fails, the run stops and says which line is off. Fix that line and run again from that step.
   - Check the checklist result. A failed stop item ends the run for that vendor. An unknown on a must-have stays blocked until someone answers it.
   - Save the decision trace with the proposals in your records. Your approver signs off outside this tool. Once a contract is signed, check it with the Vendor agreement status checker.
 how_it_works:
@@ -49,6 +50,7 @@ output_shape: |-
   PURCHASE   <what is being bought, date, approver>
   COMPARISON <criterion> | <vendor A> | <vendor B> | <evidence file> | <exclusions>
   CHECKLIST  <item, in order> | <stop rule: yes or no> | <pass, fail or unknown> | <evidence>
+             For example: <must-have item> | yes | unknown | MISSING: evidence (counts as blocked)
   TRACE      <who> | <what they decided> | <basis> | <date> | <conflicts declared>
   BLOCKERS   <failed or unknown must-have items>
   SOURCES    <each file and date>

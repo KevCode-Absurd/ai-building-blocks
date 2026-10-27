@@ -14,6 +14,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the full text of the skill file. It is one text file and needs no setup or paid tools.
   - Tell your AI your team size, company stage, top 1 to 3 goals and current meetings. Add the metrics you track if you have them.
   - Let your AI ask any questions it has before it designs anything.
+  - First output: ask your AI to return a short list of which meetings to keep, cut or merge. You get a usable result before the full plan.
   - "Size bands, in short. Under 20 people: you do not need a meeting system, so skip this skill. From 20 to 30: use only the weekly functional review and the weekly all-hands. Over 30: use the full set."
   - Read the meeting plan and check each meeting against your real calendar.
   - Treat the sample numbers in the weekly report as examples only. Swap in your own metrics. The dollar limits and timelines in the decision rules are also generic defaults, so replace them with your own.

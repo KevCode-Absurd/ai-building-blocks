@@ -40,12 +40,19 @@ Read the user's goal, existing conversation and supplied files first. Reuse conf
 - The column or ID that identifies each row (so a moved row is not read as a change).
 - The smallest difference that matters, such as a rounding limit.
 - What you meant to change, if you know.
+- If no stable key column exists, ask for one. If there is none, match rows by position and mark every row-level finding lower confidence.
+
+Read "your question" in the Before you start list as what you want checked.
 
 ## Runtime requirements
 Use an actual tool that can read and write the required native format. Plain text, JSON, HTML or a screenshot is not a finished XLSX/PPTX file. Inventory unsupported features before changing an existing file. Preserve macros, pivots, connections, masters and linked objects by using a compatible native engine when required; otherwise stop or return a clearly scoped review/plan. A formula string, cached value or successful export is not proof of recalculation, native refresh, accessibility compliance or layout. Render real output where the method calls for it and record any check that could not run.
 
 ## Method
-1. Keep both original files unchanged and work on copies. Note each file's name and date. List sheets, hidden sheets, tables, defined names, formulas, links, validations, charts, pivots and whether it contains macros, without running macros or refreshing connections.
+1. Keep both original files unchanged and work on copies. Note each file's name and date.
+   - List sheets, hidden sheets, tables and defined names.
+   - List formulas, links, validations, charts and pivots.
+   - Note whether the file contains macros. Do not run macros or refresh connections.
+   - Say up front which checks need Excel or LibreOffice (recalculating, rendering). In a chat-only run, mark those "not run" under OPEN ITEMS.
 
 2. Match records by confirmed stable keys, not by row position alone. Align changed sheet names and separate added, removed and reordered records.
 
@@ -53,7 +60,7 @@ Use an actual tool that can read and write the required native format. Plain tex
 
 4. Review changed names, validation ranges, hidden sheets, print settings, external links and data connections. State features the inspection tool cannot preserve or compare.
 
-5. Recalculate the copies in Excel (or another tool that can, such as LibreOffice) and investigate material differences using the agreed tolerance. Report file, sheet and cell or object locations with before/after evidence; make no repairs unless requested.
+5. Recalculating and rendering need Excel or LibreOffice on the user's side. In a chat-only run, return the register with those checks marked not run. Otherwise recalculate the copies in Excel (or LibreOffice) and investigate material differences using the agreed tolerance. Report file, sheet and cell or object locations with before/after evidence; make no repairs unless requested.
 
 ## Acceptance checks
 - Reordering is not reported as every record changing.
@@ -62,8 +69,7 @@ Use an actual tool that can read and write the required native format. Plain tex
 - Keep every failed or unrun check visible in the final report. Make no repairs unless the user asks; report what you find and stop.
 
 ## Deliverables
-Report sections are SOURCE MAP, CHECKS and OPEN ITEMS. List checks that failed or could not run under CHECKS as "not run" and again under OPEN ITEMS; read "CHECKS MISSED" above as OPEN ITEMS.
-workbook-change-review.xlsx and change-register.md.
+The files are workbook-change-review.xlsx and change-register.md. The report has three sections: SOURCE MAP, CHECKS and OPEN ITEMS. List checks that failed or could not run under CHECKS as "not run" and again under OPEN ITEMS. Use OPEN ITEMS as the one list of unrun or failed checks. Where any text above says CHECKS MISSED, write OPEN ITEMS.
 Include a compact run register with the source file/version, action, actual output path, check result and remaining limitations. Record missing prerequisites as MISSING: lines.
 
 ## What next

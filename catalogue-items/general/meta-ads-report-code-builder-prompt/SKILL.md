@@ -158,6 +158,7 @@ smallest next step. Do not say anything ran that did not.
 - A Markdown report builder and a Slack message draft builder.
 - Tests on made-up numbers, with what ran and what did not.
 - A short list: what was built, setup gaps, sections that will be "not available", next step.
+- CHECKS MISSED: one line for each check in "Checks" below that failed or could not run, or "none".
 
 ## If something is missing
 

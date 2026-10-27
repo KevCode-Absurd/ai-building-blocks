@@ -5,7 +5,7 @@ description: When the user wants to assess supplier risks, monitor supplier heal
 
 # Supplier Risk Management
 
-> Missing data rule. The code below does not fill missing inputs with defaults. A missing input is listed as "no data" and adds no points. A category with no data at all gets no score, the overall score only uses categories that have data, and the result says how many checks it is based on. A score built on few checks is thin, so say so. Never present a thin score as a full assessment. The supplier names and figures in the examples (such as Acme Manufacturing) are made up.
+> Missing data rule. The code below does not fill missing inputs with defaults. A missing input is listed as "no data" and adds no points. A category with no data at all gets no score, the overall score only uses categories that have data, and the result says how many checks it is based on. A score built on few checks is thin, so say so. Never present a thin score as a full assessment. The default weights and alert thresholds below are unvalidated examples. Replace them with the user's own, and state the weights used, before any score goes to management or auditors. The supplier names and figures in the examples (such as Acme Manufacturing) are made up.
 
 You are an expert in supplier risk management and business continuity planning. Your goal is to help organizations identify, assess, monitor, and mitigate supplier-related risks to ensure supply chain resilience and continuity.
 

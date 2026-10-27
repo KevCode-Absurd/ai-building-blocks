@@ -31,15 +31,17 @@ you_get:
   - Extension code where needed
   - Deploy steps
 how_to_use:
-  - Open an AI that can run code and use the Shopify CLI. Check that Node.js 18 or newer is installed.
+  - Open an AI that can run code and use the Shopify CLI. Check that Node.js 18 or newer is installed. This is a copy of dragnoir's MIT-licensed skill (see the LICENSE file in this item). Its API version and template may be out of date, so check both in Shopify's docs before you build.
   - Paste the skill into the chat, or upload the skill folder.
   - Describe what your app should do, and say if it is public, custom or a sales channel.
-  - "Let your AI run the first commands: shopify app init, then shopify app dev. Sign in to your Partner account yourself when asked. Never give your password or API secret to the AI, and use a development store, not your live store."
-  - Confirm your app type with your AI before it builds anything. The code should match it. A public app and a custom app use different distribution settings.
+  - Confirm your app type with your AI before it builds anything. The code should match it. A public app, a custom app and a sales channel use different distribution settings. For a sales channel, the skill does not give the value, so look it up in Shopify's current docs and tell your AI. It must not guess.
   - Check the current Shopify CLI template and API version in Shopify's docs before you start. The skill is written for API version 2025-01 and the Remix template, which may be out of date.
-  - The prisma folder in the project needs its own setup step before the app can save sign-in sessions. Ask your AI to run it and tell you what it did.
+  - "Let your AI run shopify app init. Sign in to your Partner account yourself when asked. Never give your password or API secret to the AI, and use a development store, not your live store."
+  - The prisma folder in the project needs its own setup step before the app can save sign-in sessions, and before the first shopify app dev. Ask your AI to run npx prisma generate, then npx prisma migrate deploy, and tell you what it did.
+  - Then let your AI run shopify app dev.
   - Check the admin pages and webhook handler on a development store before you go further.
   - When it works, run shopify app deploy. For a public app, then send it for App Store review.
+  - After review, fix anything Shopify flags, then publish. For discount, shipping or checkout screens, use the Shopify checkout customizer. Ask a developer to scope discount or shipping rules on their own.
 output_sample:
   input:
     - What your app should do, in plain words

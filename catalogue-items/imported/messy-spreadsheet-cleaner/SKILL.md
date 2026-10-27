@@ -5,23 +5,6 @@ description: Clean up messy spreadsheet data — trim whitespace, fix inconsiste
 
 # Clean Data
 
-## India (only when the data uses Indian conventions)
-
-Skip this section unless the sheet has Indian fiscal years (April to March), rupee amounts or lakh and crore units. For everything else, clean the data as the workflow below says. If it does apply: this skill operates on **Indian markets**. Load **`india-market-conventions`**
-before building anything, and **`india-market-data`** for sources. Two rules cause
-most Indian errors:
-
-- **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
-  Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
-  Never annualise a quarter without stating the fiscal offset.
-- **Units are lakh (10⁵) and crore (10⁷).** Never use the Excel format
-  `#,##0,," Cr"` — each trailing comma divides by 1,000, so that format displays
-  **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
-  formula and label the column `Total Revenue (₹ Cr)`.
-
-What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
-never substitute a proxy and present it as the real thing.
-
 Clean messy data in the active sheet or a specified range.
 
 ## What you need first
@@ -86,3 +69,20 @@ Show a summary table before changing anything:
 - A change summary: for each column, the issue, how many cells changed and the fix used.
 - A flag list of columns that mix types, and rows you were unsure about, for the user to decide.
 - A list of what you did not check or change, and any duplicates you left in because the user did not confirm removal.
+
+## India (only when the data uses Indian conventions)
+
+Skip this section unless the sheet has Indian fiscal years (April to March), rupee amounts or lakh and crore units. For everything else, clean the data as the workflow below says. If it does apply: this skill operates on **Indian markets**. Load **`india-market-conventions`**
+before building anything, and **`india-market-data`** for sources. Two rules cause
+most Indian errors:
+
+- **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
+  Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
+  Never annualise a quarter without stating the fiscal offset.
+- **Units are lakh (10⁵) and crore (10⁷).** Never use the Excel format
+  `#,##0,," Cr"` — each trailing comma divides by 1,000, so that format displays
+  **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
+  formula and label the column `Total Revenue (₹ Cr)`.
+
+What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
+never substitute a proxy and present it as the real thing.

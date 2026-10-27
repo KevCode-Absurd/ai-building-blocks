@@ -5,6 +5,8 @@ description: When the user wants to measure, track, or reduce carbon emissions i
 
 # Carbon Footprint Tracking
 
+> **No emission factors are built in.** The factor table in the code is blank on purpose. Before you run anything, fill in every factor you will use with a published figure, and note its source, year and unit. Report only totals that rest on cited factors, and say which inputs are estimates.
+
 You are an expert in carbon footprint measurement and supply chain decarbonization. Your goal is to help organizations accurately measure, track, report, and reduce greenhouse gas (GHG) emissions across their supply chain operations.
 
 ## Initial Assessment
@@ -116,43 +118,53 @@ class CarbonFootprintCalculator:
         }
 
     def _load_emission_factors(self):
-        """Load example emission factors (placeholders, not a standard database)"""
-        # PLACEHOLDER VALUES, not defaults. They are not a trusted source.
-        # Before you report any total, every factor you use must carry a cited source,
-        # a year and a unit. Replace each one you cannot cite with a published figure
-        # and write down its source, year and unit.
+        """Emission factors. Every value is blank (None) on purpose."""
+        # No factor is built in. Fill in each one you use with a published figure,
+        # and write down its source, year and unit next to it, for example:
+        #   'diesel': [VALUE],  # kgCO2e per litre. Source: [SOURCE], year: [YEAR]
+        # A blank factor stops the calculation with a clear message (see _factor).
         return {
             # Energy (kgCO2e per kWh)
-            'electricity_us_grid': 0.417,
-            'electricity_eu_grid': 0.295,
-            'electricity_renewable': 0.000,
-            'natural_gas': 0.202,  # per kWh
+            'electricity_us_grid': None,
+            'electricity_eu_grid': None,
+            'electricity_renewable': None,
+            'natural_gas': None,  # per kWh
 
             # Fuels (kgCO2e per liter)
-            'diesel': 2.68,
-            'gasoline': 2.31,
-            'jet_fuel': 2.50,
+            'diesel': None,
+            'gasoline': None,
+            'jet_fuel': None,
 
             # Transportation (kgCO2e per tonne-km)
-            'truck_full_truckload': 0.062,
-            'truck_less_than_truckload': 0.091,
-            'rail': 0.022,
-            'ocean_shipping': 0.008,
-            'air_freight': 0.602,
+            'truck_full_truckload': None,
+            'truck_less_than_truckload': None,
+            'rail': None,
+            'ocean_shipping': None,
+            'air_freight': None,
 
             # Materials (kgCO2e per kg)
-            'steel': 1.85,
-            'aluminum': 8.24,
-            'plastic_pet': 2.15,
-            'cardboard': 0.95,
-            'glass': 0.85,
-            'concrete': 0.11,
+            'steel': None,
+            'aluminum': None,
+            'plastic_pet': None,
+            'cardboard': None,
+            'glass': None,
+            'concrete': None,
 
-            # Manufacturing (kgCO2e per unit - examples)
-            'electronics_assembly': 50,
-            'textile_production': 15,
-            'food_processing': 2.5
+            # Manufacturing (kgCO2e per unit)
+            'electronics_assembly': None,
+            'textile_production': None,
+            'food_processing': None
         }
+
+    def _factor(self, name):
+        """Return a factor, or stop if it has not been filled in yet."""
+        value = self.emission_factors.get(name)
+        if value is None:
+            raise ValueError(
+                f"Emission factor '{name}' is blank. Add a published factor "
+                "with its source, year and unit before you run this."
+            )
+        return value
 
     def calculate_scope1_facilities(self, fuel_consumption):
         """
@@ -166,7 +178,7 @@ class CarbonFootprintCalculator:
 
         # Diesel/gasoline combustion
         if 'diesel_liters' in fuel_consumption:
-            diesel_co2 = fuel_consumption['diesel_liters'] * self.emission_factors['diesel']
+            diesel_co2 = fuel_consumption['diesel_liters'] * self._factor('diesel')
             emissions += diesel_co2
             breakdown.append({
                 'source': 'Diesel combustion',
@@ -176,7 +188,7 @@ class CarbonFootprintCalculator:
             })
 
         if 'gasoline_liters' in fuel_consumption:
-            gas_co2 = fuel_consumption['gasoline_liters'] * self.emission_factors['gasoline']
+            gas_co2 = fuel_consumption['gasoline_liters'] * self._factor('gasoline')
             emissions += gas_co2
             breakdown.append({
                 'source': 'Gasoline combustion',
@@ -187,7 +199,7 @@ class CarbonFootprintCalculator:
 
         # Natural gas (converted to kWh)
         if 'natural_gas_kwh' in fuel_consumption:
-            ng_co2 = fuel_consumption['natural_gas_kwh'] * self.emission_factors['natural_gas']
+            ng_co2 = fuel_consumption['natural_gas_kwh'] * self._factor('natural_gas')
             emissions += ng_co2
             breakdown.append({
                 'source': 'Natural gas',
@@ -223,11 +235,11 @@ class CarbonFootprintCalculator:
 
             # Get emission factor
             if fuel_type in ['diesel']:
-                ef = self.emission_factors['diesel']
+                ef = self._factor('diesel')
             elif fuel_type in ['gasoline', 'petrol']:
-                ef = self.emission_factors['gasoline']
+                ef = self._factor('gasoline')
             else:
-                ef = 2.5  # default
+                raise ValueError(f"No emission factor for fuel type '{fuel_type}'. Add one with its source, year and unit.")
 
             vehicle_emissions = fuel_consumed * ef
             emissions += vehicle_emissions
@@ -258,18 +270,18 @@ class CarbonFootprintCalculator:
 
         # Select emission factor based on region
         if region == 'us':
-            ef = self.emission_factors['electricity_us_grid']
+            ef = self._factor('electricity_us_grid')
         elif region == 'eu':
-            ef = self.emission_factors['electricity_eu_grid']
+            ef = self._factor('electricity_eu_grid')
         else:
-            ef = 0.40  # global average
+            raise ValueError(f"No electricity factor for region '{region}'. Add one with its source, year and unit.")
 
         # Adjust for renewable percentage
         grid_electricity = electricity_consumption * (1 - renewable_pct)
         renewable_electricity = electricity_consumption * renewable_pct
 
         emissions_grid = grid_electricity * ef
-        emissions_renewable = renewable_electricity * self.emission_factors['electricity_renewable']
+        emissions_renewable = renewable_electricity * self._factor('electricity_renewable')
 
         total_emissions = emissions_grid + emissions_renewable
 
@@ -311,7 +323,7 @@ class CarbonFootprintCalculator:
             }
 
             ef_key = mode_map.get(mode, 'truck_full_truckload')
-            ef = self.emission_factors[ef_key]
+            ef = self._factor(ef_key)
 
             shipment_emissions = tkm * ef
             emissions += shipment_emissions
@@ -345,7 +357,7 @@ class CarbonFootprintCalculator:
 
         for material, quantity_kg in materials_purchased.items():
             if material in self.emission_factors:
-                ef = self.emission_factors[material]
+                ef = self._factor(material)
                 material_emissions = quantity_kg * ef
                 emissions += material_emissions
 
@@ -460,7 +472,8 @@ class CarbonFootprintCalculator:
         }
 
 
-# Example usage
+# Example usage. The activity numbers below are made up to show the layout.
+# Replace them with your own data. This will not run until the factors above are filled in.
 calculator = CarbonFootprintCalculator()
 
 # Example calculation

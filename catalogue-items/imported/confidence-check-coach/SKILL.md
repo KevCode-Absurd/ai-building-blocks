@@ -48,7 +48,7 @@ evidence_captured:
   transfer_check: "not_applicable"
   unassisted_followup: "not_scheduled"
   assistance_tag: "scaffolded"
-chains_well_with:
+chains_well_with:  # the author's ids; in this library, see the Study session planner and review, Recall-first study tutor and Study claim checker
   - "student-learning/retrieve-first-gate"
   - "student-learning/explain-first-interrogator"
   - "student-learning/ai-claim-checker"
@@ -61,11 +61,13 @@ tags: ["metacognition", "calibration", "confidence", "self-monitoring", "overcon
 
 ## What This Skill Does
 
-Captures a confidence rating (0–100) before a knowledge attempt and again after receiving feedback, then compares the two. The AI identifies and names the pattern: overconfidence (high confidence + poor performance) and underconfidence (low confidence + good performance) are both worth surfacing. Over time, tracking calibration accuracy becomes itself a metacognitive skill — learners who can accurately predict their own knowledge gaps are significantly better at allocating study time. This skill makes the "illusion of competence" visible and actionable.
+Captures a confidence rating (0–100) before a knowledge attempt and again after receiving feedback, then compares the two. The AI identifies and names the pattern: overconfidence (high confidence + poor performance) and underconfidence (low confidence + good performance) are both worth surfacing. Over time, tracking calibration accuracy becomes itself a metacognitive skill — research on learning suggests that learners who can accurately predict their own knowledge gaps may allocate study time better. Treat this as a likely effect, not a proven result for any one learner. This skill makes the "illusion of competence" visible and actionable.
 
 ## Evidence Foundation
 
-Bjork & Bjork (2011) identified the illusion of competence as one of the primary obstacles to effective self-study: re-reading material produces a feeling of familiarity that learners mistake for genuine understanding. Students leave a study session feeling more confident than their actual knowledge warrants — and they study less as a result. Koriat & Bjork (2005) demonstrated that studying with self-referential judgements (asking "do I know this?") produces systematically biased predictions in which learners overestimate their own performance, particularly when material was recently studied. Thiede et al. (2003) showed that accuracy of metacognitive monitoring directly affects learning outcomes: students who are better calibrated allocate their study time more effectively, spending more time on material they actually don't know. Dunning & Kruger (1999) documented the broader pattern: novices in a domain not only perform poorly but lack the knowledge to recognise their own performance gaps, producing inflated self-assessment. Hacker et al. (2008) found in a classroom study that students who made test predictions before sitting exams, then compared predictions to results, showed improved performance on subsequent assessments — suggesting that the comparison act itself has metacognitive training value.
+(Added by AI Blocks: the studies below are the original author's sources and have not been re-checked here. Describe their findings as "suggests" or "found", never as settled, and do not quote a figure from them.)
+
+Bjork & Bjork (2011) suggest that the illusion of competence may be one obstacle to effective self-study: re-reading material can produce a feeling of familiarity that learners mistake for understanding. Students may leave a study session feeling more confident than their knowledge warrants, and may study less as a result. Koriat & Bjork (2005) are reported to have found that asking "do I know this?" while studying can bias predictions, so that learners overestimate their own performance, particularly when material was recently studied. Thiede et al. (2003) suggest that accurate metacognitive monitoring may affect learning outcomes: students who are better calibrated may allocate study time more effectively. Dunning & Kruger (1999) are reported to have described a wider pattern in which novices may lack the knowledge to recognise their own gaps, which can inflate self-assessment. Hacker et al. (2008) reported, in a classroom study, that students who made test predictions before exams and then compared them to results may have improved on later assessments, which suggests that the comparison itself may have some training value. None of these findings has been checked here, and none should be treated as settled.
 
 ## System Prompt
 
@@ -217,4 +219,4 @@ Here's your micro-goal for the next session: instead of re-reading the equilibri
 
 3. **Frequent calibration checks can produce strategic responding if learners game the rating.** A learner who understands the pattern may artificially lower pre-attempt confidence to appear "well-calibrated" after a good performance. This is unlikely with genuinely motivated learners but worth noting.
 
-4. **Calibration data across sessions requires session history to be useful.** A single calibration check gives a snapshot. The pattern — persistent overconfidence, improving calibration — only becomes visible over multiple sessions. This skill pairs with 20-10 (SRL Session Wrapper) and 20-12 (Weekly Agency Review) for longitudinal tracking.
+4. **Calibration data across sessions requires session history to be useful.** A single calibration check gives a snapshot. The pattern — persistent overconfidence, improving calibration — only becomes visible over multiple sessions. In this library, pair it with the Study session planner and review, the Study gap tracker or the Study review scheduler for tracking over time.

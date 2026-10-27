@@ -17,7 +17,7 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Claude Code:** It can keep the weeks and definitions files between runs and run every Monday.
+- **Claude Code:** It can keep the weeks and definitions files between runs. You start each run by hand every Monday.
 - **Your billing tool:** Export per-customer plan, price, start, cancel and payments. A read-only connection lets the tracker read them directly.
 <!-- /needs -->
 
@@ -40,7 +40,7 @@ Keep one folder, `saas/`. Save each step's result as `saas/<date>/step-NN-<skill
 3. **Read the numbers together.** Run `saas-metrics-coach` on the export and the spend. Keep its read of recurring revenue, churn, cost to win a customer and lifetime value, and its one thing to fix first. Compare with last week's one thing: if it is the same for three weeks and nothing was done, say so at the top.
 4. **Check the economics, monthly.** On the first Monday of the month, or when spend to win customers moved more than a fifth (this agent's starting point), run `cac-payback-checker` and `ltgp-to-cac-checker`. Keep the scores, the payback in months and the scale-or-fix call. A common rule of thumb, not Graham's: a customer who pays back inside a year and returns several times their cost is one you can afford to win more of. Outside it, more spend can buy more loss.
 5. **Forecast the pipeline, if there is one.** If a pipeline was given, run `bookings-forecast-builder` for the commit, best case and pipe-only forecast. Keep the maths shown. Skip if the business sells without a pipeline.
-6. **Set the week's target.** Run `weekly-growth-target-setter` on `weeks.md`. Keep one growth target, what it means in sign-ups or revenue this week, and what to skip. In "Startup = Growth", Graham calls 5 to 7 percent a week good for an early-stage startup and 1 percent a sign you have not found it yet. Treat that as a guide for young companies, not a rule for every business, and say so. If the rate has been under 1 percent for a month, flag the observed growth gap for investigation. Do not infer a product, market or marketing cause from the growth rate alone. Check acquisition, activation, retention, pricing, sample size and measurement evidence before proposing a cause.
+6. **Set the week's target.** Run `weekly-growth-target-setter` on `weeks.md`. Keep one growth target, what it means in sign-ups or revenue this week, and what to skip. Paul Graham's essay "Startup = Growth" argues that a young startup should pick one weekly growth rate and judge the week by it. It is not a source for any specific percentage here. If you suggest a target band, such as a few percent a week for a young company, say it is this agent's own rule of thumb, not a quote and not a rule for every business. Ask the person for their own target if they have one. If the rate has been under 1 percent for a month (this agent's own starting point), flag the observed growth gap for investigation. Do not infer a product, market or marketing cause from the growth rate alone. Check acquisition, activation, retention, pricing, sample size and measurement evidence before proposing a cause.
 7. **Log and hand back.** Hand back (see below), then stop.
 
 ## Stop and ask before
@@ -59,6 +59,7 @@ You never do these yourself. You list them for approval:
 - **Pipeline:** the three forecasts with the maths, if it applies.
 - **The week's target:** the one number, what it means, and what to skip to hit it.
 - **Files:** each step's file, and every `MISSING:` line.
+- **Next:** if churn is the thing to fix first, run `subscription-churn-watcher` with your cancel list, with dates and plans. Pair the monthly economics call with your own accountant's check of the gross margin.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

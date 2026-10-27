@@ -9,7 +9,9 @@ subhead: Tell it the link direction and a 5G test model, reference channel or yo
 explain: |
   You get a baseband 5G NR waveform that follows the 3GPP standard, ready for testing, simulation or playback on an instrument. You pick a test model, a fixed reference channel, or a custom setup and the skill writes the MATLAB code.
 
-  It first decides which route fits. Standard test models and reference channels use the ready-made generator with predefined settings. Custom downlink or uplink signals use a carrier config object, where you set bandwidth, subcarrier spacing, modulation, power and bandwidth parts, along with channels such as PDSCH, PUSCH and SSB. It warns you off the low-level building blocks that are easy to get wrong. It does not model channels or decode signals. It needs MATLAB with 5G Toolbox.
+  It first decides which route fits. Standard test models and reference channels use the ready-made generator with predefined settings. Custom downlink or uplink signals use a carrier config object, where you set bandwidth, subcarrier spacing, modulation, power and bandwidth parts, along with channels such as PDSCH, PUSCH and SSB. It warns you off the low-level building blocks that are easy to get wrong. It does not model channels or decode signals. It needs MATLAB with 5G Toolbox, which are paid MathWorks products.
+
+  Licence: the LICENSE.md file in this folder governs (BSD 2-Clause plus a MathWorks term that limits use to MathWorks products). The skill file header links MathWorks' own licence page, which says the same kind of thing. You need your own paid MathWorks licence for MATLAB and 5G Toolbox.
 when:
   - You need a conformance test signal for a 5G receiver.
   - You want a custom downlink waveform with specific channels turned on.
@@ -26,6 +28,8 @@ you_give:
   - Bandwidth, subcarrier spacing and modulation
   - Which channels and signals to include
   - MATLAB with 5G Toolbox (paid MathWorks products, so you need your own licence for both)
+  - Your MATLAB release. R2026a or later can use the simplified constructor. Earlier releases need the manual pattern in the skill
+  - Your bandwidth and subcarrier spacing pair, to check against the bandwidth table in the skill
 you_get:
   - MATLAB code that builds the waveform
   - The generated IQ samples
@@ -35,6 +39,7 @@ how_to_use:
   - Download the skill folder. In Claude, open Customize → Skills, then choose + → Create skill → Upload a skill. In ChatGPT, add the files to a project's Sources. In Gemini, make a Gem and paste the instructions. Or paste the instructions into a chat.
   - Ask your AI to follow this skill. Include the files and details listed on this page.
   - It works best when your AI can run MATLAB with 5G Toolbox.
+  - Next, send the IQ samples to an RF instrument for playback, or pass them to nrCDLChannel or nrTDLChannel to add channel effects.
 output_sample:
   input:
     - "Link direction: downlink or uplink"

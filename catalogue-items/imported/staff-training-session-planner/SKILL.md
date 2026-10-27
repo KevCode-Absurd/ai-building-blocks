@@ -80,6 +80,8 @@ Designs a professional development session using evidence-based adult learning p
 
 ## Evidence Foundation
 
+> AI Blocks note: these study summaries come from the original author's notes and were not checked against the sources here. Do not quote a finding from them as established. Check the cited work first.
+
 Timperley et al. (2007) conducted the most comprehensive synthesis of effective professional learning, finding that impactful PD: (a) is sustained over time (not one-off), (b) focuses on the link between teaching practice and student outcomes, (c) involves teachers in active learning (not passive listening), (d) includes collaboration, (e) is supported by expert facilitation, and (f) integrates theory with practice. They found that the CONTENT of PD matters less than the PROCESS — a poorly designed session on an important topic produces less change than a well-designed session on a narrower topic. Darling-Hammond, Hyler & Gardner (2017) identified seven features of effective PD: content-focused, active learning, collaboration, models of effective practice, coaching and expert support, feedback and reflection, and sustained duration. Desimone (2009) proposed a core conceptual framework: effective PD changes teacher knowledge and beliefs → which changes teaching practice → which changes student outcomes. Kennedy (2016) argued that PD improves teaching not by adding new techniques but by helping teachers understand WHY certain approaches work — the mechanism, not just the method. Knowles (1984) established adult learning principles: adults learn best when the learning is problem-based (not abstract), connects to their experience, offers choice, and has immediate practical application.
 
 ## Input Schema

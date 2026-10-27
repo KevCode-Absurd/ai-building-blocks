@@ -5,13 +5,13 @@ name: Database migration conflict fixer
 summary: Fix a Drizzle migration conflict safely. Paste your error and migration files. Get a diagnosis, repair steps and CI rules to stop repeat clashes.
 job: test-and-fix-code
 headline: Database migration conflict fixer
-subhead: Describe the Drizzle migration clash. Get it diagnosed and repaired, with steps to stop it coming back. Bring your migration folder and git state. Use the result to plan your next step.
+subhead: Describe the Drizzle migration clash. Get it diagnosed and repaired, with steps to stop it coming back. Bring your migration folder and git state. Act on the verdict before any file changes.
 explain: |
   A clash in your Drizzle migration files, snapshots or journal gets diagnosed and repaired without damaging your history, with a plan so it stops recurring.
 
   The skill starts in read-only mode. It inspects the migration folder, the journal, snapshot files and git state, and explains what collided and why. Only if you ask will it propose edits. It will not run migrate or push, touch a live database, delete migration files, or discard either side of a merge without your clear say so. It treats running drizzle-kit check as running project code, so it reads your scripts first. It finishes with CI or merge queue rules that reduce repeat conflicts for teams.
 
-  The licence that applies to this copy is the one in the LICENSE-CONTENT file in this item, CC BY 4.0. The skill file's header also names the author chaunsin's own Apache 2.0 licence. Both allow reuse with credit.
+  Licence: CC BY 4.0, per the LICENSE-CONTENT file. Credit the author, chaunsin.
 when:
   - A pull or rebase left conflicts in your Drizzle journal file.
   - drizzle-kit check reports migrations that do not commute.
@@ -32,9 +32,10 @@ you_get:
   - Checks to confirm the fix
   - CI rules to prevent repeats
 how_to_use:
+  - The author does not say which Drizzle Kit versions the steps were checked against, and snapshot and journal formats changed between releases. Read the Drizzle Kit notes for your version before you repair anything.
   - Check which Drizzle Kit version you use (look in package.json) and find your drizzle.config file. The layout of your migration folder, older journal files or newer one folder per migration, decides which repair applies.
   - Open your AI tool in the project folder, or paste in your error and file names if it cannot read files.
-  - Add the skill with the buttons on this page. Install the whole folder if you can, since it comes with a helper script that needs Python 3. If you only paste the skill text, the helper is skipped and your AI inspects the files with git instead.
+  - Add the skill with the buttons on this page. Install the whole folder if you can, since it comes with a helper script that needs Python 3. If you only paste the skill text, the helper is skipped and your AI inspects the files with git instead. The helper only reads the migration folder and journal. It never connects to a database or writes files.
   - Say what happened, such as a failed rebase or a drizzle-kit check error.
   - Let it run the read-only checks first. Read its diagnosis and the verdict before you agree to any change.
   - If the verdict is safe to regenerate, confirm the exact files and the branch side it names, then let it make the fix.

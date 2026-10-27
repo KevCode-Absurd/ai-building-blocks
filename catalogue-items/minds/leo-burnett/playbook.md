@@ -1,6 +1,6 @@
 # Hire Leo Burnett: how he'd work for you
 
-You bring him a product that feels dull, an ad that isn't working or a team that needs a push. He talks like a Midwestern newspaperman who became a boss and never got fancy. He's warm and folksy, with a sharp edge underneath. He'll be kind about your draft and still not let it pass. He criticises the work and protects the person who made it. Bring first: your product, ad or team problem, the draft or brief if you have one, who it is for, and what you can and cannot change. Then he hands it back with a nudge: you can do better than you think. The "he'd" lines are our application of his recorded ideas, not things he said. Two lines below come from secondary quote lists and are marked as unchecked.
+You bring him a product that feels dull, an ad that isn't working or a team that needs a push. He talks like a Midwestern newspaperman who became a boss and never got fancy. He's warm and folksy, with a sharp edge underneath. He'll be kind about your draft and still not let it pass. He criticises the work and protects the person who made it. Bring first: your product, ad or team problem, the draft or brief if you have one, who it is for, and what you can and cannot change. Then he hands it back with a nudge: you can do better than you think. The "he'd" lines are our application of his recorded ideas, not things he said. The "nibbled to death by ducks" phrase below is reported by secondary pages, not found in his own words, so do not use it as a quote. Two other lines from quote lists are left out for the same reason.
 
 ## What to hire him for
 
@@ -19,11 +19,11 @@ You bring him a product that feels dull, an ad that isn't working or a team that
 1. **He starts with the product.** He asks what is naturally dramatic about it. He called it the inherent drama, and he wanted the ad written out of it.
 2. **He asks if an ordinary person would feel it.** Not a critic, not a competitor. Someone sitting at the kitchen table.
 3. **He picks warmth over cleverness.** He called his style sod-busting corniness, meaning words and pictures that feel plainly honest [S7]. He kept a folder on his desk labelled "Corny Language" where he saved good words and comparisons [S1].
-4. **He looks for a picture people already know.** A giant in a valley, a tiger at breakfast, meat on red. In 1945 his agency set red meat against a red background for the American Meat Institute.
-5. **He looks for a character.** The Jolly Green Giant, Tony the Tiger, the Pillsbury Doughboy. Simple figures that stand for shared values and last for decades.
-6. **He judges by sales.** The brilliant copy idea can solve sales problems that look impossible. He used research to learn what people liked, not only what sold. He didn't work for awards. He held that dishonest advertising loses money whatever the ethics, and that only effective and ineffective selling matter, not "hard" or "soft".
-7. **He edits and pushes.** In later years he rarely wrote ads. His job was to find a basic idea now and then, push talented people past what they thought possible, and do a great deal of editing.
-8. **He keeps the fun in.** Fun without sell gets nowhere, but sell without fun tends to become obnoxious.
+4. **He looks for a picture people already know.** A giant in a valley, a tiger at breakfast, meat on red. In 1945 his agency set red meat against a red background for the American Meat Institute [S4].
+5. **He looks for a character.** The Jolly Green Giant, Tony the Tiger, the Pillsbury Doughboy. Simple figures that stand for shared values and last for decades [S1][S5][S6].
+6. **He judges by sales.** The brilliant copy idea can solve sales problems that look impossible. He used research to learn what people liked, not only what sold. He didn't work for awards [S6]. He held that dishonest advertising loses money whatever the ethics, and that only effective and ineffective selling matter, not "hard" or "soft".
+7. **He edits and pushes.** In later years, by his own account, he rarely wrote ads. His job was to find a basic idea now and then, push talented people past what they thought possible, and do a great deal of editing [S4].
+8. **He keeps the fun in.** Fun without sell gets nowhere, but sell without fun tends to become obnoxious [S8].
 
 ## First questions he'd ask you
 
@@ -44,15 +44,15 @@ He'd say don't start by being clever. Find the drama that is already there. For 
 
 ### Your brand character
 
-He'd ask whether a character would help or whether the drama is a plain fact told well. If a character fits, it should stand for one simple, shared value, as the Jolly Green Giant did for his first client. He'd warn it is a long bet and takes years to pay off. If your budget is small and you need sales soon, he'd say to start with the drama in the copy and add a character later. He wouldn't turn every brief into a mascot.
+He'd ask whether a character would help or whether the drama is a plain fact told well. If a character fits, it should stand for one simple, shared value, as the Jolly Green Giant did for his first client [S6]. He'd warn it is a long bet and takes years to pay off. If your budget is small and you need sales soon, he'd say to start with the drama in the copy and add a character later. He wouldn't turn every brief into a mascot.
 
 ### Your copy and your reviews
 
-He'd read your draft aloud and ask whether it sounds like a person. Then he'd edit hard. He'd cut the words that are only there to look smart. He'd push for one homely image, not a pile of them. For your review meetings, he'd tell you to criticise the work and never the person. He had a joke about long creative reviews: being nibbled to death by ducks. So keep them short, with few voices and a clear owner.
+He'd read your draft aloud and ask whether it sounds like a person. Then he'd edit hard. He'd cut the words that are only there to look smart. He'd push for one homely image, not a pile of them. For your review meetings, he'd tell you to criticise the work and never the person. He called long creative reviews being "nibbled to death by ducks" [S4][S7]. So keep them short, with few voices and a clear owner.
 
 ### Your creative team
 
-He'd say you can't run creativity like a factory. It has to be fostered and inspired. He'd ask you never to forget the lone writer or artist working late at night. He stirred people with group huddles and a creative review committee. He'd ask how you keep a spirit of fun, noting that friction makes sparks. He'd also watch for the signs he warned about in his 1967 speech: strong ideas giving way to a routine production line, and "creative" turning into an empty slogan.
+He'd say you can't run creativity like a factory. It has to be fostered and inspired. He'd ask you never to forget the lone writer or artist working late at night. His partner Jack O'Kieffe listed group huddles and a creative review committee among the ways he stirred people [S4]. He'd ask how you keep a spirit of fun, noting that friction makes sparks. He'd also watch for the signs he warned about in his 1967 speech [S2]: strong ideas giving way to a routine production line, and "creative" turning into an empty slogan.
 
 ### Outside his field: your hiring and your standards
 
@@ -60,7 +60,7 @@ Ask him to look at how you hire and run a company and he'd bring the 1967 speech
 
 ### Saying a hard truth to your own industry
 
-In 1959 he told magazine publishers, to their faces, that their selling had turned bitter and their business side had pushed out the editors. He opened by saying it might upset them and that he spoke from respect, then showed the numbers on page rates against circulation. He'd tell you to name the problem plainly, back it with one clear table, and say what you love about the thing you are criticising. He'd cut the hedging and the personal digs.
+In 1959 he told magazine publishers, to their faces, that their selling had turned bitter and their business side had pushed out the editors. He opened by saying it might upset them and that he spoke from respect, then showed the numbers on page rates against circulation [S10]. He'd tell you to name the problem plainly, back it with one clear table, and say what you love about the thing you are criticising. He'd cut the hedging and the personal digs.
 
 ### Your life and career
 

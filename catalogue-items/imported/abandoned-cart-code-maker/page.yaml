@@ -35,8 +35,9 @@ how_to_use:
   - Sign in to your store with the Shopify command line first. Your login needs the permissions listed on this page.
   - Paste this skill. Give your store address, days back, minimum cart value, discount and code prefix.
   - Run it in preview mode first. Turn on dry run, and check how many shoppers qualify.
-  - If the count looks right, ask your AI to run it for real. The codes go live at once. If something is wrong, delete the discount in Shopify Admin.
-  - Open the CSV and load it into your email tool to send each shopper their code.
+  - Your AI will first run a small read-only check of the Shopify queries. It has not been tested on a real store, so expect it to fix a field name or two. Then it stops and asks you to confirm the count. Reply with the count and say yes before anything is made.
+  - Once you confirm, the codes go live at once. If something is wrong, delete the discount in Shopify Admin. The tags stay on the customers until you remove them.
+  - Open the CSV and load it into your email tool. It needs the customer_email and discount_code columns, and the tag name if your tool filters by tag. Then send each shopper their code.
 output_sample:
   input:
     - Your Shopify store address

@@ -68,9 +68,9 @@ Input (minimal) → Magic (your algorithm) → Result (shareable)
 
 ### Result Types That Get Shared
 1. **Identity results** - "You are a..."
-2. **Comparison results** - "You're 87% like..."
-3. **Prediction results** - "In 2025 you will..."
-4. **Score results** - "Your score: 847/1000"
+2. **Comparison results** - "You're [X]% like..." ([X] comes from your formula)
+3. **Prediction results** - "In [YEAR] you will..."
+4. **Score results** - "Your score: [SCORE]/[MAX]"
 5. **Visual results** - Avatar, badge, certificate
 
 ### The Screenshot Test
@@ -192,11 +192,11 @@ Making calculator tools that get shared
 4. Make result shareable
 
 ### Result Presentation
-The dollar figures below are made-up examples of wording, not real results. Any number a tool shows must come from the user's own inputs and a stated formula.
+The amounts below are placeholders to show wording, not real results. Any number a tool shows must come from the user's own inputs and a stated formula.
 ```
-BAD:  "Result: $45,230"
-GOOD: "You could save $45,230 by age 40"
-BEST: "You're leaving $45,230 on the table 💸"
+BAD:  "Result: [AMOUNT]"
+GOOD: "You could save [AMOUNT] by age [AGE]"
+BEST: "You're leaving [AMOUNT] on the table 💸"
 ```
 
 ### Comparison Features
@@ -251,7 +251,7 @@ Fix action: Design result cards mobile-first, test screenshots on phone
 
 ## Collaboration
 
-The companion skills named below (landing-page-design, viral-hooks, seo, frontend, ai-image-generation, ai-wrapper-product) are separate items. They are optional and are not part of this one; get them separately.
+The companion skills named below (landing-page-design, viral-hooks, seo, frontend, ai-image-generation, ai-wrapper-product) are not part of this item. In the AI Blocks library, use static-html-landing-page-builder for the landing page, short-video-hook-writer or tired-ad-hook-refresher for hooks, and seo-site-auditor for search. For the other jobs, ask a developer or your AI directly.
 
 The `risk: critical` label in the front matter comes from the original author's catalogue. This skill is a planning aid: it does not build or run anything by itself. Follow its advice with care when a tool gives money or health results.
 

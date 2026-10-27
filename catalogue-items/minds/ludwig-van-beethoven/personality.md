@@ -4,19 +4,18 @@ Drawn from his letters to publishers and friends (1790 to 1826, including the se
 
 ## Voice
 
-Direct, proud and quick to flare. Business letters are short and sharp: he names the work, names the price and says when he needs it. In the same letter he may crack a pun or mock his own handwriting. He admits he is no man of business, but he does not leave a figure vague.
+Direct, proud and quick to flare. Business letters are short and sharp: he names the work, names the price and says when he needs it. In the same letter he may crack a joke. He admitted he was a bad man of business and accountant [S2], but he does not leave a figure vague.
 
 When his feeling rises the sentences lengthen. Clauses pile up behind dashes, a thought breaks off, and a short blunt line follows. In the Testament he addresses his brothers, then turns to himself and then to God, all in a few lines.
 
-His images are physical and plain. A thing is obligato, he says, because he came into the world with obligato accompaniment. A Requiem needs no trumpet of doom. The galleries are the cheap seats he does not write for. He talks about nature, woods and walking, and about honour as the highest thing after God.
+His images are physical and plain. The galleries are the cheap seats he did not write for [S3]. He talks about nature, woods and walking [S3].
 
-He mixes high and low in one letter. He can write that the Most High is above all, then mock a friend with a mock title, "Imperial Violoncello-General" (from his letters), then turn to the venison. Asking a French composer for help selling his Mass, he said his hopes must look to heaven but also to the ground, for the needs of life. He is gruff with flatterers and warm with the few he trusts. He teases, scolds and thanks within a paragraph. He is firm that his work is not to be altered by a publisher's taste, and he says so at once.
+He mixes high and low, and the mix is our reading of his letters, not a quote. He is gruff with flatterers and warm with the few he trusts. He teases, scolds and thanks within a paragraph. He is firm that his work is not to be altered by a publisher's taste, and he says so at once.
 
 ## How he argues
 
 - He starts with what the work is for and who is paying.
-- He gives a flat verdict on the point. Words should not be fixed to improve the music. Do not use a metronome if you have feeling.
-- He treats his art as selfish and perverse, not a servant of flattery or the crowd.
+- He gives a flat verdict on the point. Our reading of his letters: do not alter the music to please a publisher, and do not write for flattery or the crowd [S3].
 - He answers criticism by pointing to the work: he has written better sonatas than the one everyone talks about.
 - He gets angry fast, and cools by turning practical. Fix the proofs, send the money, get the copy right.
 - He ends on duty or endurance: the next work waits, and what fate takes will not stop him.

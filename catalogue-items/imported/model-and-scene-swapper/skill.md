@@ -5,11 +5,15 @@ description: 已有模特图换模特、换背景。一张模特图 → 多人�
 
 **Working in a chat (added by AI Blocks).** This file is in Chinese. Read it and reply in English. Before you run anything, tell the user: image runs go through dLazy, a paid service that needs an account or API key, and each image costs money. Run `--dry-run` first to show the cost. If you use a photo of a real person as the model reference (such as model-face.jpg), the user must have that person's written consent. Check local ad rules for AI-made models too. Before any result is used in an ad, check it against the real garment: colour, cut, logo, folds, hands and light. The links to the flat-lay and material-enhancement skills point to skills that are not in this folder. For a flat photo with no model, use the Virtual try-on photo maker. If fabric texture looks flat, rerun with `--quality high`.
 
+**Face references and disclosure (added by AI Blocks).** A face reference such as model-face.jpg must be the user's own model, or a model who gave written consent for this use. Never use a real person's face without it. When the result is for a paid ad, tell the user to check whether local rules require saying the model is AI-made, and to add that line before posting. Do this check before step 4 below, not after.
+
+**Core steps in English (added by AI Blocks).** 1. Pick a mode: swap the person, swap the background, or swap both. 2. Write a prompt that names every garment detail to keep (colour, cut, logo, folds, hem) and describes the new person, the new background, or both, keeping the pose, camera angle and crop. 3. Run it through the image tool with `--dry-run` first to see the cost, then make 3 or 4 versions. 4. Check each version against the real garment. **What the user gets:** 3 or 4 saved JPG versions (by default under `docs/one-shot/`, named by market and SKU), the prompt text used, and a checklist of what to verify against the real garment. Ads with AI-made models may need to say so under local ad rules.
+
 # one-shot — 同一商品替换模特和背景
 
 拿一张**已经拍好的模特图或人台图**，在**商品完全不动**的前提下换掉人、换掉背景，或两者都换。
 
-和 [flat-lay](../flat-lay/skill.md) 的区别：flat-lay 从平铺图**造**一张模特图；本技能是把**已有**的模特图**裂变**成多个人群 / 场景版本——一次拍摄，覆盖国内海外、不同年龄段、不同肤色的投放需求。
+和 flat-lay（本目录未包含 / not included） 的区别：flat-lay 从平铺图**造**一张模特图；本技能是把**已有**的模特图**裂变**成多个人群 / 场景版本——一次拍摄，覆盖国内海外、不同年龄段、不同肤色的投放需求。
 
 ---
 
@@ -212,7 +216,7 @@ Photorealistic catalog shot, natural light, no text, no watermark.
 | 手指崩坏 | 换人时手部重绘 | 加修手句 + `--batch 4` 挑图 |
 | 只换背景却把人也换了 | 模式句不完整 | 补 `Keep the model identical — same face, hair, body and pose.` |
 | 新背景光线和人对不上 | 未约束光向 | 追加 `Match the new background lighting to the light direction on the model in image 1.` |
-| 面料纹理被抹平 | `--quality medium` | 改 `--quality high`，或换图后接 [material-enhancement](../material-enhancement/skill.md) |
+| 面料纹理被抹平 | `--quality medium` | 改 `--quality high`，或换图后接 material-enhancement（本目录未包含 / not included；不要找它） |
 | 人台图转真人后脖子/手很怪 | 缺少补全指令 | 用第五节人台图专用句，明确要求补出头颈与手臂 |
 
 ---

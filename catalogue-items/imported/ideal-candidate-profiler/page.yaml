@@ -19,6 +19,7 @@ not_for:
   - "You want to screen or rank named people: use a structured interview and your own hiring checklist, not a persona."
   - "You need the job post itself rewritten: ask a recruiter or writer to redraft it from your notes."
   - "You want to treat the result as fact about real people: check it against your past hires and your hiring manager first."
+  - "You want to judge a person by tenure, company size, career gaps or where they have moved: the persona describes the role's needs only, and those things can stand in for age or national origin."
 you_give:
   - The job description
   - Your company type and culture
@@ -31,12 +32,13 @@ you_get:
   - Outreach angles to try
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. It needs no code and no paid tool.
+  - "Gather first: your job description, what the hiring manager says about the best person in this role (see the five questions in the skill), and notes from a look at a few current profiles on the platforms you use. Do that look by hand."
   - Paste your job description. Add your company type and culture.
   - Add a great past hire as an example, and any pay or location limits, if you have them.
-  - Do the research by hand: the hiring manager interview, plus a look at LinkedIn and communities, within each platform's terms. Your AI cannot browse these for you. It only drafts the persona from your brief and what you bring back.
+  - "Do the research by hand: the hiring manager interview, plus a look at LinkedIn and communities, within each platform's terms. Your AI cannot browse these for you. It only drafts the persona from your brief and what you bring back."
   - Ask your AI to build the candidate persona.
   - Read the result with your hiring manager. Fix anything that does not match your real hires.
-  - Use the outreach themes and community list to plan your sourcing. Leave out age, family status and other protected traits.
+  - Use the Where to Find Them list to build a sourcing list. Use the How to Engage themes to draft outreach, and ask your hiring manager to check the drafts. Leave out age, family status and other protected traits.
   - Check before use. The persona is an assumption. Test it against your past hires and real market data. It is not evidence about any named person.
 output_sample:
   input:

@@ -39,7 +39,10 @@ how_to_use:
   - Read the plan first. It names the Snowflake feature it chose and why. Ask for a different one if it does not fit.
   - Read the review list before you run anything. Look at grants, warehouse size and any task that needs to be resumed.
   - Run the SQL in a dev schema in your own Snowflake account. Your AI cannot run it for you in a chat.
-  - Check row counts and a few sample rows against the source. Then move it to production.
+  - Check row counts and a few sample rows against the source. Have an engineer review the SQL before it touches production data. Then move it to production.
+  - Read the Not checked line. It must name any table definitions or warehouse names you did not give, so you do not treat the result as verified.
+  - If you run the helper script, read scripts/snowflake_query_helper.py first. It is third-party code. Cortex and Snowpark calls are billed, so test on a small sample.
+  - Next, use the Database schema designer if the tables need a redesign, or the SQL query helper for questions on other databases.
 how_it_works:
   - title: Name the feature
     text: It picks Dynamic Tables, Streams with Tasks, Snowpipe or a plain query, and says why.

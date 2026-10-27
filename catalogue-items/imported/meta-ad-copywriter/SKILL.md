@@ -3,13 +3,13 @@ name: ad-copy
 description: "Write high-converting Meta (Facebook + Instagram) ad copy — primary text, headlines, descriptions, and UGC/video ad scripts. Use this skill whenever the user asks to write, rewrite, or brainstorm Meta ads, Facebook ads, Instagram ads, ad hooks, ad captions, ad primary text, UGC scripts, video ad scripts, talking head scripts, ad angles, ad variations, scroll-stopping hooks, or ad creative for social media. Also trigger for 'write me an ad', 'ADHD hook ad', 'in-feed VSL script', or any task involving creating paid social ad copy. Does NOT handle compliance review or non-ad copy types like landing pages, emails, or full VSLs."
 ---
 
-> Created by **Rob Palmer** — direct-response copywriter ($523M+ tracked).
+> Created by **Rob Palmer**, direct-response copywriter.
 > Source & updates: https://github.com/robpalmer99/claude-code-copywriting-skills
 > Free under CC-BY-4.0. Attribution requested when redistributed.
 
 # Meta Ad Copy Skill
 
-**Real facts only (added by AI Blocks).** Health, weight-loss, body image and before-and-after ads face strict Meta ad rules, and lines like "your doctor won't tell you" or an implied personal health problem can be rejected. Check every line against Meta's current ad policy before launch. Every number, name, result, study, quote and review in your copy must come from the user's own real data. The sample lines in this file, such as "47,312 women" or the weight and health lines, show the style only and are not claims to run. Write them as [X customers], [name], [result] and [source], and never invent proof. Meta restricts health, weight-loss and before-and-after claims. Ask the user to check Meta's current ad policy before launch.
+**Real facts only (added by AI Blocks).** Health, weight-loss, body image and before-and-after ads face strict Meta ad rules, and lines like "your doctor won't tell you" or an implied personal health problem can be rejected. Check every line against Meta's current ad policy before launch. Every number, name, result, study, quote and review in your copy must come from the user's own real data. The sample lines in this file, such as the weight, health and "my sister sent me this article" lines, show the style only and are not claims to run. Write them as [X customers], [name], [result] and [source], and never invent proof. Meta restricts health, weight-loss and before-and-after claims. Ask the user to check Meta's current ad policy before launch.
 
 This skill writes high-converting ad copy for Meta platforms (Facebook + Instagram) — primary text, headlines, descriptions, and UGC/video ad scripts. It draws on proven direct response frameworks from Schwartz, Halbert, Makepeace, Georgi, Sultanic, and others.
 
@@ -53,7 +53,7 @@ This is the most important strategic decision for any Meta ad:
 
 **Critical rule:** If you show the product in the ad, the viewer becomes product-aware. Never send a product-aware viewer to a blind VSL — send them to a PDP or offer page instead.
 
-**Real-world example:** Many 8-figure brands run BOTH strategies simultaneously. Static ads with product images sell the solution and send to PDPs. Curiosity video ads sell the click and send to advertorials or VSLs. Different awareness levels, different funnels, same brand.
+**Real-world example (Rob Palmer's own observation, not verified here; do not quote it as a fact in an ad):** Many 8-figure brands run BOTH strategies simultaneously. Static ads with product images sell the solution and send to PDPs. Curiosity video ads sell the click and send to advertorials or VSLs. Different awareness levels, different funnels, same brand.
 
 ## Ad Format
 
@@ -107,8 +107,10 @@ Use this fill-in-the-blank formula (from Alen Sultanic) to structure any ad:
 
 > "Why do _____ matter more than _____ after ___?"
 > "[Deep identifier — something that resonates with their identity]"
-> "Experts are calling it the '_____'. But it's not a _____ at all..."
-> "It hits from all sides: _____ stress. _____ stress. _____ stress. It's NOT aging, it's not normal and it's not permanent."
+> "[Named expert or source, only if real] calls it '[NAME]'. But it's not a [COMMON GUESS] at all..."
+> "It hits from all sides: [PROBLEM 1]. [PROBLEM 2]. [PROBLEM 3]. It's not [WRONG CAUSE], and it's not [WRONG BELIEF]."
+
+(These are fill-in patterns for style only. Do not claim a cause, a cure or a personal health problem the user cannot prove, and check Meta's health ad rules before you run anything like it.)
 
 **WHAT (The Mechanism)** — Pivot to the mechanism. Tease the solution without revealing it.
 
@@ -133,10 +135,10 @@ The hook is the single biggest lever in ad performance. Test more hooks than any
 | **Contrarian** | "Everything you've been told about _____ is wrong." | Problem-aware, skeptical |
 | **Social proof** | "Over [X] [customers] have tried this 30-second trick..." | Solution-aware+ |
 | **Story** | "Last [month] I was stuck with [problem] and [someone I trusted] said..." | Cold, emotional markets |
-| **Demographic callout** | "Attention men over 50 who..." | Cold, specific targeting |
+| **Demographic callout** | "Attention [group] who..." (Meta bars ads that imply you know a person's age, health or other personal traits, so check its policy first) | Cold, specific targeting |
 | **Result** | "I [real result] in [real time] without giving up [real thing]." | Warm/retargeting |
 | **Pattern interrupt** | "Stop scrolling. This actually matters." | Cold, saturated markets |
-| **Fascinating fact** | "Your liver processes 500+ chemicals before breakfast." | Unaware, education-first |
+| **Fascinating fact** | "[A real fact about your topic, with a source you opened]." | Unaware, education-first |
 
 ### Hook Rules
 
@@ -151,13 +153,13 @@ The hook is the single biggest lever in ad performance. Test more hooks than any
 
 **Open Loops** — Create an information gap that can only be closed by clicking. Tease without resolving.
 
-> "I tested 47 headlines. One pattern beat everything else by 3x." (Which pattern?)
+> "I tested [NUMBER] headlines. One pattern beat everything else by [X]x." (Which pattern? Use only your own real test results.)
 > "The formula has three parts. The first is obvious. The third is counterintuitive. But the second? That's where the magic happens." (What's the second?)
 
 **Tangible Curiosity** — Make curiosity concrete and specific, not vague.
 
 Weak: "Discover the secret to [the result]"
-Strong: "Discover the 7-second morning trick that targets the fat cells your body forgot about"
+Strong: "Discover the [SPECIFIC, TRUE METHOD] that [REAL RESULT YOUR PRODUCT DELIVERS]"
 
 **Bucket Brigades** — Transition phrases that maintain momentum and pull forward:
 - "But here's the thing..."
@@ -185,13 +187,12 @@ These techniques make any ad more compelling:
 > "It's not available in any health food store — and for good reason."
 
 **Drop specific hints:**
-> "It's 150 million years old"
-> "It's smaller than a nickel"
+> "[A real fact about its age or size]"
 > "[Real institution] announced it only last week" (only if true)
-> "It grows only above 12,000 feet in the Andes"
+> "[A real fact about where it comes from]"
 
 **Authority anchors:**
-> "Experts call it..."
+> "[Named expert] calls it..." (only with a real, named expert)
 > "A study from [institution] proved..."
 > "Researchers found..."
 > "[Number] studies now show..." (only with real, cited studies)
@@ -330,7 +331,7 @@ Personal narrative arc. Most effective for emotional markets.
   "I tried [what the customer really tried]. Nothing worked."
 
 [DISCOVERY — 20-40s] The turning point, how they found the solution
-  "Then my sister sent me this weird article about..."
+  "Then [a real person or source] showed me [a real tip, article or product]..."
 
 [TRANSFORMATION — 40-60s] Specific results with numbers and timelines
   "In [real time], I [real result]. [Real detail from the customer.]"
@@ -415,6 +416,8 @@ From Clayton Makepeace: feel your way through ad copy, don't think your way thro
 Read your ad aloud. When the tingle dips at any passage, that's where you rewrite.
 
 ## Power Words (Use Liberally)
+
+Check each word against Meta's ad policy first. Words like Miracle, Guaranteed and Shocking can get an ad rejected, and health claims face stricter rules.
 
 Amazing, Astonishing, Breakthrough, Discover, Easy, Effortless, First Time Ever, Free, Guaranteed, How To, Hurry, Immediate, Instant, Introducing, Last Chance, Limited, Miracle, New, Now, Proven, Quick, Revolutionary, Secret, Shocking, Simple, Special, Surprising, Truth, Unique, Win, YOU
 

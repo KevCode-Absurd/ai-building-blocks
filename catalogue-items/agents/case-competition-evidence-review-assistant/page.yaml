@@ -28,6 +28,7 @@ you_give:
   - Your financial exhibits and the assumptions behind them
   - Your last review file (optional)
   - Python PowerPoint tools, only if you want a .pptx file built (optional)
+  - If your rubric is missing or partly pasted, say so. The agent marks the missing criteria and reviews the rest.
 you_get:
   - A revised case deck, as a .pptx file if your AI can build one, or as slide-by-slide text
   - A financial bridge that ties each step to an exhibit or an assumption

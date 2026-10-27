@@ -31,13 +31,13 @@ you_get:
   - An updated list after each step
   - A completion message
 how_to_use:
-  - Before you start, write down the tool name and your operating system. Have the docs link or the first screen of the tool ready. Do not paste passwords or keys into the chat. Type them straight into the tool when a step asks.
-  - Open a chat in Claude, ChatGPT or Gemini and paste the skill text from this page.
+  - "Before you start, make sure you have admin rights on the computer, because installs often need them. The author made it for Claude and Codex. It is plain instructions, so it also works pasted into ChatGPT or Gemini. Write down the tool name and your operating system. Have the docs link or the first screen of the tool ready. Do not paste passwords or keys into the chat. Type them straight into the tool when a step asks."
+  - Open a chat in Claude, ChatGPT or Gemini and paste the skill text from this page. If you add it as a skill instead, ask for it by name, because the author turned off automatic use.
   - Tell your AI what you want to set up, such as a tool to install or services to connect.
   - Paste any docs or steps you have (optional). You can also describe what is on your screen now.
   - Before you run a command or change a file, check it is right for your machine and approve it yourself.
   - Do the one step it shows, then reply "done" or tell it what you see.
-  - Keep going until it says setup is complete. Then test that the tool works.
+  - Keep going until it says setup is complete. Then test that the tool works. A good result at every turn is one small action, a dashed divider and a numbered list of eight steps or fewer. If you get a long checklist, say "one step only".
   - If a step fails, say what went wrong. Your AI adds the fix as a new step.
   - When setup is done, save the finished steps as a short note for your team, or write a test checklist to go with it.
 output_sample:

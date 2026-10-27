@@ -19,6 +19,12 @@ terms:
     meaning: Simulating fake data from your assumptions to see if it looks plausible (in PyMC, pm.sample_prior_predictive).
   - term: DataTree
     meaning: The container (from ArviZ) that holds those simulated results.
+  - term: support
+    meaning: The values a number can take, such as only positive values.
+  - term: MCSE
+    meaning: The error left from using a finite number of simulation samples.
+  - term: SBC
+    meaning: A test that a whole fitting method works. This skill does not do it.
 when:
   - You are building a Bayesian model and not sure what prior to use.
   - Default priors give odd predictions.
@@ -40,7 +46,7 @@ you_get:
   - A sensitivity check on scale and tails
 how_to_use:
   - This is for people who know Bayesian modelling and Python. If you do not, use your tool's default priors or ask a statistician. A prior is your starting assumption about a number before you see data. A quantile is a value with a stated share of probability below it. PreliZ is a Python tool that turns your ranges into a distribution.
-  - Open a chat with an AI that can run Python code. Paste in this skill.
+  - Open a chat with an AI that can run Python code, with PyMC and PreliZ installed. Paste in this skill. Have ready the quantity you are modelling, its units, and one low and one high value you would bet on.
   - Tell it the quantity you are modelling and its units.
   - Give your likely ranges, such as a low and high value you would bet on. Add your PyMC model if you have one.
   - Check the fitted prior against your own numbers before you go on.

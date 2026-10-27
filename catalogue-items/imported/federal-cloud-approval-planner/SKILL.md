@@ -17,7 +17,7 @@ description: >
 
 # FedRAMP Certification Skill
 
-> **Last verified:** 2026-10-03
+> **Author's last-verified date:** 2026-10-03. AI Blocks did not check these rules again. Tell the user to check fedramp.gov.
 
 A comprehensive guide for helping users navigate FedRAMP authorization — from initial
 readiness through ATO and ongoing continuous monitoring.
@@ -43,7 +43,7 @@ Identify the user's goal and jump to the appropriate section:
 > ⚠️ **CR26 (FedRAMP Consolidated Rules for 2026)**: FedRAMP has restructured its authorization framework. FIPS 199-based baseline labels (Low/Moderate/High/LI-SaaS) are replaced with **Certification Classes A–D** (per notice NTC-0004; CR26 rules valid through December 31, 2028). Class labels change the *names* of the baselines, not their requirements. CSPs already authorized under the old labels retain their authorization through a transition period in which old and new labels are linked.
 
 - **Baseline**: NIST SP 800-53 **Rev 5** (fully in effect)
-- **Control counts** (Rev 5): Low ≈ 156, Moderate = 323, High = 421 (legacy references; CR26 class-based counts being published by PMO)
+- **Control counts** (Rev 5, the author's figures and not checked here; confirm them in NIST SP 800-53B before you cite them): Low ≈ 156, Moderate = 323, High = 421 (legacy references; CR26 class-based counts being published by PMO)
 - **CR26 Certification Classes** (official mapping, NTC-0004): **A** = new pilot/transitional baseline (entry via external frameworks such as SOC 2 Type II through Program Certification; holders have a 2-year window to obtain B/C/D), **B** = current **LI-SaaS + Low** baselines, **C** = current **Moderate** baseline (majority of federal deployments, incl. CUI), **D** = current **High** baseline.
 - **FedRAMP 20x**: Now the **primary authorization pathway** — continuous authorization built on **Key Security Indicators (KSIs)**, machine-readable evidence, modular API-driven submissions, and automated validation. Traditional SSP/SAP/SAR templates remain for legacy paths.
 - **CR26 status**: finalized **June 25, 2026**; optional early adoption since **July 4, 2026**; **mandatory January 1, 2027**.
@@ -254,7 +254,7 @@ Match output format to request type:
 | Control mapping question | Table: Control ID \| Requirement \| How to Implement |
 | Readiness overview | Executive summary prose + priority action list |
 
-When generating document content, always note: *"Use official FedRAMP templates from fedramp.gov — this content should be inserted into the appropriate template section."*
+When generating document content, always note: *"Check fedramp.gov for the format it requires now. Rev 5 Word and Excel templates are being retired in favour of machine-readable formats, so this content may need to be converted. Have a qualified assessor confirm it before filing."*
 
 ---
 

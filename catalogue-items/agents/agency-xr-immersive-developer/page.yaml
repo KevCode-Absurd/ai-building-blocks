@@ -43,6 +43,7 @@ how_to_use:
   - Read the library choice and fallback plan first. Change them if a device you need is not covered.
   - Run the sketches on a local page, then on each device in the test list. WebXR needs the page served over HTTPS on a real device.
   - Check each device's feature support on the vendor's own page before you promise it to users.
+  - Bring the results from each device back to your AI and ask for a revised plan.
 how_it_works:
   - title: Collect the brief
     text: It confirms the experience, target devices and browsers, library and input. It asks once for anything missing, then marks it MISSING.

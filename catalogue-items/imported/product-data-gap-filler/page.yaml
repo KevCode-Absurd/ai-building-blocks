@@ -9,6 +9,8 @@ subhead: Missing barcodes, SKUs, vendors, product types and weights found and fi
 explain: |
   Missing barcodes, SKUs, vendors, product types and weights found and filled, so AI tools can quote an exact in-stock item. When this data is blank, a shopping agent may not be able to confirm the product is the one asked for, and may pick a rival with full data. This is the author's view, not a measured result.
 
+  This is an imported copy of an MIT-licensed skill (see the LICENSE file). It is not an original AI Blocks skill. Credit goes to the source author, named in the credits.
+
   Claude scans your Shopify products and variants for blank fields. Vendor and product type are set at product level. Barcode and SKU are set per variant. You see the gaps and proposed values before anything is written. It changes live data, so you need an authenticated Shopify CLI session with product write access, and you should supply real barcodes rather than guesses.
 when:
   - Your product pages show no GTIN or SKU.
@@ -30,6 +32,7 @@ you_get:
   - Variant-level barcode and SKU updates
   - A list of gaps only you can fill
 how_to_use:
+  - "Before any real run, back up your data. In your Shopify admin, open Products and choose Export, then pick all products and the CSV for Excel option. Keep the file. If a write goes wrong, import that file again and choose to overwrite existing products with the same handle."
   - Open your AI in a tool that can run Shopify CLI commands, such as Claude Code. Install the Shopify CLI, then sign in to your store yourself with `shopify store auth --store your-store.myshopify.com --scopes read_products,write_products`. Check the command against the current Shopify CLI help, because it can change.
   - Paste the skill and give your store domain. Add your SKU and barcode file and any vendor or product type to apply.
   - Ask for a dry run first. Nothing is written in a dry run.

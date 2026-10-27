@@ -36,6 +36,7 @@ you_get:
   - A summary and one next step
 how_to_use:
   - Download the workflow pack and add it to Claude, ChatGPT or Gemini.
+  - The pack holds the two skills it uses (Plain-words contract summary and Plain English editor). If one is missing, open its page on this site from the skills list, or ask for the file.
   - Paste the full terms first, then your current customer explanation and the price rules.
   - "Say: follow the workflow file, quote clause numbers and stop if a check fails."
   - Check the summary against the terms for deposits, cancellation and refunds. These cause most disputes.

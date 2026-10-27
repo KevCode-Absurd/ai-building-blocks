@@ -58,9 +58,11 @@ they made.
 
 Match the platform properly:
 
-- **Twitter**: the claim first, compressed, nothing before it.
+- **Twitter**: the claim first, compressed, nothing before it. Free accounts allow 280 characters per post. Ask the user their limit, because paid accounts allow longer posts, and check the platform's current rule.
 - **LinkedIn**: room to set up the situation, then the claim, then what it
-  means for the reader.
+  means for the reader. A post can run to about 3,000 characters, but a range of roughly 150 to 300 words usually reads well. Check the platform's current limit.
+
+Always tell the user the length of the finished post against the limit.
 
 If the source is a transcript or a recording, watch for spoken register
 surviving into text. Filler, false starts and "so anyway" read as sloppy on the
@@ -86,7 +88,9 @@ numbers people quote are folklore.
 
 One long piece is several posts. Once the first is written, remind them of the
 other claims from step 1 and offer to space them out rather than posting the
-same idea three ways in one week.
+same idea three ways in one week. Suggest a gap of a few days between them.
+
+**Next steps (without the connector).** Tell the user to post it themselves, then note the post's date, platform, reach, replies and link clicks in a simple list or spreadsheet for a week. Compare which idea drew the most replies and use that to pick the next one.
 
 ## Example
 

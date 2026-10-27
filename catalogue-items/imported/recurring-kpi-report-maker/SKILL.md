@@ -71,7 +71,7 @@ Sources, tried simultaneously:
 
 If a source errors or returns nothing, record it and move on. Never block the whole report on one bad connector.
 
-**No connectors at all is a supported path, not a failure.** Ask for a CSV or XLSX export, read it, and build the identical report from the file. Say so plainly: "I don't see a connected data source. Export the sales report from your system and drop it here — I'll build the same report from that." Owners with tool sprawl live in this mode, and the report is just as good.
+**No connectors at all is a supported path, not a failure.** Ask for a CSV or XLSX export, read it, and build the identical report from the file. A file needs at least these columns: a date, a location or other grouping (if the report is grouped), and an amount. Add one column per extra metric. Say so plainly: "I don't see a connected data source. Export the sales report from your system and drop it here — I'll build the same report from that." Owners with tool sprawl live in this mode, and the report is just as good.
 
 ## Step 5 — Compute and sanity-check
 
@@ -117,11 +117,10 @@ If the owner asked for a cadence, confirm it in one line: "Saved. I can't run th
 
 One line: the report ran and the definition is saved. Then the single most relevant next step, with at most two others nearby:
 
-- "The weekly pack, on schedule" runs `/report-pack` to wrap this in context on a cadence. This is a separate command from the author's full pack and is not in this item, so leave this offer out unless the user has it.
 - "How's the business doing?" runs `business-snapshot-writer` for the picture around these numbers.
 - "Cash forecast" runs `cash-forecast-builder` when the report raised a cash question.
 
-Max three offers. Never repeat an offer the owner declined this session.
+Max two offers. Never repeat an offer the owner declined this session.
 
 ## What not to do
 

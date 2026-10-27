@@ -6,15 +6,16 @@ catalog_summary: "Instrument product analytics correctly: event taxonomy, proper
 display_order: 8
 ---
 
-## Supporting material availability
+## Ask first (in place of the missing analytics-strategy skill)
 
-This catalog copy does not include these files:
+Some skills the author names, such as `analytics-strategy` and `experimentation-analytics`, are not in this library. Do not say you read or ran them. Ask the person these questions in one batch, and never invent the answers:
 
-- `references/retention-measurement-patterns.md`
+1. What is your business goal, in one line?
+2. What are the three questions your data must answer?
+3. Which analytics tool do you use (Mixpanel, Amplitude, PostHog or other)?
+4. Do you have an existing event list? If yes, paste it.
 
-The `analytics-strategy` and `experimentation-analytics` skills named below are not in this library. If the person has not decided what to measure, ask them for their goal and the three questions they want answered, then carry on.
-
-Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
+If they cannot answer 1 or 2, tell them to decide that by hand first, then carry on. The longer retention reference file is not part of this copy, so use the "Retention measurement" section below and add nothing more.
 
 # Product Analytics Setup
 
@@ -22,7 +23,7 @@ A senior PM and analyst's playbook for instrumenting product analytics correctly
 
 Most product analytics setups are some combination of inherited mistakes, dashboard sprawl, and events nobody trusts. The team launches a new feature; instrumentation gets bolted on under deadline pressure; naming drifts; properties are inconsistent; six months later nobody can answer simple questions because the answer depends on which event you trust.
 
-This skill is the discipline that prevents that. It assumes you have answered the strategic questions about what to measure (see `analytics-strategy`). It assumes you have a tool connected (Mixpanel, Heap, PostHog, Amplitude, or warehouse-native via BigQuery, Snowflake, or dbt). The hard part is the systematic execution: naming conventions, property design, schema versioning, funnel construction, cohort definitions, retention measurement.
+This skill is the discipline that prevents that. It assumes you have answered the strategic questions about what to measure (`analytics-strategy` covers that, but it is not in this library, so ask the person). It assumes you have a tool connected (Mixpanel, Heap, PostHog, Amplitude, or warehouse-native via BigQuery, Snowflake, or dbt). The hard part is the systematic execution: naming conventions, property design, schema versioning, funnel construction, cohort definitions, retention measurement.
 
 When to use this skill: setting up product analytics from scratch, auditing an existing instrumentation, fixing a "we have data but cannot trust it" problem, or designing instrumentation for a new feature.
 
@@ -30,7 +31,7 @@ When to use this skill: setting up product analytics from scratch, auditing an e
 
 ## What this skill is for
 
-This skill spans instrumentation execution. It does not cover measurement strategy (use `analytics-strategy`), experimentation result interpretation (use `experimentation-analytics`), paid media analytics (use `ads-performance-analytics`), or platform decisions (use `experimentation-platform-orchestrator`). Pair this skill with the relevant integrations microsite for your specific tool.
+This skill spans instrumentation execution. It does not cover measurement strategy, experimentation result interpretation, paid media analytics or platform decisions. The skills the author names for those (`analytics-strategy`, `experimentation-analytics`, `ads-performance-analytics`, `experimentation-platform-orchestrator`) are not in this library. Say plainly that this part is outside the plan, and do not make up what those skills would say. For tool-specific setup, use your tool's own docs.
 
 The clean distinction from analytics-strategy. That skill (Growth category) is strategic: what to measure and why, KPI hierarchy, dashboard architecture, attribution models. This skill (Product category) is execution: how to actually instrument the product correctly. The two compose. Decide what matters first (the analytics-strategy skill is not in this library, so do this with the person: ask for their goal and the three questions they want answered); then use this skill to instrument it.
 

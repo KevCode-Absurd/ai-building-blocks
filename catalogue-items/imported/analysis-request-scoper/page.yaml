@@ -29,11 +29,11 @@ you_get:
   - A signed-off scope
   - An analysis brief for the analyst
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. No code or paid tool is needed.
+  - Open Claude, ChatGPT or Gemini. Upload the whole skill folder, or paste in SKILL.md plus the five files it uses (the interview guide, requirements template and analysis brief template in assets, and the decision maker framework and elicitation techniques in references). The steps read those files. No code or paid tool is needed.
   - Paste the original request, however vague. Add who asked, who else cares, and the deadline.
   - Answer the interview questions your AI asks. Say so when you don't know, so it doesn't guess.
   - Check the requirements document. Fix anything that is wrong or missing.
-  - Send it to the person who asked and get a clear yes in writing. Then ask your AI for the final analysis brief.
+  - Send it to the person who asked and get a clear yes in writing. If they have not replied by your deadline, mark the open points as assumptions in the requirements document and tell them you will proceed on those. Then ask your AI for the final analysis brief.
 output_sample:
   input:
     - The original request, however vague

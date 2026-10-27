@@ -7,6 +7,8 @@ description: Use when you are about to commit to a bold plan and want to know th
 
 A bold plan is easier to back when the worst case is known and capped. This skill puts the loss in numbers, finds ways to limit it, asks the people nearest your customers, and gives a verdict. It leaves your gut feeling until the end, so the numbers get a hearing first. For deciding who owns the call, use "Informed captain decision planner". For the one outcome that could end the business whatever its odds, use "Ruin risk stress tester".
 
+**When not to use:** if the choice is small and easy to undo, use the Reversible decision sorter instead. If you are not sure the idea is wanted yet, use the Smallest test picker first.
+
 <!-- needs: written by hand (needs_mode: manual in item.yaml). tools/add-needs.mjs skips this item. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.

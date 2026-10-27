@@ -15,7 +15,7 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 Compares, for each discount code and automatic discount, the revenue from orders that used it against what the discount cost. It also measures number of orders, average order value with vs. without discount, the share of new customers, and a simple flag for possible cannibalization (customers who would have bought anyway). The revenue counted is the total of all orders that used the code, not only the extra sales the discount caused, so it overstates the gain. Product cost is not included. Goes beyond the Old discount code cleaner (which finds broken/unused codes) to answer "did this discount earn more than it cost?" Read-only — no mutations.
 
 ## Prerequisites
-- Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_orders,read_discounts,read_customers`. If that command is not found, check the Shopify CLI docs for the current sign-in. Shopify may return only the last 60 days of orders unless the app also has `read_all_orders`, so tell the user if the window is longer than that.
+- Authenticated Shopify CLI session with the three scopes below. The author gave `shopify store auth --store <domain> --scopes read_orders,read_discounts,read_customers`, but that command has not been checked against the current Shopify CLI. Confirm the sign-in command in the current Shopify CLI docs before you run it. Shopify may return only the last 60 days of orders unless the app also has `read_all_orders`, so tell the user if the window is longer than that.
 - API scopes: `read_orders`, `read_discounts`, `read_customers` (needed to read `customer.numberOfOrders` for the new-customer share)
 
 ## Parameters
@@ -40,7 +40,7 @@ Compares, for each discount code and automatic discount, the revenue from orders
 2. Filter to discounts with `asyncUsageCount >= min_uses` and active within lookback window
 
 3. **OPERATION:** `orders` — query
-   **Inputs:** `query: "created_at:>='<NOW - days_back days>' discount_code:<code>"`, `first: 250` for each active discount code. This finds code discounts only. For automatic discounts, query all orders in the window and match on each order's discount data (the `discountApplications` title) instead, select `totalPriceSet`, `totalDiscountsSet`, `subtotalPriceSet`, `customer { id, numberOfOrders }`, pagination cursor
+   **Inputs:** `query: "created_at:>='<NOW - days_back days>' discount_code:<code>"`, `first: 250` for each active discount code. This finds code discounts only. For automatic discounts, query all orders in the window and match each order's `discountApplications` title to the automatic discount's title (exact text match) instead. Select `totalPriceSet`, `totalDiscountsSet`, `subtotalPriceSet`, `customer { id, numberOfOrders }`, pagination cursor
    **Expected output:** All orders using each discount
 
 4. Also query orders WITHOUT any discount in same period for baseline AOV comparison
@@ -53,7 +53,7 @@ Compares, for each discount code and automatic discount, the revenue from orders
    - **AOV Lift/Drop** = discounted AOV - baseline AOV
    - **New Customer %** = orders where customer.numberOfOrders == 1 / total
    - **Revenue against discount cost** (called ROI below) = (revenue - discount_cost) / discount_cost × 100. This is not profit, because product cost is not included
-   - **Cannibalization Risk** = high if discount AOV < baseline AOV and new customer % < 20%
+   - **Cannibalization check** = flag if discount AOV < baseline AOV and new customer % < 20%. The 20% cut-off is a rule of thumb, not a measured result. The flag is a prompt to look closer, not proof that buyers would have bought anyway
 
 ## GraphQL Operations
 
@@ -123,6 +123,9 @@ query OrdersByDiscount($query: String!, $after: String) {
           numberOfOrders
         }
         discountCodes
+        discountApplications(first: 10) {
+          edges { node { __typename ... on AutomaticDiscountApplication { title } } }
+        }
       }
     }
     pageInfo { hasNextPage endCursor }
@@ -164,7 +167,7 @@ DISCOUNT ROI REPORT  (<days_back> days)
     "<code>"  ROI: <n>%  Revenue: $<n>  Cost: $<n>  New customers: <pct>%
 
   UNDERPERFORMERS:
-    "<code>"  ROI: <n>%  Revenue: $<n>  Cost: $<n>  ⚠️ Cannibalization risk
+    "<code>"  ROI: <n>%  Revenue: $<n>  Cost: $<n>  ⚠️ Check: buyers may have bought anyway
 
   BASELINE COMPARISON:
     Non-discount AOV: $<n>  |  Avg discount AOV: $<n>  |  Δ: $<n>
@@ -175,18 +178,20 @@ DISCOUNT ROI REPORT  (<days_back> days)
 
 ## Output Format
 CSV file `discount_roi_<YYYY-MM-DD>.csv` with columns:
-`discount_id`, `code_or_title`, `type`, `uses`, `revenue`, `discount_cost`, `roi_pct`, `aov`, `baseline_aov`, `aov_delta`, `new_customer_pct`, `cannibalization_risk`
+`discount_id`, `code_or_title`, `type`, `uses`, `revenue`, `discount_cost`, `roi_pct`, `aov`, `baseline_aov`, `aov_delta`, `new_customer_pct`, `cannibalization_check`
+
+Note: `roi_pct` means revenue against discount cost. It is not profit and not a true return on investment, because product cost is not included.
 
 ## Error Handling
 | Error | Cause | Recovery |
 |-------|-------|----------|
 | `THROTTLED` | API rate limit exceeded | Wait 2 seconds, retry up to 3 times |
 | Automatic discounts | No code to query by | Match via order discount data |
-| Stacked discounts | Multiple codes per order | Attribute proportionally or flag as "multi-discount" |
+| Stacked discounts | Multiple codes per order | Do not split the order. Count it under each code it used and mark those rows "multi-discount", so the reader knows the revenue overlaps |
 
 ## Best Practices
 - The figure is (revenue − discount cost) ÷ discount cost × 100. Below 0% means the revenue was less than the discount cost. Between 0% and 100% means revenue was less than twice the discount cost. Neither is a loss on its own, because product cost is not included. Check your product costs before you retire a code.
 - High new-customer % with positive ROI = great acquisition tool — keep running.
-- Low new-customer % with negative AOV lift = cannibalization — customers would have bought anyway.
+- Low new-customer % with a drop in order size may mean customers would have bought anyway. This is a rule of thumb (the 20% cut-off is not measured), so use it as a prompt to check the code, not as proof.
 - To compare two codes side by side, use Discount code comparer.
 - To find broken or unused codes, use the Old discount code cleaner.

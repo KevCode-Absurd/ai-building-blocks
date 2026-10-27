@@ -11,7 +11,7 @@ explain: |
 
   If it fits, it works on three things. It times how long a new user takes to reach their first win. It maps each channel from effort to sign-ups to paying users. And it sets a keep, scale or kill rule per channel, using the cost to win a customer against the money that customer brings.
 
-  It also covers the point where larger deals need a person, and which usage signals tell you when to reach out. A growth plan for a self-serve product should end with a forecast and a written playbook, so this one does too.
+  It also covers the point where larger deals need a person, and which usage signals tell you when to reach out. The skill says sales-led beat self-serve by 10x in one parallel test. That is one author's story from one test. It does not show that sales-led wins in general. A growth plan for a self-serve product should end with a forecast and a written playbook, so this one does too.
 when:
   - Someone on your team says "we should go product-led" and you want proof before you build.
   - People sign up for your free plan but few turn into paying customers.
@@ -38,8 +38,9 @@ how_to_use:
   - Describe the product and buyer. Paste your sign-up steps and any channel numbers you have, as plain text or a table.
   - Ask for the fit check first. If it says sales-led, ask for the hybrid plan before you build more self-serve.
   - Ask for the first-value audit, the channel table and the forecast. Fill in lines marked MISSING with your real numbers.
-  - Read every number in the skill, such as 10 minutes or $5K, as the author's example. Use your own data.
+  - Read every number in the skill, such as 10 minutes to first value, 4 weeks or $5K, as the author's example. Use your own data.
   - Pick one change to test for four weeks, then write its playbook. This needs no code and no paid tools.
+  - Next, take the winning test to the Growth loop designer if you already have users. If you have none yet, use the First customer launch planner.
 how_it_works:
   - title: Check the fit
     text: It asks if value shows fast, setup is simple and buyer equals user. It then picks self-serve, hybrid or sales-led.

@@ -9,7 +9,7 @@ subhead: Tell it about your class, workshop or event. Get ticket prices, early-b
 explain: |
   Ticket prices and offer rules for a class, workshop or dated event, so you sell more seats without making the people who miss out resent you.
 
-  It applies five rules built for events with dates and limited seats. Round the price, so 150 beats 149. Show sold-out dates, but only up to about 30 percent of them. Use a dated deadline instead of a loud seat counter. For events three or more weeks away, offer a free bonus rather than an early-bird discount. Use real social proof like others also booked. It ends with a table of each choice and the reason. The 30 percent, 3 week and 40 percent figures are rules of thumb, not tested laws, so check them against your own sales.
+  It applies five rules built for events with dates and limited seats. Round the price, so 150 beats 149. Show sold-out dates, but keep them to about 10 to 30 percent of your dates. Use a dated deadline instead of a loud seat counter. For events three or more weeks away, offer a free bonus rather than an early-bird discount. Use real social proof like others also booked. It ends with a table of each choice and the reason. The 10 to 30 percent, 3 week and 40 percent figures are rules of thumb, not tested laws, and the claims that a gift beats an early-bird discount and that sold-out dates signal quality are untested too. Check them against your own sales.
 when:
   - You are pricing a workshop or class for the first time.
   - You want to run an early-bird offer and are unsure how.
@@ -33,7 +33,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
   - Paste the skill text into the chat.
-  - Add your event type, ticket price, dates, seats per date and which dates are full. These are the fields it needs: event type, price, dates, seats and sold-out dates.
+  - "Add your event type, ticket price, dates, seats per date and which dates are full. These are the fields it needs: event type, price, dates, seats and sold-out dates."
   - Add how far away the first date is, and a bonus you could give (optional).
   - Read the table of choices and reasons. The 30 percent, 3 week and 40 percent limits are rules of thumb with no strong source, so check them against your own sales.
   - Put the deadline on your ticket page in your booking or checkout tool. After one sales week, check how many dates are full and recheck the rules.

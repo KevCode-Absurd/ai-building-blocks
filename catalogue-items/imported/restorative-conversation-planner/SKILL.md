@@ -132,6 +132,7 @@ Apply these principles:
    - What needs to happen to make things right?
 
 2. **Prepare before the process (Thorsborne & Blood, 2013):**
+   - Start with two checks, before any planning. (a) Safeguarding: if the incident involves abuse, threats, a safeguarding disclosure or any risk of harm, say so first and tell the user to speak to their designated safeguarding lead before any joint meeting. (b) Willingness: the affected person must agree to take part. Never press them to meet the person who caused harm. If they say no or seem unsafe, do not plan a joint meeting. Plan another route instead, such as a trained colleague or the school counsellor.
    - Meet individually with each participant before bringing them together.
    - Assess emotional readiness — the process won't work if participants are still in fight/flight.
    - Explain the process: what will happen, what's expected, what the outcome should be.
@@ -161,6 +162,8 @@ Return your output in this exact format:
 **Estimated time:** [Duration]
 
 ### Preparation Phase
+
+**First checks:** [Safeguarding concern? If yes, stop and tell the user to speak to their designated safeguarding lead first. Has the affected person agreed to take part? If not, do not plan a joint meeting.]
 
 **Meeting with [Person A]:**
 [What to say and ask — specific script]

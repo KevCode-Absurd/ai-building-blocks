@@ -10,9 +10,9 @@ argument-hint: "[file | Drive link | paste text]"
 
 # /dpa-review
 
-**Plain-chat use (AI Blocks note).** The steps below read a saved playbook from a plugin folder. If you pasted this skill into a chat and have no such folder, do not stop. Ask the person to paste their DPA playbook (the positions they will accept) and their privacy policy, or run the setup-interview skill in this folder first and keep its result as a note to paste each time. A legal research tool is optional. Without one, tag every citation `[verify]` and do not state a statute or section as settled.
+**Plain-chat use (AI Blocks note).** The steps below read a saved playbook from a plugin folder. If you pasted this skill into a chat and have no such folder, do not stop. Ask the person to paste their DPA playbook (the positions they will accept) and their privacy policy, or run the setup-interview skill in this folder first and keep its result as a note to paste each time. A legal research tool is optional. Without one, tag every citation `[verify]` and do not state a statute or section as settled. If no playbook has been pasted or saved, do not guess the person's positions: ask for them first. This memo is a first check for a lawyer to review, not legal advice.
 
-1. Load `~/.claude/plugins/config/claude-for-legal/privacy-legal/CLAUDE.md` → DPA playbook. If placeholders, stop and prompt setup.
+1. Load `~/.claude/plugins/config/claude-for-legal/privacy-legal/CLAUDE.md` → DPA playbook. If that file is missing (plain chat) or holds only placeholders, do not stop: ask the person to paste their DPA playbook and privacy policy, or to run the setup-interview skill first.
 2. Get the DPA. Determine direction: are we processor (customer's DPA) or controller (vendor's)? Ask if ambiguous.
 3. Run the workflow below — term-by-term against the appropriate playbook row.
 4. Run privacy policy consistency check.
@@ -80,18 +80,15 @@ Read `~/.claude/plugins/config/claude-for-legal/privacy-legal/CLAUDE.md` → `##
 
 ## Federal sectoral overlay (ask first, before the term-by-term walk)
 
-Before walking the term-by-term review, answer: **does the data flowing through this DPA include any federally-regulated category?** GDPR and state consumer-privacy law supply one floor; federal sectoral law often supplies another that does not appear in the generic DPA playbook. A DPA that is GDPR-complete can still be GLBA-blind, HIPAA-blind, or COPPA-blind, and a fintech / healthtech / edtech / kidtech counterparty will notice.
+GDPR and state privacy law are one floor. US federal law for some data types is another, and a DPA can be complete under GDPR and still miss it. Ask this one question and keep the answer short: **does the data in this DPA include any of the categories below?** Any "yes" goes into the memo as a point for a privacy lawyer. Do not try to settle it in the memo.
 
-> **Activity-based federal overlays — ask first:**
->
-> Does this processing touch:
-> - **Financial account data or "nonpublic personal information" about consumers** (GLBA / Reg P)? If yes, the DPA needs: (a) an NPI-sharing restriction consistent with 15 U.S.C. § 6802(a)-(c) and Reg P (no sharing for marketing to non-affiliated third parties without opt-out / opt-in), (b) safeguards language aligned with the Safeguards Rule (16 C.F.R. Part 314), (c) incident notification that reaches FTC/OCC timing where applicable, (d) a clean carve-out so a CCPA § 1798.145(e) exemption doesn't accidentally waive GLBA-level obligations.
-> - **Protected health information held by a covered entity or business associate** (HIPAA Privacy / Security Rules)? If yes, the DPA needs: a Business Associate Agreement (BAA) layered with or integrated into the DPA per 45 C.F.R. § 164.504(e), breach notification timing aligned with HITECH (60 days to CE; CE 60 days to HHS; 500+ threshold for media), permitted-uses clause, subcontractor BAA flow-down. A commercial DPA without BAA flow-down for PHI is a defect.
-> - **Education records held by a school or a service provider acting for a school** (FERPA)? If yes, the DPA needs: a "school official" / directory-information framing consistent with 34 C.F.R. § 99.31, parental-consent flow-through, state student-privacy analog handling (NY Ed Law 2-d, CA SOPIPA, IL SOPPA).
-> - **Data from children under 13 collected by an operator of an online service directed to children or with actual knowledge** (COPPA)? If yes, the DPA needs: verifiable-parental-consent flow-through, retention limits, deletion-on-request machinery, prohibition on behavioral advertising absent VPC.
-> - **Another sectoral federal regime** (VPPA for video-viewing records, CPNI for carrier data, DPPA for DMV records, TCPA / Shaken-Stir for call/SMS, GLBA Reg S-P for broker-dealers, §5 FTC Act for unfair/deceptive practices around sensitive data)?
->
-> If yes to any: the federal overlay usually supplies the controlling substantive restriction, not just an exemption from a state consumer privacy law. Research the currently-operative provision and cite it. A DPA that is "exempt" from CCPA under § 1798.145(e) because it is GLBA-covered is still subject to the GLBA restrictions — the CCPA exemption moves the governing framework, it doesn't eliminate it. Flag sectoral gaps in the deal-breakers list alongside GDPR / state-privacy gaps.
+- **Financial account data or nonpublic personal information about consumers** (GLBA). A DPA needs limits on sharing that data, safeguards language and incident notice timing. Cite 15 U.S.C. § 6802 and 16 C.F.R. Part 314 as `[verify-pinpoint]`.
+- **Health information held by a covered entity or business associate** (HIPAA). A DPA needs a business associate agreement, breach notice timing and subcontractor flow-down. Cite 45 C.F.R. § 164.504(e) as `[verify-pinpoint]`.
+- **Student education records** (FERPA, plus state student-privacy laws). A DPA needs a school-official framing and parental-consent flow-through. Cite 34 C.F.R. § 99.31 as `[verify-pinpoint]`.
+- **Data from children under 13** (COPPA). A DPA needs parental-consent flow-through, retention limits and deletion on request.
+- **Another sector law** (video viewing records, carrier data, motor vehicle records, calls and texts, or unfair or deceptive practices around sensitive data).
+
+If yes to any, the federal rule usually sets the controlling limit. Being exempt from a state privacy law because the data is covered by a federal one moves the governing framework. It does not remove it. Flag these gaps in the deal-breakers list next to the GDPR and state-law gaps.
 
 If no sectoral overlay applies, note that explicitly — "no federally-regulated data categories identified; sectoral overlay n/a" — so the reviewing attorney sees that the check happened, rather than wondering whether it was skipped.
 
@@ -245,6 +242,8 @@ Reviewing a DPA is research. *Signing* it — or instructing someone to counters
 Do not proceed past this gate without an explicit yes.
 
 ## Close with the next-steps decision tree
+
+Before the options, list the open points that need a privacy lawyer: any "yes" to the federal overlay question, any international transfer without a mechanism, any term outside your fallbacks, and every citation tagged `[verify]`. Say that a lawyer must review the redlines before they are sent.
 
 End with the next-steps decision tree per CLAUDE.md `## Outputs`. Customize the options to what this skill just produced — the five default branches (draft the X, escalate, get more facts, watch and wait, something else) are a starting point, not a lock-in. The tree is the output; the lawyer picks.
 

@@ -70,6 +70,12 @@ Every JE carries: description (what + why + period), preparer, calculation suppo
 **Review Checklist**
 - Balanced? Correct period? Correct accounts? Support attached? Approval obtained?
 
+Sample line shape, with placeholders: `[ACCOUNT CODE] | [ACCOUNT NAME] | [DEBIT AMOUNT] | | [LINE MEMO] | [COST CENTER]`. The credit line has the amount in the Credit column instead.
+
+## Limits
+
+This is a draft. A qualified accountant must review it before it is posted. It does not check local GAAP or IFRS treatment, or tax treatment. Never invent an amount, account or source document. If one is missing, write MISSING and ask.
+
 ---
 
 ## Scripts
@@ -88,6 +94,8 @@ Every JE carries: description (what + why + period), preparer, calculation suppo
 ---
 
 ## Related Skills
+
+- **Where it goes next:** add the entry to the month-end checklist. In the AI Blocks library, the Month-end close planner shows where each entry fits in the close.
 - **close-management**: For where each entry type fits in the close calendar.
 - **automated-reconciliation**: Entries often originate from reconciling items.
 - **revenue-recognition**: For the revenue entries' measurement logic.

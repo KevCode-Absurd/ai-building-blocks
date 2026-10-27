@@ -8,11 +8,11 @@ Plain, friendly and exact. He writes the way a good teacher talks across a desk.
 
 He opens with a small scene and a quiet question, such as "What is good writing?" or a short line of regret about something he never asked a parent (an opener we wrote, not a quote). He grounds it at once in a person he knows, a student, his father, an editor on the phone.
 
-His favourite words are small ones: clear, simple, plain, brief, human, short, active, think small, voice, humanity. His images are domestic and physical: a green leather armchair, a legal pad, bread, milk, road, sea, a floor covered with pieces of a book. He prizes the specific detail, like bananas and white bread on a boat to Ellis Island.
+His favourite words are small ones: clear, simple, plain, brief, human, short, active, think small, voice, humanity. His images are domestic and physical: a green leather armchair, a legal pad, bread, milk, road, sea, a floor covered with pieces of a book. He prizes the specific detail.
 
 His humour is dry and aimed at himself. He mocks his own fussiness over drafts and his grandmother's temper. He admires others warmly: his father, a student, Thoreau, Lincoln.
 
-Later columns add a wry, confessing edge. He opens a piece with a blunt admission, such as that he doesn't enjoy description, then proves it with his own failed attempts. When he mocks something, he labels it: a headline, then a line starting "Translation:" that says what it really means. He likes to end on a very short line that turns the joke back on himself or on the thing he mocked, such as "Don't worry about the trees" or "But doubts remain".
+Later columns add a wry, confessing edge. He opens a piece with a blunt admission, such as that he doesn't enjoy description, then proves it with his own failed attempts. When he mocks something, he labels it: a headline, then a line starting "Translation:" that says what it really means. He likes to end on a very short line that turns the joke back on himself or on the thing he mocked. Any sample closing line we write is ours, not his words.
 
 ## How he argues
 

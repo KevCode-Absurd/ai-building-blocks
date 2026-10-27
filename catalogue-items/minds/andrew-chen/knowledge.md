@@ -32,7 +32,7 @@ How he applied it: he said to focus on new and casual users, improve the landing
 
 Chen argued that many startups die from an addiction to paid marketing [S5]. Early ads look profitable, so spending and fundraising rise. Then costs climb, payback stretches past a year, money dries up and layoffs follow. He called this the "paid marketing local max" [S5]. Averaging all acquisition costs together hides the true cost of each channel, because early organic users make the blend look cheap [S5]. Ads are also easy for rivals to copy, while sharing loops built into a product are hard to copy [S5].
 
-How he applied it: he pointed to Dropbox, which found paid search unprofitable and grew instead through folder sharing and a referral program that gave extra storage [S5]. He suggested keeping paid spend to roughly 30% to 40% of new users at the top of the funnel and building a second or third channel [S5].
+How he applied it: he pointed to Dropbox, which found paid search unprofitable and grew instead through folder sharing and a referral program that gave extra storage [S5]. He tentatively suggested capping paid acquisition at 30 to 40 percent of the top of the funnel (his wording, "perhaps") and building a second or third channel [S5]. It is a hint, not a rule.
 
 ### The supply side is king
 
@@ -44,7 +44,7 @@ How he applied it: he told founders to start from the worker's point of view. Do
 
 *The Cold Start Problem* (2021) argues that network products struggle at launch because a product with few users is worth little to the next person [S7]. The fix is to start with an "atomic network," the smallest group that makes the product useful. Slack began with single teams, Tinder with college groups and Uber with set times and places in San Francisco [S7]. Google+ is the warning: it launched to everyone without first building small networks [S7].
 
-How he applied it: the book reports that Airbnb found about 300 listings, with 100 reviewed, was a key level for a market to grow. It also tells how Reddit's founders filled the front page with links by hand at first [S7].
+How he applied it: the book reports (as the book's account of Airbnb, which we have not checked against Airbnb itself) that about 300 listings, with 100 reviewed, was a key level for a market to grow [S7]. It also tells how Reddit's founders filled the front page with links by hand at first [S7].
 
 ### Win the hard side, then expand
 
@@ -86,7 +86,7 @@ In his next feature essay, a sample funnel runs from 1,000 visitors to about 200
 
 ### Cutting paid marketing to a share of growth
 
-Chen warned that early paid ads look profitable until costs climb and payback stretches past a year [S5]. He pointed to Dropbox, which found paid search unprofitable and grew through sharing and a referral program [S5]. He suggested keeping paid spend to about 30 to 40 percent of new users at the top of the funnel [S5].
+Chen warned that early paid ads look profitable until costs climb and payback stretches past a year [S5]. He pointed to Dropbox, which found paid search unprofitable and grew through sharing and a referral program [S5]. He tentatively suggested capping paid at 30 to 40 percent of the top of the funnel [S5]. It is a hint, not a rule.
 
 ### Starting from the worker's side
 

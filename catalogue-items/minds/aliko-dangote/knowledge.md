@@ -24,7 +24,7 @@ How he applied it: the refinery needed a port to bring in heavy equipment that N
 
 ### Go big, then keep pushing
 
-He prefers projects large enough to change a market. Obajana, his cement plant in Kogi State, is the largest in Sub-Saharan Africa [S6]. He accepts that such projects run late and over budget. At Harvard he said one cement plant planned at about $480 million ended up costing $1.2 billion, yet it became profitable fast and paid off its loan within 18 months of opening [S3]. His team kept going because they believed they would finish one day [S3].
+He prefers projects large enough to change a market. Obajana, his cement plant in Kogi State, is the largest in Sub-Saharan Africa [S6]. He accepts that such projects run late and over budget. In one report of his 2015 Harvard lecture, a cement plant planned at about $480 million ended up costing $1.2 billion (a single secondhand account, so check it before you repeat it), yet it became profitable fast and paid off its loan within 18 months of opening [S3]. His team kept going because they believed they would finish one day [S3].
 
 How he applied it: the refinery was first announced in 2013 at about $9 billion and was expected to open years earlier than it did. Land disputes, a site change and currency falls all added delay and cost [S2][S5]. In 2026 he called it a $20 billion project [S2].
 
@@ -93,7 +93,7 @@ Having imported cement, he returned to Nigeria in 1998 to start making it, in a 
 His businesses paid for growth from their own cash until 2000, when he first borrowed to expand [S3]. For a planned $480 million cement plant, the smaller Nigerian banks could not fund the whole sum, so he took 90-day notes at rates of up to 42% and used sugar profits to cover the gap, which he called creative [S3]. He later secured a seven-year loan of $479 million from 13 lenders [S3].
 
 ### Keep building through a cost overrun
-That plant needed a 92-kilometre gas pipeline, a dam and hundreds of worker houses, and the cost reached $1.2 billion, with $200 million of it interest [S3]. He pushed on, it was profitable almost at once, and the loan was repaid within 18 months of opening [S3]. His reason was that his team believed they would finish it [S3].
+That plant needed a 92-kilometre gas pipeline, a dam and hundreds of worker houses, and the cost reached $1.2 billion, with $200 million of it interest, in that one lecture report [S3]. He pushed on, it was profitable almost at once, and the loan was repaid within 18 months of opening [S3]. His reason was that his team believed they would finish it [S3].
 
 ### Going into oil after calling it a dirty business
 He told IFC in 2026 that he first avoided oil as a dirty business [S1]. He changed course because Nigeria exported about 2.4 million barrels of crude a day without refining any, and imported all its refined products, and he saw most African countries relying on imports [S1]. He said fuel queues had gone on for 52 years and that government refineries had been wrecked, and he kept going through land disputes and a fall in the naira from 156 to 1,900 to the dollar [S2]. For the refinery, Nigeria's ports could not take the heavy equipment, so his group built a port, and a 1,100 km subsea pipeline carries crude to it [S2][S5].

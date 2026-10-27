@@ -18,13 +18,13 @@ audit_signals:
 ---
 
 ## Purpose
-AI agents answer constrained queries — "squat-proof leggings under $60", "eucalyptus slip-ons", "machine-washable wool" — by filtering on structured attributes. If those attributes live only in prose (or nowhere), the agent can't filter and your products drop out of the result set. This skill establishes a small, standard set of **agentic metafield definitions** (material, key features, care, fit, specs) and populates them across the catalog from existing product signals, so agents can match products to requirements. Fixes `listing-metafields`, `variant-metadata`, and `sizing-specs-structured`.
+AI agents answer constrained queries — "squat-proof leggings under $60", "eucalyptus slip-ons", "machine-washable wool" — by filtering on structured attributes. If those attributes live only in prose (or nowhere), the agent may be unable to filter on them, and your products may be left out of the results. This skill establishes a small, standard set of **agentic metafield definitions** (material, key features, care, fit, specs) and populates them across the catalog from existing product signals, so agents can match products to requirements. Fixes `listing-metafields`, `variant-metadata`, and `sizing-specs-structured`.
 
 If you have a product data gap report from an earlier step, use it to choose which products and attributes to fill.
 
 ## Prerequisites
 - Authenticated Shopify CLI session (`shopify auth login --store <domain>`)
-- Required API scopes: `read_products`, `write_products`, `read_metaobject_definitions`, `write_metaobject_definitions` (for definitions)
+- Required API scopes: `read_products` and `write_products`. These cover reading products, creating the product metafield definitions and writing the values. Metaobject scopes are not needed, because this skill only touches product metafields.
 
 ## Parameters
 All skills accept these universal parameters:
@@ -33,7 +33,7 @@ All skills accept these universal parameters:
 |-----------|--------|----------|---------|-------------|
 | store     | string | yes      | —       | Store domain (e.g., mystore.myshopify.com) |
 | format    | string | no       | human   | Output format: `human` (default) or `json` |
-| dry_run   | bool   | no       | false   | Preview mutations without executing |
+| dry_run   | bool   | no       | true    | Preview mutations without executing. In this skill the default is true: nothing is written to the store unless the user clearly asks to apply the changes. |
 
 Skill-specific parameters:
 
@@ -47,7 +47,7 @@ Skill-specific parameters:
 
 ## Safety
 
-> ⚠️ Step 2 (`metafieldDefinitionCreate`) and Step 4 (`metafieldsSet`) write store schema + product data. Definitions are cheap to add but clutter the admin if mis-namespaced; values written from inference can be wrong. Run `dry_run: true`, review the proposed definitions and the value preview, and only populate values inferred with high confidence — leave the rest blank for human fill.
+> ⚠️ Step 2 (`metafieldDefinitionCreate`) and Step 4 (`metafieldsSet`) write store schema + product data. Definitions are cheap to add but clutter the admin if mis-namespaced; values written from inference can be wrong. Keep `dry_run: true` (the default), review the proposed definitions and the value preview, and only populate values inferred with high confidence — leave the rest blank for human fill.
 
 ## Workflow Steps
 
@@ -64,7 +64,7 @@ Skill-specific parameters:
    **Expected output:** Products + the signals to infer attribute values from.
 
 4. **OPERATION:** `metafieldsSet` — mutation
-   **Inputs:** batches of `{ ownerId, namespace, key, value, type }` for confidently-inferred, currently-empty values.
+   **Inputs:** batches of `{ ownerId, namespace, key, value, type }` for confidently-inferred, currently-empty values. **High confidence means the value appears word for word in the product title, an option value or the description** (for example "100% wool" for material). Anything that needs a guess is not high confidence. Leave every such field blank for a person to fill. Never overwrite a value that is already there.
    **Expected output:** Set metafields; collect `userErrors`.
 
 ## GraphQL Operations
@@ -193,4 +193,4 @@ For `format: json`, emit:
 - Keep the namespace small and standard (`agentic`) and the key set tight — agents and storefront filters both benefit from consistency.
 - Only write values you can infer with high confidence from real signals; a wrong "material: leather" misleads every agent. Leave low-confidence fields blank.
 - Use `list.single_line_text_field` for multi-value attributes (features, materials) so filters work as OR-sets.
-- Follow with `shopify-admin-agentic-description-enrichment` so the prose and the structured data agree.
+- Afterwards, check that the product descriptions and the new fields agree. The Product description enricher in this library does that as a separate task.

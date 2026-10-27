@@ -9,7 +9,7 @@ subhead: "A product description built on the choices that change buying decision
 explain: |
   A product description built on the choices that change buying decisions: how many claims to make, which units to use, and what tone fits. The rules matter more than clever adjectives.
 
-  Claude first sorts your product as bought for pleasure (chocolate, decor, perfume) or bought to do a job. That sets the style. Then it picks how many benefits to show, whether to say 500g or 25 servings, how to name a color, and whether a point like lab testing is worth adding. Each choice follows research on persuasion and willingness to pay. You get copy plus a short note on why each choice was made.
+  Claude first sorts your product as bought for pleasure (chocolate, decor, perfume) or bought to do a job. That sets the style. Then it picks how many benefits to show, whether to say 500g or 25 servings, how to name a color, and whether a point like lab testing is worth adding. Some choices rest on a named study. Others are practitioner tips, marked with † in the skill text. The percentage lifts are guides, not results you should expect or quote as your own. You get copy plus a short note on why each choice was made.
 when:
   - You are writing or rewriting a description, title or feature bullets.
   - You are unsure how many benefits to list.

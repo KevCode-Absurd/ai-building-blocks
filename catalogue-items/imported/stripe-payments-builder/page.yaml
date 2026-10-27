@@ -7,11 +7,11 @@ job: build-software
 headline: Stripe payments builder
 subhead: Tell it how you charge and what your app is built with. It writes the Stripe checkout, plan changes, webhook and customer portal code, then gives you a test run to follow in test mode.
 explain: |
-  This skill adds Stripe payments to a web app. It covers one-off checkout, monthly plans, free trials, upgrades with proration, usage-based billing and the customer portal. The sample code is Next.js, and your AI adapts it to your stack.
+  This skill adds Stripe payments to a web app. It covers one-off checkout, monthly plans, free trials, upgrades with proration, usage-based billing and the customer portal. The sample code is Next.js 15 or later, and your AI adapts it to your stack.
 
   Most billing bugs are in the webhooks, the messages Stripe sends when a payment or plan changes. The webhook code here checks Stripe's signature, skips events it has already handled, and sets values from Stripe instead of adding to them. A retry is then much less likely to charge twice or lose an update.
 
-  It works in test mode only. You get a seven-step test run to follow before you go live. It asks for your plans and prices instead of guessing them. It also warns that some calls differ by Stripe API version, so check them against Stripe's docs.
+  It works in test mode only. You get an eight-step test run to follow before you go live. It asks for your plans and prices instead of guessing them. It also warns that some calls differ by Stripe API version, so check them against Stripe's docs.
 when:
   - You are adding paid plans to your web app for the first time.
   - Customers upgrade mid-month and you need to charge the right part-month amount.
@@ -22,7 +22,7 @@ not_for:
   - "You need tax, VAT or legal advice: ask an accountant. This skill does not give it."
   - "You cannot run code or read your project files: your AI can only describe the steps, so get a developer to run it."
 you_give:
-  - How you charge: one-off, monthly, seats or usage
+  - "How you charge: one-off, monthly, seats or usage"
   - Your plans and prices, with any trial length
   - Your app's language, framework and database
   - A Stripe account in test mode, with your keys kept in a .env file
@@ -31,14 +31,14 @@ you_get:
   - A webhook route with a signature check
   - Upgrade and downgrade code with a price preview
   - Customer portal code
-  - A seven-step test run using the Stripe CLI
+  - An eight-step test run using the Stripe CLI
 how_to_use:
   - Use an AI that can read and change your project files, such as Claude Code or Codex. Add this skill or paste it into the chat.
   - Make a Stripe account and stay in test mode. Create your prices there. Keep your secret key in a .env file and never paste it into chat.
   - Tell your AI how you charge, your plans and prices, and your framework. It asks for anything missing.
   - Read the list of files it made. Check that it changed only what you expected.
-  - Follow the seven-step test run, in order. Stop at the first step that fails and ask your AI to fix it.
-  - Have a developer who knows payments review the code before you take real money. Check these three paths first: the checkout price check, the webhook signature check and the upgrade price preview.
+  - Follow the eight-step test run, in order. Stop at the first step that fails and ask your AI to fix it.
+  - "Have a developer who knows payments review the code before you take real money. Check these three paths first: the checkout price check, the webhook signature check and the upgrade price preview. Then run the card payment security checker on the finished code."
   - The code is adapted from an MIT-licensed source, as the LICENSE file says. Test the webhook and upgrade paths in test mode before you go live.
 next: [card-payment-security-checker]
 output_sample:
@@ -66,7 +66,7 @@ output_sample:
     - name: .env.example
       contains: Every variable your app needs, with no real keys.
     - name: First test run
-      contains: Seven steps from first payment to a failed card, each with the result to expect.
+      contains: Eight steps from first payment to a failed card and a downgrade, each with the result to expect.
 works_best_with: Claude Code or Codex, because they can edit files and run the Stripe CLI. Have your Stripe docs open for your API version.
 terms:
   webhook: A message Stripe sends your app when something happens, such as a payment or a cancelled plan.

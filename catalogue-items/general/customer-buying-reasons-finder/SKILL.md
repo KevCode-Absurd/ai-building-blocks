@@ -32,7 +32,7 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Claude:** Every current Claude model reads up to 1 million tokens, so hundreds of reviews fit in one chat with their source IDs.
+- **Claude:** Long-context chat models can take hundreds of reviews in one chat with their source IDs. Check your plan's limit.
 - **Gemini:** Also takes long inputs, and works inside Google Sheets if your reviews live there.
 - **Google Sheets:** One row per quote with its source ID lets you count separate people with COUNTUNIQUE, so counts can be checked.
 <!-- /needs -->
@@ -60,7 +60,7 @@ How to start:
 6. **Rank** by separate people, not by the line you like best. Break ties by how strongly it's felt.
 7. **Pick the best phrase** for each group: the most specific and vivid exact quote, verified before unverified, with up to three backups from different people.
 8. **Find what the brand never says.** Any of the top five reasons missing from the brand's own pages is the headline finding. A person confirms it before it's called a gap in public.
-9. **Check saturation.** Did the newest 20 sources add a reason that wasn't already on the map? If yes, say "not saturated: more sources will change this map".
+9. **Check saturation.** Did the newest 20 sources (or the newest 5 if you have fewer than 40) add a reason that wasn't already on the map? If yes, say "not saturated: more sources will change this map".
 10. **Flag before use,** with the reason: any phrase that states or hints at a health or medical result, describes a result that could read as typical when it isn't, names a competitor, or makes a claim the brand can't support. Never quietly drop or soften these.
 11. **Score it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Score = checks passed / all checks x 100, rounded. Show the sum, and one line for each check still missed and why. The score measures the map against its own checks, not how well any reason will sell.
 
@@ -77,7 +77,7 @@ How to start:
 3. **What nearly stopped them:** every anxiety and complaint, ranked, in their words, with source IDs. This feeds the FAQ, the follow-up emails and the reasons on a long page.
 4. **Check before use:** phrase, source ID, reason.
 5. **Notes:** number of sources and kinds, date range, what was dropped and why, saturation, what the map can't tell you.
-6. **Score:** checks passed out of all checks, as a sum and a score out of 100, with one line per check missed.
+6. **Score:** checks passed out of all checks, as a sum and a score out of 100, with one line per check missed. The "Missed:" line under SCORE is the CHECKS MISSED list.
 
 Hand it back in exactly this layout, with these labels in this order:
 

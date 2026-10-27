@@ -5,9 +5,9 @@ name: Product attribute field setter
 summary: Set up product attribute fields in Shopify, then fill material, care, fit and spec values from your products so AI shopping tools can match them.
 job: build-websites
 headline: Product attribute field setter
-subhead: Product fields for material, key features, care, fit and specs, set up and filled across your Shopify catalog. AI shopping tools filter on structured facts.
+subhead: Product fields for material, key features, care, fit and specs, set up and filled across your Shopify catalog. Shopping tools filter best on facts stored in fields.
 explain: |
-  Product fields for material, key features, care, fit and specs, set up and filled across your Shopify catalog. AI shopping tools filter on structured facts. If a fact only lives in prose, your product drops out of results like "machine-washable wool".
+  Product fields for material, key features, care, fit and specs, set up and filled across your Shopify catalog. AI shopping tools can filter on facts stored in fields. A fact that lives only in prose may be missed in a search like "machine-washable wool". How each tool works varies, and this skill cannot promise more traffic.
 
   Claude checks which attribute fields exist, creates the missing ones, then reads each product's title, type, options and description to fill them in. You review the plan first. It changes live store data, so it needs an authenticated Shopify CLI session with product write access. Run a preview before you apply anything.
 when:
@@ -18,7 +18,7 @@ when:
 not_for:
   - "You want to change one or two products: edit them by hand in your Shopify admin."
   - "Your account has no product write access: ask the store owner for access first, or fix the fields by hand."
-  - "You want better product descriptions: use a description rewriting step instead. This item only fills fields."
+  - "You want better product descriptions: use the Product description enricher instead. This item only fills fields."
 you_give:
   - Your store domain
   - The facts that matter for your products, such as material, fit or care
@@ -32,10 +32,11 @@ you_get:
 how_to_use:
   - Use an AI that can run commands, such as Claude Code. A plain chat can't change your store.
   - Sign in to your store with the command shopify auth login, using your store domain.
-  - Ask your AI to run this skill with dry_run set to true. Nothing is written in this mode.
+  - Ask your AI to run this skill with dry_run set to true (the default). Nothing is written in this mode.
   - Read the planned fields and the value preview. Check that each value is true for its product.
   - Run it again with dry_run off to write the fields and values to your store.
   - Fill in any blank values by hand. The skill leaves a field empty when it is not sure.
+  - Next steps: open the CSV of filled values and check a sample against your store. Then run the Product description enricher as a separate task to make the descriptions match the new fields.
 output_sample:
   input:
     - Your store domain

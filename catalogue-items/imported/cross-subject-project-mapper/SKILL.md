@@ -159,10 +159,14 @@ For each subject (3–5):
 
 [How to assess integrated understanding — a task that requires drawing on multiple disciplines]
 
+**What to do next:** once the map is agreed, check it with each department, then plan each lesson with the Session lesson writer or the Direct teaching lesson builder. Do not plan lessons before each department has confirmed what it can offer.
+
 **Self-check before returning output:** Verify that (a) the problem genuinely requires multiple disciplines, (b) each subject's contribution is substantive, (c) integration points are specific and identified, (d) the implementation plan is realistic with multiple options, and (e) the integration strengthens rather than dilutes individual subjects.
 ```
 
 ## Example Output
+
+This example is illustrative. Any figures in it are placeholders, not real school data. Replace them with your own school data before use.
 
 **Scenario:** *Real-world problem: "Our school wants to reduce its energy consumption by 20% over the next year. The headteacher has asked students to investigate where energy is used, identify the biggest opportunities for reduction, and propose a realistic action plan." / Primary subject: "I'm a Science teacher — Year 9" / Available subjects: "Maths, Geography, and DT are all interested. English has said they could contribute if we need persuasive writing." / Time frame: "3 weeks — approximately 15 lessons across the involved subjects"*
 
@@ -208,7 +212,7 @@ For each subject (3–5):
 - **Knowledge:** Percentage change (calculating a 20% reduction), data analysis (reading and interpreting energy bills), statistical representation (bar charts, line graphs of energy use over time), proportional reasoning (cost per unit, scaling savings estimates), financial modelling (cost of intervention vs. savings over time)
 - **Skills:** Data collection and analysis, percentage calculations, creating and interpreting graphs, financial modelling (simple payback calculations)
 - **Curriculum alignment:** Year 9 Maths — percentages, data handling, proportion, interpretation of real-world data sets
-- **Why this subject is necessary:** Without Maths, the energy problem is described in vague terms ("we use too much"). With Maths, students can quantify: "Heating accounts for 62% of our energy bill. If we improve roof insulation, we could reduce heating costs by 18%, saving approximately £4,200 per year. The insulation would cost £12,000, so it pays for itself in 2.9 years." Numbers make the proposal credible and the decisions evidence-based.
+- **Why this subject is necessary:** Without Maths, the energy problem is described in vague terms ("we use too much"). With Maths, students can quantify: "Heating accounts for [HEATING SHARE]% of our energy bill. If we improve roof insulation, we could reduce heating costs by [PERCENT], saving approximately £[ANNUAL SAVING] per year. The insulation would cost £[COST], so it pays for itself in [PAYBACK YEARS] years." (Placeholders only. Use the school's own bills and quotes.) Numbers make the proposal credible and the decisions evidence-based.
 
 **Geography: Energy in context — why does this matter?**
 - **Knowledge:** Energy sources (where school electricity comes from — the national grid, fossil fuels, renewables), carbon footprint (converting energy use to CO2 emissions), global energy inequality (our school uses X kWh per student; a school in Kenya uses Y), sustainable development (SDG 7: affordable and clean energy)

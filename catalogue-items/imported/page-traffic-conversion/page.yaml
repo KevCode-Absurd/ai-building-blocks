@@ -9,7 +9,9 @@ subhead: Give it your Shopify store address. It reads your product and collectio
 explain: |
   A ranked list of your store's product and collection pages by visits and sales rate, so you see which pages earn their traffic and which waste it.
 
-  It connects to your Shopify store, reads the built-in analytics, and pulls visit data for each landing page over the last 30 days or a range you choose. It keeps only product and collection pages, then sorts by whichever measure you pick and shows the top 25. It only reads data and changes nothing. You need a Shopify store, a logged-in command-line session and permission to read reports.
+  It connects to your Shopify store, reads the built-in analytics, and pulls visit data for each landing page over the last 30 days or a range you choose. It keeps only product and collection pages, then sorts by whichever measure you pick and shows the top 25. It only reads data and changes nothing. You need a Shopify store, a logged-in command-line session and permission to read reports. If your store has more than 250 landing pages, the report may show only the top 250. Shorten the days to look back to see the rest.
+
+  Licence: MIT, as the LICENSE file in this item says. This is a copy of the skill by 40rty AI. Credit goes to the author.
 when:
   - You want to know which product pages get visits but never sell.
   - A collection page gets plenty of visits but few orders and you want proof.

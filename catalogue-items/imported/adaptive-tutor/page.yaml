@@ -11,7 +11,7 @@ explain: |
 
   The diagnostic asks a few questions, so the lesson skips what you know and fills real gaps. Each step is a short explanation, then a question to answer from memory, since recall helps learning stick. If you answer well, it moves faster. If you struggle, it explains another way and slows down. It can also give you a study guide, a lesson plan or a set of drills.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (DAIR.AI) says MIT. Credit goes to DAIR.AI and sickn33.
+  Licence: CC BY 4.0 applies to this copy, as the LICENSE-CONTENT file in this folder says. That file governs. The author's own file header (DAIR.AI) says MIT, which is the author's label for the original. Credit goes to DAIR.AI and sickn33.
 when:
   - You want to learn a new topic and do not know where to start.
   - You have an exam coming and need practice questions.
@@ -49,7 +49,7 @@ output_sample:
     - name: Level check
       contains: One to three short questions that show what you already know and what you want from the lesson.
     - name: Lesson
-      contains: A short goal, a concrete example, the idea behind it and a guided practice step.
+      contains: One small step per reply, made of a short goal, a concrete example, the idea behind it and a guided practice step. It ends with one question for you to answer.
     - name: Knowledge check
       contains: A question or task you answer yourself, with feedback on why answers are right or wrong.
     - name: Study plan

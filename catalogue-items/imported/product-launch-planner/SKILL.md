@@ -22,7 +22,9 @@ If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or 
 5. Draft the announcement messages.
 6. Finish with the launch checklist and the one thing to do first.
 
-**About the examples below:** the company stories and results (Superhuman, Notion, TRMNL, SavvyCal, Reform) are the skill author's reports of public events. We have not checked them, and we removed the specific figures and ranks that we could not link to a public source. Use them as illustrations, never repeat the numbers as fact, and never invent results for the user's own launch.
+**About the examples below:** they are patterns seen in launches, with no company names, outcomes or ranks. Use them as illustrations only. Never state a result as fact, and never invent results for the user's own launch.
+
+**Optional tools:** the tools named below (Navattic, Introw, SparkToro, Listen Notes) are optional. They may cost money and need their own account. The plan works without them.
 
 ---
 
@@ -63,8 +65,8 @@ You own the channel (though not the audience). Direct access without algorithms 
 - People want direct updates → Focus on email
 - Engagement matters → Build a community
 
-**Example - Superhuman (reported, not verified):**
-Built demand through an invite-only waitlist and one-on-one onboarding sessions. Every new user got a live demo. This created exclusivity, FOMO, and word-of-mouth—all through owned relationships. Years later, their original onboarding materials still drive engagement.
+**Pattern seen in launches (owned):**
+An invite-only waitlist plus a one-on-one onboarding call for each new user. A live demo for every user builds a sense of exclusivity and word of mouth, all through owned relationships.
 
 ### Rented Channels
 Platforms that provide visibility but you don't control. Algorithms shift, rules change, pay-to-play increases.
@@ -80,8 +82,8 @@ Platforms that provide visibility but you don't control. Algorithms shift, rules
 - Use them to drive traffic to owned channels
 - Don't rely on them as your only strategy
 
-**Example - Notion (reported, not verified):**
-Hacked virality through Twitter, YouTube, and Reddit where productivity enthusiasts were active. Encouraged community to share templates and workflows. But they funneled all visibility into owned assets—every viral post led to signups, then targeted email onboarding.
+**Pattern seen in launches (rented):**
+Post where your audience already spends time, such as Twitter/X, YouTube or Reddit. Encourage them to share templates and workflows. Send all the visibility into owned assets: every post links to a signup, then to targeted email onboarding.
 
 **Platform-specific tactics:**
 - Twitter/X: Threads that spark conversation → link to newsletter
@@ -102,11 +104,11 @@ Tap into someone else's audience to shortcut the hardest part—getting noticed.
 **Be proactive, not passive:**
 1. List industry leaders your audience follows
 2. Pitch win-win collaborations
-3. Use tools like SparkToro or Listen Notes to find audience overlap
-4. Set up affiliate/referral incentives (for channel partner launches, use [Introw](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/introw.md) to manage deal registration and commissions)
+3. Optionally, use a tool such as SparkToro or Listen Notes (may cost money, needs an account) to find audience overlap
+4. Set up affiliate/referral incentives (for channel partner launches, Introw is one optional tool for deal registration and commissions; it may cost money and needs an account)
 
-**Example - TRMNL (reported, not verified):**
-Sent a free e-ink display to YouTuber Snazzy Labs—not a paid sponsorship, just hoping he'd like it. He made an in-depth review that reportedly drove many views and sales (figures not verified, so none are given here). They also set up an affiliate program for ongoing promotion.
+**Pattern seen in launches (borrowed):**
+Send a free product to a creator your audience trusts. It is a gift, not a paid sponsorship. If they like it, they may make an honest review. Add an affiliate program for ongoing promotion. Do not promise results.
 
 Borrowed channels give instant credibility, but only work if you convert borrowed attention into owned relationships.
 
@@ -252,21 +254,15 @@ Product Hunt can be powerful for reaching early adopters, but it's not magic—i
 2. Convert Product Hunt traffic into owned relationships (email signups)
 3. Continue momentum with post-launch content
 
-### Case Studies (reported, not verified)
+### Patterns seen in launches
 
-**SavvyCal** (Scheduling tool):
-- Optimized landing page and onboarding before launch
-- Built relationships with productivity/SaaS influencers in advance
-- Responded to every comment on launch day
-- Result: reported as a high Product Hunt ranking (rank not verified)
-
-**Reform** (Form builder):
-- Studied successful launches and applied insights
-- Crafted clear tagline, polished visuals, demo video
-- Engaged in communities before launch (provided value first)
-- Treated launch as all-day engagement event
-- Directed traffic to capture signups
-- Result: reported as a top Product Hunt ranking (rank not verified)
+Launches that go well on Product Hunt tend to share these habits. No outcome is promised.
+- Polish the landing page and onboarding before launch day.
+- Build relationships with relevant creators and communities in advance, giving value before pitching.
+- Study earlier launches and apply what worked.
+- Write a clear tagline, use polished visuals and add a short demo video.
+- Treat launch day as an all-day event and answer every comment.
+- Send traffic to a page that captures signups.
 
 ---
 
@@ -289,7 +285,7 @@ Publish comparison pages highlighting why you're the obvious choice.
 Add dedicated sections about the new feature/product across your site.
 
 **Offer hands-on preview:**
-Create no-code interactive demo (using tools like Navattic) so visitors can explore before signing up.
+Create no-code interactive demo (an optional tool such as Navattic can help; it may cost money and needs an account) so visitors can explore before signing up.
 
 ### Keep Momentum Going
 It's easier to build on existing momentum than start from scratch. Every touchpoint reinforces the launch.

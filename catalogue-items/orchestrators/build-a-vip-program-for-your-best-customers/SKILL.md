@@ -34,7 +34,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-The order export below is the required input. It is not an ad performance export.
+The order history below is the only required input. It replaces both required lines in the "Before you start" block above. The customer list and the results sheet named there are both this one order history, and no Meta Ads Manager, Google Ads or other ad data is needed.
 
 - **Your order history for a closed date window** (required): one row per order with customer, date, order value, discount code, refunds, and cost or margin, plus what each column counts. If it is missing, the run stops before step 1.
 - **Customer words from reviews, tickets, surveys or calls, with source and date** (optional)
@@ -53,13 +53,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Steps
 1. **Best and worst customer profiler.** Use the skill `best-and-worst-customer-profiler`. Ranks your customers by profit and shows what the best have in common. Hands step 2 a report with the top group's share of profit; you then export the customer list for the VIP rule.
 
-Pause here: Choose the VIP rule (number of orders or spend) from the profile and export the orders for customers who meet it.
+Pause here: Choose the VIP rule (a number of orders, or a spend in the same currency as your export) from the profile. Then export, for customers who meet it, their order count, total spend and last order date. Drop names and emails you do not need.
 
-2. **Loyalty and VIP program designer.** Use the skill `loyalty-and-vip-program-designer`. Give it the audit report from the steps before. Uses the profile's top-group shares from step 1 and your customer export (spend and orders), not step 1's files alone. Hands step 3 a VIP plan with tiers, perks and the club invite.
+2. **Loyalty and VIP program designer.** Use the skill `loyalty-and-vip-program-designer`. Give it the profile in `outputs/step-01-best-and-worst-customer-profiler.md`. Uses the profile's top-group shares from step 1 and your customer export (spend and orders), not step 1's files alone. Hands step 3 a VIP plan with tiers, perks and the club invite.
 
-Pause here: Set up the tiers and invite the first VIPs, then wait a month and export their orders.
+Pause here: Set up the tiers and invite the first VIPs yourself. Then wait one full month, a date you set and write down, and export their orders for that month, with the same columns as before.
 
-3. **Top customer touch planner.** Use the skill `top-customer-touch-planner`. Give it the plan from the steps before. Uses your fresh customer export from a month after the invite, and step 2's top tier to choose who gets the biggest touch. Hands you the touches, scripts and a control group.
+3. **Top customer touch planner.** Use the skill `top-customer-touch-planner`. Give it the plan in `outputs/step-02-loyalty-and-vip-program-designer.md`. Uses your fresh customer export from a month after the invite, and step 2's top tier to choose who gets the biggest touch. Hands you the touches, scripts and a control group: a random share of the eligible customers (for example one in five) who get no touch, so you can compare. Pick the share before you send anything.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

@@ -36,6 +36,7 @@ how_to_use:
   - Say what file you want. A spreadsheet with one tab per workstream is the default. If your AI cannot make files, ask for tables.
   - Check the top priority items first. P0 items gate the offer letter or close, so chase those first. Remove any that do not fit your deal.
   - The list comes from your description only. Compare it with what is in the real data room, and have your adviser check it, before you send it to the seller.
+  - "When the red flag summary is done, take it to Investment committee memo drafter to write up the deal. Use Acquisition due diligence planner to plan the wider process, or Startup due diligence reviewer if the target is a startup."
   - Send the list to the other side. Update the status column as items arrive, and log each red flag. Take open red flags into your price and terms talks and the investment committee memo, and reuse the tracker for items due after signing.
 output_sample:
   input:
@@ -46,7 +47,7 @@ output_sample:
     - Target date for the offer letter or close
   prerequisites:
     - An AI that can make a spreadsheet file, or one that can print tables you copy into Excel
-    - Nothing else. The India rules (April to March fiscal year, lakh and crore) are written into the skill itself
+    - Nothing else to run it. The skill carries only two India rules (April to March fiscal year, lakh and crore). The fuller India convention files it was built with are not in this item, so check other India points, such as tax and company law, with your adviser
   output:
     - name: Workstream checklists
       contains: Request items for financial, commercial, legal, operations, people, technology and environmental review, picked for your sector.

@@ -47,7 +47,7 @@ Tagore disliked rote schooling and mocked it in his story "The Parrot's Training
 
 ### Keep trying the hardest craft
 
-He began painting at about sixty and exhibited across Europe, starting in Paris [S1]. His strange colour schemes may be linked to colour blindness, though that is not certain [S1]. Earlier, in 1900, he had written that he felt drawn to the skill that came to him least easily [S1].
+He began painting at about sixty and exhibited across Europe, starting in Paris [S1]. His strange colour schemes may be linked to colour blindness, though that is not certain [S1]. A 1900 remark that he was drawn to the skill that came to him least easily is reported by Wikipedia only; we have not found the original, so do not use it as his words.
 
 ### Stand up to injustice
 

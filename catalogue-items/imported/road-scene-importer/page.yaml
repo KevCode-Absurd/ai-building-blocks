@@ -30,11 +30,13 @@ you_get:
   - Build options applied
   - A scene ready for visual checking
 how_to_use:
+  - You need paid MATLAB and paid RoadRunner licences before you start. The LICENSE.md in this item is BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB.
   - Open an AI that can run MATLAB code and has your RoadRunner session connected. Set that up first with the roadrunner-core skill.
   - Paste in this skill, or upload its folder.
   - Give your AI the path to your map file and say whether you want to load only or also build.
   - Tell it your asphalt, bridge or junction choices if you have any. Ask it to check if your map has closed loops.
-  - Let it run the checks and the import. Fix anything the checks flag.
+  - Let it run the checks and the import. It reports pass or fail for each check (file location, file type and, for a build, the build options) before it imports. Fix anything the checks flag.
+  - The scene is saved in your RoadRunner project folder under your map's file name.
   - "Open the saved scene, which sits in your RoadRunner project folder and is named after your map. Look over the roads by eye: that lanes run on without breaks, and that junctions and bridges look right. Only then ask for a full build."
 output_sample:
   input:

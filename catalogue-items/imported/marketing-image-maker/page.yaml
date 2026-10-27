@@ -33,11 +33,11 @@ you_get:
   - Exact dimensions and file format
   - A file naming and saving plan
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Open Claude, ChatGPT or Gemini and paste in only the "Start here" section of the skill, not the whole long file. Your AI then gives a short, focused plan. Add the rest of the file only if you need a design tool or an optimization step.
   - Say what the image is for and where it will be shown.
   - Add your brand colours, fonts or size limits if you have them (optional).
   - Check the tool it picks. Some tools need a paid plan or API key.
-  - Paste the prompt into that tool, set the size it gave you, and save the file under the name it suggests.
+  - Paste the prompt into that tool, set the size it gave you, and save the file under the name it suggests. A good name follows the pattern goal-platform-widthxheight, such as blog-hero-site-1200x630.webp.
   - If your AI can make images itself, ask it to run the prompt for you.
   - Before you publish, add alt text, check the file in the platform's preview, and confirm the size on the platform's help page. For paid ad images, take the file to the Ad creative variation planner.
 output_sample:

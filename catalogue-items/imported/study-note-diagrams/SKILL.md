@@ -60,7 +60,7 @@ Use SVG when Mermaid can't express it: spatial layouts, annotated figures, simpl
 3. Embed with a relative link or wikilink to `Learning/<Subject>/assets/<name>.svg`.
 4. Keep it under ~100 elements. Simple shapes + text beat elaborate art every time.
 
-## 4. Dashboard charts
+## 4. Dashboard charts (skip for a single diagram)
 
 Only use this section when the user asks for a progress dashboard in a learning vault. The three chart files named below (`progress.svg`, `completion.svg`, `forecast.svg`) are not in this folder. You draw them yourself from the recipes, or skip them.
 
@@ -87,6 +87,8 @@ Embed the charts in a markdown table so they render side by side in Obsidian and
 | Progress | Completion | Reviews due |
 |---|---|---|
 | ![](<subject>/assets/progress.svg) | ![](<subject>/assets/completion.svg) | ![](<subject>/assets/forecast.svg) |
+
+(These three image files do not exist in this copy. The line above shows the layout only. You draw each one from the recipes below.)
 ```
 
 - Use standard image syntax with paths **relative to `Learning/Dashboard.md`** — portable everywhere (wikilink embeds do not render on GitHub).
@@ -121,7 +123,7 @@ Bars, one per day for the next 7 days, `viewBox="0 0 340 200"`:
 - Value 0 → a 3 px neutral stub at the baseline.
 - Bars accent `#22d3ee`, baseline and stubs `#3f3f46`, day labels (font-size 14) and title `#8b8b8b`.
 
-## 5. Delegating to subagents
+## 5. Delegating to subagents (skip for a single diagram)
 
 Optional. Skip this section if your AI has no subagents.
 

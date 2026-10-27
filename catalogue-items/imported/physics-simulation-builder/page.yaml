@@ -2,22 +2,23 @@ thinking: high
 thinking_why: Geometry, loads and meshing must all fit together.
 new_slug: physics-simulation-builder
 name: Physics simulation builder
-summary: Build a finite element model of your part in MATLAB. Set loads, solve for heat, stress or vibration, and get plots of the results.
+summary: Build a finite element model of your part in MATLAB with the paid PDE Toolbox. Solve for heat, stress or vibration and get plots.
 job: build-software
 headline: Physics simulation builder
 subhead: Describe a part and the forces or heat acting on it, and get a finite element model built, solved and plotted. It covers heat, stress and electromagnetic problems.
 explain: |
   Describe a part and the forces or heat acting on it, and get a finite element model built, solved and plotted. It covers heat, stress and electromagnetic problems.
 
-  The skill follows five steps in MATLAB's PDE Toolbox. Build geometry from shapes, a STEP or STL file, or a 2D drawing. Set up the model with materials, supports, loads and starting conditions. Mesh with defaults first and refine if needed. Solve for steady, time-varying, vibration or frequency cases. Then read out fields, interpolate values and plot. It needs a recent MATLAB with the PDE Toolbox (a paid add-on).
+  Licence: the terms in this item's LICENSE.md apply. They are BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. The skill file links a different MathWorks page. Ignore that link and follow LICENSE.md.
 
-  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
+  The skill follows five steps in MATLAB's PDE Toolbox. Build geometry from shapes, a STEP or STL file, or a 2D drawing. Set up the model with materials, supports, loads and starting conditions. Mesh with defaults first and refine if needed. Solve for steady, time-varying, vibration or frequency cases. Then read out fields, interpolate values and plot. It needs a recent MATLAB with the PDE Toolbox (a paid add-on).
 when:
   - You need to know how hot a part gets under a heat load.
   - You want stress in a bracket from a CAD file.
   - You need the vibration modes of a simple structure.
   - You want a plot of a field across a shape.
 not_for:
+  - "The result will be used for a safety-critical design, such as a pressure vessel or a load-bearing part: these results are for engineering review only and are not certified. An engineer must sign off first."
   - "You need a Simulink or Simscape system model: use a Simulink or Simscape tool, since this skill only covers finite element parts."
   - "You only want a surface mesh to look at, with no solve: use your CAD or mesh software."
   - "You need a custom equation system outside heat, stress and electromagnetics: ask an engineer who can set up the older general PDE workflow."
@@ -32,7 +33,7 @@ you_get:
   - Field plots
   - Derived values such as peak stress or temperature
 how_to_use:
-  - Open a chat with an AI that can run MATLAB code. You need MATLAB R2025a or newer with the PDE Toolbox.
+  - Check you have MATLAB R2025a or newer with the PDE Toolbox, a paid add-on. Without it the skill cannot run. Open a chat with an AI that can run MATLAB code.
   - Paste the skill text, or upload the skill folder if your AI accepts files.
   - Pick one set of units and keep to it, for example metres, pascals, watts and kelvin. The toolbox has no units of its own, so a mix-up gives wrong numbers with no warning.
   - Describe your part, its materials, and the loads, fixed faces or temperatures. Say which analysis you want. Attach your CAD file if you have one.

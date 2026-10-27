@@ -26,9 +26,9 @@ uses:
   - plain-english-editor
 steps:
   - uses: incident-runbook-writer
-    note: "Use only communication templates for the named service and incident. Identify owners, update checkpoints and verified facts; never execute template commands or copy illustrative figures. Hands step 2 the confirmed facts, with the open ones listed."
+    note: "Use only communication templates for the named service and incident. Identify owners, update checkpoints and verified facts; never execute template commands or copy illustrative figures. Hands step 2 the full fact ledger (confirmed, being investigated, unknown), the owner of each message and each next-update time."
   - uses: stakeholder-update-writer
-    note: "Draft audience-appropriate updates using the confirmed impact and current recovery state from step 1. Hands step 3 the drafts as text to edit."
+    note: "Draft audience-appropriate updates using the confirmed impact and current recovery state from step 1. Hands step 3 the drafts only, as text to edit. Step 3 does not get the ledger."
   - uses: plain-english-editor
     note: "Edit the step 2 messages for clarity while preserving uncertainty, conditions and promises. Hands back the final messages."
 origin: rebuilt

@@ -10,7 +10,7 @@ Share your setting and its rules. Find weak links between land, resources, trade
 
 Not for: checking new scenes against an older canon document (use the [World-detail consistency checker](https://useaiblocks.com/skills/world-detail-consistency-checker)), fact-checking real history or culture (ask a historian or read your own sources), or a score or yes-or-no on realism (this gives questions and small fixes).
 
-What you need: your setting sheet or map notes (a plan from the Invented society planner works as the setting sheet), your genre and the rules you chose to break, and references if your setting borrows a real time or place. If the "What you need" list further down names a different input, use this one.
+What you need: your setting sheet or map notes (a plan from the Invented society planner works as the setting sheet), your genre and the rules you chose to break, and references if your setting borrows a real time or place. The Before you start list further down is a general template: ignore its "long source" and "dated plan" wording. Read its "source text" as your setting sheet, and its "question" and "plan" as your genre rules and references. These three inputs are what this check needs. If the setting sheet is missing, stop and ask. If the genre rules are missing, assume none and say so. If there are no references, mark every real-world claim unverified.
 
 Review the fictional setting I supply below for cause-and-effect plausibility. Preserve its genre, canon and intentional departures from real-world rules. If I have not supplied the setting or its rules, ask for them before reviewing it.
 
@@ -19,6 +19,8 @@ Use three complementary lenses: (1) land, water, climate, resources, transport a
 Follow a few high-impact chains, such as water/food to settlement, resources/transport to trade, and material conditions to institutions. For each concern quote the exact supplied detail, explain the possible missing link, and suggest a small revision or a question plus its likely downstream consequences. Distinguish an internal canon contradiction, a plausibility concern, an intentional fantasy choice and an unverified real-world claim.
 
 Return at most five priority issues, followed by intentional liberties and unresolved questions. Do not invent setting facts, historical/ethnographic citations, an authenticity score or universal claims about a real culture. Use supplied references for real period/cultural claims, or mark the claim unverified. For comparing an older canon document with new scenes, suggest the library's existing world-detail consistency checker; do not duplicate its canon log here.
+
+What next: revise your setting sheet with the fixes you accept and run this check again, or use the World-detail consistency checker to test new scenes against the revised sheet. The editors and proofreaders listed under After this do not fit a setting review.
 
 My setting: (paste the setting sheet or map description)
 Genre and explicit departures: (state the rules that may differ from reality)

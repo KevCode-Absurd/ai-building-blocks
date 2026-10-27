@@ -67,6 +67,9 @@ If images, questions or GPU details are missing, ask once, then mark them MISSIN
 # Clone repository
 git clone https://github.com/haotian-liu/LLaVA
 cd LLaVA
+# Pin the version so a repeat install matches this one.
+# Pick a release tag or commit from the repository page, check it out, and write it down.
+git checkout [TAG OR COMMIT]
 
 # Install
 pip install -e .
@@ -117,6 +120,35 @@ response = tokenizer.decode(output_ids[0], skip_special_tokens=True).strip()
 print(response)
 ```
 
+### Helper functions used below
+
+The snippets that follow call two helpers, `generate` and `ask`. Define them once after the code in Basic usage has run (it creates `tokenizer`, `model` and `image_processor`).
+
+```python
+def generate(conv, model, image):
+    """Run one turn. The last message in conv is the new question."""
+    prompt = conv.get_prompt()
+    image_tensor = process_images([image], image_processor, model.config)
+    image_tensor = image_tensor.to(model.device, dtype=torch.float16)
+    input_ids = tokenizer_image_token(
+        prompt, tokenizer, IMAGE_TOKEN_INDEX, return_tensors='pt'
+    ).unsqueeze(0).to(model.device)
+    with torch.inference_mode():
+        output_ids = model.generate(
+            input_ids, images=image_tensor,
+            do_sample=True, temperature=0.2, max_new_tokens=512
+        )
+    return tokenizer.decode(output_ids[0], skip_special_tokens=True).strip()
+
+def ask(model, image, question):
+    """One question about one image."""
+    conv = conv_templates["llava_v1"].copy()
+    conv.append_message(conv.roles[0], DEFAULT_IMAGE_TOKEN + "
+" + question)
+    conv.append_message(conv.roles[1], None)
+    return generate(conv, model, image)
+```
+
 ## Available models
 
 | Model | Parameters | VRAM | Quality |
@@ -164,7 +196,7 @@ python -m llava.serve.gradio_web_server \
 
 ## Multi-turn conversations
 
-Note: `generate` and `ask` in the snippets below are helper functions you write by wrapping the code from Basic usage. They are not part of the LLaVA package.
+Note: `generate` and `ask` are the helpers defined above under Helper functions. They are not part of the LLaVA package.
 
 ```python
 # Initialize conversation
@@ -173,13 +205,13 @@ conv = conv_templates["llava_v1"].copy()
 # Turn 1
 conv.append_message(conv.roles[0], DEFAULT_IMAGE_TOKEN + "\nWhat is in this image?")
 conv.append_message(conv.roles[1], None)
-response1 = generate(conv, model, image)  # "A dog playing in a park"
+response1 = generate(conv, model, image)
 
 # Turn 2
 conv.messages[-1][1] = response1  # Add previous response
 conv.append_message(conv.roles[0], "What breed is the dog?")
 conv.append_message(conv.roles[1], None)
-response2 = generate(conv, model, image)  # "Golden Retriever"
+response2 = generate(conv, model, image)
 
 # Turn 3
 conv.messages[-1][1] = response2
@@ -292,27 +324,29 @@ For scores on VQAv2, GQA, MM-Vet and MMBench, see the LLaVA paper and each model
 
 ### LangChain
 
-```python
-from langchain.llms.base import LLM
-
-class LLaVALLM(LLM):
-    def _call(self, prompt, stop=None):
-        # Custom LLaVA inference
-        return response
-
-llm = LLaVALLM()
-```
+No working LangChain code is included. To use LLaVA there, wrap the `ask(model, image, question)` helper above in your own custom LLM class and return its answer as a string. Do not present this as a finished integration.
 
 ### Gradio App
 
-Note: `ask_llava` below is a helper you write yourself by wrapping the code from Basic usage (load the image, build the prompt, call `model.generate`). It is not part of the LLaVA package, so this snippet is a sketch, not a complete app.
+Note: run the Basic usage code and the helper definitions first, so `model` exists. This snippet is a small sketch of a chat page, not a finished app. It keeps one conversation in memory, so it suits one user at a time. It starts a new conversation when the chat is cleared.
 
 ```python
 import gradio as gr
 
-def chat(image, text, history):
-    response = ask_llava(model, image, text)
-    return response
+web_conv = None  # the running conversation, kept between questions
+
+def chat(text, history, image):
+    global web_conv
+    if web_conv is None or not history:
+        # First question: start a new conversation and attach the image token
+        web_conv = conv_templates["llava_v1"].copy()
+        text = DEFAULT_IMAGE_TOKEN + "
+" + text
+    web_conv.append_message(web_conv.roles[0], text)
+    web_conv.append_message(web_conv.roles[1], None)
+    reply = generate(web_conv, model, image)
+    web_conv.messages[-1][1] = reply  # keep the answer so follow-ups have context
+    return reply
 
 demo = gr.ChatInterface(
     chat,

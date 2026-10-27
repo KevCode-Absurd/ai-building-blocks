@@ -35,7 +35,7 @@ How to start:
 
 ## What you need
 
-This is a sales job. The "Before you start" list above is general, and its "Your results" line is about ad exports, which this workflow does not use. Use only the sales and customer data below.
+This is a sales job. The generic list above asks for a question, a plan and a spreadsheet. For this run those are the sale description, the pay plan and the rep and customer data below. Do not ask for ad exports. Use only the sales and customer data below.
 
 - **Your sale** (required): what you sell, who buys it, how hard it is to explain and how long a sale takes.
 - **Your pay plan** (required): rates, bonuses, targets and when pay is earned, in words or a table.
@@ -55,6 +55,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop:** stop if there is no description of the sale, no pay plan, or no rep and customer data, or if a step's own checks fail. Go to the hand-back summary and say which step.
 
 ## Steps
+Each step ends with a check, and the next step starts only when it passes. Step 1: every trait has a 1, 5 and 10 anchor, a test and a job link. Step 2: reps are ranked by customers kept next to earnings, and the plan change has a number. Step 3: the early sign has a percent, an action and a time limit. If a check fails, stop and say which line is off.
+
+This workflow does not give legal advice and does not decide who to hire or how to pay a person. It also does not cover legal review of traits or of pay changes. A person owns those calls.
+
 1. **Build the hiring scorecard.** Use the skill `sales-hiring-scorecard-builder` on the description of the sale, plus past hire notes and traits if given. It writes a 1 to 10 scorecard with a 1, 5 and 10 anchor and a test for each trait. For each trait, say how it links to doing the job well, and check it does not screen people out on age, sex, race, disability, religion or another protected trait. Drop or reword any trait that fails. Saves `outputs/step-01-sales-hiring-scorecard-builder.md`.
 2. **Check the pay plan.** Use the skill `sales-pay-plan-checker` on the person's pay plan and rep data, and the scorecard in `outputs/step-01-sales-hiring-scorecard-builder.md` as background for what the plan should reward. It names what the plan pays for and ignores, ranks reps by churn next to earnings, and sets one change to test. Saves `outputs/step-02-sales-pay-plan-checker.md`.
 3. **Define the early sign of success.** Use the skill `customer-success-signals` on `outputs/step-02-sales-pay-plan-checker.md` and what customers did after buying, with dates. It writes one early sign as a percent, an action and a time limit, with a cohort measure. Saves `outputs/step-03-customer-success-signals.md`.

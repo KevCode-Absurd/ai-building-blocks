@@ -1,7 +1,7 @@
 ---
 name: matlab-model-via
 description: "Via modeling: pads, antipads, ground return vias, GRV placement, and signal integrity for high-speed layer transitions. TRIGGER: user asks to model a via, design a via transition, place ground return vias, analyze via performance, or check signal integrity through layer transitions. Invoke BEFORE writing code — only viaSingleEnded exists (no viaDifferential), and the location format is non-obvious. SKIP: general signal integrity without vias (use matlab-analyze-em), transmission line design (use matlab-design-pcb-transmission-line), PDN analysis (use matlab-analyze-pcb-pdn), material/stackup setup only (use matlab-manage-pcb-material)."
-license: https://www.mathworks.com/content/dam/mathworks/license/pmrl/license.md
+license: https://www.mathworks.com/content/dam/mathworks/license/pmrl/license.md # AI Blocks: for this copy, LICENSE.md in this folder applies (BSD 2-Clause, use only with MathWorks products such as MATLAB). This link is MathWorks' own upstream terms and also limits use to MathWorks products.
 metadata:
   author: MathWorks
   version: "1.0"
@@ -457,7 +457,7 @@ Use these ranges when setting up `sparameters(via, freq)` sweeps. For resonance 
 
 4. **Pad radius must exceed via radius**: `SignalViaPad.Radius` must be larger than `SignalViaDiameter/2`. If they're equal or pad is smaller, the geometry is invalid.
 
-5. **Antipad vs pad clearance**: The antipad is the clearance hole in ground planes. It must be larger than the pad to provide insulation. Typical rule: antipad radius >= pad radius + 0.1mm.
+5. **Antipad vs pad clearance**: The antipad is the clearance hole in ground planes. It must be larger than the pad to provide insulation. Typical rule: antipad radius >= pad radius + 0.1mm. This is a general guideline, not a standard. Confirm the clearance against your fabricator's design rules before you build.
 
 6. **GRV span**: Ground return vias should span at least from the signal entry layer to the signal exit layer. Shorter GRVs degrade return path quality at higher frequencies. Currently, ground return vias must always be PTH (full span of the stackup) and cannot be back-drilled.
 

@@ -35,7 +35,7 @@ you_get:
   - A handover checklist per task
   - A list of missing facts and checks that did not run
 how_to_use:
-  - Download the pack and add it to your AI, such as Claude, ChatGPT or Gemini.
+  - Download the handoff pack, a zip with HANDOFF.md and every skill file this workflow uses. Add it to your AI, such as Claude, ChatGPT or Gemini. If your AI cannot take files, paste each file in order.
   - Paste the critical tasks, owners, possible backups and your date. Add past cover or work samples if you have them.
   - After step 1, check that no backup is marked ready without something to show for it.
   - After step 3, read each action as the backup would. Ask whether the practice is real work they can do.

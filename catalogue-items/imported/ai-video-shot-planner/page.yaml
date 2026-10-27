@@ -11,14 +11,14 @@ explain: |
 
   It asks three questions at most, then splits the video into short shots with a prompt for each. It runs three modes. Plan builds the shot list. Fix rewrites a prompt that is failing. Review looks at a bad clip and names the one change before the next try. It plans only, it does not make video.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (HEOJUNFO) says MIT. Credit goes to HEOJUNFO and sickn33.
+  Licence: CC BY 4.0 applies to this copy, as its LICENSE-CONTENT file says. Reuse it with credit to HEOJUNFO and sickn33. The author's own file header says MIT, which also allows reuse with credit.
 when:
   - You have a video idea and need to turn it into clips an AI model can make.
   - Your video prompt keeps producing the wrong result.
   - The same character looks different from shot to shot.
   - You wasted a generation and want to change the right thing next.
 not_for:
-  - "You want the video made or edited: this only plans, so use your video AI such as Runway, Kling or Veo."
+  - "You want the video made or edited: this only plans, so use your video AI such as Runway, Kling or Veo. These need your own account and usually cost money."
   - "You have no video idea yet: write a one-line idea first, or ask a teammate for a brief."
   - "You need to check ad copy or script claims: this plans shots, so ask a person to review the script."
 you_give:
@@ -35,7 +35,7 @@ how_to_use:
   - Type your video idea in one line. Add the platform, length and video model if you know them.
   - Answer up to three short questions. For a real product or person, share a photo.
   - Read the shot list. Check that each shot has one action and one camera move.
-  - Copy one prompt per shot into your video tool. It plans only, so it will not make the video.
+  - Copy one prompt per shot into your video tool. It plans only, so it will not make the video. Video tools such as Runway, Kling or Veo need your own account, and most charge per clip.
   - If a clip fails, paste the prompt or describe the clip. Make the one change it names, then try again.
 output_sample:
   input:

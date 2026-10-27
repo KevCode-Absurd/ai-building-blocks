@@ -57,6 +57,8 @@ output_sample:
       contains: What to check once it is live, and how long to watch.
     - name: MISSING
       contains: Any facts you did not give, so you can fill them in and run it again.
+    - name: CHECKS MISSED
+      contains: One line for each check the plan still fails, or none.
 
 how_it_works:
   - title: "Rate the risk"
@@ -90,6 +92,9 @@ output_shape: |
 
   MISSING
   <gaps>
+
+  CHECKS MISSED
+  <one line per check, or none>
 
 tweaks:
   - what: "Name your platform"

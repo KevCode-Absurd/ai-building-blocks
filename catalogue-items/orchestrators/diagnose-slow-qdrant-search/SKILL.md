@@ -34,7 +34,7 @@ How to start:
 
 Share query traces and workload sizes. Get speed fixes, capacity choices and health measures to compare.
 
-**When to use it.** Use it when p95 or p99 search time has risen, when you hit a throughput limit, or when memory is running short. **When not to use it.** Not when search is fast but returns the wrong results: use the Qdrant search relevance investigator. Not when you are choosing where to host Qdrant: use the Qdrant hosting option adviser. Not when you are moving to a new embedding model or Qdrant version: use the Qdrant embedding migration planner or the Qdrant version upgrade planner.
+**When to use it.** Use it when p95 or p99 search time has risen, when you hit a throughput limit, or when memory is running short. (p95 is the time that 95 out of 100 searches beat, so the slowest 5 are slower. p99 is the same for 99 out of 100. A shard is one slice of a collection, which can sit on its own node. Qdrant is the vector database that stores your searchable data.) This job is for developers or technical owners who can read query traces and change settings. **When not to use it.** Not when search is fast but returns the wrong results: use the Qdrant search relevance investigator. Not when you are choosing where to host Qdrant: use the Qdrant hosting option adviser. Not when you are moving to a new embedding model or Qdrant version: use the Qdrant embedding migration planner or the Qdrant version upgrade planner.
 
 ## Before starting
 

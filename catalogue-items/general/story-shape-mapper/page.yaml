@@ -18,8 +18,8 @@ when:
   - "You are writing a talk or pitch and the middle feels level."
   - "You want to compare two versions of a story."
 not_for:
-  - "You want facts, grammar or tone checked: use a fact-checker or a copy editor."
-  - "You have no draft yet: write a first version yourself, then bring it back to map."
+  - "You want facts, grammar or tone checked: use a fact-checker or the Plain English editor."
+  - "You have no draft yet: build a first one with the Hero story mapper, then bring it back to map."
   - "You want line-by-line edits or a rewrite: use a human editor, as this gives one change only."
 
 you_give:
@@ -147,3 +147,4 @@ terms:
     meaning: "How well things are going for the main character at a point in the story."
   - term: "Beat"
     meaning: "One event that changes the situation."
+next: [plain-english-editor, ten-percent-cutter]

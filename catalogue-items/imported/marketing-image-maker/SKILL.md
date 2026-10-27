@@ -15,7 +15,7 @@ AI Blocks note: the rest of this file is a long reference. For a first run, do o
 
 1. Ask what the image is for and where it will sit. Pick the image type from "Marketing Image Workflows" below.
 2. Pick the tool with "Choosing Your Approach" below: an AI image model, or a design tool such as Canva or Figma.
-3. Write the prompt with "Prompting Basics", give the exact pixel size and a file name, and hand it back. Use the other sections only when the user needs them.
+3. Write the prompt with "Prompting Basics", give the exact pixel size and a file name in the pattern [GOAL]-[PLATFORM]-[WIDTH]x[HEIGHT].webp (for example blog-hero-[YOUR SITE]-1200x630.webp), and hand it back. Use the other sections only when the user needs them.
 
 Claude cannot draw the picture itself. The user pastes your prompt into the tool you picked, or into an AI that makes images.
 
@@ -75,7 +75,7 @@ AI Blocks note: model names, retirement dates and costs here were copied from th
 | **Recraft V3** | Vector + brand-consistent illustrations, design assets | Strong | [Recraft API](https://www.recraft.ai/docs) | Per-credit |
 | **Stable Diffusion 3.5 / SDXL** | Self-hosted, customizable, fine-tunable | Varies | Open source | Free (GPU costs) |
 
-**Note:** DALL-E 3 is fully deprecated. OpenAI's current image models are the GPT Image family. `gpt-image-1` retires on 23 Oct 2026 and `gpt-image-1-mini` and `gpt-image-1.5` on 1 Dec 2026; OpenAI's recommended replacements are `gpt-image-2.5-sunburst` and `gpt-image-2.5-flare` (check OpenAI's deprecations page for the current list).
+**Note:** OpenAI retires and replaces its image models often, and DALL-E 3 is deprecated. Do not rely on a model name or date from this file. Check OpenAI's deprecations page (https://platform.openai.com/docs/deprecations) for the current models and dates before you use one.
 
 ### When to Use Which
 

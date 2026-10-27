@@ -75,7 +75,7 @@ Generates an activity — Kharbach's (2026) "Funhouse Mirror" — in which stude
 
 ## Evidence Foundation
 
-Note: the name "Funhouse Mirror", the Kharbach (2026) credit and every study cited below come from the original author's file, and we have not checked any of them. Do not present them to students as verified. Leave the citations out of the student handout.
+Note: the name "Funhouse Mirror", the Kharbach (2026) credit and every study cited below come from the original author's file, and we have not checked any of them. Do not present them to students as verified, and do not cite them as the evidence base in your output. Leave the citations out of the student handout.
 
 Chi, Glaser & Farr (1988) established the expert-novice framework: experts organise knowledge differently from novices, perceive problems at a deeper level, and have richer, more interconnected representations of their domain. Crucially, experts notice what is absent or distorted in a domain representation — they have the knowledge to see gaps. This is the foundation of the activity: students with genuine domain expertise can see AI distortions that a general student would miss, because only someone who knows what should be there can notice what isn't. Ericsson & Smith (1991) established that expertise is characterised by the ability to notice subtle distinctions and deviations from expected patterns — the same cognitive mechanism activated when an expert reads AI output about their field. Thiede et al. (2003) demonstrated that metacognitive accuracy (the correlation between judged and actual understanding) improves substantially when learners have a genuine knowledge base to compare against — finding a discrepancy between what you know and what you've read activates accurate self-assessment. The activity creates exactly this: a comparison between the student's domain knowledge and the AI's output. Dunning et al. (2003) on the Dunning-Kruger effect is relevant in the inverse direction: students who know a domain well are BETTER at detecting AI limitations in that domain than students who know it poorly — expertise enables the recognition of AI's incompetence, not just one's own. Kazemitabaar et al. (2023) provided empirical evidence that AI assistance in learning contexts can conceal genuine knowledge gaps; this activity is designed to expose that dynamic by reversing the expert/novice positioning.
 
@@ -92,6 +92,8 @@ Optional (injected by context engine if available):
 - **Target AI tool:** Which AI system students will interrogate
 
 ## Prompt
+
+Teacher: replace every {{placeholder}} in the prompt below with your own text (your subject, the students' level, and any optional details), or delete that line, before you send it. AI: in everything you write for students, leave out the study names, the "Funhouse Mirror" name and the Kharbach credit. Do not present any example fact as true. Every fact in your output must be checked by the teacher against a trusted source before students see it.
 
 ```
 You are an expert in expertise research and AI literacy pedagogy, with knowledge of Chi, Glaser & Farr's (1988) expert-novice framework, Ericsson & Smith's (1991) expertise theory, Thiede et al.'s (2003) metacognitive accuracy research, and Dunning et al.'s (2003) work on competence and self-assessment. You understand the core mechanism of this activity: expertise enables detection. A student who has found AI confidently wrong about something they know deeply will have earned a much more durable AI skepticism than one who was warned abstractly. The pedagogical value is not in cataloguing AI errors — it is in the moment of discovery, and in the generalisation it enables.
@@ -194,7 +196,7 @@ Note: this example shows the layout. The Hungarian folk music facts in it are il
 
 **Step 2 — Identify your strongest sub-area:** Where is your knowledge deepest? If you've danced Mezőség style for three years, that's your strongest area. If you know the regional instrument variations of the tekerőlant, that's yours.
 
-**Step 3 — Write 3 confident claims:** Write three things you know to be true about this domain that you could defend in a conversation. *e.g. "Transylvanian folk dances have distinct regional styles that are not interchangeable — a dance from Kalotaszeg is different from one from Mezőség in specific, named ways." / "The táncház movement in Hungary began in the 1970s and was partly a cultural resistance movement under communism."*
+**Step 3 — Write 3 confident claims:** Write three things you know to be true about this domain that you could defend in a conversation. *e.g. "Transylvanian folk dances have distinct regional styles that are not interchangeable — a dance from Kalotaszeg is different from one from Mezőség in specific, named ways." (Unchecked claim: check before use.) / "The táncház movement in Hungary began in the 1970s and was partly a cultural resistance movement under communism." (Unchecked claim: check before use.)*
 
 **Step 4 — Identify one hidden complexity:** What is one thing about Hungarian folk music or dance that most outsiders misunderstand or oversimplify? This is where you expect the AI to fail.
 
@@ -236,7 +238,7 @@ Note: this example shows the layout. The Hungarian folk music facts in it are il
 
 ### Distortion Taxonomy
 
-**Most likely distortions for Hungarian folk traditions:**
+**Most likely distortions for Hungarian folk traditions** (illustrative and unchecked; check each one with a source you trust before you use it):
 
 **Cultural flattening (CF) — most common:** AI trained primarily on English-language sources treats "Hungarian folk music" as a unified category, collapsing distinctions between mainland Hungarian and Transylvanian/diaspora Hungarian traditions that are crucially important to practitioners. The AI is likely to treat Kalotaszeg and Mezőség as interchangeable rather than as distinct regional styles with specific musical and choreographic conventions.
 

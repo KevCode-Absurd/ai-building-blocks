@@ -49,7 +49,7 @@ Before each step, write a short brief for it: the result wanted, the source refe
 
 1. **Compliance readiness checklist builder** (`compliance-checklist`). Map each question to the evidence needed to answer it and set the scope of the response, such as product, environment and period. Give each question a named proof type. Save `outputs/step-1-compliance-checklist.md`. **Gate before step 2:** Every question has a proof type. Questions outside the user's scope are listed, not answered. If the gate fails, stop and say which line is off.
 
-2. **Spreadsheet checker** (`spreadsheet-checker`). Build a question-to-evidence table with the proposed answer, source file, source date, scope and status. Check that each yes has a dated source for the right scope, and that a missing source shows as "no evidence yet". If you can create a workbook, save one. Otherwise return the table as text and say no workbook was made. Save `outputs/step-2-spreadsheet-checker.md`. **Gate before step 3:** No yes sits on a blank or out-of-date evidence cell. Planned controls are labelled planned. If the gate fails, stop and say which line is off.
+2. **Spreadsheet checker** (`spreadsheet-checker`). It takes two inputs: step 1's checklist of questions and proof types, and the user's own evidence files with their dates. Build a question-to-evidence table with the proposed answer, source file, source date, scope and status. Check that each yes has a dated source for the right scope, and that a missing source shows as "no evidence yet". If you can create a workbook, save one. Otherwise return the table as text and say no workbook was made. Save `outputs/step-2-spreadsheet-checker.md`. **Gate before step 3:** No yes sits on a blank or out-of-date evidence cell. Planned controls are labelled planned. If the gate fails, stop and say which line is off.
 
 3. **Plain English editor** (`plain-english-editor`). Draft short, clear answers from the verified rows only. Keep the gaps and the sharing limits. Do not add claims the table does not support. Save `outputs/step-3-plain-english-editor.md`. **Gate before the hand back:** Each answer matches its table row. No answer includes internal addresses, keys or other restricted detail. If the gate fails, stop and say which line is off.
 
@@ -92,15 +92,15 @@ Write MISSING: <what> next to the affected result. Keep going with the work that
 - No proof for a question: answer "no evidence yet", add it to the unanswered list and name who could supply it. Never turn it into a yes.
 - A proof file with no date: use it, mark MISSING: date and set the status to needs owner.
 
-## After this
+## What to do with the result
 
-Ask one short question about what to do next, and say they can type their own. Offer:
+This replaces the generic suggestions above for this run. Ask one short question about what to do next, and say they can type their own. Offer:
 
 - Send the unanswered list to the control owners with the deadline.
 - Have the security owner approve the final draft, then send it yourself. This pack sends nothing.
 - Use the Compliance readiness checklist builder on its own if many gaps show you need to build controls first.
 
-Nothing here sends, signs or changes anything outside the working files. If they pick a next step that is not in this pack, give them its link on useaiblocks.com and say what to bring to it.
+The Vendor risk reviewer in the list above is for the other direction: reviewing a supplier's security answers to you. Offer it only if the user also needs that. Nothing here sends, signs or changes anything outside the working files. If they pick a next step that is not in this pack, give them its link on useaiblocks.com and say what to bring to it.
 
 ## Avoid
 

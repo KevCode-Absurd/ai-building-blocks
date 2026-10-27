@@ -49,6 +49,8 @@ How to start:
 
 ## What you need
 
+These are the inputs that count. If the generic "Before you start" list above asks for a results export from Meta Ads Manager or Google Ads, use Instagram Insights numbers instead. Start with what the user sells and who buys it.
+
 - What the user sells and who buys it (required)
 - Their goal on Instagram: sales, leads, followers or something else (required)
 - What they can photograph or film each week, and the time they have (required)
@@ -72,7 +74,7 @@ Ask once for anything required that is missing, then mark it MISSING and carry o
 
 Return these sections in order.
 
-1. Assumptions and MISSING items.
+1. Assumptions and MISSING items. This is also your CHECKS MISSED list: name every check that failed or could not run, or write "none" if every check ran and passed.
 2. Look guide: colours, type, photo style, graphic rules.
 3. Grid plan: position, format, what the picture shows, job it does.
 4. 30-day calendar: day, format, share (brand, teach, community), topic, caption direction, call to action.

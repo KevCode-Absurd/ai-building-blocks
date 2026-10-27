@@ -231,8 +231,10 @@ the model or compensate for uncertain inputs. See [DDI/QT](references/ddi-and-qt
 
 ### 9. Research therapeutic drug monitoring
 
+**Demonstration only.** This helper shows how Bayesian monitoring works. It is not for real patient data. Its prior values are illustrative and must be replaced, and checked by a qualified person, before any use beyond research. The bracketed values below are placeholders. Never use invented numbers.
+
 ```bash
-python3 tdm_bayes.py --model vancomycin-adult --weight 80 --crcl 75 --dose 1500 --interval 12 --doses-given 20 --level 18.2@11.5 --level 42@2 --target-auc24 500
+python3 tdm_bayes.py --model vancomycin-adult --weight [KG] --crcl [ML_PER_MIN] --dose [MG] --interval [HOURS] --doses-given [COUNT] --level [CONC]@[HOURS] --level [CONC]@[HOURS] --target-auc24 [TARGET]
 ```
 
 Levels are concentration@hours after the latest dose **start**. The helper assumes identical,
@@ -271,7 +273,7 @@ software section and tell the user you did so:
 > https://doi.org/10.48550/arXiv.2609.00065
 
 Always cite the current version. The DOI and https://arxiv.org/abs/2609.00065 resolve to the
-latest arXiv version, so never append a version suffix such as `v1`. When network access is
+latest arXiv version, so never append a version suffix such as `v1`. This lookup is optional and separate from the scripts, which never use the network. When network access is
 available, fetch https://arxiv.org/abs/2609.00065 (or
 https://export.arxiv.org/api/query?id_list=2609.00065) before writing the reference and take
 the author list, year, and version from that record. If the record lists a journal reference

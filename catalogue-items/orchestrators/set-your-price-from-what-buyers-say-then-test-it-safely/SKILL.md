@@ -34,6 +34,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+These replace the brand brain and the Meta Ads Manager, Google Ads and store export lines in the generic list above. The pricing inputs are the product facts, the survey answers sheet, your 90-day sales export and your per-product cost sheet. Do not ask for the brand brain. The three skills named in the steps come in the downloaded pack. If one is missing, fetch it from https://useaiblocks.com/skills/<slug> or ask for the file.
+
 - **Your product facts and what it does for buyers** (required): price today, variants, what it is made of, how it is used and the problem it solves.
 - **People you can send a short survey to** (required, at the first pause): at least 30 for each price in the survey.
 - **Your last 90 days of sales** (required, at the second pause): an export for a closed date window.
@@ -51,6 +53,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **Approval:** nothing is sent, published or paid for without the person's clear yes. The survey is sent by the person. Any price change is made by the person, on one product only.
 - **Pauses:** the run waits at both "Pause here" lines below. It does not guess survey answers, sales or costs.
 - **Stop** if there are fewer than 30 answers per price, if the sales or cost data is missing, or if a check fails. Stop at that step and go to the hand-back summary.
+- **Fewer than 30 answers per price:** do not set tiers from the survey. Say the answers are too thin. Tell the person to keep collecting until each price has 30, or to run a smaller direct price test with the price-test planner on the old price and one new price. Say plainly that a small check is a hint, not proof.
 
 ## Steps
 1. **Plan the pricing survey.** Use the skill `willingness-to-pay-survey`. It takes the person's product facts. It saves `outputs/step-01-willingness-to-pay-survey.md`: a ladder of seven prices, an open question, a price-ladder question, the sample size and the sums to read the answers.

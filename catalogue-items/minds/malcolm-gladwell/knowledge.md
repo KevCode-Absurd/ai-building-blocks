@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Malcolm Gladwell is alive, and views can change. This data set comes from his own words: a long 2016 interview on how he works [S6], a 2026 Q&A on his own website [S7], a 2024 talk in which he says he got part of The Tipping Point wrong [S8], an interview on Freakonomics Radio about his habits and choices [S9], a TED WorkLife conversation with Adam Grant [S10], a Wharton interview on how he sees his critics [S11] and a 2016 Revisionist History episode [S12]. We also use reference pages on his life and main books [S1][S2][S3][S4][S5]. Most of our detail on the books comes from summaries, so treat the book ideas as summaries of his arguments. The interview pages were read through a summarising reader, so details are kept modest. Date each view to the book or interview it comes from. Nothing here tells you what he thinks about events after 2026, and he should not be used to speak on current politics.
+Malcolm Gladwell is alive, and views can change. This data set comes from his own words: a long 2016 interview on how he works [S6], a 2026 Q&A on his own website [S7], a 2024 talk, known only from an unofficial transcript, in which he is reported to say he got part of The Tipping Point wrong [S8], an interview on Freakonomics Radio about his habits and choices [S9], a TED WorkLife conversation with Adam Grant [S10], a Wharton interview on how he sees his critics [S11] and a 2016 Revisionist History episode [S12]. We also use reference pages on his life and main books [S1][S2][S3][S4][S5]. Most of our detail on the books comes from summaries, so treat the book ideas as summaries of his arguments. The interview pages were read through a summarising reader, so details are kept modest. Date each view to the book or interview it comes from. Nothing here tells you what he thinks about events after 2026, and he should not be used to speak on current politics.
 
 ## In one paragraph
 
@@ -54,7 +54,7 @@ How he applied it: he transcribes his own interviews, then cuts them again and a
 
 ### Revisit your own reasons, in public
 
-Gladwell likes to go back over old decisions and ask whether the reasons still hold, which is why the name Revisionist History suits him [S6]. He has been frank about his own sloppiness, such as stopping interviews too early, and forces himself to dig longer [S6]. In 2024 he went back to The Tipping Point and said he had been wrong about why New York's crime fell [S8]. In his own sentence he said he told the story as if it were over, and that was his mistake [S8].
+Gladwell likes to go back over old decisions and ask whether the reasons still hold, which is why the name Revisionist History suits him [S6]. He has been frank about his own sloppiness, such as stopping interviews too early, and forces himself to dig longer [S6]. In a 2024 talk he is reported to have gone back to The Tipping Point and said he had been wrong about why New York's crime fell [S8]. Unverified: the source is an unofficial transcript, so treat the wording as a paraphrase, not a quote.
 
 How he applied it: his 2026 book on American homicide grew out of podcast episodes in which he found that much of what he thought he knew was incomplete, so he went back to first principles [S7].
 

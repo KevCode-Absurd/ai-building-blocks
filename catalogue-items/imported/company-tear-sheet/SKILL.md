@@ -20,7 +20,7 @@ description: "Generate a professional company tear sheet — a dense single-comp
 - **Any other country:** say the free data is thin. Use the company's own investor page, or mark gaps.
 - **Private company:** expect sparse results. See "Private company handling" in Step 3.
 
-**Limits to put in the output, not just here.** `yfinance` is an unofficial Yahoo interface. It can break, it is for personal use, and its data is end of day or delayed, never live. The sheet is for information only and is not investment advice.
+**Limits to put in the output, not just here.** `yfinance` is an unofficial Yahoo interface. It can break, it is for personal use, and its data is end of day or delayed, never live. The sheet is for information only and is not investment advice. Because `yfinance` terms limit it to personal use, label every sheet built from it "Internal draft" in the header until the figures are checked against filings or a licensed source, and do not send it to a client as it is.
 
 **Tools.** The Word file is built with the `officecli` command line tool, which must be installed, and the data steps need an AI that can run code and reach the web. If you cannot run code, ask the user to paste the numbers. Then give the sheet's content as a table per section, and say no file was built.
 
@@ -29,7 +29,7 @@ description: "Generate a professional company tear sheet — a dense single-comp
 - **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` = Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
 - **Units are lakh (10⁵) and crore (10⁷).** Never use the Excel format `#,##0,," Cr"`: it shows lakh under a crore label (a 100× error). Divide by `10000000` in a live formula and label the column `Revenue (₹ Cr)`. The number-format rules later in this file say USD and US Letter. For an Indian company, use ₹ crore and keep the rest.
 
-The companion files this skill once pointed to (`india-market-conventions`, `india-market-data`, `NOT-ADAPTABLE.md`) and the `officecli-docx` skill are not in this folder. Where this file says to load them, use the rules written here and `officecli --help` for the commands. If you cannot work out a command, say so and give the content as tables instead.
+No Indian companion files and no `officecli-docx` skill are bundled. The rules written in this file are the full guidance. Use `officecli --help` for the commands. If you cannot work out a command, say so and give the content as tables instead.
 
 Generate audience-specific company tear sheets from **free, no-terminal data** and render the result as a
 professional Word document with the **`officecli` CLI**.

@@ -30,8 +30,8 @@ you_get:
   - Rewritten wording to paste in
   - Notes on region rules
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. Reading a store link needs an AI that can run the script (scripts/fetch_policies.py), which must sit in the skill folder next to SKILL.md. A store link cannot be read from the text alone. If yours can't, paste your policy text instead.
-  - "Store-link reading works only with the script in this item's scripts folder (fetch_policies.py). It obeys the store's robots.txt. Use its owner option only for a store you own or manage. For any other store, do not read it by link: ask the owner to paste the text."
+  - Open Claude, ChatGPT or Gemini and paste in the skill instructions. Reading a store link needs an AI that can run the script (scripts/fetch_policies.py), which must sit in the skill folder next to SKILL.md. A store link cannot be read from the text alone. If yours can't, paste your policy text instead. If your AI reads pages with its own web tool instead, it must check the store's robots.txt for each page first.
+  - "Store-link reading fetches your live store pages with a script (fetch_policies.py in this item's scripts folder), one page at a time, as a visitor would. It always obeys the store's robots.txt. Do not use the script's --owner option, because nothing can check who owns a store. If a page is blocked, paste its text instead. For a store that is not yours, do not read it by link: ask the owner to paste the text."
   - Paste your store link, or paste the text of your refund, shipping, privacy and terms policies. Add your FAQ if it mentions returns or shipping.
   - Add the regions you sell to and any facts your policies leave out (optional).
   - Read the score and the Fix these first list. Check each quote against your store.

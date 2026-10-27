@@ -30,7 +30,7 @@ you_get:
   - A closing message
   - Reply templates for common questions
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in this skill. No code, files or paid tools are needed.
+  - Open Claude, ChatGPT or Gemini and paste in this skill. No code, files or paid tools are needed for the drafting. Sending an InMail needs a paid LinkedIn Recruiter or Premium account. Without one, use a plain connection note or email.
   - Paste the role and what makes it appealing. Add the person's profile or your notes on their work.
   - Say which channel you will use, such as LinkedIn or email. Add the hiring manager's name if they will send it (optional). If you do, the hiring manager must read and approve the message first, and they answer the replies. Never send in someone's name without their yes.
   - Tell your AI the tone you want, such as professional, casual or technical. If you say nothing, it uses a friendly, professional tone.

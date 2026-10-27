@@ -1,5 +1,7 @@
 # Detailed Workflow for Earnings Updates
 
+> India note (AI Blocks): this file keeps some wording from the US original. Where it says 10-Q, 10-K, SEC or EDGAR, use the BSE or NSE results filing, the results press release, the investor presentation and the concall transcript. Show amounts in ₹ crore. All company names, prices and figures in examples here are made-up illustrations, not data.
+
 This document provides detailed step-by-step instructions for each phase of the earnings update process.
 
 ## ⚠️⚠️⚠️ CRITICAL WARNING: ALWAYS USE THE LATEST EARNINGS DATA ⚠️⚠️⚠️
@@ -70,12 +72,12 @@ Training data is OUTDATED. Actively search for and retrieve the MOST RECENT earn
    - Web search: `[Company name] latest earnings results`
    - Web search: `[Company name] most recent quarterly earnings`
    - Web search: `[Ticker symbol] earnings latest quarter`
-   - SEC EDGAR: Search for company and look at most recent 10-Q or 10-K filing date
+   - BSE or NSE: Search the company's announcements page and look at the date of the latest results filing
 
 **Example searches that find latest data:**
-- "Nike latest earnings results" → Returns most recent quarter reported
-- "AAPL most recent quarterly earnings" → Shows latest Apple earnings
-- "Tesla Q3 2024 earnings" → Results confirm Q3 2024 exists
+- "[Company] latest earnings results" → Returns most recent quarter reported
+- "[Ticker] most recent quarterly earnings" → Shows latest earnings
+- "[Company] Q3 FY26 earnings" → Results confirm that quarter exists
 
 **Step 1b: Understand Company's Fiscal Calendar**
 
@@ -124,10 +126,10 @@ Companies use different terminology - recognize these patterns:
 - "[Company] Announces Third Quarter Fiscal 2024 Financial Results"
 - "[Company] Q3 Revenue Grew 15% Year-over-Year"
 
-**SEC filing searches:**
-- Company name may differ from common name (e.g., "Meta Platforms, Inc." vs "Facebook")
-- Search by ticker symbol to find filings reliably
-- Look for most recent 10-Q (quarterly) or 10-K (annual if Q4)
+**Exchange filing searches:**
+- Company name may differ from common name
+- Search by NSE symbol or BSE scrip code to find filings reliably
+- Look for the most recent results filing (quarterly, or annual if Q4)
 
 ### Step 2: Gather Earnings Materials
 
@@ -143,12 +145,10 @@ After SEARCHING FOR and confirming the latest quarter, collect the following:
   - **Verify the date matches what was found in Step 1** (should be within last 1-3 months)
   - **Read the actual document** to confirm the quarter and get reported numbers
 
-- **10-Q or 10-K filing** - On SEC EDGAR (sec.gov/edgar/searchedgar/companysearch.html)
-  - Search by ticker symbol
-  - For quarters 1-3: Look for most recent 10-Q
-  - For Q4: Look for 10-K (annual report)
-  - Note: May be filed 1-5 days after earnings release
-  - Direct link format: `https://www.sec.gov/cgi-bin/viewer?accession=[accession-number]`
+- **Results filing on BSE or NSE** - On the exchange's company announcements page
+  - Search by NSE symbol or BSE scrip code
+  - Open the latest results filing for the quarter
+  - Link only the page you opened
 
 - **Earnings call transcript** - 🚨 **VERIFY THE DATE ON THE TRANSCRIPT** 🚨
   - **Search for**: "[Company] latest earnings call transcript" or "[Company] Q[X] [Year] earnings call transcript"
@@ -193,7 +193,7 @@ After SEARCHING FOR and confirming the latest quarter, collect the following:
 - [ ] ✅ **Today's date written down**: _______________
 - [ ] ✅ **Earnings release date**: _______________ (MUST be within 3 months of today)
 - [ ] ✅ **Earnings call transcript date**: _______________ (MUST match release date ±1 day)
-- [ ] ✅ **10-Q/10-K filing date**: _______________ (MUST be same quarter as release)
+- [ ] ✅ **BSE or NSE results filing date**: _______________ (MUST be same quarter as release)
 - [ ] ✅ **ALL materials show SAME quarter** (e.g., all say "Q3 2024", not mixed quarters)
 
 **SEARCH & ACCESS - Verify active search completed:**
@@ -266,13 +266,12 @@ For EACH key metric that beat or missed, explain:
 ```
 ■ **Revenue Beat by 3% Driven by Strong DTC Performance**
 
-Revenue of $13.5B exceeded our estimate of $13.1B by $400M (3%) and consensus
-of $13.2B by $300M (2%). The outperformance was driven primarily by Direct-to-
-Consumer channels, which grew 18% YoY (vs. our 12% estimate), offsetting
-weaker-than-expected wholesale (-5% vs. flat estimate). Management cited strong
-digital demand and successful product launches (Pegasus 40 running shoe, new
-Jordan colorways) as key drivers. DTC now represents 42% of total revenue vs.
-38% a year ago, demonstrating successful channel shift strategy.
+Revenue of ₹[AMOUNT] crore exceeded our estimate of ₹[AMOUNT] crore by ₹[AMOUNT] crore ([PERCENT]%) and
+consensus of ₹[AMOUNT] crore by ₹[AMOUNT] crore ([PERCENT]%). The outperformance was driven primarily by
+[SEGMENT OR CHANNEL], which grew [PERCENT]% YoY (vs. our [PERCENT]% estimate), offsetting
+weaker-than-expected [SEGMENT OR CHANNEL] ([PERCENT]% vs. our estimate). Management cited [DRIVERS
+FROM THE CONCALL] as key drivers. [SEGMENT] now represents [PERCENT]% of total revenue vs.
+[PERCENT]% a year ago. Use only figures from the filing and the concall.
 ```
 
 ### Step 6: Segment/Geographic/Product Analysis
@@ -483,7 +482,7 @@ Before publishing, verify:
 - [ ] Sources section lists all materials with URLs
 - [ ] ALL URLs are CLICKABLE HYPERLINKS (not plain text)
 - [ ] Hyperlinks tested and working (Ctrl+Click opens correct page)
-- [ ] All SEC filings hyperlinked to EDGAR viewer
+- [ ] All BSE or NSE filings hyperlinked to the exchange page you opened
 - [ ] All earnings materials hyperlinked (release, transcript, presentation)
 - [ ] Prior guidance hyperlinked to prior quarter's materials
 - [ ] No raw URLs displayed - all formatted as clickable links

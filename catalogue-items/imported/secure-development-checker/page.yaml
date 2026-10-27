@@ -34,11 +34,12 @@ you_get:
 how_to_use:
   - Use an AI that can run code and read files, such as Claude with code tools. Check that Python is installed. All three scans run on your computer and need no internet, no paid service and no API key.
   - The package scan checks your packages against a small built-in list of known flaws. It does not look up a live vulnerability database. A clean result does not mean your packages are safe, so also run your package manager's audit command.
-  - Add the skill to your AI, or paste its text into the chat.
+  - Add the skill to your AI, or paste its text into the chat. The three scans need your project files on the computer where your AI runs Python.
+  - "The command order is: python scripts/security_scanner.py <project folder>, then python scripts/vulnerability_assessor.py <project folder>, then python scripts/compliance_checker.py <project folder>."
   - Give your AI your project folder. Say which framework to check against and the lowest severity to show (both optional).
   - Ask it to run the code scan, the package scan and the compliance check in that order.
-  - Read the results from the top. Fix critical findings first, then rerun the scans.
-  - Save the JSON files if you want to use them in your build pipeline.
+  - "Read the results from the top. Each finding shows its severity, the file and line, and what to change. Exit code 0 means no critical or high findings, 1 means high ones, and 2 means critical ones. Fix critical findings first, then rerun the scans."
+  - Save the JSON files if you want to use them in your build pipeline. Next, hand the fixed list to a developer, and use dependency-risk-auditor for a full check of package licences and known flaws.
   - The skill file also has background notes on secret scanning tools, supply-chain checks and an OWASP quick check. They are optional. The three scans are the core of this skill.
   - The secret scanner gitleaks, which the skill suggests for CI, can need a paid licence key (GITLEAKS_LICENSE) when used in GitHub Actions for an organisation. Check the terms of each tool before you pick one.
 output_sample:

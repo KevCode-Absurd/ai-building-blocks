@@ -104,7 +104,7 @@ output_shape: |
   SMALL PAID TEST
   <scope> | <control> | <stop rule>
 
-  NOT CHECKED
+  NOT CHECKED  <checks you could not run, or none>
   MISSING: <what was not in the proposal>
 
 tweaks:

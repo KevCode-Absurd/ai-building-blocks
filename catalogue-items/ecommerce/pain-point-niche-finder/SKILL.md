@@ -18,7 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Customer words** with the [Product opportunity reviewer](https://useaiblocks.com/skills/rating-gap-product-finder). Bring your question, customer words (optional).
+1. **Buyer pain points** with the [Rating gap product finder](https://useaiblocks.com/skills/rating-gap-product-finder). Bring a product category. It lists unmet pain points with proof links, which you can bring back here as customer words.
 2. This one.
 
 How to start:
@@ -54,12 +54,12 @@ Let the person pick the five they like most. If they ask for help, rank by: how 
 ## 4. List who sells to each pick
 For each of the five, list the brands that sell to it with enough active ads, and for each: the product, the pain point, the ad pattern, the page type (product page or article-style page) and the top ad.
 - **If an ad spy tool is connected:** use its data. Report only ad counts and brands it returns. Quote the count as of the day you looked.
-- **If not:** give the search terms to use in the free Facebook Ad Library, and an empty table with these columns for the person to fill in. Mark every row `[idea, not data]`.
+- **If not:** give the search terms to use in the free Meta Ad Library, and an empty table with these columns for the person to fill in. Mark every row `[idea, not data]`.
 
 Never write a brand name or an ad count that did not come from the tool or the person.
 
 ## 5. Choose a product
-List 2 or 3 product options per picked problem, not just one. Say which fits a beginner best on margin, shipping and how clearly it solves the problem. Then tell the person to check the best option with the Product idea viability scorer and the Competitor revenue estimator, which are separate items in the library. If they do not have them, give the manual checks: work out cost, price and shipping by hand, and look at how many stores sell the product and how busy they are.
+List 2 or 3 product options per picked problem, not just one. Say which fits a beginner best on margin, shipping and how clearly it solves the problem. Then tell the person to check the best option with the Winning product scorer and the Competitor revenue estimator, which are separate items in the library. If they do not have them, give the manual checks: work out cost, price and shipping by hand, and look at how many stores sell the product and how busy they are.
 
 ## 6. Write the game plan
 Plan before any money is spent. If the test fails, the first question is why. Rarely is it the product alone. Check the ads first, then the page and checkout, using the Ad performance change investigator (a separate item in the library) or the person's own ad numbers. Say that the person should decide the test budget and the stop point in advance.
@@ -87,7 +87,7 @@ SEARCHES TO RUN (when there is no tool)
 <problem>: <free Ad Library search terms>
 
 PRODUCT PICKS
-<problem> -> <product option> (check with the Product idea viability scorer and the Competitor revenue estimator)
+<problem> -> <product option> (check with the Winning product scorer and the Competitor revenue estimator)
 
 GAME PLAN
 Test budget <n> | stop point <n> | if it fails ask why: ads first, then page and checkout
@@ -100,7 +100,7 @@ MISSING: <what>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Crowded market opportunity finder](https://useaiblocks.com/skills/crowded-category-white-space-finder). It takes the competitors.
-- The [Product idea viability scorer](https://useaiblocks.com/skills/winning-product-scorer). It takes the shortlist.
+- The [Winning product scorer](https://useaiblocks.com/skills/winning-product-scorer). It takes the shortlist.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -109,7 +109,7 @@ Before you hand it back, check each one and fix any that fail.
 - There are exactly 30 sub-niches, and each is a buyer problem, not a product.
 - Five picks are shown with a reason each, and each lists exactly 2 or 3 other products.
 - Every brand and ad count came from the tool or the person. Anything else is marked `[idea, not data]`.
-- Product picks name the next checks (Product idea viability scorer, Competitor revenue estimator).
+- Product picks name the next checks (Winning product scorer, Competitor revenue estimator).
 - The game plan names the budget, the stop point and the ads-first rule.
 - Health, weight and body markets carry the check-with-a-qualified-person line.
 

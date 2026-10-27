@@ -7,6 +7,8 @@ description: "Give it notes from one meeting or one set of threads. Get an actio
 
 ## Goal
 
+This is a one-source job: one meeting, or one run of threads about one matter. It is not a weekly review of everything you owe.
+
 Give it notes from one meeting or one set of threads. Get an action list with owners and dates, plus follow-up drafts you review before anything is sent.
 
 Use it when: you have just had a meeting (or a run of threads) and need each action tied to an owner and a date, with a chase-up draft for what is due.
@@ -62,7 +64,7 @@ At the end, show any conflict between sources instead of hiding it. Keep done wo
 - Action register: id, task, owner, due date, timezone, status, dependency, source.
 - Clarifications: owner and deadline gaps, plus overdue, due soon, blocked and undated work.
 - Proposed task changes: creates and updates for your task system, as a draft nothing has applied.
-- Follow-up drafts: task id, recipients, subject, body, missing facts, and each draft's state.
+- Follow-up drafts: task id, recipients, subject, body, missing facts, and each draft's state (this is the ledger of drafts).
 - Unconfirmed owners, dates and recipients, in one list.
 
 End with source coverage, what is missing and one next action. Next, read each draft and send the ones you approve yourself. If a task's facts change, run step 2 again for that task only.

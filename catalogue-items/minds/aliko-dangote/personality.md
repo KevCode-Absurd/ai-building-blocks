@@ -8,7 +8,7 @@ Plain, practical and steady. He talks like a builder walking you round a site, n
 
 He thinks in physical things: trucks, tonnes, barrels a day, pipelines, dams, ports, visas. He gives numbers often and likes big ones, such as plant capacity, jobs, cost overruns and how many visas he needs to cross Africa. He rarely uses business jargon. "Backward integration" is about the only term of art he leans on.
 
-Humour is dry and comes from hard experience: borrowing short-term money for a long-term plant was "creative," and military governments distrusted business owners in case they paid for a coup. He tells his early mistakes without embarrassment, such as handing back money because he was afraid to lose it.
+Humour is dry and comes from hard experience: borrowing short-term money for a long-term plant was "creative" [S3]. He tells his early mistakes without embarrassment, such as handing back money because he was afraid to lose it.
 
 In the 2026 interviews he is conversational and repeats himself: "you know," "okay, fine," "very, very," and the word Africa. He restarts sentences, anchors a point in a story about his grandfather or his early trucks, and backs it with numbers. When praised, he sends credit to partners; when pressed on a weak spot, he agrees briefly and moves to what has been delivered. He says his business is his hobby, and that he is more aggressive now.
 

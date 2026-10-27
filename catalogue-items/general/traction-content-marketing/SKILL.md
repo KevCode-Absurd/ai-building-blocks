@@ -5,6 +5,8 @@ description: "Plan a content marketing acquisition experiment from a product URL
 
 # Content growth experiment planner
 
+When to use: you want one small content test for one product. When not to use: to compare all 19 growth channels, use the Traction workflow (traction-channel-ranker). Also not for a business with no buyer evidence yet: talk to a few real buyers first and write down what they say.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
@@ -46,9 +48,11 @@ Use the funnel qualified visitor or account -> useful product action -> paying c
 
 Decision to resolve: Can the business teach a recurring buyer problem using knowledge competitors cannot easily repeat?
 
-1. Choose a costly buyer problem and a reader role. Draw topic ideas from real support questions, discovery notes or original product data with permission.
+1. Choose a costly buyer problem and a reader role. List up to five questions from support tickets, sales calls or discovery notes (with permission), count how often each appears, and pick the one that appears most and costs the buyer most. If you have no such notes, mark the pick as a guess.
 2. Plan one substantial piece with evidence, a useful takeaway and a natural path into the product. Separate the owned content asset from the channels used to distribute it.
-3. Specify how the piece reaches its first readers through relevant communities, partners or an existing list, then how follow-up content builds on demonstrated demand.
+3. Specify how the piece reaches its first readers through relevant communities, partners or an existing list. Name the first 20 to 50 readers by place or group, not by invented names. Then say how follow-up content builds on demonstrated demand.
+
+Default limits if you give none (proposed, for you to approve): up to [CASH CAP] in cash and [HOURS PER WEEK] hours a week for [WEEKS] weeks. Fill the brackets with your own numbers; do not use a figure you did not set.
 
 Cheap pilot: Draft one original article, tutorial or research brief and test its usefulness with a small relevant audience before committing to a publishing calendar.
 
@@ -72,6 +76,7 @@ Measurement: <events, cohort, denominators, attribution>
 Decision: <continue / revise / stop rule>
 Risks and next action: <...>
 MISSING: <unknowns>
+CHECKS MISSED: <checks that failed or could not run, or none>
 
 ## Check the answer
 

@@ -55,7 +55,7 @@ Historical examples, thresholds and platform labels are starting assumptions, no
 
 4. Plan where the credentials will live: say how the user creates the token in Meta and stores it in their own secure settings, with an owner, expiry and renewal plan. You cannot create or store credentials, and must not claim to. Never ask for or print tokens, app secrets or personal identifiers. Never install a browser extension just because a source lesson used one.
 
-5. Plan or run a minimal authorized read-only identity/account probe using tools present in the selected environment. Confirm any named local script exists before use. Report current permission errors by category and keep requests for additional access specific to the task.
+5. Plan or run a minimal authorized read-only identity/account probe using tools present in the selected environment. The test is one Graph API GET request, such as `/me/adaccounts?fields=name,account_status`, or `/act_[AD_ACCOUNT_ID]?fields=name,account_status` for one account, sent with the user's own token (hidden in anything you show). Use the current Graph API version from Meta's own docs; do not guess one. Pass: it returns the account name and status and nothing was changed. Fail: Meta returns a token or permission error; report its code and message by category and keep requests for additional access specific to the task. Confirm any named local script exists before use.
 
 6. Return a redacted app/account map, selected read-only or write mode, actual granted capabilities, missing reviews and probe evidence or not-run reason. Enabling the app is not permission to publish ads, alter budgets or query unrelated client accounts.
 
@@ -67,6 +67,6 @@ Follow the actual current account/project structure rather than source screensho
 
 - A setup plan with six parts: the mode (read-only or changes) and why; the permissions to ask for; the Meta reviews still missing; a redacted map of app, business and ad account; the token plan (owner, expiry, renewal); and a small read-only test with its result or the reason it did not run
 - Missing inputs and a bounded verification plan
-- Next steps: take any missing reviews to the Meta app admin. If calls fail, use "Meta API access troubleshooter". To review the ad account itself, use "Meta Ads 30-check account auditor".
+- Next steps: take any missing reviews to the Meta app admin. If calls fail, use "Meta API access troubleshooter" (`graph-api-common-errors-implementation-planner`). To review the ad account itself, use "Meta Ads 30-check account auditor" (`meta-ads-30-check-account-auditor`).
 
 Finish with the evidence used, assumptions, open questions, actions proposed or actually completed, and checks that did not run. Retain the previous approved settings or files so a requested revision can be compared and rolled back.

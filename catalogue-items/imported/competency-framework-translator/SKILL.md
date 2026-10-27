@@ -127,7 +127,7 @@ Return your output in this exact format:
 
 ### Original Framework Wording
 
-[The official competency descriptor as written in the framework — or your best interpretation if not provided]
+[The official competency descriptor exactly as the user pasted it. If the user pasted none, write "Not supplied: the text below is from my memory and is unverified. Check it against the official framework document." and then give your best interpretation under that label. Never present remembered wording as a quote.]
 
 ### Translation: What This Means in [Subject] for [Year Group]
 
@@ -178,7 +178,9 @@ For each task (2–3):
 
 ### Original Framework Wording
 
-"At proficiency level 3 (intermediate): Can compare and critically evaluate the credibility and reliability of specific sources of data, information and digital content." (European Commission, 2022)
+(Placeholder only. Do not treat the wording below as an official quote. It shows the shape of the section.)
+
+[OFFICIAL COMPETENCY WORDING, EXACTLY AS THE USER PASTED IT, WITH ITS SOURCE]
 
 ### Translation: What This Means in History for Year 9
 
@@ -243,7 +245,7 @@ The competency is developed THROUGH the subject content, not alongside it. Stude
 
 ### Framework Fidelity Check
 
-The DigComp 2.2 descriptor at Level 3 ("can compare and critically evaluate the credibility and reliability of specific sources") is faithfully represented in this translation, with the following contextualisation:
+The official descriptor [the wording the user pasted] is faithfully represented in this translation, with the following contextualisation:
 - **"Credibility"** is interpreted through a History lens: author expertise, evidence citation, bias, purpose. In a Science context, credibility would emphasise methodology and peer review instead.
 - **"Reliability"** is interpreted as consistency across sources and the strength of evidence — not just whether the source "looks trustworthy."
 - **"Digital content"** is interpreted as websites and online resources encountered during research, not social media or messaging (which would be a different translation for a Media Studies context).

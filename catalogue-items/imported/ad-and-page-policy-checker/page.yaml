@@ -2,21 +2,21 @@ thinking: medium
 thinking_why: It checks copy against a long set of rules.
 new_slug: ad-and-page-policy-checker
 name: Ad and page policy checker
-summary: Check your ad copy for policy risks before launch. Paste your ad, page or email and get flagged lines, safer rewrites and a score out of 10.
+summary: Check your ad copy for policy risks before launch. Paste your ad, page or email. Get flagged lines, safer rewrites and a rough risk score out of 10.
 job: check-ads
 headline: Ad and page policy checker
 subhead: Paste your ad copy, page text, video script or email and name the platform and product type. It runs a nine-point check covering personal attributes, sensational wording, health and income claims, before and after images and more. You get each issue with its severity, a safer rewrite for each and a compliance score.
 explain: |
   Ads, landing pages, video scripts and emails can be checked before launch for rules that could get them rejected or your account flagged. Each issue comes with a safer rewrite.
 
-  The skill first labels what you pasted: the type of copy, the platform, the product category and the stage of the funnel. Then it runs a nine-point check covering personal attributes, sensational wording, health claims, income claims, before and after images, open loops, trigger words, page elements and whether the ad matches its page. After that it flags problems line by line with a severity level and gives a score. It covers Meta, Google, TikTok, YouTube and ClickBank. The rules are the original author's, are undated and may be out of date, so confirm with the platform's current policy. Renaming a condition or swapping a word does not make a health claim acceptable. For health, supplement or income claims, get a compliance review before launch.
+  The skill first labels what you pasted: the type of copy, the platform, the product category and the stage of the funnel. Then it runs a nine-point check covering personal attributes, sensational wording, health claims, income claims, before and after images, open loops, trigger words, page elements and whether the ad matches its page. After that it flags problems line by line with a severity level and gives a score. It covers Meta, Google, TikTok, YouTube and ClickBank. The rules are the original author's. They carry no date. We imported them on 20 October 2026 and have not re-checked them, so confirm with the platform's current policy. Renaming a condition or swapping a word does not make a health claim acceptable. For health, supplement or income claims, get a compliance review before launch.
 when:
   - You are about to launch an ad and want to avoid a rejection.
   - Your last ad was disapproved and you do not know why.
   - You write health or money offers and need to stay inside the rules.
   - You want your page and ad to say the same thing.
 not_for:
-  - "You need legal sign-off on health or finance claims: ask a lawyer or compliance expert, because this check is not legal advice."
+  - "You need legal sign-off on health or finance claims: ask a lawyer or compliance expert, because this check is not legal advice. Use the platform's live policy page, or a compliance reviewer, for health and income copy."
   - "You need to know today's exact rule: read the platform's live policy page, since rules change and this check can be out of date."
   - "You want a platform other than Meta, Google, TikTok, YouTube or ClickBank: check that platform's own ad policy by hand."
 you_give:
@@ -34,6 +34,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste in the skill text. No code, files or paid tools are needed.
   - Paste your ad, page text, script or email.
   - Say which platform you will run on and what type of product it is. Add your funnel stage if you know it.
+  - The score is a rough self-check, not a platform approval or legal clearance. The rules are the author's, carry no date, and were not checked by us.
   - Read the issue list from high severity down. Swap in the safer rewrites where they keep your meaning.
   - Run the check again on the new copy. Then confirm the final version against the platform's current policy page before you publish. For health or income claims, get a compliance review too.
 output_sample:
@@ -50,6 +51,6 @@ output_sample:
     - name: "Phase 2: Line-Level Issues"
       contains: Each risky line with a severity of high, medium or low, why it is risky, and a safer rewrite.
     - name: Compliance Score
-      contains: A score out of 10 for how safe the copy looks.
+      contains: A rough score out of 10 for how risky the copy looks. It is not a platform approval.
     - name: Summary
       contains: The main problems to fix first and what to do next.

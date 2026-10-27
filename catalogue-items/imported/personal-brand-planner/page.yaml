@@ -34,7 +34,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
   - Paste the text of SKILL.md into a new chat.
   - "Say: I want to build my personal brand. Then answer the questions it asks about your role, background, audience, goal, strengths and views."
-  - Add your company brand notes if you have them (optional).
+  - Add your company brand notes if you have them (optional). Paste them into the chat. You do not need a file.
   - Read sections 01 to 09. Check that the one thing and the positioning line sound like you.
   - Ask for changes to any section, then start with the Month 1 steps.
 output_sample:
@@ -45,7 +45,7 @@ output_sample:
     - Your platforms and any content you have made (optional)
     - Your company brand notes (optional)
   prerequisites:
-    - Company brand notes in .agents/brand-context.md, only if you run a company brand too
+    - Company brand notes pasted into the chat, only if you run a company brand too
   output:
     - name: 01 Personal brand foundation
       contains: Your brand statement, the territory you own, and the one thing you want people to remember.

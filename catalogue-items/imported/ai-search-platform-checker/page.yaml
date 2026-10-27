@@ -11,7 +11,7 @@ explain: |
 
   For every platform, it runs a checklist and gives a score from 0 to 100. Google AI Overviews checks include question headings, direct answers under them, tables, lists, a FAQ, cited statistics, dates and author bylines. The output is one file with a score, the gaps and action items for each platform. Fix the platform that matters most to your buyers first.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (zubair-trabzada) says MIT. Credit goes to zubair-trabzada and sickn33.
+  Licence: CC BY 4.0 applies to this copy, as the LICENSE-CONTENT file in this folder says. That file governs. The author's own file header (zubair-trabzada) says MIT, which is the author's label for the original. Credit goes to zubair-trabzada and sickn33.
 when:
   - You rank in Google but never appear in ChatGPT answers.
   - You want to pick which AI platform to work on first.
@@ -32,10 +32,11 @@ you_get:
   - Action items for each platform
   - One saved report file
 how_to_use:
+  - Gather your website address, your five most important search questions, and, if you have them, Search Console and Bing Webmaster data. Without that data some checks are marked unverified.
   - Open Claude, ChatGPT or Gemini. Use one that can open web pages, or the check will be weaker.
-  - The percentages in the skill are the original author's and have no source. Do not quote them to clients as fact.
+  - The skill's text has had the unsourced percentages removed. Any figure left is the original author's guess with no source, so do not quote it to clients as fact. Scores with unverified factors are shown as partial, such as points earned out of points checked.
   - If you want the report as a PDF, that step needs pandoc and headless Chrome, which the skill does not include. Ask for the report as text instead.
-  - Paste the skill text into the chat, or upload the skill file.
+  - Paste the skill text into the chat, or upload the skill file. The check gives plain text by default. The PDF step is optional.
   - Type your website address and your main topic or industry. Add the questions you want to win if you have them.
   - Ask your AI to check your site against each platform and write the report.
   - Some checks need facts your AI cannot open on the public web, such as Reddit activity, backlinks or Bing coverage. Give it those facts, or ask it to mark the score "unverified".

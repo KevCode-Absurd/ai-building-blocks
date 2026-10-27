@@ -42,6 +42,8 @@ Read [the original role profile](references/source-agent.md) before applying its
 
 ## What to collect first
 
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question, ignore that part.
+
 Ask once, in a single message, for anything required that is missing. Mark anything still missing as MISSING. Never guess it, and do not state a conclusion that depends on it.
 
 Required:
@@ -74,7 +76,7 @@ Return these sections in this order. Skip a section only if it does not apply, a
 4. **Format fixes.** Method now and locale tool to use.
 5. **Layout check.** Risk and fix per screen or component.
 6. **Test plan.** Tests, how to run them and what a pass means.
-7. **Checks still needed.** What a native speaker or developer must confirm.
+7. **Checks still needed.** What a native speaker or developer must confirm. This is also your CHECKS MISSED list: checks that failed or could not run, or "none" if every check ran and passed.
 
 ## Guard rails
 
@@ -90,7 +92,7 @@ Return these sections in this order. Skip a section only if it does not apply, a
 
 ## Next step
 
-Suggest the user fix the top group, run the fake-language test and book a native-speaker review. For building new screens, point to the Frontend developer.
+Use this next step instead of the generic "After this" list above. Suggest the user fix the top group, run the fake-language test and book a native-speaker review. For building new screens, point to the Frontend developer.
 
 ## Credit
 

@@ -9,6 +9,8 @@ subhead: Describe a conflict between students. Get steps to repair trust and rel
 explain: |
   A step-by-step plan for repairing a relationship after a conflict between students, built around naming harm and agreeing how to put it right. It does not replace school policy, and it is not legal or medical advice.
 
+  The research named in the skill file (Hopkins, Morrison, Thorsborne and Blood, González) is the original author's summary. It has not been checked here, so do not quote it as proof.
+
   You describe what happened, who was involved and their ages. The skill picks the right format for the size of the problem: a short restorative chat for small issues or a larger conference for serious harm. It sets the questions for the student who caused harm, the questions for those affected, and the order of speaking. It also suggests how to close with a written agreement and a check-in date, and adjusts for repeat patterns and how much time you have.
 when:
   - Two students had a falling out and the usual consequence did not fix it.
@@ -32,6 +34,7 @@ you_get:
   - A repair agreement and check-in plan
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - The pasted text has fields in double curly brackets, such as {{incident_description}}, {{people_involved}} and {{student_level}}. Replace each one with your own details, or just describe the incident in the chat. For the optional fields, add what you know or write "not provided".
   - Describe what happened, who was involved and their year group. Add if it is a pattern and how much time you have (optional).
   - Read the preparation phase first. Check the affected student is willing and safe before you plan any joint meeting.
   - If there is any risk of harm, stop and talk to your designated safeguarding lead.

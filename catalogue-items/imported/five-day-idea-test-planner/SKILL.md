@@ -21,7 +21,7 @@ A five-day process for answering critical business questions through design, pro
 
 1. Decider committed for the full week; one Sprint Master facilitating.
 2. Monday produces a target customer and moment (not a vague "test the product").
-3. Hard time-boxes used (Crazy 8s in 8 min, 10am-5pm days, no open-ended sessions).
+3. Hard time-boxes used (Crazy 8s in 8 min, 10am-5pm days with a 9am Friday start, no open-ended sessions).
 4. Solution sketches done alone and anonymous — no group brainstorming.
 5. Wednesday ends with a single Decider Supervote, not consensus.
 6. Storyboard specified before any prototype is built.
@@ -39,7 +39,7 @@ Monday → Tuesday → Wednesday → Thursday → Friday
   Map      Sketch     Decide      Prototype    Test
 ```
 
-**Prerequisites:** a big challenge worth a week's focus; the right team (Decider plus 4-7 people with diverse expertise); five full days (10am-5pm) with no interruptions; a dedicated room with whiteboards. One **Sprint Master** facilitates, keeps time, and manages energy.
+**Prerequisites:** a big challenge worth a week's focus; the right team (Decider plus 4-7 people with diverse expertise); five full days (10am-5pm Monday to Thursday; Friday starts at 9am for room setup, see references/friday.md) with no interruptions; a dedicated room with whiteboards. One **Sprint Master** facilitates, keeps time, and manages energy.
 
 See [references/facilitation.md](references/facilitation.md) when you are the Sprint Master — it has the full facilitation guide, time-boxing tactics, and energy-management moves for keeping a stuck or low-energy room productive.
 
@@ -153,7 +153,7 @@ Interview room: quiet space, laptop with the prototype, camera recording screen 
 
 ### The Five-Act Interview
 
-About 45 minutes per customer (the five acts run ~35 min plus setup and transitions), with 30-minute breaks between to discuss observations and adjust questions. See references/friday.md for the full 9am-5pm schedule.
+About 45 minutes per customer (the five acts run ~35 min plus setup and transitions), with 30-minute breaks between to discuss observations and adjust questions. Friday runs 9am to 5pm, one hour earlier than the other days, to set up the rooms before the first customer. See references/friday.md for the full schedule.
 
 | Act | Time | What to Do |
 |-----|------|------------|

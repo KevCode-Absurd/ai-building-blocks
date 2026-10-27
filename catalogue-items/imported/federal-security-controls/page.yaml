@@ -3,13 +3,13 @@ thinking_why: Control choice and write-ups need careful detail.
 new_slug: federal-security-controls
 name: Federal security controls planner
 summary: Describe your system and get the right NIST 800-53 control baseline, tailoring choices and draft control write-ups for your federal security plan.
-job: secure-code
+job: check-contracts
 headline: Federal security controls planner
 subhead: Describe your system and the data it handles. Your AI works out the impact rating and the right NIST 800-53 control set. You get tailoring advice and draft wording for how you meet each control.
 explain: |
   The right set of NIST 800-53 controls for your system, with notes on what to adjust and draft wording for how you meet each one. You start your security plan with real text, not a blank page.
 
-  You describe your system and what it handles. The skill walks from the impact rating under FIPS 199 to a low, moderate or high baseline, then proposes tailoring choices with reasons. For each control it cites the family, number and enhancement exactly, such as AC-2(3). It writes control narratives with an implementation statement, evidence and responsible roles. It can also run a gap check table and explain the steps of the risk management framework. Treat the output as a draft for your assessor.
+  You describe your system and what it handles. The skill walks from the impact rating under FIPS 199 to a low, moderate or high baseline, then proposes tailoring choices with reasons. For each control it cites the family, number and enhancement exactly, such as AC-2(3). It writes control narratives with an implementation statement, evidence and responsible roles. It can also run a gap check table and explain the steps of the risk management framework. Treat the output as a draft for your assessor. This is a copy of a public skill under the MIT licence. It is not an official NIST tool.
 when:
   - You are writing a system security plan for a federal customer.
   - You need to know if your system is low, moderate or high impact.

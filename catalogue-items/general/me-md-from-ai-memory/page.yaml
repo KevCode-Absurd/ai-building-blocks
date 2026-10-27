@@ -90,11 +90,11 @@ improve:
 works_best_with:
   tools:
     - name: ChatGPT
-      why: With memory turned on, it has the most to draft from after you say yes.
+      why: If you have turned its memory on, it has more to draft from after you say yes.
     - name: Claude
-      why: Can draft from past chats when that feature is on, and follows the section order closely.
+      why: If its memory or past-chat setting is on in your account, it has more to draft from. If not, it interviews you.
     - name: Gemini
-      why: Works the same way when it has your past chats to draw on.
+      why: If it can see your past chats, it has more to draft from. If not, it interviews you.
   inputs:
     - The settings text you already use in your AI, so nothing good is lost
     - A link to where you keep your current projects

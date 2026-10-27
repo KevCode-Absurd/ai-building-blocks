@@ -230,11 +230,13 @@ Use this skill when you need to:
 
 3. **Calculate segment sizes**
 
+   These rows are illustrative placeholders. Every count and percentage must come from the user's own data.
+
    | Cluster | Users | % | Viability |
    |---------|-------|---|-----------|
-   | Power Users | 18 | 36% | Primary persona |
-   | Business Users | 15 | 30% | Primary persona |
-   | Casual Users | 12 | 24% | Secondary persona |
+   | Power Users | [COUNT] | [PERCENT] | Primary persona |
+   | Business Users | [COUNT] | [PERCENT] | Primary persona |
+   | Casual Users | [COUNT] | [PERCENT] | Secondary persona |
 
 4. **Extract key findings**
 
@@ -270,15 +272,17 @@ Generates data-driven personas from user research data.
 
 **Sample Output** (illustrative only: the name, quote, counts and figures below are made up to show the layout. Every persona figure must trace back to the user's own data):
 
+**All names, quotes, counts and figures in this sample are placeholders. Do not reuse them. Fill every one from the user's own data, and write "not in data" when the data has no figure.**
+
 ```
 ============================================================
-PERSONA: Alex the Power User
+PERSONA: [PERSONA NAME]
 ============================================================
 
 📝 A daily user who primarily uses the product for work purposes
 
 Archetype: Power User
-Quote: "I need tools that can keep up with my workflow"
+Quote: "[A QUOTE FROM YOUR OWN NOTES]"
 
 👤 Demographics:
   • Age Range: 25-34
@@ -291,7 +295,7 @@ Quote: "I need tools that can keep up with my workflow"
   • Access advanced features
 
 😤 Frustrations:
-  • Slow loading times (14/20 users)
+  • [FRUSTRATION FROM YOUR DATA] ([N] of [TOTAL] users)
   • No keyboard shortcuts
   • Limited API access
 
@@ -300,8 +304,8 @@ Quote: "I need tools that can keep up with my workflow"
   → Provide keyboard shortcuts and power features
   → Expose API and automation capabilities
 
-📈 Data: Based on 45 users
-    Confidence: High
+📈 Data: Based on [N] users
+    Confidence: [LEVEL]
 ```
 
 **Archetypes Generated:**
@@ -345,8 +349,8 @@ Quote: "I need tools that can keep up with my workflow"
 | Sample Size | Confidence | Use Case |
 |-------------|------------|----------|
 | Under 5 users | Not usable | Do not build a persona; collect more data |
-| 5-10 users | Low | Exploratory |
-| 11-30 users | Medium | Directional (20+ is the minimum for a firm persona) |
+| 5-19 users | Low | Exploratory only, label it so |
+| 20-30 users | Medium | Firm persona (20 is the minimum) |
 | 31+ users | High | Production |
 
 ### Usability Issue Severity

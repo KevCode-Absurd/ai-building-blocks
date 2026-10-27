@@ -145,7 +145,7 @@ Use this column structure for every AI risk register, whether for a single syste
 
 | AI System | Lifecycle Stage | TEVV Activity | Characteristic at Risk | Likelihood / Impact | Treatment | Owner |
 |-----------|-----------------|----------------|--------------------------|----------------------|-----------|-------|
-| Resume Screening Model v3 | Deployment | Disaggregated performance testing by demographic subgroup (MEASURE 2.2) | Fair with Harmful Bias Managed | High likelihood / High impact — disparate impact ratio measured at 0.71, below the 4/5ths threshold | Mitigate — retrain with rebalanced training data and add human review gate for all rejections in affected subgroup; re-test before re-enabling automated decisions | Head of Talent Acquisition (treatment); Chief AI Officer (residual risk acceptance) |
+| [EXAMPLE ONLY: Resume Screening Model] | Deployment | Disaggregated performance testing by demographic subgroup (MEASURE 2.2) | Fair with Harmful Bias Managed | High likelihood / High impact — disparate impact ratio measured at [MEASURED RATIO, a hypothetical placeholder, not a real result] and compared with the 4/5ths threshold | Mitigate — retrain with rebalanced training data and add human review gate for all rejections in affected subgroup; re-test before re-enabling automated decisions | Head of Talent Acquisition (treatment); Chief AI Officer (residual risk acceptance) |
 
 **Second worked example row — third-party model dependency (always include one in register answers):**
 

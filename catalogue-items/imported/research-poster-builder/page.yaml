@@ -2,12 +2,12 @@ thinking: low
 thinking_why: It lays out content you already approved, then runs set checks.
 new_slug: research-poster-builder
 name: Research poster builder
-summary: Build an editable PowerPoint research poster at print size from text you approved. It is checked for access and file safety before print.
+summary: Build an editable PowerPoint research poster at print size from text you approved. It gets automatic file and access checks, then your own PowerPoint review.
 job: work-with-files
 headline: Research poster builder
-subhead: Give it your approved poster text, images and print rules. It builds an editable one-slide PowerPoint poster at print size. It then checks the file for layout, access and safety, and stops if anything is unresolved.
+subhead: Give it your approved poster text, images and print rules. It builds an editable one-slide PowerPoint poster at print size. It then runs automatic checks on layout, access features and file safety, and stops if anything is unresolved. You still run PowerPoint's own accessibility check by hand.
 explain: |
-  An editable PowerPoint poster at print size, built only from text and images you approved, and checked for accessibility and file safety. You can still change it in PowerPoint afterward.
+  An editable PowerPoint poster at print size, built only from text and images you approved, and given automatic checks for access features and file safety. These checks cannot certify that the poster is accessible, so a manual PowerPoint accessibility review is still needed. You can still change the poster in PowerPoint afterward.
 
   It will not guess. If any claim, number, author, funding line, figure licence or QR link is unresolved, it stops and asks. Content comes from a strict local JSON file. You approve it, and the approval is tied to a fingerprint of that exact content. It builds a one-slide .pptx with no macros and no web calls, then inspects the file for structure and safety. Conference and printer rules are confirmed first. It needs Python and a few packages.
 when:
@@ -31,12 +31,15 @@ you_get:
   - Record of the approved content
   - List of unresolved items
 how_to_use:
-  - Check that you have approved text, images with licences, your conference size and your printer's rules. If not, stop and get them first.
+  - Check that you have approved text, images with licences, your conference size and your printer's rules. If not, stop and get them first. You also need a paid, fully updated Microsoft PowerPoint licence, and Python 3.10 or newer with network access to download the packages.
+  - "Words used below. The manifest is the one JSON file that holds all your poster text, images, sources and print rules. The content hash is a short code made from that exact content. If anyone changes a word, the code changes. The approval is your co-authors' recorded yes to that exact code."
   - "Open an AI that can run code and save files. Install Python 3.10 or newer, uv, and the three pinned packages: python-pptx 1.0.2, Pillow 12.3.0 and lxml 6.1.3."
   - Copy the manifest template and fill in your text, images, sources and print rules. Your AI can help with the layout of the file.
   - Run the validator to get the content hash. Ask your co-authors to approve that exact version, then add the approval and hash to the manifest.
   - Run the image, colour and export checks. Then generate the poster, and run the file safety and layout checks.
-  - Open the poster in PowerPoint and run its accessibility check. Test every QR code, then get author sign-off and a printer proof before you print.
+  - Open the poster in PowerPoint and run its accessibility check. PowerPoint is a paid Microsoft product, so you need a licence, and it should be fully updated. The accessibility check and the PDF export depend on it.
+  - Do not use the Mac PowerPoint PDF option called "Best for electronic distribution and accessibility" for unpublished or confidential research. It sends the file to Microsoft's online service. Use a local PDF export instead.
+  - Test every QR code, then get author sign-off and a printer proof before you print.
 output_sample:
   input:
     - Your approved poster text, with a source record for each claim

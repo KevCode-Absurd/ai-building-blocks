@@ -35,9 +35,9 @@ Ask the user for: the service name, what it does for users, what users care abou
 2. Choose service level indicators (SLIs) that match what users feel, such as success rate and response time.
 3. Set a target (SLO) for each indicator from real data, or mark the target as a proposal to check against data.
 4. Compute the monthly error budget: budget = (1 - target) x minutes in the month. For example, a 99.9% target over a 30-day month (43,200 minutes) leaves 43.2 minutes.
-5. Write fast-burn and slow-burn alert rules that fire when the budget is used up too quickly.
+5. Write fast-burn and slow-burn alert rules that fire when the budget is used up too quickly. Burn rate means how fast you use the budget: 1 uses it exactly over the month, 2 uses it in half the time. Example rules, to adjust to your team: a fast-burn rule fires when the burn rate stays above about 14 for 1 hour, and a slow-burn rule fires when it stays above about 6 for 6 hours. These are common starting values from Google's SRE workbook, not rules for every service.
 6. Suggest a dashboard, then review the targets with the team before using them.
-- If detailed examples are required, open `resources/implementation-playbook.md` when it is present in the folder.
+- If detailed examples are required, open `resources/implementation-playbook.md`. It is included in this folder.
 
 ## Safety
 

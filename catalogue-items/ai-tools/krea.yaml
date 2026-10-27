@@ -36,13 +36,13 @@ alternatives: [higgsfield, freepik, leonardo, midjourney]
 last_checked: 2026-10-26
 checked: 26 Oct 2026
 first_result:
-  - "Sign up free at krea.ai. The site says no credit card is needed."
+  - "Sign up free at krea.ai. The site says no credit card is needed. Some models, such as Seedance, need a paid plan, so pick another model if it asks you to upgrade."
   - "Open the image tool and pick a model. Start with one you can compare with another."
-  - "Type a short prompt with the subject, the setting and the look, then generate."
+  - "Type a short prompt with the subject, the setting and the look, then generate. Check the units one run costs in the app before you press the button."
   - "Run the same prompt in a second model and compare the two."
   - "Upscale the one you like, then download it. Check the plan terms before you use it in an ad."
   - "Next: check the licence on the plan you use before the image goes into client or ad work. If the free units run out, wait for the daily refill, move to a paid plan, or compare Higgsfield or Freepik."
-  - "What you get: images from the model you picked. The page does not say how many come back per run or which file types you can download, so check in the app."
+  - "Result: images from the model you picked, and an upscaled copy of the one you choose (the site names sizes up to 22K, with no plan limit confirmed), downloaded from the app. The page does not say how many images come back per run or which file types you can download, so check in the app."
 needs:
   - "A free account. No card is needed to start."
   - "A short prompt, and a reference image if you want a set look (optional)."

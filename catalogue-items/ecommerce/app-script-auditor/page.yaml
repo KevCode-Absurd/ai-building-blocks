@@ -93,7 +93,7 @@ output_shape: |
   DEVELOPER NOTE
   A developer is safer for theme embed changes. Test each change on a duplicate theme first.
 
-  NOT RUN
+  CHECKS MISSED
   <checks and what is needed>
   MISSING: <what>
 

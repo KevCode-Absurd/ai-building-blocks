@@ -4,10 +4,10 @@ headline: Cap and discount conversion checker
 summary: Check which conversion price applies, the cap or the discount, and see how many shares a lower-of note converts into versus round pricing.
 job: money-and-investing
 thinking: high
-thinking_why: "The cap price and the discount price come from different definitions, so each must be built from the signed terms before the lower one is chosen."
+thinking_why: "The cap price is taken as given from the signed terms. The discount price is calculated. The lower one is then chosen."
 subhead: Give it the signed note, the cap price, the round price, the discount and the balance that converts. It picks the lower of the cap price and the discounted price, counts the shares and shows how many extra shares that gives versus the round price.
 explain: |-
-  Some convertible notes let the investor convert at the lower of two prices: a cap price, or the round price less a discount. This skill builds both prices from the signed terms, picks the lower and counts the shares the balance becomes.
+  Some convertible notes let the investor convert at the lower of two prices: a cap price, or the round price less a discount. This skill takes the approved cap price as given, works out the discounted price, picks the lower and counts the shares the balance becomes.
 
   It is arithmetic on a signed note, not legal advice. Illustrative figures only, in USD thousands. A note converts a balance of 120 in a round priced at 4 per share, with a 25% discount. The discounted price is 3. If the cap price is 2, the cap is lower, so it applies: 120 / 2 = 60 shares, against 30 shares at the round price, which is 30 extra. If the cap price is 3.5 instead, the discounted price of 3 is lower, so the discount applies: 120 / 3 = 40 shares, which is 10 extra.
 when:
@@ -20,12 +20,12 @@ not_for:
   - "You need the cap price worked out from a full capitalization table: use your deal lawyer or a cap table tool."
   - "You need the simple interest on a convertible note and the shares its balance becomes: use the Convertible note interest checker instead."
 you_give:
-  - Signed instrument explicitly granting lower-of pricing, approved cap conversion price, round price, discount and converting balance.
+  - Signed instrument explicitly granting lower-of pricing, approved cap conversion price, round price, discount and converting balance. The skill needs only these five things. It does not need a buyer brief or other source text.
   - "The conversion date, plus the currency and scale used for the note conversion price."
   - "Your spreadsheet tool, if you want the note conversion price as a workbook."
 you_get:
   - Selected price, conversion shares and extra shares versus round pricing.
-  - "An editable workbook of the note conversion price, with its inputs, formulas and test cases to rerun."
+  - "An editable workbook of the note conversion price, with its inputs, formulas and test cases to rerun (only if you ask for one)."
   - "A tie-out of the converting balance and the shares issued, the inputs still missing and the checks that ran."
 how_to_use:
   - "Download the pack and give your AI its SKILL.md. Then add the signed note and the round terms."
@@ -59,19 +59,20 @@ output_sample:
     - name: CHECKS MISSED
       contains: Checks that failed or could not run, or the word none.
 how_it_works:
-  - title: 1. Confirm lower-of election and compute cap price separately using its actual capitalization definition
-    text: Confirm lower-of election and compute cap price separately using its actual capitalization definition.
-  - title: 2. Calculate round price times one minus discount, then select the lower of this result and approved cap price
-    text: Calculate round price times one minus discount, then select the lower of this result and approved cap price.
-  - title: 3. Divide converting balance by selected price and compare to round-price shares; name the binding branch
-    text: Divide converting balance by selected price and compare to round-price shares; name the binding branch.
+  - title: Confirm the election
+    text: Check the note grants the lower of two prices. Take the approved cap price as given.
+  - title: Pick the lower price
+    text: Round price times one minus the discount, then the lower of that and the cap price.
+  - title: Count the shares
+    text: Divide the balance by the selected price. Compare with round-price shares.
 output_shape: |-
   Selected price, conversion shares and extra shares versus round pricing.
   Scope and dated sources
   Inputs and assumptions
   Model calculations and reconciliations
   Actual file verification
-  MISSING: and CHECKS MISSED
+  MISSING:
+  CHECKS MISSED
 tweaks:
   - what: "Conversion date"
     how: "Take the conversion date from the signed note and the round terms. Use one currency and scale on every line."

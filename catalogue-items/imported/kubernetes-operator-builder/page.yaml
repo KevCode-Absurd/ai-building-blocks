@@ -46,6 +46,7 @@ output_sample:
   prerequisites:
     - An AI that can run Python and read your project files
     - A Kubernetes dev setup, such as a kind cluster, to test the operator
+    - The Go toolchain, if you use the kubebuilder or operator-sdk path. If Go is not installed, use the Python-only Kopf option
   output:
     - name: CRD design
       contains: The custom resource with a status subresource, conditions, finalizer hint, printer columns and a versioned schema.
@@ -56,7 +57,7 @@ output_sample:
     - name: reconcile_lint findings
       contains: Pattern-based flags on the controller, such as sleeps, spec updates and missing requeues. It can miss issues.
     - name: Capability level
-      contains: Your operator's OperatorHub level from 1 to 5, with next steps to reach the level above.
+      contains: A text report with sections for the CRD findings, the lint findings, your operator's OperatorHub level from 1 to 5 and next steps to reach the level above.
 terms:
   - term: OperatorHub capability levels
     meaning: "Five steps of operator maturity. 1 installs it, 2 upgrades it, 3 backs up and recovers it, 4 shows metrics and alerts, 5 runs and tunes itself."

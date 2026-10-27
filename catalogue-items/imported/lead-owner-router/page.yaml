@@ -33,6 +33,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill, or upload its folder.
   - Paste your routing rules in the order you want them applied. For example, named account first, then region, then company size, then industry, then a default queue.
   - Include territories, company size bands, industries and named accounts.
+  - The lead score comes from the Lead prioritizer item. If you have it, paste it with the lead. If not, the skill asks you for a score or a plain verdict.
   - Paste the new lead, or the list of unrouted leads. If your AI can read your CRM, let it pull the queue. With no CRM access or export, paste one lead and your rules. You get one routing card and a checklist to apply by hand.
   - Read each routing card. Accept it, or override it and give a one-line reason.
   - Apply the accepted owners in your CRM, or work from the checklist it gives you. Send the handoff note when you are ready.

@@ -22,7 +22,7 @@ when:
   - You want to see who already advertises to a problem before you spend on ads.
 
 not_for:
-  - "You already have a product and want it scored on margin and shipping. Use the Product idea viability scorer."
+  - "You already have a product and want it scored on margin and shipping. Use the Winning product scorer."
   - "You want a short list of products already running ads. Use the Advertised product finder."
   - "Your market has no clear before and after, or your claims need proof you cannot give. Pick another market first."
   - "You sell services or to other businesses: talk to five likely buyers and ask what they struggle with."
@@ -45,7 +45,7 @@ how_to_use:
   - Give it your market and who you are. Pick the market fast, because the market matters more than the item.
   - Read the 30 problems. Pick the five you like most, or ask it to rank them.
   - If an ad spy tool is connected, let it fill the brand table. If not, run the search terms in the free Meta Ad Library and fill the table yourself.
-  - Take the best product option to the Product idea viability scorer and the Competitor revenue estimator.
+  - Take the best product option to the Winning product scorer and the Competitor revenue estimator.
   - Set your test budget and your stop point before you spend anything.
 
 how_it_works:
@@ -106,7 +106,7 @@ output_sample:
     - name: Searches to run
       contains: Meta Ad Library search terms for each pick, shown when no tool is connected, with an empty table to fill in.
     - name: Product picks
-      contains: Two or three product options per problem, each marked to check with the Product idea viability scorer and the Competitor revenue estimator.
+      contains: Two or three product options per problem, each marked to check with the Winning product scorer and the Competitor revenue estimator.
     - name: Game plan
       contains: A test budget and a stop point to set before you spend. If a test fails, check the ads first, then the page.
     - name: Checks missed
@@ -138,7 +138,7 @@ test:
 improve:
   - Add the markets you will never enter, such as ones with strict claims rules, so they are skipped from the first step.
   - Add your own scoring for the five picks, such as how well you know the buyer or how light the product ships.
-  - Paste past results from the Product idea viability scorer to teach it what you reject.
+  - Paste past results from the Winning product scorer to teach it what you reject.
   - Pair it with the Advertised product finder for ads in each pick, and the Competitor saturation checker for rivals.
 
 works_best_with:

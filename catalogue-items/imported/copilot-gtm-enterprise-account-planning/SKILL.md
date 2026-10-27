@@ -13,6 +13,16 @@ Strategic account planning and execution for enterprise deals. Turn complex sale
 
 Start from the account and deal context. If you have call notes or a current mutual action plan, add them and use them for the buyer roles and deal risks.
 
+## Run order (added by AI Blocks)
+
+1. Gather inputs: account, what you sell, deal size, cycle length, people and titles, and the date the MAP was last updated.
+2. Decide if the deal needs a full account plan or a simpler one.
+3. Check deal health from the MAP.
+4. Build the account plan and the win map.
+5. Check the deal against MEDDICC, using only validated facts.
+6. Answer whether to send the proposal now.
+The stage-gate and LinkedIn keyword sections are optional extras.
+
 ## When to Use
 
 **Triggers:**
@@ -422,11 +432,11 @@ Have you met the Economic Buyer?
 
 ## Related Skills
 
-(These skills come from the same author's collection and are not part of this item. Use the catalogue's own items instead.)
+(These are other items in this catalogue.)
 
-- **enterprise-onboarding**: Post-close customer implementation
-- **partnership-architecture**: Deals involving partner relationships
-- **technical-product-pricing**: Enterprise pricing strategy
+- **Enterprise customer onboarding planner** (copilot-gtm-enterprise-onboarding): Post-close customer implementation
+- **Partnership architecture** (copilot-gtm-partnership-architecture): Deals involving partner relationships
+- **Technical product pricing** (copilot-gtm-technical-product-pricing): Enterprise pricing strategy
 
 ---
 

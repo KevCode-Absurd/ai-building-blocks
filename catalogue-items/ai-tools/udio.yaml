@@ -13,7 +13,7 @@ what_it_does:
 benefits:
   - Get a draft song for an idea without hiring a composer.
   - "Hear several styles for the same song idea."
-  - Test a jingle idea before you spend on a final version.
+  - Test a jingle idea as a draft before you spend on a final version. Check the terms before you publish any song.
 best_for:
   - Song ideas and drafts.
   - Creators who want to try music styles for a video.
@@ -33,12 +33,12 @@ alternatives: [suno, elevenlabs]
 last_checked: 2026-10-26
 checked: 26 Oct 2026
 first_result:
-  - "Open udio.com and sign in. We could not check the sign-in flow on 26 Oct 2026, so follow the prompts on screen. Look for what the site says you get after sign-in, such as free credits."
-  - "Before you make anything, find Udio's terms of service and read what they say about commercial use and downloads."
+  - "Stop gate: before anything else, find Udio's terms of service at udio.com and read what they say about commercial use and downloads. If you cannot read them, or they do not clearly allow it, do not publish, share or download any song. Listen in Udio only."
+  - "Open udio.com and sign in. We could not check the sign-in steps on 26 Oct 2026, so treat them as unverified and follow what the site shows. After sign-in, look for the credit count in your account."
   - "Write a style description in a sentence or two, such as the genre, mood and tempo. Leave the lyrics blank to have Udio write them, or paste your own."
   - "Generate, then listen to every version. Pick the one closest to your idea."
   - "Extend that version if you want a longer track. Treat the result as a draft, not a finished song."
-  - "You end with several song versions to pick from. Next: compare Suno, or plan a jingle with the Jingle video ad script writer."
+  - "Result: a list of song versions with sung vocals, each a short clip. How many versions a run gives and how long each clip is were not confirmed, so check your account. Next: to use a chosen version in CapCut, first pass the terms check in step 1. Download it only if the terms allow downloads, then add it as audio, and read the terms again before you share it. You can also compare Suno, or plan a jingle with the Jingle video ad script writer."
 needs:
   - "A read of Udio's terms for commercial use and downloads, before you pay or publish a song."
   - "A free Udio account. We could not confirm sign-in options."
@@ -46,7 +46,7 @@ needs:
   - "Your own lyrics, if you do not want Udio to write them (optional)."
   - "A read of Udio's current terms, if the song will be shared or sold."
 example:
-  task: "Try three styles of a 20-second jingle idea for a product video, using one style line and two lines of lyrics."
+  task: "Try three styles of a 20-second jingle idea as a draft to listen to, using one style line and two lines of lyrics. Do not put it in a product video until Udio's terms allow it."
   cost: "Udio has a free plan with credits, per earlier notes. We could not read credit amounts on Udio's own pages on 26 Oct 2026, so check the count in your account before you plan a batch."
   reply: "Several versions of the song, each with sung vocals, for you to listen to and choose from. Our example shows the shape only, not a measured result. Quality varies, so expect to try a few styles."
 not_verified:

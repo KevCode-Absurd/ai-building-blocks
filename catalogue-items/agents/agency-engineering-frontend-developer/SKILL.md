@@ -79,7 +79,7 @@ Return these sections, in this order:
 
 The open questions and the numbered checks are also your CHECKS MISSED list: name every check that failed or could not run, or write "none".
 
-Next: run Lighthouse and a keyboard-only check, then take the report and your notes to the [Page speed fixer](https://useaiblocks.com/skills/page-speed-fixer).
+Next step (use this one, not the longer "After this" list above): run Lighthouse and a keyboard-only check, then take the report and your notes to the [Page speed fixer](https://useaiblocks.com/skills/page-speed-fixer).
 
 ## Rules
 

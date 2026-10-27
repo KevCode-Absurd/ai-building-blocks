@@ -10,6 +10,8 @@ explain: |
   A working Obsidian Base file that turns your notes into a table or card view, filtered and sorted the way you describe. No hand-written syntax needed.
 
   You say which notes to show, for example every note tagged task that is not done. The skill writes the filter, then adds formulas for things like days until due or an overdue flag. It sets display names for each column, chooses table or card layout, and adds summaries such as counts or averages at the bottom. It follows the Base file format closely, because small syntax slips make a view fail to load. It reads a detailed guide first and checks the finished file against it.
+
+  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. Credit goes to the author, kepano, and the collection it came from.
 when:
   - You track tasks in notes and want an overdue-first table.
   - You keep book or project notes and want a card gallery with ratings.

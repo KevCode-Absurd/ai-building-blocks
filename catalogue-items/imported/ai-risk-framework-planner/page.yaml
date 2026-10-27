@@ -30,7 +30,7 @@ you_get:
   - A prioritised action plan
   - Policy text you can paste and edit
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tool is needed.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. Also paste the two reference files from the references folder (rmf-core.md and rmf-profiles.md). The skill is incomplete without them, because they hold the full list of framework categories and the metrics. No code or paid tool is needed.
   - "Describe your AI system in a few lines: what it does, who it affects and who runs it."
   - Add your current policies, role names and the list of outside AI vendors. Say so if you have none.
   - Ask for the status table first. Check that each red, yellow or green rating matches what you know.

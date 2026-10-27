@@ -9,7 +9,7 @@ subhead: "A runbook your on-call engineer can follow at 3 a.m. without thinking 
 explain: |
   A runbook your on-call engineer can follow at 3 a.m. without thinking hard: how bad is it, what to check first, how to fix it and who to tell. You name the service and get a ready draft.
 
-  The skill starts with severity levels, each with an impact description, a response time and an example, so no one argues about urgency mid-crisis. It then lays out stages: detect, triage, reduce harm, resolve, communicate. Each stage has copyable commands and checks. It adds escalation paths, message templates for status pages and stakeholders, and a recovery section. The templates adapt to a web service, a database or a queue.
+  The skill starts with severity levels, each with an impact description, a response time and an example, so no one argues about urgency mid-crisis. It then lays out stages: detect, triage, reduce harm, resolve, communicate. Each stage has copyable commands and checks. It adds escalation paths, message templates for status pages and stakeholders, and a recovery section. The body templates are written for a payments service on Kubernetes, so your AI must adapt them before use for a web service, a database or a queue.
 when:
   - A new service is going live and has no response plan.
   - On-call staff keep guessing during outages.
@@ -32,6 +32,7 @@ you_get:
   - Escalation paths
   - Message templates
 how_to_use:
+  - "Before you start: name who has the authority to approve changes during an incident. Every command in the draft is a placeholder, so run read-only checks first and nothing that changes your systems until that person says yes."
   - Open Claude, ChatGPT or Gemini and paste in the skill text. It needs no code running or web access.
   - Paste your service name, its main parts and your escalation contacts. Add past incidents if you have them.
   - Read the draft. Numbers, limits and messages are examples only, so replace them with your own. Every kubectl, feature-flag and curl command is a placeholder. Do not run any of them until you have replaced it with your own tested version and the service owner has approved it.

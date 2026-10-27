@@ -9,6 +9,8 @@ description: When the user wants to plan promotions, optimize trade spending, fo
 
 This block was added by AI Blocks. The method below is the original author's.
 
+**Plain chat version.** Five steps, no code: (1) the user pastes a table of past promotions; (2) you work out the lift for each deal type; (3) you work out the return after trade spend; (4) you turn the lift into extra stock by week; (5) you build the calendar with a go, change or stop for each deal. Use a table like this: Deal type | Weeks | Normal units | Promo units | Lift | Trade spend | Return | Extra stock. Fill it only from the user's data.
+
 **Start here.** Everything except fitting the lift model can be done in plain chat, from a small table the user pastes in. Only the Python blocks need an AI that can run code.
 
 **Work in this order.**
@@ -174,13 +176,13 @@ def estimate_price_elasticity(sales_data):
 
     return elasticity
 
-# Example usage. This six-row table is made up to show the column layout.
-# Six rows are too few to fit a real model: use the user's weekly history.
+# Example usage. The table below only shows the column layout.
+# Fill each [SLOT] with the user's own weekly history (many weeks, not a few rows).
 sales_data = pd.DataFrame({
-    'price': [3.99, 3.99, 2.99, 2.99, 3.99, 2.99],
-    'volume': [1000, 1100, 1800, 2000, 950, 1850],
-    'feature': [0, 0, 1, 1, 0, 1],
-    'display': [0, 0, 0, 1, 0, 1]
+    'price': [[PRICE PER WEEK]],
+    'volume': [[UNITS SOLD PER WEEK]],
+    'feature': [[1 IF FEATURED, ELSE 0, PER WEEK]],
+    'display': [[1 IF ON DISPLAY, ELSE 0, PER WEEK]]
 })
 
 elasticity = estimate_price_elasticity(sales_data)
@@ -228,15 +230,15 @@ def promotional_uplift_model(baseline, price_discount, feature, display,
 # Example: 20% discount with feature and display.
 # The three lift values are PLACEHOLDERS that show the format. Replace them
 # with values fitted from the user's own sheet before reporting anything.
-baseline = 1000
+baseline = [BASELINE UNITS]
 promo_sales = promotional_uplift_model(
     baseline=baseline,
-    price_discount=0.20,
-    feature=1,
-    display=1,
-    price_elasticity=-2.5,
-    feature_lift=1.5,
-    display_lift=2.0
+    price_discount=[DISCOUNT AS A FRACTION],
+    feature=[1 OR 0],
+    display=[1 OR 0],
+    price_elasticity=[FITTED ELASTICITY],
+    feature_lift=[FITTED FEATURE MULTIPLIER],
+    display_lift=[FITTED DISPLAY MULTIPLIER]
 )
 
 lift = (promo_sales - baseline) / baseline
@@ -401,18 +403,18 @@ def calculate_promotional_roi(promo_data):
         'payback': payback
     }
 
-# Example
+# Example. Fill each [SLOT] from the user's own data. Leave a cost as MISSING if the user has none.
 promo_result = calculate_promotional_roi({
-    'baseline_units': 1000,
-    'promo_units': 2500,
-    'regular_price': 4.99,
-    'promo_price': 3.99,
-    'cogs_per_unit': 2.50,
-    'off_invoice': 500,
-    'feature_cost': 1000,
-    'display_cost': 800,
-    'slotting': 0,
-    'coop_ad': 500
+    'baseline_units': [BASELINE UNITS],
+    'promo_units': [PROMO UNITS],
+    'regular_price': [REGULAR PRICE],
+    'promo_price': [PROMO PRICE],
+    'cogs_per_unit': [COST PER UNIT],
+    'off_invoice': [OFF-INVOICE COST],
+    'feature_cost': [FEATURE COST],
+    'display_cost': [DISPLAY COST],
+    'slotting': [SLOTTING COST],
+    'coop_ad': [CO-OP AD COST]
 })
 
 print(f"Lift: {promo_result['lift_pct']:.0f}%")
@@ -655,13 +657,13 @@ def optimize_promotional_price(baseline_volume, regular_price, cogs,
         'lift': (optimal_volume - baseline_volume) / baseline_volume * 100
     }
 
-# Example
+# Example. Fill each [SLOT] from the user's own data and fitted elasticity.
 result = optimize_promotional_price(
-    baseline_volume=1000,
-    regular_price=4.99,
-    cogs=2.50,
-    elasticity=-2.5,
-    fixed_costs=2000
+    baseline_volume=[BASELINE UNITS],
+    regular_price=[REGULAR PRICE],
+    cogs=[COST PER UNIT],
+    elasticity=[FITTED ELASTICITY],
+    fixed_costs=[FIXED COSTS]
 )
 
 print(f"Optimal Price: ${result['optimal_price']:.2f}")

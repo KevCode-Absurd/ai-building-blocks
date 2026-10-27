@@ -36,7 +36,10 @@ how_to_use:
   - Paste your current resume or a plain list of your jobs, study and projects. Add the job description and any real numbers from your work.
   - Ask for a resume, a cover letter or LinkedIn mode. Read the truthfulness check line by line against your own records before you send anything.
   - Keep the master profile it builds, and update it after each new job or project, so the next application starts from it.
-  - It works best when your AI can run Python with the listed packages to render files, or return a text draft when that is unavailable.
+  - To get a PDF or Word file, your AI must run Python. It first installs the two packages in scripts/requirements.txt (python-docx and reportlab), and then runs the render step. The skill asks for a PDF by default, because a PDF with selectable text is the safe choice for most applications. Ask for a Word file if a portal asks for one. The ending of the file name decides which you get (.pdf or .docx). If it cannot run Python, you get a text draft instead.
+  - The result is a single-column resume with standard headings, one page for under about 10 years of experience and two pages after that. A cover letter is about 250 to 350 words, four short paragraphs.
+  - "Next: run it again each time the job description changes, because keyword coverage depends on the job. Then take your Master Profile and the tailored resume to the LinkedIn profile rewriter to match your profile to the resume."
+  - This is an imported copy of a public MIT-licensed skill by João Vitor Amaral (https://github.com/artificialguybr/resume-ats-linkedin-optimizer). The method and wording come from the original author.
 output_sample:
   input:
     - Your current resume, LinkedIn export or a plain list of your jobs, study and projects

@@ -22,7 +22,7 @@ not_for:
 you_give:
   - Your product name
   - Two or three sentences about your product
-  - "Your sign-in choice: NextAuth (fully scaffolded). Clerk or Supabase need a developer to adapt the sign-in code."
+  - "Your sign-in choice: NextAuth (fully scaffolded, with only the Google sign-in written; adding GitHub or others is a manual step). Clerk or Supabase need a developer to adapt the sign-in code."
   - "Your database choice: Neon, Supabase or PlanetScale"
   - "Your payment choice: Stripe or none"
   - Your list of features
@@ -37,7 +37,8 @@ how_to_use:
   - Use an AI that can run code and save files, and install Node on your computer first.
   - Open accounts for the services you pick. Stripe and your database host need keys. A rate limit tool such as Upstash Redis is optional and also needs a key.
   - Paste the skill into your AI. Then give your product name, description, sign-in, database, payment choice and features.
-  - Let your AI build the project one phase at a time. After each phase, run the check it names.
+  - Let your AI build the project one phase at a time. After each phase, run the check it names. The code is sample code. Build it and check it phase by phase, and have a developer review it before launch. Review the trial length and the database tables too.
+  - "Stop and call a developer at Phase 4 (payments), before any real money moves. Have them review the checkout route, the price check and the webhook handler, and test them with the Stripe CLI. Do not ship the sample code unreviewed."
   - Fill in .env.example with your own keys and copy it to a .env file.
   - Test a Stripe checkout with the test card before you go live. The checkout route gives a 14-day free trial by default. Change or remove it before launch.
   - Next, deploy to a host and test the live Stripe webhook in test mode before you turn on real billing.

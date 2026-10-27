@@ -1,17 +1,19 @@
 # Best Practices, Examples, and Quality Guidelines
 
+> India note (AI Blocks): this file keeps some wording from the US original. Where it says 10-Q, 10-K, SEC or EDGAR, use the BSE or NSE results filing, the results press release, the investor presentation and the concall transcript. Show amounts in ₹ crore. All company names, prices and figures in examples here are made-up illustrations, not data.
+
 This document provides examples, tips for success, common mistakes to avoid, and comprehensive quality checklists.
 
 ## Example Headlines
 
 ### Good Earnings Update Headlines:
-- "Nike Q2 FY24: DTC Strength Offsets Wholesale Weakness - Maintaining OW, PT $95"
-- "Tesla Q3'24: Cybertruck Ramp Ahead of Plan - Raising Estimates, PT to $285"
-- "LVMH Q4'24: Fashion & Leather Resilient, Wines Weak - In-Line, Reiterating Buy"
-- "Apple Q1 FY24: Services Beat, iPhone Miss - Mixed Quarter, Lowering PT to $185"
+- "[COMPANY] Q2 FY26: [STRONG SEGMENT] Offsets [WEAK SEGMENT] - Maintaining [RATING], PT ₹[PRICE]"
+- "[COMPANY] Q3 FY26: [DRIVER] Ahead of Plan - Raising Estimates, PT to ₹[PRICE]"
+- "[COMPANY] Q4 FY26: [STRONG SEGMENT] Resilient, [WEAK SEGMENT] Weak - In-Line, Reiterating [RATING]"
+- "[COMPANY] Q1 FY27: [STRONG SEGMENT] Beat, [WEAK SEGMENT] Miss - Mixed Quarter, Lowering PT to ₹[PRICE]"
 
 ### Bad Headlines (Avoid):
-- "Nike Quarterly Update" (too generic, no takeaway)
+- "[COMPANY] Quarterly Update" (too generic, no takeaway)
 - "Company Reports Earnings" (states obvious, no analysis)
 - "Q3 Results Analysis" (no company name, no view)
 
@@ -21,7 +23,7 @@ This document provides examples, tips for success, common mistakes to avoid, and
 
 2. **Lead with conclusion**: Beat or miss? Up or down estimates?
 
-3. **Quantify everything**: "Strong" means nothing, "$150M beat on $1.2B revenue" is clear
+3. **Quantify everything**: "Strong" means nothing, "₹[AMOUNT] crore beat on ₹[AMOUNT] crore revenue" is clear
 
 4. **Focus on drivers**: Don't just say "revenue beat", explain WHY
 
@@ -69,7 +71,7 @@ Before delivering earnings update, verify all items below:
 
 **Beat/Miss Analysis:**
 - [ ] Beat/miss analysis leads the report
-- [ ] Specific variances quantified (e.g., "beat by $120M or 3%")
+- [ ] Specific variances quantified (e.g., "beat by ₹[AMOUNT] crore or [PERCENT]%")
 - [ ] Explanation of WHY results differed from expectations
 - [ ] Analysis of each key metric (revenue, EPS, margins, etc.)
 
@@ -127,7 +129,7 @@ Before delivering earnings update, verify all items below:
 **Beat/Miss Citations:**
 - [ ] Beat/miss analysis cites consensus source (Bloomberg, FactSet, etc.)
 - [ ] Consensus source includes "as of" date (pre-earnings close)
-- [ ] Company reported results cited to earnings release or 10-Q
+- [ ] Company reported results cited to the earnings release or the BSE or NSE results filing
 
 **Guidance Citations:**
 - [ ] Current guidance cited to earnings call transcript or release
@@ -144,7 +146,7 @@ Before delivering earnings update, verify all items below:
 - [ ] Hyperlinks formatted with meaningful display text
 - [ ] Blue, underlined hyperlink formatting in Word document
 - [ ] Hyperlinks tested and working (Ctrl+Click opens correct page)
-- [ ] All SEC filings hyperlinked to EDGAR viewer
+- [ ] All BSE or NSE filings hyperlinked to the exchange page you opened
 - [ ] All earnings materials hyperlinked (release, transcript, presentation)
 - [ ] Prior quarter materials hyperlinked for comparison
 - [ ] No raw URLs displayed anywhere in document
@@ -186,7 +188,7 @@ Before delivering earnings update, verify all items below:
 ### Writing Style Checklist
 
 **Clarity & Directness:**
-- [ ] Lead with numbers ("Revenue grew 15% to $1.2B" not "Strong revenue")
+- [ ] Lead with numbers ("Revenue grew [PERCENT]% to ₹[AMOUNT] crore" not "Strong revenue")
 - [ ] Use "vs." not "versus"
 - [ ] Be direct and concise throughout
 - [ ] Focus on what's NEW (not rehashing company basics)

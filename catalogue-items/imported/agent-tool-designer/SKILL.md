@@ -10,9 +10,15 @@ date_added: "2026-02-27"
 
 Build tools that agents can use effectively, including architectural reduction patterns
 
-Use this skill when you are writing, reviewing or cutting down the tools an AI agent can call, so that the agent picks the right tool and uses it correctly. You get fewer, clearer tool definitions with better error messages.
+Skip it if your agent has only one or two tools that already work, if you need the tool code written (ask a developer), or if the agent's task is still unclear (write it down first). Use this skill when you are writing, reviewing or cutting down the tools an AI agent can call, so that the agent picks the right tool and uses it correctly. You get fewer, clearer tool definitions with better error messages.
 
 If you already have a list of the tools the agent needs, give it as the plan and use it as the starting set to cut down and define.
+
+**What to gather first (AI Blocks):** the current tool list with each tool's description, the agent's main task, and any logs of failed calls. Ask for any that are missing.
+
+**Shape of the result (AI Blocks):** 1) a consolidation table with one row per tool and a keep, merge or cut verdict with the reason; 2) one description block per kept tool (what it does, when to use it, inputs, what it returns); 3) a list of error messages, each saying what went wrong and how to fix the call; 4) the shared naming and settings pattern.
+
+**What to do with the result (AI Blocks):** run the revised tools against a set of real requests and log each failing call. Run this skill again with that log for the next pass.
 # Tool Design for Agents
 
 Tools are the primary mechanism through which agents interact with the world. They define the contract between deterministic systems and non-deterministic agents. Unlike traditional software APIs designed for developers, tool APIs must be designed for language models that reason about intent, infer parameter values, and generate calls from natural language requests. Poor tool design creates failure modes that no amount of prompt engineering can fix. Effective tool design follows specific principles that account for how agents perceive and use tools.
@@ -138,7 +144,7 @@ Use a consistent schema across all tools. Establish naming conventions: verb-nou
 
 ### Tool Collection Design
 
-Research shows tool description overlap causes model confusion. More tools do not always lead to better outcomes. A reasonable guideline is 10-20 tools for most applications. If more are needed, use namespacing to create logical groupings.
+Overlapping tool descriptions can confuse a model, and more tools do not always lead to better outcomes. This copy gives no source for that, so treat it as a practical guideline to test on your own agent. A starting point is 10-20 tools for most applications, and the number is a rule of thumb, not a measured limit. If more are needed, use namespacing to create logical groupings.
 
 Implement mechanisms to help agents select the right tool: tool grouping, example-based selection, and hierarchy with umbrella tools that route to specialized sub-tools.
 

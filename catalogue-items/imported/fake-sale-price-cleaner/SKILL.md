@@ -12,7 +12,7 @@ compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
 ## Purpose
-Identifies variants with a `compareAtPrice` that no longer represents a genuine discount and clears it, so storefront strikethrough pricing reflects real savings rather than legacy noise. Two conditions are flagged: (a) `compareAtPrice <= price` (no discount, often left over from a price increase), and (b) `compareAtPrice` set for longer than `max_age_days` (stale "always on sale" optics that hurt long-term price perception and can violate advertising standards in some regions). Defaults to dry-run.
+Identifies variants with a `compareAtPrice` that no longer represents a genuine discount and clears it, so storefront strikethrough pricing reflects real savings rather than legacy noise. Two conditions are flagged: (a) `compareAtPrice <= price` (no discount, often left over from a price increase), and (b) `compareAtPrice` set for longer than `max_age_days` (stale "always on sale" optics that hurt long-term price perception and may matter under local fair-pricing rules; check yours). Defaults to dry-run.
 
 Limit: the "stale" rule is off by default. When it is turned on, it uses the variant's `updatedAt` date as a stand-in for when the compare-at price was set. Any product edit resets that date, so a live sale price can be cleared by mistake. Tell the user this before every run, and to keep `clean_stale` off during sales. Restoring a cleared price is manual: the CSV is the only record, and the user must enter the old value by hand in Shopify admin.
 

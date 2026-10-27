@@ -1,42 +1,34 @@
 ---
 name: policy-redraft
-description: Produce a proposed marked-up policy redraft that closes a gap found by /regulatory-legal:gaps or /regulatory-legal:policy-diff. A first draft for internal review — not for direct application to approved policy documents. Use when the user says "redraft the policy", "draft the policy fix", "mark up the policy", or when gap-surfacer hands off a gap for drafting.
+description: Produce a proposed marked-up policy redraft that closes a policy gap the user describes. A first draft for internal review — not for direct application to approved policy documents. Use when the user says "redraft the policy", "draft the policy fix" or "mark up the policy".
 argument-hint: "[GAP-ID or gap description]"
 ---
 
 # /policy-redraft
 
-**Working outside the original plugin.** The `/regulatory-legal:` commands, the plugin config files and the gap tracker named below are not included in this copy. If they are not available, ask the user to paste: (1) a description of the gap, (2) the current approved policy text, (3) the text of the rule. Treat the policy library and practice profile as empty and say so in the reviewer note. If you cannot write files, show the redraft memo in the chat instead of saving a dated file. Never claim you saved a file or updated a tracker you cannot reach.
+**Working outside the original plugin.** This copy needs only three pasted inputs: (1) a description of the gap, (2) the current approved policy text, (3) the text of the rule. Ignore any mention below of `/regulatory-legal:` commands, plugin config files (CLAUDE.md), a gap tracker (gap-tracker.yaml), matter workspaces or other skills. They are not included, and you must not look for them, load them or claim to have updated them. Treat the policy library and practice profile as empty and say so in the reviewer note. If you cannot write files, show the redraft memo in the chat instead of saving a dated file. Never claim you saved a file or updated a tracker you cannot reach.
 
-1. Load `~/.claude/plugins/config/claude-for-legal/regulatory-legal/CLAUDE.md` → policy library index + practice profile.
-2. Use the workflow below.
-3. Gather inputs: the gap (from `/regulatory-legal:gaps` output or described directly), the current approved policy text, the rule text.
-4. Verify the rule is current (per the policy-diff rule-status check). If you can't verify, emit the `⚠️ RULE STATUS UNVERIFIED` banner.
-5. Produce a marked-up redraft of the affected policy section(s) — smallest-possible edit, `[verify]` tags carried through, inline comments explaining WHY each change was made.
-6. Output a Policy Redraft Memo. Write it to a new file named `[policy-name]-proposed-redraft-[YYYY-MM-DD].md` — never write to the source policy document.
-7. Do NOT close the gap in the tracker. The gap closes when the redraft is applied AND approved, which is the policy owner's action.
+1. Ask for the three inputs above if any is missing.
+2. Verify the rule is current. If you can't verify, emit the `⚠️ RULE STATUS UNVERIFIED` banner.
+3. Produce a marked-up redraft of the affected policy section(s): smallest-possible edit, `[verify]` tags carried through, inline comments explaining WHY each change was made.
+4. Output a Policy Redraft Memo. Write it to a new file named `[policy-name]-proposed-redraft-[YYYY-MM-DD].md` (or show it in the chat). Never write to the source policy document.
+5. This skill does not close the gap. It closes when the policy owner applies and approves the redraft.
 
 ---
 
-> This skill produces a **proposal**, not an edit. It writes to a new file with a clearly-marked draft filename. It never writes over a source policy document, and it never closes a gap in the tracker — the gap closes when the redraft is applied AND approved by the policy owner.
-
-## Matter context
-
-**Matter context.** Check `## Matter workspaces` in the practice-level CLAUDE.md. If `Enabled` is `✗` (the default for in-house users), skip the rest of this paragraph — skills use practice-level context and the matter machinery is invisible. If enabled and there is no active matter, ask: "Which matter is this for? Run `/regulatory-legal:matter-workspace switch <slug>` or say `practice-level`." Load the active matter's `matter.md` for matter-specific context and overrides. Write outputs to the matter folder at `~/.claude/plugins/config/claude-for-legal/regulatory-legal/matters/<matter-slug>/`. Never read another matter's files unless `Cross-matter context` is `on`.
-
----
+> This skill produces a **proposal**, not an edit. It writes to a new file with a clearly-marked draft filename. It never writes over a source policy document, and it never marks a gap closed — the gap closes when the redraft is applied AND approved by the policy owner.
 
 ## Purpose
 
-Gap-surfacer finds the gap. Policy-diff names what needs to change. This skill takes the next step and produces a marked-up redraft of the affected policy section — small, specific, flagged — as a first draft for the policy owner's review.
+This skill takes the next step (the gap and what needs to change are described by the user) and produces a marked-up redraft of the affected policy section — small, specific, flagged — as a first draft for the policy owner's review.
 
 ## Hard guardrails — read these first
 
 These are the load-bearing rules. If any of them would be violated, stop and ask.
 
-1. **This is a PROPOSAL, not an edit.** Never write directly to a source policy document. The output goes to a new file at `[policy-name]-proposed-redraft-[YYYY-MM-DD].md`, or into the matter workspace. Not `[policy-name].md`.
-2. **Never close the gap in the tracker.** Gaps close when the redraft is APPLIED AND APPROVED — that is the policy owner's action, not yours. If the user says "close the gap now that you've redrafted it," decline: "I produce the proposal. The gap closes when you've reviewed, applied, and approved the change. When that's done, tell me and I'll update the tracker."
-3. **"Apply this for me" is not in scope.** If the user asks you to apply the redraft to the source policy: "I don't apply policy changes — that's the policy owner's action after review and approval. I produce the proposal. When it's been reviewed and approved, tell me and I'll update the gap tracker."
+1. **This is a PROPOSAL, not an edit.** Never write directly to a source policy document. The output goes to a new file at `[policy-name]-proposed-redraft-[YYYY-MM-DD].md`, not `[policy-name].md`.
+2. **Never mark the gap closed.** Gaps close when the redraft is APPLIED AND APPROVED — that is the policy owner's action, not yours. If the user says "close the gap now that you've redrafted it," decline: "I produce the proposal. The gap closes when you've reviewed, applied, and approved the change."
+3. **"Apply this for me" is not in scope.** If the user asks you to apply the redraft to the source policy: "I don't apply policy changes — that's the policy owner's action after review and approval. I produce the proposal."
 4. **Confirm the policy version before redrafting.** If the user gives you a file, ask: "Is this the approved version of the policy, and is it the latest? A redraft against an outdated policy creates divergence." If they paste text, trust but flag in the reviewer note.
 5. **Smallest-possible edit.** Strike a word before a sentence, a sentence before a paragraph, a paragraph before a section. Only touch sections affected by the gap. Don't restyle the policy.
 6. **Carry `[verify]` tags through.** Any effective date, threshold, citation, or requirement that came from model knowledge or an unverified source gets tagged in the redraft itself, not just in the memo.
@@ -48,29 +40,27 @@ Three inputs are required. If any is missing, ask — don't infer.
 ### 1a. The gap
 
 One of:
-- A `GAP-ID` from the gap tracker — load the entry from `~/.claude/plugins/config/claude-for-legal/regulatory-legal/gap-tracker.yaml` (or the matter-level equivalent).
 - A gap described in the user's message — capture the requirement, the regulation, and the affected policy.
-- A diff summary pasted from `/regulatory-legal:policy-diff` output.
+- A summary of what needs to change that the user pastes in.
 
 ### 1b. The current policy text
 
 One of:
 - A file path — read it, then ask: "Is this the approved version of the policy, and is it the latest? A redraft against an outdated policy creates divergence." Note the answer in the reviewer note.
 - Pasted text — trust but flag in the reviewer note: "Policy text was pasted directly; I assumed it was the current approved version. Confirm before applying."
-- Neither — ask for one. Do not guess at the policy text from the gap tracker or from web search.
+- Neither — ask for one. Do not guess at the policy text from web search.
 
 ### 1c. The rule text
 
 One of:
-- The diff output (already has the rule extracted and tagged).
 - A fetched regulation — note the source with a provenance tag.
 - Pasted rule text from the user — tag `[user provided]`.
 
-If the rule text is partial or ambiguous, apply the **no silent supplement** rule from CLAUDE.md: offer the user the options (paste full text, point at primary source, web-search-with-verify-tag, or stop), and wait.
+If the rule text is partial or ambiguous, do not fill the gap yourself: offer the user the options (paste full text, point at primary source, web-search-with-verify-tag, or stop), and wait.
 
 ## Step 2: Verify the rule is current
 
-Use the same rule-status check pattern as `policy-diff`. Red flags that the rule may not be in force:
+Check whether the rule is still in force. Red flags that the rule may not be in force:
 
 - The applicability/compliance date has passed by more than 30 days with no confirmation it wasn't delayed.
 - The rule is more than 12 months old.
@@ -113,14 +103,14 @@ If you see a second gap while redrafting — a provision that's clearly out of s
 ## Step 4: Output — Policy Redraft Memo
 
 ```markdown
-[WORK-PRODUCT HEADER — per plugin config ## Outputs — differs by role; see `## Who's using this`]
+[WORK-PRODUCT HEADER — "Draft for review by the policy owner. Not legal advice."]
 
 > **⚠️ Reviewer note**
 > - **Sources:** [Research connector: CourtListener ✓ verified | not connected — cites from training knowledge, verify before relying]
 > - **Read:** [sections of the policy reviewed; what wasn't read]
 > - **Flagged for your judgment:** [N items marked `[review]` inline | none]
 > - **Currency:** [rule status verified against [source], [date] | unverified — see banner above]
-> - **Before relying:** confirm this is the current approved version of the policy; verify rule status and effective date; get the policy owner's review; follow your policy-change approval process; update the gap tracker only when applied and approved.
+> - **Before relying:** confirm this is the current approved version of the policy; verify rule status and effective date; get the policy owner's review; follow your policy-change approval process; record the change in your own tracker only when applied and approved.
 
 ## Policy Redraft: [Policy name]
 
@@ -150,16 +140,16 @@ If you see a second gap while redrafting — a provision that's clearly out of s
 - [ ] Verify the rule status and effective date (Federal Register docket, or outside counsel).
 - [ ] Get the policy owner's review.
 - [ ] Follow your policy-change approval process.
-- [ ] Update the gap tracker when applied and approved — not before.
+- [ ] Record the change in your own gap list only when it is applied and approved — not before.
 
 ---
 
 **What next? Pick one and I'll help you build it out:**
 
-1. **Apply and get sign-off** — you review, circulate to the policy owner, walk it through your approval process. When approved, tell me and I'll mark the gap closed.
+1. **Apply and get sign-off** — you review, circulate to the policy owner and walk it through your approval process. The policy owner applies the change. Record it in your own gap list once approved.
 2. **Get more info on [X]** — if a specific change needs more grounding (a cite verified, a threshold checked, a jurisdiction question resolved), tell me which one and I'll dig in.
 3. **Escalate to [owner / GC]** — if the redraft raises something above the policy-owner's authority, I'll draft a short escalation with the facts, the proposed change, and what decision is needed.
-4. **Watch and wait** — if the rule's status is uncertain or the policy owner is unavailable, I'll add a revisit note to the gap tracker.
+4. **Watch and wait** — if the rule's status is uncertain or the policy owner is unavailable, set a date to revisit it.
 5. **Something else** — tell me what you'd do with it.
 ```
 
@@ -171,22 +161,12 @@ The output file name makes clear it's a draft. Use:
 
 Not `[policy-name].md`. Not `[policy-name]-v2.md`. The word "proposed-redraft" and the date are load-bearing — they prevent the draft from being mistaken for the current version.
 
-Write to the matter workspace if one is active; otherwise to the current working directory or a location the user names. Do not write to the policy library source directory.
+Write to the current working directory or a location the user names. Do not write to the policy library source directory.
 
-## Config-dependent fallbacks
+## If a fact is missing
 
-This skill reads the policy library index and owners from `~/.claude/plugins/config/claude-for-legal/regulatory-legal/CLAUDE.md`. When a value it needs is empty or still `[PLACEHOLDER]`:
-
-- **Policy owner missing:** still produce the redraft. Note in the reviewer note: "No policy owner is set for [policy] in `## Policy library`. Assign one with `/regulatory-legal:cold-start-interview --redo` so the approval path is routable."
-- **Policy library empty and the gap doesn't name a specific policy:** stop and ask: "I need the current policy text to redraft. Paste the text of the affected policy, or point me at the file."
-
-Say nothing about config when the values are populated.
-
-## Interactions with other skills
-
-- **Upstream inputs** come from `policy-diff` (per-requirement gap analysis) and `gap-surfacer` (the tracker). Carry their source tags and `[verify]` flags through.
-- **Gap tracker state:** this skill does NOT change the tracker. It doesn't mark the gap closed, doesn't mark it in-progress, doesn't touch `notified`. If you want a paper trail that a redraft exists, the policy owner or the user can update the gap entry with a resolution note when the redraft is applied and approved — see `/regulatory-legal:gaps --close`.
-- **Severity floor:** if the upstream gap is 🔴 or 🟠, the memo's Bottom line carries that severity. Silent demotion is a contradiction a reviewing lawyer cannot see. See CLAUDE.md `## Cross-skill severity floor`.
+- **Policy owner not given:** still produce the redraft. Note in the reviewer note that no owner was named, so the approval path is unclear.
+- **Policy text not given and the gap does not name a specific policy:** stop and ask: "I need the current policy text to redraft. Paste the text of the affected policy."
 
 ## Close with the next-steps decision tree
 
@@ -195,7 +175,7 @@ Included in the output template above. Customize the options to what the redraft
 ## What this skill does not do
 
 - Apply the redraft to the source policy. That's the policy owner's action.
-- Close the gap in the tracker. Gaps close when the redraft is applied and approved.
+- Mark the gap closed. Gaps close when the redraft is applied and approved.
 - Rewrite the whole policy. Smallest-possible edit to close the gap.
 - Produce multi-policy redrafts. One gap, one policy, one memo. A `:package` command for multi-policy fan-out is a future skill.
 - Produce the "apply" workflow. An `:apply` command with an approval gate is a future skill.

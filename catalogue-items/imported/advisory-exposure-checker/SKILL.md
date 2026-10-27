@@ -15,6 +15,8 @@ license_source: "https://github.com/davidondrej/skills/blob/main/LICENSE"
 disable-model-invocation: true
 ---
 
+> **AI Blocks note (licence):** this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says. The `license:` line in the front matter above is the original author's own label (MIT). The LICENSE-CONTENT file governs here. Keep the credit to the author.
+
 # cyber-audit
 
 ## When to Use
@@ -26,11 +28,13 @@ disable-model-invocation: true
 
 - **Read-only.** No installs, removes, upgrades, restarts, network calls, or file modifications outside `~/Documents/security-audits/`.
 - **No `sudo`.** Never.
+- **Never copy secrets into the report.** When you search config or shell files, print only the file path and the variable name. Never print the matched value, because it may be an API key or token. If a command would print a value, cut it off or list file names only.
 - **One report per invocation.** Always end by writing the `.md` file (even if the verdict is "Not affected" — the audit trail matters).
 - If a check requires a state-changing command, **skip it and note "not checked (would require state change)"** in the table. Do not run it.
 
 ## Workflow
 
+0. **Ask first.** Ask which operating system the user has (macOS, Linux or Windows) and which folders to check. Say that Windows gets no ready checks.
 1. **Identify scope.** Extract from the advisory: package/binary name, affected versions, platform (macOS / Linux / Windows), attack vector (supply chain / RCE / local / network).
 2. **Run checks in parallel** (Bash tool, multiple calls in one message). Pick relevant checks for the advisory type — don't run all of them.
 3. **Build the table** as you go. Each row = one check + concrete result (version number, path, "None", "N/A").
@@ -73,7 +77,8 @@ ls ~/Library/LaunchAgents /Library/LaunchAgents /Library/LaunchDaemons 2>/dev/nu
   | grep -i "<vendor>"
 
 # --- Env vars that change exposure (e.g. OLLAMA_HOST, listening addr) ---
-launchctl getenv <VAR>; grep -r "<VAR>" ~/.zshrc ~/.zprofile ~/.config 2>/dev/null
+launchctl getenv <VAR> >/dev/null && echo "<VAR> is set (value hidden)"
+grep -rl "<VAR>" ~/.zshrc ~/.zprofile ~/.config 2>/dev/null   # file paths only, never the matched line
 
 # --- VS Code / browser extensions (for IDE-targeted advisories) ---
 ls ~/.vscode/extensions 2>/dev/null | grep -i "<ext>"

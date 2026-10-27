@@ -48,7 +48,7 @@ If hours are missing, ask once, then plan for one day a month and mark it `[infe
 5. **Week 4, promote and monitor.** Spend about 15 minutes a day on journalist query sites. Review Search Console for early signs.
 6. **Early signs.** Impressions rising before clicks, new queries showing, and positions moving from page five toward page three.
 7. **Each month, fresh content.** Add content tied to that month's keyword: a post, new product, review, collection or support article. Aim for at least 2 posts a month, 4 if you can. Pick the topics with keyword research and keep them close to what you sell.
-8. **Rank tracking.** Add 3 to 5 keywords a month. Once tracking, check 20 to 30 key terms weekly.
+8. **Rank tracking.** Add 3 to 5 keywords a month. Once tracking, check 20 to 30 key terms weekly. Free option: the Performance report in Google Search Console shows average position for each query. It needs no subscription or API key. A paid rank-tracking tool also works, but it needs an account and a subscription, so check its price today.
 9. **One cluster at a time.** Finish one cluster before starting another.
 10. **Monthly review.** Ask if each keyword is still worth ranking. Revisit a term after 6 months to decide on more content. Compare organic revenue with the baseline.
 11. **Pace.** Do not publish hundreds of pages at once. A slow ramp, such as one post a day and then a few a week, avoids a spike that looks like spam. This ramp comes from one source and is a safety habit, not an official limit.

@@ -7,7 +7,7 @@ thinking: high
 thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
 subhead: Give it your signed SAFE, the share count before the round and the new round terms. Your AI shows the stake the SAFE holds, the added option pool on its own, and the cash you can invest to keep your share.
 explain: |-
-  A post-money SAFE with a cap promises a share of the company, set by the cap and the cash put in. Then a priced round adds new shares, and often a bigger option pool. These effects get mixed up in cap tables, so the SAFE holder's real stake is hard to see. This workflow separates them, which helps when you check a SAFE conversion before a financing.
+  A cap-only post-money SAFE gives a stake equal to the cash you funded divided by the cap. Then a priced round adds new shares, and often a bigger option pool. These effects get mixed up in cap tables, so the SAFE holder's real stake is hard to see. This workflow separates them, which helps when you check a SAFE conversion before a financing.
 
   Step 1 checks that the cap applies and finds the stake before the priced round. Step 2 shows the option pool top-up on its own, using the share count from before the top-up. If the approved dilution already includes the pool, it does not count it twice. Step 3 uses your side letter to work out the pro rata cash, and ties it back to the full round.
 

@@ -10,6 +10,8 @@ explain: |
   Turn a trained AI model into C, C++ or CUDA code that runs inside your own product or on hardware. The model stays the same. You just stop needing the original framework to run it.
 
   You start with a PyTorch .pt2 file or a LiteRT .tflite file. The steps: load the model into MATLAB and inspect its inputs and outputs, write an entry function, build a MEX file, check that its results match the original framework, then generate the production code. It can also place the model in Simulink. This needs MATLAB with Coder tools, which is paid software, and it covers running models only, not training them.
+
+  Licence: the LICENSE.md file in this folder governs (BSD 2-Clause plus a MathWorks term that limits use to MathWorks products). The skill file header links MathWorks' own licence page, which says the same kind of thing.
 when:
   - You have a trained model and need it to run on embedded hardware.
   - You want faster results than your Python setup gives.
@@ -21,7 +23,7 @@ not_for:
   - "You do not have MATLAB with Coder products: ask your team for a licence or use the runtime that ships with your model's own framework."
 you_give:
   - Your model file (.pt2 or .tflite)
-  - A sample input to test with
+  - A sample input to test with. It must match the shape and type the model inspection step reports, so check the model's input specification before you write the entry function
   - Your target, such as C, C++ or CUDA
   - Your MATLAB Coder licence, plus GPU Coder for CUDA
 you_get:
@@ -32,12 +34,12 @@ you_get:
   - A Simulink setup, if you ask for one
 how_to_use:
   - Check you have MATLAB R2026a or later, MATLAB Coder and the support package for PyTorch and LiteRT models.
-  - Open your AI and paste the skill text. Say whether your model is .pt2 or .tflite.
+  - Open an AI tool that is connected to MATLAB and can run MATLAB code. The skill's manifest lists the evaluate_matlab_code tool as required. A plain chat window cannot run the steps, but it can write the code for you to run yourself in MATLAB. Paste the skill text and say whether your model is .pt2 or .tflite.
   - Share the model file, a sample input and your target. This needs an AI that can run MATLAB code, or you run each step yourself.
   - Ask it to inspect the model, write the entry function and build the MEX file first.
   - Check the number comparison against the source framework before you ask for the final C, C++ or CUDA code.
-  - The embedded hardware step uses three other MathWorks skills: matlab-generate-code, matlab-deploy-embedded-ai and matlab-deploy-embedded-code. If they are not installed, stop after the MEX check and the generated code, and load the model onto your hardware by hand.
-  - Each step has one result to check: the model's input and output shapes, an entry function that runs, a MEX build that runs, results that match the source framework, then the final code.
+  - The embedded hardware step uses three other MathWorks skills, namely matlab-generate-code, matlab-deploy-embedded-ai and matlab-deploy-embedded-code. They are not part of this item. Get them from MathWorks' matlab-agentic-toolkit on GitHub (github.com/matlab/matlab-agentic-toolkit). If they are not installed, stop after the MEX check and the generated code, and load the model onto your hardware by hand.
+  - Each step has one result to check. These are the model's input and output shapes, an entry function that runs, a MEX build that runs, results that match the source framework, then the final code.
 output_sample:
   input:
     - Your model file (.pt2 from PyTorch or .tflite from LiteRT)
@@ -48,7 +50,8 @@ output_sample:
     - MATLAB R2026a or later with MATLAB Coder (paid software)
     - The MATLAB Coder Support Package for PyTorch and LiteRT Models
     - GPU Coder and an NVIDIA GPU, only if you want CUDA code
-    - An AI that can run MATLAB code, or you run the steps yourself
+    - An AI tool connected to MATLAB that can run MATLAB code, or you run the steps yourself
+    - For the embedded hardware step only, three other MathWorks skills that are not in this item: matlab-generate-code, matlab-deploy-embedded-ai and matlab-deploy-embedded-code. Without them, stop after the MEX check and the generated code
   output:
     - name: Model inspection
       contains: The model's input and output shapes and types, read after loading it into MATLAB.

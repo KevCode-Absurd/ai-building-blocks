@@ -44,7 +44,7 @@ How to start:
 
 These items replace the generic article and spreadsheet inputs above. They are room-night records by channel, kitchen batches, actual receipts, the cost split between rooms and kitchen, and the property and dates.
 
-- Room-night records by booking channel, with rates and commissions.
+- Room-night records by booking channel, with rates and commissions. Channel commission statements are optional but step 1's commission check depends on them. If they are missing, take the commission from the rate and commission figures in the room-night records, write `MISSING: channel commission statements`, and say the commission check was not run against a statement. Do not assume a commission rate.
 - Restaurant service batches with observed portion yields and servings.
 - Actual receipts for rooms and food.
 - Costs split into occupied-room costs and kitchen cash costs.

@@ -30,7 +30,7 @@ you_get:
 how_to_use:
   - Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini, with your details under it.
   - Paste your reviews under the prompt, each with its source, copied exactly.
-  - Paste each picture prompt into ChatGPT or Gemini, with your product photo attached.
+  - Paste each picture prompt into ChatGPT or Gemini, with your product photo attached. Claude alone cannot draw the card. Free plans have daily limits, and an image API key bills you for each picture.
   - Read the quote on every finished card against the source. Fix any changed letter by editing the text, not by making the image again.
 output_sample:
   input:

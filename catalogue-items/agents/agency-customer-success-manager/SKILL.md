@@ -41,7 +41,7 @@ How to start:
 
 ## What to collect first
 
-These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part. This skill has no tool access, so it cannot pull CRM data. The user pastes the facts.
+These are the only inputs for this agent. They replace the generic "Before you start" list above: do not ask for source text, an audit report or a separate question. This skill has no tool access, so it cannot pull CRM data. The user pastes the facts.
 
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:` in the answer, or label a stand-in `ASSUMED:` and say what to replace it with.
 

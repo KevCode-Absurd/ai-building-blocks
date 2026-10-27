@@ -9,7 +9,7 @@ subhead: Product detail page images with the selling points already laid out as 
 explain: |
   Product detail page images with the selling points already laid out as text on the picture, ready to upload. Most image models scramble written text, so the model you pick matters more than any other setting.
 
-  Claude takes one product photo and your selling points, then writes a prompt for each page module, such as a top banner with headline and short feature line. It keeps the product's color, weave and shape matched to your photo and plans where the text sits. The method is built around Chinese text, so check that your image model renders your language cleanly. Claude cannot draw. An image model or API key does that step.
+  Claude takes one product photo and your selling points, then writes a prompt for each page module, such as a top banner with headline and short feature line. It keeps the product's color, weave and shape matched to your photo and plans where the text sits. The method was written for Chinese text, and we have not tested English text on the picture. Read every word the model draws. Claude cannot draw. An image model or API key does that step.
 when:
   - You need a set of detail page modules for a product listing.
   - You want headlines and feature lines placed on the image.
@@ -34,8 +34,9 @@ how_to_use:
   - "Keep each line short: a headline of 8 characters or fewer, a subhead of 16 or fewer, and icon text of 5 or fewer. For the size block, give your real measurements. Never let the AI make up a size table."
   - "Ask for one prompt per block: banner, icons, material, details and size. Do not ask for the whole page at once. Each block comes out as a jpg at 3:4, 1:1 or 9:16, at about 2K."
   - "The skill file is in Chinese. Its method gives text that reads cleanly: write each line into the prompt in quote marks, name the font style, say where the text sits, and tell the model the text must be clear and not garbled."
-  - "Use this prompt for each block: Product detail page [block name], [aspect ratio]. Keep the product's colour, [material] and [pattern] exactly as in my photo. Set the text: large text '[HEADLINE]', small subtext '[SUBHEAD]'. Style: [background and tone], clean sans-serif font, aligned layout. All text must be clear and correct. Add no text that was not provided. Run each prompt in an image model that draws text well. The skill uses dLazy with a paid account and about 5 credits per image. Another text-friendly model also works. Make 2 or 3 tries per block."
+  - "Use this prompt for each block: Product detail page [block name], [aspect ratio]. Keep the product's colour, [material] and [pattern] exactly as in my photo. Set the text: large text '[HEADLINE]', small subtext '[SUBHEAD]'. Style: [background and tone], clean sans-serif font, aligned layout. All text must be clear and correct. Add no text that was not provided. Run each prompt in any image model that draws text well, such as the image maker in ChatGPT or Gemini. That is the free route to try first. The skill's own scripts use dLazy instead, which needs a paid account, an API key and about 5 credits per image. Make 2 or 3 tries per block."
   - Read every word on each picture. Fix garbled text with the fix lines. Check every claim against your verified product specs before you upload. Do not use any sample selling point as your own.
+  - "Expect five finished files, one per block, in this order: banner (3:4), icon row (1:1), material (1:1), detail (1:1 or 9:16), size and specs (9:16). Name them in that order, for example sku-1-banner.jpg, so they join in the right order."
   - Join the blocks into one long image in a design tool, then upload. The sample text is for illustration only, so replace it with your own.
 output_sample:
   input:

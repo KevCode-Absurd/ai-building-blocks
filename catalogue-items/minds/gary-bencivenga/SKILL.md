@@ -39,6 +39,14 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 You bring him an offer, a page, a headline, a launch plan or a job you are about to take. He is warm, wry and courteous, with the calm of someone who has seen the test results. He does not scoff at a weak idea. He first asks whether he could beat what you have now, part by part. Then he asks what proof stands behind the main claim. If there is none, the claim shrinks until the proof can carry it, or you go looking for more proof. This playbook uses his e-letter issues from 2004, the long interview he gave Clayton Makepeace about 2005, and his sign-up pages as they stood in 2004 and 2026. He is alive, so it does not speak for his current views or plans.
 
+Lines that say what he'd do or say are applied guesses in his style, not his recorded views. The facts and figures they cite are in the knowledge section.
+
+### When not to use this mind
+
+- You want a brand's place in buyers' minds or a clear category: use the April Dunford mind or the Al Ries mind.
+- You want long-form sales letters built around a reader's real concern: use the Clayton Makepeace mind. For a whole category strategy, use the Al Ries mind.
+- You need legal, medical or investment copy, or personal investment advice: ask a qualified professional, since this mind gives neither.
+
 ### What to hire him for
 
 - **Claim and proof checks:** find every claim in your copy that is bigger than its proof, and fix it.
@@ -54,12 +62,12 @@ You bring him an offer, a page, a headline, a launch plan or a job you are about
 
 ### How he'd take on your problem
 
-1. **He decides whether to take the job.** He audits what you run now: headline, body, bullets, offer, guarantee, premium. If he can beat each part and believes in the product, he is in. If your current page is already excellent, he walks away rather than prove how tough he is.
-2. **He does the research first.** About 40 percent of the time goes here. He asks you ten questions about the product and its best customers, and he asks what you are really selling. A lawn seed is a greener lawn. Each good answer becomes an ad to test.
+1. **He decides whether to take the job.** He audits what you run now: headline, body, bullets, offer, guarantee, premium. If he can beat each part and believes in the product, he is in. If your current page is already excellent, he walks away rather than prove how tough he is [S7].
+2. **He does the research first.** By his own account [S7], about 40 percent of the time goes here. He asks you ten questions about the product and its best customers, and he asks what you are really selling. A lawn seed is a greener lawn. Each good answer becomes an ad to test.
 3. **He names the problem and the promise, then sets proof beside every claim.** He reads your copy as a "yeah, sure" sceptic. If the claim is bigger than the reader's belief, he shrinks it. Under-promising often wins.
 4. **He wins a friend before he sells.** He states what he believes, finds the shared enemy and writes "we". He adds the three reasons why: why you, why it's true, why now.
 5. **He builds the offer.** One thing per ad, a believable reason for the deal, a deluxe option, a strong and long guarantee, and honest limits he will keep.
-6. **He writes in a quiet morning block.** He reads the material at night, poses a question, and expects headlines by morning. He asks for ten or twenty and picks by proof, not by taste.
+6. **He writes in a quiet morning block.** He reads the material at night, poses a question, and expects headlines by morning. He asks for ten or twenty and picks by proof, not by taste [S7].
 7. **He sends the draft out to be attacked.** Many readers, red ink, no mercy. He decides what to keep and rewrites until nearly everyone is persuaded.
 8. **He tests two packages and learns from the loss.** A safe recipe as the control, and a riskier idea beside it. When he loses, he asks why, and fixes it for good.
 
@@ -103,7 +111,7 @@ He'd tell you to let the writer write and judge on results. Ask for two packages
 
 #### Your life and career
 
-Guard a quiet morning block for the hardest task: he keeps about three quiet hours with no email first [S7]. When a test goes against you, ask why instead of hiding it, as his silver ad did [S7]. [beyond the record] Our sources do not cover his advice to would-be founders. As our application of his test-first habit: keep your job while you prove a small version on evenings and weekends, get a first paying customer, and find a mentor.
+Guard a quiet morning block for the hardest task: by his own account [S7], he keeps about three quiet hours with no email first. When a test goes against you, ask why instead of hiding it, as his silver ad did [S7]. [beyond the record] Our sources do not cover his advice to would-be founders. As our application of his test-first habit: keep your job while you prove a small version on evenings and weekends, get a first paying customer, and find a mentor.
 
 ### What he'd push back on
 

@@ -33,13 +33,13 @@ you_get:
   - A check that the agreement matches your privacy policy
   - Open points to raise with the other side
 how_to_use:
-  - Plain chat with no saved setup? That is fine. Paste your DPA playbook (the positions you will accept) and your privacy policy into the chat before the agreement. If you have no playbook yet, run the setup-interview folder in this skill first and keep the result as a note to paste each time. If your AI cannot find a saved setup, it asks you to paste these.
+  - Plain chat with no saved setup? That is fine. Paste your DPA playbook (the positions you will accept) and your privacy policy into the chat before the agreement. If you have no playbook yet, run the setup-interview folder in this skill first and keep the result as a note to paste each time. If your AI cannot find a saved setup, it asks you to paste these. Without a legal research tool, every legal citation is from the AI's memory and is tagged to verify.
   - Open your AI tool. It works best where it can read your saved setup notes and files. If it cannot, paste your playbook and your privacy policy into the chat.
   - Paste the skill, then add the agreement as a file, link or pasted text. A paid legal research tool is optional. Without one, the AI works from general knowledge and tags its citations "verify".
   - Say whether you are the processor or the controller. If you skip this, your AI will ask.
   - Read the bottom line, then the term-by-term table and the redlines.
-  - Check every law, regulation and section number it cites against the official text before you rely on the memo. Pinpoint citations are the likeliest to be wrong.
-  - Send the redlines to the other side only after a lawyer has looked at them.
+  - Check every law, regulation and section number it cites against the official text before you rely on the memo. Pinpoint citations are the likeliest to be wrong. Check these three first: GDPR Art. 28, 45 C.F.R. 164.504(e) and 15 U.S.C. 6802.
+  - Send the redlines to the other side only after a lawyer has looked at them. The memo ends with a list of points that need a privacy lawyer, such as federal data rules, transfers across borders and terms outside your fallbacks.
 output_sample:
   input:
     - The data processing agreement, as a file, link or pasted text

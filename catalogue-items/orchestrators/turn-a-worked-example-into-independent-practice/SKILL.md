@@ -27,6 +27,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+In the "Before you start" list above, "Your lesson plan" means the lesson or task the example belongs to, and "Source text" means your worked example, not a long article. The inputs below are the ones this job really uses: a worked example, a target skill and the learners' level.
+
 
 - **A worked example** (required): every step shown. If steps are skipped, ask for them. If you cannot confirm the example is correct, solve it yourself first. If any step is wrong, stop and show the step. Do not build practice on it.
 - **The target skill** (required): one line.
@@ -45,7 +47,7 @@ Save each step as `outputs/step-NN-<skill>.md` before the next step starts.
 
 2. **Practice problem set writer.** Use the skill `practice-problem-set-writer`. Give it the skill, the level, the problem count, the common errors and the worked example as the prior example. It returns problems at rising difficulty, a scaffold reduction plan, differentiation and a monitoring guide. Work every answer yourself, show the working and check that each problem needs the same skill as the example. Problems that need a skill the learners have not met are removed. Hand to step 3: the problems with answers.
 
-3. **Study understanding check.** Use the skill `study-understanding-check`. It was written for a learner studying alone, so use it this way. Write 4 to 6 why-questions about the example (why this step, why in this order, what would change if a number changed). Add a feedback line for each likely wrong answer, taken from the common mistakes. If real learner answers were supplied, check the reasoning in each one and choose the next practice from the mistakes you see. If not, write `step 3 not run with real answers` and never invent learner answers or results.
+3. **Study understanding check.** Use the skill `study-understanding-check`. Write 4 to 6 why-questions about the example (why this step, why in this order, what would change if a number changed). Add a feedback line for each likely wrong answer, taken from the common mistakes. The teacher supplies any real learner answers. If they were supplied, check the reasoning in each one and choose the next practice from the mistakes you see. If not, write `step 3 not run with real answers` and never invent learner answers or results.
 
 4. **Check and hand back.** End with a section headed `HAND-BACK SUMMARY`: each file saved, any step not run and why, every `MISSING:` line in one list, and `CHECKS MISSED:` (or "none").
 
@@ -81,9 +83,9 @@ When you've handed it back, suggest what they could do next in one short questio
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
-## After this
+## Next steps to offer
 
-Nothing has been given to learners. Offer one next step and say the teacher can type their own:
+Use these instead of the general "After this" list above. Nothing has been given to learners. Offer one next step and say the teacher can type their own:
 
 - Turn the skill into a quiz for later weeks with the [Retrieval quiz writer](https://useaiblocks.com/skills/retrieval-quiz-writer).
 - Map where the skill sits in a sequence with the [Skill progression map builder](https://useaiblocks.com/skills/skill-progression-map-builder).

@@ -36,9 +36,10 @@ you_get:
   - Text you can edit in the browser
   - A PDF copy, if the PDF tools are installed (optional)
 how_to_use:
-  - Open an AI that can write and save files, such as Claude Code or ChatGPT with code tools. Add the skill folder, or paste the skill text into a chat.
+  - "Before you run: two helper scripts come with this copy. extract-pptx.py reads a PowerPoint file you give it. export-pdf.sh starts a small local web server to save the deck as a PDF, and only opens the deck folder. Neither one sends anything online. Read both before you let your AI run them. This item is rated high risk because it writes files and runs scripts."
+  - Open an AI that can write and save files, such as Claude Code or ChatGPT with code tools. Add the skill folder, or paste the skill text into a chat. This copy does not include the style preset file or the bold template pack, so the AI makes all three style previews itself.
   - Tell it your topic, audience, slide count and whether the deck is for speaking or reading. Attach your notes, PowerPoint file or images if you have them.
-  - Open the three style previews it saves. Pick one, or ask it to mix parts of two. This copy does not include the style preset file or the bold template pack. If they are missing, it makes the three previews itself: one safe style, one bold style and one wildcard.
+  - Open the three style previews it saves. Pick one, or ask it to mix parts of two. The three previews are one safe style, one bold style and one wildcard.
   - Open the finished HTML file in your browser. Use the arrow keys to move. Press E to edit text.
   - Click through every slide. Look for cut-off text or crowded slides, and ask for fixes.
   - For a PDF, it needs Node, Playwright and Chromium already installed. Without them, print the deck to PDF from your browser. The one-click share step is not in this copy.

@@ -1,6 +1,6 @@
 # SaaS Valuation Benchmarks (dated snapshot)
 
-Reference data for the saas-valuation-compression skill. Every figure here is a point-in-time estimate. Prefer fresh search results for the dates you are analyzing, and cite the as-of dates below when you fall back on this file.
+Reference data for the saas-valuation-compression skill. None of the figures below has a source link. Label any of them `unverified` when you use them, and prefer a dated source you can name. Every figure here is a point-in-time estimate. Prefer fresh search results for the dates you are analyzing, and cite the as-of dates below when you fall back on this file.
 
 ## Private-market median ARR multiples by period
 

@@ -23,6 +23,8 @@ npx skills add nexscope-ai/eCommerce-Skills --skill ecommerce-growth-strategy -g
 
 Built by [Nexscope](https://www.nexscope.ai/?co-from=skill8) — your AI assistant for smarter e-commerce decisions.
 
+> **Figures last checked: Oct 2026, when this skill was imported. Treat every tax, duty and shipping figure in this file as needing a check.** When you pass a tax rate, duty limit, threshold, fee or date to the person, add "[check before use]" after it unless you confirmed it from an official source in this chat. Do not present any of them as current facts.
+
 ## Install
 
 ```bash
@@ -209,7 +211,7 @@ Score each target market on 8 dimensions (1-10 scale):
 
 Choose the right fulfillment model based on order volume, product characteristics, and budget.
 
-#### Fulfillment Model Comparison
+#### Fulfillment Model Comparison *(author's rough figures, undated: needs checking)*
 
 | Model | Best For | Cost/Order | Transit Time | Inventory Risk | Setup Effort |
 |-------|---------|:----------:|:------------:|:--------------:|:------------:|
@@ -219,7 +221,7 @@ Choose the right fulfillment model based on order volume, product characteristic
 | **Dropshipping / POD** | Testing products, zero inventory risk | $0 + lower margins | 5-15 days | None | Low |
 | **Cross-Border Consolidation** | Multi-market, medium volume | $8-20 | 3-10 days | Low-Medium | Medium |
 
-#### Shipping Corridors — Typical Transit & Cost
+#### Shipping Corridors — Typical Transit & Cost *(author's rough figures, undated: needs checking with a carrier quote)*
 
 | Corridor | Economy (ePacket/surface) | Standard | Express (DHL/FedEx/UPS) |
 |----------|:------------------------:|:--------:|:-----------------------:|
@@ -238,7 +240,7 @@ Choose the right fulfillment model based on order volume, product characteristic
 - **Marketplace-first strategy** → Platform fulfillment from day one
 - **High-value products (AOV > $100)** → Express shipping is viable (shipping cost is small % of order)
 
-#### Recommended 3PL Networks for Cross-Border
+#### Recommended 3PL Networks for Cross-Border *(names only: check each one still serves your market and get a quote)*
 
 | Region | 3PLs to Evaluate | Notes |
 |--------|-----------------|-------|
@@ -316,7 +318,7 @@ For each target market:
 
 The original author cites a PYMNTS 2025 figure that 99% of cross-border shoppers expect to pay with their preferred local method (approximate; verify before you quote it). Offering the wrong payment options = abandoned carts.
 
-#### Payment Preferences by Market
+#### Payment Preferences by Market *(author's rough shares, undated: needs checking)*
 
 | Market | Primary Methods | Secondary | Key Notes |
 |--------|----------------|-----------|-----------|
@@ -335,7 +337,7 @@ The original author cites a PYMNTS 2025 figure that 99% of cross-border shoppers
 | **Australia** | Cards (50%), PayPal (20%), Afterpay (15%) | Apple Pay, Google Pay | BNPL originated here — Afterpay is huge |
 | **Canada** | Cards (55%), PayPal (20%), Interac (15%) | Apple Pay, Affirm | Interac for bank transfers |
 
-#### Payment Gateway Recommendations
+#### Payment Gateway Recommendations *(prices and coverage are the author's notes, undated: check the gateway's own pricing page)*
 
 | Gateway | Best For | Coverage | Local Methods | Pricing |
 |---------|---------|---------|--------------|---------|

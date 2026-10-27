@@ -7,8 +7,9 @@ description: Build and organize a universe of potential acquirers for sell-side 
 
 ## India
 
-This skill operates on **Indian markets**. Load **`india-market-conventions`**
-before building anything, and **`india-market-data`** for sources. Two rules cause
+This skill operates on **Indian markets**. The author's files `india-market-conventions`
+and `india-market-data` are **not in this folder**, so do not look for them. Use the two
+rules below, and name any other Indian source you rely on in your reply. Two rules cause
 most Indian errors:
 
 - **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
@@ -19,8 +20,8 @@ most Indian errors:
   **millions under a crore label: the number shown is 10× the real crore figure**. Divide by `10000000` in a live
   formula and label the column `Total Revenue (₹ Cr)`.
 
-What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
-never substitute a proxy and present it as the real thing.
+The author's `NOT-ADAPTABLE.md` list is also not included. If something has no Indian
+equivalent, name the gap. Never substitute a proxy and present it as the real thing.
 
 ## Before you start
 

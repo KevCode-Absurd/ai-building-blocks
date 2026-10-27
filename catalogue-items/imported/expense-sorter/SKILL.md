@@ -89,6 +89,8 @@ The tax column is a first pass using US federal rules, not a ruling. The names, 
 
 ### Example 2: Flagging Misclassified Expenses
 
+*Illustration only. Every name, amount and date below is invented, and the impact figures are not real results.*
+
 **Input:** Review existing categorizations for accuracy.
 
 **Output — Correction Report:**
@@ -124,4 +126,4 @@ The tax column is a first pass using US federal rules, not a ruling. The names, 
 - **Foreign currency transactions:** Categorize based on the merchant and purpose, not the currency. Record both the original currency amount and the converted amount. Watch for duplicate entries from currency conversion fees.
 - **Refunds and chargebacks:** Match refunds to the original transaction and apply the same category as a negative entry. Don't create a new "refund" category — it distorts spend analytics.
 - **Recurring vs. one-time:** Identify recurring charges (same merchant, similar amount, monthly cadence) and flag any that stop unexpectedly or change amount by more than 10%.
-- **Ambiguous merchants:** When a merchant name maps to multiple possible categories (e.g., Amazon could be office supplies, software, or equipment), use the amount and cardholder's department as tiebreakers. Amounts under $100 from Amazon default to Office Supplies; over $500 default to Equipment.
+- **Ambiguous merchants:** When a merchant name maps to multiple possible categories (e.g., Amazon could be office supplies, software, or equipment), use the amount and cardholder's department as tiebreakers. Do not use a fixed amount rule. Ask the user to set their own threshold for what counts as equipment rather than supplies (for example, from their accountant's capitalisation policy). If they have not set one, mark the line as uncertain for review. The tax category depends on the item bought, so it needs a receipt or an accountant check.

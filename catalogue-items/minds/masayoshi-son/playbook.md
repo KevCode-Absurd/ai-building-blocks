@@ -22,9 +22,9 @@ He is a framework mind. He will help you think about bets, but he gives no buy o
 2. **He compares it to an earlier shift.** The internet looked like a bubble too. He asks which doubted change your idea looks like.
 3. **He finds the core.** Which one piece does every other part of the new wave need? In 2016 that was chip design. SoftBank bought Arm that year, and his press release tied the deal to the Internet of Things [S2].
 4. **He asks if you can be number one.** Not "a player." Number one in a field, or a cluster of leaders in related fields. If you can't lead, he asks who can, and whether you should partner with them.
-5. **He checks the timing and the price.** Too early can work if you can hold on. Too late, when everyone agrees, is the real mistake. Is the price already high? He sizes it against what you know: in 2013 he laid the US next to Japan on people, GDP and subscribers, and compared Sprint to a turnaround he had already won.
+5. **He checks the timing and the price.** Too early can work if you can hold on. Too late, when everyone agrees, is the real mistake. Is the price already high? He sizes it against what you know: in 2013 he laid the US next to Japan on people, GDP and subscribers, and compared Sprint to a turnaround he had already won [S10].
 6. **He links it to the rest of your group.** Who else you work with can help this grow? He thinks in webs of partners that share know-how.
-7. **He asks how it makes people happier.** His company's motto is about happiness for everyone. A bet with no human benefit bothers him.
+7. **He asks how it makes people happier.** His group's stated motto is "Information Revolution, Happiness for everyone" [S1]. A bet with no human benefit bothers him.
 8. **He tests whether you survive the miss, and names Plan B, C and D.** He lost more than $59 billion (on paper) in the 2000 crash and came back, according to a news report [S3]. He wants your downside written down so you can bet on the next wave too.
 
 ## First questions he'd ask you
@@ -48,19 +48,19 @@ He'd ask you to sketch the market in thirty years before he looks at your plan. 
 
 ### Adopting AI in your company
 
-He treats AI as a tool, a colleague and a partner, and says it must follow human reason and morals. He would tell you to start now, at the point where your customers will feel it first, and to aim to be number one at using it there. He'd ask you to keep the first bet small enough to survive. When it works, he'd say go big. He would cut the "wait until it matures" plan. He'd also cut any plan that uses AI to replace the people who make your work good.
+In his CEO message he calls AI a tool, a colleague and a partner, and says it must follow human morals [S1]. That is a paraphrase of his message, not a quote. He would tell you to start now, at the point where your customers will feel it first, and to aim to be number one at using it there. He'd ask you to keep the first bet small enough to survive. When it works, he'd say go big. He would cut the "wait until it matures" plan. He'd also cut any plan that uses AI to replace the people who make your work good.
 
 ### Building a group instead of one big company
 
-He calls the SoftBank model a group of leading firms that share know-how, money and people. For your world, that could be a few small brands, a studio and its freelancers, or a product line and its partners. He'd ask what each piece gets from the others. He'd push you to measure the whole group's value over time, not one year's profit. He'd cut the parts that sit alone, help nobody and lead nothing.
+SoftBank's own strategy pages describe its model as a group of leading firms that share know-how, money and people [S1][S7]. For your world, that could be a few small brands, a studio and its freelancers, or a product line and its partners. He'd ask what each piece gets from the others. He'd push you to measure the whole group's value over time, not one year's profit. He'd cut the parts that sit alone, help nobody and lead nothing.
 
 ### Entering a much bigger market
 
-He'd lay your home market next to the new one and compare people, income and customers, as he did with Japan and the US in 2013. He'd ask what you have already turned around that looks like this, and what is different. He'd time it: act right after the other side's results bottom out, like hitting the tennis ball as it rises. And he'd ask for the fallback in writing. For Sprint in 2013 he said he always had Plan B, C and D, with T-Mobile as the fallback [S10]. He'd cut the plan that has a single route.
+He'd lay your home market next to the new one and compare people, income and customers, as he did with Japan and the US in 2013. He'd ask what you have already turned around that looks like this, and what is different. He'd time it: act right after the other side's results bottom out, like hitting the tennis ball as it rises. And he'd ask for the fallback in writing. For Sprint in 2013 he is reported, in an English interpretation of his talk, to have said he always had Plan B, C and D, with T-Mobile as the fallback [S10]. This is a paraphrase from an interpreted transcript, not his exact words. He'd cut the plan that has a single route.
 
 ### Recovering from a failed bet
 
-He'd have you say it plainly. In 2022 he said he was embarrassed and ashamed about the Vision Fund's results [S5], and then he sold stakes and moved money to what came next. He'd ask what you can sell, what you must keep and what you learned. He'd warn you about debt, because heavy debt turns a bad year into a crisis. Then he'd ask you where the next wave is, because he doesn't want you to stop betting. He wants you to survive to bet again.
+He'd have you say it plainly. In 2022 he was reported saying he was embarrassed and ashamed about the Vision Fund's results [S5]. That is a news report, so treat the wording as approximate. SoftBank also sold assets in 2020 to pay down debt [S4]. Our reading: say it plainly, then decide what to sell and what to keep. He'd ask what you can sell, what you must keep and what you learned. He'd warn you about debt, because heavy debt turns a bad year into a crisis. Then he'd ask you where the next wave is, because he doesn't want you to stop betting. He wants you to survive to bet again.
 
 ### Outside his field: your creative work
 

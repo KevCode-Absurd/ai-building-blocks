@@ -2,7 +2,7 @@
 name: shopify-admin-exchange-vs-refund-ratio
 role: returns
 description: "Read-only: tracks what percentage of returns become exchanges vs. refunds vs. store credit — measures revenue recovery rate."
-toolkit: shopify-admin, shopify-admin-execution
+toolkit: shopify-admin
 api_version: "2025-01"
 graphql_operations:
   - returns:query
@@ -16,6 +16,8 @@ Analyzes return resolutions to calculate the split between exchanges (revenue re
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_orders,read_returns`
 - API scopes: `read_orders`, `read_returns`. Reading returns needs the `read_returns` permission, and what your Shopify plan allows can differ, so check Shopify's docs if the query is refused.
+
+- Run it first on a development store, or with a small `days_back` such as 7, before you use a full live period. The query has not been tested on a live store.
 
 ## Parameters
 
@@ -38,7 +40,7 @@ Analyzes return resolutions to calculate the split between exchanges (revenue re
 
 2. Categorize each return resolution:
    - **Exchange**: return has `exchangeLineItems` with quantity > 0
-   - **Store credit**: a refund transaction whose `gateway` is a gift card or store credit (read it from the `transactions` field below). If the gateway does not say clearly, count the return as a refund and tell the user how many were unclear.
+   - **Store credit**: a refund transaction whose `gateway` is a gift card or store credit, read from the `transactions` field in the query below. Common gateway names are `gift_card` and a store credit name, but these are unverified. To get the exact name, open one return you know was paid as store credit in your Shopify admin, look at the payment gateway on its refund transaction, and match that exact text. Ask the user to confirm the name before you count. If the gateway does not say clearly, count the return as a refund and tell the user how many were unclear.
    - **Refund**: return has cash/card refund with no exchange
 
 3. **OPERATION:** `returns` — query again (only if `compare_days_back > 0`)
@@ -47,7 +49,7 @@ Analyzes return resolutions to calculate the split between exchanges (revenue re
 ## GraphQL Operations
 
 ```graphql
-# returns:query — written for api_version 2025-01 (not validated here; check the field names against your store's API version)
+# returns:query — written for api_version 2025-01. It has NOT been run against a live store. Before you rely on it, check every field name and argument in Shopify's GraphiQL explorer for your API version, and fix any that fail. Each connection field below (refunds, transactions, exchangeLineItems, returnLineItems) is read through edges and node.
 query ReturnResolutions($query: String!, $after: String) {
   returns(first: 250, after: $after, query: $query) {
     edges {
@@ -75,19 +77,23 @@ query ReturnResolutions($query: String!, $after: String) {
           }
         }
         refunds(first: 5) {
-          id
-          transactions(first: 5) {
-            edges {
-              node {
-                kind
-                gateway
+          edges {
+            node {
+              id
+              transactions(first: 5) {
+                edges {
+                  node {
+                    kind
+                    gateway
+                  }
+                }
               }
-            }
-          }
-          totalRefundedSet {
-            shopMoney {
-              amount
-              currencyCode
+              totalRefundedSet {
+                shopMoney {
+                  amount
+                  currencyCode
+                }
+              }
             }
           }
         }
@@ -175,7 +181,7 @@ CSV file `exchange_refund_ratio_<YYYY-MM-DD>.csv` with columns:
 |-------|-------|----------|
 | `THROTTLED` | API rate limit exceeded | Wait 2 seconds, retry up to 3 times |
 | No resolved returns in window | No completed returns in period | Exit with summary: 0 returns |
-| Exchange line items empty but status indicates exchange | In-progress exchange | Count as pending, exclude from ratio |
+| Exchange line items empty but status indicates exchange | In-progress exchange | Count as pending. Show the pending count, and leave it out of the split and the recovery rate |
 
 ## Best Practices
 - There is no trusted benchmark for the recovery rate. Use your own earlier period as the baseline (`compare_days_back`), and do not tell the user a rate is "good" or "bad" against a made-up target.

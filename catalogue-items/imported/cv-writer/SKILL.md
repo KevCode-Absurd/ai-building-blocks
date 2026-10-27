@@ -36,6 +36,28 @@ missing-info checklist.
 
 ---
 
+## What to give it
+
+- Your background in at least one form: LinkedIn text or PDF, old CVs, or a GitHub or portfolio link.
+- The job post, if the CV is for one job. It is needed for the keyword match. With no target role you get a clean general CV, but no keyword match. To rework the layout of a CV you already have, use Resume layout editor.
+- Links need web access. If your AI cannot open a link, paste the text instead.
+
+## Core steps
+
+1. Gather sources and merge them. Remove repeats and keep dates exactly as written.
+2. Match your wording to the job post, without adding skills or titles you do not have.
+3. Flag gaps and ask for real figures. Never fill them in.
+4. Return the result in this order: (a) the CV text, ready to paste, (b) the flaw report for applicant filters, (c) the missing-info checklist, (d) notes on every reworded line.
+5. Next steps: paste the CV into the chosen tool, then use the change notes and the missing-info checklist to fill the gaps before you apply.
+
+The detailed guide below has the full procedure.
+
+## Not for
+
+- A cover letter. This skill only makes the CV.
+- Jobs that need a portfolio or a formal application form.
+- Adding skills or jobs you do not have.
+
 ## Limitations
 
 - **No hallucination.** Never invent a title, company, date, degree, cert, skill, metric, or award.
@@ -45,6 +67,6 @@ missing-info checklist.
 - **One version at a time.** Complete the CV before offering variants.
 - **Privacy.** Do not expose full home address, national ID, DOB, marital status, or religion unless the user's target market requires it.
 - **No keyword stuffing.** Adding skills the user does not have is fraud. Flag gaps; never fabricate.
-- **OCR warning.** Always display before continuing: "OCR was used — please verify the extracted text for accuracy."
+- **OCR warning.** Show this only when a file was scanned and read by OCR. Display before continuing: "OCR was used — please verify the extracted text for accuracy."
 
 ---

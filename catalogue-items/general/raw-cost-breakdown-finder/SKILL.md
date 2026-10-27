@@ -5,7 +5,7 @@ description: Use when a quote or bill keeps rising, when pricing something new, 
 
 # Raw cost breakdown finder
 
-A price is often set by habit. This skill goes back to what the thing is made of or how it is made, prices each raw part, and compares the total with what you pay or charge. Some of the gap is fair. This skill tells the fair part from the habit. For a plan that takes several steps to act on the result, use "Staged product ladder planner".
+A price is often set by habit. This skill goes back to what the thing is made of or how it is made, prices each raw part, and compares the total with what you pay or charge. Some of the gap is fair. This skill tells the fair part from the habit. For a plan that takes several steps to act on the result, use the [Staged product ladder planner](https://useaiblocks.com/skills/staged-product-ladder-planner).
 
 **Not for:** comparing two supplier quotes (ask each for a line-by-line quote and compare them side by side), a price fixed by a contract that cannot change, or a small one-off buy where the time costs more than the saving. If your AI cannot search the web, it must use only prices you paste in and label the rest ESTIMATE; it never makes up a price list.
 
@@ -46,7 +46,7 @@ How to start:
 
 1. **Name the thing and the price.** Write the item, the unit and the price paid or charged. If the price changes with volume, write the volume it applies to.
 2. **List what it is made of.** For a physical item, list the materials and parts. For a service or software, list the steps and the people, time and tools each step takes. Go down to the level where you could buy or do each piece directly. Stop there.
-3. **Price each raw input.** For each line write a quantity, a unit cost and a source: a public price list, an index, a supplier page, the person's invoice. If you cannot cite a source, label it ESTIMATE and give the range you used. Never present an estimate as a fact.
+3. **Price each raw input.** For each line write a quantity, a unit cost and a source: a public price list, an index, a supplier page, the person's invoice. If you cannot cite a source, label it ESTIMATE and give the range you used. Never present an estimate as a fact. If your AI cannot search the web, use only the prices the person pasted in, label every other line ESTIMATE, and list the price sources they should check first.
 4. **Add up the raw cost.** Sum the lines. Add known unavoidable costs that are not raw, such as freight, duty or labour, on their own lines. Compare the total with the price. Show the gap as an amount and a percentage.
 5. **Mark where the gap is largest.** Split the price into parts (materials, labour, assembly, shipping, margin, other). Rank the parts by size of the gap against the raw figure.
 6. **Ask why each large gap exists.** Give each one a reason: scale (it would shrink at higher or lower volume), habit (nobody has questioned it), margin (the seller's profit) or a real limit (a rule, a safety standard, a contract, a skill you do not have). For each reason write the evidence, or "unknown" and what to ask.

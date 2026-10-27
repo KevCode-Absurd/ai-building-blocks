@@ -22,7 +22,7 @@ not_for:
 you_give:
   - Brand name and official domain
   - Trademark number (optional)
-  - Links to suspected copycats (optional)
+  - "The listings you collected by hand. For each one: seller, price, images, reviews and link. Example row: [SELLER NAME], [PRICE], [IMAGE LINKS], [REVIEW COUNT], [PAGE LINK]."
   - Your approved resellers (optional)
 you_get:
   - A monitoring checklist for your brand
@@ -31,14 +31,16 @@ you_get:
   - A cease and desist letter template
   - A suggested action for each case
 how_to_use:
+  - "Read this first: if you run detector.py without your own listings, it shows built-in demo data only. Those findings are not about your store. To check your own listings, your AI calls the detect function in detector.py with your brand details and listings. SKILL.md lists the fields it expects."
+  - This is an MIT-licensed skill from Nexscope AI (see the LICENSE file in this item). It adds a risk check and ready letters to a by-hand watch of your brand. It does not watch the web for you.
   - Gather your brand name, official domain and trademark number if you have one. Add your logo link and social handles too.
-  - Download the skill folder and open it in an AI that can run Python code.
-  - "Follow these steps: put the folder where your AI can read it, fill in the input settings, run detector.py on your own list of suspect listings, then run templates.py for the letter you need."
-  - Confirm your trademark is registered and active. The letters assume you hold the right.
-  - Add your details to the input settings, then run the detector script (detector.py). It does not search the web. It checks the listing details you give it against your brand info. Run as it is, it shows demo data only.
-  - Read each finding and its risk level. Check every link yourself before you act.
+  - Find suspect listings, sites and posts by hand. For each one write down the seller, price, images, reviews and link.
+  - Download the skill folder and open it in an AI that can run Python code. Fill in the input settings with your brand details.
+  - Run detector.py on your listings. It does not search the web. It checks the details you give it against your brand info.
+  - Read each finding and its risk level. Open every link yourself before you act.
+  - Confirm your trademark is registered and active. The letters assume you hold the right. If it is not registered and active, skip the cease and desist letter and ask a lawyer first.
   - "Pick the template that fits: takedown notice, cease and desist, platform report, social report or domain complaint."
-  - Have a lawyer review the letter before you send it in any serious case. Treat the 24-hour target as a suggestion, not a legal deadline.
+  - Have a lawyer review every letter before you send it. Treat the 24-hour target as a suggestion, not a legal deadline.
 output_sample:
   input:
     - Your brand name

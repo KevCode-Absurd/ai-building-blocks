@@ -10,6 +10,8 @@ explain: |
   A full sourcing plan for one spend category, with supplier list, quote request, scoring rules and negotiation tactics. Name the category, its yearly spend, how important it is and who supplies it today.
 
   The skill follows seven steps: profile the category, study the supply market, set the strategy, find suppliers, pick one, negotiate, then roll out. It places the category on the Kraljic grid to decide how hard to push suppliers. It lists ways to save such as bundling volume, changing specs and adding competition, and it covers should-cost thinking.
+
+  This is a copy of a skill from kishorkukreja/awesome-supply-chain, shared under the MIT licence (see the LICENSE file).
 terms:
   - term: Kraljic grid
     meaning: A four-box chart that sorts what you buy by how much it costs you and how risky the supply is.
@@ -43,6 +45,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. You do not need code running or any files. The Python blocks in the skill are optional reference code.
   - "Gather first: spend per supplier for the category, units bought per year, and contract end dates. Then tell your AI the spend category, yearly spend and volume, current suppliers and contract terms."
   - Add your goals, such as cost, risk or quality (optional).
+  - The 50-point cut-offs in the skill's Kraljic code are placeholders. Set them from your own supply risk and profit impact scores.
   - Read the Kraljic position first. It sets how hard to push, so check it fits what you know.
   - Replace any sample numbers or rates in the plan with your own figures before you share it. The percentages and prices in the skill's code are placeholders, not benchmarks.
   - Next, send the quote request to your suppliers. Then compare their offers with supplier-scorer.

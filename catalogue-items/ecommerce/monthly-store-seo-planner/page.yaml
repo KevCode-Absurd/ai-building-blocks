@@ -74,13 +74,13 @@ how_it_works:
   - title: Plans week 4
     text: Promote and monitor. About 15 minutes a day on journalist query sites, and a Search Console review.
   - title: Sets the monthly routine
-    text: At least 2 posts a month, 4 if you can. Add 3 to 5 keywords to rank tracking and check 20 to 30 key terms weekly.
+    text: At least 2 posts a month, 4 if you can. Add 3 to 5 keywords to rank tracking and check 20 to 30 key terms weekly. Google Search Console does this free. A paid rank tracker needs a subscription.
   - title: Keeps volume safe
     text: Finish one cluster before the next. Ramp new pages slowly so a spike does not look like spam.
   - title: Names the signs
     text: Impressions rising before clicks, new queries showing, positions moving from page five toward page three.
   - title: Sets the review
-    text: Each month ask if the keyword is still worth ranking. Revisit a term after 6 months.
+    text: Each month ask if the keyword is still worth ranking. Revisit a term after 6 months. Change course if impressions are flat after 3 months. Review the keywords and page quality before you add more posts. This rule is our suggestion, not Google's.
 
 output_shape: |
   YOUR HOURS  <hours per month> | <who does it>

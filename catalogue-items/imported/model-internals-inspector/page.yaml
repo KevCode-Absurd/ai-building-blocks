@@ -5,7 +5,7 @@ name: Model internals inspector
 summary: "Look inside a GPT-style language model with this model internals inspector. See which layers and attention heads shape one answer, using Python code."
 job: research-topics
 headline: Model internals inspector
-subhead: "Give it a language model and a question. Get a look inside it: which parts pay attention to what, and why. Bring a GPT-style model name. Use the result to plan your next step."
+subhead: "Give it a language model and a question. Get a look inside it: which parts pay attention to what, and why. Made for ML researchers who write Python. Bring a GPT-style model name."
 explain: |
   A look inside a language model that answers questions like which parts of it attend to which words, and which parts caused a specific answer. You get evidence, not guesses.
 
@@ -20,7 +20,7 @@ not_for:
   - "You want to train or study sparse autoencoders: use SAELens, a separate Python library, instead of this skill."
   - "You want to look inside a model that is not GPT-style: use nnsight or pyvene, which handle other designs."
 you_give:
-  - A GPT-style model name
+  - A GPT-style model name that TransformerLens supports. This skill runs only on those models, and gpt2-small is the safe starting point.
   - Two prompts to compare, one right and one wrong (optional)
   - The question about its behavior
   - A Python setup with a GPU for larger models
@@ -34,7 +34,8 @@ how_to_use:
   - Check you have what it needs first. This skill needs Python, and a GPU for larger models. Some research background helps.
   - Open an AI that can run code, or paste the skill into a chat and run the code on your own computer.
   - Give your AI the model name, your prompts and your question about the model.
-  - Ask it to run the tests. Start with activation patching, then attention maps.
+  - "First run: pick gpt2-small, give it one clean prompt and one changed prompt, and ask it to run the activation patching steps from the skill. Then ask for the attention maps."
+  - The skill's code fills a grid of numbers. The heatmap comes from the Workflow 1 code plus a plotting step, for example with matplotlib, so ask your AI to add that step.
   - Read the heatmap and the table of top layers and heads. Check the caveats before you trust the result.
   - Pick one next experiment and run it to confirm what you found.
 output_sample:

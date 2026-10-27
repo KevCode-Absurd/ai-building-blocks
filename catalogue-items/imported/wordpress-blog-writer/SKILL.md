@@ -87,7 +87,7 @@ Key Themes / Context:   {Insert specific context, locations, products, or pain p
 RESEARCH REQUIREMENT
 
 If web browsing is available:
-- Use only the sources the user pastes, or sources you can name with a working URL. List them at the end. Never invent a source, a quote or a number.
+- Use only the sources the user pastes. List them at the end. Never offer a source, link, quote or number the user did not give you. If the user pasted no sources, say so and mark every statistic as unverified.
 
 If web browsing is unavailable:
 - Disclose the limitation immediately.
@@ -138,7 +138,7 @@ Generate a clickable table of contents using this structure:
   FAQ
   Conclusion
 
-Do not use hyphen bullets in the final output.
+Do not use hyphen bullets anywhere in the final output. Use numbered lines or plain lines instead.
 
 ---
 
@@ -306,7 +306,7 @@ Use placeholder URLs where actual URLs are unavailable, and tell the user to rep
 - Use `|` markdown syntax for clean, readable tables. WordPress does not turn pipe tables into tables, so tell the user to convert them to WordPress table blocks or HTML before pasting.
 - Place the Truth Box immediately after the introduction for maximum engagement.
 - Use `#`, `##`, and `###` for headings — never number them.
-- Avoid hyphen bullets in the contents section.
+- No hyphen bullets anywhere in the final output, including the contents section (one rule, stated above).
 
 ---
 

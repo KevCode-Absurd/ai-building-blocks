@@ -26,7 +26,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## Read first
 
-This skill needs only the five figures in "What you need". Ignore any line below that asks for a buyer brief or source text, or for a Cash and added interest calculator step.
+This skill needs only the five figures in "What you need". It does not use a buyer brief or source text. The "Recommended steps before this one" list below names the Cash and added interest calculator. That step is optional: use it only if your cash figure does not yet include interest that was added to the loan balance instead of paid. You can run this check without it.
 
 A chat is enough. Do the sums yourself and show each one. Run the bundled script or build a workbook only when you have code or file tools and the person wants one. If you cannot run something, say so. Never claim you ran a check you did not run.
 
@@ -134,6 +134,10 @@ Illustrative figures only, not a real loan. Excess cash flow 15, sweep 50%, cash
 Only when the person asks for a workbook and you have a spreadsheet tool. Start from `examples/model.xlsx`. Keep inputs, calculations and checks apart: inputs feed the calculations, and checks only read. Show units, and show negatives in parentheses. Recalculate, change one input and check the result, restore the case, then reopen the saved file. Say which checks could not run.
 
 The script `scripts/run-model.mjs` needs Node.js 20 or later. Run `node scripts/run-model.mjs references/model.json` for the practice numbers. For real numbers, pass a file with every input: `cashBeforeSweep`, `minimumCash`, `eligibleEcf`, `sweepFraction` and `eligibleDebt`, as plain numbers in the same units. The sweep fraction is a decimal, so 50% is 0.5. Run `node scripts/run-model.mjs references/model.json inputs.json`. The script rejects missing or invalid inputs. It only does arithmetic. It does not read loan terms or check that the facts are true. Save its output and the workbook check results separately.
+
+## What next
+
+The two main next steps are the Debt service covenant headroom checker (cover after the sweep) and the Net leverage covenant checker (leverage after the sweep). The other items in the "After this" list above are optional extras.
 
 ## Limits
 

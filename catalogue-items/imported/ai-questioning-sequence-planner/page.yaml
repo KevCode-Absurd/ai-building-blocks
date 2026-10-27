@@ -9,7 +9,9 @@ subhead: Rounds of questions your students can put to a chatbot, built to show w
 explain: |
   Rounds of questions your students can put to a chatbot, built to show whether it truly changes its answer or just gives in to pressure. It turns a vague worry about AI agreeing too easily into a class exercise.
 
-  You name a topic and a year group. The plan sets out three to five rounds, each with a question type, its purpose and the kind of reply to expect. Students log how the answer shifts using a drift tracker. A short guide helps them tell a real update, backed by new reasoning, from caving in. Facilitation notes and a debrief guide close it out. It draws on work on questioning and AI sycophancy.
+  You name a topic and a year group. The plan sets out three to five rounds, each with a question type, its purpose and the kind of reply to expect. Students log how the answer shifts using a drift tracker. A short guide helps them tell a real update, backed by new reasoning, from caving in. Facilitation notes and a debrief guide close it out. It draws on work on questioning and AI sycophancy. The papers it lists are not verified here, so check any paper yourself before you quote what it found.
+
+  Licence: CC BY-SA 4.0 applies to this copy, as the LICENSE file in this folder says. The skill is by Gareth Manning.
 when:
   - You teach AI literacy and want a hands-on lesson on chatbot flattery.
   - Students trust chatbot answers without testing them.
@@ -17,7 +19,7 @@ when:
   - You want a debrief guide for pairs or the whole class.
 not_for:
   - "You want a general AI literacy overview with no claim to test: use a source-evaluation task instead."
-  - "You need to write questions for a topic with no AI answer to probe: use the socratic-questioning-sequence-generator."
+  - "You need to write questions for a topic with no AI answer to probe: use the Socratic question sequence writer."
   - "You want to grade student essays or work: use your own marking guide or a rubric."
 you_give:
   - The claim or topic to probe
@@ -37,6 +39,7 @@ how_to_use:
   - Have students ask the chatbot each round's question. They log every answer in the drift tracker.
   - Use the capitulation guide to sort real updates from giving in.
   - Hold the debrief with the debrief guide.
+  - Next, follow up with the AI answer critique activity builder, or plan another questioning round with the Socratic question sequence writer.
 output_sample:
   input:
     - The AI claim or answer you want students to test

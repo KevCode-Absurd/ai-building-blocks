@@ -5,6 +5,8 @@ description: Use when someone wants a steady writing habit. Builds a daily sessi
 
 # Daily writing session planner
 
+Not for: finishing one long first draft by a set date (use "Daily word quota planner"), or mapping the shape of a draft you already have (use "Story shape mapper").
+
 Writing plans fail when the time is vague, the session never ends and every draft is judged as it is made. This skill builds a daily session with one place, a fixed end, a loose first draft and a rewrite on a later day. It also sets up an idea file and an hours log so you can see progress. To size one long first draft to a finish date, use "Daily word quota planner".
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
@@ -32,7 +34,7 @@ How to start:
 
 ## Steps
 
-1. **Fix the place and start.** Pick one seat, one tool (pad, laptop or notebook) and one start time. Write the single rule for the hour, such as nothing else is allowed during the session. If the person has no fixed hours, choose the quietest slot they listed.
+1. **Fix the place and start.** Pick one seat, one tool (pad, laptop or notebook) and one start time. Write the single rule for the hour, such as nothing else is allowed during the session. If the person gave days and minutes but no fixed start time, choose the quietest slot they listed. If days and minutes are missing, ask before you build the plan.
 2. **Set the end time.** Choose a finish time from the minutes they gave you, then say that stopping on time is the reward. Short and finished beats long and drained, so recommend a session length they can keep on their worst day.
 3. **Build the idea file.** Set up two places for raw material: a running idea file (one line per idea, a short note under each) and a small notebook for random observations. Write the rule for each: add, never delete, and look only when starting a new piece.
 4. **Plan the first draft.** Describe a small first draft: about half a page on one observation or one point, written with no judging. Write down what counts as done for a draft day, for example one clear paragraph and a note on what is missing.

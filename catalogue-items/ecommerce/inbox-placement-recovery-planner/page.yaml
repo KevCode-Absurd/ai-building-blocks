@@ -72,7 +72,7 @@ how_it_works:
   - title: Plans the ramp
     text: Keep welcome and post-purchase flows on and pause the rest. Cart and checkout flows stay on only if their own open rate is 40 percent or more. Send 3 strong campaigns a week to the 14-day group for two weeks.
   - title: Sets the gates
-    text: Widen to 30, 60, then 90 days when opens reach about 50 percent. If not, repeat the stage for two more weeks, then drop site activity from the segment.
+    text: Widen to 30, 60, then 90 days when opens reach about 50 percent. If not, repeat the stage for two more weeks, going back one stage if opens fall below about 40 percent, then drop site activity from the segment.
   - title: Improves the emails
     text: Live text, real product blocks, conversational subject lines and short copy, so the emails earn the opens.
 
@@ -99,6 +99,7 @@ output_shape: |
 
   TRACKER
   <stage | segment | sends | open | click | complaints | decision>
+  CHECKS MISSED: <checks that failed or could not run, or none>
   MISSING: <results | engaged counts | flow list>
 
 tweaks:

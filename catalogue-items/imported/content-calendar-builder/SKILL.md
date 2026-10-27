@@ -126,6 +126,8 @@ Which mode?
 
 ### Step 1: Collect Strategy Inputs
 
+**Gather first** (ask the user for anything missing): product details, platforms, goal and period, customer reviews or review links, and rival account handles.
+
 | Field | Required | Example |
 |-------|----------|---------|
 | `product_category` | ✅ | Portable blender, handmade candles |
@@ -232,9 +234,8 @@ Compile into **Trend Opportunities**:
 ### Upcoming Seasonal Opportunities
 | Event/Season | Timing | Content Angle |
 |--------------|--------|---------------|
-| New Year fitness | Jan 1-15 | "New year, new routine" |
-| Summer travel | May-Aug | "Travel-friendly products" |
-| Black Friday | Nov | Gift guide, deals content |
+| [event or season you found] | [dates, checked for your market] | [content angle] |
+| [event or season you found] | [dates, checked for your market] | [content angle] |
 ```
 
 ### Step 4: Competitor Content Analysis
@@ -296,11 +297,11 @@ Compile into **Competitor Analysis**:
 ### [Competitor Name]
 | Aspect | Finding |
 |--------|---------|
-| Main platforms | TikTok, Instagram |
-| Posting frequency | 1x/day TikTok, 3x/week IG |
-| Top content types | How-to videos, UGC reposts |
-| Tone | Casual, relatable, humor |
-| Content pillars | Recipes, lifestyle, behind-scenes |
+| Main platforms | [platforms you saw them use] |
+| Posting frequency | [count you saw, per day or week, or "unknown"] |
+| Top content types | [types you saw] |
+| Tone | [tone you saw] |
+| Content pillars | [pillars you saw] |
 
 ### Content Gaps (Your Opportunities)
 - Competitor doesn't cover: [topic]
@@ -331,9 +332,8 @@ Compile into **SEO Content Opportunities**:
 
 | Keyword | Search Intent | Content Type | Difficulty |
 |---------|---------------|--------------|------------|
-| how to clean portable blender | Informational | How-to video + blog | Low |
-| best protein smoothie recipes | Informational | Listicle + video | Medium |
-| portable blender vs regular | Comparison | Comparison blog | Medium |
+| [keyword you found] | [Informational / Comparison / other] | [content type] | [Low / Medium / High, or "unknown" if no tool showed it] |
+| [keyword you found] | [intent] | [content type] | [difficulty or "unknown"] |
 ```
 
 ### Step 6: Generate Content Pillars
@@ -353,6 +353,8 @@ Based on all research, define 3-5 content pillars:
 ```
 
 ### Step 7: Generate Content Calendar
+
+Every topic and hook in the calendar must come from the research in Steps 2 to 5. The sample rows below only show the layout. Never copy them.
 
 Create a week-by-week content calendar based on the strategy period.
 

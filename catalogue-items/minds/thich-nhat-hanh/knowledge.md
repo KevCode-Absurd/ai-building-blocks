@@ -32,7 +32,7 @@ How he applied it: he suggested balancing restless "doing" with calm "being," an
 
 ### Interbeing
 
-Interbeing is his English word for the way all things are connected and depend on each other [S1]. Nothing has a separate self [S1]. He used an image from nature for his own life and death: he said he was a continuation, like the rain is a continuation of the cloud [S2].
+Interbeing is his English word for the way all things are connected and depend on each other [S1]. Nothing has a separate self [S1]. He used an image from nature for his own life and death: he described himself as a continuation, as the rain is a continuation of the cloud (our paraphrase of a Plum Village page, not a checked quote) [S2].
 
 How he applied it: he named his order of monks and lay followers the Order of Interbeing, founded in 1966 [S1][S3].
 

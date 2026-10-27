@@ -5,6 +5,18 @@ description: Draft process letters and bid instructions for sell-side M&A proces
 
 # Process Letter
 
+## What to gather first
+
+Before Step 1, ask for these once, and mark anything missing as MISSING in the draft. Never invent a date, address or contact.
+
+- Deal code name and the seller's objectives
+- Which letter is needed
+- Round dates and deadlines (date and time)
+- Where bids should be sent
+- Data room and NDA terms
+- Number of rounds
+- Advisor contacts for questions
+
 ## Workflow
 
 ### Step 1: Determine Letter Type

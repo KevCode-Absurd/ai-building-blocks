@@ -34,7 +34,7 @@ you_get:
   - A list of columns that mix types, for you to review
 how_to_use:
   - Start a chat and add the skill. Attach your .xlsx file. Name the range or columns to clean, if you only want part of the sheet.
-  - Use an AI that can read and save spreadsheet files, such as Claude Code. A chat AI that cannot open files can still give you the formulas to paste.
+  - "Use an AI that can read and save spreadsheet files, such as Claude Code. If officecli (a free command-line tool for Excel files) is installed, the skill uses it. If not, it uses Python or gives you formulas to paste. A chat AI that cannot open files can still give you the formulas."
   - Read the table of planned fixes. Say yes, no or change for each kind of fix.
   - Check the samples it shows after each kind of fix, such as spaces, case, numbers, dates, then duplicates.
   - Open the cleaned copy. Spot-check a few rows against the original, and check the dates most closely.

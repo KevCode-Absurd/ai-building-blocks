@@ -9,6 +9,8 @@ subhead: A short list of datasets, models and tools for your science field and t
 explain: |
   A short list of datasets, models and tools for your science field and task, with notes on which are worth trying. Name your area, such as protein folding, weather or galaxy images, and the job you want done.
 
+  This is for researchers and builders working on machine learning in science. It is not for everyday business tasks. Licence: MIT, as the LICENSE.md file in this item says.
+
   The skill searches the Hugging Science catalogue, a curated index across seventeen scientific areas, and the matching community collections on the Hugging Face Hub. It reads the compact and full listing files, then checks fit: does the resource match your data type, task and size? It also warns about practical limits. Some models run in common libraries, while others need their own runtime, and some datasets are gated and need a token. It needs Python and network access.
 when:
   - You wonder if a dataset exists for your science topic.
@@ -30,12 +32,14 @@ you_get:
   - Runtime and access warnings
   - Links to demos and write-ups
 how_to_use:
-  - Open an AI that can run Python and reach the web. Running code and web access are often paid features of Claude, ChatGPT or Gemini, or come with coding tools such as Claude Code or Codex. Check your plan. The catalogue fetch needs this. Without it, run scripts/fetch_catalog.py yourself and paste what it prints into the chat, or search the Hugging Science catalogue by hand.
+  - Open an AI that can run Python and reach the web. Running code and web access are often paid features of Claude, ChatGPT or Gemini, or come with coding tools such as Claude Code or Codex. Check your plan.
+  - "Check that your AI can reach huggingscience.co. If it cannot, use the manual route: run scripts/fetch_catalog.py yourself and paste what it prints, or search the catalogue by hand and paste the entries you find."
   - Paste the skill text into the chat, or upload the skill folder if your AI takes files.
   - Tell it your science field and the task you want done. Add your data type, data size and computer power if you know them.
   - Read the shortlist and the warnings first. Check which picks need their own software or a token.
-  - Before you use a pick, note its exact repository, version and licence. Then check it on its Hugging Face page.
-  - Next, to load a pick, follow references/using-datasets.md for a dataset or references/using-models.md for a model.
+  - Before you use a pick, note its exact repository, version and licence. Then check it on its Hugging Face page. The shortlist is not final until the pinned repository, commit, licence and data split are written down in the Pinned details section.
+  - If a pick is gated, keep your Hugging Face token in a .env file. Never paste it into the chat.
+  - Next, to load a pick, follow references/using-datasets.md for a dataset or references/using-models.md for a model. If the result goes into a paper or a code release, cite the catalogue's methodology post and the pick's own page.
 output_sample:
   input:
     - Your science field, such as protein design or climate

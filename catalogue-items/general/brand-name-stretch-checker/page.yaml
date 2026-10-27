@@ -112,7 +112,7 @@ tweaks:
   - what: How you describe the brand
     how: Use the word customers use for you, not the word you use. Check reviews if unsure.
   - what: Rivals in the new area
-    how: Name specialists. Without them the score on market splitting is marked as missing.
+    how: Name specialists. Without them the market splitting part scores 0 and is marked missing.
   - what: Size of the core
     how: Say how much of your business the core product is. It sets the cost of a failed stretch.
   - what: How different the product is

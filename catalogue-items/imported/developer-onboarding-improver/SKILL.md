@@ -352,7 +352,7 @@ The percentages below come from the skill's original author. They are rough, are
 Problem: Wrong key, malformed header, missing auth
 Fix:
 - Clearer error messages: "API key should start with 'sk_test_'"
-- Pre-filled code examples with actual key
+- Code examples with a placeholder key such as `YOUR_API_KEY` (never publish a live key in public docs; use a test key from the signed-in user's own dashboard, shown only to them)
 - Auth header format shown with example
 ```
 
@@ -473,6 +473,8 @@ Perform this audit quarterly (or after any onboarding changes):
 - Regular audits with real developers
 
 ## Tools
+
+Most of these tools are paid or have paid tiers (Amplitude, Mixpanel, FullStory, Hotjar, ReadMe.io, Ghost Inspector, Checkly, k6 Cloud). None is required. Free options: custom dashboards, your own logs, Stoplight or Redocly open-source tools, and the open-source k6.
 
 ### Onboarding Analytics
 - **Amplitude/Mixpanel**: Event tracking and funnels

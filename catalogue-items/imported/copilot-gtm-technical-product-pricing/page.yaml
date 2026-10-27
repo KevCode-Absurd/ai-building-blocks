@@ -9,6 +9,8 @@ subhead: Tell it your product, current prices, costs and buyers. It checks wheth
 explain: |
   Technical founders often price from cost: "it costs us X, so we charge twice X". Buyers price from value: "this saves us far more than it costs". This adviser compares your price with what the buyer would spend otherwise, and flags when you are leaving money on the table.
 
+  This is the MIT-licensed skill from GitHub Awesome Copilot, copied as it is. Its price figures and examples are the author's experience and are not checked here.
+
   It then compares three ways to charge: per seat, per use and per result. It names when each one breaks, and suggests a base fee plus a usage fee when that fits. For free plans, it helps you set the limit just below where real production use starts, so hobbyists stay free and working teams pay.
 
   For large customers, it covers how to answer "what does it cost?" with questions first and three options second. It ends with a raise, hold or restructure call on your current prices.

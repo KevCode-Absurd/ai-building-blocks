@@ -10,6 +10,8 @@ explain: |
   A short briefing on a company, drawn from the signals in your Common Room data, tells you what the account has been doing so you know how to approach it.
 
   The skill first loads your own context. It finds the company in Common Room and pulls only the fields that matter for that question, such as activity, contacts and intent signals. If the data is sparse, it adds a web search and notes that the briefing is based on limited data. It then reasons across the signals and produces a clean overview with the facts first. It needs a Common Room account connected.
+
+  This is the Common Room account research skill, shared in Anthropic's knowledge-work-plugins collection under the Apache 2.0 licence. We changed its name and the page text only. What it adds to Common Room's own account page: one short briefing that puts the signals, key contacts and next steps in one place, a plain note when the data is thin, and a web search for recent news.
 when:
   - You are about to call a company and want a quick background.
   - You hear a company name and want to know if they already use you.
@@ -32,9 +34,10 @@ you_get:
 how_to_use:
   - Check that you have a paid Common Room account and that it is connected to your AI. The skill cannot run without it.
   - Open Claude, ChatGPT or Gemini with the Common Room connection turned on, and paste in the skill instructions.
+  - Paste your ideal customer profile and what you offer. This copy has no company notes file, so without them the fit view is general.
   - Type a company name or domain. Add your question if you have one, such as whether they show buying signals.
   - Read the result. Check that each fact came from Common Room, and note any line that says data is limited.
-  - If the data is thin, the skill adds a web search for recent news. Allow web access in your AI if you want this.
+  - If the data is thin, the skill adds a web search for recent news. Allow web access in your AI if you want this. Without web access it still runs, but a thin account gets only what Common Room holds and a note that data is limited.
   - Use the next steps to plan your call or to hand the account to a teammate.
 output_sample:
   input:
@@ -59,6 +62,6 @@ output_sample:
     - name: Top Contacts
       contains: The top five contacts with name, title and score, highest score first.
     - name: RoomieAI Research
-      contains: The summary research from Common Room and the names of other research topics available.
+      contains: The summary research from Common Room's own AI research tool (RoomieAI), and the names of other research topics available.
     - name: Recommended Next Steps
       contains: Two or three specific actions backed by the signals found.

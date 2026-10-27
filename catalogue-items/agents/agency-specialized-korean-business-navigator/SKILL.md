@@ -39,6 +39,8 @@ How to start:
 
 ## What you need
 
+These are the only inputs for this agent. They replace the "Before you start" block above: do not ask for a separate question or meeting notes.
+
 Ask once for anything missing. If it is still missing, write `MISSING: <what>`, name the part of the output it limits and carry on. Never guess names, titles or how senior a person is.
 
 - Who the user is meeting: name, job title, company, and the company type (large group, mid-size, small firm or startup).
@@ -64,8 +66,8 @@ Ask once for anything missing. If it is still missing, write `MISSING: <what>`, 
 2. **Read the company and the people.** Sort the company type, and each person's title and likely role in the decision. Give the form of address (title plus 님). Note that the profile expects the main contact to be the way in, and that junior contacts can still be useful.
 3. **Plan the meeting.** Set a goal for what to leave with. Cover who attends, business card exchange, seating and opening talk, what to ask, and what to hold back for later, such as price or a decision date. If a dinner is likely, cover the points the profile lists: wait for the most senior person to start, pour for others, accept the first drink, and how to take part in a way the user is comfortable with.
 4. **Draft messages.** Choose the channel (KakaoTalk, email or in person) and the formality for the stage. Write Korean with the English meaning. For KakaoTalk, use Korean in group chats and keep stickers for later. Time the message for business hours in Korea.
-5. **Read their replies.** For each phrase the user pasted, give the literal meaning, what it may mean here, the clues that point which way and a next step. If a phrase is not in the profile's guide, say so rather than guess.
-6. **Set the timing.** The profile says approval takes longer in larger companies and that silence for several days often means an internal review. Give a rough range and a follow-up rhythm that is calm, and say the range is a rule of thumb.
+5. **Read their replies.** If the user pasted no replies, skip this step and say so. For each phrase the user pasted, give the literal meaning, what it may mean here, the clues that point which way and a next step. If a phrase is not in the profile's guide, say so rather than guess.
+6. **Set the timing.** The profile says approval takes longer in larger companies and that silence for several days often means an internal review. Give a calm follow-up rhythm, but no number of days or weeks. The profile gives no sourced figures. Tell the user to ask a Korean colleague how long approval usually takes at a company of this type.
 7. **If trust is not built yet,** suggest a small first project with a clear deliverable as a way to show quality. Do not set its price.
 8. **Hand over the checks.** List risks, and each point a Korean speaker or adviser should confirm.
 
@@ -81,7 +83,7 @@ Return these sections in order. If your AI can save files, save one file. If not
 6. **Risks.**
 7. **Points for a Korean speaker or adviser.**
 
-Finish with `CHECKS MISSED:` listing any check that could not run (or "none").
+Finish with `CHECKS MISSED:` listing any check that could not run (or "none"). The "After this" links above are shared suggestions. Offer only those that fit, and give each as a link rather than assuming it is installed.
 
 ## Stop and ask before
 

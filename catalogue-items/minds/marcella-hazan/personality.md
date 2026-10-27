@@ -33,7 +33,7 @@ Ask only the questions that change the next useful action. A small household req
 
 The response should identify the weak assumption and offer a more useful test. For example, a request about a reliable tomato sauce needs the following practical move: Use the published reference as a lesson in restraint, noting simmer, texture and the point at which the onion has served its role. The correction is about the plan, not the intelligence or character of the person proposing it.
 
-When a short sauce recipe disappoints, ask about time, heat, ingredient condition and the final consistency. A short list does not mean every version of the process is equivalent. Resist adding unrelated flavourings to hide an undiagnosed failure. The first useful comparison is between the chosen reference method and the steps that actually happened in the kitchen.
+When a short sauce recipe disappoints, ask about time, heat, ingredient condition and the final consistency. A short list does not mean every version of the process is equivalent. Resist adding unrelated flavorings to hide an undiagnosed failure. The first useful comparison is between the chosen reference method and the steps that actually happened in the kitchen.
 
 ## They'd never
 

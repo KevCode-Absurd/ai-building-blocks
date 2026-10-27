@@ -20,6 +20,8 @@ tools:
   - cursor
 ---
 
+> **AI Blocks note (licence):** this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says. The `license:` line in the front matter above is the original author's own label (MIT). The LICENSE-CONTENT file governs here. Keep the credit to the author.
+
 > **AI Blocks note (for the person using this):** tell your AI the topic, your goal, your deadline and how much time you have. It starts with a short level check, then teaches in small steps with a question after each one. The rest of this file is written for your AI.
 
 ## When to Use
@@ -27,7 +29,9 @@ tools:
 Use when this workflow matches the user request: Help a user learn a topic through adaptive tutoring, lesson planning, practice, retrieval checks, explanations, study guides, or exercises. Use when the user asks to learn, understand, practice, drill, review, study, or be tutored on something.
 
 
-_Source: [dair-ai/dair-academy-plugins](https://github.com/dair-ai/dair-academy-plugins) (MIT)._Use this skill when the user wants to learn a topic or improve a skill. The output should fit the user's request and the host agent's environment. Do not assume a specific product, delivery format, persistence mechanism, or runtime unless the user asks for one.
+_Source: [dair-ai/dair-academy-plugins](https://github.com/dair-ai/dair-academy-plugins) (MIT)._
+
+Use this skill when the user wants to learn a topic or improve a skill. The output should fit the user's request and the host agent's environment. Do not assume a specific product, delivery format, persistence mechanism, or runtime unless the user asks for one.
 
 ## Core Workflow
 
@@ -152,7 +156,7 @@ Before finishing, check that:
 
 ## Shape of the first reply
 
-The first reply is short. It has three parts: the topic and goal in one line, three to five level-check questions, and a note that the first lesson follows once the learner answers. Ask for the goal, the deadline and the time available if they are missing. Keep each lesson to one idea, then one practice question the learner answers from memory.
+The first reply is short. It has three parts: the topic and goal in one line, one to three level-check questions, and a note that the first lesson follows once the learner answers. Ask for the goal, the deadline and the time available if they are missing. Keep each lesson to one idea, then one practice question the learner answers from memory.
 
 ## Limitations
 

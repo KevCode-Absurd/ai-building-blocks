@@ -23,7 +23,7 @@ This catalog copy does not include these files:
 - `../roadrunner-rrhd-authoring/scripts/resolveHeightConflicts.m`
 - `../roadrunner-rrhd-authoring/references/deduplicateBoundaries.md`
 
-Do not say you read or ran them. The steps that depend on them are center line synthesis, closed-road splitting, endpoint snapping, height conflicts, boundary alignment and boundary deduplication. Do not guess this geometry. Stop before those steps, name which ones cannot run, and ask the user to supply the files from the original roadrunner-rrhd-authoring skill. Only then continue the conversion.
+These files are in this library, in the Road map author item (road-map-author), which is the same MathWorks skill under its original name roadrunner-rrhd-authoring. If the user adds that item, use them. Until then, do not say you read or ran them. The steps that depend on them are center line synthesis, closed-road splitting, endpoint snapping, height conflicts, boundary alignment and boundary deduplication. Do not guess this geometry. Stop before those steps, name which ones cannot run, and ask the user to supply the files from the original roadrunner-rrhd-authoring skill. Only then continue the conversion.
 
 # Lanelet2 to RRHD Converter
 

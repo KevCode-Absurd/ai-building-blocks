@@ -7,7 +7,7 @@ description: Use when a story ad's picture should be a sticky note stuck on the 
 
 You brief a phone photo of one sticky note, stuck on the very thing the problem is about: "eggs: OTHER pan" on the pan handle, "cancel by the 14th" on the monitor. People only write notes like that when the old way keeps failing, so the note is the habit in a few words. Anyone who has stuck up the same kind of note knows the story before they read it.
 
-**Good for:** workarounds, house rules and reminders to self. Stories where the narrator is worn out or blames themselves.
+**Good for:** workarounds, house rules and reminders to self. Stories where the narrator is worn out or blames themselves. It works best for a buyer whose problem lives on one object at home or at a desk. For a buyer whose problem is spread across a day, use the [Problem-moment image ad maker](https://useaiblocks.com/skills/problem-moment-image-ad-maker).
 
 **Not for:** a longer note or list (`handwritten-note-image-ad-maker`), or reminders on a phone (`ignored-reminders-image-ad-maker`).
 
@@ -69,7 +69,7 @@ If an image tool is connected, offer to make the picture with it, and ask before
 4. **Stick it on the thing the rule is about,** or as close as it gets: the pan handle, the monitor edge, the cupboard door that hides the old tub. The place does half the telling.
 5. **One note.** Add a second, older and curled, only when the story is about a reminder that kept failing.
 6. **Show it lived with:** a corner lifting, a smudge, the note slightly crooked. Ordinary things around it.
-7. **Say how to make it.** Best: write a real note by hand, stick it on a real surface and take the photo. Next best: generate the scene with the words in quotes and check them letter by letter. Or generate it with a blank note and write on the photo by hand in a photo editor.
+7. **Say how to make it.** Best: write a real note by hand, stick it on a real surface and take the photo. Next best: generate the scene with the words in quotes and check them letter by letter. Or generate it with a blank note and write on the photo by hand in a photo editor. If the scene is staged or generated, label the ad as an illustration or staged scene before it runs, and never present it as a real customer's note.
 8. **Run the checks.** Run "Check before you hand it back" and fix any check that fails where you can. Show `CHECKS MISSED: <one line each>`, or "none".
 
 ## What you hand back

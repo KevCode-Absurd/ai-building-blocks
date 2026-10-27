@@ -39,6 +39,7 @@ how_to_use:
   - Run the command yourself, or hand it to someone with Python and mergekit installed. A CPU works, though a GPU is faster. The result is a folder of model files.
   - Load the merged model and test it on your test set. Compare the scores with each parent model.
   - If a skill got weaker, ask your AI to change the weights or density and run the merge again.
+  - If mergekit fails, first check that the tokenizers and base designs of your models match. Paste the full error to your AI.
 next: [language-model-benchmark-runner, model-size-reducer]
 output_sample:
   input:

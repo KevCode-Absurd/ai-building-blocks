@@ -19,6 +19,10 @@ The GitHub Copilot SDK exposes the same engine behind Copilot CLI: a production-
 
 The TypeScript, Python, and .NET packages use a bundled Copilot runtime by default, so they do not need a separate CLI installation.
 
+## Safety note (added by AI Blocks)
+
+Every example below uses `approveAll` (or `PermissionHandler.ApproveAll`) as the permission handler. That setting says yes to every request the agent makes, including file edits and commands, with no review. Use it only for local testing on code you can lose. Before any real use, replace it with a handler that allows only the actions your app needs and asks the user about the rest. Tell the user this when you give them the code.
+
 ## Installation
 
 ### Node.js/TypeScript
@@ -62,7 +66,7 @@ import { CopilotClient, approveAll } from "@github/copilot-sdk";
 
 const client = new CopilotClient();
 const session = await client.createSession({
-    onPermissionRequest: approveAll,
+    onPermissionRequest: approveAll, // LOCAL TESTING ONLY: approves every request with no review. Replace before real use.
     model: "gpt-4.1",
 });
 
@@ -83,7 +87,7 @@ from copilot import CopilotClient, PermissionHandler
 async def main():
     async with CopilotClient() as client:
         async with await client.create_session(
-            on_permission_request=PermissionHandler.approve_all,
+            on_permission_request=PermissionHandler.approve_all, # LOCAL TESTING ONLY: approves every request with no review. Replace before real use.
             model="gpt-4.1",
         ) as session:
             response = await session.send_and_wait("What is 2 + 2?")
@@ -111,7 +115,7 @@ func main() {
     defer client.Stop()
 
     session, err := client.CreateSession(&copilot.SessionConfig{
-        OnPermissionRequest: copilot.PermissionHandler.ApproveAll,
+        OnPermissionRequest: copilot.PermissionHandler.ApproveAll, // LOCAL TESTING ONLY: approves every request with no review. Replace before real use.
         Model:               "gpt-4.1",
     })
     if err != nil {
@@ -135,7 +139,7 @@ using GitHub.Copilot.SDK;
 await using var client = new CopilotClient();
 await using var session = await client.CreateSessionAsync(new SessionConfig
 {
-    OnPermissionRequest = PermissionHandler.ApproveAll,
+    OnPermissionRequest = PermissionHandler.ApproveAll, // LOCAL TESTING ONLY: approves every request with no review. Replace before real use.
     Model = "gpt-4.1",
 });
 
@@ -904,6 +908,13 @@ The SDK manages the CLI process lifecycle automatically. All communication happe
 - **MCP Servers Directory**: https://github.com/modelcontextprotocol/servers
 - **Cookbook**: https://github.com/github/copilot-sdk/tree/main/cookbook
 - **Samples**: https://github.com/github/copilot-sdk/tree/main/samples
+
+## How to check the result
+
+1. Run the quick start first. Confirm it prints one reply before you add anything else.
+2. Add one custom tool and ask a question that needs it. Confirm the tool is called.
+3. Add the MCP link last, and confirm one call through it works. In Go, fill in the MCP fields first.
+4. Before real use, replace `approveAll` with a handler that limits what the agent may do.
 
 ## Status
 

@@ -36,10 +36,10 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-This list replaces the general one above. You do not need an ad export or a brand brain.
+This list replaces the shared "Before you start" block above. You do not need an ad export or a brand brain. Skip the "Your results" line that names Meta Ads Manager, Google Ads or a store export, and skip the brand brain files. Your results are the funnel numbers below.
 - **Funnel numbers for one named period** (required): visits, sign-ups and users still active after 30 days, with how each is counted.
 - **The new-user goal** (required): what a new user should do, and what a good outcome looks like.
-- **The post-fix export** (needed for step 3): the same numbers for a later period, once every user in it has had 30 days.
+- **The post-fix export** (needed for step 3): the same numbers for a later period, once every user in it has had 30 days. It must cover the same length of time as the first export. If the periods differ in length, step 3 stops.
 - **A buyer grounded in real review language: problem, trigger, wants, doubts, words they use** (optional)
 - **A built or live web page, as a URL or saved HTML** (optional)
 
@@ -53,15 +53,23 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **New user drop-off finder.** Use the skill `new-user-drop-off-finder`. Finds the biggest leak and the first-visit change to try. Starts from your funnel numbers and hands the leak report to step 2.
-2. **Small usability test planner.** Use the skill `small-usability-test-planner`. Give it the audit report from the steps before. Plans a one-morning test of the leak the finder named. Reads the audit report from the step before and hands the test plan, with its pass number, to step 3.
+2. **Small usability test planner.** Use the skill `small-usability-test-planner`. Give it the leak report in `outputs/step-01-new-user-drop-off-finder.md`. Plans a one-morning test of the leak the finder named. Reads the leak report from step 1 and hands the test plan, with its pass number, to step 3.
 
 Pause here: Run the test with three people and one outsider. Implement the first-visit fix only with the owner’s approval. Export results only after the post-change cohort has completed the full observation window for the measure being reviewed. For 30-day retention, every included user must have had 30 days to return. Use the same cohort rules and complete window for the before and after groups. Earlier first-use results may be reviewed separately, labelled with their shorter window; they do not establish a 30-day retention result.
 
-3. **Product metrics review writer.** Use the skill `product-metrics-review-writer`. Give it the fresh export from after the wait and the test plan from the steps before, so the review uses the pass number and targets set there. Before comparing, check cohort dates, measure definitions and complete observation windows. Stop the affected comparison if either group is too young or the windows differ. Read the supported before-and-after change as an observation, not proof that the fix caused it.
+3. **Product metrics review writer.** Use the skill `product-metrics-review-writer`. Give it the fresh export from after the wait and the test plan in `outputs/step-02-small-usability-test-planner.md`, so the review uses the pass number and targets set there. Before comparing, check cohort dates, measure definitions and complete observation windows. Stop the affected comparison if either group is too young or the windows differ. If the post-fix export is not yet 30 days old for every user in it, write `MISSING: post-fix export with a full 30-day window`, hand back steps 1 and 2 and say to return once the window has passed. Read the supported before-and-after change as an observation, not proof that the fix caused it.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then a `CHECKS MISSED` list (or "none").
 
 ## What you hand back
-3 step files and the summary. The last file holds the audit report.
+3 step files and the summary. The last file holds the audit report. Use this layout:
+
+```
+STEP 1  LEAK REPORT   <biggest leak | first-visit change to try | the numbers it rests on>
+STEP 2  TEST PLAN     <who to test with | tasks | pass number | targets>
+PAUSE   <what was done: test run, fix shipped, wait for the 30-day window>
+STEP 3  METRICS REVIEW <before | after | same cohort rules | change seen | not proof of cause>
+HAND-BACK SUMMARY     <files | steps not run | MISSING lines | CHECKS MISSED>
+```
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

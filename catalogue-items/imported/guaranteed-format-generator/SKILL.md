@@ -36,6 +36,8 @@ Use Outlines when you need to:
 
 ## Installation
 
+> **Version note.** The code in this file was written for the Outlines 0.1 series. AI Blocks has not rechecked it against newer releases, so confirm the version first with `pip show outlines`.
+
 ```bash
 # Base installation (the calls in this file match the 0.1 series)
 pip install "outlines>=0.1,<0.2"
@@ -227,19 +229,9 @@ model = outlines.models.vllm(
 generator = outlines.generate.json(model, YourModel)
 ```
 
-#### OpenAI (Limited Support)
+#### Hosted models (OpenAI and others) — out of scope for this item
 
-```python
-# Basic OpenAI support. Read the key from an environment variable, never type it into code.
-import os
-model = outlines.models.openai(
-    "gpt-4o-mini",
-    api_key=os.environ["OPENAI_API_KEY"]
-)
-
-# Note: Some features limited with API models
-generator = outlines.generate.json(model, YourModel)
-```
+This catalogue item is for local models only. If the user wants a hosted model, send them to the Structured data extractor or the AI data extractor builder. Do not write hosted-model code from this file.
 
 ### 4. Pydantic Integration
 

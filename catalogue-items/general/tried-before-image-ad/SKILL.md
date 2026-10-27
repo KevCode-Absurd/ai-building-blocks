@@ -43,7 +43,7 @@ How to start:
 
 **Tools that do this best:**
 - **Your phone camera:** A real cupboard with the labels turned away is the most believable version, and nothing in it is generated.
-- **Nano Banana:** Google's image model. Its guide says a detailed scene gives you more control, and this brief is detailed.
+- **Nano Banana:** Google's image model. It works well with a detailed scene prompt, and this brief is detailed.
 - **Any good chat AI:** Reading the story for what was tried is careful reading, which Claude, ChatGPT and Gemini all do well.
 <!-- /needs -->
 
@@ -58,7 +58,7 @@ This skill runs on its own. If something marked required below is missing, ask o
 
 If you can make images in this chat (ChatGPT and Gemini can), make the picture from your prompt once the prompt passes its checks, then check the picture against the same list and say what to fix. If you can't (Claude can't draw unless an image tool is connected), say that once, in one line, before you start, so nobody waits for a picture that won't come. Hand back the prompt, and at the end tell them how to finish it:
 - **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture, or paste this whole skill there so it writes the prompt and makes the picture in one go. ChatGPT uses GPT Image, Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
-- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Higgsfield:** a paid service that needs an account and uses credits. Paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
 - **Claude Code:** with an OpenAI or Google key saved as `OPENAI_API_KEY` or `GEMINI_API_KEY`, offer to send the prompt to that image API and save the file. Keys: platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
 
 If an image tool is connected, offer to make the picture with it, and ask before you spend credits.

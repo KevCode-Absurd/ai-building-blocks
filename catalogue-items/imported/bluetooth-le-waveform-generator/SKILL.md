@@ -6,7 +6,7 @@ description: >
   Covers bleWaveformGenerator, bleIdealReceiver, bleCTEIQSample,
   bleAngleEstimate, bluetoothTestWaveform for LE1M/LE2M/LE500K/LE125K.
   Bluetooth Toolbox R2022a+.
-license: https://www.mathworks.com/content/dam/mathworks/license/pmrl/license.md
+license: "BSD-2-Clause with a MathWorks-products-only condition (see LICENSE.md). MathWorks' own reuse terms: https://www.mathworks.com/content/dam/mathworks/license/pmrl/license.md"
 compatibility: ">=R2022a"
 metadata:
   author: MathWorks

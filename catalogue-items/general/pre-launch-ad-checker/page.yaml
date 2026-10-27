@@ -37,6 +37,7 @@ how_to_use:
   - Name who the ad is for, and add your logo, font and product photos if you can.
   - Read the stop-ship list first. Fix those, then look at the rest.
   - Check the "for a person" items on a real phone before you launch.
+  - Use only proof from your own brand file. The sample figures and quotes on this page are illustrations. This check does not review platform policy, so run the Meta ads compliance checker as well.
 output_sample:
   input:
     - "Your finished ad: the image, or the video's key frames with its script"
@@ -160,8 +161,8 @@ example:
       some stomachs. Fix: show the Low Sugar pouch, and add "30-day
       money-back guarantee on your first order" to the main text, only
       if the brand's approved offer terms include it.
-    - Proof: nothing on the ad. Fix: "67% of surveyed users had
-      better, more regular digestion" (brand survey of 3,000+).
+    - Proof: nothing on the ad. Fix: add one proof line from the brand
+      file, such as "[your survey result from proof-and-claims.md]".
     - Gain: Fix: one buyer's words, exactly as written: "Feel lighter,
       less bloated and overall good." (retailer review)
     - 11 words on the image: a headline and three chips. Fix: drop

@@ -10,6 +10,8 @@ explain: |
   Find the fastest route from signup to a new user's first real win. You describe your product and get a plan to shorten that route and keep people coming back.
 
   The skill starts by asking what the aha moment is and where users drop off. Then it designs the minimum path to value, the fewest steps needed to feel the benefit. It limits the first session to one goal and saves advanced features for later. You get a checklist for the first visit, empty states that guide instead of showing blank screens, and a short email series that nudges people along. It suggests which events to measure so you can see what is working.
+
+  Licence: MIT, as the LICENSE file in this item says. This is a copy of the onboarding skill by Corey Haines. Credit goes to the author.
 when:
   - Many people sign up and never use the product again.
   - Your first screen after signup is empty and confusing.
@@ -31,9 +33,10 @@ you_get:
   - Onboarding email ideas and metrics to track
 how_to_use:
   - "Before you start, gather: how many people sign up, the one action that you think shows a user got value, and how many users drop off at each step. Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. It needs no code or paid tools."
-  - Answer the questions it asks first about your product, your users and what counts as a user getting value. Then pick the activation model that fits.
+  - Answer the questions it asks first about your product, your users and what counts as a user getting value.
   - Say where users drop off today. Paste your current onboarding steps if you have them.
-  - Read the activation goal and flow first. Check that the goal matches real value for your users.
+  - If you do not have drop-off numbers yet, say so. Your AI should ask which step you think loses people most, then plan a way to count it (one event at each step) before you change anything.
+  - Read the activation goal first. Check that it matches real value for your users. Then pick the activation model that fits (free trial, freemium and so on), and read the flow.
   - Ask your AI to adjust anything that does not fit, then build the checklist, empty states and emails. The psychology and toolkit sections can be skipped for a quick run.
   - Treat any percentage or benchmark in the result as a rough guide. Check it against your own data.
   - Pick one fix to test first, and compare it with your own sign-up numbers.

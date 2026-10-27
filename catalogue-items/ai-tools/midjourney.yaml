@@ -20,7 +20,7 @@ best_for:
   - Brand looks built from reference pictures.
   - Illustrations for blog posts, decks and covers.
 not_for:
-  - Exact on-screen text, which still comes out wrong often.
+  - Exact on-screen text, which still comes out wrong often. Use Ideogram when the words must be exact.
   - Accurate product photos where the packaging must be perfect.
 pricing:
   model: subscription
@@ -41,8 +41,8 @@ first_result:
   - "Pick one. Vary it, zoom out, or redraw it."
   - "To match a look, upload a reference image or save a personal style."
   - "Check any words in the image. Expect them to be wrong."
-  - "You end with four image options for each prompt, saved in your gallery as image files. File format and size were not verified."
-  - "Next: for ad images use the Marketing image maker, but first confirm the commercial-use terms for your plan before you use generated images in paid ads. When words must be exact, use Ideogram."
+  - "You end with four image options for each prompt, saved in your gallery. The file type and size were not verified, so check them on midjourney.com before you download."
+  - "Next: for ad images use the Marketing image maker. Do not put generated images in paid ads until you have read the commercial-use terms for your plan on midjourney.com. We did not verify them for Basic. When words must be exact, use Ideogram."
 needs:
   - "A paid Midjourney plan."
   - "One sentence on subject, mood and style."

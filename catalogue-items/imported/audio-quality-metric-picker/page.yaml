@@ -7,11 +7,11 @@ job: build-software
 headline: Audio quality metric picker
 subhead: "The right way to measure a sound, chosen before any maths is done. Say what you care about: loudness, background noise, speech clarity or room echo. Made for engineers and technicians who have MATLAB with Audio Toolbox."
 explain: |
-  The right way to measure a sound, chosen before any maths is done. Say what you care about: loudness, background noise, speech clarity or room echo. The AI picks the proper MATLAB Audio Toolbox function and standard. It does not write its own version.
+  The AI picks the proper MATLAB Audio Toolbox function and standard for your sound. It does not write its own version, so the score can be checked against a named standard.
 
-  It covers loudness, roughness, speech scores like STOI and ViSQOL, noise ratings, broadcast loudness in LUFS, reverb time and tones. It asks questions before it computes. It shows how to calibrate with your microphone's sensitivity and how to convert units. It also fixes common mistakes, such as asking for a function that does not exist. PESQ requests are sent to other options. You need MATLAB.
+  It covers loudness, roughness, speech scores like STOI and ViSQOL, noise ratings, broadcast loudness in LUFS, reverb time and tones. It asks questions before it computes. It shows how to calibrate with your microphone's sensitivity and how to convert units. It also fixes common mistakes, such as asking for a function that does not exist. PESQ and POLQA do not exist in Audio Toolbox. The skill uses visqol(degraded, reference, fs, Mode="speech") instead. You need MATLAB.
 
-  Licence: this copy is under BSD 2-Clause (see LICENSE.md). The skill file also links MathWorks' own reuse licence, which means you may use it only with MathWorks products such as MATLAB. Credit goes to MathWorks.
+  Licence: the BSD 2-Clause licence in LICENSE.md governs this copy. It adds one condition: you may use it only with MathWorks products such as MATLAB, so reuse outside MathWorks products is not allowed. The skill file also links MathWorks' own reuse licence (PMRL), which says the same kind of thing. MATLAB and Audio Toolbox are paid products. Credit goes to MathWorks.
 when:
   - You need to check a broadcast file meets loudness rules.
   - A speech recording sounds muffled and you want a number for it.
@@ -34,12 +34,12 @@ you_get:
 how_to_use:
   - "This is for engineers and technicians with MATLAB. Before you start, have ready: your audio file, its sample rate, your microphone's sensitivity from its datasheet, and the standard you must meet. If you only need a quick loudness check, use a free loudness meter instead."
   - You need MATLAB with Audio Toolbox. Some functions need a newer MATLAB release. Without MATLAB, this skill cannot run.
-  - Download the skill folder and add it to your AI tool, or paste the skill text into a chat.
+  - First, upload the whole skill folder (SKILL.md and its references folder) to an AI that can run MATLAB, or paste the text of SKILL.md into the chat. Then type your first message and say what you want to measure, such as "Check this file against EBU R 128 loudness", and attach the file.
   - Gather your recording first, as a WAV file or another audio file MATLAB can read, and note its sample rate. Tell your AI what you want to measure and give it the file details.
   - Add your microphone sensitivity and the standard you must meet, if you have them.
   - Answer the questions your AI asks before it computes.
   - Run the MATLAB code it gives you and check each score against your target.
-  - Then take the loudness, noise or speech value to your spec or standard. To compare, run it again with another microphone or room.
+  - Compare each score with its named target. For example, compare integrated loudness with -23 LUFS, give or take 1 LU, under EBU R 128. Then take the loudness, noise or speech value to your spec or standard. To compare, run it again with another microphone or room.
 output_sample:
   input:
     - Your sound file or recording details

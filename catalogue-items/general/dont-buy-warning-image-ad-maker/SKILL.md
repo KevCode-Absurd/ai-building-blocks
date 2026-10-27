@@ -19,7 +19,7 @@ The picture gives the warning. The story gives the reason. That gap is what make
 - Leave the product out unless asked. If asked, it's the real one, small and off to one side, and the picture still works without it.
 - No person, or a hand at the edge at most. No children.
 - Nothing says what the reader has. No before-and-after.
-- The card is the narrator's voice, not a real customer's note. Never present it as one unless that customer agreed in writing. A line under the image taken from a review needs the reviewer's permission on file.
+- The card is the narrator's voice, not a real customer's note. Any picture that could pass for a real customer's note needs that customer's written permission, or a clear label saying it is a dramatisation, before it runs. Never present it as a real note otherwise. A line under the image taken from a review needs the reviewer's permission on file.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

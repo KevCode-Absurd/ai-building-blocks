@@ -35,7 +35,7 @@ how_to_use:
   - Say which provider you use, which events to catch and which server framework you have.
   - Add where you store data, if you want repeat events tracked in your own database (optional).
   - Read the code your AI writes. Check that an event is marked done only after its handler works.
-  - Copy the code into your project. This needs a place to run code and a public HTTPS address.
+  - Copy the code into your project. This needs a place to run code and a public HTTPS address. The Stripe example also needs Redis (for the queue) and a database (for duplicate tracking). The GitHub example keeps duplicate tracking in memory, which is for testing only and is not safe for production.
   - Register the URL and signing secret with your provider, then send a test event.
   - Next, connect the failed-event queue to an alert or a replay step, and after the first live event check the delivery log in the provider dashboard.
 output_sample:

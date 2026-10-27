@@ -33,7 +33,7 @@ A comprehensive database design skill that provides expert-level analysis, optim
 - **Rollback Strategy**: Complete reversal capabilities with validation
 - **Execution Planning**: Ordered migration steps with dependency resolution
 
-If an earlier step gave you SQL for a schema, use it as the user's `schema.sql` below.
+Start from the user's schema: ask them to paste their SQL table definitions (or export them from their database) and save them as `schema.sql` for the steps below. If they have no schema yet, ask for a plain list of the things they store and how they relate, and write a first `schema.sql` from that.
 
 ## Tool Workflow (run these — do not analyze schemas by hand)
 
@@ -68,6 +68,8 @@ python3 migration_generator.py --current current_schema.json --target target_sch
 Re-run step 1 on the *target* schema and assert the issues found in the first pass are gone; run `migration_generator.py --validate-only` before handing over the migration.
 
 ## Database Design Principles
+(Reference only: everything from here to Cross-References is background reading. The tool workflow above is the main route.)
+
 → See references/database-design-reference.md for details
 
 ## Best Practices
@@ -283,34 +285,16 @@ Fixes:
 
 ## Sharding & Replication
 
-### Horizontal vs Vertical Partitioning
-
-- **Vertical partitioning**: Split columns across tables (e.g., separate BLOB columns). Reduces I/O for narrow queries.
-- **Horizontal partitioning (sharding)**: Split rows across databases/servers. Required when a single node cannot hold the dataset or handle the throughput.
-
-### Sharding Strategies
-
-| Strategy | How It Works | Pros | Cons |
-|----------|-------------|------|------|
-| **Hash** | `shard = hash(key) % N` | Even distribution | Resharding is expensive |
-| **Range** | Shard by date or ID range | Simple, good for time-series | Hot spots on latest shard |
-| **Geographic** | Shard by user region | Data locality, compliance | Cross-region queries are hard |
-
-### Replication Patterns
-
-| Pattern | Consistency | Latency | Use Case |
-|---------|------------|---------|----------|
-| **Synchronous** | Strong | Higher write latency | Financial transactions |
-| **Asynchronous** | Eventual | Low write latency | Read-heavy web apps |
-| **Semi-synchronous** | At-least-one replica confirmed | Moderate | Balance of safety and speed |
+This skill covers the schema, indexes and migrations. Sharding and replication are a separate design job: plan them with your database lead, then run the schema checks above on each part.
 
 ---
 
 ## Cross-References
 
-- **sql-database-assistant** — query writing, optimization, and debugging for day-to-day SQL work
-- **database-schema-designer** — ERD modeling, normalization analysis, and schema generation
-- **migration-architect** — large-scale migration planning across database engines or major schema overhauls
-- **senior-backend** — application-layer patterns (connection pooling, ORM best practices)
-- **senior-devops** — infrastructure provisioning for database clusters and replicas
+The original names five companion skills that are not in this library. Use these items instead:
+
+- **SQL query helper** — query writing and debugging for day-to-day SQL work
+- **Zero-downtime migration planner** — a safe rollout plan for a risky schema change
+- **Database migration writer** — migration files for a change you have settled
+- **NoSQL data modeler** — if you are weighing NoSQL for the design
 

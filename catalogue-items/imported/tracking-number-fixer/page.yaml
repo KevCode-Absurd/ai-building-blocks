@@ -36,6 +36,8 @@ how_to_use:
   - Run it as a dry run first, which is the default. Read the CSV and check each row.
   - Run it again with dry run off. Keep customer emails off unless you want every customer to get a new shipping email.
   - Open a few orders in Shopify admin to confirm the new tracking shows.
+  - Find each fulfillment ID in the order's fulfillment section in Shopify admin, or in an order export. IDs must be in Shopify's full GID form, for example gid://shopify/Fulfillment/[NUMBER].
+  - Next, keep the CSV with your records, and tell the carrier or warehouse partner which shipments you corrected.
 output_sample:
   input:
     - Your store domain

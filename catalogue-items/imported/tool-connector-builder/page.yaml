@@ -7,9 +7,11 @@ job: connect-tools
 headline: Tool connector builder
 subhead: Give your AI access to a service by building an MCP server, a small program that exposes the service's actions as tools the AI can call.
 explain: |
-  Give your AI access to a service by building an MCP server, a small program that exposes the service's actions as tools the AI can call. Done well, the AI picks the right action and gets useful answers back.
+  Give your AI access to a service by building an MCP server (MCP is a standard way to plug outside tools into an AI), a small program that exposes the service's actions as tools the AI can call. Done well, the AI picks the right action and gets useful answers back.
 
   The skill works in four phases. First it studies the service's API and the MCP spec, then plans which tools to offer, balancing full coverage with a few workflow tools. It builds the server, defaulting to TypeScript, with clear tool names, short descriptions, paging and error messages that tell the AI what to try next. Then it tests the tools and writes evaluation questions to check the AI can use them. You need coding tools and the service's API access.
+
+  Licence: Apache 2.0, as the LICENSE.txt file in this item says. This is a copy of Anthropic's mcp-builder skill.
 when:
   - You want Claude to work with a service that has no connector yet.
   - Your internal API should be usable by an AI assistant.
@@ -31,12 +33,15 @@ you_get:
   - Test questions
   - Setup steps
 how_to_use:
+  - "You need: an AI that can run code, Node and npm (or Python), the MCP Inspector, and API keys for the service. Use keys with read-only scope where you can. This is a developer task, so ask a developer to run it with you if that is not you."
+  - The skill fetches the MCP spec, SDK docs and web pages as it works, so your AI needs web access. Check the service's own current API docs too, because they change.
   - Open an AI that can run code and read web pages. Paste in this skill.
   - Tell it the service name, the link to its API docs and the tasks the AI should handle.
   - Say TypeScript or Python if you have a preference. TypeScript is the default.
   - Give it test API keys when it asks. Use keys with limited access, not your main ones.
   - Let it build the server, then check the Inspector test result and the tool list.
   - Ask it to write the 10 test questions, then run them to see if your AI can use the tools.
+  - Next, load the finished server into your AI tool's connector settings. Run the 10 questions again after every change to a tool. If some of the 10 fail, read which tool the AI picked. Then fix that tool's name, description or error message and run the questions again.
 output_sample:
   input:
     - The name of the service and a link to its API docs

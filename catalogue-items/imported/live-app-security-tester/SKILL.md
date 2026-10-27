@@ -11,6 +11,10 @@ metadata:
 
 This skill enables the agent to perform Dynamic Application Security Testing (DAST) against running web applications and APIs. Unlike static analysis, DAST interacts with the application at runtime — sending crafted HTTP requests, fuzzing input parameters, and analyzing responses to detect vulnerabilities such as SQL injection, cross-site scripting, server misconfigurations, broken authentication, and insecure API endpoints. The agent configures scan profiles, handles authenticated scanning, interprets results, and produces actionable remediation reports.
 
+## Approval gate (do this before anything else)
+
+Before you run any scanner, write the scope back to the user: the exact target address, the proof they gave that they own it or may test it, and what is out of scope. Ask them to reply "confirmed". If the target looks like a production site, or the user cannot show permission, stop. Do not run the active full scan (Example 1, Step 2) or any attack-payload step until that reply has arrived, and never against any address other than the confirmed one.
+
 ## Workflow
 
 1. **Define Target Scope and Scan Policy** — Specify the target URL, application type (traditional web app, SPA, REST API, GraphQL), and scan boundaries. Define which paths and domains are in scope to prevent scanning unintended targets. Select a scan policy: passive-only for low-risk reconnaissance, active for full vulnerability probing, or API-specific for endpoint fuzzing.
@@ -47,17 +51,23 @@ Run a DAST scan against our staging application at https://staging.example.com. 
 
 ### Example 1: OWASP ZAP Scan Against a Web Application
 
-**ZAP Docker command (unauthenticated baseline):**
+**Step 1: passive baseline (sends no attack payloads). Run this first:**
 
 ```bash
-# The old owasp/zap2docker-stable image is retired. Check ZAP's docs for the current image name.
+# The old owasp/zap2docker-stable image is retired. ghcr.io/zaproxy/zaproxy:stable is the image name at import. Confirm it in ZAP's docs before you run it.
+docker run --rm -v $(pwd)/report:/zap/wrk ghcr.io/zaproxy/zaproxy:stable zap-baseline.py -t https://staging.example.com -r zap-baseline-report.html
+```
+
+**Step 2: active full scan. This sends attack payloads, so run it only after the user has checked the scope and said yes:**
+
+```bash
 docker run --rm -v $(pwd)/report:/zap/wrk ghcr.io/zaproxy/zaproxy:stable zap-full-scan.py \
   -t https://staging.example.com \
   -r zap-report.html \
   -J zap-report.json
 ```
 
-Login is not set by flags here. For a login, set up authentication in ZAP itself (an authentication context or an automation plan) as ZAP's current docs describe, and check every flag against those docs before you run it. Use a throwaway test account on staging, with the username and password from your own secret store.
+Login is not set by flags here. To scan behind a login, set up authentication in ZAP itself. In outline: create a context that covers only your staging site, add a user with a throwaway test account, tell ZAP the login form address and its username and password fields, and set a logged-in indicator (text that only shows when you are signed in) so ZAP can tell when the session has dropped. Follow ZAP's current docs for the exact steps and field names: the authentication guide is at https://www.zaproxy.org/docs/authentication/ and the automation plan format is at https://www.zaproxy.org/docs/automate/automation-framework/. Check every flag against those docs before you run it. Use a throwaway test account on staging, with the username and password from your own secret store.
 
 **Findings Report (excerpt):**
 

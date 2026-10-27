@@ -10,6 +10,10 @@ explain: |
   MathWorks products installed from the command line in exactly the same way each time, so a setup that works once keeps working on any machine or server. You name the products and it handles the commands.
 
   It uses the MATLAB package manager, mpm. Before it starts, it needs four facts: the operating system, the MATLAB release, the install folder and the list of products or support packages. It confirms the plan with you before it runs anything. On Windows it follows strict safety rules. Scripts are written as files and run with the file option, never typed inline, and they use only plain ASCII.
+
+  The install downloads the MATLAB package manager (mpm) from mathworks.com and then your MathWorks products. You need a valid MathWorks licence or account first, and some products cost money.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
 when:
   - You must set up MATLAB with several toolboxes on a new machine.
   - Your team needs the same install on every computer.
@@ -34,8 +38,14 @@ how_to_use:
   - Open the skill in your AI tool, or paste its text into the chat.
   - Tell it your operating system, MATLAB release, install folder and products.
   - Read the plan it shows. Say yes only if it is right.
-  - On Windows, run it with admin rights. The scripts run with ExecutionPolicy Bypass.
+  - "On Windows, the install runs with admin rights (a Windows approval prompt appears) and the scripts run with PowerShell ExecutionPolicy Bypass, so they run even though your policy normally blocks scripts. Only approve it on a machine you manage."
+  - "The install file the AI edits gets two extra lines: noJRE=true (no bundled Java) and caller=agent (tells MathWorks an AI started the install)."
+  - "On Linux or macOS the skill points to its own steps file (reference/linux-macos-steps.md). Paste that file in too. No admin prompt is needed."
   - When it finishes, check the list of installed products and the install path.
+  - "After install, open MATLAB once and sign in to activate your licence."
+next:
+  - matlab-package-installer
+  - matlab-project-setup-helper
 output_sample:
   input:
     - Your operating system (Windows, Linux or macOS)

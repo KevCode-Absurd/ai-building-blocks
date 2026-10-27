@@ -25,7 +25,7 @@ not_for:
 you_give:
   - "The change: which HR system or process is changing, and when (from the project plan)"
   - The data it holds, such as pay, health, performance or ID numbers
-  - Roles and who gets which access now and after the change (a table is fine)
+  - "A role table with these columns: role, data types the role sees, access now, access after the change and the tasks that role does"
   - The countries where your staff work
   - Your retention rules and local privacy policy (optional)
 you_get:

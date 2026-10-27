@@ -84,7 +84,7 @@ judge:
   - Each guess has a number.
   - Known items have a source.
   - The top guess would hurt the most if wrong.
-  - Scores show the sum.
+  - Scores show damage times how little you know.
 test:
   - Run it on a plan you know well. The top guess should be the one that keeps you up at night.
   - Run it twice. The top three should match.

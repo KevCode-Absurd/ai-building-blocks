@@ -32,10 +32,11 @@ you_get:
 how_to_use:
   - Use an AI that can run commands and open web links. A plain chat window without that cannot fetch the post.
   - Copy the full link to the X post. It must look like x.com/name/status/number.
+  - Do not paste links to private, sensitive or internal posts, because the link is sent to a third-party service. Check X's terms before you use this on many posts.
   - Paste the link into your AI and say what you want, such as a summary or the like count.
   - Your AI fetches the post data from a free outside service called ADHX.
   - Check the fetch time and the counts. If you get an error, the post may be private, deleted or missing from the service.
-  - If the fetch fails, copy the post text from X and paste it into your AI instead. If it works, paste the data into a summary prompt or save the fields to a table.
+  - If the fetch fails, copy the post text from X and paste it into your AI instead. If it works, paste the data into the summary or table prompt you already use. This item reads the post and returns the fields. It does not build the table or the summary itself.
 output_sample:
   input:
     - One X or Twitter post link (x.com, twitter.com or adhx.com)

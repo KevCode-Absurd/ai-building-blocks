@@ -5,7 +5,7 @@ job: organise-work
 thinking: medium
 thinking_why: It runs a few light skills and counts tasks against last week. A mid-size model does this well.
 headline: Weekly review keeper
-subhead: Give it your task list and any loose notes each week. It compares the week with the last one, closes open loops, names tasks that keep slipping, and hands back a plan for your first focus days. It changes nothing without your yes.
+subhead: Give it your task list and any loose notes each week. Saving files between weeks needs a tool such as Claude Code, which may need a paid plan. It compares the week with the last one, closes open loops, names tasks that keep slipping, and hands back a plan for your first focus days. It changes nothing without your yes.
 explain: |
   Most people skip the weekly review, or do it by memory and miss what keeps slipping. A task carried over once is normal. A task carried over for a month is a decision you have not made. The same goes for a week that got away from you: you feel it, but you cannot say where the hours went.
 
@@ -29,7 +29,7 @@ you_get:
   - Next week's top three outcomes and a plan for your first focus days
   - Stop rules, in the weeks where others took most of your time
 how_to_use:
-  - Use it in Claude Code, where it can save files. Add it as a skill, or save it in .claude/agents. A plain chat works too, but it cannot keep the folder.
+  - Use it in Claude Code, where it can save files. Add it as a skill, or save it in .claude/agents. Claude Code needs an Anthropic account and may need a paid plan. A plain chat works too, but it cannot keep the folder.
   - "Start it by hand each Friday or Sunday: ask it to run this week's review. You can also set a scheduled task, but it will still stop to ask before any change."
   - Give it your task list and any loose notes. Add last week's calendar export from Google Calendar or Outlook if the week got away from you.
   - Answer its questions on stuck items. Say yes or no to each proposed drop.
@@ -41,7 +41,7 @@ output_sample:
     - Last week's calendar (optional)
     - The one or two outcomes that matter most this month (optional)
   prerequisites:
-    - An AI that can read and save files, such as Claude Code, to keep the review folder
+    - An AI that can read and save files, such as Claude Code, to keep the review folder. Claude Code needs an Anthropic account and may need a paid plan; a free chat can run the review but cannot keep the folder.
     - Last week's review folder, if you ran it before (the first week has nothing to compare)
   output:
     - name: Last week

@@ -36,7 +36,7 @@ The key insight is that agents may find alternative paths to goals—the evaluat
 **Performance Drivers: Tokens, Tool Calls and Model**
 > **AI Blocks note:** the original author quotes variance percentages from the BrowseComp research and a claim that model upgrades beat extra tokens. No source link is given, so we have removed the figures and the claim. The general point is a starting idea, not a measured fact. Tell the user to measure token use, tool calls and model choice on their own agent.
 
-The original author says three factors drive most of the difference in how well a browsing agent scores: how many tokens it uses, how many tool calls it makes, and which model it runs on. Token use is the biggest of the three.
+The original author says three factors drive most of the difference in how well a browsing agent scores: how many tokens it uses, how many tool calls it makes, and which model it runs on. These are worth measuring on your own agent; this copy does not say which one matters most.
 
 What this means for evaluation design:
 - **Token budgets matter**: Evaluate agents with realistic token budgets, not unlimited resources
@@ -123,6 +123,19 @@ Track evaluation metrics in production by sampling interactions and evaluating r
 
 ## Practical Guidance
 
+### Order of operations (AI Blocks)
+
+Work in this order. At each stage, say what the user must paste back.
+
+1. Build the rubric: pick the quality dimensions and weights. User checks and edits them.
+2. Write the test tasks, simple to complex. User adds real tasks and good answers, and pastes them back.
+3. Run a baseline: the user runs the current agent on the tasks and pastes the outputs, with tokens used.
+4. Run the changed agent on the same tasks. User pastes those outputs too.
+5. Judge: score each output against the rubric. Flag tricky cases for a person.
+6. Compare both runs to the pass mark (the gate) and say keep or revert.
+
+**Test report layout:** one table with a row per task and a column per rubric dimension (score 0.0 to 1.0), then the weighted overall score, pass or fail against the gate, and tokens used. Add a baseline column next to the changed-agent column. This skill file has no inline example of the report, so build the table from the user's real results and never invent scores.
+
 ### Building Evaluation Frameworks
 
 1. Define quality dimensions relevant to your use case
@@ -144,7 +157,7 @@ Skipping human evaluation: Automated evaluation misses subtle issues.
 
 ## Examples
 
-**Example 1: Simple Evaluation** (illustrative sketch only: `load_rubric`, `assess_dimension` and `weighted_average` are not defined here. They stand for a rubric loader, a judge that scores one dimension, and a weighted average. The 0.7 pass mark is only an example.)
+**Example 1: Simple Evaluation** (illustrative sketch only: `load_rubric`, `assess_dimension` and `weighted_average` are not defined here. They stand for a rubric loader, a judge that scores one dimension, and a weighted average. You must write all three yourself, and `assess_dimension` is usually an AI judge call that needs an API key. The 0.7 pass mark is only an example.)
 ```python
 def evaluate_agent_response(response, expected):
     rubric = load_rubric()

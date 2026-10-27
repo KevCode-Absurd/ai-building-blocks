@@ -223,8 +223,8 @@ improve:
 works_best_with:
   tools:
     - {name: "Claude", why: "Holds a long transcript, the approved copy and the cut list in one chat without losing a number."}
-    - {name: "Descript", why: "Edits video by its transcript, so in and out points land on whole words."}
-    - {name: "DaVinci Resolve", why: "A free editor with subtitle tracks and the export settings this plan asks for."}
+    - {name: "Descript", why: "A paid editor (free plan limited; check its pricing) that edits video by its transcript, so in and out points land on whole words. Optional: the steps work without it."}
+    - {name: "DaVinci Resolve", why: "The free option: an editor with subtitle tracks and the export settings this plan asks for."}
   inputs:
     - "A transcript with word timings for every clip, so cuts and captions land on real words"
     - "Separate voice and music tracks, so music can be changed without touching the voice"

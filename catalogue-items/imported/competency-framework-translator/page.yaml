@@ -5,7 +5,7 @@ name: Competency framework translator
 summary: Turn a framework like DigComp or ISTE into classroom activities. Give it the competency and your subject. You get indicators, levels and tasks.
 job: teach-and-train
 headline: Competency framework translator
-subhead: Give it a framework like DigComp or ISTE. Get classroom activities that teach each skill in it. Bring the framework and competency. Use the result to plan your next step.
+subhead: Name the framework, the competency and your subject. You get indicators, levels of progress and classroom tasks, with the original wording kept so you can check it.
 explain: |
   A framework such as DigComp, GreenComp or ISTE turned into classroom activities your students can do, with signs you can observe to tell whether they have the skill. Official wording is often too abstract to teach from.
 
@@ -31,9 +31,10 @@ you_get:
   - Assessment ideas
 how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
-  - Paste the skill instructions into the chat.
+  - Paste the skill instructions into the chat. This is a prompt for a general chat AI. Its indicators are a draft, so check them against the official framework document before you use them in any assessment.
   - Type the framework and competency. Add your subject, year group, and what students should do with the skill.
-  - Paste the official wording and your assessment needs if you have them.
+  - Paste the official wording and your assessment needs if you have them. Without the official wording, your AI works from memory and must label that wording "unverified". Check it against the framework's own document.
+  - Before you send the prompt, replace or delete any {{placeholder}} you did not fill in.
   - Read the result. Check each indicator against the original wording, and ask for changes if a task does not fit your class.
   - Use the indicators to build a marking rubric, or put the tasks into your unit plan.
 output_sample:

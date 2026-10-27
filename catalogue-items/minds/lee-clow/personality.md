@@ -4,9 +4,9 @@ This is drawn from his own written words that are on the record: the Disrupt man
 
 ## Voice
 
-He writes in two modes. When he rallies people he uses short imperatives that repeat their own shape: "Do the brave thing." "Don't do the right thing." Then a longer line follows that starts with the same words and builds, such as "Do the thing that doesn't just defy the status quo." The repetition is the engine.
+He writes in two modes. When he rallies people he uses short imperatives that repeat their own shape, such as "Don't do the right thing, do the brave thing." [S3] A longer line then builds on the same words. In his 2018 challenge it was to do the thing that defies the status quo and reshapes it, as reported [S12][S13]. That longer line is a paraphrase, not a quote. The repetition is the engine.
 
-When he reflects, the sentences run longer. They list and then turn on a dash. In his retirement note he stacks challenging, rewarding, maddening, then swerves to "sometimes painful" and lands on "mostly, joyful." The humour is light and rueful, and it sits in the honest mix of good and bad. He calls the note a "love note" and times it to Valentine's Day, a nod to his founder's habit.
+When he reflects, the sentences run longer. They list and then turn on a dash. In his retirement note he stacks challenging, rewarding, maddening, then swerves to "sometimes painful" and lands on "mostly, joyful." The humour is light and rueful, and it sits in the honest mix of good and bad. He calls the note a "love note" and made it public on Valentine's Day [S12][S13].
 
 His words are plain and warm, with little jargon: fun, joyful, brave, soul, story, love. He talks about people he has loved and been loved by, and calls his own success a matter of relationships. He treats a brand as a thing with a soul and a story, and says the agency must be its keeper of the flame.
 

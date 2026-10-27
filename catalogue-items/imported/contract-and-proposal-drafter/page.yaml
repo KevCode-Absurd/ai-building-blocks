@@ -9,7 +9,7 @@ subhead: Tell your AI the deal, the price, the parties and where you work. It pi
 explain: |
   A first draft of a freelance contract, proposal, scope of work, NDA or master services agreement, with the clauses that fit your deal and your country. It saves you starting from a blank page or a template that does not match.
 
-  You tell it the work, the price, the parties and where you operate. It picks a template, fills in payment terms, ownership of the work, confidentiality, warranties, liability limits and how either side can end the deal. Jurisdiction notes cover Delaware, EU data rules, the UK and German-speaking countries. Output is plain Markdown with steps to convert it to Word. It is a starting point, so have a lawyer read it before you sign.
+  You tell it the work, the price, the parties and where you operate. It picks a template, fills in payment terms, ownership of the work, confidentiality, warranties, liability limits and how either side can end the deal. Jurisdiction notes cover Delaware, EU data rules, the UK and German-speaking countries. They are a short general summary, not current law. Output is plain Markdown with steps to convert it to Word. It is a starting point, so have a lawyer read it before you sign.
 when:
   - A new client wants a contract and you have nothing ready.
   - You need a scope of work for a fixed-price project.
@@ -38,7 +38,8 @@ how_to_use:
   - Give the price, both parties' names and addresses, and the dates. Your AI asks for anything missing.
   - Read the draft and fill every spot marked REQUIRED. Check who owns the work, since US work-for-hire often does not cover freelancers, so make sure there is a clear transfer of rights.
   - "Optional: install Pandoc on your computer and run the Word steps at the end of the result."
-  - The country notes are a short summary and may be out of date. Check them for the country where you sign.
+  - The country notes are a short summary. They have never been checked against current law and carry no "last checked" date, so treat each rule as possibly out of date. Check them for the country where you sign.
+  - "Liability cap: the standard is 1x the fees. A 3x cap is only for high-risk work, and only if both sides agree and a lawyer confirms."
   - Have a lawyer read the draft before anyone signs.
   - Next, if the other side sends changes, check them with Contract change tracer, and review the whole contract with Contract risk reviewer.
 output_sample:

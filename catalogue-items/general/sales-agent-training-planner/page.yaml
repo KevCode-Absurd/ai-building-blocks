@@ -54,7 +54,7 @@ output_sample:
     - name: Pay
       contains: The commission rule, week-one pay at three sales levels and whether you can afford it.
     - name: Prizes
-      contains: Prizes beyond sales, such as recruiting, repeat buyers and local good, and how each is won.
+      contains: Prizes beyond sales, such as repeat buyers, helping other agents learn and local good, and how each is won.
     - name: Meetings
       contains: A regular local meeting and a yearly gathering, with what happens at each.
     - name: Records
@@ -72,7 +72,7 @@ how_it_works:
   - title: "Sets the pay"
     text: "Commission with a first-week example."
   - title: "Adds prizes"
-    text: "Beyond sales: recruiting, repeat buyers, local good."
+    text: "Beyond sales: repeat buyers, helping other agents, local good. Nothing is paid for recruiting."
   - title: "Plans meetings"
     text: "A local group and a yearly gathering."
   - title: "Lists records"

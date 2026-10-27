@@ -2,7 +2,7 @@ thinking: medium
 thinking_why: It reads clear speed signals and ranks well-known fixes.
 new_slug: web-page-speed-tuner
 name: Web page speed tuner
-summary: Find why your slow website is slow. Give it your site and speed numbers. You get a ranked list of fixes, best gain first, plus a score out of 10.
+summary: Find why your slow website is slow. Give it your site and speed numbers. You get a ranked list of fixes, best gain first, plus a score from 0 to 10.
 job: build-websites
 headline: Web page speed tuner
 subhead: "A ranked list of fixes that make your slow site faster, starting with the ones that gain the most. It is grounded in one idea: delay, not bandwidth, is what slows most pages."
@@ -46,7 +46,7 @@ output_sample:
     - Speed test numbers, or your AI will mark them unknown
   output:
     - name: Score
-      contains: A score out of 10 based on how many of the eight diagnostic checks pass.
+      contains: A score from 0 to 10 based on how many of the eight diagnostic checks pass, weighted toward the real-user measures.
     - name: Failed checks
       contains: Which of the eight checks failed, so you see where the problems are.
     - name: Ranked fixes

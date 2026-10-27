@@ -14,6 +14,7 @@ explain: |
   This skill reads the draft like a chapter in a book and marks every sentence where the story stops and the selling starts. Then it checks eight things: that it speaks to one person, that the story flows, the before and after, the mechanism, the beliefs, the objections, the buttons and the images. Each check adds up to a score out of 100 that shows what was measured. A separate honesty line checks the ad label and fakes, and any fail there blocks publishing, whatever the score. The rules come from health and wellness writers, so for other categories treat them as defaults and test.
 
 when:
+  - You sell health or wellness products, where these rules were written. For other categories, test the rules on a small budget first.
   - Your advertorial draft is done and you want a read before you spend on traffic.
   - An advertorial is live but readers drop off halfway and you don't know where.
   - Your AI wrote the page and you want to check it hits every belief the buyer needs.
@@ -142,3 +143,7 @@ terms:
     meaning: The short list of "I believe that..." statements a buyer must hold before buying.
   - term: Story break
     meaning: A sentence where the writing stops telling a story and starts selling.
+  - term: Mirror
+    meaning: Whether the page is written for one named person, so that reader sees themselves in it.
+  - term: Slide test
+    meaning: Reading the page as if sliding down a slide, and fixing any bump where the read stops.

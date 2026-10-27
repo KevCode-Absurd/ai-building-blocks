@@ -10,6 +10,8 @@ explain: |
   A sparring partner for the early stage of an idea, before you write a spec. It pushes back, asks the hard questions and stops you settling on the first answer.
 
   Claude picks a mode to match where you are. In problem exploration it asks who has the problem and what they do about it today. In idea generation it offers angles you may not have tried. In stress testing it attacks your assumptions. You can shift between modes as the talk moves along. The aim is not a document. It is a few strong options you can believe in and know how to test.
+
+  The skill was written for product managers, so it talks about products and users. It works for any idea. If you want to sharpen a business idea instead, use the Idea sharpener.
 when:
   - You have a vague problem area and no clear idea to build.
   - You want your plan challenged before you commit.
@@ -31,7 +33,7 @@ you_get:
   - A short list of the strongest options
 how_to_use:
   - Open a new chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
-  - Paste the skill instructions, then describe your problem and who has it.
+  - "Paste the skill instructions. Have these ready first: the problem, who has it, what has been tried, and your limits such as time or budget. Then describe them in the chat."
   - Answer the questions your AI asks. Say so when you disagree, since it is meant to push back.
   - Ask it to switch mode if you need to, such as from ideas to stress testing.
   - At the end, ask for the shortlist with the biggest unknown for each option, and pick one to test first.

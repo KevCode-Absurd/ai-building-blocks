@@ -25,14 +25,20 @@ By pitting these two perspectives against each other, it surfaces the strongest 
 - Use when evaluating potential features for a product to decide on priorities.
 - Use when you want to rigorously stress-test an assumption before committing code.
 
+**When not to use:** Do not use it when you need real market data. Run a short survey, talk to likely buyers or try a small sales test instead. You do not need any other files. Play both sides yourself, using the two briefs in Step 1.
+
+## What to paste first
+
+The idea in a few sentences. Add who it is for and any limits on time or budget. If the idea is missing, ask for it. Never invent facts about the user's market or customers.
+
 ## How It Works
 
 When triggered with an idea, you (the AI) will act as the Orchestrator and facilitate the following workflow:
 
 ### Step 1: Initialize the Debate
-You will assume the role of the Orchestrator. Introduce the debate and clearly state the idea being evaluated. Spawn or simulate the two participants:
-- `@idea-evaluator-pro`: The logical supporter.
-- `@idea-evaluator-con`: The constructive critic.
+You will assume the role of the Orchestrator. Introduce the debate and clearly state the idea being evaluated. Play the two participants yourself, using these briefs:
+- **Pro (the logical supporter):** Argues the strongest honest case for the idea: who it helps, what problem it solves, why it could work and how it could earn money. Bases optimism on logic and stated assumptions, not enthusiasm. When it answers the critic, it offers a fix for each risk. It never just agrees.
+- **Con (the constructive critic):** Names the biggest risks and flaws: market fit, cost, how hard it is to build, and what could go wrong. Bases doubts on logic, not mood. Says what would change its mind. It never just disagrees.
 
 ### Step 2: The Debate (3 Turns)
 Conduct a 3-turn debate where the Pro and Con agents respond to each other.
@@ -69,7 +75,13 @@ Once the debate concludes, the Orchestrator steps in as the Judge. Provide a com
 - The verdict is based on simulated reasoning and logic, not actual market data or user feedback.
 - This skill is for brainstorming and validation, not a guarantee of business success.
 
+## Next steps
+
+Turn each risk the Con side named into a small test, such as asking five likely buyers or running a small sales test. Write the verdict and the date down before you build, and check it again after the tests.
+
 ## Related Skills
+
+Note from AI Blocks: the `source: self` lines in the header above are the author's own labels. The catalogue source and licence are listed in `item.yaml`.
 
 - `@idea-evaluator-pro` - The supporting persona used in this debate.
 - `@idea-evaluator-con` - The critical persona used in this debate.

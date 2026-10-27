@@ -37,7 +37,7 @@ How to start:
 
 ## What you need
 
-A talk needs only your lessons, the audience, your time and, if you have them, true stories. The general "Before you start" list above mentions a brand brain. This job does not use one. The run works without one.
+A talk needs only your lessons, the audience, your time and, if you have them, true stories. The general "Before you start" list above mentions a brand brain. This job does not use one, so do not look for or read brand brain files. Ignore the brand brain lines, the "Recommended steps before this one" list and "From the brand brain, read" in that box. The run works without one.
 
 - **Two or three lessons you trust, each in one sentence** (required). Things you learned the hard way.
 - **Who the audience is and how long you have** (required). Five minutes suits two lessons, ten suits three.
@@ -66,6 +66,7 @@ Pause here: Fix the lines marked competing. Then repeat the first two steps for 
 Use these instead of the general "After this" list above:
 - Rehearse the talk aloud, then record it and time it against your slot.
 - Keep the stories that got a laugh and reuse them in your next talk.
+- Plan the jokes and timing in more detail with the [Funny speech planner](https://useaiblocks.com/skills/funny-speech-planner).
 
 ## What you hand back
 3 step files for each lesson run, and the summary. The last file holds the talk script.

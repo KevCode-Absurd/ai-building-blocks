@@ -5,11 +5,11 @@ name: n8n workflow designer
 summary: Plan your n8n workflow before you build it. Describe the job and get the best-fit pattern, an ordered step list and where errors go.
 job: connect-tools
 headline: n8n workflow designer
-subhead: Pick the shape of an n8n automation before you drag a single node. Many workflows go wrong because the structure was a guess. This skill matches your idea to one of five proven patterns and lays it out step by step.
+subhead: Pick the shape of an n8n automation before you drag a single node. You get a one-page build plan with the pattern, ordered steps, an error step and a build checklist. It matches your idea to one of five patterns.
 explain: |
-  Pick the shape of an n8n automation before you drag a single node. Many workflows go wrong because the structure was a guess. This skill matches your idea to one of five proven patterns and lays it out step by step.
+  Pick the shape of an n8n automation before you drag a single node. You get a one-page build plan: the pattern, ordered steps, an error step and a build checklist. It matches your idea to one of five patterns.
 
-  The patterns are: a webhook that receives data, an API fetch that moves data between services, a database sync, an AI agent with tools and memory, and a scheduled job. For each, it gives the usual order of steps, such as trigger, check, change, send, then log. It also adds an error step where one belongs. You end up with a clear plan, not node-by-node fixes.
+  The patterns are: a webhook that receives data, an API fetch that moves data between services, a database sync, an AI agent with tools and memory, and a scheduled job. For each, it gives the usual order of steps, such as trigger, check, change, send, then log. It also adds an error step where one belongs. You end up with a clear plan, not node-by-node fixes. The skill's own text lists the main steps of each pattern. Its five longer pattern files are not included.
 when:
   - You have an idea like "when a form is sent, add a row and ping Slack".
   - You need to sync two databases on a schedule.
@@ -36,7 +36,7 @@ how_to_use:
   - Read the pattern it picks and the reason. Say so if the fit looks wrong.
   - Check the ordered steps and the error step against your idea.
   - Build the workflow in n8n by hand, or let your AI do it if it has the n8n MCP tools. This is optional and needs your n8n set up.
-  - Next, add error handling with the n8n failure handler, and split repeated steps with the n8n sub-workflow builder.
+  - "Next, add error handling with the n8n failure handler, and split repeated steps with the n8n sub-workflow builder. Both are separate items in this library. The five pattern files the skill names (such as webhook_processing.md) are not included here, so the skill's own text is the whole guide."
 next:
   - n8n-failure-handler
   - n8n-sub-workflow-builder
@@ -47,6 +47,7 @@ output_sample:
     - The apps or databases involved
   prerequisites:
     - An n8n account to build the plan in later (optional)
+    - An OpenAI API key and a paid OpenAI account, only if you build the AI assistant example as written. You can use another chat model instead
     - The n8n MCP tools, only if you want your AI to search nodes and build for you (optional)
   output:
     - name: Best-fit pattern

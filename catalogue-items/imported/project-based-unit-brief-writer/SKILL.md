@@ -121,7 +121,7 @@ Your task is to design a project brief for:
 The following optional context may or may not be provided. Use whatever is available; ignore any fields marked "not provided."
 
 **Subject area:** {{subject_area}} — if not provided, infer from the topic and objectives.
-**Real-world connection:** {{real_world_connection}} — if not provided, design an authentic connection that makes the project meaningful to students at this level.
+**Real-world connection:** {{real_world_connection}} — if not provided, design a realistic connection that makes the project meaningful to students at this level. Label any local context you make up as fictional, and do not invent specific local incidents, statistics, names or quotes. Leave a [LOCAL DETAIL] placeholder for the teacher to fill instead.
 **Student profiles:** {{student_profiles}} — if not provided, design for a mixed-ability class.
 **Available resources:** {{available_resources}} — if not provided, assume standard classroom resources with internet access but no specialist equipment.
 **Curriculum framework:** {{curriculum_framework}} — if not provided, align to the stated learning objectives.

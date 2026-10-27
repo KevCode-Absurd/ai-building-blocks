@@ -33,7 +33,8 @@ how_to_use:
   - Give it the project folder. Add a live site link only if you own the site.
   - Read the Do first section. If it says to replace a key, do that before anything else.
   - Approve the upgrades you want. It makes only those, on a branch, and runs your tests.
-  - Run it again next week. It compares with the saved list.
+  - Run it again next week. It compares with the saved list. The agent does not start itself. You set up a Monday reminder or scheduled task in your AI app. GitHub access is only needed for the build workflow check and upgrade branches.
+  - Next, if it finds new high or critical findings, test each group of upgrades on its own branch before you merge.
 output_sample:
   input:
     - Your project folder with its package files and lock files

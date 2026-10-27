@@ -32,12 +32,9 @@ org's own trend line over any single external number, and cite the specific sour
 sector average to a board:
 
 - **Donor retention rate** = (donors who gave this year AND last year) / (donors who gave last
-  year). The sector median has hovered in a persistently low range for years across most published
-  fundraising-effectiveness studies, which is exactly why even modest retention gains compound
-  significantly over time.
-- **New donor retention rate** — retention of only first-year donors into year two — typically
-  meaningfully lower than overall retention and the highest-leverage segment to fix, since most
-  attrition happens right after the first gift.
+  year). Compare it with your own past years first. Even modest retention gains compound over time.
+- **New donor retention rate** — retention of only first-year donors into year two — often
+  lower than overall retention, so it may be the highest-leverage segment to fix. Check your own data to see where donors drop off.
 - **Donor attrition rate** = 1 − retention rate.
 - **LYBUNT** (gave Last Year But Unfortunately Not This year) and **SYBUNT** (Some Year But
   Unfortunately Not This year) — standard segment labels for lapsed-donor win-back targeting.
@@ -50,8 +47,7 @@ Map distinct stages and design a deliberate touch at each: **first gift → firs
 onboarding/welcome series (first 90 days) → first impact report → renewal ask (timed to their own
 giving anniversary, not just the annual mass-appeal calendar) → multi-year loyalty recognition →
 lapse-risk touch if giving pattern breaks.** The first 90 days after a first gift is the single
-highest-risk, highest-leverage window — most new-donor attrition is preventable with a fast,
-specific onboarding sequence rather than silence until the next mass appeal.
+highest-risk, highest-leverage window — a fast, specific onboarding sequence is more likely to keep new donors than silence until the next mass appeal.
 
 ## Acknowledgment/Thank-You Process Design
 
@@ -60,8 +56,7 @@ specific onboarding sequence rather than silence until the next mass appeal.
 > What to gather first: a table of gifts with donor ID, gift date and amount (a CSV or spreadsheet works), your current receipt and thank-you text, and your donor contact preferences. If something is missing, write MISSING: <what> and ask.
 
 1. **Speed**: send the tax receipt/acknowledgment within 24-48 hours of gift receipt; treat
-   anything beyond a week as a process failure. Speed is one of the most consistently cited
-   donor-perception drivers in retention research.
+   anything beyond a week as a process failure. Treat these times as a target to test against your own results, not a proven rule.
 2. **Required receipt elements**: organization's legal name, gift amount and date, a statement of
    whether goods/services were provided in exchange (and their value, if any) for IRS
    substantiation compliance, and the org's EIN/tax-exempt status language.

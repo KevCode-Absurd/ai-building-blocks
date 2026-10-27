@@ -14,6 +14,8 @@ license_source: https://github.com/huggingface/skills/blob/main/LICENSE
 
 ## How to run this skill (added by AI Blocks)
 
+Licence note: this copy of the skill text is covered by CC BY 4.0, as the LICENSE-CONTENT file says. The "Apache-2.0" in the header above is the original author's claim for their file. Keep the credit to Hugging Face.
+
 This skill is marked `risk: critical` upstream because it runs long, costly training and can publish files. Treat both as actions to confirm with the user.
 
 1. Ask once for what is missing: what the model must find or match, the training data (pairs or labelled texts), a starting model (optional), GPU or no GPU, and whether the result stays local or goes to the Hub. If something is still missing, write `MISSING: <what>`. Never invent training data, scores or model names.

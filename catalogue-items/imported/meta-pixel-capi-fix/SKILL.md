@@ -92,10 +92,10 @@ Output includes: pixel base code, standard events, advanced matching config, CAP
 Send test events and verify receipt in Events Manager.
 
 ```
-Run: scripts/capi-test.sh <pixel_id> [test_event_code]
+Run: scripts/capi-test.sh <pixel_id> <test_event_code>
 ```
 
-Sends a test PageView and test Purchase with fake customer data. Always pass the `test_event_code` shown in Events Manager > Test Events. The script tags events as tests even if you give none, but only the code from that tab makes them show up there.
+**Warning first:** this script sends a fake PageView and a fake Purchase (made-up customer details) to your live pixel. The test event code from Events Manager > Test Events is required. Copy it before you run anything. Only that code tells Meta to treat the events as tests, so they show in the Test Events tab and stay out of your reports and ad optimisation. Do not send them without it: they could be counted as real activity. The script now stops if you give no code.
 
 After running: **Check Events Manager > Data Sources > [Pixel] > Test Events** to confirm receipt.
 
@@ -109,7 +109,7 @@ Run: scripts/emq-check.sh <pixel_id>
 
 Pulls pixel config, scores each matching parameter, estimates EMQ, outputs recommendations sorted by impact (highest impact first).
 
-EMQ targets:
+EMQ targets (these are this skill's own guidance, not a rule from Meta):
 - Purchase: **9.3+** (excellent), 8.0-9.2 (good), 6.0-7.9 (needs work), <6.0 (critical)
 - Lead: **8.0+** (excellent), 6.5-7.9 (good), 5.0-6.4 (needs work), <5.0 (critical)
 
@@ -141,14 +141,14 @@ PII (email, phone, names) is hashed automatically. Event ID is generated if not 
 
 ### Get a META_TOKEN
 
-You need a Meta access token with `ads_management` and `ads_read` permissions (no other scopes). The score itself is confirmed on one screen: Events Manager > Data Sources > [Pixel] > Overview. Keep the token in an environment variable (`META_TOKEN`) and never paste it into a chat. Two ways:
+You need a Meta access token with `ads_management` and `ads_read` permissions (no other scopes), from a system user who has been given access to the pixel. That system user needs the pixel assigned in Business Settings; the pixel role you assign is what lets the token read and send for it. The score itself is confirmed on one screen: Events Manager > Data Sources > [Pixel] > Overview. Keep the token in an environment variable (`META_TOKEN`) and never paste it into a chat. Two ways:
 
 **Option A -- System User token (recommended for CAPI):**
 1. Business Manager > Business Settings > System Users
-2. Create system user, assign to pixel with "Analyze" permission
-3. Generate token with `ads_management` scope
+2. Create a system user, then assign the pixel to it in Business Settings (give it enough access to send events and read the pixel). The "Analyze" permission alone is not enough to send events.
+3. Generate the token with the `ads_management` and `ads_read` scopes. These are the only scopes needed.
 
-**Option B -- Ads CLI system user token:**
+**Option B -- Meta's separate Ads command-line tool (optional, not needed for the scripts in this item):** it is a different tool you would have to install from Meta first. Skip this option unless you already use it.
 ```bash
 export ACCESS_TOKEN="your_system_user_token"
 export AD_ACCOUNT_ID="act_123456789"

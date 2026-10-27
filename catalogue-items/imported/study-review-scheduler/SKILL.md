@@ -1,6 +1,6 @@
 ---
 name: spaced-repetition
-description: Use when scheduling and executing review sessions at scientifically-calibrated expanding intervals for long-term retention.
+description: Use when scheduling and executing review sessions at expanding intervals (a simplified version of the SM-2 method) for long-term retention.
 version: 1.1.0
 authors:
   - edu-agent-skills contributors
@@ -12,15 +12,17 @@ status: stable
 
 Schedule review of previously-learned concepts at expanding intervals to exploit the spacing effect. Manages due dates, adjusts intervals based on recall quality, and surfaces overdue items before they decay.
 
+> Keep the cards and dates in the chat. No other skills are needed. If a card fails three sessions in a row, re-explain that topic in the chat, then restart the card at 1 day.
+
 # Activation
 
-- Review session is due based on schedule. Learner initiates review. `flashcards` deck has due items. Sustained learning track (3+ sessions) needing interval maintenance.
+- Review session is due based on schedule. Learner initiates review. Pasted cards have due items. Sustained learning track (3+ sessions) needing interval maintenance.
 - **Skip if**: one-shot session with no continuity. Concept not yet learned. Learner declines scheduling.
-- **Routing**: overdue items take priority at session start. Coordinate with `flashcards` for card-level scheduling. Feed interval data to `learning-memory`.
+- **Routing**: overdue items take priority at session start. Show the updated intervals at the end so the learner can paste them back next time.
 
 # Inputs
 
-- Flashcard/item schedule with due dates, learner's current session, items from `learning-memory`.
+- Pasted card list with due dates, last interval in days and last recall score.
 
 # Interval Algorithm (Simplified SM2)
 
@@ -40,7 +42,7 @@ Mastery threshold: EF > 2.4, interval > 60 days, 5 consecutive successes → arc
 1. **Detect Due Items** — Check `next_review ≤ today`. Sort by overdue duration (most overdue first). Report count.
 2. **Scope Session** — ≤10 due: review all. >10: prioritize by overdue + weak-area overlap, cap at 15. Report deferrals.
 3. **Execute Review** — Present front, wait for learner response, reveal back. Self-score: Failed/Hard/Good/Easy. Compute new interval immediately. Never reveal answer before attempt.
-4. **Handle Failures** — Score 0: reset to 1 day, re-test at end of current session. Failed 3 sessions in a row: flag for `misconception-detector`.
+4. **Handle Failures** — Score 0: reset to 1 day, re-test at end of current session. Failed 3 sessions in a row: tell the learner, re-explain the topic in the chat, then restart the card at 1 day.
 5. **Update Schedule** — Output updated schedule. Show items due in next 7 days. Warn about upcoming review spikes.
 6. **Onboard New Items** — Fresh concept → add at interval=1 day. Confirm concept is understood first (not still unclear).
 

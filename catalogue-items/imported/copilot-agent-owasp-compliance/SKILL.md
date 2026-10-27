@@ -100,6 +100,7 @@ def check_asi_01(project_path: str) -> dict:
         "status": "not confirmed" if positive_found and not negative_found else "fail",  # a keyword hit is never a pass: a person must trace the code path first
         "controls_found": positive_matches,
         "vulnerabilities": negative_matches,
+        "human_signoff": None,  # a person fills this in after tracing the code path. Only then may the report say PASS
         "recommendation": "Add input validation before tool execution, not just output filtering"
     }
 ```
@@ -271,6 +272,8 @@ Verify the system can detect and respond to agent behavioral drift.
 
 ## Compliance Report Format
 
+(Added by AI Blocks: the code above can only return "not confirmed" or "fail". These match the report words NOT CONFIRMED and FAIL. PASS in the report needs a person's sign-off. The result is a self-check draft. Check the risk names and numbers against the current OWASP source before you quote them to anyone.)
+
 The report below is a layout with placeholders, not a real result. A keyword found in code (such as "sanitize" or "PolicyEngine") is only a starting point. Mark a risk PASS only after you have followed the code path and seen it work. Otherwise mark it "NOT CONFIRMED". Use FAIL when the control is missing or an unsafe pattern is found.
 
 ```markdown
@@ -329,5 +332,5 @@ If you answer "no" to any of these, that's a gap to address.
 ## Related Resources
 
 - [OWASP Agentic AI Threats](https://owasp.org/www-project-agentic-ai-threats/)
-- [Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) — Reference implementation covering 10/10 ASI controls
+- [Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) — The project claims to cover all 10 ASI risks (not verified here; check it yourself)
 - [agent-governance skill](https://github.com/github/awesome-copilot/tree/main/skills/agent-governance) — Governance patterns for agent systems

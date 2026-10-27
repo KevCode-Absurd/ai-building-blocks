@@ -89,13 +89,18 @@ curl -H "Authorization: Bearer $API_KEY" https://api.example.com
 
 ```bash
 # Install Varlock CLI
-# Before running, open https://github.com/dmno-dev/varlock/releases, pick a specific release,
-# and compare the installer with that release. Ask the user to confirm the release they want.
+# Do not run this until the user has filled in both values below. Never guess them.
+# 1. Open https://github.com/dmno-dev/varlock/releases, pick one specific release, and write its tag here.
+# 2. Download the installer, read all of it, then record its checksum (run: sha256sum <file>) and write it here.
+VARLOCK_RELEASE="[RELEASE TAG THE USER CHOSE]"
+INSTALLER_SHA256="[CHECKSUM OF THE INSTALLER THE USER REVIEWED]"
 tmpdir="$(mktemp -d)"
 trap 'rm -rf "$tmpdir"' EXIT
 curl -sSfL https://varlock.dev/install.sh -o "$tmpdir/varlock-install.sh"
 cat "$tmpdir/varlock-install.sh"  # review the full installer before executing
+echo "$INSTALLER_SHA256  $tmpdir/varlock-install.sh" | sha256sum -c -   # stop here if this fails
 sh "$tmpdir/varlock-install.sh" --force-no-brew
+varlock --version                 # confirm it matches $VARLOCK_RELEASE
 
 # Add to PATH (add to ~/.zshrc or ~/.bashrc)
 export PATH="$HOME/.varlock/bin:$PATH"
@@ -252,12 +257,14 @@ gh secret set SECRET_NAME
 
 ```dockerfile
 # Install Varlock in container.
-# This downloads a script from the web and runs it at build time. Read it first,
-# pin a version, and check it against the checksum or release notes on varlock.dev
-# before you trust it in a shared image.
+# This downloads a script from the web and runs it at build time, so it is a supply-chain risk.
+# Read the installer first. Fill in both build arguments below before you build (never guess them),
+# and check the reviewed installer's checksum in the build so a changed script stops the build.
+ARG VARLOCK_RELEASE="[RELEASE TAG THE USER CHOSE]"
+ARG INSTALLER_SHA256="[CHECKSUM OF THE INSTALLER THE USER REVIEWED]"
 RUN tmpdir="$(mktemp -d)" \
     && curl -sSfL https://varlock.dev/install.sh -o "$tmpdir/varlock-install.sh" \
-    && cat "$tmpdir/varlock-install.sh" \
+    && echo "$INSTALLER_SHA256  $tmpdir/varlock-install.sh" | sha256sum -c - \
     && sh "$tmpdir/varlock-install.sh" --force-no-brew \
     && rm -rf "$tmpdir" \
     && ln -s /root/.varlock/bin/varlock /usr/local/bin/varlock
@@ -443,15 +450,15 @@ Add these to your package.json:
 
 ## Integration with Other Skills
 
-### Clerk Skill
+If you also use a Clerk or Docker skill, these rules still apply. This copy does not include those skills.
+
+### Clerk
 - Test user passwords are `@sensitive`
 - Test emails are `@sensitive=false` (contain +clerk_test, not secret)
-- See: `~/.claude/skills/clerk/SKILL.md`
 
-### Docker Skill
+### Docker
 - Mount `.env` file, never copy secrets to image
 - Use `varlock run` as entrypoint
-- See: `~/.claude/skills/docker/SKILL.md`
 
 ---
 

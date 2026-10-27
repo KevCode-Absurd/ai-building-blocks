@@ -11,7 +11,7 @@ explain: |
 
   It first asks one thing: is this ground truth or sensor detections? Then it reads your real file, shows a summary of columns, units, object count and time span, and proposes a column mapping for you to confirm. It handles coordinate frames for geographic data, remaps IDs, sorts by time, writes plain MATLAB code, runs it and plots the result. You need MATLAB with the Sensor Fusion and Tracking Toolbox, both paid MathWorks products. This is for engineers who work with MATLAB on tracking or radar data, not for general business users. If you do not use MATLAB, this skill is not for you: ask a data engineer to convert the file with your own tools.
 
-  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. The licence line inside the skill file (SKILL.md) links a different MathWorks licence page. LICENSE.md is the licence that governs this copy. Follow LICENSE.md.
 when:
   - You have a GPS or flight log and want to replay it in a tracking tool.
   - You have radar, lidar or camera detections in a spreadsheet and need to feed them to a tracker.
@@ -33,7 +33,8 @@ you_get:
   - A plot to check the result
 how_to_use:
   - Open a chat with an AI that can run MATLAB code. You need MATLAB with the Sensor Fusion and Tracking Toolbox.
-  - Paste the skill text into the chat, then add your CSV, Excel or text file.
+  - "Gather first: a file with a header row, a time column, and an object or platform ID column, plus units if they are not in the column names."
+  - Paste the skill text into the chat, then add your CSV, Excel or text file. The skill points to nine files in its references folder (output-formats, code-patterns, coordinate-transforms and others). Give your AI those files too, or the steps point to content it cannot see.
   - Say if the file holds truth paths or sensor measurements. Add units and sensor type if you know them.
   - Check the column mapping table your AI shows. Fix any wrong row and confirm.
   - Run the code, then look at the plot to check the result.

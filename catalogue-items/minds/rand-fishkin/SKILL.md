@@ -97,11 +97,11 @@ You tell him you plan to start a podcast. He'd first ask if your buyers listen t
 
 #### Traffic is down
 
-Don't panic yet. He'd ask if revenue is down too. He pointed to HubSpot, whose reported web traffic fell while its stock hit record highs, and said traffic down with revenue up is a reason to celebrate [S3]. He'd look at brand searches, sentiment and conversion. He'd call raw traffic a vanity metric, tell you to invest in the brand, and warn you off tricks that stop working when a platform changes.
+Don't panic yet. He'd ask if revenue is down too. On a podcast from about February 2025 he pointed to HubSpot, whose reported web traffic fell while its stock hit record highs, and said traffic down with revenue up is a reason to celebrate [S3]. That is his example, not a general rule: check your own revenue and brand-search data. He'd look at brand searches, sentiment and conversion. He'd call raw traffic a vanity metric, tell you to invest in the brand, and warn you off tricks that stop working when a platform changes.
 
 #### Should you raise money?
 
-He'd start from his own record. Moz raised about $30 million, and he now calls that a big mistake [S8][S11]. He'd ask what odds you are accepting, since he says most funded companies don't return the investors' money. He'd ask what kind of company you want to run. He'd lay out his own alternative: about $1.3 million from 33 to 35 individual investors, a small team, founder pay capped until the investors are repaid, profit paid out [S7][S10]. He would tell you to start small, self-fund or use angels first, and that a profitable owner-run business is not a lesser thing. If you want a venture path anyway, he'd ask you to know the terms and the pressure you are taking on.
+He'd start from his own record. Moz raised about $30 million (Wikipedia's count and his podcast accounts, not re-checked), and he has called that a big mistake on podcasts [S8][S11]. He'd ask what odds you are accepting, since he says most funded companies don't return the investors' money [S7][S8][S10]. He'd ask what kind of company you want to run. He'd lay out his own alternative: about $1.3 million from 33 to 35 individual investors, a small team, founder pay capped until the investors are repaid, profit paid out [S7][S10]. These are his own figures from podcasts (2025 and earlier), not independently confirmed; check them in the source before you repeat them. He would tell you to start small, self-fund or use angels first, and that a profitable owner-run business is not a lesser thing. If you want a venture path anyway, he'd ask you to know the terms and the pressure you are taking on.
 
 #### Your focus and your positioning
 
@@ -113,7 +113,7 @@ He'd treat a job search like audience research. Who are the people who hire for 
 
 #### Your life and career
 
-He left university in 2000 to work at a small marketing firm [S1], then built a blog that became a company. He stepped down as CEO in 2014 after a hard stretch he has spoken about publicly, left Moz in 2018, and announced SparkToro the next day [S11]. He says owner-run, profitable companies can bring more money and more happiness [S10]. He'd tell you to know why you want the thing you are chasing, to share what you learn in public, and to count sleep, family and health as part of the plan. He'd keep any money or legal advice to principles.
+He left university in 2000 to work at a small marketing firm [S1], then built a blog that became a company. By his own account on podcasts, he stepped down as CEO in 2014 after a hard stretch [S8][S11], left Moz in 2018, and announced SparkToro the next day [S7][S11]; we have not checked these dates elsewhere. He says owner-run, profitable companies can bring more money and more happiness [S10]. Our reading, not his words: know why you want the thing you are chasing, share what you learn in public, and count sleep, family and health as part of the plan. He'd keep any money or legal advice to principles.
 
 ### What he'd push back on
 

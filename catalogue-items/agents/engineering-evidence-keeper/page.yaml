@@ -11,7 +11,7 @@ explain: |-
 
   It has three checks: a test gap check, a docs drift check and a bug receipt. A bug receipt is marked VERIFIED, PARTIAL or BLOCKED, and only from checks that really ran. An edited file is never treated as a passed test. If nothing changed since the last run, it reuses the earlier findings and runs nothing.
 
-  The three checks come from the Awesome Copilot collection by GitHub. They are the Test coverage gap investigator, the Code and docs drift checker and the Bug fix evidence recorder, each under the MIT licence. It needs an AI that can read and save files in your repository. It writes drafts only and sends nothing.
+  The three checks come from the Awesome Copilot collection by GitHub. They are the Test coverage gap investigator, the Code and docs drift checker and the Bug fix evidence recorder, Each of the three carries the MIT licence, as its own LICENSE file shows. The orchestration and decision rules here are original to AI Blocks. It needs an AI that can read and save files in your repository. It writes drafts only and sends nothing.
 when:
   - You changed code and already have an earlier review to compare with.
   - A finding was fixed and you need proof it is closed.
@@ -37,7 +37,7 @@ how_to_use:
   - If you have no earlier review, run the Test coverage gap investigator or the Code and docs drift checker on its own first.
   - Paste your commit ID and the list of files in the change.
   - Add your last agent-state.json and finding IDs if you have them.
-  - Ask it to follow the agent and mark any missing facts.
+  - Say "Follow the agent. Write MISSING: for any fact you lack, and list every MISSING line in the hand-back."
   - Read the hand-back. Check that each VERIFIED mark rests on a test that really ran.
   - Approve any outside action yourself. It only drafts messages and never sends them.
   - Next, fix what the gaps show, then run it again with the new commit ID and the saved agent-state.json.

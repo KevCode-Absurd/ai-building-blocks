@@ -81,7 +81,11 @@ Three approaches.
 **Deterministic hash assignment.** The default for warehouse-native.
 
 ```sql
+-- BigQuery only
 MOD(ABS(FARM_FINGERPRINT(CONCAT(user_id, 'exp_button_color_v1'))), 100) < 50
+
+-- Snowflake equivalent
+MOD(ABS(HASH(CONCAT(user_id, 'exp_button_color_v1'))), 100) < 50
 ```
 
 The salt (`'exp_button_color_v1'`) ensures different experiments produce uncorrelated assignments for the same user. Reproducible (same input always produces the same bucket), no service dependency, salt isolation across experiments. The assignment can be computed inline in any SQL query.
@@ -179,8 +183,9 @@ WITH metric_by_variant AS (
   SELECT
     e.variant_id,
     COUNT(*) AS n,
-    AVG(m.net_revenue_cents) AS mean,
-    VAR_SAMP(m.net_revenue_cents) AS variance
+    -- Exposed users with no metric row count as zero revenue, so n, mean and variance all cover the same users
+    AVG(COALESCE(m.net_revenue_cents, 0)) AS mean,
+    VAR_SAMP(COALESCE(m.net_revenue_cents, 0)) AS variance
   FROM exposures e
   LEFT JOIN exp_metrics_revenue m USING (user_id)
   WHERE e.experiment_id = 'exp_button_color_v1'
@@ -199,6 +204,8 @@ FROM
   (SELECT * FROM metric_by_variant WHERE variant_id = 'control') control,
   (SELECT * FROM metric_by_variant WHERE variant_id = 'treatment') treatment
 ```
+
+Missing metric values: the query above treats an exposed user with no metric row as zero. That is right for revenue or counts. If a missing value should instead mean "not measured", drop those users from both the mean and n (use an inner join and `COUNT(m.user_id)`), and say which choice you made. Never count a user in n while leaving them out of the mean.
 
 Convert the t-statistic to a p-value or confidence interval using a SQL function (BigQuery: a UDF; Snowflake: native or a stored procedure) or compute in Python on the result of the SQL query.
 

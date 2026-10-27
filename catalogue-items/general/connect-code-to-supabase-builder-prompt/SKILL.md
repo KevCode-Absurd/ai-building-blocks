@@ -29,6 +29,7 @@ How to start:
 <!-- /needs -->
 
 ## Before you run it
+- You need these ready: your Supabase URL, your service role key and the two tables below.
 - This prompt needs a Supabase project, with the URL and the service role key in `.env.local`. Keep that file out of git. The service role key skips Row Level Security, so it stays on the server and never goes in browser code.
 - It needs two tables in your Supabase project: `agent_jobs` and `agent_activity_log`. Any columns work, because the test only reads and counts rows. Create them in the Supabase dashboard (Table Editor or SQL editor). See https://supabase.com/docs/guides/database/tables.
 - It needs two packages: `@supabase/supabase-js` and `tsx`. Install them with `npm install @supabase/supabase-js` and `npm install -D tsx`. Ask the user before you install.
@@ -36,14 +37,14 @@ How to start:
 
 ## Method
 
-
-
 Copy this into Claude Code to wire up the database connection and run your first query from code.
 
 ---
 
 ```
 I need to connect my code to Supabase. Do these things in order:
+
+0. Before you install any package, ask me. The packages are @supabase/supabase-js and tsx (as a dev dependency). Then check that .env.local is listed in .gitignore. If it is not, tell me and ask before you change .gitignore.
 
 1. Create lib/supabase/admin.ts:
    - Import createClient from @supabase/supabase-js

@@ -11,6 +11,21 @@ metadata:
 
 This skill enables an AI agent to handle end-to-end meeting coordination. Given a natural language request, the agent identifies participants, resolves time zone differences, queries calendar availability, proposes conflict-free time slots, dispatches calendar invitations, and tracks RSVPs. It integrates with Google Calendar, Microsoft Outlook, and Calendly to cover the most common enterprise and freelance scheduling workflows.
 
+## Prerequisites (added by AI Blocks)
+
+- Calendar access for each service you use. Google Calendar, Microsoft Outlook and Calendly each need API access or a login from you. Calendly availability may need a paid Calendly plan.
+- Zoom, Google Meet or Teams links may need an account or plan of their own.
+
+## When not to use (added by AI Blocks)
+
+- You only want to convert one time between zones: use a plain time zone converter.
+- Your AI cannot read calendars: ask each person for free times, or use a poll tool such as Calendly.
+
+## Have ready (added by AI Blocks)
+
+- Participant names or emails, the topic, the length, and preferred days or hours.
+- The time zone for anyone your AI cannot look up.
+
 ## Workflow
 
 1. **Parse the Meeting Request**

@@ -9,12 +9,14 @@ Give it what Events Manager shows for your events and which customer fields each
 
 It reviews evidence. It does not forecast revenue. It does not work out a match score itself, because Meta does not publish how its score is built. The score you supply comes from Events Manager.
 
+**When not to use:** If you have not chosen how to send server events yet, use the Meta server tracking checker. If you want the whole account reviewed, use the Meta Ads 30-check account auditor. If your site has only the pixel and no server events, set those up first, because there is little to review.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Read your ad results** with the [Ad return evidence checker](https://useaiblocks.com/skills/platform-roas-reality-check). It takes the audit report.
-- **Make an offer people want** with the [Offer profit-per-session checker](https://useaiblocks.com/skills/offer-profit-per-session-checker). It takes the audit report.
+- **Check what your ads really return** with the [Ad return evidence checker](https://useaiblocks.com/skills/platform-roas-reality-check). It takes the audit report.
+- **Audit the whole account** with the [Meta Ads 30-check account auditor](https://useaiblocks.com/skills/meta-ads-30-check-account-auditor). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
@@ -27,7 +29,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
 2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
+3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In MISSING AND NOT RUN, list checks that could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
 - **Meta Events Manager:** It shows the match quality score for each event, and the customer fields received. This is where your evidence comes from.
@@ -78,19 +80,19 @@ Never ask for real customer emails, phone numbers or names. If the user pastes t
 
 ## Output
 
-Use these headings, in this order:
+Use these headings, in this order. They are the same labels as the result shape on the skill page.
 
-1. Setup and evidence used
-2. Per-event review (table: event, supplied score and rating label, fields sent, fields not sent, hashing issues, deduplication evidence, priority)
-3. Hashing issues
-4. Missing fields and where they would come from
-5. Deduplication findings
-6. Fixes in order (what, source, owner, effort)
-7. Check plan (what to look at in Events Manager and when)
-8. Missing evidence and next step
+1. SETUP (events, how they are sent, score dates)
+2. PER-EVENT REVIEW (event, supplied score and rating label, fields sent, fields not sent, hashing issues, duplicates, priority)
+3. HASHING ISSUES
+4. MISSING FIELDS (where each would come from, likely cause, effort)
+5. DEDUPLICATION
+6. FIXES IN ORDER (what, events affected, source, owner)
+7. CHECK PLAN (what to look at in Events Manager and when)
+8. MISSING AND NOT RUN
 
 End with a next step: once the fixes are in, run the Meta Ads 30-check account auditor to see the whole account, or the Meta server tracking checker if you still need to choose a server route.
 
 ## Final check
 
-Before you hand back, confirm: no revenue or return forecast appears, no score was estimated, hashing advice names which fields are hashed and which are not, and every `MISSING:` item is listed. Write `CHECKS MISSED:` with anything you could not review, or "none".
+Before you hand back, confirm: no revenue or return forecast appears, no score was estimated, hashing advice names which fields are hashed and which are not, and every `MISSING:` item is listed. Write anything you could not review under MISSING AND NOT RUN, or "none".

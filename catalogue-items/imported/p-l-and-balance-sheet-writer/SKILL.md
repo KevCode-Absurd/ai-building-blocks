@@ -6,7 +6,7 @@ argument-hint: "<frequency> <period>"
 
 # /financial-statements
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+> Added by AI Blocks: the placeholders `~~erp` and `~~data warehouse` stand for the person's own accounting system or data warehouse. CONNECTORS.md is not included here, and no connection is needed. The person exports a trial balance from their accounting system as a CSV or spreadsheet, with one row per account and columns for account name, account number if any, debit or credit (or a single net balance) and period. Ask for the same export for the comparison period.
 
 **Important**: This command assists with financial statement workflows but does not provide financial advice. All statements should be reviewed by qualified financial professionals before use in reporting or filings.
 
@@ -31,13 +31,15 @@ Generate financial statements with period-over-period comparison and variance an
 
 ### 1. Gather Financial Data
 
-If ~~erp or ~~data warehouse is connected:
+If ~~erp or ~~data warehouse is connected (most people will not have this, so go to the paste route below):
 - Pull trial balance or income statement data for the specified period
 - Pull comparison period data (prior period, prior year, budget/forecast)
 - Pull account hierarchy and groupings for presentation
 
 If no data source is connected:
-> Connect ~~erp or ~~data warehouse to pull financial data automatically. You can also paste trial balance data, upload a spreadsheet, or provide income statement data for analysis.
+> Export a trial balance from your accounting system as a CSV or spreadsheet, then paste it or upload it. You can also provide income statement data for analysis.
+
+Before you build any statement, ask the user to confirm that the trial balance ties: total debits equal total credits, and the totals match their accounting system. If it does not tie, or they cannot confirm, say so at the top of the draft and mark every figure "unreconciled".
 
 Prompt the user to provide:
 - Current period revenue and expense data (by account or category)
@@ -140,7 +142,7 @@ For each material variance:
 1. Quantify the variance ($ and %)
 2. Identify whether favorable or unfavorable
 3. Decompose into drivers using the categories above
-4. Provide a narrative explanation of the business reason
+4. Provide a narrative explanation of the business reason, using only causes the user supplied. If the user did not give a cause, mark the driver "unverified: ask the user" and list it as a question. Never invent a business reason
 5. Assess whether the variance is temporary or represents a trend change
 6. Note any actions required (further investigation, forecast update, process change)
 
@@ -172,7 +174,7 @@ Provide:
 2. Key metrics summary
 3. Material variance listing with investigation flags
 4. Suggested follow-up questions for unexplained variances
-5. Offer to drill into any specific variance with `/flux`
+5. Offer to drill into any specific variance. Ask the person to name the line, then give the likely drivers and the questions to ask. (The original skill calls this `/flux`. It is not included here, so do it in the same chat.)
 
 ## GAAP Presentation Requirements
 

@@ -36,6 +36,8 @@ plan or claim the user most recently wanted an opinion on.
 - Use when the user asks "is this a good idea?" about a plan, a purchase, a post, a code plan or a claim.
 - Use when the user says "court", "put it on trial" or "/court".
 
+**When not to use:** Do not use it for legal, medical or financial advice. A jury of AI models is not a qualified adviser. Do not use it when the idea has no details yet. Ask the user for their goal, numbers and limits first. Without Claude Code and Python 3, give a plain pros and cons list instead.
+
 ## The tool
 
 Every piece of bookkeeping goes through `scripts/court.py` in this skill's folder:
@@ -128,7 +130,7 @@ Rules for you, the clerk:
 ## Examples
 
 ```text
-/court Quit my job to sell candles on Etsy full time. I have $8,000 saved and 40 sales so far.
+/court Quit my job to sell candles on Etsy full time. I have [AMOUNT SAVED] saved and [NUMBER] sales so far.
 /court --quick The plan you just gave me is the right one.
 ```
 

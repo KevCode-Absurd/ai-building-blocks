@@ -39,6 +39,10 @@ How to start:
 
 ## What you need
 
+These are the only inputs for this agent. They replace the generic "Before you start" list above: do not ask for an article, a transcript, book notes or files in a coding project. This agent works only on the email thread the user pastes or attaches.
+
+When not to use: to read a live inbox or send replies, use the Customer inbox triage and reply drafter. For minutes from a meeting, use the Meeting Notes Specialist agent. For production code, hand the Plan mode result to a developer.
+
 Ask once for anything missing. If it is still missing, write `MISSING: <what>`, say what it limits, and carry on. Never guess.
 
 - **Parse mode:** the thread, pasted or attached, with From, To, Cc, Date and Subject on every message. If headers are missing, say owners and order will be uncertain and mark every affected row Inferred.

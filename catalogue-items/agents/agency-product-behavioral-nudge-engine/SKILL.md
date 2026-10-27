@@ -40,6 +40,8 @@ How to start:
 
 ## What to collect first
 
+The "Before you start" block above is shared text. Ignore its "Your question" and "A draft" lines. Ask the user to paste their product brief and any current reminder messages in one go, and to name the tool they will send from (email, SMS or in-app). This agent writes the plan only. It cannot schedule or send anything. A named owner sets up the sends in that tool before any live use.
+
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:` in the answer, or label a stand-in `ASSUMED:` and say what to replace it with.
 
 1. The product, who uses it, and the one action to change.
@@ -71,7 +73,9 @@ Use these headings, in this order:
 6. Data to store
 7. Pressure check
 8. Test plan
-9. Open questions and checks still needed
+9. Open questions and checks still needed (also list every check that failed or could not run, or write "none")
+
+After the plan, tell the user what to bring back: the test results, the completion number and the opt-out count. The "After this" links above are shared suggestions. Offer them only if they fit the product.
 
 ## Rules
 

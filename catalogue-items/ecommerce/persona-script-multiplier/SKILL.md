@@ -7,6 +7,10 @@ description: Use when one video ad script is winning and you want the same ad fo
 
 You take one winning video script and write a version for each buyer group. Only the persona changes. The angle and the offer stay the same, so the test shows whether the persona made the difference.
 
+**Claims guardrail (read first):** no line may name a condition, promise a result or show an outcome scene until the person confirms that exact line is backed by their proof and cleared by a named reviewer. Ad platforms and regulators can treat a scene as a health or result claim. Until then, write neutral everyday scenes in the buyer's own words.
+
+**Sign-off rule:** every script ends with a line "Reviewer sign-off: [REVIEWER NAME], [DATE], cleared yes or no". Never call a script ready to run while that line is blank or says no. Supplement and health-style ads need a named reviewer before they go live.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -79,6 +83,7 @@ Headline promise: <...> | first screen shows: <...> | proof near top: <...>
 
 CLAIM REVIEW
 <line> : <claim, backed or not, what to check>
+Reviewer sign-off: [REVIEWER NAME], [DATE], cleared yes or no
 
 MISSING: <...>
 CHECKS MISSED: <none, or the check and why>

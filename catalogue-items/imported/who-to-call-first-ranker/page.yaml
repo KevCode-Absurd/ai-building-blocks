@@ -17,8 +17,8 @@ when:
   - You are asked for a quick read on your pipeline.
 not_for:
   - "You want a pipeline overview or deal report: ask your AI for a pipeline summary in HubSpot instead."
-  - "You want to update CRM records or change lead stages: use crm-autopilot, since this skill only reads leads."
-  - "You want to write outreach for one person: use outreach-composer."
+  - "You want to update CRM records or change lead stages: use the CRM deal updater or CRM record filler, since this skill only reads leads."
+  - "You want to write outreach for one person: use the Prospect outreach drafter."
 you_give:
   - HubSpot access
   - Scope such as leads only or pipeline
@@ -31,7 +31,7 @@ you_get:
   - Proposed call times
 how_to_use:
   - Open your AI tool and paste in the skill instructions, or add the skill folder if your tool allows files.
-  - Connect HubSpot. If you do not use it, upload a CSV export or paste a rough list of leads.
+  - Connect HubSpot. If you do not use it, upload a CSV export or paste a rough list of leads. Lead enrichment with Apollo or Clay is optional. It needs your own paid account and uses credits, and the skill asks before each run.
   - Say "prioritize my leads". If you only say "pipeline", it will ask whether you want an overview or a call list.
   - Read the ranked list and talking points. If it says the scores did not separate, the order comes from CRM facts, so check it yourself.
   - Ask for follow-up drafts or call slots for the leads you want. Read each draft and approve any slot before anything is sent or booked.
@@ -56,3 +56,4 @@ output_sample:
       contains: Two open 30-minute windows per lead in the next two business days. Nothing is booked until you approve.
     - name: Triage board
       contains: A web page with the ranked table, an urgency tag for each lead and the talking points.
+next: [crm-deal-updater, prospect-outreach-drafter]

@@ -21,6 +21,7 @@ not_for:
   - "You need to build one button, card or form: ask your AI to build that single part. This skill plans whole pages."
   - "You want to judge your competitors first: look at a few competitor sites and write down what they share, then bring your notes here."
 you_give:
+  - Your site shape, picked from the ten allowed shapes (ecommerce-catalog, ecommerce-standout, hospitality-food, hospitality-experience, b2b-manufacturer, local-service-booking, directory-marketplace, inventory-listing, subscription-app, institution-mission)
   - Your industry or type of site
   - A competitor audit (optional)
   - Your product or catalogue size
@@ -31,10 +32,12 @@ you_get:
   - Navigation and merchandising rules
   - A list of what visitors expect to see
 how_to_use:
+  - "Know this first: the skill names companion skills (information-architecture, frontend-component-build and accessibility-audit) that are not in this library. Where it hands work to them, that work goes to your designer or developer, as the hand-off list."
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code running or paid tool is needed.
   - Say what kind of site you are building, for example a small restaurant, a store or a parts maker.
-  - Add your competitor audit if you have one, plus the size of your catalogue or menu. No audit? Name your type of site and say you have no audit. It then works from its notes for each type of site. The skills named in the skill file as companions (competitor-experience-audit, design-standards, information-architecture) are not in this library. If you do not have them, use the matching references/shape-*.md file, such as shape-ecommerce-catalog.md, as your audit substitute.
-  - It writes a notes file named composition-[site-shape]-[brand-slug].md, or gives the notes in the chat. Check its five sections: the site shape, the build decisions, the conventions checklist, the wedge and the hand-off list. Add every convention marked absent to your plan.
+  - Match your site to one shape and use its file in the references folder. A store with products to browse uses shape-ecommerce-catalog. A store with a distinctive brand angle uses shape-ecommerce-standout. A restaurant or cafe uses shape-hospitality-food. A hotel, venue or experience uses shape-hospitality-experience. A parts maker or industrial seller uses shape-b2b-manufacturer. A booking business such as a salon or repair service uses shape-local-service-booking. A directory or marketplace uses shape-directory-marketplace. Listings such as cars or homes use shape-inventory-listing. A subscription app uses shape-subscription-app. A charity, school or nonprofit uses shape-institution-mission.
+  - Add your competitor audit if you have one, plus the size of your catalogue or menu. No audit? Name your type of site and say you have no audit. It then works from its notes for each type of site. The Competitor site experience auditor and the Page design standards checker are in this library. The companion skills information-architecture and frontend-component-build are not. If you do not have an audit, use the matching references/shape-*.md file, such as shape-ecommerce-catalog.md, as your audit substitute.
+  - "It writes a notes file named composition-[site-shape]-[brand-slug].md, or gives the notes in the chat. Check its five sections: the site shape, the build decisions, the conventions checklist, the wedge and the hand-off list. Add every convention marked absent to your plan."
   - Pass the hand-off list to your designer, or to the design and component skills, to build the pages.
 output_sample:
   input:

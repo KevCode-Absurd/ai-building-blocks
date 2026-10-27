@@ -2,14 +2,14 @@ thinking: low
 thinking_why: It follows a fixed plan, check and review loop.
 new_slug: study-session-planner-and-review
 name: Study session planner and review
-summary: Plan your study session, check your method halfway and note what changed at the end. A study session planner that builds a learning habit.
+summary: Plan your study session, check your method halfway and note what changed at the end. A study session planner designed to help you build a habit.
 job: teach-and-train
 headline: Study session planner and review
-subhead: A study session with a start, a midpoint check and an end, so time spent turns into learning you can see. It builds the habit of managing your own learning.
+subhead: A study session with a start, a midpoint check and an end, so time spent turns into learning you can see. It is designed to help you build the habit of managing your own learning.
 explain: |
-  A study session with a start, a midpoint check and an end, so time spent turns into learning you can see. It builds the habit of managing your own learning.
+  A study session with a start, a midpoint check and an end, so time spent turns into learning you can see. It is designed to help you build the habit of managing your own learning.
 
-  At the start, you state the topic and a goal for the session, and the coach tightens it into something you can actually finish. Halfway, it asks whether your method is working and offers a switch if not. At the end, it has you say what changed in your understanding and what to do next time. It remembers earlier sessions to compare, and adjusts its tone to the learner's age band. The full run is written as a short transcript.
+  At the start, you state the topic and a goal for the session, and the coach tightens it into something you can actually finish. Halfway, it asks whether your method is working and offers a switch if not. At the end, it has you say what changed in your understanding and what to do next time. Paste in notes from earlier sessions each time, and it will compare against them. It adjusts its tone to the learner's age band. The full run is written as a short transcript.
 when:
   - You sit down to study for hours and finish unsure what you learned.
   - A student drifts halfway through homework with no check on progress.
@@ -33,12 +33,14 @@ you_get:
   - A note on what to do next time
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
+  - In the skill text, replace the {{placeholder}} fields (such as {{subject_or_topic}}, {{session_type}} and {{session_duration_target}}) with your own topic, session type and time before you send it. Or just tell your AI these three things.
   - Tell your AI the topic, the session type and how long you have. Add notes from earlier sessions if you have them.
   - Start with the opening step. Agree a goal you can finish in the time you have.
   - About 15 minutes in, or at a natural break, come back and ask for the mid-session check. It takes about a minute, and you can skip it if you are in deep focus. Say how it is going and switch method if the coach suggests it.
   - At the end, ask for the closing step. Write down what changed and what you will do next time.
   - Keep the goal and next step. Paste them in at the start of your next session.
-  - "The closing note has four fields: your goal, how confident you felt, how well you met the goal (rated 1 to 4), and the next goal."
+  - "The closing note has four fields: your goal, how confident you felt, how well you met the goal (rated 1 to 4), and the next goal. Save this note and paste it in at your next session."
+  - "The research behind the method (Zimmerman, Bannert, Winne and Hadwin) is cited in the skill text. The claim that it builds a lasting habit is the author's expectation, not a result checked here."
   - To pick a better study method, use the study strategy picker. To plan revision before an exam, use the study revision coach.
 next: [study-strategy-picker, study-revision-coach]
 output_sample:

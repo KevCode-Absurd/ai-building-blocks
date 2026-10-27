@@ -31,7 +31,8 @@ you_get:
 how_to_use:
   - "Gather first: the workbook file, the scope you want, and the model type (DCF, LBO, three-statement or merger) if it is a full model."
   - Open your AI tool and paste the skill, or upload the skill folder. It needs an AI that can read spreadsheet files.
-  - Upload your workbook. For Indian models (crore units, April to March year), also add the india-modeling-rules-checker skill. For other models you do not need it.
+  - Upload your workbook. For Indian models (crore units, April to March year), also add the India modeling rules checker skill. The skill text refers to india-market-conventions, india-market-data and a NOT-ADAPTABLE.md file, which are not in this copy. If they are missing, the skill says so and lists what it could not check. For other models you do not need any of them.
+  - Your AI should say whether it read the formulas or only the saved values. If it only saw values, formula checks are limited, so ask it to say which checks it could not do.
   - "Say the scope: selection, sheet or whole model. Add your currency and fiscal year if you have them."
   - Read the findings table. Start with the critical rows, and check the balance sheet first.
   - Tell your AI which fixes to make. It will not change anything until you ask.

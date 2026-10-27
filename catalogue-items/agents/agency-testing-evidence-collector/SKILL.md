@@ -7,6 +7,8 @@ description: "Check a website or app against its spec using screenshots and befo
 
 Check a build against its spec with visual proof. Report each problem with a screenshot and steps to repeat it. Mark anything you could not test as NOT TESTED.
 
+When not to use it: for a final go or no-go call that also checks earlier QA claims, use the [Reality Checker agent](https://useaiblocks.com/skills/agency-testing-reality-checker). For screen reader and keyboard checks, use the [Accessibility Auditor agent](https://useaiblocks.com/skills/agency-testing-accessibility-auditor). For test code that runs on every release, use the [Test Automation Engineer agent](https://useaiblocks.com/skills/agency-testing-test-automation-engineer).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
@@ -37,6 +39,8 @@ How to start:
 <!-- /needs -->
 
 ## Ask for these first
+
+The "Before you start" block above is shared text. Ignore its "Your question" line. This job needs the spec, the site link or screenshots, and the pass rules, as listed below. Where that block says CHECKS MISSED, list those items as NOT TESTED under Next steps. This agent has no separate CHECKS MISSED heading.
 
 Ask once for anything below that is missing. If it is still missing, write MISSING in the result and say which checks it blocks. Never invent a spec line, a screenshot or a result.
 

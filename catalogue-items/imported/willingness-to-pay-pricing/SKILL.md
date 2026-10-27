@@ -13,7 +13,7 @@ A framework for designing the product around the price, distilled from Simon-Kuc
 
 ## Core Principle
 
-**Design the product around the price — have the willingness-to-pay talk early.** 72% of new products miss their revenue targets, and the common root cause is treating price as an afterthought: build first, guess a number at launch. Price is a measure of how much customers value what you are building, which makes it the best early signal of whether to build it at all. Test willingness to pay at the concept stage and let it shape scope, segments, packaging, and the business case.
+**Design the product around the price — have the willingness-to-pay talk early.** Many new products miss their revenue targets (the original author gave a percentage with no source, so it is left out; do not quote one), and a common root cause is treating price as an afterthought: build first, guess a number at launch. Price is a measure of how much customers value what you are building, which makes it the best early signal of whether to build it at all. Test willingness to pay at the concept stage and let it shape scope, segments, packaging, and the business case.
 
 ## Scoring
 
@@ -185,7 +185,7 @@ See [references/monetization-models.md](references/monetization-models.md) when 
 
 | Mistake | Why It Fails | Fix |
 |---------|-------------|-----|
-| Building first, pricing at launch | Joins the 72% that miss revenue targets; flaws surface when change is expensive | Test WTP at concept stage and let it shape scope |
+| Building first, pricing at launch | Joins the many products that miss revenue targets; flaws surface when change is expensive | Test WTP at concept stage and let it shape scope |
 | Cost-plus or competitor-copy pricing | Anchors on your costs or their strategy — neither measures your customers' value | Price from validated WTP ranges |
 | Asking "would you buy this?" | Yields polite yeses; stated intent always overstates | Use acceptable/expensive/prohibitive probes and forced trade-offs |
 | Designing for average WTP | The mean describes a customer who does not exist | Segment the WTP curve; build per segment |

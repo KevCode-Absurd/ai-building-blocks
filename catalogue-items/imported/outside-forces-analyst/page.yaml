@@ -30,10 +30,13 @@ you_get:
   - The most important factors
   - Questions or actions to follow up
 how_to_use:
+  - "Gather first: your product description, your target region, your strategy question, and any rule or tariff changes you know about, with their sources."
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or paid tools are needed.
   - Tell your AI your business, product, market and region.
   - Add your main strategy question, such as entering a new country.
   - Add any rule or market changes you already know about (optional).
+  - The ratings and rankings are your AI's judgment from general knowledge, not live data. Check them against official sources before you decide.
+  - The result opens with a one-paragraph summary of the top five ranked forces, then lists the six areas.
   - Check the top-ranked factors first. Fix any that don't fit your case, then ask your AI to update the list.
   - Pick the actions for the top factors and add them to your plan. Review the list once a year.
 output_sample:

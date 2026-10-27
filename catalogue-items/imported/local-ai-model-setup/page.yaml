@@ -13,7 +13,7 @@ explain: |
 
   It keeps everything private by default: the services listen on your machine only, and passwords are placeholders you set yourself. It also tells you how to back up, stop and remove the setup.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header says MIT. Credit goes to the original author and sickn33.
+  Licence: the skill text in this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header says MIT, which covers the author's own code. The original MIT credit to BagelHole, and to sickn33 for sharing it, stays with the item. Credit goes to the original author and sickn33.
 when:
   - You want a private AI chat that never leaves your computer.
   - You have a gaming graphics card and do not know which model fits it.
@@ -43,8 +43,11 @@ how_to_use:
   - Tell it your system, your graphics card and what you want the model for.
   - If it asks for something you do not know, say so. It will mark the gap and not guess your hardware.
   - Read the model choice first. Then run the commands yourself, one block at a time, in your terminal.
+  - Before you rely on the Docker file, pin the Ollama and Open WebUI image versions. The "latest" and "main" tags in it change over time, so look up a current version tag on each project's page and put it in.
   - Back up anything important before you start. Make up your own passwords for the secrets it lists.
-  - Next, try a second model, or for a production server use the vLLM model server setup.
+  - On Windows, use the installer from ollama.com, then run the same pull and run commands in PowerShell. Skip the Linux install command.
+  - When it lists Gaps at the end, paste that section back into the chat with the missing answers, so it can fill them in before you go on.
+  - Next, try a second model. For a shared production server, a one-machine setup like this is not enough. Ask a developer to plan a proper model server.
 how_it_works:
   - title: Read your hardware
     text: It matches your memory to a model size and picks one starter model, with the reason.

@@ -262,4 +262,4 @@ Before starting implementation, confirm:
 
 ## See Also
 
-Acceptance criteria are per-task and answer "did we build the right thing?". They sit on top of the project-wide Definition of Done, the standing bar every task clears before it counts as done. That file is not in this copy. Use your own team's bar, such as tests pass, code reviewed and nothing else broken, and check it by hand for each task.
+Acceptance criteria are per-task and answer "did we build the right thing?". They sit on top of the project-wide Definition of Done, the standing bar every task clears before it counts as done. That file is not in this copy. If the user has no bar of their own, use this default, a fallback chosen by this library and not a project standard, for each task: tests pass, the build is clean, a person has reviewed the change and nothing else is broken. Add this line to each task's verification step, and check it by hand for each task.

@@ -66,6 +66,10 @@ When you've handed it back, suggest what they could do next in one short questio
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
+## What next
+
+Take the doubts to "Objection answer sheet writer" to write fuller replies. Say the opening out loud with a friend before the real talk. If price or terms come up, switch to "Negotiation call prep planner".
+
 ## Check before you hand it back
 
 - The plan starts from their want, not yours.

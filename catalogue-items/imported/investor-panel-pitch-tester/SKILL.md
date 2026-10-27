@@ -15,6 +15,8 @@ license_source: "https://github.com/alexyc9381/shark-skill/blob/main/LICENSE"
 argument-hint: "[--investors N] [--seed S] <the business idea>"
 ---
 
+> Licence note (added by AI Blocks): the written text of this copy is shared under CC BY-4.0 (see `LICENSE-CONTENT`). The `license: MIT` line in the header above is the original author's own declaration for their repo. Keep the credit to the author either way.
+
 # shark
 
 For when Claude says every business idea is great. Instead of one friendly answer, the idea goes in

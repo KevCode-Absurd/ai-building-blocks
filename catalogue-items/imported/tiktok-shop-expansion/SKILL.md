@@ -98,25 +98,25 @@ Do these in order:
 
 | Market | Opportunity Score | Competition Level | Setup Complexity | Revenue Potential |
 |--------|------------------|-------------------|------------------|-------------------|
-| [Country 1] | [High/Med/Low] | [High/Med/Low] | [High/Med/Low] | $[Amount]/month |
-| [Country 2] | [High/Med/Low] | [High/Med/Low] | [High/Med/Low] | $[Amount]/month |
-| [Country 3] | [High/Med/Low] | [High/Med/Low] | [High/Med/Low] | $[Amount]/month |
+| [Country 1] | [High/Med/Low] | [High/Med/Low] | [High/Med/Low] | [unknown, or your own figure] |
+| [Country 2] | [High/Med/Low] | [High/Med/Low] | [High/Med/Low] | [unknown, or your own figure] |
+| [Country 3] | [High/Med/Low] | [High/Med/Low] | [High/Med/Low] | [unknown, or your own figure] |
 
 ### Market Entry Strategy
 
-**Phase 1: [Country 1] (Months 1-3)**
+**Phase 1: [Country 1] ([YOUR TIMING])**
 
 **Market Profile:**
-- Population: [Number] | TikTok users: [Number]
-- E-commerce penetration: [X%]
-- Average order value: $[Amount]
+- Population: [unknown, or estimate: check a named official source] | TikTok users: [unknown, or estimate: check a named official source]
+- E-commerce penetration: [unknown, or estimate: check a named official source]
+- Average order value: [unknown, or your own figure]
 - Key shopping seasons: [Periods]
 - Primary payment methods: [Methods]
 
 **Setup Requirements:**
 - Business registration: [Required/Not required]
-- VAT registration threshold: $[Amount]
-- Import duty rates: [X%] on [product category]
+- VAT registration threshold: [unknown, or check the local tax office]
+- Import duty rates: [unknown, or check the customs authority] for [product category]
 - Local fulfillment partner: [Required/Optional]
 
 **Localization Needs:**
@@ -129,17 +129,16 @@ Do these in order:
 
 **Fulfillment Options Analysis:**
 
-| Option | Cost | Speed | Complexity | Recommended For |
-|--------|------|-------|------------|-----------------|
-| Direct shipping | Low | Slow | Simple | Testing phase |
-| Local warehouse | High | Fast | Complex | Established products |
-| 3PL partnership | Medium | Medium | Medium | Scaling phase |
-| FBT (Fulfilled by TikTok) | Variable | Fast | Low | When available |
+Cost and speed depend on your carrier or 3PL quotes. Write "check with your carrier or 3PL quote" in each Cost and Speed cell unless the user gives real quotes.
 
-**Recommended Approach:**
-1. **Phase 1 (0-3 months):** Direct shipping for product validation
-2. **Phase 2 (3-6 months):** 3PL partnership for popular products  
-3. **Phase 3 (6+ months):** Local warehouse for high-volume items
+| Option | Cost | Speed | Complexity | Typical use (a general idea, not a rule) |
+|--------|------|-------|------------|-----------------|
+| Direct shipping | [check carrier quote] | [check carrier quote] | Simple | Testing phase |
+| Local warehouse | [check 3PL quote] | [check 3PL quote] | Complex | Established products |
+| 3PL partnership | [check 3PL quote] | [check 3PL quote] | Medium | Scaling phase |
+| FBT (Fulfilled by TikTok) | [check TikTok Shop seller help] | [check TikTok Shop seller help] | Low | When available |
+
+**Suggested order (an example, not fixed timings):** start with direct shipping to validate a product, move to a 3PL for popular products once demand is proven, and consider a local warehouse for high-volume items. Set your own timings from your quotes and sales.
 
 ### Legal & Compliance Framework
 
@@ -154,8 +153,8 @@ Do these in order:
 - [ ] Data privacy regulation compliance (GDPR, etc.)
 
 **Tax Obligations:**
-- VAT/GST registration threshold: $[Amount]
-- Import duty rates: [X%] - [X%] depending on product
+- VAT/GST registration threshold: [unknown, or check the local tax office]
+- Import duty rates: [unknown, or check the customs authority]
 - Corporate tax implications: [Requirements]
 - Quarterly/Annual filing requirements: [Schedule]
 
@@ -164,18 +163,20 @@ Do these in order:
 **Currency and Pricing Strategy:**
 - Base currency: [Current currency]
 - Target currency: [Local currency]
-- Exchange rate buffer: [X%] for volatility protection
+- Exchange rate buffer: [YOUR CHOSEN %], set with your payment provider or adviser, for volatility protection
 - Local pricing psychology: [Round numbers, .99 endings, etc.]
 
 **Financial Projections (12 months):**
 
 | Metric | Month 3 | Month 6 | Month 12 |
 |--------|---------|---------|----------|
-| Monthly revenue | $[Amount] | $[Amount] | $[Amount] |
-| Gross margin | [X%] | [X%] | [X%] |
-| Setup costs | $[Amount] | $[Amount] | $[Amount] |
-| Operating costs | $[Amount] | $[Amount] | $[Amount] |
-| Net profit | $[Amount] | $[Amount] | $[Amount] |
+| Monthly revenue | [unknown] | [unknown] | [unknown] |
+| Gross margin | [unknown] | [unknown] | [unknown] |
+| Setup costs | [unknown] | [unknown] | [unknown] |
+| Operating costs | [unknown] | [unknown] | [unknown] |
+| Net profit | [unknown] | [unknown] | [unknown] |
+
+Fill a cell only with the user's own sales and cost figures. Otherwise leave it "unknown". Do not estimate revenue or profit.
 
 ### Localization Strategy
 
@@ -193,19 +194,19 @@ Do these in order:
 
 ### Launch Timeline & Milestones
 
-**Month 1-2: Foundation**
+**First stage: Foundation (set your own timings)**
 - [ ] Complete legal and tax registrations
 - [ ] Set up payment processing and banking
 - [ ] Establish logistics partnerships
 - [ ] Begin content localization
 
-**Month 3-4: Soft Launch**
+**Second stage: Soft Launch**
 - [ ] Launch with limited product catalog
 - [ ] Test fulfillment and customer service processes
 - [ ] Gather initial customer feedback
 - [ ] Refine operations based on learnings
 
-**Month 5-6: Scale & Optimize**
+**Third stage: Scale & Optimize**
 - [ ] Expand product catalog based on performance
 - [ ] Launch full marketing and creator campaigns
 - [ ] Optimize pricing and localization
@@ -222,13 +223,14 @@ Do these in order:
 ### Success Metrics
 
 **KPIs by Market:**
-- Monthly GMV: $[Amount] target by month 6
-- Customer acquisition cost: $[Amount] or lower
-- Average order value: $[Amount] (vs $[Amount] in home market)
-- Customer satisfaction: [X.X] stars or higher
-- Return rate: Under [X%]
+- Monthly GMV: [your target] by month 6
+- Customer acquisition cost: [your target]
+- Average order value: [your target] (compare with your home market)
+- Customer satisfaction: [your target]
+- Return rate: [your target]
 
 ### Next Actions
+- [ ] Request live carrier quotes and confirm VAT or GST registration with the local tax office before you choose any country
 - [ ] Finalize target market selection based on analysis
 - [ ] Begin legal and compliance setup process
 - [ ] Research and contact logistics partners
@@ -260,4 +262,4 @@ Do these in order:
 
 ---
 
-*Built by [Nexscope](https://www.nexscope.ai?co-from=skill) — AI-powered cross-border ecommerce intelligence. This skill provides international expansion frameworks. For automated compliance and market optimization, explore our complete platform.*
+*Built by [Nexscope](https://www.nexscope.ai?co-from=skill). Nexscope is an optional paid outside service. You do not need it.*

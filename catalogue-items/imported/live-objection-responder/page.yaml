@@ -33,7 +33,8 @@ how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini and paste in this skill's instructions.
   - Paste the objection exactly as the buyer said or wrote it.
   - "Add what you know about the deal: stage, size, who is involved and what the buyer has said they want."
-  - Add win and loss notes, customer quotes or case studies if you have them. If your AI can read your CRM or call notes, let it pull them. If not, paste them by hand. The skill works with only the objection and the deal facts, but the reply is then more general.
+  - Paste, in this order: the objection, then the deal stage and size, then any win and loss notes or customer quotes. Add case studies if you have them. If your AI can read your CRM or call notes, let it pull them. If not, paste them by hand. The skill works with only the objection and the deal facts, but the reply is then more general.
+  - Any proof point you did not supply is marked NEEDS YOUR VETTED SOURCE. Fill it from your own approved material, or leave it out.
   - Read the reply and check each proof point against its source before you use it with the buyer.
   - If the objection came by email, ask your AI to draft the reply email from the response.
 output_sample:

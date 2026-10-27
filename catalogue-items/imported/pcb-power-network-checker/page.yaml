@@ -5,13 +5,13 @@ name: PCB power network checker
 summary: Check your PCB power rails for voltage drop, hot spots and via current limits before you build. Pass or fail per rail against your own rules.
 job: build-software
 headline: PCB power network checker
-subhead: Voltage drop and hot spots on your power rails, found before the board is built. Load a layout and see where copper is too thin, where a via carries too much current and which rails miss their voltage margin.
+subhead: Voltage drop and hot spots on your power rails, found before the board is built. Load a layout and see where copper is too thin, where a via carries too much current and which rails miss their voltage margin. This is a MathWorks skill, copied unchanged under the BSD 2-Clause licence. It is not an AI Blocks original.
 explain: |
   Voltage drop and hot spots on your power rails, found before the board is built. Load a layout and see where copper is too thin, where a via carries too much current and which rails miss their voltage margin.
 
   The skill lists the nets on an imported board and finds power rails by their names, guessing nominal voltage from labels like P0V8. You then set sources, loads and sense points. A DC solve runs per rail, or in a batch across all rails. Results are checked against rules you set for maximum current density, voltage margin and via current. It runs in MATLAB with the RF PCB Toolbox and needs a board imported first.
 
-  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
+  Licence: LICENSE.md in this item applies (BSD 2-Clause), and you may use it only with MathWorks products such as MATLAB. The skill file links a different MathWorks licence page, which is MathWorks' own upstream terms and also says MathWorks products only.
 when:
   - You want to know if a 0.8 V rail drops too much before it reaches the chip.
   - A reviewer asks for proof that via currents stay under the limit.
@@ -37,7 +37,7 @@ how_to_use:
   - Collect the load current for each rail from a datasheet or your power budget. Do this before the run, because the checks depend on it.
   - Give your AI this skill, then tell it your source and load locations and your limits for drop, current density and via current. The example limits in the skill (such as 0.5 mA/mil² and 1 A) are placeholders. Replace them with your own design rules before you trust any pass or fail.
   - Each rail needs a sense point. If the net has no test point, the skill uses a resistor on the net as the sense point. Ask your AI to tell you which part it picked.
-  - Ask it to list the power nets first. Confirm the rails and voltages are right, then run one rail or all rails in a batch.
+  - Ask it to list the power nets first. Confirm the rails and voltages are right, then run one rail or all rails in a batch. A single rail needs only the steps in the main skill file. Running many rails at once needs the batch-analysis reference file (references/batch-analysis.md) pasted in with the skill.
   - Read the pass or fail table. Fix failing rails in your CAD tool, import the board again with the PCB layout file reader, and rerun this check.
 output_sample:
   input:

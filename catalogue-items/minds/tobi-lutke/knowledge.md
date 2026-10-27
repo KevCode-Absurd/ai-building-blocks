@@ -44,7 +44,7 @@ How he applied it: he treats feedback as information, not an attack, wants the b
 
 ### Charge the trust battery
 
-In a podcast interview, Lütke described trust between colleagues as a gradient, not an on-off switch [S5]. People who join through the same hiring process might start at about 50%, and working well together slowly charges the battery [S5]. He said the image lets people talk about trust without making it personal [S5].
+In a podcast interview, Lütke described trust between colleagues as a gradient, not an on-off switch [S5]. People who join through the same hiring process might start at about 50%, and working well together slowly charges the battery [S5]. This is his model, not a measured result. He said the image lets people talk about trust without making it personal [S5].
 
 He also hires for potential, because people in secondary talent markets tend to stay about ten years, and he likes the picture of Shopify as a power-up like the fire flower in Mario [S5][S14].
 
@@ -56,7 +56,7 @@ In the same interview he said the key question about a decision is how hard it i
 
 He also wrote that leaders earn their job by making good decisions when they don't know what to do, since at scale everything breaks and not knowing is how most time is spent [S9]. When a team member said he felt out of his depth, Lütke cut in and reframed the job as deciding under uncertainty [S9].
 
-How he applied it: he sorts company processes into three kinds. Some make the impossible possible. Some make the possible simpler. The rest, which he put at 99.9% of corporate process, are neither [S5].
+How he applied it: he sorts company processes into three kinds. Some make the impossible possible. Some make the possible simpler. The rest, which he put at 99.9% of corporate process, are neither [S5]. The figure comes from the show's episode page, a secondary source, so treat it as his rough estimate.
 
 ### Own the bet, then refocus
 

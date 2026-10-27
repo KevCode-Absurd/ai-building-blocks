@@ -106,6 +106,7 @@ output_shape: |
   BRAND SHARE  <% of monthly Google spend>
   WHERE SOURCES DIFFER  <the choice made and why>
   CHECKS MISSED: <none | list>
+  NEXT STEPS: <first: set up the stage 1 campaigns in Google Ads and confirm purchase tracking fires; then check the account again after 4 to 6 weeks>
 
 tweaks:
   - what: Budget in relation to AOV

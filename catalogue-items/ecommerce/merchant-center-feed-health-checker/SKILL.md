@@ -29,7 +29,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-This skill runs on its own. All it needs to start is the diagnostics, as an export or screenshots. If something is missing, ask once in one short message for what you can't work without, then carry on with what you have and mark each gap `MISSING:` or `[inferred]`.
+This skill runs on its own. The "Spreadsheet" line above means your Merchant Center diagnostics export, and "Store capture" means a screenshot of a sample product page. All it needs to start is the diagnostics, as an export or screenshots. If something is missing, ask once in one short message for what you can't work without, then carry on with what you have and mark each gap `MISSING:` or `[inferred]`.
 
 - **Merchant Center Products, Diagnostics** (required): an export or screenshots. Read attached screenshots directly.
 - **Total number of products** (required for the score).
@@ -43,10 +43,10 @@ Merchant Center screens change. The labels here come from a 2026 guide, so check
 1. **Filter Disapproved first.** In Merchant Center, Products, Diagnostics. These products can't show in Shopping or free listings, so they are lost revenue. Count them and group by cause.
 2. **Then Warnings and Limited performance.** These are approved but underserved, so they are chances to improve. Group by cause and count.
 3. **Check the five common causes.** (a) A missing or wrong GTIN. (b) A feed price that does not match the landing page. (c) Missing shipping information. (d) Policy violations, such as restricted or misleading items. (e) Wrong formatting or missing required attributes. A GTIN only applies to products that have one. Never invent one. If a product has no barcode, say so and follow Google's own help on products without one.
-4. **Split the fixes.** Use the Fix type filter to isolate auto-fixable items and run Autofix for low-risk issues. Manual fixes are needed for policy, price mismatch and missing required attributes. Changes made in the interface can be reversed for 30 days. For a policy issue, tell the owner to read the reason Google gives, change the product, its page or its data to meet the policy, and use Google's review process. Never suggest hiding, cloaking or re-uploading a disapproved product to get past a policy.
+4. **Split the fixes.** Use the Fix type filter in the Diagnostics list (if your screen names it differently, look for the filter that shows which issues Google can fix for you) to isolate auto-fixable items, and run Autofix for low-risk issues. Manual fixes are needed for policy, price mismatch and missing required attributes. One guide says changes made with Autofix can be reversed for 30 days. Confirm that in your Autofix settings before you rely on it. For a policy issue, tell the owner to read the reason Google gives, change the product, its page or its data to meet the policy, and use Google's review process. Never suggest hiding, cloaking or re-uploading a disapproved product to get past a policy.
 5. **Rank by sales lost.** Put issues on best sellers and on the most products first. Say what each costs: a disapproved best seller is the most expensive.
 6. **Price sync.** Edit price and availability in the store (Shopify), not in Merchant Center. For prices that change often, update the feed at least every 6 hours and switch on automatic item updates, so crawled prices can cover lag.
-7. **Pre-validate large catalogues.** Use a feed tool to check them before Google sees them.
+7. **Pre-validate large catalogues.** Use a feed tool to check them before Google sees them. Feed tools are usually paid services that need an account, and some need an API key or a subscription. Name the tool, say what it costs or that you do not know the price, and let the owner decide. Merchant Center's own Diagnostics screen is free and is enough for a small catalogue.
 8. **Check the link.** In Google Ads, Tools, Data manager, Connected products must show Merchant Center. For Shopify, check the Google and YouTube channel is linked and every field is filled.
 9. **Score the feed.** See "Score it".
 10. **State the gate.** Do not scale spend until feed health is clean, because scaling amplifies feed problems. Small catalogues under 30 products gain less from feed work than from tracking and offer fixes. Say so when it applies.
@@ -88,6 +88,13 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Google Shopping campaign reviewer](https://useaiblocks.com/skills/shopping-campaign-tuner). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+## Next steps to offer
+
+Say what each link does with the diagnostics result:
+- The [Shopping feed title writer](https://useaiblocks.com/skills/shopping-feed-title-writer) rewrites the weak titles this check found.
+- The [Google Shopping campaign reviewer](https://useaiblocks.com/skills/shopping-campaign-tuner) reads campaign results once the feed is clean.
+- The [Google Ads launch planner](https://useaiblocks.com/skills/google-ads-launch-planner) plans spend after the feed gate passes.
 
 ## Checks
 - Disapproved products are listed first, with counts.

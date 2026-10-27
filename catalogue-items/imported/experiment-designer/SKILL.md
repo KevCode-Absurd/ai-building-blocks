@@ -154,12 +154,12 @@ We'll know this is true when [metrics].
 ### Client-Side
 - JavaScript modifies page after load
 - Quick to implement, can cause flicker
-- Tools: PostHog, Optimizely, VWO
+- Tools: PostHog (has a free tier), Optimizely and VWO (paid services)
 
 ### Server-Side
 - Variant determined before render
 - No flicker, requires dev work
-- Tools: PostHog, LaunchDarkly, Split
+- Tools: PostHog (has a free tier), LaunchDarkly and Split (paid services)
 
 ---
 
@@ -277,12 +277,12 @@ Run highest-scoring experiments first. Re-score monthly as context changes.
 
 ### Experiment Velocity
 
-Track your experimentation rate as a leading indicator of growth:
+Track your experimentation rate as a leading indicator of growth. The targets below are rough starting points from the author, not measured benchmarks:
 
 | Metric | Target |
 |--------|--------|
 | Experiments launched per month | 4-8 for most teams |
-| Win rate | 20-30% is common for mature programs (sustained higher rates may indicate conservative hypotheses) |
+| Win rate | Track it, and set your own baseline from your first tests. No benchmark is given here, because none is sourced |
 | Average test duration | 2-4 weeks |
 | Backlog depth | 20+ hypotheses queued |
 | Cumulative lift | Compound gains from all winners |

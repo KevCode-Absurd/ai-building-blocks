@@ -23,6 +23,12 @@ tools:
   - gemini-cli
   - codex-cli
 ---
+## In short (AI Blocks note)
+
+**Who it is for:** people who can run an AI that writes code and opens a browser, such as Claude Code. A plain chat cannot build the studio.
+**First three steps:** (1) Ask what is being tuned and which files or page it lives in. (2) Build a small local page with controls for each setting, or an edit-and-comment page for text. (3) Save the final choices as JSON or captured edits, and apply them to the real files.
+**Advanced sections:** gesture capture, coherent control ranges (bounds propagation) and undo are for people building bigger studios. Skip them for a simple page.
+
 ## When to Use
 
 Use when the user says "lookdev", or asks to tune / dial in / iterate on the look of something, compare variations by feel, or review / edit / annotate a blog post, doc, copy, or media set. Use whenever "show me, I'll pick" beats asking the user to specify a number, and whenever you'd otherwise hand back a static grid or a wall of prose for review.
@@ -77,7 +83,7 @@ When the artifact is a **blog post, doc, copy deck, script, or media set**, the 
 
 ### Round-trip is MANDATORY (same rule as the settings JSON)
 
-The studio is worthless if the agent can't read the markup back out. Every edit, highlight, comment, and media-flag must export as **one machine-readable patch** with a single **Copy** button (and persist to `localStorage`/URL so a refresh doesn't lose work — this is human-labeled data; see `human-labeled-data-rule`). Shape:
+The studio is worthless if the agent can't read the markup back out. Every edit, highlight, comment, and media-flag must export as **one machine-readable patch** with a single **Copy** button (and persist to `localStorage`/URL so a refresh doesn't lose work — a person's edits and marks are their own work, so never lose or overwrite them). Shape:
 
 ```json
 {
@@ -92,7 +98,7 @@ The agent ingests this and bakes: applies the inline edits to the source file, a
 
 ### Mechanics
 
-- **Render the real thing.** MDX/React blog → mount the actual components; static page → render the real HTML/CSS. WYSIWYG per Architecture #5. An annotation layer over a fake-looking preview lies about the result.
+- **Render the real thing.** MDX/React blog → mount the actual components; static page → render the real HTML/CSS. What you see must match the real result (WYSIWYG). An annotation layer over a fake-looking preview lies about the result.
 - **Selection → offsets.** Use the `Selection`/`Range` API; store character offsets relative to the block's text content (not DOM node paths, which break on re-render). Re-apply highlights/comments on load by walking each block's text to the stored offsets.
 - **Editing toolbar floats with the selection** (a small popover at the selection rect) or a sticky top bar — controls stay reachable (see section above). Hotkeys: highlight on a key (e.g. `h`), comment on `c`.
 - **Keep edit/annotate modes distinct** so a stray click doesn't garble text while they meant to highlight — a mode toggle (Edit · Highlight · Comment) or modifier key.

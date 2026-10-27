@@ -30,11 +30,11 @@ you_get:
   - Order details for outreach
   - Report in readable or JSON form
 how_to_use:
-  - Use an AI that can run code and connect to Shopify, such as Claude Code. A plain chat window cannot run it.
+  - Use an AI that can run code and connect to Shopify, such as Claude Code, which needs a paid plan. A free chat window cannot run it.
   - Sign in to your store with read_orders access. The skill only reads orders and changes nothing.
   - Ask your AI to run the skill with your store domain. Add your own day limits if the defaults of 3 and 5 do not suit you.
   - Open the report and sort the rows by days waiting, longest first.
-  - Check the tracking link for shipped orders. If a parcel has really stalled, email that customer first.
+  - Check the tracking link for shipped orders. Any edit to an order resets its timer, so some flagged orders are not really stalled. If a parcel has stalled, email that customer first.
 output_sample:
   input:
     - Your store domain

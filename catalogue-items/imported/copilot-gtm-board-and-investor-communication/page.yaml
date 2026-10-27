@@ -17,6 +17,7 @@ how_to_use:
   - Ask for a board plan, an investor update, or both.
   - Check every number against your own records. Your AI must not guess figures.
   - Send the pre-read 48 to 72 hours before the meeting.
+  - Next, send the investor update on the same day each month. After the meeting, write down what the board decided and who owns each action. The Company meeting rhythm designer helps you keep a rhythm of internal meetings that feeds the next board meeting.
 output_sample:
   input:
     - Your current ARR, burn and runway

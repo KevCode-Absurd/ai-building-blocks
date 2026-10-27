@@ -5,7 +5,7 @@ name: Experiment designer
 summary: Plan an A/B test that gives a result you can trust. Give it your change, traffic and conversion rate. You get a hypothesis, sample size and rules.
 job: plan-ad-tests
 headline: Experiment designer
-subhead: Describe the change you want to test. Get a clear hypothesis, test plan, sample size and a way to read the result. Bring the change you want to test. Use the result to plan your next step.
+subhead: Describe the change you want to test. Get a clear hypothesis, test plan, sample size and a way to read the result. Use the result to plan your next step.
 explain: |
   A test plan you can run without fooling yourself: one clear hypothesis, the right sample size, the metric to judge it and rules for reading the result.
 
@@ -33,7 +33,7 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
   - Tell your AI the change you want to test and why you think it will help.
-  - Add your current conversion rate and your weekly visitors. Say which testing tools you have, if any.
+  - Add your current conversion rate and your weekly visitors. Say which testing tools you have, if any. Optimizely, VWO, LaunchDarkly and Split are paid services. PostHog has a free tier, and you can run a simple test without any tool.
   - Answer any questions it asks. It can run in plain chat with no code or files.
   - Check the sample size and run time. If the run time is too long, pick a bigger change.
   - Do not stop the test early, even if early numbers look good.

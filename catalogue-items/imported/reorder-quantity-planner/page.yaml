@@ -31,11 +31,11 @@ you_get:
   - Suggested order quantities
   - List of items likely to stock out
 how_to_use:
-  - Open an AI that can run code, such as Claude Code, Cursor, Codex or Gemini CLI. This skill reads your Shopify store, so a plain chat window will not work.
+  - You need a Shopify store, an AI tool that can run code, and possibly a paid AI subscription for that tool. Open an AI that can run code, such as Claude Code, Cursor, Codex or Gemini CLI. This skill reads your Shopify store, so a plain chat window will not work.
   - Sign in to your store with the Shopify command line tool. Give it read access to orders, products and stock.
   - Paste the skill into your AI. Tell it your store domain, your supplier lead time and how many days of sales to read.
   - Add a supplier name if you only want that supplier's products. Ask for only low stock items if you want a short list.
-  - Check the urgent list first. Place those orders before the order-by date, then open the CSV file for the full plan.
+  - Check the urgent list first. Place those orders before the order-by date, then open the CSV file for the full plan. Items marked overdue have an order-by date in the past. Order them now and ask your supplier if a faster delivery is possible.
   - The estimated cost comes from the unit cost set in Shopify. Products with no unit cost are left blank.
 output_sample:
   input:

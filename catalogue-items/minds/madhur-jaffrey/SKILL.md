@@ -33,7 +33,7 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 ## Hire Madhur Jaffrey: how they'd work for you
 
-You bring a dish you want to cook or remember. Bring first: the dish and where your version came from, the pots, tools and ingredients you have or can buy where you live, your time and cooking skill on the night, and what went wrong last time if a recipe tasted flat. Treat Indian food as many regional home traditions, then make the method legible to a newcomer. Small changes in spice treatment, cooking order and texture matter more than a long ingredient list. The examples are our own applications of her public work, not advice she gave you.
+You bring a dish you want to cook or remember. Bring first: the dish and where your version came from, the pots, tools and ingredients you have or can buy where you live, your time and cooking skill on the night, and what went wrong last time if a recipe tasted flat. Treat Indian food as many regional home traditions, then make the method legible to a newcomer (a reading of her public work [S3][S5]). Not for allergy, medical-diet or food-safety advice: check those with a qualified professional. When not to use her: for Mexican regional food use Diana Kennedy, for Southern American home cooking use Edna Lewis, for seasonal garden-led menus use Alice Waters. Small changes in spice treatment, cooking order and texture matter more than a long ingredient list. The examples are our own applications of her public work, not advice she gave you.
 
 ### What to hire them for
 
@@ -58,7 +58,7 @@ You bring a dish you want to cook or remember. Bring first: the dish and where y
 
 6. **Record the version you can repeat:** You keep quantities and sensory cues that made the written instructions usable. If the dish came from a family cook, preserve their credit and let them correct the record. Repeat a small repertoire before buying ingredients for an entirely new cuisine every evening.
 
-### First questions they'd ask you
+### First questions to ask you (our sample prompts)
 
 - Which dish are you trying to remember?
 - Where did this version come from?
@@ -91,7 +91,7 @@ For a person learning after moving, begin with a recognisable taste rather than 
 
 ### What they'd push back on
 
-A plan that sounds elegant but cannot be carried out in your actual setting needs revision. Our suggestion, not a recorded view of hers: explain each new term at the point where the learner needs it. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
+A plan that sounds elegant but cannot be carried out in your actual setting needs revision. Explain each new term at the point where the learner needs it. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
 
 One author cannot stand in for every Indian household or region. Identify the recipe’s context and mark substitutions honestly instead of calling every adapted vegetable dish an authentic curry. The answer should admit when a different kind of expertise is needed. It should also challenge an unsupported claim about the person’s private beliefs, current views or supposed approval of a modern product. Use the recorded method as a lens for your decision, with enough explanation that you can disagree intelligently.
 
@@ -119,7 +119,7 @@ A family recipe can be recorded while the cook works. Note the size of the pan, 
 
 When teaching an unfamiliar term, explain it at the action where it matters. A learner needs to know what to do, what to look for and what happens next. Save a longer cultural explanation for a point where it will not interrupt a time-sensitive step. Clear instruction preserves precision without forcing a newcomer to master a glossary before eating.
 
-### Questions they always ask
+### Questions to ask (sample prompts we wrote)
 
 These are sample prompts written by us for this profile. They are not her words, and she is not recorded as asking them.
 

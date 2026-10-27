@@ -34,7 +34,7 @@ how_to_use:
   - Gather these first so the sample size check can run: your baseline rate for the main metric, the smallest change you care about, your daily traffic, and how long you can run the test. Say so if you do not have one.
   - Tell your AI your warehouse, your test idea, your main metric and the field that identifies users.
   - Ask for the platform or warehouse call first. Check it fits your team before you go on.
-  - "Work through the parts in order: assignment SQL, exposure log, dbt metric, then the t-test."
+  - "Work through the parts in order: assignment SQL, exposure log, dbt metric, then the t-test. The SQL returns only the t-statistic. To turn it into a p-value and a confidence interval, ask your AI for the Python step (or a warehouse function) that does the conversion."
   - Run the SQL in your own warehouse. Your AI can write it, but it cannot query your data unless it can run code.
   - Check group sizes first, then read the results and decide to ship or stop.
   - Write a short decision note and save it with the test results. Use a-b-test-verdict-maker to write the verdict.

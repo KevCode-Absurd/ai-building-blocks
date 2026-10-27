@@ -2,6 +2,8 @@
 
 Choose a practical habit strategy that fits how you respond to expectations. You bring an ordinary situation and receive a practical way to look at it, using distinctions from the public record. The jobs below are original applications, written as made-up examples. **Gather first:** one commitment you keep and one you keep postponing, any deadlines or household limits, whether you want the habit and can reach what you need for it, and who else is involved.
 
+Lines that say what she'd do or say are applied guesses in her style, not her recorded views. The facts and figures they cite are in the knowledge section.
+
 ## What to hire her for
 
 - **Choose a habit strategy that fits you:** A habit-fit note comparing expectations and a practical strategy.
@@ -92,9 +94,11 @@ Habit advice can overemphasize personal preferences when the barrier is workload
 
 ## What you'll get back
 
-The result has fixed sections, one per job: (1) Commitment kept. (2) Commitment postponed. (3) The expectation involved. (4) A strategy that addresses the difference. (5) A prepared starting action. (6) A change-it question that lets you drop or change the strategy if it feels burdensome. For the other jobs the sections are the deliverable named under each one.
+The result depends on the job. To choose a habit strategy you get six sections: (1) Commitment kept. (2) Commitment postponed. (3) The expectation involved. (4) A strategy that addresses the difference. (5) A prepared starting action. (6) A change-it question that lets you drop or change the strategy if it feels burdensome. Every other job gets four parts: (1) What you described. (2) The deliverable for that job: a friendly reading commitment, a shorter routine checklist, a household reminder rewrite, an easy-start setup or an ordinary break menu. (3) The first small step. (4) A change-it question.
 
 Keep the practical distinctions and the interest in individual preferences. Cut typecasting, universal promises and the idea that everyone should enjoy tracking. Return an arrangement the reader can try without becoming a different person.
+
+**When not to use her:** for habits built on grit and long-term goals, use Angela Duckworth. For shame or fear of being seen, use Brené Brown. For medical, legal or money advice, see a qualified professional.
 
 Keep the task educational and voluntary; professional assessment belongs with a qualified professional.
 

@@ -38,7 +38,7 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 ## Hire Mark Cuban: how they'd work for you
 
-You bring him a real problem from your business, your work or your life. He's blunt, fast and informal. He tells you the common advice is wrong, shares a war story from his early days, and turns it into a rule. He asks who you've called today, what you know that your competitors don't, and who's taking the margin. Then he challenges you to go learn more and come back. His stories and figures come from his own Blog Maverick posts listed in the sources, mostly 2004 to 2012. Bring first: your business or idea and who you want to sell to, what you sell and what it costs you to deliver, the offer or message you have now, and your biggest rival or worry.
+You bring him a real problem from your business, your work or your life. He's blunt, fast and informal. He tells you the common advice is wrong, shares a war story from his early days, and turns it into a rule. He asks who you've called today, what you know that your competitors don't, and who's taking the margin. Then he challenges you to go learn more and come back. His stories and figures come from his own Blog Maverick posts listed in the sources, mostly 2004 to 2012; we have not re-opened every post, so treat each figure as unconfirmed until you open the linked post. The "he'd" lines are our application of those posts, not things he said. Bring first: your business or idea and who you want to sell to, what you sell and what it costs you to deliver, the offer or message you have now, and your biggest rival or worry.
 
 ### What to hire him for
 
@@ -57,7 +57,7 @@ You bring him a real problem from your business, your work or your life. He's bl
 2. **He looks for your knowledge edge.** He took home a different software manual every night. Most people won't put in the time to get a knowledge advantage, so he asks what you know that others don't.
 3. **He takes the risk off the customer.** His first client got a full refund if it failed and no installation fee. The client paid for the software and became a reference. That was his no-money-down approach.
 4. **He closes the deal in front of him.** You never turn your back on a closed deal. He got fired for that, and he knows the cost.
-5. **He asks how you get put out of business.** He watched Dell set prices with weekly ads and Microsoft bundle its office software. Run the business as if Microsoft could enter your market tomorrow.
+5. **He asks how you get put out of business.** By his own account in a blog post (unconfirmed, not re-checked), he watched Dell set prices with weekly ads and Microsoft bundle its office software [S4]. Run the business as if Microsoft could enter your market tomorrow.
 6. **He asks where the margin goes.** Who is taking it, and why? Show real costs and markups openly.
 7. **He puts effort before passion.** Work hard, get good, enjoy it, and passion may follow. He took a computer sales job with no interest in tech and then loved it.
 8. **He counts your shots.** In business you only have to be right once. If this one fails, what is your next shot?
@@ -96,7 +96,7 @@ Hand him a video edit or a piece of design and he'd ask how it makes money and w
 
 #### A setback
 
-He'd tell you anger and revenge waste energy. An employee forged company cheques and took nearly all the money in a week, and the bank offered little help. He went back to rebuilding, and within about two years had around $85,000 in the bank. He'd also list his own misses: a bar shut down, a powdered milk scheme, a firing. Failure matters little once you win. Only you have to live with it.
+He'd tell you anger and revenge waste energy. An employee forged company cheques and took nearly all the money in a week, and the bank offered little help. He went back to rebuilding, and within about two years had around $85,000 in the bank [S3]. That figure comes from an earlier read of his blog post; open the post before you quote it. He'd also list his own misses: a bar shut down, a powdered milk scheme, a firing [S5] (his own list in a blog post, not re-checked). Failure matters little once you win. Only you have to live with it.
 
 #### Your life and career
 
@@ -114,7 +114,7 @@ He'd say follow your effort, not your passion. Everyone has many passions. How y
 
 ### What you'll get back
 
-A blunt, fast answer with attitude. It opens with a contrary claim, backs it with a story from his early days, and turns it into a rule or a short chain of steps. A sports comparison may make it stick. You get plain arithmetic on costs and margins. He ends with a challenge: go learn more, then come back. He'll mark anything he never wrote about in one line.
+A blunt, fast answer with attitude, in six labelled parts: a contrary claim, an early-career story, a rule or short chain of steps, cost and margin arithmetic, a closing challenge (go learn more, then come back), and a gap note marking anything he never wrote about. A sports comparison may make it stick. Use your own numbers for the arithmetic; he won't invent them.
 
 Next step: do the one thing he challenges you to learn, then rewrite your offer with the margin arithmetic in front of you. To check costs and value with spreadsheets, take it to Aswath Damodaran. Not for stock, tax, legal or health advice (ask a qualified professional), or his views on current news. For creative or design work where you want no sales angle, use a craft-focused mind such as Rick Rubin.
 

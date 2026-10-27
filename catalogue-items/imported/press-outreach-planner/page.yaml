@@ -11,7 +11,7 @@ explain: |
 
   The skill starts by testing whether you have a real story, such as your own data, a sharp opinion, a milestone or a strong customer result. It stresses that the story is the trend or the conflict, with your product as proof. You get a target list of journalists, podcasts and newsletters, pitch emails written for each, and an outline for a press page. It also covers fast replies to news already breaking and says when to skip PR. If something has gone wrong, such as a data breach, an injury, a lawsuit or a regulator, talk to a lawyer before you publish a statement.
 
-  This is Corey Haines' public relations skill, copied under the MIT licence with a plain name and page text. The method is his.
+  This is Corey Haines' public relations skill, copied under the MIT licence with a plain name and page text. The method is his. The skill file is unchanged. This page and the name are ours.
 when:
   - You are launching a product and want coverage.
   - A news story in your field gives you something to say.
@@ -33,12 +33,20 @@ you_get:
   - Press kit outline
   - Advice on timing and follow-up
 how_to_use:
+  - Before you start, gather four things. Your news in one or two lines. Your product and who it is for. The dates your spokesperson is free for interviews. Any data or customer results you can share.
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Tell it your news, your product and who it is for. Add any data or customer results you have. Say who can give quotes or do interviews, and when they are free. If you have a product marketing notes file, add it. If not, the AI will ask.
   - Story check. Read it first. If it says you have no real story yet, fix that before you send anything.
   - Media list. Ask your AI to check each journalist's last 5 articles. This needs web access. If yours has none, open their pages yourself and paste the links.
   - Pitch. Edit each pitch email until it passes the checks in the skill (under 150 words, a clear hook, a clear ask). Then send it.
   - Follow up once, as the advice says. After coverage lands, track placements, visits from the article and searches for your brand.
+output_shape: |
+  1. Story check: is there a real story, and which angle fits
+  2. Target list, as a table with columns for outlet, beat, recent article and fit
+  3. Pitch emails, one per target, each with a subject line and a word count under 150
+  4. Press kit outline
+  5. Timing and follow-up advice
+  6. Measurement list
 output_sample:
   input:
     - Your news or announcement

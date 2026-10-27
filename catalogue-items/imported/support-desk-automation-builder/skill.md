@@ -38,7 +38,7 @@ touch support-automation/config.ts
 touch support-automation/README.md
 ```
 
-Create `.claude/skills/support/skill.md` if they want it as a Claude skill (recommended).
+Create `support-automation/skill.md` if they want it as a Claude skill (recommended). This is the skill your automation produces. It is a different file from this builder skill. To use it as a Claude skill, they can copy it to `.claude/skills/support/skill.md`.
 
 **Files to create:**
 - `config.ts` - Environment variable loading and shared configuration
@@ -90,7 +90,9 @@ Based on their stack, plan the scripts they'll need.
 **Always create:**
 - `support-automation/scripts/check-setup.ts` - Validates all required environment variables exist (the one location used everywhere in this skill)
 
-**Approval gate (required):** `reply-to-ticket.ts`, `close-ticket.ts`, `issue-refund.ts` and `cancel-subscription.ts` change a ticket or a payment. Each one must exit with an error unless the caller passes `--approved`, and the AI may only pass `--approved` after the user has read the exact message or amount and said yes in chat. Without the flag, the script prints what it would do and stops.
+**Approval gate (required):** `reply-to-ticket.ts`, `close-ticket.ts`, `issue-refund.ts` and `cancel-subscription.ts` change a ticket or a payment. Each one must print exactly what it would do and then stop, unless a person confirms it in the terminal. The script must ask the person to type `yes` in the terminal, read from the terminal itself (not from arguments or piped input), and exit with an error when there is no terminal. A `--approved` flag alone is not a check, because the script cannot tell who set it. The AI must not run these four scripts for the person. It shows the exact message or amount in chat and asks the person to run the script and type `yes` themselves.
+
+**Test first (required):** Point the scripts at test accounts before live ones. Use a Stripe test key (`sk_test_`) and a test or sandbox help desk account, and run refunds, cancellations and replies against test tickets and test customers only. Move to live keys after a person has checked each of the four scripts.
 
 ## Step 4: Write the Configuration File
 
@@ -220,20 +222,20 @@ Create a comprehensive skill.md that defines the automated workflow. This is Cla
 Brief description of what the skill does.
 
 #### 2. First Time Setup
-```markdown
+````markdown
 ## First Time Setup
 
 Before using for the first time, verify environment:
 
-\`\`\`bash
+```bash
 npx tsx support-automation/scripts/check-setup.ts
-\`\`\`
+```
 
-Required environment variables in `.env.local`:
+Required environment variables in `.env.local` (in the repository root, the folder that holds `support-automation/`):
 - SUPPORT_API_KEY
 - BILLING_API_KEY
 - DATABASE_URL (optional)
-```
+````
 
 #### 3. Automatic Workflow
 ```markdown
@@ -245,7 +247,10 @@ Required environment variables in `.env.local`:
 
 **Automatically run** `list-open-tickets.ts` to see ALL pending tickets (with automatic pagination):
 
-[Fill in the triage steps from the Triage Guidelines in section 5: the keyword lists for each urgency level, and the order to list tickets in (CRITICAL, then HIGH, then MEDIUM, then LOW)]
+Sort the tickets with the keyword lists in the Triage Guidelines:
+1. Check each ticket's subject and body against the CRITICAL list, then HIGH, then MEDIUM, then LOW.
+2. If a ticket matches more than one list, give it the highest level. If it matches none, treat it as MEDIUM.
+3. List tickets in this order: CRITICAL, then HIGH, then MEDIUM, then LOW. Within a level, put the oldest first.
 
 **Present to User:**
 - Show total count of open tickets
@@ -368,8 +373,9 @@ Present to the user:
 2. **What they need to do:**
    - Add API credentials to `.env.local`
    - Run `check-setup.ts` to verify
-   - Test individual scripts
+   - Test individual scripts against test accounts first
    - Install as skill (if applicable)
+   - Read the generated `README.md` for how to run and fix each script
 
 3. **How to use it:**
    ```bash
@@ -487,7 +493,7 @@ A: Yes! As long as they have an API, we can build scripts for it. Common platfor
 A: They need API access and the ability to run scripts. The skill does the coding for them.
 
 **Q: How long does this take?**
-A: 30-60 minutes for a basic setup with 5-10 scripts and templates. More complex integrations take longer.
+A: This is a rough guess, not a measured time. A basic setup with 5-10 scripts and templates may take an hour or more, and complex integrations take longer.
 
 **Q: Can they customize later?**
 A: Absolutely! That's the point. They can add scripts, templates, and workflow steps as they identify repetitive tasks.

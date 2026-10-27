@@ -93,9 +93,9 @@ Write MISSING: <what> next to the affected result. Keep going with the work that
 - No evidence list: return questions and plan, with every row MISSING: evidence.
 - A file with no date: mark MISSING: date and count it as not yet proven.
 
-## After this
+## What to do with the result
 
-Ask one short question about what to do next, and say they can type their own. Offer:
+This is the next-step list for this run, in place of the generic one above. Ask one short question about what to do next, and say they can type their own. Offer:
 
 - Send the plan to the area owners and ask each to confirm their dates.
 - Run the pack again once new evidence arrives, to refresh the register.

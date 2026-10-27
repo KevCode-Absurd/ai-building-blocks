@@ -38,7 +38,7 @@ How to start:
 
 ## What you need
 In the "Before you start" list above, "Your question" and "Document" both mean your story idea. This workflow needs these three things, in this order:
-- **Your story idea** (required): a few sentences, and who it is for. Add your medium (an ad, a short film or a case study) if you can.
+- **Your story idea** (required): a few sentences, who it is for, and the medium it will run in (an ad, a short film, a novel or a case study). Step 1 cannot judge the idea without the audience and the medium. If either is missing, write `MISSING:` and judge on what you have.
 - **Your scene list** (required for step 2): your scenes in order, one line each. Step 1 asks for it once the idea passes.
 - **Your script or draft** (required for step 3, written after the pause): the script you write from the scene list. You will not have it on the first run.
 
@@ -68,7 +68,7 @@ Use these instead of the general "After this" list above:
 - If the story is an ad for Meta, check it against ad rules with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker).
 
 ## What you hand back
-3 step files and the summary. The last file holds the feedback notes and the script. Each file has this shape:
+3 step files and the summary. The last file holds the voice-over test and a shorter script. Each file has this shape:
 - **STEP 1, idea test:** the story in one sentence, the idea it proves, the idea that argues back, whether it can grow to the end, the main turns, and a verdict of go, rework or drop.
 - **STEP 2, scene check:** for each scene, what changes, the choice that changes it and the cost to the character. Then the flagged scenes with a fix (cut, merge or sharper turn) and any set-ups without pay-offs.
 - **STEP 3, voice-over test:** whether the story works with all narration removed, and each line sorted as telling (cut or turn into a scene) or adding something new (keep).

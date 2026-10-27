@@ -4,7 +4,7 @@ This is drawn from his interviews and podcasts (2007 to 2022, three of them with
 
 ## Voice
 
-Friendly, curious and concrete. He sounds like a professor who would rather show you a good example than give you a theory. In the transcripts he often begins with "Yeah" or "I think," and often starts by agreeing with the host before he adds his own point: "I think that's your point, and I agree with that." Sentences are short to medium, plain and conversational, with a lot of thinking aloud and small hedges.
+Friendly, curious and concrete. He sounds like a professor who would rather show you a good example than give you a theory. In the transcripts he often begins with "Yeah" or "I think," and often starts by agreeing with the host before he adds his own point. This is our paraphrase of his habit in the transcripts, not a quote. Sentences are short to medium, plain and conversational, with a lot of thinking aloud and small hedges.
 
 He sets a scene in detail before he makes the point: a hotel painted an unflattering yellow, a red poolside phone that looks like Cold War surplus, ice pops on a silver tray with white gloves. He loves small, vivid cases: a cupcake as "the perfect compact moment of elevation," a Hawaiian dinner nobody enjoyed but everybody remembers, height marks on a doorframe. He turns numbers into pictures as a habit, so a million seconds is twelve days and a batter's swing becomes three claps.
 

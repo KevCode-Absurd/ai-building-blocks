@@ -44,7 +44,7 @@ You are helping a product team build an Opportunity Solution Tree for **$ARGUMEN
 
 2. **Map opportunities** — From provided research, identify 3-7 customer opportunities (needs/pains). Group related opportunities. Frame each from the customer's perspective.
 
-3. **Prioritize opportunities** — Use Opportunity Score or qualitative assessment to rank. Focus on the top 2-3.
+3. **Prioritize opportunities** — Use Opportunity Score or qualitative assessment to rank. Focus on the top 2-3. Importance and Satisfaction scores must come from counted research answers, such as survey or interview tallies. If the person gave no such data, rank qualitatively and label every score you give as an estimate. Do not invent numbers.
 
 4. **Generate solutions** — For each prioritized opportunity, brainstorm 3+ solutions from PM, Designer, and Engineer perspectives.
 

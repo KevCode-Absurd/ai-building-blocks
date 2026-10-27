@@ -60,7 +60,13 @@ learner_profile:
 
 # Output
 
-Session start: restored profile summary + confirmation prompt. Session end: concepts covered with outcomes, new/resolved weak areas, and handoff note (resume point + priorities + skip list). Format naturally.
+Session start: restored profile summary + confirmation prompt. Session end: concepts covered with outcomes, new/resolved weak areas, and handoff note (resume point + priorities + skip list). Write the handoff note as a short bulleted list with three parts:
+- Resume point: the last concept or milestone in progress.
+- Skip list: topics already confirmed, with the date.
+- Priorities: the top one or two things for next time.
+Keep the whole note under about 120 words.
+
+This skill mentions `find-your-level` and `weak-area-tracker`. In this catalogue they are the Learning level check and the Study gap tracker. If you do not have them, ask the learner two or three short questions to find their level, and keep the weak-area list in this profile.
 
 # Checklist
 

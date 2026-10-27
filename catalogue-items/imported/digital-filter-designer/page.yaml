@@ -9,7 +9,7 @@ subhead: A digital filter that removes the noise or interference you named, desi
 explain: |
   A digital filter that removes the noise or interference you named, designed, checked and applied to your signal in MATLAB. You also get the reasoning behind each choice.
 
-  It covers lowpass, highpass, bandpass, bandstop and notch filters. The skill decides between FIR and IIR designs, and between streaming and offline use. If those or the phase needs are not stated, it asks and does not guess. It writes all code to .m files, and reads its reference notes before every design call. For narrow transition bands it can switch to multirate or IFIR methods. You can compare candidates in Filter Analyzer. It needs MATLAB with Signal Processing Toolbox and DSP System Toolbox.
+  It covers lowpass, highpass, bandpass, bandstop and notch filters. The skill decides between FIR and IIR designs, and between streaming and offline use. If those or the phase needs are not stated, it asks and does not guess. It writes all code to .m files, and reads its reference notes before every design call. For narrow transition bands it can switch to multirate or IFIR methods. You can compare candidates in Filter Analyzer. It needs MATLAB with Signal Processing Toolbox and DSP System Toolbox. These are paid MathWorks products. Check your licence, or ask MathWorks whether a trial is open to you, before you start.
 
   This is MathWorks' skill. The licence that applies is the LICENSE file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE file.
 when:
@@ -27,7 +27,7 @@ you_give:
   - The frequencies to keep and to remove
   - Streaming or offline use
   - Phase needs, such as linear phase (optional)
-  - MATLAB with the signal toolboxes
+  - MATLAB with the signal toolboxes (paid MathWorks products)
 you_get:
   - A designed and verified filter
   - MATLAB .m files for the design
@@ -41,6 +41,7 @@ how_to_use:
   - Answer its questions about streaming or offline use and phase. It will not guess these.
   - Check the verification numbers and plots against your targets before you use the filter. If a check fails, tell your AI which target missed. It raises the filter order, moves the edge frequencies or changes the filter type, then runs the check again.
   - To use the filter on live data, ask your AI to move the chosen design into a streaming pipeline, or export the .m files into your project. Run the .m files in MATLAB, or hand them to an engineer to review before they go into a product.
+  - "What next: plot the spectrum of the filtered signal to confirm the hum or noise is gone and your wanted frequencies are intact. Then pass the cleaned data to your next analysis step."
 terms:
   - term: MCP
     meaning: A connection that lets your AI run programs on your computer, here MATLAB, and read the results.

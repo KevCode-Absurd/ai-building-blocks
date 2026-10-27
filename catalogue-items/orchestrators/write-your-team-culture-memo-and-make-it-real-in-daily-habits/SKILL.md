@@ -7,7 +7,7 @@ description: Use when you want to write down how your team works, and have it ch
 
 Give it how your team works. Get a culture memo, a standards sheet and a rule to drop.
 
-This workflow chains 4 skills into one job. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow chains 4 skills into one job. You run them one after another, and each skill's result is saved and passed to the next. The four skill files come in the handoff pack with HANDOFF.md. If one is missing, stop at that step.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -37,6 +37,11 @@ How to start:
 - **A shared document:** The memo and standards live where everyone reads them.
 <!-- /needs -->
 
+## When not to use
+- You only want to drop one rule: use the Policy removal test planner (`policy-removal-test-planner`) on its own.
+- You are bringing in a new hire: use the 30-60-90 day onboarding planner.
+- You need a legal code of conduct or an employee handbook: have an HR or legal adviser write it. This memo is not a legal document.
+
 ## What you need
 - **How your team works, and what you want it to do differently on Monday** (required). Say how big the team is, what you do when two good things collide, and a few real moments you were proud of or let down by.
 - **Your current rules and any real numbers** (needed for steps 2 and 4). Standards use only the numbers you give. If you give none, they are written as checks without targets and marked `MISSING:`.
@@ -54,14 +59,20 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Write the culture memo.** Use the skill `team-culture-memo-writer`. What the team does, what it refuses to do, and what it does when two good things collide, written as behaviour in the manner of the Netflix culture deck.
-2. **Write the standards sheet.** Use the skill `standards-sheet-writer`. Give it the memo. Each behaviour turned into a standard anyone can check, with what good looks like and how often it is checked, the way Ray Kroc wrote standards.
-3. **Design the praise.** Use the skill `recognition-plan-designer`. Give it the memo and the standards. How behaviour gets noticed and praised: in public, specific, often, tied to the standards, in the manner of Mary Kay Ash.
-4. **Drop one rule.** Use the skill `policy-removal-test-planner`. Give it the memo and your current rules. The one rule the memo makes unnecessary, the risk if it goes, a safe trial without it and the sign that says bring it back, following Patty McCord.
+1. **Write the culture memo.** Use the skill `team-culture-memo-writer`. What the team does, what it refuses to do, and what it does when two good things collide, written as behaviour in the manner of the Netflix culture deck. Takes your team facts. Saves `outputs/step-01-team-culture-memo-writer.md`.
+2. **Write the standards sheet.** Use the skill `standards-sheet-writer`. Give it the memo. Each behaviour turned into a standard anyone can check, with what good looks like and how often it is checked, the way Ray Kroc wrote standards. Takes `outputs/step-01-team-culture-memo-writer.md` and your real numbers. Saves `outputs/step-02-standards-sheet-writer.md`.
+3. **Design the praise.** Use the skill `recognition-plan-designer`. Give it the memo and the standards. How behaviour gets noticed and praised: in public, specific, often, tied to the standards, in the manner of Mary Kay Ash. Takes `outputs/step-02-standards-sheet-writer.md` and your team facts. Saves `outputs/step-03-recognition-plan-designer.md`.
+4. **Drop one rule.** Use the skill `policy-removal-test-planner`. Give it the memo and your current rules. The one rule the memo makes unnecessary, the risk if it goes, a safe trial without it and the sign that says bring it back, following Patty McCord. Takes `outputs/step-01-team-culture-memo-writer.md`, your current rules and the two files from steps 2 and 3. Saves `outputs/step-04-policy-removal-test-planner.md`.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
+## Next steps to offer
+
+Ignore the "After this" list above and use only these:
+- Bring new people in on the memo with the [30-60-90 day onboarding planner](https://useaiblocks.com/skills/30-60-90-day-onboarding-planner).
+- Run the rule trial from step 4 for the time it sets, then decide whether to keep the rule gone.
+
 ## What you hand back
-4 step files and the summary. Step 1 holds the memo. Step 2 holds the standards sheet. Step 3 holds the praise plan. Step 4 holds the rule trial. To bring new people in on the memo, carry on with the [30-60-90 day onboarding planner](https://useaiblocks.com/skills/30-60-90-day-onboarding-planner).
+4 step files and the summary. Step 1 holds the memo. Step 2 holds the standards sheet. Step 3 holds the praise plan. Step 4 holds the rule trial.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

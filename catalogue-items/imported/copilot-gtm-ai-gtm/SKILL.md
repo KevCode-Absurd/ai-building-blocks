@@ -31,6 +31,10 @@ Go-to-market strategy for AI products. These aren't generic AI principles — th
 
 ---
 
+## Start here
+
+Read the sections in this order: 1) Gather your inputs: see When to Use. 2) Choose positioning: sections 2 and 7, and the decision tree "Which Positioning Should I Use?". 3) Answer the accountability questions: sections 1 and 6. 4) Pick a pricing model: section 3 and its decision tree. 5) Build the trust ladder: section 4. 6) Plan the demo: section 5.
+
 ## Core Frameworks
 
 ### 1. The Real Enterprise AI Objection (It's Not What You Think)
@@ -210,9 +214,9 @@ Every AI company I've worked with faces this: Customer A uses 1,000 API calls/mo
 
 Base fee (covers fixed costs) + variable fee (scales with value).
 
-**Example structure:**
-- Base: $X/month per team (access to platform)
-- Variable: $Y per successful action/outcome
+**Example structure:** (set $X and $Y yourself from your own cost base and the customer's alternative cost. Do not reuse any figure from this skill.)
+- Base: $[X]/month per team (access to platform)
+- Variable: $[Y] per successful action/outcome
 - Why this works:
   - Base covers infra/support costs
   - Variable aligns with customer value
@@ -225,7 +229,7 @@ When pricing usage-based AI:
 **Ask the customer:**
 "How much would it cost you to do this manually?"
 
-If it's $0.10 per API call but saves them $2 in labor, you're underpriced. If it costs $0.50 per call but saves them $0.40, they won't use it enough to matter.
+(Illustrative figures, not benchmarks.) If it's $[PRICE PER CALL] per API call but saves them a lot more than that in labor, you're underpriced. If it costs more per call than the labor it saves, they won't use it enough to matter.
 
 **Pricing Rule:**
 
@@ -233,7 +237,7 @@ Your variable cost should be **20-30% of customer's alternative cost** (the auth
 
 **Common Mistake:**
 
-Copying OpenAI's pricing ($0.01 per 1K tokens) because "that's what everyone does." Your cost structure isn't OpenAI's cost structure. Your value isn't OpenAI's value. Price for *your* business.
+Copying another AI company's per-token pricing because "that's what everyone does." Your cost structure isn't OpenAI's cost structure. Your value isn't OpenAI's value. Price for *your* business.
 
 ---
 
@@ -555,16 +559,14 @@ Do they have incident response processes for tool failures?
 4. Scale (enterprise deployments, compliance, SLAs)
 
 **Pricing hybrid formula:**
-- Base: $X/month (covers fixed costs)
-- Variable: $Y per unit (20-30% of customer's alternative cost)
+- Base: $[X]/month (covers fixed costs)
+- Variable: $[Y] per unit (the author's rule of thumb is 20-30% of the customer's alternative cost. Set your own from real quotes.)
 
 ---
 
 ## Related Skills
 
-- **positioning-strategy**: General positioning frameworks and testing
-- **technical-product-pricing**: Pricing models including AI-specific patterns
-- **enterprise-account-planning**: Enterprise AI deal management
+The original names three related skills (positioning-strategy, technical-product-pricing, enterprise-account-planning). They are not in this library.
 
 ---
 

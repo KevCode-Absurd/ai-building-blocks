@@ -28,18 +28,18 @@ How to start:
 - **A capable chat AI with file support:** Reads the full pack, your results tables and the abstract in one run.
 <!-- /needs -->
 
-## Before you start
+## What to have ready for this job
 
 Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
 
-**You need for this job.** This list replaces the general one above. You do not need a talk transcript or a slide deck.
+**You need.** This list replaces the general "Before you start" list above. You do not need a talk transcript or a slide deck: the "Source text" there means the study's results.
 - The abstract draft, as it stands.
 - The study's methods and results: the paper, report or tables, with table numbers or page numbers. Use the final tables and figures, not an earlier draft of them.
 - The conference word limit and who will read the abstract.
 
 **Makes it better (optional):** the conference's required headings, the deadline, and anything the author does not want changed.
 
-Read each component skill in full before you use it: `source-note-summariser`, `unsupported-claim-spotter`, `plain-english-editor`. If one is missing, fetch its page at https://useaiblocks.com/skills/<slug> when you can browse, or ask for the file. Never swap in made-up instructions.
+All three component skills are required: `source-note-summariser`, `unsupported-claim-spotter` and `plain-english-editor`. Read each in full before you use it. If one is missing, fetch it at https://useaiblocks.com/skills/source-note-summariser, https://useaiblocks.com/skills/unsupported-claim-spotter or https://useaiblocks.com/skills/plain-english-editor when you can browse, or ask for the file. Stop at step 1 if you cannot get it. Never swap in made-up instructions.
 
 ## Rules
 

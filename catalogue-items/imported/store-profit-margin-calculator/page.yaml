@@ -5,9 +5,9 @@ name: Store profit margin calculator
 summary: Find your store profit margin per order and product after product cost, shipping, fees and refunds. Spot best sellers that lose money.
 job: run-your-store
 headline: Store profit margin calculator
-subhead: The profit you really keep on each order and each product, not just sales. It starts from revenue and takes off product cost, shipping, payment fees, discounts, refunds and tax, so a best seller that loses money no longer hides.
+subhead: Your estimated profit on each order and each product, not just sales. It starts from revenue and takes off product cost, shipping, payment fees, discounts, refunds and tax, so a best seller that loses money no longer hides.
 explain: |
-  The profit you really keep on each order and each product, not just sales. It starts from revenue and takes off product cost, shipping, payment fees, discounts, refunds and tax, so a best seller that loses money no longer hides.
+  Your estimated profit on each order and each product, not just sales. It starts from revenue and takes off product cost, shipping, payment fees, discounts, refunds and tax, so a best seller that loses money no longer hides.
 
   You pick a look-back period, 30 days by default, and group results by order, product or variant. A minimum order count keeps one-off sales from skewing the list. It reads your Shopify orders and product costs, so accuracy depends on unit costs being filled in. Products with missing costs are called out and left out of the margin math, not counted as free. Payment fees are an estimate (2.9 percent plus 30 cents by default), so treat the result as a close guide, not an exact figure. Nothing in your store is changed, so you can run it any time.
 when:
@@ -21,6 +21,8 @@ not_for:
   - "Your products have no unit costs filled in: add costs in Shopify first, or the margins will be left out."
 you_give:
   - Your Shopify store link and read access
+  - An AI tool that can run the Shopify command line, such as Claude Code. It may need a paid plan or an API key.
+  - What you pay the carrier per order, as a flat average (optional). Shopify does not give us this. Without it, shipping cost is left out and the report says so.
   - Look-back period in days (optional)
   - How to group results (optional)
   - Unit costs filled in on products
@@ -34,7 +36,7 @@ how_to_use:
   - Check that your products have unit costs filled in on Shopify. Without them, margins cannot be worked out.
   - "Open an AI that can run the Shopify command line, such as Claude Code. Sign in with read access to orders, products and stock: shopify store auth --store <your store domain> --scopes read_orders,read_products,read_inventory. Then paste in this skill."
   - Give it your store link. Add the look-back days and grouping if you want something other than 30 days by order.
-  - Let it read your orders. It changes nothing in your store. Orders are read 250 at a time with up to 50 line items each, so for a very large store or very big orders, check that the totals include every page before you trust them.
+  - Let it read your orders. It changes nothing in your store. Shipping you charged buyers is already in revenue. Your own carrier cost is a number you give it. Orders are read 250 at a time, page by page until none are left. Each order is read with up to 50 line items. If an order has more than 50, the AI must read the rest or mark that order as incomplete, not guess. Check the order count against your Shopify orders list before you trust the totals.
   - Open the report. Check the list of products with missing costs first.
   - Look at the bottom margin products. Decide which to reprice or drop.
   - To change prices, use the bulk price changer. To check a price against what buyers get, use the price against value checker.

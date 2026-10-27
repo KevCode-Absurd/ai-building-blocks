@@ -26,8 +26,8 @@ The PDF exporter starts a loopback-only server restricted to the selected deck d
 
 These paths remain unavailable in this catalog copy:
 
-- `<support-root>/scripts/deploy.sh`
-- `STYLE_PRESETS.md` and the `bold-template-pack` files are linked from GitHub in Phase 2 and are not bundled here. If you cannot open those links, make the three previews yourself from the Design Aesthetics section: one safe style, one bold style and one wildcard. Say that you did.
+- `<support-root>/scripts/deploy.sh` (the share link step)
+- The style preset file, the bold template pack, and the original HTML template, base CSS and animation guide. Make the three previews and the stage CSS yourself from this file. Say that you did.
 
 Do not invoke a step that requires one of these files. Obtain the original material and review its dependencies, license, and effects before use. Independent inline steps and the bundled helpers can proceed within the user’s authorized scope.
 
@@ -76,12 +76,12 @@ These invariants apply to EVERY slide in EVERY presentation:
 - The stage scales uniformly to fit the viewport. It may letterbox/pillarbox; it must not re-layout content.
 - Do not use responsive breakpoints to rearrange slide content for phones.
 - Use fixed internal slide measurements at the 1920×1080 design size.
-- Slide visibility must be controlled by `.active` / `.visible` using `visibility`, `opacity`, and `pointer-events` from `viewport-base.css`. Do not use `display: none` / `display: block` for slide switching; later layout classes such as `.slide-content { display: flex; }` can override them and make every slide visible at once.
+- Slide visibility must be controlled by `.active` / `.visible` using `visibility`, `opacity`, and `pointer-events` in the stage CSS you write. Do not use `display: none` / `display: block` for slide switching; later layout classes such as `.slide-content { display: flex; }` can override them and make every slide visible at once.
 - Use `clamp()` only for non-slide UI outside the stage, or for small fallback previews where a full stage is impractical.
 - Include `prefers-reduced-motion` support
 - Never negate CSS functions directly (`-clamp()`, `-min()`, `-max()` are silently ignored) — use `calc(-1 * clamp(...))` instead
 
-**When generating, read `viewport-base.css` and include its full contents in every presentation.**
+**When generating, write this stage CSS yourself (the original base CSS file is not bundled) and include all of it in every presentation.**
 
 ### Content Density Modes
 
@@ -180,23 +180,14 @@ If the user already gave a vibe, use it. If they did not, infer the likely mood 
 
 If the user explicitly names a preset or bold template, honor that as one option and generate the remaining preview slots around it.
 
-Read [STYLE_PRESETS.md](https://github.com/zarazhangrui/frontend-slides/tree/main/plugins/frontend-slides/skills/frontend-slides/STYLE_PRESETS.md) for safe preset candidates. If [bold-template-pack/selection-index.json](https://github.com/zarazhangrui/frontend-slides/tree/main/plugins/frontend-slides/skills/frontend-slides/bold-template-pack/selection-index.json) exists, read that compact index too, but do not read any `design.md` files yet.
-
-| Mood                | Suggested Presets                                  |
-| ------------------- | -------------------------------------------------- |
-| Impressed/Confident | Bold Signal, Electric Studio, Dark Botanical       |
-| Excited/Energized   | Creative Voltage, Neon Cyber, Split Pastel         |
-| Calm/Focused        | Notebook Tabs, Paper & Ink, Swiss Modern           |
-| Inspired/Moved      | Dark Botanical, Vintage Editorial, Pastel Geometry |
+**Not in this copy:** the style preset file and the bold template pack are not bundled. Make all three previews yourself from the Design Aesthetics section, and say that you did.
 
 **Preview mix rules:**
 
-- Generate 3 previews by default: 1 safe preset from `STYLE_PRESETS.md`, at least 1 bold template from `bold-template-pack/selection-index.json`, and 1 wildcard.
-- The wildcard may be either a second bold template or a self-generated custom design. Choose whichever creates the strongest, most useful contrast for the user's occasion, audience, mood, and content.
-- Do not force every expressive option to come from the template library. If the brief has a sharper, more specific design opportunity than the available templates, use the wildcard slot to design freely.
-- For conservative or high-stakes decks, make the safe preset especially restrained; choose a calm, higher-formality bold template; make the wildcard either another restrained template or a custom design that feels authoritative rather than decorative.
-- For expressive decks, keep the safe preset as a readable fallback; choose one strong bold template; make the wildcard adventurous, context-specific, and clearly different from both other previews.
-- If bold template matches feel weak, use the wildcard as a custom design or fall back to another safe preset instead of forcing a template.
+- Make 3 previews: one safe style, one bold style and one wildcard. Keep them clearly different from each other.
+- Pick the mood from the user's answers. Impressed or confident: dark, high contrast, one strong accent. Excited: bright colour and movement. Calm or focused: light, quiet, generous spacing. Inspired: rich colour with a soft, editorial feel.
+- For conservative or high-stakes decks, keep the safe style especially restrained and make the bold and wildcard styles calm and formal.
+- For expressive decks, keep the safe style as a readable fallback and make the wildcard adventurous and specific to the occasion.
 
 **Custom wildcard design rules:**
 
@@ -206,15 +197,6 @@ Read [STYLE_PRESETS.md](https://github.com/zarazhangrui/frontend-slides/tree/mai
 - Keep it feasible for a full deck. The preview must imply a design system that can expand into section, content, quote, comparison, and closing slides.
 - Use fixed 1920×1080 stage rules and pass the same preview authenticity checks as every other option.
 - Never render "custom", "wildcard", "AI-generated", or design-process labels on the slide itself.
-
-**Bold template selection rules:**
-
-- Match user purpose and mood against `mood`, `tone`, `best_for`, `avoid_for`, `formality`, `density`, and `scheme`.
-- Treat `best_for` examples as soft signals, not strict industry filters.
-- Keep the three previews genuinely different from each other.
-- After choosing bold template candidate(s), read only those candidate(s)' `preview.md` files from the `preview_md` paths in the selection index.
-- Use `preview.md` only for title-slide previews. Do not read full `design.md` files until the user picks the final template.
-- Do not read or copy `template.html` unless the selected final `design.md` is missing a critical implementation detail.
 
 **Preview authenticity rules (NON-NEGOTIABLE):**
 
@@ -253,33 +235,21 @@ If the user's stated needs are mixed, choose the closer of the two modes instead
 
 Never let high density become visual clutter. If a high-density slide starts to overflow, split it or redesign it into a clearer structure.
 
-If the user selected a bold template from `bold-template-pack`, read that one template's full `design.md` before generating. Do not read the other bold templates. Treat `design.md` as the design recipe:
-
-- Preserve its fonts, palette, decorative vocabulary, spacing rhythm, and component grammar.
-- Generate the final deck as a fixed 1920×1080 stage scaled uniformly to the viewport, regardless of whether the source template originally used `deck-stage.js` or viewport-fluid CSS.
-- Treat viewport-fluid values in `design.md` as design proportions to translate into 1920×1080 stage coordinates. Do not keep them as live viewport reflow rules in the final deck.
-- Keep the output as a single self-contained Frontend Slides HTML file.
-- Do not copy demo slide content or mimic the source template too literally.
-- Use `template.html` only as a last-resort implementation reference for the selected template.
-- After generating, verify both content overflow and panel overlap in rendered browser screenshots. `scrollHeight` checks alone are not enough because grid panels can visually cover each other.
+Treat the chosen preview's CSS and layout as the design recipe. Always generate the final deck as a fixed 1920×1080 stage scaled uniformly to the viewport, and keep it a single self-contained HTML file. After generating, verify both content overflow and panel overlap in rendered browser screenshots. `scrollHeight` checks alone are not enough, because grid panels can visually cover each other.
 
 If the user selected a self-generated custom wildcard, treat that preview's CSS and layout as the design recipe:
 
 - Preserve its fonts, palette, decorative vocabulary, spacing rhythm, grid logic, and component grammar.
-- Expand the same visual system across the full deck. Do not switch to a preset or bold template after the user has chosen the custom direction.
+- Expand the same visual system across the full deck. Do not switch styles after the user has chosen one.
 - Design any missing slide layouts from that system rather than importing patterns from another style.
 - Keep the output fixed-stage, single-file, and visually verified like every other deck.
 
-**Before generating, read these supporting files:**
-
-- [html-template.md](https://github.com/zarazhangrui/frontend-slides/tree/main/plugins/frontend-slides/skills/frontend-slides/html-template.md) — HTML architecture and JS features
-- [viewport-base.css](https://github.com/zarazhangrui/frontend-slides/tree/main/plugins/frontend-slides/skills/frontend-slides/viewport-base.css) — Mandatory CSS (include in full)
-- [animation-patterns.md](https://github.com/zarazhangrui/frontend-slides/tree/main/plugins/frontend-slides/skills/frontend-slides/animation-patterns.md) — Animation reference for the chosen feeling
+**Before generating:** the original helper files (HTML template notes, the base CSS and the animation guide) are not bundled in this copy. Write the fixed-stage CSS yourself from the Fixed Stage Rules section above, and build the animation from the Design Aesthetics section.
 
 **Key requirements:**
 
 - Single self-contained HTML file, all CSS/JS inline
-- Include the FULL contents of viewport-base.css in the `<style>` block
+- Put the fixed-stage CSS from the Fixed Stage Rules section in full in the `<style>` block
 - Use fonts from Fontshare or Google Fonts — never system fonts
 - Add detailed comments explaining each section
 - Every section needs a clear `/* === SECTION NAME === */` comment block
@@ -312,55 +282,18 @@ When converting PowerPoint files:
 
 ## Phase 6: Share & Export (Optional)
 
-After delivery, **ask the user:** _"Would you like to share this presentation? I can deploy it to a live URL (works on any device including phones) or export it as a PDF."_
+After delivery, **ask the user:** _"Would you like a PDF copy of this presentation?"_ The one-click share link (6A) is not available in this copy, so do not offer it.
 
 Options:
 
-- **Deploy to URL** — Shareable link that works on any device
 - **Export to PDF** — Universal file for email, Slack, print
-- **Both**
 - **No thanks**
 
-If the user declines, stop here. If they choose one or both, proceed below.
+If the user declines, stop here. If they choose the PDF, go to 6B.
 
-### 6A: Deploy to a Live URL (Vercel)
+### 6A: Share link (not in this copy)
 
-**Not available in this copy.** `scripts/deploy.sh` is missing here, so do not run it. Tell the user the one-click share link is not part of this copy. Offer the PDF export instead, or tell them to upload the HTML file (and its image folder) to any web host they trust, such as their own site or a static host.
-
-The steps below are kept from the original skill for reference only. This deploys the presentation to Vercel — a free hosting platform. The link works on any device (phones, tablets, laptops) and stays live until the user takes it down.
-
-**If the user has never deployed before, guide them step by step:**
-
-1. **Check if Vercel CLI is installed** — Run `npx vercel --version`. If not found, install Node.js first (`brew install node` on macOS, or download from https://nodejs.org).
-
-2. **Check if user is logged in** — Run `npx vercel whoami`.
-   - If NOT logged in, explain: _"Vercel is a free hosting service. You need an account to deploy. Let me walk you through it:"_
-     - Step 1: Ask user to go to https://vercel.com/signup in their browser
-     - Step 2: They can sign up with GitHub, Google, email — whatever is easiest
-     - Step 3: Once signed up, run `vercel login` and follow the prompts (it opens a browser window to authorize)
-     - Step 4: Confirm login with `vercel whoami`
-   - Wait for the user to confirm they're logged in before proceeding.
-
-3. **Deploy** — Run the deploy script:
-
-   ```bash
-   bash scripts/deploy.sh <path-to-presentation>
-   ```
-
-   The script accepts either a folder (with index.html) or a single HTML file.
-
-4. **Share the URL** — Tell the user:
-   - The live URL (from the script output)
-   - That it works on any device — they can text it, Slack it, email it
-   - To take it down later: visit https://vercel.com/dashboard and delete the project
-   - The Vercel free tier is generous — they won't be charged
-
-**⚠ Deployment gotchas:**
-
-- **Local images/videos must travel with the HTML.** The deploy script auto-detects files referenced via `src="..."` in the HTML and bundles them. But if the presentation references files via CSS `background-image` or unusual paths, those may be missed. **Before deploying, verify:** open the deployed URL and check that all images load. If any are broken, the safest fix is to put the HTML and all its assets into a single folder and deploy the folder instead of a standalone HTML file.
-- **Prefer folder deployments when the presentation has many assets.** If the presentation lives in a folder with images alongside it (e.g., `my-deck/index.html` + `my-deck/logo.png`), deploy the folder directly: `bash scripts/deploy.sh ./my-deck/`. This is more reliable than deploying a single HTML file because the entire folder contents are uploaded as-is.
-- **Filenames with spaces work but can cause issues.** The script handles spaces in filenames, but Vercel URLs encode spaces as `%20`. If possible, avoid spaces in image filenames. If the user's images have spaces, the script handles it — but if images still break, renaming files to use hyphens instead of spaces is the fix.
-- **Redeploying updates the same URL.** Running the deploy script again on the same presentation overwrites the previous deployment. The URL stays the same — no need to share a new link.
+The one-click share link is not part of this copy, and there is no deploy script. Do not offer it or run any deploy command. Tell the user they can upload the HTML file (and its image folder) to any web host they trust, such as their own site or a static host.
 
 ### 6B: Export to PDF
 
@@ -407,18 +340,14 @@ This captures each slide as a screenshot and combines them into a PDF. Perfect f
 
 ## Supporting Files
 
-| File                                               | Purpose                                                              | When to Read              |
-| -------------------------------------------------- | -------------------------------------------------------------------- | ------------------------- |
-| [STYLE_PRESETS.md](https://github.com/zarazhangrui/frontend-slides/tree/main/plugins/frontend-slides/skills/frontend-slides/STYLE_PRESETS.md)               | 12 curated visual presets with colors, fonts, and signature elements | Phase 2 (style selection) |
-| [bold-template-pack/selection-index.json](https://github.com/zarazhangrui/frontend-slides/tree/main/plugins/frontend-slides/skills/frontend-slides/bold-template-pack/selection-index.json) | Compact bold template metadata for candidate selection | Phase 2 (style selection) |
-| [bold-template-pack/templates/*/preview.md](https://github.com/zarazhangrui/frontend-slides/tree/main/plugins/frontend-slides/skills/frontend-slides/bold-template-pack/templates/) | Lightweight style cards for shortlisted bold title previews | Phase 2 after shortlisting |
-| [bold-template-pack/templates/*/design.md](https://github.com/zarazhangrui/frontend-slides/tree/main/plugins/frontend-slides/skills/frontend-slides/bold-template-pack/templates/) | Detailed design-system docs for the selected bold template only | Phase 3 after user selection |
-| [viewport-base.css](https://github.com/zarazhangrui/frontend-slides/tree/main/plugins/frontend-slides/skills/frontend-slides/viewport-base.css)             | Mandatory fixed-stage CSS — copy into every presentation             | Phase 3 (generation)      |
-| [html-template.md](https://github.com/zarazhangrui/frontend-slides/tree/main/plugins/frontend-slides/skills/frontend-slides/html-template.md)               | HTML structure, JS features, code quality standards                  | Phase 3 (generation)      |
-| [animation-patterns.md](https://github.com/zarazhangrui/frontend-slides/tree/main/plugins/frontend-slides/skills/frontend-slides/animation-patterns.md)     | CSS/JS animation snippets and effect-to-feeling guide                | Phase 3 (generation)      |
-| [scripts/extract-pptx.py](https://github.com/zarazhangrui/frontend-slides/tree/main/plugins/frontend-slides/skills/frontend-slides/scripts/extract-pptx.py) | Python script for PPT content extraction                             | Phase 4 (conversion)      |
-| [scripts/deploy.sh](https://github.com/zarazhangrui/frontend-slides/tree/main/plugins/frontend-slides/skills/frontend-slides/scripts/deploy.sh)             | Deploy slides to Vercel for instant sharing                          | Phase 6 (sharing)         |
-| [scripts/export-pdf.sh](https://github.com/zarazhangrui/frontend-slides/tree/main/plugins/frontend-slides/skills/frontend-slides/scripts/export-pdf.sh)     | Export slides to PDF                                                 | Phase 6 (sharing)         |
+Only these files are bundled with this copy, and both are run locally.
+
+| File | Purpose | When to use |
+| --- | --- | --- |
+| scripts/extract-pptx.py | Reads text, images and notes out of a .pptx file | Phase 4 (conversion) |
+| scripts/export-pdf.sh | Saves each slide as a page of a PDF | Phase 6B (optional PDF) |
+
+Read each script before you run it. See "Restored helper safety" above for what the PDF exporter opens.
 
 ## What you hand back
 
@@ -426,7 +355,7 @@ This captures each slide as a screenshot and combines them into a PDF. Perfect f
 - The style name chosen, the slide count and the density mode used.
 - For a PowerPoint conversion: a note of anything that did not carry over (for example, animations or fonts).
 - A PDF copy only if the user asked and the export ran.
-- A list of anything not done and why (for example, deploy not available, PDF tools not installed).
+- A list of anything not done and why (for example, share link not available, PDF tools not installed).
 
 Do not reply with only a summary. The deck file must exist and be opened or its path given.
 

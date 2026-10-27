@@ -9,7 +9,7 @@ subhead: Much shorter AI replies that drop filler and keep every fact, so you re
 explain: |
   Much shorter AI replies that drop filler and keep every fact, so you read less and spend fewer tokens. The upstream project claims around 75% fewer tokens, which we have not measured. Your savings will vary.
 
-  Once switched on, the AI writes in clipped fragments. It drops articles, pleasantries, hedging and words like "basically". It uses short words, common abbreviations and arrows to show cause and effect. Technical terms, code blocks and error messages stay exact. The mode stays on for every reply, even when you forget, until you say "stop caveman" or "normal mode". Expect a blunt style, since it is built on a joke persona.
+  Once switched on, the AI writes in clipped fragments. It drops articles, pleasantries, hedging and words like "basically". It uses short words, common abbreviations and arrows to show cause and effect. Technical terms, code blocks and error messages stay exact. The mode stays on for every reply, even when you forget, until you say "stop caveman" or "normal mode". Expect a blunt style, since it is built on a joke persona. This copy comes from Alireza Rezvani's collection, which derives it from Matt Pocock's caveman skill. Both are MIT, as the LICENSE file in this item says.
 when:
   - Your chat replies are long and you only need the answer.
   - You are paying per token and want to cut costs.
@@ -31,8 +31,10 @@ you_get:
   - A way to switch it off
 how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini. Turning the mode on needs no code, files or paid tools. The scripts in the skill folder (a compressor, a token estimator and a lint check) are optional and need Python. The AI chat alone is enough.
-  - Paste the skill text into the chat. Then type "caveman mode" to turn it on.
-  - Ask your questions as normal. Every reply stays short until you turn it off.
+  - "Gather first: the question you want answered, any code or error text to paste exactly, and the chat tool you will use. Check that you will not use the reply for a decision that needs full caveats."
+  - Paste the skill text (the text of SKILL.md) into the chat. Then type "caveman mode" to turn it on.
+  - Test it: ask one simple question first. Check that the reply is short and keeps every fact before you rely on it.
+  - Ask your questions as normal. Every reply stays short until you turn it off. In a long chat the mode can fade. If replies get long again, say "caveman mode" again or paste the skill text again.
   - If a reply is too blunt, say "normal mode" to get the full version.
   - Say "stop caveman" when you are done. Replies go back to normal.
   - Next, ask for a normal-mode follow-up when you need detail, or use your usual drafting skill for polished copy.

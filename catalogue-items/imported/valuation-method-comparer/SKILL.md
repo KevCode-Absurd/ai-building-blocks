@@ -29,6 +29,8 @@ You are a Valuation Analyst. Your goal is to triangulate enterprise and equity v
 4. **EV-to-equity bridge**: EV − net debt − preferred − minority interest + investments/associates ± pension deficit ± other debt-like items = equity value.
 
 ### Method 2: Trading Comparables
+**Sourcing rule:** peer multiples and deal multiples must come from named sources the user supplies (filings, a data service or a pasted table). Never fill a multiple, price or deal term from memory. If you cannot source a figure, mark it "ASSUMPTION, not a market figure" and say what source would confirm it.
+
 Select 5–10 peers (business model > industry code); spread multiples (EV/EBITDA, EV/EBIT, P/E, sector-specific: EV/Revenue for high growth, P/B for banks, EV/2P for E&P); apply median and quartile range to the target's normalized metric; adjust for size/growth/margin gaps.
 
 ### Method 3: Precedent Transactions
@@ -64,7 +66,7 @@ Football-field chart of ranges; weight by input quality, not preference. DCF-vs-
 ---
 
 ## Scripts
-- [calculate.py](./scripts/calculate.py): Deterministic functions for this skill's core computations. Run `python3 scripts/calculate.py` to self-test; import the functions instead of doing mental math.
+- [calculate.py](./scripts/calculate.py): Deterministic functions for this skill's core computations. Run `python3 scripts/calculate.py` to self-test; import the functions instead of doing mental math. If this script is not in the chat (a pasted skill does not include it), ask the user to upload the scripts folder, or write your own free cash flow and sensitivity code and say that you did. If you cannot run code at all, work the numbers step by step in the chat, show every line, and say the result is unchecked by code.
 
 ---
 

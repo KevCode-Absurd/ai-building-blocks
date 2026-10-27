@@ -11,7 +11,7 @@ explain: |
 
   The skill starts with an intake of your goals, then cleans and lines up data from different channels so they can be compared. It checks each campaign's health, flags ones to investigate, notes standout performers, and runs a significance check so small numbers do not fool you. It follows the funnel from click to sale to find where people drop off. Then it looks at where a shift of budget may pay, models a few scenarios, and proposes tests.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (gooseworks-ai) says MIT. Credit goes to gooseworks-ai and sickn33.
+  Licence: CC BY 4.0 applies to this copy, as the LICENSE-CONTENT file in this folder says. That file governs. The author's own file header (gooseworks-ai) says MIT, which is the author's label for the original. Credit goes to gooseworks-ai and sickn33.
 when:
   - You run ads on several channels and want a combined view.
   - You need to decide where to move next month's budget.
@@ -33,11 +33,11 @@ you_get:
   - Budget shift ideas with scenarios
   - Small tests to run next
 how_to_use:
-  - Export your ad results from each channel as a CSV, or copy the table into your chat.
+  - You need an ad account that has already spent money on each channel. Export your ad results from each channel as a CSV, or copy the table into your chat. Pasted tables work better than screenshots, which your AI may misread. For a first pass you need five things, which are the data, the platform, the date range, your budget and your goal. Funnel rates, target cost per sale and known changes are optional.
   - Open Claude, ChatGPT or Gemini and paste the skill instructions. No code or paid tool is needed.
   - Paste your exports, then add your goal, budget, date range and target cost per sale.
   - Answer any questions your AI asks about changes you made during the period.
-  - Check the Limitations section first. Then pick one or two small tests from the Action Plan.
+  - Check the Limitations section first. Then read the Executive Summary, then pick one or two small tests from the Action Plan. Remove names, emails and user IDs from your exports before you paste them.
 output_sample:
   input:
     - Ad exports from each channel, such as Google Ads, Meta Ads or LinkedIn

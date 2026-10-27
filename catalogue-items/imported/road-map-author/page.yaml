@@ -2,16 +2,16 @@ thinking: medium
 thinking_why: It builds many linked road parts from a clear layout.
 new_slug: road-map-author
 name: Road map author
-summary: Describe your road layout and get a RoadRunner HD map built in MATLAB, with lanes, junctions, signs and signals for testing driving software.
+summary: Describe a road layout and get a RoadRunner HD map built in MATLAB. For driving-software engineers with paid MathWorks tools.
 job: build-software
 headline: Road map author
 subhead: A road network built from your description as a RoadRunner HD map file, with lanes, boundaries, markings, junctions, signs, signals, barriers and parking. You get a scene that can be used to test automated driving.
 explain: |
   A road network built from your description as a RoadRunner HD map file, with lanes, boundaries, markings, junctions, signs, signals, barriers and parking. You get a scene that can be used to test automated driving.
 
-  You describe the layout, or point to data from another map source. The skill writes MATLAB scripts that build each element through the roadrunnerHDMap tools. It uses ready methods for detecting lane direction, drawing centre lines at least one point per metre, shaping junction areas, snapping ends together and splitting loops. Code goes in .m files and runs from there. It needs MATLAB and RoadRunner. It is made for simulation and driving-software engineers, so it is not for general business use.
+  Cost and licence: this skill only works with paid MathWorks products (MATLAB, RoadRunner, RoadRunner Scene Builder and Automated Driving Toolbox). The LICENSE.md file in this item is BSD 2-Clause plus a rule that you may use the skill only with MathWorks products. The skill file also links MathWorks' own reuse licence, which says the same. Follow LICENSE.md. Credit goes to MathWorks.
 
-  Licence: this copy is under BSD 2-Clause (see the LICENSE.md file in this item). The skill file also links MathWorks' own reuse licence, which means you may use it only with MathWorks products such as MATLAB. Follow the LICENSE.md file. Credit goes to MathWorks.
+  You describe the layout, or point to data from another map source. The skill writes MATLAB scripts that build each element through the roadrunnerHDMap tools. It uses ready methods for detecting lane direction, drawing centre lines at least one point per metre, shaping junction areas, snapping ends together and splitting loops. Code goes in .m files and runs from there. It needs MATLAB and RoadRunner. It is made for simulation and driving-software engineers, so it is not for general business use.
 when:
   - You need a test road for a driving simulation.
   - You are assembling a map from converted data and need the building pieces.
@@ -32,12 +32,17 @@ you_get:
   - Junctions, signs and signals
   - MATLAB scripts that built it
 how_to_use:
+  - This is for simulation and driving-software engineers who already have paid MATLAB and RoadRunner. If you run a business and do not work with these tools, do not start here.
   - Check you have MATLAB and RoadRunner. Both are paid products and must be installed and licensed before you start. Your AI must be able to run code, or you must run the scripts yourself.
   - "Gather these first: lane count, lane width in metres, road length, junction layout, speed limit, and any source file with its coordinate system."
   - Paste the skill into your AI, or add its folder if your AI takes files.
   - "Describe your road: lanes, widths, length, junctions, signs and signals. Add any source map file."
   - Ask your AI to write the MATLAB scripts and run the checks before it writes the map file.
+  - "The final files are two things: the .rrhd map file and the .m scripts that built it. Save both in one project folder. A run passed when every check reports pass and the .rrhd file opens in RoadRunner. The checks cover alignment, fit and sizes, and run before the file is written."
+  - Asset paths for markings, signs and barriers must be set by hand. The skill that maps them (MathWorks' RoadRunner asset mapping skill) is not in this library, so look up the asset paths in your own RoadRunner project and tell your AI.
   - Open the .rrhd file in RoadRunner and look at lanes, junctions and signs before you use it in a test.
+  - "Next: import the finished file into RoadRunner with the Road scene importer. Asset paths for markings, signs and barriers come from MathWorks' RoadRunner asset mapping skill, which is not in this library yet."
+next: [road-scene-importer]
 output_sample:
   input:
     - Your road layout in plain words, such as lanes, width and length

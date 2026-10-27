@@ -48,7 +48,7 @@ When this skill is loaded into a session where code already exists:
 
 3. **Recommend architectural changes** — Do not limit review to API correctness. Propose replacing `readtable`/`xlsread` + `sqlwrite` + query chains with `fetch(conn, "SELECT ... FROM read_csv/read_parquet/read_xlsx(...)")`.
 
-The highest-value patterns in this skill are architectural: file-analytics pushdown eliminates entire pipeline stages and can yield 10x+ speedups.
+The highest-value patterns in this skill are architectural: file-analytics pushdown eliminates entire pipeline stages and can yield 10x+ speedups (the upstream author's claim; it has not been measured here and depends on your files).
 
 ## Pre-Flight Check
 

@@ -29,8 +29,9 @@ you_give:
   - MATLAB release
 you_get:
   - Working MATLAB code that calls Python
-  - Setup steps for pip and environments
-  - Error fixes
+  - Setup steps for pip and environments, as bash steps and the pyenv lines
+  - Error diagnosis, naming the type of error
+  - The fix applied, and a check that the call runs
   - Notes on data type conversion
 how_to_use:
   - Open your AI tool and give it the skill folder. You need an AI with a MATLAB connection that can run code, and a Bash tool for the pip and virtual environment steps. It must read references/environment-setup.md before it installs anything, so include that file. That file covers how to find the Python MATLAB is using, install a supported Python, create a virtual environment and pip install your packages. You approve each install before it runs.
@@ -40,6 +41,8 @@ how_to_use:
   - Run the new code on a small test input before you use real data.
   - Once the test run passes on small input, move to your real data. For each new Python call, ask for notes on the data types that call expects.
   - Keep the virtual environment pinned to the library versions that worked. If a later run fails, paste the new error and ask your AI to run the error triage again.
+  - If the error is a TypeError or ValueError inside the Python code itself, debug that code. Do not rerun the environment setup for it.
+  - Next steps: save your pinned requirements file, and rerun your small test call after any MATLAB release upgrade or library change.
   - To go the other way and call MATLAB from Python, use the MATLAB Engine API for Python.
 output_sample:
   input:

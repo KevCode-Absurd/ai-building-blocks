@@ -120,6 +120,8 @@ dlazy gpt-image-2 \
 
 ## 5、工具调用
 
+> **Optional (added by AI Blocks).** Everything in this section uses the paid dLazy service (an account, an API key and credits). You can skip it. Paste the prompt from section 6 into the image tools in ChatGPT or Gemini, with your photo.
+
 本技能使用 dLazy 的 **`gpt-image-2`**（套图的核心指标是**整套图里的商品是同一件**，需要最强的参考图保真；实测低价模型在多场景切换时会漂移出另一款商品）。
 
 ### 调用方式
@@ -148,7 +150,7 @@ dlazy gpt-image-2 --prompt '...' --images ... --save output/fission-pattern.jpg
 | `--batch` | `1`（套图靠多条 prompt，不靠 batch） | batch 只会给同一镜位多个版本 |
 | `--save` | `docs/fission-pattern/output-<sku>-<序号>.jpg` | 按套编号归档 |
 
-> **成本提示**：想压成本可换 `dlazy seedream-5.0`（单张约 1/6 价）。代价是商品保真度下降——实测在场景切换时会漂移成另一款商品，只适合对商品一致性不敏感的氛围图。
+> **成本提示**：想压成本可换 `dlazy seedream-5.0`（单张约 1/6 价，这是原作者的数字，未经我们核实，请查 dLazy 当前价目表）。代价是商品保真度下降——实测在场景切换时会漂移成另一款商品，只适合对商品一致性不敏感的氛围图。
 
 ### Command Examples
 
@@ -232,6 +234,7 @@ Photorealistic commercial product photography, no text, no watermark.
 5. **循环跑**：用第四节的 shell 循环，每条只换镜位段。
 6. **质检整套**：把 N 张图并排看——商品是不是同一件？色调是否统一？有没有哪张场景抢戏？
 7. **不合格的单张重跑**，不用整套重来。
+8. **下一步 (Next step, added by AI Blocks)**: after the set check, check each image against your marketplace's photo rules (see the Marketplace photo rule checker) before you upload.
 
 ---
 
@@ -250,4 +253,4 @@ Photorealistic commercial product photography, no text, no watermark.
 
 ## Tips
 
-Visit https://dlazy.com for more information.
+(Vendor note from the original author, not part of the method: dLazy is a paid service. The free route in the note at the top works without it.)

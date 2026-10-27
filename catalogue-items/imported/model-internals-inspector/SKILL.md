@@ -30,7 +30,7 @@ TransformerLens is the de facto standard library for mechanistic interpretabilit
 - You need remote execution on massive models → Use **nnsight** with NDIF
 - You want higher-level causal intervention abstractions → Use **pyvene**
 
-If you have a report from the model feature finder, use its named features as the behaviour to trace through the layers.
+Start from a behaviour you can describe in a sentence and test with two prompts, one the model gets right and one it gets wrong (for example the IOI task in Workflow 2). The model feature finder is not part of this skill, so do not wait for its report.
 
 ## Installation
 
@@ -151,6 +151,8 @@ for layer in range(model.cfg.n_layers):
         results[layer, pos] = metric(patched_logits)
 
 # 5. Visualize results (layer x position heatmap)
+# The code above only fills the `results` grid. To draw the heatmap, add a plotting step,
+# for example with matplotlib: plt.imshow(results.cpu().numpy(), aspect="auto"); plt.colorbar(); plt.show()
 ```
 
 ### Checklist

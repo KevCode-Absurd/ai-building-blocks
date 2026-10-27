@@ -44,7 +44,7 @@ For each confirmed external meeting, run in parallel where possible:
 
 Common Room data is the primary source. After CR research, run a quick **recency check** for each company — this is supplementary, not primary:
 - Search `"[company name]" news` scoped to the last 7 days
-- For executive attendees, search their name for recent public posts or interviews
+- For executive attendees, search their name for recent public business posts or interviews about their work. Privacy rule: use only public business posts and news about the person in their professional role. Skip personal accounts, family, health, home address and anything not about their job.
 - Only include findings that are genuinely noteworthy (funding, leadership changes, major press). Don't pad the brief with generic news.
 
 Depth calibration:

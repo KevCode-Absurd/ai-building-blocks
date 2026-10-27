@@ -7,6 +7,10 @@ description: Build a single-company equity research earnings preview — a 4-5 p
 
 ## Before you start (read this first)
 
+**First, the Yahoo gate.** This skill uses `yfinance`, which reads Yahoo Finance pages without a licence from Yahoo. Before any data step, ask the user: "Have you checked Yahoo's terms of use for this use?" Do not run `yfinance` until they say yes. If they cannot confirm, ask them to paste the figures instead.
+
+**Indian company path (NSE or BSE ticker).** Skip the EDGAR, FRED, CBOE and SEC full-text steps and write `not available` for them. The user must paste: the latest quarterly results from the company's NSE or BSE filing (revenue, profit, EPS), and any consensus figures they trust if the free data has none. Everything you could not get goes in the MANUAL REVIEW table. The guide files named below are not in this folder, so use the two India rules in the India section and the data stack in this file.
+
 **Needs.** This skill collects data from public websites and APIs, so your AI must be able to run Python and reach the web. If it cannot, stop at Phase 1 and say so. Ask the user to paste the numbers instead, and mark every other figure `not available`.
 
 - Python 3 with `yfinance` (`pip install yfinance`).

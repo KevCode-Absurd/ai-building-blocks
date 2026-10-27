@@ -37,6 +37,8 @@ Do not say you read it. Without `matlab-build-app`, the programmatic `.m` app de
 - **First three steps:** gather those inputs, choose widgets by data type, then add alarms, trends and write safeguards (the numbered steps further down).
 - **Required gate:** never connect a write to a live plant until it has been tested on a simulated node and signed off by a controls engineer. Never enable a write path without this sign-off.
 - The shared agent guide named above is not in this copy. Without `matlab-build-app`, build the plain programmatic `.m` app described below and tell the user.
+- **Which steps need the missing parts:** only step 8 (serializing to a real `.mlapp`) and the serialization rules in Must-Follow Rules need `matlab-build-app` or the missing guide. Steps 1 to 7 and step 9 work without them. The `.m` fallback follows the same widget, alarm, trend and write rules.
+- **Not a safety system:** this output is not a certified safety instrumented system and does not replace your site's HAZOP or functional safety review. Any write path to a live plant needs your site's own safety review and a controls engineer's sign-off. Say this to the user.
 
 Build operator-facing SCADA/HMI dashboards in MATLAB App Designer that follow industrial-HMI conventions: gray-field color philosophy, alarms shown at the data source, write safeguards on every setpoint, fixed-range trends with threshold lines, and a drill-down layout (plant overview → area → detail).
 

@@ -23,7 +23,7 @@ when:
 not_for:
   - "You want to know if grant income counts as revenue yet. This tracks cash only, not revenue recognition, a legal release of funds, tax or a filing."
   - "You want a check on whether a cost was allowed under the award. You supply the approval; this skill does not judge eligibility."
-  - "You want a snapshot of spendable cash against a minimum balance across several accounts. Use the Restricted cash availability checker."
+  - "You want a snapshot of spendable cash against a minimum balance across several accounts. Use the Spendable cash balance checker."
 
 you_give:
   - "Opening total bank cash and opening restricted cash, from the bank statement and your fund ledger"

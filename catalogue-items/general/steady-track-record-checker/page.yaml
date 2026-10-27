@@ -115,7 +115,7 @@ tweaks:
   - what: The years you include
     how: Ten is best. If the business was very different earlier, say from which year the current business starts.
   - what: Your own cut-offs
-    how: Tell it if you want a tighter or looser rule for steady, such as results within a tenth of the average.
+    how: Tell it if you want a tighter or looser rule for steady, such as results within a tenth of the average. The default is within about a fifth.
   - what: Industry facts
     how: Add what rivals did in the bad years. It uses that to tell cycle from change.
 

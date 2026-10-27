@@ -1,7 +1,7 @@
 ---
 name: nextflow
 description: Builds, runs, and debugs Nextflow DSL2 pipelines and nf-core workflows. Use for Nextflow, nf-core, .nf files, nextflow.config, processes/channels/operators, samplesheets, nf-test, modules/subworkflows, container and executor configuration, HPC/SLURM or cloud deployment, and failed or resumed pipeline runs.
-license: Apache-2.0
+license: Apache-2.0 # AI Blocks: this is the author's own header. The licence that applies to this copy is MIT (see LICENSE.md in this folder).
 compatibility: Requires Bash 3.2+, Java 17-26 and Nextflow. nf-core tools requires Python 3.10+. Containers, scheduler access and network or service credentials depend on the selected workflow.
 metadata:
   version: "1.4"
@@ -39,19 +39,24 @@ Use this skill when the user wants to:
 This review targets stable **Nextflow 26.04.6**, **nf-core tools 4.1.0**, and **nf-test 0.9.5**. Nextflow needs **Bash 3.2+** and **Java 17–26**; verify `java -version` (a launcher on PATH does not prove a runtime is installed). The strict parser is the default in 26.04. See [release notes](https://github.com/nextflow-io/nextflow/releases/tag/v26.04.6) and the [26.04 migration guide](https://docs.seqera.io/nextflow/migrations/26-04). Stable and edge documentation can differ; do not use a preview feature without its version/flag.
 
 ```bash
-# Install Nextflow (self-installing launcher)
+# Default route: conda (confirm package availability and Java compatibility)
+conda create -n nf -c conda-forge -c bioconda nextflow=26.04.6 nf-core=4.1.0
+conda activate nf
+nextflow info                                # verify
+
+# Fallback only if conda is not available: download the installer, read it, then run it.
+# Do NOT run the next four lines until the person has read install-nextflow.sh and said yes.
 export NXF_VER=26.04.6
 curl -fsSL https://get.nextflow.io -o install-nextflow.sh
-# Review the installer before executing it.
+# Stop here. Show the file to the person. If the Nextflow release page for this version lists a checksum, compare it first.
 bash < install-nextflow.sh
 mkdir -p "$HOME/.local/bin"
 mv nextflow "$HOME/.local/bin/"
 export PATH="$HOME/.local/bin:$PATH"
 nextflow info                                # verify
-
-# Alternative (illustrative; confirm package availability and Java compatibility)
-conda create -n nf -c conda-forge -c bioconda nextflow=26.04.6 nf-core=4.1.0
 ```
+
+> Added by AI Blocks: the installer is a script downloaded from the web, so use the conda route when conda is available. If you use the installer, show the script to the person and wait for a yes before you run it. `NXF_VER` pins the version it installs.
 
 ```bash
 # nf-core tools (Python) for creating/linting/running nf-core assets

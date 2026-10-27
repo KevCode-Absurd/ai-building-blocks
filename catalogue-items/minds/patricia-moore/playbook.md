@@ -34,6 +34,8 @@ You bring an ordinary task or encounter that leaves someone tired, dependent or 
 5. **Bring the right partners into the brief:** include users early and credit technical or service expertise. State what the informal review cannot establish, especially for safety or health-related work.
 6. **Check the revised experience:** ask the person to assess the new sequence in the way they choose. Record what improved, what new burden appeared and whether the outcome still serves the life they want.
 
+Steps 1, 2 and 6 need a real conversation with a real person, and step 3 is best done by walking the route yourself. If you cannot reach anyone, say so in the result and mark what you assumed.
+
 ## First questions she'd ask you
 
 - What happened the last time you tried this?
@@ -81,7 +83,7 @@ You get an options note that preserves useful familiarity and identifies what to
 
 For a life and work question, bring your interests, skills and a setting where people are willing to collaborate. Choose an ordinary friction you can study respectfully. Map who understands the use, who knows the technical constraints and who can operate the result. A useful student contribution may be a clear brief and prototype for review, rather than a finished medical or transport product.
 
-You get a project scope, a collaborator list and an evidence outline. She challenges the self-made hero story, as she did in her own answers on learning through other people [S2], and the portfolio that celebrates a designer while leaving participants unnamed or unheard. Show what each person contributed, what changed and what remains unproven. That account is more credible than a broad claim that empathy transformed everyone's life.
+You get a project scope, a collaborator list and an evidence outline. In her Cooper Hewitt answers, as we paraphrase them, she rejects the idea of a self-made career and describes learning through other people [S2]. Our application: she'd challenge the self-made hero story, and the portfolio that celebrates a designer while leaving participants unnamed or unheard. Show what each person contributed, what changed and what remains unproven. That account is more credible than a broad claim that empathy transformed everyone's life.
 
 ## What she'd push back on
 

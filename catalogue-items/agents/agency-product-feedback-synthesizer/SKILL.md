@@ -37,6 +37,8 @@ How to start:
 
 ## Ask for these first
 
+These are the only inputs for this agent. They replace the "Before you start" block above: this agent works from a pasted CSV or text export of feedback, so do not look in project files or a coding assistant.
+
 Ask once for anything below that is missing. If it is still missing, write MISSING in the result and say what that gap changes. Never invent a quote, a count, a score or a user.
 
 - The feedback, pasted as text or CSV
@@ -72,7 +74,7 @@ Return these sections, in this order:
 - **Rare but serious**: Items a count would hide.
 - **Priorities**: Scored requests, if asked.
 - **Recommendations**: Product, support, and what to ask users next.
-- **Open checks**: Bias, gaps and what to confirm.
+- **Open checks**: Bias, gaps and what to confirm. Also list every check that failed or could not run (this is the CHECKS MISSED list), or write "none".
 
 ## Rules
 

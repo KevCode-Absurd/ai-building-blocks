@@ -78,11 +78,11 @@ python convert_hf_to_gguf.py models/llama-2-7b-chat/
 ### Run inference
 
 ```bash
-# Simple chat
+# Simple chat (-n 256 sets the maximum number of tokens)
 ./llama-cli \
     -m models/llama-2-7b-chat.Q4_K_M.gguf \
     -p "Explain quantum computing" \
-    -n 256  # Max tokens
+    -n 256
 
 # Interactive chat
 ./llama-cli \
@@ -92,15 +92,18 @@ python convert_hf_to_gguf.py models/llama-2-7b-chat/
 
 ### Server mode
 
+Warning: `--host 0.0.0.0` would make the server reachable from every other device on your network, with no password. Keep `127.0.0.1` for a single laptop. Use `0.0.0.0` only on a network you trust, and put a login in front of it first.
+
 ```bash
-# Start OpenAI-compatible server
+# Start OpenAI-compatible server. 127.0.0.1 lets only this computer reach it.
+# -ngl 32 offloads 32 layers to the GPU.
 ./llama-server \
     -m models/llama-2-7b-chat.Q4_K_M.gguf \
-    --host 0.0.0.0 \
+    --host 127.0.0.1 \
     --port 8080 \
-    -ngl 32  # Offload 32 layers to GPU
+    -ngl 32
 
-# Client request
+# Client request (run this in a second terminal)
 curl http://localhost:8080/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
@@ -149,7 +152,8 @@ Q3_K_M or Q4_K_S  # Lower bits to fit in memory
 cmake -B build -DGGML_METAL=ON && cmake --build build --config Release
 
 # Run with GPU acceleration (automatic)
-./llama-cli -m model.gguf -ngl 999  # Offload all layers
+# -ngl 999 offloads all layers
+./llama-cli -m model.gguf -ngl 999
 
 # Speed varies a lot by chip, model and settings. The original author's example figure is not a promise for your computer.
 ```
@@ -160,11 +164,11 @@ cmake -B build -DGGML_METAL=ON && cmake --build build --config Release
 # Build with CUDA
 cmake -B build -DGGML_CUDA=ON && cmake --build build --config Release
 
-# Offload layers to GPU
-./llama-cli -m model.gguf -ngl 35  # Offload 35/40 layers
+# Offload 35 of 40 layers to the GPU
+./llama-cli -m model.gguf -ngl 35
 
-# Hybrid CPU+GPU for large models
-./llama-cli -m llama-70b.Q4_K_M.gguf -ngl 20  # GPU: 20 layers, CPU: rest
+# Hybrid CPU+GPU for large models: 20 layers on the GPU, the rest on the CPU
+./llama-cli -m llama-70b.Q4_K_M.gguf -ngl 20
 ```
 
 ### AMD GPUs (ROCm)
@@ -204,13 +208,13 @@ cat prompts.txt | ./llama-cli \
 ### Context size
 
 ```bash
-# Increase context (default 512)
+# Increase context (default 512). -c 4096 is a 4K window.
 ./llama-cli \
     -m model.gguf \
-    -c 4096  # 4K context window
+    -c 4096
 
-# Very long context (if model supports)
-./llama-cli -m model.gguf -c 32768  # 32K context
+# Very long context (if the model supports it). -c 32768 is a 32K window.
+./llama-cli -m model.gguf -c 32768
 ```
 
 ## Performance benchmarks

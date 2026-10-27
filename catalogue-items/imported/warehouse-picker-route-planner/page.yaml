@@ -7,11 +7,11 @@ job: plan-supply-chain
 headline: Warehouse picker route planner
 subhead: "Give it your aisle layout, where pickers start and finish, and a pick list. It checks which aisles can be walked, picks a routing method, and puts each list in walking order. You get the route, the distance compared with today, and rules your team can follow."
 explain: |
-  A picker route planner turns a list of items to pick into the shortest legal walk through your aisles. This skill builds the route from your own map, so it works for a small stockroom or a large warehouse. It gives pick path optimization without special software.
+  A picker route planner turns a list of items to pick into a short, walkable route through your aisles. This skill builds the route from your own map, so it works for a small stockroom or a large warehouse. It gives pick path planning without special software.
 
   It treats your warehouse as a set of paths. Each aisle, cross-aisle and one-way rule becomes part of the map. It first checks that a picker can reach every pick and get back out. If an aisle is a dead end with no way back, it tells you, and does not draw a route that cannot be walked.
 
-  Then it compares routing methods, such as walking each aisle end to end, going in and back out, or skipping the biggest gap. It sorts your list into walking order and shows the distance before and after. Every route is an estimate, not a proven best, unless an exact solver was used.
+  Then it compares routing methods, such as walking each aisle end to end, going in and back out, or skipping the biggest gap. It sorts your list into walking order and shows the distance before and after. In a chat this is a manual method, so the result is an estimate. It is only a proven shortest route if an exact solver was run.
 when:
   - Pickers walk back and forth and orders take too long.
   - You group orders into batches and need the best order of stops.
@@ -36,11 +36,12 @@ you_get:
   - A few plain rules your team can follow
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text. It works in a chat. It runs better if your AI can run code, but this is not required.
+  - Do not use the demo numbers in the skill's code. They are random sample data. Paste your real aisle lengths, widths and pick positions before any calculation.
   - Describe your aisles. Give the number, the length of each, where cross-aisles are, and any one-way aisles.
   - Paste a pick list as a table with order or batch ID, SKU, aisle and position in the aisle.
   - Say where pickers start and finish, and how they walk today.
   - Read the layout check first. If it reports a dead end, fix the layout or add the missing access before you trust any route.
-  - The code in the skill is a sketch, not a tested tool. Check each route by hand on a small layout before you trust it, and treat every distance and every efficiency figure as an estimate or a rule of thumb.
+  - The code in the skill is a sketch, not a tested tool, and in a chat your AI may work the arithmetic by hand. Check each route by hand on a small layout before you trust it, and treat every distance and every efficiency figure as an estimate or a rule of thumb.
   - Walk one route on the floor and time it. Compare it with the estimate before you change the whole floor.
 how_it_works:
   - title: Collect the layout

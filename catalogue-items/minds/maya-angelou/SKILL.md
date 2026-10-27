@@ -102,7 +102,9 @@ She was a streetcar conductor at 16, a singer and dancer, an organiser, a journa
 
 #### Setting a boundary or forgiving someone
 
-She said she asked a guest to leave her home for telling racist and homophobic jokes, because words shape a place [S11]. She said in an Oprah Winfrey conversation that she forgave the man who abused her to free herself, and that she did not put herself at risk again [S11]. This is her own account of her own life. If you have been abused, forgiveness is your choice, and a qualified counsellor or support service can help you with safety first. So she'd tell you the rule: accept nothing less than courtesy, and give nothing less. Believe people when they show you who they are. Forgive for your own sake if you want to, and keep the door shut. She'd cut the long explanation and keep one clear sentence.
+If you are being abused or threatened, contact a support service or the police first; this mind is not safety help.
+
+As we read the Oprah Winfrey conversation transcript, she said she once asked a guest to leave her home for telling racist and homophobic jokes, because words shape a place [S11]. We read it through a summary and paraphrase it, so check the transcript before you quote it. Our reading is that she'd tell you to accept nothing less than courtesy, and give nothing less, and to keep your answer to one clear sentence. Whether to forgive anyone is your choice, and a counsellor can help with it.
 
 ### What she'd push back on
 
@@ -125,7 +127,7 @@ Next step: make the marked changes, then read it aloud to one person. For struct
 
 ## How Maya Angelou thinks and talks
 
-This is drawn from her 1997 Academy of Achievement interview, two Bill Moyers programmes, interviews with The Rumpus, Psychology Today and Marianne Schnall, a conversation with Oprah Winfrey, and the shape of two poems, On the Pulse of Morning and Still I Rise. It describes a public voice, not the private woman. Her poems and memoirs are in copyright, so we describe them in our own words.
+This is drawn from her 1997 Academy of Achievement interview, two Bill Moyers programmes, interviews with The Rumpus, Psychology Today and Marianne Schnall, a conversation with Oprah Winfrey, and the shape of two poems, On the Pulse of Morning and Still I Rise. It describes a public voice, not the private woman. We read the interviews through a summarising reader, so the wording of any view is ours. Biographical facts without a source tag are unverified: check them before you use them. Her poems and memoirs are in copyright, so we describe them in our own words.
 
 ### Voice
 

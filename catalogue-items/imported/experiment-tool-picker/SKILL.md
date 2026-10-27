@@ -20,7 +20,7 @@ When to use this skill: choosing a platform from scratch, evaluating whether to 
 
 ## What this skill is for
 
-This skill spans platform selection, multi-platform decisions, migration planning, and governance setup. It does not cover experiment design (use the Experiment designer), result interpretation (use the Experiment result analyst), or feature flag operations (use the Feature flag planner). Pair this skill with the relevant integrations microsite when you need platform-specific MCP details.
+This skill spans platform selection, multi-platform decisions, migration planning, and governance setup. It does not cover experiment design (use the Experiment designer), result interpretation (use the Experiment result analyst), or feature flag operations (use the Feature flag planner). The integrations microsite the author mentions is not in this library. For platform-specific MCP details, use each vendor's own MCP documentation.
 
 The audience is a PM, engineering leader, or data lead who is making the decision or recovering from a previous one. The voice is decisive. There is no "it depends, evaluate them all yourself." The decision space has real shape, and a senior advisor can map your situation to a defensible answer in an afternoon.
 
@@ -36,7 +36,7 @@ Every platform evaluation walks the same seven questions. Answer them honestly f
 
 3. **MCP availability.** All seven platforms covered here have a first-party or hosted MCP except Eppo (as of May 2026). MCP availability matters more for agentic workflows where AI agents create and read experiments end to end. It matters less for traditional human-driven experimentation. Worth weighting if your team is AI-forward.
 
-4. **Feature flag integration.** Do experiments and feature flags live in the same platform? Statsig, Optimizely, GrowthBook, and PostHog all unify them. Eppo is experiment-only. Kameleoon is creative-personalization-focused. If you also need feature flag operations as production infrastructure, check `feature-flagging` for the operational discipline; the platform choice has to support both surfaces or you accept a second tool.
+4. **Feature flag integration.** Do experiments and feature flags live in the same platform? Statsig, Optimizely, GrowthBook, and PostHog all unify them. Eppo is experiment-only. Kameleoon is creative-personalization-focused. If you also need feature flag operations as production infrastructure, use the Feature flag planner for the operational discipline (the author's `feature-flagging` skill is not in this library); the platform choice has to support both surfaces or you accept a second tool.
 
 5. **Analytics depth.** Can you see funnels, retention, and cohorts in the same surface as experiment results? PostHog and Amplitude are strongest here (analytics-first products). Statsig has a strong analytics overlay. Optimizely and GrowthBook are experiment-first, with analytics as a supplementary feature.
 
@@ -46,13 +46,13 @@ Every platform evaluation walks the same seven questions. Answer them honestly f
 
 ---
 
-> **Check before you use this.** Prices, free-tier limits, MCP availability and migration effort in this file are rough estimates from May 2026. Tell the user to confirm each one on the vendor's own site before deciding. Never present them as current fact.
+> **Check before you use this.** Prices, free-tier limits, MCP availability and migration effort in this file are rough estimates from May 2026. Tool counts, MCP claims and other vendor feature claims (such as "full CRUD", "200+ tools", "7 tools" or "first open-source production MCP") are also the vendors' own statements or the author's notes from May 2026. Tell the user to confirm each one on the vendor's own site before deciding. Never present them as current fact.
 
 ## Statsig
 
 Modern experimentation and feature management combined in one platform. CUPED and sequential testing built in. Strong PM-led ergonomics. Check the vendor's own site for its customer list.
 
-**Strengths.** Fast time to first experiment. Combined experiments and feature flags eliminate the second-tool tax. Statistical rigor is current with the literature. The MCP exposes full CRUD across experiments, gates, dynamic configs, and metrics.
+**Strengths.** Fast time to first experiment. Combined experiments and feature flags eliminate the second-tool tax. Statistical rigor is current with the literature. The vendor says its MCP exposes full CRUD across experiments, gates, dynamic configs, and metrics (a vendor claim as of May 2026, confirm it).
 
 **Gotchas.** Pricing scales with events, which can become expensive at high scale. The platform has strong opinions about how experiments should run; teams that want a custom statistical workflow will fight the defaults. Self-host is not a first-class option.
 
@@ -64,7 +64,7 @@ Modern experimentation and feature management combined in one platform. CUPED an
 
 Open-source product OS combining product analytics, experiments, feature flags, surveys, session replays, error tracking, and LLM analytics. Free tier available.
 
-**Strengths.** Full-funnel context. Experiments live next to the analytics that contextualize them. The MCP exposes 200+ tools (use scoping like `?features=` to keep the agent context tight). Self-host option is mature. Open-source license keeps you outside the vendor lock-in trap.
+**Strengths.** Full-funnel context. Experiments live next to the analytics that contextualize them. The vendor says its MCP exposes 200+ tools (a claim as of May 2026, confirm it; use scoping like `?features=` to keep the agent context tight). Self-host option is mature. Open-source license keeps you outside the vendor lock-in trap.
 
 **Gotchas.** Combined event volume across all features can make pricing surprising at scale. The breadth of features can make onboarding feel busy. Statistical depth in experiments is good but a step behind dedicated experiment platforms (Statsig, Eppo) on advanced features like CUPED defaults.
 
@@ -76,7 +76,7 @@ Open-source product OS combining product analytics, experiments, feature flags, 
 
 Open-source warehouse-native experimentation. Data stays in your warehouse (Snowflake, BigQuery, Redshift, Postgres). Self-host or cloud.
 
-**Strengths.** Data sovereignty. Cost control at scale because the warehouse is already paid for. First open-source production MCP for experimentation per their announcement. Mature statistical defaults including Bayesian and frequentist toggles. Bring-your-own metrics from the warehouse means experiment metrics match analytics metrics by definition.
+**Strengths.** Data sovereignty. Cost control at scale because the warehouse is already paid for. They announced it as the first open-source production MCP for experimentation (a vendor claim, confirm it). Mature statistical defaults including Bayesian and frequentist toggles. Bring-your-own metrics from the warehouse means experiment metrics match analytics metrics by definition.
 
 **Gotchas.** Setup overhead is higher than vendor-native. You own the warehouse compute cost (this is usually a feature, not a bug, but it shows up in different finance line items). Smaller community than Statsig or PostHog. UI polish lags vendor platforms by half a step.
 
@@ -122,7 +122,7 @@ Warehouse-native and statistically rigorous. Check the vendor's own site for its
 
 ## Kameleoon
 
-Specialty platform focused on the winning-experiment-to-production-code workflow. AI-driven personalization. Hosted MCP at `mcp.kameleoon.com/mcp` with OAuth and 7 specialized tools.
+Specialty platform focused on the winning-experiment-to-production-code workflow. AI-driven personalization. Hosted MCP at `mcp.kameleoon.com/mcp` with OAuth and, per the vendor, 7 specialized tools (confirm on their site).
 
 **Strengths.** Converts marketing-site experiment wins into permanent React components, which is a real workflow that other platforms force teams to handle manually. AI-driven personalization for content sites. The MCP is purpose-built for the win-to-code path.
 
@@ -185,9 +185,9 @@ The migration discipline is in [`references/migration-playbook.md`](references/m
 
 > All dollar ranges, free-tier sizes and engineer-week estimates in this skill are rough, unsourced and dated May 2026. Say that next to each figure you quote, and send the user to each vendor's pricing page.
 
-Plain talk. Vendor-native (Statsig, Optimizely) bills on events, typically $0.10 to $0.50 per million events. Easy to predict at small scale, painful at very high scale. Warehouse-native (Eppo, GrowthBook paid) bills on seats and warehouse compute; $5K to $50K per year is the typical range for paid tiers, with warehouse compute showing up on a different finance line. Product-suite (PostHog, Amplitude) bills on combined event volume across all features; often the most cost-effective when used heavily and the most expensive when only experiments are needed.
+Plain talk (author's figures, last checked May 2026; confirm on the vendor's own site). Vendor-native (Statsig, Optimizely) bills on events, typically $0.10 to $0.50 per million events. Easy to predict at small scale, painful at very high scale. Warehouse-native (Eppo, GrowthBook paid) bills on seats and warehouse compute; $5K to $50K per year is the typical range for paid tiers, with warehouse compute showing up on a different finance line. Product-suite (PostHog, Amplitude) bills on combined event volume across all features; often the most cost-effective when used heavily and the most expensive when only experiments are needed.
 
-Free tiers. PostHog gives 1M events per month free. Statsig gives 1M events free. Amplitude gives 10M events per month free with basic features. GrowthBook is free open-source. Optimizely and Eppo do not have meaningful free tiers.
+Free tiers (last checked May 2026; confirm on the vendor's own site, because limits change). PostHog gives 1M events per month free. Statsig gives 1M events free. Amplitude gives 10M events per month free with basic features. GrowthBook is free open-source. Optimizely and Eppo do not have meaningful free tiers.
 
 The trap. Optimizing for sticker price ignores total cost. Total cost includes engineer time, statistical correctness (a wrong-result experiment can cost more than a year of platform fees), governance overhead, and migration risk. Sticker price matters for finance; total cost matters for product velocity. Detail and finance conversation patterns in [`references/cost-and-pricing-models.md`](references/cost-and-pricing-models.md).
 
@@ -208,7 +208,7 @@ Onboarding cost. How long until a new PM can ship their first experiment? Statsi
 For AI-forward teams, the MCP capability layer is becoming the deciding factor. The current state as of May 2026:
 
 - All seven covered platforms have first-party or hosted MCPs, with the exception of Eppo. Eppo offers REST API only.
-- Capability differs by an order of magnitude. PostHog exposes 200+ tools; Kameleoon exposes 7. More is not better; the right size depends on your workflow.
+- Capability differs by an order of magnitude. Per the vendors, PostHog exposes 200+ tools and Kameleoon exposes 7. Confirm both on their sites. More is not better; the right size depends on your workflow.
 - For agentic workflows where AI agents run experiments end to end, prefer platforms with full CRUD via MCP: Statsig, PostHog, GrowthBook, Optimizely.
 - For human-driven workflows where MCP supplements human action, any of the seven works (Eppo via the REST path).
 

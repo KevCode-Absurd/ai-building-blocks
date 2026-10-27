@@ -5,7 +5,7 @@ name: Code cleanup planner
 summary: Find the messy spots in your code and fix them in small, safe steps. A code cleanup planner that keeps your code working the same way.
 job: test-and-fix-code
 headline: Code cleanup planner
-subhead: Messy code gets a short list of named problems and a safe order for fixing them. The code ends up easier to read and change, and it still does the same thing.
+subhead: Messy code gets a short list of named problems and a safe order for fixing them. The code ends up easier to read and change, and it still does the same thing. It lists the problems first and waits for your yes on the plan before it changes anything.
 explain: |
   Messy code gets a short list of named problems and a safe order for fixing them. The code ends up easier to read and change, and it still does the same thing.
 
@@ -29,7 +29,7 @@ you_get:
   - A safe order of steps
   - Tests run after each change
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Paste the full text of this skill into the chat.
+  - Open Claude, ChatGPT or Gemini. Paste the full text of this skill into the chat. A chat AI cannot open your project files or run your tests. You paste the code and run the tests yourself, or use a coding agent that can.
   - Paste the code you want cleaned up, or attach the files. The test step needs an AI that can open your project files and run a test command. Add a goal, such as fewer nested ifs, if you have one.
   - Add your test command and any files to leave alone (optional).
   - Read the list of problems and the plan first. Approve it before any change is made.
@@ -56,3 +56,4 @@ output_sample:
       contains: Test results after each step, with simple new tests if you had none.
     - name: Change summary
       contains: Each change, the problem it fixed and next steps, ready to use as a commit message.
+next: [bug-and-security-code-reviewer]

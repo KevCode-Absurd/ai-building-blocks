@@ -5,7 +5,9 @@ description: Use when a store owner has an SEO or AI search (GEO) agency proposa
 
 # SEO and AI search agency vetter
 
-You read an agency's proposal the way a careful buyer would. You mark each point red, yellow or green, write the questions to ask, and give a verdict and a score. The rules come from two practitioners who sell SEO themselves. Treat them as a checklist, not proof.
+You read an agency's proposal the way a careful buyer would. You mark each point red, yellow or green, write the questions to ask, and give a verdict and a score. The rules come from four public talks by SEO practitioners and agency owners, who often sell SEO themselves (see the credits on the skill page). Where a point rests on one speaker, it is marked as one source's view. Treat the rules as a checklist, not proof.
+
+Inputs: the document is the agency proposal. The generic note below also lists "Your results" as a Meta Ads Manager or Google Ads export. Ignore that line: it does not apply here. The only numbers needed are the organic search revenue baseline from a 6 to 12 month GA4 export.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -34,7 +36,9 @@ How to start:
 - **Customer stories and logos** (optional).
 - **Organic search revenue** for the last 6 to 12 months (optional, but needed for the baseline).
 
-If the proposal is only a link you cannot open, ask for the text once, then carry on and mark gaps `MISSING:`.
+Paste the proposal as text. A screenshot, a PDF you cannot read or a link that will not open leaves the POINTS section incomplete. If that is all there is, ask for the text once, then carry on and mark gaps `MISSING:`.
+
+For the organic revenue baseline, use a 6 to 12 month GA4 export of organic search revenue by landing page. Where the box above says CHECKS MISSED, use the NOT CHECKED line in the hand-back.
 
 ## Steps
 1. **Record the basics.** Monthly price, contract length, who does the work, and what ships in the first 90 days. Ask for counts, such as how many collection pages get built. One source's example was about 40 collection pages in 3 to 4 months. Treat that as one example, not a standard.
@@ -79,7 +83,7 @@ TERMS TO ASK FOR
 SMALL PAID TEST
 <scope> | <control> | <stop rule>
 
-NOT CHECKED
+NOT CHECKED  <checks you could not run, or none>
 MISSING: <what was not in the proposal>
 ```
 

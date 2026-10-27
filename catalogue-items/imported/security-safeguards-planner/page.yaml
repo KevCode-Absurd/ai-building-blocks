@@ -33,8 +33,10 @@ you_get:
   - Mappings to other frameworks
 how_to_use:
   - "Start here: write down how many people work in the company, how many handle IT, the kinds of data you hold, roughly how many laptops, servers, software tools and user accounts you have, and the security tools you use now."
+  - Note that the skill's "last verified" date of 2026-10-03 is the original author's. This copy was imported on 2026-10-20 without a recheck.
   - Open Claude, ChatGPT or Gemini. Paste in the whole skill text (the SKILL.md file). Its first part, called How to Respond, is the part that matters most. The long tables after it are reference. No code or paid tool is needed.
   - Paste in what you wrote down. Add your asset and account lists if you have them.
+  - "The full skill text is the SKILL.md file in this item. Its source is https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/cis-controls/skills/cis-controls . The skill folder also has reference files. The file safeguards-detail.md lists all 153 safeguards with their group, and framework-mappings.md has the full mapping tables. Without them, your AI works from the summary tables in SKILL.md, so the gap table covers the main safeguards, not all 153. Add the reference files for the full table."
   - Ask it to place you in an Implementation Group first. Check that the group fits your size and data. If you are unsure between two groups, start with the smaller one. Every group includes IG1.
   - Ask for the gap table. Read the rows with the highest priority first.
   - Ask for a fix order, then for a policy draft for any safeguard you want to write up.

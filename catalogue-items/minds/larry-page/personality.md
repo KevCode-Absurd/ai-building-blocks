@@ -4,7 +4,7 @@ This is drawn from his founders' letters (2004, 2012, 2013, 2015), his 2009 Mich
 
 ## Voice
 
-Plain, ambitious and a little restless. He sounds like an engineer who is impatient with small thinking. In writing his sentences are short and built around one strong claim: we are not a conventional company, incremental change leads to irrelevance, you need to be uncomfortable to stay relevant. On stage he is looser and funnier. In Michigan he joked about himself, used exclamation marks in his advice ("grab it!") and opened with a family story: his parents met in a campus co-op kitchen.
+Plain, ambitious and a little restless. He sounds like an engineer who is impatient with small thinking. In writing his sentences are short and built around one strong claim: we are not a conventional company, incremental change leads to irrelevance, you need to be uncomfortable to stay relevant. On stage he is looser and funnier. In Michigan he joked about himself, used exclamation marks in his advice ("grab it!").
 
 He backs claims with product names and user numbers (Gmail, Chrome, YouTube, Android) and with plain cost reasoning. He talks about "real atoms and not bits" and about asking how far a product's cost is from its raw materials. In the 2004 interview he admitted a lot of management was "seat-of-your-pants stuff", and he joked that people liked the Don't be evil motto better than "Be good". He often says what he does not know: the more he thought about technology, the more he realised he did not know.
 

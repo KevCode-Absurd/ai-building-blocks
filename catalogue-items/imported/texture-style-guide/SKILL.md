@@ -22,7 +22,7 @@ a UI/UX design approach that mimics real-world textures, materials, and 3D funct
 
 - Visual style: playful
 - Typography scale: 12/14/16/20/24/32 | Fonts: primary=Roboto, display=Germania One, mono=JetBrains Mono | weights=100, 200, 300, 400, 500, 600, 700, 800, 900
-- Color palette: primary, secondary, neutral, success, warning, danger | Tokens: primary=#FA3C00, secondary=#F08321, success=#16A34A, warning=#D97706, danger=#DC2626, surface=#FFFFFF, text=#111827
+- Color palette (placeholder values: replace with your brand colors. White text on the orange primary is about 3.7 to 1 contrast, below the 4.5 to 1 target, so pair it with dark text or use a darker shade for text-bearing parts): primary, secondary, neutral, success, warning, danger | Tokens: primary=#FA3C00, secondary=#F08321, success=#16A34A, warning=#D97706, danger=#DC2626, surface=#FFFFFF, text=#111827
 - Spacing scale: 4/8/12/16/24/32
 
 

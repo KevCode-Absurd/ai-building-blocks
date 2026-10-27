@@ -36,6 +36,9 @@ How to start:
 - **What you have tried before, including polite yeses** (optional)
 - **At the pause: who said yes, who said no and why, and the money taken** (required for step 3)
 
+## Before you take any money
+Taking money for something not yet built is regulated in many places. Before step 2 goes out, the person checks the local consumer and pre-order rules, the refund terms and the payment provider's rules with a qualified professional. Do not take payment at all if the product is regulated (health, money, legal, food or safety goods). The workflow takes no money itself. The person takes it, and only after the check.
+
 ## When not to use
 - If you cannot deliver by the date you promise buyers, or the product is in a regulated category (health, money, legal), do not take money. Use the Customer discovery interview planner (`customer-discovery-plan`) instead, since it tests the idea without taking any.
 - If you do not yet know who your buyers are, use the Best customer finder (`best-customer-finder`) first, then come back with ten names.
@@ -51,7 +54,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Plan the three-buyer test.** Use the skill `three-buyer-idea-test-planner`. Give it your idea, the buyer, the price and your list of ten people. It does the buyer math, lists the ten people with how to reach each, writes a direct ask for money, schedules five asks on each of two days, and writes the go and change rules before any ask is sent. A real yes is money, not words, in Noah Kagan's manner. The step 1 file holds the buyer list and the rule for a real yes.
-2. **Script the paid ask.** Use the skill `two-day-paid-ask-planner`. Give it the step 1 file and your payment link. It writes the two-day ask: the message, the price, how to take the money today, what you promise and when, a plain refund line and what to say to a no. The ask says the product is not built yet, gives the delivery date and promises a full refund if you miss it. Do not send it without those lines. The step 2 file holds the script to run. You run it and bring back who paid. If fewer than ten asks go out, the log records how many were really sent.
+2. **Script the paid ask.** Use the skill `two-day-paid-ask-planner`. Give it the step 1 file and your payment link. It writes the two-day ask: the message, the price, how to take the money today, what you promise and when, a plain refund line and what to say to a no. The ask says the product is not built yet, gives the delivery date and promises a full refund if you miss it. Do not send it without those lines. This is a hard gate: write the ask script, but mark it `NOT CLEARED TO SEND` until the person confirms in chat that they have checked the pre-order, refund and payment provider rules (see above). If the product is in a regulated category, do not write the ask at all. The step 2 file holds the script to run. You run it and bring back who paid. If fewer than ten asks go out, the log records how many were really sent.
 
 Pause here: Run the ask for two days. Record who said yes, who said no and why, and the money taken.
 
@@ -60,7 +63,7 @@ Pause here: Run the ask for two days. Record who said yes, who said no and why, 
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
-4 step files and the summary. The second file holds the paid ask script; the third the launch plan or the change; the last the trial log.
+4 step files and the summary. If the ask is still marked `NOT CLEARED TO SEND`, the summary says so first. The second file holds the paid ask script; the third the launch plan or the change; the last the trial log.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

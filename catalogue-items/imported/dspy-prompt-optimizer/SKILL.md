@@ -153,7 +153,9 @@ result = react(question="When was Python created?")
 ```
 
 #### dspy.ProgramOfThought
-Generates and executes code for reasoning:
+Generates and executes code for reasoning.
+
+> Warning: this module runs code that the model wrote. Run it only in a sandbox (a container or a throwaway environment), never on a machine with private files or keys.
 
 ```python
 pot = dspy.ProgramOfThought("question -> answer")
@@ -360,32 +362,6 @@ print(result.person.name)  # "John Doe"
 print(result.person.age)   # 35
 ```
 
-### Pattern 2: Assertion-Driven Optimization
-
-> Version note: `dspy.Assert` and `dspy.Suggest` exist only in some DSPy 2.x releases and are not in newer ones. If the import below fails, check the DSPy docs for the current way to retry or refine an answer (for example `dspy.Refine`).
-
-```python
-import dspy
-from dspy.primitives.assertions import assert_transform_module, backtrack_handler
-
-class MathQA(dspy.Module):
-    def __init__(self):
-        super().__init__()
-        self.solve = dspy.ChainOfThought("problem -> solution: float")
-
-    def forward(self, problem):
-        solution = self.solve(problem=problem).solution
-
-        # Assert solution is numeric
-        dspy.Assert(
-            isinstance(float(solution), float),
-            "Solution must be a number",
-            backtrack=backtrack_handler
-        )
-
-        return dspy.Prediction(solution=solution)
-```
-
 ### Pattern 3: Self-Consistency
 
 ```python
@@ -544,21 +520,6 @@ loaded_qa = dspy.ChainOfThought("question -> answer")
 loaded_qa.load("models/qa_v1.json")
 ```
 
-### 5. Monitor and Debug
-
-```python
-# Enable tracing
-dspy.settings.configure(lm=lm, trace=[])
-
-# Run prediction
-result = qa(question="...")
-
-# Inspect trace
-for call in dspy.settings.trace:
-    print(f"Prompt: {call['prompt']}")
-    print(f"Response: {call['response']}")
-```
-
 ## Comparison to Other Approaches
 
 | Feature | Manual Prompting | LangChain | DSPy |
@@ -580,6 +541,53 @@ for call in dspy.settings.trace:
 - Quick prototypes (manual prompting)
 - Simple chains with existing tools (LangChain)
 - Custom optimization logic needed
+
+## Appendix: older DSPy versions only (untested)
+
+The two sketches below come from older DSPy releases. We have not run them. Skip them unless you use an older release, and check the DSPy docs for your version first.
+
+### Assertion-driven optimization (older DSPy)
+
+> Untested sketch for older DSPy only. `dspy.Assert` and `dspy.Suggest` exist only in some DSPy 2.x releases and are not in newer ones. If the import below fails, check the DSPy docs for the current way to retry or refine an answer (for example `dspy.Refine`).
+
+```python
+import dspy
+from dspy.primitives.assertions import assert_transform_module, backtrack_handler
+
+class MathQA(dspy.Module):
+    def __init__(self):
+        super().__init__()
+        self.solve = dspy.ChainOfThought("problem -> solution: float")
+
+    def forward(self, problem):
+        solution = self.solve(problem=problem).solution
+
+        # Assert solution is numeric
+        dspy.Assert(
+            isinstance(float(solution), float),
+            "Solution must be a number",
+            backtrack=backtrack_handler
+        )
+
+        return dspy.Prediction(solution=solution)
+```
+
+### Monitor and debug (older DSPy)
+
+> Older DSPy style, not run against a current release. The `dspy.settings.configure(lm=lm, trace=[])` call below may not work on your version. Newer releases use `dspy.configure(lm=lm)`, as the rest of this file does, and `dspy.inspect_history()` to show recent prompts. Check the DSPy docs for your version.
+
+```python
+# Enable tracing
+dspy.settings.configure(lm=lm, trace=[])
+
+# Run prediction
+result = qa(question="...")
+
+# Inspect trace
+for call in dspy.settings.trace:
+    print(f"Prompt: {call['prompt']}")
+    print(f"Response: {call['response']}")
+```
 
 ## Resources
 

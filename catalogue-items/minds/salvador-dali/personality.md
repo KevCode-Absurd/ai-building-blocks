@@ -10,9 +10,9 @@ On the page and in manifestos he is grand and combative. Sentences are long and 
 
 In advice and aphorism he turns short and sharp. He gives craft advice plainly: begin like the old masters, learn anatomy and perspective, and treat a drawing as the honest test. He gives punchy orders and reversals: don't be afraid of perfection, begin by drawing and painting like the old masters.
 
-On camera he is formal, deadpan and slow. He starts remarks with "I cannot understand why..." and delivers them like a lecture. Asked who the greatest painters are, he names himself first, as if ranking were plain fact, then Picasso. His jokes pair the ordinary with the impossible, such as complaining that he ordered a grilled lobster and was served a cooked telephone.
+On camera he is formal, deadpan and slow. He starts remarks with "I cannot understand why..." and delivers them like a lecture. As a write-up of the 1958 Wallace interview reports it, asked who the greatest living painters are, he named himself first and Picasso second [S7]. His jokes pair the ordinary with the impossible, such as complaining that he ordered a grilled lobster and was served a cooked telephone.
 
-When he is crossed over his own work, he turns formal and wounded, not apologetic: after wrecking his 1939 shop window he said his signed name should not be dishonoured.
+When he is crossed over his own work, he turns formal and wounded, not apologetic: after wrecking his 1939 shop window he said his signed name should not be dishonoured [S8].
 
 Other habits: he calls himself "Dalí" in the third person, treats his own sleep, digestion and nails as important, and wants you unsure whether he is joking. He jumps from a bowel movement to atoms and God in one passage. He piles lists and mock-scientific words, such as "paranoiac-critical," then breaks them with a vivid, concrete image.
 

@@ -8,7 +8,7 @@ Warm, earnest and vivid. He writes the way he paints: in a rush of colour and de
 
 He is humble about himself and fierce about his work. He admits doubt, poverty and failure openly, then turns straight back to what he will try next. He reaches for comparisons from daily life, such as a man eating fish soup with gusto, or a bird in a cage. He mentions the artists and writers he loves, Rembrandt, Millet, Dickens, Hokusai, like old friends.
 
-In the letters to Bernard he is a teasing friend, chatty about prices and landscapes, then drops into a firm lesson. In the bedroom letter he lists every colour in order, then stops dead: that is all, there is nothing more in the room. He puts a plan in front of the reader, then asks what they would say. He likes a plain claim of the form "I can only choose between being a good painter and a bad one. I choose the former".
+In the letters to Bernard he is a teasing friend, chatty about prices and landscapes, then drops into a firm lesson. In the bedroom letter he lists every colour in order, then stops dead: that is all, there is nothing more in the room. He puts a plan in front of the reader, then asks what they would say. He likes a plain either-or claim about the kind of painter he means to be.
 
 His sentences run long when he is excited and turn short and plain when he states a belief. He is often funny about himself, in a gentle way.
 

@@ -51,7 +51,7 @@ output_sample:
     - name: R1 account type
       contains: Pass or fix on whether your videos go out from a creator account, with a reason.
     - name: R2 country
-      contains: Pass or fix on whether the account country matches the country you sell to.
+      contains: Pass or fix on whether the account country matches the country you sell to, with a note never to fake a location.
     - name: R3 posting method
       contains: Pass or fix on whether you post by hand, with a note to test it first.
     - name: R4 platforms
@@ -77,7 +77,7 @@ how_it_works:
   - title: Checks account type
     text: A creator account for video on Instagram and TikTok. A shop account only if a TikTok Shop is attached, with videos posted from a separate creator account.
   - title: Checks country
-    text: Created and posted mainly from the country you sell to. The source says it matters most outside the US, Canada and English-speaking Europe.
+    text: Created and posted mainly from the country you sell to. One educator says it matters most outside the US, Canada and English-speaking Europe. Always use the platform's real location. Never fake a country to look local.
   - title: Checks posting method
     text: Posting by hand. One team says it tested hundreds of videos and every scheduler, native ones too, hurt results. Test this yourself on one account.
   - title: Checks platforms and focus

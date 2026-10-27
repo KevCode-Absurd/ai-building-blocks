@@ -18,9 +18,9 @@ when:
   - A group is arguing over a favourite and nobody can say why.
   - You suspect your best-liked headline says nothing to a stranger.
 not_for:
-  - "You need new headlines written: use the Typed headline batch writer."
+  - "You need new headlines written: use the Ad headline variation writer."
   - "You want to check the promise in one headline: use the Headline promise checker."
-  - "You want to plan a test of your three picks: use the Keyed headline test planner."
+  - "You want to plan a test of your three picks: use the Headline test tracking planner."
 
 you_give:
   - Your list of headlines, subject lines or hooks
@@ -37,7 +37,7 @@ how_to_use:
   - Paste your headline list as it is.
   - Say who the reader is in one line.
   - Show the three picks to people who do not know your product, ask which they would read on, and keep their ticks private from each other.
-  - Take the three to "Keyed headline test planner".
+  - Take the three to the Headline test tracking planner.
 output_sample:
   input:
     - Your list of headlines, subject lines or hooks
@@ -74,7 +74,8 @@ output_shape: |
   <n>. <headline>
      A stranger would think: <this offers ___ to ___ / unclear>
      Rules: gain <0-1> | news <0-1> | curiosity+promise <0-1> | positive <0-1> | quick+believable <0-1>
-     Total: <n>  Fails: <dead / too smart / meaningless / mere statement / hard to grasp / none>
+     Reader gap: <0 or -1>
+     Total: <n, whole number 0 to 5>  Fails: <dead / too smart / meaningless / mere statement / hard to grasp / none>
 
   THE THREE
   1. <headline>  Why: <one line>
@@ -126,7 +127,7 @@ works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Reading, scoring and ranking lines is text work a strong chat AI does well with this skill."}
   inputs:
-    - "The list from Typed headline batch writer"
+    - "The list from the Ad headline variation writer"
     - "Your reader in one line"
     - "Three people who do not know your product, for the outside read"
 

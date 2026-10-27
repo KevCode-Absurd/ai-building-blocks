@@ -9,7 +9,7 @@ subhead: A trial balance turns into a balance sheet, an income statement and a c
 explain: |
   A trial balance turns into a balance sheet, an income statement and a cash flow statement that agree with each other. That matters at month end, when the books must close and the numbers must tie.
 
-  It starts by checking that debits equal credits and that every account sits in the right class. Then it asks which reporting framework you use, such as IFRS or GAAP, and whether accruals and deferrals are booked. It maps each account to a statement line, builds the income statement, then the balance sheet, then the cash flow using the indirect method. Last, it confirms net income lands in retained earnings.
+  It starts by checking that debits equal credits and that every account sits in the right class. Then it asks which reporting framework you use, such as IFRS or GAAP, and whether accruals and deferrals are booked. It maps each account to a statement line, builds the income statement, then the balance sheet, then the cash flow using the indirect method. That means it starts from net income and adjusts for non-cash items and changes in working capital to reach cash. Last, it confirms net income lands in retained earnings.
 when:
   - You are closing the books and need financial statements from a raw trial balance.
   - Your trial balance may not balance and you want the errors found first.
@@ -33,6 +33,8 @@ you_get:
   - Adjusting entries still needed
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
+  - Before you paste, check that the trial balance has account codes, account names, debit and credit columns, and the period-end date.
+  - Your ledger is confidential. Check your AI tool's data policy first, or remove customer and supplier names and bank details before you paste.
   - Paste your full trial balance. A spreadsheet export works well.
   - Tell your AI the reporting framework (IFRS, GAAP or tax basis) and the reporting period.
   - Add any accruals, deferrals, asset purchases or sales you have already booked.

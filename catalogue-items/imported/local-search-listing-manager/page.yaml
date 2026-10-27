@@ -36,10 +36,9 @@ how_to_use:
   - Type your business name, address, phone, services and the areas you serve.
   - "Say which job you want: a profile audit, a page for one area, a listing check, markup code or review replies."
   - Paste your current profile text or reviews if you have them.
-  - Check every local detail in the result, such as landmarks, streets and zip codes, before you publish. Anything you did not give your AI should be marked [VERIFY].
   - Next, publish the fixes to your Google Business Profile and the main directories first. Then come back with new reviews for reply drafts, and run the name, address and phone check again.
-  - Running the listing check and page scripts needs an AI that can run code. Without it, the AI works from what you paste.
-  - Check every local fact on a draft page (landmarks, streets, years in business) before you publish. The skill marks anything it could not source as VERIFY. Add photo location tags only where the photo was really taken.
+  - Running the listing check and page scripts needs an AI that can run code. Without it, the AI works from what you paste. The listing check does not look anything up online and needs no key or paid service. It compares what you paste in: your correct name, address and phone, and what each directory shows, which you copy from each directory yourself.
+  - Check every local detail in the result and on each draft page (landmarks, streets, zip codes, years in business) before you publish. Anything you did not give your AI should be marked [VERIFY]. Add photo location tags only where the photo was really taken. A geotagging tool such as GeoImgr.com is a third-party site. Check its price and terms yourself.
 output_sample:
   input:
     - Your business name, address and phone number

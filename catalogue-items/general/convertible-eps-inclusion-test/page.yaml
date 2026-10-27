@@ -22,6 +22,7 @@ not_for:
   - "You want to check a fund or investor statement: use a plain review by your fund administrator or accountant instead."
   - "You need to know if a contract allows conversion: read the contract with your lawyer first, then come back."
   - "Your dilution comes from options, not a convertible: use the Treasury-stock option dilution instead."
+  - "You want to explain a share-price change through EPS growth and the P/E multiple: use the EPS and multiple return bridge instead."
 you_give:
   - Profit from continuing operations for ordinary shareholders.
   - Basic weighted average shares.
@@ -64,19 +65,20 @@ output_sample:
     - name: MISSING and CHECKS MISSED
       contains: Inputs not supplied and checks that failed or could not run.
 how_it_works:
-  - title: 1. Extract the conversion ratio, timing, interest and tax effects from the contract; verify that if-converted treatment applies
-    text: Extract the conversion ratio, timing, interest and tax effects from the contract; verify that if-converted treatment applies.
-  - title: 2. Divide the after-tax numerator adjustment by added weighted shares and compare incremental EPS with the continuing-operations control EPS
-    text: Divide the after-tax numerator adjustment by added weighted shares and compare incremental EPS with the continuing-operations control EPS.
-  - title: 3. Recalculate EPS with both adjusted numerator and denominator; label dilutive or anti-dilutive only after the accounting control test and instrument sequencing
-    text: "Recalculate EPS with both adjusted numerator and denominator; label it dilutive or anti-dilutive only after two checks. First, the control test: compare incremental EPS with EPS from continuing operations (profit before one-off items); the convertible is dilutive only if it lowers that figure. Second, sequencing: with one convertible there is no order to set, so write \"single instrument, no sequencing\". With two or more instruments, stop and ask an accountant."
+  - title: Read the terms
+    text: Take the conversion ratio, timing, interest and tax effects from the contract.
+  - title: Compare incremental EPS
+    text: Divide the after-tax profit change by the extra shares. Compare with basic EPS.
+  - title: Label it
+    text: Call it dilutive only if it lowers EPS. Stop if there is more than one convertible.
 output_shape: |-
   A single-instrument if-converted comparison showing basic EPS, candidate EPS and incremental EPS.
   Scope and dated sources
   Inputs and assumptions
   Model calculations and reconciliations
   Actual file verification
-  MISSING: and CHECKS MISSED
+  MISSING:
+  CHECKS MISSED
 tweaks:
   - what: "Assumed conversion date"
     how: "Take the assumed conversion date from the profit figures, the share count and the convertible terms. Use one currency and scale on every line."

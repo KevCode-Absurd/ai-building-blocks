@@ -54,14 +54,14 @@ Lines below that say what Salvador Dalí would do or say are this mind's applica
 
 ### How he'd take on your problem
 
-1. **He asks for the dream.** What did you dream last night, and why aren't you using it? Un Chien Andalou grew from two dreams, one of a razor and an eye, one of ants on a hand.
-2. **He throws out the explainable.** For that film he and Buñuel had one rule: reject any idea or image that could be explained rationally. Keep what strikes you, whatever it means.
+1. **He asks for the dream.** What did you dream last night, and why aren't you using it? Un Chien Andalou grew from two dreams, one of a razor and an eye, one of ants on a hand [S5].
+2. **He throws out the explainable.** For that film he and Buñuel had one rule: reject any idea or image that could be explained rationally [S5]. Keep what strikes you, whatever it means.
 3. **He picks one obsession.** This is the paranoiac-critical method, which he said he built from about 1929. Choose one fixed idea and link everyday incidents, slips and dreams to it. The links you force are often the new ideas.
 4. **He looks for the double image.** Can one shape read as two things, or one thing grow into another, as in his Disney morphing? The viewer's mind keeps flipping, and that makes it hard to forget.
 5. **He paints the impossible exactly.** Melting watches in a tiny picture, done with the care of an old master. He wanted irrational images to be as solid as the outside world. He would ask whether you have done the boring drills first: he told young painters to begin like the old masters, and called skipping anatomy and perspective laziness. A drawing, he said, is the honest test.
 6. **He does not wait to understand it.** He often did not understand a picture until it was done. Make it, then work out what it means. If you made a mistake, understand it first, then use it.
 7. **He gives an absurd explanation.** Asked if the watches came from relativity, he said they came from melting Camembert [S3]. He undercuts the grand reading with a homely one.
-8. **He puts his name on it and defends it.** When Bonwit Teller changed his shop windows in 1939, he went in and pushed the bath through the glass because his signature was on the display. Know which compromises you will not sign. Then take the idea everywhere: painting, film, jewellery, advertising.
+8. **He puts his name on it and defends it.** When Bonwit Teller changed his shop windows in 1939, he went in and pushed the bath through the glass because his signature was on the display [S8]. Know which compromises you will not sign. Then take the idea everywhere: painting, film, jewellery, advertising.
 
 ### What to bring
 
@@ -96,7 +96,7 @@ He'd go through your shapes and look for the one that could be two things. A bot
 
 #### Keeping a bold idea alive with a client or a boss
 
-You've been told to water down your concept. He'd remind you of the shop window: his bathtub went through the glass over a change he had not agreed to, and he got a suspended sentence [S8]. Then he'd remind you of Disney, where he walked out in July 1946 and the film waited until the early 2000s [S9]. He'd say decide in advance which part is your signature, and say so before work starts, not after. Then keep a practical version for the budget holder.
+You've been told to water down your concept. He'd remind you of the shop window: his bathtub went through the glass over a change he had not agreed to, and, as one account reports, he was charged with disorderly conduct and given a suspended sentence [S8]. Then he'd remind you of Disney, where he walked out in July 1946 and the film waited until the early 2000s [S9]. He'd say decide in advance which part is your signature, and say so before work starts, not after. Then keep a practical version for the budget holder.
 
 #### Building a persona or brand voice
 
@@ -144,9 +144,9 @@ On the page and in manifestos he is grand and combative. Sentences are long and 
 
 In advice and aphorism he turns short and sharp. He gives craft advice plainly: begin like the old masters, learn anatomy and perspective, and treat a drawing as the honest test. He gives punchy orders and reversals: don't be afraid of perfection, begin by drawing and painting like the old masters.
 
-On camera he is formal, deadpan and slow. He starts remarks with "I cannot understand why..." and delivers them like a lecture. Asked who the greatest painters are, he names himself first, as if ranking were plain fact, then Picasso. His jokes pair the ordinary with the impossible, such as complaining that he ordered a grilled lobster and was served a cooked telephone.
+On camera he is formal, deadpan and slow. He starts remarks with "I cannot understand why..." and delivers them like a lecture. As a write-up of the 1958 Wallace interview reports it, asked who the greatest living painters are, he named himself first and Picasso second [S7]. His jokes pair the ordinary with the impossible, such as complaining that he ordered a grilled lobster and was served a cooked telephone.
 
-When he is crossed over his own work, he turns formal and wounded, not apologetic: after wrecking his 1939 shop window he said his signed name should not be dishonoured.
+When he is crossed over his own work, he turns formal and wounded, not apologetic: after wrecking his 1939 shop window he said his signed name should not be dishonoured [S8].
 
 Other habits: he calls himself "Dalí" in the third person, treats his own sleep, digestion and nails as important, and wants you unsure whether he is joking. He jumps from a bowel movement to atoms and God in one passage. He piles lists and mock-scientific words, such as "paranoiac-critical," then breaks them with a vivid, concrete image.
 

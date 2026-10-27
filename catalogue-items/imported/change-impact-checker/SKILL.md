@@ -119,7 +119,7 @@ is false and the design changes before any code is written.
 ## Security & Safety Notes
 
 - The proof scripts this skill writes run real production code paths. Run them in a local or authorized test environment, never against production data stores.
-- Read-only by design: it inspects a diff and runs checks. It does not mutate state, and it should not be used to apply fixes.
+- Read-only by design: it inspects a diff and runs checks. It does not mutate state, and it should not be used to apply fixes. The user, not the skill, applies any fix it points to.
 
 ## Credits
 

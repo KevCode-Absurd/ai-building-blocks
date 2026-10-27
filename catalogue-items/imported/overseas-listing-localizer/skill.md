@@ -66,7 +66,7 @@ description: 跨境一套素材多区域本地化。一套素材 → 多语言�
 
 ## 四、区域平台规格
 
-| 区域 | 主流平台 | 图片规则要点 |
+| 区域 | 主流平台 | 图片规则要点 (Oct 2026 author note, may be out of date; check each platform's seller help page) |
 | --- | --- | --- |
 | 北美 | Amazon | 主图纯白 RGB(255,255,255)、商品占 ≥85%、禁文字水印 |
 | 东南亚 | Shopee / Lazada | 方图，体积限制紧（≤2MB） |
@@ -74,7 +74,7 @@ description: 跨境一套素材多区域本地化。一套素材 → 多语言�
 | 全球 | Temu | 方图、干净背景、主图禁促销文字 |
 | 独立站 | Shopify | 无硬性限制，2048 方图便于放大镜 |
 
-> **Check the rules before you upload.** These picture rules are the author's notes at the time this skill was imported (Oct 2026). Platforms change their rules often. Look up each platform's current seller help page before you upload, and do not treat this table as current.
+> **Last checked: Oct 2026, when this skill was imported. The table above is not current.** Treat every row as an old note until you confirm it. These picture rules are the author's notes at the time this skill was imported (Oct 2026). Platforms change their rules often. Look up each platform's current seller help page before you upload, and do not treat this table as current.
 
 各区域版本出完，逐个过校验：
 
@@ -122,6 +122,8 @@ node scripts/gen.mjs --task cross-border-localize --brand examples/brand.yaml \
 > 4. Check each region's images against its own platform rules. Do not reuse one set of rules for all.
 > 5. Make the size table on its own, with letter sizes and centimetres.
 > 6. List the labels that region often requires (materials, origin, certifications). Say clearly that this is a hint, not legal advice, and the seller must confirm it.
+>
+> Using the check script: give it one or more image files and a `--platform` value (amazon, tiktok-shop, temu, shopee, shopify or taobao; the default is amazon). Each image gets pass, warn (passes with reminders) or reject-risk (likely to be rejected). It exits with an error if any image is reject-risk. In the commands above, paths such as `docs/flat-lay/` and `out/us/` are placeholders. Point them at your own product photos and output folders.
 >
 > Image making and the check script need code running and an image model key. Copy and size tables work in any chat.
 

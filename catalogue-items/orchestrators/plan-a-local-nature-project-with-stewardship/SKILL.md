@@ -18,6 +18,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Assignment AI-use rules planner](https://useaiblocks.com/skills/assignment-ai-boundaries). It takes the lesson plan and plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+Use the "Next steps" section below, not this shared list. The Overloaded lesson checker is the only link above that fits, and only to check the session table for too much in one session. The Skill transfer challenge writer is for lessons, not for a nature project, so skip it.
 
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -35,6 +36,8 @@ How to start:
 <!-- /needs -->
 
 ## Fill these inputs
+These four are the required inputs for this run. They replace the shared "Before you start" block above, so skip its "Your question" line. A lesson plan is optional. If you have one, add it. If not, the session table in the deliverable is the lesson plan.
+
 - LEARNERS: give age group, access needs and adult supervision.
 - PLACE: describe the site, permissions, seasonal limits and existing observations.
 - PROJECT_LIMITS: give sessions, budget, allowed actions and who approves changes.
@@ -44,6 +47,8 @@ How to start:
 Open the included SKILL.md and required references for each named skill before its stage. Inherit source requirements, approvals, local-only handling and action boundaries. If a skill folder is absent, ask the user to attach it. A chat without tools can use pasted skill instructions and source records for draft text and tables, but must mark unavailable conversion, rendering, API calls or tests NOT RUN. Never fabricate files, access or download links.
 
 ## Work in this order
+Before the run starts, confirm the three skills below (`nature-inquiry-cycle`, `intervention-impact-planner` and `learning-documentation-planner`) are attached. If one is missing, stop before step 1, name it and ask the person to add it. Do not do its job from memory. After each step, check that its file holds the three things named for that step before you pass it on. Each step below says what it must hand to the next.
+
 1. **Begin with the place** Use `nature-inquiry-cycle`. Use learners, site and observations to plan noticing, inquiry, a small trial, ongoing care and honest sharing. It must return three things: (a) the session list, each session with a question, an observation and a baseline to record; (b) the proposed action, written as one sentence with who would do it and where; (c) a plain description of the local system (what lives or happens there and what depends on it) and the evidence gaps. Pass all three to impact review.
 
 2. **Check effects before action** Use `intervention-impact-planner`. Use the local-system description and proposed action to test feasibility, unintended effects, adult responsibilities and doing less. It must return three things: (a) the revised action, or a decision to do less or nothing; (b) the adult gate for each action, meaning who must approve it and what permission is needed first; (c) stop conditions, meaning what the group will see that means the action stops. Pass all three to documentation planning.
@@ -57,7 +62,7 @@ If site permission, supervision or ecological uncertainty prevents action, offer
 Return a session table with question, observation, proposed action, adult gate, evidence and next decision. Include baseline records, alternatives, adverse-effect watch points, documentation sheet and care handover with named owner and review date. An unknown owner means unresolved stewardship. Describe a planned inquiry using an emerging framework, not a proven intervention. Never invent learner quotes or ecological improvements.
 
 ## Next steps
-After the deliverable, tell the user what to do with it. First, confirm the named owner and the review date with the site adult before any action. If no owner is named, say stewardship is unresolved and do not start the action. Second, if the unit needs to teach a fixed curriculum goal in one nearby place, use the Local nature inquiry unit planner next, with the session table.
+After the deliverable, tell the user what to do with it. First, confirm the named owner and the review date with the site adult before any action. If no owner is named, say stewardship is unresolved and do not start the action. Second, if the unit needs to teach a fixed curriculum goal in one nearby place, use the [Local nature inquiry unit planner](https://useaiblocks.com/skills/nature-inquiry-unit) next, with the session table. Third, you can check the session table for overload with the [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker).
 
 ## Final check
 Return the listed deliverables, source and assumption register, missing inputs and a check table with PASS, FAIL or NOT RUN for each check below. Explain failures and the next person or input needed. Keep measured facts, proposed work and illustrative examples separate. A draft or structural check is not executed validation.

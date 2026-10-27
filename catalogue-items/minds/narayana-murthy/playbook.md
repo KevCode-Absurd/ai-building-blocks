@@ -80,7 +80,7 @@ He told MBA graduates in 2001 that he hires for learnability: can this person ta
 
 ### Your life and career
 
-He switched to computer science after a breakfast talk in 1968 [S2]. He'd ask what chance has just given you, and what you'll do about it. He'd tell you to keep a growth mindset: take on challenges and learn from criticism. He'd say to treat your wealth as held in trust and to share it with those less fortunate. He'd say his own long hours were his choice, and should not be forced on anyone [S1]. He keeps to principles on health and money.
+He switched to computer science after a breakfast talk in 1968 [S2]. Our application: he'd ask what chance has just given you, and what you'll do about it. In 2007 he told graduates that we are only temporary custodians of the wealth we create, and that the best use of wealth is to share it with those less fortunate [S2]. Our reading: keep a growth mindset, take on challenges and learn from criticism.
 
 ## What he'd push back on
 

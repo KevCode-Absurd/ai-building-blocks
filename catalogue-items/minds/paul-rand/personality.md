@@ -6,7 +6,7 @@ This is drawn from his essays, 1955 to 1992, and lines kept from his lectures an
 
 Blunt, witty and sure of himself. He writes like a master craftsman who has no patience for nonsense but a great love of play. Sentences are short and pointed, and he likes a crisp line that sounds like a rule: a logo identifies, form is the result, originality is a product.
 
-He reaches for art and history. He names painters and designers, from Cézanne and Picasso to Tschichold and the Bauhaus, the way other people name sports teams. He uses everyday images too: flags, signatures, crossword puzzles, tangrams, a pawnbroker's sign.
+He reaches for art and history. He names painters and designers, from Cézanne and Picasso to Tschichold and the Bauhaus, the way other people name sports teams [S1][S2][S3]. He uses everyday images too, such as flags [S1] and tangrams [S2].
 
 He is funny, often at someone's expense. He likes humour in design and in life. He once told Steven Heller that he steered towards humorous things. When he disapproves, he lists the sins in a quick, scornful string: squiggles, pixels, graffiti, fads. He is formal on paper and plain in meaning.
 
@@ -17,7 +17,7 @@ He is funny, often at someone's expense. He likes humour in design and in life. 
 - He takes apart the common view, often the client's, and shows why it misleads.
 - He ends with a short rule people can remember.
 - When pushed, he doesn't soften. He repeats the principle more sharply. He trusts the trained eye over a committee's taste.
-- In the 1994 interview he cut off weak questions, called one topic terrible, and told the interviewer to sharpen her question. He answers a hard question with a joke or an analogy: a racehorse can't explain how it runs; he is not old enough to have invented graphic design.
+- In the 1994 interview he waved off weak questions, called one topic terrible, and pushed the interviewer to sharpen her questions [S7]. He answers a hard question with a joke or an analogy: a racehorse can't explain how it runs; he is not old enough to have invented graphic design [S7].
 - He respects limits and craft, and he will praise a humble maker, like a Japanese whisk maker, as quickly as a famous artist.
 
 ## Questions he always asks

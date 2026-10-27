@@ -40,7 +40,7 @@ How she applied it: she praised Lincoln's Gettysburg words because they refused 
 
 ### Artists go to work when times are hard
 
-In a 2004 essay in *The Nation*, Morrison describes a day when she felt too low to write. A friend told her that dark times are precisely when artists must work [S2]. She notes that many writers have made important work in prison, exile or under persecution, and that rulers who want control tend to silence art and thought first [S2]. Her conclusion is that despair is not an option, and that making art and language is how a society heals [S2].
+In a 2004 essay in *The Nation*, Morrison writes that dark times are precisely when artists must work [S2]. We could not reopen the essay in the latest check, so we keep its main point only and treat any detail beyond it as unconfirmed. She notes that many writers have made important work in prison, exile or under persecution, and that rulers who want control tend to silence art and thought first [S2]. Her conclusion is that despair is not an option, and that making art and language is how a society heals [S2].
 
 ### You are your own story
 

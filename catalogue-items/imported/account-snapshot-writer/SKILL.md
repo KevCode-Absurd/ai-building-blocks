@@ -7,7 +7,7 @@ description: "Research a company using Common Room data. Triggers on 'research [
 
 This catalog copy does not include these files:
 
-- `references/my-company-context.md`
+- `references/my-company-context.md` (the user pastes their ICP and value proposition into the chat instead)
 
 Do not say you read or ran them. Do those steps by hand, or ask the user for the original file.
 
@@ -27,16 +27,16 @@ Default all queries to the user's own segments unless the user explicitly asks f
 
 Determine what the user actually needs before deciding how much data to fetch:
 
-**Pattern 1 — Full Overview:** "Tell me about Datadog" / "Summarize cloudflare.com"
+**Pattern 1 — Full Overview:** "Tell me about [COMPANY NAME]" / "Summarize [DOMAIN]"
 → Fetch the full field set and produce a structured briefing.
 
-**Pattern 2 — Targeted Question:** "Who owns the Snowflake account?" / "Is acme.io showing buying signals?" / "What's the employee count for notion.so?"
+**Pattern 2 — Targeted Question:** "Who owns the [COMPANY NAME] account?" / "Is [DOMAIN] showing buying signals?" / "What's the employee count for [DOMAIN]?"
 → Fetch only the relevant field(s). Return a direct, concise answer — do not produce a full brief for a simple question.
 
-**Pattern 3 — Sparse Data:** "Tell me about tiny-startup.io"
+**Pattern 3 — Sparse Data:** "Tell me about [DOMAIN]"
 → If Common Room has limited data for an account, say so honestly: "There is limited information available for this account." Never speculate or fill gaps with generic statements.
 
-**Pattern 4 — Combined Reasoning:** Fetch structured MCP data, then layer in LLM analysis — e.g., "Stripe has 8,000 employees and is hiring heavily for AI roles. Based on your ICP of 1k–10k fintech companies, this is a strong fit."
+**Pattern 4 — Combined Reasoning:** Fetch structured MCP data, then layer in LLM analysis — e.g., "[COMPANY NAME] has [EMPLOYEE COUNT] employees and is hiring for [ROLE TYPE]. Based on your ICP of [YOUR ICP], this is a [STRONG / WEAK] fit." Use only numbers Common Room returned.
 
 ## Step 2: Look Up the Account
 
@@ -76,12 +76,12 @@ If the user explicitly asks for external context or recent news, run web search 
 ## Step 5: Apply Reasoning (Pattern 4)
 
 When the user's question invites synthesis — not just data retrieval — layer in analysis:
-- Compare account data to known ICP criteria from session context
+- Compare account data to the ICP the user pastes in (see below)
 - Identify fit signals (size, industry, tech stack, hiring patterns)
 - Note timing signals (funding, trial status, recent activity spike)
 - Frame insights as clearly derived from data, not assumed
 
-When the user's company context is available (see `references/my-company-context.md`), position findings relative to the user's value proposition and ICP.
+Before you position the findings, ask the user for their ideal customer profile (ICP) and value proposition, and ask them to paste both into the chat. There is no company file in this copy. Then position the findings relative to that ICP and value proposition. If the user gives none, say the fit view is general.
 
 ## Step 6: Produce Output
 
@@ -111,7 +111,7 @@ Only include sections where Common Room returned actual data. Omit sections enti
 [Name | Title | Score — top 5 sorted by score desc]
 
 **RoomieAI Research** [If summary research is non-null]
-[Summary research output; list all available research topic names]
+[RoomieAI is Common Room's own AI research tool. Say so in one plain line. Then give the summary research output and list all available research topic names]
 
 **Recommended Next Steps**
 [2–3 specific, signal-backed actions]

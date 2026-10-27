@@ -53,8 +53,8 @@ output_shape: |-
 tweaks:
   - what: "Call date"
     how: "Take the call date from the approved call and the commitment ledger. Use one currency and scale on every line."
-  - what: "The investor's remaining commitment"
-    how: "Change the investor's remaining commitment and have your AI recalculate. Keep the actual figures you supplied."
+  - what: "The investor's unfunded balance"
+    how: "Change the investor's unfunded balance and have your AI recalculate. Keep the actual figures you supplied."
 judge:
   - Eligible commitments share the same transaction and allocation rules.
   - A capped collectible amount does not waive or reallocate the unfilled obligation.

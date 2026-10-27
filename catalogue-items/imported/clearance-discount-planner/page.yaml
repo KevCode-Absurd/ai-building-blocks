@@ -7,6 +7,8 @@ job: set-prices
 headline: Clearance discount planner
 subhead: Give it your slow stock, your costs and your past sales. It works out how price cuts changed your sales before. You get a schedule of when to cut and how deep, with a price floor for each item.
 explain: |
+  This is an MIT-licensed copy of Kishor Kukreja's markdown-optimization skill from awesome-supply-chain. We only gave it a plain name.
+
   A markdown plan for slow stock that tells you when to cut prices and by how much, so you clear inventory without giving away more margin than needed. You give your stock and sales history, and you get steps by week.
 
   The skill first asks what is stuck: overstock, seasonal items or slow movers, how old it is and what you paid. It looks at past sell-through to see how price changes moved sales. It sets a floor price from your margin limit and a deadline from the season. Then it builds a schedule of cuts in steps such as 10, 20 or 30 percent, with timing by item and store.
@@ -37,6 +39,7 @@ how_to_use:
   - Add your lowest acceptable margin and your deadline. Add competitor prices if you have them. The code needs your own margin limit as an input and has no default, so give it one. Nothing should be priced below it.
   - Each item needs at least 10 weeks of sales for the price-response model. With less, ask your AI to set the cuts by hand in steps of 10, 20 or 30 percent.
   - Use an AI that can run code, such as ChatGPT with data analysis or Claude with code tools. Some plans need a paid tier for this. The code needs Python with pandas, scipy and scikit-learn.
+  - The skill's code assumes a 70 percent sell-through target and fixed cut steps (10, 20, 25, 30 up to 70 percent). Tell your AI your own target and the steps you will allow.
   - Check each price against your margin limit before you change anything. The expected revenue and sell-through come from a simple fit to your past sales, so they can be wrong. Try the first cut on a few items or one store before you mark down everything.
   - Next, send the schedule to promotion-and-stock-planner if you want to tie the cuts to a sale.
 output_sample:

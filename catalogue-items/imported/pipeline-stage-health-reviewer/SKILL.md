@@ -25,12 +25,14 @@ much is where, what's aging, what's at risk.
 |---|---|---|
 | crm | open pipeline + 2 quarters of closed for baselines | no (files fallback: uploaded pipeline export) |
 
-Read-only throughout; fixes hand off to the the skills that make changes (update-opportunity, log-activity and others).
+Read-only throughout. If a fix is needed, tell the user which record to change and what to change, and let them make the change in their CRM by hand. If they ask you to change one record and your CRM connection allows writes, you may do that single change.
 
 ## Inputs
 
 Scope - "my pipeline" (default - current user as owner), a named rep,
 or a team; period - current quarter (default) or a close-date range.
+
+If the user uploads an export instead of connecting a CRM, it needs these columns: stage, amount, close date, owner, last activity, created date and next step. Use the file's own header names. If one is missing, say which flags cannot be worked out.
 
 ## Step 1 - Ground
 
@@ -57,7 +59,7 @@ count with no activity in 14+ days.
 
 Flag opps that hit any of:
 
-- **Stale:** no activity in 14+ days (threshold tuned to the cycle)
+- **Stale:** no activity in 14+ days (the default; use another threshold only if the user gives one, and say which you used)
 - **Slipping:** close date in the past, or moved out 2+ times (if
   history is available)
 - **Blank next step**
@@ -82,8 +84,7 @@ blank-next-step count); at-risk deals table (account, stage, $, close,
 flags, suggested action); conversion signal from the 2-quarter baseline
 (stage-to-stage rates, win rate, median cycle); and recommended focus
 (highest-$ at-risk deal + action, the stage with most stuck deals,
-coverage gap action if under). Fixes apply through `update-opportunity`
-or the crm hygiene flow - this skill only reads.
+coverage gap action if under). Fixes are made by the user in their CRM (or as a single change they ask for) - this skill only reads.
 
 ## How it adapts (guidance for Claude; never show these labels to the user)
 
@@ -93,5 +94,5 @@ tiers:
                 export for slip detection); history-based flags noted
                 absent
   read-only:    live crm pull with history, contact roles, baselines
-  gated-writes: none - fixes hand off to update-opportunity
+  gated-writes: none - the user makes fixes in the CRM
 ```

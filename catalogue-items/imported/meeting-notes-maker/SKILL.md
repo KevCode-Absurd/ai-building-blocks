@@ -17,17 +17,19 @@ This skill enables an AI agent to process meeting audio recordings into structur
 
 2. **Preprocess the audio for quality.** Apply noise reduction to suppress background hum, keyboard clicks, and room echo. Normalize audio levels across the recording so that quiet speakers are boosted and loud segments are attenuated. If the recording has multiple channels (e.g., a stereo podcast), split channels where each maps to a known speaker. Flag sections with very low signal-to-noise ratio as potentially unreliable.
 
-3. **Perform speaker diarization.** Identify and label distinct speakers throughout the recording. Use voiceprint clustering to distinguish speakers even when they interrupt each other or speak in quick succession. Assign temporary labels (Speaker 1, Speaker 2, etc.) by default, and allow the user to provide a name mapping either before or after processing. Handle overlapping speech by attributing the segment to the dominant speaker and noting the overlap.
+3. **Perform speaker diarization.** Identify and label distinct speakers throughout the recording. Only run voiceprint clustering after the user confirms that everyone in the recording agreed to it. Voiceprints are biometric data in some places. If anyone has not agreed, or the user is not sure, skip voice matching: label speakers by the channel or by what the user tells you (for example "Speaker 1 = Priya, said at 00:00:12"), or leave the labels as "Speaker" with a timestamp. Where voice matching is allowed, use voiceprint clustering to distinguish speakers even when they interrupt each other or speak in quick succession. Assign temporary labels (Speaker 1, Speaker 2, etc.) by default, and allow the user to provide a name mapping either before or after processing. Handle overlapping speech by attributing the segment to the dominant speaker and noting the overlap.
 
 4. **Transcribe the audio to text.** Run the preprocessed, diarized audio through a speech-to-text engine (e.g., Whisper, Deepgram, Google Speech-to-Text). Produce a word-level or segment-level transcript with timestamps. Apply punctuation restoration and capitalization correction. For multi-language meetings, detect language switches and transcribe each segment in its original language, optionally providing inline translations.
 
 5. **Generate the structured summary.** Analyze the full transcript to extract key discussion topics, decisions made, open questions, and action items. Group related discussion segments into thematic sections. For each action item, identify the owner (by speaker label or name), the task description, and any mentioned deadline. Produce a summary document with clearly delineated sections: Overview, Key Discussion Points, Decisions, Action Items, and Follow-ups.
 
-6. **Format and deliver the output.** Produce the final output in the requested format: Markdown, JSON, or plain text. Include both the full timestamped transcript and the structured summary as separate sections or files. If calendar integration is enabled, cross-reference the meeting with calendar event data to auto-populate the meeting title, attendee list, and agenda in the output header.
+6. **Format and deliver the output.** Produce the final output in the requested format: Markdown, JSON, or plain text. Include both the full timestamped transcript and the structured summary as separate sections or files. Calendar integration is optional and is not available in this library, so skip it. Ask the user for the meeting title, attendee list and agenda to put in the output header, or leave them blank.
 
 ## Usage
 
 Provide the agent with the path to an audio file and optionally a speaker name mapping, output format preference, and language hint. The agent returns a full transcript and a structured summary.
+
+**Privacy note (added by AI Blocks):** Telling speakers apart by voiceprint is biometric processing in some places. Confirm everyone agreed to the recording and check local privacy rules before using it.
 
 **Prompt format:**
 
@@ -138,7 +140,7 @@ sprints and prioritize the analytics instrumentation for immediate deployment.
 - **Review low-confidence segments.** Flag transcript segments where the speech-to-text confidence score is below 0.7 for human review. These often correspond to crosstalk, mumbling, or heavy accents.
 - **Keep summaries to one page.** A good summary is shorter than the transcript, not a restatement of it. Focus on decisions and action items — the transcript exists for anyone who needs full detail.
 - **Separate transcript from summary in the output.** Users have different needs: some want the full record, others just want action items. Deliver both as distinct sections or files.
-- **Integrate with calendar metadata.** When the agent has access to calendar events, auto-populate the meeting title, attendee list, and agenda to reduce manual input and enrich the output header.
+- **Calendar metadata (optional, not available here).** If your own tool can read calendar events, it can fill in the meeting title, attendee list and agenda. Otherwise ask the user for them.
 
 ## Edge Cases
 

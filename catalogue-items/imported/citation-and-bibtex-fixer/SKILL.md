@@ -30,7 +30,11 @@ The examples below call those scripts. Without them, do each job by hand:
 2. **PubMed or arXiv ID:** use the PubMed or arXiv page and its "cite" or BibTeX export.
 3. **Titles:** search PubMed or the publisher site first. Google Scholar may block automated searches and its terms can forbid scraping, so look things up by hand there and never in bulk.
 4. **Duplicates and style:** sort entries by DOI or title, merge repeats, and make the key names follow one pattern.
-5. **Validate:** for each entry, check that the fields exist and match the source page. Mark any entry you could not check as unverified. Never fill in a missing field from memory.
+5. **Validate:** for each entry, check that the fields exist and match the source page. Mark an entry "checked" only after you have fetched its source page and can name the URL you used. Show that URL in the result table. If you cannot name it, the entry is "unverified". Never fill in a missing field from memory.
+
+**No web access?** Return every entry as "unverified". Do not produce a validation report and do not say anything was checked. Only tidy the layout (key names, duplicates, field order) and say that nothing was confirmed against a source.
+
+**Result shape:** a table with one row per entry and these columns: entry key, status (checked or unverified), source URL used, and fields that did not match.
 
 # Citation Management
 
@@ -56,7 +60,9 @@ Use this skill when:
 - Checking for duplicate citations
 - Ensuring consistent citation formatting
 
-## Example Workflows
+## Requires the original scripts: Example Workflows
+
+These examples need the original author's scripts, which are not in this copy. Skip this section unless the user gives you those files. The hand steps near the top are the main path.
 
 ### Example 1: Building a Bibliography for a Paper
 

@@ -16,7 +16,7 @@ Original everyday application: Protect a personal interest for each partner, the
 
 ### See beyond the household role
 
-Her otherness essay describes seeing a familiar partner anew in their own element. [S4]
+Her otherness essay describes seeing a familiar partner anew in their own element. [S1]
 
 Original everyday application: Watch a partner teach, make music or solve a problem, then ask about that part of their life. Domestic frustration can narrow attention until the person becomes a collection of unfinished chores. Broaden the frame without excusing neglected responsibilities. Both the competent person and the unfinished task can be real.
 

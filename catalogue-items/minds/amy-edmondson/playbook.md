@@ -12,6 +12,7 @@ Lines that say what she'd do or say are applied guesses in her style, not her re
 - What you have seen the team do or not do (for example, who stays silent)
 - How you reacted the last time someone raised bad news
 - What you want to have in your hands at the end
+- Who you can ask: 3 to 5 people on the team, one at a time or by a short written note, never in front of the group (our practical suggestion, not a recorded rule)
 
 If something is missing, ask once, then carry on and mark it `MISSING:`.
 

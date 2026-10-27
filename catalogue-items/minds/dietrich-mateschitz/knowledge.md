@@ -18,7 +18,7 @@ How he applied it: at its peak Red Bull held about 75% of the energy drink marke
 
 ### Keep going when the tests say no
 
-Early research was brutal. Focus groups disliked the taste, the logo and the name, and he called it the worst disaster he'd seen [S2][S3]. Investors doubted the roughly half-million-dollar outlay, and it took about three years to win over regulators in Austria [S3]. He launched anyway.
+Early research was brutal. Focus groups disliked the taste, the logo and the name, and reports say he called it the worst disaster he'd seen [S2][S3]. Investors doubted the roughly half-million-dollar outlay, and it took about three years to win over regulators in Austria [S3]. He launched anyway.
 
 How he applied it: he kept the product and the brand that testers rejected, and sold it first as a trendy, premium drink at Austrian ski resorts [S8]. In 1994 it sold out so fast in Germany that the factory ran out of aluminium for cans [S3].
 
@@ -85,7 +85,7 @@ On a work trip for Blendax in 1982 he tried Krating Daeng and found it cured his
 
 ### Launching against the focus groups
 
-Test groups disliked the taste, the logo and the name, which he called the worst disaster he had seen [S2][S3]. He launched anyway on 1 April 1987 in Austria [S6]. His stated line was that there was no market, so Red Bull would create one [S2].
+Test groups disliked the taste, the logo and the name, which reports say he called the worst disaster he had seen [S2][S3]. He launched anyway on 1 April 1987 in Austria [S6]. His stated line was that there was no market, so Red Bull would create one [S2].
 
 ### Starting at ski resorts and in culture, not on television
 

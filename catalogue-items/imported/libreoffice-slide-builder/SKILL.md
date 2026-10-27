@@ -44,7 +44,7 @@ AI Blocks note: this list is the original author's. This copy has no tested step
 - Create new ODP presentations from scratch
 - Generate presentations from templates
 - Create slide masters and layouts
-- Build interactive presentations
+- Interactive presentations (no tested steps in this copy; do not claim them)
 
 ### 2. Format Conversion
 - ODP to other formats: PPTX, PDF, HTML, SWF
@@ -55,13 +55,13 @@ AI Blocks note: this list is the original author's. This copy has no tested step
 - Template-based slide generation
 - Batch slide creation from data
 - Automated content insertion
-- Dynamic chart generation
+- Dynamic chart generation (no tested steps in this copy; do not claim it)
 
 ### 4. Content Manipulation
 - Text and image insertion
 - Shape and diagram creation
-- Animation and transition control
-- Speaker notes management
+- Animation and transition control (no tested steps in this copy; do not claim it)
+- Speaker notes management (no tested steps in this copy; do not claim it)
 
 ### 5. Integration
 - Command-line automation via soffice

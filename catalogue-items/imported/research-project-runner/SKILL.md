@@ -17,6 +17,10 @@ You are a research project manager, not a domain expert. You orchestrate; the do
 
 **Other skills named here** (`20-ml-paper-writing`, `21-research-ideation`, and the file `references/citation-workflow.md` inside the first) are not in this library. They must be installed separately. If they are missing, do that step yourself in plain steps and say so.
 
+**Fill in the limits before the loop starts.** The loop and cron commands below end with the user's spend cap, time limit and maximum cycles. Write the user's real figures into the command text before you start it. If the user has not given all three, ask. Do not start any loop or cron job without them.
+
+**Search tools may need keys or a paid plan.** Exa, Semantic Scholar and other search tools can need an API key or a paid plan. Ask the user before you use one that needs a key or costs money. Use free sources such as arXiv when you cannot ask.
+
 **This runs fully autonomously.** Within those limits, do not ask the user for permission or confirmation — use your best judgment and keep moving. Show the human your progress frequently through research presentations (HTML/PDF) so they can see what you're doing and redirect if needed. The human is asleep or busy; your job is to make as much research progress as possible on your own.
 
 ## Getting Started
@@ -80,6 +84,8 @@ OUTER LOOP (periodic, reflective)
 
 FINALIZE (when concluding)
   Write paper via ml-paper-writing → final presentation → archive
+  Before sharing: check every citation in the draft against the source paper,
+  and write no result that is not in data/ or experiments/.
 ```
 
 The inner loop runs tight experiment cycles with clear measurable outcomes. This could be optimizing a benchmark (make val_loss go down) OR testing mechanistic hypotheses (does intervention X cause effect Y?). The outer loop steps back to ask: what do these results *mean*? What patterns emerge? What's the story? Research is open-ended — the two loops let you both optimize and discover.
@@ -254,14 +260,14 @@ The "Lessons and Constraints" section is especially important — it captures sp
 **First action — run this immediately:**
 
 ```
-/loop 20m Continue autoresearch. Read research-state.yaml and findings.md. Re-read the autoresearch SKILL.md occasionally to stay aligned. Step back and reflect holistically — is the research making real progress? Are you deepening understanding or just running experiments? If stalling, pivot or search literature for new ideas. Keep making research progress — never idle, never stop. Update findings.md, research-log.md, and research-state.yaml when there's new progress. Git commit periodically and clean up the repo if needed. Show the human your research progress with key plots and findings by preparing a report in to_human/ and opening the HTML/PDF. Only when you believe the research is truly complete, invoke the ml-paper-writing skill to write the paper.
+/loop 20m Continue autoresearch. Read research-state.yaml and findings.md. Re-read the autoresearch SKILL.md occasionally to stay aligned. Step back and reflect holistically — is the research making real progress? Are you deepening understanding or just running experiments? If stalling, pivot or search literature for new ideas. Keep making research progress — never idle, never stop. Update findings.md, research-log.md, and research-state.yaml when there's new progress. Git commit periodically and clean up the repo if needed. Show the human your research progress with key plots and findings by preparing a report in to_human/ and opening the HTML/PDF. Only when you believe the research is truly complete, invoke the ml-paper-writing skill to write the paper. Stop the loop and report when any limit the user set is reached: spend cap, time limit or maximum cycles (use the exact figures the user gave you, written in here).
 ```
 
 This fires every 20 minutes regardless of what's happening. It's a rhythm that keeps you working — not a research phase boundary. If your previous work isn't done, just continue it.
 
 ### OpenClaw
 
-**First action — set up a 20-minute cron job in the current session. You MUST do this before any research work.** The cron tool, the Telegram, WhatsApp or Slack messaging and the OpenClaw setup need their own accounts and setup, done before the run starts. If you do not have them, skip the messaging and put each report in the `to_human/` folder.
+**First action — set up a 20-minute cron job in the current session. You MUST do this before any research work.** A recurring job like this keeps running and can keep spending until the user's limits stop it, so tell the user this and get their three limits first. The cron tool, the Telegram, WhatsApp or Slack messaging and the OpenClaw setup need their own accounts and setup, done before the run starts. If you do not have them, skip the messaging and put each report in the `to_human/` folder.
 
 Use the `cron.add` tool to create a recurring job bound to this chat session:
 
@@ -272,7 +278,7 @@ Use the `cron.add` tool to create a recurring job bound to this chat session:
   "sessionTarget": "current",
   "payload": {
     "kind": "agentTurn",
-    "message": "Continue autoresearch. Read research-state.yaml and findings.md. Re-read the autoresearch SKILL.md occasionally to stay aligned. Step back and reflect holistically — is the research making real progress? Are you deepening understanding or just running experiments? If stalling, pivot or search literature for new ideas. Keep making research progress — never idle, never stop. Update findings.md, research-log.md, and research-state.yaml when there's new progress. Git commit periodically and clean up the repo if needed. Show the human your research progress with key plots and findings by preparing a PDF report in to_human/ and sending it to the user via Telegram, WhatsApp, or Slack. When you get an exciting result or interesting plot, text it to the user right away — don't wait for a full report. Only when you believe the research is truly complete, invoke the ml-paper-writing skill to write the paper."
+    "message": "Continue autoresearch. Read research-state.yaml and findings.md. Re-read the autoresearch SKILL.md occasionally to stay aligned. Step back and reflect holistically — is the research making real progress? Are you deepening understanding or just running experiments? If stalling, pivot or search literature for new ideas. Keep making research progress — never idle, never stop. Update findings.md, research-log.md, and research-state.yaml when there's new progress. Git commit periodically and clean up the repo if needed. Show the human your research progress with key plots and findings by preparing a PDF report in to_human/ and sending it to the user via Telegram, WhatsApp, or Slack. When you get an exciting result or interesting plot, text it to the user right away — don't wait for a full report. Only when you believe the research is truly complete, invoke the ml-paper-writing skill to write the paper. Stop the loop and report when any limit the user set is reached: spend cap, time limit or maximum cycles (use the exact figures the user gave you, written in here)."
   }
 }
 ```

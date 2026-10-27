@@ -30,8 +30,9 @@ you_get:
   - A note on what a successful answer looks like
   - Guidance on what a miss tells you
 how_to_use:
+  - Before you start, the learner must already have shown they understand the concept, for example by passing a quiz or explaining it in their own words. Have that answer ready to paste in as the learner's prior answer.
   - Open a chat with your AI. No code, files or paid tools are needed.
-  - Paste the system prompt from the SKILL.md file into the chat.
+  - Paste the system prompt from the SKILL.md file into the chat. It has {{placeholder}} fields. Replace each one with your concept, the original context and any optional domains, or delete the line, before you send it.
   - Type the concept the learner just understood and where they learned it.
   - Add a near domain, a far domain and the learner's age or stage if you want to choose them (optional).
   - Give the two challenges to the learner. Paste their answers back into the chat to see what they show.

@@ -41,7 +41,7 @@ you_get:
   - Any of its own checks the prompts still miss, one line each
 
 how_to_use:
-  - Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it in. It writes prompts only. You make the pictures and clips in an image tool and a video tool, which may cost credits.
+  - Open the skill in Claude, ChatGPT or Gemini, or copy it and paste it in. It writes prompts only. You make the pictures and clips in an image tool and a video tool. The clip stage needs a connected or paid video tool, and each clip costs credits.
   - Paste the script. The best start is one from the Clay town video ad script writer. Attach your product photos and type out every label line.
   - Approve the avatar card. Make the reference images and pick one.
   - Make the sheets. Compare the product sheet with your real pack, word by word. Then approve the sheets with the lock lines.
@@ -161,8 +161,9 @@ example:
     VOICE  Narrator recorded separately in a stock voice. No figure
     speaks, so no lip-sync.
     EDIT  Shots 1 to 10 with the planned changes. Captions inside the
-    safe zone. End card with line 9: $29.99 first order with SMS
-    sign-up. Renews at $49.99 every 4 weeks.
+    safe zone. End card with line 9: [FIRST-ORDER PRICE] first order with
+    [SIGN-UP TERMS]. Renews at [RENEWAL PRICE] every [PERIOD]. MISSING:
+    exact offer terms; check them against the ad platform's policy before use.
     MISSING: the daily pack's label words. It is shown from its top
     edge in shots 5 and 6 until they're supplied.
     CHECKS MISSED  none

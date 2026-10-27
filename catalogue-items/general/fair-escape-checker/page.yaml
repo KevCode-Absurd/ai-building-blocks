@@ -119,7 +119,7 @@ works_best_with:
     - {name: "Any good chat AI", why: "Matching each escape to its plant is text work any strong chat AI does well with this skill."}
     - {name: "A highlighter and a printout", why: "Marking plants and pay-offs on paper shows gaps fast."}
   inputs:
-    - "A cost ladder from Rising cost ladder builder"
+    - "A cost ladder from the Story conflict escalation planner"
     - "A hook plan from Next-page hook planner"
 
 terms:

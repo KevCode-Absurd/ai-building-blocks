@@ -42,6 +42,8 @@ python scripts/api_scaffolder.py openapi.yaml --framework express --output src/r
 
 The scaffolder reads an OpenAPI spec file. It does not read a live database or existing route files.
 
+**What it writes:** one route handler file per route in the output folder, a validators file (`src/middleware/validators.ts`) and TypeScript types. Check the route handlers first.
+
 **Supported Frameworks:**
 - Express.js (`--framework express`)
 - Fastify (`--framework fastify`)
@@ -67,6 +69,8 @@ python scripts/database_migration_tool.py old.sql --compare new.sql --output mig
 
 ```
 
+**What it writes:** a printed report of missing indexes and slow query risks, plus migration files (for example `migrations/add_indexes.sql`). Read the report first.
+
 The tool writes migration files. It does not apply them. Always try a migration on a copy of your database first, never on live data.
 
 ---
@@ -87,7 +91,7 @@ python scripts/api_load_tester.py https://api.example.com/users --concurrency 50
 # Test with custom headers and body
 python scripts/api_load_tester.py https://api.example.com/orders \
   --method POST \
-  --header "Authorization: Bearer token123" \
+  --header "Authorization: Bearer [YOUR TEST TOKEN]" \
   --body '{"product_id": 1, "quantity": 2}' \
   --concurrency 100 \
   --duration 60
@@ -96,6 +100,8 @@ python scripts/api_load_tester.py https://api.example.com/orders \
 python scripts/api_load_tester.py https://api.example.com/v1/users https://api.example.com/v2/users \
   --compare --concurrency 50 --duration 30
 ```
+
+**What it prints:** a report with requests per second, response time spread (P50, P95, P99) and error counts. Check the error count first.
 
 ---
 
@@ -222,6 +228,7 @@ const jwtConfig = {
 ```
 
 **Step 2: Add rate limiting**
+Install the packages this workflow uses first, and check their versions on npmjs.com: `npm install express-rate-limit helmet zod`.
 ```typescript
 import rateLimit from 'express-rate-limit';
 
@@ -360,6 +367,10 @@ python scripts/api_load_tester.py https://api.example.com/v1 https://api.example
 
 ## Assumptions and Verifiable Success Criteria (Karpathy discipline)
 
+> **Optional extra, and parts are not included.** The agents and slash commands this section and the next two name are not in this item. For a simple job, skip to the Quick start. Use these three sections only for a big decision such as tenancy or a new data store.
+
+*Short version: before a new system, a data-store change or a tenancy decision, get the four answers below. For a quick route scaffold or a one-off query check, state your assumptions and carry on. The forcing-question and composition files are optional extras.*
+
 Before this skill recommends a pattern or modifies a schema, the following four assumptions MUST be surfaced. If any are unknown for a new system, a data-store change or a tenancy decision, the skill stops and walks the [Forcing-question library](#forcing-question-library-matt-pocock-grill) instead. For a quick route scaffold or a one-off query check, do not stop: say which of the four you are assuming and carry on.
 
 1. **Read/write ratio + one-year p99 QPS** — drives DB, cache, queue, and partitioning choices. Kleppmann, *DDIA* (2017).
@@ -407,6 +418,8 @@ To add a custom profile: copy `profiles/node-express.json` to `profiles/<your-or
 
 ## Composition map
 
+> **Not included in this item.** The sibling skills named below, the `cs-backend-engineer` agent and the `/cs:backend-review` command are not part of it. Skip any step that depends on them. Where a row names a concern, you can use the matching AI Blocks item instead, such as the API design reviewer or the CI/CD pipeline setup.
+
 This skill does NOT reimplement scope owned by the POWERFUL-tier specialists. It forks into them. See `references/composition_map.md` for the full routing table. Key forks:
 
 | Concern | Fork into |
@@ -449,6 +462,8 @@ Summary:
 ---
 
 ## Invocation from other agents and skills
+
+> **Only the third surface works here.** The slash command and the agent are not included in this item.
 
 Three surfaces:
 

@@ -35,7 +35,7 @@ The ISO 27001 ISMS auditor pressure-tests any ISMS work. Six sample-driven quest
 
 ### 1. What's the audit scope, and is rolling 3-year coverage on track?
 **No 3-year coverage discipline, no defensible programme.**
-- Every Clause 4-10 + every applicable Annex A control must be audited at least once per 3-year cycle
+- Recommended practice (the original author's rule, not an ISO 27001 requirement): audit every Clause 4-10 and every applicable Annex A control at least once per 3-year certification cycle. Check your own programme and your certification body's rules before you call a gap a failure.
 - Work out by hand, from what the user pastes, which clauses and controls were audited in the last 3 years and which are due
 - Confirm auditor independence — no self-audit on any sample
 
@@ -127,12 +127,11 @@ The original author ran three scripts for these steps. They are not in this copy
 
 These commands come from the original author's toolkit and are not in this copy. If you need one, use the AI Blocks item that does the same job, or ask your AI to do the check by hand.
 
-- `/cs:compliance-readiness` — for multi-framework view
-- `/cs:soc2-audit-prep` — for SOC 2 cross-walk pair (large overlap)
-- `/cs:aims-audit` — for ISO 42001 AIMS cross-walk
-- `/cs:gdpr-audit-prep` — for Article 32 organizational measures overlap
-- `/cs:ciso-review` — for executive cybersecurity strategy
-- `/cs:decide` — to log the verdict
+Do not run these commands. Use the manual steps in the Workflow section above, or these AI Blocks items:
+
+- SOC 2 cross-walk (large overlap): the SOC 2 readiness checker
+- GDPR Article 32 overlap: the GDPR audit prep coach
+- Multi-framework view, ISO 42001 AIMS cross-walk, executive strategy and logging the verdict: not in this library yet. Do these by hand in chat.
 
 ## Related
 

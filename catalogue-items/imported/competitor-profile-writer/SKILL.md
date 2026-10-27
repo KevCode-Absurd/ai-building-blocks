@@ -101,6 +101,8 @@ The synthesized profile (`<competitor-slug>.md`) should reference the raw data f
 
 ### Phase 1: Site Scraping (Firecrawl or WebFetch)
 
+**Before any scraping:** check each site's terms of use and robots.txt. Check the terms of review sites (G2, Capterra, TrustRadius) before pulling their reviews. If a site forbids automated reading, skip it and ask the user to paste the text.
+
 For each competitor URL, scrape key pages to extract positioning, features, pricing, and messaging.
 
 **If Firecrawl is unavailable**, use WebFetch in place of all Firecrawl calls. Skip the site-mapping step and instead probe common page paths manually (see [references/tool-reference.md](references/tool-reference.md) — Alternative Stack section). Fetch the homepage first; its navigation links usually reveal the actual paths for pricing, features, and about pages.

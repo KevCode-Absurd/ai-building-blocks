@@ -5,6 +5,8 @@ description: When the user wants to optimize procurement decisions, allocate ord
 
 # Procurement Optimization
 
+> **Check before you rely on this.** The Python code in this copy has not been tested on real orders, so treat every code block as unverified. The portfolio model assumes supplier costs are independent and ignores some price breaks. The joint replenishment code uses an approximate policy. Before using any result, work a small case by hand with two suppliers, and stop if any total does not match the quotes.
+
 You are an expert in procurement optimization and decision science. Your goal is to help organizations make optimal purchasing decisions that minimize total costs while meeting requirements for service levels, capacity constraints, and risk management.
 
 ## Initial Assessment
@@ -532,8 +534,12 @@ def joint_replenishment_problem(items_df, shared_fixed_cost):
     )
 
     # Calculate costs
+    # The shared fixed cost is paid once per joint order, not once per item.
+    # Joint orders happen base_frequency times a year, so the yearly ordering cost is
+    # shared_fixed_cost * base_frequency. Here it is split equally across the items.
+    # Use a different split if your supplier charges the items differently.
     items_df['ordering_cost'] = (
-        shared_fixed_cost * items_df['assigned_frequency'] / len(items_df)
+        shared_fixed_cost * base_frequency / len(items_df)
     )
 
     items_df['holding_cost'] = (
@@ -936,68 +942,53 @@ print(f"Total Expected Cost: ${result['total_expected_cost']:,.2f}")
 
 | Supplier | Allocation | Share % | Unit Cost | Total Cost | Quality | Lead Time | Risk Level |
 |----------|------------|---------|-----------|------------|---------|-----------|------------|
-| Supplier B | 4,800 units | 60% | $11.00 | $52,800 | 9/10 | 21 days | Low |
-| Supplier C | 2,400 units | 30% | $11.30 | $27,120 | 10/10 | 14 days | Low |
-| Supplier D | 800 units | 10% | $11.00 | $8,800 | 8.5/10 | 21 days | Medium |
-| **Total** | **8,000 units** | **100%** | **$11.09** | **$88,720** | **9.2/10** | **19 days** | **Low** |
+| [SUPPLIER] | [UNITS] | [SHARE %] | [UNIT COST] | [TOTAL COST] | [QUALITY SCORE] | [LEAD TIME] | [RISK LEVEL] |
+| **Total** | **[TOTAL UNITS]** | **100%** | **[AVERAGE UNIT COST]** | **[TOTAL COST]** | | | |
+
+Every figure comes from the user's quotes and demand. Show how each total was worked out, and check that the totals match the quotes.
 
 **Cost Breakdown:**
 
 | Component | Current | Optimized | Savings | % Change |
 |-----------|---------|-----------|---------|----------|
-| Purchase Price | $95,000 | $88,000 | $7,000 | -7.4% |
-| Transportation | $12,000 | $10,400 | $1,600 | -13.3% |
-| Ordering Costs | $2,400 | $1,350 | $1,050 | -43.8% |
-| Holding Costs | $18,000 | $15,500 | $2,500 | -13.9% |
-| **Total** | **$127,400** | **$115,250** | **$12,150** | **-9.5%** |
+| Purchase Price | [CURRENT] | [OPTIMIZED] | [SAVING] | [% CHANGE] |
+| Transportation | [CURRENT] | [OPTIMIZED] | [SAVING] | [% CHANGE] |
+| Ordering Costs | [CURRENT] | [OPTIMIZED] | [SAVING] | [% CHANGE] |
+| Holding Costs | [CURRENT] | [OPTIMIZED] | [SAVING] | [% CHANGE] |
+| **Total** | **[CURRENT]** | **[OPTIMIZED]** | **[SAVING]** | **[% CHANGE]** |
+
+If the user gave no current costs, leave the Current and Savings columns blank. Do not make them up.
 
 **Order Schedule:**
 
 ```
-Recommended Order Plan (Next 12 Months):
+Recommended Order Plan ([PLANNING PERIOD]):
 
-Q1:
-  - Order 1,200 units from Supplier B (Week 1)
-  - Order 600 units from Supplier C (Week 1)
-  - Order 200 units from Supplier D (Week 1)
-
-Q2:
-  - Order 1,200 units from Supplier B (Week 14)
-  - Order 600 units from Supplier C (Week 14)
-
-Q3:
-  - Order 1,200 units from Supplier B (Week 27)
-  - Order 600 units from Supplier C (Week 27)
-  - Order 300 units from Supplier D (Week 27)
-
-Q4:
-  - Order 1,200 units from Supplier B (Week 40)
-  - Order 600 units from Supplier C (Week 40)
-  - Order 300 units from Supplier D (Week 40)
+[PERIOD]:
+  - Order [UNITS] from [SUPPLIER] ([WEEK])
 ```
 
 **Risk Assessment:**
 
-- Overall supply risk: **Low**
-- No single supplier >60% of volume (diversified)
-- Average supplier financial health: 8.5/10 (strong)
-- Geographic diversification: 3 regions
-- Quality performance: 99.1% defect-free (excellent)
+- Overall supply risk: [LOW / MEDIUM / HIGH, with the reason]
+- Largest share held by one supplier: [SHARE %]
+- Notes on supplier health, regions and quality: only what the user supplied
 
 **Recommendations:**
 
-1. Transition to 60/30/10 split across three suppliers
-2. Implement quarterly orders to balance ordering and holding costs
-3. Negotiate 2-year contracts with volume commitments for price stability
-4. Establish performance KPIs and quarterly reviews
-5. Maintain qualified backup supplier (Supplier A) for emergencies
+1. The split to move to, with the figures it rests on
+2. The order timing that balances ordering and holding costs
+3. Contract points to raise with each supplier
+4. How you will check supplier performance
+5. A backup supplier, if one exists
 
 **Implementation Plan:**
 
-- Month 1: Finalize contracts with selected suppliers
-- Month 2: Place initial orders and validate quality
-- Month 3: Ramp to full production volumes
-- Month 4+: Monitor performance and adjust as needed
+- [MONTH 1 STEP]
+- [MONTH 2 STEP]
+- [LATER STEPS]
+
+This is a planning estimate. Do not place an order from it until each supplier has confirmed its price in writing.
 
 ---
 

@@ -19,7 +19,7 @@ when:
   - You are helping a child plan revision and want it to fit their real time
 not_for:
   - The exam is a few days away. Use the Exam study roadmap builder to rank topics by marks.
-  - You already have a plan and want to see how it is going. Use the Study plan progress review assistant.
+  - You already have a plan and want to see how it is going. Use the Study practice progress reviewer.
   - You want notes made from your reading. Use Turn saved reading into notes you can use.
   - You cannot check your own answers yet. Add a teacher or tutor. This plan assumes you can.
 you_give:
@@ -37,7 +37,7 @@ you_get:
   - An opening goal, a method check and a closing reflection for each type of session
   - A summary of anything missing, such as readings that could not be confirmed
 how_to_use:
-  - Download the handoff pack. It is a zip with HANDOFF.md and every skill file this workflow uses.
+  - Download the handoff pack. The site builds it as a zip with HANDOFF.md and the three skill files this workflow uses. If you cannot download it, paste the steps from this page into your AI in order.
   - Give the folder to Claude, ChatGPT or Gemini and say "Follow HANDOFF.md".
   - Paste your goal, date, level, weekly hours and the material you have. Say what did not work before.
   - Read the roadmap first. If a topic is missing or in the wrong order, fix that before the sessions are planned.

@@ -63,7 +63,7 @@ Forecasts future demand for each SKU based on historical sales velocity, trend a
    - **Reorder Point** = (lead_time_days + safety_stock_days) × daily_sales_rate
    - **Reorder Quantity** = forecasted demand from Step 2 (which includes trend_multiplier) + safety stock - current_inventory. The Reorder Point does not use the trend; it is a plain sales-rate figure. Current inventory is the total across all locations.
    - **Stockout Date** = today + (current_inventory / daily_sales_rate) days
-   - **Order-By Date** = stockout_date - lead_time_days
+   - **Order-By Date** = stockout_date - lead_time_days. If this date is already in the past, show the item as OVERDUE at the top of the urgent list. It means the item may stock out before a new order can arrive, so tell the user to order now and ask the supplier about a faster delivery.
 
 6. Sort by urgency: items closest to stockout first
 

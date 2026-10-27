@@ -1,7 +1,7 @@
 ---
 name: matlab-analyze-pcb-pdn
 description: "PDN DC voltage/current analysis, IR drop, design rule checking, and multi-net batch analysis on imported PCB layouts. TRIGGER: user asks about power integrity, PDN analysis, IR drop, voltage distribution, current density, power nets, or design rule checking on a PCB. Invoke BEFORE writing code — the PDN API chain is specialized and non-obvious. SKIP: importing a PCB file (use matlab-read-pcb-layout), EM field/S-parameter extraction (use matlab-analyze-em), material/stackup setup only (use matlab-manage-pcb-material), transmission line design (use matlab-design-pcb-transmission-line)."
-license: https://www.mathworks.com/content/dam/mathworks/license/pmrl/license.md
+license: https://www.mathworks.com/content/dam/mathworks/license/pmrl/license.md # AI Blocks: for this copy, LICENSE.md in this folder applies (BSD 2-Clause, use only with MathWorks products such as MATLAB). This link is MathWorks' own upstream terms and also limits use to MathWorks products.
 metadata:
   author: MathWorks
   version: "1.0"
@@ -29,8 +29,9 @@ metadata:
 ## Typical Workflow
 
 1. **Before:** `matlab-read-pcb-layout` — import the PCB layout from Gerber/ODB++/Allegro
-2. **This skill:** Run DC analysis, check IR drop, evaluate design rules, batch-analyze nets
-3. **After:** Iterate on the physical design in CAD and re-import, or use results to inform stackup changes via `matlab-manage-pcb-material`
+2. **Gate before any run:** ask the user for the load current of each rail (from a datasheet or power budget) and for their own design rules. Do not run the DC solve until you have both. Never guess a load current.
+3. **This skill:** Run DC analysis, check IR drop, evaluate design rules, batch-analyze nets
+4. **After:** Iterate on the physical design in CAD and re-import, or use results to inform stackup changes via `matlab-manage-pcb-material`
 
 ## Quick Reference
 

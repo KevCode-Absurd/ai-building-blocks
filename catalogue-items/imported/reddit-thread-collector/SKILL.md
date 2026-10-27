@@ -192,16 +192,13 @@ See <https://github.com/apify/mcpc>.
 
 ## Troubleshooting
 
+The common ones. The full list is in [references/gotchas.md](references/gotchas.md).
+
 - **0 items, run SUCCEEDED, no error** → post permalinks were put in `subredditUrls`. Move them to `startUrls`.
-- **Empty search results** → the term was a sentence. Reddit search is literal; shorten to 1–3 words, drop `searchTime` to `all`, or remove `withinCommunity`.
-- **Fewer posts than requested on a big subreddit** → Reddit's ~1,000-per-listing ceiling. Split with `postedAfter`/`postedBefore` windows or add `subredditUrls` per community.
-- **Bad date** (`postedAfter` later than `postedBefore`, or not `YYYY-MM-DD`) → the run does not fail. The Actor drops the date filter, notes it in `inputWarnings` of the `RUN-SUMMARY` record in the run's key-value store, and scrapes the full range — more items and more cost than the window implied. Check `inputWarnings` before trusting a date-bounded result.
-- **No target** (none of `searchTerms`, `startUrls`, `subredditUrls` was set — a common cause is using an invented field like `query` or `keywords`) → the run finishes SUCCEEDED with 0 items and `emptyReason` set in `RUN-SUMMARY`; nothing is charged. Fix the field names and re-run.
-- **`/s/` share links** (`reddit.com/r/x/s/abc`) → put them in `startUrls` as they are. The Actor resolves each one to its post or profile. An expired link resolves to the subreddit listing, not the post.
-- **`onlineUsersCount` is `null`** → expected on every row; Reddit no longer returns it. **`membersCount` or `subredditSubscribers` is `null`** → Reddit did not return the value for that row. A later run can return it; do not retry only for these fields.
-- **Private, banned or quarantined subreddit** → terminal skip, noted in the run summary; nothing to retry.
+- **Empty search results** → the term was a sentence. Shorten it to 1–3 words.
+- **Fewer posts than requested** → Reddit's ~1,000-per-listing ceiling. Split with `postedAfter`/`postedBefore` windows.
 - **Cost higher than expected** → `crawlCommentsPerPost` was on. Re-run with it off, or lower `maxCommentsPerPost`.
-- For cost tables and recovery flows, see [references/gotchas.md](references/gotchas.md); for the full field mapping, [references/input-mapping.md](references/input-mapping.md).
+- For the field mapping, see [references/input-mapping.md](references/input-mapping.md).
 
 ## Limitations
 

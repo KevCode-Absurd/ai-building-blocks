@@ -153,6 +153,8 @@ Conformance levels: **Supports** (fully meets) · **Partially Supports** (meets 
 6. Mobile: iOS VoiceOver, Android TalkBack
 7. Document results per criterion with element references and screenshots
 
+**What automated tools miss.** A scan alone does not pass an audit. Scans cannot judge whether alt text is meaningful, whether reading order makes sense, whether focus order is logical or whether a screen reader user can finish a task. Say this in every audit result, and list which criteria still need a manual check.
+
 ### PDF Accessibility
 Key requirements under SC 1.3.1, 4.1.2, and PDF/UA (ISO 14289):
 - Tagged PDF with correct tag hierarchy (Document, H1-H6, P, Table, List)
@@ -165,6 +167,8 @@ Key requirements under SC 1.3.1, 4.1.2, and PDF/UA (ISO 14289):
 - Document title set (not just filename)
 
 ### Procurement (FAR Clause 52.239-2)
+The clause number and the 30-day VPAT timing below are the author's and are not checked here. Confirm both with the contracting officer or on section508.gov before you put them in an RFP.
+
 Include in RFPs:
 - Reference to 36 CFR Part 1194 and applicable provisions (E205 for web/software/docs)
 - Require VPAT (ACR) using VPAT 2.x WCAG Edition within 30 days of award
@@ -185,7 +189,7 @@ Include in RFPs:
 
 ## Adjacent Deadline — ADA Title II Web Rule (state when advising public-sector-facing clients)
 
-The author's note says a DOJ Interim Final Rule of April 17, 2026 moved the ADA Title II web/mobile compliance dates out by one year (large public entities to April 26, 2027; small entities and special districts to April 26, 2028), with the WCAG 2.1 AA standard unchanged. **This is not sourced here. Say so, and tell the user to confirm the dates on ada.gov before relying on them. Do not repeat the dates as fact.** Section 508 itself still references WCAG 2.0 AA (2017 refresh) — do not conflate the two regimes.
+The author's note says the ADA Title II web and mobile compliance dates were moved out by a recent Department of Justice rule. **This is not sourced here, so no dates are given. Tell the user to find the current dates for their kind of public entity on ada.gov before relying on any date. Do not state dates as fact.** Section 508 itself still references WCAG 2.0 AA (2017 refresh) — do not conflate the two regimes.
 
 ## Reference Files
 

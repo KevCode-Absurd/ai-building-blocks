@@ -24,6 +24,7 @@ you_give:
   - Your key customer questions
   - Your competitors (optional)
   - Your product or brand background (optional)
+  - An AI plan that can browse the web. Some browsing features need a paid plan, and the monitoring tools the skill names (such as Otterly, Peec AI and Semrush) are paid services. You can skip them and check by hand
 you_get:
   - A check of today's AI answers on your topic
   - Page edits that make content easy to quote
@@ -32,9 +33,10 @@ you_get:
 how_to_use:
   - Open your AI. Use one that can browse the web, such as ChatGPT, Claude or Gemini.
   - Upload the skill file, or paste its text. The full skill is long, so if your AI limits pasting, paste only the parts for the step you are on.
-  - Add your page address or topic, and your key customer questions.
+  - Add your page address or topic, and your key customer questions. Pick 10 to 20 questions to test.
   - Add your competitors and brand background if you have them.
-  - Read the audit first. Then apply the page edits one at a time.
+  - Ask for the audit first. Check each question in ChatGPT, Perplexity and Google, and record in a table who is cited. Read the audit section first.
+  - Use the audit to choose edits. The Extractability check maps to edits to your answer blocks. The AI bot access check maps to your robots settings. Citation patterns map to the sources and bylines you add. Apply the page edits one at a time.
   - Re-check the same questions in a few weeks to see what changed.
   - Then make the page edits on the pages that sell first, and add schema markup to those pages.
 output_sample:

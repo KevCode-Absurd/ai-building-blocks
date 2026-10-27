@@ -30,7 +30,7 @@ you_get:
   - Notes for the reviewer
   - A comparison with last period
 how_to_use:
-  - Open your AI chat and paste in this skill.
+  - Open your AI chat and paste in this skill. Connecting your accounting system is optional and may need setup or a paid plan. The prompt works without it, when you paste your numbers.
   - Say which entry type you need and the period, such as an AP accrual for 2024-12.
   - Paste your trial balance and supporting schedules, or upload a spreadsheet. Add last period's entries if you have them.
   - Check that debits equal credits and that each amount matches your schedule.

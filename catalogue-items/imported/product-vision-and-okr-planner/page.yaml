@@ -31,13 +31,14 @@ you_get:
   - A quarterly plan
   - A team scaling proposal (optional)
 how_to_use:
+  - "Gather these first: your current and target numbers from your analytics, your team names, and the share of company goals your product covers."
   - Open Claude, ChatGPT or Gemini in a mode that can run Python code and use files. Upload the skill folder.
   - "Pick your strategy type: growth, retention, revenue, innovation or operational."
   - Give your team names and your company goals with current and target numbers. Replace any sample numbers with real ones from your analytics. The script's default run uses sample metrics (for example 100,000 to 150,000 users and "expand to 3 new markets"). These are placeholders, not your goals.
   - Ask your AI to run the OKR cascade script and show you the results.
   - Check the alignment scores. Fix any score under 60% before you share the plan.
   - Review the goals with your team leads. Change team goals to match real capacity.
-  - Optional: export the plan as JSON for Lattice, Ally or Workboard. Check whether your plan with each one allows an import, because some are paid.
+  - "Optional: export the plan as JSON for Lattice, Ally or Workboard. Check whether your plan with each one allows an import, because some are paid."
 output_sample:
   input:
     - "Your strategy type: growth, retention, revenue, innovation or operational"

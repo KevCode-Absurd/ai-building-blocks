@@ -30,11 +30,13 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
-- **Claude Code:** It can keep the returns folder and run on the 3rd of each month.
+- **Claude Code:** It can keep the returns folder. You start the run on the 3rd of each month. It does not run on a timer.
 - **Shopify:** The skills read refunds and returns from the store connection.
 <!-- /needs -->
 
 ## What you need
+The "Before you start" block above is shared text. This job reads refunds and returns, so it needs no brand voice or brand facts. Skip its brand brain steps and its "From the brand brain, read" line. The run starts when the owner starts it (the schedule says the 3rd of each month, but nothing starts on a timer unless a scheduler is connected).
+
 - **A store connection** (required): read access to orders, refunds and returns, through the Shopify tools the skills below use. Your store admin has to grant this access, for example through an app or connector with read permission, and your Shopify plan or the connector may limit or charge for it, so check first. Without a connection, ask for exports of refunds and returns with product, reason, dates and amounts.
 - **Product costs** (strongly advised): so the cost of returns includes written-off stock. Missing costs are marked `MISSING:`.
 - **What changed** (optional): a new supplier, a listing rewrite, a size guide change or a carrier switch last month.
@@ -86,6 +88,8 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Product field bulk editor](https://useaiblocks.com/skills/product-field-bulk-editor). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+Next steps that follow from the fix: if the listing misleads, rewrite the photos or copy for that product. If the cause is fit, add a size guide. If it is damage, check packaging or ask the supplier. The pick-pack, order hold and bulk edit links in "After this" are shared suggestions and fit only the packaging case or a bulk listing fix, so offer one only then.
 
 ## Checks before you hand it back
 - Rates are set against the store's overall rate, with the sums shown.

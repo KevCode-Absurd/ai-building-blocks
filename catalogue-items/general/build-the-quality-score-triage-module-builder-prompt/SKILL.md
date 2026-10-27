@@ -40,6 +40,7 @@ How to start:
 - A project with **code you can edit**, and a coding AI with access to it.
 - **Keyword data** for a date range, with cost, the Quality Score and its three parts. Google Ads gives you these through its API. Fetching them live needs a Google Ads API developer token and read access to the account. Setting that up is a separate job: see the Google Ads token and access check planner. Without access, the prompt builds the module to take typed keyword rows, so it still works and can be tested on sample rows.
 - **A spend floor**: the cost below which a keyword is too small to bother with. Pick one that suits your account. The prompt starts at 25 in your account currency.
+- **Cost bands for severity**: the spend levels that mean critical, high, medium and low. The prompt starts with sample bands. They are starting guesses, not facts about your account. Set your own before you trust the severity labels.
 - Enough keywords for the result to mean something. A small account may only produce a handful of groups. That is fine.
 
 ## Paste this into your coding AI
@@ -135,3 +136,5 @@ Write tests with sample rows only, no real accounts:
 ## After it works
 
 Quality Score moves slowly, so a monthly review is plenty. Weekly runs mostly show noise. Run the module on a live account only when you say so, and keep it read-only. If you want a monthly schedule, ask the AI to propose one, then approve it yourself.
+
+Next, work down the findings from the top: fix the ads or landing page for the biggest group, then wait a few weeks and run the review again. To fetch live data, set up access first with the Google Ads token and access check planner.

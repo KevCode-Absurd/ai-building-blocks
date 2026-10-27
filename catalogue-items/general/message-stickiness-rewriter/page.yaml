@@ -74,6 +74,7 @@ output_shape: |
   3. <text> (leans on: <test>)
   PICK: <number>, because <reason>
   MISSING: <...>
+  CHECKS MISSED: <one line each, or none>
 
 tweaks:
   - what: "Who hears it"

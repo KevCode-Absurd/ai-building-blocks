@@ -23,7 +23,7 @@ not_for:
   - Only shared dependencies or risks across projects changed. Use the Project risk and portfolio manager on its own.
   - You want a new finish date for one project. Use the Outside view timeline estimator.
 you_give:
-  - "Dated task updates: when each task started, when it waited and when it finished (from your project tool export, a spreadsheet or status notes)"
+  - "Dated task updates with task ID, stage, start date, wait time or wait dates, and finish date (from your project tool export, a spreadsheet or status notes)"
   - The original estimate for each task
   - The actual finish date for each completed task
   - "The fix you are testing: what changed, the date it started and the review date"
@@ -37,9 +37,9 @@ you_get:
   - MISSING lines for stages with no timing, and a record for the next week
 how_to_use:
   - Add the agent to Claude, ChatGPT or Gemini with its helpers, the Trace why work keeps missing deadlines workflow and the Project risk and portfolio manager. Or download the pack and attach it.
-  - Paste this week's task export and describe the fix you are testing. Say what a new pattern means to you, or let the agent propose a rule. From week two, paste last week's record.
+  - Paste this week's task export (one row per task: ID, stage, start date, wait, finish date, estimate; dates as YYYY-MM-DD, with the timezone) and describe the fix you are testing. Say what a new pattern means to you, or let the agent propose a rule. From week two, paste last week's record.
   - Remove staff names and other personal details from the export before you paste it. Task IDs and stage names are enough.
-  - Read the trend brief. Check the sample size before you believe any change.
+  - Read the trend brief. Check the sample size before you believe any change. The first run only builds your baseline, so it gives no keep, revise or stop call yet.
   - If the brief says the evidence is too thin, leave the fix as it is.
   - Change your plan yourself if you agree. The agent changes nothing. After a "stop" call, you or the person who owns the fix decide what happens next.
   - The Project risk and portfolio manager comes with Python scripts. In a chat-only tool the AI reads the numbers instead of running them, and says so under CHECKS MISSED.
@@ -106,9 +106,9 @@ tweaks:
   - what: Task group
     how: Compare similar tasks only. Mixing small and large work hides the pattern.
   - what: Pattern limit
-    how: Set how far a stage may move before it counts as new. Say whether the limit is in days or in percent. For example, waiting time up by a quarter against the baseline, over at least eight finished tasks. Those numbers are only an example, so use your own.
+    how: Set how far a stage may move before it counts as new. Say whether the limit is in days or in percent. For example, waiting time up by a quarter against the baseline. That number is only an example, so use your own.
   - what: Review length
-    how: Say how many weeks or finished tasks the fix needs before you judge it. With no number from you, the agent treats fewer than eight finished tasks in a group as too thin, labels that ASSUMPTION and asks you to confirm or change it.
+    how: Say how many weeks or finished tasks the fix needs before you judge it. With no number from you, the agent's default is eight finished tasks in a group. Fewer counts as too thin. It labels that ASSUMPTION and asks you to confirm or change it.
   - what: Stage names
     how: Use the stage names your team uses, so the brief matches your board.
 judge:

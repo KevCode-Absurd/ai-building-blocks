@@ -340,10 +340,8 @@ def solve_mdvrp_ortools(customer_coords, depot_coords, demands,
         True,  # start cumul to zero
         'Capacity')
 
-    # Prevent visiting depots as intermediate stops
-    for depot_id in range(n_depots):
-        depot_index = manager.NodeToIndex(depot_id)
-        routing.solver().Add(routing.ActiveVar(depot_index) == 0)
+    # AI Blocks note: the original depot-blocking constraint was removed because it was never tested.
+    # Instead, the code after the solve checks that no route visits a depot as a middle stop.
 
     # Search parameters
     search_parameters = pywrapcp.DefaultRoutingSearchParameters()
@@ -375,6 +373,10 @@ def solve_mdvrp_ortools(customer_coords, depot_coords, demands,
                     previous_index, index, vehicle_id) / 100.0
 
             route.append(manager.IndexToNode(index))
+
+            # Fail loudly if any middle stop is a depot
+            if any(node < n_depots for node in route[1:-1]):
+                raise ValueError("Route passes through a depot as a middle stop; fix before using")
 
             if len(route) > 2:  # Route has customers
                 depot_id = vehicle_to_depot[vehicle_id]
@@ -570,26 +572,26 @@ if __name__ == "__main__":
 ### MDVRP Solution Report
 
 **Problem:**
-- Customers: 60
-- Depots: 3
-- Total Vehicles: 10 (4, 3, 3 per depot)
-- Vehicle Capacity: 100 units
+- Customers: [NUMBER OF CUSTOMERS]
+- Depots: [NUMBER OF DEPOTS]
+- Total Vehicles: [TOTAL] ([TRUCKS PER DEPOT])
+- Vehicle Capacity: [CAPACITY] units
 
 **Solution:**
 
 | Metric | Value |
 |--------|-------|
-| Total Distance | 1,845 km |
-| Vehicles Used | 9 / 10 |
-| Average Route Length | 205 km |
+| Total Distance | [TOTAL KM] |
+| Vehicles Used | [USED] / [TOTAL] |
+| Average Route Length | [AVERAGE KM] |
 
 **Depot Assignments:**
 
 | Depot | Customers | Vehicles | Total Distance | Avg Load |
 |-------|-----------|----------|----------------|----------|
-| 1 | 24 | 4 | 782 km | 96% |
-| 2 | 20 | 3 | 623 km | 94% |
-| 3 | 16 | 2 | 440 km | 92% |
+| 1 | [COUNT] | [COUNT] | [KM] | [LOAD %] |
+| 2 | [COUNT] | [COUNT] | [KM] | [LOAD %] |
+| 3 | [COUNT] | [COUNT] | [KM] | [LOAD %] |
 
 ---
 

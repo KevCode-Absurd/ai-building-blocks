@@ -53,9 +53,9 @@ For each funding round, extract or estimate:
 **Rule for every figure:** show its source, or mark it `estimate`. Never present an estimate as a reported number. The ranges below are rough starting guesses without a source. Do not show them as findings. Use them only when nothing better is found, and label the result `estimate`.
 
 **ARR estimation heuristics (when not public):**
-- Seed/Series A: ARR often $500K–$3M
-- Series B: typically $5M–$20M
-- Series C: typically $20M–$60M
+- Seed/Series A: ARR often $500K–$3M (unverified guess)
+- Series B: typically $5M–$20M (unverified guess)
+- Series C: typically $20M–$60M (unverified guess)
 - Cross-check against customer count x average deal size if available
 
 ### 3. Compute Compression Metrics
@@ -77,7 +77,7 @@ Use this checklist. For each cause, rate it: Primary / Contributing / Not applic
 **Macro / Rate Environment**
 - Was the earlier round priced during the 2020–2021 ZIRP bubble? (a rough guess of a ~2–5x premium, unsourced; label it `unverified` unless `references/benchmarks.md` supports it)
 - Was the later round priced during the 2022–2023 rate hikes? (removes the bubble premium)
-- Was the later round priced during or just after a sector-wide public-software selloff, such as the April 2026 meltdown? Private marks typically lag public ones by 1–2 quarters.
+- Was the later round priced during or just after a sector-wide public-software selloff, such as the April 2026 meltdown (an unverified claim from the author's notes, with no source link; confirm it with a search before you say it, and mark it `unverified` in your answer if you cannot)? Private marks typically lag public ones by 1–2 quarters.
 - How does each round's multiple compare with the private-market median for its date?
 
 **Growth Deceleration**
@@ -92,7 +92,7 @@ Use this checklist. For each cause, rate it: Primary / Contributing / Not applic
 - Does the company serve AI-native companies (OpenAI, Anthropic, etc.) as customers? → premium
 - Did the company pivot to AI narrative credibly? → premium
 - Did the company fail to articulate AI story? → discount vs peers
-- In a macro-driven selloff an AI premium may be necessary but not sufficient — the April 2026 drawdowns in `references/benchmarks.md` show strong AI names falling with the sector.
+- In a macro-driven selloff an AI premium may be necessary but not sufficient — the April 2026 drawdowns listed in `references/benchmarks.md` (unverified, no source links) are said to show strong AI names falling with the sector.
 
 **Competitive / Market**
 - Market saturation signal (e.g., Okta pressure on WorkOS, Auth0 competition)
@@ -119,7 +119,7 @@ See design guidance: use teal for positive/growth, coral for compression/negativ
 ### 6. Write the Prose Summary
 
 Cover, in order:
-1. **Verdict** — one sentence, e.g., "The multiple compressed 36% but ARR grew 5x, so absolute valuation still rose about 3.2x."
+1. **Verdict** — one sentence, for example (illustrative wording only, not a finding): "The multiple compressed [X]% but ARR grew [Y]x, so absolute valuation still rose about [Z]x." Fill the brackets only from the figures you found.
 2. **Primary cause** — the #1 factor explaining compression
 3. **Narrative premium/discount** — AI story, category leadership, or lack thereof
 4. **Comparable context** — how this company's compression compares to peers
@@ -129,7 +129,14 @@ Cover, in order:
 
 ## Output Format
 
-Put the inline visualization first, followed by the prose summary. Flag your data confidence when ARR had to be estimated.
+Give these parts in this order. Put the chart first if your chat can draw one. If it cannot, give the same data as plain tables.
+
+1. **Round table.** Columns: Date | Round | Amount raised | Valuation | Lead investor | ARR (source, or the word "estimate" with a range) | ARR multiple | Change from the previous round.
+2. **Market comparison.** Columns: Round | Typical private software multiple for that date (label `unverified` unless you found a named source) | Gap.
+3. **Cause table.** Columns: Cause | Rating (Primary, Contributing or Not applicable) | Evidence and its source. Causes: rates and selloffs, slower growth, story or AI premium, rivals, investor demand.
+4. **Charts.** A multiple line chart, and a bar chart of valuation, ARR and multiple change.
+5. **Written summary**, about 150 to 250 words: a one-line verdict, the main cause, the story premium or discount, peer context, and what must be true for the multiple to rise.
+6. **Data confidence.** One line on which ARR figures were estimated, and a list of every benchmark you quoted that is unverified. Do not present any unverified benchmark, the ZIRP premium or the April 2026 drawdowns as a finding.
 
 ---
 

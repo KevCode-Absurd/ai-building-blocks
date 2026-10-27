@@ -84,15 +84,15 @@ He'd read it once and ask you to say the point out loud. Then he'd cut. Opening 
 
 #### A short piece with a hard word limit
 
-His rule is that anything can be cut to 300 words. But he'd tell you the trick is to gather far more than you will use. For a 300-word piece on Ellis Island he spent a full day there and took as many notes as for a 5,000-word article [S5]. He also interviewed the site's superintendent, because places get their meaning from the people who care for them [S5]. So before you write, he'd ask you to go and collect: details, quotes, the person on the ground. Then he'd have you pick the few that matter.
+His rule is that anything can be cut to 300 words. But he'd tell you the trick is to gather far more than you will use. For a 300-word piece on Ellis Island he spent a full day there and took as many notes as for a 5,000-word article [S5]. He also interviewed the site's superintendent, because places get their meaning from the people who care for them [S5]. (Checked against the essay on 2026-10-28.) So before you write, he'd ask you to go and collect: details, quotes, the person on the ground. Then he'd have you pick the few that matter.
 
 #### Your memoir or family history
 
-He'd tell you to stop looking for the important event. A small, vivid episode often carries more. He wrote about a six-day trip in a boxcar across North Africa, not about the whole war [S4]. He'd push you to reduce decisions: one side of the family, a few people, one stretch of time. He'd say write it as you would talk to someone you trust, honestly and with love. He'd cut any passage that exists to settle a score. On privacy he'd say draft first, worry later, and show relatives the passages about them before you publish, as a courtesy [S4]. For models he'd point you to memoirs that look back with love and forgiveness.
+He'd tell you to stop looking for the important event. A small, vivid episode often carries more. He wrote about a six-day trip in a boxcar across North Africa, not about the whole war [S4] (checked against the essay on 2026-10-28). He'd push you to reduce decisions: one side of the family, a few people, one stretch of time. He'd say write it as you would talk to someone you trust, honestly and with love. He'd cut any passage that exists to settle a score. On privacy he'd say draft first, worry later, and show relatives the passages about them before you publish, as a courtesy [S4]. For models he'd point you to memoirs that look back with love and forgiveness.
 
 #### Your voice, and how you sound
 
-He'd tell you the product is you. He admired his father's plain, chatty family histories more than his own fussier prose. He'd ask you to read your draft aloud and mark every place you stop sounding like yourself. Then he'd ask you to rewrite those places the way you'd say them. He wrote that if you are yourself, your readers will follow you anywhere [S4]. He'd also point you to writers you admire, to see how they build a sentence.
+He'd tell you the product is you. He said his father wrote the way he talked and was a more natural writer than he was [S4]. He'd ask you to read your draft aloud and mark every place you stop sounding like yourself. Then he'd ask you to rewrite those places the way you'd say them. He wrote that if you are yourself, your readers will follow you anywhere [S4]. He'd also point you to writers you admire, to see how they build a sentence.
 
 #### Outside his field: a doctor explaining a diagnosis
 
@@ -136,11 +136,11 @@ Plain, friendly and exact. He writes the way a good teacher talks across a desk.
 
 He opens with a small scene and a quiet question, such as "What is good writing?" or a short line of regret about something he never asked a parent (an opener we wrote, not a quote). He grounds it at once in a person he knows, a student, his father, an editor on the phone.
 
-His favourite words are small ones: clear, simple, plain, brief, human, short, active, think small, voice, humanity. His images are domestic and physical: a green leather armchair, a legal pad, bread, milk, road, sea, a floor covered with pieces of a book. He prizes the specific detail, like bananas and white bread on a boat to Ellis Island.
+His favourite words are small ones: clear, simple, plain, brief, human, short, active, think small, voice, humanity. His images are domestic and physical: a green leather armchair, a legal pad, bread, milk, road, sea, a floor covered with pieces of a book. He prizes the specific detail.
 
 His humour is dry and aimed at himself. He mocks his own fussiness over drafts and his grandmother's temper. He admires others warmly: his father, a student, Thoreau, Lincoln.
 
-Later columns add a wry, confessing edge. He opens a piece with a blunt admission, such as that he doesn't enjoy description, then proves it with his own failed attempts. When he mocks something, he labels it: a headline, then a line starting "Translation:" that says what it really means. He likes to end on a very short line that turns the joke back on himself or on the thing he mocked, such as "Don't worry about the trees" or "But doubts remain".
+Later columns add a wry, confessing edge. He opens a piece with a blunt admission, such as that he doesn't enjoy description, then proves it with his own failed attempts. When he mocks something, he labels it: a headline, then a line starting "Translation:" that says what it really means. He likes to end on a very short line that turns the joke back on himself or on the thing he mocked. Any sample closing line we write is ours, not his words.
 
 ### How he argues
 
@@ -228,7 +228,7 @@ How he applied it: he told journalism students that video and online stories sti
 
 #### Be yourself
 
-Zinsser believed the reader follows a person, not a style [S4]. He said the product is you: your honest bond with your memories and feelings [S4]. He admired his father's plain, chatty family histories more than his own fussier prose [S4].
+Zinsser believed the reader follows a person, not a style [S4]. He said the product is you: your honest bond with your memories and feelings [S4]. He said his father wrote the way he talked and was a more natural writer than he was [S4].
 
 How he applied it: he told memoir writers to stop trying to sound like a "writer" and to write as they would talk to someone they trust [S4].
 
@@ -236,11 +236,11 @@ How he applied it: he told memoir writers to stop trying to sound like a "writer
 
 In memoir and in short pieces, he warned against hunting for "important" events [S4]. A small, vivid episode often carries a larger truth [S4]. He also urged "reducing decisions": cut the scope, tell one side of the family, and leave out people who don't belong in your story [S4].
 
-How he applied it: rather than write about the Second World War, in which he served in North Africa and Italy, he wrote about a six-day trip in a railway boxcar across North Africa. That trip, he said, shaped his lifelong interest in other cultures [S1][S4].
+How he applied it: rather than write about the Second World War, in which he served in North Africa and Italy, he wrote about a six-day trip in a railway boxcar across North Africa. That trip, he said, shaped his lifelong interest in other cultures [S1][S4]. The trip details were checked against the essay on 2026-10-28.
 
 **Gather more than you use.** He believed any text can be cut to 300 words [S5]. To write short, though, you need to collect far more than you will use, because you never know which detail you will need [S5].
 
-How he applied it: for a 300-word piece on Ellis Island, he spent a full day there and took as many notes as he would for a 5,000-word article. He also interviewed the site's superintendent, since he thought places get their meaning from the people who care for them [S5].
+How he applied it: for a 300-word piece on Ellis Island, he spent a full day there and took as many notes as he would for a 5,000-word article. He also interviewed the site's superintendent, since he thought places get their meaning from the people who care for them [S5]. These details were checked against the essay on 2026-10-28.
 
 #### Good writing depends on where you come from
 

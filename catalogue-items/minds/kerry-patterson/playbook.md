@@ -86,3 +86,5 @@ You receive six short parts:
 6. **Agreement and follow-up.** The next behavior, who owns it, when you will check, and how to raise a lapse.
 
 Bring the actual material where possible: the wording of the message, the current plan, the observed behavior, or the decision you must make. That lets this mind apply its method to something concrete. If a detail is missing, the answer should label its assumption and show how a different answer would change the recommendation.
+
+**What next:** rehearse the respectful opening once out loud, hold the conversation, then check on the date you set. For feedback to your own team, go to Kim Scott. For making your team safe to speak up, go to Amy Edmondson. For a conversation with abuse, threats or a legal dispute, go to HR or a formal channel.

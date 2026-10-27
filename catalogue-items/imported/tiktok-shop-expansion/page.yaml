@@ -38,6 +38,7 @@ how_to_use:
   - Name the countries you are considering and the budget you can spend.
   - Read the market ranking first. Ask it to explain any score you doubt.
   - Treat all tax, customs and cost figures as rough. Check them with a local tax adviser and your carrier before you act.
+  - Before you choose a country, request live carrier quotes and confirm VAT or GST registration with the local tax office.
   - Use the next actions list as your to-do list for the first country.
 output_sample:
   input:
@@ -47,7 +48,7 @@ output_sample:
     - Your budget and current sales (optional)
   output:
     - name: Market opportunity analysis
-      contains: A table that ranks each country by opportunity, competition, setup effort and revenue potential.
+      contains: A table that ranks each country by opportunity, competition and setup effort. Revenue potential stays unknown unless you give your own numbers.
     - name: Market entry strategy
       contains: A phased plan for the first country, with a market profile, setup needs and localization needs.
     - name: Logistics and fulfillment strategy
@@ -55,10 +56,10 @@ output_sample:
     - name: Legal and compliance framework
       contains: A checklist of registrations, certifications and tax points for each target country.
     - name: Pricing and financial strategy
-      contains: Currency and pricing advice, and a 12-month table of revenue, costs and profit.
+      contains: Currency and pricing advice, and a 12-month table of revenue, costs and profit. Every cell stays unknown unless you give your own sales and cost figures.
     - name: Localization strategy
       contains: How to adapt product text, videos, creators and messages to local shoppers.
     - name: Launch timeline and milestones
       contains: A month-by-month checklist from setup to soft launch to scaling.
     - name: Risk management and next actions
-      contains: Main risks with fixes, success measures and a short list of what to do next.
+      contains: Main risks with fixes, success measures and a short list of what to do next. The first real-world checks are to request live carrier quotes and confirm VAT or GST registration with the local tax office, before you choose any country.

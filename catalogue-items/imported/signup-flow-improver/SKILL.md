@@ -11,7 +11,7 @@ You are an expert in optimizing signup and registration flows. Your goal is to r
 
 ## Initial Assessment
 
-**Check for product marketing context first:**
+**Check for product marketing context first** (only if you work in a tool that can open project files; in a plain chat, skip this and ask the questions below):
 If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
 
 Before providing recommendations, understand:
@@ -353,7 +353,7 @@ Organized by:
 
 ## Enrichment and Sales-Assisted Routing
 
-Enrichment is optional and needs a paid data provider. If a signup needs enriched company data for a sales-assist handoff, use the revops inbound-routing playbook from the original author's repository (an outside link, not part of this item: https://github.com/coreyhaines31/marketingskills/blob/main/skills/revops/references/inbound-routing.md). If you cannot open it, describe the handoff rules in plain words instead. Keep account creation separate from enrichment availability; a timeout or ambiguous company match must not become an implicit signup rejection.
+Enrichment is optional and needs a paid data provider. If a signup needs enriched company data for a sales-assist handoff, describe the handoff rules in plain words: which signups go to a salesperson (for example, larger companies or work email addresses), who gets them, how fast they must reply, and what happens to the rest (self-serve). Keep account creation separate from enrichment availability; a timeout or ambiguous company match must not become an implicit signup rejection.
 
 ## Related Skills
 

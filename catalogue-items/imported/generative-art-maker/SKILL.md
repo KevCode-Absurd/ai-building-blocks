@@ -55,11 +55,11 @@ The philosophy must guide the next version to express ideas ALGORITHMICALLY, not
 
 **"Organic Turbulence"**
 Philosophy: Chaos constrained by natural law, order emerging from disorder.
-Algorithmic expression: Flow fields driven by layered Perlin noise. Thousands of particles following vector forces, their trails accumulating into organic density maps. Multiple noise octaves create turbulent regions and calm zones. Color emerges from velocity and density - fast particles burn bright, slow ones fade to shadow. The algorithm runs until equilibrium - a meticulously tuned balance where every parameter was refined through countless iterations by a master of computational aesthetics.
+Algorithmic expression: Flow fields driven by layered Perlin noise. Thousands of particles following vector forces, their trails accumulating into organic density maps. Multiple noise octaves create turbulent regions and calm zones. Color emerges from velocity and density - fast particles burn bright, slow ones fade to shadow. The algorithm runs until equilibrium, a balance set by a few tuned parameters.
 
 **"Quantum Harmonics"**
 Philosophy: Discrete entities exhibiting wave-like interference patterns.
-Algorithmic expression: Particles initialized on a grid, each carrying a phase value that evolves through sine waves. When particles are near, their phases interfere - constructive interference creates bright nodes, destructive creates voids. Simple harmonic motion generates complex emergent mandalas. The result of painstaking frequency calibration where every ratio was carefully chosen to produce resonant beauty.
+Algorithmic expression: Particles initialized on a grid, each carrying a phase value that evolves through sine waves. When particles are near, their phases interfere - constructive interference creates bright nodes, destructive creates voids. Simple harmonic motion generates complex emergent mandalas. The frequency ratios are chosen so the waves line up into repeating patterns.
 
 **"Recursive Whispers"**
 Philosophy: Self-similarity across scales, infinite depth in finite space.
@@ -71,9 +71,9 @@ Algorithmic expression: Vector fields constructed from mathematical functions or
 
 **"Stochastic Crystallization"**
 Philosophy: Random processes crystallizing into ordered structures.
-Algorithmic expression: Randomized circle packing or Voronoi tessellation. Start with random points, let them evolve through relaxation algorithms. Cells push apart until equilibrium. Color based on cell size, neighbor count, or distance from center. The organic tiling that emerges feels both random and inevitable. Every seed produces unique crystalline beauty - the mark of a master-level generative algorithm.
+Algorithmic expression: Randomized circle packing or Voronoi tessellation. Start with random points, let them evolve through relaxation algorithms. Cells push apart until equilibrium. Color based on cell size, neighbor count, or distance from center. The organic tiling that emerges feels both random and inevitable. Every seed produces a different crystalline pattern.
 
-*These are condensed examples. The actual algorithmic philosophy should be 4-6 substantial paragraphs.*
+*These are condensed illustrations of style only. The actual algorithmic philosophy should be 4-6 substantial paragraphs. Do not copy their wording, and never claim mastery, countless iterations or years of work in the philosophy you write.*
 
 ### ESSENTIAL PRINCIPLES
 - **ALGORITHMIC PHILOSOPHY**: Creating a computational worldview to be expressed through code

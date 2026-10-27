@@ -5,7 +5,9 @@ description: Use when a store that buys stock ahead of sales is short of cash an
 
 # Cash lever ranker
 
-You find which of six changes frees the most cash for this store. The idea comes from the cash conversion cycle: the time it takes to turn money spent on stock back into cash. It limits how fast a store can grow, because growth needs cash for ads and stock. You test each lever alone, on the same base, then combine the best ones. The figures in the source are from one made-up model, not real brands. Use the method with the store's own numbers. Check the result with your accountant before you act on it.
+You find which of six changes frees the most cash for this store. The idea comes from the cash conversion cycle: the time it takes to turn money spent on stock back into cash. It limits how fast a store can grow, because growth needs cash for ads and stock. You test each lever alone, on the same base, then combine the best ones. The figures in the source are from one made-up model, not real brands. Use the method with the store's own numbers. Everything here is an estimate built from the numbers the owner gives, not a forecast, so never present a cash figure as certain. Check the result with your accountant before you act on it.
+
+When not to use: if you only need order dates and amounts for stock, use the [Inventory cash planner](https://useaiblocks.com/skills/inventory-cash-planner).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -43,17 +45,24 @@ This fits stores that buy stock before they sell it. A digital or made-to-order 
 
 ## Steps
 1. **Name the problem.** Cash is stuck in stock for a number of days before it comes back. Say how long, using stock value divided by daily cost of goods. This is the limit on growth, not ad efficiency.
-2. **Build one base model.** Month by month for 6 months: new customers from ad spend divided by CAC, returning revenue, cost of goods from the markup, running costs, net income, stock bought from sell-through and lead time, and cash. Show the sums.
-3. **Test the six levers one at a time,** changing only that lever by a move the owner thinks they can reach. The source used these sizes in its made-up model. Use them only as example sizes, and ask the owner for the size they can really reach. Do not quote the source's results as expected gains:
-   - **CAC:** cut by a set amount (the source cut it by 15 dollars from 65).
-   - **AOV:** raise it with the same customers and no extra running costs (the source went from 150 to 180).
-   - **Maintained markup:** This is the multiple of your cost that you actually sell at after discounts. A small supplier talk plus a small price rise cuts cost of goods and the stock you need (the source went from 4.0 to 4.5). Test the price rise against conversion before trusting it.
-   - **Repeat rate:** returning customers raise the returning share of revenue (the source went from 25 percent to 35 percent). Returning orders carry no acquisition cost. The source says 80 to 90 percent of profit often comes from repeat buyers. That is a claim, so check it against your own cohort report.
-   - **30-day sell-through:** raise it by trimming slow SKUs and buying better (the source went from 30 percent to 40 percent). Profit does not change but cash does.
+2. **Build one base model.** Month by month for 6 months. Show each sum:
+   - New customers = ad spend / CAC. New revenue = new customers x AOV.
+   - Returning revenue = returning share x total revenue (from the store's own data).
+   - Cash in = new revenue + returning revenue.
+   - Cost of goods = revenue / maintained markup. Net income = revenue - cost of goods - shipping and fees - ad spend - running costs.
+   - Stock bought each month = the cost of goods you expect to sell, adjusted by the 30-day sell-through, bought one lead time ahead and paid when ordered.
+   - Cash out = stock bought + shipping and fees + ad spend + running costs.
+   - Cash at month end = cash at start + cash in - cash out.
+3. **Test the six levers one at a time,** changing only that lever by a move the owner thinks they can reach. Ask the owner for the size of each move. Write it as "[CURRENT] to [OWNER'S MOVE]" and never fill it with a number the owner did not give. Do not quote the source's results as expected gains:
+   - **CAC:** cut by an amount the owner can reach, from [CURRENT CAC] to [OWNER'S MOVE].
+   - **AOV:** raise it with the same customers and no extra running costs, from [CURRENT AOV] to [OWNER'S MOVE].
+   - **Maintained markup:** This is the multiple of your cost that you actually sell at after discounts. A small supplier talk plus a small price rise cuts cost of goods and the stock you need, from [CURRENT MARKUP] to [OWNER'S MOVE]. Test the price rise against conversion before trusting it.
+   - **Repeat rate:** returning customers raise the returning share of revenue, from [CURRENT SHARE] to [OWNER'S MOVE]. Returning orders carry no acquisition cost. Check how much profit comes from repeat buyers against your own cohort report. Do not use an outside figure.
+   - **30-day sell-through:** raise it by trimming slow SKUs and buying better, from [CURRENT SHARE] to [OWNER'S MOVE]. Profit does not change but cash does.
    - **Operating costs:** fixed costs hit net income one for one, unlike ad spend. Fixed costs are cut one for one from profit, so size the cut to a real line the owner can remove.
-4. **Read each result at day 0, 30, 60 and 180.** The effects compound and are hard to see in 30 days. The source says to measure over 60 to 180 days.
+4. **Read each result at day 0, 30, 60 and 180.** The effects compound and are hard to see in 30 days. Measure over 60 to 180 days.
 5. **Rank the levers** by cash freed at day 180. Show net income change in a separate column, because sell-through frees cash with no profit change.
-6. **Combine two or three.** Rerun the model with the best levers changed together. Do not just add the single results. The source example cut running costs, raised markup and trimmed SKUs. It did this without touching marketing, CAC, AOV or repeat rate.
+6. **Combine two or three.** Rerun the model with the best levers changed together. Do not just add the single results. Pick the two or three the owner can move, and say plainly that cutting marketing is not the first choice when the cause is slow stock or high fixed costs.
 7. **Say what to measure for 90 days:** cash balance, stock days, sell-through, net income, and the lever's own number.
 8. **Note the limits:** one made-up model, not real brands; a lever you cannot move has no value; a price rise or a SKU cut can hurt sales, so test it small.
 
@@ -74,7 +83,8 @@ BEST COMBINATION  <2 or 3 levers> -> cash day 180 <$>, gap closed <%>
 WATCH FOR 90 DAYS  <numbers to track>
 SCORE  <n>/100 = gap closed <pts> + data quality <pts>
 Where the data is weakest: <...>
-Check this with your accountant before you act on it.
+These are estimates from the numbers you gave. Check this with your accountant before you act on it.
+CHECKS MISSED: <checks that could not run, or none>
 MISSING: <what you did not give>
 ```
 
@@ -94,7 +104,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Results are read at 60 and 180 days, not only 30.
 - Cash and net income are shown apart.
 - The combination was rerun, not added up.
-- The repeat-buyer 80 to 90 percent claim is marked as a claim.
+- No outside repeat-buyer or profit-share claim is used.
 - The score shows its sum, and the example figures from the source are not quoted as results.
 
 ## If something is missing

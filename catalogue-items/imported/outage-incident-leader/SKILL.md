@@ -226,7 +226,7 @@ Incident Commander: {name} ({contact})
 Next Update: {time}
 
 ---
-This is an automated alert from our incident response system.
+Sent by: {Incident Commander name}
 ```
 
 #### Customer Communication Template

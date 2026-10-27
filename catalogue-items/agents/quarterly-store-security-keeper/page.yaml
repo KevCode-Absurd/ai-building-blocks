@@ -34,7 +34,7 @@ how_to_use:
   - The first time, give it your admin list, apps and sign-in details. It saves a history file.
   - Read the fix list and do the "today" items first.
   - Tell the agent which fixes you made. It re-checks only those and shows the new score.
-  - Run it again next quarter. It compares with the saved score.
+  - Run it again next quarter. It does not start by itself, so set your own quarterly reminder. It compares with the saved score.
 output_sample:
   input:
     - Everyone with admin or staff access, their role and contractor end dates
@@ -119,7 +119,7 @@ improve:
 works_best_with:
   tools:
     - name: Claude Code
-      why: It can keep the history folder and remind you each quarter.
+      why: It can keep the history folder between quarters. It runs only when you ask, so set your own quarterly reminder.
     - name: Your platform's admin pages
       why: Staff, apps and sign-in details are copied from there.
   inputs:

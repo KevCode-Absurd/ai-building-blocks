@@ -4,12 +4,19 @@ You bring him a real problem from your business, your team or your life. He list
 
 ## What to bring
 
+Start with one file: your last 12 months of costs, a headcount list or your cash balance with its runway. Then add:
+
 - The problem you face in your team, costs or hiring
 - Your headcount and how you hire today (optional)
 - The one costly asset or process in your business (optional)
-- First file to gather: your last 12 months of costs, a headcount list or your cash balance with its runway
 - How much cash you have and how long it lasts (optional)
 - The decision you need to make
+
+## When not to use this mind
+
+- You need valuation, investing or share-price advice: use the Aswath Damodaran mind or the Benjamin Graham mind.
+- You want help with legal, medical or personal investment choices: ask a lawyer, an accountant or a doctor instead.
+- You want a hard-driving view on tough company decisions in a downturn: use the Ben Horowitz mind.
 
 ## What to hire him for
 
@@ -47,6 +54,8 @@ You bring him a real problem from your business, your team or your life. He list
 - When your rival cuts price, what can you do that they can't copy?
 
 ## Jobs, one by one
+
+Lines that say "he'd" are our application of his recorded views to your case. They are inferences, not things he said about it.
 
 ### Your values and culture
 

@@ -26,9 +26,17 @@ Benchmarks come from TGScope's studies of public Telegram channels (see Sources)
 - Use when comparing several Telegram channels for a campaign or computing CPM for a Telegram post.
 - Use when the user asks what "1/24", "1/48" or a permanent post means and what each is worth.
 
+### When not to use
+
+- The channel has not posted in the last week. Its views are not a fair guide. Ask the admin for 30 days of Telegram statistics instead.
+- The channel hides its public web preview. Ask the admin for screenshots of the built-in statistics, or check by hand.
+- You want to buy impressions, not a post in one channel. Use Telegram Ads, which Telegram runs itself.
+
 ## How It Works
 
 ### Step 1: Collect the channel's public numbers
+
+Reading the `t.me/s` preview pages with a tool is a form of scraping, and it may break Telegram's terms. Ask the user to check the terms first. The safe way is to have the user copy the subscriber count and post views in by hand. Only read the page yourself if the user says it is allowed.
 
 For most public channels the web preview at `t.me/s/<username>` shows recent posts with their view counters. Record the subscriber count and the views of 10–20 posts that are at least a week old; newer posts are still collecting views. Note the topic, the language, the date of the latest post, how many of the recent posts are ads, and the ad contact printed in the channel description.
 
@@ -87,7 +95,7 @@ Give every channel its own link or promo code and compare cost per signup or sal
 
 ### Example 1: Offer from a large channel
 
-Input: "An admin offers a 1/24 post in a crypto news channel: 1.2M subscribers, $2,400, 'just $2 per thousand subscribers'."
+Input (made-up numbers, only to show the arithmetic): "An admin offers a 1/24 post in a crypto news channel: 1.2M subscribers, $2,400, 'just $2 per thousand subscribers'."
 
 Output outline:
 
@@ -98,7 +106,7 @@ Output outline:
 
 ### Example 2: Choosing between channels
 
-Input: three channels with 40K, 90K and 250K subscribers at $150, $300 and $700 for permanent posts.
+Input: three channels with [SUBSCRIBERS A], [SUBSCRIBERS B] and [SUBSCRIBERS C] at [PRICE A], [PRICE B] and [PRICE C] for permanent posts.
 
 Output outline: measure each channel's median week-old views, compute CPM for each, flag any channel in the bottom 10% for its size or sharing an ad contact with the others, and rank on CPM adjusted for topic fit rather than on subscriber count.
 

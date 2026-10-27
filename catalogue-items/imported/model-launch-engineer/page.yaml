@@ -33,11 +33,14 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Use one that can run code and read your files, since this skill writes and tests code.
   - Paste the skill text, then add your model file, your data preparation code and where it will run.
+  - Pick where it will be hosted. Docker on a single machine is the simplest. Use Kubernetes if you need several copies of the service, or a serverless service for light, uneven traffic. The Dockerfile and manifests in the skill assume a container, and the Kubernetes files assume a cluster. Tell your AI your choice so it writes the right files.
   - Say how much traffic you expect, if you know.
+  - Before you deploy: the Dockerfile and the Kubernetes files in the skill are untested sample code. Build the image and run the smoke test yourself before you rely on them.
   - Check the API code and Dockerfile your AI writes before you build anything.
   - Build the container and deploy it. You need Docker and a hosting account, which may cost money.
   - "Smoke test it: send 3 to 5 inputs you already know the right answer for to /health and /predict. It passes when /health says the model is loaded, and every known input returns the answer you expect. Fix any failed test before real users call the service."
   - Do not expose the API to the internet until it needs an API key or sits on a private network. The sample Kubernetes service is internal-only (ClusterIP), so keep it that way until then.
+  - After launch, use the Monitoring and update plan to set alerts and plan your next model release.
   - If a smoke test fails, read the log, fix the cause and rebuild. Release to a small share of users first, and watch the logs before you send everyone to it.
 output_sample:
   input:

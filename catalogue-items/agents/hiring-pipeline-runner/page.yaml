@@ -1,6 +1,6 @@
 new_slug: hiring-pipeline-runner
 name: Hiring pipeline runner
-summary: Run your hiring pipeline with AI. Give it a role and each resume batch. Get a fair ranked shortlist and draft replies. You make every call.
+summary: Run your hiring pipeline with AI. Give it a role and each resume batch. Get a shortlist scored the same way against your guide, and draft replies. You make every call.
 job: hire-people
 thinking: high
 thinking_why: It scores people, picks its own path from the results and drafts messages about them. Give it your strongest model and read every score.
@@ -15,6 +15,7 @@ when:
   - You want every applicant scored the same way, with the reason shown.
   - You want a short update each Friday without building it by hand.
 not_for:
+  - "You plan to let AI screen applicants without a check first. Many places have rules for AI that screens or ranks job applicants. Check data protection and anti-discrimination law in your country before you use it."
   - "You need to decide who to hire or make an offer: that stays with you, with a qualified HR adviser or employment lawyer for the rules."
   - "You only want one job post and scoring guide before any resumes arrive: use the Hiring packet builder."
   - "You only have one small pile of resumes to rank once: use the Applicant shortlist builder."

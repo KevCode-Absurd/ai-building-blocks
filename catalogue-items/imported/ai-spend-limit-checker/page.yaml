@@ -7,11 +7,13 @@ job: secure-code
 headline: AI spend limit checker
 subhead: Code that calls paid AI services can run up a huge bill. A loop that looks finite can repeat forever if a bug feeds it new work.
 explain: |
+  In short, three rules: write a cost line above every paid call, give every loop and retry a hard count, and set the same daily cap in your provider's dashboard.
+
   Code that calls paid AI services can run up a huge bill. A loop that looks finite can repeat forever if a bug feeds it new work. This check puts firm limits in place before that happens.
 
   It reviews or writes the code with three rules. Every call gets a written cost line: most calls per run, most dollars per run, most dollars per day. Every loop gets a hard count limit, not just a reason it should stop. Retries need a cap and repeat-safe keys. The same daily cap is then set in the provider's own dashboard. A cap in code alone can fail. One in the dashboard alone can hurt normal use.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (morsechimwai) says Apache-2.0. Credit goes to morsechimwai and sickn33.
+  Licence: CC BY 4.0 applies to this copy, as the LICENSE-CONTENT file in this folder says. That file governs. The author's own file header (morsechimwai) says Apache-2.0, which is the author's label for the original. Credit goes to morsechimwai and sickn33. The author's Apache-2.0 notice stays visible beside the CC BY 4.0 label. Provider dashboard paths and prices in the skill are undated. Confirm each on the provider's own site.
 when:
   - You are writing a loop or queue that calls an image, text or voice API.
   - You are reviewing code before it goes live and want to catch runaway costs.
@@ -25,6 +27,7 @@ you_give:
   - The code that calls the paid API
   - The price per call (optional)
   - The provider you use
+  - How many calls you expect per run and per day, so you can set the most calls and most dollars the protocol asks for
 you_get:
   - A cost line for each call site
   - Hard limits on loops and retries
@@ -36,7 +39,7 @@ how_to_use:
   - Ask your AI to check the code against the skill and add cost limits. It reads code only, so no tools are needed.
   - Read the cost line above each call. Check that every loop and retry has a hard limit.
   - Set the same daily cap in your provider's dashboard. Dashboard steps, prices and retry defaults change, so check the current ones on the provider's own site first.
-  - "Next, check that every loop ends, for example with the Code correctness planner. Set the provider caps on the provider's own site before the first deploy."
+  - "Next, check that every loop ends with the Code correctness planner (a free item in this library). Set the provider caps on the provider's own site before the first deploy. Pass the flagged call sites and the cost contract to a developer to apply before you deploy."
 output_sample:
   input:
     - The code that calls the paid AI service

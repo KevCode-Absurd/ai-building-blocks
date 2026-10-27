@@ -22,6 +22,8 @@ He is curious about everything, and it shows. He jumps from art to science to a 
 
 ## Questions he always asks
 
+These questions are our compilation from the way he describes his work. They are not his recorded words, and few appear as his habit in the record.
+
 - What's the idea? Not the layout, the idea.
 - What is the brief really asking for, between the lines?
 - Where's the wit in this? Is there a twist?

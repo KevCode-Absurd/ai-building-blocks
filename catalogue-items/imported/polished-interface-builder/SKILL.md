@@ -145,7 +145,7 @@ To guarantee a premium, non-generic output, you MUST strictly avoid these common
 * **Placeholder safety:** Every name, number, price, review, phone number and logo you invent for a mock-up is placeholder content. Mark it in the code with a comment such as `// PLACEHOLDER: replace before launch`, and tell the user to replace all of it with real data before the page goes live. Never present invented figures, testimonials or customer names as real.
 * **NO Generic Names:** "John Doe", "Sarah Chan", or "Jack Su" are banned. Use highly creative, realistic-sounding names.
 * **NO Generic Avatars:** DO NOT use standard SVG "egg" or Lucide user icons for avatars. Use creative, believable photo placeholders or specific styling.
-* **NO Fake Numbers:** Avoid predictable outputs like `99.99%`, `50%`, or basic phone numbers (`1234567`). Use varied, believable-looking mock values (for example `47.2%`), keep phone numbers obviously fake (`[PHONE NUMBER]`), and mark them as placeholders (see Placeholder safety above).
+* **NO Fake Numbers:** Avoid predictable outputs like `99.99%`, `50%`, or basic phone numbers (`1234567`). Use varied, believable-looking mock values (for example a percentage with one decimal), keep phone numbers obviously fake (`[PHONE NUMBER]`), and mark them as placeholders (see Placeholder safety above).
 * **NO Startup Slop Names:** "Acme", "Nexus", "SmartFlow". Invent premium, contextual brand names.
 * **NO Filler Words:** Avoid AI copywriting clichés like "Elevate", "Seamless", "Unleash", or "Next-Gen". Use concrete verbs.
 

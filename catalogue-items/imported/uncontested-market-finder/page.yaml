@@ -33,10 +33,11 @@ how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini. Paste the full skill text as your first message.
   - Describe your market, your main rivals and what buyers compare you on. Check every rival level and cost figure against real prices or product pages. Mark any you are unsure of as estimates, and fix them before you use the canvas.
   - Add your costs and who does not buy in your category, if you know them.
+  - If you have no rival price or product data, say so. Your AI then labels every level on the canvas as an estimate, and you run the canvas on those labels and check them later.
   - Ask for the strategy canvas, the four actions lists and the score.
   - Check that the factors match how buyers really choose. Fix any that are wrong, then ask your AI to redo the lists.
   - No code, files or web access are needed. The skill works from the text you paste. Its reference files add depth for the four actions workshop and the score checks.
-  - Take the top move to reach 10 into a pricing or product brief, and run the score again after each change.
+  - Take the top move to reach 10 into the Real strategy checker and test it there before you commit. Then put the changes you keep into a pricing or product brief, and run the score again after each change.
 output_sample:
   input:
     - Your market and your main rivals

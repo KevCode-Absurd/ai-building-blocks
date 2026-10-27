@@ -35,6 +35,8 @@ you_get:
   - A register of information outline
   - Priority actions
 how_to_use:
+  - "Start here: bring three things. First, your firm type and size. Second, your supplier list with what each service does. Third, the facts of any incident (what failed, which services and clients, how long, which countries, whether data was lost)."
+  - Check first: the deadlines, thresholds and regulation numbers in this skill are not sourced in the file. Confirm each one on EUR-Lex (eur-lex.europa.eu) or with your national regulator, and write down the date you checked.
   - Before you start, gather your supplier list, the contract clauses that cover each one, and the facts of any incident. Without the incident facts the skill will not classify it.
   - Open Claude, ChatGPT or Gemini. Use one that can browse the web, so it can check current DORA texts.
   - Paste the skill instructions into the chat, or upload the skill folder if your AI accepts files.

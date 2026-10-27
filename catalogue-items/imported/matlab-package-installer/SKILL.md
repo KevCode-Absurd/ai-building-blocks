@@ -21,6 +21,8 @@ metadata:
 
 # Use the MATLAB Package Manager (mpm)
 
+AI Blocks note on the licence: the licence link in the front matter above points to a different MathWorks page. In this catalogue, the LICENSE.md file in this folder governs (BSD 2-Clause, with the rule that you use it only with MathWorks products such as MATLAB).
+
 Manage MATLAB packages from inside a running MATLAB session with the in-product
 MATLAB Package Manager — the `mpm*` command family and the `matlab.mpm.*` classes.
 Targets **MATLAB R2026b or later** (declared in `manifest.yaml`) and encodes the

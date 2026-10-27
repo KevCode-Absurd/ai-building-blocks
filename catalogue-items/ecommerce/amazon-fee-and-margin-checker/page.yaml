@@ -11,7 +11,7 @@ subhead: Give it your price, landed cost, size and weight, plus months in stock,
 explain: |
   Amazon's fees stack up: a referral fee on every sale, pick and pack by size, storage by volume, returns, disposal and the seller account. It is easy to price a product and find later that the profit is gone. A general Amazon profit calculator covers the basics. This version adds the sources' rules of thumb, such as a third to product, a third to fees and a third to profit with a 30 percent floor, and the cash you need to start.
 
-  The fee numbers in the source are from the video's date and some are garbled, so the skill uses them only to show the method. It tells you to check current fees in Seller Central or Amazon's own calculator and to paste those in. The score is ours: it measures how well your numbers meet the sources' rules, and it shows the sum.
+  The fee numbers in the source come from a course video whose publish date is not recorded here, and some are garbled, so the skill uses them only to show the method. It tells you to check current fees in Seller Central or Amazon's own calculator and to paste those in. The score is ours: it measures how well your numbers meet the sources' rules, and it shows the sum.
 
 when:
   - You have a product, a price and a supplier quote, and want the real profit per unit.

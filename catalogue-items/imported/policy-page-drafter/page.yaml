@@ -24,6 +24,7 @@ you_give:
   - Your business description and country
   - The data you collect and why you collect it
   - The tools and vendors that receive that data
+  - The cookies and trackers your live site sets, such as analytics, ad pixels and chat widgets
   - Whether you serve children or EU visitors
   - How long you keep the data (optional)
   - Your contact details for data questions (optional)
@@ -37,8 +38,9 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill instructions, then your facts. No code or paid tools are needed.
   - "Say which document you want: privacy policy, terms or cookie notice. Tell your AI today's date."
   - Your AI may not be able to look up current law. Check each law it names against your regulator's own website before you publish.
+  - Note which laws your AI named and the date you checked them, so your lawyer can confirm those points first.
   - Check each open question against your real tools and settings. Fix anything the draft got wrong.
-  - Send the draft and the open questions to a qualified lawyer before you publish.
+  - Before you publish, send the draft and the open questions to a qualified lawyer. Do not put it live until the lawyer has signed it off. The draft is not legal advice and the skill cannot check current law.
 output_sample:
   input:
     - Your business description and country
@@ -57,6 +59,8 @@ output_sample:
       contains: Technical steps your site needs, since a notice alone does not set up consent or deletion.
     - name: Compliance checklist
       contains: A checklist for each law that applies, so you can see what is still open.
+    - name: Law check marks
+      contains: "Each clause that depends on a law your AI could not check live, marked [CHECK: law and date], so you can see which laws to verify."
     - name: Open questions and disclaimer
       contains: Gaps to raise with your lawyer, plus a note that this is a template and not legal advice.
 next: [gdpr-privacy-checker]

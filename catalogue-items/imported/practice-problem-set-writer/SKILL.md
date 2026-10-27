@@ -147,6 +147,7 @@ For each problem:
 - **Problem [N]:** [The problem text]
 - **Design intent:** [Why this problem is at this position — what it tests that previous problems didn't]
 - **Difficulty level:** [Near transfer / Developing / Far transfer]
+- **Expected answer:** [The correct answer, with brief working. This is the answer key. Check each answer twice before you return it.]
 - **Common error to watch for:** [If applicable]
 
 ### Scaffold Reduction Plan

@@ -229,6 +229,8 @@ Skill creation involves these steps:
 
 Follow these steps in order, skipping only if there is a clear reason why they are not applicable.
 
+In a plain chat that cannot run code: do steps 1, 2, 4 and 6. Skip step 3 (init_skill.py) and write the folder layout and SKILL.md text yourself. Do step 5 by hand: check that SKILL.md starts with a name and description, that the name uses lowercase letters and hyphens, and that nothing else is missing. Do not claim you ran any script.
+
 ### Skill Naming
 
 - Use lowercase letters, digits, and hyphens only; normalize user-provided titles to hyphen-case (e.g., "Plan Mode" -> `plan-mode`).
@@ -284,7 +286,7 @@ At this point, it is time to actually create the skill.
 
 Skip this step only if the skill being developed already exists. In this case, continue to the next step.
 
-When creating a new skill from scratch, always run the `init_skill.py` script. The script conveniently generates a new template skill directory that automatically includes everything a skill requires, making the skill creation process much more efficient and reliable.
+When creating a new skill from scratch, run the `init_skill.py` script if you can run code. In a plain chat, write the template files yourself instead. The script conveniently generates a new template skill directory that automatically includes everything a skill requires, making the skill creation process much more efficient and reliable.
 
 Usage:
 

@@ -140,7 +140,7 @@ improve:
   - Save what each client said to a proposal in the proposals file. The next review reads it before proposing again.
   - Set a scope rule, such as two revision rounds included, so scope growth is measured, not felt.
   - Pair it with the Weekly invoice and cash chaser so days to pay come from the same rows.
-  - Ask the Wolfgang Amadeus Mozart mind for a second view on which clients to keep. It works from his recorded view on pricing, not as financial advice.
+  - Ask the Wolfgang Amadeus Mozart mind for a second view on which clients to keep. Treat it as a view in his style, not advice he gave about pricing, and not financial advice.
 works_best_with:
   tools:
     - name: Claude Code

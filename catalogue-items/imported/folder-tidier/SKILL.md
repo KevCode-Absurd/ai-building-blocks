@@ -8,6 +8,12 @@ date_added: "2026-02-27"
 
 # File Organizer
 
+## When not to use this skill
+
+- A live code project. Moving files can break the build and the history. Use Git and move files by hand.
+- Shared, work server or system folders. Ask the person who owns them, or tidy a copy first.
+- You only need to find one file. Use your computer's search.
+
 ## When to Use This Skill
 
 - Your Downloads folder is a chaotic mess
@@ -156,7 +162,7 @@ When a user requests file organization help:
       - Y images → Personal/Photos/
       - Z old files → Archive/
    3. **Rename files**: [any renaming patterns]
-   4. **Delete**: [duplicates or trash files]
+   4. **Delete**: [list each duplicate or trash file by full path. Nothing is deleted until the user gives a separate, clear yes for deletion]
 
    ## Files Needing Your Decision
 
@@ -167,7 +173,7 @@ When a user requests file organization help:
 
 6. **Execute Organization**
 
-   After approval, organize systematically:
+   After approval, organize systematically. The commands below are examples only. They have not been tested on every Mac, Windows or Linux setup, so test them on a copy of the folder first and adjust them for the user's system:
 
    ```bash
    # Create folder structure
@@ -186,7 +192,7 @@ When a user requests file organization help:
    - Write every move to a log file named `tidy-moves.log` in the target folder, one line per move as `old path -> new path`. This is the only way back. Moves are not reversed automatically
    - To undo, read the log from the bottom up and move each file from its new path back to its old path. Offer to write those move commands for the user, and show them before running anything
    - Preserve original modification dates
-   - Handle filename conflicts gracefully
+   - Never overwrite a file. If a file with the same name already exists at the new path, leave both where they are and list the pair for the user to decide
    - Stop and ask if you encounter unexpected situations
 
 7. **Provide Summary and Maintenance Tips**

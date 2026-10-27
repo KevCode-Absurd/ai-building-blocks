@@ -89,6 +89,9 @@ output_shape: |
   CHECK FIRST
   <email or service that may be affected>
 
+  CHECKS MISSED
+  <one line per check not run, or none>
+
 tweaks:
   - what: "Email and tools"
     how: "List what uses each domain, such as email. Changes that would break them get flagged."
@@ -106,7 +109,7 @@ judge:
 test:
   - "Check each redirect in a browser after you set it up."
   - "Run it twice. The main addresses should match."
-  - "Leave out the services list. It should ask what depends on each name."
+  - "Run it once without the services list. It should ask what depends on each name, or list email, shop and booking under CHECK FIRST."
 
 improve:
   - "Add the registrar you use so the safety list names real settings."

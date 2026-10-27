@@ -13,7 +13,7 @@ explain: |
 
   After the quickstart you get a tutorial outline for the second visit and a plan for a sample app that developers can copy. It also flags the onboarding mistakes your product is most likely to make, such as hidden keys or sign-up wizards that cannot be skipped.
 
-  The licence that applies to this copy is the one in the LICENSE-CONTENT file in this item, CC BY 4.0. It comes from sickn33's collection. The skill file's header names its original author jonathimer and his MIT licence, and a "risk: critical" tag that is the collection's own label and does not mean this skill is dangerous. Both licences allow reuse with credit.
+  The licence that applies to this copy is the one in the LICENSE-CONTENT file in this item, CC BY 4.0. It comes from sickn33's collection. The skill file's header names its original author jonathimer and his MIT licence, and a "risk: critical" tag that is the collection's own label and does not mean this skill is dangerous. The licence that governs this copy is CC BY 4.0 alone. Credit line to keep: "Developer onboarding skill by jonathimer (devmarketing-skills), shared through sickn33's collection, CC BY 4.0." The MIT label in the skill file's header is the original author's and does not change the CC BY 4.0 terms applied here.
 when:
   - You are launching an API or SDK and need a getting started guide.
   - Your quickstart has many steps before anything works.
@@ -38,7 +38,7 @@ you_get:
   - A list of what you still have to fill in
 how_to_use:
   - Gather what you have. Write two lines on your product, note how a developer gets a key, and copy any real install command and sample request.
-  - Open Claude, ChatGPT or Gemini. Paste the skill instructions first, then the detailed guide if your AI allows files. No code is run and no paid tool is needed.
+  - Open Claude, ChatGPT or Gemini. Paste the skill instructions first, then the detailed guide if your AI allows files. This skill is text only. You paste it into an AI chat, and nothing is fetched, installed or run from this item. No paid tool is needed.
   - Paste your product details. Answer any question your AI asks. Anything you skip is marked MISSING.
   - Run the quickstart yourself in a fresh folder. Every code line is unrun until you do this.
   - Replace each placeholder with a real value. Then ask your AI to tighten any step that took you more than a minute.

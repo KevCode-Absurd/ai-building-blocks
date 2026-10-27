@@ -7,7 +7,7 @@ job: build-product
 headline: Lean product shaping coach
 subhead: "A smaller plan that you can actually finish: a fixed six-week bet, a clear scope, and a list of features you chose not to build."
 explain: |
-  A smaller plan that you can actually finish: a fixed six-week bet, a clear scope, and a list of features you chose not to build. Describe your product plan. The skill scores it from 0 to 10 against ideas from 37signals' Shape Up, Getting Real and Rework, then names the exact changes that raise the score.
+  A smaller plan that you can actually finish: a fixed six-week bet, a clear scope, and a list of features you chose not to build. This is the 37signals way (Shape Up, Getting Real and Rework), copied from Wondel.ai under the MIT licence. Describe your product plan. The skill scores it from 0 to 10 against ideas from 37signals' Shape Up, Getting Real and Rework, then names the exact changes that raise the score.
 
   It pushes to build less, fix the time and let scope flex, write a shaped pitch before work starts, keep teams small and drop the endless backlog. It also looks for process weight like sprints and story points, and shows what to cut. Expect pointed questions about what you can leave out.
 when:
@@ -16,8 +16,8 @@ when:
   - You want to try six-week cycles instead of sprints.
   - You need to decide which requests to turn down.
 not_for:
-  - "You need to test whether anyone wants your idea: use the lean-startup skill, or talk to ten likely buyers first."
-  - "You want a structured week of testing with prototypes: use the design-sprint skill."
+  - "You need to test whether anyone wants your idea: use the Startup idea tester or the MVP experiment planner, or talk to ten likely buyers first. This item shapes a plan you already believe in."
+  - "You want a structured week of testing with prototypes: use the Five-day idea test planner. Shaping cuts scope, a sprint tests an idea with prototypes."
   - "Your client contract fixes the scope and you cannot cut anything: ask your client to change the contract first."
 you_give:
   - Your product plan or feature list
@@ -32,10 +32,16 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini in a new chat. No code or paid tools are needed.
   - Paste the text of the skill file (SKILL.md) into the chat.
-  - Paste your product plan or feature list, then your team size, how you work now and the problem you want to solve.
+  - "Paste your product plan or feature list, then your team size and the problem you want to solve. The least it needs is a list of at least five features, your team size as a number, and one sentence on the problem. How you work now helps. The deadline is optional."
   - Add your deadline if you have one.
   - "Read the results in order: score, trimmed scope, six-week pitch outline, no-go list."
   - Answer the questions it asks about what you can leave out, then ask it to redo the scope.
+output_shape: |-
+  Score: <0 to 10, with one line of reasons per part>
+  Changes to reach 10: <3 to 6 specific changes, one line each>
+  Trimmed scope: <what stays, as a short list>
+  Six-week pitch outline: <problem, appetite of six weeks, rough solution, rabbit holes, no-gos, each in one to three lines>
+  No-go list: <features and requests you will not build, one line each, with a reason>
 output_sample:
   input:
     - Your product plan or feature list

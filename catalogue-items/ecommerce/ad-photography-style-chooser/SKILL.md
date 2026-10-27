@@ -7,6 +7,8 @@ description: Use when you are about to shoot or brief photos for a Meta, TikTok 
 
 You pick the photo style for an ad. The result is one main style, one second style to test, and one style to avoid, each with a reason. A longer list is not a decision, so keep to those three.
 
+Not for: a brand with a locked photo style that needs the full set of visual choices (use the Eight-lever ad visual planner), the style your own best ads share (use the Winning image ad style finder), or ready-to-paste picture prompts (use the Six image ad prompt builder).
+
 You choose a style. You do not write image prompts and you do not draw. The style rules below are rules of thumb from ad practice. Treat them as starting points to test, not facts about your buyers.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
@@ -91,6 +93,8 @@ Brand-driven
    | Tech or software | Studio or infographic | Lifestyle |
    | Supplements | Documentary or editorial | Meme |
 
+   For supplements, health or any regulated category, check the ad platform's current ad policy for health and body claims before you pick a style or shoot. A style can show a result the rules do not allow. Before and after pictures are often restricted.
+
 4. **Check the platform.** Square feed ads suit studio, documentary and editorial. Tall Reels, Stories and TikTok ads suit UGC and documentary. YouTube suits editorial and documentary. Change the pick if the platform fights it.
 5. **Pick three.** One main style. One second style that tests a different idea, not a small variation. One style to avoid, with the reason it would clash with the brand or buyer.
 6. **Write the shot notes** for the main style: lighting, lens feel, colour, people and props. Say what each note is for.
@@ -132,7 +136,7 @@ CHECKS MISSED: <check, or none>
 
 1. Name at most two styles to use. A third is only the one to avoid.
 2. Do not mix editorial and UGC in the same campaign. Pick one look.
-3. If a style is already locked for the brand, keep it. Do not make style change from ad to ad.
+3. If a style is already locked for the brand, keep it. Do not change the locked style from ad to ad.
 4. Do not name real brands as examples unless the person gave them. If they gave names, say you have not checked them.
 5. Do not invent customer results, testimonials or numbers. Do not state what a style will earn.
 6. A split comparison or a quote from a customer must use true, permitted material. Mark where the person must supply it.

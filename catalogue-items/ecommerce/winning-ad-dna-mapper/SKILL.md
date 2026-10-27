@@ -35,7 +35,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **The ads** (required): images, screenshots, transcripts or links to ads. Video ads need a transcript or a description of what is shown. Ten or more ads are needed to see patterns.
+- **The ads** (required). In the box above, "Reference ads" means these ads, your own and rivals': images, screenshots, transcripts or links to ads. Video ads need a transcript or a description of what is shown. Ten or more ads are needed to see patterns.
 - **Results** (strongly advised, for the store's own ads): spend, ROAS or CPA, so winners and losers can be told apart.
 - **Product facts** (strongly advised): what the store really sells, its proof and its claims, so new ads stay true.
 - **Buyer words** (optional): reviews and comments, to find segments the ads have not reached.
@@ -53,7 +53,7 @@ Does not fit:
 ## Steps
 1. **Collect and label the ads.** Number them. Mark each as the store's own or a rival's. Add results where they exist. For video, get a transcript first.
 2. **Split every ad into message and creative.**
-   - **Message, the who:** the segment. Describe it as outcome (what they want or don't want), demographic and a facet (a state, event or condition). Do not name or assume sensitive personal traits in ad copy. Link the Meta ads compliance checker for that.
+   - **Message, the who:** the segment. Describe it as outcome (what they want or don't want), demographic and a facet (a state, event or condition). Do not name or assume sensitive personal traits in ad copy. Check the final ads with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker), and read Meta's current ad policies on personal attributes.
    - **Message, the what:** the concept (the core idea), the angle (how that idea is presented), and the mechanism. A mechanism has a problem side (why you have this problem) and a solution side (why this works). The best are simple, intuitive and new. Then mark each copy block as present, weak or missing: pain, promise, proof, curiosity, constraints, conditions.
    - **Message, the how:** the hook and the format (for example a timeline, a comparison of two people, a personified object). The hook is the largest part of the message.
    - **Creative for video, CAST:** conceit (the kind of media it pretends to be), actor, style, terrain (the setting) and setup (captions, b-roll, split screen, stacked hooks).

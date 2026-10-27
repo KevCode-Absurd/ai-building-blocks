@@ -30,9 +30,9 @@ you_get:
   - Earnings per share before and after the deal
   - Savings cases and a break-even view
 how_to_use:
-  - The India conventions files the skill names are not in this folder. If your AI cannot load them, ask it to state the conventions it assumed and list what it could not check.
+  - The India conventions files the skill used to name are not in this folder, and the skill no longer asks for them. It uses the two rules written in it, and the workbook ends with a section that lists the conventions it assumed and what it could not check. Read that section first.
   - Open a chat with an AI that can make Excel files. Paste in this skill.
-  - Add the buyer and target details, the offer price and the cash and stock mix.
+  - "Add the buyer and target details, the offer price and the cash and stock mix. Use these units: money in rupees crore, share counts in crore, fiscal years labelled like FY26 (April to March). Say so if yours differ."
   - Add your expected savings, fees and close date. If you skip something, your AI should ask or mark it missing.
   - Check that all amounts are in rupees, in lakh or crore, and that years run April to March.
   - Read the year one result and the breakeven savings first. Then look at the sensitivity tables.
@@ -48,7 +48,7 @@ output_sample:
     - Expected savings, fees and close date
   prerequisites:
     - An AI that can build and share an Excel file (otherwise you get the tables in the chat)
-    - The India market conventions and market data skills, which this skill asks your AI to load first
+    - "The India conventions and data files the skill names are not in this item. The two rules it needs (April to March years, lakh and crore units) are written in this page and in the skill, so it still works without them"
   output:
     - name: Purchase price analysis
       contains: Offer price, premium, equity value, net debt, enterprise value and the implied multiples.

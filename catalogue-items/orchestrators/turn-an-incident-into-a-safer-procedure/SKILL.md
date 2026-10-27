@@ -31,7 +31,7 @@ How to start:
 
 ## What you need
 
-This list replaces the general "Before you start" list above. There, "Source text" and "Meeting notes" mean the incident timeline and notes, and "Document" means the procedure. They are not an article or a book.
+This list replaces the general "Before you start" list above. There, "The incident record" and "Meeting notes" mean the incident timeline and notes, and "Document" means the procedure. Nothing here is an article or a book.
 
 - The incident timeline, logs, chat or notes, with times.
 - What was done to recover, and which facts are confirmed and which are guesses.
@@ -43,7 +43,7 @@ Use what is attached or pasted first. If something required is missing, ask once
 
 ## Skills this workflow uses
 
-`incident-postmortem-writer`, `process-and-sop-writer` and `executive-action-register`. Read each in full before its step. If one is not in your pack, open `https://useaiblocks.com/skills/<slug>` or ask for the file. Never replace it with made-up instructions.
+`incident-postmortem-writer`, `process-and-sop-writer` and `executive-action-register`. Read each in full before its step. If one is not in your pack, open `https://useaiblocks.com/skills/<slug>` or ask for the file. Never replace it with made-up instructions. Check that all three are in the pack before step 1. If one is missing, stop and say which.
 
 ## Rules
 
@@ -56,7 +56,7 @@ Use what is attached or pasted first. If something required is missing, ask once
 
 ## Steps
 
-1. **Write the report** with `incident-postmortem-writer`. Include a timeline table (time, event, source), impact, detection and response, causes with labels, what worked, what failed, and proposed actions. Save `outputs/step-01-incident-postmortem-writer.md`.
+1. **Write the report** with `incident-postmortem-writer`. A timeline row with no source is marked `MISSING: source` and left out of the causes list. Include a timeline table (time, event, source), impact, detection and response, causes with labels, what worked, what failed, and proposed actions. Save `outputs/step-01-incident-postmortem-writer.md`.
    **Gate before step 2:** every timeline row has a source, every cause is labelled, and no one is named as the fault.
    **Hands to step 2:** the confirmed causes, the controls that failed or were missing, and the controls that worked.
 

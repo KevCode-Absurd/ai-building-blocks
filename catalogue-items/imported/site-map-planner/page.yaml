@@ -10,6 +10,8 @@ explain: |
   A site map with page hierarchy, navigation, URL plan and internal links, so visitors find things and search engines follow your structure. It stops a site from growing into a pile of orphan pages.
 
   Tell it what the business does, who the audiences are and the top goals: sales, search traffic, education or support. For an existing site, it asks what is broken and which URLs need redirects. It matches the site type (SaaS, blog, shop, docs, local business) to a layout. Then it draws the hierarchy, sets URL patterns, plans the top menu and footer, and maps links between pages. Platform choice and migration notes are also covered.
+
+  This is a copy of the MIT-licensed site-architecture skill by Corey Haines. The page text is ours.
 when:
   - You are planning a new website from scratch.
   - Your menu has grown messy and visitors cannot find pages.
@@ -31,12 +33,14 @@ you_get:
   - An internal linking map
   - Redirect notes for moved pages
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste the skill text. No code or paid tool is needed.
+  - Open Claude, ChatGPT or Gemini and paste the skill text. No code or paid tool is needed. The skill links to four reference files in the references folder of this item: site-type-templates.md, navigation-patterns.md, mermaid-templates.md and platforms-and-migration.md. In a chat that cannot open them, paste the one for your site type, and platforms-and-migration.md if you are moving platforms.
+  - "Have ready: your business brief (what you do, who you serve, your top 3 goals), your site type and platform, and your current URL list if the site exists."
   - "Paste your business brief first: what you do, who you serve and your top 3 goals."
   - Add your site type and platform. If the site exists, paste your current URL list and say what is broken.
   - Answer any questions your AI asks, such as your 5 most important pages.
   - "Read the results in order: page tree, visual sitemap, URL table, navigation spec, then linking plan."
   - Check that every old URL you must keep has a redirect before you build.
+  - Next, take the URL map table into your site builder or CMS. Before go-live, use the Site go-live runbook writer for launch checks.
 output_sample:
   input:
     - What your business does and who it serves

@@ -11,7 +11,7 @@ explain: |
 
   The skill follows a fixed order: list the devices with the hardware info call, connect through the video input object, set properties like exposure and frame rate, then grab frames. It picks the right driver name per system, such as winvideo on Windows, macvideo on Mac and linuxvideo on Linux, and uses gentl for GigE and CoaXPress cameras. It tells you which support packages to install, and it asks which frame grabber you have when it needs to.
 
-  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. That link is superseded by LICENSE.md, so follow the LICENSE.md file.
 when:
   - You plugged in a USB camera and MATLAB does not see it.
   - You need to grab a series of frames at a set rate for analysis.
@@ -25,7 +25,8 @@ you_give:
   - Camera type and model
   - Operating system
   - What to capture (stills or video)
-  - MATLAB release
+  - Your MATLAB release, which you check by typing ver in MATLAB, so the code matches what your version supports
+  - Confirmation that Image Acquisition Toolbox is installed. It is a paid MathWorks add-on, and MATLAB itself needs a licence.
 you_get:
   - Device listing code
   - Connection and setup code
@@ -33,6 +34,7 @@ you_get:
   - A list of support packages to install
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Check first that your MATLAB has Image Acquisition Toolbox. Type ver in MATLAB and look for it in the list. Without it, this code will not run.
   - Tell it your camera type and model, your operating system, and whether you want stills or video.
   - If you use CoaXPress or Camera Link, name your frame grabber. Your AI needs it to pick the right adaptor.
   - Install the support packages it lists. GigE, USB3 Vision and CoaXPress cameras also need the vendor's .cti file.
@@ -48,7 +50,7 @@ output_sample:
     - Your camera type and model
     - Your operating system
     - Whether you want still images or video
-    - Your MATLAB release (optional)
+    - Your MATLAB release and whether Image Acquisition Toolbox is installed
     - Your frame grabber name, if you use CoaXPress or Camera Link
   prerequisites:
     - MATLAB with Image Acquisition Toolbox installed

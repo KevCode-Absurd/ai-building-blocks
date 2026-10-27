@@ -5,7 +5,7 @@ description: "/em:stress-test — Business assumption stress testing. Use before
 
 # /em:stress-test — Business Assumption Stress Testing
 
-**Command:** `/em:stress-test <assumption>`
+**Command:** `/em:stress-test <assumption>` in tools that support it. In a plain chat there is no command. Paste your assumption as one sentence and ask the AI to follow this skill.
 
 Take any business assumption and break it before the market does. Revenue projections. Market size. Competitive moat. Hiring velocity. Customer retention.
 
@@ -19,7 +19,7 @@ Founders are optimists by nature. That's a feature — you need optimism to star
 
 **The most dangerous assumptions are the ones everyone agrees on.**
 
-When the whole team believes the $50M market is real, when every investor call goes well so you assume the round will close, when your model shows $2M ARR by December and nobody questions it — that's when you're most exposed.
+When the whole team believes the [MARKET SIZE] market is real, when every investor call goes well so you assume the round will close, when your model shows [ARR TARGET] ARR by December and nobody questions it — that's when you're most exposed.
 
 Stress testing isn't pessimism. It's calibration.
 
@@ -29,7 +29,7 @@ Stress testing isn't pessimism. It's calibration.
 
 ### Step 1: Isolate the Assumption
 
-State it explicitly. Not "our market is large" but "the total addressable market for B2B spend management software in German SMEs is €2.3B."
+State it explicitly. Not "our market is large" but "the total addressable market for [PRODUCT TYPE] in [SEGMENT AND REGION] is [AMOUNT]."
 
 The more specific the assumption, the more testable it is. Vague assumptions are unfalsifiable — and therefore useless.
 
@@ -60,6 +60,8 @@ Ask:
 - What competitors who tried this found
 
 The goal isn't to find a reason to stop — it's to surface what you don't know.
+
+**Label every counter-evidence point.** Mark each one as "from your data", "from memory, verify before use" or "needs a source". Never give a figure, a company name or a study without one of these labels. Do not invent comparable failures, statistics or sources. If you cannot name a real one, say what kind of evidence to look for instead.
 
 ### Step 3: Model the Downside
 
@@ -174,7 +176,7 @@ For every high-risk assumption, there should be a hedge:
 
 **Stress questions:**
 - If the market leader copies your product in 6 months, how does pricing change?
-- What's your response if a competitor raises $30M to attack your space?
+- What's your response if a competitor raises [AMOUNT] to attack your space?
 - Which of your customers have vendor relationships with your competitors?
 
 ---
@@ -203,4 +205,7 @@ HEDGE
 • Validation: [How to test this before betting on it]
 • Contingency: [Plan B if it's wrong]
 • Early warning: [Leading indicator to watch — and at what threshold to act]
+
+NEXT STEPS
+• [What to do with this result, for example: take the validation hedge into a pilot, or update the plan model before any investor meeting]
 ```

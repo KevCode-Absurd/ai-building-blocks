@@ -34,7 +34,7 @@ you_get:
   - Questions about work that looks copied, never a verdict
 how_to_use:
   - Open a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents. In ChatGPT or Gemini, paste it in.
-  - Describe the task and what a good piece shows. Use student ids, not names, and follow your school's data rules.
+  - Describe the task and what a good piece shows. Before you paste any student work into an AI tool, check your school's data-protection and consent rules. Remove names first and use student ids.
   - On the first batch, read the rubric closely and approve it. It is kept for later batches of this task.
   - Attach the batch. In a chat AI, paste a few pieces at a time. Claude Code can read a folder of files.
   - Settle the edge cases, then read the class patterns before the pieces.

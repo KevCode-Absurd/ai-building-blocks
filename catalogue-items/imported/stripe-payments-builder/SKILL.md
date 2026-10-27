@@ -15,7 +15,7 @@ description: "Production-grade Stripe integrations: subscriptions with trials an
 
 Implement production-grade Stripe integrations: subscriptions with trials and proration, one-time payments, usage-based billing, checkout sessions, idempotent webhook handlers, customer portal, and invoicing. Covers Next.js, Express, and Django patterns.
 
-The code below is Next.js (App Router) with a Prisma-style `db`. Adapt it to the user's framework and database. Do not paste it in unchanged.
+The code below is Next.js (App Router, version 15 or later) with a Prisma-style `db`. Adapt it to the user's framework and database. Do not paste it in unchanged.
 
 ---
 
@@ -69,19 +69,20 @@ List these at the end, with the path of each file you made or changed:
 ## Subscription Lifecycle State Machine
 
 ```
-FREE_TRIAL ──paid──► ACTIVE ──cancel──► CANCEL_PENDING ──period_end──► CANCELED
-     │                  │                                                    │
-     │               downgrade                                            reactivate
-     │                  ▼                                                    │
-     │             DOWNGRADING ──period_end──► ACTIVE (lower plan)           │
-     │                                                                        │
-     └──trial_end without payment──► PAST_DUE ──payment_failed 3x──► CANCELED
-                                          │
-                                     payment_success
-                                          │
-                                          ▼
-                                        ACTIVE
+trialing ──paid──► active ──cancel──► cancel_pending ──period_end──► canceled
+    │                 │                                                  │
+    │            downgrade: the new price starts at period end,        reactivate
+    │            status stays active, the plan changes at the renewal    │
+    │                                                                    │
+    └──trial_end without payment──► past_due ──payment_failed 3x──► canceled
+                                        │
+                                  payment_success
+                                        │
+                                        ▼
+                                     active
 ```
+
+The names in the diagram are the same as the database status values below.
 
 ### DB subscription status values:
 `trialing | active | past_due | canceled | cancel_pending | paused | unpaid`
@@ -197,11 +198,26 @@ export async function changeSubscriptionPlan(
       billing_cycle_anchor: "unchanged",
     })
   } else {
-    // Downgrade: apply at period end, no proration
-    return stripe.subscriptions.update(subscriptionId, {
-      items: [{ id: currentItem.id, price: newPriceId }],
-      proration_behavior: "none",
-      billing_cycle_anchor: "unchanged",
+    // Downgrade: keep the current plan until the period ends, then switch.
+    // A subscription schedule does this. Updating the subscription directly would switch now.
+    // Check these calls against the Stripe docs for your API version.
+    const schedule = await stripe.subscriptionSchedules.create({
+      from_subscription: subscriptionId,
+    })
+    const currentPhase = schedule.phases[0]
+    return stripe.subscriptionSchedules.update(schedule.id, {
+      end_behavior: "release",
+      phases: [
+        {
+          items: [{ price: currentItem.price.id, quantity: currentItem.quantity }],
+          start_date: currentPhase.start_date,
+          end_date: currentPhase.end_date,
+        },
+        {
+          items: [{ price: newPriceId, quantity: currentItem.quantity }],
+          iterations: 1,
+        },
+      ],
     })
   }
 }
@@ -250,7 +266,8 @@ async function markEventProcessed(eventId: string, type: string) {
 
 export async function POST(req: Request) {
   const body = await req.text() // raw body: the signature check fails if you parse it first
-  const signature = headers().get("stripe-signature")
+  // headers() must be awaited on Next.js 15 and later. On older versions the await does no harm.
+  const signature = (await headers()).get("stripe-signature")
   if (!signature) return NextResponse.json({ error: "Missing signature" }, { status: 400 })
 
   let event: Stripe.Event
@@ -511,6 +528,7 @@ Give the user these steps in order, and stop at the first one that fails:
 5. Run `stripe trigger invoice.payment_failed`. Check the status becomes `past_due`.
 6. Send the same event twice. Check the second one is skipped.
 7. Pay with the generic decline card. Check the user is told and not upgraded.
+8. Downgrade a test subscription to a cheaper plan. Check the plan, the price and the renewal date in Stripe: the new price must start at the end of the current period, not today. Your app should show the old plan until then.
 
 ---
 

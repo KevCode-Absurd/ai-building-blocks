@@ -108,6 +108,8 @@ output_shape: |
   VERDICT: <ship | fix>
   THREE FIXES: 1. <...> 2. <...> 3. <...>
   NOTE: the limits are one teacher's rules of thumb. Test them on your own data.
+  CHECKS MISSED: <none | checks that failed or could not run>
+  MISSING: <...>
 
 tweaks:
   - what: Your brand voice rules

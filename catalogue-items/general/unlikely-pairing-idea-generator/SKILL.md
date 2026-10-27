@@ -5,7 +5,7 @@ description: Use when your ideas look like everyone else's and you want a fresh 
 
 # Unlikely pairing idea generator
 
-Fresh ideas often come from crossing things that do not usually meet. Most crossings fail, so you need many, plus a rule to stop them drifting into the usual. This skill makes the pairings, applies a limit, and keeps the ones that hold together. It works for naming, design, writing, products and campaigns.
+Fresh ideas often come from crossing things that do not usually meet. Most crossings fail, so you need many, plus a rule to stop them drifting into the usual. This skill makes the pairings, applies a limit, and keeps the ones that hold together. It works for naming, design, writing, products and campaigns. The method is inspired by public talks and advice from David Bowie. These are our own paraphrases of the ideas, not his words, and he has not endorsed this skill.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -52,6 +52,8 @@ When you've handed it back, suggest what they could do next in one short questio
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 
+What next: turn the pairing you pick into a short brief or first draft and show it to two people from the audience. The XR interface architect link under "After this" only fits if your pairing is a spatial or XR product. For anything else, skip it.
+
 ## Check before you hand it back
 
 - Ten or more pairings were written, with failures kept.
@@ -63,7 +65,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## If something is missing
 
-Write `MISSING: <what> for <step>`. If the audience is unclear, ask before writing pairings. Do not state facts about real people or brands that the user did not supply.
+Write `MISSING: <what> for <step>`. If the audience is unclear, ask once before writing pairings, even if the user says to go ahead, because the comfort check needs it. For any other gap, finish what you can and mark it. Do not state facts about real people or brands that the user did not supply.
 
 ## Avoid
 

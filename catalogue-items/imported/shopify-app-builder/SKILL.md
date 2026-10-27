@@ -76,7 +76,18 @@ my-app/
 └── package.json
 ```
 
-### 3. Start Development
+### 3. Set Up the Session Database
+
+The Remix template stores sign-in sessions with Prisma. Run this once from the project folder, before the first `shopify app dev`:
+
+```bash
+npx prisma generate
+npx prisma migrate deploy
+```
+
+(The template also has `npm run setup`, which runs both.)
+
+### 4. Start Development
 
 ```bash
 # Start dev server with tunnel
@@ -138,7 +149,8 @@ const shopify = shopifyApp({
   // Set from the app type the user chose:
   // public app -> AppDistribution.AppStore
   // custom app for one store -> AppDistribution.ShopifyAdmin
-  // sales channel -> check Shopify's current docs for the right value
+  // sales channel -> not given here. Stop and ask the user to look up the right value in
+  // Shopify's current docs and tell you. Never guess it.
   distribution: AppDistribution.AppStore, // change this for a custom app
 });
 
@@ -268,6 +280,7 @@ function ProductBlock() {
 ### Basic Layout
 
 ```jsx
+import { useState } from "react";
 import {
   Page,
   Layout,
@@ -283,7 +296,7 @@ import {
 } from "@shopify/polaris";
 
 export default function ProductPage() {
-  // State for the form fields below (add: import { useState } from "react";)
+  // State for the form fields below
   const [title, setTitle] = useState("");
   const [status, setStatus] = useState("draft");
 

@@ -2,16 +2,18 @@ thinking: medium
 thinking_why: Standards give exact settings.
 new_slug: wi-fi-waveform-generator
 name: Wi-Fi waveform generator
-summary: Build a Wi-Fi waveform generator output for any 802.11 format. Get IQ samples and a plot for link tests, using MATLAB with WLAN Toolbox.
+summary: Pick an 802.11 format. Get IQ samples and a plot for link tests. Needs paid MATLAB and WLAN Toolbox.
 job: build-software
 headline: Wi-Fi waveform generator
 subhead: A standard-compliant Wi-Fi transmit waveform, ready to feed into a link test or simulation. You choose the 802.11 format and get time-domain IQ samples you can plot or send to hardware.
 explain: |
-  This is for RF engineers and researchers who already have MATLAB and the WLAN Toolbox. It is not for general business use.
+  Who this is for: RF engineers and researchers who already hold MATLAB and WLAN Toolbox licences. It is not for general business use.
+
+  Cost and access: it cannot run without MATLAB and the WLAN Toolbox, which are paid MathWorks products. We know of no free way to run it.
 
   A standard-compliant Wi-Fi transmit waveform, ready to feed into a link test or simulation. You choose the 802.11 format and get time-domain IQ samples you can plot or send to hardware.
 
-  The skill covers formats from 802.11a/g through n, ac, ax and be, plus newer ones, with single-user, multi-user MIMO, OFDMA, trigger-based uplink and preamble puncturing. You set the PHY format, size the payload, optionally build MAC frames such as data, Block Ack or beacon, and aim for a given packet duration. It can combine packets into a longer waveform. It needs MATLAB with the WLAN Toolbox, which are paid MathWorks products, and an AI that can run MATLAB code. The skill comes from MathWorks under the BSD 2-Clause licence, which lets you use it only with MathWorks products.
+  The skill covers formats from 802.11a/g through n, ac, ax and be, plus newer ones, with single-user, multi-user MIMO, OFDMA, trigger-based uplink and preamble puncturing. You set the PHY format, size the payload, optionally build MAC frames such as data, Block Ack or beacon, and aim for a given packet duration. It can combine packets into a longer waveform. It needs MATLAB with the WLAN Toolbox, which are paid MathWorks products, and an AI that can run MATLAB code. Licence: the LICENSE.md file in this folder governs our copy. It is the BSD 2-Clause licence with one added rule: you may use the skill only with MathWorks products. The licence link inside the skill file is the author's own header, and we follow LICENSE.md.
 when:
   - You need a test signal for a Wi-Fi receiver design.
   - You are building the transmit side of a link simulation.
@@ -35,7 +37,7 @@ you_get:
   - Multi-packet waveform (optional)
 how_to_use:
   - Check you have MATLAB with the WLAN Toolbox. Wi-Fi 8 (802.11bn) needs MATLAB R2026a or later.
-  - "Gather your numbers: 802.11 format, channel bandwidth, MCS, number of streams, and payload size or target duration."
+  - "Have these ready before you open the AI: the 802.11 format (for example n, ac, ax, be or bn), the channel bandwidth, the MCS, the number of streams and antennas, and either the payload size or the packet duration you want. If you want MAC frames, also the frame type (Data, Block Ack or Beacon). For OFDMA, the resource unit layout."
   - Open an AI that can run MATLAB code. Paste the skill, then give it your numbers.
   - Ask for the waveform and a plot. Check the packet length and shape match what you asked for.
   - If you need MAC frames or OFDMA, say which frame type or resource unit layout you want.

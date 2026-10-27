@@ -1,6 +1,6 @@
 ---
 name: "skill-tester"
-description: "Validate, test, and score the quality of skills within the claude-skills ecosystem. Comprehensive meta-skill: structure validation, Python script testing (syntax + imports + runtime + output format), multi-dimensional quality scoring with letter grades and tier classification (BASIC/STANDARD/POWERFUL). Use when authoring a new skill, auditing existing skills for tier promotion, setting up pre-commit hooks for skill quality, or integrating skill QA into CI."
+description: "Validate, test, and score the quality of skills within the claude-skills ecosystem. Comprehensive meta-skill: structure validation, Python script testing (syntax + imports + runtime + output format), multi-dimensional quality scoring with letter grades and tier classification (BASIC/STANDARD/POWERFUL). Use when auditing existing skills for tier promotion, setting up pre-commit hooks for skill quality, or integrating skill QA into CI. Not for authoring new skills: its tier minimums suit older skills."
 ---
 
 ## Supporting material availability
@@ -26,15 +26,17 @@ Meta-skill that validates, tests, and scores skills in this repository. Four too
 
 ## Quick Start (exact, runnable from repo root)
 
+> **Safety warning:** `script_tester.py` runs the skill's own Python scripts. Run it only on a throwaway copy of a skill you trust, or inside a container. Never run it in CI on code from an untrusted pull request.
+
 ```bash
 # 1. Validate structure (exit non-zero on failure — usable as a gate)
-python3 engineering/skills/skill-tester/scripts/skill_validator.py engineering/skills/self-eval --json
+python3 engineering/skills/skill-tester/scripts/skill_validator.py engineering/skills/your-skill --json
 
 # 2. Test the skill's Python scripts (30s default timeout per script)
-python3 engineering/skills/skill-tester/scripts/script_tester.py engineering/skills/self-eval --json
+python3 engineering/skills/skill-tester/scripts/script_tester.py engineering/skills/your-skill --json
 
 # 3. Score quality (fail CI below threshold with --minimum-score)
-python3 engineering/skills/skill-tester/scripts/quality_scorer.py engineering/skills/self-eval --json --detailed --minimum-score 75
+python3 engineering/skills/skill-tester/scripts/quality_scorer.py engineering/skills/your-skill --json --detailed --minimum-score 75
 ```
 
 Consume the JSON: validator emits `overall_score`, `compliance_level`, per-check `checks{}`; scorer emits `overall_score`, `letter_grade`, `tier_recommendation`, `dimensions`, and an `improvement_roadmap` — work the roadmap top-down, then re-run until the target score is met.
@@ -72,8 +74,9 @@ Four dimensions, 25% each: **Documentation** (depth, examples, references), **Co
 # GitHub Actions: gate changed skills
 - name: "validate-changed-skills"
   run: |
-    # Set changed_skills first, for example:
-    # changed_skills=$(git diff --name-only origin/main... | grep '/SKILL.md$' | xargs -n1 dirname | sort -u)
+    # Set changed_skills first. Only run this on pull requests from people you trust,
+    # because script_tester.py runs the skill's Python code.
+    changed_skills=$(git diff --name-only origin/main...HEAD | grep '/SKILL.md$' | xargs -n1 dirname | sort -u)
     for skill in $changed_skills; do
       python3 engineering/skills/skill-tester/scripts/skill_validator.py "$skill" --json
       python3 engineering/skills/skill-tester/scripts/script_tester.py "$skill"

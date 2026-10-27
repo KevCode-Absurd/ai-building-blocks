@@ -32,12 +32,14 @@ you_get:
   - Actions to free it
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Pick one that can run code and read files. Some free plans can and some need a paid plan, so check for data analysis or code execution in your AI's settings.
-  - Paste the full text of the skill into a new chat.
+  - Paste the full text of the skill into a new chat. Pasting only the skill text leaves out scripts/calculate.py and references/wc-metrics.md. Either upload those two files too, or tell your AI to write and run its own code for the day counts.
   - "Send your spreadsheet first: monthly receivables, stock, payables, revenue and cost of goods for about 24 months."
   - Add your agings and your payment terms list (optional), and say if your sales are seasonal.
   - Check that your AI ran the calculation script and did not work the numbers in its head. Compare the day counts for one month with your own books before you read the Diagnosis.
   - Read the Diagnosis before the Action Plan.
   - Pick one fix to try first, then run it again after a few months to see the change.
+  - Next, turn the day counts into a forecast with the Cash forecast builder, or plan currency and cash risk with the Cash and currency risk planner.
+next: [cash-forecast-builder, cash-and-currency-risk-planner]
 output_sample:
   input:
     - Monthly receivables, stock and payables for about 24 months

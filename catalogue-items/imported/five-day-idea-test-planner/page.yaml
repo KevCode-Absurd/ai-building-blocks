@@ -31,7 +31,7 @@ you_get:
   - Interview script for five users
   - Plan score with missing items
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text from the download. No code or paid tools are needed.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text from the download. No code or paid tools are needed. The day-by-day detail sits in the reference files (facilitation, Monday to Friday guides, recruiting, remote sprints). Paste or upload them alongside the skill text, or your plan will be less complete.
   - Tell your AI the idea you want to test and who your target customers are.
   - Add your team names and roles, and the dates you can block out.
   - Ask for a five-day plan. Check that it names one decider and plans five real users.
@@ -45,6 +45,7 @@ output_sample:
   prerequisites:
     - An AI chat tool such as Claude, ChatGPT or Gemini
     - A person on your team who can make the final call all week
+    - For the prototype, any slide tool works. Free ones such as Google Slides do the job. Figma has a free plan, and Keynote and PowerPoint are optional
   output:
     - name: Day-by-day schedule
       contains: Monday to Friday plan with time limits for each part of the day.

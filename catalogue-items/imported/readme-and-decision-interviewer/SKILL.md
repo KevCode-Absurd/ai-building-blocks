@@ -35,7 +35,7 @@ decisions.
    creative spectrum of unique angles, not all the same type (e.g. not all "tech
    stack" or all "product" or all "monetization"). Exception: if the user asks for a
    specific focus area, follow it. The user answers whichever they find most useful.
-3. **Integrate confirmed answers into the authorized docs.** Preserve unanswered questions and distinguish tentative ideas from accepted decisions. You decide whether it
+3. **Integrate confirmed answers into the authorized docs.** Before the first save, confirm the project folder with the user. For every change after that, show the proposed file change and wait for a yes before you write it. Preserve unanswered questions and distinguish tentative ideas from accepted decisions. You decide whether it
    updates `README.md` or becomes a new ADR — whatever makes sense.
 4. Repeat until the user says "we're done" (or similar).
 
@@ -59,5 +59,6 @@ One round, shown with placeholders:
 
 ## Limitations
 
+- If you cannot save files in this chat, print each full file (README.md or the ADR) after each round, say which path it belongs at, and ask the user to save it by hand.
 - Adapted from `davidondrej/skills`; verify local paths, tools, credentials, and agent features before acting.
 - For commands, remote access, scheduling, browser automation, or file-changing workflows, get explicit user approval and confirm the target environment first.

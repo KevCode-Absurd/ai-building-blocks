@@ -15,6 +15,8 @@ argument-hint: "[slug] [--format=working|sof|witness-[name]]"
 - E. Ask: "Scan the red entries. Anything I miscalled?"
 - F. Tag any date or rule that did not come from an uploaded file as `[model knowledge — verify]`. Never fill a gap from memory without saying so. This is a first working draft for a person to check, not legal advice.
 
+**Saved plugin setup only. In a plain chat, stop reading here and use steps A to F above. The rest of this file (the numbered list below, matter.md, _log.yaml, saved folder paths and slash commands) assumes the Anthropic plugin and is kept as the author wrote it.**
+
 1. Load `~/.claude/plugins/config/claude-for-legal/litigation-legal/matters/[slug]/matter.md` → theory, pivot fact, key facts.
 2. Load `~/.claude/plugins/config/claude-for-legal/litigation-legal/CLAUDE.md` → Document storage sources, default matter folder pattern.
 3. Follow the workflow and reference below.
@@ -31,6 +33,8 @@ argument-hint: "[slug] [--format=working|sof|witness-[name]]"
 # Chronology
 
 ## Disclosed-document use restrictions
+
+Source and last checked: the rules below come from the AI's general knowledge, not from a checked source. Last checked: never. Tag every statement here `[model knowledge — verify]` and have a lawyer confirm it before anyone relies on it.
 
 Before working with a set of litigation documents, ask: "Were any of these documents obtained through disclosure or discovery in legal proceedings?" If yes:
 

@@ -11,7 +11,7 @@ explain: |
 
   It studies the site, then writes the file to the published format: a title, a short summary, then sections of links. Each link is a full address with a 10 to 30 word note on what the page covers, ordered by importance. An optional section holds lower priority pages. Key facts such as pricing, features and locations are stated outright, so a tool that reads the file has less to guess. It can also check an existing file against the rules.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header says MIT. Credit goes to the original author and sickn33.
+  Licence: the skill text in this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header says MIT, which covers the author's own code. The llms.txt file you write is your own. Credit goes to the original author and sickn33.
 when:
   - AI tools get your pricing or services wrong.
   - You want AI answers to cite your best page.
@@ -33,8 +33,9 @@ you_get:
   - Placement steps for your site
   - A check of an existing file
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. Pick one that can open web pages, so it can read your site. If yours cannot, paste in the text of your key pages or your sitemap.
+  - Open Claude, ChatGPT or Gemini. Your AI must be able to open your pages, or you must paste in the text of your key pages or your sitemap, before it writes any description. It cannot write true notes about pages it has not seen.
   - Paste the skill text into the chat.
+  - The skill's last check opens every link in the file and reads its status. Your AI needs web access for that. If it has none, open each link yourself and tell your AI which ones fail.
   - Add your website address. Add your key pages and facts if you have them.
   - If you already have an llms.txt, paste it in and ask for a check first.
   - Read the result. Check every fact in Key Facts against your live site before you publish. Leave out any line your site does not state.

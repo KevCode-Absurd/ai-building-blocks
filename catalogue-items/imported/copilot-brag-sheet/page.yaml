@@ -11,7 +11,7 @@ not_for:
   - "You want to announce a feature to your team: write a short launch post yourself, since this makes review entries, not announcements."
   - "Your work leaves no notes, commits or documents and you can't recall details: talk it through with your manager or a peer first."
 how_to_use:
-  - Before you start, gather the time range, your git author email and the list of pull requests you merged. No paid service or API key is needed.
+  - Before you start, gather the time range, your git author email and the list of pull requests you merged. The git and interview routes need no paid service or key. Reading Copilot session logs needs a GitHub Copilot CLI subscription.
   - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
   - Say the time range and what it is for, such as a self-review or a weekly update.
   - To scan git, GitHub pull requests or Copilot logs, use an AI that can run commands on your computer. The pull request scan uses the gh command line tool, which must be installed and signed in to your GitHub account. If you do not want that, say you want the interview instead.

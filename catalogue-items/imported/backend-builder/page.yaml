@@ -9,7 +9,7 @@ subhead: "The server side of an app: API routes, database design and secure logi
 explain: |
   The server side of an app: API routes, database design and secure login, written for what your service must do. Start from an OpenAPI file or a schema, and the AI scaffolds route handlers, input checks and types.
 
-  It also reviews your database for slow queries and helps plan changes safely, tests an API under load by setting how many users and for how long, and runs a security pass over login and common attack points. It includes standard response formats, error shapes and status code rules so your API stays consistent. Three Python helper scripts do the scaffolding, migration analysis and load testing. You need a way to run code.
+  It also reviews your database for slow queries and helps plan changes safely, tests an API under load by setting how many users and for how long, and runs a security pass over login and common attack points. It includes standard response formats, error shapes and status code rules so your API stays consistent. Four Python helper scripts do the scaffolding, migration analysis, load testing and picking a design profile. You need a way to run code.
 when:
   - You have an API plan and need routes without writing each by hand.
   - A page is slow and you suspect the database.
@@ -44,7 +44,7 @@ output_sample:
     - Your load test target, such as users and seconds (optional)
   prerequisites:
     - An AI that can run code and read your project files
-    - Python on your computer to run the three helper scripts
+    - Python on your computer to run the four helper scripts
   output:
     - name: Route handlers
       contains: One file per API route, with the code that answers each request.

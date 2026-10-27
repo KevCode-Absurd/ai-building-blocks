@@ -17,6 +17,16 @@ Use observed audience research and verified product facts. Psychological interpr
 
 Original contribution: [PR 451](https://github.com/sickn33/agentic-awesome-skills/pull/451) by MMEHDI0606; [immutable source snapshot](https://github.com/MMEHDI0606/antigravity-awesome-skills/blob/9c61357e3e6bb167946036f52ac1e28fc82e04d0/skills/headline-psychologist/SKILL.md). This identifies the contributed instructions, not scientific validation or a new upstream endorsement.
 
+## Steps in order
+
+1. Gather the reader, the goal, the channel and the proven facts.
+2. Pick the mental state the reader is in (see the decision matrix).
+3. Write one headline per angle.
+4. Check every headline against the proven facts. Drop or rewrite any line that goes past them.
+5. Pick a best fit and say why.
+
+The author-year citations in this file are background only. Do not quote them to the user as proof, and do not repeat them in the copy.
+
 ## CONTEXT GATHERING
 
 Before writing headlines, establish:

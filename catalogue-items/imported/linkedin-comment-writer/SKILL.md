@@ -30,6 +30,14 @@ have. Everything below is about finding that thing.
 - Use when someone says their comments go nowhere.
 - Do not use it to write flattery or an advert disguised as a comment, and do not promise the comment will be seen.
 
+## Before you paste
+
+Gather these first. Without the post text there is nothing to work from.
+
+- The full text of the post, pasted in (not a link or screenshot).
+- One line of your own view or experience on the topic.
+- Optional: your role, your goal on LinkedIn and a sample of your writing.
+
 ## Step 1: decide whether to comment at all
 
 Read the post and ask whether you actually have anything. If the honest answer

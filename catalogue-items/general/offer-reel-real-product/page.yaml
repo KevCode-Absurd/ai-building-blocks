@@ -1,6 +1,6 @@
 new_slug: offer-reel-real-product
 name: "An offer video with your product and price exactly right"
-summary: "Make an offer video from your real product photos, approved words and price. You get a 10 to 20 second reel in each shape you need."
+summary: "Make an offer reel from your real photos and approved words. Needs a paid coding agent. You get each shape you need."
 job: make-video-ads
 thinking: high
 thinking_why: "It runs several skills in a row. Give it your strongest model."
@@ -20,7 +20,7 @@ when:
 not_for:
   - "You need a demo that shows the product in use: film real footage instead, or ask a video editor."
   - "You want a story told by a person: film the person, or use the Video ad script writer from customer quotes to plan it."
-  - "You have no computer that can run code: a simple video editor such as Canva or CapCut is an easier fit."
+  - "You have no coding agent or computer that can run code: stop after the storyboard stage, then build the reel in a simple video editor such as Canva or CapCut."
 
 you_give:
   - What the reel is for (launch, offer, reasons, bundle, closing card)
@@ -35,11 +35,13 @@ you_get:
   - The film's code, a review log and final videos in each shape, with loudness and scores
 
 how_to_use:
-  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. It needs a coding agent that can run code on your computer, such as Claude Code with Remotion. Remotion has its own licence terms and may need a paid licence for a company, so read them before you build.
+  - Cost first. A coding agent such as Claude Code needs a paid Claude plan or an API key. Remotion has its own licence terms and may need a paid licence for a company, so read them before you build. Rendering uses your own computer time.
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. It needs a coding agent that can run code on your computer, such as Claude Code with Remotion.
   - Give it your photos, approved words, colours, font files and logo, and answer the one round of questions.
   - Approve the product card, then the product sheet and style guide.
   - Read the storyboard carefully, then reply APPROVED or ask for changes.
   - Wait for the review rounds to finish before judging the reel. For later changes, ask it to update the storyboard first, then rebuild.
+  - The sample claims, prices and figures on this page are illustrations. Use only your own approved sources, and check any health or money claim against your platform's ad rules.
 output_sample:
   input:
     - What the reel is for, such as a launch, offer, 3 reasons, bundle or closing card

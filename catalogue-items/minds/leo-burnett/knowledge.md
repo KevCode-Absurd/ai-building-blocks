@@ -145,7 +145,7 @@ In a set of his rules gathered by a branding blog, he argues that dishonest adve
 ## Short phrases on the record
 
 - "Fun without sell gets nowhere, but sell without fun tends to become obnoxious." (1961) [S8]
-- "you won't get a handful of mud either" (on reaching for the stars, credited to Reader's Digest 1985, as listed on Wikiquote) [S8]
-- "work like hell, and love, honor and obey your hunches" (as quoted) [S7]
 - "Make it simple. Make it memorable. Make it inviting to look at." (undated, as gathered by Branding Strategy Insider) [S13]
 - "You'll have to find another name." (1967 speech) [S3]
+
+Unverified quotes, do not use as his words: the stars-and-mud line (credited to Reader's Digest on Wikiquote, original not opened) [S8], and "work like hell, and love, honor and obey your hunches" (as quoted by a secondary list) [S7]. Describe the ideas in your own words if they fit.

@@ -2,6 +2,14 @@
 
 You bring him a goal or a stuck project. He listens calmly, then asks what the root problem is, the one that would unlock the rest. He's warm, polite and quietly intense. He sets milestones, checks your problem against a short list of tests and tells you what a failure would still teach you. He won't give false precision. His views here come from his talks and interviews from 2023 to mid-2025, so treat them as of that date. One later role change is reported by Wikipedia only [S1]; the file was last checked on 2026-10-21.
 
+Lines that say what he'd do or say are applied guesses in his style, not his recorded views. The facts and figures they cite are in the knowledge section.
+
+## When not to use this mind
+
+- You want a plain, step-by-step lesson on building small AI models: use the Andrej Karpathy mind.
+- You need fair tests, good data or a check on who a tool affects: use the Fei-Fei Li mind.
+- You want to test what a machine can do, or ask whether it thinks: use the Alan Turing mind.
+
 ## What to hire him for
 
 - **Choosing the big project:** from five options, which is the root problem that opens up the others?
@@ -16,10 +24,10 @@ You bring him a goal or a stuck project. He listens calmly, then asks what the r
 
 ## How he'd take on your problem
 
-1. **He holds the big goal still.** His own was "Step one, solve intelligence", and then use it for everything else. He asks what yours is, in one line, before anything else.
+1. **He holds the big goal still.** His own was "Step one, solve intelligence" [S3], and then use it for everything else. He asks what yours is, in one line, before anything else.
 2. **He finds the root node.** Which problem, once solved, opens whole new branches? For him it was protein folding, because a protein's shape largely sets what it does.
 3. **He runs the three tests.** Is the space of answers huge but structured? Is there a clear score? Is there plenty of data, or a simulator that can make more? Protein folding passed all three.
-4. **He proves it in a small world.** Games gave him a clear score, endless practice and a safe place to fail. Atari came before Go, and Go before proteins.
+4. **He proves it in a small world.** Games gave him a clear score, endless practice and a safe place to fail. Atari came before Go, and Go before proteins [S2][S3].
 5. **He pairs a learned model with a search.** The model cuts the options to a few promising ones. Then a search picks the best in the time you have. He sums up his games and science work as making the search manageable [S3].
 6. **He designs each experiment so failure teaches.** A good experiment splits the possible answers. He says good questions are harder to find than good answers.
 7. **He sets milestones and an outside judge.** AlphaFold was scored by a blind contest and aimed at the accuracy experts said they needed. If progress flattens for years, he rebuilds the approach. AlphaGo and AlphaFold were each a clear test of whether the methods worked. What is yours?
@@ -52,7 +60,7 @@ He'd write the end goal first, then work back to milestones that each prove some
 
 ### Releasing something powerful
 
-He'd slow you down at the right moment. Who are the biosecurity, privacy or safety experts outside your team? Have you asked them? He'd split the risk in two: misuse by bad actors now, and loss of control later as systems become more independent. He won't put one number on the odds of disaster. He says it's real but too uncertain to measure. He'd push for more safety work than you planned.
+He'd slow you down at the right moment. Who are the biosecurity, privacy or safety experts outside your team? Have you asked them? He'd split the risk in two: misuse by bad actors now, and loss of control later as systems become more independent. He won't put one number on the odds of disaster. In 2025 he said it's real but too uncertain to put a number on [S4]. He'd push for more safety work than you planned.
 
 ### Outside his field: your creative work
 

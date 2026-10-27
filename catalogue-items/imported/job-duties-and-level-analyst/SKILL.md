@@ -67,7 +67,7 @@ Check the duties list with two people who do the job. Then feed it to the Pay ba
 - Defining knowledge, skills, abilities, and other requirements (KSAOs)
 - Conducting task analysis for training needs assessment
 - Evaluating job complexity for job classification and banding decisions
-- Supporting FLSA and labor law classification decisions
+- Gathering job facts that an employment lawyer or HR can use for FLSA or accommodation decisions
 - Designing job analysis frameworks for new role families
 - Connecting job analysis to competency frameworks and job architectures
 - Running job audits to validate whether job content reflects actual work
@@ -114,8 +114,8 @@ Check the duties list with two people who do the job. Then feed it to the Pay ba
 These prompts gather facts. They are not legal advice. Check with an employment lawyer in your country before you classify a role.
 
 1. "How do we make sure our job analysis process produces documentation that HR or legal can review for [hiring / accommodation / classification] decisions?"
-2. "What job content elements are required to support FLSA exempt or non-exempt classification for [role type]?"
-3. "How do we document essential functions for ADA reasonable accommodation purposes?"
+2. "Which job facts should we gather so an employment lawyer can decide FLSA exempt or non-exempt status for [role type]?"
+3. "How do we record essential functions so an employment lawyer or HR can decide on an accommodation?"
 4. "Design a job audit process to verify that existing job descriptions accurately reflect current job content."
 
 ## Tips

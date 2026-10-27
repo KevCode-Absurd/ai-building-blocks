@@ -9,7 +9,7 @@ subhead: Give it the path to a large CSV, Parquet or JSON file and the question 
 explain: |
   Large CSV, Parquet and JSON files queried in place from MATLAB, with no giant loading step. You get SQL answers fast, and only the reduced result lands in memory.
 
-  The skill uses DuckDB through the Database Toolbox. On load it audits your code for the slow habit of reading a file into MATLAB, writing it to a database, then querying it. It sends you straight to reading the file with SQL instead. It covers in-memory and file databases, filtering, grouping, deduplicating, cleaning and sampling at the source, and saving to a .duckdb file for repeat use. It also says when not to use it: small files, or number-heavy work better done in MATLAB afterwards.
+  The skill uses DuckDB through the Database Toolbox. On load it audits your code for the slow habit of reading a file into MATLAB, writing it to a database, then querying it. It sends you straight to reading the file with SQL instead. It covers in-memory and file databases, filtering, grouping, deduplicating, cleaning and sampling at the source, and saving to a .duckdb file for repeat use. The speed gain depends on your files. Any "10x faster" figure comes from the MathWorks skill file and has not been measured in this catalogue, so time your own query. This copy is our version 1.0.0 of the MathWorks skill, whose own header says version 1.2. It also says when not to use it: small files, or number-heavy work better done in MATLAB afterwards.
 
   Licence: BSD 2-Clause plus a MathWorks reuse term, as the LICENSE file says. You may use this copy only together with MathWorks products such as MATLAB. MATLAB and Database Toolbox are paid MathWorks products, so you need your own licence for both.
 when:

@@ -36,7 +36,7 @@ How to start:
 
 ## What you need
 
-This is a business plan job. The general "Before you start" list above mentions a buyer brief. This job does not use one. This workflow needs the plan, the numbers behind it and what you are putting in.
+This is a business plan job. The general "Before you start" list above mentions a buyer brief and a brand brain. This job does not use either. Ignore the buyer brief lines and the "Recommended steps before this one" list in that box. This workflow needs the plan, the numbers behind it and what you are putting in.
 
 - **The business plan** (required): however rough.
 - **The numbers behind it** (required): costs, prices, how many customers and when. Give the inputs of any forecast, not only its results, because step 3 changes the inputs.
@@ -69,6 +69,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **Step 4, ruin check:** what could take you out, how exposed you are and how to cap the downside.
 - **Step 5, pre-mortem:** the most likely story of how it failed a year on, what to change today, and a go, no or changed line that is left for you to decide.
 - **HAND-BACK SUMMARY:** each step's file, then every `MISSING:` line in one list.
+
+## Next steps to offer
 
 Use these instead of the general "After this" list above:
 - If the plan survives, turn it into dated work with the [Check your strategy, then turn it into a 90-day plan](https://useaiblocks.com/workflows/check-your-strategy-then-turn-it-into-a-90-day-plan) workflow.

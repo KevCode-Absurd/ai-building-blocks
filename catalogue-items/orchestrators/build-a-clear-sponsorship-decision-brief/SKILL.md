@@ -29,6 +29,8 @@ How to start:
 
 ## What you need
 
+The "document" and "brief" in the block above mean the proposal and your goal, listed here. These are the inputs to use:
+
 - The sponsorship proposal, with what is included and the dates.
 - Every quoted cost, including fees and extras.
 - What you know about the audience, from the seller or from your own data (optional, but advised).
@@ -64,7 +66,7 @@ Use what is attached or pasted first. If the proposal has no price, stop and ask
 3. **Run the checklist** with `decision-checklist-runner`. Run the person's checklist on the pilot recommendation. Stop items first. Mark each item `PASS`, `FAIL` or `UNKNOWN` with the fact behind it. Unknown stays unknown. End with the call: go, wait or no, and what would change it. Save `outputs/step-03-decision-checklist-runner.md`.
    **Gate before the hand back:** every item has an answer and a fact, and any failed stop item is shown first.
 
-4. **Check and hand back.** Confirm the pilot's cap matches the cost comparison and the checklist run covers the same plan.
+4. **Check and hand back.** Make these comparisons and fix or flag any that fail: (a) the pilot's spend cap is no higher than the total cost in step 1 and is stated in the same currency; (b) the tracking method and result definition in the checklist run are the ones in the step 2 pilot plan; (c) the decision date in the call matches the pilot's decision date; (d) every `MISSING` from steps 1 and 2 appears in the hand-back list.
 
 ## What you hand back
 
@@ -95,9 +97,9 @@ If they pick one and that skill is added here, carry straight on with what you j
 - The pilot says results are observational.
 - The original proposal is untouched.
 
-## After this
+## Next steps for this workflow
 
-Suggest one next step in a short question, and say they can type their own:
+This is the only next-step list for this workflow: do not offer the generic links in the block above. Suggest one next step in a short question, and say they can type their own:
 
 - **Set up the tracking link or code before any money moves.** A person does this.
 - **When the pilot ends,** bring the tracked results back and run the checklist again with the [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner).

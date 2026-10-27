@@ -140,7 +140,7 @@ class ArchitectureDesigner:
                 'No server management',
                 'Auto-scaling with scale-to-zero',
                 'Pay only for what you use',
-                'No cold starts with min instances',
+                'Fewer cold starts if min instances is set above 0',
                 'Container-based (no runtime restrictions)'
             ],
             'cons': [

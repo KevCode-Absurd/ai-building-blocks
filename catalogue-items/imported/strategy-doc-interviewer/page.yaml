@@ -26,11 +26,12 @@ you_give:
   - Answers to questions, one at a time
   - An existing skeleton to fill in (optional)
 you_get:
-  - A skeleton file for the document
+  - A skeleton file for the document, with a header, a purpose line and one section for each part you name
   - Questions asked one by one
   - Your answers placed in the right sections
-  - A finished document in your words
+  - "A finished document in your words. Its length is whatever your answers fill: a short paragraph or list in each section."
 how_to_use:
+  - "Gather first: the name of the document, the sections you want in it, and any existing file you want it to patch. Back that file up first, because the AI edits it directly. Give your AI access to one folder only."
   - Open Claude, ChatGPT or Gemini and paste in the skill text. A tool that can save and edit files works best. In a plain chat that cannot write files, ask the AI to show the full updated document after each answer, and copy it into your own file.
   - Tell it which document you want, such as principles, priorities, a vision or a ranked list.
   - Answer each question in your own words. It asks only one at a time.

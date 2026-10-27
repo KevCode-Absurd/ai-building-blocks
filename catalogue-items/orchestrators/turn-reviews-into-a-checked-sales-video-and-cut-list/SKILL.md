@@ -37,6 +37,12 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+The general "Before you start" list above mentions a brand brain. This job does not use one. Ignore the brand brain lines, "From the brand brain, read" and the "Recommended steps before this one" list in that box. Use the inputs below.
+
+**Video tool (needed for the pause after step 4):** you make the clips yourself, by filming them or by using a video tool such as Kling or Veo. Claude cannot make video. Video tools usually need an account, can cost money, and some need an API key. Decide this before the pause. Steps 1 to 4 run without one.
+
+**When one skill is enough:** to check a short script only, use the [Video ad script line checker](https://useaiblocks.com/skills/video-ad-script-line-checker) on its own. This workflow is for a full seven-part sales video from reviews to a cut list.
+
 - **One product's facts: price, variants, ingredients or materials, how it is used, photos by job** (required)
 - **Customer words from reviews, tickets, surveys or calls, with source and date** (required)
 - **A live offer with price, terms, effective_from/to and a current flag** (optional)
@@ -61,7 +67,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 Pause here: Film or generate the clips from the shot list and save every take in one folder.
 
 5. **Video ad edit planner.** Use the skill `video-ad-edit-planner`. Give it the list of your finished clip files (saved after the pause), `outputs/step-03-ad-script-read-aloud-editor.md` and `outputs/step-04-video-ad-shot-list-maker.md`. Plan the cuts by real clip file, caption windows, a sound plan, exports and any gaps. If a shot has no clip, write `MISSING: clip for shot <n>`. Saves `outputs/step-05-video-ad-edit-planner.md`. This is the final step.
-6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then `CHECKS MISSED:` with each check that failed or could not run, or `none`.
 
 ## What you hand back
 5 step files and the summary. The last file holds the edit plan. Each file holds:

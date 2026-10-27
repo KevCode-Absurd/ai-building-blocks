@@ -38,9 +38,10 @@ how_to_use:
   - Describe your feature in a few lines. Collect 5 to 20 real user questions as example inputs, with the answers you would call good. The plan helps you pick them if you have none.
   - Say what matters most. Pick one or two of accuracy, tone, speed and safety, so the plan stays short.
   - Read the list of scores. Cut any you cannot explain to a teammate. Fewer, clearer scores beat a long list.
-  - Run the plan on your own data yourself or with a developer. This skill writes the plan and sample code. It does not run tests, and the sample code will not run as it is. It uses placeholder names that a developer must replace.
+  - Run the plan on your own data in this order. Write 5 to 20 test cases. Record the baseline scores. Change one prompt or model. Run the same tests again. Compare the new scores with your drop limit.
+  - This skill writes the plan and sample code. It does not run tests. The sample code is a pattern only. It will not run until a developer writes the missing helper functions (llm_eval, check_groundedness and call_judge_model).
+  - Some scores, such as BERTScore with a large model, need a big model download. Check the model page for its size first. Say your budget up front.
   - Next, run the baseline before you change any prompt or model, and save the scores. Then change one thing and run the same tests again.
-  - Note the costs. The AI judge and some scores need a paid API key or a large model download. Say your budget up front.
 output_sample:
   input:
     - A description of your AI feature

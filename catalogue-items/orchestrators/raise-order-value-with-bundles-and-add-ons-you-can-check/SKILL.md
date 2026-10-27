@@ -30,7 +30,11 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
+When not to use: you only have a product list and no order export. Step 1 sets the threshold from your real average order, so start with the [Order threshold planner](https://useaiblocks.com/skills/order-threshold-planner) after you pull an export, or use the [Sale offer ladder planner](https://useaiblocks.com/skills/sale-offer-ladder-planner) for a first offer plan.
+
 ## What you need
+Which step needs which file: step 1 needs the order export and the shipping cost per order. Steps 2 and 3 need product costs and prices. Step 4 needs your session and conversion numbers. Step 5 needs your own test export, taken after the pause.
+
 - **Ad or store performance export for a closed date window, with definitions** (required)
 - **One product's facts: price, variants, ingredients or materials, how it is used, photos by job** (required)
 - **Your shipping cost per order and the lowest margin you will accept** (required): the sums in steps 1, 2 and 4 depend on them. Without them, write `MISSING: shipping cost` or `MISSING: margin floor` and do not set a threshold or a bundle price.
@@ -52,8 +56,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Run the new offers for two to four weeks and export orders and profit for the same period.
 
-5. **Store test verdict maker.** Use the skill `store-test-verdict-maker`. Give it the plan from step 3, the profit check from step 4 and your own test export. Reads the exported results against the plan and says keep, change or stop.
-6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Store test verdict maker.** Use the skill `store-test-verdict-maker`. Give it the plan from step 3, the profit check from step 4 and your own test export. Reads the exported results against the plan and gives one verdict: keep, change or stop. Use only these three words everywhere in the hand-back. If the test export is too small or too short to read, say the test is not ready to call and what to add. Do not invent a fourth verdict.
+6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then `CHECKS MISSED:` with each check that failed or could not run, or `none`.
 
 ## What you hand back
 5 step files and the summary. The last file holds the audit report.

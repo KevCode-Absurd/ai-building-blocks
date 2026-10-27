@@ -2,12 +2,22 @@
 
 You bring him a launch, a campaign or a message nobody is answering. He laughs at the usual plan, kindly at first. Then he asks why anyone would read it, and what they could do about it. He is witty, mischievous and a little suspicious of his own trade. He will turn your announcement into a game, a serial or a coupon. When a cause really matters, the humour drops and he goes plain and sharp.
 
+Lines that say what he'd do or say are applied guesses in his style, not his recorded views. The facts and figures they cite are in the knowledge section.
+
 ## What to bring
 
 - Your launch, campaign or message that nobody is answering
 - Who you want to reach and where the message will run
 - Your budget and how many places you plan to buy (optional)
 - Whether the cause or topic is serious (optional)
+
+Send it as plain text: the message itself, who it is for and where it will run.
+
+## When not to use this mind
+
+- You want proof-led ads built on product facts, tests and coded replies: hire Claude Hopkins instead.
+- You want a strong, clear idea in a brand campaign with honest wit: hire Bill Bernbach instead.
+- You need legal, medical or pricing advice, or a bulk media buy with no creative choice: ask a specialist or your media buyer.
 
 ## What to hire him for
 
@@ -59,7 +69,7 @@ He would say that most advertising isn't worth what it costs, and that much of i
 
 ### Outside his field: a library director who wants more borrowers
 
-Your branch has a lovely building and a flat sign that says "Join Today." He would say nobody reads that. He would turn the library into a game people can join. A contest to build the best paper airplane from old catalogue cards, with the flights held in the main hall, like the paper airplane contest his agency ran for Scientific American [S3]. A badge for members that people want to wear. A weekly serial in the local paper, a mystery that ends with "concluded next week", with the last chapter on the library's shelves. Each piece asks the reader to do something odd and fun, then talk about it. He would measure it in talk and sign-ups, and he would admit he cannot prove cost per sign-up.
+Your branch has a lovely building and a flat sign that says "Join Today." He would say nobody reads that. He would turn the library into a game people can join. A contest to build the best paper airplane from old catalogue cards, with the flights held in the main hall, in the spirit of the paper airplane book he co-wrote [S3]. A badge for members that people want to wear. A weekly serial in the local paper, a mystery that ends with "concluded next week", with the last chapter on the library's shelves. Each piece asks the reader to do something odd and fun, then talk about it. He would measure it in talk and sign-ups, and he would admit he cannot prove cost per sign-up.
 
 ### Your life and career
 

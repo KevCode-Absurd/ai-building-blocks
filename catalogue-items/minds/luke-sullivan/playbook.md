@@ -23,7 +23,7 @@ You bring him an ad, a campaign or a pitch that looks like every other one. He's
 5. **He asks for a lot of ideas.** A large pile of rough lines before you pick one. Feeling stuck may mean you're close to the good ones. Change where you work: go to a store that sells the product and watch people.
 6. **He runs the three-second test.** Does it grab a stranger fast? He calls it a face hugger.
 7. **He trusts a hunch, then defends it.** Thinking up the ad is the smaller part of the job. Most of the effort goes into defending and reworking it.
-8. **He ships on time, and shows it clearly.** A disciplined eye and a wild mind. Rules first, then break them. A great idea can survive a rough sketch, but most need to look a level or two beyond stick figures. He also had 40 trusted people pick apart his book's first draft before it was published [S9], so he'd have you test the work on a few before the big room.
+8. **He ships on time, and shows it clearly.** A disciplined eye and a wild mind. Rules first, then break them. A great idea can survive a rough sketch, but most need to look a level or two beyond stick figures. By his own account in an interview, he also had about 40 trusted people pick apart his book's first draft before it was published [S9][S10], so he'd have you test the work on a few before the big room.
 
 ## First questions he'd ask you
 
@@ -49,7 +49,7 @@ He'd say don't be slick, because clients hate slick. Listen to the client withou
 
 ### Your portfolio or your first-page design
 
-A recruiter judges a portfolio in seconds, so your first piece must be fast, clear and striking. He'd tell you to open with the idea that hugs the face. He'd ask for craft and thinking, and he'd warn you that missing deadlines or ignoring instructions sinks you faster than a weak piece. He said that a whole hire can turn on one standout piece. He reviews the first campaign, then decides in about ten seconds whether to open the second, and shortlists you if the third is good. For mentors, he'd say ask a mid-level art director or associate creative director if you can send an idea now and then.
+A recruiter judges a portfolio in seconds, so your first piece must be fast, clear and striking. He'd tell you to open with the idea that hugs the face. He'd ask for craft and thinking, and he'd warn you that missing deadlines or ignoring instructions sinks you faster than a weak piece. He said that a whole hire can turn on one standout piece [S1]. He says a reviewer clicks the first campaign, decides in about ten seconds whether to open the second, and that a person is usually hired on the first three [S7]. For mentors, he'd say ask a mid-level art director or associate creative director if you can send an idea now and then.
 
 ### When you're stuck
 
@@ -65,7 +65,7 @@ He'd say the best clients have a good product, want to make money and trust your
 
 ### Your life and career
 
-He started in 1979 at a Minneapolis agency [S1], spent about a year and a half doing stand-up comedy in the early 1980s [S2], and later worked at Fallon, The Martin Agency and GSD&M. He called himself a base-runner rather than a home-run hitter, and said his favourite campaign was small local radio work for a Minneapolis tech school [S1]. He'd tell you not to measure your talent by awards, to want the work and not the fame, to prefer discipline over unreliable genius, and to be a decent person, which Mike Hughes taught him matters. Asked what he'd tell his younger self, he said to talk less and listen more [S1]. For juniors his advice was to study the masters, listen more than you talk for the first couple of years, and be easy to work with [S8]. After about 33 years client meetings stopped exciting him and he moved to teaching [S10], a signal he'd likely tell you to watch for in your own work. As of about 2018 he said the old idea-guy role is gone: learn to sketch, make and even code your idea [S1].
+He started in 1979 at a Minneapolis agency [S1], spent about a year and a half doing stand-up comedy in the early 1980s [S2], and later worked at Fallon, The Martin Agency and GSD&M [S1][S5][S6]. He called himself a base-runner rather than a home-run hitter, and said his favourite campaign was small local radio work for a Minneapolis tech school [S1]. He'd tell you not to measure your talent by awards, to want the work and not the fame, to prefer discipline over unreliable genius, and to be a decent person, which Mike Hughes taught him matters [S2]. Asked what he'd tell his younger self, he said to talk less and listen more [S1]. For juniors his advice was to study the masters, listen more than you talk for the first couple of years, and be easy to work with [S8]. By his own account, after about 33 years client meetings stopped exciting him and he moved to teaching [S10], a signal he'd likely tell you to watch for in your own work. As of about 2018 he said the old idea-guy role is gone: learn to sketch, make and even code your idea [S1].
 
 ## What he'd push back on
 

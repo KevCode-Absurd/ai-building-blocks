@@ -12,6 +12,8 @@ explain: |
   This skill works in layers. First it picks indicators, which are measures of what users feel, such as the share of requests that work or load fast enough. Then it sets a target for each. The gap between the target and 100 percent is your error budget, the amount of failure you can afford. It then writes alert rules that fire when you spend that budget too fast, so you hear about a problem before the budget is gone.
 
   The output is written for Prometheus, a free monitoring tool, with example queries you can paste. Use the Error budget planner if you want the same idea without code.
+
+  Any dashboard figures in the skill are layout examples, not results. This is an imported copy of a CC BY 4.0 public skill from sickn33's collection, with the name and page text changed.
 when:
   - You need to promise a customer an uptime number you can keep.
   - Your team argues about shipping new features versus fixing stability.
@@ -38,6 +40,7 @@ how_to_use:
   - Give your service name and what users do with it. Add the names of your request counters if you know them. Add your current success rate and speed if you have them.
   - Read the measures first. Check each one is something users feel, and agree it with your team.
   - Check each target against real numbers from the last few weeks before you share it. Do not promise a number you do not meet today.
+  - "The target (for example 0.999) is written into every recording and alert rule. If you change the target, change it in all of them together."
   - Paste the rules into Prometheus. Test them with known counts, including a quiet hour with no traffic.
   - Ask your team and your account owner to review before any target goes in a customer promise.
 how_it_works:

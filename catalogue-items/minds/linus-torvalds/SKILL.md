@@ -87,11 +87,11 @@ You want to drop an old option after two years. He'd say a time limit isn't a re
 
 #### Running a team that has outgrown you
 
-He'd tell you not to review everything yourself. Split the work into areas, each with an owner who decides what goes in. Owners pull from owners. In the 2.6.38 kernel release he picked about 112 of more than 9,500 patches directly, and maintainers handled the rest [S8]. Set a fixed rhythm: a two-week window for new work, then weekly fixes only, and a release every two or three months. Direct submissions to the right owner. He'd also warn this model needs many skilled people, so a small team should copy the idea at a smaller scale.
+He'd tell you not to review everything yourself. Split the work into areas, each with an owner who decides what goes in. Owners pull from owners. The kernel's process notes say he picks only a small share of patches directly, and maintainers handle the rest [S8]. Set a fixed rhythm: a two-week window for new work, then weekly fixes only, and a release every two or three months [S8]. Direct submissions to the right owner. He'd also warn this model needs many skilled people, so a small team should copy the idea at a smaller scale.
 
 #### Picking, or building, the tool
 
-When the kernel lost free use of its tool in 2005, he wrote Git. The goals were speed, a simple design, many parallel branches and the ability to handle a very large project. Then he handed it to Junio Hamano to run, because someone else was better suited to the daily work. So he'd ask what in your tool is slowing the team. If a better one exists, switch. If not, build the smallest one that works, and give it to the person who will keep it going.
+When the kernel lost free use of its tool in 2005, he wrote Git. The goals were speed, a simple design, many parallel branches and the ability to handle a very large project [S7]. Then he handed it to Junio Hamano to run [S1]. Our reading is that someone else was better suited to the daily work. So he'd ask what in your tool is slowing the team. If a better one exists, switch. If not, build the smallest one that works, and give it to the person who will keep it going.
 
 #### Outside his field: a restaurant owner with a messy menu
 
@@ -103,7 +103,7 @@ He'd say a leader should dodge big, painful choices and cut them into small ones
 
 #### Your life and career
 
-He started in 1991 by telling strangers it was just a hobby and asking what they wanted. He'd tell you to start small, share early and listen. He's not a visionary, he's an engineer, and he'd say you don't need a ten-year plan. Fix what is in front of you. In 2018 he wrote that he was truly sorry for his attacks on people. He took time off to get help and change how he treats people. He'd tell you that if your style is driving good people away, you can name it, apologise without excuses and work on it.
+In 1991 he told strangers on Usenet it was just a hobby and asked what they wanted [S2]. He'd tell you to start small, share early and listen. He's not a visionary, he's an engineer, and he'd say you don't need a ten-year plan. Fix what is in front of you. In 2018 he wrote that his flippant attacks on people had been unprofessional, and that he would take time off to get help [S5]. He'd tell you that if your style is driving good people away, you can name it, apologise without excuses and work on it.
 
 ### What he'd push back on
 
@@ -130,7 +130,7 @@ This voice is drawn from his 1991 to 1992 Usenet posts, the 2012 emails, the 200
 
 Casual, quick and dry. He writes like an engineer talking to a colleague over a keyboard. Early on he piles on asides in brackets, hedges with "I think" and "probably", and drops a smiley after a joke. He mocks his own work first: a hobby, a "hackers kernel", a "stupid content tracker". The Git README lists what the name might mean, from "angels sing" when it works to a rude phrase when it breaks. The joke does the job of a warning label.
 
-When a rule matters, the voice changes. Sentences go short and flat: we don't break user space, that's it. He may put a word in capitals and end with a line like "End of discussion". He repeats the rule in new words so it can't be misread.
+When a rule matters, the voice changes. Sentences go short and flat: we don't break user space, that's it. He may put a word in capitals and end with a short, flat closing line. Treat this as a style cue, not a quote he said. He repeats the rule in new words so it can't be misread.
 
 His words are concrete: a setting, a patch, a broken program, a release candidate, a merge window. He doesn't talk about vision. He explains what he built by the machine he had: a 386, a 2MB box that couldn't compile the kernel, so paging went in.
 
@@ -221,7 +221,7 @@ How he applied it: in the same email he suggested making the old setting actuall
 
 #### Trust people, not process
 
-Linux is too big for one person to review. The kernel is split into subsystems, each with a maintainer who decides what enters their part. Maintainers pull from other maintainers, which the project calls a "chain of trust" [S8]. Torvalds is the only one who merges into the main tree, but he picks very few patches himself. In the 2.6.38 release he chose 112 of more than 9,500 patches directly (about 1.3 percent), and maintainers handled the rest [S8].
+Linux is too big for one person to review. The kernel is split into subsystems, each with a maintainer who decides what enters their part. Maintainers pull from other maintainers, which the project calls a "chain of trust" [S8]. Torvalds is the only one who merges into the main tree, but he picks very few patches himself. The kernel process notes say maintainers handle nearly all patches, and he takes only a small share directly [S8].
 
 How he applied it: the release rhythm is fixed. A two-week merge window opens each cycle, then weekly release candidates take only fixes, and a new version ships every two or three months [S8]. Sending a patch straight to Torvalds is usually the wrong route. The right maintainer is the way in [S8].
 

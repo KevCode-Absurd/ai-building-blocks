@@ -81,7 +81,7 @@ Before any command that changes the machine, remind the person to back up anythi
 
 The install command below is for Linux only. The Docker Compose file further down assumes an NVIDIA graphics card. Say which of your steps are for Linux, Mac, Windows or NVIDIA before you give any commands.
 
-Windows and Mac: download the installer from ollama.com and skip the first command. Check the install script before you run it, since it runs with your account's rights.
+Windows and Mac: download the installer from ollama.com and skip the first command. On Windows, run the pull and run commands that follow in PowerShell. They are the same as below. Check the install script before you run it, since it runs with your account's rights.
 
 ```bash
 # Install Ollama (Linux)

@@ -8,9 +8,9 @@ Fast, blunt and technical, with jokes. Musk writes the way an engineer talks at 
 
 His humour is dry, nerdy and self-mocking. He'll call his own idea foolish, then explain why he's doing it anyway. In emails to staff the tone flips to rally mode: short lines and exclamation marks. 
 
-When he talks, the sentences are short and plain and often start with "I think," "I mean" or "Well." He hedges with "sort of" and "probably" and then gives a number. He reaches for analogies from other fields, such as software modules for rocket tests. He corrects his own earlier premise out loud: his first Mars idea, he said at Stanford, rested on a premise that was wrong. On a tough question he gives a direct answer first and a principle after. He calls himself "pathologically optimistic on schedule" and admits he is sometimes late.
+When he talks, the sentences are short and plain and often start with "I think," "I mean" or "Well." He hedges with "sort of" and "probably" and then gives a number. He reaches for analogies from other fields, such as software modules for rocket tests. He corrects his own earlier premise out loud: his first Mars idea, he said at Stanford, rested on a premise that was wrong. On a tough question he gives a direct answer first and a principle after. He calls himself "pathologically optimistic on schedule" and admits he is sometimes late [S13].
 
-In writing for a board, the voice is formal, short and firm. The April 2022 offer letters repeat one number, call the choice "binary" and close with a promise. On an earnings call, when he found questions dull, he said so, and he told short-term holders to sell. He dismisses a press report as based on nothing. Under attack he cites a record or number.
+In writing for a board, the voice is formal, short and firm. The April 2022 offer letters repeat one number, call the choice "binary" and close with a promise. On an earnings call, when he found questions dull, he said so, and he told short-term holders to sell. Under attack he cites a record or number.
 
 He thinks out loud and isn't afraid of an awkward pause while he works something out.
 

@@ -38,6 +38,7 @@ how_to_use:
   - Tell it the AI use you are assessing, such as AI résumé screening for HR. If you have no saved company profile, also tell it your countries, your AI policy and whether you are a provider or a deployer.
   - Answer its questions about what the system does, who is affected and who checks its results.
   - Add your AI policy and a past assessment if you have them. Without them it uses a default format.
+  - Without a legal research tool, treat every cited article or pinpoint as unverified until you have checked it against the official text. The result is a draft, not a sign-off.
   - Check every cited rule against the source before you rely on it. Then ask a lawyer to review.
 output_sample:
   input:

@@ -10,6 +10,8 @@ explain: |
   Natural customer groups found in your data and described in a way you can act on. Say what decision the groups should inform, such as a campaign, a roadmap or a retention plan, and the AI picks three to seven behaviours to compare.
 
   Your AI runs k-means clustering (a way to sort users into groups) in its own code. That same code checks the groups are truly different with a silhouette score (how clearly the groups separate) above 0.3, and that they make business sense. A helper script does not cluster. It only profiles the groups that already have labels, by how far above or below average each one sits on each trait. Each group gets a strategy: retain and expand, monetise, activate, win back or sunset. You need user-level data and a way to run Python.
+
+  This is an imported copy of Nimrod Fisher's segmentation-analysis skill, shared under the MIT licence. We changed step 3 to say that your AI runs the clustering in its own code, because the helper script only profiles groups that already have labels.
 when:
   - Marketing wants different messages for different customers and has no groups.
   - You suspect your best customers share a pattern.
@@ -18,7 +20,7 @@ when:
 not_for:
   - "You have fewer than about 100 users per group you expect, or no user-level data: use simple rule-based groups, such as recent, frequent and high spend, instead."
   - "You only want to check one idea, such as whether paying users churn more: a simple chart in a spreadsheet is enough."
-  - "You have no way to run code and a large data file: ask an analyst to run the k-means script for you."
+  - "You have no way to run code and a large data file: ask an analyst to run k-means in Python, then use segmentation_runner.py to profile the labelled groups."
 you_give:
   - User-level data with behaviour and plan details
   - What the groups will be used for
@@ -51,4 +53,4 @@ output_sample:
     - name: segmentation_approaches.md
       contains: A guide to when k-means, RFM or rule-based groups fit best, and how to read the results.
     - name: segment_profile_template.md
-      contains: One profile per group with size, key traits, a name, a recommended strategy and a plan to track it.
+      contains: One profile per group, about half a page each, with these fields. Size, defining traits, a name, a recommended strategy and the metric to track.

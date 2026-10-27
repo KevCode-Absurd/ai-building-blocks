@@ -65,9 +65,9 @@ how_it_works:
   - title: "Add the cost of delivery"
     text: "Unit cost, freight, duty, shipping out, pick and pack, packaging and the payment fee. Payment fees belong here, not in overhead."
   - title: "Add a refund allowance"
-    text: "Use your own 90-day refund and discount rates. Mark a guess as GUESS."
+    text: "Net price is price after the average discount. Refund cost is net price times your refund rate, shown as its own line. Use your own 90-day rates. Mark a guess as GUESS."
   - title: "Show three margins"
-    text: "Product margin is price minus unit cost. Gross margin is price minus every delivery cost. Contribution margin is gross margin minus marketing, at 20% of price if none was given, marked as a test value."
+    text: "All three use the same net price. Product margin is net price minus unit cost. Gross margin is net price minus every delivery cost, refunds included. Contribution margin is gross margin minus marketing, at 20% of net price if none was given, marked as a test value."
   - title: "Find break-even"
     text: "Break-even ROAS is 1 divided by gross margin as a decimal. Break-even CAC is gross profit per order."
 

@@ -28,7 +28,11 @@ How to start:
 - **A chat AI that reads files, such as Claude, ChatGPT or Gemini:** It reads the rubric and your notes together. In plain chat, paste the text in. No code or paid tool is needed.
 <!-- /needs -->
 
+When not to use: you work alone, or your course already sets the team rules (follow the course rules as they are). You only need the action items from one meeting (use the [Executive action register keeper](https://useaiblocks.com/skills/executive-action-register)). You are starting a project for a paying client (use the [Prepare a clear client project kickoff](https://useaiblocks.com/workflows/prepare-a-clear-client-project-kickoff) workflow).
+
 ## What you need
+
+These replace the generic "Your lesson plan" line above. This is not a lesson plan, so do not ask for an age group, subject or class task. The inputs are the rubric, the team's availability and the meeting notes.
 
 - The assignment brief and marking rubric, or the list of deliverables, with the deadline.
 - When each person can work, such as class times, jobs and busy weeks. Ask the team for this. Do not guess it.
@@ -96,12 +100,12 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Owners and dates come from the notes. Everything else is marked suggested or `MISSING`.
 - Original files are untouched. New files have their own names.
 
-## After this
+## What to do with the result
 
-Suggest one next step in a short question, and say they can type their own:
+Use this in place of the generic list above. Suggest one next step in a short question, and say they can type their own:
 
 - **Each person reads the agreement and says yes in the team chat.** A person does this, not your AI.
 - **Keep the register current** by bringing each week's notes to the [Executive action register keeper](https://useaiblocks.com/skills/executive-action-register).
-- **Send a progress update to your supervisor** with the [Weekly status update writer](https://useaiblocks.com/skills/weekly-status-update-writer).
+- **Send a progress update to your supervisor** with the [Weekly status update writer](https://useaiblocks.com/prompts/weekly-status-update-writer).
 
 Nothing here sends or signs anything.

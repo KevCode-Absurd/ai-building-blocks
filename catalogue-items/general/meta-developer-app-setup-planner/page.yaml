@@ -41,9 +41,9 @@ how_it_works:
   - title: Confirm account access
     text: Confirm the user or system identity actually has access to the intended ad account and app. Distinguish app permissions from business asset assignment. A token with a scope but no account access must fail clearly rather than widening authority blindly.
   - title: Store credentials safely
-    text: Create and store authorized credentials in secure settings with an owner, expiry and rotation plan. Do not print tokens, app secrets or personal identifiers in the output. Never install a browser extension just because a source lesson used one.
+    text: You create the token in Meta and store it in your own secure settings, with an owner, expiry and renewal plan. The AI cannot create or store credentials for you and must not claim to. Do not print tokens, app secrets or personal identifiers in the output. Never install a browser extension just because a source lesson used one.
   - title: Run a small read-only test
-    text: Plan or run a minimal authorized read-only identity/account probe using tools present in the selected environment. Confirm any named local script exists before use. Report current permission errors by category and keep requests for additional access specific to the task.
+    text: Plan or run one read-only Graph API request, such as the list of ad accounts with name and status, using your own token. It passes if it returns the account name and status and changes nothing. If it fails, you get the error by category and a specific request for more access.
   - title: Hand over the map
     text: Return a redacted app/account map, selected read-only or write mode, actual granted capabilities, missing reviews and probe evidence or not-run reason. Enabling the app is not permission to publish ads, alter budgets or query unrelated client accounts.
 thinking: medium

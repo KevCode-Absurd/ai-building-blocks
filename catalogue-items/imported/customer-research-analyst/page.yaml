@@ -29,6 +29,7 @@ you_get:
   - Personas based on evidence
   - Gaps and suggested next questions
 how_to_use:
+  - Start here. This is a set of instructions you paste into an AI, not a tool that runs by itself. Gather your transcripts, surveys, reviews or tickets first, and decide the one question you want answered.
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions. Attach your transcripts, surveys, reviews or tickets.
   - "Say which result you want: a report, quote bank, personas, jobs map, competitor summary or gap analysis. The AI will ask if you do not say."
   - For public opinions, the safest route is to copy reviews or posts yourself and paste them in. Asking your AI to read review sites or forums is automated scraping. It needs web access and may break a site's terms, so check them first.

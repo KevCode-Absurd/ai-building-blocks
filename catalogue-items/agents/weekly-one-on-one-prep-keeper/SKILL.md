@@ -29,7 +29,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **Last week's notes** (required): your notes from each one-on-one and anything you noticed during the week, per person. Rough is fine.
+- **Last week's notes** (required): your notes from each one-on-one and anything you noticed during the week, per person. Rough is fine. The agent cannot fetch notes itself, so paste them or point to the files each Monday.
 - **Who you manage** (required): each person's name, job, how long they have been in it, and what they are working on.
 - **Their goals** (advised): the objectives or key results each person is working toward this quarter.
 - **Your own update** (optional): if you want a status update for your manager, say so each week.
@@ -45,7 +45,7 @@ Keep one folder, `one-on-ones/`. Keep one file per person, `one-on-ones/<name>.m
 3. **Find the win.** Run `small-win-praise-planner` for each person with last week's notes and their goals. Keep one specific win, the exact praise, and when to give it. If the notes show no win, say so. Do not invent one; forced praise reads as fake.
 4. **Spot the repeat.** If the same problem appears in two weeks of notes for a person (this agent's starting point), run `behaviour-and-fix-notes-writer` for one watchable behaviour and its likely reason. Save it to their file with the week it first appeared. One problem shows up once is a Tuesday. Twice is a pattern.
 5. **Plan the hard conversation, only when needed.** For each person with a behaviour note this week, run `feedback-conversation-planner` for what to praise, what to say and how. Scott's shape: humble, helpful, immediate, in private, about what happened and not who they are. Put it after their agenda items, not first.
-6. **Build each agenda.** For each person, in this order: their items (ask first), open items carried forward with the stuck ones marked, the win, the hard point if any, and the go-to question if it is due. Keep it to one page.
+6. **Build each agenda.** For each person, in this order: their items (ask first), open items carried forward with the stuck ones marked, the win, the hard point if any, and the go-to question if it is due. Keep it to one page, with five items or fewer.
 7. **Write the manager's update, on request.** If asked, run `weekly-status-update-writer` from the week's notes for a one-page update to the manager's own manager. Leave people's private notes out of it.
 8. **Log and hand back.** Update each person's file. Hand back (see below), then stop.
 
@@ -61,7 +61,7 @@ You never do these yourself. You list them for approval:
 - **This week in one line:** how many one-on-ones, how many stuck items, how many hard points.
 - **Per person, one page:** their agenda in order, the win and the exact praise, the open items with the stuck ones marked, the hard point and how to raise it, and whether the go-to question is due.
 - **Patterns across the team:** anything stuck for more than one person, which may be the manager's problem, not theirs.
-- **Your update:** the one-page status update, only if asked.
+- **Your update:** the one-page status update, only if asked. It is one page at most.
 - **Files:** each agenda file, and every `MISSING:` line.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->

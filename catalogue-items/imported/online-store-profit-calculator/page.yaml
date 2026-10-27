@@ -31,12 +31,13 @@ you_get:
   - The most you can pay to win one customer
   - A look at your margins next to rules of thumb that have no source, so use them only as a rough prompt to check your own data
 how_to_use:
+  - "Gather first: your price, product cost, shipping both ways, fulfillment cost, your card plan rate and fixed fee, and your ad spend per order."
   - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in. The skill works the math by hand in this order: card fee, ad cost, return cost, other costs, net profit and margin, then max CAC (price minus every cost except ads). The bundled script was written for Amazon, so your AI should not use it as is."
   - Say what tool you use, so it can pick the script or the hand math.
   - Paste your price, product cost, shipping, fulfillment and ad spend.
   - Replace the example card fee of 2.9% plus $0.30 with your own plan's rate.
   - Read the net margin and the max affordable CAC. Treat any range it mentions as a rough rule of thumb with no source, and compare it with your own data.
-  - Run it again with a new price or ad spend to find your break-even. Use the max CAC to set a small test ad budget, then run it again with your real order data.
+  - Run it again with a new price or ad spend to find your break-even. Use the max CAC to set a small test ad budget, then run it again with your real order data. Check the result against an order export or ad platform report before you scale spend.
 output_sample:
   input:
     - Your selling price

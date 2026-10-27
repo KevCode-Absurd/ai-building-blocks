@@ -11,6 +11,8 @@ explain: |
 
   The plan lays out three levels: a learner who just pulls out facts, one who spots emotive words but does not connect them to the author, and one who ties specific language to the writer's position and purpose. It then gives a modelled think-aloud, a shared practice task and an independent task. It adds prompts for analysing language, typical mistakes, and marking indicators. It also explains how history reading differs from literary reading.
 
+  Research notes: the study names and figures in the skill file come from its author. Check any of them against the original paper before you quote them to others.
+
   Credit: Gareth Manning, education-agent-skills. The skill file also names Sean Hu as contributor. Licence: CC BY-SA 4.0. We renamed it and rewrote the page text. The prompt itself is unchanged.
 when:
   - Students summarise sources without commenting on the language.
@@ -27,19 +29,20 @@ you_give:
   - What students do now when they read sources
   - Documents you plan to use (optional)
   - Prior close reading teaching (optional)
-  - Your curriculum framework (optional). If you give none, the skill uses its own default, called DIG in the skill file.
+  - Your curriculum framework (optional). If you give none, the skill uses its own default history-thinking framework. The skill file calls it DIG and does not spell out the name.
 you_get:
   - Three levels of close reading with signs of each
   - A modelled, shared and independent teaching sequence
   - Prompts on word choice and tone
   - Common mistakes and marking indicators
+  - Five headed sections in all, in that order
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat.
-  - Add your topic, your students' year, and what they do now when they read a source.
+  - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. It runs in any general AI chat. No paid service, API key or plan is needed.
+  - "Paste these first: your topic, your students' year, and what they do now when they read a source. You can add the document itself after the plan appears."
   - Add the documents you plan to use, or describe them (optional).
   - Read the three levels first. Check they match what you see in your class.
   - "Use the teaching sequence in order: model it, practise together, then set the independent task."
-  - Mark student work against the assessment indicators. Use them to decide which level each student has reached before you pick the next lesson, such as the think-aloud or quiz items.
+  - Mark student work against the assessment indicators. Use them to decide which level each student has reached before you pick the next lesson, such as the think-aloud or quiz items. Use history-think-aloud to write the modelled reading for your source. Use history-source-simplifier if the source is too hard for your class. Use history-thinking-quiz-designer to check what your students can do afterwards.
 output_sample:
   input:
     - Your history topic, period or question

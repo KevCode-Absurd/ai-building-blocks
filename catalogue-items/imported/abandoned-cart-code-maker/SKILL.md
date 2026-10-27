@@ -40,14 +40,18 @@ Identifies customers who started checkout but did not complete their purchase, g
 
 ## Workflow Steps
 
+**Confirmation gate before step 1b.** Report the eligible shopper count, the discount percentage, the prefix and the 30-day expiry. Then stop. Do not run step 1b until the user replies with that count and says yes. Tags stay on customers even after the price rule is deleted, so this is the last point where a run is easy to undo.
+
 1. **OPERATION:** `abandonedCheckouts` — query
    **Inputs:** `first: 250`, `query: "created_at:>='<NOW - days_back days>'"`, pagination cursor
    **Expected output:** List of checkout objects with `customer.id`, `email`, `totalPrice`, `createdAt`, `lineItems`; paginate until `hasNextPage: false`
 
 1a. **FILTER (no API call):** Drop checkouts with no email, and any checkout whose total is below `min_cart_value`. The rest are the eligible customers. If one email has more than one eligible checkout, keep only the most recent, so each shopper gets exactly one code. In `dry_run`, stop after this step and report the count.
 
+1a-check. **READ-ONLY CHECK (before any live step):** Run the `abandonedCheckouts` query on its own with `first: 5`. Confirm every field name in it works on your `api_version`. If the store rejects a field, fix the query and run this check again. Never start step 1b until this read-only query has run cleanly. The only version tested here is the one in the header (2025-01). The queries are written from the Shopify docs and have not been run on a real store, so this check is the test.
+
 1b. **OPERATION:** `priceRuleCreate` — mutation (live; needs `write_price_rules`)
-   **Inputs:** One price rule for the whole run: percentage value `discount_pct`, 30-day expiry, once per customer. Do not set a rule-wide usage limit, because it would cap all codes together. Keep the returned price rule `id`; step 2 needs it as `priceRuleId`.
+   **Inputs:** One price rule for the whole run: percentage value `discount_pct`, 30-day expiry, once per customer. Do not set a rule-wide usage limit, because it would cap all codes together. Keep the returned price rule `id`; step 2 needs it as `priceRuleId`. Before step 2, open Shopify Admin under Discounts and confirm the rule has the 30-day expiry and once-per-customer setting. Do not run step 2 until you have confirmed both.
    **Expected output:** The new price rule `id`; collect `userErrors`. If it fails, stop. Do not run step 2.
 
 2. **OPERATION:** `discountCodeBulkCreate` — mutation
@@ -57,6 +61,8 @@ Identifies customers who started checkout but did not complete their purchase, g
 3. **OPERATION:** `tagsAdd` — mutation
    **Inputs:** Customer `id` (taken from `customer.id` in the step 1 query; if it is empty, look the customer up by email first), tag string from `tag` parameter
    **Expected output:** Updated customer tags; collect `userErrors`
+
+4. **WRITE THE CSV (no API call):** Write `recovery_list_<YYYY-MM-DD>.csv` from the step 1a results and the codes made in step 2. Use these columns in this order: `customer_email`, `cart_total`, `abandoned_at`, `discount_code`, `discount_pct`, `tag_applied`. One row per eligible shopper who got a code. Then emit the outcome summary.
 
 ## GraphQL Operations
 

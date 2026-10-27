@@ -32,11 +32,13 @@ you_get:
   - A check that no claim goes beyond your facts
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy the full SKILL.md text and paste it into Claude, ChatGPT or Gemini. It needs no code, files or paid tools.
+  - The order it follows: gather your reader, goal, channel and proven facts, pick the reader's mental state, write one headline per angle, then check each line against your facts.
   - Tell it who the headline is for, what you want them to do, and where it will run.
   - Add the facts you can prove about your offer. Add your brand voice and length limit if you have them.
   - Ask for headline options. If your goal or channel is unclear, it will ask you before it writes.
   - Read the fact check for each headline. Drop any line that claims more than your facts show.
   - Pick one, or test two or three against each other. Make sure the page or email delivers what the headline promises.
+  - The author and year names inside the skill text are background only. Do not quote them as proof or put them in your copy.
 output_sample:
   input:
     - Who the headline is for

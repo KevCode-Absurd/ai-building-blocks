@@ -30,6 +30,7 @@ you_give:
   - The pilot budget and the cost so far
   - Your go or stop checklist, in order, with its stop rules
   - The date your results run to
+  - The name of the person who approves the go or stop call, and where you record their sign-off
   - The record from your last review (optional)
 you_get:
   - An evidence brief with the goal, the baseline, which success signals were set first, and what was measured
@@ -37,12 +38,14 @@ you_get:
   - Your checklist applied in order, each item marked Pass, Fail or Unknown, with the evidence
   - A call of Go, Stop or Cannot decide yet, with the reason
   - A short record to start your next review from
+  - A next step: take the brief and gap list to the person who decides, and set the next gate or results date
 how_to_use:
   - Download the pack and add it to your AI, or paste SKILL.md into a new chat. Claude, ChatGPT and Gemini work if they can read your files. Without file access, paste your results table as text.
   - Attach your results table, your baseline and your checklist. Type the goal, the budget and the results date. Add your last record on a repeat run.
   - Say "Run the review. Do not guess any missing number." Your AI asks once for anything missing.
   - Read pilot-evidence-brief.md first. Check the baseline and the counts against your own records.
   - Open go-stop-checklist.md. Any Unknown on a required item needs a fix before the gate. data-quality-gaps.md says what to collect.
+  - A Go call is a recommendation only. Do not treat it as approved until your named approver has signed off and the sign-off is recorded. If they have not, the record says "no sign-off yet".
   - Keep next-review-record.md. Run it again when new results arrive or the gate date comes up. The agent changes no budget and turns nothing on.
 how_it_works:
   - title: Read the last record

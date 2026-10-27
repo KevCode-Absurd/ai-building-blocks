@@ -9,6 +9,8 @@ subhead: The best quick check for the moment in your lesson, with a clear way to
 explain: |
   The best quick check for the moment in your lesson, with a clear way to run it. You stop reaching for the same exit ticket every time.
 
+  Licence: CC BY-SA 4.0, as the LICENSE file in this item says. The original is by Gareth Manning (formative-assessment-technique-selector, from his education-agent-skills collection on GitHub). We renamed and reformatted it for this catalogue. If you share a changed version, it must keep the same CC BY-SA 4.0 licence and credit him.
+
   You say when the check happens, what you want to find out, and the age group. You can add class size, subject, who needs extra support and what gear you have, such as mini whiteboards or slips of paper. The skill picks a technique that fits that moment, class size and time, explains how to run it, and says what to do with the answers. It can offer a backup if you have no devices. It suits teachers who want to see understanding before moving on.
 when:
   - You are mid-lesson and want to check if students can move on.
@@ -16,7 +18,7 @@ when:
   - You teach a large class and need a quick way to scan answers.
   - You have no devices and only paper or whiteboards.
 not_for:
-  - "You want to write a question that splits right and wrong ideas: use a hinge question designer, or write one yourself."
+  - "You want to write the question itself, such as one that splits right and wrong ideas: use the Check-for-understanding question writer, or write one yourself."
   - "You want a short end-of-lesson task that you write from scratch: use an exit ticket designer."
   - "You need a full lesson plan, not one check: plan the lesson first, then come back to pick the check."
 you_give:
@@ -35,6 +37,7 @@ how_to_use:
   - Add the year group. Add class size, subject and gear such as mini-whiteboards if you can.
   - Read the ranked techniques and pick the one that fits your time.
   - "Run it in class, then use the answer guide to decide: move on, reteach or regroup."
+  - Pairs with the Check-for-understanding question writer. Pick the technique here, then write the questions there.
 output_sample:
   input:
     - When in the lesson the check happens

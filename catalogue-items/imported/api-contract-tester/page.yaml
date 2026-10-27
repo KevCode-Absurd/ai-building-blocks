@@ -10,6 +10,8 @@ explain: |
   Tests that catch the moment an API change would break the programs using it, before it reaches anyone. Give it the API and a list of who calls it, and you get a small test set that checks both sides.
 
   The skill starts from the real contract, such as an OpenAPI file or documented examples, and reads the server and client code that match. It sorts each change as breaking or safe by looking at fields, required flags, empty values, allowed options, status codes, headers, paging and error shapes. Even a new optional field can break a strict client. It then builds a small matrix of sample data using fake values. Gaps are reported, not guessed.
+
+  Licence: CC BY 4.0 applies to this copy, as its LICENSE-CONTENT file says. Reuse it with credit to sickn33. The skill file header says MIT, which also allows reuse with credit.
 when:
   - You renamed a response field and fear a client will break.
   - The build passes but the app and server disagree at runtime.
@@ -21,7 +23,7 @@ not_for:
   - "You want to plan how clients move off an old version: write a migration plan with your team, as this item only flags what breaks."
 you_give:
   - The API spec or documented examples
-  - The server and client code
+  - The server and client code. If you have no code to share, documented request and response examples can stand in
   - A list of known callers
   - The change you plan to make
 you_get:
@@ -34,7 +36,7 @@ how_to_use:
   - Paste your API spec or examples, then the server and client code that match.
   - Say what change you plan to make and list the known callers.
   - Read the change list first. Check that each breaking call makes sense for your clients.
-  - Run the tests. This needs an AI that can run code in your project, or you can run them yourself.
+  - Run the tests. Only an AI tool that can run code in your project, such as Claude Code or Cursor, can run them for you. In a ChatGPT or Gemini chat you only get the test files, so run them yourself.
   - Fix the gaps it lists, or plan a staged move if a change is breaking.
 output_sample:
   input:

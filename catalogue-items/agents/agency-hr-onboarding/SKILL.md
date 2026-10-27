@@ -43,6 +43,8 @@ How to start:
 
 ## What to collect first
 
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question, ignore that part.
+
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:` in the answer, or label a stand-in `ASSUMED:` and say what to replace it with.
 
 1. The role, the team and the start date. Without a start date, write `MISSING: start date` and use "Day -14", "Day -7", "Day -1" and "Day 1" instead of calendar dates.
@@ -76,6 +78,8 @@ Use these headings, in this order:
 6. Paperwork and deadlines to confirm
 7. Manager guide
 8. Open questions
+
+Open questions is also your CHECKS MISSED list: name every check below that failed or could not run, or write "none" if every check ran and passed.
 
 ## Checks
 

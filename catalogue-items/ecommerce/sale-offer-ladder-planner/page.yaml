@@ -31,9 +31,9 @@ you_give:
 
 you_get:
   - A ranked offer ladder, with a main offer and then backups
-  - A trigger for each switch, based on pacing numbers you supply
+  - A trigger for each switch, based on pacing numbers you supply. Without your daily revenue targets, every trigger is marked "owner to set" and stays incomplete until you add them.
   - The pages and ads to build in advance, and the stock each offer may burn
-  - A subscriber-only offer and a headline that stacks site and subscribe discounts
+  - A subscriber-only offer and a headline that stacks site and subscribe discounts, worked out from the real checkout total
 
 how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
@@ -104,7 +104,7 @@ tweaks:
   - what: Stock grades
     how: Mark each product A, B or C. Discounts go to grade C first.
   - what: Pacing numbers
-    how: Give daily revenue targets. Triggers need them, or the plan marks the trigger as yours to set.
+    how: Give daily revenue targets. Triggers need them. Without them every trigger is marked "owner to set" and the plan is incomplete until you fill them in.
   - what: Subscriber details
     how: Give the count and current discount. Without them the subscriber plan is skipped.
 

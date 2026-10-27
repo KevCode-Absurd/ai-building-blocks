@@ -5,13 +5,15 @@ description: "Plan an affiliate programs acquisition experiment from a product U
 
 # Affiliate experiment planner
 
+**You get:** a recommendation (test now, later or weak fit), one small partner pilot with cash and hour limits, a commission model, attribution and payout rules, a draft recruitment message, a decision rule and the facts still missing.
+
 Needs no account, API key or paid tool, and no scraping. If your AI can browse, it reads the public pages you point to. If not, paste your page text.
 
 Affiliate disclosure and consumer-protection rules apply where you live. Have a lawyer check the terms before you sign anyone.
 
 Not for comparing all 19 growth channels: use the Find your SaaS growth channel workflow (or, for a shop or service, Find your business growth channel). Not for a product with no buyer overlap with any partner audience: talk to a few customers first to learn where they look for help. Not for contracts or legal terms: ask a lawyer to review the draft terms.
 
-Gather first: your product link or pasted pricing text, your growth goal, the most you can spend, your hours a week, and any partner audiences you already know.
+Required: a product link or pasted product and pricing text. Gather these first if you have them: your price points, your current customer count, your monthly cash cap, your hours a week, your growth goal and any partner audiences you already know. If you give no cash cap or hour cap, the plan proposes small ones, such as a cash cap you can afford to lose and a few hours a week, and labels them as assumptions for you to approve. If your AI cannot open the link and you paste no text, stop and ask for the pasted text instead of guessing.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
@@ -49,7 +51,7 @@ Separate observed facts, user-provided facts, hypotheses and missing inputs. Pub
 
 Explain this channel's fit for the current business and the strongest reason it might fail. Use evidence to propose one cheap pilot, its audience, offer, deliverable, owner, time window, cash cap, labour cap, tracking and go / revise / stop rules. If caps or thresholds were not supplied, label proposed values as assumptions for approval. Check long sales cycles and slow channels before choosing a review date. A short pilot can test an early assumption without proving long-term acquisition.
 
-Use the funnel qualified visitor or account -> useful product action -> paying customer -> retained customer. Keep people, teams and buying accounts separate. Use references/measurement.md for economics and attribution. Never invent search volume, contacts, conversion rates, ROI or results. Include an evidence ledger and MISSING at the end. Send nothing, spend nothing, publish nothing and change no live system without authorization for that action.
+Use the funnel qualified visitor or account -> useful product action -> paying customer -> retained customer. Keep people, teams and buying accounts separate. Use references/measurement.md for economics and attribution. Never invent search volume, contacts, conversion rates, ROI or results. Include an evidence ledger and MISSING at the end. Send nothing, spend nothing, publish nothing and change no live system without authorization for that action. Recruitment messages are drafts only: do not email or message any partner until the owner has approved each one.
 
 ## Affiliate Programs
 
@@ -60,9 +62,9 @@ Decision to resolve: Can a relevant partner earn a sustainable commission for br
 3. Define the attribution window, payout trigger, refunds, self-referrals, brand bidding, disclosures, fraud review and dispute handling.
 
 Cheap pilot, in order:
-1. Pick a short list of partner audiences with real buyer overlap.
+1. Pick a short list of partner audiences with real buyer overlap. Look in newsletters, communities, review sites and the integration or app marketplaces your buyers already use. Name only audiences you or the public pages show exist. Never state a partner's audience size or conversion rate unless the user or a cited page gives it.
 2. Draft the offer and terms: commission, attribution window, payout trigger and refund rule.
-3. Recruit a few approved partners, by invitation only.
+3. Recruit three to five approved partners, by invitation only. Fewer is fine for a first pilot.
 4. Set a spend cap and tracking before any partner promotes you.
 5. Review on a set date, and pay only on the agreed qualified outcome.
 

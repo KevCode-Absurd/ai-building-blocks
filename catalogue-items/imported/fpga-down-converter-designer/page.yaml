@@ -2,7 +2,7 @@ thinking: high
 thinking_why: Hardware rate limits make it exacting.
 new_slug: fpga-down-converter-designer
 name: FPGA down converter designer
-summary: Design a digital down converter for FPGA or ASIC. Give your sample rates and bands. Get a MATLAB model, a simulation and Verilog or VHDL code.
+summary: Design a digital down converter for FPGA or ASIC. Give your sample rates and bands. Get a MATLAB model, a simulation and Verilog or VHDL code. Works only with MathWorks products.
 job: build-software
 headline: FPGA down converter designer
 subhead: Give your sample rates, carrier and bandwidth. Your AI asks a few questions, then builds the converter in MATLAB. You get a tested design and Verilog or VHDL you can run in your simulator.
@@ -19,6 +19,7 @@ not_for:
   - "You need embedded C code, not HDL: use a standard MATLAB DSP workflow with C code generation instead."
   - "You do not have MATLAB with the DSP HDL Toolbox: ask a DSP engineer or use a plain filter design tool first."
   - "You only need a simple filter, not a full converter chain: design the filter on its own in MATLAB."
+  - "You work in a toolchain that is not from MathWorks: the skill licence lets you use it only with MathWorks products."
 you_give:
   - Input sample rate
   - Carrier frequency
@@ -37,6 +38,7 @@ how_to_use:
   - Say you want a digital down converter. Your AI asks for your rates and bands, one question at a time.
   - Look at the simulation plots (I/Q and spectrum) and the sample counts before you generate HDL. Compare them with your own floating-point model if you have one.
   - Run the generated Verilog or VHDL testbench in your HDL simulator to confirm the result.
+  - What comes back at the end: the sample counts, the I/Q and spectrum plots, the MATLAB design function and testbench, and the paths of the HDL files. Next, take the HDL into your FPGA synthesis and timing flow, and check the results against your own floating-point model.
 output_sample:
   input:
     - Your input sample rate

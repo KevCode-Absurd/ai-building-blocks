@@ -11,7 +11,7 @@ explain: |
 
   The scorer splits your page into blocks and rates each one. It looks for a length near 134 to 167 words, a direct answer in the first one or two sentences, and specific facts such as numbers, dates and named things. Self-containment is a large share of the score. A block that says "it" or "this" without naming the subject scores low, because it makes no sense when lifted out. Each weak block gets a clear rewrite you can copy.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (zubair-trabzada) says MIT. Credit goes to zubair-trabzada and sickn33.
+  Licence: CC BY 4.0 applies to this copy, as the LICENSE-CONTENT file in this folder says. That file governs. The author's own file header (zubair-trabzada) says MIT, which is the author's label for the original. Credit goes to zubair-trabzada and sickn33.
 when:
   - You want AI assistants to quote your page in their answers.
   - Your article ranks but AI tools ignore it.
@@ -32,7 +32,7 @@ you_get:
   - Rewrite suggestions you can paste in
 how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini.
-  - Paste the full SKILL.md text into the chat. A plain chat cannot save files, so you get the report as text in the chat. Copy it into your own file.
+  - Paste the full SKILL.md text into the chat. Plain chat needs only that text and your page text. The file tools, pandoc and headless Chrome that the skill file lists are optional. A plain chat cannot save files, so you get the report as text in the chat. Copy it into your own file.
   - Paste your page text below it, or give the page address if your AI can open web pages.
   - Add the question the page should answer (optional).
   - Read the weakest blocks first. Paste in the rewrites you like.
@@ -52,6 +52,6 @@ output_sample:
     - name: Weakest Content Blocks (Rewrite Priority)
       contains: The passages that score lowest, why they score low, and a rewrite you can copy.
     - name: Quick Win Reformatting Recommendations
-      contains: Five changes to make first, each with an estimated lift in score.
+      contains: Five changes to make first, each with a likely effect (low, medium or high), marked as a guess.
     - name: Per-Section Scores
       contains: A score for every section of the page, in page order.

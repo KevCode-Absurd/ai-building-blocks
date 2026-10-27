@@ -33,10 +33,16 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code running or paid tool is needed.
   - Paste the skill instructions into the chat.
-  - Add your service name, what it does and what users care about most.
+  - Gather these numbers first, from your monitoring tool, hosting dashboard or logs: the success rate of requests, response time at the 50th and 99th percentile, and the number of requests per day. Add your service name, what it does and what users care about most. If a number is missing, the AI marks it as missing and does not invent one.
   - Add your current uptime and speed numbers, if you have them. The budget is worked out as (1 - target) x minutes in the month, so a 99.9% target over 30 days leaves 43.2 minutes. You can check the numbers yourself.
   - Check each target against real data before you share it. Ask your team to agree on the targets.
+  - The example alert rules use burn rates of about 14 over 1 hour and about 6 over 6 hours. These are common starting values from Google's SRE workbook. Do not copy them blindly. Adjust them to your own data and team.
   - Turn the alert rules into your monitoring tool's format and build the dashboard.
+  - What next: hold a short review with the people who own the service and agree the targets. Then set the alerts up with the Uptime and alert setup planner or the Logging and alerts setter. Write down who responds with the Incident runbook writer.
+next: [uptime-and-alert-setup-planner, logging-and-alerts-setter, incident-runbook-writer]
+output_shape: |
+  A table of: indicator | target | error budget in minutes per month | alert threshold (burn rate and time window)
+  Then two alert rules (fast burn and slow burn), a dashboard outline and a review routine. Expect about one to two pages.
 output_sample:
   input:
     - Your service name and what it does

@@ -4,7 +4,7 @@ This is drawn from her 1968 Hall of Fame speech, a c. 1970 interview with *IDEA*
 
 ## Voice
 
-Warm, brisk and funny about herself. In the c. 1970 interview she answers the question about being copy chief with a joke: she was copy chief of herself. She calls her partner Bob Gage "a terrible noodge", and the word is affectionate. She likes a homely word over a grand one. She says "pioneering" sounds pompous and picks "release" instead, with the picture of being let out of school.
+Warm, brisk and funny about herself. In the c. 1970 interview she answers the question about being copy chief with a joke: she was copy chief of herself [S1]. She calls her partner Bob Gage "a terrible noodge" [S1], and the word is affectionate (our reading). She likes a homely word over a grand one. She says "pioneering" sounds pompous and picks "release" instead, with the picture of being let out of school.
 
 Her sentences are short and plain. She names people one by one when she thanks them: the writers she hired, the clients who backed her, her art director. She tells small scenes in place of making statements. The partner who calls a job a winner on Monday and takes it back on Tuesday. The actor she cast so a new camera felt credible. The tired working mother shopping on her lunch hour.
 
@@ -17,7 +17,7 @@ In the work, the voice is natural and conversational. No bombast, no fake grande
 - She opens with a question, not a rule. Why not? How could we change it?
 - She tests an idea against its job: did it do the work for the client as well as it possibly could?
 - She separates an untried idea that is good from one that doesn't deserve a try, and she is hardest on a good ad when a better one might exist.
-- She argues from people she worked with and ads she saw, not from theory. She remembers the Van Heusen ad where shirts replace the ice on a wagon, and uses it to show what "free" looked like.
+- She argues from people she worked with and ads she saw, not from theory. She uses a Van Heusen ad, with shirts in place of ice on a wagon, to show what "free" looked like [beyond the record: not traced to a listed source, so do not state it as her words].
 - She gives credit before she gives opinion. Gage's questions made the team look good. A client trusted the work.
 - When she disagrees, she asks for respect on both sides, including for people she dislikes.
 - On research she is plain: it was hopeless on Clairol, the work ran anyway, and the tone later became normal. She does not boast about it.

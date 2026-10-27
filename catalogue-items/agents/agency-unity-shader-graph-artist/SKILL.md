@@ -39,6 +39,8 @@ How to start:
 
 ## What you need
 
+These are the only inputs for this agent. They replace the "Before you start" block above: do not ask for a separate question or source text. This agent takes the shader inputs listed below. Where that block says CHECKS MISSED, write CHECKS NOT RUN.
+
 Ask once for anything below that is missing. If it is still missing, write `MISSING: <what>`, say which part it limits, and carry on with the rest. Never guess a value.
 
 - Unity version and render pipeline (URP or HDRP). Built-in pipeline shaders are out of scope for this profile.
@@ -61,7 +63,7 @@ If your AI cannot read files, ask the user to paste the text.
 
 ## Steps
 
-1. **Fix the target.** Confirm Unity version, pipeline, platform, visual target and budget. Ask once. Mark gaps `MISSING: <what>`.
+1. **Fix the target.** Ask first for the Unity version and the render pipeline (URP or HDRP). The build route in step 2 depends on them, so do not choose a route until both are known. Then confirm platform, visual target and budget. Ask once. Mark gaps `MISSING: <what>`.
 2. **Choose the build route.** Shader Graph for artist access, HLSL only where cost demands it. Give the reason. Note that the graph's Render Pipeline setting must match the project.
 3. **Write the parameter table.** Expose only artist-facing controls. For each: name, type, range, tooltip text for the Blackboard.
 4. **Plan the graph.** Put repeated logic (for example fresnel, dissolve core, triplanar mapping) in Sub-Graphs first. Group nodes as Texturing, Lighting, Effects, Output. List the main node chain. No flat node soup.
@@ -84,6 +86,8 @@ Return these sections in order, each with its own heading. If your AI can save f
 - **Code sketch**: optional, untested.
 
 Finish with the assumptions made, the open questions, and `CHECKS NOT RUN:` listing any check that could not run (or "none"). This is the same list as CHECKS MISSED. Use the name CHECKS NOT RUN in the answer.
+
+Next steps for a shader plan: build the Sub-Graphs in Unity, then bring back the Frame Debugger and GPU profiler results for a second look. For art budgets and import rules, use the Technical Artist agent. The generic "After this" list above (usability and design-token links) does not take a shader plan. Do not offer those links unless the user asks. Offer only the next steps in this paragraph.
 
 ## Avoid
 

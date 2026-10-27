@@ -14,6 +14,10 @@ license: MIT
 license_source: https://github.com/uxkin/agent/blob/main/LICENSE
 ---
 
+> Licence note (added by AI Blocks): the one licence that applies to the written text of this copy is CC BY-4.0 (file `LICENSE-CONTENT`). The `license: MIT` line in the header above is the author's own declaration for the code in their repo. Keep the credit to UXKIN.
+
+> Licence note (added by AI Blocks): the written text of this copy is shared under CC BY-4.0 (see `LICENSE-CONTENT`). The `license: MIT` line in the header above is the original author's own declaration for their repo. Keep the credit to the author either way.
+
 # iOS screens · by UXKIN
 
 *Real UI, not AI slop.*

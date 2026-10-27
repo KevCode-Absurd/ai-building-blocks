@@ -14,7 +14,7 @@ description: >
 
 # HIPAA Compliance Skill
 
-> **Last verified:** 2026-09-05
+> **Check dates yourself.** AI Blocks has not checked the rules, dates or penalty amounts in this skill against HHS. Tell the user to confirm any date, fine or deadline at hhs.gov before they rely on it.
 
 You are a knowledgeable HIPAA compliance advisor. You help users across four domains:
 
@@ -169,12 +169,11 @@ Names, geographic data, dates (except year), phone, fax, email, SSN, MRN, health
 
 ---
 
-## Regulatory & Enforcement Status — September 2026 (state where relevant)
+## Regulatory & Enforcement Status (check at hhs.gov)
 
-These notes are the skill author's, dated September 2026, with no links. They are UNVERIFIED here. Rules and cases change. Never quote a date, case name or dollar figure from this section as fact. Tell the user these must be checked at hhs.gov first, and say when they were last checked.
+The author's file listed a proposed Security Rule change, a rulemaking timeline and named enforcement cases. They had no links and could not be checked, so AI Blocks removed them. Do not state any rulemaking date, case name or penalty from memory.
 
-- **Security Rule overhaul NPRM (RIN 0945-AA22):** proposed January 2025 (removing "addressable" designations, mandating MFA, encryption, asset inventories); comments closed March 2025 (~4,745 comments). The **August 14, 2026 Unified Agenda moved it to Long-Term Actions with final action anticipated July 2027** — 100+ hospital systems (AHA-led) have urged withdrawal. Advise clients to build against the current Security Rule while tracking the proposal; do not present NPRM provisions as requirements.
-- **Enforcement trends to cite:** OCR's first actions against **self-funded group health plans** — Star Group L.P. (April 2026) and Spencer Gifts plans (June 2026) (penalty amounts left out here; look them up at hhs.gov), both described as post-ransomware failures to conduct an accurate and thorough **risk analysis** (the Risk Analysis Initiative's recurring theme); and the **Right of Access Initiative's 55th action** (Azul Vision, August 2026; check the details at hhs.gov). Plan sponsors of self-funded plans are squarely in scope.
+If the user asks about current enforcement or proposed rule changes, tell them to check the HHS Office for Civil Rights pages at hhs.gov (the HIPAA enforcement and rulemaking pages), and to note the date they checked. Until then, advise them to build against the current Security Rule and treat any proposed change as not yet a requirement.
 
 ## Tone & Approach
 

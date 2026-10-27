@@ -222,7 +222,7 @@ SpikeInterface can apply pretrained machine-learning classifiers from Hugging Fa
 `spikeinterface.curation` module. The UnitRefine models were trained on real Neuropixels
 data (V1, SC, ALM). The public model metadata currently requests SI 0.102.0 and
 scikit-learn 1.4.2, with empty metric-parameter metadata; compatibility with this
-0.105.0 environment is untested. Inspect model requirements/features first:
+0.105.0 environment is untested. **Before you run either call below, stop and ask the user to confirm.** Show them the two repo IDs, the Hugging Face model page and the model version it asks for. Do not set `trust_model=True` for any repo ID other than these two. Do not run it at all unless the user says yes. Inspect model requirements/features first:
 
 ```python
 import spikeinterface.curation as sc
@@ -256,6 +256,8 @@ areas/datasets may not transfer; validate against a manually labelled subset.
 When running inside an agent such as Cursor or Claude Code, the agent can directly inspect
 waveform/correlogram plots and suggest review questions — no API setup required. Generate plots
 and ask the agent to assess isolation quality.
+
+The programmatic route below uses a paid Anthropic API key and sends images of your units to Anthropic. **Ask the user first, and only use it if their data rules and consent allow it.** If they say no, skip it and review the plots by hand or in Phy.
 
 For programmatic vision-model access, **read API keys from the environment — never hardcode
 credentials in analysis scripts** (they leak into version control and logs):

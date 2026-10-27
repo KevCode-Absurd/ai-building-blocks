@@ -130,7 +130,7 @@ test:
   - "Throttle to slow 3G with the cache off and watch the page. The element should stay still."
   - "Run PageSpeed on mobile and desktop three times. CLS should be 0.1 or lower."
   - "Check that the cookie banner still shows and works."
-  - "Look at real-user data after about 28 days. One case went from 0.13 to 0.1 to 0 over that window."
+  - "Look at real-user data after about 28 days. It can take about that long to settle."
 
 improve:
   - "Add the list of apps that add visible widgets, so each gets a fixed space the first time."

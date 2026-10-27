@@ -34,7 +34,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
   - Paste the skill instructions into the chat.
   - Under them, write what your product is, who it is for, who you compete with and what limits you have.
-  - Add any numbers or customer notes you have (optional). If something is missing, say so.
+  - Paste your competitor list and customer review notes in the same message, under your product description. Both are optional, so leave them out if you have none. Add any numbers you have. If something is missing, say so.
   - Read the nine sections. Check that they agree with each other, then test the hypotheses it lists.
   - Ask your AI to fix any section that feels vague, and review the plan each quarter.
 output_sample:
@@ -64,3 +64,4 @@ output_sample:
       contains: Why rivals cannot easily copy you, such as switching costs, network effects or barriers to entry.
     - name: Hypotheses and experiments
       contains: What must be true for the plan to work, plus low-effort tests for the key guesses.
+next: [outcome-based-roadmap, quarterly-roadmap-builder]

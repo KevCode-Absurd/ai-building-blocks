@@ -31,6 +31,7 @@ you_get:
   - An action plan with next steps
   - CRM fields updated after your approval
 how_to_use:
+  - Before you start, have the account name ready, and connect your CRM and docs tool, or have a file of account and deal rows. Enrichment tools are optional, and are usually paid services with their own account or key.
   - Open Claude, ChatGPT or Gemini and paste in the skill text. Connect your CRM first if your AI allows it.
   - Type the account name. Say if you want a new plan or a refresh, and if you want a quarter, half or year.
   - If your CRM is not connected, upload a file of the account and deal rows. Paste any notes or call transcripts too.

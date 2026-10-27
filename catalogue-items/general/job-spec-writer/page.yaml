@@ -33,7 +33,7 @@ how_to_use:
   - Paste the leads and your notes as they are.
   - Say which lead you want written first.
   - Read the one-line job to a customer if you can. Ask if it sounds like them.
-  - Carry the spec to "Job rival mapper".
+  - Carry the spec to the Job rival mapper.
 output_sample:
   input:
     - Your ranked leads, from the Job hunting spot finder or your own list

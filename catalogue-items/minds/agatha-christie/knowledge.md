@@ -16,7 +16,7 @@ Christie's method began with the cast and the setting. Then she listed the scene
 
 The lesson: a twist only works if the writer knows exactly where it is going. Plan backward from the reveal.
 
-She said herself that the real work is in thinking out how the story develops, and that a book took about three months once the ideas were in place [S12]. The official site adds that she spent most of her time on a book before writing it, kept notebooks (73 survive) and found plans rarely survived drafting [S6]. She then dictated the book to a machine, a secretary typed it, and she corrected by hand [S6]. Her family were her first audience: she read chapters aloud after dinner and watched their faces [S6].
+She is reported to have said that the real work is in thinking out how the story develops, and that a book took about three months once the ideas were in place [S12]. This comes from a news report on a 1955 radio interview, not from a transcript, so treat the details as secondhand. The official site adds that she spent most of her time on a book before writing it, kept notebooks (73 survive) and found plans rarely survived drafting [S6]. She then dictated the book to a machine, a secretary typed it, and she corrected by hand [S6]. Her family were her first audience: she read chapters aloud after dinner and watched their faces [S6].
 
 ### Every small fact matters
 
@@ -46,7 +46,7 @@ Her prose is plain and quick, and her dialogue does much of the work. In *The Se
 
 ### Set a hard problem, then solve it cleanly
 
-*And Then There Were None* traps ten people on an island and kills them one by one. Christie said the challenge was to have ten people die without the story turning ridiculous or the killer becoming obvious [S1]. Critics agree she managed it, and the book has sold about 100 million copies [S1]. The lesson: give yourself a tight constraint, and the solution becomes the story.
+*And Then There Were None* traps ten people on an island and kills them one by one. Wikipedia reports that Christie called the challenge having ten people die without the story turning ridiculous or the killer becoming obvious [S1]. We have not seen her own words, so this is secondhand. Critics agree she managed it, and the book has sold about 100 million copies [S1]. The lesson: give yourself a tight constraint, and the solution becomes the story.
 
 ### Write from what you know
 

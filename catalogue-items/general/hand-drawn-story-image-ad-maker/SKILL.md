@@ -5,11 +5,13 @@ description: Use when a story ad's problem is private, inside the body, or likel
 
 # Hand-drawn story image ad maker
 
-You brief a drawing, photographed flat on a table like a page from someone's notebook. It shows what a camera shouldn't: the gut that won't settle, the night that won't end. A drawing gets past the problem of showing the body, and a short sequence asks to be followed, so the eye runs straight on into the story.
+You brief a drawing, photographed flat on a table like a page from someone's notebook. It shows what a camera shouldn't: the gut that won't settle, the night that won't end. A drawing is a creative choice for a private problem, and a short sequence asks to be followed, so the eye runs straight on into the story. It does not change what the ad platform's health policy allows.
 
 The panels follow the same order as the story ad: the push (the moment it stopped being bearable), then the habit (what they kept doing anyway). They stop there. The way out belongs to the story.
 
 **Good for:** digestion, cramps, headaches, a racing mind at 2am, anything private or flagged as a photo.
+
+**Health warning:** ads about a private body problem fall under the ad platform's health and personal-attribute policy. A drawn symptom can still be flagged. Do not write the panel plan or the prompt until the policy check is done. Ask the person to confirm it first, or mark `MISSING: policy check` and stop.
 
 **Not for:** a problem a camera can show safely. Use the matching photo skill, and let the [Image style picker for story ads](https://useaiblocks.com/skills/image-style-picker-for-story-ads) choose one if you are unsure.
 
@@ -61,25 +63,26 @@ How to start:
 
 If you can make images in this chat (ChatGPT and Gemini can), make the picture from your prompt once the prompt passes its checks, then check the picture against the same list and say what to fix. If you can't (Claude can't draw unless an image tool is connected), say that once, in one line, before you start, so nobody waits for a picture that won't come. Hand back the prompt, and at the end tell them how to finish it:
 - **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture, or paste this whole skill there so it writes the prompt and makes the picture in one go. ChatGPT uses GPT Image, Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
-- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Higgsfield:** a paid service. It needs an account and its own plan or credits. Paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
 - **Claude Code:** with an OpenAI or Google key saved as `OPENAI_API_KEY` or `GEMINI_API_KEY`, offer to send the prompt to that image API and save the file. Keys: platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
 
 If an image tool is connected, offer to make the picture with it, and ask before you spend credits.
 <!-- /making-it -->
 
 ## Steps
-1. **Follow the house rules.**
-2. **Pick the panel count by what the story needs:**
+1. **Do the policy gate.** For any private body problem, confirm the ad platform's health and personal-attribute policy has been checked for this problem. If not, stop here and say so.
+2. **Follow the house rules.**
+3. **Pick the panel count by what the story needs:**
    - **One panel**: one moment says it all (2am, eyes open, the clock lit).
    - **Three panels**: the push, then the habit twice. The most useful shape.
    - **Four panels**: only when the story has a clear doubt, such as a new thing tried once and put away.
    More than four is unreadable at feed size.
-3. **Repeat one frame.** Draw the same place from the same angle in each panel and change one or two things: the clock, the light through the window, the pile of tubs. The reader fills in the time between panels and feels the habit repeat.
-4. **Draw one figure the same in every panel:** simple, faceless or with dots for eyes, the same clothes. Show the problem through posture and things nearby, never through the body itself.
-5. **Leave the last panel open.** Same frame, problem unchanged. No product, no smile, no sunrise.
-6. **Choose what it's drawn with,** in one line, kept for every panel: a ballpoint on lined paper for an office worker, a soft pencil in a sketchbook, a felt-tip on the back of an envelope. The narrator should plausibly own it.
-7. **Keep it wordless.** No speech bubbles, captions or lettering. Image tools misspell drawn words, and the words belong to the story and the line under the image. Numbers on a drawn clock are fine.
-8. **Run the checks.** Run "Check before you hand it back" and fix any check that fails where you can. List any check still missed, one line each, or write "none".
+4. **Repeat one frame.** Draw the same place from the same angle in each panel and change one or two things: the clock, the light through the window, the pile of tubs. The reader fills in the time between panels and feels the habit repeat.
+5. **Draw one figure the same in every panel:** simple, faceless or with dots for eyes, the same clothes. Show the problem through posture and things nearby, never through the body itself.
+6. **Leave the last panel open.** Same frame, problem unchanged. No product, no smile, no sunrise.
+7. **Choose what it's drawn with,** in one line, kept for every panel: a ballpoint on lined paper for an office worker, a soft pencil in a sketchbook, a felt-tip on the back of an envelope. The narrator should plausibly own it.
+8. **Keep it wordless.** No speech bubbles, captions or lettering. Image tools misspell drawn words, and the words belong to the story and the line under the image. Numbers on a drawn clock are fine.
+9. **Run the checks.** Run "Check before you hand it back" and fix any check that fails where you can. List any check still missed, one line each, or write "none".
 
 ## What you hand back
 1. **Scene**: one sentence, what someone scrolling would say they saw.
@@ -88,8 +91,8 @@ If an image tool is connected, offer to make the picture with it, and ask before
 4. **Figure**: what they look like and wear, the same throughout.
 5. **Drawn with**: pen and paper, one line.
 6. **Words on the image**: none.
-7. **Line under the image**: about 27 characters. A plain caption, a question about the thing, the buyer's own line or the swap. Never the product name, never a line about the reader's body or health.
-8. **Flags**: anything near the brand's body limits.
+7. **Line under the image**: up to about 27 characters. Shorter is fine. A plain caption, a question about the thing, the buyer's own line or the swap. Never the product name, never a line about the reader's body or health.
+8. **Flags**: anything near the brand's body limits. Any digestion, gut-health or other health claim in the story needs the brand's own proof and a policy review before the ad runs.
 9. **Image prompt**: 60 to 120 words, ready to paste.
 10. **Checks missed**: one line per check still missed, or none.
 

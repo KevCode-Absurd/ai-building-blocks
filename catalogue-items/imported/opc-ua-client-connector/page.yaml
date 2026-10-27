@@ -11,7 +11,7 @@ explain: |
 
   It starts with discovery through the local discovery service and reads the server's endpoints and security policies. It then connects as a client, with a username and password or with certificates, and sets the security mode. It handles the common stumbling blocks, such as untrusted certificates and host name mismatches, and inspects certificate files. Once connected, it walks the node tree, finds nodes by name or ID, calls methods, and processes large namespaces in batches.
 
-  This is MathWorks' skill. The licence that applies is the LICENSE file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE file. The AI Blocks note in step 5 of the skill file is our own addition.
+  This is MathWorks' skill. The licence that applies is the LICENSE file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE file. The AI Blocks notes in the skill file are our own additions.
 when:
   - You need to read data from a factory machine into MATLAB.
   - Your connection fails with a certificate trust error.

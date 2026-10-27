@@ -147,3 +147,6 @@ terms:
     meaning: A check that explains any gap between two sets of figures that should match.
   - term: Illustrative figures
     meaning: Practice numbers that show how the sums work. They are not a real contract.
+next:
+  - treasury-forecast-backtest-checker
+  - currency-exposure-netting-checker

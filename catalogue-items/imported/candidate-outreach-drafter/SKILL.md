@@ -9,6 +9,12 @@ description: "Use proactively for craft personalized candidate outreach messages
 
 Transform sourcing intelligence (personas, talent maps, JDs) into compelling, personalized outreach that gets responses. Cover the full outreach lifecycle: first touch, follow-ups, channel switches, breakup messages, and response handling.
 
+## When not to use
+
+- You want to mass mail an unknown list. Post the job on a job board instead. This skill needs a real person and a real signal about them.
+- You have no profile, project or post to personalise from. Run a search first with the Candidate sourcing planner.
+- You need the job ad itself. Write that first, then come back here.
+
 ## Outreach Principles
 
 The percentages and rates in this skill (here and in the tables below) are the author's, taken from LinkedIn and Gem data. They are not checked here, and each one is marked "(author's figure, unchecked)". The same goes for the five files in `references/`. Use them as rough guides. Never repeat them to a candidate as fact, and never put one in an outreach message.
@@ -99,7 +105,7 @@ Touch 4 (Day 14)   → Breakup message, create soft urgency
 - **Between touches:** 3-5 business days minimum
 - **Best send times:** Tuesday-Thursday, 8-10am or 5-7pm candidate's timezone
 - **Avoid:** Monday mornings (inbox flood), Friday afternoons, holidays, same day as company layoff announcements
-- **Test weekends:** The author reports higher open rates on weekends (unchecked). Schedule sends for Sunday evening / Monday 6am to land at top of inbox.
+- **Test weekends:** The author reports higher open rates on weekends (unchecked). If a weekend test works for you, schedule sends for Sunday evening. Do not schedule them for Monday morning: that is when inboxes flood (see Avoid above).
 - **Best months:** January (professionals return refreshed), April (post-Q1 momentum). Q4 is weakest.
 - **Seasonal:** Avoid late December, first week of January, major conference weeks
 
@@ -140,9 +146,9 @@ For leadership hires and key ICs, send the first touch from the hiring manager o
 
 ## Personalization Hierarchy
 
-Personalization quality directly correlates with response rate. Use the highest-available level:
+Personalization quality tends to go with better replies. Use the highest-available level. The response-lift figures in the table are the original author's rough guides. They are unchecked estimates, so do not quote them to the user as fact:
 
-| Level | Signal Type | Example | Response Lift |
+| Level | Signal Type | Example | Response Lift (author's unchecked estimate) |
 |-------|------------|---------|---------------|
 | **1 - Deep** | Their specific work/output | "Your Kafka consumer optimization in [repo] is elegant" | 3-5x |
 | **2 - Contextual** | Career event or content | "Congrats on the Staff promo" / "Loved your post on X" | 2-3x |

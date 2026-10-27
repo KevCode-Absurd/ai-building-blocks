@@ -48,6 +48,7 @@ pip install peft transformers accelerate bitsandbytes datasets
 ### LoRA fine-tuning (standard)
 
 ```python
+import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, TrainingArguments, Trainer
 from peft import get_peft_model, LoraConfig, TaskType
 from datasets import load_dataset
@@ -103,7 +104,6 @@ trainer = Trainer(
                                  "attention_mask": torch.stack([f["attention_mask"] for f in data]),
                                  # padding positions are set to -100 so they are ignored by the loss
                                  "labels": torch.stack([f["input_ids"].masked_fill(f["attention_mask"] == 0, -100) for f in data])}
-# This masks padding only. To train on the response only, also set the prompt tokens to -100.
 )
 
 trainer.train()
@@ -112,10 +112,14 @@ trainer.train()
 model.save_pretrained("./lora-llama-adapter")
 ```
 
+The data collator above masks padding only, so the model also learns from the prompt tokens, not only the answers. To train on the response only, also set the prompt tokens to -100 in the labels. The one-line change: tokenize the prompt part (everything up to and including "### Response:
+") on its own, take its length as `prompt_len`, and set `labels[:prompt_len] = -100` for each example before you stack them.
+
 ### QLoRA fine-tuning (memory-efficient)
 
 ```python
-from transformers import AutoModelForCausalLM, BitsAndBytesConfig
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 from peft import get_peft_model, LoraConfig, prepare_model_for_kbit_training
 
 # 4-bit quantization config
@@ -132,6 +136,8 @@ model = AutoModelForCausalLM.from_pretrained(
     quantization_config=bnb_config,
     device_map="auto"
 )
+tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-3.1-70B")
+tokenizer.pad_token = tokenizer.eos_token
 
 # Prepare for training (enables gradient checkpointing)
 model = prepare_model_for_kbit_training(model)
@@ -148,8 +154,9 @@ lora_config = LoraConfig(
 
 model = get_peft_model(model, lora_config)
 # The 4-bit weights of a 70B model are about 35 GB. This needs a larger card or several cards (device_map="auto" spreads the layers). It does not fit on one 24 GB card.
-# Train it with the same TrainingArguments and Trainer as the LoRA example above. For QLoRA, use bf16=True instead of fp16=True, and optim="paged_adamw_8bit".
 ```
+
+To train it, reuse these parts of the LoRA example above without change: the dataset load, the tokenize function, `TrainingArguments`, the data collator and `Trainer`. Make two changes for QLoRA: use `bf16=True` instead of `fp16=True`, and add `optim="paged_adamw_8bit"` to `TrainingArguments`.
 
 ## LoRA parameter selection
 
@@ -421,7 +428,7 @@ TrainingArguments(learning_rate=1e-4)
 4. **Enable gradient checkpointing** for memory savings
 5. **Save adapters frequently** (small files, easy rollback)
 6. **Evaluate on held-out data** before merging
-7. **Use QLoRA for 70B+ models** on consumer hardware
+7. **Use QLoRA for 70B+ models** to cut memory, but plan a 48 GB or 80 GB card, or several cards. A 70B model in 4-bit needs about 35 GB for the weights alone, so one 24 GB consumer card is not enough
 
 ## References
 

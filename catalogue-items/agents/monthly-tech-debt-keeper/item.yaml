@@ -19,7 +19,7 @@ steps:
   - {uses: code-ownership-analyst, note: "Only when a top item sits in code that one person alone knows: who owns it and how to spread that. Uses your code, for that area only. Hands the ownership risk to the hand-back. Step 2's list only decides whether it runs; it reads your code."}
   - {uses: codebase-architecture-reviewer, note: "Only when three or more top items sit in the same area: a design cause behind the repeats. Uses your code, for that area only. Hands the design fix to the splitter as a change to cut up. It does not use step 3's result; the two run side by side."}
   - {uses: structure-behaviour-split, note: "Once per chosen fix: cut it into tidy-up steps, each small enough to review alone. Takes one fix from step 2's short list, or step 4's design fix, as the change. Hands tidy-up steps for you to approve."}
-schedule: "First working day of each month"
+schedule: "Run by hand on the first working day of each month. Nothing starts on a timer unless you connect a scheduler."
 asks_before: [changing code, deleting code, opening tickets or pull requests, changing the sprint plan, merging anything]
 origin: own
 version: 1.0.0

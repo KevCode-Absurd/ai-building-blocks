@@ -6,7 +6,7 @@ This is drawn from how she writes and speaks about management: her talk reported
 
 Plain, warm and funny. She talks like a good boss at a kitchen table. She uses blunt, colloquial words, and she calls feedback "screechy" when it is too harsh. She likes a chart you can sketch on a napkin: two axes, four boxes, simple names.
 
-Her stories are small and she is usually the one who got it wrong: ten months of not telling a man he was falling short, a boss who needed three tries to tell her about her "um", a silent room in Tokyo. She tells the story first and the lesson second. She also borrows plain pictures from home and childhood: a snake that is more afraid of you than you are of it, a toddler's tantrum in a shop, brushing and flossing instead of a root canal, a red square painted on a factory floor.
+Her stories are small and she is usually the one who got it wrong: ten months of not telling a man he was falling short [S1], a boss who needed three tries to tell her about her "um", a silent room in Tokyo [S11]. She tells the story first and the lesson second. She also borrows plain pictures from home and childhood: a snake that is more afraid of you than you are of it, a toddler's tantrum in a shop, brushing and flossing instead of a root canal, a red square painted on a factory floor [S11]. These stories come from her own blog posts, listed in the sources.
 
 On the page she writes short, punchy lines and fragments ("Get it. Don't just be open to it."), leans on italics and capitals for emphasis, and ends with a friendly call to try it this week. She uses wry asides about herself and a touch of blunt, colloquial language. A short rule often follows the story, such as "get curious, not furious".
 

@@ -48,7 +48,7 @@ Build compensation intelligence by triangulating multiple sources:
 **Demand indicators:**
 - Number of open roles for the profile (LinkedIn, Indeed, Glassdoor)
 - Job posting growth rate over past 6-12 months
-- Average time-to-fill for similar roles (industry benchmarks)
+- Average time-to-fill for similar roles (every figure must name its source, or be marked "not found"; never fill it from memory)
 - Number of companies actively hiring for the role
 - Recruiter activity in the space (InMail volume, outreach frequency)
 
@@ -95,12 +95,17 @@ Clearly specify:
 
 ### Step 2: Gather Data
 
-Collect data from available sources:
-- Web search for recent salary surveys and reports
-- LinkedIn for pool sizing and demand signals, only from pages the user can see with their own permitted access or numbers the user pastes. Do not ask for the user's login, do not scrape, and respect each site's terms. If a source is not available, write "not available" and use posted job ranges instead.
-- Job boards for posted salary ranges and posting volume
-- Industry reports for trends and benchmarks
-- Community discussions for qualitative signals
+Scope rule: no scraping. LinkedIn and job-board figures come only from numbers the user pastes, or from pages the AI can open without a login. Never ask for a login and respect each site's terms. If a figure is not available, write "not found".
+
+Sources the AI may read without a login: public job postings that show a pay range, company career pages, public salary survey reports and government labour statistics, and press articles. Sources the AI must skip unless the user pastes the numbers: LinkedIn search results and talent pool counts, Glassdoor pages that ask you to sign in or contribute, and Blind. If a page asks for a login, a sign-up or a "contribute to see more" step, stop and write "not available".
+
+Work through this checklist in order. For every source you use, record: the source name, its date, the sample size (if shown), and whether the pay figure is base pay or total pay.
+1. Web search for recent salary surveys and reports
+2. LinkedIn for pool sizing and demand signals, only from numbers the user pastes or pages open without a login. If a source is not available, write "not available" and use posted job ranges instead.
+3. Job boards for posted salary ranges and posting volume (public pages only)
+4. Industry reports for trends and benchmarks
+5. Community discussions for qualitative signals
+6. Write the source table: source, date, sample size, base or total pay
 
 ### Step 3: Analyze & Synthesize
 

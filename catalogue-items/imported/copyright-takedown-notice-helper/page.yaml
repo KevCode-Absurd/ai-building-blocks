@@ -7,6 +7,8 @@ job: check-contracts
 headline: Copyright takedown notice helper
 subhead: Describe a copy of your work online, or paste a notice. Get a draft or options. Have a lawyer review. Bring description of your original work. Use the result to plan your next step.
 explain: |
+  Not legal advice. This covers US law only. Stop and see a lawyer before you send anything, and always when fair use is a close call or the copy or site is outside the US.
+
   Help with a copyright takedown: either a draft notice to get your work removed, or a read on a notice sent to you, with your options laid out. It saves you from missing the required parts of a notice.
 
   In send mode it identifies your work, the copy and where it sits, then runs a fair use check and a good faith check before drafting. It confirms accuracy and your right to act, writes the notice, and stops for a final review before anything goes out. In respond mode it reads the notice you received, assesses it, lists choices such as complying or disputing, and writes a short memo. It assumes US law. Have a lawyer review before you send.
@@ -31,12 +33,13 @@ you_get:
   - Short triage memo
 how_to_use:
   - The setup-interview is optional. If you skip it, your AI asks you in chat for the approver, the facts of the work and your fair-use read.
-  - Have these facts ready: the work, who owns it, any registration, the exact web addresses of the copies, and who must approve a notice. If your AI has no saved setup, it will ask you for them. This is for US law only. For the EU, UK or elsewhere, you need a different notice.
+  - "Have these facts ready: the work, who owns it, any registration, the exact web addresses of the copies, and who must approve a notice. If your AI has no saved setup, it will ask you for them. This is for US law only. For the EU, UK or elsewhere, you need a different notice."
   - Open your AI tool. Use one that can read and write files, such as Claude, and load the skill folder.
   - Say whether you want to send a notice, respond to one you received, or write a counter-notice.
   - Add your work description, the web address of the copy and your proof of ownership. Paste the notice you received if you have one.
-  - Read the fair use check and the draft. Fix anything that is not true.
+  - Read the fair use check and the draft. Fix anything that is not true. If your AI cannot save files, the notice, the fair use check and the triage memo come back as text in the reply. Copy them into your own document.
   - Give the draft to a lawyer. A takedown notice is a sworn statement, so do not send it unreviewed. Lawyer review is not optional.
+  - After the lawyer approves it, send the notice through the provider's DMCA form or to its designated agent. Then record the date sent and the date to watch for a counter-notice in submission.md, or in the reply if your AI cannot save files.
 output_sample:
   input:
     - A short description of your original work

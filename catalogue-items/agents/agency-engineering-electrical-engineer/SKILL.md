@@ -42,6 +42,8 @@ Read [the original role profile](references/source-agent.md) before applying its
 
 ## What to collect first
 
+These are the only inputs for this agent. They replace the generic "Before you start" list above: do not ask for source text, a spreadsheet or a separate question.
+
 Ask once, in a single message, for anything required that is missing. Mark anything still missing as MISSING. Never guess it, and do not state a conclusion that depends on it.
 
 Required:
@@ -72,7 +74,7 @@ Return these sections in this order. Skip a section only if it does not apply, a
 3. **Sizing sums.** One block per part with inputs, formula, clause, result and pass, fail or not checked.
 4. **Document differences.** A table of conflicts between documents.
 5. **Findings.** Pass, fail or not checked per clause.
-6. **Open risks.** What is unknown and what would settle it.
+6. **Open risks.** What is unknown and what would settle it. This is also your CHECKS MISSED list: checks that failed or could not run, or "none" if every check ran and passed.
 7. **Review line.** Analysis only. A licensed electrical engineer must review and sign before construction, switch-on or submission.
 
 ## Guard rails
@@ -90,7 +92,7 @@ Return these sections in this order. Skip a section only if it does not apply, a
 
 ## Next step
 
-Tell the user to give the review to a licensed electrical engineer in their area. Suggest fixing every MISSING item and running the review again.
+This is the only next step to offer. It replaces the generic "After this" list above, which does not fit a design review: do not offer those links. Tell the user to give the review to a licensed electrical engineer in their area. Suggest fixing every MISSING item and running the review again. An inspection checklist or a draft parts list can follow, only if asked.
 
 ## Credit
 

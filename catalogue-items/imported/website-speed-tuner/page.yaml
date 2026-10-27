@@ -12,6 +12,7 @@ explain: |
   The skill starts with a measured baseline: how long the main content takes to appear, how fast the page reacts to taps and clicks, and how much the layout jumps. Then it hunts the usual causes. Oversized hero images, a heavy JavaScript bundle that blocks the page, missing caching rules and scripts that load too early. Each fix comes with the before and after target, so you can confirm it worked, and a final check against a Lighthouse score.
 when:
   - Your pages feel slow and visitors leave before they load.
+  - You want the whole speed process in one pass. For an eight-check score on the network side, use the Web page speed tuner. For one specific fix on one page, use the Page speed fixer.
   - Google flags your Core Web Vitals as poor.
   - Your JavaScript bundle keeps growing and you do not know why.
   - You are preparing for a performance audit and need a to-do list.

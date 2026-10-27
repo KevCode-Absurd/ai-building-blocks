@@ -13,6 +13,9 @@ The rest of this file is in Chinese. Follow it as written. In short:
 4. Make a control (A) and a test (B) with two prompts that differ in one place only. Make 3 images per version and pick the best one.
 5. Check every image against the marketplace's main image rules, so a rejected image does not spoil the test. Run the bundled check, `python3 scripts/check_listing.py <your images> --platform <marketplace>` (needs Python and the Pillow library). It reads image size, background and other things a program can measure. Its rules are a snapshot, so also read the marketplace's own main image help page before you upload.
 6. Give the user a results sheet to fill in with impressions, clicks and sales. This skill does not connect to a store and cannot say who won. Do not call a winner on low traffic. Wait about two weeks.
+7. What to do with the result: keep the winning image as the new control, queue the next single-variable round (one thing changed again), and ask the user to record each finished test (variable, winner, the numbers they saw, the date) in one place they can find later, such as a spreadsheet or their brand file. If the test was too close to call, run it longer or pick a stronger variable. Do not claim a result the user's own numbers do not show.
+
+How to follow the steps without reading Chinese: all six steps are above. The commands in section 3 and the sheet in section 4 are the only parts you need to run or copy. Their English notes sit above each one in italics. Describe everything to the user in English.
 
 Needs before you start: the image commands call a paid image API (OpenAI, Gemini, fal or Replicate), so an API key is needed and each image may cost money. They also need Node and Python. The user must supply: a product photo (the commands call it `docs/flat-lay/garment-flatlay.jpg`), a pose reference photo for clothing (optional), and a brand file (`examples/brand.yaml` is the bundled sample; the user can edit it or leave it out). Every path and product detail in the commands, such as the olive sweater and SKU A001, is a placeholder to replace with the user's own product. The linked platform-compliance and brand-kit skills are not part of this item, so skip the brand-kit step (the last tip). Use `scripts/check_listing.py` for the automatic check.
 
@@ -31,11 +34,13 @@ How to read the Chinese sections: section 1 says what the skill can and cannot d
 
 ## 一、能力边界
 
+*(English: what the skill can do, in a table: one-variable test sets, a written hypothesis per version, a compliance check on each image, and a review sheet. What it cannot do: read your store data, or judge whether a result is statistically sound.)*
+
 | 能做 | 说明 |
 | --- | --- |
 | 单变量对照组 | 一次只改一个维度，其余保持一致 |
 | 假设记录 | 每组附「预期效果 + 理由」，跑完能复盘 |
-| 合规校验 | 每张自动过 [platform-compliance](../platform-compliance/skill.md)，避免因驳回污染数据 |
+| 合规校验 | 每张自动过 `scripts/check_listing.py`（本目录自带），避免因驳回污染数据。注意：原文提到的 platform-compliance 技能不在本目录里 |
 | 复盘模板 | 产出可填数据的对照表 |
 
 | 不能做 | 说明 |
@@ -46,6 +51,8 @@ How to read the Chinese sections: section 1 says what the skill can and cannot d
 ---
 
 ## 二、可测的变量
+
+*(English: the variables you can test, one per round: background, shot distance, with or without a model, text on the image, the model, colour tone. Do not change three at once.)*
 
 一次实验只动一个：
 
@@ -63,6 +70,8 @@ How to read the Chinese sections: section 1 says what the skill can and cannot d
 ---
 
 ## 三、工具调用
+
+*(English: the image commands. Replace the placeholders before you run them: the olive cable-knit sweater is a sample product, and `docs/flat-lay/garment-flatlay.jpg` and `docs/flat-lay/pose-reference.jpg` are sample file names. Use your own product and files. Each command makes 3 images through a paid image API, so run one command and check what it cost before you run more.)*
 
 生成对照组 —— 两条命令只差一处 prompt：
 
@@ -92,6 +101,8 @@ python3 scripts/check_listing.py out/ab/*.jpg --platform amazon
 
 ## 四、复盘模板
 
+*(English: the review sheet. Fill in the SKU, platform, dates and variable. Write the hypothesis before the test runs. Leave the view, click and sales columns blank until the test ends. The SKU A001 and the dates below are examples, so replace them with yours.)*
+
 生成时就把这张表建好，投放后填数据：
 
 ```markdown
@@ -116,6 +127,8 @@ python3 scripts/check_listing.py out/ab/*.jpg --platform amazon
 
 ## 五、执行流程
 
+*(English: the six steps in order. They match the English summary at the top.)*
+
 1. **问清楚要优化什么指标**。点击率和转化率的优化方向经常相反——
    猎奇主图能提点击率，但会拉低转化率并推高退货。
 2. **选一个变量**。用户想改三样时，告诉他排队做三轮。
@@ -127,6 +140,8 @@ python3 scripts/check_listing.py out/ab/*.jpg --platform amazon
 ---
 
 ## 六、常见问题
+
+*(English: a troubleshooting table. Two versions look too alike: pick a stronger variable. B seems to win but traffic is low: wait for more views, and be careful when the gap is under 10 percent. Clicks went up but sales fell: the image promises too much. More than one thing differs: compare the two prompts and keep only one difference.)*
 
 | 现象 | 原因 | 怎么办 |
 | --- | --- | --- |
@@ -141,4 +156,4 @@ python3 scripts/check_listing.py out/ab/*.jpg --platform amazon
 
 - **一次一个变量，一轮两周**。急着一周出结论通常是自欺。
 - **先测大变量**。有没有模特、白底还是场景，这类差异远大于色温微调。
-- **赢的那版存进 [brand-kit](../brand-kit/skill.md)**，让它成为之后的默认，实验成果才会沉淀。
+- **赢的那版存进 你自己的品牌文件（原文提到的 brand-kit 技能不在本目录里）**，让它成为之后的默认，实验成果才会沉淀。

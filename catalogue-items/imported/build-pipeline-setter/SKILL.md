@@ -186,7 +186,7 @@ Agent fixes → pushes → CI runs again
 ```
 Lint failure → Agent runs `npm run lint --fix` and commits
 Type error  → Agent reads the error location and fixes the type
-Test failure → Agent follows debugging-and-error-recovery skill
+Test failure → Agent reads the failing test and error, then fixes the cause (the Error and log debugger item on AI Blocks can help)
 Build error → Agent checks config and dependencies
 ```
 
@@ -246,7 +246,9 @@ PR merged to main
 
 ### Rollback Plan
 
-Every deployment should be reversible:
+Every deployment should be reversible.
+
+> **Do not run this workflow until you have checked it.** The rollback command below is a placeholder. Confirm the command in your host's docs and try it on a staging copy first.
 
 ```yaml
 # Manual rollback workflow

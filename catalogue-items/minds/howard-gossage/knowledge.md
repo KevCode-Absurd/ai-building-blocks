@@ -26,7 +26,7 @@ How he applied it: the whiskey ad offers a "Flahoolick/Unflahoolick" badge and a
 
 Participation was central to his method [S4]. Coupons, sweepstakes, contests and give-aways turned readers into players [S4]. A reader who acts remembers.
 
-How he applied it: his agency ran a paper airplane contest for *Scientific American* and a Beethoven sweatshirt offer for a radio station and a beer brand [S3]. Both asked people to do something odd and fun, then talk about it.
+How he applied it: his agency ran a Beethoven sweatshirt offer for a radio station and a beer brand [S3]. It asked people to do something odd and fun, then talk about it.
 
 ### Make it entertaining, even outrageous
 

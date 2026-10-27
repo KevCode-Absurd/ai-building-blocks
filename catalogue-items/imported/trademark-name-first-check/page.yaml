@@ -32,14 +32,15 @@ you_get:
   - Notes on confusion risk factors
   - Recommended next steps
 how_to_use:
+  - "This copy was made for a plugin that is not included. Its practice profile, matter workspace, work-product header and /ip-legal: commands do not exist here, and those steps are skipped. What runs is the eight-step check: intake, name problems, similar marks, confusion factors, memo, next steps."
   - Open your AI tool and add the skill folder, or paste the skill's instructions into a chat.
   - If the plugin config folder and the setup interview are not there, you can still run the check. Just type the name, the goods or services, the countries and the flag list you want checked.
-  - Gather first: the exact spelling of the name, what you will sell under it, the classes if you know them, the countries, and how the name will look. Type these in.
+  - "Gather first: the exact spelling of the name, what you will sell under it, the classes if you know them, the countries, and how the name will look. Type these in."
   - It covers the US, EU and UK well. For another country it will say it has no test for it and tell you to ask a local trademark specialist. It will not apply US rules there.
   - Say if your AI can search trademark registers. Some connectors, such as Solve Intelligence, Descrybe and CourtListener, may cost money or need an API key. Without one, the check only covers the name itself and the risk factors, and skips the similar-marks search.
   - Read the flag list. Check each flag and any similar marks it found.
-  - If the skill asks you to run /ip-legal:cold-start-interview, use the setup-interview folder inside the skill. You only need it if the skill asks. You can also say "provisional" to run with US defaults.
-  - Take the memo to a trademark lawyer before you buy, print or file anything. The case names in it are from memory or search, so have the lawyer confirm each one is still good law.
+  - "The skill mentions a setup interview and /ip-legal: commands. You do not need them. Say \"provisional\" to run with US defaults, or use the setup-interview folder inside the skill if you want a tailored run."
+  - Take the memo to a trademark lawyer before you buy, print or file anything. The skill names legal tests such as du Pont, Polaroid and Sleekcraft from memory and gives no case citations. Have the lawyer or a legal database confirm each one before you rely on it.
 output_sample:
   input:
     - The name you want to use

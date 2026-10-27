@@ -73,6 +73,8 @@ End with a decision: run it, change one variable and rerun at the stated volume,
 
 ## Examples
 
+The numbers in these three examples are made up to show the reasoning. They are not data. Use your own numbers.
+
 ### Example 1: "Our cold email gets 0.4% reply rate — how do we optimize it?"
 
 The response does not start with subject lines. It asks how many emails were sent. At 300 sends, 0.4% is one reply; the correct answer is to keep sending to the pre-declared floor before changing anything. At 4,000 sends across two variants, the reply rate is a real signal, and the useful move is offer and targeting, not wording.

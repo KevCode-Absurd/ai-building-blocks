@@ -40,6 +40,9 @@ Read the user's goal, existing conversation and supplied files first. Reuse conf
 - What each row stands for, such as an event or a snapshot, and which rows to include.
 - The timezone, and where each month starts and ends.
 - For each rate, what is counted on top (numerator) and on the bottom (denominator).
+- The sheet name and the exact column names that hold the date, the row ID and each measure. Confirm them with the user before you start.
+- Your Excel version.
+- Which months and measures you want, and who will read the table. This is the "your question" in the Before you start list.
 
 ## Runtime requirements
 Use an actual tool that can read and write the required native format. Plain text, JSON, HTML or a screenshot is not a finished XLSX/PPTX file. Inventory unsupported features before changing an existing file. Preserve macros, pivots, connections, masters and linked objects by using a compatible native engine when required; otherwise stop or return a clearly scoped review/plan. A formula string, cached value or successful export is not proof of recalculation, native refresh, accessibility compliance or layout. Render real output where the method calls for it and record any check that could not run.
@@ -49,7 +52,7 @@ Use an actual tool that can read and write the required native format. Plain tex
 
 2. Keep original rows in one source table and preserve source IDs. Convert genuine numeric and date fields without changing text identifiers or interpreting missing values as zero.
 
-3. Build a compact monthly output using COUNTIFS, SUMIFS or a supported equivalent. Calculate a rate from matching aggregate numerator and denominator, with a stated zero-denominator rule.
+3. Build a compact monthly output using COUNTIFS, SUMIFS or a supported equivalent. Calculate a rate from matching aggregate numerator and denominator, with a stated zero-denominator rule. Use the pattern COUNTIFS(date column, ">="&month start, date column, "<"&next month start, status column, "Completed") for counts, SUMIFS the same way for totals, and rate = IF(denominator=0, "", numerator/denominator). A zero denominator shows blank, never 0%, and metric-definitions.md says so.
 
 4. Include months with no eligible activity when the brief requires them. Reconcile each monthly result to source rows and check that totals do not count subtotal or duplicate rows twice.
 
@@ -62,7 +65,7 @@ Use an actual tool that can read and write the required native format. Plain tex
 - Keep every failed or unrun check visible in the final report. Repair confirmed issues within scope, then recheck at most twice. Stop if a required gate still fails.
 
 ## Deliverables
-Report sections are SOURCE MAP, CHECKS and OPEN ITEMS. List checks that failed or could not run under CHECKS as "not run" and again under OPEN ITEMS; read "CHECKS MISSED" above as OPEN ITEMS.
+Report sections are SOURCE MAP, CHECKS and OPEN ITEMS. List checks that failed or could not run under CHECKS as "not run" and again under OPEN ITEMS. OPEN ITEMS is the one place for them: where any text above says CHECKS MISSED, write OPEN ITEMS.
 monthly-summary.xlsx and metric-definitions.md.
 Include a compact run register with the source file/version, action, actual output path, check result and remaining limitations. Record missing prerequisites as MISSING: lines.
 
@@ -71,5 +74,5 @@ Share the monthly table, or build a chart from it in Excel or PowerPoint. If the
 
 ## Verification cases
 These are illustrative test cases, not evidence that a native application has already run them.
-- January records total 12 completed of 20 eligible; February 3 of 10: show 60% and 30%; the combined completion rate is 15/30, not 45%.
+- January records total 12 completed of 20 eligible; February 3 of 10: show 60% and 30%; the combined completion rate is 50% (15/30), not the 45% you get by averaging 60% and 30%.
 - A record falls exactly at 1 February 00:00 in the chosen timezone: count it in February only.

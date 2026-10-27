@@ -50,7 +50,7 @@ output_sample:
     - name: Sorted
       contains: Each item marked trainable or specific, with a short reason.
     - name: The edge of the field
-      contains: For each specific item, the field it sits in and how few people have gone deep.
+      contains: For each specific item, the field it sits in and a rough guess, for you to check, of how crowded the deep end is.
     - name: Your picks
       contains: One or two picks, why each, and the basics you still need first.
     - name: Cheap tests
@@ -68,7 +68,7 @@ how_it_works:
   - title: "Sort teachable from specific"
     text: "Marks each item as trainable or specific."
   - title: "Test against the edge of a field"
-    text: "Checks each against how few people have gone deep."
+    text: "Checks each against how crowded the deep end of its field is, as a guess for you to check."
   - title: "Pick one or two"
     text: "Picks one or two and names the basics still needed."
   - title: "Design a cheap test"
@@ -84,7 +84,7 @@ output_shape: |
   - <item> | <trainable / specific> | Why: <reason>
 
   THE EDGE OF THE FIELD
-  - <specific item> | Field: <field> | How few go deep: <note>
+  - <specific item> | Field: <field> | How crowded the deep end is: <rough guess to check, not a count>
 
   YOUR PICKS
   1. <pick> | Why: <one sentence> | Basics first: <list>
@@ -138,3 +138,4 @@ works_best_with:
 terms:
   - {term: "Specific knowledge", meaning: "Know-how you picked up through your own curiosity that cannot be taught in a class."}
   - {term: "Trainable", meaning: "A skill that a course or manual could teach to most people."}
+next: [hours-to-assets-planner]

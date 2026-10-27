@@ -1,6 +1,6 @@
 slug: physics-simulation-builder
 name: Physics simulation builder
-summary: Describe the part and its loads. Get a finite element model built, solved and plotted.
+summary: Describe the part and its loads. Get a finite element model built, solved and plotted. Needs MATLAB with the paid PDE Toolbox.
 category: general
 boards: []
 type: skill

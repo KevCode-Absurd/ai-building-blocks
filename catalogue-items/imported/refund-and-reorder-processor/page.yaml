@@ -10,6 +10,8 @@ explain: |
   A refund issued on the right order, for the right items, with a replacement draft order ready if the customer wants one. No clicking through the Shopify admin, and no guessing at amounts.
 
   You give it the store, the order and the items to refund. It looks up the order, works out the refund for a full or partial return, and creates it. If you ask for a replacement, it drafts a new order for the same items. Because it moves real money, it has a dry run mode that shows what would happen first. It needs a logged-in Shopify command line session and permission to read and write orders.
+
+  The replacement is a draft order for your customer, with the same items. It is not a supplier reorder and does not buy stock.
 when:
   - A customer got a damaged item and you need to refund it and ship a new one.
   - You need to refund only two items from a five item order.
@@ -34,10 +36,12 @@ you_get:
 how_to_use:
   - Check you have a logged-in Shopify command line session for your store and permission to read and write orders. This tool needs an AI that can run commands, so a plain chat window will not work.
   - Find the order in your Shopify admin and copy its ID in the long form that starts with gid://shopify/Order/. The short order number is not enough.
+  - The GraphQL queries in the skill were written for API version 2025-01 and have not been tested by AI Blocks. Before any real run, have your AI check each query against your store's API version, so a changed field name does not fail halfway on a live order.
   - Ask your AI to run the skill with dry run on first. Give it the store domain, the order ID and the items to refund.
   - Read the preview. It lists each item, its quantity, the price the customer paid and the exact refund total. Shipping and tax are left out unless you ask. Check them before you go on.
-  - Ask your AI to run it again with dry run off. This moves real money and cannot be undone.
+  - Ask your AI to run it again with dry run off only after you have typed yes to the exact refund total it showed. This moves real money and cannot be undone.
   - If you asked for a replacement, send the invoice link to your customer. The draft order is not paid or shipped until they pay.
+  - Next steps: open the order in your Shopify admin and check the refund shows the right amount. Use the Refund speed checker to see how long the money takes to reach the customer. Use the Order lookup assistant if the customer asks where their replacement is.
 output_sample:
   input:
     - Your store domain

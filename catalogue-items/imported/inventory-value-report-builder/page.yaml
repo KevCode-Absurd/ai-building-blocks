@@ -7,9 +7,11 @@ job: run-your-store
 headline: Inventory value report builder
 subhead: A clean answer to what your stock is worth, split by location and by supplier. Connect your Shopify store with read-only access. The skill pulls every active location, then every variant with its stock and unit cost, and multiplies quantity by cost for each variant at each location.
 explain: |
-  A clean answer to what your stock is worth, split by location and by supplier. Connect your Shopify store with read-only access. The skill pulls every active location, then every variant with its stock and unit cost, and multiplies quantity by cost for each variant at each location.
+  The skill pulls every active location, then every variant with its stock and unit cost, and multiplies quantity by cost at each location. Totals roll up by location, by vendor or both, in a readable layout or as JSON. It changes nothing in your store.
 
-  Totals roll up by location, by vendor or both, in a readable layout or as JSON. It changes nothing in your store. Items with no cost set count as zero, so the report shows which ones to fix before you trust the total. You need the Shopify command line tool and an authenticated session with product and inventory read access.
+  Items with no cost set count as zero. If many items have no cost, the total can be much too low. Fill in those costs in Shopify and run it again before you give the number to your accountant or insurer.
+
+  You need the Shopify command line tool and a signed-in session with product and inventory read access. Your Shopify plan and your AI tool's own plan may cost money. Field names were written for Shopify API version 2025-01 and have not been re-tested, so a first run may need a small fix.
 when:
   - Your accountant asks for the value of stock on hand at year end.
   - You need a number for an insurance claim or renewal.
@@ -21,7 +23,7 @@ not_for:
   - "Your store is not on Shopify: use the stock and cost columns in your own spreadsheet or accounting tool."
 you_give:
   - Your Shopify store domain
-  - Read access to products and inventory
+  - Read access to products and inventory, plus any costs your Shopify plan and AI tool need (the report itself adds no cost)
   - "Breakdown choice: location, vendor or both (optional)"
   - Whether to include items with no cost (optional)
 you_get:
@@ -34,7 +36,9 @@ how_to_use:
   - Sign in to your store with read-only access to products and inventory.
   - Paste the skill and give your store domain. Pick a breakdown by location, vendor or both if you want one.
   - Before you read the total, check the count of items with no cost. They count as zero, so the total is too low until you add those costs in Shopify and run it again.
-  - Compare the total with your accounting system, then send the CSV to your accountant or insurer.
+  - Compare the total with your accounting system, then send the CSV to your accountant or insurer. Fill the no-cost variants in Shopify first and run it again.
+  - To see how much of the value sits in slow stock, use the Dead stock finder next.
+next: [dead-stock-finder]
 output_sample:
   input:
     - Your Shopify store domain

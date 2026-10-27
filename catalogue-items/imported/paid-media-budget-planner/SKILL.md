@@ -22,7 +22,7 @@ When to use this skill: any time you are designing a paid media plan, evaluating
 
 ## What this skill is for
 
-This skill spans paid media strategy and operations. It does not cover ad creative production (use `ads-creative-development`), result interpretation in depth (use `ads-performance-analytics`), or platform-specific MCP tooling (consult each ad platform's official documentation for current MCP setup, auth, and example prompts).
+This skill spans paid media strategy and operations. It does not cover ad creative production (on this site, use the Ad creative variation planner or the Meta ad copywriter), result interpretation in depth (on this site, use the Ad performance diagnoser), or platform-specific MCP tooling (consult each ad platform's official documentation for current MCP setup, auth, and example prompts).
 
 The audience is a performance marketer (in-house or agency), a growth lead allocating spend across channels, or a founder making early paid budget decisions. The voice is tactical. There is no "evaluate every option yourself with no opinion." Paid media decisions have shape, and a senior practitioner can map a situation to a defensible plan in an afternoon.
 
@@ -72,7 +72,7 @@ Four splits operate at the same time. Get them all right and the budget compound
 
 **Brand vs performance.** Brand keeps the demand pipeline filled (long term); performance captures it (short term). 70-30 to 80-20 performance-heavy is typical for most B2C. Brand-heavy splits fit high-consideration B2B where the buying cycle is months long and pipeline visibility matters more than week-over-week conversions.
 
-**Baseline vs test.** 70 to 80% of budget to channels, campaigns, and audiences that are working. 20 to 30% to systematic testing of new channels, new audiences, new creative. Without test budget, you stagnate. Without baseline budget, you have nothing to scale.
+**Baseline vs test.** 70 to 80% of budget to channels, campaigns, and audiences that are working. 20 to 30% to systematic testing of new channels, new audiences, new creative (unverified rule of thumb; check it against your own results). Without test budget, you stagnate. Without baseline budget, you have nothing to scale.
 
 **Primary vs secondary channel.** One channel does the heavy lifting (60 to 70% of budget). Others scale supplementally. Resist the equal-split temptation; spreading across channels before any one is proven is the most expensive way to learn nothing.
 
@@ -108,7 +108,7 @@ Bid strategy depends on data state. New campaigns need a different strategy than
 
 **Maximize Conversions.** Platform optimizes for volume within budget; the platform decides CPC. Use when you want as many conversions as possible regardless of cost. Good early-stage strategy while you gather data.
 
-**Target CPA (tCPA).** Set a max CPA, platform delivers within. Use when CPA is the constraint and you have at least 30 conversions in the recent window for the platform to optimize against.
+**Target CPA (tCPA).** Set a max CPA, platform delivers within. Use when CPA is the constraint and you have at least 30 conversions in the recent window for the platform to optimize against (unverified rule of thumb; check the platform's current help pages).
 
 **Target ROAS (tROAS).** Set a min ROAS, platform delivers above. Use when revenue per conversion varies and you care about value, not count.
 
@@ -128,7 +128,7 @@ For each major platform, the campaign types and when to use them.
 
 **Meta.** Sales, Leads, Engagement, Awareness, Traffic, App Promotion. Sales for direct response. Awareness for brand at scale. Leads for B2B with native lead forms.
 
-**LinkedIn.** Sponsored Content, Conversation Ads, Lead Gen Forms. Format types: Single Image, Carousel, Video. Lead Gen Forms convert hardest because they pre-fill from LinkedIn profile data. Sponsored messaging cannot target EU members, so Conversation Ads are non-EU only.
+**LinkedIn.** Sponsored Content, Conversation Ads, Lead Gen Forms. Format types: Single Image, Carousel, Video. Lead Gen Forms convert hardest because they pre-fill from LinkedIn profile data. The original author says sponsored messaging cannot target EU members, so Conversation Ads are non-EU only (undated and unsourced: check LinkedIn's current ad policy before you plan around it).
 
 **TikTok.** In-Feed, TopView, Spark Ads, Branded Hashtag Challenge. Spark Ads (boost organic posts) outperform pure paid creative because they retain organic-feel signal. Use Spark when you have organic posts performing.
 
@@ -170,7 +170,7 @@ The "winning creative is the floor" principle. Do not kill winners to test new i
 
 Ad fatigue is real. Same audience seeing the same creative eight times in a week tunes it out, or worse, develops negative associations.
 
-Typical caps. Three to four impressions per user per week for Awareness campaigns. Six to eight per week for Direct Response. Lower for B2B (one to two per week per LinkedIn target). Platform defaults are usually too high; set explicit caps.
+Typical caps (unverified rules of thumb; check the platform's current guidance). Three to four impressions per user per week for Awareness campaigns. Six to eight per week for Direct Response. Lower for B2B (one to two per week per LinkedIn target). Platform defaults are often too high (rule of thumb); set explicit caps.
 
 Rotation as alternative. If you have enough creative variants, rotate often enough that no individual creative hits fatigue threshold. Rotation plus capping is the strongest pattern for high-spend, long-running campaigns.
 
@@ -180,15 +180,15 @@ Rotation as alternative. If you have enough creative variants, rotate often enou
 
 The trap. Platform-reported conversions are inflated by view-through attribution, generous click attribution windows, and platform self-attribution bias.
 
-**Last-click in GA vs platform-reported.** Google Ads typically reports 1.3 to 1.5x the conversions GA reports. The gap comes from multi-touch attribution differences and view-through that GA does not credit.
+**Last-click in GA vs platform-reported.** Google Ads typically reports 1.3 to 1.5x the conversions GA reports (unverified rule of thumb; compare your own two reports). The gap comes from multi-touch attribution differences and view-through that GA does not credit.
 
 **iOS 14.5+ impact.** Meta and other platforms underreport iOS conversions because of App Tracking Transparency. Modeled conversions try to fill the gap; they are imperfect. Treat iOS-heavy reporting with extra skepticism.
 
-**View-through attribution.** Counted by Meta and Google for users who saw but did not click. Often half the reported "conversions" are view-through. Useful for awareness; misleading for performance optimization.
+**View-through attribution.** Counted by Meta and Google for users who saw but did not click. Some say about half the reported "conversions" are view-through (unverified rule of thumb; check your own report). Useful for awareness; misleading for performance optimization.
 
 **Cross-platform interference.** Meta retargeting captures users who would have converted from Google Search anyway. Both platforms claim the conversion. You pay for the same conversion twice.
 
-The discipline. Single source of truth in your warehouse or analytics platform. Report against that for incrementality decisions. Use platform metrics for in-flight optimization only. The deeper interpretation work belongs in `ads-performance-analytics` (forthcoming); this skill names the trap so you do not optimize against the wrong number.
+The discipline. Single source of truth in your warehouse or analytics platform. Report against that for incrementality decisions. Use platform metrics for in-flight optimization only. The deeper interpretation work belongs in the Ad performance diagnoser item on this site; this skill names the trap so you do not optimize against the wrong number.
 
 Per-platform reporting quirks in [`references/ads-platform-comparison.md`](references/ads-platform-comparison.md).
 

@@ -9,7 +9,7 @@ subhead: "An answer to which Australian Government security rules apply to your 
 explain: |
   An answer to which Australian Government security rules apply to your system, and where you fall short. Say what you run, where it is hosted and how sensitive the data is, such as OFFICIAL: Sensitive. The AI maps this to the Information Security Manual (ISM) from the Australian Signals Directorate.
 
-  You get gap tables with control numbers, status and the evidence needed. It also sets out the steps to authorise a system and prepare for an IRAP assessment. It writes security documents that cite the ISM. Hardening answers always cover patching and a cloud checklist. It shows the date it was last checked, so confirm against the current ISM.
+  You get gap tables with control numbers, status and the evidence needed. It also sets out the steps to authorise a system and prepare for an IRAP assessment. It writes security documents that cite the ISM. Hardening answers always cover patching and a cloud checklist. It shows the date it was last checked, so confirm against the current ISM. It was written against the skill author's June and September 2026 ISM notes, dated 5 September 2026. The control IDs and release list are unverified by us, and a newer release may have replaced them since we imported it on 20 October 2026.
 when:
   - You sell software to an Australian agency and must show security controls.
   - You are preparing for an IRAP assessment.
@@ -30,6 +30,7 @@ you_get:
   - An authorisation pathway
   - What assessors will ask for
 how_to_use:
+  - "First run, in this order: 1) paste the skill, 2) paste the ISM chapter text from cyber.gov.au, 3) describe your system, hosting, data level and role, 4) ask for the gap table."
   - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat. No code or paid tool is needed.
   - "Before you start, open cyber.gov.au and copy the ISM chapter or control list that matches your system. Paste it in too, so the gap table is built from real text and not from the skill's own summary."
   - "Describe your system, where it is hosted and the data level, such as OFFICIAL: Sensitive. If you skip the level, the AI assumes OFFICIAL: Sensitive."
@@ -37,7 +38,7 @@ how_to_use:
   - "Say what you want: a gap table, an authorisation plan, an IRAP checklist or a security document."
   - The control numbers, release contents and the "last verified" date come from the skill's source. They are not checked by us.
   - Check the ISM release the answer names. Confirm every control number and date on cyber.gov.au before it goes into any document. This is guidance, not an IRAP result or legal advice.
-  - Next, ask your AI to turn the gap table into a security plan outline or a fix plan, and book an IRAP assessor when the gaps are closed.
+  - Paste the matching ISM chapter text before you ask for the gap table, so the table is built from the source text and not from the skill's summary. Then ask your AI to turn the gap table into a security plan outline or a fix plan, and book an IRAP assessor when the gaps are closed.
 output_sample:
   input:
     - A short description of your system and where it is hosted

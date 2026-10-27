@@ -33,6 +33,17 @@ If the audience, offer, or channel is unclear, ask before proceeding. If you hav
 ### Mechanism
 Awareness determines whether the audience can process central arguments or will rely on peripheral cues, heuristics, and familiarity. The wrong stage match creates resistance, confusion, or boredom. Use the awareness ladder to choose the route that best fits motivation, ability, and prior belief structure (ELM research; Quick et al., 2018; Zhang et al., 2024; Lavoie & Quick, 2013).
 
+### Run order in chat
+
+1. Gather the inputs: audience, offer, the action wanted, channel and length limits, and any interview notes.
+2. Classify the awareness stage and say how sure you are.
+3. Pick the route: teach, compare or prove.
+4. Set the language: vocabulary, jargon level and detail.
+5. Choose the entry point: education, proof, demo, comparison or direct offer.
+6. Order the messages so cold readers move toward the offer. Then list the claims to verify.
+
+Each step is explained below. The references in italics are the original author's ideas to test. They have not been checked here. Do not quote them to others as proven.
+
 ### Execution Steps
 
 **Step 1 - Classify the awareness stage**
@@ -52,7 +63,7 @@ Match vocabulary depth, jargon, and specificity to the stage.
 *Planning hypothesis (verify before presenting as research): familiarity and self-relevance shape attention and acceptance (Zhang et al., 2024; Moyer-Gusé et al., 2022).*
 
 **Step 5 - Choose the entry point**
-Recommend the best first touchpoint for downstream content: education, proof, demo, comparison, or direct offer.
+Recommend the best first touchpoint for downstream content: education, proof, demo, comparison, or direct offer. Then write the order of messages, one line each, from first touch to the ask.
 *Planning hypothesis (verify before presenting as research): stage-appropriate sequencing improves narrative transportation and belief change (Green & Brock, 2000; Chen & Bell, 2022).*
 
 ## DECISION MATRIX

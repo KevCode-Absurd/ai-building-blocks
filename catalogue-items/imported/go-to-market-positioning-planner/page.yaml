@@ -10,6 +10,8 @@ explain: |
   A launch plan that starts from the buyer, not the feature list. Give it your product and your rivals and you get a clear position, a go-to-market plan and launch steps in order.
 
   It begins by defining the ideal customer from your best customers, those with the highest lifetime value. Then it builds positioning, sizes up competitors, and plans the launch. It also covers what your sales team needs and notes on entering new countries. The result is a plan you can hand to a team, written around why the right buyer picks you over the options.
+
+  This is adapted from a general, public product marketing skill. Its advice stays generic until you give it your own customer and market data. Check every competitor fact before you use it.
 when:
   - You are launching a product and cannot explain why you beat the alternatives.
   - Your messaging sounds like every competitor's.
@@ -29,8 +31,11 @@ you_get:
   - A positioning statement
   - Competitor comparison
   - A go-to-market and launch plan
+  - A sales enablement kit (outlines for a deck, one-pagers, a demo script and emails)
+  - A new-country entry plan, if you ask for one
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the full skill text.
+  - Open Claude, ChatGPT or Gemini and paste in the full skill text. If your AI cannot open the reference files in the references folder, paste the text of the one you need by hand.
+  - "Run it in this order: ideal customer first, then positioning, then battlecards, then the launch plan. Each step uses the one before."
   - Gather these first. Your product description, your main rivals with their websites, and 10 or more customer interview notes or your win and loss list. Paste them in, and ask your AI to list any inputs that are missing before it writes the plan.
   - Add your launch date and budget if you have them (optional).
   - "Ask for the part you need: the ideal customer, positioning, battlecards, a launch plan or a new market plan."

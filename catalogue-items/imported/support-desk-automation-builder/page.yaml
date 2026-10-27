@@ -33,11 +33,13 @@ you_get:
   - A reusable skill definition
 how_to_use:
   - Open an AI that can run code and work with files in your project, such as Claude Code. You also need your own help desk account, and a billing account if you want refunds checked. Plans for these cost money, so check yours.
-  - Paste this skill into the chat and say you want to build a support automation.
+  - Paste this skill into the chat and say you want to build a support automation. Use test accounts first, such as a Stripe test key and a sandbox help desk. Do not point it at live billing or live tickets until you have checked every script that replies, closes, refunds or cancels.
   - Answer the questions about your help desk, billing tool, database and common ticket types. Check the summary it gives back.
-  - Add your API keys when asked. Keep them in environment variables, never in the chat.
+  - Add your API keys when asked. Keep them in a .env.local file in your project's top folder, never in the chat.
   - "For the database, create a read-only database user limited to the tables the automation needs. Do not give it production admin credentials."
-  - Run the setup check, then try the triage on a few real tickets. Read each drafted reply before you approve it. Check that every script that replies, closes a ticket or refunds a payment refuses to run without the --approved flag. Your AI should only add it after you say yes. After your first approved draft, refine the triage keywords and reply templates.
+  - Run the setup check, then try the triage on a few real tickets. Read each drafted reply before you approve it. Check that every script that replies, closes a ticket or refunds a payment stops and asks you to type yes in the terminal before it acts. A flag on its own is not a check. Run those four scripts yourself and do not let your AI run them for you. After your first approved draft, refine the triage keywords and reply templates.
+  - When it is built, open the README.md your AI wrote. It says how to run each script and fix common errors.
+  - "After your first week: keep a log of replies you had to edit before approving. Feed the common edits back into the reply templates and the triage keywords. Review the log weekly and remove any template that you keep rewriting."
 output_sample:
   input:
     - Your help desk platform, such as Zendesk, HelpScout or Intercom
@@ -57,9 +59,9 @@ output_sample:
       contains: The core scripts that list tickets, gather customer details and draft replies.
     - name: references/common-responses/
       contains: Reply templates for refunds, bugs, feature requests and billing, plus ones for your own common cases.
-    - name: skill.md
-      contains: The skill definition that sets the triage workflow, priority rules and approval steps.
-    - name: check-setup.ts
+    - name: support-automation/skill.md
+      contains: The skill definition that sets the triage workflow, priority rules and approval steps. It is made for your company, so it is a different file from this builder skill.
+    - name: scripts/check-setup.ts
       contains: A script that checks your keys and connections work before you run the workflow.
     - name: README.md
       contains: Plain documentation on how to set up and run the automation.

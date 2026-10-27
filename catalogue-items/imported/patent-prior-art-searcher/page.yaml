@@ -35,6 +35,7 @@ you_get:
 how_to_use:
   - Use an AI that can search the web and run code, such as Claude with web tools and code running turned on.
   - Before you start, check the terms of use of Google Patents, Espacenet and the USPTO for automated access. If a site forbids it, stop and search that site by hand.
+  - To build the Word report, your AI needs Node.js with the docx package, and Python for the bundled helper scripts. If it cannot run code, it gives you the queries and a plain-text summary instead.
   - Paste the skill into the chat, or upload the skill folder. The search reads public patent sites automatically, about one query a second, so it may hit rate limits and take a while. If your AI cannot run the scripts, it gives you a list of search queries to type into each site yourself.
   - Describe your invention, rival product or target patent.
   - Answer the questions one at a time. Pick one of the five goals when asked.
@@ -53,7 +54,7 @@ output_sample:
     - A Lens.org API key for the citation step (optional)
   output:
     - name: Verdict
-      contains: A plain call on the goal you chose, such as how new the idea looks or where the risk sits.
+      contains: A plain call on the goal you chose, such as how new the idea looks or where the risk sits. A clear verdict means no close hit was found in this search. It does not mean you are safe to ship or file.
     - name: Ranked closest art
       contains: The nearest patents in order, with the claim text that matters and why each one ranks where it does.
     - name: Landscape

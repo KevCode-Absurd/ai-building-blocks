@@ -37,7 +37,7 @@ How to start:
 
 ## What you need
 
-Note: this list replaces the general Before you start list above. This job does not need a brief. It needs a code change.
+Note: this list replaces the general "Before you start" list above, which is shared text. This job does not need a brief. It needs a code change. Where that block says CHECKS MISSED, use the "Missing facts" line of the hand-back.
 
 - **The commit ID or revision** of the change (required).
 - **The list of files the change touches** (required).

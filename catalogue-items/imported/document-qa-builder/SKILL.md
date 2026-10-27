@@ -285,6 +285,8 @@ documents = SimpleDirectoryReader(
 
 ### Web scraping
 
+Only read pages you own or have permission to collect, and follow each site's terms of use and robots rules. Reading pages in bulk is scraping and may be against a site's terms. The two sample URLs below are only a placeholder; replace them with your own pages.
+
 ```python
 from llama_index.readers.web import BeautifulSoupWebReader
 
@@ -466,7 +468,7 @@ print(f"Faithfulness: {result.passing}")
 
 1. **Use vector indices for most cases** - Best performance
 2. **Save indices to disk** - Avoid re-indexing
-3. **Chunk documents properly** - 512-1024 tokens optimal
+3. **Chunk documents properly** - 512-1024 tokens is a common starting point (the author gives no source). Test chunk sizes on your own files
 4. **Add metadata** - Enables filtering and tracking
 5. **Use streaming** - Better UX for long responses
 6. **Enable verbose during dev** - See retrieval process
@@ -493,7 +495,9 @@ query_engine = index.as_query_engine(
 )
 response = query_engine.query("What is the main topic?")
 print(response)
-print(f"Sources: {[node.metadata['file_name'] for node in response.source_nodes]}")
+for node in response.source_nodes:
+    print("Source:", node.metadata.get("file_name"))
+    print(node.text[:300])  # the passage the answer used
 ```
 
 ### Chatbot with memory

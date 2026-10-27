@@ -30,8 +30,8 @@ you_get:
   - Gaps ranked by priority
   - A readiness summary
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or files are needed.
-  - Name the framework or frameworks, such as SOC 2 Type II or GDPR.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. No code or files are needed. The checklist is for internal readiness planning only. It is not an audit or legal advice.
+  - Name each framework and its version, such as SOC 2 Type II or GDPR. Say your business type, size and the tools you use, as separate items.
   - Describe your business, the tools you use and the controls you already have. Add your audit date if you have one.
   - Read the readiness summary first. Then check the status of each item against what you really have.
   - Check the version of the framework and its effective dates against the official source before you act on the gap ranking. Rules change.

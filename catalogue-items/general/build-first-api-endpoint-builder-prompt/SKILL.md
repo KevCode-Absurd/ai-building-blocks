@@ -7,9 +7,9 @@ description: Use to build your first API endpoints and learn what a server does.
 
 This prompt is for a person who is not a developer and wants to see what a server does. You paste it into Claude Code (or another coding AI that can edit files in your project). It builds two tiny routes and explains them.
 
-It is a practice exercise. It does not build a feature for your business. Part 3 is the bridge to your own first endpoint.
+It is a practice exercise. It does not build a feature for your business. To review the two new routes afterwards, use the Code change reviewer. Part 3 is the bridge to your own first endpoint.
 
-Not for: testing endpoints you already have (use the API test suite builder), a mobile app that needs a server (use the Expo API route builder), a Slack bot (use the First Slack Bot coding prompt), or a project that is not Next.js with an app folder. The "Before you start" list mentions MISSING lines and CHECKS MISSED. This prompt has neither section: if something is missing, say exactly what and stop.
+Not for: testing endpoints you already have (use the API test suite builder), a mobile app that needs a server (use the Expo API route builder), a Slack bot (use the First Slack Bot coding prompt), or a project that is not Next.js with an app folder. The "Before you start" list mentions MISSING lines and CHECKS MISSED. Ignore those two labels here. This prompt has neither section: if something is missing, say exactly what and stop. After this, the default next step is the Code change reviewer.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
@@ -35,11 +35,14 @@ How to start:
 <!-- /needs -->
 
 ## What you need first
+This is a local practice run. The echo route sends back whatever it receives, so never deploy it.
+
 
 - A **Next.js project that uses the App Router** (it has an `app/` folder, or `src/app/`). Next.js is the web framework this prompt is written for.
 - **Node.js and npm** installed, so you can run the project on your own computer.
 - **Claude Code** or a similar coding AI with access to the project folder. Claude Code needs a paid Claude plan or an Anthropic API account. Check Anthropic's current pricing and sign-in options.
 - A terminal window.
+- For the optional Part 3 only: your own endpoint idea, written in one or two plain sentences. Without it, skip Part 3.
 
 No project yet? Make a throwaway one with the setup command on the Next.js website. That installs software on your computer, so do it yourself and only if you want to. Do not ask the AI to install anything for you here.
 

@@ -119,7 +119,7 @@ improve:
   - Pair it with the product page section planner, so each ranked doubt gets a place on the page.
 works_best_with:
   tools:
-    - {name: "Okendo", why: "Shopify reviews app with survey features and ready-made question templates. The source uses it for both surveys."}
+    - {name: "Okendo", why: "Paid Shopify reviews app with survey features and ready-made question templates. The source uses it for both surveys. Check the current price."}
     - {name: "Userbrain", why: "A panel tool for paid user tests, filtered by device, country, age and gender. The source quotes about $45 per tester; check the current price."}
     - {name: "Microsoft Clarity", why: "Free session recordings and heatmaps to watch what testers and shoppers did."}
   inputs:

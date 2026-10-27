@@ -49,7 +49,7 @@ output_sample:
     - name: TITLE
       contains: One title with the main search phrase first, then supporting phrases, with its character count.
     - name: BULLETS
-      contains: Five bullets with the benefit first, then the feature, and a money-back note last marked as a test.
+      contains: Five bullets with the benefit first, then the feature, and a money-back note last. The note that it is a test goes in the notes to you, not in the bullet.
     - name: DESCRIPTION
       contains: A short selling paragraph with the main phrases, plus a note on richer A+ content if your brand is registered.
     - name: BACKEND KEYWORDS
@@ -65,7 +65,7 @@ how_it_works:
   - title: Writes five bullets
     text: Starts bullet 1 with the main phrase and a true quality number, and gives the benefit first, then the feature, in every bullet.
   - title: Adds the money-back note
-    text: Ends with a plain money-back bullet to ease doubt, and marks it as a test.
+    text: Ends with a plain money-back bullet to ease doubt, and marks it as a test in the notes to you, not in the bullet.
   - title: Writes the description
     text: A short selling paragraph with the main phrases, or a note to use A+ content once the brand is registered.
   - title: Fills the backend
@@ -116,7 +116,7 @@ judge:
   - Each bullet gives the benefit first, then the feature, and reads like a person wrote it.
   - Every fact and number in the copy is one you gave it.
   - No medical, diet or other claim you cannot prove appears in the copy.
-  - The money-back bullet is marked as a test, not a proven lift.
+  - The money-back test is marked in the notes to you, not in the bullet text, and it is not a proven lift.
 
 test:
   - Read the title aloud as a shopper would see it in the results. Is it clear what the product is?

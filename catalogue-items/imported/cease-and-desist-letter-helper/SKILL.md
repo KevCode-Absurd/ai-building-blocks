@@ -17,6 +17,13 @@ Two modes. Pick one:
 
 ## Instructions
 
+> **Plain chat path (AI Blocks note).** This skill came from a plugin whose setup interview and config files (the practice profile CLAUDE.md, matter workspaces, `/ip-legal` commands) are not included here. In a plain chat, do this instead:
+>
+> - Do not look for the config file or run any `/ip-legal` command. Ask the user in plain words: how firm they want to be, who must approve a letter, and where their rights are registered.
+> - Ask whether they are sending a letter or got one. That replaces the `--send` and `--receive` flags.
+> - Skip matter workspaces and write every output in the chat. Use the user's answers wherever the steps below say "practice profile".
+> - Say at the top of the draft that these answers came from the chat. Keep every other rule below, including the pre-delivery gate and the lawyer review.
+
 1. **Read the practice profile.** Load `~/.claude/plugins/config/claude-for-legal/ip-legal/CLAUDE.md`. If it contains `[PLACEHOLDER]` markers or does not exist, stop and say: "This plugin needs setup before it can give you useful output. Run `/ip-legal:cold-start-interview` — the C&D skill depends on your enforcement posture, approval matrix, and practice-area mix, none of which are configured yet."
 
    If the user is in a plain chat with no plugin, do not just stop. Ask them for the same facts in plain words: how firm they want to be, who must approve a letter, and where their rights are registered. Use those answers in place of the profile, say so at the top of the draft, and keep every other rule below.

@@ -53,16 +53,23 @@ sales targets).
 If the intake template can't be honestly filled out, the prospective partner has not
 demonstrated enough substance to evaluate. Stop. Go back to them.
 
-**Intake fields.** `intake.json` holds: `partner_name`, `partner_type`, `independent_demand_evidence` (`named_accounts_sourced_count`, `end_customer_relationships_pct`, `sales_team_size`), `strategic_value`, and `commitments` (`joint_marketing_spend`, `dedicated_resources`, `certification_completion`, `sales_targets`). `gtm.json` holds `partner_name`, `partner_tier`, `sales_motion`, `target_segments`, `joint_value_proposition`, `deal_avg_size_usd`, `commitment_horizon_months`. `revshare.json` holds `partner_name`, `partner_tier`, `partner_contribution`, `deal_avg_size_usd`, `our_cost_to_serve_direct_usd`, `our_cost_to_serve_via_partner_usd`. Each script also has `--sample` to show a full example. If you cannot run scripts, ask the same questions in chat, apply the same tier floors by hand, and say the result is by hand. Never fill in a value the user has not given: write "unknown".
+**Intake fields.** `intake.json` holds: `partner_name`, `partner_type`, `independent_demand_evidence` (`named_accounts_sourced_count`, `end_customer_relationships_pct`, `sales_team_size`), `strategic_value`, and `commitments` (`joint_marketing_spend`, `dedicated_resources`, `certification_completion`, `sales_targets`). `gtm.json` holds `partner_name`, `partner_tier`, `sales_motion`, `target_segments`, `joint_value_proposition`, `deal_avg_size_usd`, `commitment_horizon_months`. `revshare.json` holds `partner_name`, `partner_tier`, `partner_contribution`, `deal_avg_size_usd`, `our_cost_to_serve_direct_usd`, `our_cost_to_serve_via_partner_usd`. Each script also has `--sample` to show a full example. If you cannot run scripts, ask the same questions in chat, apply the tier floors written in Step 2 by hand, and say the result is by hand. Never fill in a value the user has not given: write "unknown".
 
-The statistics and attributions quoted from Forrester, Canalys, Jay McBain, Joe Hessling and others in this skill and its reference files are the original author's and were not checked. Present them as the author's rules of thumb, not as research results.
+Every named researcher, firm, case study and statistic in this skill and its reference files (Forrester, Canalys, Jay McBain, Joe Hessling, Chintagunta, IBM, HP, MIT Sloan and others) is the original author's attribution. None was checked. Never present them to the user as research results or quote their figures as fact. Present them as the author's rules of thumb.
 
 ### Step 2 — Tier classify
 
 Run `scripts/partner_tier_classifier.py --input intake.json --profile saas --output markdown`.
 Output ranks the partner into 1 of 5 tiers — REFERRAL / RESELLER / OEM / SI-CONSULTING /
-STRATEGIC — with deterministic floors. STRATEGIC requires named_accounts ≥ 5 AND
-multi-year commit AND dedicated resources. Skill emits rationale + kill criteria.
+STRATEGIC — with deterministic floors. Skill emits rationale + kill criteria.
+
+**Tier floors (the script's default "saas" profile). Failing a floor caps the tier. Use these by hand if you cannot run scripts. They are the author's defaults, so adjust them to your own business.**
+
+- REFERRAL: no floor. This is the default.
+- RESELLER: at least 40% of their customer relationships are end customers, and a sales team of at least 3.
+- OEM: at least 60% end-customer relationships, a completed certification, and at least 2 dedicated people.
+- SI-CONSULTING: at least 50% end-customer relationships, a sales team of at least 5, and the partner is a services firm.
+- STRATEGIC: at least 5 named accounts they sourced, a commitment of 24 months or more, at least 3 dedicated people, and joint marketing spend of at least 50,000 in your currency (the script default; ask the user for their own figure and use it if they have one).
 
 ### Step 3 — Joint GTM plan
 
@@ -101,6 +108,8 @@ cd commercial/skills/partnerships-architect && python3 scripts/partner_tier_clas
 ```
 
 ## References
+
+These reference files carry the author's unchecked attributions. Do not repeat their names or figures as verified research.
 
 - `references/channel_partner_canon.md` — Caro on HP indirect channels, Chintagunta on channel economics, Hessling on partner programs, Forrester channel software stack, IDC channel research, Tien Tzuo subscription-channel models, Geoffrey Moore whole-product partnerships
 - `references/joint_gtm_canon.md` — Aaron Ross *Predictable Revenue* (cold-source vs partner), Winning by Design, Jay McBain on co-sell, Microsoft Partner Network playbook, AWS Partner Network research, SiriusDecisions partner benchmarks, Bridge Group SaaS partner data
@@ -160,8 +169,7 @@ cd commercial/skills/partnerships-architect && python3 scripts/partner_tier_clas
 
 ## Forcing-question library (Matt Pocock grill discipline)
 
-Walked one at a time by `/cs:grill-commercial` or the orchestrator. Recommended answer +
-canon citation per question. Never bundled. Lock 1-3 before opening 4-6.
+Ask these one at a time. Give a recommended answer and the author's canon note for each (the canon notes are unchecked author attributions). Never bundle them. Lock 1-3 before opening 4-7.
 
 1. **"Name 5 end customers this partner has already sold to in the last 12 months — at companies you would target yourself."**
    Recommended: if they cannot, they have no independent demand. Sign at REFERRAL tier only,
@@ -183,8 +191,8 @@ canon citation per question. Never bundled. Lock 1-3 before opening 4-6.
 
 4. **"At what % discount / revshare does this partnership beat the direct-sale economics, and at what scale?"**
    Recommended: model break-even pipeline volume. If partner-sourced deals must exceed
-   30% of channel volume to beat direct, and partner can plausibly deliver 5%, you have
-   built a losing program.
+   the break-even share of channel volume to beat direct, and the partner can plausibly deliver only a smaller realistic share, you have
+   built a losing program. Work out both shares from the user's own data. If the user has no data, write "unknown" and do not guess a number.
    Canon (author's attribution, not verified): Pradeep Chintagunta (Chicago Booth) on channel economics — channel partnerships
    without volume floor break even in theory and lose money in practice.
 

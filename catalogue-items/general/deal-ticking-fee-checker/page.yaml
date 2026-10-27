@@ -4,7 +4,7 @@ headline: Deal ticking fee checker
 summary: Check a deal ticking fee. Get the extra price that builds up from each eligible day of delay, and the new total once it is added.
 job: money-and-investing
 thinking: high
-thinking_why: Financial modelling requires consistent periods, source evidence, formulas and independent reconciliations.
+thinking_why: The sum is simple, but the day count must come from the contract, and any amount already in the price must be caught.
 subhead: Give it the agreed price, the fixed amount charged per day of delay, and the number of eligible days your lawyer has confirmed. It multiplies the two and adds the result to the price. You get the ticking fee and the new total, with the day count traced to the contract.
 explain: |-
   When a deal takes longer to close than planned, some contracts add a ticking fee. The buyer pays a set extra amount for each day of delay past an agreed date. The word "ticking" is because the fee builds up like a clock. The sum is simple. The hard part is the day count, because the contract decides which days count.
@@ -141,3 +141,6 @@ terms:
     meaning: A check that explains any gap between two sets of figures that should match.
   - term: Illustrative figures
     meaning: Practice numbers that show how the sums work. They are not a real deal.
+next:
+  - deal-funding-gap-checker
+  - earnout-payout-checker

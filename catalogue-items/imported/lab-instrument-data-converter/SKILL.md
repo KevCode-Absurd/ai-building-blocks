@@ -106,6 +106,8 @@ python scripts/validate_asm.py output.json --strict  # Treat warnings as errors
 - Source: https://gitlab.com/allotrope-public/asm
 
 **Soft Validation Approach:**
+**Regulated data needs a human check.** The validator only warns. It does not approve data. If the data goes into a regulated or GxP record, a QA reviewer or data engineer must check every warning and the traceability before it is loaded into the LIMS. Tell the user this.
+
 Unknown techniques, units, or sample roles generate **warnings** (not errors) to allow for forward compatibility. If Allotrope adds new values after December 2024, the validator won't block them—it will flag them for manual verification. Use `--strict` mode to treat warnings as errors if you need stricter validation.
 
 **What it checks:**
@@ -179,7 +181,7 @@ Before writing a custom parser, ALWAYS:
 
 | Mistake | Correct Approach |
 |---------|------------------|
-| Manifest as object | Use URL string |
+| Wrong `$asm.manifest` shape | Use the `$asm.manifest` field as either a schema URL string from allotrope.org, or an object with `vocabulary` and `contexts` lists, which is what the bundled script writes. Never leave it empty or use any other shape |
 | Lowercase detection types | Use "Absorbance" not "absorbance" |
 | "emission wavelength setting" | Use "detector wavelength setting" for emission |
 | All measurements in one document | Group by well/sample location |

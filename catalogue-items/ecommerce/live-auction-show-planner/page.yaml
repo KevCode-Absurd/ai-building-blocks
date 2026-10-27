@@ -92,6 +92,7 @@ output_shape: |
   Anchors (<n> items): <list with start price, floor>
   Core items (<n>): <list or groups>
   Giveaway: <prize> at <point in the show>; needed extra bid per item = <prize cost> / <items> = <$>
+  Check local lottery and sweepstakes law and the platform's giveaway rules before you run this draw.
 
   START PRICES AND FLOORS
   <item> | cost <$> | start <$> | floor <$>
@@ -112,7 +113,7 @@ tweaks:
   - what: Your following
     how: The big-show results leaned on an existing following. With none, start small and be consistent.
   - what: Prize
-    how: Size the prize so the extra bid per item covers it. A $250 prize across 250 items needs about $1 extra per item.
+    how: Size the prize so the extra bid per item covers it. Extra bid per item = prize cost divided by number of items. Check local lottery law and the platform's giveaway rules first.
 
 judge:
   - The run time is shown as a sum and fits the show length.

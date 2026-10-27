@@ -29,9 +29,9 @@ How to start:
 - **A chat AI that reads files:** It reads your task list and the pack together. Nothing is sent or changed for you.
 <!-- /needs -->
 
-## Before you start
+## What you need
 
-Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
+Use what is attached or pasted first. Ask only for missing facts that change the result, in one short message. This list replaces the generic one above.
 
 **You need (for one role):**
 - The critical tasks, each with how often it happens and what breaks if it stops.
@@ -98,6 +98,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Nonprofit resale store shift planner](https://useaiblocks.com/skills/nonprofit-retail-coverage-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+Offer these first, as they fit a cover plan: the [Handover note writer](https://useaiblocks.com/prompts/handover-note-writer) for tasks that need notes, the [Career ladder and growth plan writer](https://useaiblocks.com/skills/career-ladder-plan) for the backup's growth, or the [Get a new hire to full speed in 90 days](https://useaiblocks.com/workflows/get-a-new-hire-to-full-speed-in-90-days) workflow to fill a gap by hiring. The Nonprofit resale store shift planner and the Sales pay plan checker above do not fit a general critical-role plan.
 
 ## Check before you hand it back
 
@@ -106,13 +107,6 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every action closes a named gap and has a lead and a date.
 - Every fact and date traces to the user's sources or is labelled an assumption.
 - End with `CHECKS MISSED:` and the checks that failed or could not run, or `none`.
-
-## After this
-
-Offer one next step in a short question, and say the user can type their own:
-- **Write the handover notes** for tasks that need them with the [Handover note writer](https://useaiblocks.com/prompts/handover-note-writer).
-- **Plan the backup's growth** with the [Career ladder and growth plan writer](https://useaiblocks.com/skills/career-ladder-plan).
-- **Fill a gap by hiring** with the [Get a new hire to full speed in 90 days](https://useaiblocks.com/workflows/get-a-new-hire-to-full-speed-in-90-days) workflow.
 
 ## Avoid
 

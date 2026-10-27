@@ -68,12 +68,12 @@ Classic startup debate. PLG camp: "Developers want self-serve." Sales camp: "Ent
 
 **The Results:**
 
-PLG: High volume, low ACV (~$5K), fast time-to-revenue, higher churn. Sales-led: Lower volume, high ACV (~$50K), slower time-to-revenue, lower churn. **Sales won 10x on dollars despite 10x less volume.**
+PLG: High volume, low ACV (~$5K), fast time-to-revenue, higher churn. Sales-led: Lower volume, high ACV (~$50K), slower time-to-revenue, lower churn. **In the author's example, sales won 10x on dollars despite 10x less volume (the author's example, not a benchmark).**
 
 **Why:** Product complexity + buyer seniority = sales-led wins. The product required integration with existing infrastructure, change management across teams, and multi-stakeholder alignment. Developers loved self-serve. But they weren't the economic buyer.
 
 **PLG works when:**
-- Value is obvious in first 5 minutes
+- Value is obvious fast (the author's example is about 10 minutes, set in the first-value section; use your own data, not a benchmark)
 - Implementation is trivial
 - Individual user gets value without team buy-in
 - No procurement/legal hurdles
@@ -115,7 +115,7 @@ Once you validate the equation, scaling becomes math. "I need 200 more users nex
 2. Test with small sample: 1 blog post, measure actual conversion
 3. Validate: Does reality match hypothesis?
 4. Scale with confidence: If yes, increase input
-5. Kill if not: 4 weeks of data is enough to decide
+5. Kill if not: the author's example is that 4 weeks of data is enough to decide (an example, not a benchmark; set your own window)
 
 **Common Mistake:**
 
@@ -140,13 +140,13 @@ Every channel has economics. Without tracking them, you over-invest in losers an
 
 - CAC < (LTV × margin) → Scale aggressively
 - CAC ≈ (LTV × margin) → Optimize, don't scale
-- CAC > (LTV × margin) → Kill within 4 weeks
+- CAC > (LTV × margin) → Kill within your set window (the author's example is 4 weeks, not a benchmark)
 
 **Monthly channel review:** Which channels are profitable? Which are drains? Quarterly reallocation: 3x budget to winners, kill losers.
 
 **Critical Insight: Channel Quality Varies**
 
-Cheap CAC doesn't mean good CAC. Organic search might deliver users at $0 CAC with 85% 30-day retention. Paid search might deliver users at $12 CAC with 45% 30-day retention. The "free" channel is 10x more valuable when you factor in retention and LTV.
+Cheap CAC doesn't mean good CAC. Organic search might deliver users at a CAC of $[LOW] with [HIGH]% 30-day retention. Paid search might deliver users at a CAC of $[HIGH] with [LOWER]% 30-day retention. (Placeholders: use your own numbers.) The "free" channel can be worth far more once you factor in retention and LTV.
 
 **Systematic Testing:**
 
@@ -162,7 +162,7 @@ Tracking CAC without retention. A cheap channel that churns users costs more tha
 
 **The Pattern:**
 
-Users decide product value in the first 5-10 minutes. If they don't reach the aha moment fast, they abandon.
+Users decide product value within minutes. If they don't reach the aha moment fast, they abandon.
 
 **The Activation Audit:**
 
@@ -171,7 +171,7 @@ Users decide product value in the first 5-10 minutes. If they don't reach the ah
 3. Count steps to aha moment
 4. Where did you get stuck?
 
-**If TTFV > 10 minutes, you have an activation problem.**
+**The author's rule of thumb: if TTFV is above 10 minutes, you may have an activation problem. This is the one example value used across this skill. It is not a benchmark. Use your own data.**
 
 **Before:** Sign up → confirm email → fill profile → configure settings → read docs → first action
 
@@ -186,7 +186,7 @@ Users decide product value in the first 5-10 minutes. If they don't reach the ah
 
 **Common Mistake:**
 
-Assuming users will read documentation. They won't. They'll click around for 5 minutes, and if nothing works, they leave.
+Assuming users will read documentation. They won't. They'll click around for a few minutes, and if nothing works, they leave.
 
 ---
 
@@ -194,7 +194,7 @@ Assuming users will read documentation. They won't. They'll click around for 5 m
 
 **The Pattern:**
 
-PLG works for $1K-$10K ARR. Between $20K-$50K, the motion breaks because organizational friction kicks in: procurement, legal, security, multi-stakeholder buy-in.
+The author's example bands (not benchmarks): PLG works for $1K-$10K ARR. Between $20K-$50K, the motion breaks because organizational friction kicks in: procurement, legal, security, multi-stakeholder buy-in.
 
 **The Hybrid Approach:**
 
@@ -213,7 +213,7 @@ PLG works for $1K-$10K ARR. Between $20K-$50K, the motion breaks because organiz
 **The Handoff:**
 
 Bad: "Hey, I saw you signed up." (Cold, generic, kills trust)
-Good: "Your team is using [specific feature] across 12 repos. We can help you [specific value]. Want 15 minutes?" (Warm, specific, offers value)
+Good: "Your team is using [specific feature] across [NUMBER] repos. We can help you [specific value]. Want a short call?" (Warm, specific, offers value)
 
 **Common Mistake:**
 
@@ -229,22 +229,21 @@ Forecasts are always wrong. Plans are still valuable because they force thinking
 
 **Model Three Scenarios:**
 
+(Blank template. Fill every line from the user's own channel data. Never use made-up numbers.)
+
 **Baseline (current trajectory continues):**
-- Organic search: 35% growth → 40K new users
-- Paid: Flat → 2K new users
-- Community: 10% growth → 400 new users
-- Total: 42.4K
+- [CHANNEL]: [GROWTH RATE] → [NEW USERS]
+- [CHANNEL]: [GROWTH RATE] → [NEW USERS]
+- Total: [SUM]
 
 **Upside (if all growth initiatives execute):**
-- Organic: 50% growth (3x content) → 48K
-- Paid: 2x spend, same efficiency → 4K
-- New initiative (partnerships): ramp → 3K
-- Total: 55K
+- [CHANNEL]: [WHAT CHANGES] → [NEW USERS]
+- [NEW INITIATIVE]: [RAMP] → [NEW USERS]
+- Total: [SUM]
 
 **Downside (if key channels fail):**
-- Organic: 0% growth → 26K
-- Paid: CPA doubles → 1K
-- Total: 27K
+- [CHANNEL]: [WHAT GOES WRONG] → [NEW USERS]
+- Total: [SUM]
 
 **Use This For:**
 - Setting baseline targets (baseline scenario)
@@ -308,8 +307,8 @@ Can users get value in <10 min without docs?
 
 ```
 CAC < (LTV × margin)?
-├─ No → Kill within 4 weeks
-└─ Yes → 90-day retention > 60%?
+├─ No → Kill within your set window (the author's example is 4 weeks, not a benchmark)
+└─ Yes → 90-day retention above your own bar? (Set the bar from your own data. The author's example is 60%. It is not a benchmark.)
     ├─ No → Optimize (improve activation/onboarding)
     └─ Yes → Scale aggressively (3x budget)
 ```
@@ -331,7 +330,7 @@ Too generous: no conversion. Too limited: no activation. Allow 10-20 aha moments
 "Do more marketing" isn't a strategy. Map inputs → outputs → conversions per channel.
 
 **5. Scaling before validating**
-4 weeks of data before scaling any channel. Kill decisively if economics don't work.
+Get enough data before scaling any channel (the author's example is 4 weeks; not a benchmark). Kill decisively if economics don't work.
 
 **6. Growth knowledge in one person's head**
 Document every successful experiment as a playbook.
@@ -340,13 +339,13 @@ Document every successful experiment as a playbook.
 
 ## Quick Reference
 
-**PLG readiness:** Value in <10 min + self-serve implementation + buyer = user
+**PLG readiness:** Fast value (the author's example is under 10 minutes; use your own bar) + self-serve implementation + buyer = user
 
 **Growth equation:** Activity (input) → Traffic (output) → Conversions, per channel
 
 **Channel economics:** CAC, conversion, 30/90-day retention, LTV, payback — per channel, monthly review
 
-**Kill criteria:** CAC > (LTV × margin) → 4 weeks to improve, then kill
+**Kill criteria:** CAC > (LTV × margin) → a set window to improve (the author's example is 4 weeks; not a benchmark), then kill
 
 **PQL signals:** Usage depth + expansion (multi-user) + buying (SSO/compliance requests)
 

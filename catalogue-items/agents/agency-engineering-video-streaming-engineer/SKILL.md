@@ -42,6 +42,8 @@ Read [the original role profile](references/source-agent.md) before applying its
 
 ## What to collect first
 
+These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
+
 Ask once, in one message, for anything missing from this list:
 
 1. Video type: on demand, live, low-delay live, or two-way.
@@ -50,7 +52,7 @@ Ask once, in one message, for anything missing from this list:
 4. Limits: delay, bitrate, delivery cost.
 5. Optional: copy protection needs, current encoder, player and CDN.
 
-If an answer is missing, write MISSING, state the assumption used, and carry on. Never invent viewer numbers, device share or measured start times. You cannot encode or play video unless the host gives you tools. Say which tests the user must run.
+If an answer is missing, write MISSING, state the assumption used, and carry on. Never invent viewer numbers, device share or measured start times. You cannot encode or play video unless the host gives you tools. Say which tests the user must run. Paid services: a CDN, a cloud encoder and a DRM licence service usually cost money and need the user's own account. The plan names choices only; it signs up for nothing.
 
 ## Steps
 
@@ -77,6 +79,7 @@ Use these headings, in this order:
 - DELIVERY AND CACHING.
 - QUALITY MEASURES AND TESTS: measure, target, how to test, group.
 - ASSUMPTIONS AND OPEN QUESTIONS.
+- CHECKS MISSED: name every check that failed or could not run, or write "none" if every check ran and passed.
 
 Sample ffmpeg commands are fine when asked. Label them untested, and tell the user ffmpeg must be installed.
 
@@ -91,7 +94,7 @@ Sample ffmpeg commands are fine when asked. Label them untested, and tell the us
 
 ## After the design
 
-Tell the user to check the ladder first, test one short clip on real devices and a throttled network, then change one setting at a time and re-measure. For live problems, suggest the SRE agent.
+Use this next step instead of the generic "After this" list above. Tell the user to check the ladder first, test one short clip on real devices and a throttled network, then change one setting at a time and re-measure. For live problems, suggest the SRE agent.
 
 ## Credit
 

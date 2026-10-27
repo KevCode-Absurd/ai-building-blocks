@@ -10,6 +10,8 @@ license: MIT
 license_source: https://github.com/expo/skills/blob/main/LICENSE
 ---
 
+> Licence note (AI Blocks): this copy of the skill text is covered by CC BY 4.0, as the LICENSE-CONTENT file says. The "MIT" in the header above is the original author's claim. Keep the credit to Expo and sickn33.
+
 ## When to Use API Routes
 
 Use API routes when you need:
@@ -107,6 +109,8 @@ export function GET(request: Request) {
 ### Headers
 
 ```ts
+// This only shows how to read a header. It is NOT real authentication: any text passes.
+// Verify the token before you trust it (see the auth middleware below).
 export function GET(request: Request) {
   const auth = request.headers.get("Authorization");
 
@@ -245,6 +249,12 @@ eas env:create --name OPENAI_API_KEY --environment production
 
 Configure in `eas.json` or Expo dashboard.
 
+### After you deploy
+
+- Test each route with `curl` against the live URL, including a request with no token and a request with bad input.
+- Rotate any key that was pasted into a chat, a file in your repo or a shell command.
+- Check your EAS usage and set billing alerts, and do the same for the paid services your routes call (OpenAI, Stripe and others).
+
 ## EAS Hosting Runtime (Cloudflare Workers)
 
 API routes run on Cloudflare Workers. Key limitations:
@@ -354,6 +364,8 @@ export async function GET(request: Request) {
 
 ### Proxy External API
 
+> **TEMPLATE: do not ship as is.** The endpoint and header name come from environment variables you must set from your weather provider's own docs. Until you set them, the route will fail. Do not send your key to any URL you have not checked.
+
 ```ts
 // app/api/weather+api.ts
 export async function GET(request: Request) {
@@ -364,17 +376,42 @@ export async function GET(request: Request) {
     return Response.json({ error: "Invalid city" }, { status: 400 });
   }
 
-  // Encode the value, and send the key in a header if the provider allows it
-  // (the URL and header name shown are placeholders: replace them with the endpoint and header
-  // your weather provider documents, and check them before you rely on this example)
+  // Encode the value, and send the key in a header if the provider allows it.
+  // WEATHER_API_URL and WEATHER_API_HEADER are placeholders: set them to the endpoint and the
+  // header name your provider documents, and check them before you rely on this example.
   const response = await fetch(
-    `https://api.weather.com/v1/current?city=${encodeURIComponent(city)}`,
-    { headers: { "X-Api-Key": process.env.WEATHER_API_KEY! } }
+    `${process.env.WEATHER_API_URL!}?city=${encodeURIComponent(city)}`,
+    { headers: { [process.env.WEATHER_API_HEADER!]: process.env.WEATHER_API_KEY! } }
   );
 
   return Response.json(await response.json());
 }
 ```
+
+### Rate limit per user (sketch)
+
+Routes that call a paid service need a limit per caller. Workers do not share memory between requests, so keep the counter in a store you choose (your database or your host's key-value store). This is a sketch: replace `store` and set the numbers yourself.
+
+```ts
+// utils/rateLimit.ts
+export async function limitPerUser(
+  store: { increment(key: string, ttlSeconds: number): Promise<number> },
+  userId: string,
+  maxPerWindow: number,
+  windowSeconds: number
+) {
+  const bucket = Math.floor(Date.now() / (windowSeconds * 1000));
+  const count = await store.increment(`rl:${userId}:${bucket}`, windowSeconds);
+  if (count > maxPerWindow) {
+    throw new Response(JSON.stringify({ error: "Too many requests" }), {
+      status: 429,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
+}
+```
+
+Call it right after `requireAuth` and before the route calls the paid service.
 
 ## Rules
 
@@ -386,7 +423,7 @@ export async function GET(request: Request) {
 - Use TypeScript for type safety
 - Log errors server-side for debugging
 - Put keys in request headers, not in the URL query string, where the provider allows it, so they stay out of logs
-- Limit how often each caller can use a route that calls a paid service. This skill gives no rate-limit code. Use your host's rate-limit feature or a per-user counter in your database, and test it before launch
+- Limit how often each caller can use a route that calls a paid service. See the rate limit sketch above, or use your host's rate-limit feature, and test it before launch
 
 ## Limitations
 

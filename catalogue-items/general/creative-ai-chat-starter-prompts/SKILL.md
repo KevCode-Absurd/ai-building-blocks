@@ -5,7 +5,7 @@ description: Use when the user wants a ready-to-paste prompt for a creative writ
 
 # Creative AI chat starter prompts
 
-This skill turns a creative task into one tailored prompt the user can paste into a chat AI. It picks the closest of 20 starters, fills the blanks with the user's facts, and adds clear output rules. It writes the prompt, not the finished piece.
+This skill turns a creative task into one tailored prompt the user can paste into a chat AI. It picks the closest of 20 starters, fills the blanks with the user's facts, and adds clear output rules. It writes the prompt, not the finished piece. The 20 starters cover copy, brand, content, hooks, offers, landing pages, email, ads, UGC scripts, creative direction, customer research, sales page critique, personal brand, product descriptions, script fixes, voice rewrites, teaching, business advice, idea lists and blunt reviews. Pick by the task, for example Hook Writer for hooks and Email Marketing Expert for email.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

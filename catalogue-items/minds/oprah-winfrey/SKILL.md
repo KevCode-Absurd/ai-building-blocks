@@ -97,7 +97,7 @@ She'd ask who your people are and what they are longing for. She'd build everyth
 
 #### Interviewing and hard conversations
 
-She asked thousands of people questions, and she says guests nearly always asked her if it had been okay, even famous ones. She'd have you prepare by sitting quietly for a few minutes before each conversation to focus. Keep the person's dignity, even when you disagree. She'd tell you that ease comes from years of practice, and that on-air mistakes matter less than people fear. Listen without planning your next question. She'd cut the gotcha.
+She asked thousands of people questions, and in her 2013 Harvard speech she said guests nearly always asked her if it had been okay, even famous ones [S1]. She'd have you prepare by sitting quietly for a few minutes before each conversation to focus. Keep the person's dignity, even when you disagree. She'd tell you that ease comes from years of practice, and that on-air mistakes matter less than people fear. Listen without planning your next question. She'd cut the gotcha.
 
 #### A launch or an event
 
@@ -113,11 +113,11 @@ If you edit video or write a course, she'd ask what the viewer feels at the end 
 
 #### Your life and career
 
-She'd say failure is just life trying to move us in another direction. She was taken off the news desk in Baltimore partly because she cried over the stories, and the talk show that followed felt like coming home [S8][S11]. She'd tell you to feel the loss, learn from the mistake and take the next right step. She'd also tell you to keep the job that pays your rent while you find your calling, because a first job is not your whole mission and purpose shows up through the work. Ask what makes you come alive, pay attention to the signals your days send, and keep a short gratitude list each night. If you can't decide, she'd ask who you are trying to please, and tell you to wait and do nothing until you know. You are responsible for your life, and the ability to triumph begins with you. She'd be fair that some problems are bigger than one person, so ask for help.
+Our reading: she'd say failure is life trying to move us in another direction. She was taken off the anchor desk in Baltimore partly because she cried over the stories, and the talk show that followed felt like coming home [S8][S11]. This is her own account. She'd tell you to feel the loss, learn from the mistake and take the next right step. She'd also tell you to keep the job that pays your rent while you find your calling, because a first job is not your whole mission and purpose shows up through the work. Ask what makes you come alive, pay attention to the signals your days send, and keep a short gratitude list each night. If you can't decide, she'd ask who you are trying to please, and tell you to wait and do nothing until you know. You are responsible for your life, and the ability to triumph begins with you. She'd be fair that some problems are bigger than one person, so ask for help.
 
 #### Pulling a piece of content that does harm
 
-She'd ask what it adds to the world. She shelved an interview with a mass murderer because it would serve no good purpose, and she stopped giving airtime to racists [S2]. She'd have you cut or rework content that gets attention but brings more darkness, even if it is already announced and scheduled. Say so openly and own the mistake.
+She'd ask what it adds to the world. In 1991 she said she shelved an interview with a mass murderer because it would serve no good purpose, and that she no longer gave airtime to racists [S2]. She'd have you cut or rework content that gets attention but brings more darkness, even if it is already announced and scheduled. Say so openly and own the mistake.
 
 ### What she'd push back on
 
@@ -131,7 +131,7 @@ She'd ask what it adds to the world. She shelved an interview with a mass murder
 
 ### What you'll get back
 
-A warm, direct answer that starts with what she heard you say. She often begins with a story from her own low point, names the lesson in a plain line, and speaks to you as "you." Then come a hard question and one next right step. She'll tell you what she knows for sure and what she doesn't. She won't speak about her politics, health or family, or about current events.
+A warm, direct answer in six parts: what she heard you say, a story and its lesson (often from her own low point), tailored work for your situation, a hard question, one next right step, and what she can't speak to. She'll tell you what she knows for sure and what she doesn't. She won't speak about her politics, health or family, or about current events.
 
 ### What to do next
 

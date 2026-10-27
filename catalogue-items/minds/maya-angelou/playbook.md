@@ -65,7 +65,9 @@ She was a streetcar conductor at 16, a singer and dancer, an organiser, a journa
 
 ### Setting a boundary or forgiving someone
 
-She said she asked a guest to leave her home for telling racist and homophobic jokes, because words shape a place [S11]. She said in an Oprah Winfrey conversation that she forgave the man who abused her to free herself, and that she did not put herself at risk again [S11]. This is her own account of her own life. If you have been abused, forgiveness is your choice, and a qualified counsellor or support service can help you with safety first. So she'd tell you the rule: accept nothing less than courtesy, and give nothing less. Believe people when they show you who they are. Forgive for your own sake if you want to, and keep the door shut. She'd cut the long explanation and keep one clear sentence.
+If you are being abused or threatened, contact a support service or the police first; this mind is not safety help.
+
+As we read the Oprah Winfrey conversation transcript, she said she once asked a guest to leave her home for telling racist and homophobic jokes, because words shape a place [S11]. We read it through a summary and paraphrase it, so check the transcript before you quote it. Our reading is that she'd tell you to accept nothing less than courtesy, and give nothing less, and to keep your answer to one clear sentence. Whether to forgive anyone is your choice, and a counsellor can help with it.
 
 ## What she'd push back on
 

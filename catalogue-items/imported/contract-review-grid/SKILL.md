@@ -12,6 +12,8 @@ description: >
 
 # /tabular-review
 
+(Added by AI Blocks: this skill came from a legal plugin. In a plain chat there is no `/corporate-legal` command and no `~/.claude` config file. Say the command name as a plain request ("build a review grid"). If the config file is not there, ask the user for their diligence structure, thresholds and house format, and use the `references/` templates in this folder. Contracts are sent to the AI tool, so confirm the user may share them first.)
+
 1. Load `~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md` → diligence structure, thresholds, house format.
 2. Confirm: what documents, what columns, where does the output go.
 3. Build the typed schema. Write `.review-schema.yaml`. Confirm with the user.
@@ -39,7 +41,9 @@ description: >
 
 ---
 
-## Matter context
+## Matter context (plugin only, optional)
+
+(Skip this section in a plain chat. It applies only if you run the original legal plugin.)
 
 **Matter context.** Check `## Matter workspaces` in the practice-level CLAUDE.md. If `Enabled` is `✗` (the default for in-house users), skip the rest of this paragraph — skills use practice-level context and the matter machinery is invisible. If enabled and there is no active matter, ask: "Which matter is this for? Run `/corporate-legal:matter-workspace switch <slug>` or say `practice-level`." Load the active matter's `matter.md` for matter-specific context and overrides. Write outputs to the matter folder at `~/.claude/plugins/config/claude-for-legal/corporate-legal/matters/<matter-slug>/`. Never read another matter's files unless `Cross-matter context` is `on`.
 
@@ -53,7 +57,9 @@ This is not issue spotting. `diligence-issue-extraction` finds the 30 problems h
 
 This is also not a replacement for a human reading the document. Every cell this skill produces is a **lead that needs verification**, not a finding. The output is designed to make verification fast, not to skip it.
 
-## Load context
+## Load context (plugin only, optional)
+
+(In a plain chat none of these files exist. Ask the user for the same details instead.)
 
 - `~/.claude/plugins/config/claude-for-legal/corporate-legal/CLAUDE.md` → diligence structure, materiality thresholds, house format preferences
 - `~/.claude/plugins/config/claude-for-legal/corporate-legal/deals/[code]/deal-context.md` if working a specific deal
@@ -215,7 +221,7 @@ After the table is written, give the user a one-screen readout:
 
 ## Close with the next-steps decision tree
 
-End with the next-steps decision tree per CLAUDE.md `## Outputs`. Customize the options to what this skill just produced — the five default branches (draft the X, escalate, get more facts, watch and wait, something else) are a starting point, not a lock-in. The tree is the output; the lawyer picks.
+In a plain chat, close with these next steps instead: sort the grid by the flagged columns, send the needs_review rows to a lawyer, and use Acquisition due diligence planner or Due diligence checklist builder for the problems the grid shows. With the plugin, end with the next-steps decision tree per CLAUDE.md `## Outputs`. Customize the options to what this skill just produced — the five default branches (draft the X, escalate, get more facts, watch and wait, something else) are a starting point, not a lock-in. The tree is the output; the lawyer picks.
 
 ## What this skill does not do
 

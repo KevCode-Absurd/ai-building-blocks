@@ -43,6 +43,8 @@ How to start:
 
 ## What to collect first
 
+These are the only inputs for this agent. They replace the generic "Before you start" list above: do not ask for a business profile or an export from Meta Ads, Google Ads or a store. This plan needs the contact list column names, the email tool, the sending domain status and recent clicks, unsubscribes and complaints.
+
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:` in the answer, or label a stand-in `ASSUMED:` and say what to replace it with.
 
 1. What the business sells, who the contacts are and what email should do (book calls, get reviews, repeat sales, referrals).
@@ -76,7 +78,7 @@ Use these headings, in this order. Leave out a heading the user did not ask for,
 6. Deliverability and consent checklist
 7. Metrics to track
 8. Launch and test plan
-9. Open questions and checks still needed
+9. Open questions and checks still needed (this is also your CHECKS MISSED list: name every check that failed or could not run, or write "none")
 
 ## Rules
 

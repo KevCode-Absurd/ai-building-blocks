@@ -174,7 +174,7 @@ improve:
 works_best_with:
   tools:
     - {name: "Your phone camera", why: "A real cupboard with the labels turned away is the most believable version, and nothing in it is generated."}
-    - {name: "Nano Banana", why: "Google's image model. Its guide says a detailed scene gives you more control, and this brief is detailed."}
+    - {name: "Nano Banana", why: "Google's image model. It works well with a detailed scene prompt, and this brief is detailed."}
     - {name: "Any good chat AI", why: "Reading the story for what was tried is careful reading, which Claude, ChatGPT and Gemini all do well."}
   inputs:
     - "Five to ten reviews that name what buyers used before, so the objects are the ones they really owned"

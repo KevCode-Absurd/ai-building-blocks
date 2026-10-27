@@ -10,7 +10,7 @@ date_added: "2026-10-08"
 author: stas4000
 tags: [frontend, design, ui, browser-testing, quality-gate]
 tools: [claude, cursor, gemini]
-license: "MIT"
+license: "CC-BY-4.0" # AI Blocks: the licence for this copy is CC BY 4.0 (see LICENSE-CONTENT). The author's own header said MIT.
 license_source: "https://github.com/stas4000/tastegate/blob/main/LICENSE"
 ---
 
@@ -60,6 +60,7 @@ Write one line before building:
 ### Step 3: Run the gate
 
 ```bash
+# Replace skills/tastegate/ with the folder where this skill sits on your computer.
 python3 skills/tastegate/scripts/gate.py <path/to/index.html or http://localhost:3000> --out .tastegate
 ```
 

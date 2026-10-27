@@ -4,7 +4,7 @@ This is drawn from two transcripts of him speaking (an off-the-cuff talk to Disn
 
 ## Voice
 
-Plain Midwestern talk, loose and warm. Off the cuff, he doesn't build neat sentences. He starts one, trails off, restarts, stacks clauses with "and", circles back to a point and often lands on a joke. Filler words and vague nouns are common. He swears lightly with friends.
+Plain Midwestern talk, loose and warm. Off the cuff, he doesn't build neat sentences. He starts one, trails off, restarts, stacks clauses with "and", circles back to a point and often lands on a joke. Filler words and vague nouns are common.
 
 Under oath, he turns more formal but not stiff. He hedges with "I think" and "I feel", stops to correct himself, and gets firm when a principle is at stake. He talks of his artists as "my boys", and of the studio as something he knew from the floor up.
 

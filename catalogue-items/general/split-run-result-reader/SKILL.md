@@ -5,7 +5,7 @@ description: Use when a two-version test has finished and you have the counts. W
 
 # Split-run result reader
 
-A test result is a few numbers, and numbers are easy to over-read. This skill turns them into one plain call and a record you can reuse. It states the gap the way a buyer of ads would, as a percentage, then asks four questions: is the gap bigger than luck, did the test stay fair, did the replies lead to sales, and what does it cost. For planning the test, use "Split-run test planner". For a before-and-after report on a whole account, use "Ad results report writer".
+A test result is a few numbers, and numbers are easy to over-read. This skill turns them into one plain call and a record you can reuse. It states the gap the way a buyer of ads would, as a percentage, then asks four questions: is the gap bigger than luck, did the test stay fair, did the replies lead to sales, and what does it cost. For planning the test, use the [Split-run test planner](https://useaiblocks.com/skills/split-run-test-planner). For a before-and-after report on a whole account, use the [Ad results report writer](https://useaiblocks.com/skills/ad-results-report-writer).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -45,7 +45,7 @@ How to start:
 
 1. **Set out the table.** One row per version: key, audience, replies, reply rate (replies divided by audience), sales, spend. Mark any blank as `MISSING:`.
 2. **State the gap as a percentage.** Take the leader's replies minus the other's, divided by the other's. Example: A has 130 replies and B has 100; the gap is 30 divided by 100, so A is 30 percent better. Say which version leads and by how much, in one line.
-3. **Check the gap against luck.** This is a rough rule of thumb, not a full statistics test. With equal audiences, add the two reply counts and take the square root. If the gap in replies is more than twice that number, it is probably real. Example: 130 and 100; 230, square root about 15, twice that is about 30; the gap of 30 is right at the line, so it is borderline. 150 and 100: 250, root about 16; the gap of 50 is over 3 times, so it is likely real. If audiences are unequal, compare reply rates and say the check is rough. Under about fifty replies in total, say the test is too small to call.
+3. **Check the gap against luck.** This is a rough rule of thumb, not a full statistics test. With equal audiences, add the two reply counts and take the square root. If the gap in replies is more than twice that number, it is probably real. Example: 130 and 100; 230, square root about 15, twice that is about 30; the gap of 30 is right at the line, so it is borderline. 150 and 100: 250, root about 16, twice that is about 32; the gap of 50 is about 1.6 times that line, so it is likely real. If audiences are unequal, compare reply rates and say the check is rough. Under about fifty replies in total, say the test is too small to call.
 4. **Check the test stayed fair.** Compare the plan with what happened: did both go at the same time, to matched halves, with one difference, the same offer and the keys intact? Note anything that broke. A broken test may only support a rerun.
 5. **Follow replies to sales.** Where sales are known, work out sales per hundred replies and cost per sale for each version. In general, the version with more replies also has more sales, but not always. If the reply item was free and the lead version also has far fewer sales per reply, say the extra replies were probably people after the free item.
 6. **Work out cost.** Cost per reply is spend divided by replies. If two versions cost the same to run, the cheaper cost per reply wins. If one version costs more to produce or send, include it.
@@ -53,6 +53,7 @@ How to start:
    - Keep: the leader has a gap that passes the check, held up on sales and the test was fair. Run the leader as the control from now on.
    - Rerun: the gap is borderline, the test was small, or something broke. Say what to fix and whether to repeat the same pair or enlarge it.
    - Stop: the versions are level. Say that and test a bigger difference, such as a different buying reason.
+   If the leader on replies loses on sales or cost per sale, do not call keep. Call rerun, or keep the other version if the sales gap passes the same check.
    If a result is a surprise, repeat the same pair once at the end of the series to double-check.
 8. **Write what it taught,** in a form you can reuse: the difference tested, the result, the percentage, the date, the audience and one sentence on why that might be. Mark it a finding for this audience, not a rule.
 9. **Name the next test,** in this order of what usually matters most: the buying reason, then the headline, then the offer, then the copy, then the medium, the size, the season and the position.

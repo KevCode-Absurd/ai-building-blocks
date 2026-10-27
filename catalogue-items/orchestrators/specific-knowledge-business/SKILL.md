@@ -26,7 +26,9 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-This job is about you and your work, not ads. The "Before you start" list above mentions an ad results export. This workflow does not use one.
+This job is about you and your work, not ads. The "Before you start" list above mentions an ad results export. This workflow does not use one. You only need your history, your earnings and, if you have one, partner details.
+
+This workflow does not test whether a business idea will sell or size a market. For that, use the [Business assumption stress tester](https://useaiblocks.com/skills/assumption-stress-test).
 
 - **Your history of what came easily** (required): what came easily to you as a child or teenager, and what others noticed.
 - **What people ask you for now** (required): what you are curious about and what feels like play to you.
@@ -45,11 +47,18 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Steps
 1. **Specific knowledge finder.** Use the skill `specific-knowledge-finder` on your history of what came easily and what people ask you for. List what you know or do that cannot be taught in a class, trace each item to something the person said, pick one or two, and give a cheap test with a date for each. Saves `outputs/step-01-specific-knowledge-finder.md`.
 2. **Hours-to-assets planner.** Use the skill `hours-to-assets-planner` on the picks in `outputs/step-01-specific-knowledge-finder.md` (as what you are known for) and your earnings. Mark each income line as tied to hours or not, work out the hourly rate, plan one route to build something you own, list work to stop or buy back, and set a first step and a review date. Saves `outputs/step-02-hours-to-assets-planner.md`, the product plan for step 3.
-3. **Long-term partner screener.** Use the skill `long-term-partner-screener` on the plan in `outputs/step-02-hours-to-assets-planner.md` (as the game you would play together) and the partner details. Score intelligence, energy and integrity with the evidence for each, weigh integrity first, and give keep, test first or walk away. If no partner was named, skip this step and say so. Saves `outputs/step-03-long-term-partner-screener.md`. This is a prompt for your own judgement about a person, not a verdict on them.
+3. **Long-term partner screener.** Use the skill `long-term-partner-screener` on the plan in `outputs/step-02-hours-to-assets-planner.md` (as the game you would play together) and the partner details. Score intelligence, energy and integrity with the evidence for each, weigh integrity first, and give keep, test first or walk away. Score only what the person saw first-hand, with dates. Where there is no example, write `MISSING:` and do not guess. If no partner was named, skip this step and say so. Saves `outputs/step-03-long-term-partner-screener.md`. This is a prompt for your own judgement about a person, not a verdict on them.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
+## Next steps to offer
+
+Use these instead of the general "After this" list above:
+- Run the cheap test from step 1 by its date, then note what happened.
+- Come back on the review date set in step 2 and re-run step 2 with your new earnings.
+- If you named a partner, run step 3 again after a few months of working together, with new dated examples.
+
 ## What you hand back
-3 step files and the summary. The last file holds the partner check.
+3 step files and the summary. The result is a plan, not an audit report. The last file holds the partner check. The scores are your own impressions from dated observations, not a verdict on the person.
 - Step 1: your picks, each traced to what you said, the basics to learn, and a cheap test with a date.
 - Step 2: each income line marked as tied to hours or not, one route to build something you own, your hourly rate, the stop or buy-back list, a first step and a review date.
 - Step 3: scores for intelligence, energy and integrity with evidence, and a keep, test first or walk away call.

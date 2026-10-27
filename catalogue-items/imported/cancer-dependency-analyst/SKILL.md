@@ -1,7 +1,7 @@
 ---
 name: depmap
 description: Retrieves and analyzes Cancer Dependency Map (DepMap) release data, including CRISPR Chronos gene effects, cancer model annotations, omics biomarkers, and PRISM drug sensitivity. Supports cancer-selective dependency, co-essentiality, and candidate synthetic-lethality analyses with release-aware identifiers and statistical checks.
-license: CC-BY-4.0 # the LICENSE.md in this catalogue folder says MIT; DepMap data has separate terms
+license: CC-BY-4.0 # original author's note. For this copy the LICENSE.md in this folder (MIT) governs. DepMap data has separate terms
 compatibility: Requires Python 3.10+ with numpy, pandas, and scipy>=1.11 for the bundled helpers. Network access is needed for release discovery; downloading current data may require browser verification through the DepMap portal.
 metadata:
   version: "1.2"
@@ -25,6 +25,10 @@ DEMETER2 is a different perturbation modality, not an older CRISPR scoring metho
 ## 1. Discover a release, then obtain its files
 
 Gather first: the DepMap release to use, the files to download (`CRISPRGeneEffect.csv`, `Model.csv` and, for drug links, the PRISM files), and Python with numpy, pandas and scipy. Each analysis returns a table with group size, effect size, p-value and q-value columns.
+
+**Before you show any ranked list:** read the release README, then run a sanity test on one known control. Pick a gene from the release's own common-essential control list. Its gene effect should be strongly negative, near −1, across most cell lines. A nonessential control gene should sit near 0. If either looks wrong, stop and check the files, units and identifiers before going on.
+
+**Downloads:** the DepMap portal may show a browser verification check, and its terms may limit automated downloads. Do not get around the check. Read the terms first, and ask the user to download the files by hand if automation is not allowed.
 
 Use [DepMap Downloads](https://depmap.org/portal/data_page/) and the selected
 release's README and release notes. On review, the live catalogue's latest

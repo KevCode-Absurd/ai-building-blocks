@@ -9,7 +9,7 @@ subhead: Point it at your folder of skills once a month. It finds skills that ne
 explain: |
   A folder of skills decays. Two skills end up with near the same job, so neither fires reliably. A skill is edited and quietly breaks. A skill from outside brings a script nobody read. Meanwhile a task you repeat every week still has no skill.
 
-  This agent audits the whole folder each month. It checks when each skill fires, tests the new and changed ones, and tests every skill at least once a quarter. Anything from outside gets a safety check first. A skill that fails it is marked do not run and is never tested or run. It then looks for tasks worth a new skill. You get one ranked fix list. It never edits, installs or publishes anything on its own.
+  This agent audits the whole folder each month. It checks when each skill fires, tests the new and changed ones, and tests a rotating third of the unchanged ones each month, so every skill is tested at least once every three months. Anything from outside gets a safety check first. A skill that fails it is marked do not run and is never tested or run. It then looks for tasks worth a new skill. You get one ranked fix list. It never edits, installs or publishes anything on its own.
 when:
   - You have more than a handful of skills and are not sure all of them still work.
   - You add skills from other people and want them checked before they run.
@@ -33,6 +33,7 @@ you_get:
 how_to_use:
   - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this month's check.
   - Point it at the folder where your skills live. Say which came from outside.
+  - Say yes to quality tests only for your own skills that passed the safety check. Tests run in a copy of the folder with the network off and made-up data. If your tool cannot do that, the test is skipped and marked blocked.
   - Read the hand-back. Anything marked do not run goes first.
   - Say yes to the fixes you want, or make them yourself. For a skill that failed its test, use the Prompt and skill tuner.
   - Run it next month. It checks whether the fixes worked.
@@ -101,7 +102,7 @@ tweaks:
   - what: Where each skill came from
     how: Mark the ones from outside. They get a safety check every time they change.
   - what: How often unchanged skills are tested
-    how: It starts at once a quarter. Test them monthly if the folder is small.
+    how: It tests a rotating third each month, so each unchanged skill is tested once a quarter. Test them all every month if the folder is small.
   - what: Which AI tools you use
     how: Name them. If it is more than one, the portability check runs.
   - what: History to read
@@ -123,7 +124,7 @@ improve:
 works_best_with:
   tools:
     - name: Claude Code
-      why: It can read the skills folder, keep the inventory and run the checks on a schedule.
+      why: It can read the skills folder, keep the inventory. You start each monthly run. It does not run on a timer.
   inputs:
     - The prompts you use most often, to compare with the skills you have
     - A note of which skills fired wrongly last month

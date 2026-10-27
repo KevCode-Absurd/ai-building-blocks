@@ -18,10 +18,13 @@ written culture. These are original scaffolds, not official Amazon templates.
 
 ## When not to use
 
-- Use `adr-authoring` for durable architecture decisions and `incident-learning`
+- (AI Blocks note: on this site, use the Decision record writer for durable architecture
+  decisions and the Incident postmortem writer for incident analysis. The names below are
+  the source repo's own skills and may not exist here.) Use `adr-authoring` for durable architecture decisions and `incident-learning`
   for incident analysis. Add an executive cover memo only when useful; retain the
   underlying artifact's structure and evidence.
-- Use `technical-documentation` for instructions and runbooks, `writers-helper`
+- On this site, use the Incident runbook writer or the Developer docs writer for instructions
+  and runbooks. In the source repo, use `technical-documentation` for instructions and runbooks, `writers-helper`
   for general manuscript craft, and `documents` for rendered office files.
 - Use `product-discovery` or `product-methodology` when the missing work is
   understanding the problem or testing demand. A polished memo cannot supply that evidence.
@@ -76,7 +79,7 @@ written culture. These are original scaffolds, not official Amazon templates.
 ## Non-negotiable distinctions
 
 - **Six pages is a ceiling, not a requirement.** Amazon's 2024 shareholder letter
-  describes a maximum six-page narrative; do not pad two pages of substance to six.
+  is reported to describe a maximum six-page narrative (the link is in references/sources.md; check it before you quote it); do not pad two pages of substance to six.
   Local rules may differ. No universal font, word count, or heading sequence is established here.
 - **A press release is not the whole PR/FAQ.** The future release states customer
   value; customer and internal FAQs test the proposal. Mark all imagined quotes and

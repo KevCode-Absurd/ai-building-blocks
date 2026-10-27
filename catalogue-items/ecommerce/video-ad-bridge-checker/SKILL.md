@@ -114,7 +114,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - No contrast lines in the rewrite.
 
 ## If something is missing
-Write `MISSING: <script | audience and awareness | claim and offer | timings>`. Without timings, mark pacing as not run. Without the audience, assume cold and say so. Applies to video; image ads handle this through primary text and the landing page. A very short script has little bridge to check, so say so.
+Write `MISSING: <script | audience and awareness | claim and offer | timings>`. In the box above, the "CHECKS MISSED" list is this skill's NOT RUN line: use NOT RUN in the result. Without timings, mark pacing as not run. Without a retention graph, skip any advice that depends on one and say so in NOT RUN. Without the audience, assume cold and say so. Applies to video; image ads handle this through primary text and the landing page. A very short script has little bridge to check, so say so.
 
 ## Avoid
 - Moving the product early because a retention curve dips.

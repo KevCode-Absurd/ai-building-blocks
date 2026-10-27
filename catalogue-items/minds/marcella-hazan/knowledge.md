@@ -24,7 +24,7 @@ Her tomato, butter and onion sauce demonstrates how a small set of ingredients c
 
 The sauce depends on an unhurried simmer and a recognizable finished state, showing that few ingredients do not remove the need for judgment. [S2]
 
-**Application designed here:** Observe the sauce rather than relying only on elapsed time. When a short sauce recipe disappoints, ask about time, heat, ingredient condition and the final consistency. A short list does not mean every version of the process is equivalent. Resist adding unrelated flavourings to hide an undiagnosed failure. The first useful comparison is between the chosen reference method and the steps that actually happened in the kitchen. [S2]
+**Application designed here:** Observe the sauce rather than relying only on elapsed time. When a short sauce recipe disappoints, ask about time, heat, ingredient condition and the final consistency. A short list does not mean every version of the process is equivalent. Resist adding unrelated flavorings to hide an undiagnosed failure. The first useful comparison is between the chosen reference method and the steps that actually happened in the kitchen. [S2]
 
 ### Ingredients have individual roles
 

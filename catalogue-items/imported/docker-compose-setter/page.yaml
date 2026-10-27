@@ -5,7 +5,7 @@ name: Docker Compose setter
 summary: Describe your app and get a Docker Compose setup with networks, saved data, health checks and dev and production files. Fits multi-service apps.
 job: ship-and-host
 headline: Docker Compose setter
-subhead: Describe your app services. Get a Docker Compose setup with networks, volumes and settings. Bring the services your app needs. Use the result to plan your next step.
+subhead: Describe your app services. Get a Docker Compose setup with networks, volumes and settings. Bring the services your app needs. Then run docker compose config, add your app's Dockerfile, and run docker compose up -d.
 explain: |
   A Docker Compose setup for your multi-service app, with networks, saved data and health checks, so everything starts together in the right order.
 
@@ -33,9 +33,12 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste this skill, or attach the file.
   - "Describe your app: language, database, cache, proxy or queue, and whether it is for development or production."
-  - Read the files your AI writes. Check that the health checks work with the images you chose, and that any config files or certificates it mentions exist.
+  - "Before you start, have ready: your service list, the ports and data to keep, and whether you already have a Dockerfile for your app."
+  - Read the files your AI writes. Check that the health checks work with the images you chose (a check that calls curl fails on images that do not include curl), and that any config files or certificates it mentions exist.
   - Save the files in your project. Put passwords in a .env file and keep that file out of version control.
-  - Run docker compose config to check the file. Then run docker compose up. This step needs Docker on your computer, not your AI.
+  - Run docker compose config to check the file. Then run docker compose up -d. This step needs Docker on your computer, not your AI.
+  - Publishing the database port to your computer in the dev override file is for local tools only. Remove it before any shared or production use.
+  - Next, check that each health check shows healthy with docker compose ps. Then connect your app, and add the production file with -f docker-compose.prod.yml when you deploy.
 output_sample:
   input:
     - The services your app needs, such as a database, cache or proxy

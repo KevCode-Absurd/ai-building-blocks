@@ -10,7 +10,7 @@ Describe your best location. Get written standards, a manual a stranger can foll
 Use it when: one location works well and you want a second, a partner or a franchisee to run it your way without you, a new hire keeps asking things that should be written down, or you are about to hand the keys to a manager.
 Not for: a site you will never copy (use a plain staff checklist), work with no repeatable steps, or only checking a launch plan for faults (use the Rapid growth readiness reviewer).
 
-The order of the steps is adapted from a summary of Grinding It Out: The Making of McDonald's by Ray Kroc with Robert Anderson, so its claims are kept modest. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+The order of the steps is adapted from a summary of Grinding It Out: The Making of McDonald's by Ray Kroc with Robert Anderson, so its claims are kept modest. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next. The four skill files (`standards-sheet-writer`, `operations-manual-writer`, `second-location-check` and `go-or-no-go-launch-checker`) come in the handoff pack with HANDOFF.md. If one is missing, stop at that step and list it under `MISSING:`.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -41,7 +41,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-The general "Before you start" list above mentions a brand brain and a spreadsheet. This job does not use a brand brain. Use the shop inputs below. The spreadsheet is the optional takings and costs sheet.
+The general "Before you start" list above mentions a brand brain and a spreadsheet. This job does not use a brand brain. Ignore the brand brain lines, the "Recommended steps before this one" list and "From the brand brain, read" in that box. Use the shop inputs below. The spreadsheet is the optional takings and costs sheet.
 
 - **What you sell and how a customer gets it, from order to hand-off** (required): walk the path in a few lines.
 - **Your roles and what each person does in a shift** (required): list each role and its tasks.
@@ -69,6 +69,12 @@ Pause here: Have someone who has never worked for you run one shift from the man
 3. **Check the system is ready to copy.** Use the skill `second-location-check`. It takes the manual in `outputs/step-02-operations-manual-writer.md` and the newcomer's notes from the pause, plus the week-away takings and costs if given. It saves `outputs/step-03-second-location-check.md`: each trial gap with a fix, whether the first place earns without you, the site, supplies and named person, and a ready call.
 4. **Make the go or no-go call.** Use the skill `go-or-no-go-launch-checker`. It takes the readiness check in `outputs/step-03-second-location-check.md` and the manual in `outputs/step-02-operations-manual-writer.md`. It saves `outputs/step-04-go-or-no-go-launch-checker.md`: a go or no-go on the next location, a halfway check and the first fix to make.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+
+## Next steps to offer
+
+Use these instead of the general "After this" list above:
+- After the first month at the second location, run step 3 (`second-location-check`) again with that location's real takings and costs, and fix the gaps it finds.
+- If the call is no-go, fix the first fix named in step 4, run a newcomer trial again, then repeat steps 3 and 4.
 
 ## What you hand back
 4 step files and the summary. The last step file holds the go or no-go call, and the HAND-BACK SUMMARY comes after it.

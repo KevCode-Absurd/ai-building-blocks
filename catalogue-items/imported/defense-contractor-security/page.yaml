@@ -39,6 +39,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in this skill. Use an AI with web access if you can, so it can read the current DoD notice. Without it, paste the notice yourself.
   - Paste your contract clauses and the section that names the CMMC level. Say what data you handle.
   - Describe your systems in plain words. List the controls you already have. If you have none to list, say so.
+  - "Unverified planning figures, all from the original author with no source: the July 2026 program status note, the 9 to 18 month timeline, and the list of practices that cannot stay open. The skill keeps them in one labelled box with a blank source link for each. The level comes from your contract clause alone, so do not mix them with it."
   - Read the level determination first. If it says undetermined, get the missing documents before you go on.
   - Take the gap table and open questions to an accredited assessor or your counsel before you spend money on fixes. Treat the program status, the list of practices that cannot stay open, and any timeline as planning leads to confirm with them, not as facts.
 output_sample:

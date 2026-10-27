@@ -11,6 +11,7 @@ explain: |
 
   It starts by reading the current official docs. Then it sorts your idea into a type of app, plans each tool with names, inputs and outputs, and picks an official example to adapt or a small fallback to start from. It writes the server, the panel and the setup steps for local testing. A final check compares the repo against a minimum working checklist. You need Node, plus access to the OpenAI docs through a tool or the web.
 when:
+  - You or a developer you work with can code in Node and host a server. A non-technical owner should use a custom GPT, or ask a developer.
   - You want your service to appear as an app inside ChatGPT.
   - You are not sure which of the official examples to start from.
   - You need a tool plan with clear names and inputs before coding.
@@ -32,11 +33,14 @@ you_get:
   - A validation report
 how_to_use:
   - Open an AI that can run code and read web pages, such as Codex or Claude Code. Paste the skill or load its folder.
+  - Check what costs money before you start. Codex and Claude Code need an account and may need a paid plan or API credit. ChatGPT Developer Mode may need a paid ChatGPT plan, so check OpenAI's current docs. ngrok needs an account, and it has a free tier. The Apps SDK itself has no key to buy, but running your app online later may cost hosting fees.
   - Describe your app in plain words. Say what it does, what data it uses and whether it needs a panel.
-  - Let your AI read the current Apps SDK docs first. Then check the app type and tool plan it proposes.
+  - Let your AI read the current Apps SDK docs first. If it cannot open the OpenAI docs (no docs tool or no web access), paste the pages you need into the chat yourself, and tell your AI the docs may be newer than what it knows. Do not let it build from memory. Then check the app type and tool plan it proposes.
   - Approve the plan. Your AI writes the server and the panel, then checks them against the minimum working list.
   - Run the app on your computer. Start an HTTPS tunnel such as ngrok so ChatGPT can reach it.
   - In ChatGPT, turn on Developer Mode, add your tunnel link as an app and try your tools.
+  - A good first result is your tool list showing up in ChatGPT in Developer Mode, and each tool returning the output your plan promised. Then the local test has passed.
+  - Next, re-run the checklist after you fix any gaps the validation report lists, and test again in Developer Mode before you think about submitting.
 output_sample:
   input:
     - What your app should do

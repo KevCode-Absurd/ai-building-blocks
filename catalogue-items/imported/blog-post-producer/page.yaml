@@ -10,6 +10,8 @@ explain: |
   A finished blog post or guide that is researched, edited and ready to publish, built from a topic and an angle. It cuts out the blank-page stall and the long back and forth with a draft.
 
   The skill first checks for any saved brand notes, then asks for what is missing in one go: the topic, target keyword, reader, goal and length. If the topic is vague, it pushes back and asks for a sharper angle. It then researches, outlines, drafts, tightens and checks the piece for search fit and links to your other content. It is for writing the piece, not for planning a calendar or reusing old content.
+
+  You get one document with fixed sections, in this order: content brief, full draft, SEO pass, readability and voice edits, internal links and a publish checklist.
 when:
   - You have a topic and need a full post, not an outline.
   - A writer is stuck and you need a solid first draft fast.
@@ -31,12 +33,14 @@ you_get:
   - Search-friendly headings and a title
   - Internal link suggestions
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste in the skill text.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. If you have brand notes, save them as .claude/product-marketing-context.md in your project. The skill reads that file first for your voice, reader and keywords. If you have none, it asks.
   - Tell it your topic, reader, goal and length. Add your search term and related page links if you have them.
   - Check that your AI can search the web. If it can't, paste in the sources you trust. Never accept a quote or number without a source.
   - Read the brief first. Fix the angle before you ask for the full draft.
-  - Ask for the polish pass. The score and gate scripts need code running, so skip them if your AI can't run code.
-  - Check every fact and link by hand before you publish.
+  - Ask for the polish pass. The four Python scripts in the scripts folder (SEO, score, brand voice and quality gates) are optional and need code running. If your AI can't run code, it does the same checks by hand: word count against target, keyword in the title, first 100 words and one heading, sentence length and the quality-gate list.
+  - Check every fact and link by hand before you publish. Any claim marked UNVERIFIED needs a source or has to go.
+  - Next, make it easier for AI assistants to quote with the AI search visibility optimiser. Add more posts to the plan with the content topic planner.
+next: [ai-search-visibility-optimiser, content-topic-planner]
 output_sample:
   input:
     - Your topic or working title

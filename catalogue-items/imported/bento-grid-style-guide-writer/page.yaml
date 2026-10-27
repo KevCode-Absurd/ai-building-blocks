@@ -2,14 +2,14 @@ thinking: low
 thinking_why: It fills a set template with the style's rules.
 new_slug: bento-grid-style-guide-writer
 name: Bento grid style guide writer
-summary: Describe your product and get a Bento grid style guide for card-based layouts, with tokens, states, accessibility rules and a code review checklist.
+summary: Describe your product. Get Bento grid rules for columns, tile sizes and phone stacking order, plus tokens and a code review checklist.
 job: design-work
 headline: Bento grid style guide writer
 subhead: A design-system guide for a Bento look, the tidy layout of cards in different sizes that you see on many modern product pages. Describe your product, and the AI writes guidance engineers and designers can use directly.
 explain: |
   A design-system guide for a Bento look, the tidy layout of cards in different sizes that you see on many modern product pages. Describe your product, and the AI writes guidance engineers and designers can use directly.
 
-  It sets type scale, colour tokens, spacing, states and component rules, with do and do-not lists, accessibility to WCAG 2.2 AA, keyboard use and visible focus. It also writes the tone for interface text and ends with quality gates so you can check the work. The starting values, such as Inter type and a soft peach and blue palette, can be changed to match your brand. Use semantic tokens rather than raw values.
+  The grid is the heart of it. The guide sets how many columns you use at each width, a few fixed tile sizes, one gap, one lead tile and the order tiles stack in on a phone. Around that it writes colour tokens, spacing, states and component rules, with accessibility to WCAG 2.2 AA, keyboard use and visible focus. It ends with a checklist you can run in code review. The starting values, such as Inter type and a soft peach and blue palette, can be changed to match your brand.
 when:
   - You are redesigning a landing page with a card-grid layout.
   - Developers and designers keep guessing at spacing and colours.
@@ -20,6 +20,7 @@ not_for:
   - "You want a guide for a page built to sell with one main button: use a conversion page style guide, not a card grid guide."
   - "You want finished page designs or code: hire a designer or developer, because this skill writes rules only."
   - "You want a plain look with few colours and no card grid: use the Minimal style guide writer."
+  - "Your look is built on surface textures and not on a grid of cards: use the Texture style guide. Choose this item when your layout is a grid of cards in mixed sizes."
 you_give:
   - A description of your product and brand
   - Colours and fonts you already use (optional)
@@ -31,7 +32,8 @@ you_get:
   - Component rules with states
   - Do and don't lists and quality gates
 how_to_use:
-  - Open Claude, ChatGPT or Gemini and paste the full skill text into a new chat.
+  - Decide your grid first: how many columns at each width (for example 12, 4 and 1) and your tile sizes (for example 1x1, 2x1 and 2x2). Pick one lead tile, and decide which tiles come first when the page stacks on a phone. The grid rules are the main value of this guide.
+  - Open Claude, ChatGPT or Gemini and paste the full skill text into a new chat. It is plain text, and it needs no paid service or API key.
   - Have ready a short description of your product, your brand colours and fonts, and the components that need rules (cards, buttons, forms). Describe your product, your brand and who uses the page.
   - Add the colours and fonts you already use, if you have them. Say which components you need rules for, and the accessibility level. The skill starts from WCAG 2.2 AA.
   - Check the grid rules in the result: how many columns, which tile sizes, and how tiles stack on a phone. The skill sets starting values for these. Change them to fit your content.

@@ -163,6 +163,7 @@ If a check fails due network, DNS, permissions, or API rate limits:
 - Keep confidence as `Hypothesis` for impacted categories.
 - Continue with available evidence instead of stopping the audit.
 - Do not enter repeated fallback loops. Retry a failed source at most once, then finalize the audit.
+- If a site blocks the request (for example, it answers with an access-denied or too-many-requests error), do not try to get around the block. Slow down, keep the scan to a few pages, and tell the user which pages could not be read.
 - Do not pivot into repeated web-search scraping loops for the same URL.
 
 **Visual analysis** (requires Playwright: run `pip install playwright && playwright install chromium` first; every other part of the audit runs without it):
@@ -336,6 +337,8 @@ Structure reports as:
 ---
 
 ## Critical Rules
+
+These rules reflect the author's sources as of December 2025 (the dates in each rule). Google changes its guidance. Before you tell the user to add or remove markup because of one of these rules, check it against Google's current documentation, and say that you did or did not.
 
 1. **INP not FID** — FID was removed September 9, 2024. The sole interactivity metric is INP (Interaction to Next Paint). Never reference FID.
 2. **FAQ schema is restricted** — FAQPage schema is limited to government and healthcare authority sites only (August 2023). Do NOT recommend for commercial sites.

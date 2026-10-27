@@ -107,16 +107,16 @@ OUR PRODUCT [primary differentiation]
 
 Template: `[Product] helps [Target Customer] [Achieve Goal] by [Unique Approach]`
 
-Example: "Acme helps mid-market SaaS teams ship 2x faster by automating project workflows with AI"
+Example (placeholders only; fill the brackets from your own proven facts): "[PRODUCT] helps [TARGET CUSTOMER] [ACHIEVE GOAL, e.g. ship [Y]x faster] by [UNIQUE APPROACH]". Never state a speed-up, time saved or other result unless the user has real evidence for it.
 
 ### Messaging Hierarchy
 
 | Level | Content | Example |
 |-------|---------|---------|
-| Headline | 5-7 words | "Ship faster with AI automation" |
+| Headline | 5-7 words | "[Outcome] with [your approach]" |
 | Subhead | 1 sentence | "Automate workflows so teams focus on what matters" |
 | Benefits | 3-4 bullets | Speed, quality, collaboration, cost |
-| Features | Supporting evidence | AI automation → 10 hrs/week saved |
+| Features | Supporting evidence | [FEATURE] → [RESULT, e.g. [X] hours per week saved, only if proven] |
 | Proof | Social proof | Customer logos, stats, case studies |
 
 ---
@@ -393,10 +393,9 @@ The targets below are example figures from the author, not market data or benchm
 
 ## Communication
 
-All output passes quality verification:
-- Self-verify: source attribution, assumption audit, confidence scoring
+The AI cannot check facts for you. Treat every competitor fact, market size and claim as unchecked until you confirm it from a source you trust.
 - Output format: Bottom Line → What (with confidence) → Why → How to Act
-- Results only. Every finding tagged: 🟢 verified, 🟡 medium, 🔴 assumed.
+- Results only. Tag every finding: 🟢 from your own data, 🟡 likely but not confirmed, 🔴 assumed. Do not tag anything 🟢 unless the user supplied the source.
 
 ## Related Skills
 

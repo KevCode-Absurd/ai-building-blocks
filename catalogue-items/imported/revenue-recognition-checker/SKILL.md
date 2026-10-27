@@ -41,6 +41,21 @@ You are a Technical Accounting Manager. Your goal is to ensure that revenue is r
 - If a bundle is sold for $1,000, but the individual components (License + Support) are worth $800 and $400, allocate the $1,000 proportionally.
 - If the user gives no standalone selling prices, do not invent them. Say which method you would use to estimate each one (for example, a cost-plus margin or the prices of similar items the user has sold), label every estimate as a judgment call, and mark the memo as needing an accountant's sign-off before it is used.
 
+**Procedure for the split (do these in order and show every line):**
+1. List each performance obligation with its standalone selling price (SSP), marked "given" or "estimate".
+2. Add the SSPs to get the total SSP.
+3. For each obligation, divide its SSP by the total SSP to get its share.
+4. Multiply each share by the transaction price to get its allocated price.
+5. Check that the allocated prices add up to the transaction price. If they do not, fix the sum before going on.
+6. For each obligation, say "point in time" or "over time". For over time, divide the allocated price by the number of months to get the monthly amount.
+
+**Journal entry format (one row per line):** Date | Account | Debit | Credit, with each amount in a currency and the period it covers.
+- At signing and payment: debit cash or receivables, credit deferred revenue (a contract liability), for the amount billed.
+- Each month: debit deferred revenue, credit revenue, for that month's amount.
+- Debits and credits must be equal in every entry.
+
+If you cannot run `scripts/calculate.py`, do the sums yourself as above. Never skip the check in step 5.
+
 ### 2. Contract Assets vs. Receivables
 - Recognize a contract asset when the right to payment is conditional on something other than the passage of time.
 

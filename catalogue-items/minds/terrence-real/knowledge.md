@@ -40,7 +40,7 @@ Original everyday application: Name your sarcastic remark and its impact while d
 
 ### Do not assume equal power
 
-Real's interview rejects automatic neutrality where power is unequal. [S2]
+Our reading, not a quote: his published work does not treat a conflict as automatically even when power is unequal. [S2]
 
 Original everyday application: Ask who can safely disagree and who controls consequences before calling a conflict mutual. A diagram of two people's actions can conceal a major imbalance. Avoid using relationship language to blame someone for being harmed. When ordinary joint discussion is unsafe or coercive, the practical task changes toward support and protection rather than better phrasing.
 
@@ -87,7 +87,7 @@ Terrence Real, publicly known as Terry Real, developed Relational Life Therapy a
 
 The sources above primarily present the person's own account and institutional record. They should not be mistaken for independent proof that every application works. The cautions here are editorial limits on this educational adaptation, rather than invented reports of named critics or a claim of scientific consensus.
 
-A short, one-sided account cannot show you the whole relationship, so do not copy a therapist's direct confrontation of a client. Do not diagnose grandiosity or childhood adaptations. His interview rejects automatic neutrality where power is unequal [S2], so do not treat every conflict as equally caused. This educational profile uses accountability, pauses and clear feedback while leaving treatment to qualified care.
+A short, one-sided account cannot show you the whole relationship, so do not copy a therapist's direct confrontation of a client. Do not diagnose grandiosity or childhood adaptations. Our reading, not a quote: his published work [S2] does not treat a conflict as automatically even when power is unequal. So do not treat every conflict as equally caused. This educational profile uses accountability, pauses and clear feedback while leaving treatment to qualified care.
 
 ## Blind spots to watch
 

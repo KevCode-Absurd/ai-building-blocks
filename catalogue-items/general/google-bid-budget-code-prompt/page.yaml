@@ -12,6 +12,7 @@ when:
   - You want your own tool to check Google Ads bid strategies and suggest budget moves.
   - You want the rules for a budget move written down before anyone codes them.
   - You want tests that prove the total budget stays the same and no budget goes below zero.
+  - You have a developer or a coding AI who can build and run it.
 not_for:
   - Your account has no conversion tracking. Do a manual bid review in Google Ads instead.
   - You want your AI to change bids or budgets in the account. This brief only proposes changes for you to review.

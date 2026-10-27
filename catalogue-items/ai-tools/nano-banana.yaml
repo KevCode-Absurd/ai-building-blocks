@@ -48,15 +48,16 @@ blocks:
 alternatives: [midjourney, ideogram, flux, adobe-firefly]
 last_checked: 2026-10-21
 first_result:
-  - "Open the Gemini app at gemini.google.com and sign in. Nano Banana runs inside it."
+  - "Open the Gemini app at gemini.google.com and sign in. Nano Banana runs inside it. We did not confirm which menu picks the image tool, so ask for an image in your message and look for an image option near the message box if it answers in text."
   - "To edit, upload your own photo and say the one change you want."
   - "To make a set, upload one reference picture and describe each new scene."
   - "Compare each result to the original. Check the product, the colours and any text."
   - "Ask for one change at a time."
-  - "You end with one image per request, which you can download. Download format and resolution options were not verified, so check them in the app."
+  - "You end with one image per request, which you can download. Download file types and sizes were not verified, so check them in the app."
   - "Next: plan the set with the Single image ad planner, or use the Accurate product image ad maker when packaging must be exact."
 needs:
   - "A Google account."
+  - "API use (optional, for developers): the page we read lists API as a way in, but we did not check the sign-up steps, keys or prices. Use the app if you are not a developer."
   - "Your own photos, for edits."
   - "One clear change per request."
 not_verified:

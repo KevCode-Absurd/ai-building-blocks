@@ -26,9 +26,11 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
+When not to use: you want to design a process from scratch (design it first, then run this on the draft). You need pricing or strategy advice (use a pricing or strategy skill instead). You have one incident and no repeatable steps (use the [Root cause finder](https://useaiblocks.com/skills/root-cause-finder) on its own). The method is inspired by Taiichi Ohno's published ideas on production, and the step order is this library's own. It does not claim to be his method.
+
 ## What you need
-- **Your process, step by step, with who does each step** (required). This is what the run depends on most.
-- **The problem that keeps coming back, with the place and date it was seen** (required for step 2), for example "twelve orders shipped late on 3 March"
+- **Your process, step by step, with who does each step** (required). This is what the run depends on most. Paste one line per step in this shape: `step | who | work time | wait time`, for example `[STEP NAME] | [ROLE] | [MINUTES OF WORK] | [MINUTES WAITING]`. Rough times are fine. Leave a time blank if you do not know it, and it is marked `MISSING:`.
+- **The problem that keeps coming back, with the place and date it was seen** (required for step 2), for example "[NUMBER] orders shipped late on [DATE]"
 - **Times for work and for waiting on each step** (optional, rough numbers help)
 - **Logs, tickets, photos or notes** (optional, the whys need a record to check against)
 - **What was tried before** (optional)

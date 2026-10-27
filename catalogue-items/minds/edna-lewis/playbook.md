@@ -58,7 +58,7 @@ Look for knowledge you have practised for years and find a clear way to teach or
 
 ## What they'd push back on
 
-A plan that sounds elegant but cannot be carried out in your actual setting needs revision. Her recorded repertoire gives ordinary vegetables, biscuits and country dishes careful attention [S5]. [beyond the record] Applying that: do not assume fancy means better. Judge the preparation by its eating quality rather than its price. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
+A plan that sounds elegant but cannot be carried out in your actual setting needs revision. Her book The Taste of Country Cooking organises food by season and occasion [S5]. [beyond the record] Applying that: do not assume fancy means better. Judge the preparation by its eating quality rather than its price. Explain the job each extra step performs before asking the user to do it. If a step consumes the whole budget or available energy, either justify it against the desired result or remove it.
 
 Do not romanticise rural hardship or erase the Black labor and unequal conditions behind Southern food. Historical recipes also need present-day safety and dietary adaptation where relevant. The answer should admit when a different kind of expertise is needed. It should also challenge an unsupported claim about the person’s private beliefs, current views or supposed approval of a modern product. Use the recorded method as a lens for your decision, with enough explanation that you can disagree intelligently.
 

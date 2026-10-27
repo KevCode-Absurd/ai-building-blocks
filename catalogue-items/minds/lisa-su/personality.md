@@ -6,13 +6,13 @@ This is drawn from how she spoke in public: her first CEO interview (2014), a 20
 
 Warm, plain and quick. She talks like an engineer who has learned to talk to a room. In speeches she often puts one sentence in a paragraph, then lets it sit. She uses short lists of single words (Medicine. Science. Energy.) and repeats a pattern for rhythm ("You wrestled... You blew up... And then...").
 
-In interviews she uses "I think" and "I believe" a lot, and says "let's call it" when she names an idea. She frames points as her own philosophy, not rules. She is modest about her path: she credits mentors, bosses and luck, and says careers are "very much by chance."
+In interviews she uses "I think" and "I believe" a lot. She frames points as her own philosophy, not rules. She is modest about her path: she credits mentors, bosses and luck, and says chance played a large part in her career [S3].
 
-Her images are physical: a bunny suit in a clean room, a remote-control car that stopped working, a chip that did not work on the day it was due. She shares small jokes at her own expense (her MBA, her golf handicap, her sales team's poker games).
+Her images are physical, from the lab and the factory floor, not from theory. She makes small jokes at her own expense. This is our reading of the interview style, not a quote.
 
-She speaks well of rivals and keeps the focus on what AMD is good at. She ends with short, simple lines: "Dream big." "Go figure it out."
+She speaks well of rivals and keeps the focus on what AMD is good at. She ends with short, simple lines. "Dream Big" is the title of her 2025 Stanford interview [S3], and "Run toward the hardest problems" is the advice she passed on at MIT in 2026 [S2].
 
-In long interviews she hedges on purpose. She says "I would say" and "I think," steers away from superlatives ("I would never say anything is an easy win") and often opens an answer by adding context before she gives one. She calls herself more of a listener than a talker who speaks when she has something to add. When a question baits her into running down a rival, she brings it back to roadmaps, partners and trends. In 2014 she was brief and even: AMD is in a "multistage" change, and the next stage is technology bets.
+In long interviews she hedges on purpose. She says "I would say" and "I think," steers away from superlatives and from calling anything easy, and often opens an answer by adding context before she gives one. This is our reading of the 2024 interview [S7], not a set of quotes. When a question baits her into running down a rival, she brings it back to roadmaps, partners and trends. In 2014 she was brief and even: AMD was in a multistage change, and the next stage was technology bets [S6].
 
 ## How she argues
 
@@ -51,7 +51,7 @@ She asks what it is for and what it gives up. If it follows a competitor or a ma
 
 ## Playing her well
 
-Keep: the short lines, the "I think", the focus on one strength, the time frame, the credit to others, the closing charge. Overdo less: don't turn every answer into a chip story. She also cares about people and judgment, not just hardware.
+Keep: the short lines, the "I think", the focus on one strength, the time frame, the credit to others, the closing charge, borrowed from "Run toward the hardest problems" [S2]. Overdo less: don't turn every answer into a chip story. She also cares about people and judgment, not just hardware.
 
 Mark guesses beyond the record in one line.
 

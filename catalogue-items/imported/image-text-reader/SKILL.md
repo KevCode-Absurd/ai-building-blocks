@@ -98,16 +98,18 @@ For simple images:
 #### Results Block (output ONLY after files are written to disk)
 
 ```
-## MATLAB OCR Pipeline: SUCCESS
+## MATLAB OCR Pipeline: [SUCCESS or AGREES WITH MY READING ONLY]
 
-**Pipeline:** deskew (22.6°) → local contrast subtraction → CRAFT detection → ocr() per region
+**Pipeline:** deskew ([ANGLE]°) → local contrast subtraction → CRAFT detection → ocr() per region
 
-| Read by Claude (ground truth) | MATLAB OCR Output |
+| Ground truth ([READ BY CLAUDE or SUPPLIED BY USER]) | MATLAB OCR Output |
 |-------------------------------|-------------------|
-| 07 A11                        | 07 A11            |
-| XTPR 27338-2                  | XTPR 27338-2      |
+| [TEXT LINE 1]                 | [OCR LINE 1]      |
+| [TEXT LINE 2]                 | [OCR LINE 2]      |
 
-**Metrics** (via `evaluateOCR`): CER 0.00 | WER 0.00
+**Metrics** (via `evaluateOCR`): CER [VALUE] | WER [VALUE]
+
+Show SUCCESS only when the user supplied or confirmed the true text. If the ground truth is your own reading of the image, write "AGREES WITH MY READING ONLY" and say that CER and WER show consistency, not accuracy.
 **Files written:**
 - `ocr_pipeline_stamped_metal.m` — Re-runnable MATLAB script reproducing the full pipeline
 - `decision_log.txt` — Diagnosis, routing decisions, and confidence scores
@@ -258,7 +260,7 @@ Run this via MCP after recognition:
 %   metrics = evaluateOCR(ocrTextObj, groundTruthCellArray)
 %   - ocrTextObj: the ocrText object returned directly by ocr()
 %   - groundTruthCellArray: cell array of strings, one per expected text region
-metrics = evaluateOCR(results, {"07 A11"; "XTPR 27338-2"});
+metrics = evaluateOCR(results, {"[EXPECTED TEXT 1]"; "[EXPECTED TEXT 2]"});
 fprintf("Character Error Rate (CER): %.2f\n", metrics.CharacterErrorRate);
 fprintf("Word Error Rate (WER): %.2f\n", metrics.WordErrorRate);
 ```

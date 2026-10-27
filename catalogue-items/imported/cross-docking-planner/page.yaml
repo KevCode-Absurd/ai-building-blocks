@@ -29,14 +29,16 @@ you_get:
   - The cross-dock type that fits your loads
   - A flow and staging plan
   - Dock assignment rules
-  - Handling time and cost targets
+  - Handling time targets from your own data, marked needs your data where you gave none
 how_to_use:
   - Before you start, gather your lane volumes (pallets or cases a day, in and out), your number of dock doors, the size of your staging area and your time window from arrival to departure.
-  - Open Claude, ChatGPT or Gemini and paste in the skill text. The plan works as prose. The skill text also holds Python examples that need pandas, numpy, pulp and matplotlib. You can skip the code and ask for the plan in words.
+  - Open Claude, ChatGPT or Gemini and paste in the skill text. Ask for the plan in words. This chat-only route is the default. The skill text also holds optional Python examples that need pandas, numpy, pulp and matplotlib. Their figures are placeholders, so skip the code unless you can run it with your own data.
   - Describe your products, case or pallet size, and inbound and outbound volumes.
   - Add your dock doors, staging space, time window and any temperature or inspection needs.
+  - All targets and impact figures must come from your own lane data. Anything you do not provide is marked needs your data.
   - Answer any questions your AI asks. Say so if you do not know a figure.
   - Check the numbers in the plan against your own figures before you act on it. Sample figures in the skill, such as pallets per door and space per pallet, are placeholders. Swap in your own door throughput and pallet footprint. The result has a type pick, a door assignment table, a staging summary and handling rules.
+  - The door assignment split in the skill's code is a simplification. Check it against your real lane volumes before you adopt any door plan.
   - Take the dock assignment rules to your yard or warehouse system team to set up.
 next: [warehouse-layout-planner, warehouse-slot-assigner]
 output_sample:
@@ -47,13 +49,11 @@ output_sample:
     - Temperature or inspection needs (optional)
     - Your current WMS or TMS setup (optional)
   output:
-    - name: Executive Summary
-      contains: Daily volume, dwell time, cross-dock rate and door use against targets, with one main recommendation.
-    - name: Performance Metrics
-      contains: A table of each metric with its current value, target and status.
-    - name: Operational Analysis
-      contains: Dwell time by destination, root causes of long waits, and door use for inbound and outbound.
-    - name: Recommendations
-      contains: Numbered fixes such as synchronized scheduling and better door scheduling, each with its expected impact.
-    - name: Expected Results
-      contains: A table of current against target values for the next six months.
+    - name: Cross-dock type
+      contains: Pre-sorted direct transfer, consolidation or break-bulk, with the reason it fits your loads.
+    - name: Door assignments
+      contains: A table of each door, its direction, the lanes or destinations it serves and the volume it carries.
+    - name: Staging summary
+      contains: The space needed, where it sits and the dwell-time target you set.
+    - name: Flow and handling rules
+      contains: How freight moves from inbound door to outbound door, plus the checks to run on your own lane data. Any figure you did not give is marked needs your data.

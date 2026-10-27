@@ -16,7 +16,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 ## Goal
 Share due tasks and their threads. Get checked follow-up drafts in your voice, ready for review.
 
-The result: one follow-up email draft for each due task, with To, CC, subject, body, the linked task ID and thread ID, and the send status. A second pass checks each draft against your voice and shows every fix as before and after. Nothing is sent until you say yes.
+The result: one follow-up email draft for each due task, with To, CC, subject, body, the linked task ID and thread ID, and the send status. A second pass checks each draft against your voice and shows every fix as before and after. Nothing is sent until you say yes. This differs from Turn meetings into owned actions: it starts from tasks that are already due and their email threads, not from meeting notes, and it ends in drafts that match your voice.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -44,7 +44,7 @@ How to start:
 
 ## What you need for this job
 
-This list replaces the general one above. You do not need a buyer brief or a brand brain.
+This list replaces the general one above, including its "Your question" line. You do not need a question, a buyer brief or a brand brain. Voice notes or past emails stand in for a brand brain.
 - **The due task list** (required): each task with its due date, owner and status, as an export or paste.
 - **The matching email threads** (required): the thread for each task, with the recipient.
 - **Voice notes or a few past emails** (optional): step 2 checks the drafts against them. Without them it checks clarity and tone only.
@@ -67,7 +67,7 @@ Not for:
 
 ## Run in order
 
-1. Read skills/executive-due-task-drafts/SKILL.md. Take the tasks due in your date window from the task list or export, and match each to its email thread and recipient. Write one follow-up email draft per need, with To, CC, subject and body. Link each draft to its task ID and thread ID, list missing facts, and keep the send status clear. Save the drafts, the draft ledger and the missing facts with source references. Hands the follow-up drafts to step 2. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result.
+1. Read skills/executive-due-task-drafts/SKILL.md. Take the tasks due in your date window from the task list or export. If no window was given, ask once. If there is still none, use tasks that are overdue or due today and say so. Skip any task whose status is done, completed, cancelled or closed. Match each to its email thread and recipient. If a task has no thread ID, do not guess a thread: list it under missing facts with `MISSING: thread` and write no draft for it. Write one follow-up email draft per need, with To, CC, subject and body. Link each draft to its task ID and thread ID, list missing facts, and keep the send status clear. Save the drafts, the draft ledger and the missing facts with source references. Hands the follow-up drafts to step 2. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result.
 
 2. Read skills/draft-brand-voice-checker/SKILL.md. Check each follow-up email from step 1 against your voice notes or a few of your past emails. Flag each off-voice line with a before and after fix, and save the edited drafts. Facts, recipients and dates stay as step 1 set them. Save the result with source references. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result.
 
@@ -89,5 +89,5 @@ Include source coverage, unresolved findings, missing facts and one next action.
 
 ## After this (for this job)
 
-Use this first. Read each edited draft, fix any fact, and send the ones you approve yourself. Nothing here sends them. Then update the task list with what you sent. The general suggestions above are for writing new outreach, not follow-ups on existing tasks.
+Use this section, not the shared "After this" list near the top. Read each edited draft, fix any fact, and send the ones you approve yourself. Nothing here sends them. Then update the task list with what you sent.
 

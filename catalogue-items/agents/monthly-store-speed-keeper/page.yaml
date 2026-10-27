@@ -16,7 +16,7 @@ when:
   - A sale is coming and you want the store checked beforehand.
 not_for:
   - "You want a one-time speed check with no monthly comparison: use the Store speed report reader on its own."
-  - "Your store already passes everywhere and rarely changes: run this every second or third month instead."
+  - "Your store already passes everywhere and rarely changes: skip a month when last month said no work, nothing changed and no sale is due, then run it again the month after."
   - "You need someone to edit your live theme or remove an app: ask a developer, because this agent only writes code for a copy of your theme."
 you_give:
   - PageSpeed results for the homepage, a collection page and a product page, mobile and desktop. Include the real-user (field) score, the LCP, INP and CLS bands, the lab score and its main findings

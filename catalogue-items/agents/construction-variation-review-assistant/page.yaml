@@ -30,7 +30,7 @@ not_for:
 you_give:
   - The variation request, with its version and date
   - The signed contract, with its change, notice and approval clauses
-  - The priced scope, such as the bill of quantities or rate schedule
+  - The priced scope, such as the bill of quantities or rate schedule, as a PDF or spreadsheet (the cost check needs the priced lines)
   - Evidence for any time impact, such as a program or delay notice
   - Your delegated approval rules, showing who may approve what amount
   - The contract form and the country or state it applies in
@@ -47,6 +47,8 @@ you_get:
 
 how_to_use:
   - Download the agent pack and add it to Claude, ChatGPT or Gemini. Add these five pieces from the pack: Prepare a construction variation decision, Plain-words contract summary, Invoice totals checker, Stakeholder update writer and Executive action register keeper. If one is missing, stop and ask for it.
+  - The agent can only call its pieces once they are installed. With no file access it prints the tables and the record in the chat, and the comparison with the last review then needs you to paste that record.
+  - It works on any contract text you supply. It has not been tested against a particular standard form or place, and it quotes clauses only from your own contract.
   - Say if this is a first run. If not, paste your last review and its record.
   - Attach the variation request, the signed contract and the priced scope. Write your approval rules in two or three lines.
   - Read "Changed since last version" first. Check each change against the new request.

@@ -45,6 +45,7 @@ output_sample:
     - An AI that can run code and open your file
     - Python with pandas installed
     - great_expectations for the final checks (optional)
+    - fuzzywuzzy, only if you want near-duplicate matching
   output:
     - name: Data profile
       contains: Blank cells per column, duplicate rows and columns with mixed types, found before any change is made.

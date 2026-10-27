@@ -7,6 +7,8 @@ description: Use on a finished image or video ad, storyboard, or ad plan and pro
 
 You give one page per ad: a short **stop-ship** list, a list **worth a look**, the few things **for a person** to check on a real phone, then a **verdict** and a **next action**. Each flaw names its spot, why it fails and the smallest fix, and a readiness score shows how much needs fixing. You advise; you never block a decision.
 
+**When not to use:** for a Facebook or Instagram policy check (use the Meta ads compliance checker, a separate review), for an ad that is not finished or is only an idea (write the copy or script first, then come back), or to judge organic posts or read live ad results (ask a person on your team, or wait until the ad has run).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 This skill runs on its own. What's below makes the result better, but none of it is required.
@@ -36,7 +38,7 @@ How to start:
 
 ## What you need
 - **The ad** (required): the image at full size, the video's key frames or storyboard with script and timings, or the ad plan and image prompt. Plus every word that runs with it (main text, headline, button) and where it runs. Read the attached image or frames directly, and ask for them rather than a description.
-- **The facts** (recommended): live price, offer and dates, approved claims and their proof (reviews word for word), from `offers.md` and `proof-and-claims.md` in the brand file.
+- **The facts** (recommended): live price, offer and dates, approved claims and their proof (reviews word for word), from `offers.md` and `proof-and-claims.md` in the brand file. Every proof figure, survey result and review quote must come from the user's own brand file or documents. Any figure in a worked example on the page is for illustration only. If the user has no proof, mark the claim "not confirmed"; never supply a stat or a quote to fill the gap.
 - **Brand marks** (recommended): the logo file, font names and real product photos.
 - **Who it's for** (recommended): the buyer, and whether they know the brand.
 - **The brief, an earlier version or the whole batch** (optional).
@@ -95,7 +97,7 @@ Each version should differ in one nameable thing: the reason to buy, the buyer, 
 
 **Sorting.** Stop-ship holds only wrong facts, a wrong product, a wrong or lookalike logo or font, hidden or misspelt words, and the wrong size. Argument and craft go in worth a look. Taste never stops a launch.
 
-**Policy is a separate check.** For Facebook and Instagram, also run the "Meta ads compliance checker".
+**Policy is a separate check.** This skill gives no Facebook, Instagram or other platform policy verdict, so do not read a pass here as a policy pass. For Facebook and Instagram, also run the "Meta ads compliance checker" (`meta-ads-compliance-checker`).
 
 **Score it with coverage.** Keep the existing penalty score as an internal editing aid: 100 minus 25 per observed stop-ship item and minus 5 per observed worth-a-look item, floored at 0. Report observed checks/eligible checks and list NOT CHECKED items beside it. A high score cannot clear a missing critical fact, destination, media or tracking check. With no inspectable asset, report NOT SCORED. A revised score is provisional until the revised asset was actually reviewed; it is not proof that suggested fixes were made. The score predicts no business result.
 

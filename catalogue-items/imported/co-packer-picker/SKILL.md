@@ -138,7 +138,7 @@ def score_copacker_candidates(candidates_df, weights):
     return candidates_df.sort_values('rank')
 
 
-# Example usage
+# Example usage. The names and scores are placeholders, not real co-packers. Score each real candidate from your own audit and quotes.
 candidates = pd.DataFrame({
     'copacker_name': ['CoPackA', 'CoPackB', 'CoPackC'],
     'quality_capability': [9, 8, 7],
@@ -355,8 +355,11 @@ print(f"Cost per Unit: ${cost_analysis['cost_per_unit']:.2f}")
 ### Demand Planning and Forecasting
 
 ```python
+import numpy as np
+
+
 def plan_copacker_orders(demand_forecast, lead_time_weeks, safety_stock_weeks,
-                          moq, lot_size):
+                          moq, lot_size, starting_inventory):
     """
     Plan co-packer orders based on demand forecast
 
@@ -366,22 +369,27 @@ def plan_copacker_orders(demand_forecast, lead_time_weeks, safety_stock_weeks,
     - safety_stock_weeks: weeks of safety stock
     - moq: minimum order quantity
     - lot_size: production lot size (for rounding)
+    - starting_inventory: units on hand today (from the user)
 
     Returns:
     - order plan with timing and quantities
     """
 
     order_plan = []
+    on_hand = starting_inventory
+    arrivals = {}  # week -> units arriving
 
     for week, demand in enumerate(demand_forecast):
+        on_hand += arrivals.get(week, 0)
         # Calculate order point
         lead_time_demand = sum(demand_forecast[week:week+lead_time_weeks])
         safety_stock = demand * safety_stock_weeks
 
         order_point = lead_time_demand + safety_stock
 
-        # Current inventory
-        current_inventory = calculate_current_inventory(week)
+        # Inventory position: on hand plus units already ordered and not yet arrived
+        in_transit = sum(q for w, q in arrivals.items() if w > week)
+        current_inventory = on_hand + in_transit
 
         # Order if below order point
         if current_inventory < order_point:
@@ -402,6 +410,9 @@ def plan_copacker_orders(demand_forecast, lead_time_weeks, safety_stock_weeks,
                 'inventory_before': current_inventory,
                 'inventory_after': current_inventory + order_qty
             })
+            arrivals[week + lead_time_weeks] = arrivals.get(week + lead_time_weeks, 0) + order_qty
+
+        on_hand -= demand
 
     return order_plan
 ```
@@ -544,10 +555,13 @@ def make_vs_buy_analysis(internal_costs, copacker_costs, annual_volume):
     # Break-even volume
     if internal_variable < copacker_variable:
         # Internal has lower variable cost
-        breakeven = internal_fixed / (copacker_variable - internal_variable)
-    else:
+        breakeven = (internal_fixed - copacker_fixed) / (copacker_variable - internal_variable)
+    elif internal_variable > copacker_variable:
         # Co-packer has lower variable cost
         breakeven = (copacker_fixed - internal_fixed) / (internal_variable - copacker_variable)
+    else:
+        # Same variable cost: the cheaper fixed cost always wins, so there is no break-even point
+        breakeven = 0
 
     recommendation = 'Make Internal' if internal_total < copacker_total else 'Use Co-Packer'
 
@@ -563,7 +577,7 @@ def make_vs_buy_analysis(internal_costs, copacker_costs, annual_volume):
     }
 
 
-# Example
+# Example. Every number below is a placeholder. Replace each one with the user's own costs and the co-packer's real quote.
 analysis = make_vs_buy_analysis(
     internal_costs={
         'fixed_costs_annual': 500000,  # Plant overhead, equipment, staff
@@ -977,41 +991,34 @@ import statsmodels.api as sm
 
 ### Co-Packer Evaluation Report
 
+(Every value below is a placeholder to show the shape. Fill each one from the user's own audit, quotes and records. Never copy a placeholder as a result.)
+
 **Executive Summary:**
-- Co-Packer: ABC Co-Packing Inc.
-- Location: Memphis, TN
-- Products: Snack bars, granola
-- Evaluation Date: January 2025
-- Overall Score: 85/100 (Grade: B)
-- Recommendation: Approved for partnership
+- Co-Packer: [NAME]
+- Location: [CITY, REGION]
+- Products: [PRODUCTS]
+- Evaluation Date: [DATE]
+- Overall Score: [SCORE]/100 (Grade: [GRADE])
+- Recommendation: [Approve / Approve with conditions / Do not approve, and why]
 
 **Scoring Detail:**
 
 | Category | Score | Weight | Weighted | Target | Status |
 |----------|-------|--------|----------|--------|--------|
-| Quality | 90 | 35% | 31.5 | >85 | ✓ |
-| Delivery | 85 | 25% | 21.25 | >90 | ⚠ |
-| Cost | 80 | 25% | 20.0 | >80 | ✓ |
-| Service | 82 | 15% | 12.3 | >80 | ✓ |
-| **Total** | **85** | **100%** | **85** | **>80** | **✓** |
+| Quality | [SCORE] | [WEIGHT %] | [N] | [TARGET] | [Pass / Warning] |
+| Delivery | [SCORE] | [WEIGHT %] | [N] | [TARGET] | [Pass / Warning] |
+| Cost | [SCORE] | [WEIGHT %] | [N] | [TARGET] | [Pass / Warning] |
+| Service | [SCORE] | [WEIGHT %] | [N] | [TARGET] | [Pass / Warning] |
+| **Total** | **[SCORE]** | **100%** | **[N]** | **[TARGET]** | **[Pass / Warning]** |
 
 **Strengths:**
-- Excellent quality track record (0.3% defect rate)
-- SQF Level 3 certified
-- Modern equipment and technology
-- Competitive pricing
-- Strong technical expertise
+- [Each strength, with the evidence it came from]
 
 **Weaknesses:**
-- Delivery performance below target (85% vs. 90%)
-- Limited surge capacity
-- Higher MOQs than desired
+- [Each weakness, with the evidence it came from]
 
 **Recommendations:**
-1. Negotiate improved lead times and on-time delivery
-2. Request MOQ reduction for initial SKUs
-3. Establish expedite process for urgent orders
-4. Proceed with pilot production (10,000 units)
+1. [Numbered next steps, such as lead-time terms, a lower minimum order, an expedite process and a small pilot run]
 
 ---
 

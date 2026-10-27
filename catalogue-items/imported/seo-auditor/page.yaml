@@ -33,12 +33,13 @@ how_to_use:
   - "Before you start: a full run takes a while. The PageSpeed check works without a key. Only scan a site you own or have permission to scan."
   - Install Python on your computer, and open an AI that can run code and reach the web. If your AI cannot, paste in your page's text and ask for the checks it can do from that. It will say which checks it could not run.
   - Every API key is optional. Google PageSpeed works without one but is rate-limited. The Search Console checks need a Google service-account file with Search Console access. The Knowledge Graph check needs a Google key. The GitHub checks need a GitHub token or a signed-in gh tool (read-only is enough). The screenshot checks need Playwright installed.
-  - Download the skill folder. If you have API keys, copy .env.example to .env and add them.
+  - Download the skill folder, open a terminal in it and run pip install requests beautifulsoup4. If you have API keys, copy .env.example to .env and add them.
   - "Tell your AI: perform seo analysis on, then your page link."
-  - Wait for the run. Then open FULL-AUDIT-REPORT.md and check the score and the Critical items.
+  - Wait for the run. The two files are saved in the folder your AI is running from, so open that folder to find them. Then open FULL-AUDIT-REPORT.md and check the score and the Critical items.
+  - The skill's SEO rules, such as dropping FID, limiting FAQ markup and applying E-E-A-T to all queries, reflect its author's sources as of December 2025. Check them against current Google guidance before you act on them.
   - Open ACTION-PLAN.md and hand it to your developer or writer.
   - To check one area only, ask for it, such as seo schema with your link.
-  - Next, fix the Critical items first. Then run the same audit on the same page and compare the score to see what moved.
+  - Next, fix the Critical items first. If one is about structured data, ask for seo schema with your link to get fixed markup. Then run the same audit on the same page and compare the score to see what moved.
 output_sample:
   input:
     - Your site or page link

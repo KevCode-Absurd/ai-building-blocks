@@ -42,7 +42,7 @@ how_to_use:
   - Paste the message and your organisation's rules for that case. Add bill or claim figures without identifiers.
   - 'Say: "Check for emergencies and clinical questions first. Then draft my reply. Use only the facts I gave. Put MISSING where a fact is needed."'
   - Read the safety screen first. If it flags an emergency or a clinical question, follow your own steps before you send any reply.
-  - A staff member checks every fact and sends the reply. File the record note with no identifiers.
+  - A staff member checks every fact and sends the reply. File the record note with no identifiers. Name who owns the case afterwards, such as your record system lead or compliance lead.
 how_it_works:
   - title: Screen for safety
     text: Before anything else, it looks for emergency signs, thoughts of self-harm, clinical questions, legal threats and injuries.

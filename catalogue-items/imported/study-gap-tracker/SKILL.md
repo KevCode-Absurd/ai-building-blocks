@@ -12,6 +12,8 @@ status: stable
 
 Maintain a prioritized, evidence-based log of topics where the learner consistently struggles. Drives which skills to activate next and prevents ignoring recurring problems in favor of always-new content.
 
+> The skills named below (`check-understanding`, `challenge-generator`, `misconception-detector`, `lesson-plan`, `revision-mode`, `teach-concept`, `socratic-mode`) are optional skills from the original collection. They are not in this catalogue. If you do not have one, ask your AI in plain words for the same thing: practice questions, a re-explanation, or a set of "why" questions.
+
 # Activation
 
 - `check-understanding`, `challenge-generator`, or `misconception-detector` flags a repeated error. Returning learner with prior weak areas. Planning a study/revision session. Learner reports a covered topic is still unclear.
@@ -28,12 +30,12 @@ Score each weak area 1–5: `score = min(5, recurrence × type_weight + stalenes
 - Type weights: Surface=1, Structural=2, Deep=3
 - Staleness: +1 if not addressed in 3+ sessions
 
-Intervention selection: Score 1–2 → `challenge-generator`. Score 3–4 → `teach-concept` re-teach. Score 5 → `socratic-mode` then `misconception-detector`.
+Intervention selection: Score 1–2 → more practice questions (`challenge-generator`). Score 3–4 → re-teach the topic (`teach-concept`). Score 5 → question the learner on why, then look for a wrong idea behind the error (`socratic-mode`, then `misconception-detector`). Without those skills, ask for the same thing in plain words.
 
 # Workflow
 
 1. **Ingest** — New error: add to log (recurrence=1) or increment existing entry + update `last_seen`.
-2. **Score** — Compute severity from recurrence, type, staleness, and self-reported confidence.
+2. **Score** — Compute severity from recurrence, type and staleness only, using the formula above. Self-reported confidence is noted but does not change the score.
 3. **Triage** — Rank by score. Surface top 2 for current session. Max 2 weak areas per session.
 4. **Select Intervention** — Match score to appropriate skill (see above).
 5. **Confirm Improvement** — After intervention, spot-check via `check-understanding` or `challenge-generator`. 2 consecutive clean passes → "resolving." 3 consecutive → "resolved" and archived. Regression after resolution → re-open.

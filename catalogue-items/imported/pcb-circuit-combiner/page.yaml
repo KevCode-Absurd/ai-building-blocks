@@ -2,15 +2,16 @@ thinking: medium
 thinking_why: It joins parts with a set method.
 new_slug: pcb-circuit-combiner
 name: PCB circuit combiner
-summary: Join RF PCB parts into one circuit, add loads at ports and save a Touchstone S-parameter file. Use it as a PCB circuit combiner in MATLAB.
+summary: Join RF PCB parts into one circuit in MATLAB, add loads at ports and save a Touchstone S-parameter file. Needs MATLAB and the RF PCB Toolbox.
 job: build-software
 headline: PCB circuit combiner
 subhead: Several RF circuit board parts joined end to end into one circuit, with extra components added and results saved as a standard Touchstone file. It runs in MATLAB.
 explain: |
   Several RF circuit board parts joined end to end into one circuit, with extra components added and results saved as a standard Touchstone file. It runs in MATLAB.
 
-  It uses pcbcascade to chain parts like filters and couplers, and pcbElement to wrap them as circuit elements for RF Toolbox. You can load internal ports with parts such as varactors or terminators. The combined response is written out as S-parameters with rfwrite, and the data can move on to signal integrity eye diagram analysis. It expects each part to be designed and checked first. You need MATLAB with the RF PCB Toolbox. 
-  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
+  It uses pcbcascade to chain parts like filters and couplers, and pcbElement to wrap them as circuit elements for RF Toolbox. You can load internal ports with parts such as varactors or terminators. The combined response is written out as S-parameters with rfwrite, and the data can move on to signal integrity eye diagram analysis. It expects each part to be designed and checked first. You need MATLAB with the RF PCB Toolbox.
+
+  Licence: this is MathWorks' skill, copied unchanged. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause, plus a rule that you may use it only with MathWorks products such as MATLAB. The skill file and its manifest link a different MathWorks licence page. Follow LICENSE.md.
 when:
   - You must join a filter and coupler into one chain.
   - You need S-parameters in a file for another tool.
@@ -21,14 +22,14 @@ not_for:
   - "You want EM analysis of one component: use a single-part analysis step in MATLAB, not this skill."
   - "You have no MATLAB with the RF PCB Toolbox, which are paid licensed products: ask an RF engineer or use a free circuit simulator."
 you_give:
-  - Designed PCB components in MATLAB
+  - Designed PCB components in MATLAB, each as a pcbComponent object (or a design object such as filterStub) with its board material, height and conductor already set. Parts you cascade must share the same material, height and conductor.
   - Order they connect in
   - Loads to add at ports (optional)
   - Frequency range
 you_get:
   - Cascaded circuit
   - Added load elements
-  - Touchstone S-parameter file
+  - Touchstone S-parameter file. You choose the file name. MATLAB sets the ending from the port count (.s2p for two ports, .s4p for four). You choose the frequency unit (Hz, kHz, MHz or GHz) and the format (MA, DB or RI).
   - Link to eye diagram analysis
 how_to_use:
   - Check you have MATLAB and the RF PCB Toolbox. Both are paid products and are needed to run this.
@@ -54,6 +55,6 @@ output_sample:
     - name: Loaded ports
       contains: Internal ports loaded with resistors, capacitors or Touchstone parts such as varactors.
     - name: Touchstone file
-      contains: The combined S-parameters saved with rfwrite, ready for other tools.
+      contains: The combined S-parameters saved with rfwrite, ready for other tools. File name, frequency unit and number format are set in the call, so check them against what the next tool expects.
     - name: Eye diagram link
       contains: A bridge from the S-parameters to signal integrity eye diagram analysis.

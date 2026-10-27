@@ -8,6 +8,10 @@ description: "Use when the user asks how to build with OpenAI products or APIs, 
 
 Provide authoritative, current guidance from OpenAI developer docs using the developers.openai.com MCP server. "Docs MCP" means `mcp__openaiDeveloperDocs__search_openai_docs` and `mcp__openaiDeveloperDocs__fetch_openai_doc`; for API reference, schema, parameter, or required-field questions, also use `mcp__openaiDeveloperDocs__get_openapi_spec` when available. Official-domain web search is fallback after those tools are unavailable or unhelpful. Broad Codex questions use the manual helper before Docs MCP. This skill also owns model selection, API model migration, and prompt-upgrade guidance.
 
+## Answer format (added by AI Blocks)
+
+Answer in this order: the answer, the links used, a model recommendation (only if asked), an API check (only for API questions), and upgrade steps (only for migrations). Keep it under about 300 words unless the person asks for more. Ask the person before you install a docs server or run a command that needs new permissions.
+
 ## Workflow Configuration
 
 ### Source Priority

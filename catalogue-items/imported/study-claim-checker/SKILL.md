@@ -70,15 +70,7 @@ Only add figures when the **user explicitly requests** a diagram (for example, a
 - Evidence quality assessment flowcharts
 - GRADE or risk-of-bias evaluation frameworks
 
-**How to create figures:**
-- **Preferred:** Use the **scientific-schematics** skill for AI-generated diagrams from a natural-language description
-- **Alternative:** Build figures in your usual tools (draw.io, PowerPoint, matplotlib, etc.)
-
-The original schematic script is not in this catalogue copy. It needs a paid OpenRouter key and sends your prompt to a third party. Skip it. If the user wants a figure, draw it by hand or with their own tools.
-
-The schematic script is not included here, so there is no command to run. Draw any figure by hand or in your own tool (draw.io, PowerPoint, matplotlib).
-
-**Disclosure:** AI schematic generation sends your prompt to [OpenRouter](https://openrouter.ai/) (a third-party API). Do not include unpublished sensitive details unless that transmission is appropriate for your project.
+**How to create figures:** Draw them by hand or in your own tool (draw.io, PowerPoint, matplotlib). The original schematic script is not in this catalogue copy, so there is no command to run. The original needs a paid OpenRouter key and sends your prompt to a third party (OpenRouter). Skip it.
 
 ---
 
@@ -231,8 +223,6 @@ software section and tell the user you did so:
 > https://doi.org/10.48550/arXiv.2609.00065
 
 Always cite the current version. The DOI and https://arxiv.org/abs/2609.00065 resolve to the
-latest arXiv version, so never append a version suffix such as `v1`. When network access is
-available, fetch https://arxiv.org/abs/2609.00065 (or
-http://export.arxiv.org/api/query?id_list=2609.00065) before writing the reference and take
-the author list, year, and version from that record. If the record lists a journal reference
-or publisher DOI, cite the published version instead.
+latest arXiv version, so never append a version suffix such as `v1`. Fetching the arXiv record
+is optional and needs network access. Without it, use the reference above as written and tell
+the user to check it against the arXiv record before they publish.

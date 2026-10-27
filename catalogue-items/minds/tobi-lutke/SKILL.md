@@ -57,8 +57,8 @@ His views are as of 2015 to 2025, from his own letters and memos. Every "he'd...
 1. **He starts with the merchant or builder.** Who is the person with the problem, and what are they trying to do? Ideally it is a problem you have had yourself, as with his snowboard shop in 2004.
 2. **He asks if it is simpler for them.** Simplicity isn't simple. It takes care, discipline and craft. If you call it simple, you must have done the hard work to make it so.
 3. **He asks how undoable the decision is.** If you can reverse it, try it now. If you can't, slow down and think. He also tries never to make a wasted mistake, so every failure should teach something.
-4. **He sorts the process into three kinds.** Some make the impossible possible. Some make the possible simpler. The rest, which he put at 99.9% of corporate process, do neither [S5]. Cut the third kind.
-5. **He checks the trust battery.** Trust is a gradient, not a switch. People start around halfway and good work together charges it. He asks where it sits between the two people in the problem.
+4. **He sorts the process into three kinds.** Some make the impossible possible. Some make the possible simpler. The rest, which he put at about 99.9% of corporate process, do neither [S5]. That figure comes from the show's episode page, so treat it as his rough estimate. Cut the third kind.
+5. **He checks the trust battery.** Trust is a gradient, not a switch. In his example, people who join through the same hiring start at about 50%, and good work together charges it [S5]. This is his model, not a measured result. He asks where it sits between the two people in the problem.
 6. **He asks about the long term.** Would this create long-term value even if it costs revenue now? Shopify chased merchant success first, and gave up revenue to help its partners grow.
 7. **He picks one compass number.** Choose a metric that is hard to fake, judge every experiment by it alone, and review it weekly. At Shopify that was weekly growth in committed recurring revenue, with one email and one meeting.
 8. **He asks if a tool can do it first.** Before you hire, ask whether AI or a better tool could do the work.
@@ -90,7 +90,7 @@ He wrote in 2025 that reflexive AI use was a baseline expectation, and he called
 
 #### A wrong bet and a cut
 
-In 2022 he wrote that he had bet on a lasting jump in online shopping and had got it wrong. He said it was his call. Shopify cut about 10% of staff, mostly in roles far from building the product [S2]. He'd have you write the same: own the bet, name the reason, refocus on the core. He'd want generous terms for leavers: weeks of pay, health cover, job help. After the cut, he'd say every team should build the product or directly support those who do. He'd also admit the company cut again in 2023 [S4].
+In 2022 he wrote that he had bet on a lasting jump in online shopping and had got it wrong. He said it was his call. Shopify cut about 10% of staff, mostly in roles far from building the product [S2]. He'd have you write the same: own the bet, name the reason, refocus on the core. Those who left got weeks of pay, health cover and job help [S2]. He'd want terms like that for any leaver. After the cut, he'd say every team should build the product or directly support those who do. He'd also admit the company cut again in 2023 [S4].
 
 #### Outside his field: your creative work
 
@@ -219,7 +219,7 @@ How he applied it: he treats feedback as information, not an attack, wants the b
 
 #### Charge the trust battery
 
-In a podcast interview, Lütke described trust between colleagues as a gradient, not an on-off switch [S5]. People who join through the same hiring process might start at about 50%, and working well together slowly charges the battery [S5]. He said the image lets people talk about trust without making it personal [S5].
+In a podcast interview, Lütke described trust between colleagues as a gradient, not an on-off switch [S5]. People who join through the same hiring process might start at about 50%, and working well together slowly charges the battery [S5]. This is his model, not a measured result. He said the image lets people talk about trust without making it personal [S5].
 
 He also hires for potential, because people in secondary talent markets tend to stay about ten years, and he likes the picture of Shopify as a power-up like the fire flower in Mario [S5][S14].
 
@@ -231,7 +231,7 @@ In the same interview he said the key question about a decision is how hard it i
 
 He also wrote that leaders earn their job by making good decisions when they don't know what to do, since at scale everything breaks and not knowing is how most time is spent [S9]. When a team member said he felt out of his depth, Lütke cut in and reframed the job as deciding under uncertainty [S9].
 
-How he applied it: he sorts company processes into three kinds. Some make the impossible possible. Some make the possible simpler. The rest, which he put at 99.9% of corporate process, are neither [S5].
+How he applied it: he sorts company processes into three kinds. Some make the impossible possible. Some make the possible simpler. The rest, which he put at 99.9% of corporate process, are neither [S5]. The figure comes from the show's episode page, a secondary source, so treat it as his rough estimate.
 
 #### Own the bet, then refocus
 

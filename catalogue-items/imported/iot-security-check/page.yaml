@@ -7,7 +7,7 @@ job: secure-code
 headline: Connected product security checker
 subhead: A plain answer to what the EU Cyber Resilience Act means for your connected product. Describe what it is, whether it is hardware, software or an app, and who sells it.
 explain: |
-  A plain answer to what the EU Cyber Resilience Act means for your connected product. Describe what it is, whether it is hardware, software or an app, and who sells it. The skill decides if it counts as a product with digital elements, sorts it into default, important or critical class, and names the route to CE marking.
+  A plain answer to what the EU Cyber Resilience Act means for your connected product. Describe what it is, whether it is hardware, software or an app, and who sells it. The skill decides if it counts as a product with digital elements, sorts it into the default group, Class I or Class II, and names the route to CE marking.
 
   It then lists the security duties you carry: secure design, a support period, a software parts list, vulnerability handling and reporting to authorities. Reporting rules are already in force, and the full set applies from December 2027. Your role matters too, whether maker, importer or distributor. This is guidance, not legal advice.
 when:
@@ -31,11 +31,15 @@ you_get:
   - What a software parts list needs
   - Reporting steps and deadlines
 how_to_use:
+  - This is an imported MIT-licensed copy. Its author last checked it on 2026-09-14, and we have not checked it again, so some dates and rule numbers may have changed.
+  - Gather first. Write down your product's parts (hardware and software), how it connects, the countries you sell in, your role, and any software parts list you already have.
   - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
   - Paste the full SKILL.md text into the chat.
   - "Describe your product, how it connects, where you sell it and your role: maker, importer or distributor."
   - Read the answer. It gives your scope, class, route and a summary of duties, in that order.
-  - Check any dates against the ENISA and European Commission links in the skill before you act on them.
+  - Treat the answer as a draft for your assessor, not a decision on your product class. Do not file any ENISA report based on it without checking the current steps on the reporting platform itself.
+  - Check every date, rule number and class list against EUR-Lex and the ENISA site before you act on them. The skill's own check date is 2026-09-14, and we have not checked it again.
+  - Next, take the Key Obligations Summary to a notified body or a qualified assessor. The class decision, the CE marking route and your reporting steps need a lawyer or assessor to sign off.
 output_sample:
   input:
     - A description of your product and how it connects

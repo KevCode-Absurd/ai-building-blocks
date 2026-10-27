@@ -9,6 +9,8 @@ date_added: "2026-03-23"
 license: MIT
 ---
 
+> AI Blocks licence note: the skill text in this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says. The `license: MIT` line in the header above is the original author's label. Both allow reuse if you keep the credit.
+
 # Moyu
 
 > The best code is code you didn't write. The best PR is the smallest PR.

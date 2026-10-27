@@ -14,6 +14,8 @@ license: MIT
 license_source: "https://github.com/Optim-Agent/optim-agent/blob/main/LICENSE"
 ---
 
+<!-- Licence note: this copy is shown under CC BY 4.0 (see LICENSE-CONTENT). The MIT line in the header above is the original author's, kept as the upstream source. -->
+
 # Optim Agent
 
 ## Overview
@@ -52,7 +54,7 @@ Use this skill to optimize configurable systems against a measurable scalar obje
 
 ### Example 1: Hyperparameter optimization
 
-Tune learning rate, regularization, and tree depth for a credit-default model. Track validation AUC for each trial, compare against the default configuration, and recommend the best setting only if it improves the baseline under the agreed trial budget.
+Tune learning rate, regularization, and tree depth for a model. Track validation score for each trial, compare against the default configuration, and recommend the best setting only if it improves the baseline under the agreed trial budget.
 
 ### Example 2: Inference tuning
 

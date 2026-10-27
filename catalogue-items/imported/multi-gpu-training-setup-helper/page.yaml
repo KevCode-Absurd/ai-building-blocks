@@ -31,14 +31,15 @@ you_get:
   - Memory-saving options for large models
 how_to_use:
   - Gather first the exact script file, the number of GPUs and machines, and whether the model fits on one GPU.
-  - Paste your training script into Claude, ChatGPT or Gemini.
+  - Check your company rules, then paste your training script into Claude, ChatGPT or Gemini. The provider sees whatever you paste, so leave out private code if you must.
   - Say how many GPUs and machines you have, and whether the model fits on one GPU.
   - Add your precision choice if you have one (optional).
   - Ask your AI to add the Accelerate lines, mark them, and give you a launch command and a config.
   - Check that the old lines moving data to the GPU are gone.
   - Run the script on your own machines. Your AI can only test it if it can run Python code.
   - Next, run a short test on one GPU first. Then scale to all your GPUs, and compare speed and loss with the one-GPU run. If you need callbacks, use PyTorch Lightning instead. If you need to manage many machines, use Ray Train.
-  - The skill is an imported copy under the MIT licence. It was written for Hugging Face Accelerate 1.11.0 or newer, so check your version.
+  - "You get the marked script, a launch command and a config file. Your AI can test the script only if it can run Python code."
+  - The skill is an imported copy of Orchestra Research's MIT-licensed skill, with its text unchanged. It was written for PyTorch with Hugging Face Accelerate 1.11.0 or newer, so check your version. DeepSpeed and FSDP need extra installs.
 next: [rented-gpu-server-setup-helper]
 output_sample:
   input:

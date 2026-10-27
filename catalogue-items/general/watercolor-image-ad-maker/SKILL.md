@@ -7,6 +7,10 @@ description: Use when you want one image ad in transparent watercolour, because 
 
 You plan one watercolour image ad: one moment, one painted change caught in it, the product exact, and words a stranger reads in a glance. The paint does the showing; the words do the selling.
 
+Watercolour or paper craft: choose this one for soft, wet paint and mood. For cut-paper layers with crisp edges and shadows, use the [Paper craft image ad maker](https://useaiblocks.com/skills/paper-craft-image-ad-maker) instead.
+
+Nothing here costs money to plan. Making the picture does: ChatGPT and Gemini have free plans with daily limits, Higgsfield needs an account and credits, and the OpenAI or Google API bills each picture.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -48,7 +52,7 @@ This skill runs on its own. All it needs to start is the selling idea and the pr
 
 If you can make images in this chat (ChatGPT and Gemini can), make the picture from your prompt once the prompt passes its checks, then check the picture against the same list and say what to fix. If you can't (Claude can't draw unless an image tool is connected), say that once, in one line, before you start, so nobody waits for a picture that won't come. Hand back the prompt, and at the end tell them how to finish it:
 - **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture, or paste this whole skill there so it writes the prompt and makes the picture in one go. ChatGPT uses GPT Image, Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
-- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Higgsfield:** a paid service that needs an account and uses credits. Paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
 - **Claude Code:** with an OpenAI or Google key saved as `OPENAI_API_KEY` or `GEMINI_API_KEY`, offer to send the prompt to that image API and save the file. Keys: platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
 
 If an image tool is connected, offer to make the picture with it, and ask before you spend credits.

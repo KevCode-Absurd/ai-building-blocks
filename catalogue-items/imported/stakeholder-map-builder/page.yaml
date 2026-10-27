@@ -31,10 +31,11 @@ you_get:
   - Risks of ignoring each group
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
-  - Tell your AI what your project is. Add your list of people and groups if you have one.
+  - Tell your AI what your project is. Add your list of people and groups if you have one. If you give no list, your AI infers the likely groups from your project description, so check each one.
   - Attach an org chart, brief or team roster if you have one (optional). No code or web access is needed.
   - Read the grid. Fix any person placed in the wrong box, then ask your AI to update the plan.
   - Save the plan as a document and share it with your team.
+  - Next, review the placements with your team, then ask your AI to turn each key message into an update draft.
 output_sample:
   input:
     - Your project or initiative, in a sentence or two

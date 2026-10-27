@@ -30,13 +30,14 @@ you_get:
   - Open orders moved to the new location
   - A summary on screen and a CSV log of every order
 how_to_use:
+  - Before you start, test the whole flow on a development store first. If the preview list does not match the orders you see at the source location in Shopify Admin, stop and do not type yes. Ask your AI to check the list again, or move the orders by hand.
   - Use an AI that can run commands, such as Claude Code, Codex or Gemini CLI. A plain chat window cannot change your store.
-  - Sign in to your store with the Shopify CLI. Allow read_orders and write_fulfillments access.
+  - Sign in to your store with the Shopify CLI. Allow read_orders and write_fulfillments access. Check the sign-in command against the Shopify CLI help first (run shopify store auth --help). If the help shows a different command or scope names, use what the help says. Try it on a test store if you have one.
   - Paste the skill and give your store address, the source location ID and the destination location ID. Add order numbers if you want only some orders moved.
-  - Run the preview first. Check the list of orders and the destination.
+  - Run the preview first. The search the skill uses to find orders was not tested on a live store. Check that the preview list matches the orders you expect at the source location in Shopify Admin before you type yes.
   - Check that the destination has stock for every item. This step is required. This skill does not move stock, so transfer it first in Shopify Admin if it is short.
   - Tell your AI to go ahead by typing yes. The skill must not move any order until you do. Then open the CSV log and check for errors.
-  - After the move, spot-check a few orders in Shopify Admin.
+  - After the move, spot-check a few orders in Shopify Admin. Then reconcile the CSV log against your counts: the number moved plus the errors should equal the number of orders you saw at the source, and the source location should show no open orders left from that list.
 output_sample:
   input:
     - Your store address

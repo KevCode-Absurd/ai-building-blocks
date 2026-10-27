@@ -1,6 +1,6 @@
 slug: hiring-pipeline-runner
 name: "Hiring pipeline runner"
-summary: "Give it a role and each batch of resumes. Get a fair ranked shortlist and draft replies. You decide on every person."
+summary: "Give it a role and each batch of resumes. Get a shortlist scored the same way against your guide, and draft replies. You decide on every person."
 category: agent
 type: agent
 role: orchestrate

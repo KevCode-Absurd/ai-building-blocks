@@ -56,15 +56,15 @@ Rules: no more than 7 tips in the first plan. Never show the same tip to someone
 
 This skill spans in-product tours, tooltips, and contextual help. The growth-tooling distinctions:
 
-- `onboarding-wizard-design` is the sequential first-run experience. This skill is contextual help WITHIN the product, surfacing across the lifecycle.
-- `chatbot-flow-design` is conversational help. This skill is non-conversational tour and tooltip help.
+- The First-run wizard designer is the sequential first-run experience. This skill is contextual help WITHIN the product, surfacing across the lifecycle.
+- The Chatbot conversation designer is conversational help. This skill is non-conversational tour and tooltip help.
 - **`interactive-product-tour` (this skill)** is trigger logic, tour architecture, contextual placement, completion tracking, and the discipline of being absent until needed.
-- `discovery-research-synthesis` is research that informs tour content. Input, not part of.
-- `pm-spec-writing` is the spec for engineers building the tour. This skill is about WHAT to build; pm-spec-writing is about communicating it.
+- The Customer research analyst turns research into input for tour content. Input, not part of this skill.
+- The Feature spec writer is the spec for engineers building the tour. This skill is about WHAT to build; the Feature spec writer is about communicating it.
 
 The audience: product marketers, growth marketers, in-house product teams, agencies running activation work for SaaS clients.
 
-Out of scope: first-run wizards (covered by `onboarding-wizard-design`); conversational help (covered by `chatbot-flow-design`); the engineering implementation; specific Userpilot/Pendo/Appcues platform configurations (those stay implementation-side).
+Out of scope: first-run wizards (covered by the First-run wizard designer); conversational help (covered by the Chatbot conversation designer); the engineering implementation; specific Userpilot/Pendo/Appcues platform configurations (those stay implementation-side).
 
 ---
 

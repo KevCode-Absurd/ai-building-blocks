@@ -19,12 +19,12 @@ when:
   - "You suspect there is a bigger idea in the draft you have not named."
 not_for:
   - Your draft is still being written, so finish a first draft and let it rest, then come back.
-  - Your piece is nonfiction or an idea with no people in trouble, so write the story first or ask a friend who reads for notes.
-  - You want to shorten the draft, so use the ten percent cutter and run this after the cuts.
+  - Your piece is nonfiction or an idea with no people in trouble, so write the story first, or use the Long-form draft editor for a nonfiction piece.
+  - You want to shorten the draft, so use the Draft shortening editor and run this after the cuts.
 
 you_give:
   - "Your draft"
-  - "The recurring list from the cold re-read marker (optional)"
+  - "The recurring list from the Fresh draft reviewer (optional)"
   - "What you think it is about, if you have a guess (optional)"
   - "What drew you to write it (optional)"
 you_get:
@@ -112,7 +112,7 @@ tweaks:
   - what: "Your guess"
     how: "State what you think it is about. If the draft does not back it, the report says so, which can save a rewrite."
   - what: "Your recurring list"
-    how: "Paste the list from the cold re-read marker. If not, it makes its own."
+    how: "Paste the list from the Fresh draft reviewer. If not, it makes its own."
   - what: "Interests"
     how: "Name two or three things you keep writing about. They often show up here."
   - what: "Genre"
@@ -133,14 +133,14 @@ test:
 improve:
   - "Keep a list of readings it finds across your drafts. Your concerns will repeat."
   - "Add a page about what you want a reader to feel at the end."
-  - "Run the ten percent cutter next, so cuts follow the reading."
+  - "Run the Draft shortening editor next, so cuts follow the reading."
 
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Finding patterns across a draft is text work that a strong chat AI does well."}
     - {name: "A friend who reads", why: "Ask them what the story was about in one sentence, before you show the report."}
   inputs:
-    - "The recurring list from the cold re-read marker"
+    - "The recurring list from the Fresh draft reviewer"
     - "What drew you to the idea"
 
 terms:

@@ -37,7 +37,8 @@ how_to_use:
   - Ask your AI to work in this order. Clarify the problem, draft the job statements, find the struggling moments, then test each job against your decision.
   - Read the job statements first. Check that each one describes a real moment, not a feature request.
   - Look at the decision test. Use the hire and fire reasons to shape your priorities and how you describe the product.
-  - Bring the result to your next prioritisation or positioning meeting, and test it against real customer calls.
+  - Bring the result to your next prioritisation or positioning meeting, and test it against real customer calls. For positioning, use the Product positioning planner next. For the roadmap, use the Roadmap update writer.
+next: [product-positioning-planner, roadmap-update-writer]
 output_sample:
   input:
     - A product or customer problem

@@ -46,6 +46,8 @@ This skill runs on its own. All it needs to start is the product's facts; everyt
 - **Marketplace gallery?** (optional): yes or no, and which one.
 
 ## Steps
+Pick this skill for a full scored gallery, with a card for every image. For a quick first pass with fewer checks, use the Eight-picture product page planner instead.
+
 1. **Name the kind of product** (one or two): goes in or on the body (food, supplements, skincare, make-up); worn; held and used (tools, cookware, bags, devices); lives in a room (furniture, bedding, decor); fits with something else (refills, parts, chargers).
 2. **List the candidate images.** Each answers one shopper question. They sit in five families:
 
@@ -112,7 +114,7 @@ CHECKS MISSED: <one line each, or none>
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Product page image checker](https://useaiblocks.com/skills/product-page-image-checker). It takes the gallery plan.
-- The [Product photo set reviewer](https://useaiblocks.com/skills/product-photo-set-maker).
+- The [Product photo set maker](https://useaiblocks.com/skills/product-photo-set-maker).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

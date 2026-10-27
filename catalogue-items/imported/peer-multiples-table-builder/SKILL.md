@@ -57,6 +57,7 @@ never substitute a proxy and present it as the real thing.
 2. **DO NOT use web search** if the above MCP data sources are available
 3. **ONLY if MCPs are unavailable:** Then use Bloomberg Terminal, SEC EDGAR filings, or other institutional sources
 4. **NEVER use web search as a primary data source** - it lacks the accuracy, audit trails, and reliability required for institutional-grade analysis
+5. **India exception (AI Blocks).** Free sites such as Screener.in and yfinance may fill a gap only after the company's own NSE or BSE filing has been tried, only under their own terms, and only when every figure from them is marked `unverified`. They are never the primary source.
 
 **Why this matters:** MCP sources provide verified, institutional-grade data with proper citations. Web search results can be outdated, inaccurate, or unreliable for financial analysis.
 
@@ -492,26 +493,10 @@ This helps answer: "Is our target company trading rich or cheap vs. peers?"
    - Date-stamp the analysis
 
 ### Pro Tips
-- **Save templates**: Build once, reuse forever
 - **Color-code outliers**: Conditional formatting for values >2 standard deviations
-- **Link to source files**: Hyperlink to Bloomberg screenshots or SEC filings
-- **Version control**: Save as "Comps_v1_2024-12-15" with clear dating
-- **Collaborative reviews**: Have someone else check your formulas
-
-### Excel Formatting Checklist (Optional - adapt to user preferences)
-- [ ] Font set to user's preferred style (default: Times New Roman, 11pt data, 12pt headers)
-- [ ] Section headers formatted per user's template (default: dark blue #17365D with white bold text)
-- [ ] Column headers formatted per user's template (default: light blue/gray #D9E2F3 with black bold text)
-- [ ] Statistics rows formatted per user's template (default: light gray #F2F2F2)
-- [ ] No borders applied (clean, minimal appearance)
-- [ ] **Column widths set to uniform/even width** (creates clean, professional appearance)
-- [ ] **Row heights set to consistent height** (typically 20-25pt for data rows)
-- [ ] Numbers formatted with proper decimal precision and thousands separators
-- [ ] **All metrics center-aligned** for clean, uniform appearance
-- [ ] **One blank row for separation between company data and statistics rows**
-- [ ] **No separate "SECTOR STATISTICS" or "VALUATION STATISTICS" header rows**
-- [ ] **Every hard-coded input cell has a comment with either: (1) exact data source, OR (2) assumption explanation**
-- [ ] **Hyperlinks added to cells where applicable** (SEC filings, data provider pages, reports)
+- **Version control**: Save with a dated name, such as "Comps_v1_[DATE]"
+- **Every hard-coded input cell has a comment** with its exact source or the assumption behind it.
+- Formatting (fonts, colours, widths) follows the user's template. Keep it clean and consistent.
 
 ---
 

@@ -14,6 +14,8 @@ tags: [video, routing, editing, composition, generation]
 tools: [claude, codex, cursor, gemini]
 ---
 
+<!-- Licence note: this copy is shown under CC BY 4.0 (see LICENSE-CONTENT). The MIT line in the header above is the original author's, kept as the upstream source. -->
+
 # Video Router
 
 Knowledge for picking a video production line and locking it before work begins. This skill is read for guidance; it describes **what to decide**, not any tool mechanics.

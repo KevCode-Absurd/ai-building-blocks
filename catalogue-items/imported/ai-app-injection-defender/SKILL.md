@@ -18,6 +18,8 @@ metadata:
   version: '1.0'
 ---
 
+> **AI Blocks note (licence):** this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says. The `license:` line in the front matter above is the original author's own label (MIT). The LICENSE-CONTENT file governs here. Keep the credit to the author.
+
 # Prompt Injection Defense
 
 Mitigate direct and indirect prompt injection across chat apps, agentic workflows, and RAG pipelines.
@@ -368,6 +370,16 @@ def redact_secrets(text: str) -> str:
         text = re.sub(pattern, '[REDACTED]', text)
     return text
 ```
+
+## Output
+
+Return the review as a table with one row per entry point and these columns:
+
+```text
+Entry point | Who controls the text | Controls applied | Red-team test result (pass, fail or not run) | Fix needed
+```
+
+Then list the starter code you added, and mark every test not run until it has been run. After any fix, re-run all the tests.
 
 ## Red-Team Test Cases
 

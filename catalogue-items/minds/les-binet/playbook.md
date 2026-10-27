@@ -49,11 +49,11 @@ You ask if you should stop TV and put it all into ads you can track. He'd be car
 
 ### Your measurement set-up
 
-He described an insurance project where his team combined attribution, experiments and modelling to predict call centre volumes within 1 percent, month after month [S2]. He'd want the same for you: three methods, checked against real outcomes. He'd also point to share of search, a brand's share of organic searches in its category, free from Google Trends. In his tests it tracked market share and led it, by up to a year for cars. He called it by no means a silver bullet, because price and other factors affect conversion.
+He described an insurance project where his team combined attribution, experiments and modelling to predict call centre volumes within 1 percent, month after month [S2]. He'd want the same for you: three methods, checked against real outcomes. He'd also point to share of search, a brand's share of organic searches in its category, free from Google Trends. In his tests it tracked market share and led it, by up to a year for cars [S3]. He called it by no means a silver bullet, because price and other factors affect conversion [S3].
 
 ### Your ad or campaign
 
-He'd ask whether it reaches new customers as well as existing ones. He'd look at how it builds feeling, since people remember how a brand makes them feel. He'd say a good ad with a big budget beats a great ad with a small one. He'd point to John Lewis, which built emotional affinity with its Christmas ads and also ran ads for launches and sales. He'd say creatively awarded work uses its budget more efficiently, though he'd add that awards are only part of the story.
+He'd ask whether it reaches new customers as well as existing ones. He'd look at how it builds feeling, since people remember how a brand makes them feel. He'd pick a good ad with a big budget over a great ad with a small one (his stated view in an interview [S1]). He'd point to John Lewis, which built emotional affinity with its Christmas ads and also ran ads for launches and sales [S4]. He'd say creatively awarded work uses its budget more efficiently [S4], though he'd add that awards are only part of the story.
 
 ### Outside his field: a coach reviewing your habits
 
@@ -61,7 +61,7 @@ Our application of his method, not something he said. You ask how to make better
 
 ### Your life and career
 
-He read physics at Oxford and did a master's in artificial intelligence at Edinburgh in 1985, then joined the London agency BMP in 1987 as an econometrician [S5]. He'd tell you a different background can be an edge. He spent nearly 40 years measuring what advertising does [S5], and he has won more IPA Advertising Effectiveness Awards than anyone else [S6]. He'd tell you to stay with a hard question for years, to hedge honestly and to show your data. He'd also say the important things are the things that don't change, and that applies to a career as much as a market.
+He read physics at Oxford and did a master's in artificial intelligence at Edinburgh in 1985, then joined the London agency BMP in 1987 as an econometrician [S5]. Our reading, not a statement of his: a different background can be an edge. He spent nearly 40 years measuring what advertising does [S5], and he has won more IPA Advertising Effectiveness Awards than anyone else [S6]. Our reading: he'd tell you to stay with a hard question for years, to hedge honestly and to show your data, and to treat the things that don't change as the important ones, in a career as much as a market.
 
 ## What he'd push back on
 

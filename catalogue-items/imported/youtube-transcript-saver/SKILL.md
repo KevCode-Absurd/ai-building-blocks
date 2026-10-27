@@ -18,6 +18,8 @@ plugin:
 
 # ingest-youtube — YouTube-to-vault connector
 
+Licence note: this skill and its script are MIT, as the front matter says. The collection's LICENSE-CONTENT file says CC BY 4.0 for written content unless an upstream notice says otherwise. Keep the credit to adelaidasofia and sickn33. Storing YouTube captions may breach YouTube's terms or copyright, so check the terms before you save a transcript.
+
 Pulls YouTube transcripts into a markdown vault as queryable typed-memory entries that downstream skills (knowledge graph extraction, voice-fingerprint training, content repurposing, action-item extraction) can act on.
 
 Same pattern as ingest-slack, ingest-whatsapp, ingest-notion, ingest-linear, ingest-github, ingest-gmail. Adding YouTube means a new normalizer, not a new architecture.

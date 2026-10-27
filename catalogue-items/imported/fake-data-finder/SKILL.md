@@ -35,6 +35,13 @@ Because this workflow drives a real browser against live pages, treat it as an i
 - Use before showing a vibe-coded MVP to a customer or investor
 - Use when a dashboard "looks too clean" — every metric uniformly round, all timestamps clustered, no variance — and you suspect seeded data
 
+## When Not to Use This Skill
+
+- Do not use it on an app you do not own or have no permission to test. Ask the owner for a staging copy or a test account first.
+- Do not use it to test a whole site in one run. It checks one page per run, so run it again for each page.
+- Do not use it on code that is not live yet. Ask a developer to review the code, or put it on a test site first.
+- Before any click or form submit, the user must approve the action and confirm the allowed-action list. If that has not happened, stay in observation-only mode.
+
 ## How It Works
 
 ### Phase 1: Setup & Smart Questions

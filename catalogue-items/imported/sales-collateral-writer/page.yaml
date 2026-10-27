@@ -9,6 +9,8 @@ subhead: The sales material your reps will actually open and use. Name the deal 
 explain: |
   The sales material your reps will actually open and use. Name the deal or buyer and get a pitch deck outline, a one-pager, an objection sheet or a demo script.
 
+  Licence: MIT, as the LICENSE file in this item says. Credit goes to the original author.
+
   It reads any product context file you keep, then asks what is missing: your value and what sets you apart, how you sell, deal size, sales cycle, the people in the buying decision and the funnel stage. It checks which materials already exist so it does not repeat them. The output is written for whoever will use it, whether an account executive, a development rep or a champion inside the buyer's company, and leans on proof you can back up.
 when:
   - A big deal needs a tailored pitch outline.
@@ -16,9 +18,10 @@ when:
   - You need a one-page leave-behind for a buyer.
   - A demo is coming and the presenter needs a script.
 not_for:
-  - "You want a public page that compares you to rivals: write that as a competitor comparison page, not sales collateral."
-  - "You want to learn why buyers say yes or leave: run buyer interviews with a person, not this skill."
-  - "You need a cold outreach email: write it as a short email with a cold email tool or template, not a sales deck."
+  - "You want a public page that compares you to rivals: use vendor-comparison-writer, not sales collateral."
+  - "You want a card on one rival for reps to use across deals: use sales-battlecard-builder."
+  - "You want to learn why buyers say yes or leave: run buyer interviews with customer-interview-coach, not this skill."
+  - "You need a cold outreach email: use cold-email-writer, not a sales deck."
 you_give:
   - What you sell, in one or two sentences, and who it is for
   - The deal or buyer to target, and the buyer's role
@@ -34,11 +37,13 @@ you_get:
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill. No code, files or paid tools are needed. The skill works from the text alone. If you want more detail for one asset, also paste the matching reference file from the item folder.
   - "Tell your AI which asset you want: a deck, one-pager, objection sheet or demo script."
-  - Share what you sell, who the buyer is, your deal size and any proof you can back up.
+  - "Before anything else, write one sentence: what you sell, the buyer's role and the deal size. Then add any proof you can back up. Mark proof you do not have as missing. Do not let your AI fill it with a figure."
   - Answer the questions it asks about your sales process and the stage of the deal.
   - "For a deck: paste the deal size, the buyer's role and what they care about. For a one-pager: paste your best proof and the one action you want the buyer to take. For an objection sheet: paste the objections reps hear most. For a demo script: paste the buyer's use case and how long the demo runs."
+  - "Draft a one-pager or deck in this order: confirm the buyer and their role, pick the proof you can back up, write the headline, draft the body or slides, then cut any claim without proof."
   - Read the draft and check every claim has proof. Test it with one rep before you send it.
   - Next, log live objections and how they went. Send confirmed win-loss findings back into your battlecard and objection sheet. The Sales battlecard builder pairs with this for rival-specific cards.
+next: [sales-battlecard-builder, cold-email-writer]
 output_sample:
   input:
     - What you sell and who it is for

@@ -100,6 +100,7 @@ output_shape: |
   What repeats: <...> | Longest waits: <...> | Worries that held buyers back: <...>
   Leads, not proof: <one-line caution>
   MISSING: <order fact | product | what it replaced>
+  CHECKS MISSED: <list or none>
 
 tweaks:
   - what: Which orders you pick

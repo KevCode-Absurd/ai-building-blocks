@@ -9,9 +9,11 @@ subhead: See how the pitch or frequency of a signal moves over time, such as a b
 explain: |
   See how the pitch or frequency of a signal moves over time, such as a bearing that starts to whine or a heart rhythm that shifts. You get plots and numbers showing when each frequency appears and fades.
 
+  This is for MATLAB users who work with signals, such as engineers and researchers. It is not for business operators or anyone without MATLAB.
+
   The skill is for MATLAB. It first picks the method that fits your goal: short-time Fourier transform for steady views, wavelets for sharp changes, synchrosqueezing for crisp ridges, or EMD and VMD to split a signal into parts. It draws spectrograms or scalograms, extracts and rebuilds single components, and estimates instantaneous frequency. For two signals it can compute time-varying coherence. It points out common mistakes for each method. It needs paid MATLAB with the Signal Processing and Wavelet Toolboxes, and some signal-processing knowledge. It is not for non-technical business users.
 
-  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. The licence line inside the skill file (SKILL.md) links a different MathWorks licence page. LICENSE.md is the licence that governs this copy. Follow LICENSE.md.
 when:
   - Your sensor signal changes pitch and a single spectrum hides it.
   - You need to pull one component out of a mixed signal.
@@ -35,11 +37,15 @@ you_get:
   - Working MATLAB code
 how_to_use:
   - Open an AI that can run MATLAB, or run the code it gives you in your own MATLAB. You need a paid MATLAB licence with the Signal Processing and Wavelet Toolboxes. The AI step alone does not give a checked result, so run the code and look at the plots yourself. The licence allows use of this skill only with MathWorks products (see LICENSE.md).
-  - Paste the skill text into the chat, or attach the skill folder if your AI accepts files.
+  - Paste the skill text into the chat, or attach the skill folder if your AI accepts files. Put the scripts folder (assessSignalForTF.m and assessBoundary.m) on your MATLAB path.
+  - "First run: call assessSignalForTF(x, fs) from the scripts folder on your signal. Its report decides which method to use, so do it before anything else."
   - Give your signal, your sample rate and what you want to find. Add a second signal if you want to compare two.
+  - "What the method names mean: STFT (short-time Fourier transform) cuts the signal into short windows and shows the frequencies in each. Wavelets zoom in on sudden changes. Synchrosqueezing sharpens the plot into thin ridges so you can follow one frequency. EMD and VMD split a mixed signal into separate parts, EMD without you saying how many parts, VMD when you know how many."
+  - The function tffilt, which removes parts of the plot you mask out, needs MATLAB R2025a or newer. Everything else works from R2024b.
   - Read the method choice first. If it does not fit your goal, say so and ask for another method.
   - Run the MATLAB code it writes. Check the plot, then ask it to pull out parts or estimate frequency over time.
   - Ask whether you need to rebuild the signal or only view it. Some methods can rebuild it and some cannot.
+  - Next, pass the extracted parts or frequency estimates to the signal feature skill (matlab-extract-signal-features) if you want inputs for machine learning.
 output_sample:
   input:
     - Your signal as a list of numbers
@@ -64,3 +70,5 @@ output_sample:
       contains: How two signals relate over time, with phase arrows for coherence, when you give a second signal.
     - name: MATLAB code
       contains: Working code for each step, plus warnings about common mistakes for the chosen method.
+    - name: Report layout
+      contains: Sections in a fixed order, signal check, method choice, plot, extracted parts, frequency over time, then code, each with a short note.

@@ -29,7 +29,7 @@ Follow these steps in sequence to produce a complete teardown:
 2. **Collect data** — Use `references/data-collection-guide.md` to gather raw signals from at least 3 sources per competitor (website, reviews, job postings, SEO, social).  
    _Validation checkpoint: Before proceeding, confirm you have pricing data, at least 20 reviews, and job posting counts for each competitor._
 3. **Score using rubric** — Apply the 12-dimension rubric below to produce a numeric scorecard for each competitor and your own product.  
-   _Validation checkpoint: Every dimension should have a score and at least one supporting evidence note._
+   _Validation checkpoint: Every dimension should have either a score with at least one supporting evidence note, or the words "no data" when there is no sourced evidence. Never score a dimension without evidence._
 4. **Generate outputs** — Populate the templates in `references/analysis-templates.md` (Feature Matrix, Pricing Analysis, SWOT, Positioning Map, UX Audit).
 5. **Build action plan** — Translate findings into the Action Items template (quick wins / medium-term / strategic).
 6. **Package for stakeholders** — Assemble the Stakeholder Presentation using outputs from steps 3–5.
@@ -106,11 +106,11 @@ Capture recent mentions via Twitter/X API v2 (a paid API), Reddit, or LinkedIn. 
 | 11 | **Community** | None | Forum / Slack | Active, vibrant community |
 | 12 | **Innovation** | No recent releases | Quarterly | Frequent, meaningful |
 
-**Example completed row** (Competitor: Acme Corp, Dimension 3 – UX):
+**Example completed row** (illustrative only: the company and every figure in this row are made up to show the format. Never reuse them. Fill each row from your own sourced evidence.) (Competitor: [COMPETITOR], Dimension 3 – UX):
 
-| Dimension | Acme Corp Score | Evidence |
+| Dimension | [COMPETITOR] Score | Evidence |
 |-----------|----------------|---------|
-| UX | 2 | App Store reviews cite "confusing navigation" (38 mentions); onboarding requires 7 steps before TTFV; no onboarding wizard; CC required at signup. |
+| UX | [1-5 or "no data"] | [What reviews say, with the count of mentions you saw] ; [number of onboarding steps you saw] ; [other sourced facts] |
 
 Apply this pattern to all 12 dimensions for each competitor.
 
@@ -167,5 +167,10 @@ Navigation: global search, keyboard shortcuts, in-app help.
 
 ## Related Skills
 
-- **Product Strategist** (`product-team/product-strategist/`) — Competitive insights feed OKR and strategy planning
-- **Landing Page Generator** (`product-team/landing-page-generator/`) — Competitive positioning informs landing page messaging
+The original lists two companion skills that are not in this library. For the same next steps, use Sales battlecard builder (battle cards) and Quarterly roadmap builder (a plan from your findings).
+
+This copy is adapted from the upstream MIT-licensed competitive-teardown skill.
+
+## Source rule
+
+Every price, review count and job post count needs a source link and the date you saw it. If you could not check a figure, write "no data". Never fill a gap with a guess. Check each site's terms before reading its pages, reviews or job posts with a tool.

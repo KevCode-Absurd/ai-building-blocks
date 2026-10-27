@@ -33,7 +33,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-This list replaces the general one above. The "question" is your topic. Collecting from Reddit uses a paid service (Apify), so read the cost line below first.
+This list replaces the general one above. The "question" is your topic. Collecting from Reddit is scraping, through a paid service (Apify), so read the cost line below first and check Reddit's terms of use.
 - **A topic, a rival or a product category, and who you think buys it** (required)
 - **An Apify account** (required). Step 1 collects public Reddit posts and comments through Apify. Small runs fit the free plan, but a run can cost money. Show the search terms, the settings and the cost, and get a clear yes before step 1 runs.
 - **Your brand brain or product facts** (optional). Step 3 uses them to say who the product is not for.
@@ -47,7 +47,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Reddit thread collector.** Use the skill `reddit-thread-collector`. Give it the topic, the search terms and a time window. Ask for the cost and get a yes before it runs. It collects public posts and comments about the topic into a table of their own words, with dates and sources. Saved as `outputs/step-01-reddit-thread-collector.md`. Hands the post table to steps 2, 3 and 4.
+1. **Reddit thread collector.** Use the skill `reddit-thread-collector`. Give it the topic, the search terms and a time window. Ask for the cost and get a yes before it runs. This is scraping: Apify, a third-party service, pulls public Reddit data for you. Tell the person to check Reddit's terms of use and their local rules first, and use the posts for research only, never to contact or name the people who wrote them. It collects public posts and comments about the topic into a table of their own words, with dates and sources. Saved as `outputs/step-01-reddit-thread-collector.md`. Hands the post table to steps 2, 3 and 4.
 2. **Customer buying reasons finder.** Use the skill `customer-buying-reasons-finder`. Give it the post table in `outputs/step-01-reddit-thread-collector.md`. It keeps each line that gives a reason, copies the phrases word for word with their source, and ranks the reasons. Saved as `outputs/step-02-customer-buying-reasons-finder.md`. Hands the ranked reasons to step 3.
 3. **Ideal customer profile writer.** Use the skill `ideal-customer-profile-writer`. Give it the post table in `outputs/step-01-reddit-thread-collector.md` and the ranked reasons in `outputs/step-02-customer-buying-reasons-finder.md`. It builds a buyer profile: goals, frustrations, triggers, the words they use and who the product is not for. Saved as `outputs/step-03-ideal-customer-profile-writer.md`. Hands the profile to step 4.
 4. **Audience hangout finder.** Use the skill `audience-hangout-finder`. Give it the buyer profile in `outputs/step-03-ideal-customer-profile-writer.md` and the post table in `outputs/step-01-reddit-thread-collector.md`. It ranks the sites, shows, accounts and groups where the buyer gathers, and the few places to show up first. Saved as `outputs/step-04-audience-hangout-finder.md`.

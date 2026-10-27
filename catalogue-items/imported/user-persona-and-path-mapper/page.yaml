@@ -31,7 +31,7 @@ you_get:
 how_to_use:
   - Paste the skill into Claude, ChatGPT or Gemini. Or add it as a skill so you can reuse it.
   - Put your user data in a list with one row per person, such as age, how often they use the product, features used, device and pain points. Add interview notes if you have them.
-  - Ask for personas first. Check each one against your data. Every frustration should have a count, like 14 of 20 users. That count is only an example: each figure must come from your own data.
+  - "Ask for personas first. Check each one against your data. Every frustration should have a count, like 14 of 20 users. That count is only an example: each figure must come from your own data."
   - Then ask for the path map and the usability test plan for the persona you care about most.
   - Show each persona to 3 to 5 real users and ask "Does this sound like you?" before your team uses it.
   - The persona script needs code running. Without it, the AI can still group your notes by hand, but with less structure.

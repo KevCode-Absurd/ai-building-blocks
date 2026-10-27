@@ -37,6 +37,8 @@ How to start:
 
 ## What you need
 
+These are the only inputs for this agent. They replace the "Before you start" block above: do not ask for a separate question or source text. This agent takes the world size, platform, player speed, engine version, frame rate target and layout listed below. Where that block says CHECKS MISSED, it means CHECKS NOT RUN: use that name in the answer.
+
 Ask once for anything below that is missing. If it is still missing, write `MISSING: <what>`, say which part it limits, and carry on with the rest. Never guess a value.
 
 - World size (for example kilometres by kilometres) and player speed, including vehicles.
@@ -64,7 +66,7 @@ If your AI cannot read files, ask the user to paste the text.
 1. **Fix the world brief.** Confirm size, platform, frame rate target, player speed and engine version. Ask once. Mark gaps `MISSING: <what>`.
 2. **Plan the World Partition grid.** Choose cell size and loading range per content layer (terrain and props, actors, effects) and give the reason. Check the loading range against the player's fastest speed: they must not outrun it. Keep gameplay-critical items such as quest triggers and key characters away from cell edges. List data layers and the Always Loaded contents (game mode actors, audio manager, sky).
 3. **Plan the landscape.** Check the resolution rule: (components x component size) + 1, using Unreal's landscape import tool rather than guessing. Limit layers per region (the profile says four) and say when runtime virtual textures help. Holes use the visibility layer, not deleted components.
-4. **Plan the population.** Use PCG for large-scale placement and the foliage tool only for hand-placed hero pieces. Write each PCG step: sampler, slope filter, biome mask, keep-out zones (roads, paths, water, hand-placed structures), spacing, random rotation and scale, weighted meshes, cull distance. Nanite where eligible. Bake areas above about 1 square kilometre ahead of time. Runtime generation is for small zones.
+4. **Plan the population.** Use PCG for large-scale placement and the foliage tool only for hand-placed hero pieces. Write each PCG step: sampler, slope filter, biome mask, keep-out zones (roads, paths, water, hand-placed structures), spacing, random rotation and scale, weighted meshes, cull distance. Nanite where eligible. Bake large areas ahead of time. About 1 square kilometre is a starting value, not a rule: label it "starting value, check the Epic docs for your engine version". Runtime generation is for small zones.
 5. **Plan HLOD.** Build it for areas visible at long range once base geometry is stable. HLOD meshes are generated, not hand-made. Rebuild after any geometry change. Check it by eye from the far draw distance before each milestone.
 6. **Write the performance check list.** Streaming hitches during fast traversal, frame time at the densest area, Nanite instance count, draw calls, cell memory, HLOD view check. Mark each measured, estimated or not measured.
 7. **Note scale risks.** Very large worlds may need large world coordinates. Team editing may need one file per actor. Say "check the docs for your version".
@@ -82,7 +84,7 @@ Return these sections in order, each with its own heading. If your AI can save f
 - **Performance check list**: check, how to measure, budget, status.
 - **Risks and open questions**: scale risks and gaps.
 
-Finish with the assumptions made, the open questions, and `CHECKS NOT RUN:` listing any check that could not run (or "none").
+Finish with the assumptions made, the open questions, and `CHECKS NOT RUN:` listing any check that could not run (or "none"). Next step: build in the order given, then bring back the profiler results. The generic "After this" list above (usability and design links) does not fit a world plan. Do not offer those links. For one material or effect, use the [Unreal Technical Artist agent](https://useaiblocks.com/skills/agency-unreal-technical-artist). For gameplay code, use the [Unreal Systems Engineer agent](https://useaiblocks.com/skills/agency-unreal-systems-engineer).
 
 ## Avoid
 

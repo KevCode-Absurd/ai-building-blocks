@@ -27,8 +27,8 @@ How to start:
 
 ## What you need
 - **A scene idea** (required): one or two sentences about the strange scene.
-- **Reference notes or a style you like** (optional). The "brief" in the block above means your scene idea.
-- **Your image tool and aspect ratio** (optional).
+- **Reference notes or a style you like** (optional). The "brief" in the block above means your scene idea. The "Reference ads" line there does not apply: reference notes here are words about a look or mood, not ads. Skip the about-me and project lookups. You only need the scene idea.
+- **Your image tool and aspect ratio** (optional). Hand-over: the result is a prompt to paste into ChatGPT or Gemini (free plans have tight daily limits), or into Higgsfield (a paid service with an account). Claude does not draw it.
 
 ## Scope and intake
 
@@ -48,7 +48,7 @@ This method produces image prompt from the supplied brief. Read what the user al
 
 6. Use consistent adult character identity where relevant and avoid adding gratuitous violence or sexual framing not requested by the user.
 
-7. Return one copy-ready image prompt plus two or three variation ideas (camera, mood or setting). A video clip needs a separate motion and timing brief, so say so if asked.
+7. Return one copy-ready image prompt plus two or three variation ideas (camera, mood or setting). A video clip needs a separate motion and timing brief. If the user wants motion, point them to the Anime video clip prompt writer (anime-video-clip-prompt-writer), which starts from an approved script, and to the Multi-provider image maker for the still.
 8. Say once that Claude cannot draw the picture, and where to paste the prompt. Under CHECKS MISSED, list any check that failed or could not run (the picture itself is never checked here), or write "none".
 
 ## Output shape
@@ -75,8 +75,8 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## Check before handing back
 
-Check the required facts, format and internal consistency against the actual input. Repair contradictions before delivery. Keep user facts, creative choices and missing evidence distinct. A prompt or plan is not a generated asset; name any tool or visual/audio check that did not run. If the user asks for a revision, preserve the approved parts and change the requested dimension.
+The user receives one still-image prompt, two or three variations and a next step. Before you hand it back, check that the prompt keeps their scene idea, shows the uncanny hook in the first look, uses a palette that matches the chosen lane, and names no living artist or franchise character. After the picture is made, the user should check it for stray text, odd hands and a hook that still reads at a glance. If they ask for a revision, keep the parts they approved and change only what they name.
 
 ## Offline practice case
 
-A fictional practice example is included for installation and method checks. It does not establish real tool execution, measured audience results or production performance.
+This skill never runs an image tool. Any picture check is yours to do on the finished image.

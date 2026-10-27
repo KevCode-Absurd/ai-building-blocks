@@ -62,7 +62,7 @@ output_schema:
       type: "array"
       description: "Moments where the teacher will observe and decide: extend this direction, introduce a new provocation, or allow the project to wind down"
 chains_well_with:
-  - "reggio-documentation-protocol"
+  - "reggio-documentation-protocol" (a separate skill, not in this library; use Learning documentation planner here)
   - "awe-wonder-experience-designer"
   - "agency-scaffold-generator"
   - "place-based-inquiry-anchor"

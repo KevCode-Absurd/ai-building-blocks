@@ -7,6 +7,8 @@ metadata:
   version: "1.1"
 ---
 
+<!-- Licence note: the licence line in the header above links a MathWorks reuse page. The licence that governs this copy is LICENSE.md in this folder: BSD 2-Clause, for use with MathWorks products only. -->
+
 # Detect and Capture RF Signals on NI USRP Radios
 
 ## Reference Loading

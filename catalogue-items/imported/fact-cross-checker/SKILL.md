@@ -16,6 +16,8 @@ license_source: "https://github.com/sandbaseai/sandbase-skills/blob/fc25b2ed4548
 
 # Multi-Source Search
 
+> Licence note (AI Blocks): this copy of the skill text is covered by CC BY 4.0, as the LICENSE-CONTENT file says. The "Apache-2.0" in the header above is the original author's (sandbaseai) claim for their repo. Keep the credit to sandbaseai.
+
 ## Overview
 
 Use the search and page-reading capabilities already available to the host agent to

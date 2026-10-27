@@ -7,6 +7,8 @@ job: money-and-investing
 headline: Likely buyers list builder
 subhead: Describe the company for sale, with its sector, revenue, profit and growth. Your AI finds likely strategic buyers and financial sponsors, scores each one and sorts them into three waves of outreach. Each row shows its source or is marked to verify.
 explain: |
+  This is a skill by nighomni123 (fsi-skills-india on GitHub) that we copied under the Apache 2.0 licence. The licence file is in this folder, and the source link is on this page.
+
   This is a buyer list builder for a company sale. It answers one question before you sell: who might buy this, and in what order should you call them?
 
   You describe the company. It looks for strategic buyers in four groups: direct rivals, neighbours in nearby markets, customers or suppliers, and large companies that grow by buying. Then it adds financial sponsors, such as funds that want a new platform or an add-on to a company they own. Each buyer is scored on fit, ability to pay and deal history.
@@ -38,13 +40,20 @@ you_get:
   - A one-page summary for a pitch or engagement letter
 how_to_use:
   - Write a short brief on the company. Use the list above. State the currency, the units (for example crore) and the fiscal year end used for revenue and profit. Say who you are, such as the owner, the adviser or an analyst.
-  - The India files the skill names (market conventions, market data, the not-adaptable list) are not in the library. Your AI applies the two Indian rules written in the skill instead. These are the April to March fiscal year, and lakh and crore units.
-  - Open the skill and paste the brief. If your AI can search the web, turn that on, so buyers come with sources.
+  - First check whether web search is switched on in your AI. If it is, buyers come with sources. If it is not, every decision maker is marked TO FIND, and you look them up on the buyer's own site, its annual report and its exchange filings.
+  - Know that the India files the skill used to name (india-market-conventions, india-market-data and NOT-ADAPTABLE.md) are not in the library, and the skill no longer asks for them. It runs on the two Indian rules written in it: the April to March fiscal year, and lakh and crore units. Your AI should say so.
+  - Open the skill and paste the brief.
   - Add the names the seller wants in or out before you read the list.
   - Check every row marked TO VERIFY against the buyer's own site, exchange filings or news of past deals.
   - Move names between tiers as you learn more, and ask your AI to update the tables.
   - Keep contacts in your own sheet. Fill them from public pages or your own network.
   - After the first wave of calls, move buyers between tiers based on the replies, ask your AI to update the tables, and start tier 2 when tier 1 has answered.
+output_shape: |-
+  Strategic buyers tab, sorted by tier: Buyer | Sector | Revenue | Strategic fit | Financial capacity | M&A track record | Likelihood | Priority | Source or TO VERIFY
+  Financial sponsors tab, sorted by tier: Sponsor | Fund size | Sector focus | Portfolio overlap | Recent activity | Priority | Source or TO VERIFY
+  Contact mapping, tier 1 only: Buyer | Role to approach | Relationship status | Best channel | Source or TO FIND
+  Summary statistics: <total buyers by tier and by type>
+  One-page summary: <the list, how it was built, the next step>
 output_sample:
   input:
     - A description of the company, its sector and what it sells

@@ -38,6 +38,8 @@ How to start:
 
 ## Ask for these first
 
+The "Before you start" block above is shared text. Ignore its "Your question" and "Codebase" lines. This agent takes the flows that must not break, the tool and language, and the test files, CI config and failing logs listed below. Where that block says CHECKS MISSED, use the NOT RUN list in the Run checklist.
+
 Ask once for anything below that is missing. If it is still missing, write MISSING and say what it blocks. Never invent an app route, a selector, an API call or a test result.
 
 - The flows that must never break, in plain words
@@ -75,7 +77,9 @@ Return these sections, in this order:
 - **Tests**: One block per flow with what it proves and the code.
 - **CI**: The workflow file, shards and artifacts kept.
 - **Flake triage**: Test, symptom, likely cause, fix.
-- **Run checklist**: Commands, number of runs, NOT RUN list.
+- **Run checklist**: Commands, number of runs, NOT RUN list (every check that failed or could not run, or "none").
+
+The "After this" links above are shared suggestions. Offer them only if they fit, and give the link if a skill is not added yet.
 
 If the user asked only for a review, skip Setup files and Tests, and give the changes as a short list instead.
 

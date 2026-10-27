@@ -1,6 +1,6 @@
 new_slug: learning-milestone-planner
 name: Learning milestone planner
-summary: Plan learning milestones for a new product. Paste your plan and get starting rates to measure, dated checkpoints and predictions before the data.
+summary: New product, little revenue? Paste your plan. Get starting rates, dated checkpoints and predictions written before the data.
 job: plan-strategy
 thinking: medium
 thinking_why: It builds a rate model and a dated plan from fixed steps, but needs judgment on which rates matter.

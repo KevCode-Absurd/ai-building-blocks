@@ -28,12 +28,12 @@ This skill is **prior-art + landscape intelligence**. It **refuses to be a bucke
 
 See [`references/sub_use_case_routing.md`](references/sub_use_case_routing.md) for the canon.
 
-## Agent Integrity Rules (Research-Pack Convention)
+## Source Rules
 
-These rules keep your AI from making up patents, sources or results. They were fixed word for word in the original repo's audit ("PR #657"), so do not loosen them.
+These rules keep your AI from making up patents, sources or results. Follow them exactly. Before any search runs, confirm the user has checked each site's terms for automated access (see Phase 2).
 
 - **Execution discipline.** Sequential search calls only. **1 query/sec rate limit.** Confirm response received before next call.
-- **Source discipline.** Cite only patents returned by THIS session's tool calls. Training knowledge labeled `[Not from search — reference information]` and excluded from counts.
+- **Source discipline.** Cite only patents returned by THIS session's tool calls. Training knowledge labeled `[Not from search — reference information]` and excluded from counts. Verdict words such as NOVEL or HIGH RISK are search signal only. Never state them as a legal conclusion.
 - **Three-count tracking.** Queries sent / patents received (shown) / patents cited. Surfaced in audit log.
 - **Retry policy.** On failure → wait 3s → retry once → log. After 3 consecutive failures across tools: stop, alert user, explain what's missing.
 - **Plan-tier detection.** Lens.org free tier = 1000 queries/month. Google Patents has no auth but rate-limits per IP. Detect and surface caps.
@@ -112,7 +112,7 @@ Returns: query plan (5-8 queries) + ranking heuristic + DOCX emphasis flags.
 
 **Check site terms first.** Google Patents, Espacenet and the USPTO each have terms of use. Before any automated access, tell the user to check them. If a site forbids automated access, do not use it. Give the user the queries to run by hand on that site instead.
 
-**If you cannot run the scripts:** write the query plan yourself from the intake answers. For novelty, give 3 narrow queries on the invention's own terms, 2 broad queries with synonyms, and 1 query limited to the class code (CPC) of the best hit. For the other four goals, follow the per-goal patterns in Phase 3. Give the queries to the user to run by hand, ask them to paste the results back, and say the audit counts are by hand.
+**If you cannot run the scripts:** write the query plan yourself from the intake answers. For novelty, give 3 narrow queries on the invention's own terms, 2 broad queries with synonyms, and 1 query limited to the class code (CPC) of the best hit. For the other four goals, follow the per-goal patterns in Phase 3. Give the queries to the user to run by hand, ask them to paste the results back, and say the audit counts are by hand. Tell them where to type each part: on Google Patents, the search box for keywords, plus the Inventor, Assignee, Country and Before/After date filters; on Espacenet, Smart search for keywords and Advanced search for the class code (CPC), applicant and publication date; on the USPTO Patent Public Search, the query builder for terms, assignee and date fields.
 
 ## Phase 3: Multi-Source Search (Sequential)
 
@@ -162,7 +162,7 @@ For each closest-art hit:
 - Pull **key dependent claims** (claims that add the inventive step)
 - Score relevance against invention description (overlap of claim language with Q1 terminology)
 
-Rank by score. Verdict per sub-use-case (NOVEL / POTENTIALLY NOVEL / NOT NOVEL for novelty; CLEAR / FLAGGED / HIGH RISK per jurisdiction for FTO).
+Rank by score. A verdict of CLEAR, NOVEL or POTENTIALLY NOVEL means only that no close hit turned up in this search. It does not mean the idea is new in law or that shipping is safe. Say so next to every verdict. Verdict per sub-use-case (NOVEL / POTENTIALLY NOVEL / NOT NOVEL for novelty; CLEAR / FLAGGED / HIGH RISK per jurisdiction for FTO).
 
 ## Phase 5: Citation Graph + Family Resolution
 

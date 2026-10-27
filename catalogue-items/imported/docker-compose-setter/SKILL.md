@@ -70,7 +70,9 @@ services:
       - frontend
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      # nginx:alpine includes wget but not curl, so the check uses wget.
+      # Your nginx.conf must also serve a /health path, or this check will fail.
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost/health"]
       interval: 30s
       timeout: 5s
       retries: 3
@@ -220,7 +222,7 @@ services:
 
   postgres:
     ports:
-      - "5432:5432"   # Expose DB to host for local tooling
+      - "5432:5432"   # Expose DB to host for local tooling. LOCAL DEV ONLY: remove this before any shared or production use
 ```
 
 **docker-compose.prod.yml** (production — used with `-f`):

@@ -43,6 +43,8 @@ Share your Azure resources. Get a resource map, current price estimates and a ri
 
 ## Gather first
 
+These replace the generic "Your question" and "Codebase" lines in the box above.
+
 - The name of your Azure resource group, or a list of your resources.
 - Your Bicep, Terraform or ARM files, if you have them.
 - The services and regions you want priced.
@@ -81,3 +83,7 @@ Price assumptions: retail price per service, size and region, with monthly and y
 Cost and workload findings: each saving tied to a named resource, with the fix, the saving, the risk and the effort, then the architecture gaps rated high, medium or low.
 
 Include source coverage, unresolved findings, missing facts and one next action.
+
+## What to do with the result
+
+Use this in place of the generic list above, which does not fit an Azure review. Offer one next step as a short question. Ask the owner to approve one saving at a time, starting with the lowest risk and the highest saving. If the review shows a design gap that needs a new layout, offer the [Azure architecture designer](https://useaiblocks.com/skills/azure-architecture-designer). Nothing is changed in Azure by this run.

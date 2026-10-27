@@ -13,9 +13,13 @@ The rest of this file is in Chinese. Read this summary first and answer the user
 
 **Warning: the image model can invent texture.** It may add weave, relief or fuzz that the real garment does not have. Do not use the result as proof of fabric quality, and do not put it on a product page without checking it against the real item.
 
-**Where the result is saved.** The commands save to `docs/material-enhancement/output-<sku>-enhanced.jpg` (the page's name), or to `output/material-enhancement-<sku>.jpg` if you use the unified `scripts/gen.mjs` entry. Use one of these and keep the original apart so you can compare.
+**Where the result is saved.** Both commands save to `docs/material-enhancement/output-<sku>-enhanced.jpg`. Keep the original apart so you can compare.
+
+**Which text to run.** The prompt template in section 5 is in English and can be used as written. The Chinese tables and notes are for reference only, so do not send them to the image model.
 
 **Cost.** Each run costs dlazy credits. Use `--dry-run` first.
+
+**Before you publish.** The prompt asks the model to rebuild texture, so it may add detail the real garment lacks. Check the result against the real item. Say the image is AI-made where your store or the law requires it.
 
 把一张**面料糊掉的商拍图**修成**面料清晰真实**的图，构图和人一动不动。
 
@@ -60,7 +64,7 @@ dlazy gpt-image-2 \
 | --- | --- |
 | 面料表面纹理、微观细节、褶皱阴影层次、纤维光泽 | 构图、模特（脸/发/手/姿势）、其他服饰、背景、色调、服装轮廓与颜色 |
 
-**不做**：不改服装轮廓与颜色；不改模特与背景；不把一种面料换成另一种（换面料请用 [fabric-on-body](../fabric-on-body/skill.md)（this catalogue's Fabric swap sample maker））。
+**不做**：不改服装轮廓与颜色；不改模特与背景；不把一种面料换成另一种（换面料请用 `fabric-swap-sample-maker`（this catalogue's Fabric swap sample maker））。
 
 ---
 
@@ -120,6 +124,8 @@ and micro-detail improve.
 
 ### 调用方式
 
+> Warning (added by AI Blocks): the image model can invent weave, relief or fuzz that the real garment does not have. Check every result against the real item before you use it, and never use it as proof of fabric quality on a product page.
+
 两种等价写法，选一种。统一入口会自动选后端、失败重试、建目录落盘、估算成本：
 
 ```bash
@@ -127,11 +133,13 @@ and micro-detail improve.
 node scripts/gen.mjs --task material-enhancement \
   --prompt '<见下方 Prompt 模板>' \
   --images <按下表顺序> \
-  --save output/material-enhancement-<sku>.jpg
+  --save docs/material-enhancement/output-<sku>-enhanced.jpg
 
 # B. 直接用 dLazy CLI（不想引入 Node 依赖时，效果等价）
-dlazy gpt-image-2 --prompt '...' --images ... --save output/material-enhancement.jpg
+dlazy gpt-image-2 --prompt '...' --images ... --batch 2 --save docs/material-enhancement/output-<sku>-enhanced.jpg
 ```
+
+Save path (added by AI Blocks): both commands above save to `docs/material-enhancement/output-<sku>-enhanced.jpg`, which keeps the result apart from the original so you can compare. Use this one path every time. `--batch 2` makes two variants. Both commands default to one image, so add `--batch 2` to either command if you want two.
 
 **参数约定（本技能固定用法）**
 
@@ -187,6 +195,7 @@ Image 2 is the high-resolution product photo that defines the true fabric.
 Rebuild the [服装部位] surface in image 1 using the real texture from image 2:
 [第三节表格里对应面料的具体特征],
 correct fold shadows with proper ambient occlusion in the creases.
+Add no weave, relief or fibre detail that is not visible in image 2.
 
 Do not change anything else — the model face, hair, hands, pose, other garments,
 background, framing and colour grading must stay identical to image 1.
@@ -195,6 +204,8 @@ and micro-detail improve.
 
 Photorealistic, sharp, no text, no watermark.
 ```
+
+> Check the result against the real garment before you publish it. Do not present it as proof of fabric quality.
 
 **按问题追加的修正句**
 

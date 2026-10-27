@@ -33,14 +33,16 @@ you_get:
   - A read-only security audit that lists licences, sign-in policies and who lacks multi-factor sign-in
   - New-user scripts that save temporary passwords to a file
   - Sign-in policies in report-only mode, with break-glass accounts left out
-  - An offboarding script, with a preview before anything is removed
+  - An offboarding script. It prints a list of planned changes first, then a real -WhatIf dry run, and each removal waits for your yes.
 how_to_use:
   - Use an AI that can run PowerShell, or run the scripts yourself. Install the Microsoft Graph, Exchange Online and Teams PowerShell modules first.
   - Start in a test tenant or with a small test group. Do not run a new script on all staff first.
   - Say what you need. For new users, give your AI the CSV. Name your two break-glass admin accounts, or say you have none.
-  - Run the security audit first, since it only reads. Read the list of findings before you change anything. Then ask your AI for the admin sign-in policy (multi-factor for admins) to fix the gaps it found. Then ask your AI for the admin sign-in policy (multi-factor for admins) to fix the gaps it found.
-  - Before each change, check the script, the count of accounts it touches and what it does. Say yes only when it matches.
-  - Keep new sign-in policies in report-only for about 48 hours. Check the sign-in logs, then ask your AI to switch them on. Hand over temporary passwords safely, never by email to the same account. The skill limits the passwords file to your own Windows account. Delete the file after you hand the passwords over.
+  - Run the security audit first, since it only reads. Read the list of findings before you change anything. Then ask your AI for the admin sign-in policy (multi-factor for admins) to fix the gaps it found.
+  - Before each change, check the script, the count of accounts it touches and what it does. Say yes only when it matches. For offboarding, the first "preview" is only a printed list. Run the -WhatIf dry run as well before you let anything be removed.
+  - The sign-in policy scripts hold placeholders for your two break-glass account IDs. They stop with an error until you fill both in, so nobody is locked out.
+  - Temporary passwords are made with a cryptographic random generator, 16 random characters plus a fixed tail. They are saved in plain text in a file on your disk, so delete it after handover.
+  - Keep new sign-in policies in report-only for about 48 hours. Check the sign-in logs, then ask your AI to switch them on. Hand over temporary passwords safely, never by email to the same account. The passwords file is plain text on your disk, limited to your own Windows account. Delete it straight after you hand the passwords over.
 how_it_works:
   - title: Ask what is missing
     text: It asks for your domain, the user list and the break-glass accounts, and does not invent them.
@@ -77,7 +79,7 @@ output_sample:
     - name: Sign-in policy script
       contains: Creates multi-factor and legacy-sign-in policies in report-only mode, with break-glass accounts left out.
     - name: Offboarding script
-      contains: Blocks sign-in, ends sessions, removes licences and groups, and makes the mailbox shared, after a preview.
+      contains: Blocks sign-in, ends sessions, removes licences and groups, and makes the mailbox shared, after a printed list of changes and a -WhatIf dry run.
     - name: Check list
       contains: What to review in the admin portal and sign-in logs before and after you run each script.
 works_best_with:

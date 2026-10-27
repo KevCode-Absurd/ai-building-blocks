@@ -30,12 +30,16 @@ you_get:
   - GraphQL queries for your products
   - Deploy steps for Oxygen
 how_to_use:
+  - "First run, in order: create the project, fill in your .env file, run npm run dev, check that the home, product and collection pages load, then deploy to Oxygen."
   - Before you start, get your Storefront API token. In Shopify admin, install the Headless channel and create a storefront. Copy the token from there.
   - Keep the token in your .env file. Never paste it into a chat.
   - Paste this skill into Claude, ChatGPT or Gemini. Add your store domain, design idea, page list and JavaScript or TypeScript.
   - Read each command before you run it, and run it only inside your project folder. This needs Node.js 18 or newer, so use an AI that can run code or run them yourself.
+  - The code samples are written for the @remix-run/react and @remix-run/cloudflare packages. Newer Hydrogen projects import the same names from react-router. Check your package.json and switch the imports to match.
+  - This skill has no working customer sign-in or multi-currency code. Use Shopify's hosted Customer Account login, and take any localization code from Shopify's current docs. Never build a form that collects customer passwords yourself.
   - Check that the home, product and collection pages load. If a code sample fails, ask your AI to match it to the router package your project uses.
   - Run the deploy steps to put your storefront on Oxygen.
+  - After the storefront loads, run the speed-budget-and-sale-check item to test page speed before launch. When you are ready to go live, use the site-go-live-runbook-writer item to write your launch steps.
 output_sample:
   input:
     - Your Shopify store domain
@@ -48,6 +52,8 @@ output_sample:
     - An AI that can run code, or a developer to run the commands
     - A Shopify store
   output:
+    - name: What a finished reply looks like
+      contains: A file tree for the new project, the commands to run in order, the route files it wrote, and a short list to check first, which is the .env values, the three pages loading and the router imports.
     - name: Hydrogen project
       contains: A new storefront app made with the Hydrogen setup command, using the template and language you pick.
     - name: .env file

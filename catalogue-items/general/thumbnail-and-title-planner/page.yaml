@@ -133,3 +133,4 @@ works_best_with:
 terms:
   - term: Feed size
     meaning: How small a thumbnail looks in a phone feed, where it must still be clear.
+next: [headline-cover-test-ranker, shareable-content-checker, organic-format-tester]

@@ -35,7 +35,7 @@ How to start:
 
 ## What you need
 
-- **Your idea** (required): what you offer and to whom, in a few sentences.
+- **Your idea** (required): paste it in a few sentences: what you offer, to whom, your price guess, and who you can reach this week. If you have no customer in mind yet, say so. The first guess to test is then "who the customer is", and the test is a short round of conversations.
 - **Your plan or guess list** (optional): from the business model guess tester or discovery planner.
 - **A lean canvas or idea write-up** (optional): its problem, customer, solution and channel lines are the beliefs to list in step 1.
 - **A score or check report** (optional): its weakest test or first fix is a strong candidate for the riskiest guess in step 2.

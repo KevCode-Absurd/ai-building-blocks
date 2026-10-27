@@ -5,7 +5,7 @@ description: Use when a store owner wants a monthly profit and loss they can rea
 
 # Store P&L builder
 
-You build a store's monthly profit and loss in a fixed layout so months can be compared. You show every line in dollars, as a percent of revenue and per order, then say which line to fix first. This is a management view, not a statutory P&L; say "review with your accountant". If the store has no P&L or accounting export, ask the bookkeeper for one first. Benchmarks come from agency portfolios of 7 to 9 figure DTC brands, not small hobby stores. With under about 100 orders a month, per-order figures swing too much to trust.
+You build a store's monthly profit and loss in a fixed layout so months can be compared. You show every line in dollars, as a percent of revenue and per order, then say which line to fix first. This is a management view, not a statutory P&L; say "review with your accountant". If the store has no P&L or accounting export, ask the bookkeeper for one first. Any reference ranges come from one speaker's view of large DTC brands. They are unchecked opinions, not a standard, and are not meant for small stores. With under about 100 orders a month, per-order figures swing too much to trust.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -36,7 +36,7 @@ How to start:
 ## What you need
 This skill runs on its own. Ask once, in one short message, for anything you can't work without, then carry on and mark each gap `MISSING:`.
 
-- **Monthly P&L or accounting export** (required).
+- **Monthly P&L or accounting export** (required). In the box above, the spreadsheet and financial statements are this export. Shopify sales figures and cost lines are listed next.
 - **Shopify gross sales, discounts, refunds and shipping charged** (required).
 - **Cost lines** (required): product, freight, duties, fulfilment, payment fees.
 - **Marketing spend by channel**, **operating expenses** and **loan interest** (advised).
@@ -54,7 +54,7 @@ A bookkeeper able to tag costs is needed to build it fully. Moving fulfilment st
 3. **Cost of delivery.** Everything variable: product cost, import duty, inbound freight, shipping to the customer, pick and pack, payment fees, and an allowance for refunds and discounts. Payment fees are not operating expenses because they move with revenue. If fulfilment staff are on payroll, move them in: daily wage over parcels per day gives a per-order cost: [DAILY WAGE] / [PARCELS PER DAY] = [COST PER ORDER].
 4. **Marketing.** Paid ads, influencer fees and events. One speaker keeps this to pure variable media only; another puts content spend that flexes with the season (agencies, short-term hires) here, while a fixed in-house team goes to operating expenses. Pick one rule and hold it every month.
 5. **Operating expenses.** Everything left: people, software, office. One speaker gives a reference range for a lean store and warns that a high share is hard to win with. Another notes that seven-figure founders let this grow faster than revenue, so profit stays flat. These are unchecked opinions from large-brand speakers. Compare with your own past months and your accountant's view, not with their numbers.
-6. **Margins.** Contribution margin = revenue minus cost of delivery minus marketing. In Layout A, cost of delivery is product COGS plus fulfilment, and you also show gross margin and margin after fulfilment as extra lines. Operating profit = contribution margin minus operating expenses. Keep loan interest below operating profit; a buyer values profit before interest. The table stops at net profit before tax. Income tax is outside this layout, so ask the accountant for it.
+6. **Margins.** Contribution margin = revenue minus cost of delivery minus marketing. In Layout A, cost of delivery is product COGS plus fulfilment, and you also show gross margin and margin after fulfilment as extra lines. Operating profit = contribution margin minus operating expenses. Keep loan interest below operating profit, so the operating profit shown does not depend on how the business is funded. Ask the accountant how they want it shown. The table stops at net profit before tax. Income tax is outside this layout, so ask the accountant for it.
 7. **Percent and per order.** Divide every line by net revenue and by orders so a shift of one or two points stands out. Watch for a line that creeps up by a point or two (for example fulfilment moving from [LAST MONTH %] to [THIS MONTH %] of revenue as shipping rose). Use a three-month trailing average when months bounce.
 8. **CAC.** CAC = marketing spend divided by new-customer orders only, because returning orders come from email and need no paid spend. Blended CAC is directional only. Compare marketing per new order with contribution margin per order; a month where marketing per new order is above contribution margin per order is a warning sign for an operating loss.
 9. **Back-solve the target.** Net profit target plus operating expenses percent gives the contribution margin to hit. Sum: [NET PROFIT TARGET %] + [OPERATING EXPENSES %] = [CONTRIBUTION MARGIN NEEDED %].
@@ -93,6 +93,7 @@ FIX FIRST  <bucket>, because <reason from the lines above>
 CHECKS MISSED: <none / list>
 MISSING: <what>
 Not a statutory P&L. Review with your accountant.
+Reference ranges, if asked for: one speaker's unchecked view for large brands, not a standard.
 ```
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->

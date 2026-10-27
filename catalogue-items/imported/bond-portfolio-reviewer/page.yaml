@@ -21,6 +21,7 @@ not_for:
   - You want a price for one private or unlisted bond. Free sources do not have it, so use your broker or the issuer's documents.
   - You have no price for most of your bonds. Get prices first, or use the yield curve explainer to learn the basics.
   - You want a view on what to buy or sell. This is a research summary, not investment advice.
+  - You hold Indian bonds and have no Indian government curve to paste. The tool has no Indian curve, so it marks curve spreads n/a.
 you_give:
   - A holdings list with name or ID, amount held, price, coupon and maturity date for each bond
   - Rating, sector and currency for each bond (optional)

@@ -7,6 +7,8 @@ job: build-software
 headline: Traffic co-simulation builder
 subhead: A Simulink model that runs in step with the SUMO traffic simulator, so you can test a driving controller against moving traffic. You describe the test, and the skill builds the model blocks and the SUMO files.
 explain: |
+  Licence: BSD 2-Clause plus a MathWorks-only term, as the LICENSE.md file in this item says. You may use this skill only with MathWorks products, so MATLAB and Simulink are required. The skill file also links MathWorks' own reuse licence (PMRL). LICENSE.md is the one that applies to this copy.
+
   A Simulink model that runs in step with the SUMO traffic simulator, so you can test a driving controller against moving traffic. You describe the test, and the skill builds the model blocks and the SUMO files.
 
   It sets up the server and client blocks, adds reader, writer and actor blocks to read vehicle positions and speeds, and controls the ego vehicle. It can add random background traffic without hand-written route files. It also covers a common Windows trap: the SUMO_HOME path needs a trailing separator or every run fails. You need MATLAB, Simulink, the SUMO support package and SUMO installed. It is for driver-assistance and automated-driving testing.
@@ -30,12 +32,13 @@ you_get:
   - SUMO files for the scenario
   - Setup fixes for common start-up errors
 how_to_use:
+  - Gather first: your .sumocfg file and route files (if you have them), and the path to your SUMO folder for SUMO_HOME.
   - Install MATLAB, Simulink, SUMO and the SUMO support package. MATLAB and Simulink are paid MathWorks products, and the licence allows this skill only with MathWorks products (see LICENSE.md). SUMO is free. Set SUMO_HOME to your SUMO folder.
   - Open an AI that can run MATLAB code, for example one with a MATLAB connection (MCP) set up, and add this skill. If yours cannot run MATLAB, ask it for the code and run it yourself.
   - Describe your traffic test. Add your .sumocfg file if you have one (optional).
   - Tell it which vehicle is the ego vehicle and how it should be controlled.
   - Check that the model, .sumocfg and route files were saved, then open the .slx file in Simulink and press Run.
-  - Log the speed and position signals to read the results. Check the ego vehicle's speed and gap to other cars first, then pair the model with your own controller.
+  - Log the speed and position signals to read the results. Check the ego vehicle's speed and gap to other cars first. Then export the logged speed and gap data from the saved .slx run for a controller review, or connect your own controller to the model.
 output_sample:
   input:
     - A description of the traffic test

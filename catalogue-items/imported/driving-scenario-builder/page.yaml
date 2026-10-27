@@ -7,7 +7,7 @@ job: build-software
 headline: Driving scenario builder
 subhead: A simulation-ready driving scene, built from real drives instead of drawn by hand. Feed in recorded GPS, camera, lidar and tracked vehicles, and you get roads, other vehicles and their paths that a simulator can replay.
 explain: |
-  Who this is for: engineers who run MATLAB, with the paid Scenario Builder add-on from MathWorks. If that is not you, ask an engineer who does, or pick a simpler tool.
+  Who this is for: engineers who run MATLAB, with the paid Scenario Builder add-on from MathWorks. MATLAB and RoadRunner are paid MathWorks products too, and the licence lets you use this skill only with MathWorks products. There is no free version of this skill. If that is not you, ask an engineer who does, or pick a simpler tool.
 
   A simulation-ready driving scene, built from real drives instead of drawn by hand. Feed in recorded GPS, camera, lidar and tracked vehicles, and you get roads, other vehicles and their paths that a simulator can replay.
 
@@ -37,8 +37,8 @@ you_get:
 how_to_use:
   - This is for engineers. If you are not a MATLAB user, ask one to run it. Check you have MATLAB with the Scenario Builder support package. It is a paid MathWorks product. Add RoadRunner if you want that export.
   - Open an AI that can write and run MATLAB code, and paste in the skill.
-  - Give it your sensor files and say which format you want, such as RoadRunner or OpenSCENARIO.
-  - Check the data format table it shows first. Fix any timestamp or axis problem it flags.
+  - "Gather first: your GPS file with timestamps, camera data and its intrinsics (the lens settings) with the camera mounting height, lidar data if you have it, and a track file for the other vehicles if you have one. Give your AI these files and say which format you want, such as RoadRunner or OpenSCENARIO."
+  - "The run produces a data format table, a progress table with plots, trajectory plots, and the exported scene and scenario files in the format you chose. Check the data format table it shows first. Fix any timestamp or axis problem it flags."
   - Tell it the paths to RoadRunner when it asks, and check the plots at each step.
   - Open the exported files in your simulator and replay the drive. Then run test scenarios from them, or feed the events into a safety coverage report. Driving scenario simulator can replay them.
 terms:

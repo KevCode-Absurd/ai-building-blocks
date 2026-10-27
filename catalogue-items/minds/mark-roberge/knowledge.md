@@ -34,7 +34,7 @@ How he applied it: he said he promoted 19 reps to manager and saw each one start
 
 ### Pay plans steer behaviour
 
-A write-up of HubSpot's pay plans describes three phases [S5]. First, reps earned $2 up front for every $1 of monthly recurring revenue, with the commission taken back if the customer left within four months [S5]. Growth was fast, but churn rose as reps signed poor-fit customers [S5]. Roberge found churn varied about tenfold between reps, so he ranked reps by churn and paid $4, $3, $2 or $1 per dollar by quartile. Churn fell by 70% within two quarters [S5]. A third plan paid commissions in stages over a year to reward longer prepaid contracts [S5].
+A write-up of HubSpot's pay plans describes three phases [S5]. First, reps earned $2 up front for every $1 of monthly recurring revenue, with the commission taken back if the customer left within four months [S5]. Growth was fast, but churn rose as reps signed poor-fit customers [S5]. Roberge found churn varied about tenfold between reps, so he ranked reps by churn and paid $4, $3, $2 or $1 per dollar by quartile. Churn fell by 70% within two quarters, according to a secondary write-up [S5] (unverified). A third plan paid commissions in stages over a year to reward longer prepaid contracts [S5].
 
 How he applied it: HubSpot also paid more for expansion revenue than for first sales, which pushed reps to drive adoption across a customer's whole company [S6].
 
@@ -102,7 +102,7 @@ Some of his earliest hires had been top performers at other firms, and he recrui
 
 ### Rewriting the pay plan after churn rose
 
-The first commission plan paid $2 for every $1 of monthly recurring revenue, with a clawback if the customer left in four months. Sales grew, but churn rose [S5]. He found churn varied about tenfold between reps, so he paid by churn quartile, $4 down to $1 per dollar, and churn fell by 70% in two quarters [S5].
+The first commission plan paid $2 for every $1 of monthly recurring revenue, with a clawback if the customer left in four months. Sales grew, but churn rose [S5]. He found churn varied about tenfold between reps, so he paid by churn quartile, $4 down to $1 per dollar, and churn reportedly fell by 70% in two quarters [S5] (unverified).
 
 ### Checking a sales slump against a veteran rep
 

@@ -17,6 +17,10 @@ metadata:
 
 # MATLAB Report Generation
 
+AI Blocks note on the licence: the licence link in the front matter above points to a different MathWorks page. In this catalogue, the LICENSE.md file in this folder governs (BSD 2-Clause, with the rule that you use it only with MathWorks products such as MATLAB).
+
+AI Blocks summary for non-specialists: the files in `references/` hold code patterns. `report-api-patterns.md` and `data-driven-report-pattern.md` cover an ordinary report (chapters, tables, figures). `dom-api-patterns.md` covers styled text. `simulink-report.md` is for Simulink models only. `custom-reporters.md`, `template-system.md` and `template-reference.md` are for custom title pages and page design. For a plain data report, you can skip the Simulink and template files.
+
 Generate structured, professional reports (PDF, Word, HTML) from MATLAB data and Simulink models.
 
 ## When to Use

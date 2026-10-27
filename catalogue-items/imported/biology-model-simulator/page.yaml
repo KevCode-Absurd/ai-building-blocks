@@ -10,6 +10,10 @@ explain: |
   Run your SimBiology model forward in time and see what changes when you tweak a dose, a rate or a starting level. You also learn which settings move the result most, so you know where to spend your effort.
 
   The skill covers smooth ODE runs and random-event runs, plus what-if scenarios, dose-response sweeps and factorial designs. For influence, it runs global sensitivity methods such as Sobol and Morris. It follows a few hard-won rules: use element-wise operators in observables, and log the states that observables depend on. It works inside MATLAB with SimBiology installed.
+
+  Scenario results come as a table with one row per run: run ID, dose, parameter values and the final value of each output species. The sensitivity list ranks each parameter with its first-order and total-order index.
+
+  Licence: BSD 2-Clause, plus a MathWorks term in the LICENSE file. You may use it only together with MathWorks products such as MATLAB.
 when:
   - You want to see how your model behaves over time under a new dose.
   - You need to compare several what-if cases side by side.

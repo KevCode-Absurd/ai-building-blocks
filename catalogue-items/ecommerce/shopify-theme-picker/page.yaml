@@ -77,7 +77,7 @@ how_it_works:
   - title: Reads the demo on mobile
     text: Reads the full feature list, all the presets and the mobile demo, plus variant image grouping and the size guide.
   - title: Scores and plans the trial
-    text: Scores each theme out of 100 on the checks run and shows the sum. Then plans a free trial and a backup.
+    text: Scores each theme out of 100 on the checks run and shows the sum. The weights (50 for must-haves, 15, 15, 10, 10) are this skill's own scoring, not taken from the sources. Then plans a free trial and a backup.
 
 output_shape: |
   THEME SHORTLIST for <store>, <products>, <budget>

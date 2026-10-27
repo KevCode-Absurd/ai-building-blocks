@@ -99,18 +99,19 @@ Before developing a sourcing strategy, understand:
 **Four Quadrants:**
 
 ```
-High Supply Risk
-       │
-   2   │   1
-Leverage│Strategic
-       │
-───────┼───────  High Profit Impact
-       │
-   3   │   4
-Non-   │Bottleneck
-Critical│
-       │
-Low Supply Risk
+                High Supply Risk
+                       │
+   Bottleneck (4)      │      Strategic (1)
+   high risk,          │      high risk,
+   low impact          │      high impact
+                       │
+Low Profit Impact ─────┼───── High Profit Impact
+                       │
+   Non-Critical (3)    │      Leverage (2)
+   low risk,           │      low risk,
+   low impact          │      high impact
+                       │
+                Low Supply Risk
 ```
 
 **1. Strategic (High Risk, High Impact)**
@@ -150,6 +151,7 @@ class KraljicAnalysis:
     def classify_category(self, supply_risk, profit_impact):
         """Classify category into Kraljic quadrant"""
 
+        # The 50-point cut-offs are placeholders. Set them from your own supply risk and profit impact scores.
         if supply_risk >= 50 and profit_impact >= 50:
             return 'Strategic'
         elif supply_risk < 50 and profit_impact >= 50:

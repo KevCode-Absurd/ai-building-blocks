@@ -13,6 +13,8 @@ metadata:
 
 # TimesFM Forecasting
 
+> **Plain words (added by AI Blocks).** Quantile: a point on the range of likely values, such as the 10th or 90th percentile; the low and high bands are quantiles. Covariate or XReg: an extra column that helps explain your numbers, such as price or promotions. Rolling-origin test: hide the last part of your history, forecast it, compare, then repeat with an earlier cut-off. Held-back test: the single version of this, using the most recent data. Zero-shot: the model predicts without being trained on your data. Horizon: how many steps ahead you forecast.
+
 ## Choose the model/API first
 
 The **Python package version is 3.0.2**; checkpoint versions are separate.

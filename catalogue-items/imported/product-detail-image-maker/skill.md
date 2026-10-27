@@ -7,7 +7,7 @@ description: 生成带中文排版的详情页模块。商品图 + 卖点 → �
 
 一张商品图 + 卖点文案 → **带中文排版的详情页视觉**。
 
-> **Before you start (added by AI Blocks).** You need: one clear product photo; your verified selling points and size data; the language for the text on the picture; and an image model that draws text cleanly. The skill's own commands use a paid dLazy account (an API key and credits). Another text-friendly image model also works. English prompt template for each block: "Product detail page [block name], [aspect ratio]. [Position] shows the product from image 1 as [model photo / flat lay / close-up]. Keep the product's colour, [material or weave] and [pattern] exactly as in image 1. In [position], set the text: large text '[HEADLINE]', small subtext '[SUBHEAD]'. Style: [background and tone], clean sans-serif font, aligned layout. All text must be clear and correct, with no garbled characters. Add no text that was not provided."
+> **Before you start (added by AI Blocks).** This file is written in Chinese first. AI Blocks has not tested how well English text renders on the picture, so read every word the model draws. The free route is to paste the English prompt below into any image model that draws text well. The dLazy commands later in this file are an optional paid route. You need: one clear product photo; your verified selling points and size data; the language for the text on the picture; and an image model that draws text cleanly. The skill's own commands use a paid dLazy account (an API key and credits). Another text-friendly image model also works. English prompt template for each block: "Product detail page [block name], [aspect ratio]. [Position] shows the product from image 1 as [model photo / flat lay / close-up]. Keep the product's colour, [material or weave] and [pattern] exactly as in image 1. In [position], set the text: large text '[HEADLINE]', small subtext '[SUBHEAD]'. Style: [background and tone], clean sans-serif font, aligned layout. All text must be clear and correct, with no garbled characters. Add no text that was not provided."
 >
 > **For English readers (added by AI Blocks).** This file is written in Chinese. To get readable text on the picture, the method sets four conditions: (1) write each line of text into the prompt word for word, inside quote marks; (2) name the font style and weight; (3) say where each text block sits; (4) tell the model the text must be clear and not garbled. Keep lines short, and make one image per block, not the whole page at once. Each block comes out as a jpg at 3:4, 1:1 or 9:16, at about 2K. The sample selling points in the source have been replaced with bracketed placeholders such as [主标题] (main title). Fill each one only with a claim that you have checked against verified product specs. Never make up a claim, a certification or a size. Scripts need the skill folder, Node and a dLazy account, or the dLazy command line tool.
 
@@ -113,7 +113,9 @@ dlazy seedream-5.0-pro \
 
 ---
 
-## 5、工具调用
+## 5、工具调用（可选，付费 dLazy / Optional, paid dLazy route）
+
+> **Optional (added by AI Blocks).** The dLazy commands in this section need a paid dLazy account and API key. You can skip them: paste the prompt from section 6 into any image model that draws text well.
 
 本技能使用 dLazy 的 **`seedream-5.0-pro`**（专业档图像模型，在**中文字形与复杂排版**上明显强于同类；本技能的产出带大量中文文案，字形正确率是首要指标）。
 
@@ -183,6 +185,8 @@ dlazy seedream-5.0-pro --dry-run --prompt '...' --images a.jpg --size 3:4
 
 ## 6、Prompt 模板
 
+> **Verify claims (added by AI Blocks).** Every selling point, material, certification and size you put inside the quote marks must come from the user's verified specs. If the user gave none, leave that text out or write [TO ADD] and ask. Never write a claim yourself.
+
 ```text
 电商[类目]详情页[模块名]，[比例描述]。
 
@@ -241,4 +245,4 @@ dlazy seedream-5.0-pro --dry-run --prompt '...' --images a.jpg --size 3:4
 
 ## Tips
 
-Visit https://dlazy.com for more information.
+(Vendor note from the original author, not part of the method: dLazy is a paid service. The steps above also work with any image model that draws text well.)

@@ -7,6 +7,8 @@ job: build-software
 headline: Vehicle network setup helper
 subhead: "A working CAN connection in MATLAB: your device found, a channel opened at the right speed, and messages going out and coming in. You can test without hardware too, using a virtual channel. It needs paid MATLAB with Vehicle Network Toolbox, and the licence lets you use this copy only with MathWorks products."
 explain: |
+  Licence: copied from MathWorks under BSD 2-Clause with an added term that limits use to MathWorks products, as the LICENSE.md file in this item says. It needs paid MATLAB with Vehicle Network Toolbox.
+
   A working CAN connection in MATLAB: your device found, a channel opened at the right speed, and messages going out and coming in. You can test without hardware too, using a virtual channel.
 
   The skill lists the connected CAN hardware from vendors such as Vector, Kvaser, NI and PEAK, then creates a channel with the right bus speed and options. It also shows how to encode and decode signals inside messages, and how to set up a loopback test on your bench. Common errors, like channel already in use, wrong speed or no acknowledgment, are explained with fixes. It needs MATLAB with Vehicle Network Toolbox and the vendor driver.
@@ -31,11 +33,13 @@ you_get:
   - Send and receive examples
   - Fixes for common channel errors
 how_to_use:
+  - "Before you start, gather: your adapter model, your bus speed, your MATLAB release, and a check that your MATLAB licence includes Vehicle Network Toolbox. Remember the licence allows this copy only with MathWorks products."
   - Open Claude and paste in this skill's instructions. It is written for Claude, and its troubleshooting routing points to Claude-specific files. Other AIs can follow the setup steps but may handle the diagnostic part less well.
   - Tell your AI your CAN adapter brand and model, your bus speed, and whether you use CAN or CAN FD.
   - Add your MATLAB release and any error message you see (optional).
   - Before you send anything, check that your bus is a bench bus, a virtual channel or an isolated test network. Never send frames on a vehicle that is in service, or on a network that safety systems rely on. If you are not sure, use the virtual channel or only receive.
-  - Run the code your AI gives you in MATLAB. This needs Vehicle Network Toolbox and, for real hardware, the vendor driver. No adapter? Use the virtual channel.
+  - Run the code your AI gives you in MATLAB. This needs Vehicle Network Toolbox and, for real hardware, the vendor driver.
+  - No adapter? Run the whole thing on the MathWorks virtual channel. Ask your AI to create two channels on the virtual device (channel 1 and channel 2), set the same bus speed on both, start both, send a message on one and receive it on the other. That tests the full path with no hardware.
   - Check the health line after each send. Error counts of zero and an active bus mean the frame was accepted.
   - If the error counters (TEC or REC) are above zero, or no acknowledgment appears, stop and follow the diagnostic workflow in the skill before you retry. The usual cause is that no other device on the bus is started to acknowledge the frame. Once messages flow, ask your AI to decode signals using your database file. Use your vendor's database editor for any DBC changes.
 output_sample:
@@ -57,6 +61,6 @@ output_sample:
     - name: Send and receive code
       contains: Examples to send, repeat and receive messages, with filters and signal decoding from a database.
     - name: Bus health check
-      contains: A check of error counts and bus status after each send, so you know the frame was accepted.
+      contains: "A short run of code blocks (find the device, create the channel, set the speed, start, send, receive), then one health line such as TEC=0 REC=0 BusStatus=ErrorActive. That line means the frame was accepted. Any error count above zero means stop and diagnose."
     - name: Error fixes
       contains: Steps for common problems such as channel in use, wrong speed or no acknowledgment.

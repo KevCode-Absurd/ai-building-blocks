@@ -9,34 +9,23 @@ description: >
 argument-hint: "[vendor name, or attach the contract]"
 ---
 
-> **AI Blocks note: using this in a plain chat.** The `~/.claude/plugins/config/...CLAUDE.md` files, the matter workspaces and the slash commands in this file belong to the original legal toolkit. They do not exist for you, so ignore every reference to them. Use the provisional path (see "Provisional mode") by default when the user has not pasted an AI policy. The parts you need are the term-by-term table, the severity scale, the output template under "Output", and the signature gate. Skip the matter context and the long notes on mapping to the user's own tech stack. This is a first check, not legal advice.
+> **AI Blocks note: using this in a plain chat.** This is a first check, not legal advice. Anthropic's original skill used plugin config files and slash commands that do not exist in a plain chat. We removed those references. Where this file says "your AI policy", use the policy the user pasted, or run in provisional mode.
 
-# /vendor-ai-review
+# Vendor AI review
 
-1. Read `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md`. Confirm vendor governance positions are populated. If that file does not exist (for example in a plain chat), ask the user to paste their AI policy and vendor positions, or to say "provisional", and carry on.
+1. Ask the user to paste their AI policy and vendor positions, or to say "provisional".
 2. Use the framework below.
 3. Confirm document type (AI addendum / main agreement AI provisions / ToS). If only an AUP was provided, ask for the full terms.
 4. Term-by-term review: training on data, confidentiality of inputs, model changes, output IP, liability, incident notification, human review rights, use restrictions, audit rights.
 5. AI addendum gap check if DPA exists but no AI addendum.
-6. AI policy consistency diff vs. `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md`.
+6. AI policy consistency check against the user's AI policy.
 7. Output: bottom line, term-by-term, recommended redlines, if-they-won't-move routing.
-
-```
-/ai-governance-legal:vendor-ai-review openai-enterprise-agreement.pdf
-```
-
----
-
-## Matter context
-
-**Matter context.** Check `## Matter workspaces` in the practice-level CLAUDE.md. If `Enabled` is `✗` (the default for in-house users), skip the rest of this paragraph — skills use practice-level context and the matter machinery is invisible. If enabled and there is no active matter, ask: "Which matter is this for? Run `/ai-governance-legal:matter-workspace switch <slug>` or say `practice-level`." Load the active matter's `matter.md` for matter-specific context and overrides. Write outputs to the matter folder at `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/matters/<matter-slug>/`. Never read another matter's files unless `Cross-matter context` is `on`.
 
 ---
 
 ## Purpose
 
-Vendor AI terms are where your governance positions actually get tested. The cold-start
-interview captures what you *want*. This skill checks what you *agreed to* — and flags
+Vendor AI terms are where your governance positions actually get tested. Your AI policy captures what you *want*. This skill checks what you *agreed to* — and flags
 the gaps between those two things.
 
 The direction here is always the same: we are the deployer or buyer reviewing the
@@ -57,27 +46,15 @@ model-specific rights and risks. Both need to be reviewed.
 
 ---
 
-## Load the playbook
+## Load your AI policy
 
-Read `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md` → `## Vendor AI governance`. Also read `## AI policy commitments`
-— vendor terms can't be consistent with a use restriction our own policy imposes if
-we've agreed to something different.
-
-If `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md` contains `[PLACEHOLDER]`, surface this bounce:
-
-> I notice you haven't configured your practice profile yet — that's how I tailor vendor governance positions to your practice.
->
-> **Two choices:**
-> - Run `/ai-governance-legal:cold-start-interview` (2 minutes) to configure your profile, then I'll review tailored to YOUR positions.
-> - Say **"provisional"** and I'll review against generic defaults — US jurisdiction, middle risk appetite, lawyer role, no playbook — and tag every output `[PROVISIONAL — configure your profile for tailored output]` so you can see what I do before committing.
+Ask the user to paste their AI policy and vendor positions (what they accept, what they would accept as a fallback, what is an automatic no). If they have none, or say "provisional", run in provisional mode.
 
 ### Provisional mode
 
-In a plain chat with no configured files, the cold-start interview command is not available. Use provisional mode, or ask the user to paste their AI policy.
+Review against these generic defaults: middle risk appetite, US jurisdiction, no policy. Flag all common vendor-AI risks from first principles. Tag the reviewer note and every finding block with `[PROVISIONAL]`. At the end of the output, add:
 
-If the user says "provisional," run the vendor AI review normally using these generic defaults: middle risk appetite, lawyer role, US jurisdiction, no playbook (flag all common vendor-AI risks from first principles rather than matching to configured positions). Tag the reviewer note and every finding block with `[PROVISIONAL]`. At the end of the output, append:
-
-> "That was a generic run against default assumptions. Run `/ai-governance-legal:cold-start-interview` to get output calibrated to YOUR practice — your vendor governance positions, your jurisdiction, your risk appetite. 2 minutes."
+> "That was a generic run against default assumptions. Paste your AI policy and vendor positions and I will run it again against them."
 
 ---
 
@@ -103,7 +80,7 @@ If they share an acceptable use policy only:
 
 ### Core AI-specific terms (check every vendor AI agreement)
 
-Review each term below. For each, extract what the vendor's contract actually says and compare it against the position in `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md` → `## Vendor AI governance` (standard / acceptable fallback / automatic no). The default positions come from the team's playbook, not from this skill.
+Review each term below. For each, extract what the vendor's contract actually says and compare it against the position in your AI policy and vendor positions (standard / acceptable fallback / automatic no). The default positions come from the user's AI policy, not from this skill.
 
 | Term | What to look for |
 |---|---|
@@ -121,29 +98,29 @@ Review each term below. For each, extract what the vendor's contract actually sa
 | **Term and termination** | What happens to our data when we terminate? Deletion timelines? |
 | **Stacked-vendor accountability** | Is this vendor the model provider (e.g., Anthropic, OpenAI, Google, Meta), or are they a deployer of someone else's model (e.g., a SaaS wrapper of Claude, ChatGPT, or Gemini) or a reseller of infrastructure-hosted foundation models (Anthropic-on-Bedrock, Claude-on-Vertex, OpenAI-on-Azure)? If the latter: there are TWO vendors' terms in play — the one you're reviewing, plus the upstream model provider's terms. Identify (a) whose terms govern training on inputs, retention, and safety, (b) who is contractually liable for model behavior, and (c) whether each upstream commitment (e.g., "no training on inputs") is flowed down to you, or remains between the vendor and the upstream provider only. Flag any clause where one party disclaims responsibility for the other (e.g., "Anthropic is not responsible for Bedrock or any other services it receives from AWS"; "Azure disclaims responsibility for OpenAI model outputs") and whether the counter-party's contract closes the gap. Do not review the two contracts in isolation. |
 
-If `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md` doesn't define a position for a term on this list, ask: "Your playbook doesn't cover [term]. What's your default position, your acceptable fallback, and your automatic no? I'll add it to `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md` so the next review is consistent."
+If the user's AI policy doesn't define a position for a term on this list, ask: "Your policy doesn't cover [term]. What's your default position, your acceptable fallback, and your automatic no?"
 
 ---
 
 ## Playbook comparison
 
-For each term above, compare what we found to the positions in `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md`.
+For each term above, compare what we found to the positions in the user's AI policy.
 
 **Output format for each term:**
 
 > **[Term name]**
 > 🟢 / 🟡 / 🟠 / 🔴
 > **Vendor says:** [summary of what the contract actually says]
-> **Our position:** [from `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md`]
+> **Our position:** [from the user's AI policy]
 > **Gap:** [specific delta — or "Aligned"]
 > **Proposed fix:** [specific redline language, or "escalate — outside fallback"]
 
-Use the severity ratings consistently (calibrated against `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md` positions):
+Use the severity ratings consistently (calibrated against the user's AI policy positions):
 
-- 🟢 **Aligned** — at or better than the standard position in the playbook.
+- 🟢 **Aligned** — at or better than the standard position in the user's AI policy.
 - 🟡 **Note** — within fallback but worse than standard; flag for awareness, not a blocker.
 - 🟠 **Significant** — outside standard position but within fallback; needs redline before signing.
-- 🔴 **Critical** — outside fallback; deployment should not proceed without resolution. Escalate per `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md`.
+- 🔴 **Critical** — outside fallback; deployment should not proceed without resolution. Escalate to counsel.
 
 ---
 
@@ -170,7 +147,7 @@ Use the severity ratings consistently (calibrated against `~/.claude/plugins/con
 
 ## AI policy consistency check
 
-Cross-check the vendor's terms against our AI policy commitments in `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md`.
+Cross-check the vendor's terms against our AI policy commitments in the user's AI policy.
 
 Common conflicts:
 - Our policy prohibits vendor training on our data — the vendor's terms permit it by
@@ -189,7 +166,7 @@ Flag every mismatch. One of them has to change.
 
 **Edit at the smallest possible granularity.** A redline is a negotiation artifact, not a rewrite. Wholesale clause replacement signals "we threw out your drafting" — it's aggressive, it forces the counterparty to re-read the whole clause, and it discards the parts of their drafting that were fine. Surgical redlines — strike a word, insert a phrase, restructure a subclause — signal "we have specific asks" and are faster to read, understand, and accept.
 
-Default to the smallest edit that achieves the playbook position:
+Default to the smallest edit that achieves the policy position:
 - Replace a **word** before a phrase. ("twelve (12)" → "twenty-four (24)")
 - Replace a **phrase** before a sentence. ("paid by the Buyer" → "paid and payable by the Buyer")
 - Restructure a **subclause** before replacing the sentence. (Add "(a)" and "(b)" to split a compound condition.)
@@ -200,7 +177,7 @@ When in doubt, smaller. A client who receives a surgical redline trusts that you
 
 ## Output
 
-**Before recommending signature of a vendor AI agreement (the version the company will execute):** Read `## Who's using this` in `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md`. If the Role is Non-lawyer:
+**Before recommending signature of a vendor AI agreement (the version the company will execute):** Ask the user whether they are a lawyer. If they are not:
 
 > Signing this vendor AI agreement has legal consequences. Have you reviewed this with an attorney? If yes, proceed. If no, here's a brief to bring to them:
 >
@@ -211,7 +188,7 @@ When in doubt, smaller. A client who receives a surgical redline trusts that you
 Do not proceed past this gate without an explicit yes. Review/redline drafts for attorney consideration do not require the gate — signature does.
 
 ```markdown
-[WORK-PRODUCT HEADER — per plugin config ## Outputs — differs by role; see `## Who's using this`]
+[PROVISIONAL tag here if no AI policy was pasted]
 
 *This review is derived from vendor contract terms that are typically confidential under NDA, and it may itself be privileged. It inherits the source's confidentiality and privilege status. Distributing it beyond the privilege circle (e.g., forwarding to the vendor, sharing in an open channel) can waive privilege and breach the NDA. Mark, store, and route accordingly.*
 
@@ -259,8 +236,7 @@ issues where no fallback exists, flag for escalation rather than proposing langu
 
 ## If they won't move
 
-[For each 🔴 and 🟠: the fallback from `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md`, or "escalate — outside fallback"
-and routing per escalation table]
+[For each 🔴 and 🟠: the fallback from the user's AI policy, or "escalate to counsel: outside fallback"]
 ```
 
 ---
@@ -315,13 +291,11 @@ internal workflows.
 
 ## Close with the next-steps decision tree
 
-End with the next-steps decision tree per CLAUDE.md `## Outputs`. Customize the options to what this skill just produced — the five default branches (draft the X, escalate, get more facts, watch and wait, something else) are a starting point, not a lock-in. The tree is the output; the lawyer picks.
+End with a short list of next steps the reader can pick from, such as: draft the redlines, escalate to counsel, get more facts from the vendor, watch and wait, or something else. Tailor the options to what this review just produced.
 
 ## What this skill does not do
 
-- It doesn't review the DPA provisions of the same agreement — run
-  `/privacy-legal:dpa-review`, if the plugin is installed, for that.
-- It doesn't decide whether to accept terms outside the fallbacks. It routes those
-  per the escalation table in `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md`.
+- It doesn't review the DPA provisions of the same agreement. Ask your lawyer or privacy lead, or use the contract risk reviewer.
+- It doesn't decide whether to accept terms outside the fallbacks. It sends those to counsel.
 - It doesn't evaluate vendor security posture beyond what's in the agreement —
   that's a security team function.

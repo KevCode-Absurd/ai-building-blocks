@@ -35,10 +35,11 @@ you_get:
 how_to_use:
   - Install LibreOffice and check it opens. Use an AI that can run commands and save files, such as Claude Code, or ask for the commands and run them yourself.
   - Start a chat and add the skill. Paste your outline, one slide per line or short block, and say the format you want back.
+  - Before any batch run, test with one slide. If you use the Python (UNO) method, ask your AI to confirm that Python can import uno. If it cannot, use the command-line method instead.
   - For a template, attach the deck and name the markers in it. Make sure each marker in the deck has text to match.
   - Open the deck it made. Check the slide count, that the text fits, and that no ${...} markers are left.
   - For a folder, convert two or three decks first. Then run the whole folder.
-  - If a conversion hangs, save your work, close LibreOffice, then ask your AI to find and stop any leftover LibreOffice process and try again. Stopping the process closes every LibreOffice window and loses unsaved work, so save and close your documents first.
+  - If a conversion hangs, save your work and close LibreOffice from its own menu first. Only if it is still stuck, then ask your AI to find and stop any leftover LibreOffice process and try again. Stopping the process closes every LibreOffice window and loses unsaved work, so save and close your documents first.
   - Next, send the PDF, upload the PPTX, or run the same batch again next month with new text in your template.
 output_sample:
   input:

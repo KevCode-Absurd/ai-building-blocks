@@ -33,9 +33,14 @@ How to start:
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
+**When not to use it:** you have no product facts yet (write them down first, or build a [brand file](https://useaiblocks.com/skills/website-brand-brain-builder)), or you only need a headline (use the [Headline test](https://useaiblocks.com/workflows/headline-test) workflow).
+
 ## What you need
+This list replaces the shared "Before you start" block above. Check the draft first: it must be real copy that was meant to run, not notes. If you have a brand brain, step 1 reads `offers.md` and `proof-and-claims.md` for facts, and step 3 reads `offers.md` for the dates and limits. Without one, use the product facts you give.
+
 - **A draft of any copy (ad, page, email or script) that a check or edit pass works on** (required)
 - **One product's facts: price, variants, ingredients or materials, how it is used, photos by job** (required)
+- **Where the copy will run and how long it can be** (strongly advised): the ad placement and its character or word limit.
 - **A live offer with price, terms, effective_from/to and a current flag** (optional)
 - **The brand's facts, voice, products, offers (with effective dates), claims register, personas and look** (optional)
 
@@ -48,14 +53,19 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Make each line concrete.** Use the skill `concrete-copy-rewriter`. Starts from your draft and product facts.
-2. **Add a believable how-it-works.** Use the skill `how-it-works-copy-writer`. Give it the copy draft from the steps before. Takes the concrete draft and adds the cause-and-effect that backs the promise.
-3. **Write the ask.** Use the skill `call-to-action-writer`. Give it the copy draft from the steps before. Ends the draft from the step before with a clear ask.
-4. **Edit the whole ad.** Use the skill `sales-copy-editor`. Give it the copy draft and the ad copy from the steps before. Reads the draft and the ask from the steps before and fixes what still stops a reader.
+1. **Make each line concrete.** Use the skill `concrete-copy-rewriter`. Starts from your draft and product facts. It tests each line (can you picture it, can it be proved, can nobody else say it) and rewrites vague words into detail from your facts, with the fact shown behind each rewrite. Saved as `outputs/step-01-concrete-copy-rewriter.md`.
+2. **Add a believable how-it-works.** Use the skill `how-it-works-copy-writer`. Give it `outputs/step-01-concrete-copy-rewriter.md`. Takes the concrete draft and adds the cause-and-effect that backs the promise. Each link in the chain rests on a fact you supplied. Saved as `outputs/step-02-how-it-works-copy-writer.md`.
+3. **Write the ask.** Use the skill `call-to-action-writer`. Give it `outputs/step-02-how-it-works-copy-writer.md`. Ends the draft from the step before with a clear ask. It picks the kind of ask, uses a real reason to act now from your offer's dates and limits, and writes two versions. Saved as `outputs/step-03-call-to-action-writer.md`.
+4. **Edit the whole ad.** Use the skill `sales-copy-editor`. Give it the draft in `outputs/step-02-how-it-works-copy-writer.md` and the ask in `outputs/step-03-call-to-action-writer.md`. Reads the draft and the ask from the steps before and fixes what still stops a reader, using only supplied facts, and logs each change. Saved as `outputs/step-04-sales-copy-editor.md`.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
-4 step files and the summary. The last file holds the audit report.
+4 step files and the summary:
+- Step 1, concrete lines: each vague line, its rewrite and the fact behind it.
+- Step 2, how it works: a short chain of cause and effect, each link backed by a fact.
+- Step 3, the ask: two versions, with the reason to act now.
+- Step 4, edited ad: the final draft and a log of each change with its gain. This file is the audit report.
+- HAND-BACK SUMMARY: each step's file, and every `MISSING:` line in one list.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
@@ -68,7 +78,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 <!-- /next -->
 
 ## Check before you hand it back
-- Each step passed its own checks, or the run stopped at the step that failed and says why.
+- Every rewrite in step 1 shows the fact behind it, and step 2 and step 3 add no claim your facts do not support. Check the final ad against the rules of the platform where it will run. If a step is missing, the run stopped there and says why. If a named skill is not in your pack, stop at that step, write `MISSING: skill <name>` and do not do its job from memory.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.

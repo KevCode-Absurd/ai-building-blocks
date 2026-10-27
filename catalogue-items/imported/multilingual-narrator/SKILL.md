@@ -10,7 +10,7 @@ metadata: {"openclaw": {"requires": {"env": ["ELEVENLABS_API_KEY"]}, "primaryEnv
 
 Generate natural speech from text - supports 90+ languages, multiple models for quality vs latency tradeoffs. Examples default to `eleven_v4`, the latest and highest-quality model.
 
-> **Setup, before writing any code:** if `ELEVENLABS_API_KEY` isn't set for this project, show the user the command below and ask them to confirm before you run it (added by AI Blocks: `@latest` downloads and runs whatever the newest version of the ElevenLabs CLI is, so the user should check the package on npm first, or pin a version they trust). Then run `npx -y @elevenlabs/cli@latest onboard init` from the app's folder first and follow what it prints: it signs the user in and stores a key for the project, so nobody copies one by hand. Otherwise see the [Installation Guide](references/installation.md). For JavaScript, use `@elevenlabs/*` packages only.
+> **Setup, before writing any code:** if `ELEVENLABS_API_KEY` isn't set for this project, show the user the command below and ask them to confirm before you run it (added by AI Blocks: do not run it unpinned. The user should open npmjs.com/package/@elevenlabs/cli, read the package page and pick a version number, then you use that number in place of [VERSION] below. Stop and ask the user for the version number. Never guess one and never leave it out). Then run `npx -y @elevenlabs/cli@[VERSION] onboard init` from the app's folder first and follow what it prints: it signs the user in and stores a key for the project, so nobody copies one by hand. Otherwise see the [Installation Guide](references/installation.md). For JavaScript, use `@elevenlabs/*` packages only.
 
 ## Quick Start
 
@@ -50,7 +50,7 @@ Readable.fromWeb(audio).pipe(createWriteStream("output.mp3"));
 
 ### CLI
 
-Use `say` to play text immediately with the default voice and `eleven_v3` model:
+Use `say` to play text immediately with the default voice. Its default model is its own (it has been `eleven_v3`, the previous generation), not the `eleven_v4` used in the examples. For `eleven_v4`, use the API command below:
 
 ```bash
 elevenlabs say "Hello!"

@@ -58,14 +58,14 @@ output_sample:
     - name: MISSING and CHECKS MISSED
       contains: Inputs still needed and any check that failed or could not run, or none.
 how_it_works:
-  - title: 1. Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing
-    text: Map dated source records, actual units, period cutoffs, currency, definitions and missing evidence before computing.
-  - title: 2. Freeze the cohort, opening quantity and source cost; separate actual sold units from proposed clearance quantities
-    text: Freeze the cohort, opening quantity and source cost; separate actual sold units from proposed clearance quantities.
-  - title: 3. Reconcile full-price plus markdown units sold against opening cohort quantity; refuse sales exceeding available stock
-    text: Reconcile full-price plus markdown units sold against opening cohort quantity; refuse sales exceeding available stock. Separate realized receipts, purchase cost of sold units and the purchase-cost memo of unsold units.
-  - title: 4. Calculate sold-unit contribution after sold purchase cost and clearance expense
-    text: Calculate sold-unit contribution after sold purchase cost and clearance expense. Separately subtract the full original cohort purchase cash from realized receipts and clearance expense to report cumulative cohort net cash, not current-period cash flow.
+  - title: List the inputs
+    text: Writes down the opening units, unit cost, sales and clearance costs. Anything missing is marked MISSING.
+  - title: Count the units
+    text: Works out units left, and stops if you sold more than you had.
+  - title: Work out receipts and cost
+    text: Adds up what the sales brought in and what the sold units cost. Units still held are shown as a memo.
+  - title: Find contribution and cash recovered
+    text: Takes cost and clearance costs from receipts, then compares all the cash back with the full purchase cost. This is not profit for a period.
 output_shape: |-
   SCOPE AND DATED SOURCES
   INPUTS AND ASSUMPTIONS
@@ -104,8 +104,8 @@ works_best_with:
     - name: Node.js 20 or later
       why: Run the bundled dependency-free reference calculation against explicit numeric inputs.
   inputs:
-    - Dated primary financial records and the applicable contractual definitions.
-    - A named reviewer and an explicit financial question.
+    - Your sales records for the batch, split into full price and markdown.
+    - The purchase invoice for the batch.
 terms:
   - term: Illustrative figures
     meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.

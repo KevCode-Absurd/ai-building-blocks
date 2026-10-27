@@ -155,6 +155,8 @@ For each section:
 
 ### Summary writing
 
+Write each summary only from the Consensus abstract and details returned in this session. Do not add findings, numbers or claims the abstract does not state. Tell the user to check each summary against the abstract before sharing it with students.
+
 Per paper:
 - Plain language (calibrated to audience from Q2)
 - 2-3 sentences
@@ -246,6 +248,7 @@ See [`references/bundled_script_pattern.md`](references/bundled_script_pattern.m
 
 - File path
 - Audit summary in chat: "Saved {file}. {N} sections × {M} papers / {K} cited. Plan tier: {tier}."
+- What to do next: tell the user to check each link and summary against the paper abstract, then share the list with students
 - Validate: check zip integrity with `python3 -c "import zipfile,sys; zipfile.ZipFile(sys.argv[1]).testzip()" <docx>` (no output = intact), then confirm the required sections are present
 
 ## Tooling

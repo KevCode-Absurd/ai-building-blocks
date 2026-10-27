@@ -43,9 +43,9 @@ For each identified pool, assess:
 
 - **Size** - Estimated number of potential candidates (read LinkedIn headcount by hand from your own account, never scrape it, or use any other reliable source, company size, team estimates)
 - **Accessibility** - How reachable are these candidates? (Public profiles, community activity, event attendance)
-- **Fit probability** - What percentage likely match the role requirements?
+- **Fit probability** - What share are likely to match the role requirements? This is a judgement, so label it "estimate". Leave it blank when no public evidence supports it. Never invent a percentage.
 - **Competition intensity** - How many other companies target this same pool?
-- **Move likelihood** - Are candidates at this company likely to be open to moving? (Growth stage, recent layoffs, compensation gaps)
+- **Move likelihood** - Are candidates at this company likely to be open to moving? (Growth stage, recent layoffs, compensation gaps.) Rate it High, Medium or Low, label it "estimate" and name the public signal it rests on. Leave it blank when there is no signal. Judge it at company level. Do not rate named individuals.
 - **Company-size fit** - How large is the culture and comp gap between the source company and the hiring company? A candidate at a 5,000-person enterprise joining a 40-person startup faces a different transition than someone moving between two scaleups. Assess: source company size vs. hiring company size, whether the candidate has prior experience at a similarly-sized company, and whether push factors (layoffs, acquisitions, low quota attainment) override the gap. When the hiring company is a startup or scaleup, assign a fit score (High / Medium / Low) to each target company.
 
 ### Organizational Mapping

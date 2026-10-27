@@ -13,7 +13,7 @@ subhead: "Enter the deal: entry EBITDA and multiple, net debt, growth, margins
 explain: |
   Tables that show what a deal returns if the price, the debt or the exit changes. You get IRR and MOIC grids across entry multiple, debt level, exit multiple and hold period, so you can see which assumption matters most.
 
-  You start by entering the deal: entry EBITDA, entry multiple, net debt, growth, margins, debt terms and exit year. The model builds the base case with live formulas, then runs the two-way sensitivities. It is set up for Indian markets: April to March fiscal years, and lakh and crore units, with a built-in check against a 100x crore label error. It needs a spreadsheet to build in. The sensitivity ranges are for you to set, so the tables show what could happen, not a forecast. This is nighomni123's India returns-analysis skill, shared under the Apache 2.0 licence.
+  You start by entering the deal: entry EBITDA, entry multiple, net debt, growth, margins, debt terms and exit year. The model builds the base case with live formulas, then runs the two-way sensitivities. It is set up for Indian markets: April to March fiscal years, and lakh and crore units, with a rule against the 100x crore label error. The skill gives the lakh and crore unit rule as guidance, and no automatic check is included. Check the unit labels yourself. It needs a spreadsheet to build in. The sensitivity ranges are for you to set, so the tables show what could happen, not a forecast. This is nighomni123's India returns-analysis skill, shared under the Apache 2.0 licence.
 when:
   - You are weighing a bid and need to know how much price headroom you have.
   - Your lender wants to see returns at different debt levels.
@@ -33,8 +33,10 @@ you_get:
   - Notes on which assumptions drive the result
 how_to_use:
   - Add the skill to an AI that can build a spreadsheet, or paste the skill
-    instructions into its chat. The India helper files it mentions are not
-    included, so the rules in the skill are what it uses.
+    instructions into its chat. The India helper files it mentions (india-market-conventions,
+    india-market-data and NOT-ADAPTABLE.md) are not included. They held
+    wider India market rules. The skill keeps only two rules, April to March years
+    and lakh and crore units.
   - Give it the deal terms listed on this page, and say which fiscal year the
     exit falls in. It asks once for anything missing.
   - It builds the base case with live formulas, then the two-way IRR and MOIC

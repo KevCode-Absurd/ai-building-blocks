@@ -21,7 +21,7 @@ not_for:
   - The study has no results yet. This workflow checks claims against finished results.
   - You only want grammar and plain wording fixed. Use the Plain English editor.
   - You want every unsourced claim found in a long draft, not an abstract checked against data. Use the Unsupported claim spotter.
-  - You are reviewing someone else's paper. Use the Check a paper's claims and write a fair peer review workflow.
+  - You are reviewing someone else's paper. Use the workflow "Check a paper's claims and write a fair peer review" (review-a-paper-and-write-a-fair-peer-review).
 you_give:
   - Your abstract draft, as it stands
   - Your study's methods and results, as the paper, report or tables, with table numbers or page numbers

@@ -31,8 +31,8 @@ you_get:
   - Notes on keeping assessment low-pressure
 how_to_use:
   - Open a chat in Claude, ChatGPT or Gemini. No code, files or paid tools are needed.
-  - Paste the skill instructions from this page into the chat. The curriculum and learner stage placeholders in the prompt are filled in from what you paste next.
-  - Paste your unit description and the learner stage. Add your learning targets or competency list if you have them.
+  - Paste the skill instructions into the chat. In the prompt, replace the bracketed fields with your own details. Type your unit description where it says curriculum input, and your learner stage where it says learner stage. Add your learning targets or competency list if you have them.
+  - The result has three columns, Know, Understand and Do. Each item carries a knowledge label and a matching test type.
   - Read the chart. Check that each item sits in the right column and that each test type fits.
   - Fix any item that looks misplaced, then ask your AI to redo that part.
   - "Next, write a marking rubric for the Do: Skills items with the Marking rubric writer. For the Do: Dispositions items, plan how you will watch for the habit over several weeks."

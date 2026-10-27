@@ -30,7 +30,7 @@ you_get:
   - A quality score out of ten
 how_to_use:
   - Open Claude, ChatGPT or Gemini. No code running or paid tool is needed.
-  - Paste the skill instructions into the chat. The skill also uses six reference files in its references folder. Paste those too, or attach the folder. Without them it still works from the main text but is less exact.
+  - Paste the skill instructions into the chat. The skill also uses six reference files that ship in this item's references folder. Paste or attach them with it. If you cannot, say so: it then works from the main text alone and is less exact.
   - Paste the code you want to improve. Add your test command and any parts that must not change (optional).
   - Read the smells and score first. Check that each named move fits your code.
   - Apply one move at a time. Run your tests after each move, and stop if one fails.
@@ -45,9 +45,9 @@ output_sample:
     - Tests that pass before you start, or a way to add a few
   output:
     - name: Current score
-      contains: A quality score out of ten, based on eight quick checks, with the smells pulling it down.
+      contains: A quality score out of ten, based on eight quick checks, with the smells pulling it down. The reply opens with this, then the smell table, then the ordered steps and the path to 10/10.
     - name: Code smells
-      contains: Each smell found in your code, with where it sits.
+      contains: A table with one row per smell found, in this order of columns, location, smell name, and the move that fixes it.
     - name: Named moves
       contains: The matching refactoring move for each smell, such as extracting a function or removing duplication.
     - name: Step order

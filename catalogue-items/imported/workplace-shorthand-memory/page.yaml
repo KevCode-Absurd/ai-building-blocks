@@ -7,7 +7,7 @@ job: set-up-ai
 headline: Workplace shorthand memory builder
 subhead: Share your nicknames and codes. Get a memory so Claude knows who and what you mean in short requests. Bring your nicknames, names and acronyms. Then use short requests like "ask todd for the PSR" for drafting and reporting.
 explain: |
-  This skill is copied from Anthropic's memory-management skill under the Apache 2.0 licence, with the original wording largely unchanged. It was not written for this catalogue.
+  This skill is copied from Anthropic's memory-management skill under the Apache 2.0 licence, with the original wording largely unchanged. It was not written for this catalogue. It is written for Claude Code, so with other AI tools you will need to save the memory files in a folder your tool reads. The people, deal names and dollar figures in its examples (such as Todd and Oracle) are invented, so do not copy them into your own memory files.
 
   A memory file that teaches Claude your nicknames, acronyms and project codes, so a short request like "ask todd to do the PSR for oracle" is understood as written.
 
@@ -37,7 +37,7 @@ how_to_use:
   - Give it your nicknames, acronyms, project codes and key people. Share only work roles, not private details.
   - Check that CLAUDE.md is saved in your project folder and the memory/ folder sits next to it.
   - "Optional: if you have the Claude Code productivity plugin, run /productivity:start. It needs Claude Code and a paid Claude plan, and it reads your chat, calendar, email and documents, so check which accounts you connect first."
-  - Try a short request like "ask todd to do the PSR". Check each person and project entry against the real person or project, and fix any wrong one. Then reuse the memory for drafting emails, writing status reports and briefing a new teammate. Point those requests at the same project folder so your AI reads CLAUDE.md first.
+  - Try a short request like "ask todd to do the PSR". Before it acts, ask your AI to list each term it decoded and what it took each one to mean. Confirm or correct every one before you rely on the memory. Check each person and project entry against the real person or project, and fix any wrong one. Then reuse the memory for drafting emails, writing status reports and briefing a new teammate. Point those requests at the same project folder so your AI reads CLAUDE.md first. Re-check the people and project entries each quarter.
 output_sample:
   input:
     - Your nicknames, names and acronyms
@@ -60,3 +60,4 @@ output_sample:
       contains: Your tools, teams and processes, with any internal names for them.
     - name: Lookup rule
       contains: Check CLAUDE.md first, then the glossary, then the detail files, and ask you only if nothing matches.
+next: [status-report-writer, weekly-status-update-writer]

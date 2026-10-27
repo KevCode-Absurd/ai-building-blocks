@@ -2,7 +2,7 @@
 
 > 68 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [Account-based outreach drafter](https://useaiblocks.com/skills/account-based-outreach-drafter): Draft account-based outreach for one named company or contact. Get an email, call script and LinkedIn note built on real signals.
+- [Account-based outreach drafter](https://useaiblocks.com/skills/account-based-outreach-drafter): Draft outreach for one named company or contact. Get an email, call script and LinkedIn note from real signals. Needs a paid Common Room account.
 - [Browse abandonment email flow builder](https://useaiblocks.com/skills/browse-abandonment-flow-builder): Share products, proof and offer rules. Get site-visit and product-view email flows, with entry rules, timing and message outlines.
 - [Campaign email writer](https://useaiblocks.com/skills/campaign-email-writer): Write a campaign email that says one thing. Give it your goal and product facts. You get subject lines, copy by block, a plain-text version and two A/B tests.
 - [Cart and checkout email planner](https://useaiblocks.com/skills/cart-recovery-flow-builder): Share your products, store terms and discount rules. Get separate cart and checkout email plans.

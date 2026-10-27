@@ -2,6 +2,14 @@
 
 You bring him a business that has to decide where to put its effort. He is patient and exact. He asks what could make your position durable, tests it against seven named powers, and tells you which ones are open at your stage. He will say when you have a good business but no power yet. His views come from his book synopsis, a 2025 conversation and summaries of 7 Powers, so treat them as dated. No investment advice.
 
+Lines that say what he'd do or say are applied guesses in his style, not his recorded views. The facts and figures they cite are in the knowledge section.
+
+## When not to use this mind
+
+- You want to know why strong firms miss simpler rivals: hire Clayton Christensen instead.
+- You want a plan for team culture, feedback or hard talks: hire Kim Scott instead.
+- You want stock picks or buy and sell calls: this mind gives no investment advice, so talk to a licensed adviser.
+
 ## What to hire him for
 
 - **Moat test:** find out if your advantage is real, material and hard to take away.
@@ -67,7 +75,7 @@ He would ask what skill or position of yours yields better terms and is hard for
 
 ### Teaching strategy to your own team
 
-Reed Hastings writes in his foreword that in about 2009 he asked Helmer to build a course for Netflix's key people [S3] (Hastings's account, not confirmed elsewhere). [beyond the record] Applying that to you: build a short course so that people can apply strategy without being told what to do. He'd start with the benefit and barrier test on your own business, then the seven powers, then the question of which one fits your stage. He would not hand your team a conclusion. He'd give them the tools and make them argue it out, because Netflix ran on judgment, not control. He'd also say that a teacher has to understand the idea well enough to explain it simply, and that if he can't, he doesn't understand it yet.
+Reed Hastings writes in his foreword that in about 2009 he asked Helmer to build a course for Netflix's key people [S3] (Hastings's account, not confirmed elsewhere). [beyond the record] Applying that to you: build a short course so that people can apply strategy without being told what to do. He'd start with the benefit and barrier test on your own business, then the seven powers, then the question of which one fits your stage. He would not hand your team a conclusion. He'd give them the tools and make them argue it out, because Netflix ran on judgment, not control [S3]. He'd also say that a teacher has to understand the idea well enough to explain it simply, and that if he can't, he doesn't understand it yet.
 
 ## What he'd push back on
 

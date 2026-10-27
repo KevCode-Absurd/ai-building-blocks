@@ -21,7 +21,9 @@ This skill collects public data about people who follow or comment on an account
 
 Report patterns across the group, such as common places, interests and how much of the engagement looks genuine. Never list named people or build a profile of one person in your summary. These Actors return public profile fields and comments, not verified age or gender. Label any demographic claim as inferred, and say how many records it rests on.
 
-Apify charges for runs. Before you run, tell the user which Actor you chose and ask them to check its price on its Apify page. Never show the token in chat or in saved logs. The token lives in `.env` only, and the run script reads it from there. The optional `mcpc` command in Step 2 is different: it puts the token on the command line, where other programs on a shared machine could see it in the process list. Use that command only on a computer that only you use. Otherwise skip it and read the Actor's input fields on its public Apify page, which needs no token.
+Apify charges for runs. Before you run, tell the user which Actor you chose and ask them to check its price on its Apify page. Never show the token in chat or in saved logs. The token lives in `.env` only, and the run script reads it from there. Do not run any command that puts the token on the command line, because other programs on a shared machine can see it. Read the Actor's input fields on its public Apify page instead, which needs no token.
+
+Before every run, check that the platform's terms allow collecting this data, and check the privacy rules where you and the account's audience live (for example GDPR in the EU). Have a reason for collecting, collect only what you need, and set a date to delete the exported file. The Apify account needs credit before the run starts, or the run fails.
 
 The run script is at `reference/scripts/run_actor.js` inside this skill folder. Run the commands below from that skill folder.
 
@@ -36,8 +38,7 @@ Check these before you run anything:
 
 - `.env` file with `APIFY_TOKEN`
 - Node.js 20.6+ (for native `--env-file` support)
-- `mcpc` CLI tool, only if you use the optional Step 2 command: `npm install -g @apify/mcpc`
-- `jq` (used by the schema command in Step 2)
+- An Apify account with credit
 
 ## Workflow
 
@@ -46,7 +47,7 @@ Copy this checklist and track progress:
 ```
 Task Progress:
 - [ ] Step 1: Identify audience analysis type (select Actor)
-- [ ] Step 2: Fetch Actor schema via mcpc
+- [ ] Step 2: Read the Actor's input fields
 - [ ] Step 3: Ask user preferences (format, filename)
 - [ ] Step 4: Run the analysis script
 - [ ] Step 5: Summarize findings
@@ -54,7 +55,7 @@ Task Progress:
 
 ### Step 1: Identify Audience Analysis Type
 
-Select the appropriate Actor based on analysis needs:
+Select the appropriate Actor based on analysis needs. AI Blocks note: the Actor IDs below come from the original skill. Before the first run, check that each one you pick still exists on apify.com and read its page for current inputs and price.
 
 | User Need | Actor ID | Best For |
 |-----------|----------|----------|
@@ -81,15 +82,9 @@ Select the appropriate Actor based on analysis needs:
 
 Read the Actor's input fields. The safest way is to open the Actor's public page on apify.com and copy its README and input fields. No token is needed for that.
 
-Optional, on a computer only you use: fetch the details with mcpc. This puts your token on the command line.
+Use the page of the selected Actor (e.g., `apify/facebook-followers-following-scraper`) at apify.com/ACTOR_ID.
 
-```bash
-export $(grep APIFY_TOKEN .env | xargs) && mcpc --json mcp.apify.com --header "Authorization: Bearer $APIFY_TOKEN" tools-call fetch-actor-details actor:="ACTOR_ID" | jq -r ".content"
-```
-
-Replace `ACTOR_ID` with the selected Actor (e.g., `apify/facebook-followers-following-scraper`).
-
-This returns:
+The page shows:
 - Actor description and README
 - Required and optional input parameters
 - Output fields (if available)
@@ -136,13 +131,12 @@ After completion, report:
 - Number of audience members/profiles analyzed
 - File location and name
 - Key demographic insights (label each one as inferred and say how many records it rests on)
-- Engagement read. Use this rough method and call it a heuristic, never proof of bought activity: compare likes and comments with follower count in the same sample, count how many commenters appear more than once, and note how many comments are only emojis or one generic word. Give the counts you used. Say "looks typical", "looks thin" or "looks odd", and never state a threshold as a rule.
+- Engagement read. Use this rough method and call it a heuristic, never proof of bought activity: compare likes and comments with follower count in the same sample, count how many commenters appear more than once, and note how many comments are only emojis or one generic word. Give the counts you used. Say "looks typical", "looks thin" or "looks odd", and never state a threshold as a rule. Never say or imply that a creator bought followers or likes. "Looks odd" only means the counts are worth checking by hand.
 - Suggested next steps (deeper analysis, segmentation)
 
 ## Error Handling
 
 `APIFY_TOKEN not found` - Ask user to create `.env` with `APIFY_TOKEN=your_token`
-`mcpc not found` - Ask user to install `npm install -g @apify/mcpc`
 `Actor not found` - Check Actor ID spelling
 `Run FAILED` - Ask user to check Apify console link in error output
 `Timeout` - Reduce input size or increase `--timeout`

@@ -16,6 +16,8 @@ tools: [claude, cursor, gemini, codex]
 
 # Same idea, both platforms
 
+(Added by AI Blocks. The "risk: critical" label in the header above comes from the collection that shared this skill. It is there because the optional VoiceMoat connector at the end can post to real accounts. The writing steps on their own only produce text. Licence: this copy is CC BY 4.0 per the LICENSE-CONTENT file. The MIT label in the header is the original upstream label.)
+
 Cross-posting fails in a specific and visible way. The same words appear in two
 places, and in at least one of them they are obviously wrong. A LinkedIn post
 dropped onto Twitter reads as a press release. A tweet dropped onto LinkedIn

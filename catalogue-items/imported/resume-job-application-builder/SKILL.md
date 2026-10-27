@@ -195,7 +195,7 @@ Load references on demand as you reach the phase that needs them.
 - `assets/master-profile-template.md`, `assets/resume.schema.json`,
   `assets/example-resume.json`, `assets/action-verbs.md`,
   `assets/metric-proxies.md`, `assets/ai-slop-blacklist.md`.
-- `scripts/resume_tools.py` — `render` (JSON→ATS-safe .docx), `validate`
+- `scripts/resume_tools.py` — `render` (JSON→ATS-safe .pdf or .docx; the file ending you give to --out picks the format, and with no --out it writes .docx), `validate`
   (truthfulness invariants), `coverage` (JD keyword-coverage estimate),
   `deslop` (flag AI-tells/filler). `python scripts/resume_tools.py --help`.
 

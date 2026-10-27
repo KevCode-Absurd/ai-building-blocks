@@ -36,11 +36,11 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **A built or live web page, as a URL or saved HTML** (required)
+- **A built or live web page, as a URL or saved HTML** (required). If your AI cannot open the link, paste the page text or attach saved HTML instead. Say which one you used.
 - **Customer words from reviews, tickets, surveys or calls, with source and date** (optional)
 - **Ad or store performance export for a closed date window, with definitions** (optional)
 - **One product's facts: price, variants, ingredients or materials, how it is used, photos by job** (optional)
-- **Saved evidence from a storefront visit: screenshots, page text and what was observed, with dates** (required)
+- **Saved evidence from a storefront visit** (required): screenshots of your homepage, a product page, your packaging and one email, with page text and dates.
 - **A draft of any copy (ad, page, email or script) that a check or edit pass works on** (optional)
 - **A video ad script, beat by beat, with on-screen text and shots** (optional)
 - **Headline, primary text, description and CTA within platform limits** (optional)
@@ -54,10 +54,10 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Website brand brain builder.** Use the skill `website-brand-brain-builder`. Reads your store and reviews into one brand file. Hands the brand file to steps 2, 3 and 4.
-2. **Store brand signal auditor.** Use the skill `store-brand-signal-auditor`. Scores and ranks where homepage, pack and emails drift from the brand file. Uses the brand file from step 1 and your store capture.
-3. **Brand voice editor.** Use the skill `brand-voice-editor`. Checks sample copy against the voice and rewrites the weak lines. Uses the brand file from step 1 and your own ad copy or script, not step 2's report.
-4. **Brand guide builder.** Use the skill `brand-guide-builder`. Packages the voice, look and do and don't into a guide for new writers. Uses the brand file from step 1, not step 3's report.
+1. **Website brand brain builder.** Use the skill `website-brand-brain-builder`. Reads your store and reviews into one brand file. Hands the brand file to steps 2, 3 and 4. Saved as `outputs/step-01-website-brand-brain-builder.md`: the voice, promise, buyers and claims you can back up, with the page each came from.
+2. **Store brand signal auditor.** Use the skill `store-brand-signal-auditor`. Scores and ranks where homepage, pack and emails drift from the brand file. Uses the brand file from step 1 and your store capture. It lists each touchpoint (homepage, product page, pack, email), scores how closely it matches the brand file, and ranks the biggest gaps first with the line that causes each. Saved as `outputs/step-02-store-brand-signal-auditor.md`.
+3. **Brand voice editor.** Use the skill `brand-voice-editor`. Checks sample copy against the voice and rewrites the weak lines. Uses the brand file from step 1 and your own ad copy or script, not step 2's report. It saves each checked line, the reason it is weak and a rewrite that uses only the brand file's facts. Saved as `outputs/step-03-brand-voice-editor.md`.
+4. **Brand guide builder.** Use the skill `brand-guide-builder`. Packages the voice, look and do and don't into a guide for new writers. Uses the brand file from step 1, not step 3's report. Saved as `outputs/step-04-brand-guide-builder.md`: voice rules, look notes, do and don't lists and before and after lines.
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

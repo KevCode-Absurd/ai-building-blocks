@@ -48,9 +48,11 @@ Skip this if you are ready to change the code (use the Oracle to Npgsql code mig
 
 ## What to gather first
 
-- Step 1: the path to your .NET solution, and whether the test project builds.
+The four skills below are separate items in the AI Blocks library. Attach all four before step 1: `copilot-creating-oracle-to-postgres-master-migration-plan`, `copilot-planning-oracle-to-postgres-migration-integration-testing`, `copilot-creating-oracle-to-postgres-migration-integration-tests` and `copilot-reviewing-oracle-to-postgres-migration`. Each is at https://useaiblocks.com/skills/<slug>. If one is missing, stop at that step, name it and ask the person to add it. Do not rebuild its method from memory.
+
+- Step 1: the path to your .NET solution (the `.sln` file), the list of projects that touch the database, and whether the test project builds. Step 1 cannot start without the solution path.
 - Step 2: the data access code (repositories, stored procedure calls) and any existing integration tests.
-- Step 3: the Oracle data access code, seed data you can use, and a running Oracle test database.
+- Step 3: the Oracle data access code, seed data you can use, and a running Oracle test database. Use a test database, never a live one.
 - Step 4: the migrated code, and the baseline tests and plan from steps 1 to 3.
 
 ## Run in order

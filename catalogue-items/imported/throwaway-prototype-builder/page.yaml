@@ -9,6 +9,8 @@ subhead: Build a rough prototype to answer one question, then delete it. Instead
 explain: |
   Build a rough prototype to answer one question, then delete it. Instead of debating whether a design idea works, you can click through it in minutes.
 
+  You need a developer and a terminal for this one. Bring one in before you start. Once the demo exists, anyone can click through it.
+
   The skill first sorts your question into one of two kinds. If you are asking whether logic or a state model feels right, it makes a single HTML file with buttons and guided walkthroughs that push the logic through its paces and show the full state after each step. If you are asking what a screen should look like, it builds several very different versions on one page that you flip between with a small bar. Both stay in memory, skip polish, and are clearly marked as throwaway.
 when:
   - Your team argues about how a workflow should behave and nobody can picture it.
@@ -16,6 +18,7 @@ when:
   - You want to test a rule such as order status changes without touching the real database.
   - You want a quick demo for a stakeholder before committing time.
 not_for:
+  - "You have no developer help and are not comfortable with a terminal: ask a developer to run this with you. The steps assume a local project and command-line tools."
   - "You need a real feature for customers: build it in your project with a developer, since a prototype skips tests and error handling."
   - "You want final visual design or brand polish: ask a designer for a design review instead."
   - "You want to keep the prototype as live code: this skill marks it as throwaway, so rebuild the validated idea properly."
@@ -29,8 +32,10 @@ you_get:
   - A one-command way to run it
   - A note of what you learned
 how_to_use:
-  - Open your AI tool in your project. Use one that can run code and write files, such as Claude Code. You need a local copy of the project and some comfort running a command. A person who does not code can then click through the finished demo.
+  - "Gather first: your design question in one sentence, the file or page it relates to, and any rules or states you have already agreed."
+  - Open your AI tool in your project. Use one that can run code and write files, such as Claude Code. Tools like this usually need a paid plan or an API key, so check yours first. You need a local copy of the project and some comfort running a command in a terminal. A person who does not code can then click through the finished demo.
   - Add this skill to your AI, or paste its text into the chat. Then state your design question in one sentence.
+  - "Pick your branch with a first sentence. If your question is \"Does this order status flow work?\", it is about logic, and your AI hands back one HTML file to click through. If it is \"What should the checkout page look like?\", it is about a screen, and your AI hands back several versions of the page you switch between."
   - Say whether it is about how something behaves or how a screen looks. If you skip this, your AI picks from your code and tells you its guess.
   - Run the prototype with the command your AI gives you. Logic demos are one HTML file you open in your browser.
   - Click through the cases and watch the state after each step.

@@ -23,6 +23,7 @@ you_give:
   - Your current privacy policy
   - Description of the new practice
   - Saved assessments and reviews (optional)
+  - Any sector notices you must keep, such as a GLBA, HIPAA, FERPA or COPPA notice, if your business is under those rules. Paste them in, or the check will not cover them.
   - Date of last check (optional)
 you_get:
   - Covered, missing or conflicting verdict
@@ -30,12 +31,13 @@ you_get:
   - Suggested replacement wording
   - Timing advice
 how_to_use:
-  - Open your AI tool and paste the skill text, or upload the skill folder if your AI can read files. Direct mode needs only pasted text. Sweep mode also needs your saved reviews pasted or uploaded. The plugin config and scheduler named in the skill are not needed.
+  - Open your AI tool and paste the skill text, or upload the skill folder if your AI can read files. Direct mode works from pasted text alone. Sweep mode needs your saved reviews pasted or uploaded one by one, plus the date of your last check typed into the chat. The skill also names a privacy-legal config file and an outputs folder path from its original plugin. They are not included, so do not look for them. Use pasted text instead.
   - Paste your current privacy policy. Add the date of your last check if you have one (optional).
   - To check one new plan, describe it in a sentence, such as using a new analytics tool. To run a sweep, give your AI the saved reviews since the last check.
   - Read each gap marked required first. These are places where your policy says something untrue.
   - The suggested wording is a draft. Your lawyer must approve each change before you publish it.
   - If your AI cannot read saved files, paste the policy and the practice into the chat. The check still works.
+  - Next steps: send every gap marked required to your lawyer. Publish the approved wording before the new practice goes live. Fix advisable gaps at your next policy update.
 output_sample:
   input:
     - Your current privacy policy text

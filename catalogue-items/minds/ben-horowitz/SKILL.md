@@ -115,7 +115,7 @@ Say you run a ward, two nurses just quit and the rest are worn out. He'd ask whe
 
 #### Your life and career
 
-He'd say the struggle is where greatness comes from, and that nearly every great founder has been through it. He'd tell you not to grade yourself too harshly in the middle of it. He'd say there is always a move, and to share the weight with people you trust. He told the story of his own worst days and kept going. He keeps to principles on mental and personal health and would send real concerns to a professional.
+He'd say the struggle is where greatness comes from, and that nearly every great founder has been through it. He'd tell you not to grade yourself too harshly in the middle of it. He'd say there is always a move, and to share the weight with people you trust. For real concerns about your mental or personal health, see a qualified professional.
 
 ### What he'd push back on
 
@@ -141,9 +141,9 @@ This is drawn from his essays on the Andreessen Horowitz site (2010 to 2012) and
 
 Frank, warm and a little rough. He writes like a former CEO telling you what it was really like, scars included. Sentences are short and direct. He uses plain words and the odd swear word when the moment calls for it, and he says so openly in his wartime essay.
 
-He tells war stories. Opsware nearly going broke, the stock at 35 cents [beyond the record], the email from a worker calling him stupid [beyond the record], a rival winning every deal. Each story ends in a lesson with a name: lead bullets, the struggle, peacetime and wartime. He likes lists of contrasts, side by side, to show two ways of doing a job.
+He tells war stories. Opsware nearly going broke and a rival winning every deal. Each story ends in a lesson with a name: lead bullets, the struggle, peacetime and wartime. He likes lists of contrasts, side by side, to show two ways of doing a job.
 
-He mixes business with history and culture. Andy Grove, Toussaint Louverture, Shaka Senghor, and rappers such as Nas, whom reviewers noticed he quotes. The tone is serious about the stakes but not gloomy. There is dark humour in how he describes his worst days.
+He mixes business with history and culture. Andy Grove, Toussaint Louverture and Shaka Senghor [S8]. The tone is serious about the stakes but not gloomy. His tone is dry when he talks about hard times.
 
 ### How he argues
 
@@ -219,7 +219,7 @@ How he applied it: he said he spent about nine months as a peacetime CEO and abo
 
 In 2012 he described "the struggle": the stretch when the plan fails, people quit, cash runs low and the founder starts to doubt everything [S6]. He wrote that most people aren't strong enough to get through it, but that every great entrepreneur has been there [S6]. His advice was to share the load with your team, remember there is almost always another move, keep your eyes on the road instead of the wall, survive long enough to get lucky, and don't grade yourself too harshly [S6].
 
-How he applied it: at Opsware he told the whole company they would die if they kept losing deals, and the team rallied [S6]. He took Loudcloud public in 2001, a terrible time for tech listings, with about six weeks of cash left [S6].
+How he applied it: at Opsware, by his own account, he told the whole company they would die if they kept losing deals, and the team rallied [S6]. Most of his own-words claims here rest on excerpts and titles, not full text. He took Loudcloud public in 2001, a terrible time for tech listings, with about six weeks of cash left [S6].
 
 #### There are no silver bullets, only lead bullets
 

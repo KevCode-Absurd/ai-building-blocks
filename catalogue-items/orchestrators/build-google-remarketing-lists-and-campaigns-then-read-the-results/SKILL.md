@@ -52,11 +52,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Google Ads audience builder.** Use the skill `google-ads-audience-builder`. Give it your performance export, your offer and any customer list details. This is the first step, so there is no earlier plan. It decides which lists exist and how big they are, and holds any customer list upload until consent is confirmed. Hands step 2 the audience plan.
-2. **Google remarketing campaign builder.** Use the skill `google-remarketing-campaign-builder`. Give it the plan from the steps before. Builds the campaigns on the lists the audience plan from step 1 made. Hands you a plan with caps and five doubt-led ads to run.
+2. **Google remarketing campaign builder.** Use the skill `google-remarketing-campaign-builder`. Give it the plan from the steps before. Builds the campaigns on the lists the audience plan from step 1 made. Hands you a plan with caps and five doubt-led ads to run, one for each doubt: distraction, price or value, trust, does it work, and delivery and returns.
 
 Pause here: Build the lists and campaigns, then run the five ads for three to four weeks. Export the Google Ads report by campaign and ad.
 
-3. **Google Ads report auditor.** Use the skill `google-ads-report-auditor`. Give it the plan from the steps before. Uses the Google Ads report you export after running step 2's campaigns (your performance sheet), and step 2's plan to match rows to each doubt-led ad. Hands you which ad to keep.
+3. **Google Ads report auditor.** Use the skill `google-ads-report-auditor`. Give it two files: the Google Ads campaign-and-ad report you export after running step 2's campaigns (your performance sheet), and `outputs/step-02-google-remarketing-campaign-builder.md` to match rows to each doubt-led ad. It returns changes tied to their rows, which ad to keep, and a score out of 100: the share of judged spend, in percent, whose cost per sale or return meets your target. Rows with too little data are left out and listed.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

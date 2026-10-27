@@ -18,7 +18,8 @@ You need a written scorecard for the role (questions, follow-ups, green and red 
 - The AI scores evidence and shows gaps. A person makes every hiring decision. Never let the AI pick who to hire or reject.
 - Candidate transcripts and notes are personal data. Before you paste them, check your employment-law and data-protection rules, and your AI tool's data policy. Remove or anonymise candidate names and personal details first (use "Candidate A" and "Candidate B"), and only use a tool your company has approved for candidate data. Rating people with AI carries hiring-bias and legal risk, so never use the ratings as the only basis for a decision.
 - If you work in a plain chat with no folders, paste the transcript, the scorecard and any candidate notes into the chat. Ignore the `roles/...` file paths below and ask for the results in the chat.
-- The Teamtailor and Metaview parts are paid tools. Skip them if you do not use them. The scorecards work without them.
+- The Teamtailor and Metaview parts are paid tools and are optional. Skip them if you do not use them. The scorecards work without them.
+- Every rating and recommendation below is a draft for people to review. A person must check the quotes behind each rating before anyone acts on it.
 
 ## Transcript Scoring (Single Candidate, Single Stage)
 
@@ -128,17 +129,17 @@ Step-by-step process for turning raw interview feedback into a structured evalua
 
 ## Decision Framework
 
-How to go from aggregated feedback to a hire/no-hire decision.
+How to go from aggregated feedback to a summary a person can decide from. The AI does not pick who to hire or reject. It reports what the evidence shows and what is still open.
 
-### Hire/No-Hire Matrix
+### Evidence summary
 
-| Must-Have Competencies | Nice-to-Have Competencies | Recommendation |
+| Must-have competencies | Nice-to-have competencies | What the evidence shows |
 |----------------------|--------------------------|----------------|
-| All met (Lean Yes+) | Most met | Strong Hire |
-| All met (Lean Yes+) | Few met | Hire (with development plan) |
-| Most met, 1 borderline | Most met | Conditional Hire (depends on gap criticality) |
-| Any must-have at No Hire | N/A | No Hire |
-| Mixed signals on must-haves | N/A | Additional assessment needed |
+| All rated Lean Yes or higher | Most rated Lean Yes or higher | Strong evidence against the bar |
+| All rated Lean Yes or higher | Few rated Lean Yes or higher | Meets the bar, thin on extras |
+| Most met, 1 borderline | Most met | Depends on how much the one gap matters |
+| Any must-have rated Strong No | Not applicable | Clear gap against the bar |
+| Mixed signals on must-haves | Not applicable | More evidence needed before anyone decides |
 
 ### Confidence Levels
 
@@ -182,49 +183,21 @@ Use a consistent scale across all competencies:
 
 ## Bias Mitigation
 
-Common evaluation biases and how to counteract them during feedback synthesis and debriefs.
+Common biases to check for, with the fix. The full checklist is in **`references/bias-checklist.md`**.
 
-| Bias | What It Looks Like | Mitigation |
-|------|-------------------|------------|
-| Halo Effect | One strong signal colors the entire assessment | Evaluate each competency independently, use scorecard structure |
-| Anchoring | First interviewer's opinion dominates the debrief | Independent scorecards before debrief, most junior interviewer speaks first |
-| Similarity Bias | "They remind me of myself" / "culture fit" as proxy for likeness | Focus on specific behavioral evidence, not gut feeling |
-| Contrast Effect | Comparing candidates to each other instead of the bar | Always compare to the job requirements, not to other candidates |
-| Recency Bias | Last interview or most recent candidate carries the most weight | Structured debrief covers all stages equally |
-| Confirmation Bias | Seeking evidence that confirms the initial impression | Require contradictory evidence for every strong opinion |
-| Horn Effect | One weak signal colors the entire assessment negatively | Check if the concern is actually a must-have or a nice-to-have |
-
-For a complete pre-debrief, during-debrief, and post-debrief bias checklist, see **`references/bias-checklist.md`**.
+- **Halo and horn effects.** One strong or weak signal colors everything. Rate each competency on its own evidence.
+- **Anchoring and recency.** The first opinion or the latest interview dominates. Collect independent scorecards before any debrief.
+- **Similarity bias.** "Culture fit" or "reminds me of myself" stands in for evidence. Name the specific behavior seen.
+- **Contrast effect.** Candidates are compared to each other, not to the bar. Compare to the job requirements.
+- **Confirmation bias.** Seek contradictory evidence for every strong opinion.
 
 ## Debrief Facilitation
 
-How to run an effective hiring debrief that produces a clear, evidence-based decision.
-
-### Pre-Debrief
-
-- All interviewers submit scorecards before the meeting — no late submissions, no filling them in during the debrief
-- Recruiter aggregates feedback and identifies areas of agreement and disagreement
-- Prepare the agenda with specific discussion points (focus time on disagreements, not consensus)
-
-### Debrief Agenda (45-60 min)
-
-1. **Ground rules (5 min)** — Evidence-based only, no "vibes", most junior speaks first
-2. **Per-competency review (25-35 min)** — Walk through each competency, share evidence, discuss disagreements
-3. **Gap identification (5 min)** — What wasn't assessed? Do we need another round?
-4. **Overall recommendation (10 min)** — Each interviewer states their recommendation with rationale
-5. **Decision (5 min)** — HM makes the final call with input from the panel
-
-### Ground Rules
-
-- No one says "culture fit" without specifying which behavior they observed
-- Disagree with evidence, not opinions
-- Junior interviewers speak before senior ones (prevents anchoring)
-- "I don't know" is a valid assessment — better than guessing
-- Stay on the competency being discussed — don't jump ahead or revisit unless explicitly reopened
+Keep the debrief short and evidence-based. Collect every scorecard before the meeting. Talk about the disagreements, not the consensus. Say what was not assessed. Let the junior interviewers speak first. The hiring manager makes the decision with input from the panel.
 
 ## Output Format
 
-Standard structure for candidate evaluation deliverables saved to `roles/[role-name]/reports/`.
+Standard structure for candidate evaluation deliverables saved to `roles/[role-name]/reports/`. It reports evidence-based ratings and open questions only. It does not label anyone Hire or No Hire. A person makes that call.
 
 ```markdown
 # Candidate Evaluation: [Role Title]
@@ -237,7 +210,7 @@ Standard structure for candidate evaluation deliverables saved to `roles/[role-n
 ## Individual Summaries
 
 ### [Candidate Name]
-**Overall:** Strong Hire / Hire / No Hire / Strong No Hire
+**Evidence rating:** [rating from the scale used for every candidate]
 **Confidence:** High / Medium / Low
 
 **Strengths (with evidence):**
@@ -250,20 +223,22 @@ Standard structure for candidate evaluation deliverables saved to `roles/[role-n
 - [Competency not sufficiently tested]
 
 **Interviewer consensus:**
-| Interviewer | Stage | Recommendation | Key Evidence |
-|-------------|-------|---------------|--------------|
-| [Name] | [Stage] | [Recommendation] | [Evidence] |
+| Interviewer | Stage | Rating | Key Evidence |
+|-------------|-------|--------|--------------|
+| [Name] | [Stage] | [Rating] | [Evidence] |
 
 [Repeat for each candidate]
 
-## Recommendation
-**Recommended hire:** [Name] — [Rationale with evidence]
-**Runner-up:** [Name] — [Why they're close but not recommended]
-**Silver medalists:** [Names of qualified candidates who could fill future roles]
+## Open questions for the person who decides
+[What the evidence does not settle, and what to ask or test next. No hire or reject label.]
 
 ## Debrief Notes
 [Key discussion points, disagreements resolved, action items]
 ```
+
+## What next
+
+For a clean table of finalists, use the Candidate comparison table builder.
 
 ## Reference Files
 

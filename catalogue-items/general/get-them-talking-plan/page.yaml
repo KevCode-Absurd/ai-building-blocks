@@ -20,10 +20,10 @@ when:
 not_for:
   - "You need to negotiate or make a hard sell: prepare your terms and limits in a short written list first, then meet."
   - "You are making a first cold approach to someone you have no brief on: send a short intro message instead."
-  - "You want to write up notes after the meeting: use the Contact memory card writer."
+  - "You want to write up notes after the meeting: use the Contact notes organizer."
 
 you_give:
-  - "A brief on the person, such as from \"Before-you-meet brief writer\""
+  - "A brief on the person, such as from the Meeting brief writer"
   - "Where and how long you will meet"
   - "Your aim, if you have one (optional)"
 you_get:
@@ -40,7 +40,7 @@ how_to_use:
   - "Write notes within an hour after the meeting."
 output_sample:
   input:
-    - A brief on the person, such as one from the Before-you-meet brief writer
+    - A brief on the person, such as one from the Meeting brief writer
     - Where you will meet and how long you will have
     - Your aim for the meeting (optional)
   prerequisites:
@@ -139,7 +139,7 @@ improve:
   - "Add your own opening lines, so the first ten seconds sound like you."
   - "Add topics you can ask about with real interest."
   - "Keep a card of your three best questions in your pocket."
-  - "Pair it with \"Contact memory card writer\" for the notes after."
+  - "Pair it with the Contact notes organizer for the notes after."
 
 works_best_with:
   tools:

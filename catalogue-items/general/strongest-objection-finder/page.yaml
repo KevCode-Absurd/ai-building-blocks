@@ -58,6 +58,8 @@ output_sample:
       contains: Go, change or wait, with the reason in two lines.
     - name: MISSING
       contains: Facts you did not give, so the AI could not use them.
+    - name: CHECKS MISSED
+      contains: One line for each check that failed or could not run, or none.
 
 how_it_works:
   - title: "State your position"
@@ -86,6 +88,8 @@ output_shape: |
   <go / change / wait> - <reason>
   MISSING
   <lines>
+  CHECKS MISSED
+  <one line each, or none>
 
 tweaks:
   - what: "The opponent"

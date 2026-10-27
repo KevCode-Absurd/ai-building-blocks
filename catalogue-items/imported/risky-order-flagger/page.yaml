@@ -9,7 +9,7 @@ subhead: Orders Shopify rates high risk are tagged for review and, if you choose
 explain: |
   Orders Shopify rates high risk are tagged for review and, if you choose, held so they cannot ship until you check them. It changes live orders, so it starts as a preview.
 
-  The skill looks at orders from the last day by default, optionally only those over a value you set. Each flagged order gets a tag, fraud-review unless you rename it. If hold is on, it also places a fulfilment hold with a payment-risk reason. Customers wait while the hold is on, so turn the hold off if you only want tags. Run the dry run first to see the list. Holds are released later by a separate skill after you review.
+  The skill looks at orders from the last day by default, optionally only those over a value you set. Each flagged order gets a tag, fraud-review unless you rename it. If you turn hold on, it also places a fulfilment hold with a payment-risk reason. Hold is off by default. Customers wait while a hold is on, so leave it off if you only want tags. Run the dry run first to see the list. Holds are released later by a separate skill after you review.
 when:
   - You want a daily queue of orders to check before shipping.
   - A fraud wave hit and you need to stop risky orders leaving the warehouse.
@@ -17,8 +17,8 @@ when:
   - You want tags only, without delaying shipping.
 not_for:
   - "Your store is not on Shopify, or you cannot give your AI access to the Shopify admin: check orders by hand in your store's own fraud tools."
-  - "You only want to read risk details and not change any orders: use the order-risk-report skill instead."
-  - "You want to release held orders after review: use the order-hold-and-release skill, since this skill only places holds."
+  - "You only want to read risk details and not change any orders: use the Fraud review queue builder instead."
+  - "You want to release held orders after review: use the Order hold manager, since this skill only places holds."
 you_give:
   - Your Shopify store address
   - How many days back to check
@@ -32,11 +32,12 @@ you_get:
   - A dry-run preview before any change
 how_to_use:
   - Check that your AI can run Shopify CLI commands and sign in to your store. This skill needs code running and live store access.
-  - Paste the skill into your AI. Give it your store address and how many days back to check.
-  - Leave dry run on. Read the list of orders it would tag or hold.
-  - Decide on holds. They are on by default and stop orders shipping until you release them, so turn hold off if you only want tags.
+  - Decide on holds first. They are off by default, so the first run only adds tags. Holds stop real customers' orders from shipping until you release them, which delays those customers. Ask your AI to turn holds on only when you want them.
+  - Paste the skill into your AI. Give it your store address, how many days back to check and your hold choice.
+  - Leave dry run on. Read the list of orders it would tag or hold. The dry run count should be close to the number of high-risk orders your Shopify admin shows for the same days. If the list is empty, the count is far off, or it looks wrong, stop and ask your AI to check the risk filter against your store's API version.
   - Run it again with dry run off. Check the CSV file it writes.
-  - Review each held order, then release the good ones with the order-hold-and-release skill.
+  - Review each held order, then release the good ones with the Order hold manager.
+next: [order-hold-manager, fraud-review-queue-builder]
 output_sample:
   input:
     - Your Shopify store address

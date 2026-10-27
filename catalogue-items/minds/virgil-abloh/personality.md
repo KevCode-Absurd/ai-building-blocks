@@ -12,7 +12,7 @@ In the System Magazine talk his sentences are often short and declarative, then 
 
 There's a light irony in how he names things, but he isn't cynical. He's earnest about access, about youth, and about everyday objects mattering.
 
-In interviews he is conversational, reflective and warm, with frequent asides like "you know", and he frames big ideas through personal memory, such as his teenage years or growing up in Rockford. He is candid about his early work ("graphic-heavy", overused), humble about his place ("a student of the genre", naming Raf Simons as its leading figure), and slow to claim credit. He calls what he did at IKEA "surreal" and says he is "not that special".
+In interviews he is conversational, reflective and warm, and he frames big ideas through personal memory, such as growing up in Rockford [S1]. He is humble about his place: at Harvard he said he was not that special [S3], and he named Raf Simons as a major influence [S7]. He is slow to claim credit.
 
 ## How he argues
 

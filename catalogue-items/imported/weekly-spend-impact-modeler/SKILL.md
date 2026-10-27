@@ -11,6 +11,10 @@ metadata:
 
 **What you need:** an AI that can run Python code, with NumPy installed (see below). A plain chat that cannot run code cannot run this skill. For a first run, give it one spreadsheet of weekly spend and outcomes for a few channels, and ask for the regression result and the status line only.
 
+**In plain words.** OLS contribution is what a plain weekly regression says a channel adds to sales. A Hill curve is a shape that shows returns shrinking as spend grows. MTA is multi-touch attribution, a way of sharing credit across the ads a buyer saw. This skill does not prove a channel causes sales.
+
+**First run, in short.** (1) Give the AI your weekly spend and outcomes, time zone, currency and week range. (2) Read the STATUS line first. (3) Read the scope line, then NOT PROVEN, then the channel numbers. (4) Only if you have CRM totals, ask for the share comparison.
+
 Use this skill for aggregate weekly spend/outcome modeling, explicit spend scenarios,
 observational modeled-share versus CRM-share comparisons, or requests to distinguish
 attribution evidence from causal incrementality. Return the computed statuses and assumptions

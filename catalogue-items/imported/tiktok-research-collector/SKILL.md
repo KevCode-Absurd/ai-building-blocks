@@ -14,6 +14,8 @@ license: "MIT"
 license_source: "https://github.com/harshmaur/apify-tiktok-scraper/blob/main/LICENSE.txt"
 ---
 
+<!-- Licence note: this copy is shared under CC BY 4.0 (see LICENSE-CONTENT). The MIT line in the header above is the original author's, kept as the upstream source. -->
+
 # TikTok Scraper
 
 Answer a TikTok question with one run of `harshmaur/tiktok-scraper`. One Actor reads profiles, hashtags, search, video links, sounds, comments and followers, so the job is to pick the input lists, set the per-target count, and keep paid add-ons off unless the user asks for them.
@@ -42,7 +44,7 @@ Out of scope (the boundary):
 
 ## Before you run
 
-Check TikTok's terms of service and your local privacy rules before you collect comments or follower lists. Do not publish personal details taken from them. Collect only the fields the question needs, keep commenter and follower IDs out of shared results, and delete the raw export after the analysis. This skill is marked `risk: critical` because it collects data from people at scale through a paid scraper. Keep runs small, and tell the user what is collected and what it costs before you start.
+TikTok's terms may prohibit automated collection, so confirm you are allowed to collect before any run. Check TikTok's terms of service and your local privacy rules before you collect comments or follower lists. Do not publish personal details taken from them. Collect only the fields the question needs, keep commenter and follower IDs out of shared results, and delete the raw export after the analysis. This skill is marked `risk: critical` because it collects data from people at scale through a paid scraper. Keep runs small, and tell the user what is collected and what it costs before you start.
 
 ## Prerequisites
 
@@ -197,10 +199,11 @@ See <https://github.com/apify/mcpc>.
 
 ## Next steps
 
-Turn the top-video table into a content plan, or export the comments to a sheet to sort and code them.
+Turn the top-video table into a plan with the content calendar builder, or sort and code the exported comments with the comment mining analyst. Both are in this library.
 
 ## Limitations
 
+- Scraping can break TikTok's terms, and comments and follower lists hold personal data from private individuals. Confirm you may collect, keep only the fields you need, and delete raw exports when done.
 - Reads public TikTok content. It does not post, like, message, or access private accounts or stories.
 - Feeds may return fewer rows than requested. Confirm result counts and missing values.
 - Runs spend Apify credit. Confirm the target and estimated cost for large runs and paid extras. Send results to another app only when the user requests it and has authorized that destination.

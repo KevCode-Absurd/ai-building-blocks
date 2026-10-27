@@ -5,17 +5,20 @@ name: Privacy policy drafter
 summary: Write a privacy policy draft for your business, with a checklist for your lawyer. Built from the data you collect and where your users live.
 job: check-contracts
 headline: Privacy policy drafter
-subhead: Describe your business and data use. Get privacy policy wording and a review checklist. Have a lawyer check it. Bring your business and product description.
+subhead: Get a first draft of your privacy policy, in plain language, and a checklist to take to your lawyer. It is a draft, not legal advice.
 explain: |
   Privacy policy wording written for how your business really handles data, with a checklist for review. Have a lawyer check it before you publish.
 
   You describe your business, what you collect and where your users live. The skill maps every kind of personal data, from forms and accounts to cookies and payment details, to the laws that may apply. It writes each section in plain language next to the exact disclosures required, and marks open questions. A final pass checks every data use has a purpose and a legal basis, and lists compliance gaps you still need to close.
+
+  The draft reads as short plain-language paragraphs by section. The legal basis part is a table that matches each way you use data to its legal reason. The gap list and the lawyer checklist are short bullet lists.
 when:
   - You are launching a SaaS and have no privacy policy.
   - Your current policy is a copy from another site.
   - You added a new tool that collects data.
   - You want a list to hand your lawyer.
 not_for:
+  - "You want to publish the draft as it is: this is a drafting aid written from a public source. A lawyer must review it before any policy goes live, and you must confirm every claim about security and data sales yourself."
   - "You need final legal wording or a guarantee of compliance: ask a lawyer, or check your regulator's own guidance. Laws change, so recheck the draft against current law for your country on a set date each year."
   - "Your business handles health, school or bank records under special rules: have a privacy lawyer write and review the policy."
   - "You only need a cookie banner or consent tool: use a cookie consent tool, then bring its details here."
@@ -30,6 +33,7 @@ you_get:
   - Compliance gap list
   - Review checklist for your lawyer
 how_to_use:
+  - "Before you start, write down: your business name, the countries your users live in, each kind of personal data you collect, the third-party tools that touch it (analytics, payments, login), and whether children under 13 may use your product."
   - Open Claude, ChatGPT or Gemini and paste in the skill text. No code, files or paid tools are needed.
   - Describe your business and what your product does.
   - List every kind of personal data you collect, and the tools that handle it, such as analytics, payments and login.

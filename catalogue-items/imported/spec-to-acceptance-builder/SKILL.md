@@ -20,6 +20,8 @@ tools:
   - codex
 ---
 
+> AI Blocks licence note: the text of this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says. The `license: MIT` line in the header above is the original author's (Linji-x) label for the original code. Keep the credit.
+
 # Spec-Driven Loop
 
 Turn an uncertain software request into an approved specification, a controlled implementation, and evidence-backed acceptance. Keep project documents in the repository's established location; otherwise use `docs/spec-driven/<feature-slug>/`.

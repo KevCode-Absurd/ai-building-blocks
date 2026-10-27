@@ -50,7 +50,7 @@ How he applied it: the MCA Chicago show presented his work across art, music, gr
 
 Abloh said he grew up in Rockford as a young Black kid with immigrant parents and felt fashion was not for people like him [S1]. He said his motive was to stand for a generation, including young people shut out of fashion shows [S1]. When big houses took up streetwear, he read it as proof that design had changed, and hoped it would let young people work there on their own terms [S1].
 
-How he applied it: he used his first Louis Vuitton show to make a point about who walks a runway [S1]. In 2020 he set up a scholarship fund that raised $1 million for Black students [S9]. He aimed "The Ten" at young people with a passion for design, even in the middle of nowhere [S4].
+How he applied it: he used his first Louis Vuitton show to make a point about who walks a runway [S1]. In 2020 he set up a scholarship fund that raised $1 million for Black students [S9]. Only Wikipedia reports this figure, so check it before you quote it. He aimed "The Ten" at young people with a passion for design, even in the middle of nowhere [S4].
 
 ### Good design for everyone In his 2018 talk with Rem Koolhaas he described research as a travelling survey of young adults about how they use and value objects, which he then checked against his own taste to see whether his look served a purpose [S10]. He said he wanted to refine and reduce: find what 18 to 26 year olds physically need, then add beauty on top [S10].
 

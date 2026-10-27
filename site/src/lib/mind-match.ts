@@ -7,7 +7,7 @@
 import type { Block, Catalogue } from "./data.ts";
 import { queryTokens, searchTokens } from "./library-search-core.ts";
 
-type Profile = { slug: string; weight: Map<string, number> };
+type Profile = { slug: string; weight: Map<string, number>; works: number };
 const PROFILES = new WeakMap<Catalogue, { profiles: Profile[]; idf: Map<string, number> }>();
 
 function profilesOf(c: Catalogue) {
@@ -28,7 +28,7 @@ function profilesOf(c: Catalogue) {
     for (const s of m.skills ?? []) put(c.bySlug[s]?.name, 1.5);
     put(m.summary, 1);
     for (const a of [m.area, ...(m.also ?? [])]) if (a) put(areaName(a), 1);
-    return { slug: m.slug, weight };
+    return { slug: m.slug, weight, works: (m.skills ?? []).length + ((m as Block & { flows?: string[] }).flows ?? []).length };
   });
   const df = new Map<string, number>();
   for (const p of profiles) for (const t of p.weight.keys()) df.set(t, (df.get(t) ?? 0) + 1);
@@ -41,7 +41,7 @@ export type MindFit = { mind: Block; score: number };
 /** Minds for a topic, best first. `parts` are [text, weight] pairs (a step's name counts more than its summary); a
  *  typed word met only through one of its everyday stand-ins counts at a discount. `score` is the share of the topic's
  *  weighted words the mind's profile says, 0 to 1. */
-export function mindsFor(c: Catalogue, parts: [string, number][], limit = 5, floor = 0.12): MindFit[] {
+export function mindsFor(c: Catalogue, parts: [string, number][], limit = 5, floor = 0.12, prominence = 0): MindFit[] {
   const { profiles, idf } = profilesOf(c);
   const want = new Map<string, number>(), alt = new Map<string, string[]>();
   for (const [text, w] of parts) {
@@ -63,7 +63,9 @@ export function mindsFor(c: Catalogue, parts: [string, number][], limit = 5, flo
       const stand = Math.max(0, ...(alt.get(t) ?? []).map(a => (p.weight.get(a) ?? 0) * (idf.get(a) ?? 0)));
       said += w * stand * 0.6;
     }
-    return { mind: c.bySlug[p.slug], score: said / total };
+    // `prominence` (topic searches only) lifts the minds the most library work builds on (their skills and workflows):
+    // it mostly settles ties between people who say the same words, in favour of the one people know best for them.
+    return { mind: c.bySlug[p.slug], score: (said / total) * (1 + prominence * Math.log2(1 + p.works)) };
   }).filter(x => x.mind && x.score >= floor).sort((a, b) => b.score - a.score || a.mind.name.localeCompare(b.mind.name)).slice(0, limit);
 }
 
@@ -77,7 +79,7 @@ export const stepTopic = (b: Block): [string, number][] => [[`${b.name} ${(b.ali
 export function mindSearchOrder(c: Catalogue, query: string, matched: string[], allowed: (slug: string) => boolean = () => true): string[] {
   const terms = queryTokens(query).sequence;
   const named = matched.filter(s => { const words = searchTokens(c.bySlug[s]?.name ?? "", true); return terms.length > 0 && terms.every(t => words.includes(t)); });
-  const fits = mindsFor(c, [[query, 1]], 40).filter(f => allowed(f.mind.slug)).map(f => f.mind.slug);
+  const fits = mindsFor(c, [[query, 1]], 40, undefined, TOPIC_PROMINENCE).filter(f => allowed(f.mind.slug)).map(f => f.mind.slug);
   return [...new Set([...named, ...fits, ...matched])];
 }
 
@@ -85,3 +87,5 @@ export function mindSearchOrder(c: Catalogue, query: string, matched: string[], 
 export const SEARCH_ROW_FLOOR = 0.4;
 /** How clearly a mind must fit a step to be named as a fit for it (the AI builder's fitting_minds). */
 export const CLEAR_FIT = 0.25;
+/** The lift a topic search gives the minds most library work builds on (scripts/evaluate-minds.mjs, dev half). */
+export const TOPIC_PROMINENCE = 0.04;

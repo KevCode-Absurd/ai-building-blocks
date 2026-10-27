@@ -18,7 +18,7 @@ const arg = name => { const i = process.argv.indexOf(name); return i < 0 ? undef
 const split = arg('--split') ?? 'dev', verbose = process.argv.includes('--verbose');
 const half = id => Number(id.replace(/\D/g, '')) % 2 ? 'dev' : 'test';
 const out = path.join(os.tmpdir(), `abb-minds-eval-${process.pid}.mjs`);
-await build({ stdin: { contents: ["export { suggestMinds } from './src/lib/crew.ts';", "export { mindsFor, stepTopic, mindSearchOrder } from './src/lib/mind-match.ts';", "export { publicSearchDocuments } from './src/lib/library-search.ts';", "export { buildLibrarySearchIndex, searchLibraryIndex } from './src/lib/library-search-core.ts';", "export { rankLibraryResults } from './src/lib/library-rank.ts';", "export { classificationText } from './src/lib/catalogue-taxonomy.mjs';", "export { decodeWire } from './src/lib/data.ts';"].join('\n'), resolveDir: SITE, loader: 'ts' }, bundle: true, format: 'esm', platform: 'node', outfile: out, logLevel: 'silent', jsx: 'automatic' });
+await build({ stdin: { contents: ["export { suggestMinds } from './src/lib/crew.ts';", "export { mindsFor, stepTopic, mindSearchOrder, TOPIC_PROMINENCE } from './src/lib/mind-match.ts';", "export { publicSearchDocuments } from './src/lib/library-search.ts';", "export { buildLibrarySearchIndex, searchLibraryIndex } from './src/lib/library-search-core.ts';", "export { rankLibraryResults } from './src/lib/library-rank.ts';", "export { classificationText } from './src/lib/catalogue-taxonomy.mjs';", "export { decodeWire } from './src/lib/data.ts';"].join('\n'), resolveDir: SITE, loader: 'ts' }, bundle: true, format: 'esm', platform: 'node', outfile: out, logLevel: 'silent', jsx: 'automatic' });
 let m;
 try { m = await import('file://' + out.replace(/\\/g, '/')); } finally { fs.rmSync(out, { force: true }); }
 const c = m.decodeWire(JSON.parse(fs.readFileSync(path.join(SITE, 'public/data/blocks.json'), 'utf8')));
@@ -28,7 +28,7 @@ const index = m.buildLibrarySearchIndex(m.publicSearchDocuments(c, m.classificat
 const round = n => Number(n.toFixed(3));
 const score = (rows) => ({ n: rows.length, hit1: round(rows.filter(r => r.expect.includes(r.got[0])).length / rows.length), hit3: round(rows.filter(r => r.got.slice(0, 3).some(s => r.expect.includes(s))).length / rows.length), recall5: round(rows.reduce((n, r) => n + r.expect.filter(s => r.got.slice(0, 5).includes(s)).length / r.expect.length, 0) / rows.length) });
 const page = q => { const hits = m.searchLibraryIndex(index, q); const minds = c.blocks.filter(b => b.type === 'mind' && hits.has(b.slug)); return m.rankLibraryResults(minds, hits, q, { isTested: () => false }).map(b => b.slug); };
-const topicRows = { libraryOnly: topics.map(q => ({ ...q, got: page(q.q) })), page: topics.map(q => ({ ...q, got: m.mindSearchOrder(c, q.q, page(q.q)) })), mindsFor: topics.map(q => ({ ...q, got: m.mindsFor(c, [[q.q, 1]], 5, 0).map(x => x.mind.slug) })) };
+const topicRows = { libraryOnly: topics.map(q => ({ ...q, got: page(q.q) })), page: topics.map(q => ({ ...q, got: m.mindSearchOrder(c, q.q, page(q.q)) })), mindsFor: topics.map(q => ({ ...q, got: m.mindsFor(c, [[q.q, 1]], 5, 0, m.TOPIC_PROMINENCE).map(x => x.mind.slug) })) };
 const stepRows = steps.map(s => ({ ...s, got: m.suggestMinds(c, c.bySlug[s.slug], 5).map(b => b.slug) }));
 const report = { split, topics: { libraryOnly: score(topicRows.libraryOnly), page: score(topicRows.page), mindsFor: score(topicRows.mindsFor) }, steps: { all: score(stepRows), strong: score(stepRows.filter(s => !s.weak)) } };
 console.log(JSON.stringify(report, null, 1));
@@ -39,6 +39,6 @@ if (verbose && split === 'dev') {
 // The "minds who know this" row on a library search: how often it shows for a topic (and is right), and how often it
 // shows for an ordinary task request (workflow bench goals of the same half), by the top mind's score.
 const bench = JSON.parse(fs.readFileSync(path.join(SITE, 'test/fixtures/workflow-bench.json'), 'utf8')).goals.filter(g => split === 'all' || half(g.id) === split);
-const top = q => m.mindsFor(c, [[q, 1]], 3, 0);
+const top = q => m.mindsFor(c, [[q, 1]], 3, 0, m.TOPIC_PROMINENCE);
 const rowAt = floor => ({ floor, topicsShown: round(topics.filter(q => (top(q.q)[0]?.score ?? 0) >= floor).length / topics.length), topicsRight: round(topics.filter(q => top(q.q).filter(x => x.score >= floor).some(x => q.expect.includes(x.mind.slug))).length / topics.length), tasksShown: round(bench.filter(g => (top(g.request)[0]?.score ?? 0) >= floor).length / bench.length) });
 console.log(JSON.stringify({ row: [0.2, 0.3, 0.4, 0.5].map(rowAt) }));

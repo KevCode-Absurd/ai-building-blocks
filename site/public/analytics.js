@@ -62,8 +62,10 @@
     return queued;
   }
   function stopReplay() {
-    if (!window.clarity || replayStopped) return;
+    if (replayStopped) return;
+    // Stopping before the recorder has loaded keeps it from loading later on this page.
     replayStopped = true;
+    if (!window.clarity) return;
     if (window.clarity.v) window.clarity('stop');
     // stop() replaces the vendor global with a queue. Remove any pending start
     // and keep gating starts if either of the two vendor scripts is still loading.
@@ -108,7 +110,7 @@
       if (!picked) return;
       try { localStorage.setItem(CONSENT_KEY, picked); } catch (_) {}
       box.remove(); style.remove();
-      if (picked === 'granted') start();
+      if (picked === 'granted') start(true);
       else if (running) { window['ga-disable-' + GA] = true; stopReplay(); running = false; }
     });
     document.head.appendChild(style);
@@ -121,7 +123,7 @@
     try { localStorage.removeItem(CONSENT_KEY); } catch (_) {}
     askBanner();
   });
-  function start() {
+  function start(chosen = false) {
     if (running || !safeHere()) return;
     if (!allowed()) { if (askFirst && !choice() && !gpc) askBanner(); return; }
     running = true;
@@ -140,13 +142,22 @@
     const google = document.createElement('script'); google.async = true;
     google.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA;
     document.head.appendChild(google);
-    if (!replayStopped && !location.search && safeReferrer()) {
+    if (replayStopped || location.search || !safeReferrer()) return;
+    // The recorder is heavy on phones (seconds of main-thread work), so it starts on the first
+    // scroll, tap or key press instead of while the page is painting. A click on Allow counts.
+    let asked = false;
+    const replay = () => {
+      if (asked) return;
+      asked = true;
+      if (replayStopped || !running || !safeHere() || location.search || window.clarity) return;
       window.clarity = clarityQueue();
       window.clarity('consentv2', { analytics_Storage: 'granted', ad_Storage: 'denied' });
       const clarity = document.createElement('script'); clarity.async = true;
       clarity.src = 'https://www.clarity.ms/tag/' + CLARITY;
       document.head.appendChild(clarity);
-    }
+    };
+    if (chosen) replay();
+    else for (const name of ['pointerdown', 'keydown', 'scroll', 'touchstart']) document.addEventListener(name, replay, { capture: true, passive: true, once: true });
   }
   function boot() {
     if (!allowedHost) return;

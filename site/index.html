@@ -121,9 +121,11 @@
         const home = location.pathname === "/";
         const params = new URLSearchParams(location.search);
         const starter = home && !params.has("block") && !params.has("workflow");
+        // A first visit to home shows only the starter picks; the list index waits for a search, scroll or library link.
+        const intent = location.hash === "#library" || location.hash === "#build" || ["q", "kind", "area", "fn", "job", "audience", "starred", "scope"].some(key => params.has(key));
         // Home lists cards from the small index; block pages and tools need the full catalogue.
         const list = home ? "/data/blocks-index.json" : "/data/blocks.json";
-        for (const href of starter ? [list, "/data/starter-blocks.json"] : [list]) {
+        for (const href of starter ? (intent ? [list, "/data/starter-blocks.json"] : ["/data/starter-blocks.json"]) : [list]) {
           const catalogue = document.createElement("link");
           catalogue.rel = "preload"; catalogue.href = href;
           catalogue.as = "fetch"; catalogue.crossOrigin = "anonymous";

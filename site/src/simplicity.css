@@ -33,7 +33,8 @@
 .persistence-controls > summary { cursor: pointer; min-height: 32px; }
 .persistence-panel { display: flex; flex-wrap: wrap; gap: 12px; padding: 12px 0; max-width: 70em; }
 .persistence-status { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-.library-recovery { min-height: 180px; }
+/* Hold a screen's height while the library opens, so the sections below never start on screen and jump down. */
+.library-recovery { min-height: 100vh; }
 @media (max-width: 1024px) {
   .nav.open { max-height: calc(100dvh - 64px); overflow-y: auto; overscroll-behavior: contain; }
   .nav.open .nav-more { display: block; }

@@ -11,10 +11,11 @@ function browser({zone='Europe/Berlin',saved='',gpc=false}={}){
  vm.runInNewContext(script,{window,document,history:{pushState(){},replaceState(){}},location,URL,URLSearchParams,Date,Set,Intl,localStorage,navigator:{globalPrivacyControl:gpc}});
  const banner=()=>nodes.find(n=>n.id==='abb-consent');
  const pick=choice=>banner().listeners.click({target:{closest:()=>({getAttribute:()=>choice})}});
- return {calls,store,banner,pick,scripts:()=>calls.filter(x=>x[0]==='script')};
+ const interact=()=>{for(const fn of documentEvents.pointerdown??[])fn({});};
+ return {calls,store,banner,pick,interact,scripts:()=>calls.filter(x=>x[0]==='script')};
 }
-test('visitors outside Europe are measured from the first page with no banner',()=>{
- for(const zone of ['Asia/Kolkata','America/New_York','Australia/Sydney']){const b=browser({zone});assert.equal(b.banner(),undefined);assert.equal(b.scripts().length,2,zone);}
+test('visitors outside Europe are measured from the first page with no banner; replay starts on the first tap',()=>{
+ for(const zone of ['Asia/Kolkata','America/New_York','Australia/Sydney']){const b=browser({zone});assert.equal(b.banner(),undefined);assert.equal(b.scripts().length,1,zone);b.interact();assert.equal(b.scripts().length,2,zone);}
 });
 test('visitors in the EU, UK and Switzerland see a banner and nothing loads until they allow it',()=>{
  for(const zone of ['Europe/Berlin','Europe/London','Europe/Zurich','Atlantic/Canary','Indian/Reunion']){const b=browser({zone});assert.ok(b.banner(),zone);assert.equal(b.scripts().length,0,zone);}
@@ -24,7 +25,7 @@ test('allowing starts analytics and is remembered; declining loads nothing',()=>
  const no=browser();no.pick('denied');assert.equal(no.banner(),undefined);assert.equal(no.scripts().length,0);assert.equal(no.store.get('abb:analytics-consent:v2'),'denied');
 });
 test('a saved choice is respected on the next visit without asking again',()=>{
- const yes=browser({saved:'granted'});assert.equal(yes.banner(),undefined);assert.equal(yes.scripts().length,2);
+ const yes=browser({saved:'granted'});assert.equal(yes.banner(),undefined);yes.interact();assert.equal(yes.scripts().length,2);
  const no=browser({saved:'denied'});assert.equal(no.banner(),undefined);assert.equal(no.scripts().length,0);
 });
 test('anyone can say no from the analytics page, including outside Europe',()=>{

@@ -15,10 +15,10 @@ function browser({ url = 'https://useaiblocks.com/', referrer = '', consent = 'g
   const window = { addEventListener(name, fn) { windowEvents[name] = fn; } };
   const context = { window, document, history, location, URL, URLSearchParams, Date, Set, navigator: { globalPrivacyControl: optedOut }, localStorage: { getItem: key => values.get(key), setItem: (key, value) => values.set(key, value), removeItem: key => values.delete(key) } };
   vm.runInNewContext(script, context);
-  return { ...context, calls, documentEvents, windowEvents, values, elements, events: () => Array.from(window.dataLayer ?? [], args => [...args]), vendors: () => calls.filter(x => x[0] === 'script') };
+  return { ...context, calls, documentEvents, windowEvents, values, elements, interact: () => documentEvents.pointerdown?.({}), events: () => Array.from(window.dataLayer ?? [], args => [...args]), vendors: () => calls.filter(x => x[0] === 'script') };
 }
 test('latest production measurement configuration retains saved work and denies advertising', () => {
-  const b = browser(); assert.equal(b.vendors().length, 2); assert.equal(b.values.get('abb:kits'), 'saved kits');
+  const b = browser(); b.interact(); assert.equal(b.vendors().length, 2); assert.equal(b.values.get('abb:kits'), 'saved kits');
   const consent = b.events().find(x => x[0] === 'consent' && x[1] === 'default')[2];
   assert.equal(consent.analytics_storage, 'granted'); assert.equal(consent.ad_storage, 'denied');
 });
@@ -56,7 +56,7 @@ test('SPA views deduplicate and exclude private transitions', () => {
   assert.equal(b.events().filter(x => x[0] === 'event' && x[1] === 'page_view').length, 3); assert(!JSON.stringify(b.events()).includes('goal='));
 });
 test('private SPA URLs stop replay and remove delayed starts', () => {
-  const b = browser(); b.window.clarity('start', {}); b.history.replaceState(null, '', '/?q=synthetic-private'); b.window.clarity('start', {});
+  const b = browser(); b.interact(); b.window.clarity('start', {}); b.history.replaceState(null, '', '/?q=synthetic-private'); b.window.clarity('start', {});
   assert(!b.window.clarity.q.some(args => args[0] === 'start')); assert.equal(b.window['ga-disable-G-FLLHB8ZGN7'], true); assert(!JSON.stringify(b.events()).includes('synthetic-private'));
 });
 test('action events accept fixed names and no supplied private parameters', () => {

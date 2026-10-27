@@ -234,10 +234,19 @@ export function loadCatalogueIndex(): Promise<Catalogue> {
 export function useCatalogueState(enabled = true, { starterFirst = false, tier = "full" }: { starterFirst?: boolean; tier?: "full" | "index" } = {}) {
   const [catalogue, setCatalogue] = useState<Catalogue | null>(() => resolvedCatalogue ?? (tier === "index" ? resolvedIndex : null));
   const [starterCatalogue, setStarterCatalogue] = useState<Catalogue | null>(resolvedStarter);
+  const [starterFailed, setStarterFailed] = useState(false);
   const [error, setError] = useState("");
   const [attempt, setAttempt] = useState(0);
   const [loading, setLoading] = useState(enabled);
   const retry = useCallback(() => { trackUxEvent("task_retried"); setAttempt(value => value + 1); }, []);
+  // The starter is optional and loads even before the full library is wanted. A stalled starter
+  // must not hold the full library behind its timeout; both downloads make progress independently.
+  useEffect(() => {
+    if (!starterFirst || resolvedCatalogue || resolvedStarter) return;
+    let live = true;
+    void loadStarterCatalogue().then(value => { if (live) setStarterCatalogue(value); }).catch(() => { if (live) setStarterFailed(true); });
+    return () => { live = false; };
+  }, [starterFirst, attempt]);
   useEffect(() => {
     if (!enabled) { setLoading(false); return; }
     let live = true;
@@ -246,18 +255,13 @@ export function useCatalogueState(enabled = true, { starterFirst = false, tier =
     // A list catalogue on screen is not enough for a page that needs the full one.
     setCatalogue(current => tier === "full" && current?.index ? null : current);
     setLoading(true); setError("");
-    // The starter is optional. A stalled starter must not hold the full library
-    // behind its timeout; both public downloads can make progress independently.
-    if (starterFirst && !resolvedCatalogue) {
-      void loadStarterCatalogue().then(value => { if (live) setStarterCatalogue(value); }).catch(() => {});
-    }
     (tier === "index" ? loadCatalogueIndex() : loadCatalogue()).then(value => { if (live) setCatalogue(value); }).catch(() => {
       if (live) setError("The task library could not load. Check your connection and try again.");
     }).finally(() => { if (live) setLoading(false); });
     return () => { live = false; };
   }, [enabled, attempt, starterFirst, tier]);
   const shown = tier === "full" && catalogue?.index ? null : catalogue;
-  return { catalogue: shown, starterCatalogue: starterFirst ? starterCatalogue : null, complete: shown !== null, loading, error, retry };
+  return { catalogue: shown, starterCatalogue: starterFirst ? starterCatalogue : null, starterFailed: starterFirst && starterFailed, complete: shown !== null, loading, error, retry };
 }
 export function useCatalogue(enabled = true) { return useCatalogueState(enabled).catalogue; }
 const textCache = new Map<string, Promise<string | null>>();

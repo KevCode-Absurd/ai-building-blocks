@@ -33,7 +33,7 @@ test("home: one heading, the search box, cards marked Tested, and a short header
   await expect(cards(page).first()).toBeVisible();
   await expect(page.getByTestId("trust-badge").first()).toHaveText("Tested");
   await expect(page.locator("body")).not.toContainText("not yet tested");
-  await expect(page.getByTestId("logo")).toBeVisible();
+  await expect(page.getByRole("link", { name: "AI Blocks, home" }).getByTestId("logo")).toBeVisible();
   await expect(await menuButton(page)).toBeVisible();
 });
 

@@ -60,6 +60,11 @@
       .boot-recovery a { display: inline-block; color: inherit; padding: 8px 12px; text-underline-offset: 4px; }
       .boot-recovery a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
       html[data-boot="error"] .boot-recovery { display: block; }
+      /* Item pages: the server's readable page shows at once; the app opens hidden behind it (main.tsx) and replaces it in one frame. */
+      html[data-boot="loading"]:has(#root > [data-static-first]) #app-loader, html[data-boot="static"] #app-loader { display: none; }
+      html[data-boot="loading"]:has(#root > [data-static-first]) #root { visibility: visible; }
+      html[data-boot="loading"]:has(#root > [data-static-first]) body, html[data-boot="static"] body { overflow: auto; }
+      html[data-boot="static"] #root { visibility: hidden; position: absolute; top: 0; left: 0; right: 0; height: 0; overflow: hidden; }
       @media (prefers-reduced-motion: reduce) { html[data-boot] #app-loader { transition: none; } .boot-progress { animation: none; } }
     </style>
     <script>
@@ -100,6 +105,7 @@
         clearTimeout(window.__abbBootTimer);
         if (bootStyleFailed) return;
         window.removeEventListener("error", bootStyleError, true);
+        document.getElementById("static-view")?.remove();
         document.documentElement.dataset.boot = "ready";
         // The live app now owns the page semantics. Keep the short visual fade,
         // but prevent its duplicated heading and links from being announced.

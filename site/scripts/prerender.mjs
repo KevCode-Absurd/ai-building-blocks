@@ -328,7 +328,9 @@ function pageFor(url) {
       title: b.name, modified: page.added, documentTitle: mindTitle({ name: b.name, identity: b.identity, area: AREAS[b.area] ?? b.area ?? "" }), h1: b.name, crumbs: [["Minds", "/minds"]],
       desc: describe({ summary: b.summary, more: [`An AI built from public sources about ${b.name}.`], tail: ["Free to use in Claude, ChatGPT or Gemini.", "Free to use in your AI.", "Free AI mind."] }).text,
       body: [
-        `<p class="bp-identity">${esc(b.identity || "")}</p>`, `<p class="small">${esc(disclose)}${page.added ? ` Updated ${niceDate(page.added)}.` : ""}</p>`, `<p class="bp-sub">${esc(b.summary)}</p>`,
+        `<p class="bp-identity">${esc(b.identity || "")}</p>`, `<p class="small">${esc(disclose)}${page.added ? ` Updated ${niceDate(page.added)}.` : ""}</p>`,
+        // The subhead goes where the app puts it (p.bp-sub), so the page reads the same before and after the app opens.
+        ...(text(page.subhead) ? [`<p class="bp-sub">${esc(text(page.subhead))}</p>`, `<p>${esc(b.summary)}</p>`] : [`<p class="bp-sub">${esc(b.summary)}</p>`]),
         (page.hire?.jobs ?? []).length || mindFit.fitHtml || mindFit.sampleHtml ? `<section id="get"><h2>What you get</h2>${(page.hire?.jobs ?? []).length && !mindFit.hasSample ? `<p>What you can hire ${esc(b.name)} for.</p>${list(page.hire.jobs.slice(0, 5).map((j) => esc(j.title)))}` : ""}${mindFit.sampleHtml}${mindFit.fitHtml}</section>` : "",
         `<section id="task-start"><h2>Run it</h2><p>Add ${esc(b.name)} to Claude, ChatGPT or Gemini once, then ask for it by name in any chat. Copy and download buttons are on the page.</p></section>`,
         `<details id="details"><summary><h2>Details</h2></summary>${[
@@ -388,7 +390,8 @@ function pageFor(url) {
     desc: seo.description.text, h1: b.headline || b.name,
     crumbs: job ? [[job, jobHref(b.task)]] : [],
     body: [
-      `<p class="bp-sub">${esc(b.summary)}</p>`, `<p>${esc(lead)}</p>`, `<p class="small">${facts.map(esc).join(" · ")}</p>`,
+      // The subhead goes where the app puts it (p.bp-sub), so the page reads the same before and after the app opens.
+      ...(subhead ? [`<p class="bp-sub">${esc(subhead)}</p>`, `<p>${esc(b.summary)}${isCoordinator ? ` ${esc(kindLine)}` : ""}</p>`] : [`<p class="bp-sub">${esc(b.summary)}</p>`, `<p>${esc(lead)}</p>`]), `<p class="small">${facts.map(esc).join(" · ")}</p>`,
       // Three parts first (what you get, fill it in, run it), then what to do next, then everything else under one Details.
       page.output_shape || get.length || fitHtml || sampleHtml ? `<section id="get"><h2>What you get</h2>${sampleHtml}${page.output_shape ? (hasSample ? `<details><summary>See the full layout</summary><p class="small">Every run hands it back in this order. Your details fill each gap.</p><pre>${esc(page.output_shape)}</pre></details>` : `<p class="small">Every run hands it back in this order. Your details fill each gap.</p><pre>${esc(page.output_shape)}</pre>`) : hasSample ? "" : list(get.map(esc))}${fitHtml}</section>` : "",
       give.length ? `<section id="task-start"><h2>Fill it in</h2><p>${isFlow ? "Gather these first. You add them in your AI after you download." : "Add what this task works from, then copy the request."}</p>${list(give.map(esc))}</section>` : "",
@@ -504,7 +507,7 @@ function render(url, p, { plain = false, noindex = false } = {}) {
     ? `<main class="wrap ${p.mainClass ?? "api-mcp-docs"}" data-prerendered>${header}${p.content}${footer}</main>`
     : p.hub
     ? `${siteHeader}<main class="wrap bp-hero hub" data-prerendered>${trail}<h1 class="bp-h1">${esc(p.h1)}</h1>${p.body}</main>${footer}`
-    : `<main class="wrap bp-hero" data-prerendered>${header}${trail}${url === "/" ? `<h2 class="bp-h1">${esc(p.h1)}</h2>` : `<h1 class="bp-h1">${esc(p.h1)}</h1>`}${p.body}${footer}</main>`;
+    : `<main class="wrap bp-hero" data-prerendered${/^\/(skills|prompts|workflows|agents|minds)\/[^/]+$/.test(url) ? " data-static-first" : ""}>${header}${trail}${url === "/" ? `<h2 class="bp-h1">${esc(p.h1)}</h2>` : `<h1 class="bp-h1">${esc(p.h1)}</h1>`}${p.body}${footer}</main>`;
   const metadata = { title, description: desc, canonical: full, robots: noindex ? "noindex, nofollow" : "max-image-preview:large, max-snippet:-1", graph: noindex ? null : { "@context": "https://schema.org", "@graph": graph }, markdown: p.markdown || null, ...(p.json ? { json: p.json } : {}), image: `${SITE}/og/default.png` };
   const metadataFile = path.join(DIST, "metadata", `${url === "/" ? "index" : url.slice(1)}.json`);
   fs.mkdirSync(path.dirname(metadataFile), { recursive: true });

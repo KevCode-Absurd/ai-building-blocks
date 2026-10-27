@@ -1,9 +1,9 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import vm from 'node:vm';
 const script=fs.readFileSync(new URL('../public/analytics.js',import.meta.url),'utf8');
-function browser({url='https://useaiblocks.com/',referrer=''}={}){
+function browser({url='https://useaiblocks.com/',referrer='',readyState='complete'}={}){
  const calls=[],documentEvents={},windowEvents={},values=new Map([['abb:analytics-consent:v1','denied'],['abb:kits','saved kits'],['abb:flows','saved workflows']]);const location={};
  const setUrl=target=>{const u=new URL(target,location.href);Object.assign(location,{href:u.href,origin:u.origin,pathname:u.pathname,search:u.search,hash:u.hash,hostname:u.hostname});};setUrl(url);
- const document={readyState:'complete',referrer,head:{appendChild(el){calls.push(['script',el.src]);}},documentElement:{setAttribute(name,value){calls.push(['attribute',name,value]);}},createElement(tag){assert.equal(tag,'script','No cookie popup elements');return{};},addEventListener(name,fn){documentEvents[name]=fn;}};
+ const document={readyState,referrer,head:{appendChild(el){calls.push(['script',el.src]);}},documentElement:{setAttribute(name,value){calls.push(['attribute',name,value]);}},createElement(tag){assert.equal(tag,'script','No cookie popup elements');return{};},addEventListener(name,fn){documentEvents[name]=fn;}};
  const history={pushState(_s,_u,target){setUrl(target);},replaceState(_s,_u,target){setUrl(target);}};
  const window={addEventListener(name,fn){windowEvents[name]=fn;}};const context={window,document,history,location,URL,URLSearchParams,Date,Set,localStorage:{removeItem(key){calls.push(['removeItem',key]);values.delete(key);}}};vm.runInNewContext(script,context);
  return {...context,calls,documentEvents,windowEvents,values,interact:()=>documentEvents.pointerdown?.({}),events:()=>Array.from(window.dataLayer??[],args=>[...args])};
@@ -43,4 +43,8 @@ test('typing before the first tap keeps the recorder from loading on that page',
 });
 test('leaving for a private page before the first tap keeps the recorder from loading',()=>{
  const b=browser();b.history.pushState(null,'','/space');b.interact();assert.equal(b.calls.filter(x=>x[0]==='script'&&x[1].includes('clarity')).length,0);
+});
+test('the Google tag downloads after the page has loaded, with the page view already queued',()=>{
+ const b=browser({readyState:'loading'});b.documentEvents.DOMContentLoaded();assert.equal(b.calls.filter(x=>x[0]==='script').length,0);assert.equal(b.events().filter(x=>x[1]==='page_view').length,1);
+ b.windowEvents.load();assert.deepEqual(b.calls.filter(x=>x[0]==='script').map(x=>x[1]),['https://www.googletagmanager.com/gtag/js?id=G-FLLHB8ZGN7']);
 });

@@ -139,9 +139,15 @@
     gtag('js', new Date());
     // Config is queued before loading gtag, with automatic page views disabled.
     pageView();
-    const google = document.createElement('script'); google.async = true;
-    google.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA;
-    document.head.appendChild(google);
+    // The page view above is queued now; the tag itself downloads after the page has loaded,
+    // so it never competes with the page's own code on a slow phone connection.
+    const loadGoogle = () => {
+      const google = document.createElement('script'); google.async = true;
+      google.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA;
+      document.head.appendChild(google);
+    };
+    if (document.readyState === 'complete') loadGoogle();
+    else window.addEventListener('load', loadGoogle, { once: true });
     if (replayStopped || location.search || !safeReferrer()) return;
     // The recorder is heavy on phones (seconds of main-thread work), so it starts on the first
     // scroll, tap or key press instead of while the page is painting. A click on Allow counts.

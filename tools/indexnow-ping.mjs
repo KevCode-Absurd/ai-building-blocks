@@ -78,10 +78,11 @@ export async function main(argv = process.argv.slice(2), { log = console.log, en
   const dist = path.join(repo, "site/dist");
   const next = await readSitemaps(arg("--new", fs.existsSync(path.join(dist, "sitemap.xml")) ? dist : path.join(repo, "site/public")));
   const oldSource = arg("--old", null);
+  // --baseline only ever saves (replacing any earlier record); it never pings.
+  if (baseline) { if (!dryRun) writeState(state, next); log(`baseline: ${next.size} URLs ${dryRun ? "would be" : ""} saved to ${path.relative(repo, state)}; nothing pinged`); return { send: [] }; }
   let previous;
   if (oldSource && !oldSource.endsWith(".json")) previous = await readSitemaps(oldSource);
   else if (fs.existsSync(oldSource ?? state)) previous = readState(oldSource ?? state);
-  else if (baseline) { if (!dryRun) writeState(state, next); log(`baseline: ${next.size} URLs ${dryRun ? "would be" : ""} saved to ${path.relative(repo, state)}; nothing pinged`); return { send: [] }; }
   else if (all) previous = new Map();
   else throw Error(`no record of the last ping (${path.relative(repo, state)}). Run with --baseline to save this build without pinging, or --all to send every URL.`);
   const diff = diffSitemaps(previous, next);

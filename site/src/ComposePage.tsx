@@ -23,7 +23,10 @@ import { TransferGuide } from "./DownloadDialog";
 type Result = { plan: Composition; model: string; cost: number; latencyMs: number; context?: string };
 
 const EXAMPLES = ["Build a landing page from scratch and give me source code", "Turn customer reviews into checked video ad scripts", "Create a weekly KPI report and dashboard", "Design an n8n automation with safe retries"];
-export default function ComposePage({ c: baseCatalogue, toast }: { c: Catalogue; toast: (message: string) => void }) {
+// Until the task library arrives the page is already usable: the request form shows at once and only planning waits.
+const EMPTY: Catalogue = { built: "", portTypes: {}, renamed: {}, blocks: [], bySlug: {} };
+export default function ComposePage({ c: loaded, toast }: { c: Catalogue | null; toast: (message: string) => void }) {
+  const baseCatalogue = loaded ?? EMPTY;
   const [customSkills, setCustomSkills] = useState<CustomSkill[]>([]);
   const c = useMemo(() => withCustomSkills(baseCatalogue, customSkills), [baseCatalogue, customSkills]);
   const [goal, setGoal] = useState("");
@@ -60,7 +63,7 @@ export default function ComposePage({ c: baseCatalogue, toast }: { c: Catalogue;
     document.title = "Build a custom workflow | AI Blocks";
     let live = true;
     fetch("/api/compose").then(r => { if (!r.ok) throw Error(); return r.json(); }).then(d => { if (live) setAvailable(d.enabled === true); }).catch(() => {}).finally(() => { if (live) setConnecting(false); });
-    try { const saved = JSON.parse(libraryStorage.getItem("abb:composer") ?? "null"); if (saved?.format === "ai-blocks-composition/1") { remoteApplying.current = true; const custom = validateCustomSkills(saved.customSkills); const plan = finalize(withCustomSkills(baseCatalogue, custom), saved.plan, saved.plan.source); const restoredFlow = typeof saved.flowCode === "string" ? unpackFlow(baseCatalogue, saved.flowCode) : null; if (saved.flowCode !== undefined && !restoredFlow) throw Error("Saved workflow is incomplete."); setCustomSkills(custom); setGoal(saved.goal); setAssignMinds(saved.assignMinds !== false); setChoices(validateChoices(saved.choices ?? {})); setContext(saved.context ?? ""); setResult({ plan, model: saved.model || "free", cost: saved.cost || 0, latencyMs: saved.latencyMs || 0 }); setGraphFlow(restoredFlow); setRestored(true); setReview(true); } } catch { setError("The saved workflow could not be restored without changing its steps. Import a complete copy or create a new workflow."); }
+    if (loaded) try { const saved = JSON.parse(libraryStorage.getItem("abb:composer") ?? "null"); if (saved?.format === "ai-blocks-composition/1") { remoteApplying.current = true; const custom = validateCustomSkills(saved.customSkills); const plan = finalize(withCustomSkills(baseCatalogue, custom), saved.plan, saved.plan.source); const restoredFlow = typeof saved.flowCode === "string" ? unpackFlow(baseCatalogue, saved.flowCode) : null; if (saved.flowCode !== undefined && !restoredFlow) throw Error("Saved workflow is incomplete."); setCustomSkills(custom); setGoal(saved.goal); setAssignMinds(saved.assignMinds !== false); setChoices(validateChoices(saved.choices ?? {})); setContext(saved.context ?? ""); setResult({ plan, model: saved.model || "free", cost: saved.cost || 0, latencyMs: saved.latencyMs || 0 }); setGraphFlow(restoredFlow); setRestored(true); setReview(true); } } catch { setError("The saved workflow could not be restored without changing its steps. Import a complete copy or create a new workflow."); }
     try {
       const pending = JSON.parse(sessionStorage.getItem("abb:composer-signin") ?? "null");
       sessionStorage.removeItem("abb:composer-signin");
@@ -85,7 +88,7 @@ export default function ComposePage({ c: baseCatalogue, toast }: { c: Catalogue;
   } catch { /* storage can be unavailable */ } }, [result, goal, context, choices, assignMinds, customSkills, graphFlow]);
   useEffect(() => {
     const received = (event: Event) => {
-      if (!(event as CustomEvent<string[]>).detail.includes("abb:composer")) return;
+      if (!loaded || !(event as CustomEvent<string[]>).detail.includes("abb:composer")) return;
       if (editing.current.busy || !editing.current.result && editing.current.goal.trim()) return;
       try {
         const saved = JSON.parse(libraryStorage.getItem("abb:composer") ?? "null");
@@ -108,6 +111,7 @@ export default function ComposePage({ c: baseCatalogue, toast }: { c: Catalogue;
     } catch { setError("Sign-in could not open. Please try again."); }
   };
   const compose = async () => {
+    if (!loaded) { setError("The task library is still loading. Try again in a moment."); return; }
     setError(""); const invalid = requestError(goal); if (invalid) { setError(invalid); return; }
     if (mode === "ai" && !available) { setError("AI planning is unavailable. Open Customize and choose Find steps from the library if you want browser matching instead."); return; }
     if (mode === "ai" && account.state !== "signed-in") { setError("Sign in to generate a free AI workflow."); return; }
@@ -151,6 +155,7 @@ export default function ComposePage({ c: baseCatalogue, toast }: { c: Catalogue;
   };
   const importPack = async (file?: File) => {
     if (!file) return; setError("");
+    if (!loaded) { setError("The task library is still loading. Try again in a moment."); return; }
     try { if (file.size > 1000000) throw Error("Keep the workflow file under 1 MB."); const data = JSON.parse(await file.text()); if (data.format !== "ai-blocks-composition/1" || typeof data.goal !== "string" || data.goal.length > LEGACY_REQUEST_LIMIT || typeof data.context !== "string" || data.context.length > LIMITS.context) throw Error("Choose a workflow.edit.json exported from this composer."); const importedFlow = typeof data.flowCode === "string" ? unpackFlow(baseCatalogue, data.flowCode) : null; if (data.flowCode !== undefined && !importedFlow) throw Error("This workflow is incomplete or invalid. No steps were imported. Supply a complete workflow."); const custom = validateCustomSkills(data.customSkills); const plan = finalize(withCustomSkills(baseCatalogue, custom), data.plan, data.plan.source === "ai" ? "ai" : "free"); setCustomSkills(custom); setGoal(data.goal); setAssignMinds(data.assignMinds !== false); setContext(data.context); setChoices(validateChoices(data.choices ?? {})); setResult({ plan, model: typeof data.model === "string" ? data.model : "free", cost: Number.isFinite(data.cost) && data.cost >= 0 ? data.cost : 0, latencyMs: 0 }); setGraphFlow(importedFlow); setPreparedZip(null); setRestored(true); setReview(true); toast("Your workflow is ready to edit"); } catch (e) { setError(e instanceof SyntaxError ? "This file could not be read. Choose workflow.edit.json from a previous download. Your current workflow is kept." : (e as Error).message); } finally { if (importRef.current) importRef.current.value = ""; }
   };
 
@@ -178,7 +183,8 @@ export default function ComposePage({ c: baseCatalogue, toast }: { c: Catalogue;
           {mode === "ai" && <p className="small">{connecting ? "Checking service availability…" : "Your request, added context and relevant skill descriptions go to our AI provider. When Assign minds is on, public mind profiles go too. The service selects the model and enforces usage limits."}</p>}
           {mode === "ai" && <p className="small compose-policy-note">Generated results and usage records are stored by the service. Share only information you are authorised to provide. <Link to="/privacy#server">How your data is handled</Link>.</p>}
           </details>}<div className="compose-submit-pane">
-          <button className="btn btn-primary" type="submit" data-testid="compose-submit" disabled={busy || dictating || !goal.trim() || goal.length > LIMITS.request || review && mode === "ai" && (!available || connecting || account.state !== "signed-in")}>{busy ? "Preparing your plan…" : !review ? "Continue" : mode === "free" ? "Find where to start" : "Create my plan"}</button>
+          <button className="btn btn-primary" type="submit" data-testid="compose-submit" disabled={!loaded || busy || dictating || !goal.trim() || goal.length > LIMITS.request || review && mode === "ai" && (!available || connecting || account.state !== "signed-in")}>{busy ? "Preparing your plan…" : !review ? "Continue" : mode === "free" ? "Find where to start" : "Create my plan"}</button>
+          {!loaded && <span className="small compose-loading" role="status">Loading the task library…</span>}
           {busy && <button type="button" className="link-btn" onClick={() => { abortRef.current?.abort(); requestRef.current++; setBusy(false); setError("Planning stopped. Your request is still here."); }}>Stop planning</button>}
           <div className="compose-examples" aria-label="Example requests">{EXAMPLES.map(s => <button type="button" key={s} disabled={busy || dictating} onClick={() => changeGoal(s)}>{s}</button>)}</div>
           </div>

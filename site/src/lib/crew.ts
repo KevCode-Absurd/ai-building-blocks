@@ -1,5 +1,6 @@
 // Minds working inside a workflow (docs/MINDS-PRD.md §6e): a mind on a step, one overseer for the whole run, and a team
 // council of up to six. Plain code, so the same workflow always gives the same assignments.
+import { mindsFor, stepTopic } from "./mind-match";
 import { type Block, type Catalogue, areasOf } from "./data";
 import type { Ordered } from "./handoff";
 import { TEAM_MAX, type Flow, type FlowNode } from "./store";
@@ -12,9 +13,11 @@ export const mindsIn = (c: Catalogue) => c.blocks.filter((b) => b.type === "mind
 export function suggestMinds(c: Catalogue, b: Block, n = 4): Block[] {
   // The minds whose work the skill comes from go first, in their order; then the best fits by area.
   const own = (b.minds ?? []).map((s) => c.bySlug[s]).filter((m): m is Block => !!m && m.type === "mind");
+  // Then the minds known for what this step is about (mind-match.ts); a shared area only breaks near ties.
   const want = new Set(areasOf(b));
   const fit = (m: Block) => [m.area ?? "", ...(m.also ?? [])].reduce((s, a, i) => s + (want.has(a) ? (i === 0 ? 2 : 1) : 0), 0);
-  const rest = mindsIn(c).filter((m) => !own.includes(m)).map((m) => ({ m, f: fit(m) })).filter((x) => x.f > 0).sort((a, b) => b.f - a.f || a.m.name.localeCompare(b.m.name)).map((x) => x.m);
+  const rest = mindsFor(c, stepTopic(b), 40).filter((x) => !own.includes(x.mind)).map((x) => ({ m: x.mind, f: x.score + 0.01 * fit(x.mind) }))
+    .sort((a, b) => b.f - a.f || a.m.name.localeCompare(b.m.name)).map((x) => x.m);
   const matches = [...own, ...rest];
   // When there is no area match, offer a general critical-thinking perspective explicitly.
   const fallback = ["charlie-munger", "richard-feynman"].map(s => c.bySlug[s]).filter((m): m is Block => m?.type === "mind" && !matches.includes(m));

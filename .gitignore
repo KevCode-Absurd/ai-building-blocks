@@ -61,6 +61,7 @@ site/.copyable-build/
 !/tools/build-mini-tool.mjs
 !/tools/check-masking.mjs
 !/tools/indexnow-ping.mjs
+!/tools/evaluate-ai-builder.mjs
 !/tools/indexnow-state.json
 !/tools/test-mcp-api-e2e.mjs
 !/tools/build-minds.mjs

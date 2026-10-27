@@ -120,8 +120,9 @@
     <link rel="preload" href="/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin />
     <!-- The library list starts downloading alongside the code instead of after it. -->
     <script>
-      // Only catalogue screens need the full index. Keep independent pages light.
-      if (location.pathname === "/" || /^\/(skills|prompts|workflows|agents|minds|space|people|s|compose|from-a-source)(\/|$)/.test(location.pathname)) {
+      // Only catalogue screens need the full index. Keep independent pages light. The builder (/compose) fetches it
+      // itself once its form has painted (App.tsx).
+      if (location.pathname === "/" || /^\/(skills|prompts|workflows|agents|minds|space|people|s|from-a-source)(\/|$)/.test(location.pathname)) {
         // Public files can load while sign-in opens. Keep the full homepage
         // catalogue behind critical code/fonts in the network queue.
         const home = location.pathname === "/";

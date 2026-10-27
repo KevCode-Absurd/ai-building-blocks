@@ -23,6 +23,8 @@ export function buildListIndex(catalogue, sourceBytes) {
     if (out.steps) out.steps = out.steps.map(step => (Array.isArray(step) ? step[0] : step));
     if (out.source) out.source = { by: out.source.by };
     if (block.type === 'mind' && !out.face && faces.get(block.slug)) out.face = faces.get(block.slug);
+    // What a mind is known for, so a library search can name the minds who know its topic (src/MindsForSearch.tsx).
+    if (block.type === 'mind') for (const field of ['seats', 'labels', 'cues']) if (block[field] !== undefined) out[field] = block[field];
     return out;
   });
   return {

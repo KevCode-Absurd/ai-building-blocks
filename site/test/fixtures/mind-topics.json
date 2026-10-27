@@ -1,0 +1,600 @@
+{
+ "version": 1,
+ "written": "2026-10-28",
+ "note": "Topic searches for expert minds, labelled independently from the mind roster (not from search output). Odd ids dev, even ids test: tune on dev only. Independent topic test set for mind search. Queries written as people type them (about half keywords, half short phrases). expect = 2-5 roster slugs a knowledgeable person would most want to see, best first, judged by what each person is known for rather than word overlap.",
+ "queries": [
+  {
+   "id": "mq01",
+   "q": "copywriting",
+   "expect": [
+    "gary-halbert",
+    "david-ogilvy",
+    "eugene-schwartz",
+    "john-carlton",
+    "joanna-wiebe"
+   ]
+  },
+  {
+   "id": "mq02",
+   "q": "negotiation",
+   "expect": [
+    "chris-voss",
+    "roger-fisher",
+    "douglas-stone"
+   ]
+  },
+  {
+   "id": "mq03",
+   "q": "pricing",
+   "expect": [
+    "alex-hormozi",
+    "kazuo-inamori",
+    "jeffrey-gitomer"
+   ]
+  },
+  {
+   "id": "mq04",
+   "q": "first principles",
+   "expect": [
+    "elon-musk",
+    "richard-feynman",
+    "aristotle"
+   ]
+  },
+  {
+   "id": "mq05",
+   "q": "public speaking",
+   "expect": [
+    "dale-carnegie",
+    "nancy-duarte",
+    "garr-reynolds",
+    "guy-kawasaki"
+   ]
+  },
+  {
+   "id": "mq06",
+   "q": "habits",
+   "expect": [
+    "james-clear",
+    "bj-fogg",
+    "gretchen-rubin",
+    "judson-brewer"
+   ]
+  },
+  {
+   "id": "mq07",
+   "q": "how to sell to big companies",
+   "expect": [
+    "neil-rackham",
+    "matthew-dixon",
+    "jill-konrath",
+    "aaron-ross"
+   ]
+  },
+  {
+   "id": "mq08",
+   "q": "write a novel",
+   "expect": [
+    "stephen-king",
+    "anne-lamott",
+    "ursula-k-le-guin",
+    "ann-patchett",
+    "kurt-vonnegut"
+   ]
+  },
+  {
+   "id": "mq09",
+   "q": "design a logo people remember",
+   "expect": [
+    "paul-rand",
+    "michael-bierut",
+    "aaron-draplin",
+    "saul-bass",
+    "milton-glaser"
+   ]
+  },
+  {
+   "id": "mq10",
+   "q": "should I raise money",
+   "expect": [
+    "paul-graham",
+    "sam-altman",
+    "sahil-lavingia",
+    "jason-fried"
+   ]
+  },
+  {
+   "id": "mq11",
+   "q": "positioning",
+   "expect": [
+    "al-ries",
+    "jack-trout",
+    "april-dunford"
+   ]
+  },
+  {
+   "id": "mq12",
+   "q": "how do I know if I have product market fit",
+   "expect": [
+    "marc-andreessen",
+    "sean-ellis",
+    "eric-ries",
+    "steve-blank"
+   ]
+  },
+  {
+   "id": "mq13",
+   "q": "leadership",
+   "expect": [
+    "peter-drucker",
+    "jim-collins",
+    "andy-grove",
+    "satya-nadella"
+   ]
+  },
+  {
+   "id": "mq14",
+   "q": "how to give feedback to my team",
+   "expect": [
+    "kim-scott",
+    "susan-scott",
+    "ed-catmull",
+    "brene-brown"
+   ]
+  },
+  {
+   "id": "mq15",
+   "q": "productivity",
+   "expect": [
+    "david-allen",
+    "cal-newport",
+    "oliver-burkeman",
+    "greg-mckeown"
+   ]
+  },
+  {
+   "id": "mq16",
+   "q": "headlines",
+   "expect": [
+    "john-caples",
+    "eugene-schwartz",
+    "david-ogilvy",
+    "victor-schwab"
+   ]
+  },
+  {
+   "id": "mq17",
+   "q": "advice for first-time founders",
+   "expect": [
+    "paul-graham",
+    "sam-altman",
+    "ben-horowitz",
+    "marc-andreessen"
+   ]
+  },
+  {
+   "id": "mq18",
+   "q": "how to validate a business idea",
+   "expect": [
+    "rob-fitzpatrick",
+    "steve-blank",
+    "eric-ries",
+    "noah-kagan"
+   ]
+  },
+  {
+   "id": "mq19",
+   "q": "user experience",
+   "expect": [
+    "don-norman",
+    "jakob-nielsen",
+    "steve-krug"
+   ]
+  },
+  {
+   "id": "mq20",
+   "q": "typography",
+   "expect": [
+    "ellen-lupton",
+    "erik-spiekermann",
+    "massimo-vignelli",
+    "paula-scher",
+    "herb-lubalin"
+   ]
+  },
+  {
+   "id": "mq21",
+   "q": "make a chart people understand",
+   "expect": [
+    "cole-nussbaumer-knaflic",
+    "edward-tufte",
+    "alberto-cairo",
+    "hans-rosling"
+   ]
+  },
+  {
+   "id": "mq22",
+   "q": "storytelling",
+   "expect": [
+    "robert-mckee",
+    "nancy-duarte",
+    "annette-simmons",
+    "ira-glass",
+    "joseph-campbell"
+   ]
+  },
+  {
+   "id": "mq23",
+   "q": "brand strategy",
+   "expect": [
+    "marty-neumeier",
+    "debbie-millman",
+    "al-ries",
+    "jack-trout"
+   ]
+  },
+  {
+   "id": "mq24",
+   "q": "how to write more clearly",
+   "expect": [
+    "william-zinsser",
+    "george-orwell",
+    "roy-peter-clark",
+    "barbara-minto"
+   ]
+  },
+  {
+   "id": "mq25",
+   "q": "stoicism",
+   "expect": [
+    "marcus-aurelius",
+    "seneca",
+    "ryan-holiday"
+   ]
+  },
+  {
+   "id": "mq26",
+   "q": "risk",
+   "expect": [
+    "nassim-taleb",
+    "gerd-gigerenzer",
+    "annie-duke"
+   ]
+  },
+  {
+   "id": "mq27",
+   "q": "investing",
+   "expect": [
+    "warren-buffett",
+    "benjamin-graham",
+    "john-c-bogle",
+    "charlie-munger",
+    "morgan-housel"
+   ]
+  },
+  {
+   "id": "mq28",
+   "q": "why do I make bad decisions",
+   "expect": [
+    "daniel-kahneman",
+    "annie-duke",
+    "charlie-munger",
+    "julia-galef"
+   ]
+  },
+  {
+   "id": "mq29",
+   "q": "clean code",
+   "expect": [
+    "robert-c-martin",
+    "kent-beck",
+    "martin-fowler",
+    "sandi-metz"
+   ]
+  },
+  {
+   "id": "mq30",
+   "q": "how to do a code review",
+   "expect": [
+    "linus-torvalds",
+    "martin-fowler",
+    "kent-beck"
+   ]
+  },
+  {
+   "id": "mq31",
+   "q": "debugging",
+   "expect": [
+    "julia-evans",
+    "john-carmack",
+    "brendan-gregg"
+   ]
+  },
+  {
+   "id": "mq32",
+   "q": "make my website faster",
+   "expect": [
+    "addy-osmani",
+    "harry-roberts",
+    "brendan-gregg"
+   ]
+  },
+  {
+   "id": "mq33",
+   "q": "how to learn anything faster",
+   "expect": [
+    "barbara-oakley",
+    "scott-young",
+    "anders-ericsson",
+    "henry-roediger",
+    "josh-waitzkin"
+   ]
+  },
+  {
+   "id": "mq34",
+   "q": "scientific method",
+   "expect": [
+    "galileo-galilei",
+    "richard-feynman",
+    "isaac-newton",
+    "carl-sagan"
+   ]
+  },
+  {
+   "id": "mq35",
+   "q": "explain complex ideas simply",
+   "expect": [
+    "richard-feynman",
+    "carl-sagan",
+    "hans-rosling",
+    "stephen-hawking"
+   ]
+  },
+  {
+   "id": "mq36",
+   "q": "film directing",
+   "expect": [
+    "alfred-hitchcock",
+    "stanley-kubrick",
+    "akira-kurosawa",
+    "christopher-nolan"
+   ]
+  },
+  {
+   "id": "mq37",
+   "q": "how to produce a song",
+   "expect": [
+    "quincy-jones",
+    "rick-rubin",
+    "ar-rahman"
+   ]
+  },
+  {
+   "id": "mq38",
+   "q": "I'm stuck creatively",
+   "expect": [
+    "julia-cameron",
+    "steven-pressfield",
+    "anne-lamott",
+    "rick-rubin",
+    "austin-kleon"
+   ]
+  },
+  {
+   "id": "mq39",
+   "q": "learn to draw",
+   "expect": [
+    "betty-edwards",
+    "kimon-nicolaides",
+    "andrew-loomis",
+    "james-gurney"
+   ]
+  },
+  {
+   "id": "mq40",
+   "q": "how to write jokes",
+   "expect": [
+    "jerry-seinfeld",
+    "steve-martin",
+    "oscar-wilde",
+    "mark-twain"
+   ]
+  },
+  {
+   "id": "mq41",
+   "q": "cook better at home",
+   "expect": [
+    "julia-child",
+    "jacques-pepin",
+    "samin-nosrat",
+    "mary-berry"
+   ]
+  },
+  {
+   "id": "mq42",
+   "q": "budgeting",
+   "expect": [
+    "ramit-sethi",
+    "vicki-robin",
+    "joe-dominguez",
+    "michelle-singletary"
+   ]
+  },
+  {
+   "id": "mq43",
+   "q": "my toddler has tantrums",
+   "expect": [
+    "janet-lansbury",
+    "becky-kennedy",
+    "tina-payne-bryson",
+    "daniel-siegel"
+   ]
+  },
+  {
+   "id": "mq44",
+   "q": "mindfulness",
+   "expect": [
+    "jon-kabat-zinn",
+    "tara-brach",
+    "thich-nhat-hanh",
+    "sharon-salzberg"
+   ]
+  },
+  {
+   "id": "mq45",
+   "q": "how to have a hard conversation",
+   "expect": [
+    "douglas-stone",
+    "kerry-patterson",
+    "susan-scott",
+    "brene-brown",
+    "chris-voss"
+   ]
+  },
+  {
+   "id": "mq46",
+   "q": "competitive strategy",
+   "expect": [
+    "michael-porter",
+    "sun-tzu",
+    "hamilton-helmer"
+   ]
+  },
+  {
+   "id": "mq47",
+   "q": "advertising",
+   "expect": [
+    "david-ogilvy",
+    "bill-bernbach",
+    "claude-hopkins",
+    "lee-clow"
+   ]
+  },
+  {
+   "id": "mq48",
+   "q": "cold email",
+   "expect": [
+    "aaron-ross",
+    "jill-konrath",
+    "jeb-blount"
+   ]
+  },
+  {
+   "id": "mq49",
+   "q": "grow on social media",
+   "expect": [
+    "gary-vaynerchuk",
+    "mrbeast",
+    "ann-handley"
+   ]
+  },
+  {
+   "id": "mq50",
+   "q": "customer service",
+   "expect": [
+    "tony-hsieh",
+    "herb-kelleher",
+    "howard-schultz"
+   ]
+  },
+  {
+   "id": "mq51",
+   "q": "how to cut costs",
+   "expect": [
+    "ingvar-kamprad",
+    "taiichi-ohno",
+    "sam-walton",
+    "henry-ford"
+   ]
+  },
+  {
+   "id": "mq52",
+   "q": "build a great team culture",
+   "expect": [
+    "reed-hastings",
+    "patty-mccord",
+    "tony-hsieh",
+    "herb-kelleher",
+    "ed-catmull"
+   ]
+  },
+  {
+   "id": "mq53",
+   "q": "motivation",
+   "expect": [
+    "daniel-pink",
+    "zig-ziglar",
+    "jim-rohn",
+    "carol-dweck",
+    "angela-duckworth"
+   ]
+  },
+  {
+   "id": "mq54",
+   "q": "how to hire great people",
+   "expect": [
+    "patty-mccord",
+    "mark-roberge",
+    "reed-hastings",
+    "jim-collins"
+   ]
+  },
+  {
+   "id": "mq55",
+   "q": "product management",
+   "expect": [
+    "marty-cagan",
+    "clayton-christensen",
+    "eric-ries"
+   ]
+  },
+  {
+   "id": "mq56",
+   "q": "learn AI from scratch",
+   "expect": [
+    "andrej-karpathy",
+    "demis-hassabis",
+    "fei-fei-li",
+    "alan-turing"
+   ]
+  },
+  {
+   "id": "mq57",
+   "q": "persuasion",
+   "expect": [
+    "robert-cialdini",
+    "dale-carnegie",
+    "rory-sutherland",
+    "aristotle"
+   ]
+  },
+  {
+   "id": "mq58",
+   "q": "design a building",
+   "expect": [
+    "frank-lloyd-wright",
+    "zaha-hadid",
+    "christopher-alexander"
+   ]
+  },
+  {
+   "id": "mq59",
+   "q": "career change",
+   "expect": [
+    "jenny-blake",
+    "herminia-ibarra",
+    "bill-burnett",
+    "dave-evans",
+    "richard-nelson-bolles"
+   ]
+  },
+  {
+   "id": "mq60",
+   "q": "SEO",
+   "expect": [
+    "neil-patel",
+    "rand-fishkin"
+   ]
+  }
+ ]
+}

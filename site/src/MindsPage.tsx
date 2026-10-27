@@ -5,6 +5,7 @@ import { type CSSProperties, memo, useEffect, useMemo, useRef, useState } from "
 import { type Catalogue, type RosterMind, classificationText, pathOf } from "./lib/data";
 import { useLibrarySearch } from "./lib/library-search";
 import { rankLibraryResults } from "./lib/library-rank";
+import { mindSearchOrder } from "./lib/mind-match";
 import { isTested } from "./lib/verification";
 import { Link } from "./lib/router";
 import { ArrowIcon } from "./ui";
@@ -23,7 +24,7 @@ export default function MindsPage({ c, toBuilder }: { c: Catalogue; toBuilder: (
   const roster = c.minds?.roster ?? [];
   const areas = c.minds?.areas ?? {};
   const [label, setLabel] = useState("");
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState(() => new URLSearchParams(location.search).get("q")?.slice(0, 120) ?? "");
   const search = useLibrarySearch(c, query, { extraText: classificationText });
   const myMinds = new URLSearchParams(location.search).get("view") === "my";
   const labels = c.minds?.labels ?? {};
@@ -57,10 +58,12 @@ export default function MindsPage({ c, toBuilder }: { c: Catalogue; toBuilder: (
     const matched = searchable.filter(({ mind, text }) => (!label || mind.labels?.includes(label))
       && (!terms.length || search.hits.has(mind.slug) || terms.every((term) => text.includes(term)))).map(({ mind }) => mind);
     if (!terms.length) return matched;
-    // Same order as the library search (lib/library-rank.ts): a name that says the search leads.
-    const bySlug = new Map(matched.map((mind) => [mind.slug, mind]));
-    return rankLibraryResults(matched.map((mind) => c.bySlug[mind.slug] ?? { slug: mind.slug, name: mind.name, type: "mind" }), search.hits, query, { isTested: (b) => "tested" in b && isTested(b) }).map((b) => bySlug.get(b.slug)!);
-  }, [searchable, label, query, search.hits, c.bySlug]);
+    // The library search's order (lib/library-rank.ts), then mind-match.ts: a typed name leads, then the minds best
+    // known for the topic (also when no word of their page matched), then the other matches.
+    const ranked = rankLibraryResults(matched.map((mind) => c.bySlug[mind.slug] ?? { slug: mind.slug, name: mind.name, type: "mind" }), search.hits, query, { isTested: (b) => "tested" in b && isTested(b) }).map((b) => b.slug);
+    const bySlug = new Map(roster.map((mind) => [mind.slug, mind]));
+    return mindSearchOrder(c, query, ranked, (slug) => !label || !!bySlug.get(slug)?.labels?.includes(label)).map((slug) => bySlug.get(slug)).filter((mind): mind is RosterMind => !!mind);
+  }, [searchable, label, query, search.hits, c, roster]);
   const clear = () => { setQuery(""); setLabel(""); };
   const toggle = (slug: string) => setSeated((s) => (s.includes(slug) ? s.filter((x) => x !== slug) : s.length >= MAX ? s : [...s, slug]));
   const open = () => {

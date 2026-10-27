@@ -74,7 +74,8 @@ test("automatic assignment schema and compact prompt expose the entire real Mind
   const candidates = rawPlan().steps.map(s => c.bySlug[s.slug]);
   const roster = JSON.parse(plannerPrompt(goal, "", {}, candidates, [], minds).user).mindRoster;
   assert.equal(roster.length, minds.length);
-  assert.deepEqual(roster.map(m => m.slug), minds.map(m => m.slug));
+  // Every mind is offered; the closest to the request come first (mind-match.ts).
+  assert.deepEqual(roster.map(m => m.slug).sort(), minds.map(m => m.slug).sort());
   assert(roster.every(m => m.name && Array.isArray(m.areas) && Array.isArray(m.expertise) && m.expertise.length));
   assert.deepEqual(selectionSchema(candidates, true, minds).properties.steps.items.properties.minds.items.enum, minds.map(m => m.slug));
 });

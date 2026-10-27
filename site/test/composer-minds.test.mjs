@@ -15,7 +15,7 @@ function runnerFor(on, seen = []) { return async (_m, _k, prompt, schema) => {
   if (schema.properties.intents) return output({ intents: [{ query: goal, kind: 'create' }] });
   if (schema.properties.issues) return output({ issues: [] });
   const data = JSON.parse(prompt.user); seen.push(data);
-  if (on) { assert.equal(data.mindRoster.length, minds.length); assert.deepEqual(data.mindRoster.map(m=>m.slug), minds.map(m=>m.slug)); assert(data.mindRoster.every(m=>m.name && Array.isArray(m.areas) && m.expertise.length)); }
+  if (on) { assert.equal(data.mindRoster.length, minds.length); assert.deepEqual(data.mindRoster.map(m=>m.slug).sort(), minds.map(m=>m.slug).sort()); assert(data.mindRoster.every(m=>m.name && Array.isArray(m.areas) && m.expertise.length)); }
   else assert.equal(Object.hasOwn(data, 'mindRoster'), false);
   assert(schema.properties.steps.items.required.includes('minds'));
   const plan = freeSelection(c, goal); plan.steps.forEach(s => { s.minds = on ? [minds[0].slug] : []; }); return output(plan);

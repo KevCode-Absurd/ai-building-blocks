@@ -20,8 +20,9 @@ test('list index keeps every block with what cards, filters and the Verified/Imp
       assert.deepEqual(block[field], full[field], `${full.slug}.${field}`);
     assert.deepEqual(block.steps, full.steps?.map(step => (Array.isArray(step) ? step[0] : step)));
     assert.equal(block.source?.by, full.source?.by);
-    for (const field of ['inputs', 'outputs', 'uses', 'seats', 'skills', 'aliases']) assert.equal(block[field], undefined, `${full.slug}.${field} stays in blocks.json`);
-    if (full.type === 'mind') assert.deepEqual(block.face, full.face ?? faces.get(full.slug));
+    for (const field of ['inputs', 'outputs', 'uses', 'skills', 'aliases', ...(full.type === 'mind' ? [] : ['seats'])]) assert.equal(block[field], undefined, `${full.slug}.${field} stays in blocks.json`);
+    // A mind keeps what it is known for, so a library search can name the minds who know its topic.
+    if (full.type === 'mind') { assert.deepEqual(block.face, full.face ?? faces.get(full.slug)); for (const field of ['seats', 'labels', 'cues']) assert.deepEqual(block[field], full[field], `${full.slug}.${field}`); }
   });
   assert.equal(index.minds, undefined, 'The mind roster loads with the full catalogue.');
   assert(Buffer.byteLength(JSON.stringify(index)) < source.length * 0.7);

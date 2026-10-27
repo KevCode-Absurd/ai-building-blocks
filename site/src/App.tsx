@@ -14,6 +14,7 @@ import { trackUxEvent } from "./lib/ux-events";
 import "./simplicity.css";
 import "./home-library.css";
 import { Link, navigate, setPrefetch, setSearch, useLocation } from "./lib/router";
+import MindsForSearch from "./MindsForSearch";
 import { BusinessDrawer, openBusiness, useBusinessOpener } from "./Business";
 import { TailorDrawer, useTailorOpener } from "./Tailor";
 import SiteHeader from "./SiteHeader";
@@ -325,6 +326,7 @@ function Library({ c, complete = true, error = "", retry, onNeedFull }: { c: Cat
         {complete && <span data-testid="result-count" role="status" aria-atomic="true">{results.length} result{results.length === 1 ? "" : "s"}{activeTask ? ` for “${activeTask.name}”` : fn ? ` for “${fn.name}”` : area ? ` in ${area.name}` : ""}</span>}
         {hasFilters && <button type="button" className="btn btn-ghost btn-sm" onClick={clear}>Clear filters</button>}
       </div>
+      {hasQuery && complete && f.kind !== "mind" && <MindsForSearch c={c} q={df.q} />}
       {hidden > 0 && <p className="small library-scope-note" data-testid="scope-note">Showing tested blocks only. {hidden.toLocaleString("en-US")} block{hidden === 1 ? " hasn't" : "s haven't"} been tested yet. <button type="button" className="link-btn" onClick={() => set({ scope: "" })} data-testid="scope-show-all">Show all</button></p>}
       {hasQuery && searchState.loading && <p className="small" role="status">Searching full instructions…</p>}
       {hasQuery && searchState.error && <p className="small" role="alert">Full instructions could not be searched. These results use titles and descriptions. <button type="button" className="link-btn" onClick={searchState.retry}>Try full search again</button></p>}
@@ -511,7 +513,20 @@ export default function App() {
     if (path !== "/") setHomeCatalogueRequested(false);
     else if (hasHomeLibraryIntent) setHomeCatalogueRequested(true);
   }, [path, hasHomeLibraryIntent]);
-  const catalogueState = useCatalogueState((needsCatalogue && (!starterFirst || homeCatalogueRequested)) || kitsOpen, { starterFirst, tier: path === "/" ? "index" : "full" });
+  // The builder paints its request form first and only then fetches the task library (about 1 MB), so on a phone the
+  // page shows at once instead of waiting behind the download.
+  const [builderPainted, setBuilderPainted] = useState(false);
+  useEffect(() => {
+    if (path !== "/compose" || builderPainted) return;
+    let timers: number[] = [];
+    const done = () => setBuilderPainted(true);
+    // A short pause after the cover lifts, so the form paints before the download starts; nothing needs the library
+    // until a request is sent.
+    const painted = () => { timers.push(window.setTimeout(done, 300)); };
+    if (document.documentElement.dataset.boot === "ready") painted(); else document.addEventListener("abb:ready", painted, { once: true });
+    return () => { document.removeEventListener("abb:ready", painted); timers.forEach(clearTimeout); timers = []; };
+  }, [path, builderPainted]);
+  const catalogueState = useCatalogueState((needsCatalogue && (!starterFirst || homeCatalogueRequested) && (path !== "/compose" || builderPainted)) || kitsOpen, { starterFirst, tier: path === "/" ? "index" : "full" });
   // Without starter picks there is nothing light to show, so open the library straight away.
   useEffect(() => { if (catalogueState.starterFailed) requestHomeCatalogue(); }, [catalogueState.starterFailed, requestHomeCatalogue]);
   const c = catalogueState.catalogue;
@@ -534,7 +549,7 @@ export default function App() {
   const here = now(pageSlug);
   const redirectTo = LEGACY_PATHS[path] ?? (old ? pathOf(old) : here && pathOf(here) !== path ? pathOf(here) : null);
   // Optional library data must not delay the home hero or the space form.
-  const waitingForCatalogue = !c && !catalogueState.error && (pageSlug !== null || ["/minds", "/compose", "/from-a-source"].includes(path)
+  const waitingForCatalogue = !c && !catalogueState.error && (pageSlug !== null || ["/minds", "/from-a-source"].includes(path)
     || search.has("block") || (path === "/" && ["#library", "#build"].includes(location.hash)));
   useEffect(() => {
     if (redirectTo) navigate(redirectTo, { replace: true });
@@ -575,7 +590,8 @@ export default function App() {
           ) : path === "/minds" ? (
             c ? <MindsPage c={c} toBuilder={toBuilder} /> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
           ) : path === "/compose" ? (
-            c ? <ComposePage c={c} toast={setToast} /> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
+            // The builder opens at once; it plans once the task library is here (ComposePage.tsx).
+            <ComposePage c={c} toast={setToast} />
           ) : path === "/from-a-source" ? (
             c ? <IntakePage c={c} toast={setToast} /> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
           ) : ["/api-and-mcp", "/api-and-mcp.html"].includes(path) ? (

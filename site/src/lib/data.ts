@@ -17,6 +17,8 @@ export type Block = {
   summary: string;
   /** Earlier display names still work in library searches. */
   aliases?: string[];
+  /** When to use it and the everyday words people use for it (scripts/build-index.mjs): search only, never shown. */
+  cues?: string;
   category: "general" | "ecommerce" | "orchestrator" | "agent" | "mind";
   boards: string[];
   type: "prompt" | "skill" | "workflow" | "routine" | "agent" | "mind";
@@ -351,3 +353,6 @@ export const paidService = (b: { warnings?: string[] }) => b.warnings?.find((w) 
 
 /** Where an imported skill came from (item.yaml `source`). The library list only carries `by`; the rest comes with the page. */
 export type Source = { by: string; repo?: string; url?: string; licence?: string; original?: string; commit?: string };
+
+/** The wire decoder, for offline scripts (scripts/evaluate-minds.mjs) that read public/data/blocks.json as the site does. */
+export { decodeCatalogue as decodeWire };

@@ -1,0 +1,608 @@
+{
+ "version": 1,
+ "written": "2026-10-28",
+ "note": "Minds that fit a workflow step, labelled independently from the mind roster for 60 catalogue items picked by a fixed hash. weak: no real expert fits. Odd ids dev, even ids test: tune on dev only. Independent expectation set by an editor-style judgement of each person's known expertise. weak=true means no mind is a real fit and the listed ones are the closest general thinkers.",
+ "steps": [
+  {
+   "id": "ms01",
+   "slug": "cash-forecast-builder",
+   "expect": [
+    "alex-hormozi",
+    "michael-dell",
+    "john-d-rockefeller"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms02",
+   "slug": "stock-and-bond-split-planner",
+   "expect": [
+    "john-c-bogle",
+    "burton-malkiel",
+    "william-bernstein",
+    "benjamin-graham"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms03",
+   "slug": "personal-mission-statement",
+   "expect": [
+    "simon-sinek",
+    "stephen-covey",
+    "viktor-frankl",
+    "jim-rohn"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms04",
+   "slug": "fact-based-ad-copy-writer",
+   "expect": [
+    "david-ogilvy",
+    "claude-hopkins",
+    "david-abbott",
+    "rosser-reeves"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms05",
+   "slug": "personal-study-notebook",
+   "expect": [
+    "barbara-oakley",
+    "henry-roediger",
+    "john-dunlosky",
+    "scott-young"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms06",
+   "slug": "copilot-gtm-0-to-1-launch",
+   "expect": [
+    "paul-graham",
+    "steve-blank",
+    "sean-ellis"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms07",
+   "slug": "make-a-readable-event-poster",
+   "expect": [
+    "saul-bass",
+    "josef-muller-brockmann",
+    "paula-scher",
+    "george-lois"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms08",
+   "slug": "agency-support-analytics-reporter",
+   "expect": [
+    "cole-nussbaumer-knaflic",
+    "edward-tufte",
+    "les-binet",
+    "david-spiegelhalter"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms09",
+   "slug": "internal-link-mapper",
+   "expect": [
+    "neil-patel",
+    "rand-fishkin",
+    "tim-berners-lee"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms10",
+   "slug": "product-test-result-reader",
+   "expect": [
+    "peep-laja",
+    "sean-ellis",
+    "andrew-chen"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms11",
+   "slug": "nonprofit-earned-income-planner",
+   "expect": [
+    "peter-drucker",
+    "jim-collins"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms12",
+   "slug": "gift-card-issuer",
+   "expect": [
+    "tobi-lutke",
+    "tony-hsieh"
+   ],
+   "weak": true
+  },
+  {
+   "id": "ms13",
+   "slug": "reconcile-conglomerate-valuation-perimeters",
+   "expect": [
+    "aswath-damodaran",
+    "benjamin-graham",
+    "warren-buffett"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms14",
+   "slug": "post-money-safe-ownership-checker",
+   "expect": [
+    "paul-graham",
+    "naval-ravikant"
+   ],
+   "weak": true
+  },
+  {
+   "id": "ms15",
+   "slug": "fragile-code-spotter",
+   "expect": [
+    "michael-feathers",
+    "kent-beck",
+    "linus-torvalds",
+    "margaret-hamilton"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms16",
+   "slug": "agency-marketing-linkedin-content-creator",
+   "expect": [
+    "ann-handley",
+    "gary-vaynerchuk",
+    "reid-hoffman"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms17",
+   "slug": "campaign-brief-calendar",
+   "expect": [
+    "mark-ritson",
+    "philip-kotler",
+    "drayton-bird"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms18",
+   "slug": "email-and-sms-performance-reader",
+   "expect": [
+    "peep-laja",
+    "sean-ellis",
+    "les-binet"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms19",
+   "slug": "investor-statement-nav-checker",
+   "expect": [
+    "katherine-johnson",
+    "warren-buffett"
+   ],
+   "weak": true
+  },
+  {
+   "id": "ms20",
+   "slug": "selling-proposition-finder",
+   "expect": [
+    "rosser-reeves",
+    "david-ogilvy",
+    "april-dunford",
+    "jack-trout"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms21",
+   "slug": "second-order-effects-tracer",
+   "expect": [
+    "donella-meadows",
+    "charlie-munger",
+    "adam-smith"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms22",
+   "slug": "beat-bigger-rival",
+   "expect": [
+    "michael-porter",
+    "hamilton-helmer",
+    "sun-tzu",
+    "peter-thiel"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms23",
+   "slug": "raw-cost-breakdown-finder",
+   "expect": [
+    "elon-musk",
+    "ingvar-kamprad",
+    "henry-ford"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms24",
+   "slug": "circle-of-competence-mapper",
+   "expect": [
+    "charlie-munger",
+    "warren-buffett",
+    "julia-galef"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms25",
+   "slug": "postgres-query-tuner",
+   "expect": [
+    "brendan-gregg",
+    "donald-knuth",
+    "julia-evans"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms26",
+   "slug": "winning-ad-variant-writer",
+   "expect": [
+    "john-caples",
+    "david-ogilvy",
+    "joanna-wiebe"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms27",
+   "slug": "key-hire-gap-finder",
+   "expect": [
+    "patty-mccord",
+    "jim-collins",
+    "peter-drucker"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms28",
+   "slug": "job-application-evidence-review-assistant",
+   "expect": [
+    "richard-nelson-bolles",
+    "jenny-blake",
+    "herminia-ibarra"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms29",
+   "slug": "snowflake-sql-helper",
+   "expect": [
+    "julia-evans",
+    "brendan-gregg"
+   ],
+   "weak": true
+  },
+  {
+   "id": "ms30",
+   "slug": "fix-your-marketing-plan-and-cut-it-to-one-goal",
+   "expect": [
+    "mark-ritson",
+    "greg-mckeown",
+    "les-binet"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms31",
+   "slug": "retention-problem-fixer",
+   "expect": [
+    "andrew-chen",
+    "sean-ellis",
+    "bj-fogg"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms32",
+   "slug": "transport-cyber-rules-checker",
+   "expect": [
+    "bruce-schneier",
+    "troy-hunt"
+   ],
+   "weak": true
+  },
+  {
+   "id": "ms33",
+   "slug": "sku-ad-money-planner",
+   "expect": [
+    "alex-hormozi",
+    "michael-dell",
+    "les-binet"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms34",
+   "slug": "paper-cutout-video-prompts",
+   "expect": [
+    "scott-mccloud",
+    "saul-bass",
+    "mrbeast"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms35",
+   "slug": "signup-flow-improver",
+   "expect": [
+    "steve-krug",
+    "don-norman",
+    "melanie-perkins",
+    "sean-ellis"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms36",
+   "slug": "first-in-category-finder",
+   "expect": [
+    "al-ries",
+    "peter-thiel",
+    "jack-trout"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms37",
+   "slug": "self-hosted-store-speed-fixer",
+   "expect": [
+    "addy-osmani",
+    "harry-roberts"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms38",
+   "slug": "hidden-theme-finder",
+   "expect": [
+    "robert-mckee",
+    "toni-morrison",
+    "joseph-campbell"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms39",
+   "slug": "side-hustle-idea-finder",
+   "expect": [
+    "noah-kagan",
+    "pieter-levels",
+    "daymond-john",
+    "tim-ferriss"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms40",
+   "slug": "failure-first-plan-check",
+   "expect": [
+    "charlie-munger",
+    "nassim-taleb",
+    "daniel-kahneman",
+    "annie-duke"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms41",
+   "slug": "agency-security-threat-intelligence-analyst",
+   "expect": [
+    "bruce-schneier",
+    "troy-hunt"
+   ],
+   "weak": true
+  },
+  {
+   "id": "ms42",
+   "slug": "agency-security-incident-responder",
+   "expect": [
+    "bruce-schneier",
+    "charity-majors",
+    "margaret-hamilton"
+   ],
+   "weak": true
+  },
+  {
+   "id": "ms43",
+   "slug": "nonprofit-executive-dashboard-planner",
+   "expect": [
+    "peter-drucker",
+    "andy-grove",
+    "jim-collins"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms44",
+   "slug": "earnout-payout-checker",
+   "expect": [
+    "katherine-johnson",
+    "aswath-damodaran"
+   ],
+   "weak": true
+  },
+  {
+   "id": "ms45",
+   "slug": "local-place-lesson-planner",
+   "expect": [
+    "john-dewey",
+    "paulo-freire",
+    "jane-jacobs"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms46",
+   "slug": "weekly-customer-call-planner",
+   "expect": [
+    "neil-rackham",
+    "jill-konrath",
+    "jeffrey-gitomer"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms47",
+   "slug": "cut-your-product-line-to-the-few-that-pay-and-commit-the-team",
+   "expect": [
+    "peter-drucker",
+    "jim-collins",
+    "steve-jobs",
+    "greg-mckeown"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms48",
+   "slug": "saas-pricing-designer",
+   "expect": [
+    "alex-hormozi",
+    "april-dunford",
+    "kazuo-inamori"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms49",
+   "slug": "turn-a-free-checker-into-leads-and-a-paid-first-step",
+   "expect": [
+    "alex-hormozi",
+    "russell-brunson",
+    "noah-kagan"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms50",
+   "slug": "flight-environment-calculator",
+   "expect": [
+    "katherine-johnson",
+    "margaret-hamilton"
+   ],
+   "weak": true
+  },
+  {
+   "id": "ms51",
+   "slug": "store-speed-report-reader",
+   "expect": [
+    "addy-osmani",
+    "harry-roberts",
+    "brendan-gregg"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms52",
+   "slug": "monthly-channel-budget-reviewer",
+   "expect": [
+    "les-binet",
+    "bob-hoffman",
+    "rand-fishkin"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms53",
+   "slug": "course-exercise-scaffolder",
+   "expect": [
+    "kent-beck",
+    "sal-khan"
+   ],
+   "weak": true
+  },
+  {
+   "id": "ms54",
+   "slug": "customer-history-exporter",
+   "expect": [
+    "tobi-lutke",
+    "tony-hsieh"
+   ],
+   "weak": true
+  },
+  {
+   "id": "ms55",
+   "slug": "revolver-interest-fee-checker",
+   "expect": [
+    "katherine-johnson",
+    "benjamin-graham"
+   ],
+   "weak": true
+  },
+  {
+   "id": "ms56",
+   "slug": "chat-screenshot-image-ad-maker",
+   "expect": [
+    "joseph-sugarman",
+    "gary-halbert",
+    "john-carlton"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms57",
+   "slug": "code-security-scanner",
+   "expect": [
+    "bruce-schneier",
+    "troy-hunt",
+    "linus-torvalds"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms58",
+   "slug": "paper-research-assistant",
+   "expect": [
+    "jevin-west",
+    "carl-bergstrom",
+    "richard-hamming"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms59",
+   "slug": "jira-project-setup-helper",
+   "expect": [
+    "nicole-forsgren",
+    "kent-beck",
+    "taiichi-ohno"
+   ],
+   "weak": false
+  },
+  {
+   "id": "ms60",
+   "slug": "feedback-conversation-planner",
+   "expect": [
+    "kim-scott",
+    "douglas-stone",
+    "sheila-heen",
+    "susan-scott"
+   ],
+   "weak": false
+  }
+ ]
+}

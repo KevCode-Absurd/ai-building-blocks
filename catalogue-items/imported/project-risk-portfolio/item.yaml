@@ -35,3 +35,7 @@ credits:
     by: Alireza Rezvani
     url: https://github.com/alirezarezvani/claude-skills/tree/main/project-management/skills/senior-pm
     used: Used under the MIT licence. We gave it a plain name, labelled thresholds and formulas as examples, and fixed the EMV example to use a 0 to 1 chance. The EMV example now marks EMV unknown when the chance or money impact is missing, instead of failing.
+  - title: AI Blocks catalogue guidance
+    by: AI Blocks
+    url: https://useaiblocks.com
+    used: We added Before you start and After this sections that link to other AI Blocks steps. We refreshed those generated sections from the catalogue inputs and next-step links.

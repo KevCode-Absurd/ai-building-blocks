@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 - **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 How to start:
@@ -109,3 +109,5 @@ If **~~project tracker** is connected:
 1. **Start messy** — You don't need a perfect description. Tell me how it works today and I'll structure it.
 2. **Include the exceptions** — "Usually we do X, but sometimes Y" is the most valuable part to document.
 3. **Name the people** — Even if roles change, knowing who does what today helps get the process right.
+
+Changed by AI Blocks (2026-10-28): refreshed the generated Before you start and After this guidance from catalogue metadata.

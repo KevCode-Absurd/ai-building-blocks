@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Makes it better (optional):**
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A plan** with the [Production capacity checker](https://useaiblocks.com/skills/production-capacity-checker). Bring a spreadsheet, a plan (optional).

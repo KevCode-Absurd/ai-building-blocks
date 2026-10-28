@@ -34,3 +34,7 @@ credits:
     by: Pawel Huryn
     url: https://github.com/phuryn/pm-skills/tree/main/pm-marketing-growth/skills/product-name
     used: Copied as it is under the MIT licence, with an AI Blocks note added at the end. We gave it a plain name.
+  - title: AI Blocks catalogue guidance
+    by: AI Blocks
+    url: https://useaiblocks.com
+    used: We added Before you start and After this sections that link to other AI Blocks steps. We refreshed those generated sections from the catalogue inputs and next-step links.

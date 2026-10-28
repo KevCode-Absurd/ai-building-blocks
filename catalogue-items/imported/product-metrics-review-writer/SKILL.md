@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Makes it better (optional):**
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 - **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 How to start:
@@ -414,3 +414,5 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Not all metric movements matter. Small fluctuations are noise. Focus attention on meaningful changes.
 - If a metric is missing its target, do not just report the miss — recommend what to do about it.
 - Metrics reviews should drive decisions. If the review does not lead to at least one action, it was not useful.
+
+Changed by AI Blocks (2026-10-28): refreshed the generated Before you start and After this guidance from catalogue metadata.

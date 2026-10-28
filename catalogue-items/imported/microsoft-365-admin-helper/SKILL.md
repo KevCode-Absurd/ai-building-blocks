@@ -35,15 +35,15 @@ How to start:
 
 These scripts change a live company tenant. Follow these rules every time.
 
-1. **Ask once for what is missing.** You need the tenant domain, what to set up, and for user jobs the list of people (a CSV with DisplayName, UserPrincipalName, Department, LicenseSku). Never invent names, addresses or licence codes. If the tenant has on-premises Active Directory (a hybrid setup), say that extra setup is needed and stop before any user change.
+1. **Ask once for what is missing.** You need the tenant domain, what to set up, and for user jobs the list of people (a CSV with DisplayName, UserPrincipalName, Department, LicenseSku, UsageLocation). Never invent names, addresses or licence codes. If the tenant has on-premises Active Directory (a hybrid setup), say that extra setup is needed and stop before any user change.
 2. **Test tenant first.** Say clearly that scripts should run in a test tenant or a small test group before the real one.
 3. **Read first, change later.** Run the audit (read-only) before any policy or user change.
 4. **Confirm before any change.** Before creating or disabling users, changing licences, converting mailboxes, or creating a policy, show the script, say how many accounts it touches, and wait for a clear yes.
 5. **Never lock the admins out.** Every Conditional Access policy that covers all users, or that blocks sign-in, must exclude one or two break-glass admin accounts. Ask the person for them. If they have none, tell them to create two cloud-only admin accounts first, with long passwords stored offline, and stop until they have. The sample policy code stops with an error while the break-glass IDs are still placeholders. Never remove that check, and never run a policy with unfilled IDs.
 6. **Report-only first.** Every new Conditional Access policy starts as `enabledForReportingButNotEnforced`. Move to `enabled` only after about 48 hours of sign-in log review.
-7. **Passwords are never lost or shown in chat.** Temporary passwords go to a local file the admin chooses, with a clear note to hand them over safely and delete the file after.
+7. **Passwords are never lost or shown in chat.** Temporary passwords go to Windows-encrypted local credential files in a folder the admin chooses. Hand them over safely, then delete the files. Never put passwords in a prompt, chat, log or source control.
 8. **No tools, no run.** If you cannot run PowerShell here, write the scripts for the admin to run and ask them to paste back any error. Do not invent output.
-9. **Generated scripts follow the same rules.** Scripts from the bundled Python tools must also record temporary passwords, exclude break-glass accounts and start policies in report-only mode. Check each one, and fix it before it is run. The user tool's create script makes each temporary password from the system's secure random generator; it still does not record them, so add that before you run it.
+9. **Generated scripts follow the same rules.** Scripts from the bundled Python tools must also record temporary passwords, exclude break-glass accounts and start policies in report-only mode. Check each one, and fix it before it is run. The bundled user tool saves a Windows-encrypted credential file before creating each account. Run it with an existing local handover folder chosen by the admin. It stops on an uncertain account or licence result; check the tenant before retrying. Local checks cover encryption and mocked failures, not a live tenant.
 
 ---
 
@@ -63,40 +63,40 @@ Get-MgIdentityConditionalAccessPolicy | Select-Object DisplayName, State | Expor
 ### Bulk Provision Users from CSV
 
 ```powershell
-# Run this in a test tenant or on a small test group first. Show the admin the script and the row count, and wait for a clear yes.
-# CSV columns: DisplayName, UserPrincipalName, Department, LicenseSku
-# Same pattern as Workflow 1, Step 4: one failed row must not stop the rest, and each user gets a licence.
-# Temporary passwords are saved to .\temp_passwords.csv in plain text, a file only you can open. This file is the fallback:
-# hand each password over through a password manager share or a one-time secret link (never by email to the same account),
-# then DELETE the file straight away.
-function New-TempPassword {
-    # 20 characters from a cryptographic random source, with no fixed part.
-    # At least one upper case letter, lower case letter, digit and symbol, in random places.
-    $sets = @('ABCDEFGHJKLMNPQRSTUVWXYZ', 'abcdefghijkmnpqrstuvwxyz', '23456789', '!@#$%')
-    $rng = [System.Security.Cryptography.RandomNumberGenerator]::Create()
-    $next = { param($max) $b = New-Object byte[] 4; $rng.GetBytes($b); [BitConverter]::ToUInt32($b, 0) % $max }
-    $all = -join $sets
-    $chars = @($sets | ForEach-Object { $_[(& $next $_.Length)] })
-    $chars += 1..16 | ForEach-Object { $all[(& $next $all.Length)] }
-    -join ($chars | Sort-Object { & $next ([uint32]::MaxValue) })
+# Run on Windows, in a test tenant first, after the admin approves the script and row count.
+# Keep this skill's scripts folder alongside it. This helper makes only local files, not tenant calls.
+. .\scripts\password-handover.ps1
+$folder = Get-PasswordHandoverDirectory -Directory (Read-Host 'Existing local folder for encrypted password handover')
+$rows = @(Import-Csv .\new_users.csv)
+# CSV columns: DisplayName, UserPrincipalName, Department, LicenseSku, UsageLocation.
+# Supply the real tenant licence part number and two-letter usage location for every person.
+$skus = @(Get-MgSubscribedSku -All -ErrorAction Stop)
+foreach ($row in $rows) {
+    if (-not $row.UserPrincipalName -or -not $row.LicenseSku -or -not $row.UsageLocation) { throw 'Fill in every required user field before creating anyone.' }
+    $matches = @($skus | Where-Object { $_.SkuPartNumber -eq $row.LicenseSku })
+    if ($matches.Count -ne 1) { throw 'A licence SKU is missing or ambiguous. No users have been created.' }
 }
-$licenseSku = (Get-MgSubscribedSku | Where-Object { $_.SkuPartNumber -eq "[LICENCE SKU PART NUMBER]" }).SkuId
-$results = Import-Csv .\new_users.csv | ForEach-Object {
+foreach ($row in $rows) {
+    $handover = New-TemporaryUserCredential -UserPrincipalName $row.UserPrincipalName -Directory $folder
     try {
-        $tempPassword = New-TempPassword
-        $passwordProfile = @{ Password = $tempPassword; ForceChangePasswordNextSignIn = $true }
-        $user = New-MgUser -DisplayName $_.DisplayName -UserPrincipalName $_.UserPrincipalName `
-                   -Department $_.Department -MailNickname ($_.UserPrincipalName.Split('@')[0]) -AccountEnabled -PasswordProfile $passwordProfile
-        Set-MgUserLicense -UserId $user.Id -AddLicenses @(@{ SkuId = $licenseSku }) -RemoveLicenses @()
-        [pscustomobject]@{ UserPrincipalName = $_.UserPrincipalName; TempPassword = $tempPassword }
+        $profile = @{ Password = $handover.Credential.GetNetworkCredential().Password; ForceChangePasswordNextSignIn = $true }
+        $user = New-MgUser -DisplayName $row.DisplayName -UserPrincipalName $row.UserPrincipalName `
+            -Department $row.Department -UsageLocation $row.UsageLocation `
+            -MailNickname ($row.UserPrincipalName.Split('@')[0]) -AccountEnabled:$true -PasswordProfile $profile -ErrorAction Stop
+        $sku = ($skus | Where-Object { $_.SkuPartNumber -eq $row.LicenseSku }).SkuId
+        Set-MgUserLicense -UserId $user.Id -AddLicenses @(@{ SkuId = $sku }) -RemoveLicenses @() -ErrorAction Stop | Out-Null
+        Write-Host "Created and licensed: $($row.UserPrincipalName). Handover file: $($handover.HandoverFile)"
     } catch {
-        Write-Warning "Failed $($_.UserPrincipalName): $_"
+        Write-Warning "Stopped for $($row.UserPrincipalName). Keep $($handover.HandoverFile)."
+        throw 'Check the actual account and licence state before retrying. Do not rerun bulk creation blindly.'
+    } finally {
+        if ($profile) { $profile.Password = $null }
+        $handover = $null
     }
 }
-$results | Export-Csv .\temp_passwords.csv -NoTypeInformation
-# Limit the file to your own Windows account:
-icacls .\temp_passwords.csv /inheritance:r /grant:r "$($env:USERNAME):F"
-# Check the warnings above, and compare the row count of new_users.csv with the number of users created.
+# Each .credential.clixml file encrypts its password for this Windows user and machine (DPAPI).
+# Retrieve with Import-Clixml locally, and deliver through an approved password manager.
+# Never print passwords or paste them into chat. Delete the files after confirmed delivery.
 ```
 
 ### Create a Conditional Access Policy (MFA for Admins)
@@ -134,6 +134,8 @@ python3 scripts/powershell_generator.py --tenant-domain acme.com --task conditio
 python3 scripts/powershell_generator.py --tenant-domain acme.com --task security-audit -o audit.ps1
 python3 scripts/powershell_generator.py --tenant-domain acme.com --task bulk-license --users-csv users.csv --license-sku ENTERPRISEPACK -o licenses.ps1
 ```
+
+**Password handover (added by AI Blocks):** creation JSON needs `username`, `display_name`, `first_name`, `last_name`, `license_sku` and `usage_location` (the real two-letter country code). On Windows, use `python` if `python3` is not installed. After review and approval, run `./create_users.ps1 -HandoverDirectory <existing-local-folder>`. Keep the encrypted `.credential.clixml` files on that Windows account and machine. Use `Import-Clixml` locally to retrieve a credential for your approved password manager; never print the password or paste it into chat. Do not upload these files. Delete them after confirmed handover.
 
 **Gate:** for user creation, run `--action validate` first and require every entry to report `"is_valid": true` before generating the creation script. Review every generated `.ps1` against the workflows below before running it in the tenant.
 
@@ -189,35 +191,40 @@ Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
 **Step 4: Provision Users**
 
 ```powershell
-function New-TempPassword {
-    # Same as Quick Start: 20 cryptographically random characters, no fixed part, every character kind present.
-    $sets = @('ABCDEFGHJKLMNPQRSTUVWXYZ', 'abcdefghijkmnpqrstuvwxyz', '23456789', '!@#$%')
-    $rng = [System.Security.Cryptography.RandomNumberGenerator]::Create()
-    $next = { param($max) $b = New-Object byte[] 4; $rng.GetBytes($b); [BitConverter]::ToUInt32($b, 0) % $max }
-    $all = -join $sets
-    $chars = @($sets | ForEach-Object { $_[(& $next $_.Length)] })
-    $chars += 1..16 | ForEach-Object { $all[(& $next $all.Length)] }
-    -join ($chars | Sort-Object { & $next ([uint32]::MaxValue) })
+# Run on Windows, in a test tenant first, after the admin approves the script and row count.
+# Keep this skill's scripts folder alongside it. This helper makes only local files, not tenant calls.
+. .\scripts\password-handover.ps1
+$folder = Get-PasswordHandoverDirectory -Directory (Read-Host 'Existing local folder for encrypted password handover')
+$rows = @(Import-Csv .\employees.csv)
+# CSV columns: DisplayName, UserPrincipalName, Department, LicenseSku, UsageLocation.
+# Supply the real tenant licence part number and two-letter usage location for every person.
+$skus = @(Get-MgSubscribedSku -All -ErrorAction Stop)
+foreach ($row in $rows) {
+    if (-not $row.UserPrincipalName -or -not $row.LicenseSku -or -not $row.UsageLocation) { throw 'Fill in every required user field before creating anyone.' }
+    $matches = @($skus | Where-Object { $_.SkuPartNumber -eq $row.LicenseSku })
+    if ($matches.Count -ne 1) { throw 'A licence SKU is missing or ambiguous. No users have been created.' }
 }
-$licenseSku = (Get-MgSubscribedSku | Where-Object { $_.SkuPartNumber -eq "ENTERPRISEPACK" }).SkuId
-
-# Temporary passwords are saved to .\temp_passwords.csv so new people can sign in. The file is the fallback:
-# hand each one over through a password manager share or a one-time secret link (not by email to the same account), then delete the file.
-$results = Import-Csv .\employees.csv | ForEach-Object {
+foreach ($row in $rows) {
+    $handover = New-TemporaryUserCredential -UserPrincipalName $row.UserPrincipalName -Directory $folder
     try {
-        $tempPassword = New-TempPassword
-        $user = New-MgUser -DisplayName $_.DisplayName -UserPrincipalName $_.UserPrincipalName `
-                           -MailNickname ($_.UserPrincipalName.Split('@')[0]) -AccountEnabled -PasswordProfile @{ Password = $tempPassword; ForceChangePasswordNextSignIn = $true }
-        Set-MgUserLicense -UserId $user.Id -AddLicenses @(@{ SkuId = $licenseSku }) -RemoveLicenses @()
-        Write-Host "Provisioned: $($_.UserPrincipalName)"
-        [pscustomobject]@{ UserPrincipalName = $_.UserPrincipalName; TempPassword = $tempPassword }
+        $profile = @{ Password = $handover.Credential.GetNetworkCredential().Password; ForceChangePasswordNextSignIn = $true }
+        $user = New-MgUser -DisplayName $row.DisplayName -UserPrincipalName $row.UserPrincipalName `
+            -Department $row.Department -UsageLocation $row.UsageLocation `
+            -MailNickname ($row.UserPrincipalName.Split('@')[0]) -AccountEnabled:$true -PasswordProfile $profile -ErrorAction Stop
+        $sku = ($skus | Where-Object { $_.SkuPartNumber -eq $row.LicenseSku }).SkuId
+        Set-MgUserLicense -UserId $user.Id -AddLicenses @(@{ SkuId = $sku }) -RemoveLicenses @() -ErrorAction Stop | Out-Null
+        Write-Host "Created and licensed: $($row.UserPrincipalName). Handover file: $($handover.HandoverFile)"
     } catch {
-        Write-Warning "Failed $($_.UserPrincipalName): $_"
+        Write-Warning "Stopped for $($row.UserPrincipalName). Keep $($handover.HandoverFile)."
+        throw 'Check the actual account and licence state before retrying. Do not rerun bulk creation blindly.'
+    } finally {
+        if ($profile) { $profile.Password = $null }
+        $handover = $null
     }
 }
-$results | Export-Csv .\temp_passwords.csv -NoTypeInformation
-# Limit the file to your own Windows account, hand the passwords over safely, then delete it:
-icacls .\temp_passwords.csv /inheritance:r /grant:r "$($env:USERNAME):F"
+# Each .credential.clixml file encrypts its password for this Windows user and machine (DPAPI).
+# Retrieve with Import-Clixml locally, and deliver through an approved password manager.
+# Never print passwords or paste them into chat. Delete the files after confirmed delivery.
 ```
 
 **Validation:** Spot-check 3–5 accounts in the M365 admin portal; confirm licenses show "Active."

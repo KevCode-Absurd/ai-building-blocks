@@ -5,6 +5,16 @@ Handles user creation, modification, license assignment, and deprovisioning.
 
 from typing import Dict, List, Any, Optional
 from datetime import datetime
+from pathlib import Path
+import re
+
+
+def powershell_literal(value: Any) -> str:
+    """Quote input as PowerShell data, never as an interpolated expression."""
+    value = str(value)
+    if any(ord(c) < 32 for c in value):
+        raise ValueError("User fields must not contain control characters")
+    return "'" + value.replace("'", "''") + "'"
 
 
 class UserLifecycleManager:
@@ -17,124 +27,72 @@ class UserLifecycleManager:
         Args:
             domain: Primary domain name for the tenant
         """
+        if not re.fullmatch(r"[A-Za-z0-9]+(?:[.-][A-Za-z0-9]+)*\.[A-Za-z0-9]+", domain):
+            raise ValueError("Use a tenant DNS domain, without commands or control characters")
         self.domain = domain
         self.operations_log = []
 
     def generate_user_creation_script(self, users: List[Dict[str, Any]]) -> str:
-        """
-        Generate PowerShell script for bulk user creation.
-
-        Args:
-            users: List of user dictionaries with details
-
-        Returns:
-            PowerShell script for user provisioning
-        """
-        script = """<#
-.SYNOPSIS
-    Bulk User Provisioning Script for Microsoft 365
-
-.DESCRIPTION
-    Creates multiple users, assigns licenses, and configures mailboxes.
-
-.NOTES
-    Prerequisites:
-    - Install-Module Microsoft.Graph -Scope CurrentUser
-    - Install-Module ExchangeOnlineManagement
-#>
-
-# Connect to Microsoft Graph
-Connect-MgGraph -Scopes "User.ReadWrite.All", "Directory.ReadWrite.All", "Group.ReadWrite.All"
-
-# Connect to Exchange Online
-Connect-ExchangeOnline
-
-# Define users to create
-$users = @(
-"""
-
+        """Generate an admin-reviewed Windows script; no tenant calls run in Python."""
+        helper = Path(__file__).with_name('password-handover.ps1').read_text(encoding='utf-8')
+        rows = []
+        fields = ('UserPrincipalName', 'DisplayName', 'GivenName', 'Surname', 'JobTitle', 'Department', 'LicenseSku', 'UsageLocation')
         for user in users:
-            upn = f"{user.get('username', '')}@{self.domain}"
-            display_name = user.get('display_name', '')
-            first_name = user.get('first_name', '')
-            last_name = user.get('last_name', '')
-            job_title = user.get('job_title', '')
-            department = user.get('department', '')
-            license_sku = user.get('license_sku', 'Microsoft_365_Business_Standard')
-
-            script += f"""    @{{
-        UserPrincipalName = "{upn}"
-        DisplayName = "{display_name}"
-        GivenName = "{first_name}"
-        Surname = "{last_name}"
-        JobTitle = "{job_title}"
-        Department = "{department}"
-        LicenseSku = "{license_sku}"
-        UsageLocation = "US"
-        PasswordProfile = @{{
-            # 120 random bits from the system's secure generator; the tail only meets the complexity rule.
-            Password = "$($b = New-Object byte[] 15; [System.Security.Cryptography.RandomNumberGenerator]::Create().GetBytes($b); [Convert]::ToBase64String($b))!a1"
-            ForceChangePasswordNextSignIn = $true
-        }}
-    }}
-"""
-
-        script += """
+            validation = self.validate_user_data(user)
+            if not validation['is_valid']:
+                raise ValueError('; '.join(validation['errors']))
+            values = (f"{user['username']}@{self.domain}", user.get('display_name', ''),
+                      user.get('first_name', ''), user.get('last_name', ''), user.get('job_title', ''),
+                      user.get('department', ''), user['license_sku'], user['usage_location'])
+            rows.append('    @{\n' + '\n'.join(f'        {key} = {powershell_literal(value)}' for key, value in zip(fields, values)) + '\n    }')
+        script = """# Added by AI Blocks: save Windows-encrypted handover credentials before any account is created.
+# Review this script and the user count. Obtain the tenant owner's approval before running.
+[CmdletBinding()]
+param([Parameter(Mandatory=$true)][string]$HandoverDirectory)
+$ErrorActionPreference = 'Stop'
+""" + helper + """
+$HandoverDirectory = Get-PasswordHandoverDirectory -Directory $HandoverDirectory
+Connect-MgGraph -Scopes 'User.ReadWrite.All', 'Organization.Read.All', 'LicenseAssignment.ReadWrite.All'
+try {
+$users = @(
+""" + '\n'.join(rows) + """
 )
-
-# Create users
+# Resolve every requested licence before creating anyone. Never substitute a default licence.
+$skus = @(Get-MgSubscribedSku -All -ErrorAction Stop)
 foreach ($user in $users) {
+    $matches = @($skus | Where-Object { $_.SkuPartNumber -eq $user.LicenseSku })
+    if ($matches.Count -ne 1) { throw 'A licence SKU is missing or ambiguous. No users have been created.' }
+    $user.SkuId = $matches[0].SkuId
+}
+foreach ($user in $users) {
+    # If saving fails, stop here, before the account API call.
+    $handover = New-TemporaryUserCredential -UserPrincipalName $user.UserPrincipalName -Directory $HandoverDirectory
+    $stage = 'account creation'
     try {
-        Write-Host "Creating user: $($user.DisplayName)..." -ForegroundColor Cyan
-
-        # Create user account
+        $profile = @{ Password = $handover.Credential.GetNetworkCredential().Password; ForceChangePasswordNextSignIn = $true }
         $newUser = New-MgUser -UserPrincipalName $user.UserPrincipalName `
-                              -DisplayName $user.DisplayName `
-                              -GivenName $user.GivenName `
-                              -Surname $user.Surname `
-                              -JobTitle $user.JobTitle `
-                              -Department $user.Department `
-                              -PasswordProfile $user.PasswordProfile `
-                              -UsageLocation $user.UsageLocation `
-                              -AccountEnabled $true `
-                              -MailNickname ($user.UserPrincipalName -split '@')[0]
-
-        Write-Host "  ✓ User created successfully" -ForegroundColor Green
-
-        # Wait for user provisioning
-        Start-Sleep -Seconds 5
-
-        # Assign license
-        $licenseParams = @{
-            AddLicenses = @(
-                @{
-                    SkuId = (Get-MgSubscribedSku -All | Where-Object {$_.SkuPartNumber -eq $user.LicenseSku}).SkuId
-                }
-            )
-        }
-
-        Set-MgUserLicense -UserId $newUser.Id -BodyParameter $licenseParams
-        Write-Host "  ✓ License assigned: $($user.LicenseSku)" -ForegroundColor Green
-
-        # Log success
-        $user | Add-Member -NotePropertyName "Status" -NotePropertyValue "Success" -Force
-        $user | Add-Member -NotePropertyName "CreatedDate" -NotePropertyValue (Get-Date) -Force
-
+            -DisplayName $user.DisplayName -GivenName $user.GivenName -Surname $user.Surname `
+            -JobTitle $user.JobTitle -Department $user.Department -UsageLocation $user.UsageLocation `
+            -PasswordProfile $profile -AccountEnabled:$true `
+            -MailNickname ($user.UserPrincipalName -split '@')[0] -ErrorAction Stop
+        $stage = 'licence assignment'
+        Set-MgUserLicense -UserId $newUser.Id -AddLicenses @(@{ SkuId = $user.SkuId }) -RemoveLicenses @() -ErrorAction Stop | Out-Null
+        Write-Host "Created and licensed: $($user.UserPrincipalName). Handover file: $($handover.HandoverFile)"
     } catch {
-        Write-Host "  ✗ Error creating user: $_" -ForegroundColor Red
-        $user | Add-Member -NotePropertyName "Status" -NotePropertyValue "Failed" -Force
-        $user | Add-Member -NotePropertyName "Error" -NotePropertyValue $_.Exception.Message -Force
+        # Do not echo API exceptions: they may contain request details, including credentials.
+        Write-Warning "Stopped during $stage for $($user.UserPrincipalName). Keep $($handover.HandoverFile)."
+        throw 'Check the actual account and licence state before any retry. Do not rerun bulk creation blindly.'
+    } finally {
+        if ($profile) { $profile.Password = $null }
+        $handover = $null
     }
 }
-
-# Export results
-$users | Export-Csv -Path "UserCreation_Results_$(Get-Date -Format 'yyyyMMdd_HHmmss').csv" -NoTypeInformation
-
-# Disconnect
-Disconnect-MgGraph
-Disconnect-ExchangeOnline -Confirm:$false
-
-Write-Host "`nUser provisioning complete!" -ForegroundColor Green
+} finally {
+    Disconnect-MgGraph -ErrorAction SilentlyContinue | Out-Null
+}
+# The admin retrieves each credential with Import-Clixml on this Windows account and machine.
+# Share passwords through an approved password manager, never chat or email to the new account.
+# Delete the handover files after confirmed secure delivery. Never commit them to source control.
 """
         return script
 
@@ -153,7 +111,7 @@ Write-Host "`nUser provisioning complete!" -ForegroundColor Green
     User Offboarding Script - Secure Deprovisioning
 
 .DESCRIPTION
-    Securely offboards user: {user_email}
+    Securely offboards the user supplied below after owner review.
     - Revokes access and signs out all sessions
     - Converts mailbox to shared (preserves emails)
     - Removes licenses
@@ -165,7 +123,7 @@ Write-Host "`nUser provisioning complete!" -ForegroundColor Green
 Connect-MgGraph -Scopes "User.ReadWrite.All", "Directory.ReadWrite.All"
 Connect-ExchangeOnline
 
-$userEmail = "{user_email}"
+$userEmail = {powershell_literal(user_email)}
 $timestamp = Get-Date -Format "yyyyMMdd_HHmmss"
 
 Write-Host "Starting offboarding for: $userEmail" -ForegroundColor Cyan
@@ -411,10 +369,13 @@ Disconnect-ExchangeOnline -Confirm:$false
         warnings = []
 
         # Required fields
-        required_fields = ['first_name', 'last_name', 'username']
+        required_fields = ['first_name', 'last_name', 'username', 'display_name', 'license_sku', 'usage_location']
         for field in required_fields:
             if not user_data.get(field):
                 errors.append(f"Missing required field: {field}")
+
+        if user_data.get('usage_location') and not re.fullmatch(r'[A-Z]{2}', str(user_data['usage_location'])):
+            errors.append('Usage location must be a two-letter uppercase country code')
 
         # Username validation
         username = user_data.get('username', '')

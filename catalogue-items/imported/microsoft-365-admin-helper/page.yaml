@@ -42,7 +42,7 @@ how_to_use:
   - Run the security audit first, since it only reads. Read the list of findings before you change anything. Then ask your AI for the admin sign-in policy (multi-factor for admins) to fix the gaps it found.
   - Before each change, check the script, the count of accounts it touches and what it does. Say yes only when it matches. For offboarding, the first "preview" is only a printed list. Run the -WhatIf dry run as well before you let anything be removed.
   - The sign-in policy scripts hold placeholders for your two break-glass account IDs. They stop with an error until you fill both in, so nobody is locked out.
-  - Temporary passwords are 20 characters from a cryptographic random generator, with no fixed part. Hand them over through your password manager's secure share or a one-time secret link where you can, never by email to the same account. The scripts also save them to a plain-text file on your disk, limited to your own Windows account. Treat that file as the fallback and delete it straight after handover.
+  - New-user scripts need Windows and an existing local folder you choose. Each password is generated on your machine and saved in an encrypted credential file before the account is created. Open it with Import-Clixml using the same Windows account and machine. Hand passwords over through an approved password manager, never chat or email to the new account. Delete the files after delivery. If a step fails, check the real account and licence state before retrying. Local checks do not prove it works in your tenant.
   - Keep new sign-in policies in report-only for about 48 hours. Check the sign-in logs, then ask your AI to switch them on.
 how_it_works:
   - title: Ask what is missing

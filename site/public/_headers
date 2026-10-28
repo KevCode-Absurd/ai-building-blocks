@@ -27,7 +27,7 @@
 /skills/*
   Cache-Control: public, max-age=300, stale-while-revalidate=86400
 # The skill files and zips are for downloading and for AI assistants; the page for each skill is what search shows.
-/skills/*/SKILL.md
+/skills/:slug/SKILL.md
   X-Robots-Tag: noindex
 /skills/*.zip
   X-Robots-Tag: noindex
@@ -79,3 +79,14 @@
 # Preview images change rarely.
 /og/*
   Cache-Control: public, max-age=86400
+
+# Supporting package files are downloads, never executable pages on this origin.
+# These paths have at least three segments; public item pages keep their normal headers.
+/skills/:slug/:file
+  Content-Disposition: attachment
+  X-Robots-Tag: noindex
+  Content-Security-Policy: sandbox; default-src 'none'; frame-ancestors 'none'
+/skills/:slug/:directory/*
+  Content-Disposition: attachment
+  X-Robots-Tag: noindex
+  Content-Security-Policy: sandbox; default-src 'none'; frame-ancestors 'none'

@@ -41,12 +41,18 @@ const read = (f) => fs.readFileSync(f, "utf8");
 const exists = (f) => fs.existsSync(f);
 
 // ---- find the pages -------------------------------------------------------------------------------------------
+// Inventoried package HTML files are downloads, not catalogue pages.
+// Their /skills/<slug>/... paths carry attachment, sandbox and noindex headers.
+const downloadInventory = path.join(DIST, "data/skill-assets.json");
+const downloads = new Set(exists(downloadInventory) ? JSON.parse(read(downloadInventory)).paths : []);
+if ([...downloads].some(p => !/^skills\/[a-z0-9-]+\/.+/.test(p) || p.split("/").includes(".."))) throw Error("Invalid download inventory");
 const pages = []; // { url, file, html }
 const walk = (dir, top) => {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
     const p = path.join(dir, e.name);
     if (e.isDirectory()) { if (top && SKIP_DIRS.has(e.name)) continue; walk(p, false); continue; }
     if (!e.name.endsWith(".html")) continue;
+    if (downloads.has(path.relative(DIST, p).split(path.sep).join("/"))) continue;
     const rel = path.relative(DIST, p).split(path.sep).join("/").replace(/\.html$/, "");
     pages.push({ url: rel === "index" ? "/" : `/${rel}`, file: p });
   }
@@ -250,9 +256,9 @@ for (const pg of indexable) {
     linkCount++;
     const p = (href.split(/[?#]/)[0] || "/").replace(/(.)\/$/, "$1");
     const resolved = p === "/" || p.startsWith("/api/") || byUrl.has(p) || files.has(p) || files.has(`${p}.html`) || files.has(`${p}/index.html`) || APP_ROUTES.has(p) || twinOf(p);
-    // A supporting file the page lists (references/...): the release step copies it out of the skill's zip.
+    // Inventoried supporting files must already be published by the index build.
     const support = p.match(/^\/skills\/([^/]+)\/(.+)$/);
-    if (!resolved && support && (readPage(support[1])?.files ?? []).includes(support[2])) { warn("a link to a supporting file that exists only after the release step unpacks the zip", `${pg.url} -> ${p}`); continue; }
+    if (!resolved && support && (readPage(support[1])?.files ?? []).includes(support[2])) { bad("a supporting-file link has no published asset", `${pg.url} -> ${p}`); continue; }
     if (redirects.has(p)) bad("an internal link goes to an address that redirects", `${pg.url} -> ${p}`);
     else if (!resolved) bad("a broken internal link", `${pg.url} -> ${p}`);
   }

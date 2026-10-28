@@ -1,5 +1,5 @@
 slug: mcp-server-hardener
-name: MCP server hardener
+name: "MCP server security reviewer"
 summary: Point it at an MCP server you run. Get a checklist of fixes for transport, auth, access and logging.
 category: general
 boards: []

@@ -1,10 +1,10 @@
 thinking: medium
 thinking_why: It works through a set checklist against your setup.
 new_slug: mcp-server-hardener
-name: MCP server hardener
+name: "MCP server security reviewer"
 summary: "Lock down an MCP server you run. Get a ranked fix list for encryption, sign-in, per-tool access and logging, with sample configs."
 job: secure-code
-headline: MCP server hardener
+headline: "MCP server security reviewer"
 subhead: "Tell it how your MCP server connects, who signs in and which tools it offers. It checks each layer and gives you a ranked list of fixes, with sample settings for the ones that need code or config."
 explain: |
   An MCP server lets AI agents run real actions, such as reading files or querying a database. If it is open to a network with no lock on it, anyone who reaches it can use those tools. This skill is an MCP server security checklist that turns that worry into a short list of fixes.

@@ -1,5 +1,5 @@
 slug: mcp-attack-defence-reviewer
-name: MCP attack defence reviewer
+name: "MCP attack risk reviewer"
 summary: Point it at an MCP server. Get a ranked list of attack risks, each with a fix.
 category: general
 boards: []

@@ -1,5 +1,5 @@
 slug: referral-administration-evidence-review-assistant
-name: Referral administration evidence review assistant
+name: "Clinic referral handover reviewer"
 summary: "Build a referral status handover for the next administrator. See what was sent, received and booked, what is unconfirmed, and draft the follow-ups."
 category: agent
 type: agent

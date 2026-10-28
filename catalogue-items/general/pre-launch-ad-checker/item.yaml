@@ -62,4 +62,4 @@ credits:
     used: "The versions check: near-identical visuals add little"
 package_files: all
 needs_mode: manual
-example_pending: true
+example_pending: false

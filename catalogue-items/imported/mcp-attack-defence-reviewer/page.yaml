@@ -1,10 +1,10 @@
 thinking: high
 thinking_why: It must think like an attacker and tell real risks from noise.
 new_slug: mcp-attack-defence-reviewer
-name: MCP attack defence reviewer
+name: "MCP attack risk reviewer"
 summary: Check your MCP server for attack risks. Get a ranked list of problems an attacker could use, with a fix for each one.
 job: secure-code
-headline: MCP attack defence reviewer
+headline: "MCP attack risk reviewer"
 subhead: A ranked list of the ways someone could attack your MCP server, with a fix for each. Point it at the server and see where an attacker or a confused AI could do damage.
 explain: |
   A ranked list of the ways someone could attack your MCP server, with a fix for each. Point it at the server and see where an attacker or a confused AI could do damage.

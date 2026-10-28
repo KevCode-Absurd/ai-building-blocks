@@ -11,7 +11,7 @@ explain: |
 
   It writes the trl command with learning rate, epochs, packing and dataset settings, and explains why each is set that way. It is built on Hugging Face Transformers and Accelerate. You need Python, the TRL package and a GPU, and larger models need more memory.
 
-  Licence: the one licence for the skill text in this copy is CC BY 4.0, as the LICENSE-CONTENT file says. The Apache-2.0 line in the skill's file header is Hugging Face's own declaration, and it covers any code you copy from it. Credit goes to Hugging Face and sickn33.
+  Licence: this copy is credited under the Apache 2.0 licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to Hugging Face and sickn33.
 when:
   - You want a small model to follow your company's instruction style.
   - You have pairs of good and bad answers and want to train on the preference.

@@ -11,7 +11,7 @@ explain: |
 
   The skill follows hard rules: look, do not fix. Pick the advisory or breached package and it chooses the relevant checks from a menu. For software supply chain advisories it searches your Node and Python projects for affected versions. It also looks at installed tools, running programs and open network ports, startup items, settings that raise risk, and editor or browser extensions. The report lists the advisories in scope, what was found, a verdict in set wording, actions taken and follow-ups. It tells you when breaking the read-only rule would be needed, and asks first.
 
-  Licence: CC BY 4.0 applies to this copy, as the LICENSE-CONTENT file in this folder says. That file governs. The author's own file header (davidondrej) says MIT, which is the author's label for the original. Credit goes to davidondrej and sickn33.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to davidondrej and sickn33.
 when:
   - A package you use was in the news for a breach.
   - You want to know if you are exposed to a new vulnerability.

@@ -11,7 +11,7 @@ explain: |
 
   The skill first sorts each reply. Bad requests and permission errors are final and never retried. Rate limits, timeouts and server faults are retried. Next it reads the delay hints the service sends, such as the Retry-After header or a reset time, before it makes up its own wait. If there is no hint, it uses growing waits with a little random jitter and a hard cap on attempts. It also checks that repeating the action is safe.
 
-  Licence: CC BY 4.0 applies to this copy, as its LICENSE-CONTENT file says. Reuse it with credit to Prajeeth-12 and sickn33. The author's own file header says MIT, which also allows reuse with credit.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to Prajeeth-12 and sickn33.
 when:
   - Your script gets 429 errors from a payment, AI or code hosting service.
   - Retries sometimes create duplicate orders or messages.

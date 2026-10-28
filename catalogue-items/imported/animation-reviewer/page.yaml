@@ -11,7 +11,7 @@ explain: |
 
   You must attach STANDARDS.md (it comes with this item) when you run it. The review depends on its exact values and does not work well without it. The skill acts as a picky motion designer. It checks each animation against ten fixed standards from Emil Kowalski's craft rules: easing curves, durations, where an element appears from, whether it can be interrupted, how often it fires, frame drops, and what happens for people who choose reduced motion. It starts from doubt, so a transition that merely works still gets flagged if it feels wrong. It reviews only motion and does not edit your code unless you ask.
 
-  Licence: CC BY 4.0 applies to this copy, as its LICENSE-CONTENT file says. Reuse it with credit to Emil Kowalski and sickn33. His own file header says MIT, which also allows reuse with credit.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to Emil Kowalski and sickn33.
 when:
   - A pull request changes transitions, modals, drawers or toasts and you want a second opinion.
   - An interface feels slow and you cannot say why.

@@ -11,7 +11,7 @@ explain: |
 
   The skill first helps you decide whether you need a route at all. Good reasons are hidden API keys, database writes, proxying Stripe or OpenAI calls, checking data on the server, webhooks and heavy work. Poor reasons are public data, plain CRUD that a managed backend handles, file uploads and sign-in alone, and it points you to better options there. When a route is the right answer, it writes the route files and sets up the deploy.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (Expo) says MIT. Credit goes to Expo and sickn33. This copy adds safety changes to Expo's expo-api-routes skill: the sign-in helper refuses requests until you add a real check, the paid OpenAI example checks the caller first, and the example routes are marked as templates.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to Expo and sickn33.
 when:
   - Your app calls a paid API and the key must not ship inside the app.
   - You need an endpoint that receives Stripe or GitHub webhooks.

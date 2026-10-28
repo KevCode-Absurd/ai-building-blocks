@@ -11,7 +11,7 @@ explain: |
 
   The score comes from seven categories, such as coherence, colour, type hierarchy, layout, and missing states. Each starts at full marks. Points come off for faults it can cite, like mixed corner radii, two accent colours, pure black text, emoji used as icons, or no empty and error states. You get a fix list ranked by how much each change lifts the score. It only reviews. It will not edit your files unless you ask.
 
-  Licence: CC BY 4.0 applies to this copy, as the LICENSE-CONTENT file in this folder says. That file governs. The author's own file header (bitjaru) says MIT, which is the author's label for the original. Credit goes to bitjaru and sickn33. The rubric is bitjaru's StyleSeed review, shared through sickn33's collection. The full 74-rule set is at github.com/bitjaru/styleseed.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to bitjaru and sickn33.
 when:
   - Your app screen looks generic or unfinished and you cannot say why.
   - You want a quality check on a page before you ship it.

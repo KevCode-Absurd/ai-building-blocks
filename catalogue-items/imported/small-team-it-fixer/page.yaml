@@ -13,7 +13,7 @@ explain: |
 
   Many commands act on live accounts with admin power. The skill asks you to confirm the target, take a backup and get approval before it resets, deletes or lowers security. It uses random passwords, never fixed ones. Some steps need paid or admin accounts, such as Google Workspace admin or Okta.
 
-  Licence: the author's own file header (BagelHole) says MIT, and that covers this skill text. sickn33's LICENSE-CONTENT file (CC BY 4.0) applies only where no more specific upstream notice exists. Keep the MIT notice. We added a run guide and safety steps at the top, and made some commands safer. Credit goes to BagelHole and sickn33.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to BagelHole and sickn33.
 when:
   - Someone is locked out of their work account at midnight.
   - The office Wi-Fi keeps dropping before a client demo.

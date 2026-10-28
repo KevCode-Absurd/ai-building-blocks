@@ -11,7 +11,7 @@ explain: |
 
   The skill starts in read-only mode. It inspects the migration folder, the journal, snapshot files and git state, and explains what collided and why. Only if you ask will it propose edits. It will not run migrate or push, touch a live database, delete migration files, or discard either side of a merge without your clear say so. It treats running drizzle-kit check as running project code, so it reads your scripts first. It finishes with CI or merge queue rules that reduce repeat conflicts for teams.
 
-  Licence: CC BY 4.0, per the LICENSE-CONTENT file. Credit the author, chaunsin.
+  Licence: this copy is credited under the Apache 2.0 licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to chaunsin and sickn33.
 when:
   - A pull or rebase left conflicts in your Drizzle journal file.
   - drizzle-kit check reports migrations that do not commute.

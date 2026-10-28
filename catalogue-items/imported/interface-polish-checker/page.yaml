@@ -11,7 +11,7 @@ explain: |
 
   Give it a file and it checks against a firm baseline. For each problem it quotes the exact line, says in one short sentence why it matters, and offers a code-level fix. The baseline leans on Tailwind defaults, uses motion libraries only when script animation is needed, and respects your existing design, accessibility needs and framework choices. It is aimed at quick clean-up passes, not redesigns.
 
-  Licence: this skill is by ibelick. The one licence for the written text is CC BY-4.0 (the LICENSE-CONTENT file). The "MIT" line in the SKILL.md header is the author's own declaration for their own code repo, not the licence for this text. Keep the credit to the author.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to ibelick and sickn33.
 when:
   - A page works but looks slightly off and you cannot say why.
   - You want a fast review before a launch.

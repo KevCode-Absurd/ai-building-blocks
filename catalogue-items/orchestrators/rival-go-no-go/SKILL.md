@@ -1,13 +1,13 @@
 ---
 name: rival-go-no-go
-description: Use when you are about to take on a rival or launch a move against one. It runs 2 skills in the order Sun Tzu's book teaches, and checks each result before the next step starts.
+description: Use when you are about to take on a rival or launch a move against one. It runs 2 skills in an order we set, using ideas from Sun Tzu's book, and checks each result before the next step starts.
 ---
 
 # Size up a rival and decide whether to go
 
 Describe you and a rival. Get a five-factor matchup and a go or no-go check on your plan.
 
-This workflow follows the method in The Art of War by Sun Tzu. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from The Art of War by Sun Tzu. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 Use it when: you are about to launch a product or offer into a market where a stronger rival already sells, or a rival has just cut prices or copied your best idea and you must decide how to answer.
 

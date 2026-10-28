@@ -13,7 +13,7 @@ explain: |
 
   Every slide sits on a fixed 16:9 stage that scales to the screen, so layouts never jump around. You can fix text right in the browser. A PDF copy is optional and needs extra tools. The one-click share link from the original skill is not in this copy.
 
-  Licence: this skill text is shared under CC BY-4.0 (the LICENSE-CONTENT file). The helper scripts that come with it (extract-pptx.py and export-pdf.sh) keep their original MIT licence (UPSTREAM-LICENSE.txt). The "MIT" line inside SKILL.md is the original author's own note.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to zarazhangrui and sickn33.
 when:
   - You have a talk next week and want slides that look designed, not default.
   - You have an old PowerPoint file and want it as a web page.

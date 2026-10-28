@@ -14,7 +14,7 @@ license: Apache-2.0
 license_source: https://github.com/ASI2030/Fact-Check-X/blob/4dd7eef0452a4c31e4b3b3b0d643c9daeea7fdbe/LICENSE
 ---
 
-> **AI Blocks note (licence):** this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says. The `license:` line in the front matter above is the original author's own label (Apache-2.0). The LICENSE-CONTENT file governs here. Keep the credit to the author.
+> **AI Blocks note (licence):** this copy is credited under the Apache 2.0 licence in the `license:` line above, the author's own header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Keep the credit to ASI2030 and sickn33.
 
 # Fact-Check-X Complete
 
@@ -258,3 +258,5 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Fact cross-checker](https://useaiblocks.com/skills/fact-cross-checker). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+Changed by AI Blocks (2026-10-28): gave it a plain name and added Before you start and After this sections that link to other AI Blocks steps.

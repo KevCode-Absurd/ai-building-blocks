@@ -11,7 +11,7 @@ explain: |
 
   It runs an outside audit of your repo and live URL using a command line tool. The checks cover database access rules, webhook handling, leaked secrets, permission grants, payment retries that could charge twice, missing indexes, monitoring and mobile use. Results are saved in a folder in the project so later sessions can read them without a re-run. It works best alongside the code-time security checks you already use, and is useful right after merging to main.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (commitshow) says MIT. Credit goes to commitshow and sickn33.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to commitshow and sickn33.
 when:
   - You just merged a big feature and want a check before deploy.
   - You built the app with AI and are unsure what a real launch would expose.

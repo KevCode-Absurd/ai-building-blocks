@@ -13,7 +13,7 @@ tools: [claude, cursor, gemini, codex]
 license: "MIT"
 ---
 
-> **AI Blocks note (licence):** this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says. The `license:` line in the front matter above is the original author's own label (MIT). The LICENSE-CONTENT file governs here. Keep the credit to the author.
+> **AI Blocks note (licence):** this copy is credited under the MIT licence in the `license:` line above, the author's own header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Keep the credit to Pangolinfo and sickn33.
 >
 > **AI Blocks note (paid and scraping):** this skill needs a paid Pangolinfo account and the user's own API key. It reads Amazon data through a third-party scraping service. Amazon's conditions and Pangolinfo's terms still apply. The `npx -y` line below must run a pinned package. Replace `<pinned-version>` with the exact version from the official Pangolinfo site or the npm page before you run it. Do not drop the version, because an unpinned package runs whatever is newest with your API key in its environment.
 

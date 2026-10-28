@@ -7,7 +7,7 @@ description: Use when an ad, email or page is seen but not answered and you want
 
 Give it an ad that gets no replies. Get likely causes in order, a fixed version and a test to prove it.
 
-This workflow follows the method in Tested Advertising Methods, fifth edition by John Caples, revised by Fred E. Hahn. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from Tested Advertising Methods, fifth edition by John Caples, revised by Fred E. Hahn. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 When not to use: if you have no ad yet, write one first with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer). If you want to know why sales dropped overall, not why one ad gets no replies, use the [Ad sales drop analyst](https://useaiblocks.com/skills/ad-sales-drop-analyst). If you only want the likely causes, with no rewrite or test, run the [Ad response troubleshooter](https://useaiblocks.com/skills/ad-pull-diagnoser) on its own.
 

@@ -1,13 +1,13 @@
 ---
 name: beat-bigger-rival
-description: Use when a bigger rival dominates your market and you need a way to win that they cannot match without hurting themselves. It runs 4 skills in the order Hamilton Helmer's book teaches, and checks each result before the next step starts.
+description: Use when a bigger rival dominates your market and you need a way to win that they cannot match without hurting themselves. It runs 4 skills in an order we set, using ideas from Hamilton Helmer's book, and checks each result before the next step starts.
 ---
 
 # Beat a bigger rival with a model it cannot copy
 
 Paste your rivals. Get gaps, a model the leader would lose by copying, and what to build while the window is open.
 
-This workflow follows the method in 7 Powers: The Foundations of Business Strategy (a book summary) by Hamilton Helmer. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from 7 Powers: The Foundations of Business Strategy (a book summary) by Hamilton Helmer. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 **When not to use it:** Not for a pure price fight, or when no rival dominates your market. Use a standard competitor comparison or the Competitive advantage tester. Not to find out which strengths you already hold: use the Competitive advantage tester. Not to check one guess about how your business makes money: use the Business model assumption tester.
 

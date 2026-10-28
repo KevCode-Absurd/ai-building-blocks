@@ -11,7 +11,7 @@ explain: |
 
   Each quoted piece of code is saved with its file, line range and a fingerprint of those lines, and the deck notes the commit it came from. Later, a small Python script compares every citation with today's code and marks it current, moved, changed or missing. It needs no model and no network. The deck is one self-contained HTML file. A full version lives in the SlideOps repository.
 
-  Licence: two licences apply, to different parts. The skill file (SKILL.md) and the bundled helper files are glukicov's work under the MIT licence (see UPSTREAM-LICENSE.txt). The page text written for this library is under CC BY 4.0 (see LICENSE-CONTENT). Both let you reuse with credit. Credit glukicov (author) and sickn33 (collection).
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to glukicov and sickn33.
 
   Risk: the skill file is marked "critical" because it clones an outside repo, adds links in your home folder and writes files. It asks before each of those steps.
 when:

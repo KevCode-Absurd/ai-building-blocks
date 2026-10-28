@@ -11,7 +11,7 @@ explain: |
 
   It goes through a list for every screen that loads, lists, searches or saves: first use, empty, loading, partial data, error, offline, bad input, no results and success. It keeps only the ones that can happen, then writes the content and design for each, with a way out of every error. It works on its own. An optional connection to the UXKIN screen library can show how other products handle the same case.
 
-  Licence: UXKIN wrote it and marked it MIT; the LICENSE-CONTENT file from sickn33's collection sets CC BY 4.0 for the written text. Credit both on any copy you share.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to UXKIN and sickn33.
 when:
   - Your screen only shows the version with perfect data and you need the rest.
   - A new user would see an empty list on day one and you have nothing designed for it.

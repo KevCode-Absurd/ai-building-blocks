@@ -218,3 +218,5 @@ Use these prompts to validate the skill behavior:
 - "Review PR #123 before release. Check migrations, configs, and cache work."
 - "This repo has no tags. Use the default strategy and audit release readiness."
 - "Check `v1.2.3..HEAD` for backend go-live blockers."
+
+Changed by AI Blocks (2026-10-28): gave it a plain name and added Before you start and After this sections that link to other AI Blocks steps.

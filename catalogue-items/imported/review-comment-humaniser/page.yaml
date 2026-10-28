@@ -11,7 +11,7 @@ explain: |
 
   Feed it a wordy comment. The skill cuts the padding, such as I noticed, I was wondering if perhaps, or small suggestion. It removes praise stuck onto every note and stops the comment from retelling the code. Each one becomes a line in the shape line number, label, problem, fix. The labels are bug, risk, nit and question, so the reader knows how urgent it is. A comment with an opinion and no fix gets a fix added. Kind words stay when aimed at the person, not as padding. It only rewrites the wording. It does not check that the bug is real.
 
-  Licence: MohamedAbdallah-14 wrote the skill and marked it MIT in the skill file's header. sickn33 collected it, and the LICENSE-CONTENT file in this item sets CC BY 4.0 for the written text. Both let you reuse it if you give credit. Credit MohamedAbdallah-14 (author) and sickn33 (collection) on any copy you share.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to MohamedAbdallah-14 and sickn33.
 when:
   - Your review comments read like a polite robot wrote them.
   - Teammates ignore your long feedback.

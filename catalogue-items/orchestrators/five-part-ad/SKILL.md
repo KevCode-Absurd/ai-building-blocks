@@ -7,7 +7,7 @@ description: Use when you need a full ad, not just a headline, and want to be su
 
 Give it your product facts. Get an ad that grabs attention, shows a gain, proves it, sums up and asks for action.
 
-This workflow follows the method in How to Write a Good Advertisement (a book summary) by Victor O. Schwab. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from How to Write a Good Advertisement (a book summary) by Victor O. Schwab. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

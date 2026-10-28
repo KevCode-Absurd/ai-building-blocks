@@ -11,7 +11,7 @@ explain: |
 
   The scorer splits your page into blocks and rates each one. It looks for a length near 134 to 167 words, a direct answer in the first one or two sentences, and specific facts such as numbers, dates and named things. Self-containment is a large share of the score. A block that says "it" or "this" without naming the subject scores low, because it makes no sense when lifted out. Each weak block gets a clear rewrite you can copy.
 
-  Licence: CC BY 4.0 applies to this copy, as the LICENSE-CONTENT file in this folder says. That file governs. The author's own file header (zubair-trabzada) says MIT, which is the author's label for the original. Credit goes to zubair-trabzada and sickn33.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to zubair-trabzada and sickn33.
 when:
   - You want AI assistants to quote your page in their answers.
   - Your article ranks but AI tools ignore it.

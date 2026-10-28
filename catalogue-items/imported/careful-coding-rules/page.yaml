@@ -11,7 +11,7 @@ explain: |
 
   The first rule is to think before coding: say the assumptions, list the options and ask when unsure. The second is to keep it simple: no extra features, no code built for one use, and a rewrite when 200 lines could be 50. The third is to make small edits: change only the lines needed, match the existing style and clean up only your own mess. The fourth is to set a goal you can check, such as a test, then loop until it passes.
 
-  Licence: the licence file in this folder (LICENSE-CONTENT) says CC BY 4.0, and that is the licence we apply to this copy. The skill's own header says MIT, from its original author, multica-ai. Both allow reuse with credit, so keep the credit to multica-ai and sickn33. This is an unmodified copy of the multica-ai skill. Only this page's words and the name are ours.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to multica-ai and sickn33.
 
   The rules lean toward care over speed. That costs a little time on a trivial task, so use judgment there. You can paste the rules into any AI coder, or save them as a standing instruction.
 when:

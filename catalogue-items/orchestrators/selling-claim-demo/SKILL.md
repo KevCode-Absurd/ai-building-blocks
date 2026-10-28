@@ -1,6 +1,6 @@
 ---
 name: selling-claim-demo
-description: Use when your ads say many things, or your product looks the same as its rivals, and you need one claim buyers will remember and act on. It runs 5 skills in the order Rosser Reeves's book teaches, and checks each result before the next step starts.
+description: Use when your ads say many things, or your product looks the same as its rivals, and you need one claim buyers will remember and act on. It runs 5 skills in an order we set, using ideas from Rosser Reeves's book, and checks each result before the next step starts.
 ---
 
 # Find the one claim that sells and show it working
@@ -11,7 +11,7 @@ Use it when: your ads say many things or your product looks like its rivals, you
 
 Not for: a product with no real difference yet (run the Product differentiation checker first, or fix the product), ad copy from a claim you already have, or planning which ads to test against each other.
 
-This workflow follows the method in Reality in Advertising by Rosser Reeves. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from Reality in Advertising by Rosser Reeves. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

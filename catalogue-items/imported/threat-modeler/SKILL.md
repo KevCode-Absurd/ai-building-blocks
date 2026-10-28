@@ -19,7 +19,7 @@ metadata:
   version: '1.0'
 ---
 
-<!-- Licence note: this copy is shared under CC BY 4.0 (see LICENSE-CONTENT). The MIT line in the header above is the original author's, kept as the upstream source (BagelHole/DevOps-Security-Agent-Skills, author field: devops-skills). -->
+<!-- Licence note (AI Blocks): this copy is credited under the MIT licence in the author's own header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Keep the credit to devops-skills and sickn33. -->
 
 # Threat Modeling
 

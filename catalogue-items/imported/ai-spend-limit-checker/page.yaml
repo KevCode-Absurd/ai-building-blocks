@@ -13,7 +13,7 @@ explain: |
 
   It reviews or writes the code with three rules. Every call gets a written cost line: most calls per run, most dollars per run, most dollars per day. Every loop gets a hard count limit, not just a reason it should stop. Retries need a cap and repeat-safe keys. The same daily cap is then set in the provider's own dashboard. A cap in code alone can fail. One in the dashboard alone can hurt normal use.
 
-  Licence: CC BY 4.0 applies to this copy, as the LICENSE-CONTENT file in this folder says. That file governs. The author's own file header (morsechimwai) says Apache-2.0, which is the author's label for the original. Credit goes to morsechimwai and sickn33. The author's Apache-2.0 notice stays visible beside the CC BY 4.0 label. Provider dashboard paths and prices in the skill are undated. Confirm each on the provider's own site.
+  Licence: this copy is credited under the Apache 2.0 licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to morsechimwai and sickn33.
 when:
   - You are writing a loop or queue that calls an image, text or voice API.
   - You are reviewing code before it goes live and want to catch runaway costs.

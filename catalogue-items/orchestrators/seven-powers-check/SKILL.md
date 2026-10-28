@@ -1,6 +1,6 @@
 ---
 name: seven-powers-check
-description: Use when you think your business has a moat and want proof, or you want to know which lasting advantage to build next. It runs 4 skills in the order Hamilton Helmer's book teaches, and checks each result before the next step starts.
+description: Use when you think your business has a moat and want proof, or you want to know which lasting advantage to build next. It runs 4 skills in an order we set, using ideas from Hamilton Helmer's book, and checks each result before the next step starts.
 ---
 
 # Find which of seven powers you hold or can build
@@ -10,7 +10,7 @@ Describe your business. Get each of the seven powers scored on benefit and barri
 Use it when: you think you have a moat and want proof, you can name one advantage and want to know if a stronger one is unused, or you are choosing where to spend (brand, scale, a community or a better model).
 Not for: a business with no revenue or customer data yet, testing one edge only (use the Business power tester), or investment advice.
 
-This workflow follows the method in 7 Powers: The Foundations of Business Strategy (a book summary) by Hamilton Helmer. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next. It rests on a summary of the book, so its claims are kept modest.
+This workflow uses ideas from 7 Powers: The Foundations of Business Strategy (a book summary) by Hamilton Helmer. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next. It rests on a summary of the book, so its claims are kept modest.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

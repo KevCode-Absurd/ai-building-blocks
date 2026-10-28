@@ -11,7 +11,7 @@ explain: |
 
   It works with SwiftUI, UIKit, React Native, Expo or Flutter, and it applies a checklist for small and large phone sizes, light and dark mode and the largest text. A real check needs a simulator, preview or device, and your AI says what it could not check. A paid design library can be connected for reference screens, but only if you ask for it. The skill works fine without any account.
 
-  Licence: the one licence for the written text of this copy is CC BY 4.0, as the LICENSE-CONTENT file says. The MIT line in the author's file header (UXKIN) is their own declaration for the code in their repo, not the licence for this text. Credit goes to UXKIN and sickn33.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to UXKIN and sickn33.
 when:
   - Your app screens feel like a web page in an app shell.
   - You are building a settings screen, paywall or onboarding flow.

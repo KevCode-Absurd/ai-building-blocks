@@ -19,8 +19,8 @@ source:
   repo: sickn33/agentic-awesome-skills
   path: skills/mcp-dependency-drift-audit
   url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/mcp-dependency-drift-audit
-  licence: CC-BY-4.0
-  licence_file: LICENSE-CONTENT
+  licence: MIT
+  licence_file: LICENSE
   commit: 0c10eb8
   original_name: mcp-dependency-drift-audit
   author: tomelias10
@@ -30,7 +30,7 @@ credits:
   - title: mcp-dependency-drift-audit skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/mcp-dependency-drift-audit
-    used: Copied under the CC BY-4.0 licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the MIT licence named in its own header (sickn33's collection labels it CC BY 4.0). We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: tomelias10
     url: https://github.com/tomelias10

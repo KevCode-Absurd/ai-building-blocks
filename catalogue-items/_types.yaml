@@ -46,6 +46,7 @@ production:
   lessons_register: {desc: "What past creative taught: what worked, what failed and why, with dates."}
   feedback_notes:  {desc: "A person's notes on an output: what to keep, change or drop."}
   source_text:     {desc: "A long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link."}
+  short_text:      {desc: "A short piece of text to reply to or work from: a post, comment, message, email or enquiry, with who wrote it and where."}
   skill_pack:      {desc: "Skill files ready to add to an AI: a workflow file and one SKILL.md for each of its steps."}
   image_plan:      {desc: "What an image should show and say, before any prompt is written."}
   approved_image:  {desc: "An image a person has approved for use."}

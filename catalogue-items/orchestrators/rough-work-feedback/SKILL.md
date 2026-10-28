@@ -1,13 +1,13 @@
 ---
 name: rough-work-feedback
-description: Use when your work is stuck or still rough and the feedback you get is either polite or bossy. It runs 4 skills in the order Ed Catmull with Amy Wallace's book teaches, and checks each result before the next step starts.
+description: Use when your work is stuck or still rough and the feedback you get is either polite or bossy. It runs 4 skills in an order we set, using ideas from Ed Catmull with Amy Wallace's book, and checks each result before the next step starts.
 ---
 
 # Get honest notes on rough work and a fix plan
 
 Give it rough work and your reviewers. Get a safe review, sharp problem notes and a plan to fix it.
 
-This workflow follows the method in Creativity, Inc. by Ed Catmull with Amy Wallace. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from Creativity, Inc. by Ed Catmull with Amy Wallace. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 Use it when: your work is stuck or still rough and the feedback you get is either polite or bossy, or you have a pile of comments and do not know where to start.
 

@@ -11,7 +11,7 @@ explain: |
 
   It studies the site, then writes the file to the published format: a title, a short summary, then sections of links. Each link is a full address with a 10 to 30 word note on what the page covers, ordered by importance. An optional section holds lower priority pages. Key facts such as pricing, features and locations are stated outright, so a tool that reads the file has less to guess. It can also check an existing file against the rules.
 
-  Licence: the skill text in this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header says MIT, which covers the author's own code. The llms.txt file you write is your own. Credit goes to the original author and sickn33.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to zubair-trabzada and sickn33.
 when:
   - AI tools get your pricing or services wrong.
   - You want AI answers to cite your best page.

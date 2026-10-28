@@ -11,7 +11,7 @@ explain: |
 
   The paragraph is written for a researcher who knows nothing about your project. It opens by explaining what the project is and why it exists. Then it states the single question and the decision the answer will inform. It adds all the names, dates, known facts and limits, and lists three to six numbered sub-questions. It says what to include and what to avoid, and how the answer should look. It asks for the job to be done, not just a topic.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (davidondrej) says MIT. Credit goes to davidondrej and sickn33.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to davidondrej and sickn33.
 when:
   - You want to use a deep research tool but your question is fuzzy.
   - Past research results were off topic or too general.

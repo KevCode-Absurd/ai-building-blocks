@@ -16,7 +16,7 @@ argument-hint: "[--jury N | --quick] [--seed S] <the idea, plan or claim>"
 ---
 
 
-> Licence note (added by AI Blocks): the written text of this copy is shared under CC BY-4.0 (see `LICENSE-CONTENT`). The `license: MIT` line in the header above is the original author's own declaration for their repo. Keep the credit to the author either way.
+> Licence note (added by AI Blocks): this copy is credited under the MIT licence in the author's own header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Keep the credit to Alex Chen and sickn33.
 
 # court
 

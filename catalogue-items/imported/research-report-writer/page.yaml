@@ -9,7 +9,7 @@ subhead: A research report that opens with the conclusion, ranks every source by
 explain: |
   A research report that opens with the conclusion, ranks every source by trust, and states what remains unknown. Readers can see how you got there and how sure you are.
 
-  Licence: alapha888 wrote it as deep-research-framework (alapha888/agent-skills-en) and marked it MIT in the skill file's header. sickn33 collected it, and the LICENSE-CONTENT file in this item sets CC BY 4.0 for the written text. Both allow reuse with credit. Credit alapha888 (author) and sickn33 (collection).
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to alapha888 and sickn33.
 
   First you write the question in one sentence, with at most three sub-questions. Then sources are tiered before searching: primary ones such as official documents and original papers, secondary ones such as reputable press, and tertiary ones such as forums, which count as leads only. Key claims are cross-checked against more than one source. The report puts the answer first, then the evidence, then the gaps and uncertainty. It suits topic studies and competitor analysis.
 when:

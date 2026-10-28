@@ -19,8 +19,8 @@ source:
   repo: sickn33/agentic-awesome-skills
   path: skills/test-framework-migration-skill
   url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/test-framework-migration-skill
-  licence: CC-BY-4.0
-  licence_file: LICENSE-CONTENT
+  licence: MIT
+  licence_file: LICENSE
   commit: 0c10eb8
   original_name: test-framework-migration-skill
   author: LambdaTest
@@ -30,7 +30,7 @@ credits:
   - title: test-framework-migration-skill skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/test-framework-migration-skill
-    used: Shared by sickn33 (LICENSE-CONTENT, CC BY-4.0); the skill file's own MIT header covers the skill text. We gave it a plain name, linked the guide files to the source repo, and added notes on drafts without a guide and on the paid cloud option.
+    used: Copied under the MIT licence named in its own header (sickn33's collection labels it CC BY 4.0). We gave it a plain name, linked the guide files to the source repo, and added notes on drafts without a guide and on the paid cloud option.
   - title: Original author
     by: LambdaTest
     url: https://github.com/LambdaTest

@@ -11,7 +11,7 @@ Use it when: many people look at your product and never switch, or customers say
 
 Not for: finding your best customers, needing only an interview script for one purchase, or having no recent buyers to talk to.
 
-This workflow follows the method in Competing Against Luck by Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from Competing Against Luck by Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

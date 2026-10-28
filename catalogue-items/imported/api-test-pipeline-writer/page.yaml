@@ -11,7 +11,7 @@ explain: |
 
   The skill uses Newman, the command line runner for Postman. It asks a short list of questions: which CI platform you use, where the collection and environment files live, which reports you want such as JUnit or HTML, which Node version, and when it should run. It then writes the config for GitHub Actions, GitLab, Jenkins, Azure DevOps, CircleCI or Bitbucket. Secrets come from your CI store, reports are saved as artifacts, and the build fails when a test fails.
 
-  Licence: CC BY 4.0 applies to this copy, as its LICENSE-CONTENT file says. Reuse it with credit to LambdaTest and sickn33. The author's own file header says MIT, which also allows reuse with credit.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to LambdaTest and sickn33.
 when:
   - You have Postman tests but run them only by hand.
   - Your team wants API checks on every pull request.

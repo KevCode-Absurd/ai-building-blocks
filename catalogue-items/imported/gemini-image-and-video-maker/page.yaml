@@ -11,7 +11,7 @@ explain: |
 
   You can link a folder of references once and reuse it for on-brand results. A still image can also be animated. Each run saves a small log file next to the result so you know how it was made. It needs a Gemini API key, and usage is billed by Google. Google's prices change, so the skill quotes the current price before every call and you approve each one. Check Google's price page and set a spend limit on your key before you start.
 
-  Licence: we share this copy under CC BY 4.0, as sickn33's collection does (see the LICENSE-CONTENT file). The skill file header names the author's own MIT licence. Both allow reuse. The skill file is the collection's adaptation of the author's workflow, copied as it stands. Credit antonio and sickn33 if you reuse it.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to AntonioCardenas and sickn33.
 when:
   - You need a thumbnail or hero image that matches your brand look.
   - You want to animate a still product photo into a short clip.

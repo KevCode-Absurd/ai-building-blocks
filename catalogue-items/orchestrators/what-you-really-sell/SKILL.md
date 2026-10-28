@@ -1,6 +1,6 @@
 ---
 name: what-you-really-sell
-description: Use when your ad or page copy makes big claims and you want each one to hold up, and to find fresh angles and offer changes to test. It runs 3 skills in the order Gary Bencivenga's Marketing Bullets Collection teaches, and checks each result before the next step starts.
+description: Use when your ad or page copy makes big claims and you want each one to hold up, and to find fresh angles and offer changes to test. It runs 3 skills in an order we set, using ideas from Gary Bencivenga's Marketing Bullets Collection, and checks each result before the next step starts.
 ---
 
 # Find what you really sell and prove every claim

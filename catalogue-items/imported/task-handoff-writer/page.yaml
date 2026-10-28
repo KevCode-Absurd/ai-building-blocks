@@ -11,7 +11,7 @@ explain: |
 
   The skill only delegates when you have allowed it. It scopes the job to something bounded, then writes the brief: the goal, the files or areas the agent owns, what is off limits and the check that proves success. For terminal agents it uses safe ways to send long prompts so quotes and symbols do not break. It polls at sensible intervals, reports real progress only, and keeps the final review with you.
 
-  Licence: the author's own file header (davidondrej) says MIT, and that covers this skill text. sickn33's LICENSE-CONTENT file (CC BY 4.0) applies only where no more specific upstream notice exists. Keep the MIT notice and credit davidondrej and sickn33.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to David Ondrej and sickn33.
 when:
   - You want a second AI agent to take one part of a big job.
   - A long prompt keeps breaking when sent to a terminal agent.

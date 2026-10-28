@@ -1,13 +1,13 @@
 ---
 name: brand-sales-budget-split
-description: Use when you spend on marketing and want to know how much should build the brand and how much should drive sales. It runs 2 skills in the order Les Binet and Peter Field's paper teaches, and checks each result before the next step starts.
+description: Use when you spend on marketing and want to know how much should build the brand and how much should drive sales. It runs 2 skills in an order we set, using ideas from Les Binet and Peter Field's paper, and checks each result before the next step starts.
 ---
 
 # Split your marketing budget between brand and sales
 
 Paste your spend and the numbers you track. Get a balanced scorecard and a brand versus sales split.
 
-This workflow follows the method in The Long and the Short of It by Les Binet and Peter Field. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from The Long and the Short of It by Les Binet and Peter Field. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 **When not to use it:** Not for one launch campaign. Use a simple channel-by-channel results review, since this needs a year or more of spend history. Not when you have no results data yet: track spend and sales by month, then come back. If you want to know why sales dropped after your ads changed, use the [Ad sales drop analyst](https://useaiblocks.com/skills/ad-sales-drop-analyst).
 

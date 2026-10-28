@@ -11,7 +11,7 @@ explain: |
 
   You play no part in the argument. The skill acts as clerk, keeps the record and never softens the result. A Python script handles the bookkeeping, with a quick mode and a juror count. You get the vote count, the reasons and what facts or changes would flip the verdict. It suits a plan, a purchase, a post, a code approach or a claim. It needs Python and the ability to run subagents.
 
-  Licence: the written text of this skill is shared under CC BY-4.0 (the LICENSE-CONTENT file). The "MIT" line in the SKILL.md header is the original author's own note (Alex Chen). Keep the credit to the author.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to Alex Chen and sickn33.
 when:
   - You keep getting yes from AI and want a real challenge.
   - You are deciding whether to make a big purchase or change.

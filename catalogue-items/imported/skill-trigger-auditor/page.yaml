@@ -11,7 +11,7 @@ explain: |
 
   It grades each skill from A to F on its name and description. You can also type a sample request and see which skill it would pick and why. A collisions view lists groups of skills that shadow each other. A fix option adds a clearer "use when" line to weak descriptions. It runs from the command line, so you need Node or Homebrew.
 
-  Licence: the skill text in this copy is CC BY 4.0, as the LICENSE-CONTENT file says. The skill-issue tool you install is the original author's code, and that is MIT, which is the licence the skill file header names. Credit goes to mishanefedov and sickn33.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to mishanefedov and sickn33.
 when:
   - A skill you wrote never seems to run and you do not know why.
   - You want to know which skill a request like "deploy to prod" will pick.

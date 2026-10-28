@@ -11,7 +11,7 @@ explain: |
 
   It starts by choosing a mode. A live outage gets quick action. A simple fact gets a short answer. A vague question gets one round of clarifying questions. Only high stakes or why-is-it-broken questions run the full five stages: state a hypothesis that could be proven wrong, try to break it, gather evidence, judge it, and report what remains uncertain. The rule is that no answer is allowed without a stated way it could fail.
 
-  Licence: the licence file in this folder (LICENSE-CONTENT) says CC BY 4.0, and that is the licence we apply to this copy. The skill's own header says MIT, from its original author, 263311487-ux. Both allow reuse with credit, so keep the credit.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to 263311487-ux and sickn33.
 when:
   - You must decide something important and your first idea may be wrong.
   - A system is failing and you need to know the real cause.

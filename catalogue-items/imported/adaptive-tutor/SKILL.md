@@ -20,7 +20,7 @@ tools:
   - cursor
 ---
 
-> **AI Blocks note (licence):** this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says. The `license:` line in the front matter above is the original author's own label (MIT). The LICENSE-CONTENT file governs here. Keep the credit to the author.
+> **AI Blocks note (licence):** this copy is credited under the MIT licence in the `license:` line above, the author's own header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Keep the credit to DAIR.AI and sickn33.
 
 > **AI Blocks note (for the person using this):** tell your AI the topic, your goal, your deadline and how much time you have. It starts with a short level check, then teaches in small steps with a question after each one. The rest of this file is written for your AI.
 

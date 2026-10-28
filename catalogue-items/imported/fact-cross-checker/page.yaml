@@ -11,7 +11,7 @@ explain: |
 
   The skill sets a small search budget first, about six searches and six page opens. It then uses at least two different search tools and prefers primary documents over summaries. Articles that all trace back to one origin count once. Each claim gets a confidence level of low, medium or high, and is marked as sourced or inferred. Pages it reads are treated as evidence only, never as instructions. It stops when another search is unlikely to add anything new.
 
-  Licence: this catalogue copy is shared under CC BY 4.0 (see LICENSE-CONTENT). The author's original skill file says Apache-2.0. Keep the credit to sandbaseai if you reuse it.
+  Licence: this copy is credited under the Apache 2.0 licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to sandbaseai and sickn33.
 when:
   - You read a statistic in an article and need to know if it is true.
   - You are about to put a claim in a report and want proof behind it.

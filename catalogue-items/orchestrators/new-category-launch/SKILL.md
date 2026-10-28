@@ -1,13 +1,13 @@
 ---
 name: new-category-launch
-description: Use when a rival leads your market and you cannot win by being better. It runs 4 skills in the order Al Ries and Jack Trout's book teaches, and checks each result before the next step starts.
+description: Use when a rival leads your market and you cannot win by being better. It runs 4 skills in an order we set, using ideas from Al Ries and Jack Trout's book, and checks each result before the next step starts.
 ---
 
 # Find a category to be first in and launch it
 
 Paste your rivals and product. Get a category you can lead, a name for it and a press-first launch.
 
-This workflow follows the method in The 22 Immutable Laws of Marketing by Al Ries and Jack Trout. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from The 22 Immutable Laws of Marketing by Al Ries and Jack Trout. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 **When not to use:** you can win by being better than the leader, no rival holds a category in your market yet (learn who you serve first), you only want to see what rivals do in their ads, or you already compete in a category and want the one word to own in it.
 

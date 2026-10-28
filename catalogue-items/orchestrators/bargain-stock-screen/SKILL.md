@@ -1,13 +1,13 @@
 ---
 name: bargain-stock-screen
-description: Use when you have time to study companies and want to look for stocks priced well under what the business is worth, as a group and not one big bet. It runs 4 skills in the order Benjamin Graham's book teaches, and checks each result before the next step starts.
+description: Use when you have time to study companies and want to look for stocks priced well under what the business is worth, as a group and not one big bet. It runs 4 skills in an order we set, using ideas from Benjamin Graham's book, and checks each result before the next step starts.
 ---
 
 # Find bargain stocks with a screen and a group test
 
 Paste a table of listed companies. Get the cheap ones that pass five safety tests, their asset floor and the group rules.
 
-This workflow follows the method in The Intelligent Investor (revised edition, with commentary by Jason Zweig) by Benjamin Graham. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from The Intelligent Investor (revised edition, with commentary by Jason Zweig) by Benjamin Graham. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 **When not to use it:** Not for banks, insurers or utilities. The five tests suit industrial companies, so name any you hold and they are set aside. Not for a quick tip. If you do not have time to study companies, a low-cost index fund is the plain path. This is a method of analysis, not personal financial advice, and it never says buy or sell. For a steadier list of large companies, use the [Company quality and share-price screener](https://useaiblocks.com/workflows/defensive-stock-screen) workflow instead.
 

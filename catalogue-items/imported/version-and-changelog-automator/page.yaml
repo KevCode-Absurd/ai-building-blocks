@@ -13,7 +13,7 @@ explain: |
 
   You choose how much runs on its own. Semantic-release runs from GitHub Actions. By default you start each release by hand, and you can switch it to run on every push to your release branch. Standard-version is a command you run yourself, then review before you push. There are also notes for git-cliff and for repos with many packages.
 
-  Licence: the code and config snippets are MIT, as the author's file header (BagelHole) says. The written text is CC BY 4.0, as the LICENSE-CONTENT file in this item says. Keep one credit line to BagelHole and sickn33 if you share it.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to BagelHole and sickn33.
 when:
   - You release often and forget to bump the version.
   - Your changelog is empty, or you write it by hand the night before a release.

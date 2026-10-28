@@ -11,7 +11,7 @@ explain: |
 
   A good runbook answers a few things quickly: what this service does, how to tell it is broken, how to fix the common failures, and who to call when the fix does not work. The skill writes each step so it can be done in order, with the exact command or screen and what a good result looks like. It adds troubleshooting trees for known problems, recovery steps, and rollback. The AI only writes the document. It does not touch your systems, but the commands in the runbook need access such as kubectl, a cloud command line or database rights. Examples in the skill use placeholder host names. Some sample steps are destructive, so test them in staging with a second person.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header says MIT. Credit goes to the author and sickn33.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to BagelHole and sickn33.
 when:
   - Only one person knows how to restart your main service.
   - An incident exposed that your recovery steps live in someone's head.

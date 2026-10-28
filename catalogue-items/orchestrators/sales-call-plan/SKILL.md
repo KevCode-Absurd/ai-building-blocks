@@ -1,13 +1,13 @@
 ---
 name: sales-call-plan
-description: Use when you sell face to face or on calls and want the conversation planned. It runs 4 skills in the order Elmer Wheeler's book teaches, and checks each result before the next step starts.
+description: Use when you sell face to face or on calls and want the conversation planned. It runs 4 skills in an order we set, using ideas from Elmer Wheeler's book, and checks each result before the next step starts.
 ---
 
 # Plan a sales conversation from first line to close
 
 Give it your product and buyer. Get the lead argument, a ten-second opener, answers to doubts and a close.
 
-This workflow follows the method in Tested Direct Selling by Elmer Wheeler. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from Tested Direct Selling by Elmer Wheeler. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 Use it when: you sell face to face or on calls and want the conversation planned before you walk in, buyers say "I'll think about it", or you keep hearing the same doubts.
 

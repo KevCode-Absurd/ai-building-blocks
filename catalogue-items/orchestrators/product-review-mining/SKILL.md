@@ -1,13 +1,13 @@
 ---
 name: product-review-mining
-description: Use when you need fresh hooks and angles built from what your product already says. It runs 2 skills in the order The Lost Secrets of Breakthrough Advertising by Eugene Schwartz teaches, and checks each result before the next step starts.
+description: Use when you need fresh hooks and angles built from what your product already says. It runs 2 skills in an order we set, using ideas from The Lost Secrets of Breakthrough Advertising by Eugene Schwartz, and checks each result before the next step starts.
 ---
 
 # Mine your product's own words and find the shared want
 
 Paste a product page or manual. Get its own phrases sorted for headlines, plus the one want buyers share.
 
-This workflow follows the method in The Lost Secrets of Breakthrough Advertising by Eugene Schwartz. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from The Lost Secrets of Breakthrough Advertising by Eugene Schwartz. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

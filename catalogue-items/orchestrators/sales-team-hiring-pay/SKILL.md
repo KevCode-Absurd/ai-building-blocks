@@ -1,6 +1,6 @@
 ---
 name: sales-team-hiring-pay
-description: Use when you are building a sales team and want hiring, pay and targets to rest on data. It runs 3 skills in the order Mark Roberge's book teaches, and checks each result before the next step starts.
+description: Use when you are building a sales team and want hiring, pay and targets to rest on data. It runs 3 skills in an order we set, using ideas from Mark Roberge's book, and checks each result before the next step starts.
 ---
 
 # Hire, pay and measure a sales team on what works
@@ -11,7 +11,7 @@ Use it when: you are building a sales team and want hiring, pay and targets to r
 
 Not for: customers with no cancel dates yet (pull a sales export first), legal advice on hiring traits (ask an employment lawyer or HR adviser), or a business with no sales team or past hires to learn from.
 
-This workflow follows the method in The Sales Acceleration Formula by Mark Roberge. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from The Sales Acceleration Formula by Mark Roberge. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

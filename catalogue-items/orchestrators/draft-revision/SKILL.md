@@ -1,13 +1,13 @@
 ---
 name: draft-revision
-description: Use when you have a finished first draft that has rested for a few weeks and you want a second draft that is tighter and clearer. It runs 7 skills in the order Stephen King's book teaches, and checks each result before the next step starts.
+description: Use when you have a finished first draft that has rested for a few weeks and you want a second draft that is tighter and clearer. It runs 7 skills in an order we set, using ideas from Stephen King's book, and checks each result before the next step starts.
 ---
 
 # Revise a draft with the door open
 
 Revise a story or book draft in seven steps. Paste a rested draft; get holes marked, a 10% cut, plain words and a reader plan.
 
-This workflow follows the method in On Writing: A Memoir of the Craft by Stephen King. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from On Writing: A Memoir of the Craft by Stephen King. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

@@ -11,7 +11,7 @@ explain: |
 
   A Python script uses the free yt-dlp tool to list the available subtitles and prefers manual ones over auto captions, because manual ones keep punctuation and speaker names. It then strips the timing marks, removes the doubled lines that auto captions produce, and merges the rest into clean paragraphs. The note is filed by channel and date, with title, channel and date at the top. It also scans for words like framework, decision and lesson, and drops a small idea stub for each hit. You need Python and yt-dlp.
 
-  Licence: the LICENSE-CONTENT file in this folder applies to our copy: CC BY 4.0, free reuse with credit. The author's own header (adelaidasofia) says MIT for the skill and its script, which also allows reuse with credit. Keep the credit to adelaidasofia and sickn33 either way.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to adelaidasofia and sickn33.
 when:
   - You watch long talks and want them in your notes.
   - You want to search across what you have learned from videos.

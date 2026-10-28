@@ -1,13 +1,13 @@
 ---
 name: persuasive-body-copy
-description: Use when your headline gets read but the copy underneath does not convince. It runs 4 skills in the order Eugene Schwartz's book teaches, and checks each result before the next step starts.
+description: Use when your headline gets read but the copy underneath does not convince. It runs 4 skills in an order we set, using ideas from Eugene Schwartz's book, and checks each result before the next step starts.
 ---
 
 # Build body copy that deepens desire and earns belief
 
 Give it your brief and product facts. Get body copy that sharpens the want, earns belief and shows how it works.
 
-This workflow follows the method in Breakthrough Advertising (a book summary) by Eugene Schwartz. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from Breakthrough Advertising (a book summary) by Eugene Schwartz. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 **When not to use:** your headline is not being read yet (fix the headline first), you only want to reorder claims you already wrote, or you only want to check claims against proof in finished copy.
 

@@ -9,7 +9,7 @@ subhead: Paste several years of income statements and their notes. It strips out
 explain: |
   What does this company really earn in a normal year? Reported profit is a figure with a story behind it. A building sold, a tax refund, a write-down that comes back as next year's profit, a cost parked on the balance sheet. Each can move the number without changing the business.
 
-  This workflow follows the method in the 1940 edition of Security Analysis by Benjamin Graham and David Dodd. It rebuilds each year without the one-offs, checks for padding and rates how far the record can be trusted. Only then does it work out normal earnings, as a range. It never projects a trend and does not use the latest year alone unless three conditions hold. It is a method of analysis, not financial advice. It never says buy or sell.
+  This workflow uses ideas from the 1940 edition of Security Analysis by Benjamin Graham and David Dodd. The order of the steps is ours, not the authors'. It rebuilds each year without the one-offs, checks for padding and rates how far the record can be trusted. Only then does it work out normal earnings, as a range. It never projects a trend and does not use the latest year alone unless three conditions hold. It is a method of analysis, not financial advice. It never says buy or sell.
 when:
   - A company's latest profit looks too good, or too poor, to be typical.
   - A big write-down was followed by a very good year.

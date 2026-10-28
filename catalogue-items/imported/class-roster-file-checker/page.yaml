@@ -13,7 +13,7 @@ explain: |
 
   What it does not check: it checks your files against the public OneRoster (1EdTech) format only. The system you upload to may have its own extra rules, so confirm its import requirements with your vendor too.
 
-  Licence: this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says, and that file governs here. The skill file's own header says MIT, the original author's label. Keep the credit to wwewtech and sickn33.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to wwewtech and sickn33.
 when:
   - Clever or ClassLink rejected your roster zip and gave a vague error.
   - You want to catch orphan enrolments before a nightly sync.

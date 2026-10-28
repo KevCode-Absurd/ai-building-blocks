@@ -11,7 +11,7 @@ explain: |
 
   The skill asks a few questions first: OpenAPI 3 or Swagger 2, YAML or JSON, what the API does, the endpoints, the sign-in type and the main data shapes. If you paste code from Express, FastAPI, Django or Spring, it reads the endpoints itself and does not ask what you already showed. It then builds the paths, parameters, request and response shapes, security schemes, tags and example servers. A partial spec is merged, not overwritten.
 
-  Licence: CC BY 4.0 applies to this copy, as its LICENSE-CONTENT file says. Reuse it with credit to LambdaTest and sickn33. The author's own file header says MIT, which also allows reuse with credit.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to LambdaTest and sickn33.
 when:
   - You have working endpoints but no documentation file.
   - You need a spec so tools can generate client libraries.

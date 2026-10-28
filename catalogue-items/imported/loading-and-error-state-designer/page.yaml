@@ -13,7 +13,7 @@ explain: |
 
   The rules come from the original author. A skeleton waits 300ms before it shows, so fast loads skip it. A failed card shows its own error while the rest of the page loads. The examples use React and Tailwind, and your AI swaps in your own components.
 
-  Licence: we share this copy under CC BY 4.0, as sickn33's collection does (see the LICENSE-CONTENT file). The skill file header names the author's own MIT licence. Both allow reuse. Credit bitjaru and sickn33.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to bitjaru and sickn33.
 when:
   - A list shows nothing while data loads, and users think it broke.
   - A failed request leaves a blank page with no message.

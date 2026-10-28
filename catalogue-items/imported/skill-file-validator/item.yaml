@@ -19,8 +19,8 @@ source:
   repo: sickn33/agentic-awesome-skills
   path: skills/skill-check
   url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/skill-check
-  licence: CC-BY-4.0
-  licence_file: LICENSE-CONTENT
+  licence: MIT
+  licence_file: LICENSE
   commit: 0c10eb8
   original_name: skill-check
   author: olgasafonova
@@ -30,7 +30,7 @@ credits:
   - title: skill-check skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/skill-check
-    used: Copied as it is. The collection's LICENSE-CONTENT file sets CC BY 4.0 for this text, and the author's skill file header says MIT. We gave it a plain name.
+    used: Credited under the MIT licence named in its own header (sickn33's collection labels it CC BY 4.0). Copied as it is. The collection's LICENSE-CONTENT file sets CC BY 4.0 for this text, and the author's skill file header says MIT. We gave it a plain name.
   - title: Original author
     by: olgasafonova
     url: https://github.com/olgasafonova/SkillCheck-Free

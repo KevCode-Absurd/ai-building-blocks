@@ -15,7 +15,7 @@ explain: |
 
   Low, medium and high effort settings only apply if your tool lets you set them. If it does not, the lead uses its normal setting for every helper.
 
-  Licence: the written text is shared under CC BY 4.0 (see LICENSE-CONTENT). The skill file's own header says MIT, the author's licence for the code. Keep the credit to the original author either way.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to provencher and sickn33.
 when:
   - A task has several independent parts, such as research, review and edits.
   - You want results faster by running parts side by side.

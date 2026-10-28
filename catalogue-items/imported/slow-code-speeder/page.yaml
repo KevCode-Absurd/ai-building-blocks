@@ -9,7 +9,7 @@ subhead: Faster code that still gives the same answers. You hand over code that 
 explain: |
   Its firm rule is that tests must pass before and after every change. If you have no tests, it first writes one from a sample input and the current output. Then it makes a single transformation, such as replacing a nested scan with a lookup table or running independent awaits together, and runs the tests. A failed test means the change is reverted and the work stops. It also fixes N+1 queries in common ORMs. No change goes in without proof.
 
-  Licence: the skill file's own header (morsechimwai) says Apache-2.0. sickn33's LICENSE-CONTENT file (CC BY 4.0) applies only where no more specific upstream notice exists, so Apache-2.0 covers this skill file. Keep the Apache-2.0 notice and the credit to morsechimwai and sickn33. We replaced pointers to three skills that are not in this library with plain steps, and marked that change at the end of the file.
+  Licence: this copy is credited under the Apache 2.0 licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to morsechimwai and sickn33.
 when:
   - A function times out when the list gets large.
   - Nested loops are slowing a report that used to be quick.

@@ -13,7 +13,7 @@ explain: |
 
   Its advice is judgement, not law. Your brand system and platform rules come first, and a still image cannot show motion, so test on real devices. It leaves out spacing and layout slips, which the Interface polish checker covers.
 
-  Licence: the written text is shared under CC BY-4.0 (the LICENSE-CONTENT file). The "MIT" line in the SKILL.md header is the original author's own note. Keep the credit to Emil Kowalski.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to Emil Kowalski and sickn33.
 when:
   - Your interface works but feels stiff or flat.
   - Your animations feel too slow, too fast or too bouncy.

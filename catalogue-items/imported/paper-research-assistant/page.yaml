@@ -11,7 +11,7 @@ explain: |
 
   It runs a bundled Python tool that searches Semantic Scholar and arXiv, downloads arXiv PDFs and extracts their text. From that it builds the piece you asked for: who cites a paper, which work shaped it, what the method and results are, and which papers to read in what order. It needs Python and an internet connection, and it uses free services rather than paid ones.
 
-  Licence: two labels apply. The skill file's own header (xwmxcz) says MIT. sickn33's collection shares it under CC BY 4.0, as the LICENSE-CONTENT file says. Both allow reuse with credit, so keep the credit to xwmxcz and sickn33.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to xwmxcz and sickn33.
 when:
   - You are new to a field and need a starting reading list.
   - You want a plain summary of what one paper does and finds.

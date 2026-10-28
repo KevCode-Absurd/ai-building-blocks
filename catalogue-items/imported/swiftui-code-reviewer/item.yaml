@@ -19,8 +19,8 @@ source:
   repo: sickn33/agentic-awesome-skills
   path: skills/swiftui-expert-skill
   url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/swiftui-expert-skill
-  licence: CC-BY-4.0
-  licence_file: LICENSE-CONTENT
+  licence: MIT
+  licence_file: LICENSE
   commit: 0c10eb8
   original_name: swiftui-expert-skill
   author: AvdLee
@@ -30,7 +30,7 @@ credits:
   - title: swiftui-expert-skill skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/swiftui-expert-skill
-    used: Adapted under the CC BY-4.0 licence (LICENSE-CONTENT). The skill file itself says MIT. We gave it a plain name and added a not-for list, input checks and a fixed review table. The method is unchanged.
+    used: Adapted under the MIT licence named in its own header (sickn33's collection labels it CC BY 4.0). We gave it a plain name and added a not-for list, input checks and a fixed review table. The method is unchanged.
   - title: Original author
     by: AvdLee
     url: https://github.com/AvdLee

@@ -11,7 +11,7 @@ explain: |
 
   First it helps you decide whether to comment at all. Then it finds the gap in the post: what is missing, assumed or too general. Next it picks one of five shapes: a counterexample, an extension, a specific case, an honest disagreement about the idea, or a real question. It keeps the comment short and standalone, and removes any pitch. The same method works when you reply on someone else's thread. It never posts for you.
 
-  Licence: the skill text in this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (prateeks367) says MIT, which covers the author's own code. The skill was written by prateeks367 (repo: voicemoat-skills) and we copied it from sickn33's agentic-awesome-skills library. Credit goes to both.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to prateeks367 and sickn33.
 when:
   - You want to get noticed by people you admire without sounding fake.
   - Your comments get no replies.

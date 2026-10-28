@@ -1,13 +1,13 @@
 ---
 name: offer-from-buyer-problems
-description: Use when your product sells like everyone else's and you want a bundle that is hard to compare and easy to say yes to. It runs 5 skills in the order Alex Hormozi's book teaches, and checks each result before the next step starts.
+description: Use when your product sells like everyone else's and you want a bundle that is hard to compare and easy to say yes to. It runs 5 skills in an order we set, using ideas from Alex Hormozi's book, and checks each result before the next step starts.
 ---
 
 # Build an offer from your buyer's problems
 
 Give it your product and buyer. Get every problem they face turned into a stacked, scored, priced offer.
 
-This workflow follows the method in $100M Offers: How To Make Offers So Good People Feel Stupid Saying No by Alex Hormozi. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from $100M Offers: How To Make Offers So Good People Feel Stupid Saying No by Alex Hormozi. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 **When not to use:** you have no buyer data yet (write a buyer profile first with the Buyer brief writer), you only want a bonus package on an offer you already have, or you only need to price a one-off discount.
 

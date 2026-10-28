@@ -7,7 +7,7 @@ description: Use when you have two ads, emails or pages and want to know which s
 
 Give it two ads. Get a fair split-run test, a reply offer that brings enough replies and a read of the result.
 
-This workflow follows the method in Tested Advertising Methods, fifth edition by John Caples, revised by Fred E. Hahn. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from Tested Advertising Methods, fifth edition by John Caples, revised by Fred E. Hahn. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

@@ -19,8 +19,8 @@ source:
   repo: sickn33/agentic-awesome-skills
   path: skills/newman-cicd-integration
   url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/newman-cicd-integration
-  licence: CC-BY-4.0
-  licence_file: LICENSE-CONTENT
+  licence: MIT
+  licence_file: LICENSE
   commit: 0c10eb8
   original_name: newman-cicd-integration
   author: LambdaTest
@@ -30,7 +30,7 @@ credits:
   - title: newman-cicd-integration skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/newman-cicd-integration
-    used: Shared under the CC BY-4.0 licence (LICENSE-CONTENT). The skill file itself says MIT. We gave it a plain name, finished a cut-off When to Use sentence and passed BASE_URL in the Azure DevOps template like the others.
+    used: Shared under the MIT licence named in its own header (sickn33's collection labels it CC BY 4.0). We gave it a plain name, finished a cut-off When to Use sentence and passed BASE_URL in the Azure DevOps template like the others.
   - title: Original author
     by: LambdaTest
     url: https://github.com/LambdaTest

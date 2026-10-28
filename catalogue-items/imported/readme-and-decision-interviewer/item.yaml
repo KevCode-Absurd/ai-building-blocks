@@ -25,8 +25,8 @@ source:
   repo: sickn33/agentic-awesome-skills
   path: skills/brain-to-docs
   url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/brain-to-docs
-  licence: CC-BY-4.0
-  licence_file: LICENSE-CONTENT
+  licence: MIT
+  licence_file: LICENSE
   commit: 0c10eb8
   original_name: brain-to-docs
   author: davidondrej
@@ -36,7 +36,7 @@ credits:
   - title: brain-to-docs skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/brain-to-docs
-    used: Shared under the collection's CC BY 4.0 licence (LICENSE-CONTENT) for the written text. The skill file's header says MIT, the author's licence. We gave it a plain name.
+    used: Credited under the MIT licence named in its own header (sickn33's collection labels it CC BY 4.0). Shared under the collection's CC BY 4.0 licence (LICENSE-CONTENT) for the written text. The skill file's header says MIT, the author's licence. We gave it a plain name.
   - title: Original author
     by: davidondrej
     url: https://github.com/davidondrej

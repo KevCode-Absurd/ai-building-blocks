@@ -1,13 +1,13 @@
 ---
 name: specific-knowledge-business
-description: Use when you trade hours for pay and want to build something that earns without you. It runs 3 skills in the order Naval Ravikant and Eric Jorgenson's book teaches, and checks each result before the next step starts.
+description: Use when you trade hours for pay and want to build something that earns without you. It runs 3 skills in an order we set, using ideas from Naval Ravikant and Eric Jorgenson's book, and checks each result before the next step starts.
 ---
 
 # Find your specific knowledge and build something you own
 
 Tell it what you do well. Get your specific knowledge, a plan to earn without trading hours and a partner check.
 
-This workflow follows the method in The Almanack of Naval Ravikant by Naval Ravikant and Eric Jorgenson. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from The Almanack of Naval Ravikant by Naval Ravikant and Eric Jorgenson. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

@@ -13,7 +13,7 @@ explain: |
 
   On its own it only writes text. It posts nothing. The optional VoiceMoat connector is a paid service (Pro or Enterprise plan) and it sends your post text to voicemoat.com when you use it. You do not need it. The skill file header carries a risk label from the source, which comes from the optional VoiceMoat connector that can post for you.
 
-  Licence: the LICENSE-CONTENT file in this item governs this copy. It says CC BY 4.0 for written content like this skill. The author's own header (prateeks367) says MIT. Both are permissive and both need credit, so keep the credit to prateeks367 and sickn33 if you share it.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to prateeks367 and sickn33.
 when:
   - You post on LinkedIn or X and want drafts that need less editing.
   - Your AI posts all sound generic.

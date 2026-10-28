@@ -21,8 +21,8 @@ source:
   repo: sickn33/agentic-awesome-skills
   path: skills/deep-research-framework
   url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/deep-research-framework
-  licence: CC-BY-4.0
-  licence_file: LICENSE-CONTENT
+  licence: MIT
+  licence_file: LICENSE
   commit: 0c10eb8
   original_name: deep-research-framework
   author: alapha888
@@ -32,7 +32,7 @@ credits:
   - title: deep-research-framework skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/deep-research-framework
-    used: "Copied with one added paragraph on when not to use it, and a plain name. Licence split: the SKILL.md header is alapha888's MIT licence (source alapha888/agent-skills-en); LICENSE-CONTENT sets CC BY 4.0 for the collection's written text."
+    used: "Credited under the MIT licence named in its own header (sickn33's collection labels it CC BY 4.0). Copied with one added paragraph on when not to use it, and a plain name. Licence split: the SKILL.md header is alapha888's MIT licence (source alapha888/agent-skills-en); LICENSE-CONTENT sets CC BY 4.0 for the collection's written text."
   - title: Original author
     by: alapha888
     url: https://github.com/alapha888

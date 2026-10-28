@@ -11,7 +11,7 @@ explain: |
 
   It starts by reading the room: who visits, what feel suits them, and one signature detail to make the page memorable. It then builds on a set floor of rules for type, colour, layout, button states and motion, and bans familiar AI looks like purple glow gradients and emoji icons. The last step renders the page at both sizes and keeps the work open while any hard problem remains, such as overlapping text or sideways scrolling. It needs a browser it can control.
 
-  Licence: two labels apply. The skill file keeps its author's own MIT header (stas4000). sickn33's collection shares it under CC BY 4.0, as the LICENSE-CONTENT file says. Both allow reuse with credit, so keep the credit to stas4000 and sickn33.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to stas4000 and sickn33.
 when:
   - You asked an AI for a landing page and it looks like every other one.
   - You want proof the page works on a phone, not a guess.

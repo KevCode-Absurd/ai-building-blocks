@@ -20,8 +20,8 @@ source:
   repo: sickn33/agentic-awesome-skills
   path: skills/runaway-guard
   url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/runaway-guard
-  licence: CC-BY-4.0
-  licence_file: LICENSE-CONTENT
+  licence: Apache-2.0
+  licence_file: LICENSE
   commit: 0c10eb8
   original_name: runaway-guard
   author: morsechimwai
@@ -31,7 +31,7 @@ credits:
   - title: runaway-guard skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/runaway-guard
-    used: Copied under the CC BY-4.0 licence (LICENSE-CONTENT). The skill file itself says Apache-2.0. We gave it a plain name, fixed the per-token cost cap formula (input and output costs are added, not multiplied), made the retry rules agree on how to handle 429 rate limits, and pointed the prompt caching note to Anthropic's pricing page. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the Apache 2.0 licence named in its own header (sickn33's collection labels it CC BY 4.0). We gave it a plain name, fixed the per-token cost cap formula (input and output costs are added, not multiplied), made the retry rules agree on how to handle 429 rate limits, and pointed the prompt caching note to Anthropic's pricing page. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: morsechimwai
     url: https://github.com/morsechimwai

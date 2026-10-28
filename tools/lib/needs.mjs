@@ -47,6 +47,7 @@ export const INPUTS = {
   footage: { label: "Video clips", what: "the clips you want to edit" },
   approved_image: { label: "An approved picture", what: "the picture you've chosen to use" },
   feedback_notes: { label: "Your notes", what: "what to keep, change or drop" },
+  short_text: { label: "The post or message", what: "the post, comment, message or email you're replying to, with who wrote it and where" },
   question: { label: "Your question", what: "the decision or problem, and what a good outcome looks like" },
   mind_view: { label: "Views from great minds", what: "each mind's answer from the steps before this one, or their skill files from the minds library" },
   // Specific hand-offs added 2026-10-27 (catalogue-items/_types.yaml), so pages say "Your API spec", not "Api spec".

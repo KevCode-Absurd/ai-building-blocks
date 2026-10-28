@@ -1,13 +1,13 @@
 ---
 name: mental-models-decision
-description: Use when you face a decision that is hard, costly or close, and want it checked from many sides before you act. It runs 7 skills in the order Charlie Munger's book teaches, and checks each result before the next step starts.
+description: Use when you face a decision that is hard, costly or close, and want it checked from many sides before you act. It runs 7 skills in an order we set, using ideas from Charlie Munger's book, and checks each result before the next step starts.
 ---
 
 # Think a hard decision through with models from many fields
 
 Describe a hard decision. Get the obvious questions settled, many fields checked, pressures and rewards tested, and the case against it.
 
-This workflow follows the method in Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger by Charlie Munger. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger by Charlie Munger. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

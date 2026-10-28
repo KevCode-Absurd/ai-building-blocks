@@ -154,3 +154,5 @@ If they pick one and that skill is added here, carry straight on with what you j
 - This skill cannot guarantee that a prompt is safe to disclose; redact proprietary or personal
   material before requesting user approval.
 - An API key must remain local and must never be committed, printed, or sent in a query.
+
+Changed by AI Blocks (2026-10-28): gave it a plain name and added Before you start and After this sections that link to other AI Blocks steps.

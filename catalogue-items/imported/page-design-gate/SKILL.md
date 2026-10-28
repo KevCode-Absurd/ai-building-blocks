@@ -10,7 +10,7 @@ date_added: "2026-10-08"
 author: stas4000
 tags: [frontend, design, ui, browser-testing, quality-gate]
 tools: [claude, cursor, gemini]
-license: "MIT" # AI Blocks: this is the author's own header, kept as written. sickn33's collection shares this copy under CC BY 4.0 (see LICENSE-CONTENT).
+license: "MIT"
 license_source: "https://github.com/stas4000/tastegate/blob/main/LICENSE"
 ---
 

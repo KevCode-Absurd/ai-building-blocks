@@ -10,7 +10,7 @@ explain: |
   Choose how a video will be made before you spend anything: generate it with AI, build it from code and assets, or edit footage you already have. 
   You describe the video. The skill picks one main route, or a combined plan when a brief mixes types. Generation suits new scenes. Composition suits exact text, charts and repeatable layouts. Editing suits cutting, trimming and finishing your own clips. Without production tools, it still returns a full written package: script, timed storyboard, exact on-screen text, audio direction and export target.
 
-  Licence: the LICENSE-CONTENT file in this item governs this copy. It says CC BY 4.0 for written content like this skill. The author's own header (Orkas-AI) says MIT. Both are permissive and both need credit, so keep the credit to Orkas-AI and sickn33 if you share it.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to Orkas-AI and sickn33.
 when:
   - You are not sure if AI generation or editing is the right approach.
   - Your brief mixes screen recordings, motion graphics and new scenes.

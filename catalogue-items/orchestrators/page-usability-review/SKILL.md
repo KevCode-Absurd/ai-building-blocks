@@ -1,13 +1,13 @@
 ---
 name: page-usability-review
-description: Use when people get lost on your site or app and you want fixes before a redesign. It runs 3 skills in the order Steve Krug's book teaches, and checks each result before the next step starts.
+description: Use when people get lost on your site or app and you want fixes before a redesign. It runs 3 skills in an order we set, using ideas from Steve Krug's book, and checks each result before the next step starts.
 ---
 
 # Review a page's ease of use, then plan a test
 
 Give it a page or screen. Get usability problems, unclear clicks rated, and a one-morning test with three people.
 
-This workflow follows the method in Don't Make Me Think, Revisited by Steve Krug. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from Don't Make Me Think, Revisited by Steve Krug. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 **When not to use:** your page has no clear goal for visitors yet (decide what a visitor should do first), you want to know why an ad is not getting responses (use the Ad response troubleshooter), or you want a page checked against 30 sales checks or pricing questions.
 

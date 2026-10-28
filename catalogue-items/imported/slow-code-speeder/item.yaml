@@ -19,8 +19,8 @@ source:
   repo: sickn33/agentic-awesome-skills
   path: skills/complexity-cuts
   url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/complexity-cuts
-  licence: CC-BY-4.0
-  licence_file: LICENSE-CONTENT
+  licence: Apache-2.0
+  licence_file: LICENSE
   commit: 0c10eb8
   original_name: complexity-cuts
   author: morsechimwai
@@ -30,7 +30,7 @@ credits:
   - title: complexity-cuts skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/complexity-cuts
-    used: Shared by sickn33 (LICENSE-CONTENT, CC BY-4.0); the skill file's own Apache-2.0 header covers the skill text. We gave it a plain name and replaced pointers to three skills not in this library with plain steps.
+    used: Copied under the Apache 2.0 licence named in its own header (sickn33's collection labels it CC BY 4.0). We gave it a plain name and replaced pointers to three skills not in this library with plain steps.
   - title: Original author
     by: morsechimwai
     url: https://github.com/morsechimwai/lemmaly

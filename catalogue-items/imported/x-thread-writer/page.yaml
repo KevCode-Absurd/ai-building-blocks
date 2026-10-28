@@ -11,7 +11,7 @@ explain: |
 
   It first asks if the idea needs a thread at all. A single point with one proof is a post, and it says so. If a thread is right, it writes a skeleton first: one line per beat. If the beats could be shuffled with no loss, it labels the thread as a list. The first post makes a specific promise, each following post holds one idea and never leans on the last, and the final post closes the loop. Posts are split by three dashes so a tool can chain them.
 
-  Licence: the LICENSE-CONTENT file in this folder applies to our copy: CC BY 4.0, which means free reuse with credit. The author's own file header says MIT, which also allows reuse with credit. Keep the credit to prateeks367 and sickn33. The thread you write from your own material is yours.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to prateeks367 and sickn33.
 when:
   - You have a blog post or talk and want it as a thread.
   - You wrote a rambling draft and need to find the spine.

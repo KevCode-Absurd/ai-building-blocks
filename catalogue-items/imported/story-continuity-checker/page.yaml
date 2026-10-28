@@ -11,7 +11,7 @@ explain: |
 
   The fix is a story bible, which is the facts of your story as a list, plus a mechanical check of the prose against it. For each hit, the skill asks one question: is the manuscript wrong, or is the bible out of date? It does not write, outline or polish. It checks and reports. It works on long manuscripts and comes with a small script.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The skill file itself says Apache-2.0. Credit goes to jiawood2006 and sickn33.
+  Licence: this copy is credited under the Apache 2.0 licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to jiawood2006 and sickn33.
 when:
   - Your manuscript passes about 10 chapters or 30,000 characters and a re-read no longer catches slips.
   - Your character is 18 in chapter one and 23 in chapter twelve with no time passing.

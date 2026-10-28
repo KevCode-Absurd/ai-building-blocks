@@ -19,8 +19,8 @@ source:
   repo: sickn33/agentic-awesome-skills
   path: skills/falsify
   url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/falsify
-  licence: CC-BY-4.0
-  licence_file: LICENSE-CONTENT
+  licence: MIT
+  licence_file: LICENSE
   commit: 0c10eb8
   original_name: falsify
   author: 263311487-ux
@@ -30,7 +30,7 @@ credits:
   - title: falsify skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/falsify
-    used: Copied under the CC BY-4.0 licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the MIT licence named in its own header (sickn33's collection labels it CC BY 4.0). We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: 263311487-ux
     url: https://github.com/263311487-ux/falsify

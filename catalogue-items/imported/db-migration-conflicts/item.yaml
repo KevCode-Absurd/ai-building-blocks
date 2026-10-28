@@ -20,8 +20,8 @@ source:
   repo: sickn33/agentic-awesome-skills
   path: skills/drizzle-migration-conflict
   url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/drizzle-migration-conflict
-  licence: CC-BY-4.0
-  licence_file: LICENSE-CONTENT
+  licence: Apache-2.0
+  licence_file: LICENSE
   commit: 0c10eb8
   original_name: drizzle-migration-conflict
   author: chaunsin
@@ -31,7 +31,7 @@ credits:
   - title: drizzle-migration-conflict skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/drizzle-migration-conflict
-    used: Copied under the CC BY-4.0 licence (LICENSE-CONTENT). The skill file itself says Apache-2.0. We gave it a plain name. We added notes marked "Added by AI Blocks" so it works in this library. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the Apache 2.0 licence named in its own header (sickn33's collection labels it CC BY 4.0). We gave it a plain name. We added notes marked "Added by AI Blocks" so it works in this library. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: chaunsin
     url: https://github.com/chaunsin

@@ -328,3 +328,5 @@ Cannot check every box? The code is example-correct, not behavior-correct. Eithe
 - `lemmaly` — algorithm choice must be settled before invariants; load lemmaly first if the algorithm family is unclear.
 - `mathguard` — ε-bounded postconditions for approximate / randomized algorithms.
 - `complexity-cuts` — if 3+ optimization transformations have failed tests, the bug is a missing contract, not a missing optimization — escalate here.
+
+Changed by AI Blocks (2026-10-28): gave it a plain name and added Before you start and After this sections that link to other AI Blocks steps.

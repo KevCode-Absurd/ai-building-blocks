@@ -11,7 +11,7 @@ explain: |
 
   It asks three questions at most, then splits the video into short shots with a prompt for each. It runs three modes. Plan builds the shot list. Fix rewrites a prompt that is failing. Review looks at a bad clip and names the one change before the next try. It plans only, it does not make video.
 
-  Licence: CC BY 4.0 applies to this copy, as its LICENSE-CONTENT file says. Reuse it with credit to HEOJUNFO and sickn33. The author's own file header says MIT, which also allows reuse with credit.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to HEOJUNFO and sickn33.
 when:
   - You have a video idea and need to turn it into clips an AI model can make.
   - Your video prompt keeps producing the wrong result.

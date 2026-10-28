@@ -11,7 +11,7 @@ explain: |
 
   The skill restates your idea in one sentence: who it is for, the job they need done and what they do now. It then checks the main risks: real demand, fit with their workflow, willingness to switch, how people will find it, pricing, data access and running costs. It prefers specific doubts to vague brainstorming. It proposes one small test, like a buyer chat, a landing page or a manual version. If risk is low it moves on to build with the assumptions written down. If high, it says stop.
 
-  Licence: the licence file in this folder (LICENSE-CONTENT) says CC BY 4.0, and that is the licence we apply to this copy. The skill's own header says MIT, from its original author, bin1874. Both allow reuse with credit, so keep the credit.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to bin1874 and sickn33.
 when:
   - You are about to ask an AI to build an app and are unsure anyone wants it.
   - A feature sounds good but you cannot say why users would switch.

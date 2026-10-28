@@ -11,7 +11,7 @@ explain: |
 
   You name one score to push up or down and list the settings with their ranges and defaults. The skill runs a baseline first, sets a budget in trials, time or money, and then tries one change at a time unless you allow parallel runs. It compares each trial to the best so far, writes down the result and the reason for the next step, and stops at the limit or when gains flatten. It works for model settings, prompts, inference options, simulations and control policies.
 
-  Licence: the LICENSE-CONTENT file in this item says CC BY 4.0 for written content like this skill, and that is the licence shown for this copy. The author's own header (Optim-Agent) says MIT. Both are permissive and both need credit, so keep the credit to Optim-Agent and sickn33 if you share it.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to Optim-Agent and sickn33.
 when:
   - You want to tune model settings with a small, fixed budget.
   - You need a record of what you tried and what each trial scored.

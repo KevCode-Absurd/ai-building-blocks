@@ -11,7 +11,7 @@ explain: |
 
   It confirms what the image is for: an exact match, or only direction for your own style. It reads sizes and spacing from the image, builds with what the project already has, and puts the result next to the original to fix differences. If the image shows another company's product, it copies the layout pattern only, never their logo, text or pictures. It works with no account.
 
-  Licence: UXKIN wrote it and marked it MIT; the LICENSE-CONTENT file from sickn33's collection sets CC BY 4.0 for the written text. Credit both on any copy you share.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to UXKIN and sickn33.
 when:
   - A designer sent a mockup and you need it built in your codebase.
   - You have a screenshot of a layout you like and want your own version.

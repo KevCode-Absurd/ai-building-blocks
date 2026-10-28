@@ -7,7 +7,7 @@ role: orchestrate
 job: organic
 level: beginner
 inputs:
-  - {type: source_text, required: true}
+  - {type: short_text, required: true}
   - {type: copy_draft, required: false}
   - {type: brand_brain, required: false}
 outputs:

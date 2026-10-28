@@ -12,7 +12,7 @@ execution: coordinator
 inputs:
   - type: question
     required: true
-  - type: source_text
+  - type: short_text
     required: true
   - type: brand_brain
     required: false

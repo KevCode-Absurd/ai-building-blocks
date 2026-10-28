@@ -11,7 +11,7 @@ explain: |
 
   The diagnostic asks a few questions, so the lesson skips what you know and fills real gaps. Each step is a short explanation, then a question to answer from memory, since recall helps learning stick. If you answer well, it moves faster. If you struggle, it explains another way and slows down. It can also give you a study guide, a lesson plan or a set of drills.
 
-  Licence: CC BY 4.0 applies to this copy, as the LICENSE-CONTENT file in this folder says. That file governs. The author's own file header (DAIR.AI) says MIT, which is the author's label for the original. Credit goes to DAIR.AI and sickn33.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to DAIR.AI and sickn33.
 when:
   - You want to learn a new topic and do not know where to start.
   - You have an exam coming and need practice questions.

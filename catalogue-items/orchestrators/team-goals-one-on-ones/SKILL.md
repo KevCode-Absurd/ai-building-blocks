@@ -1,6 +1,6 @@
 ---
 name: team-goals-one-on-ones
-description: Use when you manage people and want goals, meetings and decisions to run on a simple system. It runs 3 skills in the order Andy Grove's book teaches, and checks each result before the next step starts.
+description: Use when you manage people and want goals, meetings and decisions to run on a simple system. It runs 3 skills in an order we set, using ideas from Andy Grove's book, and checks each result before the next step starts.
 ---
 
 # Set team goals, run one-on-ones and settle decisions
@@ -11,7 +11,7 @@ Use it when: you manage a team and each person works on something different with
 
 Not for: working alone with no team (write your own goals with the Objectives and key results writer, or use a simple to-do list), one quick decision with no ongoing team (ask a trusted colleague to argue against it, then pick a date and decide), or better one-on-ones when you already have goals (use the One-on-one meeting planner by itself).
 
-This workflow follows the method in High Output Management by Andy Grove. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from High Output Management by Andy Grove. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

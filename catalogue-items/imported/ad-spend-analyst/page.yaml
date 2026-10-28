@@ -11,7 +11,7 @@ explain: |
 
   The skill starts with an intake of your goals, then cleans and lines up data from different channels so they can be compared. It checks each campaign's health, flags ones to investigate, notes standout performers, and runs a significance check so small numbers do not fool you. It follows the funnel from click to sale to find where people drop off. Then it looks at where a shift of budget may pay, models a few scenarios, and proposes tests.
 
-  Licence: CC BY 4.0 applies to this copy, as the LICENSE-CONTENT file in this folder says. That file governs. The author's own file header (gooseworks-ai) says MIT, which is the author's label for the original. Credit goes to gooseworks-ai and sickn33.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to gooseworks-ai and sickn33.
 when:
   - You run ads on several channels and want a combined view.
   - You need to decide where to move next month's budget.

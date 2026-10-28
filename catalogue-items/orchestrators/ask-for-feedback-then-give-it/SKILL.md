@@ -1,13 +1,13 @@
 ---
 name: ask-for-feedback-then-give-it
-description: Use when you want honest feedback from your team before you give yours. It runs 2 skills in the order Kim Scott's blog teaches, and checks each result before the next step starts.
+description: Use when you want honest feedback from your team before you give yours. It runs 2 skills in an order we set, using ideas from Kim Scott's blog, and checks each result before the next step starts.
 ---
 
 # Ask for feedback, then give it
 
 Say who you manage. Get a go-to question to ask for feedback and a plan for the next conversation you lead.
 
-This workflow follows the method in How do you get feedback? The four steps to solicit Radical Candor by Kim Scott. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from How do you get feedback? The four steps to solicit Radical Candor by Kim Scott. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 **When not to use it:** Not for a serious conduct or performance issue in a first talk. Speak to HR or your manager first. If you only want to write a thank-you to your team, use the [Honest thank-you note writer](https://useaiblocks.com/skills/honest-appreciation-note-writer). If you need to settle a team disagreement, use the [Disagreement response writer](https://useaiblocks.com/skills/disagreement-calming-line-writer).
 

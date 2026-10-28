@@ -20,7 +20,7 @@ tools:
   - codex
 ---
 
-> AI Blocks licence note: the text of this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says. The `license: MIT` line in the header above is the original author's (Linji-x) label for the original code. Keep the credit.
+> Licence note (added by AI Blocks): this copy is credited under the MIT licence in the author's own header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Keep the credit to Linji-x and sickn33.
 
 # Spec-Driven Loop
 

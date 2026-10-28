@@ -9,7 +9,7 @@ subhead: A tricky function gets its rules written down before any code, so off-b
 explain: |
   A tricky function gets its rules written down before any code, so off-by-one and empty-input bugs get caught early. Tests alone often miss these, because the bug lives in the contract, not the loop body.
 
-  Licence: this copy is shared under CC BY 4.0, as set out in its LICENSE-CONTENT file. The skill file's own header names the author's Apache-2.0 licence for the original repo. Credit the author either way.
+  Licence: this copy is credited under the Apache 2.0 licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to morsechimwai and sickn33.
 
   Before writing a loop or a recursive call, it states the invariant (what stays true on each pass), the base case, why the loop must end, and the awkward inputs: empty, duplicates, boundaries, overflow. Only then does it write the code, and it checks the code keeps each rule it stated. The firm rule is no loop or recursion without a written invariant and a reason it stops.
 when:

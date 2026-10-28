@@ -1,13 +1,13 @@
 ---
 name: riskiest-guess-test
-description: Use when you have a new product, service or project and want proof of the shakiest part before you build more. It runs 3 skills in the order Eric Ries's book teaches, and checks each result before the next step starts.
+description: Use when you have a new product, service or project and want proof of the shakiest part before you build more. It runs 3 skills in an order we set, using ideas from Eric Ries's book, and checks each result before the next step starts.
 ---
 
 # Find the riskiest guess in your plan and test it
 
 Paste your plan. Get the guesses it rests on as numbers, the smallest test for the riskiest and pass lines set first.
 
-This workflow follows the method in The Lean Startup by Eric Ries. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from The Lean Startup by Eric Ries. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 Use it when: you have a plan and sense that part of it is a bet but cannot say which part, or you are about to spend months building and want proof of the shakiest part first.
 

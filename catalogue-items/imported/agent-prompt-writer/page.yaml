@@ -11,7 +11,7 @@ explain: |
 
   It starts with one round of questions, usually two to five. First it reads the files and notes you point to, so it only asks what you alone can decide: what better means, what is out of scope, what the agent may change, and what done looks like. Each question comes with a suggested answer you can accept. Then it returns only the prompt, with exact names and paths filled in. If you say no questions, it skips straight to writing.
 
-  Licence: CC BY 4.0 applies to this copy, as the LICENSE-CONTENT file in this folder says. That file governs. The author's own file header (codegiveness) says MIT, which is the author's label for the original. Credit goes to codegiveness and sickn33.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to codegiveness and sickn33.
 when:
   - You have a rough idea and need a prompt an agent will not misread.
   - You want an agent to improve a file, and you need the instruction, not the edit.

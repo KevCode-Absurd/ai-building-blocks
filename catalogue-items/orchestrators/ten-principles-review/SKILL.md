@@ -1,13 +1,13 @@
 ---
 name: ten-principles-review
-description: Use when a product has grown cluttered and you want it simpler without losing its job. It runs 2 skills in the order Dieter Rams's talk teaches, and checks each result before the next step starts.
+description: Use when a product has grown cluttered and you want it simpler without losing its job. It runs 2 skills in an order we set, using ideas from Dieter Rams's talk, and checks each result before the next step starts.
 ---
 
 # Review a product against ten principles, then cut extras
 
 Review your product against ten design principles. Describe it; get a score for each principle and a list of what to keep, cut and merge.
 
-This workflow follows the method in Design by Vitsoe, speech delivered in New York by Dieter Rams. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from Design by Vitsoe, speech delivered in New York by Dieter Rams. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

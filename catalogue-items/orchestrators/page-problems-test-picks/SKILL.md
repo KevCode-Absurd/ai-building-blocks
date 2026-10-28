@@ -1,13 +1,13 @@
 ---
 name: page-problems-test-picks
-description: Use when your page converts poorly and you do not know what to fix or test first. It runs 4 skills in the order Peep Laja's talk teaches, and checks each result before the next step starts.
+description: Use when your page converts poorly and you do not know what to fix or test first. It runs 4 skills in an order we set, using ideas from Peep Laja's talk, and checks each result before the next step starts.
 ---
 
 # Find what's wrong with your page and pick tests
 
 Give it your page and analytics. Get a research plan, ranked page problems and a check that you can test.
 
-This workflow follows the method in Optimizing Optimization, opening keynote by Peep Laja. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from Optimizing Optimization, opening keynote by Peep Laja. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 **When not to use:** your page has no traffic yet (set up basic analytics first), you only want the page scored before launch (use the Landing page auditor), or you only want to know if your traffic can support a test (use the A/B test traffic checker).
 

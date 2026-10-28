@@ -1,13 +1,13 @@
 ---
 name: ad-works-check
-description: Use when your ad has run a while, sales are muddy and your team wants something new. It runs 4 skills in the order Rosser Reeves's book teaches, and checks each result before the next step starts.
+description: Use when your ad has run a while, sales are muddy and your team wants something new. It runs 4 skills in an order we set, using ideas from Rosser Reeves's book, and checks each result before the next step starts.
 ---
 
 # Check if your ad works, then keep or change it
 
 Give it your current ad. Get a short survey, the recall and pull sums, and a keep or change call.
 
-This workflow follows the method in Reality in Advertising by Rosser Reeves. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from Reality in Advertising by Rosser Reeves. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 **When not to use it:** Not for a brand-new ad with no sales history. Run it first, then come back. If you already have survey answers, use the Ad recall and pull calculator on its own. If you need a better claim rather than a verdict, use the Big problem splitter.
 

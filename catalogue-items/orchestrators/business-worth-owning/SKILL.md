@@ -7,7 +7,7 @@ description: Use when you are weighing a business to buy or own a share of, and 
 
 Give it a business and its figures. Get a pass, fail or too-hard call on ten tests, and what to check next.
 
-This workflow follows the method in The Warren Buffett Way (Second Edition) by Robert G. Hagstrom. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from The Warren Buffett Way (Second Edition) by Robert G. Hagstrom. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 **When not to use it.** This gives no buy or sell call and no share price. If the business has no public or shared accounts, such as a very young company, ask for its books first or talk to an accountant. If you only want to know what the assets are worth, use the Business asset value estimator.
 

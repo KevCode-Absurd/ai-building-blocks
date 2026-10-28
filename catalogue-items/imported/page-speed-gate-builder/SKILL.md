@@ -10,7 +10,7 @@ date_added: "2026-06-29"
 author: stareezy-1
 tags: [frontend, lighthouse, performance, core-web-vitals, ci]
 tools: [lighthouse, node, github-actions]
-license: "MIT" # AI Blocks: this is the author's own header, kept as written. sickn33's collection shares this copy under CC BY 4.0 (see LICENSE-CONTENT).
+license: "MIT"
 license_source: "https://github.com/stareezy-1/frontend-architecture-skill/blob/main/LICENSE"
 ---
 

@@ -11,7 +11,7 @@ explain: |
 
   It splits the five fields and checks each range. Then it hunts for traps: dates that never exist, like 30 February; day-of-month and day-of-week joined by OR, which fires far more than you meant; and midnight times shifted by time zones. A small Node script that needs no install parses the line, validates it deeply and lists upcoming runs with a yearly count. It suits crontabs, Kubernetes, GitHub Actions and Airflow.
 
-  Licence: the skill text in this copy is CC BY 4.0, as the LICENSE-CONTENT file in this item says. The scripts folder is code, which LICENSE-CONTENT says stays MIT, and MIT is also the label in the skill file's header. Both allow reuse with credit. Credit goes to takeaseat and sickn33.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to takeaseat and sickn33.
 when:
   - A job did not fire and you cannot see why.
   - You are about to deploy a CronJob and want to check its timing.

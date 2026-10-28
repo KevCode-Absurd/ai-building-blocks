@@ -1,13 +1,13 @@
 ---
 name: press-release-memo
-description: Use when you have an idea for a product or project and want to test it on paper before you spend on it. It runs 5 skills in the order Jeff Bezos's letter teaches, and checks each result before the next step starts.
+description: Use when you have an idea for a product or project and want to test it on paper before you spend on it. It runs 5 skills in an order we set, using ideas from Jeff Bezos's letter, and checks each result before the next step starts.
 ---
 
 # Write the press release and six-page memo before you build
 
 Paste your idea. Get a future press release, the hard questions, a six-page memo and a check of that memo.
 
-This workflow follows the method in Letters to shareholders, 1997 to 2020 by Jeff Bezos. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from Letters to shareholders, 1997 to 2020 by Jeff Bezos. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

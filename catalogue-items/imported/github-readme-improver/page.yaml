@@ -15,7 +15,7 @@ explain: |
 
   The skill file also has optional extras: GitHub Actions for badges and release posts, a tweet on release, and the Octolens mention monitor. Some need secret keys or tokens, the X (Twitter) API may need a paid plan, they use third-party actions you should review first, and Octolens is a paid service. Skip them for a README-only rewrite. Never paste a key into the chat.
 
-  Licence: we share this copy under CC BY 4.0, as sickn33's collection does (see the LICENSE-CONTENT file). The skill file header names the author's own MIT licence. Both allow reuse. Credit jonathimer and sickn33 if you reuse it.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to jonathimer and sickn33.
 when:
   - Your repo gets visits but few stars or installs.
   - Your README starts with setup steps instead of what the project does.

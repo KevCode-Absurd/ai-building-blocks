@@ -1,6 +1,6 @@
 ---
 name: uncontested-market-space
-description: Use when you need a brand position that rivals do not hold and your team will back. It runs 3 skills in the order Marty Neumeier's book teaches, and checks each result before the next step starts.
+description: Use when you need a brand position that rivals do not hold and your team will back. It runs 3 skills in an order we set, using ideas from Marty Neumeier's book, and checks each result before the next step starts.
 ---
 
 # Find a space no rival holds and win buy-in
@@ -11,7 +11,7 @@ Use it when: you need a brand position that rivals do not hold, your line could 
 
 Not for: needing only a position sentence with no rival list, a memo that explains a position you already chose, or a pitch plan for an idea you already have.
 
-This workflow follows the method in The Brand Gap by Marty Neumeier. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from The Brand Gap by Marty Neumeier. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

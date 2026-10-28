@@ -15,7 +15,7 @@ explain: |
 
   On this site the skill comes with plain how-to steps, a list of what it needs, and a sample of the result. We gave it a plain name and wrote the page text. The method is the author's.
 
-  Licence: the LICENSE-CONTENT file in this item says CC BY 4.0 for written content like this skill, and that is the licence shown for this copy. The author's own header (jonathimer) says MIT. Both are permissive and both need credit, so keep the credit to jonathimer and sickn33 if you share it. The skill file is tagged "risk: critical" by its source collection. It means wrong prices can hurt your business, so test every price before launch.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to jonathimer and sickn33.
 when:
   - You are launching an API or a tool and must decide what to charge per unit.
   - Customers say their bill was higher than they expected.

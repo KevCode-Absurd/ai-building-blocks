@@ -1,13 +1,13 @@
 ---
 name: niche-first-message
-description: Use when you want outbound sales to work and need to know who to write to first. It runs 3 skills in the order Aaron Ross and Jason Lemkin's book teaches, and checks each result before the next step starts.
+description: Use when you want outbound sales to work and need to know who to write to first. It runs 3 skills in an order we set, using ideas from Aaron Ross and Jason Lemkin's book, and checks each result before the next step starts.
 ---
 
 # Find your niche, write the first message, split sales jobs
 
 Give it your offer and how customers found you. Get a niche verdict, a stranger-friendly message and a sales role split.
 
-This workflow follows the method in From Impossible to Inevitable by Aaron Ross and Jason Lemkin. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from From Impossible to Inevitable by Aaron Ross and Jason Lemkin. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

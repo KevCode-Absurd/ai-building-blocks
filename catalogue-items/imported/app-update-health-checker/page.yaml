@@ -11,7 +11,7 @@ explain: |
 
   The skill uses the Expo command line tool, so it needs to be installed and signed in. It lists recent update groups, then pulls per-platform launches, failed launches, crash rate and daily numbers for the one you pick. For a channel and runtime, it shows how many users run the embedded build and how many run over-the-air updates, and which updates are most popular. It reports totals only. It cannot show a single user's crash or device detail.
 
-  Licence: CC BY 4.0 applies to this copy, as its LICENSE-CONTENT file says. Reuse it with credit to Expo and sickn33. The author's own file header says MIT, which also allows reuse with credit.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to Expo and sickn33.
 when:
   - You just pushed an update and want to know if it is crashing.
   - You need to compare the new release with the last one.

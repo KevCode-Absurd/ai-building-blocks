@@ -11,7 +11,7 @@ explain: |
 
   Before anything runs, it shows you the exact question, the cost range (about $2 to $5 per run, the author's estimate from an unstated date, not a spending limit; check Google's current Gemini API prices before you approve) and where the file will be saved. It only starts after you agree, because the question goes to Google. It suits market scans, literature reviews and competitor checks where a quick web search falls short. It needs Python and a paid Gemini API key.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The skill file's own header says Apache-2.0. Credit goes to sanjay3290 and the collection maintainer, sickn33.
+  Licence: this copy is credited under the Apache 2.0 licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to sanjay3290 and sickn33.
 when:
   - You need a market or competitor scan with sources you can check.
   - A quick web search will not cover a topic you must understand.

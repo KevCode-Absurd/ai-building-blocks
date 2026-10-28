@@ -11,7 +11,7 @@ explain: |
 
   First it uses the USE method: for each resource such as CPU, memory, disk and network, check use, saturation and errors. Then the TSA method looks at where each thread spends its time. Each finding is tied to evidence, such as command output, so you can see why a cause was ruled in or out. The last step writes a root cause report or postmortem. It works best on Linux systems where you can run the commands.
 
-  Licence: the author's own file header (thecsdoctor) says MIT, and that covers this skill text. sickn33's LICENSE-CONTENT file (CC BY 4.0) applies only where no more specific upstream notice exists. Keep the MIT notice and credit thecsdoctor and sickn33.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to thecsdoctor and Brendan Gregg and sickn33.
 when:
   - A server is slow and nobody knows why.
   - Latency jumped after a deploy or a config change.

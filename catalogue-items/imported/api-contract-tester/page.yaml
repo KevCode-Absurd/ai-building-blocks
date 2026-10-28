@@ -11,7 +11,7 @@ explain: |
 
   The skill starts from the real contract, such as an OpenAPI file or documented examples, and reads the server and client code that match. It sorts each change as breaking or safe by looking at fields, required flags, empty values, allowed options, status codes, headers, paging and error shapes. Even a new optional field can break a strict client. It then builds a small matrix of sample data using fake values. Gaps are reported, not guessed.
 
-  Licence: CC BY 4.0 applies to this copy, as its LICENSE-CONTENT file says. Reuse it with credit to sickn33. The skill file header says MIT, which also allows reuse with credit.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to sickn33.
 when:
   - You renamed a response field and fear a client will break.
   - The build passes but the app and server disagree at runtime.

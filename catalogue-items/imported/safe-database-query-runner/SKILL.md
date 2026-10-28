@@ -197,3 +197,5 @@ If they pick one and that skill is added here, carry straight on with what you j
   database and avoid exporting or sharing results without explicit authorization.
 - The script is not a replacement for backups, auditing, access reviews, or production change
   controls.
+
+Changed by AI Blocks (2026-10-28): gave it a plain name and added Before you start and After this sections that link to other AI Blocks steps.

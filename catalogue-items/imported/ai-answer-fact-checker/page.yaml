@@ -11,7 +11,7 @@ explain: |
 
   It keeps three questions apart: did the AI gather evidence, does the cited source actually say that, and is the claim true. Paste the answer text, the original question and any date or country that matters. Every web page and file is treated as untrusted. Links open only when your AI tool can keep to the skill's public-link rules. If it cannot, the citation is marked unavailable instead. It does not log in for you or touch private chats. Using the web tools your AI already has, it writes a report with one row per claim.
 
-  Licence: this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says. The original author, ASI2030, labelled their text Apache-2.0, and that notice still applies to it. If you reuse the text, keep the credit to ASI2030 and sickn33 and the Apache-2.0 notice.
+  Licence: this copy is credited under the Apache 2.0 licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to ASI2030 and sickn33.
 when:
   - An AI gave you facts and you need to know which ones hold up.
   - You asked two or three AIs the same question and the answers differ.

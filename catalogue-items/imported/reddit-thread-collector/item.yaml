@@ -26,8 +26,8 @@ source:
   repo: sickn33/agentic-awesome-skills
   path: skills/apify-reddit-scraper
   url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/apify-reddit-scraper
-  licence: CC-BY-4.0
-  licence_file: LICENSE-CONTENT
+  licence: MIT
+  licence_file: LICENSE
   commit: 0c10eb8
   original_name: apify-reddit-scraper
   author: harshmaur
@@ -37,7 +37,7 @@ credits:
   - title: apify-reddit-scraper skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/apify-reddit-scraper
-    used: Shared under the collection's CC BY 4.0 licence (LICENSE-CONTENT) for the written text. The skill file's header says MIT, the author's licence. We gave it a plain name, added a privacy and terms note, and reworded one use case so it never suggests getting round a Reddit block.
+    used: Credited under the MIT licence named in its own header (sickn33's collection labels it CC BY 4.0). Shared under the collection's CC BY 4.0 licence (LICENSE-CONTENT) for the written text. The skill file's header says MIT, the author's licence. We gave it a plain name, added a privacy and terms note, and reworded one use case so it never suggests getting round a Reddit block.
   - title: Original author
     by: harshmaur
     url: https://github.com/harshmaur/apify-reddit-scraper-skill

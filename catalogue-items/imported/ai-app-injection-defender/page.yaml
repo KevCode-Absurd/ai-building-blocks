@@ -11,7 +11,7 @@ explain: |
 
   The skill maps where untrusted text enters: chat input, retrieved documents, tool results, shared context and displayed markup. Then it adds layers. System rules rank above user text, and tool output is treated as data only. Untrusted text is kept apart from control instructions. Each tool gets an allow-list for the task. Replies are checked for format, secrets and unsafe actions. High-impact steps need human approval. Starter Python code screens for common attack phrases, and you test it with sample attacks.
 
-  Licence: CC BY 4.0 applies to this copy, as the LICENSE-CONTENT file in this folder says. That file governs. The author's own file header (BagelHole) says MIT, which is the author's label for the original. Credit goes to BagelHole and sickn33. We added a first-step note, an Output section and this licence note to the author's file.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to BagelHole and sickn33.
 when:
   - Your app reads web pages or documents and you worry about hidden instructions.
   - Someone reported that your bot can be tricked.

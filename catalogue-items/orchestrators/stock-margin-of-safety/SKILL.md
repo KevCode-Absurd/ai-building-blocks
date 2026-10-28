@@ -11,7 +11,7 @@ Use it when: you are thinking of buying shares or a small business and want to c
 
 Not for: the asset side alone (use the Asset floor estimator), checking that debt and preferred dividends are covered by earnings (use the Average earnings coverage tester), or a company with no audited accounts or a balance sheet you cannot trust (ask an accountant to check the numbers first).
 
-This workflow follows the method in Security Analysis: Principles and Technique (second edition) by Benjamin Graham and David L. Dodd. Each step is its own skill, and the four skill files come in the handoff pack folder next to HANDOFF.md. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from Security Analysis: Principles and Technique (second edition) by Benjamin Graham and David L. Dodd. The order of the steps is ours, not the author's. Each step is its own skill, and the four skill files come in the handoff pack folder next to HANDOFF.md. You run them one after another, and each skill's result is saved and passed to the next.
 
 It is a method of analysis, not financial advice. It never says buy or sell and names no price to pay.
 

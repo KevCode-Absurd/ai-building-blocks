@@ -14,7 +14,7 @@ license: "Apache-2.0"
 license_source: "https://github.com/Sketchjar/stipple-agent-skills/blob/main/LICENSE"
 ---
 
-> **AI Blocks note (licence):** this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says. The `license:` line in the front matter above is the original author's own label (Apache-2.0). The LICENSE-CONTENT file governs here, and the author's Apache-2.0 notice stays visible. Keep the credit to the author.
+> **AI Blocks note (licence):** this copy is credited under the Apache 2.0 licence in the `license:` line above, the author's own header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Keep the credit to Sketchjar and sickn33.
 >
 > **AI Blocks note (data and testing):** the whole document is sent to Stipple, an outside service. We do not know its cost, allowance or how long it keeps documents. Tell the user to read Stipple's terms and privacy rules before the first upload. We have not tested the endpoint or the response fields below.
 
@@ -115,3 +115,5 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Non-prose documents (forms, tables, payslips) get `applicable: false` — the engine refuses rather than guessing
 - Can false-flag templated/coached or non-native-English writing — always present as one signal alongside human review
 - Verify current authentication/allowance on https://www.stipple.sh; do not guarantee a free anonymous tier or publish the submitted document.
+
+Changed by AI Blocks (2026-10-28): gave it a plain name and added Before you start and After this sections that link to other AI Blocks steps.

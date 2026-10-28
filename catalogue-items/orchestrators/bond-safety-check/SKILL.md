@@ -7,7 +7,7 @@ description: Use when you are about to lend money, buy a bond or note, or hold a
 
 Get a safe, speculative or reject call on a bond or loan. Paste the debt terms and the borrower's accounts; it tests cover and cushion.
 
-This workflow follows the method in Security Analysis: Principles and Technique (second edition) by Benjamin Graham and David L. Dodd. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next. It is a method of analysis, not financial advice. It never tells anyone to buy or sell.
+This workflow uses ideas from Security Analysis: Principles and Technique (second edition) by Benjamin Graham and David L. Dodd. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next. It is a method of analysis, not financial advice. It never tells anyone to buy or sell.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

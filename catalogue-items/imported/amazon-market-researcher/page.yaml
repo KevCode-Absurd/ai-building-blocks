@@ -13,7 +13,7 @@ explain: |
 
   You set a narrow question, a marketplace and a scope. The skill turns it into read-only data requests through the Pangolinfo service, then compares a small set of named products or pulls out review themes with evidence. It never invents tool names. It only reads data. It cannot place orders, contact sellers or crawl beyond the documented service. Amazon's conditions and Pangolinfo's terms still apply to the data you collect. The service needs your own API key, kept in your tool's secret settings, and it may use plan credits.
 
-  Licence: CC BY 4.0 applies to this copy, as its LICENSE-CONTENT file says. Reuse it with credit to Pangolinfo and sickn33. The author's own file header says MIT, which also allows reuse with credit.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to Pangolinfo and sickn33.
 when:
   - You are sizing up a product niche before you buy stock.
   - You want to compare a few named competitors on price, rank and reviews.

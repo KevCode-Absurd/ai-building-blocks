@@ -11,7 +11,7 @@ explain: |
 
   The skill uses assay, a command line tool. It serves your page locally, opens it in a real Chromium browser through Playwright, finds every control and drives each one. It then prints a result that says where the page does not do what it promises. You run it once at the end, after your last edit, on each page you changed. The skill reports the result and does not fix the page itself. It needs Python 3.10 or newer and a one-time pip install. The first run also downloads the Chromium browser that Playwright uses.
 
-  Licence: the LICENSE-CONTENT file in this item says CC BY 4.0 for written content like this skill, and that is the licence shown for this copy. The author's own header (awss1i) says MIT. Both are permissive and both need credit, so keep the credit to awss1i and sickn33 if you share it.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to awss1i and sickn33.
 when:
   - You just made an HTML page and want a quick check.
   - You changed a script or style file and worry something broke.

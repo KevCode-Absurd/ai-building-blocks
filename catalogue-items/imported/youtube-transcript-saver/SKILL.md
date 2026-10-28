@@ -115,7 +115,7 @@ For a manual fallback today, download audio with `yt-dlp`, transcribe it with yo
 - Does not download video files or perform built-in Whisper transcription in this version.
 - Network availability, YouTube subtitle access, and local `yt-dlp` behavior determine whether ingest succeeds.
 - Saving a transcript may breach YouTube's terms or the creator's copyright. Keep notes for your own use, quote briefly and link to the video. Never fill in transcript text the script did not return.
-- Licence: the script is MIT. The text of this copy is shared under CC BY 4.0 (see LICENSE-CONTENT). Credit adelaidasofia.
+- Licence note (added by AI Blocks): this copy is credited under the MIT licence in the author's own header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Keep the credit to adelaidasofia and sickn33.
 
 ## Acceptance test
 

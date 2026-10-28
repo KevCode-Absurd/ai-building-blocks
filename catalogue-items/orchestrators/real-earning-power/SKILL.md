@@ -7,7 +7,7 @@ description: Use when you are reading a company's results, or a business you mig
 
 See what a company really earns in a normal year. Paste its income statements; get one-offs removed, padding flagged and a normal earnings range.
 
-This workflow follows the method in Security Analysis: Principles and Technique (second edition) by Benjamin Graham and David L. Dodd. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next. It is a method of analysis, not financial advice. It never tells anyone to buy or sell.
+This workflow uses ideas from Security Analysis: Principles and Technique (second edition) by Benjamin Graham and David L. Dodd. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next. It is a method of analysis, not financial advice. It never tells anyone to buy or sell.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

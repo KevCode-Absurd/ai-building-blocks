@@ -1,13 +1,13 @@
 ---
 name: customer-job-finder
-description: Use when you want to know what progress customers are really buying. It runs 2 skills in the order Clayton Christensen and others's paper teaches, and checks each result before the next step starts.
+description: Use when you want to know what progress customers are really buying. It runs 2 skills in an order we set, using ideas from Clayton Christensen and others's paper, and checks each result before the next step starts.
 ---
 
 # Find the job customers hire your product for
 
 Describe what you sell and when people buy it. Get an interview plan and the ranked reasons they bought.
 
-This workflow follows the method in Know Your Customers' Jobs to Be Done by Clayton Christensen and others. You run the planner, collect the interviews, then run the finder on what you collected.
+This workflow uses ideas from Know Your Customers' Jobs to Be Done by Clayton Christensen and others. The order of the steps is ours, not the author's. You run the planner, collect the interviews, then run the finder on what you collected.
 
 **When not to use:** if you have no customers yet, use the Buyer problem list builder to map the problems your future buyers have. If you only want to know who your best buyers are, use the Best customer finder. If you only need a script for the interview itself, use the Customer purchase interview script writer.
 

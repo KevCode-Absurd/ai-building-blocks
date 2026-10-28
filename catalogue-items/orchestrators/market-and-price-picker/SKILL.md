@@ -1,13 +1,13 @@
 ---
 name: market-and-price-picker
-description: Use when you compete on price, or you sell to anyone who will pay and want a market that can afford more. It runs 4 skills in the order Alex Hormozi's book teaches, and checks each result before the next step starts.
+description: Use when you compete on price, or you sell to anyone who will pay and want a market that can afford more. It runs 4 skills in an order we set, using ideas from Alex Hormozi's book, and checks each result before the next step starts.
 ---
 
 # Pick a market worth selling to and its price
 
 Give it your offer and who might buy. Get the best narrow market and a price that fits what it is worth.
 
-This workflow follows the method in $100M Offers: How To Make Offers So Good People Feel Stupid Saying No by Alex Hormozi. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from $100M Offers: How To Make Offers So Good People Feel Stupid Saying No by Alex Hormozi. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 Run alone, each skill starts from only what you tell it. Run in this chain, the market chosen in step 2 and the ladder built in step 3 feed the price in step 4, so the price is for the one narrow market you committed to.
 

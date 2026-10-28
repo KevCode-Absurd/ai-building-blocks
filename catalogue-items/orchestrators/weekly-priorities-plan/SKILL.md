@@ -11,7 +11,7 @@ Use it when: your days fill with small urgent jobs and the big work never starts
 
 Not for: one fixed deadline or a one-off project (use the [Weekly big task sorter](https://useaiblocks.com/skills/weekly-big-task-sorter) for that), planning a single day, or having no task list and no idea of your roles.
 
-This workflow follows the method in The 7 Habits of Highly Effective People (25th anniversary edition) by Stephen R. Covey. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next. The sort in step 1 is Covey's urgent and important grid. The four skill files come in the handoff pack with HANDOFF.md.
+This workflow uses ideas from The 7 Habits of Highly Effective People (25th anniversary edition) by Stephen R. Covey. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next. The sort in step 1 is Covey's urgent and important grid. The four skill files come in the handoff pack with HANDOFF.md.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

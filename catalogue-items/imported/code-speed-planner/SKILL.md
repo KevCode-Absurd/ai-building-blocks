@@ -255,3 +255,5 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Database schema planner](https://useaiblocks.com/skills/database-schema-planner). It takes the code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+Changed by AI Blocks (2026-10-28): gave it a plain name and added Before you start and After this sections that link to other AI Blocks steps.

@@ -13,7 +13,7 @@ explain: |
 
   Outside reference screens are optional and used only to answer a clear visual question. UIZZE, the author, offers an account-based tool for that. The skill works without it. The last step is to render the result, look at it and fix clipping, overlap or dead buttons. It covers web and iOS.
 
-  Licence: CC BY 4.0 applies to this copy, as the LICENSE-CONTENT file in this folder says. That file governs. The author's own file header says MIT, which is the author's label for the original. Credit goes to UIZZE and sickn33.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to UIZZE and sickn33.
 when:
   - You are building a screen and want it to match your product.
   - AI-built screens keep coming out generic.

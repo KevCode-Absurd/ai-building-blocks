@@ -7,7 +7,7 @@ description: Use when you know the job your customer hires you for but your prod
 
 Give it your job spec, your feature requests and the numbers you track. Get the key moments of the customer's path, the features to keep, a name for the job and measures of progress.
 
-This workflow follows the method in Competing Against Luck by Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan. Each step is its own skill. You run them one after another, and each result is saved and passed to the next. It works on one job in one circumstance at a time.
+This workflow uses ideas from Competing Against Luck by Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each result is saved and passed to the next. It works on one job in one circumstance at a time.
 
 <!-- needs: written by hand for this workflow (needs_mode: manual in item.yaml). -->
 ## Before you start

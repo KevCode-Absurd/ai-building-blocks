@@ -11,7 +11,7 @@ explain: |
 
   After each answer it patches your words into the right section, never rewriting the whole file, then asks the next question or a follow-up if the answer was thin. It will not suggest content for you. That keeps the document honest, because the thinking is yours. It is a good fit for quarterly reviews or notes you will return to for years. It is not for day planning or task lists.
 
-  Licence: the skill file's own header (davidondrej) says MIT, and that covers the skill text. sickn33's LICENSE-CONTENT file (CC BY 4.0) applies only where no more specific upstream notice exists. This page text is ours. Keep the MIT notice and credit davidondrej and sickn33.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to davidondrej and sickn33.
 when:
   - You need to write down your priorities but staring at a blank page stalls you.
   - You want a quarterly review that reflects your real thinking.

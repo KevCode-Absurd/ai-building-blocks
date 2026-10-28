@@ -11,7 +11,7 @@ explain: |
 
   The skill pulls out each endpoint's name, method, URL, headers, authentication, body and query parameters. It puts the host in a base_url variable so you can switch between environments. It then writes a valid Collection v2.1 JSON file with folders for related requests. When something is unclear, it follows common REST habits and lists its guesses at the end so you can correct them. You can mix described endpoints and cURL in one request.
 
-  Licence: LambdaTest wrote the skill and marked it MIT in the skill file's header. sickn33 collected it, and the LICENSE-CONTENT file in this item sets CC BY 4.0 for the written text. Both let you reuse it if you give credit. Credit LambdaTest (author) and sickn33 (collection) on any copy you share.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to sickn33.
 when:
   - You have a dozen cURL commands and want them organised.
   - A new teammate needs a way to try your API.

@@ -9,7 +9,7 @@ subhead: Give it normal earnings, the balance sheet and the share price. It labe
 explain: |
   Nobody can say what a company is exactly worth. You do not need to. You need to know if the price is well under a sensible range, well over it, or in the fog between. In the fog, the purchase depends on one estimate being right, and that is a bet.
 
-  This workflow follows the method in the 1940 edition of Security Analysis by Benjamin Graham and David Dodd. It values the shares from normal earnings with a ceiling on the multiple, builds a floor from the balance sheet with stated markdowns, and then sets the price against both. It asks why the price might be wrong and whether the cause is neglect or real decline. It is a method of analysis, not financial advice. It never says buy or sell and names no price to pay.
+  This workflow uses ideas from the 1940 edition of Security Analysis by Benjamin Graham and David Dodd. The order of the steps is ours, not the authors'. It values the shares from normal earnings with a ceiling on the multiple, builds a floor from the balance sheet with stated markdowns, and then sets the price against both. It asks why the price might be wrong and whether the cause is neglect or real decline. It is a method of analysis, not financial advice. It never says buy or sell and names no price to pay.
 when:
   - You are thinking of buying shares or a small business and want to compare price with value.
   - A share price looks cheap, or very high, and you want to know how much rests on hope.

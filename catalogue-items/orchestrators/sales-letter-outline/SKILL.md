@@ -1,6 +1,6 @@
 ---
 name: sales-letter-outline
-description: Use when you are about to write a long sales page or letter and want the research done first. It runs 3 skills in the order Clayton Makepeace's talk teaches, and checks each result before the next step starts.
+description: Use when you are about to write a long sales page or letter and want the research done first. It runs 3 skills in an order we set, using ideas from Clayton Makepeace's talk, and checks each result before the next step starts.
 ---
 
 # Research your buyer and outline the sales letter
@@ -11,7 +11,7 @@ Use it when: you are about to write a long sales page or letter and want the res
 
 Not for: a short product page with little else (find real buyer words first), research you already have and want the finished page from (use the Proof-backed sales copy writer), or when you only want to know what buyers worry about.
 
-This workflow follows the method in The 7 Daily Habits of Successful Copywriters by Clayton Makepeace. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from The 7 Daily Habits of Successful Copywriters by Clayton Makepeace. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

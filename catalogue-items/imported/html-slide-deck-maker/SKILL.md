@@ -31,7 +31,7 @@ How to start:
 
 ## Licence and risk notes (added by AI Blocks)
 
-- Licence: the skill text is shared under CC BY-4.0 (`LICENSE-CONTENT`). The bundled helper scripts keep the original MIT licence (`UPSTREAM-LICENSE.txt`). The `license: MIT` line above is the original author's own declaration.
+- Licence note (added by AI Blocks): this copy is credited under the MIT licence in the author's own header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). The bundled helper scripts keep their original MIT licence (`UPSTREAM-LICENSE.txt`). Keep the credit to zarazhangrui and sickn33.
 - `risk: critical` above means this skill writes files and can run local helper scripts (PDF export, PowerPoint extraction). Before running any script, read it, and run it only inside the deck folder. Open generated HTML only after you have looked at it.
 
 ## Bundled upstream support

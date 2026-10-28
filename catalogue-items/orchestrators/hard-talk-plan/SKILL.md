@@ -1,13 +1,13 @@
 ---
 name: hard-talk-plan
-description: Use when you must ask for something, change a mind or settle a dispute, and you want to keep the relationship. It runs 4 skills in the order Dale Carnegie's book teaches, and checks each result before the next step starts.
+description: Use when you must ask for something, change a mind or settle a dispute, and you want to keep the relationship. It runs 4 skills in an order we set, using ideas from Dale Carnegie's book, and checks each result before the next step starts.
 ---
 
 # Plan a hard talk so they end up agreeing
 
 Describe the talk you dread. Get their side, a plan, easy yeses in order and lines for pushback.
 
-This workflow follows the method in How to Win Friends and Influence People (1981 revised edition) by Dale Carnegie. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from How to Win Friends and Influence People (1981 revised edition) by Dale Carnegie. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

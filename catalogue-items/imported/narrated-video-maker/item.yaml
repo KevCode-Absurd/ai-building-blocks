@@ -19,8 +19,8 @@ source:
   repo: sickn33/agentic-awesome-skills
   path: skills/md2video-audio
   url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/md2video-audio
-  licence: CC-BY-4.0
-  licence_file: LICENSE-CONTENT
+  licence: Apache-2.0
+  licence_file: LICENSE
   commit: 0c10eb8
   original_name: md2video-audio
   author: 70v-Yoyo
@@ -30,7 +30,7 @@ credits:
   - title: md2video-audio skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/md2video-audio
-    used: Copied under the CC BY-4.0 licence (LICENSE-CONTENT). The skill file itself says Apache-2.0. We gave it a plain name and replaced the calls to video scripts missing from this package with direct Marp, edge-tts and ffmpeg steps. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the Apache 2.0 licence named in its own header (sickn33's collection labels it CC BY 4.0). We gave it a plain name and replaced the calls to video scripts missing from this package with direct Marp, edge-tts and ffmpeg steps. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: 70v-Yoyo
     url: https://github.com/70v-Yoyo

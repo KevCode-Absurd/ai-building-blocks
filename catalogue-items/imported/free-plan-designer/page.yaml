@@ -13,7 +13,7 @@ explain: |
 
   It also lists what to keep free, such as core features and integrations, and what to gate, such as team controls and support terms. It adds upgrade messages that warn early and offer a choice, plus the questions a pricing page should answer. The skill is written for developer tools, so some examples will not fit other products.
 
-  Licence: for reuse, follow the MIT licence the author names in the skill file header. That covers the skill text. Our LICENSE-CONTENT file (CC BY 4.0) covers only the rest of this page. Credit jonathimer if you reuse it.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to jonathimer and sickn33.
 when:
   - You are launching a developer tool and must decide what to give away.
   - Your free users never pay, or they leave angry about limits.

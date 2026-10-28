@@ -11,7 +11,7 @@ explain: |
 
   It works through six steps with Unsloth. First, it estimates memory before any code. Then it loads the model and fixes the chat template, a common cause of models that ignore stop tokens. It attaches LoRA adapters, runs the training, and exports to the format your runtime needs, such as GGUF. It covers QLoRA on a 16 GB GPU and reward-based methods like GRPO and DPO. You need Python and a GPU.
 
-  Licence: the skill text in this copy is shared under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header says Apache-2.0, which covers the author's code. Unsloth's core package is Apache-2.0, and optional parts such as its Studio app are AGPL-3.0.
+  Licence: this copy is credited under the Apache 2.0 licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to A-ryanVAT-S and sickn33.
 when:
   - You want a model that follows your format and have one consumer GPU.
   - Training crashes with out of memory part way through.

@@ -21,8 +21,8 @@ source:
   repo: sickn33/agentic-awesome-skills
   path: skills/building-native-ui
   url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/building-native-ui
-  licence: CC-BY-4.0
-  licence_file: LICENSE-CONTENT
+  licence: MIT
+  licence_file: LICENSE
   commit: 0c10eb8
   original_name: building-native-ui
   author: Expo
@@ -32,7 +32,7 @@ credits:
   - title: building-native-ui skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/building-native-ui
-    used: Copied under the CC BY-4.0 licence (LICENSE-CONTENT). The skill file itself says MIT. We gave it a plain name, added notes on SDK-dependent imports and undefined handlers, and added empty stub handlers to the context menu example. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the MIT licence named in its own header (sickn33's collection labels it CC BY 4.0). We gave it a plain name, added notes on SDK-dependent imports and undefined handlers, and added empty stub handlers to the context menu example. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: Expo
     url: https://github.com/expo/skills

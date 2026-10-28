@@ -11,7 +11,7 @@ explain: |
 
   The skill turns your request into a single Apify run. You can search by keyword, set a date window, pull every comment in a thread, or get the newest posts from several subreddits. This helps with brand watching, finding what people ask for, or tracking mentions since a date. The Apify run is a paid service charged per result, built by the skill author, and it needs an Apify account. Scraping Reddit may break Reddit's terms, so check them first and collect public data only.
 
-  Licence: harshmaur wrote the skill and marked it MIT in the skill file's header. sickn33 collected it, and the LICENSE-CONTENT file in this item sets CC BY 4.0 for the written text. Both let you reuse it if you give credit. Credit harshmaur (author) and sickn33 (collection) on any copy you share.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to harshmaur and sickn33.
 when:
   - You want every post where someone asks for an alternative to a rival tool.
   - You want to see who mentioned your brand since last month.

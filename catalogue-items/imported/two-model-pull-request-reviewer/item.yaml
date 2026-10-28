@@ -21,8 +21,8 @@ source:
   repo: sickn33/agentic-awesome-skills
   path: skills/debate-review
   url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/debate-review
-  licence: CC-BY-4.0
-  licence_file: LICENSE-CONTENT
+  licence: MIT
+  licence_file: LICENSE
   commit: 0c10eb8
   original_name: debate-review
   author: amElnagdy
@@ -32,7 +32,7 @@ credits:
   - title: debate-review skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/debate-review
-    used: Adapted under the CC BY-4.0 licence. We gave it a plain name and added a by-hand way to run it, a cost note and an output format.
+    used: Adapted under the MIT licence named in its own header (sickn33's collection labels it CC BY 4.0). We gave it a plain name and added a by-hand way to run it, a cost note and an output format.
   - title: Original author
     by: amElnagdy
     url: https://github.com/amElnagdy

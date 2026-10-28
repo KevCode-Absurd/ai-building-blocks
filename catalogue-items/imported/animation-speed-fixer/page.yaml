@@ -11,7 +11,7 @@ explain: |
 
   It sorts the work by what the browser must redo each frame. Moving or fading with transform and opacity is cheap. Changing colours, gradients and filters costs more. Changing size or position forces a full layout and costs the most. The skill flags common traps: reading and writing layout in the same frame, animating large areas, tying motion to scroll in a heavy way, and heavy blur.
 
-  Licence: CC BY 4.0 applies to this copy, as its LICENSE-CONTENT file says. Reuse it with credit to ibelick and sickn33. The author's own file header says MIT, which also allows reuse with credit.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to ibelick and sickn33.
 when:
   - Your page janks while scrolling and you suspect the animations.
   - A menu or card slide drops frames on phones.

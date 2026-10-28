@@ -1,13 +1,13 @@
 ---
 name: pivot-or-persevere
-description: Use when you have run a first test or launched, your totals are rising, and you cannot tell if your work is making a difference. It runs 5 skills in the order Eric Ries's book teaches, and checks each result before the next step starts.
+description: Use when you have run a first test or launched, your totals are rising, and you cannot tell if your work is making a difference. It runs 5 skills in an order we set, using ideas from Eric Ries's book, and checks each result before the next step starts.
 ---
 
 # Measure real progress and decide to pivot or persevere
 
 Paste your plan and your numbers. Get honest progress measures by customer group and a dated pivot or persevere call.
 
-This workflow follows the method in The Lean Startup by Eric Ries. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from The Lean Startup by Eric Ries. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

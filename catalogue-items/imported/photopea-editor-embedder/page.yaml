@@ -11,7 +11,7 @@ explain: |
 
   The skill uses the photopea.js wrapper instead of hand-written message passing. It gives scripts for common jobs such as renaming text layers from their contents, exporting each layer as its own PNG, and editing text, selections, filters, colours and paths. A detailed guide holds the full steps, safety notes and checks, and the skill says to read it first. It needs web development skills.
 
-  Licence: two licences apply, as the LICENSE-CONTENT file says. The code and scripts are MIT, which is what the author's own file header (yikuansun) says. The written text of this copy is CC BY 4.0. Keep the credit to yikuansun and sickn33 with any copy you share.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to sickn33.
 when:
   - You are adding image editing to your product.
   - You need to export every layer of a design as a separate file.

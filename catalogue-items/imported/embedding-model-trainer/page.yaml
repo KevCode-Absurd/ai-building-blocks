@@ -17,7 +17,7 @@ explain: |
 
   What AI Blocks changed from the source skill: we added the one-line WIN, MARGINAL or REGRESSION verdict, the local-only default, a cost warning and a plain run order.
 
-  Licence: one licence applies to this copy, CC BY 4.0, as the LICENSE-CONTENT file says. That file governs. The author's own file header (Hugging Face skills) says Apache-2.0 for the original. Both allow reuse with credit, so keep the credit to Hugging Face and sickn33.
+  Licence: this copy is credited under the Apache 2.0 licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to Hugging Face and sickn33.
 when:
   - Ready-made search misses results in your field, such as legal, medical or product terms.
   - You need a reranker to sort the top 100 search results.

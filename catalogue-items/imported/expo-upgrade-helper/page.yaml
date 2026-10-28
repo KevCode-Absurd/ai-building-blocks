@@ -13,7 +13,7 @@ explain: |
 
   The skill follows a step-by-step upgrade, then deals with version-specific changes using its notes. These cover React 19 changes, the New Architecture, the React Compiler, native tabs, moving from the old audio and video package to the new ones, and moving navigation imports to Expo Router. It can also install preview releases when you want to try a beta. Dependency mismatches are fixed with Expo's own install tool.
 
-  Licence: one licence applies to this copy, CC BY 4.0, as the LICENSE-CONTENT file says. That file governs. The skill file's own header (Expo) says MIT for the original. Both allow reuse with credit, so keep the credit to Expo and sickn33.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to Expo and sickn33.
 when:
   - A new Expo release is out and your app is several versions behind.
   - Packages fail to install after you bump the version.

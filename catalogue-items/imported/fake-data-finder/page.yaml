@@ -11,7 +11,7 @@ explain: |
 
   You give a live URL. A browser walks the page, takes a full screenshot, and lists every heading, button, card, stat and table cell. With your approval it clicks tabs and safe buttons, and watches network calls and console errors. Each value is labelled real, mocked, hardcoded, generated or broken. Warning signs include round numbers, clustered timestamps and values that never change. You confirm ownership and which actions are allowed before it starts.
 
-  Licence: the skill file's header names the author's MIT licence, and sickn33's collection, where we copied it from, ships it with a CC BY 4.0 file (LICENSE-CONTENT). Both allow reuse with credit. Credit CodeShuX and sickn33 if you reuse it.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to CodeShuX and sickn33.
 when:
   - You built a dashboard with an AI tool and are unsure what is connected.
   - A contractor delivered an app and you need a check before you pay.

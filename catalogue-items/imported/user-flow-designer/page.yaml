@@ -9,7 +9,7 @@ subhead: Say what a person wants to do in your app, and get a clear flow from fi
 explain: |
   Say what a person wants to do in your app, and get a clear flow from first tap to done, plus a navigation layout that fits it. Every step has a way in, a way out and a way back from errors.
 
-  Licence: the LICENSE-CONTENT file in this item says CC BY 4.0 for written content like this skill, and that is the licence shown for this copy. The author's own header (bitjaru, styleseed) says MIT. Both are permissive and both need credit, so keep the credit to the author if you share it.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to bitjaru and sickn33.
 
   The skill applies simple rules. Show only what is needed at each step. Keep choices per screen low. Group items in sets of five to nine. Reach any key feature in three taps or fewer. It picks a pattern: hub and spoke for dashboards, a straight line for forms and checkout, or tabs for three to five main areas. It adds loading, empty and error states, and makes each screen answer one main question.
 when:

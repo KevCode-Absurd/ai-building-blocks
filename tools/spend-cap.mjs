@@ -1,7 +1,7 @@
 // A hard cap on Anthropic API spend, shared by every script that calls the API (test-blocks.mjs, screen-items.mjs).
 //
-// Kevin approved $200 in total, counted from 2026-10-26 on, across every label and script. Nothing goes out when
-// spent + this call's estimate would pass the cap minus the headroom ($10), so real spend stays under $200 even when
+// Kevin approved $200 in total, counted from 2026-10-26 on, and raised it by $10 to $210 on 2026-10-28, across every label and script. Nothing goes out when
+// spent + this call's estimate would pass the cap minus the headroom ($10), so real spend stays under the cap even when
 // an estimate runs low.
 //
 // "Spent" is the larger of two counts:
@@ -18,7 +18,7 @@ import { fileURLToPath } from "node:url";
 const here = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(here, "..");
 export const SINCE = "2026-10-26";
-export const CAP_USD = 200;
+export const CAP_USD = 210;
 // A script may keep back less (never under $2) by setting SPEND_HEADROOM_USD, e.g. for the last job before the cap.
 export const HEADROOM_USD = Math.max(2, Number(process.env.SPEND_HEADROOM_USD) || 10);
 export const LEDGER = path.join(ROOT, "runs", `api-spend-${SINCE}.json`);

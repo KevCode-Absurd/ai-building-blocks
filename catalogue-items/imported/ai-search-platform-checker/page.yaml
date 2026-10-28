@@ -11,7 +11,7 @@ explain: |
 
   For every platform, it runs a checklist and gives a score from 0 to 100. Google AI Overviews checks include question headings, direct answers under them, tables, lists, a FAQ, cited statistics, dates and author bylines. The output is one file with a score, the gaps and action items for each platform. Fix the platform that matters most to your buyers first.
 
-  Licence: CC BY 4.0 applies to this copy, as the LICENSE-CONTENT file in this folder says. That file governs. The author's own file header (zubair-trabzada) says MIT, which is the author's label for the original. Credit goes to zubair-trabzada and sickn33.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to zubair-trabzada and sickn33.
 when:
   - You rank in Google but never appear in ChatGPT answers.
   - You want to pick which AI platform to work on first.

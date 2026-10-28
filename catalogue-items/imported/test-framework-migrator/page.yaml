@@ -11,7 +11,7 @@ explain: |
 
   The skill first detects the source framework from your code, looking for signs like By.id, cy.get or page.goto. It confirms the target. If either is unclear, it asks. It then maps the old calls to the new ones: locators, waits, assertions, setup and teardown. It replaces explicit waits with the target's own waiting model, and notes features with no direct match so you can decide what to do. The result is converted files with a list of anything that needs manual review.
 
-  Licence: the author's own file header (LambdaTest) says MIT, and that covers this skill text. sickn33's LICENSE-CONTENT file (CC BY 4.0) applies only where no more specific upstream notice exists. Keep the MIT notice and credit LambdaTest and sickn33.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to LambdaTest and sickn33.
 when:
   - Your team is moving from Selenium to Playwright.
   - Cypress tests must run in a different tool for cross-browser coverage.

@@ -200,3 +200,5 @@ Use these prompts to validate the skill behavior:
 - "We're halfway through moving from the legacy flat layout to folder-based migrations. How do we handle a conflict during the transition?"
 - "Our `drizzle.config.ts` sets `out` from `process.env.MIGRATIONS_DIR`, and the helper says no out directory was found. What now?"
 - "`drizzle-kit check` keeps failing on a migration we know commutes. Can we just always pass `--ignore-conflicts`?"
+
+Changed by AI Blocks (2026-10-28): gave it a plain name and added Before you start and After this sections that link to other AI Blocks steps.

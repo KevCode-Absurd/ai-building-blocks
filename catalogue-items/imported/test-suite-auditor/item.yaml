@@ -19,8 +19,8 @@ source:
   repo: sickn33/agentic-awesome-skills
   path: skills/agentic-test-audit
   url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/agentic-test-audit
-  licence: CC-BY-4.0
-  licence_file: LICENSE-CONTENT
+  licence: MIT
+  licence_file: LICENSE
   commit: 0c10eb8
   original_name: agentic-test-audit
   author: Tim Richardson
@@ -30,7 +30,7 @@ credits:
   - title: agentic-test-audit skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/agentic-test-audit
-    used: Shared by sickn33 (LICENSE-CONTENT, CC BY-4.0); the skill file's own MIT header covers the skill text. We gave it a plain name and added a licence note.
+    used: Copied under the MIT licence named in its own header (sickn33's collection labels it CC BY 4.0). We gave it a plain name and added a licence note.
   - title: Original author
     by: Tim Richardson
     url: https://github.com/timini/agentic-verification

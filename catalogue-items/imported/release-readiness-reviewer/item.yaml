@@ -19,8 +19,8 @@ source:
   repo: sickn33/agentic-awesome-skills
   path: skills/pre-release-review
   url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/pre-release-review
-  licence: CC-BY-4.0
-  licence_file: LICENSE-CONTENT
+  licence: Apache-2.0
+  licence_file: LICENSE
   commit: 0c10eb8
   original_name: pre-release-review
   author: chaunsin
@@ -30,7 +30,7 @@ credits:
   - title: pre-release-review skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/pre-release-review
-    used: "Copied without changes to the text, and renamed from pre-release-review to a plain name. Licence split: the SKILL.md header is the author's Apache-2.0 licence for the skill file; LICENSE-CONTENT sets CC BY 4.0 for the collection's written text."
+    used: "Credited under the Apache 2.0 licence named in its own header (sickn33's collection labels it CC BY 4.0). Copied without changes to the text, and renamed from pre-release-review to a plain name. Licence split: the SKILL.md header is the author's Apache-2.0 licence for the skill file; LICENSE-CONTENT sets CC BY 4.0 for the collection's written text."
   - title: Original author
     by: chaunsin
     url: https://github.com/chaunsin

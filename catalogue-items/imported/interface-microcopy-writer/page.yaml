@@ -11,7 +11,7 @@ explain: |
 
   The skill applies a short rule set. Buttons name the action, so "Save changes", not "Submit". Errors help and never blame. Empty states invite the next step. Money messages stay calm. One term is used for each idea across the product. It follows your voice notes or design language if you paste them in, so the voice matches. It handles one language per run and does not cover long content, full feedback design, or defining a brand voice.
 
-  Licence: the one licence for the written text of this skill is CC BY-4.0 (the LICENSE-CONTENT file). The "MIT" line in the SKILL.md header is the original author's own declaration for their own code repo, not the licence for this text. Keep the credit to the author.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to bitjaru and sickn33.
 when:
   - Your error messages say "Invalid input" and nothing more.
   - You have a new screen and need every label and message.

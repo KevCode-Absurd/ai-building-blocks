@@ -10,7 +10,7 @@ license: Apache-2.0
 license_source: https://github.com/neondatabase/agent-skills/blob/main/LICENSE
 ---
 
-<!-- Licence note: this copy is shared under CC BY 4.0 (see LICENSE-CONTENT). The Apache-2.0 line in the header above is Neon's own, kept as the upstream source. -->
+<!-- Licence note (AI Blocks): this copy is credited under the Apache 2.0 licence in the author's own header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Keep the credit to Neon and sickn33. -->
 
 # Claimable Postgres
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
@@ -282,3 +282,5 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Database designer](https://useaiblocks.com/skills/database-design-guide). It takes the code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+Changed by AI Blocks (2026-10-28): gave it a plain name and added Before you start and After this sections that link to other AI Blocks steps.

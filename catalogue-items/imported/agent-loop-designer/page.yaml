@@ -11,7 +11,7 @@ explain: |
 
   Start by saying what you want done. The skill first looks through a catalogue of published loops and offers the closest one or two. You can copy one as it is, change its limits, tools and schedule, or design a new one from a few plain questions. The published loops come from a public collection written by Forward Future, so this is a copy of their work and not a loop we wrote. Each loop gets a test that proves progress, rules for stopping, guardrails on what the agent may touch, and a note on who picks up the result.
 
-  Licence: CC BY 4.0 applies to this copy, as the LICENSE-CONTENT file in this folder says. That file governs. The author's own file header (Forward Future) says MIT, which is the author's label for the original. Credit goes to Forward Future and sickn33.
+  Licence: this copy is credited under the MIT licence named in the author's own file header (see LICENSE). sickn33's collection labels it CC BY 4.0 (LICENSE-CONTENT). Credit goes to Forward Future and sickn33.
 when:
   - You want an agent to keep working on a task until a check passes.
   - You want something to run on a schedule, like a daily review.

@@ -21,8 +21,8 @@ source:
   repo: sickn33/agentic-awesome-skills
   path: skills/geo-brand-mentions
   url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/geo-brand-mentions
-  licence: CC-BY-4.0
-  licence_file: LICENSE-CONTENT
+  licence: MIT
+  licence_file: LICENSE
   commit: 0c10eb8
   original_name: geo-brand-mentions
   author: zubair-trabzada
@@ -32,7 +32,7 @@ credits:
   - title: geo-brand-mentions skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/geo-brand-mentions
-    used: Adapted. The original skill is MIT; the written text in sickn33's collection is CC BY 4.0. We added a plain-language section and gave it a plain name.
+    used: Adapted under the MIT licence named in its own header (sickn33's collection labels it CC BY 4.0). We added a plain-language section and gave it a plain name.
   - title: Original author
     by: zubair-trabzada
     url: https://github.com/zubair-trabzada/geo-seo-claude

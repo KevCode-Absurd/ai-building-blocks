@@ -7,7 +7,7 @@ description: Use when you are busy but unsure the work fits what you care about,
 
 Describe what matters to you. Get a mission statement built from your roles and a test of it on real choices.
 
-This workflow follows the method in The 7 Habits of Highly Effective People (25th anniversary edition) by Stephen R. Covey. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+This workflow uses ideas from The 7 Habits of Highly Effective People (25th anniversary edition) by Stephen R. Covey. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

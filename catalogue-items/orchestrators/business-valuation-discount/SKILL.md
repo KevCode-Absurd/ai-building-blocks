@@ -7,7 +7,7 @@ description: Use when you have a price for a business or a share of one and want
 
 See what a business is worth and if its price leaves room for error. Paste the accounts and price; get a value range and verdict.
 
-This workflow follows the method in The Warren Buffett Way (Second Edition) by Robert G. Hagstrom. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next. The sums are estimates. It is a method of analysis, not financial advice, and it never tells anyone to buy or sell.
+This workflow uses ideas from The Warren Buffett Way (Second Edition) by Robert G. Hagstrom. The order of the steps is ours, not the author's. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next. The sums are estimates. It is a method of analysis, not financial advice, and it never tells anyone to buy or sell.
 
 **When not to use it.** This is not a buy or sell call, and it does not give a share price. If you have not yet checked the business is any good, run Find out if a business is worth owning long term first. If you hold a listed company and want an asset floor from its balance sheet, use Value a stock with a margin of safety. If you are buying a whole small business from a broker's listing, use Check a small business before you buy it.
 

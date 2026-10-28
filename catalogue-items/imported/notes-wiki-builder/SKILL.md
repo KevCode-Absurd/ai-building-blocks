@@ -10,7 +10,7 @@ date_added: "2026-08-16"
 author: 5dive-ai
 tags: [knowledge-management, memory, documentation, wiki, notes]
 tools: [claude, cursor, gemini]
-license: "MIT" # AI Blocks: this is the author's own header, kept as written. sickn33's collection shares this copy under CC BY 4.0 (see LICENSE-CONTENT).
+license: "MIT"
 license_source: "https://github.com/5dive-ai/skills/blob/main/LICENSE"
 ---
 

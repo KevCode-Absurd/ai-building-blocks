@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Customer needs** with the [Customer task definition writer](https://useaiblocks.com/skills/job-spec-writer). Bring customer words (optional). It uses your shortlist.
+1. **Customer needs** with the [Customer task definition writer](https://useaiblocks.com/skills/job-spec-writer). Bring a shortlist, customer words (optional).
 2. This one.
 
 How to start:

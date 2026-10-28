@@ -12,6 +12,8 @@ explain: |
   You describe your devices, cloud services, home working and who uses what. The skill checks the five control themes: firewalls, secure setup, updates, user access and malware protection. It flags the automatic fail points, such as missing multi-factor login on cloud services and updates older than 14 days. It also applies the scope rules for cloud, personal devices and remote staff, and explains how Plus testing differs. It states which question set version applies. It also lists prices by company size as the author last checked them (2026-09-14). Prices, cover and deadlines change, so confirm each one on the IASME and NCSC sites before you decide.
 
   Licence: MIT, as the LICENSE file in this item says. Credit goes to the original author.
+
+  Version check, 28 Oct 2026: [NCSC confirms v3.3 from 27 April 2026](https://www.ncsc.gov.uk/cyberessentials/resources), and [IASME confirms the Danzell question set](https://iasme.co.uk/cyber-essentials/preview-the-self-assessment-questions-for-cyber-essentials/). Prices, insurance terms and other deadlines remain dated author figures and need a separate check.
 when:
   - You want Cyber Essentials for a tender or for cyber insurance.
   - You are unsure which devices and cloud tools count in scope.

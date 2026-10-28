@@ -11,6 +11,8 @@ status: stable
 compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
+**Source check by AI Blocks, 28 Oct 2026:** The [Shopify store auth reference](https://shopify.dev/docs/api/shopify-cli/store/store-auth) requires --store and comma-separated --scopes. Replace REQUIRED_SCOPES with the least permissions for the actual queries and mutations; confirm them in the Admin API reference before signing in. Do not run a command with placeholders. Complete browser sign-in yourself and keep tokens out of chat and logs. This is a documentation check, not a store login or live API test.
+
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -32,7 +34,7 @@ How to start:
 Applies inventory quantity corrections to specific variants at specific locations — the programmatic equivalent of manually editing inventory in the Shopify admin. Use after a cycle count reveals discrepancies, after a 3PL return batch posts late, or after a stock check, such as the Stock sync error finder, finds Available/Committed drift. Replaces manual row-by-row inventory editing in the Shopify admin.
 
 ## Prerequisites
-- `shopify auth login --store <domain>`
+- `shopify store auth --store <domain> --scopes <REQUIRED_SCOPES>`
 - API scopes: `read_products`, `write_inventory`
 
 ## Parameters

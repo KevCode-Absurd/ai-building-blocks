@@ -5,7 +5,7 @@ description: "Expert Vietnam Personal Data Protection Law (PDPL) compliance advi
 
 # Vietnam Personal Data Protection Law (PDPL) Skill
 
-> **Last verified by the author:** 2026-09-05. AI Blocks did not re-check it. The effective dates, the 72-hour breach rule and every deadline in this file are the author's summary of Law 91/2025 and Decree 356/2025. They are not checked against the official text. Ask the user to confirm each one on vbpl.vn or with Vietnamese counsel before relying on it, and to paste the official law text if they want a precise check.
+> **Source status:** the author last checked this summary on 2026-09-05. On 28 Oct 2026, AI Blocks confirmed the law number and 1 January 2026 start date on the [official Government Gazette page](https://congbao.chinhphu.vn/van-ban/luat-so-91-2025-qh15-45578/57730.htm), which links the original law and PDF. We did not verify every obligation in this file or its implementing decree, including breach deadlines. Match any duty or deadline to the current official Article and have Vietnamese counsel review it before relying on it.
 
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start

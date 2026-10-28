@@ -5,11 +5,13 @@ name: Vietnam data privacy checker
 summary: Check your Vietnam data privacy duties under the 2026 law. Describe your data and get a gap list, transfer checks and a fix plan.
 job: check-contracts
 headline: Vietnam data privacy checker
-subhead: A clear list of what Vietnam's new personal data law asks of you, with gaps marked and a plan to close them. According to the skill's own summary, the law took effect on 1 January 2026 and reaches foreign firms that handle data about people in Vietnam. Confirm the date on vbpl.vn.
+subhead: "Find gaps in how you handle personal data under Vietnam's privacy law. Bring your data flows and get a draft fix plan for Vietnamese counsel to review."
 explain: |
-  A clear list of what Vietnam's new personal data law asks of you, with gaps marked and a plan to close them. According to the skill's own summary, the law took effect on 1 January 2026 and reaches foreign firms that handle data about people in Vietnam. Confirm the date on vbpl.vn.
+  Find gaps in how you handle personal data under Vietnam's privacy law. Bring your data flows and get a draft fix plan for Vietnamese counsel to review.
 
-  You describe what personal data you collect and where it goes. The skill sorts it into basic and sensitive data, checks your consent and notices, and tests any transfer abroad. It then covers breach reporting, sector rules for finance, AI and cloud, and what your data protection officer needs. It works from the skill author's summary of the law and its decree, not from the official text. Paste the official text from vbpl.vn if you want your AI to check against it.
+  You describe what personal data you collect and where it goes. The skill sorts it into basic and sensitive data, checks your consent and notices, and tests any transfer abroad. It then covers breach reporting, sector rules for finance, AI and cloud, and what your data protection officer needs. It starts from the author's summary. Check each duty and deadline against the official law and its decree before relying on the result.
+
+  Source check, 28 Oct 2026: the [official law and PDF](https://congbao.chinhphu.vn/van-ban/luat-so-91-2025-qh15-45578/57730.htm) confirm Law 91/2025/QH15 and its 1 January 2026 start date. Other duties and decree deadlines in the author's summary remain unchecked until matched to the official Articles.
 when:
   - You sell to customers in Vietnam and need to know what the new law requires of you.
   - You send Vietnamese user data to servers or vendors in another country.

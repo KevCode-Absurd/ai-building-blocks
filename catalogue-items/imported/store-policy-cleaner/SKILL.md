@@ -14,6 +14,8 @@ audit_signals:
   - returns-policy-readable
 ---
 
+**Source check by AI Blocks, 28 Oct 2026:** The [Shopify store auth reference](https://shopify.dev/docs/api/shopify-cli/store/store-auth) requires --store and comma-separated --scopes. Replace REQUIRED_SCOPES with the least permissions for the actual queries and mutations; confirm them in the Admin API reference before signing in. Do not run a command with placeholders. Complete browser sign-in yourself and keep tokens out of chat and logs. This is a documentation check, not a store login or live API test.
+
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -34,7 +36,7 @@ How to start:
 Before an AI agent completes a purchase for a shopper it checks the store's policies — "Do they ship to me? What's the return window?" If shipping/returns policies are missing, empty, or buried in an image/PDF, the agent can't answer, loses confidence, and abandons or sends the shopper elsewhere. This skill audits the store's policies and ensures the key ones exist as clean, plain-text/HTML content an agent can read and quote. Fixes `shipping-policy-readable` and `returns-policy-readable`.
 
 ## Prerequisites
-- Authenticated Shopify CLI session (`shopify auth login --store <domain>`)
+- Authenticated Shopify CLI session (`shopify store auth --store <domain> --scopes <REQUIRED_SCOPES>`)
 - Required API scopes: `read_legal_policies` (or `read_online_store_pages`), `write_legal_policies`
 
 ## Parameters

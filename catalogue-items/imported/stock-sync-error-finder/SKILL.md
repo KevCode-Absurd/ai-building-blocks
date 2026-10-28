@@ -11,6 +11,8 @@ status: stable
 compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
+**Source check by AI Blocks, 28 Oct 2026:** The [Shopify store auth reference](https://shopify.dev/docs/api/shopify-cli/store/store-auth) requires --store and comma-separated --scopes. Replace REQUIRED_SCOPES with the least permissions for the actual queries and mutations; confirm them in the Admin API reference before signing in. Do not run a command with placeholders. Complete browser sign-in yourself and keep tokens out of chat and logs. This is a documentation check, not a store login or live API test.
+
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -43,7 +45,7 @@ Surfaces inventory sync discrepancies across locations: variants where `availabl
 
 ## Prerequisites
 Pick one way to get the numbers.
-- **Live connection (best).** `shopify auth login --store <domain>` with API scopes `read_products`, `read_inventory`, `read_locations`. Your AI must be able to run the Shopify CLI or call the Admin API.
+- **Live connection (best).** `shopify store auth --store <domain> --scopes <REQUIRED_SCOPES>` with API scopes `read_products`, `read_inventory`, `read_locations`. Your AI must be able to run the Shopify CLI or call the Admin API.
 - **No connection (fallback).** The user exports their inventory from the Shopify admin (Products, then Inventory, then Export) with columns for available, committed and on hand per location, and pastes or uploads it. Run the same two checks on those rows. Say in the report that this ran on an export, with its date.
 
 If neither is available, stop and say what is missing. Do not make up numbers.

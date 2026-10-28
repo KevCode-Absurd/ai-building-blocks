@@ -92,7 +92,7 @@ started, built, or queried in this review.
 ## Local embeddings and TLS
 
 [SentenceTransformer API](https://sbert.net/docs/package_reference/sentence_transformer/model.html)
-was checked against sentence-transformers 6.1.0 release metadata. Construction
+was checked against sentence-transformers 6.1.0 release metadata. AI Blocks rechecked the [PyPI 6.1.0 release](https://pypi.org/project/sentence-transformers/6.1.0/) on 28 Oct 2026: it exists (released 18 Sep 2026) and requires Python 3.10 or later. We retained the pin; this check did not install model weights or validate ranking quality. Construction
 accepts `local_files_only`; `encode(str)` returns an embedding usable by the
 existing cosine ranking. The
 [all-MiniLM-L6-v2 model card](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)

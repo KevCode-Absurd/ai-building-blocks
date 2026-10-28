@@ -24,10 +24,10 @@ How to start:
 
 ## Version status (state in every assessment-planning answer)
 
-*Dates below were checked on 2026-09-14. Confirm them on the NCSC site (ncsc.gov.uk) and the IASME site (iasme.co.uk) before you rely on them.*
+*AI Blocks checked the version start date on 28 Oct 2026: [NCSC lists v3.3 from 27 April 2026](https://www.ncsc.gov.uk/cyberessentials/resources), and [IASME names the matching question set Danzell](https://iasme.co.uk/cyber-essentials/preview-the-self-assessment-questions-for-cyber-essentials/). This check covers the version and start date. Prices, insurance terms and other deadlines below remain the author's figures dated 2026-09-14; check them separately before relying on them.*
 
 - **Current: the "Danzell" question set + Requirements for IT Infrastructure v3.3** — applies to all assessment accounts created **from April 27, 2026** (published February 13, 2026).
-- **Willow (v3.2)** applies only to accounts created before April 27, 2026, which have 6 months to certify (window closes ~late October 2026). Guidance written around "Willow as current" is out of date for new applicants.
+- **Willow (v3.2)** applies only to accounts created before April 27, 2026. Check the actual purchase date and assessment expiry with the assessor; do not assume an old assessment window is still open. Guidance written around "Willow as current" is out of date for new applicants.
 - **Danzell headline changes**: two **automatic-fail** conditions — (1) MFA not implemented for cloud services where available, (2) the 14-day update questions (A6.4 OS/router/firewall firmware; A6.5 applications) not met; formal definition of "cloud service" and a definitive rule that **cloud services cannot be excluded from scope**; scope exclusions must be justified and all in-scope legal entities named; "point in time" = certificate issue date; board declaration now covers **maintaining compliance through the certification period**; CE+ failed-sample retests use a new random sample (second failure revokes the verified self-assessment certificate); "Application development" section (was "Web applications") referencing the UK Government Software Security Code of Practice; FIDO2 recognised in passwordless/MFA.
 
 ## The five control themes (v3.3)

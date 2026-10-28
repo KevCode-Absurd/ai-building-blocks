@@ -25,7 +25,7 @@ not_for:
 pricing:
   model: subscription
   from: US$10 per month
-  note: Last checked 21 Oct 2026. These prices come from a third-party site (eesel.ai), not from Midjourney, so check the current plans on midjourney.com before you pay. Basic gives about 3.3 hours of fast image time. There is no free plan. Standard, Pro and Mega cost more and add more hours. Unused hours expire each month.
+  note: "Pricing checked on 28 Oct 2026 against Midjourney's own plan comparison. Basic costs US$10 monthly, or US$96 paid for a full year (US$8 per month equivalent). It includes 3.3 hours of Fast GPU time per month. Check the current plan and terms before you pay."
 works_with:
   - stable-diffusion
   - ideogram
@@ -34,7 +34,7 @@ runs_in: [web]
 blocks:
   - marketing-image-maker
 alternatives: [nano-banana, flux, ideogram, leonardo]
-last_checked: 2026-10-21
+last_checked: 2026-10-28
 first_result:
   - "Go to midjourney.com and pick a plan. There is no free plan. Basic starts at US$10 a month."
   - "Write the subject, mood and style in one sentence. Look at the four options it makes."
@@ -52,4 +52,4 @@ not_verified:
   - "How many images one hour of fast time makes."
   - "The licence for commercial use on Basic."
 sources:
-  - https://eesel.ai/blog/midjourney-pricing
+  - https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans

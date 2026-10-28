@@ -10,6 +10,8 @@ explain: |
   A clean list of every product and add-on package inside one MATLAB install. Point it at the install folder, or just name the release, and see what you actually have.
 
   The skill works out the release from the folder name, such as R2025a, and expands short names like 25a. It then reads the installed products from the main folder and the support packages from the standard location for your system. Product names are cleaned up and sorted in a set order: MATLAB first, then Simulink and the Copilot products, then the rest A to Z.
+
+  MathWorks' terms limit use of this skill, including changes, to MathWorks products and services. Read the included LICENSE.md and the MathWorks reuse licence (PMRL) linked in the skill header. These are product-use terms, rather than the standard BSD 2-Clause licence alone. Keep the MathWorks notices.
 when:
   - A colleague asks which toolboxes are on your machine.
   - You are planning an upgrade and need a list of what to reinstall.

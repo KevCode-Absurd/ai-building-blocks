@@ -29,4 +29,4 @@ credits:
   - title: matlab-read-documentation skill
     by: MathWorks
     url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/matlab-core/matlab-read-documentation
-    used: Copied under the BSD 2-Clause licence (LICENSE.md), which adds that you may use it only with MathWorks products. The skill file also links MathWorks' own reuse licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: "Copied with the MathWorks product-use terms in LICENSE.md; use, changes and derivatives are limited to MathWorks products and services. The skill header also links MathWorks' reuse licence (PMRL). We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps."

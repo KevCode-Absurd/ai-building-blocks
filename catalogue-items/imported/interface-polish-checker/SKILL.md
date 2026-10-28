@@ -11,7 +11,7 @@ license_source: https://github.com/ibelick/ui-skills/blob/main/LICENSE
 ---
 
 
-> Licence note (added by AI Blocks): this skill is by ibelick (repo ibelick/ui-skills). The one licence that applies to the written text of this copy is CC BY-4.0 (file `LICENSE-CONTENT`). The `license: MIT` line in the header above is the author's own declaration for their own code repo. It is not the licence for this text. Keep the credit to the author.
+> Added by AI Blocks. Licence: this skill follows the MIT licence in its original header and the included LICENSE file. Keep the source notices and author credits. We also retain the collection's LICENSE-CONTENT file.
 
 > **When not to use (added by AI Blocks):** not for redesigns or new design systems, not for sites that do not use Tailwind CSS, and not for bug, speed or security checks. For those, work with a designer or a developer.
 

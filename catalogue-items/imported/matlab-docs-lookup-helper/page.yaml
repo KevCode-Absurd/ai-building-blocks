@@ -10,6 +10,8 @@ explain: |
   The right MATLAB syntax, taken from the official MathWorks pages, instead of a function call that is almost right. Ask how a function works and it finds the page that answers it.
 
   It knows how the help site is laid out: product pages, category pages, guides, examples and function reference. Guide pages show which functions to call and in what order, and reference pages show the exact options and argument types. You normally need both, and it reads both. It looks up function names in the local list first, then reaches for the matching pages, with a four-step search when the name is unknown.
+
+  MathWorks' terms limit use of this skill, including changes, to MathWorks products and services. Read the included LICENSE.md and the MathWorks reuse licence (PMRL) linked in the skill header. These are product-use terms, rather than the standard BSD 2-Clause licence alone. Keep the MathWorks notices.
 when:
   - You are not sure which options a MATLAB function accepts.
   - Code that worked last release now gives a warning or error.

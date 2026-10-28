@@ -12,7 +12,7 @@ license_source: https://github.com/expo/skills/blob/main/LICENSE
 
 # EAS Workflows Skill
 
-> Licence note (AI Blocks): this copy of the skill text is covered by CC BY 4.0, as the LICENSE-CONTENT file says. The "MIT" in the header above is the original author's claim. Keep the credit to Expo and sickn33.
+> Added by AI Blocks. Licence: this skill follows the MIT licence in its original header and the included LICENSE file. Keep the source notices and author credits. We also retain the collection's LICENSE-CONTENT file.
 
 ## When to Use
 

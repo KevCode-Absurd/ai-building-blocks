@@ -11,7 +11,7 @@ license_source: https://github.com/bitjaru/styleseed/blob/main/LICENSE
 ---
 
 
-> Licence note (added by AI Blocks): the one licence that applies to the written text of this copy is CC BY-4.0 (see `LICENSE-CONTENT`). The `license: MIT` line in the header above is the original author's own declaration for their own code repo. It is not the licence for this text. Keep the credit to the author.
+> Added by AI Blocks. Licence: this skill follows the MIT licence in its original header and the included LICENSE file. Keep the source notices and author credits. We also retain the collection's LICENSE-CONTENT file.
 
 # UX Microcopy Generator
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->

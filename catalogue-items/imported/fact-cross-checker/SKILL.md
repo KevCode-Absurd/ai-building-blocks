@@ -16,7 +16,7 @@ license_source: "https://github.com/sandbaseai/sandbase-skills/blob/fc25b2ed4548
 
 # Multi-Source Search
 
-> Licence note (AI Blocks): this copy of the skill text is covered by CC BY 4.0, as the LICENSE-CONTENT file says. The "Apache-2.0" in the header above is the original author's (sandbaseai) claim for their repo. Keep the credit to sandbaseai.
+> Added by AI Blocks. Licence: this skill follows the Apache-2.0 licence in its original header and the included LICENSE file. Keep the source notices and author credits. We also retain the collection's LICENSE-CONTENT file.
 
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
@@ -165,3 +165,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 Changed by AI Blocks (2026-10-28): gave it a plain name and added Before you start and After this sections that link to other AI Blocks steps.
 Changed by AI Blocks (2026-10-28): refreshed the generated Before you start and After this guidance from catalogue metadata.
+Changed by AI Blocks (2026-10-28): corrected our licence note to follow the original Apache-2.0 header and included LICENSE.

@@ -34,7 +34,7 @@ How to start:
 
 ## How to run this skill (added by AI Blocks)
 
-Licence note: this copy of the skill text is covered by CC BY 4.0, as the LICENSE-CONTENT file says. The "MIT" in the header above is the original author's claim. Keep the credit to Expo and sickn33.
+Added by AI Blocks. Licence: this skill follows the MIT licence in its original header and the included LICENSE file. Keep the source notices and author credits. We also retain the collection's LICENSE-CONTENT file.
 
 1. Ask once for what is missing: a description of each screen and how people move between them, whether there is an Expo project already (and its SDK version), the look wanted (optional), and data to keep on the phone (optional). If something is still missing, write `MISSING: <what>`. Never invent screens, brand colors or data.
 2. Before you write any code, check these three imports against the user's Expo SDK in the current Expo docs: native tabs (`expo-router/unstable-native-tabs`), `Color` from `expo-router`, and `expo-router/react-navigation`. Then open only the reference notes that the screens need.

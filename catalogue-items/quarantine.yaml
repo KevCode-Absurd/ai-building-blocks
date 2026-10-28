@@ -1,3 +1,1 @@
-headless-store-builder:
-  reason: "Release hold: the cart example calls useLoaderData<typeof loader>() but supplies only an action, not its referenced loader. The customerAccount.mutate(LOGIN_MUTATION) email/password snippet has no defined mutation and does not establish the documented hosted Customer Account OAuth/session flow. Examples also combine unpinned latest creation with an expired 2025-01 API version and inconsistent framework imports. Official https://shopify.dev/docs/api/usage/versioning and https://shopify.dev/docs/storefronts/hydrogen/customer-accounts checked. Imported source unchanged; release requires versioned, build-tested examples. Withheld pending a reviewed and checked correction."
-  evidence: Native item-by-item finding in reports/2026-10-23-catalogue-refinement-skills-root-native.json
+{}

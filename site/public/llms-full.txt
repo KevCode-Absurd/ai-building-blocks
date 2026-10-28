@@ -21,7 +21,7 @@ Once connected, ask in plain words:
 ## Key facts
 
 - Free to use, no account needed.
-- 5020 skills, workflows and prompts in 70 jobs, 505 minds and 68 mini tools.
+- 5021 skills, workflows and prompts in 70 jobs, 505 minds and 68 mini tools.
 - Imported skills keep their open-licence sources and credits (MIT, Apache 2.0, BSD, CC BY, CC BY-SA). Local changes are identified on the page and in the skill file.
 - Minds are AIs built from a person's public work, with their sources listed. They are not the person. Minds that invest teach frameworks only, never buy or sell advice.
 - Skills that scrape websites or need a paid outside account say so on their page.
@@ -47,7 +47,7 @@ Once connected, ask in plain words:
 - [Audit a landing page](https://useaiblocks.com/llms/audit-landing-page.txt): 36 skills and workflows, such as A/B test traffic checker and Customer objection coverage checker
 - [Build a product people want](https://useaiblocks.com/llms/build-product.txt): 66 skills and workflows, such as Feature request screener and Launch scope cutter
 - [Build and ship software](https://useaiblocks.com/llms/build-software.txt): 416 skills and workflows, such as Agent database migration planner and Agent database setup planner
-- [Build websites and web apps](https://useaiblocks.com/llms/build-websites.txt): 65 skills and workflows, such as Font pair shortlist maker and Website page structure planner
+- [Build websites and web apps](https://useaiblocks.com/llms/build-websites.txt): 66 skills and workflows, such as Font pair shortlist maker and Website page structure planner
 - [Check ads before they go live](https://useaiblocks.com/llms/check-ads.txt): 42 skills and workflows, such as Ad claims checker and Ad distraction checker
 - [Check contracts and rules](https://useaiblocks.com/llms/check-contracts.txt): 109 skills and workflows, such as Ad claim sorter and Business insurance needs checker
 - [Connect AI to your tools](https://useaiblocks.com/llms/connect-tools.txt): 42 skills and workflows, such as AI tool set designer and Automation flow sketcher

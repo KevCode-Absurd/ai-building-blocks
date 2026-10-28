@@ -21,7 +21,7 @@ Once connected, ask in plain words:
 ## Key facts
 
 - Free to use, no account needed.
-- 5020 skills, workflows and prompts in 70 jobs, 505 minds and 68 mini tools.
+- 5021 skills, workflows and prompts in 70 jobs, 505 minds and 68 mini tools.
 - Imported skills keep their open-licence sources and credits (MIT, Apache 2.0, BSD, CC BY, CC BY-SA). Local changes are identified on the page and in the skill file.
 - Minds are AIs built from a person's public work, with their sources listed. They are not the person. Minds that invest teach frameworks only, never buy or sell advice.
 - Skills that scrape websites or need a paid outside account say so on their page.
@@ -74,8 +74,8 @@ Once connected, ask in plain words:
 - [Help your customers](https://useaiblocks.com/llms/help-customers.txt): 72 skills and workflows, such as Angry customer reply writer and Apology email writer
 - [Plan budgets, costs and cash flow](https://useaiblocks.com/llms/plan-budgets-and-cash.txt): 72 skills and workflows, such as Bad-year break-even tester and Budget stress tester
 - [Build a product people want](https://useaiblocks.com/llms/build-product.txt): 66 skills and workflows, such as Feature request screener and Launch scope cutter
+- [Build websites and web apps](https://useaiblocks.com/llms/build-websites.txt): 66 skills and workflows, such as Font pair shortlist maker and Website page structure planner
 - [Test an idea before you build it](https://useaiblocks.com/llms/test-an-idea.txt): 65 skills and workflows, such as AI suitability reviewer and Business model assumption tester
-- [Build websites and web apps](https://useaiblocks.com/llms/build-websites.txt): 65 skills and workflows, such as Font pair shortlist maker and Website page structure planner
 - [Make image ads](https://useaiblocks.com/llms/make-image-ads.txt): 64 skills and workflows, such as 3D cutaway image ad maker and Product image ad prompt writer
 - [Read your ad results](https://useaiblocks.com/llms/read-ad-results.txt): 61 skills and workflows, such as Ad survey results calculator and Ad results brief writer
 - [Write down how work gets done](https://useaiblocks.com/llms/document-work.txt): 57 skills and workflows, such as Handover note writer and Lessons learned note writer

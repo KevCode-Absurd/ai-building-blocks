@@ -1,6 +1,6 @@
 # Build websites and web apps: AI Blocks
 
-> 65 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 66 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [3D web scene builder](https://useaiblocks.com/skills/3d-web-scene-builder): Share a scene brief, web framework, model files and target devices to get 3D scene code with a loading state and a fallback.
 - [3D website builder](https://useaiblocks.com/skills/3d-website-builder): Give a site brief, colours and models. Get 3D scene code with shader effects, motion, a preloader and phone performance guidance.
@@ -15,6 +15,7 @@
 - [Frontend developer](https://useaiblocks.com/agents/agency-engineering-frontend-developer): Plan a React, Vue, Angular or Svelte front end. Get the component list, accessibility and speed plan, and tests to run before launch.
 - [Full-page screenshot taker](https://useaiblocks.com/skills/full-page-screenshot-taker): Share a page address or open browser tab. Get a full-page capture with scroll and late-loading content checks.
 - [GLSL shader writer](https://useaiblocks.com/skills/glsl-shader-writer): Describe the visual effect and target runtime. Get GLSL shader code with uniforms and performance checks to run.
+- [Headless store builder](https://useaiblocks.com/skills/headless-store-builder): Build a TypeScript Shopify storefront from a pinned Hydrogen starter. Get home, product, collection, search and cart pages, plus build and launch checks.
 - [Image and video pipeline planner](https://useaiblocks.com/skills/image-and-video-pipeline-planner): Plan your image and video pipeline: formats, sizes, video hosting and a tidy asset library, so your site loads fast and stays organized.
 - [Industry site layout planner](https://useaiblocks.com/skills/industry-look-site-composer): Turn your site type and brand brief into page layout notes, navigation guidance, and checklists.
 - [Interface builder](https://useaiblocks.com/skills/interface-builder): Describe your screens and get responsive interface components with a design system, accessible markup and dark mode in React, Vue or plain HTML.

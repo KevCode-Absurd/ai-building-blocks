@@ -1,6 +1,6 @@
 {
  "note": "The sitemap URLs and lastmod of the last build pinged by tools/indexnow-ping.mjs. Written after a successful ping.",
- "saved": "2026-10-28T10:44:49.918Z",
+ "saved": "2026-10-28T11:43:38.213Z",
  "count": 5805,
  "urls": {
   "https://useaiblocks.com/": "",
@@ -1176,7 +1176,7 @@
   "https://useaiblocks.com/prompts/connect-code-to-supabase-builder-prompt": "2026-10-28",
   "https://useaiblocks.com/prompts/cost-per-sellable-unit-finder": "2026-10-28",
   "https://useaiblocks.com/prompts/creative-ai-chat-starter-prompts": "2026-10-28",
-  "https://useaiblocks.com/prompts/customer-question-keyword-finder": "2026-10-27",
+  "https://useaiblocks.com/prompts/customer-question-keyword-finder": "2026-10-28",
   "https://useaiblocks.com/prompts/deal-win-reason-finder": "2026-10-28",
   "https://useaiblocks.com/prompts/debate-then-decide-meeting-planner": "2026-10-27",
   "https://useaiblocks.com/prompts/deploy-worker-to-render-builder-prompt": "2026-10-28",

@@ -6,6 +6,15 @@ export function generatedSectionCredit(yaml, refreshed = false) {
   let next = yaml;
   if (!next.includes(ADDED)) next = next.replace(/^(\s*used: )(["']?)(Copied|Shared) (as it is, )?(under [^\r\n]*?)(["']?)(\r?\n)/m,
     (_, lead, q1, verb, _asIs, rest, q2, end) => `${lead}${q1}${verb} ${rest} ${ADDED}${q2}${end}`);
+  if (refreshed && !next.includes(ADDED)) {
+    // Folded credits can start "Original instructions...". Keep that source credit intact.
+    const nl = next.includes('\r\n') ? '\r\n' : '\n';
+    const entry = ['  - title: AI Blocks catalogue guidance', '    by: AI Blocks', '    url: https://useaiblocks.com', `    used: ${ADDED}`].join(nl);
+    const credits = /(^credits:[ \t]*\r?\n)([\s\S]*?)(?=^\S|$(?![\s\S]))/m;
+    if (credits.test(next)) next = next.replace(credits, (_, head, body) => head + body.trimEnd() + nl + entry + nl);
+    else if (/^credits:/m.test(next)) throw new Error('Generated guidance needs a block-style credits list; original credits were not changed.');
+    else next = next.trimEnd() + nl + 'credits:' + nl + entry + nl;
+  }
   if (refreshed && next.includes(ADDED) && !next.includes(REFRESHED)) next = next.replace(ADDED, `${ADDED} ${REFRESHED}`);
   return next === yaml ? null : next;
 }

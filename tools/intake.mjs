@@ -7,11 +7,12 @@
 //   node tools/intake.mjs todo <id>           the steps whose skills still need writing, as lines for a skill writer
 //   node tools/intake.mjs workflow <id|all>   write catalogue-items/orchestrators/<slug>/ and its page from the skeleton
 //   node tools/intake.mjs list                every skeleton, with how many of its skills exist
-// A workflow folder written by hand (no `generated_from:` line in its item.yaml) is never overwritten.
+// Existing workflow sources are never overwritten, including generated files that may have reviewed edits.
 import fs from "node:fs";
 import path from "node:path";
 import { createRequire } from "node:module";
 import { fileURLToPath } from "node:url";
+import { writeNewWorkflowFiles } from "./lib/intake-files.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const require = createRequire(path.join(ROOT, "site/package.json"));
@@ -110,7 +111,12 @@ function workflow(id) {
   const wf = sk.workflow;
   const dir = path.join(CAT, "orchestrators", wf.slug);
   const itemFile = path.join(dir, "item.yaml");
-  if (fs.existsSync(itemFile) && !/^generated_from:/m.test(fs.readFileSync(itemFile, "utf8"))) { console.log(`${id}: ${wf.slug} was written by hand, left as it is.`); return true; }
+  const skillFile = path.join(dir, "SKILL.md");
+  const pageFile = path.join(PAGES, `${wf.slug}.yaml`);
+  if ([itemFile, skillFile, pageFile].some(file => fs.existsSync(file))) {
+    console.error(`${id}: regeneration blocked for ${wf.slug}; existing sources may contain reviewed edits. Edit them in place.`);
+    return false;
+  }
   const steps = realSteps(sk);
   // The person gives what no earlier step makes.
   const made = new Set(), needs = new Map();
@@ -134,7 +140,7 @@ function workflow(id) {
     `uses: [${steps.map((s) => s.skill).join(", ")}]`,
     "steps:", ...steps.map((s) => `  - {uses: ${s.skill}, note: ${q(s.note)}}`),
     "origin: rebuilt", "version: 1.0.0", ...(minds.length ? [`minds: [${minds.join(", ")}]`] : []),
-    ...(lib0 ? [] : ["credits:"]), ...(lib0 ? [] : [`  - {title: ${q(sk.source.title)}, by: ${q(sk.source.by)}${sk.source.url ? `, url: ${q(sk.source.url)}` : ""}, used: ${q(`The order of the steps: ${steps.map((s) => s.name.toLowerCase()).join(", ")}`)}}`]),
+    ...(lib0 ? [] : ["credits:"]), ...(lib0 ? [] : [`  - {title: ${q(sk.source.title)}, by: ${q(sk.source.by)}${sk.source.url ? `, url: ${q(sk.source.url)}` : ""}, used: ${q("Uses ideas from this source. AI Blocks chose the steps and their order.")}}`]),
     `generated_from: intake/${id}/skeleton.yaml`, "",
   ].join("\n");
   let n = 0;
@@ -166,17 +172,14 @@ function workflow(id) {
     "- Nothing was invented to fill a gap. Every gap is a `MISSING:` line.",
     "- Nothing was sent, published or paid for without a clear yes.", "",
   ].join("\n");
-  fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(itemFile, item);
-  fs.writeFileSync(path.join(dir, "SKILL.md"), md);
-  // A first page from the skeleton. Polish it by hand afterwards; it's only rewritten while it still says it's a draft.
-  const pageFile = path.join(PAGES, `${wf.slug}.yaml`);
+  const files = [{ file: itemFile, text: item }, { file: skillFile, text: md }];
+  // A first page from the skeleton. Polish it in place afterwards; regeneration preserves that work.
   if (!fs.existsSync(pageFile) || /^draft_from:/m.test(fs.readFileSync(pageFile, "utf8"))) {
     const page = {
       new_slug: wf.slug, name: wf.name, summary: wf.summary, job: wf.job, thinking: "high",
       thinking_why: "It runs several skills in a row. Give it your strongest model.",
       headline: wf.headline ?? wf.name, subhead: wf.subhead ?? wf.summary,
-      explain: wf.explain ?? (lib0 ? `${steps.length} skills from the library, run in order. Each one's result is the starting point of the next, so you get the whole job done in one run instead of copying work between chats.` : `${sk.source.title} by ${sk.source.by} teaches a method in ${steps.length} parts. Each part is a skill here, run in the same order, so the result of one is the starting point of the next.`),
+      explain: wf.explain ?? (lib0 ? `${steps.length} skills from the library, run in order. Each one's result is the starting point of the next, so you get the whole job done in one run instead of copying work between chats.` : `This workflow uses ideas from ${sk.source.title} by ${sk.source.by}. AI Blocks chose ${steps.length} steps and their order. Each skill passes its result to the next.`),
       when: wf.when_list ?? [`You want to ${wf.when.replace(/\.$/, "")}.`],
       you_give: [...needs].map(([t, r]) => `${t.replace(/_/g, " ")}${r ? "" : " (optional)"}`),
       you_get: steps.map((s) => s.gives ?? s.name),
@@ -189,8 +192,9 @@ function workflow(id) {
       improve: wf.improve ?? ["Save the first step's result in your brand file, so later runs can start from step 2."],
       draft_from: `intake/${id}/skeleton.yaml`,
     };
-    fs.writeFileSync(pageFile, YAML.stringify(page, { lineWidth: 0 }));
+    files.push({ file: pageFile, text: YAML.stringify(page, { lineWidth: 0 }) });
   }
+  writeNewWorkflowFiles(files);
   console.log(`${id}: wrote ${wf.slug} (${steps.length} steps)`);
   return true;
 }

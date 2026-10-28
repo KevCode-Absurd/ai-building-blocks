@@ -33,6 +33,7 @@ export const INPUTS = {
   design_direction: { label: "A design direction", what: "the page's type, colours and layout rules", maker: "landing-page-design-planner" },
   ad_breakdowns: { label: "Ad breakdowns", what: "what each reference ad does: opening, angle, format, offer and proof", maker: "competitor-ad-gap-finder" },
   shortlist: { label: "A shortlist", what: "the best few picked from a bigger set, with reasons", maker: "competitor-ad-swipe-file-builder" },
+  plan: { label: "A plan", what: "the goals, steps, constraints and dates for this work" },
   lessons_register: { label: "Your lessons", what: "what past ads taught you: what worked, what failed and why", maker: "ai-image-fix-rules" },
   copy_draft: { label: "A draft", what: "the ad, page, email or script you want checked or improved" },
   voc_reviews: { label: "Customer words", what: "reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in" },
@@ -95,8 +96,10 @@ const PLAIN = {
  * Elsewhere (stock, supply, finance) product data is a product list.
  */
 const BRAIN_AREAS = ["marketing", "design", "sales", "writing", "leadership"];
-const BRAIN_TASKS = new Set(["set-up-store", "run-your-store", "set-prices", "sell-on-amazon"]);
-const brainWork = (task) => BRAIN_TASKS.has(task) || BRAIN_AREAS.some((a) => familiesOf(task).has(a));
+const BRAIN_TASKS = new Set(["set-up-store", "run-your-store", "sell-on-amazon"]);
+const NON_BRAND_TASKS = new Set(["hire-people", "set-prices"]);
+const brainWork = (task) => !NON_BRAND_TASKS.has(task) && (BRAIN_TASKS.has(task) || BRAIN_AREAS.some((a) => familiesOf(task).has(a)));
+const BUYER_BRIEF_TASKS = new Set(["write-ad-copy", "make-image-ads", "make-video-ads", "plan-ad-tests", "write-landing-page", "write-emails", "make-offer"]);
 
 /** Which brand brain files a task reads (from the brand file builder's "which file for which task" and its slices). */
 const BRAIN_FILES = {
@@ -233,6 +236,9 @@ function outsideInputs(b, bySlug) {
  * Asking for the brand brain by name counts anywhere.
  */
 function inputInfo(type, task, bySlug, describe) {
+  // A generic shortlist is not evidence that this job needs a competitor ad swipe file.
+  if (type === "shortlist") return { label: "A shortlist", what: "the selected options, with the reasons and criteria used" };
+  if (type === "brief" && !BUYER_BRIEF_TASKS.has(task)) return PLAIN.brief;
   const info = INPUTS[type] ?? describe(type);
   const home = info.maker && bySlug[info.maker];
   if (!home || type === "brand_brain" || (info.part ? brainWork(task) : sameFamily(task, home.task))) return info;
@@ -246,11 +252,12 @@ function inputInfo(type, task, bySlug, describe) {
 export function needsOf(b, bySlug, describe = (t) => ({ label: t, what: t })) {
   const byKey = new Map();
   for (const p of outsideInputs(b, bySlug)) {
+    // Check the original type before inputInfo turns a brand part into generic product/persona text.
+    if (p.step && NON_BRAND_TASKS.has(b.task) && (p.type === "brand_brain" || INPUTS[p.type]?.maker === BRAND_BRAIN)) continue;
     // A transformation may take and return the same type (notes, drafts, tables).
     // outsideInputs already tracks what earlier workflow steps have made; a
     // later output must not erase material needed to start the job.
     const info = inputInfo(p.type, b.task, bySlug, describe);
-    // One step reading the brand brain (a plain-English editor keeping the voice) is no reason to ask for it outside brand work.
     if (p.step && info.maker === BRAND_BRAIN && !brainWork(b.task)) continue;
     if (info.maker === b.slug) continue; // a block never needs what it makes (the brand file builder needs no brand brain)
     if (info.maker && b.steps?.some((st) => st.uses === info.maker)) continue; // a workflow whose own step makes it

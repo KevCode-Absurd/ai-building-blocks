@@ -13,7 +13,7 @@ explain: |
 
   You pick the models and the chairman. Every raw answer is saved to a file and shown unedited. The models run on Fireworks AI, a paid service that hosts open AI models. It needs a Fireworks account and key, and you pay per use.
 
-  The licence that applies to this copy is CC BY 4.0, as the LICENSE-CONTENT file in this item says. The MIT line in the skill file is the author's own header (DAIR.AI). Keep the credit if you reuse it. Credit goes to DAIR.AI and sickn33.
+  Licence: this skill follows the MIT licence in its original header and the included LICENSE file. Keep the source notices and author credits. We also retain the collection's LICENSE-CONTENT file.
 when:
   - You face a hard choice and want more than one AI opinion before you act.
   - You want to see where different models disagree on the same question.

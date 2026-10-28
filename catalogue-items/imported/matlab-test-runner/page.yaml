@@ -10,6 +10,8 @@ explain: |
   Your MATLAB tests run, filtered and explained. You get a clear pass and fail count, the reason for each failure, which lines are not covered by tests, and a build file for continuous integration.
 
   It runs tests through MATLAB's test tools, with filters for a name, a tag or a folder. After the run it checks the pass and fail counts and reads the diagnostics for each failure. For coverage it sets up the coverage plugin, shows a summary and points at the gaps. For CI it writes a buildfile with a test task and adds a config for GitHub Actions, Azure DevOps or GitLab.
+
+  MathWorks' terms limit use of this skill, including changes, to MathWorks products and services. Read the included LICENSE.md and the MathWorks reuse licence (PMRL) linked in the skill header. These are product-use terms, rather than the standard BSD 2-Clause licence alone. Keep the MathWorks notices.
 when:
   - You changed code and need to see which tests now fail.
   - You want to know which parts of your code no test touches.

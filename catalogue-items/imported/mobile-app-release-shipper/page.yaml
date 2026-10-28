@@ -11,7 +11,7 @@ explain: |
 
   The skill sets up Expo's build service, creates the build profiles in a config file, and runs the production build for each platform. It can send the iOS build to TestFlight for testers, then to App Store review, and send the Android build to Google Play. It also covers version and build numbers, store listing text, and automated releases that run when you merge code. You need an Expo project, an Apple developer account and a Google Play account.
 
-  The licence that applies to this copy is CC BY 4.0, as the LICENSE-CONTENT file in this item says. The MIT line in the skill file is the author's own header (Expo). Keep the credit if you reuse it. Credit goes to Expo and sickn33.
+  Licence: this skill follows the MIT licence in its original header and the included LICENSE file. Keep the source notices and author credits. We also retain the collection's LICENSE-CONTENT file.
 when:
   - Your Expo app works and you are ready to put it on the App Store.
   - You want testers on TestFlight before the public release.

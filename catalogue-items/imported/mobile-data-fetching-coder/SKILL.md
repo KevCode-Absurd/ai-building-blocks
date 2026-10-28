@@ -12,7 +12,7 @@ license_source: https://github.com/expo/skills/blob/main/LICENSE
 
 # Expo Networking
 
-AI Blocks note on the licence: the MIT line in the front matter above is the original author's (Expo) header. The licence that applies to this copy in the AI Blocks catalogue is CC BY 4.0, as the LICENSE-CONTENT file in this folder says.
+Added by AI Blocks. Licence: this skill follows the MIT licence in its original header and the included LICENSE file. Keep the source notices and author credits. We also retain the collection's LICENSE-CONTENT file.
 
 **Core steps (the short version; the detailed guide has the full procedure).**
 1. Ask for the API base URL, the login method, the list of screens and the data each screen needs, and how fresh each piece of data must be.

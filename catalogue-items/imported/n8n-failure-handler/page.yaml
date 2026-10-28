@@ -13,7 +13,7 @@ explain: |
 
   A retry must never send an email or take a payment twice. The skill checks every retried step for that, and it keeps passwords, personal data and system details out of alerts and replies.
 
-  This is an imported copy of Romuald Czlonkowski's n8n skill, shared by sickn33. It was not written for this catalogue. We added a "Before you start" list, a rule that no step that sends or charges is retried unless it is safe, and a plain edit list for people without n8n tools. The licence that applies to this copy is CC BY 4.0, as the LICENSE-CONTENT file in this item says. Keep the credit if you reuse it.
+  This is an imported copy of Romuald Czlonkowski's n8n skill, shared by sickn33. It was not written for this catalogue. We added a "Before you start" list, a rule that no step that sends or charges is retried unless it is safe, and a plain edit list for people without n8n tools. Licence: this skill follows the MIT licence in its original header and the included LICENSE file. Keep the source notices and author credits. We also retain the collection's LICENSE-CONTENT file.
 when:
   - A webhook workflow returns an empty error and you cannot tell why.
   - A scheduled workflow stopped weeks ago and no one noticed.

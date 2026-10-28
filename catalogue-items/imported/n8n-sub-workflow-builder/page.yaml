@@ -13,7 +13,7 @@ explain: |
 
   This is a copy of a skill by Romuald Czlonkowski (github.com/czlonkowski/n8n-skills), shared through sickn33's collection.
 
-  The licence that applies to this copy is CC BY 4.0, as the LICENSE-CONTENT file in this item says. The MIT line in the skill file is the author's own header. Keep the credit to Romuald Czlonkowski and sickn33 if you reuse it.
+  Licence: this skill follows the MIT licence in its original header and the included LICENSE file. Keep the source notices and author credits. We also retain the collection's LICENSE-CONTENT file.
 when:
   - The same date-cleaning steps are copied across four workflows.
   - One workflow has grown so large that nobody wants to edit it.

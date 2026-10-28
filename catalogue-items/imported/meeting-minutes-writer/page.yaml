@@ -11,7 +11,7 @@ explain: |
 
   The notes are sorted into three groups. Decisions are written as "Decided to do X", never "Discussed X". Action items need an owner and a date, and when the notes lack one, the gap is marked [unassigned] or [TBD] rather than guessed. Open questions say what blocks them and who moves next. A final check confirms every item is complete, and the minutes stay under a third of the length of the notes.
 
-  This is a copy of a community skill written by alapha888, not an original AI Blocks skill. The licence that applies to this copy is CC BY 4.0, as the LICENSE-CONTENT file in this item says. The MIT line in the skill file is the author's own header (alapha888), and the original repository is alapha888/agent-skills-en. We copied it from sickn33's collection. Keep the credit if you reuse it. Credit goes to alapha888 and sickn33.
+  This is a copy of a community skill written by alapha888, not an original AI Blocks skill. Licence: this skill follows the MIT licence in its original header and the included LICENSE file. Keep the source notices and author credits. We also retain the collection's LICENSE-CONTENT file. The original repository is alapha888/agent-skills-en; sickn33 shared it in their collection.
 when:
   - You have a page of messy notes from a team call and need to send a summary.
   - Your action items keep going out without owners or dates.

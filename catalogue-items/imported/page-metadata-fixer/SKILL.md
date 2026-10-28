@@ -58,7 +58,7 @@ Then give a next step: publish, paste the live address into each social platform
 
 ## Licence note (added by AI Blocks)
 
-The upstream skill by ibelick lists MIT. This copy came through the sickn33 collection, which licenses written content under CC BY 4.0 (see LICENSE-CONTENT). The licence that applies to this copy is CC BY 4.0. Credit both authors when you share it.
+Added by AI Blocks. Licence: this skill follows the MIT licence in its original header and the included LICENSE file. Keep the source notices and author credits. We also retain the collection's LICENSE-CONTENT file.
 
 ## When to Use
 

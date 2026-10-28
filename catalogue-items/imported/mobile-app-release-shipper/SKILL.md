@@ -12,7 +12,7 @@ license_source: https://github.com/expo/skills/blob/main/LICENSE
 
 # Deployment
 
-AI Blocks note on the licence: the MIT line in the front matter above is the original author's (Expo) header. The licence that applies to this copy in the AI Blocks catalogue is CC BY 4.0, as the LICENSE-CONTENT file in this folder says. Keep the credit to Expo.
+Added by AI Blocks. Licence: this skill follows the MIT licence in its original header and the included LICENSE file. Keep the source notices and author credits. We also retain the collection's LICENSE-CONTENT file.
 
 Costs: EAS builds use your Expo plan, and its free build allowance is limited. Apple and Google charge for developer accounts. This skill does not check current prices, so tell the user to look them up before building.
 

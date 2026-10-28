@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A plan** with the [Board and investor update planner](https://useaiblocks.com/skills/copilot-gtm-board-and-investor-communication). Bring your question, a spreadsheet (optional), a business profile (optional), an audit report (optional).

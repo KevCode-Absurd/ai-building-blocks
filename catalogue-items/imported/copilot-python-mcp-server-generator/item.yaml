@@ -33,4 +33,4 @@ credits:
   - title: python-mcp-server-generator skill
     by: GitHub Copilot community
     url: https://github.com/github/awesome-copilot/tree/main/skills/python-mcp-server-generator
-    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps. We refreshed those generated sections from the catalogue inputs and next-step links.

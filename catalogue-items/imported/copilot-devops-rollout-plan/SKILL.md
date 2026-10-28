@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **A codebase** (yours): a project's code, in a folder or repo the AI can open.
 - **A test report** (yours): what was tested, what passed, what failed and why.
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A plan** with the [Bicep deployment preflight checker](https://useaiblocks.com/skills/copilot-azure-deployment-preflight). Bring a codebase, a plan (optional).

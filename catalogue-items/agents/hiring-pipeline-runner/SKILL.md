@@ -14,15 +14,17 @@ This is HR work, and it uses personal data. Check the process, the scoring guide
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+- **Resumes or CVs** (yours): the resumes or CVs this job uses, pasted or attached.
+- **The job description** (yours): the role's title, team, duties and level, as a job post or plain notes.
 
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-2. This one.
+**Makes it better (optional):**
+- **Your notes** (yours): what to keep, change or drop.
+- **A transcript** (yours): the words from a recording, written out, with who said what.
+- **Your data** (yours): the data files, with their format and where they came from.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a buyer brief. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for resumes or CVs, the job description, your notes. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -31,7 +33,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-These are the only inputs for this agent. They replace the general "Before you start" list above, including its buyer brief and its "Recommended steps before this one". This job does not need a buyer brief. It needs the role brief and the resumes. The Friday update runs only when you start it, or when you connect a scheduler.
+Bring the role brief and the applications listed below. You start the Friday update yourself, unless you connect a scheduler.
 
 Resumes hold personal details. Tell the user to check their AI tool's data terms and their local privacy rules before pasting them, and to take out names, photos and contact details where they can.
 
@@ -87,18 +89,9 @@ If the person says yes in clear words to one named action, do only that action. 
 - Applicants already in `seen.md` were not scored again.
 - CHECKS MISSED: name any check that failed, or write "none".
 
-<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Applicant shortlist builder](https://useaiblocks.com/skills/applicant-shortlist-builder). It takes the document.
-- **Set up AI to work for you** with the [Deliverable requirements checker](https://useaiblocks.com/skills/request-acceptance-checker). It takes the plan and document.
-- The [Factory price-break negotiator](https://useaiblocks.com/skills/factory-price-break-negotiator). It takes the plan and document.
-- The [Article formatter](https://useaiblocks.com/skills/article-formatter). It takes the document.
-- The [Contract plain-language summary writer](https://useaiblocks.com/prompts/plain-words-contract-summary). It takes the document.
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->
+## Continue the hiring work
 
-Next steps that fit hiring: after interviews, use the [Fair candidate comparer](https://useaiblocks.com/skills/fair-candidate-comparer) on the finalists, and the [Candidate message drafter](https://useaiblocks.com/skills/candidate-message-drafter) for replies. The generic "After this" list above (price-break, article formatter and contract summary links) does not fit hiring. Do not offer those links. Offer only the next steps in this paragraph.
+After interviews, add the interview notes before using the [Fair candidate comparer](https://useaiblocks.com/skills/fair-candidate-comparer). To draft a reply, give the candidate's current stage to the [Candidate message drafter](https://useaiblocks.com/skills/candidate-message-drafter). The agent already runs these steps when their inputs are ready.
 
 ## If something is missing
 Write `MISSING: <what>` where it belongs and carry on. With no scoring guide, build it in step 1 and stop for the person to approve it. With no interview notes, skip step 6 and say so. With only one batch and no history, say the path in step 4 was not chosen on trends.

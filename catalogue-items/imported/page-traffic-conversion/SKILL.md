@@ -10,6 +10,8 @@ status: stable
 compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
+**Source check by AI Blocks, 28 Oct 2026:** The [Shopify store auth reference](https://shopify.dev/docs/api/shopify-cli/store/store-auth) requires --store and comma-separated --scopes. Replace REQUIRED_SCOPES with the least permissions for the actual queries and mutations; confirm them in the Admin API reference before signing in. Do not run a command with placeholders. Complete browser sign-in yourself and keep tokens out of chat and logs. This is a documentation check, not a store login or live API test.
+
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -27,7 +29,7 @@ How to start:
 Queries Shopify's built-in analytics engine (ShopifyQL) to surface session-level traffic data scoped to product and collection pages. Shows which pages are attracting the most traffic, and how many sessions convert to orders — ready input for SEO prioritisation, merchandising focus, and A/B test targeting. Read-only — no mutations are executed.
 
 ## Prerequisites
-- Authenticated Shopify CLI session: `shopify auth login --store <domain>`
+- Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes <REQUIRED_SCOPES>`
 - API scopes: `read_reports`
 - Shopify plan: the store's plan must include Shopify's analytics reports, and session data is not on every plan. If the query is refused for access reasons, tell the user their plan may not include it and stop. Do not guess the numbers.
 

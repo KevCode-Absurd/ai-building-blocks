@@ -14,6 +14,8 @@ audit_signals:
   - agentic-listing-schema
 ---
 
+**Source check by AI Blocks, 28 Oct 2026:** The [Shopify store auth reference](https://shopify.dev/docs/api/shopify-cli/store/store-auth) requires --store and comma-separated --scopes. Replace REQUIRED_SCOPES with the least permissions for the actual queries and mutations; confirm them in the Admin API reference before signing in. Do not run a command with placeholders. Complete browser sign-in yourself and keep tokens out of chat and logs. This is a documentation check, not a store login or live API test.
+
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -31,7 +33,7 @@ How to start:
 When an AI agent decides whether to recommend a product, it quotes the description to justify the match. One-line or empty descriptions give it nothing — so it can't confirm the product fits the shopper's intent and moves on. This skill finds products with thin descriptions (below a character threshold or missing key attributes) and rewrites them into structured copy: a benefit-led opening line, then concrete facts (material, fit/sizing, dimensions, use-cases, care) drawn from the product's own metafields/options/type. Fixes `listing-description-quality` and strengthens `agentic-listing-schema`.
 
 ## Prerequisites
-- Authenticated Shopify CLI session (`shopify auth login --store <domain>`)
+- Authenticated Shopify CLI session (`shopify store auth --store <domain> --scopes <REQUIRED_SCOPES>`)
 - Required API scopes: `read_products`, `write_products`
 
 ## Parameters

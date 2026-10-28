@@ -10,6 +10,8 @@ status: stable
 compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
 
+**Source check by AI Blocks, 28 Oct 2026:** The [Shopify store auth reference](https://shopify.dev/docs/api/shopify-cli/store/store-auth) requires --store and comma-separated --scopes. Replace REQUIRED_SCOPES with the least permissions for the actual queries and mutations; confirm them in the Admin API reference before signing in. Do not run a command with placeholders. Complete browser sign-in yourself and keep tokens out of chat and logs. This is a documentation check, not a store login or live API test.
+
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -27,7 +29,7 @@ How to start:
 Retrieves complete order details for a customer without requiring navigation through the Shopify admin UI. Useful for support agents answering customer queries about order status, shipping tracking, and refunds. This skill operates directly on the Shopify-native data layer, returning full order context in a single operation.
 
 ## Prerequisites
-- Authenticated Shopify CLI session: `shopify auth login --store <domain>`
+- Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes <REQUIRED_SCOPES>`
 - API scopes: `read_orders`, `read_customers`. Orders older than 60 days also need `read_all_orders`.
 - Customer names, emails, phones and addresses will pass through the AI tool you run this in. Use a tool your business already trusts with customer data, and do not paste results into public places.
 
@@ -44,7 +46,7 @@ Retrieves complete order details for a customer without requiring navigation thr
 
 ## Workflow Steps
 
-1. Confirm the Shopify CLI is signed in to the store (`shopify auth login --store <domain>`). If it is not, stop and ask the user to sign in.
+1. Confirm the Shopify CLI is signed in to the store (`shopify store auth --store <domain> --scopes <REQUIRED_SCOPES>`). If it is not, stop and ask the user to sign in.
 2. Build the search text from `lookup_by`: `name:<order_number>`, `email:<email>` or `phone:<phone>`.
 3. **OPERATION:** `orders` — query
    **Inputs:** `first: <limit>`, `query:` the search text from step 2

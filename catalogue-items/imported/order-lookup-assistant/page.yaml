@@ -32,7 +32,7 @@ you_get:
   - Refund dates and amounts
 how_to_use:
   - Use an AI tool that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot reach your store.
-  - Install the Shopify CLI. Then run shopify auth login --store followed by your store domain.
+  - Install the Shopify CLI. Then run shopify store auth with --store set to your myshopify.com domain and --scopes set to the comma-separated Admin API scopes this task needs.
   - Check your login can read orders and customers in Shopify. For orders older than 60 days it also needs the read_all_orders permission.
   - Give your AI this skill, your store domain, how you are searching and the value to search for.
   - "Type order numbers with the # sign, like #1001. Type phone numbers with country code, like +15551234567."

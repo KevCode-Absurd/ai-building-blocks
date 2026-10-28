@@ -35,7 +35,7 @@ you_get:
   - A CSV file you can open in a spreadsheet
 how_to_use:
   - Use an AI tool that can run code and reach your store, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot do this.
-  - "Log in to your store with the Shopify command line: shopify auth login --store yourstore.myshopify.com. Your login must be allowed to read reports."
+  - "Log in to your store with the Shopify command line: shopify store auth --store yourstore.myshopify.com --scopes <REQUIRED_SCOPES>. Your login must be allowed to read reports."
   - Give your AI this skill and your store address. Add the days to look back, the page type and the ranking if you want to change them.
   - Let it run. It only reads data and changes nothing in your store. If your Shopify plan refuses the report, the skill tells you and stops. It does not guess numbers.
   - The CSV file is saved in the folder your AI runs from. Look there for traffic_by_page and today's date.

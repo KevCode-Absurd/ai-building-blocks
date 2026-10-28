@@ -21,8 +21,8 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
-- **A shortlist** (yours): a ranked short list chosen from a larger set, with reasons.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
+- **A shortlist** (yours): the selected options, with the reasons and criteria used.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.

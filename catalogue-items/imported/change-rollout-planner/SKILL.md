@@ -24,7 +24,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **A draft** (yours): the ad, page, email or script you want checked or improved.
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 How to start:

@@ -18,7 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -153,3 +153,5 @@ If **~~chat** is connected:
 1. **Be specific about impact** — "Everyone" is not an impact assessment. "200 users in the billing team" is.
 2. **Always have a rollback plan** — Even if you're confident, plan for failure.
 3. **Communicate early** — Surprises create resistance. Previews create buy-in.
+
+Changed by AI Blocks (2026-10-28): refreshed the generated Before you start and After this guidance from catalogue metadata.

@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 - **Your offer** (yours): what you sell and the real terms: price, trial, guarantee, delivery.
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Disagreement perspective mapper** with the [Disagreement perspective mapper](https://useaiblocks.com/skills/other-person-view-mapper). Bring your question.

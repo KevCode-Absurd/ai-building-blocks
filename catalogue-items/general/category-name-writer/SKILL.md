@@ -12,7 +12,7 @@ When you are first in a kind of product, buyers need to know why anyone would bu
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A shortlist** (yours): a ranked short list chosen from a larger set, with reasons.
+- **A shortlist** (yours): the selected options, with the reasons and criteria used.
 
 **Makes it better (optional):**
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.

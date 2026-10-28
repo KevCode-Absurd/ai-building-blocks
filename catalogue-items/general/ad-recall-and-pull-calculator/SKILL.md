@@ -15,10 +15,10 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Makes it better (optional):**
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A plan** with the [Ad response survey planner](https://useaiblocks.com/skills/recall-and-pull-survey-planner). Bring a draft. It uses your buyer brief.
+1. **A plan** with the [Ad response survey planner](https://useaiblocks.com/skills/recall-and-pull-survey-planner). Bring a draft, a brief (optional).
 2. This one.
 
 How to start:

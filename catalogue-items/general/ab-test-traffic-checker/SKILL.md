@@ -17,14 +17,13 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
 
 **Makes it better (optional):**
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
-- **A shortlist**, made by the [Competitor ad swipe file builder](https://useaiblocks.com/skills/competitor-ad-swipe-file-builder): the best few picked from a bigger set, with reasons.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
+- **A shortlist** (yours): the selected options, with the reasons and criteria used.
 - **An objection map** (yours): each buyer doubt paired with the proof or answer that settles it, and where it goes on the page.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A shortlist** with the [Competitor ad swipe file builder](https://useaiblocks.com/skills/competitor-ad-swipe-file-builder). Bring reference ads, competitors (optional). It uses your brand brain.
-2. **An objection map** with the [Unanswered customer question finder](https://useaiblocks.com/skills/customer-question-finder). Bring customer words, your page. It uses your brand brain.
-3. This one.
+1. **An objection map** with the [Unanswered customer question finder](https://useaiblocks.com/skills/customer-question-finder). Bring customer words, your page. It uses your brand brain.
+2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.

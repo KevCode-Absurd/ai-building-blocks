@@ -12,7 +12,7 @@ allowed-tools: Bash, Read, Write, Glob, WebSearch, Task
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A plan** with the [Research outline builder](https://useaiblocks.com/skills/research-outline-builder). Bring your question.

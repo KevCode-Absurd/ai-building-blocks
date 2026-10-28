@@ -5,7 +5,7 @@ job: hire-people
 thinking: high
 thinking_why: It scores people, picks its own path from the results and drafts messages about them. Give it your strongest model and read every score.
 headline: Hiring pipeline runner
-subhead: Give it the role, then each new batch of resumes. It scores them only against your scoring guide, drafts the replies, tells you when to widen the search, and sends a short update each Friday. You send, book and decide.
+subhead: Give it the role, then each new batch of resumes. It scores them only against your scoring guide, drafts the replies, tells you when to widen the search, and writes a short update when you start the Friday run. You send, book and decide.
 explain: |
   Hiring a person takes weeks, and the work comes in waves. A batch of resumes lands, you screen it, someone replies late, another batch lands. The usual faults are scoring on a gut feel, losing track of who was already looked at, and leaving good people without a reply.
 

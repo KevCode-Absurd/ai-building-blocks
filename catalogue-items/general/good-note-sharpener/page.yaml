@@ -1,7 +1,7 @@
 new_slug: good-note-sharpener
 name: "Good note sharpener"
 summary: "Turn vague or bossy feedback into clear notes on the problem. Paste your raw comments and get each one rewritten with its place and any fix as an example."
-job: lead-people
+job: write-and-tell-stories
 thinking: medium
 thinking_why: "It sorts and rewrites each comment by fixed rules, but it has to judge what problem sits behind a fix."
 

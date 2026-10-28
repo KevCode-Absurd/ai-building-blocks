@@ -13,6 +13,7 @@ inputs:
     required: true
 outputs:
   - type: spreadsheet
+    required: false
 needs_mode: manual
 uses:
   - weighted-average-share-schedule

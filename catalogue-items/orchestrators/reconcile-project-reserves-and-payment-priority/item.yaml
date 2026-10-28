@@ -16,6 +16,7 @@ inputs:
 outputs:
   - type: audit_report
   - type: spreadsheet
+    required: false
 needs_mode: manual
 uses:
   - debt-reserve-rollforward-builder

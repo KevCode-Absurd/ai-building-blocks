@@ -17,6 +17,7 @@ inputs:
     required: true
 outputs:
   - type: spreadsheet
+    required: false
   - type: document
 needs_mode: manual
 uses:

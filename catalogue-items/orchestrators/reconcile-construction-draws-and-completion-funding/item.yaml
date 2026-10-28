@@ -13,7 +13,7 @@ inputs:
     required: false
 outputs:
   - type: spreadsheet
-    required: true
+    required: false
   - type: audit_report
     required: true
 next:

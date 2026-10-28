@@ -16,7 +16,7 @@ inputs:
 outputs:
   - type: shortlist
   - type: plan
-needs_mode: manual
+next: []
 uses: [hiring-packet-builder, applicant-shortlist-builder, candidate-message-drafter, candidate-sourcing-planner, job-ad-campaign-planner, fair-candidate-comparer, hiring-progress-reporter]
 steps:
   - {uses: hiring-packet-builder, note: "Once per role: the job post and the scoring guide every later step uses. Skipped if they are already saved."}

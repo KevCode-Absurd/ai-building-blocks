@@ -18,7 +18,7 @@ This workflow chains skills from the library. Each step is its own skill. You ru
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 - **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 

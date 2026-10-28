@@ -21,7 +21,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 **Makes it better (optional):**
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A document** with the [On-call runbook writer](https://useaiblocks.com/skills/on-call-runbook-writer). Bring your question.

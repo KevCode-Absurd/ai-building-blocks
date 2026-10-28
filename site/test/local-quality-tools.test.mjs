@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import {selectLowest,saveWeekly} from '../../tools/qa/weekly-report.mjs';
+import {selectLowest,saveWeekly,inspectLocalItem} from '../../tools/qa/weekly-report.mjs';
 import {licenceFindings,proseFindings} from '../../tools/qa/catalogue-audit.mjs';
 const result=(slug,score,at='2026-10-27T00:00:00Z')=>({group:'general',slug,key:'general/'+slug,score,at,fixes:['A synthetic source-review suggestion.']});
 test('weekly report uses the latest saved result per item and preserves imported items',()=>{
@@ -44,4 +44,14 @@ test('name cleanup flags only a recorded old label, leaving purposeful link desc
  const names=new Map([['synthetic',{name:'Current name',aliases:['Old name']}] ]);
  const text='[Old name](https://useaiblocks.com/skills/synthetic)\n[Make a useful result](https://useaiblocks.com/skills/synthetic)';
  assert.deepEqual(proseFindings('page.md',text,names),[{file:'page.md',rule:'old-link-label',line:1}]);
+});
+test('weekly current-source checks detect present metadata errors without regrading or rewriting a skill',t=>{
+ const root=fs.mkdtempSync(path.join(os.tmpdir(),'abb-weekly-source-')),folder=path.join(root,'catalogue-items/imported/fixture');
+ t.after(()=>{const target=path.resolve(root);assert.equal(path.dirname(target),path.resolve(os.tmpdir()));assert.match(path.basename(target),/^abb-weekly-source-/);fs.rmSync(target,{recursive:true,force:true});});
+ fs.mkdirSync(folder,{recursive:true});fs.writeFileSync(path.join(folder,'item.yaml'),'slug: fixture\nname: Synthetic fixture\nsource:\n  by: sickn33\n  licence: MIT\n  licence_file: LICENSE\ncredits: []\n');
+ const method='---\nname: fixture\nlicense: MIT\n---\n# Synthetic method\nRead the supplied notes.\n';fs.writeFileSync(path.join(folder,'skill.md'),method);fs.writeFileSync(path.join(folder,'LICENSE'),'Synthetic licence fixture only.\n');
+ const page=path.join(folder,'page.yaml');fs.writeFileSync(page,'when:\n  - Need a result: with source notes\n');
+ const first=inspectLocalItem(root,'imported/fixture');assert.ok(first.localFindings.some(f=>f.rule==='source-parse'));assert.ok(first.sourceFiles.some(f=>f.endsWith('/skill.md')));assert.equal(fs.readFileSync(path.join(folder,'skill.md'),'utf8'),method);assert.equal('score' in first,false);
+ fs.writeFileSync(page,'when:\n  - "Need a result: with source notes"\n');const next=inspectLocalItem(root,'imported/fixture');assert.deepEqual(next.localFindings,[]);assert.notEqual(next.currentSourceSha256,first.currentSourceSha256);assert.equal(fs.readFileSync(path.join(folder,'skill.md'),'utf8'),method);
+ assert.throws(()=>inspectLocalItem(root,'imported/../escape'),/Unsafe source key/);
 });

@@ -160,3 +160,21 @@ function dateFixtureDiagnostics(dir, files, dates) {
     status: run(['status', '--porcelain', '-z', '--untracked-files=all', '--', '.']),
   });
 }
+
+test('Git dates resolve Windows 8.3 path aliases before matching history', { skip: process.platform !== 'win32' }, t => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'abb-date-short-alias-'));
+  t.after(() => { const target = path.resolve(root); assert.equal(path.dirname(target), path.resolve(os.tmpdir())); assert.match(path.basename(target), /^abb-date-short-alias-/); fs.rmSync(target, { recursive: true, force: true }); });
+  // A constant read-only command obtains this owned fixture's 8.3 path without interpolating any path into shell text.
+  const short = execFileSync('cmd.exe', ['/d', '/c', 'for %I in (.) do @echo %~sI'], { cwd: root, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }).trim();
+  if (!/~\d/.test(short)) { t.skip('This filesystem does not provide an 8.3 alias.'); return; }
+  assert.equal(fs.realpathSync.native(short), fs.realpathSync.native(root));
+  const git = (...args) => execFileSync('git', ['-c', 'core.longpaths=true', '-c', 'core.autocrlf=false', '-c', 'commit.gpgsign=false', '-c', 'user.name=QA Fixture', '-c', 'user.email=qa@example.invalid', '-C', root, ...args], { stdio: 'pipe', env: { ...process.env, GIT_AUTHOR_DATE: '2026-10-05T10:00:00Z', GIT_COMMITTER_DATE: '2026-10-05T10:00:00Z' } });
+  git('init', '--initial-branch=codex/date-short-fixture');
+  fs.writeFileSync(path.join(root, 'SKILL.md'), '# Synthetic 8.3 date fixture\n'); git('add', '--', 'SKILL.md');
+  git('commit', '-m', 'Synthetic 8.3 date fixture\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>');
+  const future = new Date('2030-01-01T00:00:00Z'); fs.utimesSync(path.join(root, 'SKILL.md'), future, future);
+  const file = path.join(short, 'SKILL.md');
+  assert.equal(gitDates(short).modified([file]), '2026-10-05');
+  assert.equal(gitDates(root).modified([file]), '2026-10-05');
+  assert.equal(gitDates(short).published([path.join(root, 'SKILL.md')]), '2026-10-05');
+});

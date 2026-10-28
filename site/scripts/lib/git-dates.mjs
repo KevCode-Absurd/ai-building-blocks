@@ -15,7 +15,7 @@ const day = (iso) => (iso ? new Date(iso).toISOString().slice(0, 10) : "");
 export function gitDates(dir) {
   // Git can expand Windows short paths or filesystem aliases differently from the caller.
   const realPaths = new Map();
-  const normalize = file => { const absolute = path.resolve(file); if (!realPaths.has(absolute)) { try { realPaths.set(absolute, fs.realpathSync(absolute)); } catch { realPaths.set(absolute, absolute); } } return realPaths.get(absolute); };
+  const normalize = file => { const absolute = path.resolve(file); if (!realPaths.has(absolute)) { try { realPaths.set(absolute, fs.realpathSync.native(absolute)); } catch { realPaths.set(absolute, absolute); } } return realPaths.get(absolute); };
   const root = normalize(dir);
   const last = new Map(), first = new Map(), dirty = new Set();
   let usable = false, shallow = false;

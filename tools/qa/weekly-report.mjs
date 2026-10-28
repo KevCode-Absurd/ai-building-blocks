@@ -4,10 +4,34 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
+import {createRequire} from 'node:module';
 import {git,REPO,checkedPath} from './git-content.mjs';
+import {checkTextChange} from './source-validation.mjs';
+import {licenceFindings,proseFindings} from './catalogue-audit.mjs';
+import {primarySkillFile} from '../../site/scripts/lib/skill-file.mjs';
+const YAML=createRequire(new URL('../../site/package.json',import.meta.url))('yaml');
 const GROUPS=new Set(['general','ecommerce','orchestrators','imported','agents','minds','ai-tools']);
 const sha=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 function safeFile(root,file,canonicalRoot=fs.realpathSync(root)){checkedPath(file);const absolute=path.join(root,file);if(fs.lstatSync(absolute).isSymbolicLink()||!fs.realpathSync(absolute).startsWith(canonicalRoot+path.sep))throw Error('Evidence path escaped repository');return absolute;}
+export function inspectLocalItem(root,key){
+  const [group,slug,...extra]=key.split('/');if(extra.length||!GROUPS.has(group)||! /^[a-z0-9][a-z0-9-]*$/.test(slug??''))throw Error('Unsafe source key');
+  const canonicalRoot=fs.realpathSync(root),folder=`catalogue-items/${group}/${slug}`,findings=[],sources=[];
+  const primaryMeta=group==='ai-tools'?folder+'.yaml':folder+'/item.yaml';
+  const meta=fs.existsSync(path.join(root,primaryMeta))?primaryMeta:group==='minds'?folder+'/mind.yaml':primaryMeta;
+  const read=file=>{
+    if(!fs.existsSync(path.join(root,file)))return null;
+    const bytes=fs.readFileSync(safeFile(root,file,canonicalRoot));sources.push({file,sha256:createHash('sha256').update(bytes).digest('hex')});
+    findings.push(...checkTextChange({file,before:null,after:bytes}).map(message=>({file,rule:'source-parse',message})),...proseFindings(file,bytes.toString('utf8')));return bytes.toString('utf8');
+  };
+  const metadata=read(meta);if(metadata===null)findings.push({file:meta,rule:'missing-source-metadata'});
+  if(group!=='ai-tools'&&fs.existsSync(path.join(root,folder))){
+    safeFile(root,folder,canonicalRoot);
+    let method=null;try{const file=primarySkillFile(path.join(root,folder));if(file)method=read(path.relative(root,file).split(path.sep).join('/'));else findings.push({file:folder,rule:'missing-method'});}catch{findings.push({file:folder,rule:'unreadable-primary-method'});}
+    const page=folder+'/page.yaml',fallback=`tools/orchestrator-pages/${slug}.yaml`;if(fs.existsSync(path.join(root,page)))read(page);else if(group==='orchestrators')read(fallback);
+    if(group==='imported'&&metadata!==null&&method!==null)try{findings.push(...licenceFindings(meta,YAML.parse(metadata,{maxAliasCount:100,logLevel:'silent'}),method,fs.readdirSync(path.join(root,folder))));}catch{findings.push({file:meta,rule:'licence-metadata-unreadable'});}
+  }
+  return {sourceFiles:sources.map(source=>source.file),currentSourceSha256:sha(sources),localFindings:findings};
+}
 export function selectLowest(rows,{limit=50,latestSource=new Map(),dirty=new Set(),exists=()=>true}={}){
   if(!Number.isInteger(limit)||limit<1||limit>50)throw Error('Choose 1 to 50 saved results');
   const latest=new Map();let invalid=0,missing=0;
@@ -47,7 +71,8 @@ export function weeklyReport({root=REPO}={}){
     const found=files.some(file=>fs.existsSync(path.join(root,file))&&fs.statSync(safeFile(root,file,canonicalRoot)).isFile());presence.set(key,found);return found;
   };
   const result=selectLowest(rows,{latestSource,dirty,exists});
-  const stable={schema:'abb-weekly-local-quality/1',...result,policy:'Saved scores are historical, not new tests or a current quality grade. The saved fingerprint includes the model, rubric and prompt; it is not a source-file hash. No API calls, automatic fixes, hiding or deletion. Review imports only for real safety issues or plainly wrong data.'};
+  result.items=result.items.map(item=>({...item,...inspectLocalItem(root,item.key)}));
+  const stable={schema:'abb-weekly-local-quality/1',...result,policy:'Saved scores are historical, not new tests or a current quality grade. Current local findings cover primary metadata/instructions, the active page, licence notices and selected prose patterns; supporting files are not graded. The saved fingerprint includes the model, rubric and prompt; currentSourceSha256 separately fingerprints the inspected source files. No API calls, automatic fixes, hiding or deletion. Review imports only for real safety issues or plainly wrong data.'};
   return {...stable,contentHash:sha(stable)};
 }
 export function saveWeekly(root,report){

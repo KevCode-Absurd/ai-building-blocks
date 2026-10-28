@@ -7,6 +7,8 @@ job: build-software
 headline: Picture chat assistant builder
 subhead: Give it your images and the questions you want to ask. It walks you through installing LLaVA, an open-source model that sees pictures, and running it on your own GPU. You get image captions and answers, and a chat that keeps context across questions.
 explain: |
+  Who it suits: someone at ease with Python, the command line and a GPU. It is not a no-code tool.
+
   LLaVA is a free, open-source AI model that looks at an image and talks about it. This skill helps you set up your own picture chat assistant: you ask what is in a photo, what a chart shows or what a document image says, then ask follow-ups.
 
   Your AI walks you through the install, picks a model size that fits your GPU memory, and writes the code for a first run. It shows the command line chat, a small web page chat, and how to keep a multi-turn conversation going. It also shows how to shrink memory use with 4-bit loading.
@@ -38,7 +40,7 @@ you_get:
 how_to_use:
   - Check you have Python, git and an NVIDIA GPU with enough memory. A 7B model needs about 14 GB, or less with 4-bit loading. Your AI cannot run the model in a chat window. You run it on your own machine.
   - Open Claude, ChatGPT or Gemini and paste this skill. Tell it your GPU and the model size you want.
-  - Run the install commands it gives you, then run the first command with one image and one question. The install clones the LLaVA project from GitHub. The skill tells you to check out a release tag or commit after cloning. In the command `git checkout [TAG OR COMMIT]`, replace [TAG OR COMMIT] with a real release tag or commit from the LLaVA GitHub page, or the command fails. Write down which one, so you can repeat the install later. The multi-turn and web chat code are sketches. They call small helper functions (generate, ask), which the skill defines after the first-run code. The web chat keeps one conversation at a time, so it suits one user. Run that code first so the model is loaded. The skill has no working LangChain code, so skip that part.
+  - Run the install commands it gives you, then run the first command with one image and one question. The install clones the LLaVA project from GitHub. Then it checks out release tag v1.2.2.post1, the newest on 28 Oct 2026. Use a newer tag from the LLaVA GitHub page if there is one, and write down which one, so you can repeat the install later. The multi-turn and web chat code are sketches. They call small helper functions (generate, ask), which the skill defines after the first-run code. The web chat keeps one conversation at a time, so it suits one user. Run that code first so the model is loaded. The skill has no working LangChain code, so skip that part.
   - Read the answer and compare it with the image. If it invents details, make your question more specific.
   - Move on to your full set of images, or start the web chat page to ask follow-ups.
   - Save the captions to a file or spreadsheet, and check a sample by eye.

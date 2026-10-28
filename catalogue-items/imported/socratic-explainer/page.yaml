@@ -36,6 +36,8 @@ how_to_use:
   - If you feel lost, say so. The skill goes back to its analogy and simplifies.
   - When the idea is clear, try explaining it back, or test it on a real case from your own work.
   - The talk ends when you say you have got it, or when you say stop. Your AI may close with one question about the picture you now have.
+  - Next, to keep it, paste the talk into the Flashcard maker and get review cards. To check any facts it used, run the AI answer fact-checker.
+next: [flashcard-maker, ai-answer-fact-checker]
 output_sample:
   input:
     - The topic you want to understand, in one sentence

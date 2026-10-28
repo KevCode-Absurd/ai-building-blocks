@@ -7,9 +7,9 @@ job: build-product
 headline: Onboarding improver
 subhead: Find the fastest route from signup to a new user's first real win. You describe your product and get a plan to shorten that route and keep people coming back.
 explain: |
-  Find the fastest route from signup to a new user's first real win. You describe your product and get a plan to shorten that route and keep people coming back.
+  This designs the whole flow and picks the activation goal: the one action that shows a new user got value. It only sketches the emails. To write them in full, use the New customer onboarding sequence writer next.
 
-  The skill starts by asking what the aha moment is and where users drop off. Then it designs the minimum path to value, the fewest steps needed to feel the benefit. It limits the first session to one goal and saves advanced features for later. You get a checklist for the first visit, empty states that guide instead of showing blank screens, and a short email series that nudges people along. It suggests which events to measure so you can see what is working.
+  The skill starts by asking what the aha moment is (the moment a new user first feels the benefit) and where users drop off. Then it designs the minimum path to value, the fewest steps needed to feel the benefit. It limits the first session to one goal and saves advanced features for later. You get a checklist for the first visit, empty states that guide instead of showing blank screens, and a short email series that nudges people along. It suggests which events to measure so you can see what is working.
 
   Licence: MIT, as the LICENSE file in this item says. This is a copy of the onboarding skill by Corey Haines. Credit goes to the author.
 when:
@@ -20,7 +20,7 @@ when:
 not_for:
   - "Your users leave before they finish signing up: fix the signup form first, with a simpler form or fewer fields."
   - "Your product has no onboarding flow yet and no repeat use: talk to a few real users first to learn what value means for them."
-  - "You need a full email series written out: use a dedicated email writing step, or ask a copywriter."
+  - "You need a full email series written out: use the New customer onboarding sequence writer, or ask a copywriter."
 you_give:
   - What your product does and who uses it
   - What counts as a user getting value
@@ -37,7 +37,7 @@ how_to_use:
   - Say where users drop off today. Paste your current onboarding steps if you have them.
   - "For an audit of your current onboarding, ask for it in three stages: 1. a list of your steps from sign-up to first value, with the drop-off at each; 2. one row per problem with finding, impact, fix and priority; 3. the new flow, with the activation goal, steps, checklist, empty-state text, email triggers and what to measure."
   - If you do not have drop-off numbers yet, say so. Your AI should ask which step you think loses people most, then plan a way to count it (one event at each step) before you change anything.
-  - Read the activation goal first. Check that it matches real value for your users. Then pick the activation model that fits (free trial, freemium and so on), and read the flow.
+  - Read the activation goal first (activation means a new user did the one action that shows they got value). Check that it matches real value for your users. Then pick the activation model that fits (free trial, freemium and so on), and read the flow.
   - Ask your AI to adjust anything that does not fit, then build the checklist, empty states and emails. The psychology and toolkit sections can be skipped for a quick run.
   - Treat any percentage or benchmark in the result as a rough guide. Check it against your own data.
   - Pick one fix to test first, and compare it with your own sign-up numbers.

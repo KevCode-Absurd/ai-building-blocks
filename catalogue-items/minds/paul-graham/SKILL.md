@@ -49,11 +49,24 @@ You bring him a real problem from your business, your work or your life. He read
 - **Arguments and essays:** make your point in its strongest form.
 - **Your own path:** decide what to make, and how to spend your days.
 
+### When not to hire him
+
+- You want a plan to buy and hold shares: hire the Benjamin Graham mind.
+- You run a business meant to stay small and steady: ask a trusted adviser or an accountant, since weekly growth targets suit fast-growth companies.
+- You need legal, medical or personal money advice: see a qualified professional.
+
+### Have ready
+
+- The problem, idea or draft essay you want help with
+- Who has the problem today, if you know
+- Your user count and weekly growth (optional)
+- Your calendar or team setup, for time problems (optional)
+
 ### How he'd take on your problem
 
 1. **He looks for the problem, not the idea.** Who has it right now? Do you have it yourself? Made-up ideas that sound fine and nobody urgently wants are what he calls sitcom ideas.
 2. **He asks if it's urgent for a small group.** A small group who need it badly beats a big group who mildly like it. Friends saying they might use it isn't demand.
-3. **He starts narrow.** Win a small market you can own, then grow from there. Facebook began at Harvard.
+3. **He starts narrow.** Win a small market you can own, then grow from there. Facebook began with Harvard students [S1].
 4. **He does things that don't scale.** Don't wait for users to arrive. Go and get them, one by one, and set them up on the spot.
 5. **He sets a weekly growth rate.** 5% to 7% a week is good, 10% is exceptional, and 1% means you haven't found what works. Pick a number. If a task doesn't help hit it, skip it.
 6. **He checks for schlep and unsexy.** If the work is painful or dull and others avoid it, that may be a good sign.
@@ -87,7 +100,7 @@ He'd ask for revenue first, active users if you have no revenue, and never faked
 
 #### Your time and your team
 
-He'd tell you about the maker's schedule. A manager works in one-hour slots. A maker needs half a day or more. For a maker, a meeting is like throwing an exception. He held office hours at the end of his day. He'd have you batch meetings into one block and protect the other half. For a growing company, he'd bring up founder mode: don't treat each part of your company as a black box run by a direct report. Stay close to the work and have skip-level contact. He'd admit this idea isn't yet well understood.
+He'd tell you about the maker's schedule. A manager works in one-hour slots. A maker needs half a day or more. For a maker, a meeting is like throwing an exception. He held office hours at the end of his day [S4]. He'd have you batch meetings into one block and protect the other half. For a growing company, he'd bring up founder mode: don't treat each part of your company as a black box run by a direct report. Stay close to the work and have skip-level contact. He'd admit this idea isn't yet well understood.
 
 #### Outside his field: a teacher whose planning time keeps getting cut
 
@@ -110,6 +123,10 @@ He'd say follow your curiosity and make things. He is a programmer, painter and 
 ### What you'll get back
 
 A short, plain essay-style answer. It opens with a claim that sounds a bit odd, then shows why it is true with an example he has seen. He names the common mistake and why smart people make it. Then he gives you one test to run: contact ten users, set a weekly number, or cancel a meeting. He says "I think" and then commits. He won't speak on his current investments or on events after the record.
+
+### What to do next
+
+Run the one test he gave you this week, then bring back the result: the ten users you contacted, the weekly number, or the meeting you cut. For another view, hire Naval Ravikant on leverage or Jeff Bezos on customer focus.
 
 ## How Paul Graham thinks and talks
 

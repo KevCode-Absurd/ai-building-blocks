@@ -285,7 +285,9 @@ If any existing configuration matches the device (same IP, same model), **ask th
 
 **Determine the correct SFP+ port index:** Devices with multiple SFP+ ports (X310, X410) expose multiple IP addresses in `probesdru` output (for example, `ip-addr0`, `ip-addr1`, `ip-addr2`, `ip-addr3`). Compare the IP found by `findsdru` against the `probesdru` port list to determine which port index (0, 1, 2, 3) the radio was discovered on. Use that index for the `HostIPx`/`DeviceIPx` pair below — using the wrong port index causes misleading errors.
 
-**Option A: Programmatic (preferred when agent is driving)**
+Use Option B (the `radioSetupWizard` GUI) by default. Use Option A only when the user says they are an experienced user and asks for the code route.
+
+**Option A: Programmatic (optional, experienced users only)**
 
 This route is for experienced users only. Use the internal `DeviceStore` API to create a configuration without the GUI. It is not documented by MathWorks and may change between releases, and a bad write can corrupt the cached radio configuration. Before writing, run `radioConfigurations` and note which saved names already exist, and tell the user that the recovery steps are below. Write only the one configuration the user chose. If a call fails, stop and use Option B (the `radioSetupWizard` GUI) instead. **You MUST use the `getUsrp<Model>Params()` function matching the user's selected device** — do not copy example names blindly. **Read the `probesdru` output carefully before setting any fields** — do not assume values. Default params assume UBX-160 daughterboards; if `probesdru` reports a different board (e.g., OBX, TwinRX) or "Unknown", ask the user what is installed. For unsupported/unknown boards, configure as if UBX-160 — streaming still works but is untested. For TwinRX, skip transmit verification (RX-only board).
 
@@ -322,13 +324,13 @@ rehash toolboxcache
 
 Then recreate the configuration from scratch.
 
-**Option B: GUI wizard (when user is driving interactively)**
+**Option B: GUI wizard (default, safer route)**
 
 ```matlab
 radioSetupWizard
 ```
 
-The wizard walks through device selection, IP configuration, connectivity test, firmware or FPGA update if needed, clock, time, and LO source configuration, and saves a named configuration. Use this when the user prefers a guided interactive experience or when firmware needs updating (the wizard handles firmware flashing). **Note:** After support package installation, a dialog box prompts the user to open the Radio Setup Wizard — tell the user to close it (the skill handles setup).
+The wizard walks through device selection, IP configuration, connectivity test, firmware or FPGA update if needed, clock, time, and LO source configuration, and saves a named configuration. Use this by default, and always when firmware needs updating (the wizard handles firmware flashing). **Note:** After support package installation, a dialog box prompts the user to open the Radio Setup Wizard. The user can use it to save the configuration, then come back for Step 5.
 
 After either option, verify the configuration exists:
 
@@ -416,7 +418,7 @@ If any step fails, consult [references/troubleshooting.md](references/troublesho
 - **Inspect host first.** Always check OS, NIC type/speed, MTU, and buffers before touching the radio.
 - **Stay in MATLAB.** Use `findsdru` or `probesdru` for discovery — never call `uhd_find_devices` or other UHD CLI tools.
 - **Modern path for streaming.** Use `basebandTransceiver`, `basebandReceiver`, or `basebandTransmitter`. These load their own FPGA bitstream. Do not use `sdruload` for streaming — that is the legacy `comm.SDRu*` path. `sdruload` remains valid for FPGA image management (for example, E320 variant switching).
-- **Programmatic config when agent-driven.** Use `DeviceStore` to create configs without the GUI. Fall back to `radioSetupWizard` when the user prefers interactive setup or firmware needs updating.
+- **Wizard first.** Use `radioSetupWizard` to create configs by default. Use the undocumented `DeviceStore` code route only for an experienced user who asks for it.
 - **Check versions early.** Compare `getSDRuDriverVersion` (host) with `probesdru` output (device) before proceeding.
 - **Diagnose before configuring.** Complete all host and radio checks before creating a radio configuration or launching the wizard.
 - **Use release-specific doc URLs.** When linking to MathWorks docs, use `https://www.mathworks.com/help/releases/<release>/wireless-testbench/...` (derive `<release>` from `version('-release')`). This ensures docs match the user's installed version.

@@ -7,6 +7,7 @@ api_version: "2025-01"
 graphql_operations:
   - customers:query
   - tagsAdd:mutation
+  - tagsRemove:mutation
 status: stable
 compatibility: Claude Code, Cursor, Codex, Gemini CLI
 ---
@@ -44,12 +45,18 @@ Segments your highest-value customers by order count and total lifetime spend, t
 
 ## Workflow Steps
 
+0. **CHECK (required before a live run):** confirm every customer field name in the query below against Shopify's Admin API docs for the API version the store uses (see the AI Blocks note under GraphQL Operations). Fix any renamed field before step 2 runs live.
+
 1. **OPERATION:** `customers` — query
    **Inputs:** filter `orders_count:>=(min_orders)`, `total_spent:>=(min_spend)`, `-tag:(tag)` (so customers who already have the tag are skipped), `first: 250`, pagination
    **Expected output:** List with `id`, `defaultEmailAddress { emailAddress }`, `firstName`, `lastName`, `ordersCount`, `totalSpentV2`; paginate until `hasNextPage: false`
 
 2. **OPERATION:** `tagsAdd` — mutation
-   **Inputs:** Customer `id`, tag from `tag` parameter. Run this once for every customer id step 1 returned, so tell the user how many records it will change before a live run
+   **Inputs:** Customer `id`, tag from `tag` parameter. Write the CSV (see Output Format) from step 1's results first, before any `tagsAdd` call, so the user can review the exact list. Then run this once for every customer id step 1 returned, so tell the user how many records it will change before a live run
+   **Expected output:** Confirmation per customer; collect `userErrors`
+
+3. **OPERATION (undo, only if asked):** `tagsRemove` — mutation
+   **Inputs:** Customer `id` values from the CSV and the same tag. Use this only when the user says the wrong customers were tagged, and show the count before running it
    **Expected output:** Confirmation per customer; collect `userErrors`
 
 ## GraphQL Operations
@@ -86,6 +93,16 @@ query LoyaltyCustomers($first: Int!, $after: String, $query: String) {
 # tagsAdd:mutation — written for api_version 2025-01; check it against Shopify's docs for your version
 mutation TagsAdd($id: ID!, $tags: [String!]!) {
   tagsAdd(id: $id, tags: $tags) {
+    node { id }
+    userErrors { field message }
+  }
+}
+```
+
+```graphql
+# tagsRemove:mutation — added by AI Blocks for undoing a wrong tag; check it against Shopify's docs for your version
+mutation TagsRemove($id: ID!, $tags: [String!]!) {
+  tagsRemove(id: $id, tags: $tags) {
     node { id }
     userErrors { field message }
   }

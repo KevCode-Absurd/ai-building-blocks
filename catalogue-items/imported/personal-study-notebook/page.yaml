@@ -10,7 +10,7 @@ not_for:
   - "You need to cram for an exam next week: use a past-paper practice session with a teacher or tutor instead, since this plans slow, spaced study."
   - "You only want a quick answer to one question: ask your AI directly in a normal chat."
   - "Your AI cannot read and write files: you can still chat through lessons, but the notes folder and dashboard will not be saved."
-explain: Choose a subject, goal and folder for your notes. It learns your preferences, plans short lessons and checks your answers. You get lesson notes, quiz feedback, review dates and a dashboard that keeps the next study step visible.
+explain: It works like a tutor that keeps its own files. Everything lives in your notes folder as plain Markdown, so you can open it in Obsidian, VS Code or any editor. Each session picks up where the last one stopped, from your profile, plan, logs and review dates.
 you_give:
   - Your subject, goal, current level and weekly study time.
   - A local folder for notes and any source materials.
@@ -28,6 +28,7 @@ how_it_works:
 how_to_use:
   - Open your AI tool and use one that can read and write files in a folder. Add the skill's instructions to the chat or project.
   - You need nothing else. The skill mentions two companion skills (agent-tutor-visualize and agent-tutor-review) and some pi tool extensions (quiz, learning_log, svg_save, mermaid_lint, subagent). None are in this item, and the skill has built-in fallbacks for each. If it offers to install them with npx, that downloads code from the author's GitHub, and you can say no.
+  - "Network note: if your AI can browse the web, the skill checks the author's GitHub once a day for a newer version. It reads only the version number and asks before any install. To turn it off, tell your AI at the start: skip the update check."
   - Tell it the subject you want to learn, your goal, your level and how many hours a week you have.
   - Name the folder where your notes should go. Add any books or articles you want it to teach from (optional).
   - Answer its short questions about how you like things explained. It builds your learner profile and study plan from your answers. One question is whether you want your dashboard and logs as plain Markdown tables or as a web page (HTML). Markdown is the default and needs nothing extra. The web page opens in any browser. The HTML Reader plugin for Obsidian is optional and only needed to view it inside Obsidian.

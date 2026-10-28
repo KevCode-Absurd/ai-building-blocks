@@ -72,7 +72,8 @@ $users = @(
         LicenseSku = "{license_sku}"
         UsageLocation = "US"
         PasswordProfile = @{{
-            Password = "ChangeMe@$(Get-Random -Minimum 1000 -Maximum 9999)"
+            # 120 random bits from the system's secure generator; the tail only meets the complexity rule.
+            Password = "$($b = New-Object byte[] 15; [System.Security.Cryptography.RandomNumberGenerator]::Create().GetBytes($b); [Convert]::ToBase64String($b))!a1"
             ForceChangePasswordNextSignIn = $true
         }}
     }}

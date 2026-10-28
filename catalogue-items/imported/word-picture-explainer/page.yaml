@@ -33,7 +33,7 @@ how_to_use:
   - Say the subject and year group, like Year 7 Geography.
   - Add your format limits, such as a whiteboard drawing in three minutes, and any visuals you already use (optional).
   - Read the plan from top to bottom. Check that the picture shows the key idea and has few labels.
-  - Draw it by hand or build it in slides. The plan is a spec, not a finished picture. For next steps, use the cognitive load analyser to check overload and the worked example fading designer to plan practice.
+  - Draw it by hand or build it in slides. The plan is a spec, not a finished picture. For next steps, use the Overloaded lesson checker to check for overload and the Worked example to practice sequence builder to plan practice.
 output_sample:
   input:
     - The explanation or text you want a visual for
@@ -53,3 +53,4 @@ output_sample:
       contains: How to show words and picture together so students do not have to split their attention.
     - name: Common Pitfalls to Avoid
       contains: Design mistakes that would add clutter and make the idea harder to learn.
+next: [overloaded-lesson-checker, worked-example-practice, self-explanation-question-writer]

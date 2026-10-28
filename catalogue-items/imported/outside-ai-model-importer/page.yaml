@@ -25,6 +25,7 @@ you_give:
   - The model file
   - Input size and data format
   - Your MATLAB release, and the Python and torch version if you export from PyTorch (torch 2.8 is needed)
+  - "For Keras models, Python with matlabsaver (MATLAB R2026a or later), or with tf_keras on older releases; tf2onnx if you go through ONNX"
   - A sample input (optional)
   - MATLAB with Deep Learning Toolbox
 you_get:
@@ -40,6 +41,7 @@ how_to_use:
   - Check the layer count, the learnables count and the difference from the source model.
   - If the check passes, run predict on the imported network with a few of your own inputs. Keep the match report with the model.
   - Next, use the network in your MATLAB workflow with predict, or fine-tune it on your own data with the Neural network trainer.
+next: [neural-network-trainer, ai-model-code-generator, small-device-ai-deployer]
 output_sample:
   input:
     - Your model file (.pt2, .pt, .onnx or .keras folder)

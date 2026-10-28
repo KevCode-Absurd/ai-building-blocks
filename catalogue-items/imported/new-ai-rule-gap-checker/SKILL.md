@@ -16,10 +16,10 @@ argument-hint: "[regulation name, or paste regulatory text, or attach a document
 
 **No setup file? Use this instead (added by AI Blocks).** Ask the user to paste five short sections in the chat: Regulatory footprint (where you operate, size, sector, builder or user of AI), Use case registry (each AI tool or use, and what it is used for), AI policy commitments (promises you made publicly or in contracts), Vendor AI governance (what each AI vendor has agreed to), and Impact assessment house style (what checks you already do). Then run the steps below with those facts in place of the file. Never fill a missing section by guessing, and never state an article number, threshold or date as fact unless it came from the rule text the user gave you or a source you can name. Otherwise write "confirm with counsel".
 
-1. Read `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md`. Confirm regulatory footprint and use case registry are populated.
-2. Use the framework below.
+1. Get the current governance facts. Default: the five sections the user pasted (see above). Alternative, only if the plugin is installed: read `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md`. Either way, confirm regulatory footprint and use case registry are filled in.
+2. Follow the Workflow below (Steps 1 to 5), after the research checklist.
 3. Scope: does this regulation apply? (Jurisdiction, threshold, builder/deployer, sector.) If not, one line and done.
-4. Extract requirements. Diff against current state in `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md`.
+4. Extract requirements (Step 2 below lists the categories and the table). Diff them against the current state from step 1.
 5. Prioritize gaps. Output: remediation plan with must-do / should-do / already compliant / accepted gaps.
 6. Save as dated markdown doc for the file.
 
@@ -63,7 +63,7 @@ judgment call.
 
 ## Load current state
 
-Read `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md`:
+Use the sections the user pasted, or, if the plugin is installed, read `~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md`:
 - `## Regulatory footprint` — what already applies
 - `## Use case registry` — what AI you're actually running, and under what conditions
 - `## AI policy commitments` — what you've publicly or contractually committed to
@@ -258,4 +258,4 @@ End with the next-steps decision tree per CLAUDE.md `## Outputs`. Customize the 
 - It doesn't substitute for sector-specific legal counsel where specialized knowledge
   is required (healthcare AI, financial services model risk management, etc.).
 
-Changed by AI Blocks (2026-10-28): added notes on the missing setup file, a paste-in route without it, and ask-first web search with verify tags.
+Changed by AI Blocks (2026-10-28): added notes on the missing setup file, a paste-in route without it, and ask-first web search with verify tags; made the paste-in route the default in the opening steps and pointed "the framework below" to the Workflow steps.

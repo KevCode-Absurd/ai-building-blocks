@@ -71,16 +71,7 @@ Pause here: The owner reviews and authorizes any sends, live flow changes and su
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
-5 step files and the summary. Step 2 holds the recovery plan. The last file holds the results review.
-
-<!-- next: hand-edited 2026-10-26 because the audit_report links did not fit this workflow. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Win back lapsed buyers** with the [Lapsed buyer email results planner](https://useaiblocks.com/workflows/win-back-lapsed-buyers-and-clean-out-the-rest) workflow, once opens have recovered.
-- **Build a win-back flow** with the [Win-back flow builder](https://useaiblocks.com/skills/win-back-flow-builder).
-- **Read next month's results** with the [Email and SMS results reviewer](https://useaiblocks.com/skills/email-and-sms-performance-reader).
-Nothing here sends an email or suppresses anyone. The owner does that.
-<!-- /next -->
+5 step files and the summary. Step 2 holds the recovery plan. The last file holds the results review. Nothing here sends an email or suppresses anyone. The owner does that.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
@@ -91,6 +82,8 @@ Nothing here sends an email or suppresses anyone. The owner does that.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [SMS send checker](https://useaiblocks.com/skills/sms-send-checker). It takes the plan.
+- The [Lapsed buyer email results planner](https://useaiblocks.com/workflows/win-back-lapsed-buyers-and-clean-out-the-rest).
+- The [Win-back flow builder](https://useaiblocks.com/skills/win-back-flow-builder).
+- The [Email and SMS results reviewer](https://useaiblocks.com/skills/email-and-sms-performance-reader).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

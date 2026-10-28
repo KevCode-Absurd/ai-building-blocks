@@ -79,7 +79,7 @@ Three step files and the summary. The last step file holds the launch check.
 - **Hand-back summary:** each step's file, and every `MISSING:` line in one list.
 
 ## Next steps for this workflow
-Use this, not the generated link below, which is for making new clips. Suggest one next step as a short question: when the verdict is ship, upload the captioned video and launch it yourself (nothing here posts it), then bring the first week's results back to judge the ad.
+Suggest one next step as a short question: when the verdict is ship, upload the captioned video and launch it yourself (nothing here posts it). After the first week, bring the ad's results export to the [Ad results report writer](https://useaiblocks.com/skills/ad-results-report-writer) or the [Ad creative test analyst](https://useaiblocks.com/skills/creative-test-reader) to judge the ad.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
@@ -93,6 +93,7 @@ Use this, not the generated link below, which is for making new clips. Suggest o
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Talking object video clip prompt writer](https://useaiblocks.com/skills/talking-object-video-prompts). It takes the audit report.
+- **Read your ad results** with the [Ad results report writer](https://useaiblocks.com/skills/ad-results-report-writer). It takes the audit report.
+- The [Ad creative test analyst](https://useaiblocks.com/skills/creative-test-reader). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

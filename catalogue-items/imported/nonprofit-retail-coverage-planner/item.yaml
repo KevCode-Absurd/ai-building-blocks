@@ -8,10 +8,10 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: business_profile
+  - type: document
     required: true
-  - type: plan
-    required: true
+  - type: policy
+    required: false
 outputs:
   - type: plan
     required: true
@@ -34,4 +34,4 @@ credits:
   - title: nonprofit-retail-staffing skill
     by: sector-skills
     url: https://github.com/sector-skills/nonprofit-skills/tree/7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8/nonprofit-skills-library/skills/retail-operations/nonprofit-retail-staffing
-    used: Original instructions and supporting files, with attribution and the MIT licence. Display copy describes the task.
+    used: Original instructions and supporting files, with attribution and the MIT licence. Display copy describes the task. We added a note that the three related source skills are not included, so missing store, HR or volunteer policies are marked MISSING and rules that depend on them stay drafts.

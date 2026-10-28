@@ -11,7 +11,7 @@ metadata:
 
 # Shopify Functions
 
-> The code samples below are starting points. Several parts are placeholders you must write or replace before the code runs (`cart_weight_exceeds_limit`, `is_restricted_product`, `YOUR_FUNCTION_ID`, the free gift ID and the example limits). Test on a development store only until a developer has reviewed the code. Rules that block checkout, hide payment methods or limit regions affect every order, so check them against your legal and shipping terms before going live.
+> The code samples below are starting points. Several parts are placeholders you must write or replace before the code runs (`cart_weight_exceeds_limit`, `is_restricted_product`, `YOUR_FUNCTION_ID`, `YOUR_SHIPPING_LABEL`, the free gift ID and the example limits). Each Function has its own input query: the `run.graphql` shown below is for the discount example. The delivery and payment examples read `cart.deliveryGroups` and `paymentMethods`, so their own `run.graphql` must request those fields. Test on a development store only until a developer has reviewed the code. Rules that block checkout, hide payment methods or limit regions affect every order, so check them against your legal and shipping terms before going live.
 >
 > The result shape differs by target. `FunctionRunResult` is generated from your target's schema: `discounts` and `discount_application_strategy` for discount targets, `operations` for delivery, payment and cart transform targets, and `errors` for validation. The examples below each use the shape for their own target, so use the generated types for yours.
 
@@ -182,6 +182,10 @@ fn run(input: input::ResponseData) -> Result<output::FunctionRunResult> {
 
             // Check for eligible tag
             if merchandise.product.has_any_tag {
+                // A bad percentage setting skips this discount instead of crashing the Function.
+                let Ok(percentage) = Decimal::from_str(&config.discount_percentage) else {
+                    continue;
+                };
                 discounts.push(output::Discount {
                     targets: vec![output::Target::ProductVariant(
                         output::ProductVariantTarget {
@@ -190,8 +194,7 @@ fn run(input: input::ResponseData) -> Result<output::FunctionRunResult> {
                         },
                     )],
                     value: output::Value::Percentage(output::Percentage {
-                        // unwrap() is shown for brevity. Replace it with real error handling before you deploy.
-                        value: Decimal::from_str(&config.discount_percentage).unwrap(),
+                        value: percentage,
                     }),
                     message: Some(format!("{}% volume discount", config.discount_percentage)),
                 });
@@ -298,7 +301,8 @@ fn run(input: input::ResponseData) -> Result<output::FunctionRunResult> {
         if method.title.contains("Standard") {
             operations.push(output::Operation::Rename(output::RenameOperation {
                 delivery_option_handle: method.handle.clone(),
-                title: Some("Economy Shipping (5-7 days)".to_string()),
+                // Placeholder: put your own wording here, and only a delivery time you can keep.
+                title: Some("YOUR_SHIPPING_LABEL".to_string()),
             }));
         }
     }

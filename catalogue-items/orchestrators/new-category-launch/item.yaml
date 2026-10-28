@@ -8,7 +8,7 @@ job: research
 level: intermediate
 inputs:
   - {type: competitor_set, required: true}
-  - {type: brand_brain, required: true}
+  - {type: brand_brain, required: false}
   - {type: product_data, required: true}
   - {type: voc_reviews, required: false}
 outputs:

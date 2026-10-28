@@ -29,7 +29,7 @@ How to start:
 
 ## What you need
 
-The general "Before you start" block above lists source text. Ignore that line, including where it says nothing is required: for this workflow the required inputs are the company table, the latest balance sheets and the money for the group, listed below. No article or transcript is needed.
+The "spreadsheet" in "Before you start" is the company table below, and the "financial statements" are the latest balance sheets for the survivors. No article or transcript is needed.
 
 - **A table of listed companies** (required): price, earnings per share for the last twelve months, current assets, current liabilities, long-term debt, tangible book value per share, dividend now, and profit for each of the last five years. Paste it or attach it. If the table lacks the five-year profit or dividend columns, step 1's five tests cannot run for those companies: mark each as `MISSING: five-year profit` or `MISSING: dividend`, set those companies aside as unknown, and ask for the figures. Never fill them in.
 - **The latest balance sheet for each survivor** (needed for step 2): the one before it too, if you have it. Step 1 tells you which companies survive.
@@ -50,7 +50,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 
-1. **Screen for cheap stocks that pass five safety tests.** Use the skill `enterprising-bargain-screener`. Give it the table. It makes a first cut on a low multiple of the last twelve months of earnings. If you gave no multiple, use 10 times as the default and say so, so two runs on the same table keep the same survivors. It then removes any company that fails one of five tests. It returns the survivors, the cuts with the failed test beside each, and the share kept at each stage. Save it as `outputs/step-01-enterprising-bargain-screener.md`.
+1. **Screen for cheap stocks that pass five safety tests.** Use the skill `enterprising-bargain-screener`. Give it the table. It makes a first cut on a low multiple of the last twelve months of earnings. If you gave no multiple, use 10 times as the default and say so, so two runs on the same table keep the same survivors. The 10 times default is this workflow's choice, not a rule: it decides which companies survive, so give your own multiple if you want a wider or tighter first cut. It then removes any company that fails one of five tests. It returns the survivors, the cuts with the failed test beside each, and the share kept at each stage. Save it as `outputs/step-01-enterprising-bargain-screener.md`.
 2. **Find the asset floor for each survivor.** Use the skill `asset-floor-estimator`. Give it the survivors in `outputs/step-01-enterprising-bargain-screener.md`, each one's latest balance sheet, its share count and price. It returns book value, net current assets and cash assets per share, a typical and a harsh sale value, and how each sits beside the price. Save it as `outputs/step-02-asset-floor-estimator.md`.
 3. **Judge the gap for each one.** Use the skill `price-versus-value-gap-judge`. Give it `outputs/step-02-asset-floor-estimator.md`, the price with its date, and an earnings value range if you have one. If you have none, say so: the judge then works from the asset floor and the price, and marks the missing range as `MISSING:`. It returns a margin of safety verdict for each survivor and why the price may be low. Save it as `outputs/step-03-price-versus-value-gap-judge.md`.
 4. **Set the group rules before you buy.** Use the skill `bargain-group-rules-writer`. Give it the verdicts in `outputs/step-03-price-versus-value-gap-judge.md`, the money for the group, and your costs and tax rate. It returns group size, caps for one name and one industry, a gain target, a time limit, an if-the-facts-change rule, the cost and tax sums, and a scorecard against a plain fund with a pass mark set in advance. These are rules for your own study, not personal financial advice: check with a licensed adviser before you buy. Save it as `outputs/step-04-bargain-group-rules-writer.md`.
@@ -67,7 +67,7 @@ Four step files and the summary, in this shape:
 
 It names no company to buy or sell.
 
-Next step that fits: review the scorecard at the date step 4 set, against the plain fund. Do not offer the tools in the generic "After this" list below (bonds, habits, feature requests) unless the person asks. Better follow-ups: rerun the screen on a fresh table once a year, and compare the scorecard with a plain index fund at the review date. The Case-against writer is the one listed tool that fits, to argue against your own shortlist.
+Next steps: put the review date from step 4 in your calendar, and on that date compare the scorecard with a plain index fund. Rerun the screen on a fresh table once a year. For a steadier list of large companies, run the [Company quality and share-price screener](https://useaiblocks.com/workflows/defensive-stock-screen). The "After this" suggestion below fits only if you plan to question a company's managers before you buy.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

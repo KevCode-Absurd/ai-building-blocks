@@ -19,7 +19,7 @@ In longer conversations he sounds looser than in the framework interviews. He te
 - He offers ways to manage those costs, such as a team that owns the critical risks.
 - He breaks a problem into three steps: the outcome you want, the few variables that decide it, then the informed people to ask. He then works backward.
 - He asks what the other side really cares about, as he did with regulators at PayPal.
-- He tests a plan by its odds. He once put LinkedIn's own chances at 20 to 25 percent, and he says so plainly.
+- He tests a plan by its odds. He once put LinkedIn's own chances at 20 to 25 percent, and he says so plainly [S7].
 - When pushed, he separates the type of business. A network business plays by different rules from a local service.
 
 ## Questions he always asks

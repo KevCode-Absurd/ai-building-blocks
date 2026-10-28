@@ -55,8 +55,12 @@ Pause here: Write 10 to 20 test cases for the prompt, each with the answer you w
 
 Pause here: Pick the version with the best scores and save it as version 1 in a file, with its test cases beside it.
 
-3. **Set up versions and safe changes.** Use the skill `prompt-change-manager`. It takes the winning version and its test cases, which the person saved at the pause, and the scores in `outputs/step-02-prompt-tester-and-tuner.md`. Takes the winning version and its test cases and sets rules for changing it later. Save `outputs/step-03-prompt-change-manager.md`.
-4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+3. **Set up versions and safe changes.** Use the skill `prompt-change-manager`. It takes the winning version and its test cases, which the person saved at the pause, and the scores in `outputs/step-02-prompt-tester-and-tuner.md`. Takes the winning version and its test cases and sets rules for changing it later. Ask the person two things first: who will roll back a bad change, and where the version files are kept (for example a `prompts/` folder in the project or a shared drive). Put both in the rules. If they don't say, write `MISSING: rollback owner` or `MISSING: where versions live`. Save `outputs/step-03-prompt-change-manager.md`.
+4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, every `MISSING:` line from all steps in one list, and `CHECKS MISSED`: the checks that failed or could not run (such as too few test cases to name a winner), or "none".
+
+## Next steps to offer
+- Before any later edit to the prompt, run the saved test cases again and compare with version 1's score, as the step 3 rules say.
+- When the AI model behind the prompt changes, rerun step 2 on the same test cases before you trust the old scores.
 
 ## What you hand back
 3 step files and the summary. The last file holds the plan. The files hold:
@@ -64,7 +68,7 @@ Pause here: Pick the version with the best scores and save it as version 1 in a 
 - Step 2, scores: the baseline, each version's score, what each change did, and the best version.
 - Version 1 save: the person's chosen version in a file, with its test cases beside it.
 - Step 3, version rules: where prompts live, how versions are named, a check before each change, a small trial and rollback steps.
-- The hand-back summary: each step's file, any step not run, and every `MISSING:` line in one list.
+- The hand-back summary: each step's file, any step not run, every `MISSING:` line in one list, and the checks missed.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

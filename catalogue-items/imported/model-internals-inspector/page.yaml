@@ -35,9 +35,28 @@ how_to_use:
   - Open an AI that can run code, or paste the skill into a chat and run the code on your own computer.
   - Give your AI the model name, your prompts and your question about the model.
   - "First run: pick gpt2-small, give it one clean prompt and one changed prompt, and ask it to run the activation patching steps from the skill. Then ask for the attention maps."
-  - The skill's code fills a grid of numbers. The heatmap comes from the Workflow 1 code plus a plotting step, for example with matplotlib, so ask your AI to add that step.
+  - The Workflow 1 code ends with a matplotlib step that draws the heatmap and saves it as activation_patching.png. Install matplotlib first.
   - Read the heatmap and the table of top layers and heads. Check the caveats before you trust the result.
-  - Pick one next experiment and run it to confirm what you found.
+  - Pick one next experiment and run it to confirm what you found, such as patching single attention heads in the layers that stood out.
+  - If one layer stands out, the Language model feature explorer can load or train sparse autoencoder features for it. Bring the model name, the layer and your two prompts.
+output_shape: |
+  ## Setup
+  <model, clean and changed prompts, the metric used>
+
+  ## Activation patching
+  <layer by position heatmap, saved as activation_patching.png>
+
+  ## Top layers and heads
+  | Rank | Layer | Head or position | Effect on the metric | Method |
+
+  ## Short reading
+  <3 to 5 sentences on which parts matter, and how sure it is>
+
+  ## Caveats
+  <tokenization, LayerNorm, approximate head scores, memory>
+
+  ## Next experiments
+  <one to three tests that would confirm or break the reading>
 output_sample:
   input:
     - The name of a GPT-style model

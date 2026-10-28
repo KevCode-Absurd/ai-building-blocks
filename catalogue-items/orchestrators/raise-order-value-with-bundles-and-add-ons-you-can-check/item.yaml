@@ -18,7 +18,7 @@ steps:
   - {uses: bundle-and-quantity-break-builder, note: "Builds bundles and quantity breaks that sit around that threshold."}
   - {uses: after-sale-offer-planner, note: "Adds an after-sale offer that follows the bundle the customer picked."}
   - {uses: offer-profit-per-session-checker, note: "Checks the full set of offers earns more profit per visitor, not only more revenue."}
-  - {uses: store-test-verdict-maker, note: "Reads the exported results against the plan and says keep, change or stop. Uses your own test export, with step 3's plan and the winner and profit-per-session metric from step 4."}
+  - {uses: store-test-verdict-maker, note: "Reads the exported results against the plan and says ship, do not ship, re-test or inconclusive. Uses your own test export, with step 3's plan and the winner and profit-per-session metric from step 4."}
 origin: rebuilt
 version: 1.0.0
 generated_from: intake/raise-order-value-with-bundles-and-add-ons-you-can-check/skeleton.yaml

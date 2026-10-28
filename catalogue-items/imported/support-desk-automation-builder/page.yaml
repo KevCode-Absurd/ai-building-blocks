@@ -62,7 +62,7 @@ output_sample:
       contains: Reply templates for refunds, bugs, feature requests and billing, plus ones for your own common cases.
     - name: support-automation/skill.md
       contains: The skill definition that sets the triage workflow, priority rules and approval steps. It is made for your company, so it is a different file from this builder skill.
-    - name: scripts/check-setup.ts
+    - name: support-automation/scripts/check-setup.ts
       contains: A script that checks your keys and connections work before you run the workflow.
     - name: README.md
       contains: Plain documentation on how to set up and run the automation.

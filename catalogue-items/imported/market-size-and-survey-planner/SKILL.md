@@ -82,6 +82,8 @@ Answers are saved to `~/.config/research-ops/market-research.json` (global) or `
 
 ## Optimize with autoresearch (opt-in)
 
+> Note from AI Blocks: not available in this copy. The `/ar:setup` and `/ar:loop` commands come from a separate autoresearch skill that is not included. Skip this section unless the user has that skill installed, and follow the caution at the end of it.
+
 This skill ships an **isolated, opt-in** bridge to `engineering/autoresearch-agent`. Only when you ask to "optimize" / "reconcile the sizing" / "run a loop" does an autoresearch experiment iteratively reconcile your market model so top-down and bottoms-up triangulate. `scripts/ar_evaluator.py` is the ground-truth evaluator; it prints `tam_divergence: <fraction>` (**lower** is better).
 
 ```bash
@@ -127,6 +129,8 @@ AI Blocks caution: a loop that only lowers `tam_divergence` can "fix" the gap by
 | `commercial/pricing-strategist` | Pricing model + WTP + packaging | That **sets price**; this **sizes the market** |
 | `product-research` (sibling) | User/product discovery methods | That studies **users**; this studies **the market** |
 
+> Note from AI Blocks: the paths above are from the original collection. On AI Blocks, pricing is the SaaS pricing strategist and positioning is the Go-to-market positioning planner. The campaign analytics and demand-gen neighbours are not in this library.
+
 ## Quick examples
 
 ```bash
@@ -139,7 +143,7 @@ The built-in sample (made-up numbers for a demo, not real market data) triangula
 
 ## Forcing-question library (Matt Pocock grill discipline)
 
-Walked one at a time by `/cs:grill-research-ops` or the orchestrator. Recommended answer + canon citation per question. Never bundled.
+Walked one at a time by `/cs:grill-research-ops` or the orchestrator (neither is in this AI Blocks copy, so ask the questions one at a time in chat). Recommended answer + canon citation per question. Never bundled.
 
 1. **"Is your TAM top-down or bottoms-up — and have you computed it both ways to triangulate?"**
    Recommended: both; reconcile the delta before quoting a number.

@@ -105,7 +105,7 @@ Open with a mischievous question about the reader's own habits, such as eating a
 
 #### Your prize or gift
 
-Skip the holiday every rival offers. Pick a prize tied to the product and its readers. His rule was that prizes should reflect the product. A colleague's city-magazine sweepstakes, with dinner at the mayor's residence, is the example the talk notes use [beyond the record: not in our knowledge file, so treat it as a secondhand anecdote]. Ask what your readers would love to tell a friend about.
+Skip the holiday every rival offers. Pick a prize tied to the product and its readers. His rule was that prizes should reflect the product. The example in Drayton Bird's post is a *New York* magazine sweepstakes from Bird's own agency, with prizes such as dinner at Gracie Mansion [S1]. That mailing is Bird's, not Jayme's; only the rule is Jayme's. Ask what your readers would love to tell a friend about.
 
 #### A fee that depends on the result
 
@@ -174,7 +174,7 @@ He is never pompous. He speaks to readers as clever equals, and to clients as pe
 
 ### When he hears a weak idea
 
-He teases it. A dull envelope gets a dry comment about how fast it will reach the bin. A clever word that could be misread gets the pizzazz warning. A mailing that talks down to its readers gets a reminder that flattery works and insults don't.
+He teases it. A dull envelope gets a dry comment about how fast it will reach the bin. A clever word that could be misread gets a warning. (The "pizzazz" story that backs this rule is Drayton Bird's, from his own agency, not Jayme's.) A mailing that talks down to its readers gets a reminder that flattery works and insults don't.
 
 Then he shows a better line, usually a question that pulls the reader in, or a cleaner layout with the free offer made unmissable.
 

@@ -62,6 +62,18 @@ Before each step, write a short brief for it: the result wanted, the source refe
 - outputs/step-3-executive-action-register.md: the restricted action plan
 - outputs/hand-back.md: scope, files, source coverage, MISSING lines and CHECKS MISSED
 
+Use this layout across the files:
+
+```
+SCOPE    <change, date, countries, systems>
+ISSUES   <role> | <data> | <access now> | <access after> | <issue> | <why it matters>
+RISKS    <risk> | <likelihood> | <impact> | <mitigation> | <owner>
+ACTIONS  <action> | <owner> | <proof needed> | <must happen before which change>
+SOURCES  <each file or policy and its date>
+MISSING  <each gap and what it stops>
+CHECKS MISSED <one line each, or none>
+```
+
 Lead with issues on sensitive data such as pay, health or ID numbers. Then give the risks and the restricted action plan. Include a HAND-BACK SUMMARY with the scope, each saved file, each step run or skipped and why, source references, every MISSING: line and CHECKS MISSED. If a tool made a native file, include it with its real verification result. An outline is not a finished document, and a plan is not a completed action.
 
 ## Check before you hand it back
@@ -95,11 +107,13 @@ Write MISSING: <what> next to the affected result. Keep going with the work that
 
 ## What to do with the result
 
-This is the only next-step list for this run. Ignore the "After this" list in the generated block above. Ask one short question about what to do next, and say they can type their own. Offer:
+Offer these first, in one short question, and say they can type their own:
 
 - Give the action plan to the person who approves access. Wait for their sign-off before any change.
 - Use the Employee data privacy checker on its own if a single AI tool needs a closer look.
 - Use Prepare a new data use for review if the same change also touches customer data.
+
+The links in "After this" above are later options, for once the reviewer has signed off. Offer them only if the person asks for more.
 
 Nothing here sends, signs or changes anything outside the working files. If they pick a next step that is not in this pack, give them its link on useaiblocks.com and say what to bring to it.
 

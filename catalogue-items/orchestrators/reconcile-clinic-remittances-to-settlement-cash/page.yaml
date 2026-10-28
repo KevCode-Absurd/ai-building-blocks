@@ -42,6 +42,7 @@ how_to_use:
   - Download the workflow pack and add it to Claude, ChatGPT or Gemini, in a chat that accepts files.
   - Strip names, dates of birth and member numbers first. Attach totals and remittance records only.
   - Say the account, the period, your opening cash and the order of the payments you must make.
+  - Give the period start date and the bucket size (daily or weekly) before step 2. The ladder is not built without them.
   - After step 1, compare the bank receipts with your statement. Every gap needs a reason or stays listed as unexplained.
   - After step 2, check that no pending remittance counts as cash. Use the ladder to plan, not to approve payments.
 how_it_works:

@@ -65,7 +65,6 @@ defuddle parse "<url>" -p domain
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Markdown to web page maker](https://useaiblocks.com/skills/markdown-to-web-page-maker). It takes the source text.
-- The [Markdown slide deck maker](https://useaiblocks.com/skills/markdown-slide-deck-maker). It takes the source text.
 - The [Citation and BibTeX fixer](https://useaiblocks.com/skills/citation-and-bibtex-fixer). It takes the source text.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

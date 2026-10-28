@@ -110,5 +110,5 @@ test:
   - Run it twice on the same figures. The ranking of products should come out in the same order.
 improve:
   - Keep the weekly count sheet going and bring a month of counts back for a re-run.
-  - Add your supplier prices, so it can check what a rival's waste would cost you to buy.
+  - Bring a list of your supplier unit prices for the materials you buy, so it can price each waste item at what it would cost to buy new.
   - After you act on the first waste, re-run the steps to see the cost per unit move.

@@ -31,7 +31,7 @@ how_to_use:
   - "Say: follow the workflow file, and wait for my approval after step 1."
   - Answer the memory question and the short questions. Skip any you like.
   - Approve your me.md, then check the short core.
-  - Paste your me.md into Your me.md in AI Blocks, and follow the guide for each AI.
+  - Paste your me.md into Your me.md in AI Blocks, and follow the guide for each AI. It is kept private, in your browser or your account when signed in. Remove anything you would not want stored first.
 output_sample:
   input:
     - A yes or no to using what your AI remembers

@@ -7,8 +7,6 @@ job: build-software
 headline: PCB circuit combiner
 subhead: Several RF circuit board parts joined end to end into one circuit, with extra components added and results saved as a standard Touchstone file. It runs in MATLAB.
 explain: |
-  Several RF circuit board parts joined end to end into one circuit, with extra components added and results saved as a standard Touchstone file. It runs in MATLAB.
-
   It uses pcbcascade to chain parts like filters and couplers, and pcbElement to wrap them as circuit elements for RF Toolbox. You can load internal ports with parts such as varactors or terminators. The combined response is written out as S-parameters with rfwrite, and the data can move on to signal integrity eye diagram analysis. It expects each part to be designed and checked first. You need MATLAB with the RF PCB Toolbox.
 
   Licence: this is MathWorks' skill, copied unchanged. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause, plus a rule that you may use it only with MathWorks products such as MATLAB. The skill file and its manifest link a different MathWorks licence page. Follow LICENSE.md.
@@ -33,10 +31,12 @@ you_get:
   - Link to eye diagram analysis
 how_to_use:
   - Check you have MATLAB and the RF PCB Toolbox. Both are paid products and are needed to run this.
+  - Design and check each part first. The skill file names other MathWorks skills for this. In AI Blocks they are the MATLAB PCB RF filter designer, the MATLAB PCB coupler and splitter designer, the MATLAB PCB trace designer and the MATLAB PCB material setup helper.
   - Gather your designed parts, the order they connect in, any load values and your frequency range.
   - Open a chat with an AI that can run MATLAB code. Paste this skill and your details.
   - Ask for these steps in order. First, cascade the parts with pcbcascade (the parts must share the same board material, height and conductor). Second, wrap the result with pcbElement. Third, add loads to internal ports. Fourth, save the Touchstone file with rfwrite.
   - Open the S-parameters and check them before you use them in another tool.
+before: [pcb-rf-filter-designer, pcb-coupler-designer, pcb-trace-designer]
 output_sample:
   input:
     - Your designed and checked PCB components in MATLAB

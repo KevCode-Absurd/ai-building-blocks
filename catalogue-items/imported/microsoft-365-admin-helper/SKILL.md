@@ -7,6 +7,10 @@ description: Microsoft 365 tenant administration for Global Administrators. Auto
 
 Expert guidance and automation for Microsoft 365 Global Administrators managing tenant setup, user lifecycle, security policies, and organizational optimization.
 
+**What you hand back (added by AI Blocks):** named PowerShell scripts (.ps1) for the job, the read-only audit CSV files, and for new users a temporary passwords file to hand over safely and then delete. See Output format at the end.
+
+**Plan needs (added by AI Blocks):** Conditional Access policies need Microsoft Entra ID P1 or higher (included in plans such as Microsoft 365 Business Premium or E3). Shared mailbox and other mailbox steps need Exchange Online in the plan. Both are paid. Check the tenant has them before writing those scripts, and say so if it does not.
+
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -39,7 +43,7 @@ These scripts change a live company tenant. Follow these rules every time.
 6. **Report-only first.** Every new Conditional Access policy starts as `enabledForReportingButNotEnforced`. Move to `enabled` only after about 48 hours of sign-in log review.
 7. **Passwords are never lost or shown in chat.** Temporary passwords go to a local file the admin chooses, with a clear note to hand them over safely and delete the file after.
 8. **No tools, no run.** If you cannot run PowerShell here, write the scripts for the admin to run and ask them to paste back any error. Do not invent output.
-9. **Generated scripts follow the same rules.** Scripts from the bundled Python tools must also record temporary passwords, exclude break-glass accounts and start policies in report-only mode. Check each one, and fix it before it is run.
+9. **Generated scripts follow the same rules.** Scripts from the bundled Python tools must also record temporary passwords, exclude break-glass accounts and start policies in report-only mode. Check each one, and fix it before it is run. The user tool's create script makes each temporary password from the system's secure random generator; it still does not record them, so add that before you run it.
 
 ---
 
@@ -62,13 +66,19 @@ Get-MgIdentityConditionalAccessPolicy | Select-Object DisplayName, State | Expor
 # Run this in a test tenant or on a small test group first. Show the admin the script and the row count, and wait for a clear yes.
 # CSV columns: DisplayName, UserPrincipalName, Department, LicenseSku
 # Same pattern as Workflow 1, Step 4: one failed row must not stop the rest, and each user gets a licence.
-# Temporary passwords are saved to .\temp_passwords.csv in plain text, a file only you can open. Hand them over safely, then DELETE the file straight away.
+# Temporary passwords are saved to .\temp_passwords.csv in plain text, a file only you can open. This file is the fallback:
+# hand each password over through a password manager share or a one-time secret link (never by email to the same account),
+# then DELETE the file straight away.
 function New-TempPassword {
-    # 16 random characters from a cryptographic random source, plus a fixed tail so it meets complexity rules
-    $chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789!@#$%'
-    $bytes = New-Object byte[] 16
-    [System.Security.Cryptography.RandomNumberGenerator]::Create().GetBytes($bytes)
-    (-join ($bytes | ForEach-Object { $chars[$_ % $chars.Length] })) + "Aa9!"
+    # 20 characters from a cryptographic random source, with no fixed part.
+    # At least one upper case letter, lower case letter, digit and symbol, in random places.
+    $sets = @('ABCDEFGHJKLMNPQRSTUVWXYZ', 'abcdefghijkmnpqrstuvwxyz', '23456789', '!@#$%')
+    $rng = [System.Security.Cryptography.RandomNumberGenerator]::Create()
+    $next = { param($max) $b = New-Object byte[] 4; $rng.GetBytes($b); [BitConverter]::ToUInt32($b, 0) % $max }
+    $all = -join $sets
+    $chars = @($sets | ForEach-Object { $_[(& $next $_.Length)] })
+    $chars += 1..16 | ForEach-Object { $all[(& $next $all.Length)] }
+    -join ($chars | Sort-Object { & $next ([uint32]::MaxValue) })
 }
 $licenseSku = (Get-MgSubscribedSku | Where-Object { $_.SkuPartNumber -eq "[LICENCE SKU PART NUMBER]" }).SkuId
 $results = Import-Csv .\new_users.csv | ForEach-Object {
@@ -180,16 +190,19 @@ Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
 
 ```powershell
 function New-TempPassword {
-    # 16 random characters from a cryptographic random source, plus a fixed tail so it meets complexity rules
-    $chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789!@#$%'
-    $bytes = New-Object byte[] 16
-    [System.Security.Cryptography.RandomNumberGenerator]::Create().GetBytes($bytes)
-    (-join ($bytes | ForEach-Object { $chars[$_ % $chars.Length] })) + "Aa9!"
+    # Same as Quick Start: 20 cryptographically random characters, no fixed part, every character kind present.
+    $sets = @('ABCDEFGHJKLMNPQRSTUVWXYZ', 'abcdefghijkmnpqrstuvwxyz', '23456789', '!@#$%')
+    $rng = [System.Security.Cryptography.RandomNumberGenerator]::Create()
+    $next = { param($max) $b = New-Object byte[] 4; $rng.GetBytes($b); [BitConverter]::ToUInt32($b, 0) % $max }
+    $all = -join $sets
+    $chars = @($sets | ForEach-Object { $_[(& $next $_.Length)] })
+    $chars += 1..16 | ForEach-Object { $all[(& $next $all.Length)] }
+    -join ($chars | Sort-Object { & $next ([uint32]::MaxValue) })
 }
 $licenseSku = (Get-MgSubscribedSku | Where-Object { $_.SkuPartNumber -eq "ENTERPRISEPACK" }).SkuId
 
-# Temporary passwords are saved to .\temp_passwords.csv so new people can sign in.
-# Hand them over safely (not by email to the same account), then delete the file.
+# Temporary passwords are saved to .\temp_passwords.csv so new people can sign in. The file is the fallback:
+# hand each one over through a password manager share or a one-time secret link (not by email to the same account), then delete the file.
 $results = Import-Csv .\employees.csv | ForEach-Object {
     try {
         $tempPassword = New-TempPassword

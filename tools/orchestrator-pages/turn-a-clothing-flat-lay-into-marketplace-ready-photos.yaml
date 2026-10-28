@@ -63,7 +63,7 @@ how_it_works:
   - title: "Pause: pick the best photo"
     text: You choose the retouched photo that looks most like the real garment and save it.
   - title: Shape it as if worn
-    text: Fills the shoulders and chest, curves the sleeves and shows the inside of the collar, without changing colour or pattern.
+    text: Fills the shoulders and chest and curves the sleeves, without changing colour or pattern. It shows the inside of the collar only if your flat lay shows it.
   - title: "Pause: save the worn-shape photo"
     text: You choose the photo you like best. The next step zooms into it.
   - title: Zoom into the fabric

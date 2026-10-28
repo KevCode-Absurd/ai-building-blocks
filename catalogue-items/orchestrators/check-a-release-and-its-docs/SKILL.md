@@ -11,9 +11,9 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
 
 **Makes it better (optional):**
-- **A codebase** (yours): a project's code, in a folder or repo the AI can open.
 - **A test report** (yours): what was tested, what passed, what failed and why.
 
 How to start:
@@ -63,7 +63,7 @@ In the summary, give source coverage, unresolved findings, missing facts and one
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Mobile app release planner](https://useaiblocks.com/skills/agency-engineering-mobile-release-engineer). It takes the document.
-- **Build it** with the [Software developer from specifications](https://useaiblocks.com/skills/spec-builder). It takes the document.
+- The [Code release readiness checker](https://useaiblocks.com/skills/ship-readiness-gate).
+- The [Release readiness and live version checker](https://useaiblocks.com/skills/deploy-verifier).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

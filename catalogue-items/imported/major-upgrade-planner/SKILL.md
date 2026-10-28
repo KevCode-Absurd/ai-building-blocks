@@ -134,6 +134,8 @@ npx madge --image graph.png src/
 
 ## Compatibility Matrix
 
+> Note from AI Blocks: the version pairs below are an illustration of the format, not checked facts. Before you use any pair in a plan, confirm it against the package's own peer dependency list (`npm view <package> peerDependencies`) or its changelog, and cite that source in the table.
+
 ```javascript
 // compatibility-matrix.js
 const compatibilityMatrix = {
@@ -400,7 +402,7 @@ yarn upgrade-interactive  # Interactive upgrades
 ### Peer Dependency Resolution
 ```bash
 # Blocked step: last resort only. Ask the user for a clear yes before running either one.
-# These skip real conflict checks: say so in the plan, then run the full tests a second time.
+# These skip real conflict checks: write the reason (which conflict, why no other fix works) in the plan, then run the full tests a second time.
 # npm 7+: strict peer dependencies
 npm install --legacy-peer-deps  # Ignore peer deps
 

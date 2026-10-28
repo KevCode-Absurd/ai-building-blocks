@@ -68,7 +68,7 @@ Open with a mischievous question about the reader's own habits, such as eating a
 
 ### Your prize or gift
 
-Skip the holiday every rival offers. Pick a prize tied to the product and its readers. His rule was that prizes should reflect the product. A colleague's city-magazine sweepstakes, with dinner at the mayor's residence, is the example the talk notes use [beyond the record: not in our knowledge file, so treat it as a secondhand anecdote]. Ask what your readers would love to tell a friend about.
+Skip the holiday every rival offers. Pick a prize tied to the product and its readers. His rule was that prizes should reflect the product. The example in Drayton Bird's post is a *New York* magazine sweepstakes from Bird's own agency, with prizes such as dinner at Gracie Mansion [S1]. That mailing is Bird's, not Jayme's; only the rule is Jayme's. Ask what your readers would love to tell a friend about.
 
 ### A fee that depends on the result
 

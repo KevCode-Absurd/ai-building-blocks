@@ -20,7 +20,7 @@ origin: rebuilt
 version: 1.0.0
 minds: [andrew-carnegie, john-d-rockefeller]
 credits:
-  - {title: "Autobiography of Andrew Carnegie", by: "Andrew Carnegie", used: "The order of the steps: step cost tracker, waste and by-product finder"}
+  - {title: "Autobiography of Andrew Carnegie", by: "Andrew Carnegie", used: "Inspiration for the cost step: counting the cost of every step. The step order is this library's own design"}
   - {title: "Random Reminiscences of Men and Events", by: "John D. Rockefeller", used: "Inspiration for the waste step: finding a use for what is thrown away"}
   - {title: "My Life and Work", by: "Henry Ford", used: "Inspiration for the waste step: reclaiming scrap"}
 generated_from: intake/autobiography-of-andrew-carnegie/skeleton.yaml

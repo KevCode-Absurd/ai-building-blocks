@@ -9,6 +9,8 @@ Give it your orders and reviews. Get the wrong-fit buyers, what blocks them and 
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
+**When not to use it:** most of your low reviews are real product faults (fix the product first), or you only want to rewrite an ad or page (use the Story image ad writer). This finds who is unhappy and why, and picks one change to test. It does not fix the product, and it does not run the test for you: the 30-day re-measure does that.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.

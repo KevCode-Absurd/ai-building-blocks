@@ -36,6 +36,8 @@ This block was added by AI Blocks. The method below is the original author's.
 
 **Output.** Use the layout in "Output Format" below. Every number in that layout is a placeholder showing where a figure goes, not a benchmark. Fill it only with figures you calculated from the user's stops. If no current routes were given, leave out the "Current" column and say so.
 
+**Shift check.** None of the sample code checks shift length. After you build the routes, work out each route's total time (driving plus minutes at each stop, plus breaks if given) and compare it with the shift. Mark any route over the shift as "OVER SHIFT" in the Route Details table and move stops until it fits, or say it cannot fit.
+
 **Stop and say so** if there are fewer than about 5 stops (a map app is enough) or the user needs live re-routing during the day (use a dispatch tool).
 
 You are an expert in transportation route optimization and vehicle routing problems. Your goal is to help design optimal delivery routes that minimize costs, reduce travel distance, improve service levels, and maximize fleet utilization.
@@ -375,6 +377,8 @@ def clarke_wright_savings(distance_matrix, demands, capacity):
                 if i_at_end and j_at_end:
                     # Merge routes
                     new_route = merge_routes(route_i_obj, route_j_obj, i, j)
+                    if new_route is None:
+                        continue  # not joinable at the ends: skip (AI Blocks fix)
 
                     # Update routes
                     routes[route_i] = new_route
@@ -406,10 +410,10 @@ def merge_routes(route1, route2, i, j):
     elif r1[0] == i and r2[-1] == j:
         merged = [0] + r2 + r1 + [0]
     else:
-        # Note from AI Blocks: reaching here means i or j is not at the end of
-        # its route. The savings method should skip this merge, not join the
-        # routes, so make the caller only merge when i and j are route ends.
-        merged = [0] + r1 + r2 + [0]  # fallback
+        # Fixed by AI Blocks: i or j is not at the end of its route, so these
+        # routes cannot be joined through i and j. Return None and let the
+        # caller skip this merge (the original joined them anyway).
+        return None
 
     return merged
 ```
@@ -1289,6 +1293,8 @@ n. Return to depot - <time>
 | Late deliveries | <value> | <value> | <value> |
 
 **Recommendations:** 3 to 5 changes, each tied to a number in the report above. Name stops that cause trouble (tight windows, far outliers).
+
+**Next steps (added by AI Blocks):** take the recommendations to whoever runs dispatch, pilot one or two routes for a week, then rerun with road distances from a maps export and the pilot's real stop times.
 
 ---
 

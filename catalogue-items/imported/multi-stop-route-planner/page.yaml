@@ -41,6 +41,7 @@ how_to_use:
   - For more than about 15 stops, use an AI that can run Python. Small lists work in a plain chat. The exact method needs the free PuLP library, so ask your AI to install it first. For long stop lists, ask for one of the quicker methods instead.
   - The code is untested sample code. Check each route by hand before you use it. Every stop should appear once, the miles should look right, the load should fit the vehicle, and no route should be longer than a shift. Ask your AI to fix any that break these.
   - Try the new plan on one or two drivers first. Road distance can differ from the straight-line estimate.
+  - Next, take the recommendations to whoever runs dispatch. After the pilot, rerun with road distances from a maps export and the real stop times.
 how_it_works:
   - title: Ask about your operation
     text: It asks for fleet size, capacity, time windows, shift lengths, time at each stop and stops per day. Missing items are marked, not guessed.
@@ -49,7 +50,7 @@ how_it_works:
   - title: Pick a method for your size
     text: Small lists can use an exact method. Bigger ones use savings, sweep or nearest-neighbor builds, then local swaps to shorten the routes.
   - title: Build the routes
-    text: It assigns stops to drivers and orders them. The sample code checks capacity, and its delivery-window version checks windows. Shift length is not checked in the code, so check each route against your shift yourself.
+    text: It assigns stops to drivers and orders them. The sample code checks capacity, and its delivery-window version checks windows. Shift length is not checked in the code. The skill adds each route's time and marks any route over the shift, and you should still check them yourself.
   - title: Compare and report
     text: It lays out miles and time per route, sets them against your current routes, and lists stops that cause trouble.
 output_shape: |
@@ -59,6 +60,7 @@ output_shape: |
   Stop sequence per route: <stop>, <arrival time>, <window>
   Current vs new plan: <miles>, <labor hours>, <vehicles>, <late stops>
   Recommendations: <3 to 5 changes tied to the numbers>
+  Next steps: <who acts on it, which routes to pilot, when to rerun>
 output_sample:
   input:
     - Your stop addresses or coordinates

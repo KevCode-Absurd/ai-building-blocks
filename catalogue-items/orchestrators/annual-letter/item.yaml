@@ -23,5 +23,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [jeff-bezos]
 credits:
-  - {title: "Letters to shareholders, 1997 to 2020", by: "Jeff Bezos", used: "The order of the steps: write the long-term principles, pick the input metrics that matter, check the cash behind the earnings, tally the value you create, write the letter"}
+  - {title: "Letters to shareholders, 1997 to 2020", by: "Jeff Bezos", used: "Ideas behind the steps: long-term principles, input metrics, cash over earnings, value for each group, and a plain yearly letter. The order of the steps is ours."}
 generated_from: intake/bezos-letters-annual-letter/skeleton.yaml

@@ -37,6 +37,7 @@ how_to_use:
   - Read the ID and label for each match. Check that the meaning fits your sample.
   - For an old file, ask your AI to run validate_terms.py on your ID and label columns.
   - Next, before you submit the table, run validate_terms.py --strict on it so any unknown or out-of-date ID stops the check. Keep the lookup record with the file, so others can see where each ID came from.
+next: [validate-lab-data-before-system-import]
 output_sample:
   input:
     - A list or column of lab terms, such as tissue, cell type or disease names

@@ -35,7 +35,7 @@ You bring a practical problem with a real setting, some limits and an outcome yo
 
 4. **Cook and inspect the cues:** You use timing to know when to check, then evaluate the food using the recipe’s visible and tactile signs. Look at the centre as well as the outside. Record the actual setting and pan if the result diverges, so another attempt can address a plausible cause instead of changing everything.
 
-5. **Finish with enough time:** You apply toppings, cooling or assembly in the order the recipe needs. Keep necessary ingredients ready and protect a margin before service. For a whole meal, choose components that can finish together without turning a single oven or tray into a promise it cannot physically fulfil.
+5. **Finish with enough time:** You apply toppings, cooling or assembly in the order the recipe needs. Keep necessary ingredients ready and protect a margin before service. For a whole meal, choose dishes that can finish together, and check they fit in your oven and on your trays at the same time.
 
 6. **Review one correction kindly:** You name what worked, identify the exact defect and choose a practical change for next time. Keep the criticism attached to the bake or plan rather than the person’s ability. A useful review supports another informed attempt and a dependable repertoire, including knowledge of the household’s own oven and equipment.
 

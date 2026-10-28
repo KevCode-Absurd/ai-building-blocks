@@ -41,7 +41,7 @@ How to start:
 This list replaces the shared "Before you start" block above. Where that block asks for "Your question", give the job below. Skip its "Council brief" line: this workflow needs no council.
 
 - **The job and who does it** (required), with a typical week of work.
-- **The goal** (required): one line on the result the job must keep delivering once AI takes some tasks, for example "[WHAT THE JOB MUST STILL ACHIEVE]". Step 4 tests the plan against it.
+- **The goal** (required): write one line naming the result the job must keep delivering once AI takes some tasks, such as "every customer complaint gets a reply within one working day". Step 4 tests the plan against it.
 - **Which tasks people dislike or find tiring** (required). Ask two or three of the people who do the job.
 - **What the job must never get wrong** (strongly advised).
 - **For step 2:** the tasks marked for AI in step 1, and your reason for handing each one over. Step 1 saves the first list. You add the reasons.
@@ -72,7 +72,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - Step 4, failure check: the ways the plan could fail, with a change for each. The last file holds the plan.
 
 ## After this (for this job)
-Use this section, not the shared "After this" list above, whose coding links assume you are building software. Suggest one next step as a short question:
+Suggest one next step as a short question:
 - Give each handoff card an owner on your team, and run the first AI task with a person checking the result.
 - Check what the keep-or-replace list protects after the first month, and update the cards.
 

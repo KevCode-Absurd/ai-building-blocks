@@ -21,6 +21,7 @@ not_for:
   - "Your project does not use shadcn/ui and you do not want to: use the docs for the component library you already have."
   - "You want a whole site or page designed from scratch: ask your AI for a design first, or hire a designer."
   - "You have no code project or package manager: start with a simple page builder instead."
+  - "You only want to read how a component works: use the shadcn/ui docs directly. This item is a copy of the shadcn/ui skill for adding parts to a project."
 you_give:
   - A project using or ready for shadcn/ui
   - The components or screens you need
@@ -34,7 +35,8 @@ you_get:
 how_to_use:
   - Before you start, check that your project has a package.json and uses React (for example Next.js or Vite). Write down the screens or components you need and your package manager. Choose a registry if you have one, such as @shadcn.
   - Open your AI tool in a place where it can run commands and read your project files.
-  - Paste in the skill text, or add the skill folder.
+  - Add the skill folder to a coding assistant that can run shell commands, such as Claude Code. Pasted text alone will not load your project details, because the skill's first line runs a command. If you paste it, ask your AI to run npx shadcn@latest info --json first.
+  - "Community registry components are third-party code. Read every added file before you keep it. On a live project, pin the CLI to the version you tested (shadcn@ followed by that version number, rather than shadcn@latest) and use add --dry-run to preview changes."
   - Tell your AI which components or screens you need, and which package manager you use.
   - Let it read your project setup, then search for ready-made components before it builds anything.
   - Review the added files and usage code, then run your project and check the result in your browser. You should see the new files, the import lines and a short usage snippet.

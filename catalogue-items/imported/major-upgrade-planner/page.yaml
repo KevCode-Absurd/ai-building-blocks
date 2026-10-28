@@ -21,8 +21,8 @@ not_for:
   - The update is only a minor or patch version. A normal update and a test run are enough.
   - Your project has no tests. Add a basic smoke test first, so each stage can be checked.
   - You want the upgrade to run for you with no review. This writes a plan. You run each stage yourself.
-  - You are upgrading an Expo app. Use the Expo upgrade helper, which knows Expo SDK steps.
-  - You are retiring a whole system or API, not one package. Use the migration planner.
+  - You are upgrading an Expo app. Use the Expo upgrade planner, which knows Expo SDK steps.
+  - You are retiring a whole system or API, not one package. Use the System migration and retirement planner.
 you_give:
   - The package and the version you want
   - Your dependency file, such as package.json
@@ -36,12 +36,14 @@ you_get:
   - The tests to pass before each next stage
   - A return point for every stage
 how_to_use:
+  - In your project folder, run npm outdated and npm ls --depth=0. Keep the output, so the plan starts from your real versions.
   - Open Claude, ChatGPT or Gemini and paste this skill. If your AI can read project files, let it read your dependency file.
-  - Name the package, your current version and the version you want. Paste your dependency file and say how you run tests.
+  - Name the package, your current version and the version you want. Paste your dependency file, the output from step 1, and say how you run tests.
   - Check the compatibility table and the breaking changes against the package's own changelog. The AI cannot see the web unless you give it access.
   - Run stage 1 on a new git branch. Only go on to the next stage when its tests pass.
   - If a stage fails, return to its marked point. Share the error with your AI and ask for a changed plan.
-  - Do not run any command the plan marks as risky, such as a force install, without reading what it does first.
+  - Do not run any command the plan marks as risky, such as a force install, without reading what it does first. The custom migration script rewrites every matching file, so commit first and run it on a branch.
+  - The version pairs in the skill's compatibility example are an illustration. Check each one against the package's own peer dependency list.
   - The code samples in the skill are examples. Check each command against the package's own docs before you run it.
 how_it_works:
   - title: Read your setup

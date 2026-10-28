@@ -37,7 +37,7 @@ how_to_use:
   - Tell your AI your USRP model, how it connects, and your MATLAB release. Add any error message.
   - Let your AI run each step and show you the results. It runs MATLAB commands on your computer, so read each command before you approve it. Any firewall change and any sudo or admin command must be run by you, in your own admin terminal. Your AI should give you the command, not run it.
   - Windows Firewall may need to be off for the radio network card only, and only for this test. That lowers your computer's security. You make that change yourself, and you turn the firewall back on as soon as the connection test passes.
-  - The code route for saving the radio is for experienced users only. Before you let your AI write anything, note the names of your saved radio configurations by running radioConfigurations. It uses an undocumented MATLAB function that can change between releases. A bad write can corrupt the saved radio settings. If it fails, close MATLAB tools, follow the recovery steps in the skill, and use the setup wizard, which is the safer route.
+  - Save the radio with the setup wizard (radioSetupWizard). That is the default. The code route for saving the radio is for experienced users only. Before you let your AI write anything, note the names of your saved radio configurations by running radioConfigurations. It uses an undocumented MATLAB function that can change between releases. A bad write can corrupt the saved radio settings. If it fails, close MATLAB tools, follow the recovery steps in the skill, and use the setup wizard, which is the safer route.
   - When the connection test passes, move on to the matlab-detect-capture-usrp skill to capture your first real signal.
 output_sample:
   input:

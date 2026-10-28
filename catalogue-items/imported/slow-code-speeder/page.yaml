@@ -7,8 +7,6 @@ job: test-and-fix-code
 headline: Slow code speeder
 subhead: Faster code that still gives the same answers. You hand over code that works but is too slow on big inputs, and the skill cuts its time or memory cost one change at a time.
 explain: |
-  The rule that matters most: tests must pass before and after every change, so the answers stay the same.
-
   Its firm rule is that tests must pass before and after every change. If you have no tests, it first writes one from a sample input and the current output. Then it makes a single transformation, such as replacing a nested scan with a lookup table or running independent awaits together, and runs the tests. A failed test means the change is reverted and the work stops. It also fixes N+1 queries in common ORMs. No change goes in without proof.
 
   Licence: the skill file's own header (morsechimwai) says Apache-2.0. sickn33's LICENSE-CONTENT file (CC BY 4.0) applies only where no more specific upstream notice exists, so Apache-2.0 covers this skill file. Keep the Apache-2.0 notice and the credit to morsechimwai and sickn33. We replaced pointers to three skills that are not in this library with plain steps, and marked that change at the end of the file.
@@ -38,8 +36,9 @@ how_to_use:
   - Check each change it proposes. If a test fails, it undoes that change and stops.
   - The skill does not run benchmarks for you. Give it a typical input and the command you use to time it, or the before and after ratio will be a guess.
   - Apply the final diff only after your own tests pass.
-  - Next, commit the change with the before and after timings in the commit message, and run your full test suite in your build system.
+  - Next, rerun the same timing command on the changed code. Keep the change only if it is faster, and put the before and after timings in the commit message. Then run your full test suite in your build system, or have the Parallel code reviewer check the diff.
   - For new code, plan the approach first. For math-level changes, such as a Bloom filter or an FFT, ask a developer.
+next: [parallel-code-reviewer, agency-engineering-database-optimizer]
 output_sample:
   input:
     - Your slow code

@@ -63,7 +63,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 2. **Plan a styled photo set.** Use the skill `product-photo-shoot-planner`. Give it the brand file from `outputs/step-01-website-brand-brain-builder.md` and your product photos. Use the brand file and your photos to set one style and plan nine matching photos. It saves `outputs/step-02-product-photo-shoot-planner.md`: a style sheet, nine frames on a grid, one prompt for each, and a check of the grid. It hands back the first of three photo sets. Steps 3 and 4 do not read it.
 3. **Make flash snapshots.** Use the skill `flash-product-photos`. Give it the brand file from `outputs/step-01-website-brand-brain-builder.md`, your own phone photos and who the photos are for. Use the brand look to plan six flash snapshots that read like a real night out, not a studio. It is a separate look: it uses step 1's brand brain and your own phone photos, not step 2's photo set. It saves `outputs/step-03-flash-product-photos.md`: the flash dials, one real occasion in time order, six prompts and a test frame. It hands back the second photo set. A flash snapshot used in an ad must carry a visible "AI-generated" label. Never show one as a photo of a real customer or a real event.
 4. **Copy a look you like.** Use the skill `reference-product-photos`. Give it the brand file from `outputs/step-01-website-brand-brain-builder.md`, your own phone photos and the reference photo you chose. Use the brand file to match the look of one photo you admire with your own product. It is a separate look: it uses step 1's brand brain, your own phone photos and the reference you chose, not the earlier photo sets. It saves `outputs/step-04-reference-product-photos.md`: what is kept, swapped and dropped from the reference, one prompt, and the pictures ranked. It hands back the third photo set.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, every `MISSING:` line from all steps in one list, and `CHECKS MISSED`: the checks that failed or could not run (such as pictures not yet made, so not checked at full size), or "none".
 
 ## What you hand back
 4 step files and the summary. Step 2's file holds the styled photo set, step 3's the flash snapshots and step 4's the reference look. Each file has this shape:
@@ -72,7 +72,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **Flash snapshots:** the flash dials, one real occasion in time order, and six prompts.
 - **Reference look:** what is kept, swapped and dropped, one prompt, and the pictures ranked.
 - **Checks:** a list for looking at each picture at full size next to your real product.
-- **HAND-BACK SUMMARY:** each step's file, then every `MISSING:` line in one list.
+- **HAND-BACK SUMMARY:** each step's file, every `MISSING:` line in one list, then CHECKS MISSED.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

@@ -60,8 +60,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Ship it, keep the proof, and wait until the shipments close. Then export the shipment, fee, damaged and lost reports.
 
-2. **Amazon reimbursement claim finder.** Use the skill `amazon-reimbursement-claim-finder`. It takes the checklist and proof list in `outputs/step-01-amazon-inbound-stock-planner.md`, plus the closed reports and the person's receipts and packing lists. The size tier and fee checks need Amazon's current fee tables, so check them live on Amazon's own pages and mark any figure you could not check as needing a check and list it as `MISSING: live fee check`. It saves `outputs/step-02-amazon-reimbursement-claim-finder.md`: sent versus received by shipment, the size tier and fee check, damaged and lost stock, returns, and each claim to file with the shipment, the units and the proof to attach, plus a score for how much could be checked.
-3. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+2. **Amazon reimbursement claim finder.** Use the skill `amazon-reimbursement-claim-finder`. It takes the checklist and proof list in `outputs/step-01-amazon-inbound-stock-planner.md`, plus the closed reports and the person's receipts and packing lists. The size tier and fee checks need Amazon's current fee tables, so check them live on Amazon's own pages. If your chat has no web access, do not quote fee figures from memory: list each one as `MISSING: live fee check` from the start. It saves `outputs/step-02-amazon-reimbursement-claim-finder.md`: sent versus received by shipment, the size tier and fee check, damaged and lost stock, returns, and each claim to file with the shipment, the units and the proof to attach, plus a score for how much could be checked.
+3. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, every `MISSING:` line from all steps in one list, and `CHECKS MISSED`: the checks that failed or could not run (such as a shipment with no report), or "none".
 
 ## Next steps to offer
 
@@ -73,7 +73,7 @@ Use these instead of the general "After this" list below:
 2 step files and the summary. The last file holds the audit report.
 - Step 1: order size and working, shipment split, checklist, proof to keep, storage notes.
 - Step 2: sent versus received, size tier check, fee lines, damaged and lost, returns, claim list and a score.
-- Summary: each step's file and one list of `MISSING:` lines.
+- Summary: each step's file, one list of `MISSING:` lines and the checks missed.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

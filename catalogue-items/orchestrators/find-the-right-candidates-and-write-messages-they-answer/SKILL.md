@@ -54,10 +54,15 @@ Pause here: Send the messages for two weeks. Count how many you sent, how many r
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
-Four step files and the summary: the candidate profile, the search plan, the first messages with follow-ups, and the pipeline update with changes for the next two weeks.
+Four step files and the summary:
+- **Step 1, candidate profile:** who fits, their motives, habits and places, what moves them and what turns them off.
+- **Step 2, search plan:** ranked places to look, target companies, search words and the week-by-week work.
+- **Step 3, first messages:** a first message for each place, follow-ups on a set schedule and replies to the usual answers.
+- **Step 4, pipeline update:** counts by stage, what works, what is stuck and changes for the next two weeks.
+- **Hand-back summary:** each step's file and every `MISSING:` line in one list.
 
 ## Next steps for this workflow
-Use these, not the generated links below. Once the first candidates say yes, build what they will see with the [Hiring packet builder](https://useaiblocks.com/skills/hiring-packet-builder), then plan the interviews with the [Hiring interview planner](https://useaiblocks.com/skills/hiring-interview-designer). Bring the candidate profile from step 1.
+Once the first candidates say yes, build what they will see with the [Hiring packet builder](https://useaiblocks.com/skills/hiring-packet-builder), then plan the interviews with the [Hiring interview planner](https://useaiblocks.com/skills/hiring-interview-designer). Bring the candidate profile from step 1.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
@@ -68,8 +73,7 @@ Use these, not the generated links below. Once the first candidates say yes, bui
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Fair candidate comparer](https://useaiblocks.com/skills/fair-candidate-comparer). It takes the document.
-- The [Work sample test designer](https://useaiblocks.com/skills/work-sample-test-designer). It takes the document.
-- The [Nonprofit board recruitment planner](https://useaiblocks.com/skills/nonprofit-board-recruitment-planner). It takes the document.
+- The [Hiring packet builder](https://useaiblocks.com/skills/hiring-packet-builder).
+- The [Hiring interview planner](https://useaiblocks.com/skills/hiring-interview-designer).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

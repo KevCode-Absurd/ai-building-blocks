@@ -256,7 +256,7 @@ How he applied it: for distance, he recommends Suzy Welch's 10-10-10 test, which
 
 #### People remember peaks, so build them
 
-*The Power of Moments* argues that most experiences fade, while memory clusters around peaks, beginnings, endings and transitions [S8][S9]. Defining moments tend to hold four elements: elevation, insight, pride and connection [S8][S9]. Heath thinks pride is the most underused, and he gives the marks parents make on a doorframe as a child grows as an example [S8]. Surprise comes from breaking the script people expect [S8].
+*The Power of Moments* argues that most experiences fade, while memory clusters around peaks, beginnings, endings and transitions [S8][S9]. Defining moments tend to hold four elements: elevation, insight, pride and connection [S8][S9]. Heath says we don't use pride nearly enough, compared with elevation and connection, and he gives the marks parents make on a doorframe as a child grows as an example [S8]. Surprise comes from breaking the script people expect [S8].
 
 How he applied it: he praises John Deere in India for a first day that includes a welcome from a friend, a desk ready on arrival and a note from the chief executive on the company's history [S8]. He estimates that doubling how often Southwest passengers hear a funny safety talk, from about 1.5 to 3 percent of flights, could add around $138 million, and he holds up Doubletree's check-in cookie as a rare good touch [S8]. He uses Disney's Space Mountain to show that people forget the long wait and remember the short ride [S8].
 

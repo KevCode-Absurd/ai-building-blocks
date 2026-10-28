@@ -128,11 +128,11 @@ This is drawn from his Berkshire Hathaway shareholder letters (1985 to 2008), th
 
 ### Voice
 
-Plain, folksy and funny. He writes like someone explaining money to a smart relative who doesn't work in finance. He speaks of "Charlie and I" and "we," and calls readers partners and fellow shareholders. A finance term gets a one-line explanation or a wink, as with beta and sigma, which he pokes fun at as expert jargon (our paraphrase of his tone; the exact wording is not checked against a source [beyond the record]).
+Plain, folksy and funny. He writes like someone explaining money to a smart relative who doesn't work in finance. He speaks of "Charlie and I" and "we," and calls readers partners and fellow shareholders. A finance term gets a one-line explanation or a wink, as with beta and sigma, which he pokes fun at as expert jargon (our paraphrase of his tone; the exact wording is not checked against a source).
 
-He reaches for homely pictures: a cigar butt with one puff left, a castle with a moat and a duke inside, a moody partner called Mr. Market, a leaky boat, three savings accounts, a Hope Diamond against a rhinestone. The book adds more: one-foot hurdles you step over, a punch card with only twenty punches for a lifetime of investing, and the blackjack player who bets big only when the odds are lopsided. He borrows from tennis ("unforced errors"), poker, country songs, the Bible and small-town Omaha. He likes a punchline built on a familiar phrase, such as "Beware of geeks bearing formulas." (2008 letter) [S12]
+He reaches for homely pictures: a cigar butt with one puff left, a castle with a moat and a duke inside, a moody partner called Mr. Market, a leaky boat, three savings accounts, a Hope Diamond against a rhinestone. The book adds more: one-foot hurdles you step over, a punch card with only twenty punches for a lifetime of investing, and the blackjack player who bets big only when the odds are lopsided. He borrows from tennis ("unforced errors"), poker, country songs, the Bible and small-town Omaha. He likes a punchline built on a familiar phrase, such as "Beware of geeks bearing formulas." (2008 letter)
 
-His humour is aimed at himself first. He pokes fun at his own errors, owns up to them and opens a list of mistakes in a mock-confessional way (our paraphrase of his tone, not quotes; the exact wording is not checked against a source [beyond the record]). He puns, too, and praises others by name and in detail.
+His humour is aimed at himself first. He pokes fun at his own errors, owns up to them and opens a list of mistakes in a mock-confessional way (our paraphrase of his tone, not quotes). He puns, too, and praises others by name and in detail.
 
 He makes a point land with a number: looms bought for $5,000 sold for $26. Often he does the sum in front of you, in short steps and round figures, one assumption at a time. Late in life the tone grows warmer and more personal.
 

@@ -30,7 +30,7 @@ you_get:
   - A list of ways the plan could fail, with a change for each
 how_to_use:
   - Download the handoff pack. It holds HANDOFF.md plus one skill file for each step.
-  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md". Claude Code and Claude Projects may need a paid Claude plan. Without them, paste each skill file into a chat in order and run one step at a time.
   - Describe the job and a normal week. Ask two or three of the people who do it which tasks they dislike.
   - Read the hidden-value step before you automate anything. Keep or replace whatever it flags.
   - Run one small task first, and check the failure list before you add more.

@@ -36,7 +36,7 @@ how_to_use:
   - Add your file of prompts with chosen and rejected answers, as JSON or CSV with the columns prompt, chosen and rejected. Ask your AI to check the format first.
   - Ask your AI to pick a method. DPO is the simplest if you have answer pairs.
   - Run the training script. If the GPU runs out of memory, ask for smaller batch sizes or LoRA. The skill's rough memory guide for a 7B model is 16 GB for SFT with LoRA, 24 GB for DPO and 40 GB for PPO, so check what your GPU or rented GPU has before you start.
-  - The PPO command in the skill may be out of date. Its script path and options change between TRL versions. Run it with --help first, and if it fails, ask your AI for the PPO example that matches your installed TRL version.
+  - The PPO command in the skill may be out of date. Its script path and options change between TRL versions. Run it with --help first. If it fails, find the PPO example for your installed TRL version (run pip show trl) in the TRL docs at huggingface.co/docs/trl, and ask your AI to use that one.
   - Compare the tuned model with the original on the same prompts before you use it. Then test on new prompts the model has not seen, or clean your dataset and run again.
   - When it holds up, deploy or share the saved model folder. For plain prompt and answer pairs with no good or bad ranking, use the Language model trainer instead.
 next: [language-model-trainer, model-launch-engineer]

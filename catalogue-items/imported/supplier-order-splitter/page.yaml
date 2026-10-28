@@ -2,12 +2,12 @@ thinking: high
 thinking_why: It balances price, limits and risk across suppliers.
 new_slug: supplier-order-splitter
 name: Supplier order splitter
-summary: Split a big order across suppliers at the lowest total cost. Give it quotes, limits and demand. Get order sizes per supplier.
+summary: Split a big order across suppliers to keep total cost down. Give it quotes, limits and demand. Get planned order sizes per supplier.
 job: plan-supply-chain
 headline: Supplier order splitter
-subhead: How much to buy from each supplier to get the lowest total cost, within their limits and your demand. It replaces guessing with a worked allocation. The code has not been tested on real orders, so check the result before you buy.
+subhead: How much to buy from each supplier, worked out from your quotes, their limits and your demand. You get a planning estimate, not a final order. The code has not been tested on real orders, so check the result before you buy.
 explain: |
-  How much to buy from each supplier to get the lowest total cost, within their limits and your demand. It replaces guessing with a worked allocation.
+  Known limits: the models assume supplier costs are independent, ignore some price breaks, and treat joint ordering as an approximation. So the split is a cost estimate to check, not a proven lowest cost.
 
   Give it quotes, capacity limits and the quantity you need. The skill covers order sizing with economic order quantity, including price breaks at higher volumes, and splits orders across suppliers with an optimisation model. It handles harder cases too, such as ordering several items together, planning lot sizes over several periods, and balancing risk with a dual-sourcing split. Python code does the maths, and the supply risk measures keep you from relying on one source.
 when:
@@ -27,7 +27,7 @@ you_give:
   - Holding and ordering costs (optional)
 you_get:
   - Order quantities per supplier
-  - An optimal order size
+  - A suggested order size
   - Total cost comparison
   - A dual-sourcing split
   - The Python code used

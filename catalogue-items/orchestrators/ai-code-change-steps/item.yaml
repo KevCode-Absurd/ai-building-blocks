@@ -20,5 +20,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [kent-beck]
 credits:
-  - {title: "Canon TDD", by: "Kent Beck", used: "The order of the steps: test list writer, structure and behaviour change splitter, ai coding agent rules writer"}
+  - {title: "Canon TDD", by: "Kent Beck", used: "The test list idea and working one test at a time. The order of the three steps is ours."}
 generated_from: intake/canon-tdd/skeleton.yaml

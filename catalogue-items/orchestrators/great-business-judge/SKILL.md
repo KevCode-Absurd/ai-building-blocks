@@ -31,6 +31,7 @@ Gather these before step 1:
 - **What you know about it** and your own background in the field: years, work done, what you use daily.
 - **At least five years of the business's return on invested money** (needed for step 5), plus price history.
 - **What managers did with spare cash**, their pay and major deals, for the last five to ten years (needed for step 4).
+- **The changes to test** (needed for step 3), such as a cost cut or a better product.
 - **Your tax rate** and **a named next best choice** for the money (step 5 compares against it).
 - **Competitor profiles** (optional).
 
@@ -49,11 +50,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Business power tester.** Use the skill `business-power-tester` on the business and its rivals. It saves what customers get that rivals cannot match, the barrier that protects it and the kinds of scale at work. The edge and the wall around it.
-2. **Circle of competence sorter.** Use the skill `circle-of-competence-sorter`. Give it the edge test from step 1 and your background. It saves your five answers, your real edge or none, and a yes, no or too tough sort. A sort of the business into yes, no or too tough, with your real edge written down.
-3. **Who-keeps-the-gain tester.** Use the skill `who-keeps-the-gain-tester`. Give it the edge test from step 1 and the changes to test, such as a cost cut or a better product. It saves a sum for each change with and without rivals getting it, and an industry sort. Whether improvements stay with the owners or pass to buyers, and whether rivals fight each other.
-4. **Owner-minded management checker.** Use the skill `owner-minded-management-checker`. Give it the findings from steps 1 to 3 and the record of what managers did with cash. It saves a cash log and ratings for able, honest and owner-minded, each with evidence. Whether those running it are able, honest and act like owners.
-5. **Long-hold return calculator.** Use the skill `long-hold-return-calculator`. Give it the findings from steps 1 to 4, your return figures, tax rate and next best choice. Before it runs, check each return figure against the company's annual reports or filings, and mark any figure you could not check `unverified`. It saves the long sums and a keep, wait or pass call. A call that rests on unverified figures says so in its first line. If the return figures are missing, it lists what is missing and gives no call. The long sums and the final keep, wait or pass call.
+1. **Business power tester.** Use the skill `business-power-tester` on the business and its rivals. It saves what customers get that rivals cannot match, the barrier that protects it and the kinds of scale at work.
+2. **Circle of competence sorter.** Use the skill `circle-of-competence-sorter`. Give it the edge test from step 1 and your background. It saves your five answers, your real edge or none, and a yes, no or too tough sort.
+3. **Who-keeps-the-gain tester.** Use the skill `who-keeps-the-gain-tester`. Give it the edge test from step 1 and the changes to test, such as a cost cut or a better product. It saves a sum for each change with and without rivals getting it, whether rivals fight each other, and an industry sort. If no changes were given, it writes `MISSING: changes to test` and tests none.
+4. **Owner-minded management checker.** Use the skill `owner-minded-management-checker`. Give it the findings from steps 1 to 3 and the record of what managers did with cash. It saves a cash log and ratings for able, honest and owner-minded, each with evidence.
+5. **Long-hold return calculator.** Use the skill `long-hold-return-calculator`. Give it the findings from steps 1 to 4, your return figures, tax rate and next best choice. Before it runs, check each return figure against the company's annual reports or filings, and mark any figure you could not check `unverified`. It saves the long sums and a keep, wait or pass call. A call that rests on unverified figures says so in its first line. If the return figures are missing, it lists what is missing and gives no call. The call is a view on the quality of the business only. It does not look at your savings, debts, goals or other holdings, so it is never a personal instruction to buy, sell or keep any investment.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

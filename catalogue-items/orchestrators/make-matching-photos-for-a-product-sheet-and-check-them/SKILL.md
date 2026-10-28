@@ -9,6 +9,8 @@ Give it a sheet of products. Get one matching photo per product, a faults report
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
+**When not to use it:** you have only a few products (real phone photos build more trust), you already have photos and only need to know if a shop will accept them (use the Marketplace photo rule checker on its own), or you made the photos in another tool and want them judged (use the AI product photo inspector on its own).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -46,15 +48,15 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Product photo batch maker.** Use the skill `product-photo-batch-maker`. Starts the chain: one matching photo per row of your sheet. Saves one photo per row, a contact sheet to pick from, and the cost used against your limit. Hands the saved batch of photos to step 2.
+1. **Product photo batch maker.** Use the skill `product-photo-batch-maker`. Give it the product sheet, the reference photos, the look sentence and the spending limit. It makes one matching photo per row. Saves `outputs/step-01-product-photo-batch-maker.md`, which lists each photo file by row, the contact sheet to pick from and the cost used against your limit. Hands the saved photos to step 2.
 
 Pause here: Look at the test batch and approve it before the full run, then save the finished photos.
 
-2. **AI product photo inspector.** Use the skill `ai-product-photo-inspector`. Checks the saved batch from step 1 for AI faults: a risk rating for each photo, eight checks, and a call of use, retry or retouch, with a fix line for each photo to redo. Hands the redone set to step 3.
+2. **AI product photo inspector.** Use the skill `ai-product-photo-inspector`. Give it the approved photos listed in `outputs/step-01-product-photo-batch-maker.md` and the reference photos. Checks each for AI faults: a risk rating for each photo, eight checks, and a call of use, retry or retouch, with a fix line for each photo to redo. Saves `outputs/step-02-ai-product-photo-inspector.md` and hands the fix lines to the pause below.
 
 Pause here: Redo the flagged photos with the fix lines, then save the final set.
 
-3. **Marketplace photo rule checker.** Use the skill `marketplace-photo-rule-checker`. Give it your final photo set (after you redo the flagged photos) and the name of the marketplace. Checks background, size and framing against that marketplace's rules and marks each rule pass or reject, with a fix for every reject. Uses your final photo set, not step 2's report. Saves the rules check as the step 3 file.
+3. **Marketplace photo rule checker.** Use the skill `marketplace-photo-rule-checker`. Give it your final photo set (after you redo the flagged photos) and the name of the marketplace. Checks background, size and framing against that marketplace's rules and marks each rule pass or reject, with a fix for every reject. Uses your final photo set, not step 2's report. Saves the rules check as `outputs/step-03-marketplace-photo-rule-checker.md`.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

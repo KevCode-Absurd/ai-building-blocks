@@ -50,7 +50,7 @@ Pause here: Say or send it. Then watch for the first small improvement.
 ## What you hand back
 4 step files and the summary. The last file holds the plan.
 
-Next: use the plan on the review date it sets. If the behaviour has not changed by then, run step 1 again with the new examples. Ignore the generated suggestion below unless the issue is about sales pay.
+Next: use the plan on the review date it sets. If the behaviour has not changed by then, run step 1 again with the new examples. To plan that check-in, use the [One-on-one meeting planner](https://useaiblocks.com/skills/one-on-one-meeting-planner) and bring the step 4 plan.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
@@ -61,6 +61,7 @@ Next: use the plan on the review date it sets. If the behaviour has not changed 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Sales pay plan checker](https://useaiblocks.com/skills/sales-pay-plan-checker). It takes the plan.
+- The [One-on-one meeting planner](https://useaiblocks.com/skills/one-on-one-meeting-planner). It takes the plan.
+- **Sell it** with the [Difficult conversation planner](https://useaiblocks.com/workflows/hard-talk-plan).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

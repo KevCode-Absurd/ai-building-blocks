@@ -300,7 +300,5 @@ For Bluetooth-specific event data fields, see `references/bluetooth-capture.md`.
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Session to script exporter](https://useaiblocks.com/skills/session-to-script-exporter). It takes the code change.
-- The [RoadRunner traffic test scenario writer](https://useaiblocks.com/skills/driving-test-scenario-writer). It takes the code change.
-- The [MATLAB package manager](https://useaiblocks.com/skills/matlab-package-installer). It takes the code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

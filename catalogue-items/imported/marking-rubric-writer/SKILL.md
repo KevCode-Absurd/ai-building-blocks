@@ -274,6 +274,5 @@ Return your output in this exact format:
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [AI feedback quality checker](https://useaiblocks.com/skills/ai-feedback-quality-checker). It takes the draft.
 - The [Overloaded lesson checker](https://useaiblocks.com/skills/overloaded-lesson-checker). It takes the draft.
-- The [Text and diagram explainer designer](https://useaiblocks.com/skills/word-picture-explainer). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

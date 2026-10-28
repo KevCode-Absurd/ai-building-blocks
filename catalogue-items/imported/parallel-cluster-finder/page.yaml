@@ -7,7 +7,7 @@ job: build-software
 headline: Parallel cluster finder
 subhead: A list of the computing clusters your MATLAB can use, with each profile checked and one set as the default. It answers the question of where you can run big jobs.
 explain: |
-  This is an unchanged copy of the MathWorks skill (commit dc9507d). It has not been adapted for this catalogue beyond the plain name and page text.
+  This is an unchanged copy of the MathWorks skill (commit dc9507d). We changed nothing in it beyond the plain name and the Before you start and After this sections we add to every skill.
 
   In plain words: a cluster profile is a saved settings file (an .mlsettings file) that tells MATLAB where to run parallel work. parcluster is the MATLAB command that loads a profile. MJS, the MATLAB Job Scheduler, is MathWorks' own cluster manager. A Generic cluster uses another scheduler, such as Slurm.
 
@@ -37,7 +37,7 @@ how_to_use:
   - Before any step, you need a MATLAB licence with Parallel Computing Toolbox (a paid add-on). Open MATLAB and check that it is installed. Use an AI that can run MATLAB code, or paste the code it gives you into MATLAB. Know two risks before you start. The cluster finder script (discoverClusters.p) is compiled, cannot be read, and scans your network and cloud. Checking a cloud profile can start paid cloud machines.
   - Check your MATLAB release. Listing, importing and setting a default work from R2022b. Checking a profile in code needs R2025a, and deleting one in code needs R2026a. On older releases, use the Cluster Profile Manager in MATLAB for those two steps.
   - Paste the skill into your AI chat, or upload the skill folder if your AI accepts files.
-  - The cluster finder script (discoverClusters.p) is compiled and cannot be read. It scans your network and cloud, so run cluster discovery only on networks and machines you trust.
+  - Run cluster discovery only on networks and machines you trust, since the finder script scans them.
   - Ask a plain question, such as "What parallel clusters can I use?" Add your admin's profile file if you have one.
   - Read the profile table. Unreachable profiles are marked, so you can tell them apart from missing ones.
   - Before you validate or connect to a MATLAB Job Scheduler (MJS) cluster, stay at the MATLAB window. A sign-in dialog may open and will block MATLAB until you answer it. If you close it without entering your details, the step fails.

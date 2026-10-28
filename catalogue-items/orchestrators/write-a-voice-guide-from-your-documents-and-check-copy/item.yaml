@@ -7,8 +7,8 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - {type: source_text, required: true}
-  - {type: brief, required: true}
+  - {type: document, required: true}
+  - {type: brief, required: false}
   - {type: voc_reviews, required: false}
   - {type: copy_draft, required: false}
   - {type: brand_brain, required: false}

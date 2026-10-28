@@ -31,13 +31,15 @@ you_get:
   - Batch output for many prompts
   - Messages when a setting is missing
 how_to_use:
+  - Before the first run, check the pricing of the service you will use. Every image, and every image in a batch, is a paid request on your own account. Your prompt and any reference image are sent to that service.
   - Open an AI that can run code on your computer, such as Claude Code or Codex. A plain chat window cannot run the script.
   - Make sure Bun is installed. If not, your AI can run it with npx instead.
-  - "Add the skill folder and say: Make an image with the image maker skill. Give your prompt, service and size."
-  - On the first run, answer the setup questions. Your default service, model and size are saved for next time.
-  - Add your API key for the service when asked, or set it as an environment variable first.
+  - "Add the skill folder and say: Make an image with the image maker skill. Give your prompt, service, size and the file to save, such as out.png."
+  - "On the first run, answer the setup questions. For example: service openai, the default model, quality normal, and save the settings for this project only. Your choices are saved in EXTEND.md for next time."
+  - Add your API key for the service when asked, or set it as an environment variable first. Never paste the key into the chat.
+  - If a reference image shows a real person, use it only with that person's consent. Do not publish a picture that passes as them without their permission.
   - Open the image file at the path in the reply. For many images, give a batch file (a list of prompts and file names) and the number of jobs (how many images to make at the same time). A higher number is faster but sends more paid requests at once.
-  - Next, open the saved file and check the image. Rerun with another service or size to compare, or give it a batch file to make many images at once. Before you drop an image into a post, deck or ad, check the service's licence terms and that it fits your brand.
+  - Next, open the saved file and check the image. Rerun with another service or size to compare, or give it a batch file to make many images at once. Before you drop an image into a post, deck or ad, check the service's licence terms and that it fits your brand. To make the file smaller for a web page, bring it to the Image compressor.
 terms:
   - term: EXTEND.md
     meaning: A small file where the skill saves your default service, model and size.

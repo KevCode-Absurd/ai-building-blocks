@@ -94,7 +94,6 @@ The standard failure mode in nonprofit board recruitment is relationship-driven 
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Nonprofit resale store shift planner](https://useaiblocks.com/skills/nonprofit-retail-coverage-planner). It takes the plan.
 - The [Work sample test designer](https://useaiblocks.com/skills/work-sample-test-designer). It takes the plan.
 - **Lead the team** with the [Nonprofit executive board report writer](https://useaiblocks.com/skills/nonprofit-executive-board-report-writer). It takes the plan.
 - The [Nonprofit change rollout planner](https://useaiblocks.com/skills/nonprofit-change-rollout-planner). It takes the plan.

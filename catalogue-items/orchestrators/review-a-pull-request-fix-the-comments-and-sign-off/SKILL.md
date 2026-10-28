@@ -9,6 +9,8 @@ Give it a pull request. Get risks ranked, the comments fixed in code and a one-p
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
+**When not to use:** a tiny change that a quick read covers; or a pull request with no comments yet that you only want reviewed (run the Pull request risk reviewer, `pull-request-risk-reviewer`, on its own).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -46,14 +48,14 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Post the findings that matter as comments on the pull request.
 
-2. **Fix the comments.** Use the skill `review-comment-fixer`. Works through the comments you posted from step 1's review, read from the pull request, and the code branch. It changes only the comments you pick and hands over the fixed code.
-3. **Sign off.** Use the skill `human-review-gate`. Give it the fixed change from step 2, the step 1 risks and the name of the person who signs off. It takes the fixed change from step 2 and holds it until a named person has reviewed it and no blocker is open. It hands over the one-page sign-off with proof.
+2. **Fix the comments.** Use the skill `review-comment-fixer`. It reads every comment and thread on the pull request and numbers them. For each, it gives the file and line, the request in one sentence and what a fix would take, and marks threads already resolved or needing no code change. Then it stops and asks which numbers to fix. It changes code only for the numbers you pick, asks you when two comments clash, runs the project's tests if it can, and reports which numbers were fixed, which files changed and which were skipped. It does not post replies or resolve threads unless you ask. Save `outputs/step-02-review-comment-fixer.md`.
+3. **Sign off.** Use the skill `human-review-gate`. Give it the fixed change from step 2, the step 1 risks and the name of the person who signs off. It holds the change until a named person has reviewed it and no BLOCKER or MAJOR point is open. It hands over the one-page sign-off record: the pull request link and commit, the reviewer's name and date, each step 1 risk with its status (fixed, accepted with a reason, or open), each comment number with fixed or skipped, the test result or "not run", and the gate result (pass, or the rule that stopped it). Save `outputs/step-03-human-review-gate.md`.
 After sign-off, save the one-page record with the pull request, for example as a comment or an attached file, before the change is merged. Merging stays your decision.
 
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
-3 step files and the summary. The last file holds the audit report.
+3 step files and the summary: the ranked risks, the numbered comment fixes, and the one-page sign-off record.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

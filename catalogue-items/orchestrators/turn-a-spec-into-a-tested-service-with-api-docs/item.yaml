@@ -8,7 +8,7 @@ job: ops
 level: intermediate
 inputs:
   - {type: product_spec, required: true}
-  - {type: question, required: true}
+  - {type: question, required: false}
 outputs:
   - {type: codebase}
   - {type: test_report}

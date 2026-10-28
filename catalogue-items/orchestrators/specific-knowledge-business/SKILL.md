@@ -17,16 +17,16 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question, your results. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
 ## What you need
-This job is about you and your work, not ads. The "Before you start" list above mentions an ad results export. This workflow does not use one. You only need your history, your earnings and, if you have one, partner details.
+This job is about you and your work, not ads. "Your question" in the list above means your history and earnings below. The optional spreadsheet is your sales or income sheet, not an ad export. You only need your history, your earnings and, if you have one, partner details.
 
 This workflow does not test whether a business idea will sell or size a market. For that, use the [Business assumption stress tester](https://useaiblocks.com/skills/assumption-stress-test).
 
@@ -47,8 +47,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Steps
 1. **Specific knowledge finder.** Use the skill `specific-knowledge-finder` on your history of what came easily and what people ask you for. List what you know or do that cannot be taught in a class, trace each item to something the person said, pick one or two, and give a cheap test with a date for each. Saves `outputs/step-01-specific-knowledge-finder.md`.
 2. **Hours-to-assets planner.** Use the skill `hours-to-assets-planner` on the picks in `outputs/step-01-specific-knowledge-finder.md` (as what you are known for) and your earnings. Mark each income line as tied to hours or not, work out the hourly rate, plan one route to build something you own, list work to stop or buy back, and set a first step and a review date. Saves `outputs/step-02-hours-to-assets-planner.md`, the product plan for step 3.
-3. **Long-term partner screener.** Use the skill `long-term-partner-screener` on the plan in `outputs/step-02-hours-to-assets-planner.md` (as the game you would play together) and the partner details. Score intelligence, energy and integrity with the evidence for each, weigh integrity first, and give keep, test first or walk away. Score only what the person saw first-hand, with dates. Where there is no example, write `MISSING:` and do not guess. If no partner was named, skip this step and say so. Saves `outputs/step-03-long-term-partner-screener.md`. This is a prompt for your own judgement about a person, not a verdict on them.
-4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+3. **Long-term partner screener.** Use the skill `long-term-partner-screener` on the plan in `outputs/step-02-hours-to-assets-planner.md` (as the game you would play together) and the partner details. Score intelligence, energy and integrity with the evidence for each, weigh integrity first, and give keep, test first or walk away. Score only what the person saw first-hand, with dates. Where there is no example, write `MISSING:` and do not guess. If no partner was named, skip this step and say so. Saves `outputs/step-03-long-term-partner-screener.md`. This is a prompt for your own judgement about a person, not a verdict on them. Keep the scores as private notes: do not share them with others or about the person, and check them with people who have worked with the partner before you act.
+4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, every `MISSING:` line from all steps in one list, and `CHECKS MISSED`: the checks that failed or could not run, or "none".
 
 ## Next steps to offer
 
@@ -58,11 +58,11 @@ Use these instead of the general "After this" list below:
 - If you named a partner, run step 3 again after a few months of working together, with new dated examples.
 
 ## What you hand back
-3 step files and the summary. The result is a plan, not an audit report. The last file holds the partner check. The scores are your own impressions from dated observations, not a verdict on the person.
+3 step files and the summary. The result is a plan, with a partner check at the end. The last file holds the partner check. The scores are your own impressions from dated observations, not a verdict on the person.
 - Step 1: your picks, each traced to what you said, the basics to learn, and a cheap test with a date.
 - Step 2: each income line marked as tied to hours or not, one route to build something you own, your hourly rate, the stop or buy-back list, a first step and a review date.
 - Step 3: scores for intelligence, energy and integrity with evidence, and a keep, test first or walk away call.
-- Summary: each step's file and every `MISSING:` line in one list.
+- Summary: each step's file, every `MISSING:` line in one list and the checks missed.
 
 Income figures are from the person's own numbers and are not financial advice.
 
@@ -75,8 +75,8 @@ Income figures are from the person's own numbers and are not financial advice.
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Campaign lessons reviewer](https://useaiblocks.com/skills/copy-or-skip-lesson-writer). It takes the audit report.
-- The [Subject knowledge tester](https://useaiblocks.com/skills/real-knowledge-tester). It takes the audit report.
-- The [Knowledge gap decision planner](https://useaiblocks.com/skills/learn-borrow-or-pass-planner). It takes the audit report.
+- The [Personal mission statement writer](https://useaiblocks.com/skills/personal-mission-statement). It takes the plan.
+- The [Campaign lessons reviewer](https://useaiblocks.com/skills/copy-or-skip-lesson-writer). It takes the plan.
+- The [Weekly time audit planner](https://useaiblocks.com/skills/weekly-time-audit-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

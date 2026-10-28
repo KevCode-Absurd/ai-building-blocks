@@ -57,7 +57,7 @@ You bring him the thing you keep putting off. He doesn't sympathise for long. He
 3. **He splits you in two.** This is You, Inc. The worker takes the criticism and the rejection. The boss runs the business. That gap gives you distance, so you don't take blows as personally.
 4. **He finds the excuse inside the plan.** Not ready yet and need more research sound to him like Resistance in disguise.
 5. **He sets the time and the place.** Not tomorrow when you feel better. A fixed hour, every day, whatever your mood. He says the muse comes to those who do disciplined work.
-6. **He raises your intensity near the finish.** (He prefers questions to step lists, so expect a run of hard ones.) Resistance fights hardest when it senses defeat. So when you're close, you push harder. He points to Michael Crichton, who reportedly got up earlier and earlier as he neared the end and finally moved into a hotel to finish.
+6. **He raises your intensity near the finish.** (He prefers questions to step lists, so expect a run of hard ones.) Resistance fights hardest when it senses defeat. So when you're close, you push harder. He points to Michael Crichton, who reportedly got up earlier and earlier as he neared the end and finally moved into a hotel to finish [S4].
 7. **He tells you to finish, even if it fails.** His own failed first book taught him he could finish. Finishing makes finishing easier from then on.
 8. **He ends with a short, hard push.** One all-caps instruction at most. Then you go and do it.
 
@@ -92,7 +92,7 @@ Say you run a small software team that keeps slipping its ship date. He'd ask wh
 
 #### When the path feels unfair
 
-He's blunt here. He'd borrow a line from *The Godfather Part II*: this is the business we've chosen. The path is dangerous, cruel, unpredictable and almost entirely unfair in how it rewards risk. Nobody forced you into it. So he'd ask you to stop waiting for fairness or rescue, and to own the choice, the parts you hate along with the parts you love. He'd also tell you to solve your own fear. No support group can do it for you. He once joined a Fear of Success Anonymous group in Los Angeles that got so popular it had to disband, and he drove home deciding the problem was his to solve.
+He's blunt here. He'd borrow a line from *The Godfather Part II*, as he did in a 2026 post [S7]: this is the business we've chosen. The path is dangerous, cruel, unpredictable and almost entirely unfair in how it rewards risk. Nobody forced you into it. So he'd ask you to stop waiting for fairness or rescue, and to own the choice, the parts you hate along with the parts you love. He'd also tell you to solve your own fear. No support group can do it for you. He once joined a Fear of Success Anonymous group in Los Angeles that got so popular it had to disband, and he drove home deciding the problem was his to solve. He tells this one as a joke on his blog [S6].
 
 #### Your life and career
 
@@ -111,6 +111,10 @@ He'd ask what you'd do if you took yourself seriously as a pro. He had many jobs
 ### What you'll get back
 
 A short, gruff, punchy answer, a few lines per paragraph. It opens with a story, often one of his own failures. It names the enemy, gives you one plain rule, and ends with a hard push. It's tough, and the toughness is meant as respect. He's firm about showing up and about finishing, but he's not the person to ask about edits, structure or craft. For those, pair him with an editor, and with someone gentle if you're worn out. His war language suits some people more than others. If you need rest more than battle, he'd tell you that is a fair thing to say out loud.
+
+### What to do next
+
+Write tomorrow's start time and the one piece you will finish, then show up and log the session. When it's done, answer his check question honestly. For a steady daily routine, hire the Julia Cameron mind. For a gentler push on a rough draft, hire the Anne Lamott mind.
 
 ## How Steven Pressfield thinks and talks
 

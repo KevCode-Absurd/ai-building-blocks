@@ -165,7 +165,7 @@ cfg = LanguageModelSAERunnerConfig(
     context_size=128,
 
     # Logging
-    log_to_wandb=True,
+    log_to_wandb=True,  # needs a Weights & Biases account and login; set False if you have none (AI Blocks note)
     wandb_project="sae-training",
 
     # Checkpointing
@@ -180,8 +180,31 @@ sae = trainer.run()
 # 3. Evaluate
 # L0 (avg active features) and CE loss recovered are logged during training
 # (to Weights & Biases when log_to_wandb=True). The runner has no documented
-# `metrics` attribute, so read them from the run log, or check the SAELens docs
-# for your version for an evaluation helper. (Note added by AI Blocks.)
+# `metrics` attribute, so read them from the run log, or run the check below.
+# (Note and code added by AI Blocks: a sketch built only from the calls in
+# Workflow 1. Test it on your SAELens and TransformerLens versions.)
+import torch
+from transformer_lens import HookedTransformer
+
+model = HookedTransformer.from_pretrained(cfg.model_name, device="cuda")
+tokens = model.to_tokens(["Put a few hundred lines of held-out text here."])
+
+with torch.no_grad():
+    _, cache = model.run_with_cache(tokens)
+    acts = cache[cfg.hook_name]                       # [batch, pos, d_in]
+    feats = sae.encode(acts)                          # [batch, pos, d_sae]
+    l0 = (feats > 0).float().sum(-1).mean().item()    # average active features per token
+    # Share of features that never fired on this text. A small sample overstates it.
+    dead_share = ((feats > 0).sum(dim=(0, 1)) == 0).float().mean().item()
+
+    clean_loss = model(tokens, return_type="loss").item()
+    sae_loss = model.run_with_hooks(tokens, return_type="loss",
+        fwd_hooks=[(cfg.hook_name, lambda act, hook: sae.decode(sae.encode(act)))]).item()
+    zero_loss = model.run_with_hooks(tokens, return_type="loss",
+        fwd_hooks=[(cfg.hook_name, lambda act, hook: torch.zeros_like(act))]).item()
+    ce_recovered = (zero_loss - sae_loss) / (zero_loss - clean_loss)
+
+print(f"L0: {l0:.1f} | CE loss recovered: {ce_recovered:.1%} | dead on this text: {dead_share:.1%}")
 ```
 
 ### Key Hyperparameters
@@ -194,6 +217,8 @@ sae = trainer.run()
 | `l1_warm_up_steps` | 500-2000 | Prevents early feature death |
 
 ### Evaluation Metrics
+
+> Note from AI Blocks: the target ranges below are rules of thumb from the source skill, with no cited source. AI Blocks has not checked them. Good values depend on the model, layer and dictionary size, so compare against published SAEs for a similar setup.
 
 | Metric | Target | Meaning |
 |--------|--------|---------|

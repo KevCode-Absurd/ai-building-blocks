@@ -52,7 +52,8 @@ how_to_use:
   - Check the fitted prior against your own numbers before you go on.
   - Read the simulated predictions. If they look silly, change your assumptions and run it again.
   - Look at the sensitivity check to see how much the prior changes your answers.
-  - Next, report the range of answers to the people deciding, or ask a statistician to review the priors.
+  - Next, report the range of answers to the people deciding, or ask a statistician to review the priors. Bring them the fitted priors, your stated ranges and the sensitivity table. Then build the full model with the PyMC Bayesian model builder.
+next: [bayesian-model-builder, agency-academic-statistician]
 output_sample:
   input:
     - The quantity you are modelling, with its units

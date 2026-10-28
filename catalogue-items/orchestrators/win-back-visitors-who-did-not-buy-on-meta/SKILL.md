@@ -18,11 +18,12 @@ This workflow chains skills from the library. Each step is its own skill. You ru
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 - **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Makes it better (optional):**
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -34,18 +35,20 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your brand brain, customer words, your results. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for customer words, your results, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
 ## What you need
 
-Step 1 stops if the reasons visitors left are missing. That is the input that matters most. Before step 1 runs, confirm you have supplied the store conversion rate and the channel spend. Step 3 cannot run without the spend.
+Step 1 stops if the reasons visitors left are missing. That is the input that matters most. Before step 1 runs, confirm you have supplied the store conversion rate and the channel spend. Step 3 cannot run without the spend. You do not need a brand brain: the spreadsheet in the list above is your product list with margins.
 
-- **Why visitors left** (required). Reviews, survey answers, support questions or call notes, in the buyer's own words, with source and date.
-- **Your store conversion rate** (required). Without it, the size of the group who left is a guess.
-- **Your product list with margins** (required). The cross-sell pairs products using margin, so the cheap item is not pushed.
-- **Your spend and new-customer revenue by channel** (required), for a closed date window, with where each number comes from. If you ran a holdout or lift test, add it.
+This run only plans. Running the ads on Meta costs ad spend, which you set and pay in your own ad account.
+
+- **Why visitors left** (required). Reviews, survey answers, support questions or call notes, in the buyer's own words, with source and date. With only a handful, each share in step 1 is marked a guess.
+- **Your store conversion rate** (required). Take it from your store's analytics report (sessions and orders) for the same dates as your spend. Without it, the size of the group who left is a guess.
+- **Your product list with margins** (required). A sheet from your store or costing file: product, price and cost or margin. The cross-sell pairs products using margin, so the cheap item is not pushed.
+- **Your spend and new-customer revenue by channel** (required), for a closed date window, with where each number comes from. Spend comes from each ad platform's campaign report. New-customer revenue comes from your store's sales report split into new and returning customers. If you ran a holdout or lift test, add it.
 - **Your proof, offer and guarantee** (optional, helps). Review count, a real discount, your guarantee. Each ad uses one claim, so only proof you hold backs it.
 - **How many visitors you can retarget** (optional).
 
@@ -60,15 +63,15 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Steps
 1. **Give each reason for leaving an ad.** Use the skill `retargeting-objection-ad-planner`. It takes why visitors left, your conversion rate and your proof and offer. It saves `outputs/step-01-retargeting-objection-ad-planner.md`: the visitors who left split into price, trust, quality and not ready yet (each share marked measured or guess), one ad concept per objection with one claim and its proof, a test order and what to measure.
 2. **Order the ads into a sequence.** Use the skill `retargeting-ad-sequence-planner`. It takes the objection map and ad concepts in `outputs/step-01-retargeting-objection-ad-planner.md`, why visitors did not buy and your product list with margins. It saves `outputs/step-02-retargeting-ad-sequence-planner.md`: a ranked list of why visitors do not buy, an objection ad, a proof ad and a cross-sell ad, a cross-sell pairing table, and the audience and window.
-3. **Cap the retargeting spend.** Use the skill `next-dollar-budget-allocator`. It takes the sequence plan in `outputs/step-02-retargeting-ad-sequence-planner.md` and your spend and new-customer revenue by channel. It saves `outputs/step-03-next-dollar-budget-allocator.md`: channels ranked by new-customer revenue for the next dollar with the evidence behind each, a stop point per channel, a test plan, and a loss limit with a fallback. It checks the plan does not take budget from ads that find new buyers.
-4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+3. **Cap the retargeting spend.** Use the skill `next-dollar-budget-allocator`. It takes the sequence plan in `outputs/step-02-retargeting-ad-sequence-planner.md` and your spend and new-customer revenue by channel. It saves `outputs/step-03-next-dollar-budget-allocator.md`: channels ranked by new-customer revenue for the next dollar with the evidence behind each, a stop point per channel, a test plan, and a loss limit with a fallback. It checks the plan does not take budget from ads that find new buyers. If the channel numbers do not cover at least one full closed date window, stop this step, write `MISSING: one closed window of spend and new-customer revenue`, and give no cap.
+4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, every `MISSING:` line from all steps in one list, and `CHECKS MISSED`: the checks that failed or could not run, or "none".
 
 ## What you hand back
 3 step files and the summary. The last file holds the budget plan.
 - Step 1, objection ads: visitors split by objection, one ad concept per objection, test order, what to measure.
 - Step 2, sequence: objection ad, proof ad and cross-sell ad, pairing table, audience and window.
 - Step 3, budget: ranking for the next dollar, stop point per channel, test plan, loss limit and fallback.
-- Hand-back summary: each file, then every `MISSING:` line in one list.
+- Hand-back summary: each file, every `MISSING:` line in one list, then the checks missed.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

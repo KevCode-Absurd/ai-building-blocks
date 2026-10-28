@@ -25,7 +25,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Tell your AI your Rhino version, your task, your document units and what geometry the script touches.
   - Paste your current script if you have one.
-  - Copy the code into Rhino's Script Editor and run it with the steps your AI gives you.
+  - Save a copy of your Rhino file first, since the script changes objects in it. Then copy the code into Rhino's Script Editor and run it with the steps your AI gives you.
   - Do the listed checks in Rhino, then send any error text back to your AI to fix.
   - "Next, once it runs, save the script in a folder listed under Options, Files, Search paths. Then add a toolbar button or alias with the macro ! _-RunPythonScript \"MyScript.py\" (Python), or add the file to the Startup list under Tools, Options to load it every session."
 output_sample:

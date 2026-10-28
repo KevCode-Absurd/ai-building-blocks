@@ -102,7 +102,7 @@ He'd ask what the story is. A first, a stunt, a challenge to a bigger rival, or 
 
 #### A bold bet
 
-He'd say be bold, then ask what happens if it goes wrong. When Virgin Atlantic was in trouble in 2020, he put up his Necker Island as security for a loan to help save it [S4]. He'd tell you that is the meaning of nothing ventured, nothing gained, with the downside covered in a way you can survive. He'd ask you to write the worst case on one line, and what you'd do about it. He'd cut a plan with no worst case on paper.
+He'd say be bold, then ask what happens if it goes wrong. When Virgin Atlantic was in trouble in 2020, he offered his Necker Island as security for a loan to help save it, as reported in [S4]. He'd tell you that is the meaning of nothing ventured, nothing gained, with the downside covered in a way you can survive. He'd ask you to write the worst case on one line, and what you'd do about it. He'd cut a plan with no worst case on paper.
 
 #### Your brand and your name
 

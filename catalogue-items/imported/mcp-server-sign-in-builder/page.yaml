@@ -11,7 +11,7 @@ explain: |
 
   The first choice depends on the connection. Local stdio servers do not use OAuth, while web servers may. A web server should only check tokens, not issue them. It publishes discovery data so a client can find the sign-in, validates every token on every request, including who the token was meant for, and does not pass tokens through to other services. Finally it tests the flow from start to end.
 
-  This is Paldom's mcp-server-auth skill, copied as it is under the MIT licence. It mentions security incidents from 2025 and a 2026-07-28 revision of the MCP standard without naming sources. Check those against the MCP specification site before you rely on them.
+  This is Paldom's mcp-server-auth skill, copied as it is under the MIT licence. It mentions security incidents from 2025, scans that find thousands of open MCP servers, flaws disclosed in both major SDKs, and a 2026-07-28 revision of the MCP standard. None of these name a source. Check them against the MCP specification site and the SDK release notes before you rely on them or quote them.
 when:
   - Your remote MCP server needs users to sign in.
   - Clients cannot find how to connect to your server.
@@ -39,7 +39,7 @@ how_to_use:
   - Check the auth model choice first. Local servers should end up with no OAuth.
   - Add the token checks and discovery routes to your server.
   - Run the check script against your live server. From the skill folder, run python3 scripts/check_auth_endpoints.py followed by your server address. (The skill file writes the path with ${CLAUDE_SKILL_DIR}, which only works in Claude Code.) It needs code running and web access. Then try a real client.
-  - Next, fix anything the script flags and run it again. Then give the server to the MCP attack defence reviewer to check for risks beyond sign-in.
+  - Next, fix anything the script flags and run it again. Then check risks beyond sign-in. Use the MCP server hardener for encryption, tool access and logging, and the MCP attack defence reviewer for injection and sandbox gaps.
 output_sample:
   input:
     - "How people connect to your server: local or web"

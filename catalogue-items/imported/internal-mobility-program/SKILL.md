@@ -75,7 +75,7 @@ Return these parts in order:
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Handbook change and cross-reference checker](https://useaiblocks.com/skills/handbook-change-checker). It takes the policy.
 - The [Staff announcement writer](https://useaiblocks.com/skills/staff-announcement-writer). It takes the plan.
-- The [Employee data privacy checker](https://useaiblocks.com/skills/employee-data-privacy-checker). It takes the document.
+- The [Nonprofit resale store shift planner](https://useaiblocks.com/skills/nonprofit-retail-coverage-planner). It takes the policy and document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

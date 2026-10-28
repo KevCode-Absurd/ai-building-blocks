@@ -50,7 +50,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 1. **Voiceover maker.** Use the skill `voiceover-maker`. Give it your script, the voice and the delivery style. Turns the script into a spoken file and checks clarity, pace and pronunciation. Saves the step 1 file with the spoken audio, the text used and the voice and style.
 2. **Video dubbing editor.** Use the skill `video-dubbing-editor`. Give it the audio in the step 1 file and these settings: the source language (the language of your script), the list of target languages, and the output format (for example MP3 or WAV, one file per language). Makes one dubbed audio file per language that keeps the voice, with a transcript per language and a list of lines to refine. Saves these as the step 2 file.
 
-Pause here: Send each native speaker the dubbed audio file for their language and its transcript. Ask them to return a list of wrong words, names or tone, with the time of each. Then regenerate the lines they flag. Have a native speaker for each language listen and mark wrong words, names or tone, then regenerate the lines they flag. Step 3 waits until the native speakers' fixes are back and the flagged lines are regenerated. If a language has no native speaker, leave it out of step 3.
+Pause here: Send each native speaker the dubbed audio file for their language and its transcript. Ask them to listen and return a list of wrong words, names or tone, with the time of each, then regenerate the lines they flag. Step 3 waits until the native speakers' fixes are back and the flagged lines are regenerated. If a language has no native speaker, leave it out of step 3.
 
 3. **Subtitle and transcript maker.** Use the skill `subtitle-and-transcript-maker`. Give it the corrected audio for each language from step 2 (after the regenerated lines), not the first dub. Transcribes each file with word timing and saves a subtitle file per language. Saves these as the step 3 file.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
@@ -63,7 +63,7 @@ Three step files and the summary. The last file holds the subtitles and transcri
 - **HAND-BACK SUMMARY:** each step's file, and every `MISSING:` line in one list.
 
 ## After this (for this job)
-Use this section, not the shared "After this" list above, whose call summarizer takes a call transcript, which this workflow does not make. Suggest one next step as a short question:
+Suggest one next step as a short question:
 - Load each subtitle file into your video editor or video host with its matching dubbed audio, and watch one full language version before you publish. Nothing here publishes for you.
 - To add more languages, run steps 2 and 3 again with the new language list and a native speaker for each.
 
@@ -78,6 +78,7 @@ Use this section, not the shared "After this" list above, whose call summarizer 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Dialpad and Leexi call summarizer](https://useaiblocks.com/skills/dialpad-and-leexi-call-summarizer). It takes the transcript.
+- The [YouTube description and tags writer](https://useaiblocks.com/skills/youtube-description-tags). It takes the transcript.
+- **Grow on social** with the [YouTube upload planner](https://useaiblocks.com/skills/youtube-upload-planner).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

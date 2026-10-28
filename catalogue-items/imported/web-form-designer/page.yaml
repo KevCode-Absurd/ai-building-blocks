@@ -33,7 +33,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text.
   - Tell your AI what the form is for and paste your current fields, or a screenshot if your AI can read images.
   - Add your tools, such as your CRM or email service. Add your completion and spam numbers if you have them.
-  - Read the field cuts first. Change those, then add the spam protection.
+  - Read the field cuts first. Change those, then add the spam protection. Hidden fields, time checks and rate limits cost nothing. Challenge tools such as Cloudflare Turnstile, hCaptcha and reCAPTCHA need an account, and some have usage limits or paid plans. Your CRM, email tool or form service may also need a paid plan, so check yours before you set it up.
   - Send a test entry and check that the data lands in your CRM or inbox. This step is done by you, not your AI.
   - Check your numbers again after a few weeks to see if spam and completions have improved.
 output_sample:

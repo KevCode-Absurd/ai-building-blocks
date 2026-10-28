@@ -1,6 +1,6 @@
 new_slug: investment-results-review
 name: "Review your investments by business results, not price"
-summary: "Give it your holdings. Get each judged on business results, a short ranked list with sizes and rules for sitting still."
+summary: "Give it your holdings. Get each judged on business results, a short ranked list and rules for sitting still."
 job: money-and-investing
 thinking: high
 thinking_why: "It reviews several businesses, ranks them and writes rules that depend on your answers. Give it your strongest model."
@@ -11,7 +11,7 @@ subhead: Give it your holdings and what you know of each business. It judges eve
 explain: |
   It is easy to review investments by the price. It is up, so it feels right. It is down, so it feels wrong. But the price is a mood, and the thing you own is a business with results you can read.
 
-  This workflow reviews your holdings the way a focused owner would. Step one hides the price and sorts each holding as keeper, watch, weak or not understood, by earnings, returns and debt. Step two ranks what is left, using your best holding as the bar every other idea must beat, and keeps the list short with sizes that match how well you understand each. Step three writes the rules for sitting still: the facts that must stay true, the cost of trading and tax, and the only reasons to act. Step four writes your rules for price drops and jumps, before you are in one. The approach is inspired by Robert Hagstrom's account of Warren Buffett's focus investing. It gives no buy or sell calls, and it is not a substitute for a licensed adviser on tax, loans or a single buy or sell decision.
+  This workflow reviews your holdings the way a focused owner would. Step one hides the price and sorts each holding as keeper, watch, weak or not understood, by earnings, returns and debt. Step two ranks what is left, using your best holding as the bar every other idea must beat, and keeps the list short. It sets no target sizes: it shows what share each holding is now, and sizing stays your call with an adviser. Step three writes the rules for sitting still: the facts that must stay true, the cost of trading and tax, and the only reasons to act. Step four writes your rules for price drops and jumps, before you are in one. The approach is inspired by Robert Hagstrom's account of Warren Buffett's focus investing. It gives no buy or sell calls, and it is not a substitute for a licensed adviser on tax, loans or a single buy or sell decision.
 
 when:
   - You own a handful of investments and want to judge them by business results.
@@ -25,7 +25,7 @@ you_give:
 you_get:
   - Each holding sorted keeper, watch, weak or not understood, with the figure behind it
   - A cross-check of profit kept against value gained
-  - A short ranked list with sizes, and a written no for the rest
+  - A short ranked list with each holding's current share, and a written no for the rest
   - A one-page rule set for sitting still, with the cost of acting and the only reasons to change
   - A rule card for price drops and jumps, with look dates and your mind traps
 
@@ -40,7 +40,7 @@ how_it_works:
   - title: Judges each holding by its results
     text: Hides the price, checks whether the reason you bought it still holds, and labels each holding with the figure behind it.
   - title: Ranks them and cuts the list
-    text: Ranks holdings by how well you understand them and how clear the edge is, uses the best as the bar, and gives most weight to the top few.
+    text: Ranks holdings by how well you understand them and how clear the edge is, uses the best as the bar, and writes a no for the rest. It sets no target sizes.
   - title: Writes the rules for sitting still
     text: The facts that must stay true, fixed review dates, the cost of trading and tax, and the only reasons to act.
   - title: Writes your rules for price drops
@@ -52,7 +52,7 @@ output_shape: |
     Where results and price disagree: <...>
 
   STEP 2: RANKED LIST
-    <top picks with sizes, the best-holding bar, and a written no for the rest>
+    <top picks with each one's current share, the best-holding bar, and a written no for the rest>
 
   STEP 3: RULES FOR SITTING STILL
     <facts that must stay true, review dates, cost of acting, only reasons to act>
@@ -62,13 +62,13 @@ output_shape: |
 
   HAND-BACK SUMMARY
     Files: <each step's file> | MISSING: <every line, in one list>
-    Not personal financial advice. The ranked sizes are not an instruction to buy or sell.
+    Not personal financial advice. The ranked list is not an instruction to buy or sell.
 
 tweaks:
   - what: The reason you bought
     how: One honest line per holding. A weak reason is a useful finding.
   - what: How long you can leave the money
-    how: Say it plainly. The sizes and the drop rules both depend on it.
+    how: Say it plainly. The drop rules depend on it.
   - what: Your drop sizes
     how: Choose falls that would hurt you, such as a tenth, a quarter and a half.
 
@@ -96,7 +96,7 @@ works_best_with:
     - {name: "Claude", why: "Holds four steps and several businesses' figures in one run."}
     - {name: "A printed page", why: "A rule card only works if you can see it at the moment you want to break it."}
   inputs:
-    - "Your broker statement, for sizes and dates"
+    - "Your broker statement, for current shares and dates"
     - "Annual report summaries for each company you hold"
     - "A list of money you will need in the next five years"
 

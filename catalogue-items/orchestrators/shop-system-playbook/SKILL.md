@@ -68,7 +68,7 @@ Pause here: Have someone who has never worked for you run one shift from the man
 
 3. **Check the system is ready to copy.** Use the skill `second-location-check`. It takes the manual in `outputs/step-02-operations-manual-writer.md` and the newcomer's notes from the pause, plus the week-away takings and costs if given. It saves `outputs/step-03-second-location-check.md`: each trial gap with a fix, whether the first place earns without you, the site, supplies and named person, and a ready call.
 4. **Make the go or no-go call.** Use the skill `go-or-no-go-launch-checker`. It takes the readiness check in `outputs/step-03-second-location-check.md` and the manual in `outputs/step-02-operations-manual-writer.md`. It saves `outputs/step-04-go-or-no-go-launch-checker.md`: a go or no-go on the next location, a halfway check and the first fix to make.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, every `MISSING:` line from all steps in one list, and `CHECKS MISSED`: the checks that failed or could not run (such as no trial shift), or "none".
 
 ## Next steps to offer
 
@@ -82,7 +82,7 @@ Use these instead of the general "After this" list below:
 - Step 2: job cards, missed-standard rules, what is fixed and what is local, trial sheet.
 - Step 3: trial gaps each with a fix, runs without you (yes, partly, no or unknown), site, supplies and named person, the ready call.
 - Step 4: go or no-go, halfway check, first fix.
-- Summary: each step's file and one list of `MISSING:` lines.
+- Summary: each step's file, one list of `MISSING:` lines and the checks missed.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

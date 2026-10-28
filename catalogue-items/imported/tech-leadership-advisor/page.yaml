@@ -5,7 +5,7 @@ name: Tech leadership advisor
 summary: Get a tech debt review, a hiring plan and build or buy calls for your engineering team, with each debt item graded by severity and every figure tagged as yours or an estimate.
 job: build-software
 headline: Tech leadership advisor
-subhead: Describe your tech team and stack. Get a tech debt review, a hiring plan and architecture calls. Bring a description of your team and stack. Use the result to plan your next step.
+subhead: Describe your tech team and stack. Get a tech debt review, a hiring plan and architecture calls. Any cost it cannot work out from your facts is marked as missing, not guessed.
 explain: |
   The kind of advice a seasoned CTO gives: a view of your tech debt, a hiring and growth plan for engineering, and clear calls on architecture, build versus buy and cloud choices. It suits founders and leads who have no technical peer to ask.
 
@@ -31,16 +31,16 @@ you_get:
   - Build versus buy recommendations
   - Engineering health measures to track
 how_to_use:
-  - "Gather your facts first: team size and roles, your list of tools and systems, your top three pain points, and your budget range."
+  - "Gather your facts first: team size and roles, current pay range, your list of tools and systems, your top three pain points, and your budget range."
   - Add any deploy or incident data you have (optional). It helps your AI rate your engineering health.
   - Paste the skill into Claude, ChatGPT or Gemini, then paste your facts below it.
-  - "Say what you want: a tech debt review, a build or buy call, a hiring plan or a health check."
+  - "Say what you want: a tech debt review, a build or buy call, a hiring plan or a health check. You get only the parts you ask for. Each one opens with the bottom line, then what, why, how to act and the decision left to you."
   - Check each result with your lead engineer. Costs and dates are estimates, and your AI does not know your code.
   - The two Python scripts are optional. They only run in an AI that can run code. Skip them in a plain chat.
   - Your AI marks each figure as "from your input" or "estimate, check with your lead". It asks for numbers you have not given instead of quoting benchmarks it cannot source.
   - "The advice looks about one to three years ahead. The hiring and cost figures are only usable if you give your team size, current pay range and budget. Without them your AI will mark each figure as an estimate."
   - "The health measure targets (such as debt ratio, deploy speed and uptime) are generic starting points, not benchmarks. Set them from your own baseline."
-  - "This is a copy of the cto-advisor skill by Alireza Rezvani (MIT). The source link is in the credits. In the skill file we changed one thing: a rule that tags each figure as from your input or an estimate, and never as verified. The page text is ours."
+  - "This is a copy of the cto-advisor skill by Alireza Rezvani (MIT). The source link is in the credits. In the skill file we added a rule that tags each figure as from your input or an estimate, never as verified, and marks missing costs as missing. We also labelled the example debt table as illustrative. The page text is ours."
   - Next, take the hiring plan to your budget review, log the health measures in a monthly check, and run the debt review again after the first sprint. Write each big decision down with the decision record writer.
 next: [tech-debt-prioritiser, decision-record-writer]
 output_sample:

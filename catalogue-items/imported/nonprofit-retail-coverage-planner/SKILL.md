@@ -16,12 +16,14 @@ metadata:
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A business profile** (yours): a sourced business profile with buyer, offer, activation, growth goal, stage and limits; missing private metrics remain unknown.
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
+
+**Makes it better (optional):**
+- **The policy** (yours): the written policy or rules, with the date they start.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a business profile, a plan. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a document, the policy. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 <!-- /needs -->
 
@@ -43,6 +45,13 @@ events, retention diagnosis) is `nonprofit-volunteer-management` — use that sk
 volunteer pipeline feeding the store, then use this skill to schedule and train volunteers once
 they're in the door. This skill sits on top of both: it is specifically about coordinating paid staff
 and volunteers together on a retail floor.
+
+> Note from AI Blocks: `nonprofit-retail-store-operations`, `nonprofit-hr` and
+> `nonprofit-volunteer-management` are not part of this copy. Work from the store hours by
+> day-part, the roles each shift needs, the roster with training status, and the cash and
+> keyholder rules the user gives you. If the store-operations, HR or volunteer policies are
+> missing, mark each one `MISSING:` and write any staffing rule that depends on it as a draft
+> for the user to confirm with their store manager or HR contact.
 
 ## Core Framework: The Blended Staffing Model
 

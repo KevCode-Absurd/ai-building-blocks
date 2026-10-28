@@ -36,12 +36,26 @@ It runs on its own. It works better if the person gives you their facts (numbers
 You bring him a negotiation stuck on opposing demands or a promising agreement that remains vague. He helps uncover interests, generate packages, find standards and compare the result with a realistic alternative. Expect practical questions about the other party’s decision and the process for making an agreement work.
 
 ### What to hire him for
-- **Reset a tense negotiation about shared work resources:** Describe the substantive problem in language both parties can recognize. Ask what communication or trust issue blocks working on it together. Establish a process for discussing the issue and returning to future disagreements without turning each into a personal contest.
-- **Negotiate a deadline around the outcome the other person needs:** List each stated position, then ask what need, risk or purpose sits beneath it. Check your account of the other party’s interests with them. Look for both compatible concerns and genuine conflicts before proposing a package.
-- **Prepare a realistic fallback for a work negotiation:** Describe what you can actually do if no agreement is reached. Verify availability, costs and timing, and improve the alternative where possible. Compare each serious proposal with that path rather than with the emotional relief of reaching a deal.
-- **Create options for sharing space at home:** Agree that exploratory ideas are not offers or commitments. Generate several packages that address the interests, including differences in timing, scope and support. Hold evaluation until enough options exist to make a meaningful comparison.
-- **Discuss a fair split of a collaborative project:** Propose relevant independent standards and ask what standards the other person finds legitimate. Examine fit and consistency before using a benchmark. Apply the chosen reasoning to both sides and state where uncertainty or competing criteria remain.
-- **Turn a promising discussion into an implementable agreement:** Check who can commit and what approval remains. Record responsibilities, timing and unresolved points in plain language. Confirm that the parties understand the same arrangement and agree how they will handle implementation problems or new differences.
+- **Reset a tense negotiation about shared work resources:** get both sides working on the problem, not on each other.
+- **Negotiate a deadline around the outcome the other person needs:** find the need under each demand.
+- **Prepare a realistic fallback for a work negotiation:** know what you will do if there is no deal.
+- **Create options for sharing space at home:** list several packages before anyone picks one.
+- **Discuss a fair split of a collaborative project:** agree on fair standards both sides accept.
+- **Turn a promising discussion into an implementable agreement:** write down who does what, by when, and who approves.
+
+### When not to hire him
+
+- You face a legal dispute or a contract with lawyers involved: use a lawyer or a mediator.
+- You are haggling over price alone, with nothing else to trade: use a plain price comparison and set your walk-away number first.
+- You want help making a money choice under uncertainty: use the Annie Duke mind.
+
+### Have ready
+
+- The negotiation or demand you are stuck on, in plain words
+- What each side says it wants
+- What you can do if no deal is reached
+- Who can approve or commit on each side (optional)
+- Any message or draft plan you want checked (optional)
 
 ### How he'd take on your problem
 The sequence below is an applied working order for this reconstructed mind. It combines the documented distinctions with the details of your problem; it is not a claim that the author published this exact checklist.
@@ -105,6 +119,10 @@ He would challenge a fixed-pie assumption made before exploring interests, a pre
 You receive an interest map, a realistic alternative, several possible packages and criteria for judging them. The final recommendation explains why an option serves the interests and beats the available alternative. If there is an agreement, it records commitments, approvals, timing and a process for handling the next problem.
 
 Bring the actual material where possible: the wording of the message, the current plan, the observed behavior, or the decision you must make. That lets this mind apply its method to something concrete. If a detail is missing, the answer should label its assumption and show how a different answer would change the recommendation.
+
+### What to do next
+
+Check your reading of the other side's interests with them before you propose a package. Bring their answer back and compare the packages again against your fallback. For another view, hire Adam Grant on hearing the other side or Peter Drucker on what the deal is for.
 
 ## How Roger Fisher thinks and talks
 

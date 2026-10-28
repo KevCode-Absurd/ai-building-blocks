@@ -35,7 +35,7 @@ How to start:
 
 ## What you need
 
-This is a documentation job. The generic list above asks for a buyer brief and for a "Recommended steps before this one" list. Ignore the buyer brief lines and the "Recommended steps before this one" list in the box above. Do not make a buyer brief and do not run any earlier step. This job does not use one. This workflow needs your repeat tasks, what breaks and the names of your tools. Have ready the place the pages will go, such as a wiki or a shared drive, and the store, email and help desk tools your fixes use.
+This is a documentation job. This workflow needs your repeat tasks, what breaks and the names of your tools. Have ready the place the pages will go, such as a wiki or a shared drive, and the store, email and help desk tools your fixes use.
 
 - **Access** (required): a folder or chat where the AI can read your pasted notes, and a place to save the `outputs/` files. The pages are written as text. Nothing is put into your wiki or shared drive by the AI.
 - **The repeat tasks** (required): what they are, who does each, and where notes live today.
@@ -61,7 +61,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop:** stop if there are no repeat tasks described, or if a step's own checks fail. Go to the hand-back summary and say which step.
 
 ## Steps
-1. **Plan the system.** Use the skill `documentation-system-planner` on how the team works and any existing docs. It plans where pages live, how they are named, who owns each, how often each is reviewed and how a stale page is caught. Saves `outputs/step-01-documentation-system-planner.md`.
+1. **Plan the system.** Use the skill `documentation-system-planner` on how the team works and any existing docs. It plans where pages live, how they are named, who owns each, how often each is reviewed and how a stale page is caught. A page with no named owner goes in the plan with the owner as `MISSING: owner` and a review date set anyway; it is never given an owner by guess. Saves `outputs/step-01-documentation-system-planner.md`.
 2. **Write the procedures.** Use the skill `process-and-sop-writer` on `outputs/step-01-documentation-system-planner.md` and the repeat tasks. It writes a standard procedure for each repeat task: the steps in order, who does each, what good looks like and what to do when a step fails. Saves `outputs/step-02-process-and-sop-writer.md`.
 3. **Write the runbooks.** Use the skill `on-call-runbook-writer` on what goes wrong and how it is fixed, and `outputs/step-01-documentation-system-planner.md` for where pages go. It writes a runbook for each thing that breaks: the signs, what to check in order, the fix, who to call and when to stop and escalate. Saves `outputs/step-03-on-call-runbook-writer.md`.
 4. **Check every page.** Use the skill `sop-and-runbook-checker` on `outputs/step-02-process-and-sop-writer.md` and `outputs/step-03-on-call-runbook-writer.md`, plus the tool names. It follows each procedure and runbook as a newcomer would, step by step, and lists every place they would get stuck, need to ask or find a missing step. Saves `outputs/step-04-sop-and-runbook-checker.md`.
@@ -69,7 +69,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list below:
+Offer these first. The "After this" links below are further options if the person wants more:
 - Put the review dates from step 1 in your calendar, and check each page again on its date.
 - Check one finished page on its own with the [SOP and runbook checker](https://useaiblocks.com/skills/sop-and-runbook-checker).
 - Teach one procedure with [Write a procedure, test it and build a training deck](https://useaiblocks.com/workflows/write-a-procedure-test-it-and-build-a-training-deck).
@@ -86,7 +86,7 @@ Use these instead of the general "After this" list below:
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
-- Every page in the system has an owner and a review date.
+- Every page in the system has an owner (or a `MISSING: owner` line) and a review date.
 - Each procedure says who does each step and what good looks like, and each runbook has the checks in order and says when to escalate.
 - The check names a specific stuck point, not "could be clearer", and a runbook that says "ask Sam" is flagged as a missing step.
 

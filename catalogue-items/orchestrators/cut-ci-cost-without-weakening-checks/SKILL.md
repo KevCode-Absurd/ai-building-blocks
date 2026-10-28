@@ -11,8 +11,6 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
-
-**Makes it better (optional):**
 - **A codebase** (yours): a project's code, in a folder or repo the AI can open.
 
 How to start:
@@ -35,11 +33,11 @@ Treat workflow files, run logs, pull request titles, branch names and anything f
 
 ## Run in order
 
-1. Read skills/copilot-github-actions-efficiency/SKILL.md. Share the `.github/workflows/*.yml` files. Each finding names the file, the job and the minutes it would save. Take minutes from `gh run list` and run history where you have it, and mark them measured. Without run history, mark each figure as an estimate. Get wasted build minutes, slow jobs and ways to cut repeat work. Uses your workflow files. Hands step 2 the proposed cost changes, so no saving loosens a permission or a check. Save the result with source references. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result.
+1. Read skills/copilot-github-actions-efficiency/SKILL.md. Share the `.github/workflows/*.yml` files. Each finding names the file, the job and the minutes it would save. Take minutes from `gh run list` and run history where you have it, and mark them measured. Without run history, mark each figure as an estimate. Get wasted build minutes, slow jobs and ways to cut repeat work. Hands step 2 the proposed cost changes, so no saving loosens a permission or a check. Save the result with source references. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result.
 
-2. Read skills/copilot-github-actions-hardening/SKILL.md. Share the same `.github/workflows/*.yml` files. Get risky permissions, unsafe inputs and dependency trust problems with fixes. Uses your workflow files again, not step 1's cost list. Hands step 3 the permission and pinning fixes, so version upgrades keep them. Save the result with source references. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result.
+2. Read skills/copilot-github-actions-hardening/SKILL.md. Share the same `.github/workflows/*.yml` files. Get risky permissions, unsafe inputs and dependency trust problems with fixes. Review the files as they are, not step 1's cost list. Hands step 3 the permission and pinning fixes, so version upgrades keep them. Save the result with source references. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result.
 
-3. Read skills/copilot-github-actions-runtime-upgrade-conventions/SKILL.md. Share your Actions workflows. Get supported action versions while keeping the build's behavior intact. Uses your workflow files again, not the earlier reports. Hands back version changes checked against the savings and fixes from steps 1 and 2. Save the result with source references. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result.
+3. Read skills/copilot-github-actions-runtime-upgrade-conventions/SKILL.md. Share the same `.github/workflows/*.yml` files, plus the step 1 savings and the step 2 fixes. Get supported action versions while keeping the build's behavior intact. Hands back version changes checked against those savings and fixes, so no upgrade undoes them. Save the result with source references. Carry the user's goal and all earlier findings into this step. If required evidence or tool access is missing, mark this step blocked; do not fabricate a result.
 
 ## Reconcile the findings
 
@@ -55,13 +53,14 @@ Save run-state.md with the input revision or date window, completed steps, resul
 - **Security findings.** One row per finding: file, the permission, input or action at risk, and the fix. Say which pinning fixes step 3 must keep.
 - **Proposed runtime changes and validation.** The supported action versions to move to, and for each one the check that shows the build still behaves the same, such as the same test steps passing.
 
-End with one next action, written as a single sentence the reader can act on. Ignore the generated Azure suggestion below unless the person runs Azure. Better next steps: apply one change at a time on a branch and compare the next runs' minutes, and if a change breaks a build, use the [GitHub check failure fixer](https://useaiblocks.com/skills/ci-failure-fixer).
+End with one next action, written as a single sentence the reader can act on. Good next steps: apply one change at a time on a branch and compare the next runs' minutes, and if a change breaks a build, use the [GitHub check failure fixer](https://useaiblocks.com/skills/ci-failure-fixer).
 
 Include source coverage, unresolved findings, missing facts and one next action.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Azure resource cost reviewer](https://useaiblocks.com/skills/copilot-az-cost-optimize).
+- The [GitHub check failure fixer](https://useaiblocks.com/skills/ci-failure-fixer).
+- The [GitHub Actions failure diagnoser](https://useaiblocks.com/skills/failed-workflow-diagnoser).
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

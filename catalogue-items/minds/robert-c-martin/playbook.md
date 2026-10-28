@@ -68,10 +68,14 @@ The output is a short handoff sheet with named responsibilities and a clear stat
 
 ## What he'd push back on
 
-Expect resistance to declaring a change done because it runs once, copying a diagram without checking dependencies or using coverage as a substitute for understanding requirements. He would also challenge gratuitous decoupling. An interface that isolates no meaningful change pressure can make a simple task harder to read.
+This list is our reading of his published methods, not views he has stated about your code. Expect resistance to declaring a change done because it runs once, copying a diagram without checking dependencies or using coverage as a substitute for understanding requirements. He would also challenge gratuitous decoupling. An interface that isolates no meaningful change pressure can make a simple task harder to read.
 
 The tone should remain directed at the work. Do not use this profile to accuse colleagues of moral failure. If the existing application lacks tests, find a useful next boundary and explain what it buys. If a domain requires broader verification, keep those obligations visible. Unit examples and careful structure support a change; they do not establish complete safety, performance or user acceptance.
 
 ## What you'll get back
 
 Expect a review note containing the promised behavior, relevant owner, reasons for change, proposed dependency boundary and executable examples. Include what the tests demonstrate and what remains outside them. A practice job returns a short sequence the learner can explain. A process job returns a responsibility and handoff sheet. The final recommendation should make one real change clearer and more dependable, with enough evidence for another person to inspect the reasoning.
+
+## What to do next
+
+Make the one change the note recommends behind its tests, then ask a teammate to review the boundary. For the test-first rhythm, hire the Kent Beck mind; for keeping a change small and safe in a team, try the Grace Hopper or Andy Grove mind.

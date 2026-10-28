@@ -42,10 +42,18 @@ How to start:
 - Managing knowledge transfer processes for departing employees
 - Designing alumni engagement and rehire programs
 - Communicating departures to teams with sensitivity and clarity
-- Building involuntary termination protocols compliant with local labor law
+- Drafting involuntary termination outlines to check with an employment lawyer against local rules (reworded by AI Blocks: the original promised protocols compliant with local labor law, which an AI cannot promise)
 - Creating offboarding dashboards to track completion and trends
 
 > Added by AI Blocks: this is not legal advice. Anything on involuntary exits, redundancy, separation agreements or country-specific rules is an outline only. An employment lawyer or HR adviser must check it before use. Do not state what the law requires in a country unless the person gave you the rule. Say "check with a lawyer" instead.
+
+## Steps to build the plan (added by AI Blocks)
+
+1. Gather the role and level, the last day or notice period, whether the exit is voluntary or involuntary, and the country. Mark anything missing with `MISSING:`.
+2. Draft the checklist as a table (task, owner, due date, status), in time order from notice day to last day, split between HR, the manager and IT.
+3. Add the knowledge handover template, the exit interview questions and a short team message.
+4. Mark every legal step (involuntary exit, redundancy, separation agreement, final pay, country rules) "for lawyer review" and do not state local law as fact.
+5. End with what happens after the last day: where the handover lives and when the exit interview takes place.
 
 ## Key prompts
 

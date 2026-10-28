@@ -77,9 +77,9 @@ profiling), see `matlab-optimize-performance` (if available).
    % Development-time helper: ensure a thread pool is active
    pool = gcp("nocreate");
    if ~isempty(pool) && ~isa(pool, "parallel.ThreadPool")
-       warning("Closing the open process pool to start a thread pool.");
-       delete(pool);
-       pool = [];
+       % Ask the user first. Run delete(pool) only after they say yes,
+       % then run this snippet again.
+       error("A process pool is open. Ask before closing it with delete(pool).");
    end
    if isempty(pool)
        parpool("Threads");

@@ -1,6 +1,6 @@
 slug: supplier-order-splitter
 name: Supplier order splitter
-summary: Give it quotes, limits and demand. Get how much to order from each supplier for the lowest total cost.
+summary: Give it quotes, limits and demand. Get a planned split of how much to order from each supplier, to keep cost down.
 category: general
 boards: []
 type: skill

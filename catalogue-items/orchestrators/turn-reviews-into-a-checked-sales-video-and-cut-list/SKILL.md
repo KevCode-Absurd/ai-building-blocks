@@ -1,6 +1,6 @@
 ---
 name: turn-reviews-into-a-checked-sales-video-and-cut-list
-description: Use when your product needs explaining and a short ad will not carry it. It runs 5 skills in order, and checks each result before the next step starts.
+description: Use when your product needs explaining and a short ad will not carry it. It turns your customer reviews into a seven-part sales video script, checks it line by line, then gives timed shots and, after you film, a cut list. It runs 5 skills in order, and checks each result before the next step starts.
 ---
 
 # Turn reviews into a checked sales video and cut list
@@ -16,9 +16,9 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **What you need** (use your own material or the linked skill):
 - **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
-- **Video clips** (yours): the clips you want to edit.
 
 **Makes it better (optional):**
+- **Video clips** (yours): the clips you want to edit.
 - **Your offer**, made by the [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): what you sell and the real terms: price, trial, guarantee, delivery.
 - **A character sheet**, made by the [Video avatar and storyboard planner](https://useaiblocks.com/skills/avatar-storyboard-planner): pictures that keep one person looking the same in every shot.
 
@@ -37,7 +37,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-The general "Before you start" list above mentions a brand brain. This job does not use one. Ignore the brand brain lines, "From the brand brain, read" and the "Recommended steps before this one" list in that box. Use the inputs below.
+You do not need to build a brand brain first. If you have one, its products part gives step 1 the product facts. If not, paste the facts below. The other "Recommended steps" in the box above are optional too. The clips are needed only for step 5, after the pause.
 
 **Video tool (needed for the pause after step 4):** you make the clips yourself, by filming them or by using a video tool such as Kling or Veo. Claude cannot make video. Video tools usually need an account, can cost money, and some need an API key. Decide this before the pause. Steps 1 to 4 run without one.
 
@@ -45,7 +45,7 @@ The general "Before you start" list above mentions a brand brain. This job does 
 
 - **One product's facts: price, variants, ingredients or materials, how it is used, photos by job** (required)
 - **Customer words from reviews, tickets, surveys or calls, with source and date** (required)
-- **A live offer with price, terms, effective_from/to and a current flag** (optional)
+- **A live offer with its price, terms, and start and end dates** (optional)
 - **Raw or generated video clips to edit** (required for step 5 only): you make these after the pause, from the shot list. Steps 1 to 4 run without them.
 
 Use a review as a quote only if it is a real one with its source. Never invent a review, a result or a name. Tell the person to check that they may use each customer's words in an ad.
@@ -76,7 +76,7 @@ Pause here: Film or generate the clips from the shot list and save every take in
 - Step 3: the fixed script a presenter can say cleanly, with the rule behind each fix.
 - Step 4: timed shots, a prompt per clip and an edit list.
 - Step 5: cuts by clip file, caption windows, a sound plan, exports and gaps.
-- Summary: each step's file and every `MISSING:` line in one list.
+- Summary: each step's file, every `MISSING:` line in one list, and the checks missed.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

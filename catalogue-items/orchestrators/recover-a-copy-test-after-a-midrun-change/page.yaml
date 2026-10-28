@@ -3,37 +3,40 @@ name: Copy test change and recovery workflow
 summary: Check a copy test after an offer or tracking change. Get a fair comparison map, clear evidence limits and a plan to restart.
 job: plan-ad-tests
 headline: Copy test change and recovery workflow
-subhead: Share the test plan, versioned ads, dated results and change log. Get a comparison map, an honest result boundary and a bounded recovery pack.
+subhead: Share the test plan, ad versions, dated results and change log. Get which comparisons still hold, what the numbers can show, and a restart plan.
 explain: |-
-  Share the test plan, versioned ads, dated results and change log. Get a comparison map, an honest result boundary and a bounded recovery pack.
+  An offer, page or tracking rule changed while your copy test was running. Now the numbers mix two setups, and an apparent winner may not be real.
 
-  This workflow salvages the interpretation and integrity of a test affected by mid-run changes. It does not rank new concepts, allocate the next budget or promise an optimized winner. A necessary factual correction can proceed while the performance inference remains inconclusive.
+  This workflow sorts out which parts of the test you can still trust. It does not pick new ideas to test, set your next budget or promise a winner. If the copy now states a wrong price or offer, you can fix that straight away, even when the test result stays unclear.
 when:
   - An offer, page, tracking rule or copy version changed while a test was running.
   - You need to know which comparisons remain usable before rewriting an apparent winner.
 you_give:
-  - The original control/variant copy, test question, assignment and planned decision rule
-  - Results with dates, timezone, exposure/outcome definitions and version or unit mapping
-  - Actual change times for offers, tracking, pages or creative, plus approved current facts
+  - The original test plan, with the control and variant copy, the question, how people were split and the rule for picking a winner
+  - Results with dates, time zone, what counts as a view and a conversion, and which ad version each row belongs to
+  - The dates and times when the offer, tracking, page or ads changed, plus your current approved facts such as price and terms
 you_get:
-  - A period/version map showing which rows remain comparable and why
-  - An observed result or explicit inconclusive decision without invented partitions or attribution
-  - A locked copy repair if needed and a recovery test contract with evidence, exposure and stop limits
+  - A timeline of each change and which test periods it splits
+  - A table of which groups are still fair to compare, and why the others are not
+  - A result table (group, period, people, conversions, rate, difference) with a supported, unclear or unusable call for each comparison
+  - A small copy fix for any stale fact, or a note that none is needed
+  - A recovery plan: resume, restart, run a new test or stop, with one thing to change, limits, an owner and a next decision date
 how_to_use:
-  - Download the complete pack and give its instructions to your AI.
-  - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.
-  - Check the result against the supplied facts before using it.
+  - Download the pack and add it to your AI, or paste the instructions into a chat.
+  - Attach the test plan, your results export and the change log. Say which approved facts are current.
+  - When the AI pastes back a stage, check it before the next one starts. In a plain chat, paste each stage's result into the next prompt if the AI loses track.
+  - Before you act on the recovery plan, check the result table against your own export.
 how_it_works:
   - title: Freeze the planned comparison and locate material changes
-    text: Record the original question, one intended variable, assignment method, population, event definitions and stop rule. Map offer, product, page, tracking and creative changes to effective boundaries and affected variants. Preserve the full history; do not silently rewrite the test question after seeing outcomes.
+    text: Writes down the original question, the one thing being tested, how people were split, what counts as a conversion and when the test should stop. Then it maps each change to the date it took effect and the versions it touched. The question is never rewritten after seeing results.
   - title: Check co-changes and determine comparable units
-    text: Compare actual content and conditions against the intended one-variable design. Mark unintended co-changes, unequal offers, page/tracking differences and ambiguous assignments. Propose only defensible comparable groups using real unit/time linkage. Keep exclusion reasons and excluded totals visible; do not select a flattering subset.
+    text: Checks whether anything besides the copy differed between versions, such as a different offer, page or tracking. Only groups where the copy is the sole difference count as clean. Excluded rows and their totals stay visible, so nobody picks a flattering subset.
   - title: Read only the evidence the design can support
-    text: Recompute observed counts, denominators and differences for validly linked groups. Keep currency, time, conversion delay and event definition aligned. Report source sums and uncertainty. A descriptive rate difference is not a statistically established copy effect; use only the predeclared or justified analysis and label post-hoc explorations. Do not hide whole-run totals or excluded periods.
+    text: Works out counts, rates and differences for the clean groups only, with the same dates, currency and conversion rules on both sides. A gap in rates is not proof the copy caused it. Extra digging after the fact is labelled as such, and whole-run totals stay in view.
   - title: Repair the current copy without moving the goalposts
-    text: Correct a stale offer or factual error independently of the test verdict. Preserve the intended variable and all other agreed locks. Keep factual maintenance separate from an optimization hypothesis. If no copy defect exists, return an explicit no-copy-change decision rather than manufacture a rewrite to fill the workflow.
+    text: Fixes a stale offer or wrong fact in the copy, whatever the test says. Everything else that was agreed stays the same. If nothing is wrong, it says "no change" instead of inventing a rewrite.
   - title: Choose and hand off the bounded recovery plan
-    text: Choose resume unchanged, restart aligned versions, run a new bounded test or stop for evidence. Specify the single variable, preserved facts, allocation, outcome, guardrails, conversion-lag handling, uncertainty/analysis plan, exposure/time limits, owner and next decision. Any required sample sizing depends on baseline, useful effect and design, not a universal spend or day count. Return the contract in chat or named files, not an implied launched experiment.
+    text: Picks one path, resume, restart with matching versions, run a new test or stop, and writes the rules for it. How many people a new test needs depends on your starting rate and the lift worth finding, not a fixed spend or day count. The plan is handed back to you; nothing is launched.
 thinking: high
 thinking_why: It compares supplied evidence and follows a specific method.
 not_for:

@@ -4,6 +4,8 @@ You bring a practical problem with a real setting, some limits and an outcome yo
 
 ## What to bring
 
+Gather these before you start. For a party plan, that means the guest count, the date, your oven and fridge space, and what you want to serve.
+
 - The occasion and how many guests are coming
 - The ingredients you have or can buy well
 - How much time and kitchen equipment you have

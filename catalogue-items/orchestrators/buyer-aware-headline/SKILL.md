@@ -1,15 +1,15 @@
 ---
 name: buyer-aware-headline
-description: Use when your headline gets ignored or doubted and you suspect buyers know more, or have heard more, than you assume. It runs 4 skills in the order Eugene Schwartz's book teaches, and checks each result before the next step starts.
+description: Use when your headline gets ignored or doubted and you suspect buyers know more, or have heard more, than you assume. It runs 4 skills built on Eugene Schwartz's ideas about buyer awareness, and checks each result before the next step starts.
 ---
 
 # Write a headline that fits what your buyers already know
 
 Give it your product and buyers. Get their awareness and claim fatigue read, stage-matched headlines, a promise check and a test plan.
 
-This workflow follows the method in Breakthrough Advertising (a book summary) by Eugene Schwartz. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
+Steps 1 and 2 use the ideas in Breakthrough Advertising by Eugene Schwartz, read through a book summary: buyer awareness and how worn a market's claims are. The promise check, the test and the order of the steps are our own. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
-**What sets it apart.** This one starts by reading your market: how aware your buyers are and how worn the rival claims are. It then writes only the headline moves that stage allows. For twenty or more headlines sorted by type and cut to the three worth testing, use Get headlines sorted by type and the three worth testing instead.
+**What sets it apart.** This one starts by reading your market: how aware your buyers are and how worn the rival claims are. It then writes only the headline moves that stage allows. For twenty or more headlines sorted by type and cut to the three worth testing, use [Get headlines sorted by type and the three worth testing](https://useaiblocks.com/workflows/headline-type-tests) instead. That one starts from headline types; this one starts from your market's stage, so it fits when buyers have heard every claim before.
 
 **When not to use it.** If your market has no rival claims to read, or buyers already know your product well, use the Ad headline writer. If you only need new opening lines for an ad, use the Ad hook writer. If you want to check ad claims for proof, use the Ad claims checker.
 

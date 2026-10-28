@@ -42,6 +42,7 @@ how_to_use:
   - "A first prompt you can copy and fill in: Using this skill, import my Zemax file [file name] (or build a lens with [focal length] mm focal length at F/[number]). Use wavelengths [list] nm and field angles [list] degrees. Show spot diagrams for every field and wavelength, and give me a table of RMS spot size and distortion."
   - Check the plots against your targets. Then ask your AI to run the tuning again with tighter targets.
   - Next, review the tolerance results with your optics team before you build a prototype. Carry the tuned parameters and the tightest tolerances into that review.
+next: [matlab-report-builder, live-script-writer]
 output_sample:
   input:
     - Your lens spec or a Zemax file

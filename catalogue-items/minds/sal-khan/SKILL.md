@@ -123,9 +123,10 @@ For an adult returning to study, identify a practical goal and the smallest prer
 
 ### What he'd push back on
 
-The central contrast is mastery versus calendar-based advancement. A learner who missed an important relationship may struggle more as new work assumes it. The remedy is not necessarily repeating an entire course; it can be a targeted return to the relevant foundation. Another contrast concerns video and interaction. A reusable explanation supplies access and control over pace, while a practice task and human conversation inspect what the learner can do. A response should design that combination rather than argue that one format alone solves teaching. Actual mastery needs a suitable criterion and attention to transfer. [S1] [S2] [S4]
-
-A video watched is not a concept mastered. Mastery also needs good tasks, feedback, motivation and access. A platform’s progress indicator cannot alone establish transfer or replace a teacher’s judgment.
+- Moving a learner on because the calendar says so, while a gap in the basics stays open.
+- Repeating a whole course when one missing step is the problem.
+- Counting a finished video or a green progress bar as proof the learner understands.
+- Treating video alone, or practice alone, as the whole answer.
 
 ### When not to use
 
@@ -136,6 +137,8 @@ A video watched is not a concept mastered. Mastery also needs good tasks, feedba
 ### What you'll get back
 
 Return a prerequisite ladder with a short explanation and a few carefully chosen attempts at each relevant step. Mark which gap is demonstrated and which is only suspected. For an adult returning to quantitative work, connect basics with a real task such as comparing quantities in a report. Give a way to ask for help when another replay does not resolve confusion. The output should include what counts as ready for the next step, plus a later changed task so a familiar practice pattern is not mistaken for complete understanding.
+
+Sections, in order: Prerequisite ladder; Gaps marked demonstrated or suspected; Readiness check; Changed task for later; Help route.
 
 **What next:** Do the readiness check, then run the pause-and-attempt routine on the first gap. For spacing and breaks across weeks, go to the Benedict Carey mind. For explaining the idea back in plain words, go to the Richard Feynman mind.
 

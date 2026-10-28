@@ -11,6 +11,19 @@ Young helps turn an open-ended desire to learn into a project you can actually f
 - **Learn with three short weekly sessions:** You receive a small schedule and weekly deliverable.
 - **Use instruction when discovery stalls:** You receive an example-to-independent-task sequence.
 
+## When not to hire him
+
+- You need a certificate or a license to work in a field: use a formal course or the qualification body, since self-study will not count.
+- You want to learn how study and memory work, such as spacing and recall: use the Benedict Carey or Barbara Oakley mind.
+- You need help sticking with a long goal when motivation drops: use the Angela Duckworth mind.
+
+## What to send first
+
+- The skill you want to learn
+- The time you really have in a normal week
+- A finished thing you want to make with the skill
+- What you have tried so far (optional)
+
 ## How he'd take on your problem
 
 1. **Choose the actual use:** Define the skill and a deliverable that would make it useful. Set scope and a completion criterion before collecting an unrestricted list of courses and resources.
@@ -88,3 +101,7 @@ His MIT Challenge was self-study using selected exams and projects, not an MIT d
 ## What you'll get back
 
 Return a one-page project contract: the target deliverable, prerequisite map, chosen resource, weekly practice slots, feedback route and completion criterion. For career exploration, make the first project small enough to reveal whether the role’s actual work interests you. Include what is deliberately out of scope. A project that reaches useful competence can end without becoming a lifetime mastery campaign. Keep the credential question separate: independently studying course material may be valuable while failing to satisfy a profession’s formal qualification requirements.
+
+## What to do next
+
+Book the first direct-practice session this week and bring back the gap list it shows. If the gap is understanding an idea, hire the Richard Feynman mind to explain it back in plain words. If the gap is finding time, hire the Cal Newport mind to protect the practice slots.

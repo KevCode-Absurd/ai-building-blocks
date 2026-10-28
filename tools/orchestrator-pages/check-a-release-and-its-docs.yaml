@@ -11,12 +11,12 @@ explain: |-
 
   Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - A code change is ready to ship and you want its tests, docs and rollout checked together.
+  - You need a rollback plan before the first rollout stage.
 you_give:
-  - The source files, notes or product facts for this job
-  - Your goal, deadline and limits
-  - Relevant earlier work, if available
+  - Your repo or the code change you plan to release (needed for steps 1 and 2)
+  - Your docs, such as README, setup guide, API docs and changelog
+  - Your release plan, with the target environment and any downtime limit (needed for step 3)
 you_get:
   - Coverage gaps
   - Documentation drift
@@ -55,6 +55,7 @@ improve:
   - Save corrections alongside the result for the next run.
   - Update the source files and rerun only the work affected by the change.
 terms: []
+next: [ship-readiness-gate, deploy-verifier]
 not_for:
   - You want a go or no-go verdict on your code and a list of blockers. Use the Ship readiness gate.
   - You only need a read-only report on migrations, config, secrets and rollout order. Use the Release readiness reviewer.

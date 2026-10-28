@@ -15,10 +15,17 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **A code change** (yours): a change to the code, with what it fixes and how it was checked.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+**Recommended steps before this one** (optional; do each once, then reuse what it makes):
+1. **MATLAB PCB RF filter designer** with the [MATLAB PCB RF filter designer](https://useaiblocks.com/skills/pcb-rf-filter-designer). Bring your question, a code change (optional).
+2. **MATLAB PCB coupler and splitter designer** with the [MATLAB PCB coupler and splitter designer](https://useaiblocks.com/skills/pcb-coupler-designer). Bring your question, a code change (optional).
+3. **MATLAB PCB trace designer** with the [MATLAB PCB trace designer](https://useaiblocks.com/skills/pcb-trace-designer). Bring your question, a code change (optional).
+4. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a code change. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a code change, your question. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 <!-- /needs -->
 

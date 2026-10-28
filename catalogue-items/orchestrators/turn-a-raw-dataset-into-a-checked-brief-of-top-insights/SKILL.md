@@ -20,20 +20,19 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **What you need** (use your own material or the linked skill):
 - **Your data** (yours): the data files, with their format and where they came from.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
-- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Makes it better (optional):**
 - **Your website** (yours): the link to your site or the page.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your data, your question, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your data, your question, your website. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
 ## What you need
 
-This is a data job. Ignore any buyer brief, website or coding-assistant lookup mentioned above. This data job has one gate before step 1: the file has a header row, and you have a short list of what each column means. The question is written at the pause after step 1. The file can be a CSV or a spreadsheet. It is one data file, not two inputs.
+This is a data job. You do not need a website. This data job has one gate before step 1: the file has a header row, and you have a short list of what each column means. The question is written at the pause after step 1. The file can be a CSV or a spreadsheet. It is one data file, not two inputs.
 
 - **A data file**, such as a CSV or spreadsheet (required). It needs a header row. Attach it, or give its path.
 - **The one question you want the data to answer** (required). A narrow question gets a sharper answer. Write it at the pause after step 1.
@@ -58,7 +57,7 @@ Pause here: Fix or drop the columns the profile flagged. Write the one question 
 2. **Data analyst.** Use the skill `data-analyst`. It takes the fixed file, the person's question, and `outputs/step-01-dataset-profiler.md` for what to trust. Answers your question from the cleaned file, using what the profile said to trust. It works out summary numbers, trends, group differences and outliers, runs the tests that fit, and states the limits. Save `outputs/step-02-data-analyst.md`.
 3. **Analysis checker.** Use the skill `analysis-checker`. It takes the analysis in `outputs/step-02-data-analyst.md`. Reviews the analysis from the step before and lists what to fix before it is shared. It checks the question, the population, the joins and the sums, recalculates a few key numbers, and gives a trust rating. Save `outputs/step-03-analysis-checker.md`.
 4. **Insight brief writer.** Use the skill `insight-brief-writer`. It takes the analysis in `outputs/step-02-data-analyst.md` and the check in `outputs/step-03-analysis-checker.md`, plus the goals and reader if given. Turns the checked analysis into a short ranked brief, and lets the checker's doubts lower each insight's confidence. Each of the top three to five insights has a finding, why it matters, the likely cause, the impact, an action and a confidence. Save `outputs/step-04-insight-brief-writer.md`.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, every `MISSING:` line from all steps in one list, and `CHECKS MISSED`: the checks that failed or could not run (such as a sum the check could not recalculate), or "none".
 
 ## Next steps to offer
 
@@ -72,7 +71,7 @@ Ignore the suggestions in "After this" that do not fit a dataset. Offer these in
 - Step 2, analysis: summary numbers, trends and groups, tests, outliers and limits.
 - Step 3, check: the method review, sums recalculated, pitfalls found and a trust rating.
 - Step 4, insight brief: the top insights, each with finding, why it matters, likely cause, impact, action and confidence.
-- The hand-back summary: each step's file, any step not run, and every `MISSING:` line in one list.
+- The hand-back summary: each step's file, any step not run, every `MISSING:` line in one list, and the checks missed.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

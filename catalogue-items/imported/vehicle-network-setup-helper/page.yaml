@@ -64,3 +64,4 @@ output_sample:
       contains: "A short run of code blocks (find the device, create the channel, set the speed, start, send, receive), then one health line such as TEC=0 REC=0 BusStatus=ErrorActive. That line means the frame was accepted. Any error count above zero means stop and diagnose."
     - name: Error fixes
       contains: Steps for common problems such as channel in use, wrong speed or no acknowledgment.
+next: [vehicle-log-data-converter]

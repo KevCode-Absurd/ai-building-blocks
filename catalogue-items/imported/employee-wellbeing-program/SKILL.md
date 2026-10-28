@@ -148,8 +148,8 @@ The period immediately following a return from burnout or mental health leave is
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Nonprofit resale store shift planner](https://useaiblocks.com/skills/nonprofit-retail-coverage-planner). It takes the plan.
 - The [Employee termination risk reviewer](https://useaiblocks.com/skills/termination-risk-checker). It takes the plan.
 - The [Workplace change announcement writer](https://useaiblocks.com/skills/org-change-announcement-writer). It takes the plan.
+- The [Staff announcement writer](https://useaiblocks.com/skills/staff-announcement-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

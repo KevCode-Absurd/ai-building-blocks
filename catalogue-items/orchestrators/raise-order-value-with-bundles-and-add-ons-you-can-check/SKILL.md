@@ -54,17 +54,17 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 ## Steps
 1. **Order threshold planner.** Use the skill `order-threshold-planner`. Give it your order export and shipping cost. It sets a free-shipping or gift threshold just above your current average order. Save `outputs/step-01-order-threshold-planner.md`.
-2. **Bundle and quantity-break builder.** Use the skill `bundle-and-quantity-break-builder`. Give it the threshold and the average order value from step 1, plus your product costs and margin floor. It builds bundles and quantity breaks that sit around that threshold.
-3. **After-sale offer planner.** Use the skill `after-sale-offer-planner`. Give it the bundles from step 2 and your product costs. It adds an after-sale offer that follows the bundle the customer picked.
-4. **Offer profit-per-session checker.** Use the skill `offer-profit-per-session-checker`. Give it the threshold from step 1, the bundles from step 2, the after-sale offer from step 3 and your session and conversion numbers. It checks the full set of offers earns more profit per visitor, not only more revenue.
+2. **Bundle and quantity-break builder.** Use the skill `bundle-and-quantity-break-builder`. Give it the threshold and the average order value from step 1, plus your product costs and margin floor. It builds bundles and quantity breaks that sit around that threshold. Check that every bundle price stays above your margin floor after shipping. Save `outputs/step-02-bundle-and-quantity-break-builder.md`.
+3. **After-sale offer planner.** Use the skill `after-sale-offer-planner`. Give it the bundles from step 2 and your product costs. It adds an after-sale offer that follows the bundle the customer picked. Save `outputs/step-03-after-sale-offer-planner.md`.
+4. **Offer profit-per-session checker.** Use the skill `offer-profit-per-session-checker`. Give it the threshold from step 1, the bundles from step 2, the after-sale offer from step 3 and your session and conversion numbers. It checks the full set of offers earns more profit per visitor, not only more revenue. Check that it used the same shipping cost and margin floor as steps 1 and 2. Save `outputs/step-04-offer-profit-per-session-checker.md`.
 
 Pause here: Run the new offers for two to four weeks and export orders and profit for the same period. The export needs, for each order: the date, the order value, the profit (or product cost, shipping and discount so profit can be worked out) and which offer or test group it came from. Add sessions and conversions for each group over the same dates.
 
-5. **Store test verdict maker.** Use the skill `store-test-verdict-maker`. Give it the plan from step 3, the profit check from step 4 and your own test export. Reads the exported results against the plan and gives one verdict: keep, change or stop. Use only these three words everywhere in the hand-back. If the test export is too small or too short to read, say the test is not ready to call and what to add. Do not invent a fourth verdict.
+5. **Store test verdict maker.** Use the skill `store-test-verdict-maker`. Give it the plan from step 3, the profit check from step 4 and your own test export. Reads the exported results against the plan and gives one call, using that skill's four words: ship (keep the new offers), do not ship (stop them), re-test, or inconclusive. Use only these four calls everywhere in the hand-back. If the test export is too small or too short to read, the call is re-test or inconclusive, with what to add. Save `outputs/step-05-store-test-verdict-maker.md`.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then `CHECKS MISSED:` with each check that failed or could not run, or `none`.
 
 ## What you hand back
-5 step files and the summary. The last file holds the audit report.
+5 step files and the summary. The step 5 file holds the call (ship, do not ship, re-test or inconclusive) with the profit per visitor it rests on. The HAND-BACK SUMMARY lists every gap. If the run stopped at the pause, steps 1 to 4 are the plan to test and step 5 is marked not run.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

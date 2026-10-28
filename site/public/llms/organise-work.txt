@@ -32,7 +32,7 @@
 - [Deep work day planner](https://useaiblocks.com/skills/deep-work-day-planner): Give it your tasks and calendar. Get a schedule with protected focus blocks and shallow work cut back.
 - [Donated goods intake planner](https://useaiblocks.com/skills/donated-goods-intake-planner): Plan your donated goods intake: what to accept, how to grade, where each item goes, and a basic donor receipt. Built for thrift and resale stores.
 - [Email sorter and reply drafter](https://useaiblocks.com/skills/inbox-triager): Sort recent email by your rules, check new senders and draft replies for review. It never sends.
-- [Executive daily action planner](https://useaiblocks.com/workflows/prepare-your-executive-day): Share your calendar, meeting notes and open tasks. Get meeting briefs, a sourced action list and a dated priorities plan.
+- [Executive daily action planner](https://useaiblocks.com/workflows/prepare-your-executive-day): Share one day's calendar, meeting notes and open tasks. Get a brief per meeting, a sourced action list and that day's plan.
 - [Executive meeting brief writer](https://useaiblocks.com/skills/executive-meeting-brief): Prepare for a meeting with a sourced brief. Share the invite and your notes. You get the goal, open decisions, questions and gaps.
 - [Executive office work planner](https://useaiblocks.com/skills/executive-office-work-planner): Prepare a leader's decision brief, triage list or handover note. You get facts, options and a recommendation marked as advice.
 - [Executive priorities and commitment reviewer](https://useaiblocks.com/workflows/prepare-your-weekly-executive-review): Share the week's notes, tasks and calendar. Get an action review, open commitments, decisions due and next-week priorities.

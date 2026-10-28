@@ -31,4 +31,4 @@ credits:
   - title: matlab-design-pcb-filter skill
     by: MathWorks
     url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/rf-and-mixed-signal/matlab-design-pcb-filter
-    used: Copied under the BSD 2-Clause licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the BSD 2-Clause licence (LICENSE.md), which adds that you may use it only with MathWorks products. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps, and a note on the skill file's licence line saying LICENSE.md applies to this copy. We added Before you start and After this sections that link to other AI Blocks steps.

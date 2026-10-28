@@ -21,6 +21,7 @@ not_for:
 you_give:
   - Your static ad image
   - Its copy (headline, primary text and call to action)
+  - Where it will run, such as Facebook feed or Instagram story (needed for the last check)
   - The page it sends people to (optional)
   - Your product facts and brand file (optional)
 you_get:

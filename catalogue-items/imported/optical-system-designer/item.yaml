@@ -10,7 +10,7 @@ level: expert
 inputs:
   - type: question
     required: true
-  - type: spreadsheet
+  - type: design_file
     required: false
 outputs:
   - type: code_change

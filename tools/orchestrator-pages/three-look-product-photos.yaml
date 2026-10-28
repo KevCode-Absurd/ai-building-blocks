@@ -24,8 +24,8 @@ not_for:
 
 you_give:
   - Your website, as a link or saved pages
-  - Your product photos, from the front, the back and in use
-  - A photo whose look you like (optional)
+  - "Your product photos: the front, the back of the pack, in use, and a close-up of the print"
+  - A photo whose look you like (optional, needed for the third look)
   - Who the photos are for (optional)
 you_get:
   - A brand file with your colours, look and product details
@@ -152,7 +152,7 @@ improve:
   - Drop step 1 if your brand file is up to date, and start from step 2.
   - Add a step that plans which photo goes in which place on your product page.
   - Tune the shoot planner with the look words your brand already uses.
-  - Run the finished pictures through a product page image check before they go live.
+  - Next, check each finished picture against your real product with the AI product photo inspector before it goes live.
 
 works_best_with:
   tools:

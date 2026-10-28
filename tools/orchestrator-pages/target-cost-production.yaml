@@ -21,7 +21,7 @@ when:
 you_give:
   - The price you want to sell at, and the customers who can pay it
   - Your product facts, such as costs, parts and materials
-  - How the work runs now: the steps in order, who does each, the space and the tools
+  - "How the work runs now: the steps in order, who does each, the space and the tools"
   - What you throw away, leave idle or redo, with amounts if you know them
   - A competitor's prices (optional)
   - A cost or process report, if you have one (optional)

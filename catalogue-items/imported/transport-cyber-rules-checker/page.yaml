@@ -35,7 +35,7 @@ you_get:
   - An incident reporting procedure
 how_to_use:
   - "Check this before anything else. The directive revisions and dates in the skill were last checked by the original author, not by AI Blocks. At least one bundled revision (SD 1582-21-01C) has already expired. Your AI must check each directive against TSA's official Security Directives page first, and record the date it checked. Do not act on any revision letter or date without that check."
-  - Open your AI and use one that can search the web. The skill must check TSA's official pages first.
+  - Open your AI and use one that can search the web. The skill must check TSA's official pages first. If your AI cannot reach TSA's Security Directives page, it should report coverage as undetermined and stop before any gap table or plan drafts.
   - Paste the skill text, then tell it your operator type and whether you hold a TSA designation letter.
   - Add your critical systems, current controls and network layout (optional).
   - Ask for the applicability check first. Read the sources and check dates before you go on.

@@ -8,12 +8,10 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
+  - type: document
+    required: true
   - type: question
     required: true
-  - type: copy_draft
-    required: false
-  - type: brand_brain
-    required: false
 outputs:
   - type: copy_draft
   - type: document

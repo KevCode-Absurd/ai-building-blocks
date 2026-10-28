@@ -40,6 +40,7 @@ how_to_use:
   - "Run each piece of code in MATLAB and check the result before you move on. After reading, check the band count and wavelengths. After unmixing, check that each abundance map runs from 0 to 1 and that the colours match places you know. After detection, check that flagged pixels sit where you expect them."
   - "You get MATLAB code for each step, abundance maps scaled 0 to 1, and detection maps. Each detection result should state the band count and wavelengths it used."
   - Save results with enviwrite. Next, open the saved maps in GIS software such as QGIS or ArcGIS to lay them over your site maps, or label them in MATLAB and train a classifier with the Deep Learning Toolbox.
+next: [agency-gis-analyst, agency-gis-geoai-ml-engineer, neural-network-trainer]
 output_sample:
   input:
     - Your hyperspectral or multispectral image file (ENVI, NITF, GeoTIFF, Sentinel-2, Landsat or ASTER)

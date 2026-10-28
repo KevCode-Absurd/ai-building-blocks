@@ -11,9 +11,9 @@ explain: |
 
   The skill checks whether the Vercel CLI is installed, then runs the deploy command with a ten minute allowance, since builds can be slow. By default it publishes a preview. Production happens only if you say so, with the production flag. If there is no sign-in, a bundled script packages the project, detects the framework, uploads it and returns two links: a preview link and a claim link that lets you take ownership of the deployment later. If the network blocks the deploy, it shows you the command and asks before it reruns it with wider access.
 
-  Before you use the no-login route: it uploads your whole project folder to a third-party deploy service (codex-deploy-skills.vercel.sh) and the preview link is public until you claim it.
+  The signed-in Vercel CLI route is the safer default, and the right one for any private project. The no-login route is a fallback only. It uploads your project folder to a third-party deploy service (codex-deploy-skills.vercel.sh), and the preview link is public until you claim it. The bundled scripts/deploy.sh skips node_modules, .git and .env files, but it uploads everything else, including any other key or token files.
 
-  Source: copied from OpenAI's vercel-deploy skill (github.com/openai/skills) under the MIT licence, as the LICENSE.txt file in this item says. We gave it a plain name and rewrote this page. The skill text is unchanged apart from added warnings about secrets and network access.
+  Source: copied from OpenAI's vercel-deploy skill (github.com/openai/skills) under the MIT licence, as the LICENSE.txt file in this item says. We gave it a plain name and rewrote this page. In the skill text we added warnings about secrets and network access, and Before you start and After this sections that link to other AI Blocks steps.
 when:
   - You want a shareable link for a prototype in minutes.
   - You do not have a Vercel account yet and want to try it.
@@ -26,6 +26,8 @@ not_for:
   - You want the AI to test the live site after it deploys. This skill only returns the link, so check the site yourself.
 you_give:
   - Your project folder, or a zipped copy of it
+  - For the signed-in route, the Vercel CLI installed and a Vercel account
+  - For the no-login route, a read of scripts/deploy.sh first, so you know what it uploads
   - A clear yes for production (optional)
   - Permission for network access, if your AI is blocked (optional)
 you_get:

@@ -38,7 +38,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-The "Before you start" list above is general. For this workflow, "Your question" means the weekly questions below, and "Source text" means your own docs and tickets, not an article or a book. A brand brain is not used. Bring:
+The "Before you start" list above is general. For this workflow, "Your question" means the weekly questions below, and "Source text" means your own docs and tickets, not an article or a book. You do not need a brand brain. If you have one, step 4 can keep its voice. Bring:
 - **The questions you answer every week** (required), and your real reply to each one.
 - **Who reads the pages** (required): who they are and what they already know.
 - **The exact names of your screens and buttons** (required for step 5): so wrong names can be caught.
@@ -58,8 +58,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 2. **Write a page per question.** Use the skill `solved-ticket-help-page-writer`. Give it the gathered answers. A help page for each question: the steps in order, what the reader should see after each, and what to do if it fails. Written for someone who has never written in. Hands step 3 the finished pages.
 3. **Check the reading level.** Use the skill `text-difficulty-checker`. Give it each page. The reading level of each page, the sentences and words that push it up, and which pages need a rewrite. Hands step 4 the list of pages to rewrite.
 4. **Rewrite the hard pages.** Use the skill `plain-english-editor`. Give it the pages flagged in step 3. Each flagged page rewritten in plain English with the same substance, following George Orwell's rules: short words, active voice, cut what adds nothing. Hands step 5 the rewritten pages.
-5. **Check every page is right.** Use the skill `documentation-checker`. Give it the final pages and your docs. Each page checked as a reader would use it: missing steps, wrong names for buttons or screens, promises your docs do not back. Fixes listed and applied. This is the final check, so the pages it hands back are the ones to publish.
-6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Check every page is right.** Use the skill `documentation-checker`. Give it the final pages and your docs. Each page checked as a reader would use it: missing steps, wrong names for buttons or screens, promises your docs do not back. Fixes listed and applied. This check works only from the docs and the screen and button names the person pasted. It cannot open the live app, so say so and ask the person to follow each page in the app before publishing. This is the final check, so the pages it hands back are the ones to publish once that is done.
+6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, every `MISSING:` line from all steps in one list, and `CHECKS MISSED`: the checks that failed or could not run (always including "steps not tried in the live app"), or "none".
 
 ## What you hand back
 5 step files and the summary. The fourth file holds the plain rewrites; the last holds the accuracy check and the final pages.

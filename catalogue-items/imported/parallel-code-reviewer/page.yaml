@@ -7,8 +7,6 @@ job: test-and-fix-code
 headline: Parallel code reviewer
 subhead: One short list of code issues that matter, produced by four reviewers working at the same time on your change. Noise is filtered out before you see it.
 explain: |
-  One short list of code issues that matter, produced by four reviewers working at the same time on your change. Noise is filtered out before you see it.
-
   It picks the review scope in order: files you name, then your current git changes, then a branch or commit you ask for. It reads your project notes, then sends four read-only reviewers to hunt for different problems such as behaviour regressions, security and privacy, missing tests and risky structure. The main agent then removes weak or duplicate findings, orders the rest and writes one summary. It only reviews. It never edits your files.
 
   Licence: two labels apply. The copied skill file keeps its author's own MIT header (Dimillian). sickn33's collection shares it under CC BY 4.0, as the LICENSE-CONTENT file says. Both allow reuse with credit, so keep the credit to Dimillian and sickn33.

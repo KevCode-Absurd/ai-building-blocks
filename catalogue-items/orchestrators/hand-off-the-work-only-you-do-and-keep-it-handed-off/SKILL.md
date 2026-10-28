@@ -60,8 +60,24 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - Step 2, one-page agreement: the results wanted, the limits, the help the person gets and the review dates. It is a working agreement, not an employment contract. For pay or contract terms, ask your lawyer or HR adviser.
 - Step 3, meeting plan: the one-on-one rhythm, agenda rules and follow-up. The last file holds the plan.
 
+Use this layout:
+
+```
+STEP 1: DELEGATION PLAN
+  Your week by job | what only you can do | what to hand off first | blind spots
+
+STEP 2: RESULTS AGREEMENT
+  Results wanted | limits | help and resources | review dates | what happens if it slips
+
+STEP 3: ONE-ON-ONE PLAN
+  How often | agenda rules | follow-up | the hard case
+
+HAND-BACK SUMMARY
+  Files: <each step's file> | MISSING: <every line, in one list>
+```
+
 ## After this (for this job)
-Use this section, not the shared "After this" list above, whose pay plan checker does not fit a hand-off. Suggest one next step as a short question:
+Suggest one next step as a short question:
 - Send the one-page agreement to the person taking the job yourself, and book the first one-on-one. Nothing here sends it.
 - Check the agreement against the real week after the first review date, and move the next job across.
 
@@ -74,6 +90,7 @@ Use this section, not the shared "After this" list above, whose pay plan checker
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Sales pay plan checker](https://useaiblocks.com/skills/sales-pay-plan-checker). It takes the plan.
+- The [One-on-one agenda and feedback planner](https://useaiblocks.com/skills/weekly-one-on-one-prep-keeper). It takes the plan.
+- The [Team goal and responsibility planner](https://useaiblocks.com/workflows/team-goals-one-on-ones). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

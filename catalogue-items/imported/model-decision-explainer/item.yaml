@@ -10,7 +10,7 @@ level: advanced
 inputs:
   - type: ai_model
     required: true
-  - type: spreadsheet
+  - type: dataset
     required: false
 outputs:
   - type: audit_report
@@ -31,4 +31,4 @@ credits:
   - title: matlab-interpret-machine-learning-model skill
     by: MathWorks
     url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/ai-and-statistics/matlab-interpret-machine-learning-model
-    used: Copied under the BSD 2-Clause licence (LICENSE.md), which adds that you may use it only with MathWorks products. The skill file also links MathWorks' own reuse licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the BSD 2-Clause licence (LICENSE.md), which adds that you may use it only with MathWorks products. LICENSE.md governs this copy. The skill file's front matter links a different MathWorks licence page, so we added a note saying LICENSE.md wins, and named what the skill needs (MATLAB, the toolbox, a MATLAB model and its table data). We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.

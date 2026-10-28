@@ -11,9 +11,9 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **Meeting notes** (yours): an agenda, notes or decisions from a meeting.
 
 **Makes it better (optional):**
-- **Meeting notes** (yours): an agenda, notes or decisions from a meeting.
 - **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 How to start:
@@ -24,9 +24,14 @@ How to start:
 
 ## Goal
 
-Review one named week: turn its meeting notes, email threads and tasks into one action list with owners and deadlines, show what is done and what is still open, and set next week's priorities. For a single day, use Prepare your executive day (`prepare-your-executive-day`). For one meeting's follow-ups, use Turn meetings into owned actions (`turn-meetings-into-owned-actions`).
+Review one named week: turn its meeting notes, email threads and tasks into one action list with owners and deadlines, show what is done and what is still open, and set next week's priorities.
 
 Only this weekly version has a seven-day window and carries last week's open commitments into next week's priorities. The daily version does not.
+
+## When not to use
+
+- For a single day, use Prepare your executive day (`prepare-your-executive-day`).
+- For one meeting's follow-ups, use Turn meetings into owned actions (`turn-meetings-into-owned-actions`).
 
 ## Fill in first
 

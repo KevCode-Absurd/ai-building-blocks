@@ -1072,6 +1072,8 @@ print(f"  Net Annual Benefit: ${safety_stock_result['net_annual_benefit']:,.2f}"
 
 ### Risk Assessment Report
 
+> Every number in the tables below, and in the example calls above, is a made-up placeholder that shows the layout only. Never copy one into the user's report. Use the user's own figures, or write `MISSING:` where a figure is not given.
+
 **Executive Summary:**
 - Top risks and overall risk exposure
 - Value at Risk (VaR) estimate

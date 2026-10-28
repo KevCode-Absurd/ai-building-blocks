@@ -94,6 +94,8 @@ A calm, measured answer, often built step by step like a case laid before a cour
 
 Sections, in order: The record first; First questions; Shared goal; Terms and pressure; Who to bring inside; Pushback and timing; One-line close.
 
+This is an AI reading of his public record applied to your case, not a view Mandela gave. Check it against the real facts of your situation before you act.
+
 ## What to do next
 
 Write the shared goal and your firm terms on one page, then list who you have not yet heard from and talk to them first. For another view, hire Mahatma Gandhi on nonviolent pressure, Abraham Lincoln on holding people together, or Chris Voss on tense talks.

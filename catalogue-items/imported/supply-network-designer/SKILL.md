@@ -510,10 +510,30 @@ def service_level_analysis(dc_locations, customer_locations):
 
 **Run Optimization Models:**
 ```python
-# Multi-scenario optimization (outline only).
-# AI Blocks note: optimize_network_weighted is not defined in this file. Before
-# running, write it by extending optimize_network above with a weighted objective
-# (alpha * cost + beta * service penalty), or run optimize_network once per scenario.
+# Multi-scenario optimization.
+# AI Blocks addition: the original file called optimize_network_weighted without
+# defining it. This wrapper reuses optimize_network above. It needs one more input,
+# costs['distance'][(customer, dc)] in miles. two_day_miles is a placeholder:
+# set it to the distance your carrier really covers in two days.
+def optimize_network_weighted(customers, facilities, demand, costs,
+                              alpha=1.0, beta=0.0, two_day_miles=500):
+    weighted = dict(costs)
+    weighted['fixed'] = {j: alpha * costs['fixed'][j] for j in facilities}
+    weighted['handling'] = {j: alpha * costs['handling'][j] for j in facilities}
+    weighted['transport'] = {k: alpha * costs['transport'][k] + beta * costs['distance'][k]
+                             for k in costs['transport']}
+    res = optimize_network(customers, facilities, demand, weighted)
+    flows = res['flows']
+    shipped = sum(flows.values())
+    # Report the real cost, not the weighted score
+    res['total_cost'] = (sum(costs['fixed'][j] for j in res['open_facilities'])
+                         + sum((costs['transport'][i, j] + costs['handling'][j]) * q
+                               for (i, j), q in flows.items()))
+    res['avg_distance'] = sum(costs['distance'][i, j] * q for (i, j), q in flows.items()) / shipped
+    res['service_pct'] = 100 * sum(q for (i, j), q in flows.items()
+                                   if costs['distance'][i, j] <= two_day_miles) / shipped
+    return res
+
 scenarios = {
     'Cost_Min': {'weight_cost': 1.0, 'weight_service': 0.0},
     'Service_Max': {'weight_cost': 0.0, 'weight_service': 1.0},

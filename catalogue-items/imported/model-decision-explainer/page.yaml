@@ -7,7 +7,7 @@ job: build-software
 headline: Model decision explainer
 subhead: A clear answer to why your trained model says what it says. You see which inputs matter most, why it gave one case a certain score, and where it keeps getting things wrong.
 explain: |
-  Who it suits: someone who already has a trained model in MATLAB and the Statistics and Machine Learning Toolbox, working alone or with a data scientist. If you do not use MATLAB, this is not for you.
+  Who it suits: someone who already has a trained model in MATLAB and the Statistics and Machine Learning Toolbox, working alone or with a data scientist. If you do not use MATLAB, this is not for you. The licence (LICENSE.md, BSD 2-Clause) lets you use this skill only with MathWorks products.
 
   The skill works in MATLAB on models trained on rows and columns of data. It matches your question to a method: ranking the inputs, showing how one input moves the result, explaining a single prediction, studying the errors, or comparing groups of people. It works with built-in models and with custom ones you wrap in a prediction function, which is a short MATLAB function that takes rows of data and returns the model's answers. It is not for images or text models, and it does not train or tune anything. You need MATLAB and its Statistics and Machine Learning Toolbox. Both are paid MathWorks products, so check you hold a licence first.
 when:

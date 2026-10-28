@@ -7,11 +7,11 @@ job: ship-and-host
 headline: Terraform setup builder
 subhead: Terraform modules for your cloud, laid out cleanly, with safe state storage and security checks built in. It flags drift risks, and you review a plan before anything is applied.
 explain: |
-  Terraform modules for your cloud, laid out cleanly, with safe state storage and security checks built in. It flags drift risks and gives you code to plan and review. It cannot promise your live setup will never fail, so read every plan before you apply it.
+  It cannot promise your live setup will never fail, so read every plan before you apply it.
 
   The skill takes a messy or empty project and applies firm decisions. It designs modules with clear inputs and outputs that compose. It sets up remote state with locking and encryption, and pins provider and module versions. Three review modes cover code smells, module design and security, where it looks for secrets in code, open network rules and broad IAM roles. It also handles multi-region layouts. The output is code you can plan and review before anything is applied.
 
-  Licence: MIT, as the LICENSE file in this item says. Credit goes to the original author.
+  Licence: MIT, as the LICENSE file in this item says. Credit goes to the original author. This copy adds a check of what to have ready before you start and links to the next steps.
 when:
   - Your Terraform is one huge file and nobody dares touch it.
   - You need to move state to a remote, locked backend.
@@ -37,7 +37,10 @@ how_to_use:
   - Gather first: all your .tf files, your cloud provider and version, the state backend you want and any security rules you must meet.
   - Open your AI tool and paste in this skill. Use Claude, ChatGPT or Gemini.
   - Paste your .tf files, or describe your cloud setup and name your provider.
-  - "Pick a job. Start with a review: paste your main .tf file and ask for a Terraform review (the skill calls it /terraform:review; in a chat, just ask in words). Expect a findings list, each with a fix. You can also ask for a module design or a security audit."
+  - "Pick one of three jobs and ask for it in words (the skill names them /terraform:review, /terraform:module and /terraform:security; in a chat, plain words work). Each gives a findings list with a fix for each item."
+  - "Code review: pick this when you have existing .tf files that feel messy or risky to change."
+  - "Module design: pick this when you are building a new module or splitting one big file into reusable parts."
+  - "Security audit: pick this before a release or an audit, to find secrets in code, open network rules and broad access roles."
   - Read the results and the new code. Run terraform plan in a copy of the project first and check it. Never apply code you have not read.
   - The two analysis scripts need python3 and an AI that can run code. Skip them in a plain chat.
   - Set your CI to need a manual approval before apply. Then work through the security findings list, highest risk first.

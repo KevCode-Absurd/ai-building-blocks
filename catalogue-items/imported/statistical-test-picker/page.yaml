@@ -20,7 +20,7 @@ not_for:
   - "Your data has clusters or repeated measures from the same people: ask a statistician or use a specialist mixed model instead."
   - "You need low-level model code for statsmodels or PyMC: use those tools directly instead."
 you_give:
-  - Your data file or a description of it
+  - "Your data file or a description of it: one row per participant, one column for the group, one column for the result, and one column per measure if the same people were measured more than once"
   - The research question
   - The study design
   - The alpha level you use (optional)
@@ -34,7 +34,9 @@ how_to_use:
   - "This is for people comfortable running Python 3.12 and installing science packages. If you cannot run code, ask a statistician for help, or use a menu-based stats package. Check that your AI can run Python code. The skill file lists the install steps."
   - Paste the skill into your AI chat, or upload the skill folder.
   - Add your data file or a short description of it. Say what you want to know and how the study was set up.
+  - "Your AI works in this order: install the packages, state the hypothesis and design, look at each group, run the assumption checks, pick and run the test, work out effect sizes, then write it up."
   - Read the assumption checks first. The AI flags concerns, but you decide if the test fits your study.
+  - You get the write-up as text to copy into your paper, and the plots as images in the chat, or as image files if your AI can save files.
   - Check the write-up. Any example numbers in the report templates are placeholders, so use only your real results.
   - The checks screen your data. They do not prove the assumptions hold or that the study is sound. Before you submit or publish, have a statistician review the test choice and the write-up.
 output_sample:

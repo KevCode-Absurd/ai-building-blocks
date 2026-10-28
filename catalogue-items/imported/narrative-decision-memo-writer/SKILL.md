@@ -38,16 +38,17 @@ How to start:
 
 ## When not to use
 
-- (AI Blocks note: on this site, use the Decision record writer for durable architecture
-  decisions and the Incident postmortem writer for incident analysis. The names below are
-  the source repo's own skills and may not exist here.) Use `adr-authoring` for durable architecture decisions and `incident-learning`
-  for incident analysis. Add an executive cover memo only when useful; retain the
-  underlying artifact's structure and evidence.
-- On this site, use the Incident runbook writer or the Developer docs writer for instructions
-  and runbooks. In the source repo, use `technical-documentation` for instructions and runbooks, `writers-helper`
-  for general manuscript craft, and `documents` for rendered office files.
-- Use `product-discovery` or `product-methodology` when the missing work is
-  understanding the problem or testing demand. A polished memo cannot supply that evidence.
+- Use the Decision record writer for durable architecture decisions and the Incident
+  postmortem writer for incident analysis. Add an executive cover memo only when useful;
+  retain the underlying artifact's structure and evidence.
+- Use the Incident runbook writer or the Developer docs writer for instructions and runbooks.
+  General manuscript craft and rendered office files are out of scope for this skill.
+- When the missing work is understanding the problem or testing demand, do that research
+  first. A polished memo cannot supply that evidence.
+- (AI Blocks note: the original named its own repo's skills here, such as `adr-authoring`,
+  `incident-learning`, `technical-documentation`, `writers-helper`, `documents`,
+  `product-discovery` and `product-methodology`. We replaced them with the AI Blocks items
+  above, since those skills are not on this site.)
 
 ## Workflow
 

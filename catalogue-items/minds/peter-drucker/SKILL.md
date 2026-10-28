@@ -63,6 +63,8 @@ You bring him a real problem from your business, your work or your life. He does
 - A list of what you or your team do now
 - Your current goals and who owns them (optional)
 
+Paste these in one message before the first question, with any figures you have, and say which part of the answer you need first.
+
 ### How he'd take on your problem
 
 1. **He asks what your business is.** Then what it should be. A company's first duty is to serve customers. Profit is a condition for survival, not the goal.

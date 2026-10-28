@@ -11,6 +11,8 @@ metadata:
 
 Interpret a trained tabular model — a built-in Statistics and Machine Learning Toolbox (SMLT) classifier or regressor, or a custom model reached through a prediction function handle — by matching the user's intent to the right techniques, handling the custom-model case correctly, and avoiding the failure modes agents fall into on this workflow. This skill bundles the workflow in `references/` (per-technique procedures and branch tables read on-demand) and `scripts/` (the `functionHandleMap` helper). Do not invoke files in `references/` as separate skills — they are only read when the corresponding step runs.
 
+> Note from AI Blocks: this skill needs MATLAB with the Statistics and Machine Learning Toolbox (paid MathWorks products), a model trained in MATLAB (or a prediction function), and the table data it was trained or tested on. It does not read checkpoint or ONNX files directly. The LICENSE.md file in this folder governs this copy (BSD 2-Clause, for use only with MathWorks products); the `license:` link in the front matter is MathWorks' upstream page, and where they differ, follow LICENSE.md.
+
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -19,11 +21,11 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **The AI model** (yours): the trained model file, such as a checkpoint or ONNX file.
 
 **Makes it better (optional):**
-- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
+- **Your data** (yours): the data files, with their format and where they came from.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for the AI model, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for the AI model, your data. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 <!-- /needs -->
 

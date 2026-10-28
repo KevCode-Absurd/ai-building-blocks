@@ -359,7 +359,7 @@ Guide the user through testing:
 3. **Test get-ticket.ts** - Get full ticket details
 4. **Test get-customer-context.ts** - Unified customer view
 5. **Test draft response** - Using a template
-6. **Test reply (optional)** - Only if they want to test sending
+6. **Test reply (optional)** - Only on a test ticket in a sandbox help desk, never a real customer. The person runs `reply-to-ticket.ts` and types `yes` themselves. The AI does not run it.
 
 Ask: "Would you like me to walk through testing each script?"
 

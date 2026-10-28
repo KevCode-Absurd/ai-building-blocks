@@ -260,7 +260,7 @@ For extractor-specific pitfalls (e.g., `Skewness=true` on the time extractor, `M
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [MATLAB data analysis coder](https://useaiblocks.com/skills/data-analysis-coder). It takes the spreadsheet.
 - The [Classifier comparison analyst](https://useaiblocks.com/skills/data-classifier-comparer). It takes the spreadsheet.
-- The [MATLAB tabular model explainer](https://useaiblocks.com/skills/model-decision-explainer). It takes the spreadsheet.
+- The [SimBiology model parameter fitter](https://useaiblocks.com/skills/biology-model-fitter). It takes the spreadsheet and code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

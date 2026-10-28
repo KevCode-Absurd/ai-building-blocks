@@ -18,14 +18,11 @@ A claims roll-forward, a match to bank cash and an ordered payment ladder built 
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
-
-**Makes it better (optional):**
 - **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for source text, a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a spreadsheet. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -36,11 +33,11 @@ How to start:
 
 These items replace the generic source text and spreadsheet inputs above. They are claim totals, payer remittances, provider offsets, bank receipt dates and times, opening cash and the confirmed payment order.
 
-- Claim totals and payer remittances for the period. Aggregate or deidentified only, never patient-level detail.
-- Provider offsets taken back from payments, with dates.
-- Bank receipt dates and times for the same account.
-- Opening accessible cash for that account on the start date.
-- The confirmed administrative payments and their order.
+- Claim totals and payer remittances for the period. Aggregate or deidentified only, never patient-level detail. Each remittance row needs: remittance ID, payer, amount, date paid and the claim batch or total it covers.
+- Provider offsets taken back from payments. Each row needs: the remittance ID it came off, amount and date.
+- Bank receipts for the same account. Each row needs: account, amount, the date and time the cash was available, and the bank reference.
+- Opening accessible cash for that account on the start date, with its source (statement or portal) and currency.
+- The confirmed administrative payments and their order. Each row needs: payee type, amount, due date and its place in the order.
 - The period start date and the time bucket for the cash ladder (for example daily or weekly). Ask for both. If the user has no preference, propose weekly and say it was your choice, not theirs.
 
 If an item is missing, ask once. If it cannot be supplied, write MISSING: with what it stops. Never use zero, a typical figure or an example number in its place.

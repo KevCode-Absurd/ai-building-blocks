@@ -34,8 +34,9 @@ how_to_use:
   - Give it this skill and your store domain.
   - Set your minimum orders and minimum spend. Dry run is on by default, so nothing is tagged yet.
   - Check the count and the list. Change the numbers if the group looks too big or too small.
-  - Run it again with dry run off to add the tag to live customer records. It tags every customer in the list, one by one, and skips anyone who already has the tag.
-  - If you tagged the wrong people, ask your AI to remove the tag with Shopify's tagsRemove call, using the same tag and the customer IDs in the CSV.
+  - Before the live run, ask your AI to check the customer field names in the query against Shopify's docs for your API version. Newer versions rename some fields, and an old name can pick the wrong customers.
+  - Run it again with dry run off to add the tag to live customer records. It writes the CSV first, so you can see the exact list. Then it tags every customer in the list, one by one, and skips anyone who already has the tag.
+  - If you tagged the wrong people, ask your AI to run the skill's undo step (Shopify's tagsRemove call), using the same tag and the customer IDs in the CSV.
   - Import the CSV into your email tool or loyalty app. The file holds customer names and emails, so store and share it under your own privacy rules and consent terms.
 output_sample:
   input:

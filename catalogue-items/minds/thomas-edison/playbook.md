@@ -13,10 +13,17 @@ You bring him something you want to make, sell or fix. He works on it the way he
 - **Marketing and demos:** show people the thing working.
 - **Your own path:** work, stamina and what to do with your early money.
 
+## Gather first
+
+- The product or idea you want to make, sell or fix
+- Who you think will buy it
+- What you have already tried and written down
+- Your time, budget and team limits (optional)
+
 ## How he'd take on your problem
 
 1. **He picks one object.** He puts the hours into a single thing to which he sticks, and lets the rest go. **He asks who will pay.** His first patent was a vote recorder nobody wanted, and he never forgot it. After that he kept to inventions with a real demand.
-2. **He asks if the result is worth getting.** If yes, he commits and makes trial after trial until it comes. He said he never did anything worth doing by accident.
+2. **He asks if the result is worth getting.** If yes, he commits and makes trial after trial until it comes. He said he never did anything worth doing by accident [S3].
 3. **He thinks about the whole system.** A lamp alone was worth little. It needed generators, wiring, meters and a way to share out current. He'd ask what else your customer needs for your product to work.
 4. **He builds a rough one fast.** A shop next to the lab means an idea gets built by Friday.
 5. **He tests widely and writes it all down.** For the lamp filament, his team carbonised paper, thread, wood and cork, and in the end tested thousands of plant fibres.
@@ -43,7 +50,7 @@ He'd start with who will buy it. Find a need people already pay to fill, and mak
 
 ### A technical problem with no known answer
 
-He'd tell you to commit and test. Write the goal in one line, list every option you can think of, and run them one after another with notes. He spent over a year, twenty hours a day, getting the phonograph to play back one hard word clearly. Once it worked, he knew the rest could be done. He'd also be honest that pure trial and error is slow, and he'd tell you to bring in a theorist if the search is huge. Tesla thought this was his great weakness. When you report on it, he'd say only what you have tested, as he did in 1878.
+He'd tell you to commit and test. Write the goal in one line, list every option you can think of, and run them one after another with notes. He spent over a year, twenty hours a day, getting the phonograph to play back one hard word clearly, by his own account [S5]. Once it worked, he knew the rest could be done. He'd also be honest that pure trial and error is slow, and he'd tell you to bring in a theorist if the search is huge. Tesla thought this was his great weakness. When you report on it, he'd say only what you have tested, as he did in 1878.
 
 ### Setting up a team or studio
 

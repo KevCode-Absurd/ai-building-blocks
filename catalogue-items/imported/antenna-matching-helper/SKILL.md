@@ -188,6 +188,6 @@ Copyright 2026 The MathWorks, Inc.
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [MATLAB PCB signal loss analyzer](https://useaiblocks.com/skills/pcb-signal-loss-analyzer). It takes the code change.
 - The [MATLAB large antenna analyzer](https://useaiblocks.com/skills/large-antenna-analyzer). It takes the code change.
-- The [MATLAB RF circuit board combiner](https://useaiblocks.com/skills/pcb-circuit-combiner). It takes the code change.
+- The [MATLAB PCB Gerber exporter](https://useaiblocks.com/skills/pcb-gerber-exporter). It takes the code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

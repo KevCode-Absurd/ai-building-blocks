@@ -9,7 +9,7 @@ subhead: Give it the questions you answer every week and how you answer them. It
 explain: |
   Every business has ten questions that make up most of its support. The answers exist, scattered across sent emails, a chat log and one person's head. New staff answer them differently. Customers who could have helped themselves write in instead, and the help page that does exist reads like a terms sheet.
 
-  This workflow turns those questions into pages people can follow. It first gathers what your docs and tickets already say about each question, with gaps marked. It writes a help page per question: the steps, what the reader should see, and what to do if it fails. It checks the reading level of each page and rewrites any that read hard, following George Orwell's rules for plain English. Then it checks each page as a reader would, for a missing step or a wrong button name. You publish pages that answer the question the first time.
+  This workflow turns those questions into pages people can follow. It first gathers what your docs and tickets already say about each question, with gaps marked. It writes a help page per question: the steps, what the reader should see, and what to do if it fails. It checks the reading level of each page and rewrites any that read hard, following George Orwell's rules for plain English. Then it checks each page as a reader would, for a missing step or a wrong button name. That check uses the docs and screen names you paste. It cannot open your app, so try each page in the app before you publish it.
 when:
   - Ten questions make up most of your support inbox.
   - Your help pages exist but customers write in anyway, because they could not follow them.
@@ -65,7 +65,7 @@ how_it_works:
   - title: Rewrite the hard pages
     text: Rewrites the flagged pages in plain English with the same meaning, following Orwell's rules.
   - title: Check every page is right
-    text: Checks each page for missing steps, wrong button or screen names and promises your docs do not back, and applies the fixes.
+    text: Checks each page against the docs and screen names you gave for missing steps, wrong button names and promises your docs do not back, and applies the fixes. It does not open your app.
 output_shape: |-
   STEP 1: WHAT IS KNOWN
     <question>: Answer today: <...> (source: <...>) | Gap or contradiction: <...>

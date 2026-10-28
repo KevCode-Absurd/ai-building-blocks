@@ -13,10 +13,8 @@ execution: coordinator
 inputs:
   - type: plan
     required: true
-  - type: source_text
+  - type: document
     required: true
-  - type: brand_brain
-    required: false
 outputs:
   - type: document
 uses:

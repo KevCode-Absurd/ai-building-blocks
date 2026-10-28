@@ -105,6 +105,7 @@ works_best_with:
   inputs:
     - Approved examples of a good result.
     - A named reviewer and their acceptance rules.
+next: [check-a-prototype-before-user-testing, new-screen-design-reviewer]
 terms:
   - term: Usability review
     meaning: An expert-style check of a screen for what confuses people. It is not a test with real users.

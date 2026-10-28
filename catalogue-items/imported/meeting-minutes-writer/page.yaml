@@ -37,8 +37,7 @@ how_to_use:
   - "Paste your rough notes or transcript below it. The meeting must already have happened: this works from notes you have, not from a live call. Add attendee names and known deadlines if you have them."
   - Send it and read the bottom line first. Check it matches what the meeting decided.
   - Look for [unassigned] (no owner), [TBD] (no date) and [to confirm] (any other missing detail) marks. Fill in each gap yourself, because the AI will not guess.
-  - Pair it with the Rough notes to minutes writer, which does a similar job. Pick this one when you want a short bottom line, a fixed three-bucket list and a self-check on each item. Pick the Rough notes to minutes writer when you want one pass from messy notes to a full set of minutes.
-  - Send the minutes to the attendees. Copy the open questions into your task list, and run the skill again when one gets an answer.
+  - Send the minutes to the attendees. Copy each action item, with its owner and date, into the task tool or shared doc your team already uses. Add the open questions there too, and run the skill again when one gets an answer.
 output_sample:
   input:
     - Your rough meeting notes or a transcript

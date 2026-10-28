@@ -39,10 +39,10 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill instructions into a new chat. No code or paid tool is needed. The pasted prompt has {{problem_type}}, {{common_sticking_points}} and other {{...}} fields. Replace each one with your own typed text, or delete the optional lines.
   - Type the problem type, for example the kind of equation students solve, and add two or three sticking points.
   - Add your student level and say how many levels you want. Use 3 for short, one-step problems and 4 or 5 when students get stuck at several points. Say what should happen after the last hint. Pick a teacher referral when a wrong answer points to a gap in the basics, and reveal the answer when the student only needs to see the last step.
-  - Read the hints in order. Check that none gives the answer too early, and ask your AI to soften any that do.
+  - Read the hints in order. Check that none gives the answer too early, and ask your AI to soften any that do. If the reply mentions any research finding, check it against the original study before students see it.
   - Paste the final sequence into your worksheet, quiz or tutoring script. The reply has five parts, in this order: Hint Architecture, Hint Sequence, Bottom-Out Strategy, Trigger Conditions Summary, then Adaptation Notes.
   - Next, pair the hints with a worked example. Use the Online worked example builder or the Worked example practice item.
-  - "Source and version: this is a copy of Gareth Manning's adaptive hint sequence skill, taken at commit 6bbbce4. We only added one note that the study summaries were not checked. The newest version lives in his repository (see the credits)."
+  - "Source and version: this is a copy of Gareth Manning's adaptive hint sequence skill, taken at commit 6bbbce4. We only added a note that the study summaries were not checked, and one line telling the AI not to quote study figures without a checked source. The newest version lives in his repository (see the credits)."
   - The text comes from Gareth Manning's skill and is licensed CC BY-SA 4.0. If you reuse or share it, keep his credit and share your version under the same licence.
 output_sample:
   input:

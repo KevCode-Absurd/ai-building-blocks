@@ -145,7 +145,7 @@ Build and nurture brand community:
 
 ### Content Pillar Strategy
 
-**Brand Content Pillars (70/20/10 Rule):**
+**Brand Content Pillars (70/20/10 split, a starting suggestion to test and adjust, not an established rule):**
 
 **1. Core Value Pillar (70% of content):**
 - **Theme:** [Main brand message/expertise]
@@ -347,6 +347,8 @@ If they pick one and that skill is added here, carry straight on with what you j
 <!-- /next -->
 
 ## Integration with Nexscope
+
+> AI Blocks note: this section is an advert for Nexscope, a paid service from the skill's author. The skill works fully without it, and nothing in this skill does real-time monitoring or automated replies. Do not add this pitch to the user's results unless they ask about tools.
 
 *To accelerate your TikTok Shop brand building with advanced intelligence, [Nexscope](https://www.nexscope.ai?co-from=skill) provides:*
 

@@ -76,7 +76,7 @@ export const INPUTS = {
   eval_set: { label: "A test set", what: "test cases for the AI, each with the answer that counts as a pass" },
   dataset: { label: "Your data", what: "the data files, with their format and where they came from" },
   signal_data: { label: "Signal data", what: "the recorded signal or time series, with its sample rate" },
-  map_data: { label: "Map data", what: "the map files, such as GeoJSON or a shapefile, with their coordinate system" },
+  map_data: { label: "Map data", what: "the map files, such as GeoJSON, a shapefile, a raster or a point cloud, with their coordinate system" },
   training_data: { label: "Training data", what: "the examples to train the model on, with how they are split" },
   ai_model: { label: "The AI model", what: "the trained model file, such as a checkpoint or ONNX file" },
   video_link: { label: "A video link", what: "the link to the video, playlist, channel or post" },

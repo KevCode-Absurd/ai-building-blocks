@@ -9,7 +9,7 @@ level: advanced
 inputs:
   - {type: product_data, required: true}
   - {type: voc_reviews, required: true}
-  - {type: footage, required: true}
+  - {type: footage, required: false}
   - {type: offer, required: false}
 outputs:
   - {type: edit_plan}

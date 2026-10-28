@@ -14,21 +14,12 @@ This workflow chains four skills from the library. Run them in order. Save each 
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
-**Makes it better (optional):**
-- **Brand brain**, made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
-- **A draft** (yours): the ad, page, email or script you want checked or improved.
-
-**Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. This one.
-
-**From the brand brain, read:** `00-start-here.md`, `offers.md`, `customers.md`, `proof-and-claims.md`, `voice-and-look.md`. Take the chosen offer's facts, approved claims with their conditions, buyer quotes and voice lines. Source notes and rejected ideas never go into the result.
-
 How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your question, your brand brain, a draft. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for a document, your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -38,7 +29,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-The general "Before you start" list above mentions a brand brain, a question and an ad, page, email or script draft. This job uses none of them. Ignore the brand brain lines, "Recommended steps before this one" and "From the brand brain, read" in that box. Its real inputs are below: the rough notes (pasted or attached before step 1), the reader and action, the format, and an optional past handout.
+In the list above, the document is your rough notes and "your question" is the reader, the action and the format. You do not need a brand brain or an ad draft. The inputs in full:
 
 
 - **The rough notes** (required): pasted text or files. If missing, write `MISSING: notes` and stop.
@@ -48,7 +39,7 @@ The general "Before you start" list above mentions a brand brain, a question and
 
 ## Tools
 
-Building the .docx needs an AI that can run code and save files, with Node.js and the PaperJSX npm package (check its licence and cost before installing). The PDF copy needs LibreOffice (free). Checking pages needs a way to draw PDF pages as pictures, such as Poppler, and Python PDF libraries such as pdfplumber and pypdf.
+Building the .docx needs an AI that can run code and save files, with Node.js and the PaperJSX npm package. Installing PaperJSX is an optional, separate step: read the licence and price on its npm page first, and install it only with the person's clear yes. The PDF copy needs LibreOffice (free). Checking pages needs a way to draw PDF pages as pictures, such as Poppler, and Python PDF libraries such as pdfplumber and pypdf.
 
 If a tool is missing, do step 1, then give the edited text and a clearly labelled plan, and write `MISSING: <tool>` for each step that could not run. Never call the text a Word file or a checked PDF when it is not.
 
@@ -99,7 +90,7 @@ Files | Steps run or skipped | MISSING lines | CHECKS MISSED (or "none") | One n
 
 ## Next steps to offer
 
-Ignore the "After this" list below and use only this list. Offer one next step and say they can type their own:
+This is the one next-step list. The "After this" list below names the same two skills, so offer each once. Offer one next step and say they can type their own:
 
 - Open the Word file and read any page marked not run before you send or print it.
 - For a one-page version to use at a desk, try the [Training handout writer](https://useaiblocks.com/prompts/training-handout-writer).

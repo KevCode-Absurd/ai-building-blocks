@@ -9,9 +9,9 @@ subhead: Give your AI a data table in MATLAB and the column to predict. It train
 explain: |
   Machine learning models trained and compared in MATLAB's Classification Learner and Regression Learner apps, with the best one exported. You do it by code, so you do not click through the apps by hand.
 
-  The skill drives the apps by code. It opens a session on your data table, creates models, trains them and selects them. It reads their accuracy figures and options such as feature selection and PCA, and opens the standard plots. For explanation, it can run partial dependence, permutation importance, Shapley and LIME. Finally it exports the chosen model, or code to rebuild it. You need MATLAB with the Statistics and Machine Learning Toolbox. This is a MathWorks skill.
+  The skill drives the apps by code. It opens a session on your data table, creates models, trains them and selects them. It reads their accuracy figures and options such as feature selection and PCA, and opens the standard plots. Validation means part of your data is held back to test each model fairly. PCA squeezes many columns into a few combined ones, which can speed up training. For explanation, it can run partial dependence, permutation importance, Shapley and LIME. Finally it exports the chosen model, or code to rebuild it. You need MATLAB with the Statistics and Machine Learning Toolbox. This is a MathWorks skill.
 
-  Licence: the LICENSE.md file in this item governs this copy. It is BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. The skill file header links MathWorks' own reuse licence, which is MathWorks' upstream terms and also limits use to MathWorks products. Do not use it outside MathWorks products. The skill also runs MathWorks' compiled helper files (.p files), which you cannot read. They run inside your own MATLAB, so use them only if you trust MathWorks as the source.
+  Licence: the LICENSE.md file in this item governs this copy. It is BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. The skill file header links MathWorks' upstream licence page, which also limits use to MathWorks products.
 when:
   - You have a table and want to try many model types quickly.
   - You want to compare models without clicking through the app.
@@ -32,10 +32,9 @@ you_get:
   - Explanation plots
   - The exported best model
 how_to_use:
-  - Check you have MATLAB with the Statistics and Machine Learning Toolbox. This skill needs an AI tool that can run MATLAB code.
-  - "First run, in order: 1. Load your data into MATLAB as a table, with one column to predict. 2. Open your AI, add the skill and name the table and the column. 3. Read what code your AI says it will run and confirm. 4. Say how much data to hold back for a test. 5. Let it train a few models. 6. Read the first metrics table."
-  - "Open an AI that can run MATLAB code, such as Claude Code, and add the skill folder. If your AI cannot run MATLAB code, it can only write the code for you to run yourself. Say: Follow this skill. Add your table name, the column to predict and any model types you want."
+  - Check you have MATLAB with the Statistics and Machine Learning Toolbox. This skill needs an AI tool that can run MATLAB code, such as Claude Code. Without that, your AI can only write the code for you to run yourself.
   - The skill runs MathWorks helper files (.p files) that you cannot read. They come from MathWorks and run inside your MATLAB, so use them only if you trust that source.
+  - "First run, in order: 1. Load your data into MATLAB as a table, with one column to predict. 2. Open your AI, add the skill folder and say: Follow this skill. Name the table, the column to predict and any model types you want. 3. Read what code your AI says it will run and confirm. 4. Say how much data to hold back for a test. 5. Let it train a few models. 6. Read the first metrics table."
   - Read the comparison of model scores. Ask for explanation plots if you want to know which features matter.
   - Next, check the best model's score on the held-out test data before you trust or export it. Then ask for explanation plots, and ask your AI to export the best model, or the code to rebuild it.
 next: [model-decision-explainer, neural-network-trainer]

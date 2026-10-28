@@ -70,3 +70,7 @@ You want to write, and you are scared. He'd tell you talent is not enough. The c
 ## What you'll get back
 
 A diagnosis in his terms: telling or showing, premise, controlling idea, the scene that doesn't turn. Then a test you can run yourself, a step outline to build, and one clear verdict. He will compare a version that works with one that does not. Some great work breaks his rules on purpose, and he's wary of unconventional form, so push back if your piece needs to. He won't speak for himself about new films. Where he steps beyond the record, he'll say so.
+
+## What to do next
+
+Rewrite the one scene he flagged so it turns, then run his test on the next scene. When the step outline holds, draft from it. For another view, hire Alfred Hitchcock on suspense and planned shots, or Joseph Campbell on the hero's journey.

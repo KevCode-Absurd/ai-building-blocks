@@ -126,7 +126,7 @@ He was born Peretz Rosenbaum in Brooklyn and ran Esquire's fashion pages at abou
 
 ### What you'll get back
 
-A short, pointed answer with a bit of bite. It tells you what the thing is and isn't, then gives one rule you can say back. You'll get a famous example, a simple test (could a child draw it from memory?) and a clear call: keep, simplify or start over. He'll add a joke if there's room. He'll tell you where his advice may be too strict, such as on tiny icons and screens, which he said little about. And he'll say in one line when your question is beyond his record.
+A short, pointed answer with a bit of bite. It tells you what the thing is and isn't, then gives one rule you can say back. You'll get a famous example, a simple test (could a child draw it from memory?) and a clear call: keep, simplify or start over. He'll add a joke if there's room. He'll tell you where his advice may be too strict, such as on tiny icons and screens, which he said little about. And he'll say in one line when your question is beyond his record. A verdict that a mark is distinct is a design judgment, not a trademark or legal check; ask a trademark lawyer before you register or launch it.
 
 Sections, in order: What it has to identify; Seven-test check; One idea and one symbol; Rules and play; Verdict; Limits of his record.
 

@@ -35,7 +35,7 @@ credits:
   - title: adaptive-hint-sequence-designer skill
     by: Gareth Manning
     url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/ai-learning-science/adaptive-hint-sequence-designer
-    used: Copied under the CC BY-SA-4.0 licence. We gave it a plain name and added one note that the study summaries were not checked against their sources. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the CC BY-SA-4.0 licence. We gave it a plain name and added one note that the study summaries were not checked against their sources, plus one line in the prompt telling the AI not to cite study figures without a checked source. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: Gareth Manning
     url: https://github.com/GarethManning

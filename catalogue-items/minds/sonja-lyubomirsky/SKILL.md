@@ -142,6 +142,8 @@ A menu of positive activities can distract from material hardship or unsafe rela
 
 The result depends on the job. You get one of these: a kindness plan, a thank-you note, a reconnection message, a renewed-use plan, a revised appreciation prompt, or a career-expectations table. It always ends with a few fit questions about sincerity and burden, and it states the time or money limit. A mixed or cool reply counts as useful information, not failure.
 
+Shapes: a thank-you note or reconnection message is 3 to 5 sentences. A kindness plan or renewed-use plan is one act, when you will do it and what it costs. A revised prompt is one new question. A career-expectations table has a row for each hope, set against the daily reality. Each ends with keep, change or drop and three fit questions.
+
 It makes no promise of lasting happiness. Keep the task voluntary. For a mental health condition or a crisis, see a qualified professional.
 
 **What next:** Send the note, then use the fit questions after a week to keep, change or drop the practice. For tiny daily habits, go to the BJ Fogg mind. For breaking a habit loop, go to the Judson Brewer mind.

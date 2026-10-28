@@ -31,4 +31,4 @@ credits:
   - title: risk-mitigation skill
     by: Kishor Kukreja
     url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/risk-mitigation
-    used: Used under the MIT licence. We gave it a plain name and made the resilience score stop when a factor score is missing, instead of filling in 50.
+    used: Used under the MIT licence. We gave it a plain name and made the resilience score stop when a factor score is missing, instead of filling in 50. We labelled the sample figures in the output tables as placeholders.

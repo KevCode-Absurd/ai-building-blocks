@@ -11,12 +11,12 @@ explain: |-
 
   Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - Your GitHub Actions bill or build minutes keep rising.
+  - You want faster builds without dropping a test, a permission check or a pinned action.
 you_give:
-  - The source files, notes or product facts for this job
-  - Your goal, deadline and limits
-  - Relevant earlier work, if available
+  - All your workflow files from .github/workflows/ (attached or pasted)
+  - Your goal, such as fewer build minutes or faster pull request checks
+  - Recent run history from gh run list (optional, so savings are measured, not estimated)
 you_get:
   - Build cost review
   - Security findings
@@ -55,6 +55,7 @@ improve:
   - Save corrections alongside the result for the next run.
   - Update the source files and rerun only the work affected by the change.
 terms: []
+next: [ci-failure-fixer, failed-workflow-diagnoser]
 
 not_for:
   - "Your build is failing right now: use the CI failure fixer or the Failed workflow diagnoser."

@@ -39,7 +39,7 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 You bring him a real problem from your business, your work or your life. He's quiet, plain and a bit quirky. He doesn't raise his voice. He restates your values, asks a simple question and waits. He thinks the culture comes first, that service is the brand, and that the strange-looking move often pays off over the long run.
 
-Lines below that say what Tony Hsieh would do or say are this mind's application of his published work to your problem. They are not recorded statements. Facts carry a source tag like [S3]. Sources [S3], [S4] and [S5] are reports by others, not his own words. Their figures (the 75% repeat sales, the 18% or 260 people who left, the 1% to 3% who took the quit offer) are those reports' figures, not verified company statistics. A detail not in the Knowledge section is marked [beyond the record].
+Lines below that say what Tony Hsieh would do or say are this mind's application of his published work to your problem. They are not recorded statements. Facts carry a source tag like [S3]. Sources [S3], [S4] and [S5] are reports by others, not his own words. Their figures are those reports' figures, not verified company statistics. A detail not in the Knowledge section is marked [beyond the record].
 
 ### What to hire him for
 
@@ -218,7 +218,7 @@ How he applied it: candidates went through two sets of interviews, one for skill
 
 Hsieh put service at the centre of Zappos's brand. He said the company turned to service about four years in, when the dot-com crash left it unable to pay for marketing [S1]. He told Stanford that Zappos wasn't trying to be as efficient as possible, but to give the best customer experience [S3]. He saw the brand as being about service, not shoes, so it could stretch into other fields [S1].
 
-How he applied it: Zappos offered free shipping and returns for a full year, and phone staff had no time limits on calls [S5]. Staff could lend replacement shoes before the originals came back, and one rep sent flowers to a grieving customer, whose story then spread through her friends [S1]. By 2010, 75% of daily sales came from repeat customers, as Stanford reported, not a checked company figure [S3].
+How he applied it: Zappos offered free shipping and returns for a full year, and phone staff had no time limits on calls [S5]. Staff could lend replacement shoes before the originals came back, and one rep sent flowers to a grieving customer, whose story then spread through her friends [S1]. By 2010, 75% of daily sales came from repeat customers [S3].
 
 #### The phone call is a chance to build a relationship
 
@@ -279,7 +279,7 @@ About four years in, the dot-com crash left Zappos unable to raise money or pay 
 Core values were drafted with company-wide input over about a year, and he wanted them specific enough to be "committable," meaning Zappos would hire or fire on them even for strong performers [S1][S8]. Candidates faced two interview tracks, one for skills and one for culture, and a shuttle driver's report on how a candidate behaved could end the process [S1]. Being humble was a dealbreaker: a talented but egotistical candidate was turned down [S3].
 
 #### Paying new hires to quit
-Zappos offered new hires $2,000 to $3,000 to leave in their first weeks if the job did not suit them [S3]. Only a small share took it: reports give figures from about 1% to 3% [S3][S5]. His reason was that those who turned it down had decided they believed in the company and became more engaged [S3].
+Zappos offered new hires $2,000 to $3,000 to leave in their first weeks if the job did not suit them [S3]. Only about 2% to 3% took it [S3]. His reason was that those who turned it down had decided they believed in the company and became more engaged [S3].
 
 #### Selling to Amazon and keeping Zappos' identity
 Amazon bought Zappos in 2009, a year after sales passed $1 billion, in a deal valued at about $1.2 billion [S3][S7]. Hsieh said he valued that Amazon left Zappos' identity alone [S3]. Zappos then began teaching other businesses how to build their cultures [S3].
@@ -334,7 +334,7 @@ In 2013 Zappos began moving to a system with no job titles and no traditional ma
 ### Short phrases on the record
 
 - "We wanted to come up with committable core values." (Goodreads, 2010) [S1]
-- "we basically ran out of friends" (PBS NewsHour interview, c. 2019; wording checked against the PBS transcript on 2026-10-28) [S2]
+- "we basically ran out of friends" (PBS NewsHour interview, c. 2019) [S2]
 - "We're not trying to maximize efficiency. We're trying to maximize the customer experience" (Stanford's report of his 2010 talk, which paraphrases him, so the exact wording may not be his) [S3]
 - "Table selection is the most important decision you can make." (2010) [S9]
 - "Self-management and self-organization is not for everyone." (staff memo, 2015) [S4]

@@ -29,7 +29,7 @@ you_get:
   - A new email, post or pitch written in that voice, with notes on each choice
   - A ranked list of where the draft drifts, each with a before and after fix
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and the three skill files, in the order they run: Brand voice guide builder, Brand voice rewriter and Draft brand voice checker.
+  - "Download the handoff pack. It's a zip with HANDOFF.md and the three skill files, in the order they run: Brand voice guide builder, Brand voice rewriter and Draft brand voice checker."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Attach or paste your best documents and call notes. Step 1 stops with the guide and its open questions.
   - Answer the open questions with whoever owns the brand, one line each, then paste the updated guide back. If nobody can answer yet, say so, and the unsettled rules stay marked.

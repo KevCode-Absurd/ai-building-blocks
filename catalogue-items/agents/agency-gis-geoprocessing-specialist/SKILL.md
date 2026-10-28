@@ -15,7 +15,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Map data** (yours): the map files, such as GeoJSON or a shapefile, with their coordinate system.
+- **Map data** (yours): the map files, such as GeoJSON, a shapefile, a raster or a point cloud, with their coordinate system.
 - **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
 
 How to start:

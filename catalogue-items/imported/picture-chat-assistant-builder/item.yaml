@@ -31,4 +31,4 @@ credits:
   - title: llava skill
     by: Orchestra Research
     url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/18-multimodal/llava
-    used: Copied under the MIT licence. We gave it a plain name, added notes on missing files and version pinning, and fixed two string literals that were split across lines. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the MIT licence. We gave it a plain name, added notes on missing files and version pinning (with a checked release tag), added a test note to the web chat sketch, and fixed two string literals that were split across lines. We added Before you start and After this sections that link to other AI Blocks steps.

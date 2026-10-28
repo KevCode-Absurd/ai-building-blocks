@@ -57,13 +57,14 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A pause for your pick:** after step 3, ask the person for their two to five best names from the shortlist. If they're not there, pick the five strongest and say so.
 - **A question** (a step needs something only the person knows): if they're there, wait. If not, write it as `MISSING: <what>` and carry on.
 - **A stop:** if the product, price or buyer is missing, stop at step 1 and ask in one short message.
+- **Fewer than five rivals:** before step 1, ask once for the missing rivals. If the person has no more, carry on, label the step 1 map a hypothesis to test, and repeat that label in the hand-back summary.
 - Nothing is bought, registered or published. Domain and trademark checks stay with the person.
 
 ## Steps
 1. **Positioning grid builder.** Use the skill `positioning-grid-builder`. It receives your product, price, buyer and rivals. It saves the rival map: every alternative on two axes, the gaps tested, and the one corner to own with a claim, three proof actions and a 30-day check.
 2. **Positioning statement writer.** Use the skill `positioning-statement-writer`. It receives the rival set and the corner picked in the step 1 file. It saves what each rival owns, your one-line position and a short brief for the name steps.
 3. **Store name generator.** Use the skill `store-name-generator`. It receives the step 2 brief and the rivals' naming patterns. It saves four strategy answers, a shortlist of 10 to 15 names with reasons, and a clearance to-do list. It cannot clear a trademark or a domain.
-4. **Store name tester.** Use the skill `store-name-tester`. It receives the two to five names the person picked from the step 3 shortlist, plus the rivals. It saves a score out of 100 for each name, its name type, its meaning in each market, a five-place preview and a keep, fix or drop call. It is a risk check, not a trademark clearance.
+4. **Store name tester.** Use the skill `store-name-tester`. It receives the two to five names the person picked from the step 3 shortlist, plus the rivals. It saves a score out of 100 for each name, its name type, its meaning in each market, a five-place preview and a keep, fix or drop call. The score is five tests worth 20 points each (spell and search, ease of saying, surprise, sound fit, clear of rivals), each scored 0, 10 or 20, with the sum shown: below 60 drop, 60 to 79 fix, 80 and up keep. It is a risk check, not a trademark clearance.
 5. **Brand name stretch checker.** Use the skill `brand-name-stretch-checker`. It receives the winning name from the step 4 file, the position from step 2, the rivals, and the range you might add. It saves a stretch score with a reason and one call: use the name, rename or skip.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 

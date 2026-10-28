@@ -11,12 +11,12 @@ explain: |-
 
   Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - Your p95 or p99 search time has risen, or you hit a throughput limit.
+  - Qdrant is running short of memory and you need to know whether to tune or add nodes.
 you_give:
-  - The source files, notes or product facts for this job
-  - Your goal, deadline and limits
-  - Relevant earlier work, if available
+  - Your Qdrant version, point count, vector size and collection settings
+  - Query traces with their latency (without them you get likely causes only)
+  - The machine's RAM, CPU and disk, plus your data size and traffic
 you_get:
   - Performance baseline and candidate fixes
   - Capacity plan
@@ -55,6 +55,7 @@ improve:
   - Save corrections alongside the result for the next run.
   - Update the source files and rerun only the work affected by the change.
 terms: []
+next: [copilot-qdrant-search-quality, copilot-qdrant-deployment-options]
 
 not_for:
   - "Search is fast but returns the wrong results: use the Qdrant search relevance investigator."

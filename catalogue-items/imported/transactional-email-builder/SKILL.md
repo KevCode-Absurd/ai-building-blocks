@@ -60,17 +60,18 @@ Build complete transactional email systems: React Email templates, provider inte
 
 1. Set up the project and pick one provider. Install React Email and the provider's package, and keep the API key in an environment variable.
 2. Build the shared layout and button (`emails/components/layout/`).
-3. Write each template you need (welcome and invoice are shown below; write the others in the same shape).
+3. Write each template you need (welcome and invoice are shown below; write the others in the same shape). Suggested props for the other four: verify email takes `name`, `verifyUrl` and `expiresInHours`; password reset takes `name`, `resetUrl` and `expiresInMinutes`; notification takes `name`, `title`, `message`, `actionUrl` and `actionLabel`; weekly digest takes `name`, `periodLabel` and a list of `items` (each with `title`, `summary` and `url`).
 4. Wire `emails/lib/send.ts` to your provider.
 5. Run the preview with `npm run email:dev`, and check each email in light and dark mode.
-6. Add translated text files if you need more than one language.
-7. Run the spam checklist and send a test email to yourself before your first real send.
+6. Before any real send, search the `emails/` folder for square brackets (`[`) and for the sample trial, seat and company details. Replace or remove every one with a true fact about the product.
+7. Add translated text files if you need more than one language.
+8. Run the spam checklist and send a test email to yourself before your first real send.
 
 ---
 
 ## Project Structure
 
-The welcome and invoice templates are given as full code blocks below. Copy them into `templates/welcome.tsx` and `templates/invoice.tsx`. The other four templates (verify email, password reset, notification, weekly digest) are not included as files or code blocks. Write them in the same shape as those two.
+The welcome and invoice templates are given as full code blocks below. Copy them into `emails/templates/welcome.tsx` and `emails/templates/invoice.tsx`. The other four templates (verify email, password reset, notification, weekly digest) are not included as files or code blocks. Write them in the same shape as those two.
 
 ```
 emails/

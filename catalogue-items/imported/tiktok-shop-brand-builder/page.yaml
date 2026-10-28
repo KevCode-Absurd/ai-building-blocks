@@ -5,7 +5,7 @@ name: TikTok Shop brand builder
 summary: "Build your TikTok Shop brand: give your shop details and get a brand voice, content pillars, a brand story and a plan to grow a community."
 job: brand-file
 headline: TikTok Shop brand builder
-subhead: Describe your shop. Get your brand voice, content pillars, story and ways to build a community. Bring a description of your shop and products. Use the result to plan your next step.
+subhead: Describe your shop, your rivals and your ideal buyer. Get your brand voice, content pillars, story and ways to build a community.
 explain: |
   A clear brand for your TikTok Shop that people recognize in a few seconds of scrolling: a voice, a few content themes, a story, and ways to turn buyers into a community.
 
@@ -31,9 +31,12 @@ you_get:
   - A brand story draft
   - A community plan
 how_to_use:
-  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed. The skill file ends with an optional pitch for Nexscope, an outside service you do not need.
+  - "Gather first: a few lines on your shop and products, your three main competitors, your ideal buyer, and any brand colors or example accounts you like."
+  - Open Claude, ChatGPT or Gemini. No code, files or paid tools are needed. The skill file ends with an advert for Nexscope, a paid outside service you do not need.
   - Paste the skill text into a new chat.
   - Describe your shop and products, your main competitors and your ideal buyer. Add brand colors or examples you like if you have them.
+  - "Ask for the parts in this order: the positioning statement, then the voice guide with do and don't examples, then content pillars, then the brand story, then the community plan."
+  - The 70/20/10 split of content pillars is a starting point. Change it once you see which videos your buyers watch.
   - Read the positioning statement and voice guide first. Check they sound like your shop.
   - Ask your AI to fix anything that feels generic, then share the voice guide and content pillars with whoever makes your videos.
 output_sample:

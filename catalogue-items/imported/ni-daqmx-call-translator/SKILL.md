@@ -24,6 +24,8 @@ metadata:
 Translate NI-DAQmx C signatures into correct `calldaqlib` MATLAB calls on
 Data Acquisition Toolbox R2026a+.
 
+> Licence note from AI Blocks: the LICENSE.md file in this folder governs this copy (BSD 2-Clause, for use only with MathWorks products such as MATLAB). The `license:` link in the front matter points to MathWorks' upstream licence page; where the two differ, follow LICENSE.md.
+
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.

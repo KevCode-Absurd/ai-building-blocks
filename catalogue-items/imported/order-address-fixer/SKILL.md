@@ -37,13 +37,15 @@ Corrects a shipping address on an unfulfilled order without navigating the Shopi
 |-----------|------|----------|---------|-------------|
 | store | string | yes | — | Store domain (e.g., mystore.myshopify.com) |
 | format | string | no | human | Output format: `human` or `json` |
-| dry_run | bool | no | false | Preview operations without executing mutations |
+| dry_run | bool | no | true | Preview operations without executing mutations. Set to `false` only after the user confirms the preview |
 | order_id | string | yes | — | GID of the order (e.g., `gid://shopify/Order/12345`) |
 | new_address | object | yes | — | New shipping address: `address1`, `address2` (optional), `city`, `province`, `country`, `zip`, `phone` (optional), `first_name`, `last_name` |
 
 ## Safety
 
 > ⚠️ Step 2 executes `orderUpdate` which immediately changes the shipping address on record. If the order is already with a fulfillment partner, notify them separately — this skill updates the Shopify record only. This skill will abort with an error if `displayFulfillmentStatus` is not `UNFULFILLED`. Address changes cannot be applied to partially or fully fulfilled orders.
+
+> ⚠️ Run Step 2 only after the user has seen the preview (old address, new address, order status) and said yes. Change the address only when the request comes from the customer on the order. If someone else asks, or you cannot tell, stop and ask the user to confirm who they are through their normal support checks first, so nobody can redirect another person's order.
 
 ## Workflow Steps
 
@@ -165,8 +167,8 @@ No CSV output. The skill reports the updated address in the session completion s
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Stock count updater](https://useaiblocks.com/skills/stock-count-updater). It takes the audit report.
-- The [Product field bulk editor](https://useaiblocks.com/skills/product-field-bulk-editor). It takes the audit report.
+- The [Shopify order finder](https://useaiblocks.com/skills/order-lookup-assistant).
+- The [Customer reply drafter](https://useaiblocks.com/skills/customer-reply-drafter). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -11,7 +11,7 @@ explain: |
 
   Three terms it uses. Context isolation means each agent only holds the information its own part needs. The telephone game is when a supervisor re-words what a worker said and loses detail. Sycophancy is when agents just agree with each other instead of checking.
 
-  Unverified figures: the skill file quotes a few numbers from its original author, about what drives results and what multi-agent setups cost. They have no source link, and AI Blocks does not stand behind them. Do not quote them unless you find the source.
+  Removed figures: the original skill quoted cost multipliers and research numbers with no source link. We took them out of this copy and kept the reasoning. Measure token use and results on your own runs.
 when:
   - One agent runs out of room and loses track of earlier work.
   - Your job splits into parts that need different tools.
@@ -35,7 +35,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. No code or paid tool is needed.
   - Describe your job in a few lines. Say what the finished work should look like.
   - List the tools each part needs and how big the inputs are. Add speed and cost limits if you have them.
-  - Ask your AI to plan the system with this skill.
+  - Ask your AI to plan the system with this skill. Tell it to mark any fact you did not give, such as tool limits or input size, as MISSING rather than guess it.
   - Read the answer. Check first whether it says one agent is enough for your job.
   - Pick the pattern, then copy the handoff protocol into your build notes.
   - Next, give the plan and handoff protocol to the developer or coding assistant who will build the system. Ask them to build one agent and one handoff first, and test it before adding more.

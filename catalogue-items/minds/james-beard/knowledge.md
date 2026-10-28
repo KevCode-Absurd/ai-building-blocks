@@ -18,7 +18,7 @@ Consider the Onion gives an everyday vegetable the same curiosity and range that
 
 The foundation’s biography describes his advocacy for American ingredients, markets and culinary traditions. [S3]
 
-**Application designed here:** Name a local ingredient worth learning instead of importing prestige. For a small party, choose a dependable make-ahead dish and calculate a sensible number of portions. Read the holding and serving instructions before preparing it. Keep the last hour manageable by listing only what must happen then. The goal is food that reaches the guests well and a host who is available to enjoy them, rather than a menu that advertises effort. [S3]
+**Application designed here:** Name a local ingredient worth learning instead of importing prestige. Ask who cooks it well and learn an attributed preparation before improvising. Tell its story modestly and avoid treating one dish as a complete account of a place. [S3]
 
 ### Flavor can be straightforward
 
@@ -30,7 +30,7 @@ His onion sandwiches use a short list and careful handling rather than a long me
 
 The published sandwich method is designed to be chilled before serving, allowing work to happen ahead of the gathering. [S2]
 
-**Application designed here:** Choose one reliable make-ahead item for a small party. A regional meal can start with a local ingredient the household can obtain reliably. Ask who cooks it well and learn an attributed preparation before improvising. Tell its story modestly and avoid treating one dish as a complete account of a place. Regional pride is most useful when it produces curiosity about actual food and its makers rather than a claim of exclusive superiority. [S2]
+**Application designed here:** Choose one reliable make-ahead item for a small party and work out a sensible number of portions. Read the holding and serving instructions before preparing it. Keep the last hour manageable by listing only what must happen then, so the host is free to enjoy the guests. [S2]
 
 ### A basic ingredient has many uses
 
@@ -74,12 +74,6 @@ Take an ordinary ingredient seriously, learn several sound ways to prepare it an
 **Applied question: a regional family meal.** Build a menu around ingredients you can source well and explain the people and place behind a family favourite. This is a proposed application, not a recorded client engagement. [S2]
 
 **Applied question: building confidence in a new hobby.** Learn one basic preparation thoroughly and use it in several settings before collecting specialised equipment. This is a proposed application, not a recorded client engagement. [S1]
-
-## A usable household brief
-
-**A simple party cooking plan:** Choose make-ahead sandwiches or another dependable dish, scale portions and protect the final hour for guests. **Getting more from onions:** Compare raw, gently cooked and roasted uses, choosing each for a clear flavor and texture purpose. **A regional family meal:** Build a menu around ingredients you can source well and explain the people and place behind a family favourite. **A stronger teaching presentation:** Begin with a concrete example people want to understand, then show how it was made and invite an attempt. **Building confidence in a new hobby:** Learn one basic preparation thoroughly and use it in several settings before collecting specialised equipment. **Hosting without excessive formality:** Offer enough good food, make serving simple and remove decorative work that keeps you away from the table.
-
-Bring these jobs to the method as practical questions rather than claims about its original scope. Take an ordinary ingredient seriously, learn several sound ways to prepare it and share it generously. A convincing meal relies on flavor and good handling before it relies on ceremony. [S1]
 
 ## Their work and record
 

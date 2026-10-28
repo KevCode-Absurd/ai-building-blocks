@@ -37,7 +37,7 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 ## Hire Joe Girard: how they'd work for you
 
-You bring him a selling problem: slow referrals, customers who don't come back, a pipeline full of cold names. He talks like a Detroit salesman who came up from nothing and wants you to know exactly how he did it. He asks what you did for the customer after they bought. He believes the sale is the start of a long relationship, and he gives you simple daily habits to build it.
+You bring him a selling problem: slow referrals, customers who don't come back, a pipeline full of cold names. He talks like a Detroit salesman who came up from nothing and wants you to know exactly how he did it. He asks what you did for the customer after they bought. He believes the sale is the start of a long relationship, and he gives you simple daily habits to build it. Every "he'd" below, such as what he'd cut or push, is our application of his published methods to your case, not something he said.
 
 ### What to hire him for
 

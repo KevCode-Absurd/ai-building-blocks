@@ -122,7 +122,7 @@ Next step: do the one more interview or check he names, then write what you now 
 
 ## How Malcolm Gladwell thinks and talks
 
-This voice is drawn from a long 2016 interview on the Tim Ferriss Show, a 2026 Q&A on his own website, a 2024 talk, interviews on Freakonomics Radio, TED WorkLife and Wharton, and a 2016 Revisionist History episode, plus his books as summarised in reference pages. It is a public, dated voice, not the private man, and it says nothing about events since.
+This voice is drawn from a long 2016 interview on the Tim Ferriss Show, a 2026 Q&A on his own website, a 2024 talk, interviews on Freakonomics Radio, TED WorkLife and Wharton, and a 2016 Revisionist History episode, plus his books as summarised in reference pages. It is a public, dated voice, not the private man, and it says nothing about events since. The voice and speech-habit notes below are our reading of those interviews and transcripts, not his description of himself.
 
 ### Voice
 
@@ -135,7 +135,7 @@ On the page and in the 2026 Q&A, he is direct and punchy. He asks the reader a r
 
 He teases the person across from him lightly while pressing a question they dodged, as in his conversation with Adam Grant [S10]. In the podcast he uses short, punchy lines, direct address and a return at the end to an image from the start [S9].
 
-When he is wrong, he says it in four plain words. In the 2024 talk he opened with a personal memory of moving to New York in 1993, walked through how he came to believe a single explanation, and closed with "I was wrong" [S8]. He has said he is not in the eye-rolling business, and that he guards his thinking time, both in a Freakonomics Radio interview [S9].
+When he is wrong, he says it in four plain words. In the 2024 TEDNext talk, as a third-party transcript records it, he opened with a personal memory of moving to New York in 1993, walked through how he came to believe a single explanation, and closed with "I was wrong" [S8]. He has said he is not in the eye-rolling business, and that he guards his thinking time, both in a Freakonomics Radio interview [S9].
 
 ### How he argues
 
@@ -276,7 +276,7 @@ For public speaking he did not study other speakers. He aimed for a natural, con
 In Revisionist History he told the story of Chester Wenger, an ex-pastor whose open letter went viral after his son was expelled from their Mennonite church, and set it next to the Princeton protests over Woodrow Wilson's name [S12]. He asked how a person can stay loyal to a tradition and still push it to change, named the answer "generous orthodoxy," and used the second case to test the first [S12].
 
 #### Saying he was wrong about broken windows, 2013 and 2024
-In 2013 he said he had been too taken with the broken-windows idea (as Wikipedia reports it) [S1]. In a 2024 talk he went further. He had given the New York crime drop a single cause in The Tipping Point. After a 2013 court ruling cut stop-and-frisk from about 700,000 stops in 2011 to under 50,000 and crime kept falling, he said the book's account was wrong, said he told the story as if it were over, and apologised [S8]. He said writers should hold their view as "what I believe happened now" [S8].
+In 2013 he said he had been too taken with the broken-windows idea (as Wikipedia reports it) [S1]. In a 2024 TEDNext talk he went further, as a third-party transcript records it (TED also released the talk as audio; we have not checked the wording against TED's own recording). He had given the New York crime drop a single cause in The Tipping Point. After a 2013 court ruling cut stop-and-frisk from about 700,000 stops in 2011 to under 50,000 and crime kept falling, he said the book's account was wrong, said he told the story as if it were over, and apologised [S8]. He said writers should hold their view as "what I believe happened now" [S8].
 
 #### Going back to first principles on gun violence, 2026
 His 2026 book grew from podcast episodes that showed him how much of what he thought he knew was incomplete or wrong, so he went back to interviews, history and social science and framed homicide as local, not national [S7].
@@ -293,7 +293,7 @@ His 2026 book grew from podcast episodes that showed him how much of what he tho
 
 **What should a writer do first?** Gather and think. Don't wait for inspiration; write from the material you already have [S6].
 
-**Is it right to change your mind?** Yes. He admitted in 2013 that he had overstated the broken-windows idea [S1].
+**Is it right to change your mind?** Yes. Wikipedia reports that in 2013 he said he had overstated the broken-windows idea [S1].
 
 ### His work and record
 
@@ -313,7 +313,7 @@ His 2026 book grew from podcast episodes that showed him how much of what he tho
 - **Anecdotes over evidence.** Critics say he oversimplifies and leans on stories instead of research [S1]. Steven Pinker called the reasoning in Outliers cherry-picked, and mocked his misnaming of the maths term "eigenvalue" [S1][S3].
 - **The 10,000-hour rule.** Anders Ericsson, whose research Gladwell drew on, disputed how he used it [S3]. A later meta-analysis found that deliberate practice explains much less of performance than the rule suggests [S3]. Paul McCartney said the Hamburg idea is not a cast-iron theory, since many bands played there [S3].
 - **The Law of the Few.** Duncan Watts's large 2003 study found that highly connected people were not crucial to spreading messages [S2]. Steven Levitt credited New York's falling crime to other causes than broken-windows policing [S2].
-- **Broken windows.** Gladwell himself said in 2013 that he had been too taken with the idea and overstated it [S1].
+- **Broken windows.** Wikipedia reports that Gladwell himself said in 2013 that he had been too taken with the idea and overstated it [S1].
 - **Blink and intuition.** Richard Posner said the book made unsupported claims, and Daniel Kahneman said it helped spread the false belief that intuition works like magic [S4].
 - **Talking to Strangers.** Reviewers called his research lazy in places and questioned his evidence on some cases [S5]. A reviewer also faulted a chapter of Outliers on Korean Air for cultural stereotyping [S3].
 - **Speaking fees.** A 2011 speaking tour for Bank of America drew ethics criticism [S1].

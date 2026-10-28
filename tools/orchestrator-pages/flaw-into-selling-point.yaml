@@ -30,7 +30,7 @@ you_get:
   - A claim check on whether the offer is stated, only you can say it and it is strong enough to pull
 
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
+  - Download the handoff pack from this page. It's a zip with HANDOFF.md (the run order) plus one skill file for each step, market-stage-reader, product-handicap-reframer, how-it-works-copy-writer and usp-claim-checker. No download? Paste the steps below into your AI in order.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give it your product facts and, if you have them, rival claims and what buyers say about the trait.
   - It works step by step and saves each result. Read the fix results before the passage.

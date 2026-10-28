@@ -18,14 +18,14 @@ This workflow draws on ideas in My Life and Work by Henry Ford, such as pricing 
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
+- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 - **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 **Makes it better (optional):**
+- **Brand brain** (its products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Competitors** (yours): the brands buyers compare you with.
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
-- **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -35,7 +35,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your brand brain, your question, a document. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, a spreadsheet, a document. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 
 **Tools that do this best:**
@@ -45,7 +45,7 @@ How to start:
 
 ## What you need
 
-This run starts from your own cost and process data. Have your cost lines per unit and your steps in order ready before step 1. The general "Before you start" list above mentions a brand brain and the brand brain builder. This job does not use either. Ignore the brand brain, document and "Recommended steps before this one" lines in that box. The two things to bring first are a stopwatch time for each step and your supplier prices.
+This run starts from your own cost and process data. Have your cost lines per unit and your steps in order ready before step 1. You do not need a brand brain: your own cost facts are enough. In the list above, "your question" is the price you want to sell at, the spreadsheet is your product facts and cost lines (a pasted list works too), and the document is how the work runs now. The two things to bring first are a stopwatch time for each step and your supplier prices.
 
 - **The price you want to sell at** (required): a number or a group of customers and what they can pay now. Say what is fixed, such as a supplier contract or a space.
 - **Your product facts** (required): what it is, today's price and what goes into it, with your cost lines per unit if you have them.
@@ -61,19 +61,20 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **Where you may be asked:** with no target price or buyer, step 1 writes `MISSING: target price or buyer` and asks. If a cost, time or amount is missing, it is marked `MISSING:` and the run carries on. Costs, times and savings are never estimated and shown as facts.
 - **What is never done without a clear yes:** nothing is cut, moved, sold or bought. Every plan is a suggestion with a small test first. Anything hazardous, regulated or food-safe is flagged so you check the rules before you sell or reuse it.
 - **When it stops:** with no product and no process at all, stop and go to the hand-back summary.
+- **Thin cost lines:** if step 1 finds too few cost lines to mark, it does not stop. It marks the plan provisional, lists each missing cost as `MISSING:`, and steps 2 and 3 carry on with the steps and waste you gave.
 
 ## Steps
 1. **Price-first cost planner.** Use the skill `price-first-cost-squeeze-planner`. Give it your target price or customers, your product facts, your cost lines and your rivals' prices. A plan that works backward from the price to cut cost. It saves `outputs/step-01-price-first-cost-squeeze-planner.md`: a table of cost lines marked needed, partly needed or not needed with the action and the saving, where rivals are thin, volume and margin worked only from the figures you gave (`MISSING:` where you gave none), and a single-job test.
 2. **Work flow layout planner.** Use the skill `work-flow-layout-planner`. Give it the plan from `outputs/step-01-price-first-cost-squeeze-planner.md` (the steps that are left), plus how the work runs now, the space and the tools. A layout where the work moves to the person, with fewer steps and less walking. It saves `outputs/step-02-work-flow-layout-planner.md`: the steps in order with a time each (the time you gave, or `MISSING: time`), the layout in words, and the move count before and after.
 3. **Waste and by-product finder.** Use the skill `waste-and-by-product-finder`. Give it the plan from `outputs/step-02-work-flow-layout-planner.md`, your list of what you throw away, leave idle or redo, and your labour rate. Each item priced as a possible product, reuse or saving. It saves `outputs/step-03-waste-and-by-product-finder.md`: each item with its monthly amount, who might buy it, its value and the effort to reclaim it, ranked by money recovered against effort, with the first three actions.
-4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, every `MISSING:` line from all steps in one list, and `CHECKS MISSED`: the checks that failed or could not run, or "none".
 
 ## What you hand back
 3 step files and the summary. The last file holds the waste list, ranked, with the first three actions. The HAND-BACK SUMMARY is a plain list of the files, the gaps and the checks that could not run. Each file has this shape:
 - **Step 1, price-first cost plan:** who can pay and the target price, each cost line marked needed or not with remove, simplify or keep and the saving, where rivals are thin and the plan in order.
 - **Step 2, work layout:** the small steps in order with a time each, where each tool and part sits, and moves counted before and after.
 - **Step 3, waste and by-products:** each scrap or idle item with its monthly amount, who might buy it, its value and the effort to reclaim it, ranked.
-- **HAND-BACK SUMMARY:** each step's file, then every `MISSING:` line in one list.
+- **HAND-BACK SUMMARY:** each step's file, every `MISSING:` line in one list, then CHECKS MISSED.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

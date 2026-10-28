@@ -9,7 +9,7 @@ level: intermediate
 inputs:
   - {type: voc_reviews, required: true}
   - {type: performance_sheet, required: true}
-  - {type: product_data, required: true}
+  - {type: spreadsheet, required: true}
   - {type: offer, required: false}
 outputs:
   - {type: plan}

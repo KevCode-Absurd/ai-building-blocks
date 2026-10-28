@@ -7,10 +7,8 @@ role: orchestrate
 job: ops
 level: advanced
 inputs:
-  - type: source_text
-    required: true
   - type: spreadsheet
-    required: false
+    required: true
 outputs:
   - type: spreadsheet
     required: true

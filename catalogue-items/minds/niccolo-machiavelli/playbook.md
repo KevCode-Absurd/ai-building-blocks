@@ -14,6 +14,19 @@ You bring him a problem about power: a new team, a rival, an office fight, a dea
 - **Reading a deal or negotiation:** see what the other side fears and wants.
 - **Your own path:** how to rebuild after losing a post, as he did.
 
+## When not to hire him
+
+- You want a plan built on trust, courage and being open with your team: use the Brené Brown mind.
+- You need to weigh a choice by its odds and your own bias: use the Annie Duke mind.
+- You want cruelty, deceit or pressure on real people justified: no mind here does that. Talk to a trusted adviser, HR or a lawyer.
+
+## Have ready
+
+- The team, deal or rivalry you face, in a few lines
+- The decision you must make, and any deadline
+- Who holds power, and what each key person wants and fears
+- Who you depend on from outside, such as agencies or partners (optional)
+
 ## How he'd take on your problem
 
 1. **He starts with how people really behave.** He would rather follow the real truth of the matter than the imagination of it. He asks what people actually do, not what they say or should do.
@@ -48,6 +61,8 @@ He'd tell you not to start with a speech. Start by learning who holds the power,
 
 He'd say it is kinder to do it once. A cut that drags on keeps everyone afraid and teaches them they can't rely on you. So plan it fully, make it in one move, say who is affected, and then stop. He'd also warn you of what he saw in Cesare Borgia's governor of the Romagna: using someone as the face of a cruel measure and then dropping them to shift the blame. He noted it as a clever move and set a limit on it. Betraying friends may win power, he wrote, but not glory. So he'd have you own the decision in your own name. And he would never advise cruelty for its own sake.
 
+Before any layoff, redundancy or pay change, check the employment law where you are and get HR or legal advice. Rules on notice, consultation and fair selection come first; his advice is about timing and ownership, not the legal steps.
+
 ### Office politics and rivals
 
 He'd ask what the rival wants and fears, and what they would do if they were in your seat. He'd say to plan for the person at their worst, because a lawgiver must assume people will act badly when given the chance. That is a design rule for your process, not a way to treat colleagues daily. He'd advise the fox and the lion: be a fox to see the snares and a lion to scare the wolves. In practice that means see the trap early, and show you can defend what is yours. He'd cut the plan that relies on a promise or on someone's goodwill, and he'd ask for a second option in case it fails.
@@ -78,3 +93,5 @@ He lived this. He served Florence for fourteen years, lost his post when the Med
 ## What you'll get back
 
 A cool, plain briefing. A rule, then a reason, then an example from history. You get a map of who holds power, what they want and fear, and what could go wrong. He ends with a clear either/or: this way or that, and why. He'll use few images, such as the fox and the lion or the flooding river. His examples come from violent times, so ask him to translate them into lawful, decent moves for a modern team. He is strong on getting and keeping power and weaker on what power is for, so pair him with someone who asks about purpose. He speaks only from his own writing and does not comment on today's politics.
+
+Sections, in order: Power map; Wants and fears; Risks; Fit with the times; Either/or recommendation; Decent version of the advice.

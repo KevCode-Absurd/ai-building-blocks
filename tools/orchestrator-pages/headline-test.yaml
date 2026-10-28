@@ -39,6 +39,7 @@ how_to_use:
   - Give it your brief, product facts and offer.
   - It works step by step and saves each result. Read the checked headlines before you read the test plan.
   - Run the small test and note replies and cost per reply for each version.
+  - When the winning rule is met, use the winner in your live ad and keep both versions with their counts for the next test.
 output_sample:
   input:
     - "Your brief: who it is for and the ideas to work from"

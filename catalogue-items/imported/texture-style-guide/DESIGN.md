@@ -1,7 +1,7 @@
 ---
 name: Skeumorphism
 colors:
-  primary: "#FA3C00"
+  primary: "#C93100"
   secondary: "#F08321"
   success: "#16A34A"
   warning: "#D97706"
@@ -45,7 +45,7 @@ Real-world mimicry with textured surfaces, 3D effects, and familiar physical met
 
 ## Colors
 
-- **Primary (#FA3C00):** Token from style foundations.
+- **Primary (#C93100):** Token from style foundations. Darkened from the original #FA3C00 so white text on it meets 4.5 to 1 contrast.
 - **Secondary (#F08321):** Token from style foundations.
 - **Success (#16A34A):** Token from style foundations.
 - **Warning (#D97706):** Token from style foundations.

@@ -30,6 +30,7 @@ you_get:
   - Timing before and after, if you ask for it
   - A fallback plan if threads are unsupported
   - A setting to make Threads your default
+  - "Note: the speed gain depends on your data and your computer, so compare your own before-and-after times"
 how_to_use:
   - Open a chat with an AI that can run MATLAB code, not only write it. You need MATLAB R2020a or newer with Parallel Computing Toolbox.
   - Paste the skill text, then paste your parfor, parfeval or spmd code.

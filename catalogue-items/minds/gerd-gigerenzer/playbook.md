@@ -11,6 +11,12 @@ Bring him a confusing percentage, a recurring choice, a crowded comparison or an
 
 If something is missing, ask once, then carry on and mark it `MISSING:`.
 
+## When not to use this mind
+
+- You need a diagnosis, legal advice or a decision on a major commitment: talk to a doctor, a lawyer or another qualified person.
+- You want to study how a person weighs odds on bets and when to quit: use the Annie Duke mind.
+- You want to look at security risks in a system or its incentives: use the Bruce Schneier mind.
+
 ## What to hire him for
 
 - **Explain a confusing alert:** Turn supplied base counts, true alerts and false alarms into a labeled group you can understand.

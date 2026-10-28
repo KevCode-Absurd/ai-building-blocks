@@ -32,8 +32,8 @@ you_get:
   - "A status report in this shape: TestRail cases, Playwright tests with TestRail IDs, unlinked TestRail cases, and Playwright tests without IDs, each as a count"
   - "An operation summary after each job: counts, any errors or unmatched cases, and a link to the TestRail run"
 how_to_use:
-  - Check you have a TestRail account and an API key. Set your TestRail address, user email and API key as settings your AI can read.
-  - Set up the TestRail connector once. A developer can do this. Take the integrations/testrail-mcp folder from the source repo, run npm install inside it, and add it to your AI tool's connector (MCP) settings. Then ask your AI to list its tools and check the testrail ones appear. Setting the keys alone is not enough. As a last setup check, ask it to call testrail_get_projects. If your projects come back, the connection works.
+  - Check you have a TestRail account and an API key. Set them as three environment variables on your computer, TESTRAIL_URL, TESTRAIL_USER and TESTRAIL_API_KEY. Do not paste the key into the chat.
+  - Set up the TestRail connector once. A developer can do this. The connector is not included in this item. Take the engineering-team/playwright-pro/integrations/testrail-mcp folder from the alirezarezvani/claude-skills repo, run npm install inside it, and add it to your AI tool's connector (MCP) settings. Then ask your AI to list its tools and check the testrail ones appear. Setting the keys alone is not enough. As a last setup check, ask it to call testrail_get_projects. If your projects come back, the connection works.
   - Open your AI in your Playwright project. It must be able to run code and read your files.
   - Ask it to import your project and suite ID. Check the new tests and their case IDs.
   - To send results, give it a run ID. It runs your tests with npx playwright test, which runs your project's own test code on your computer and writes a test-results.json file. Then it pushes each result to that run.

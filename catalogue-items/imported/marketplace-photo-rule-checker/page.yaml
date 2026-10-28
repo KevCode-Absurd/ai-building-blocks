@@ -35,16 +35,16 @@ how_to_use:
   - Give it your photo or folder and name the platform you sell on.
   - Read the pass or reject list first. Fix content problems such as text or watermarks yourself.
   - Ask for the fix option to get new copies in a separate folder. Your originals stay as they are.
-  - Check the store's current seller image guide before you upload, since platform rules change.
-  - Send each failing photo back to your image tool with the problem listed in the report (for example "product must fill 85 percent of the frame", the author's Amazon limit, which you should confirm), then run the check again on the new file.
-  - The size and fill limits in the rule table were copied on 20 Oct 2026 and not re-checked since. Confirm each one in the store's own seller image guide. Other skills named in the file (detect-task, flat-lay, batch-image, remove-watermark, item-repair and run_loop) are not included, so do not look for them.
+  - Open each fixed copy before you upload. The fix whitens the background and reframes the product, so check it still shows your real product, with true colours and nothing cut off.
+  - Send each failing photo back to your image tool with the problem listed in the report, then run the check again on the new file. Take the exact limit for that problem from the store's own seller image guide.
+  - The size and fill limits in the rule table were copied on 20 Oct 2026 and not re-checked since, so treat them as unverified. Confirm each one in the store's own seller image guide before you upload. Other skills named in the file (detect-task, flat-lay, batch-image, remove-watermark, item-repair and run_loop) are not included, so skip those steps.
 output_sample:
   input:
     - One product photo or a folder of photos
     - The platform you sell on
     - Your own rule file (optional)
   prerequisites:
-    - An AI that can run Python code on your computer
+    - Python 3 on your computer, and an AI that can run it (or a terminal to run scripts/check_listing.py yourself)
     - The Pillow image library for Python
   output:
     - name: Pass or reject report

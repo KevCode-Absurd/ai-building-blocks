@@ -93,8 +93,9 @@ If they pick one and that skill is added here, carry straight on with what you j
 git clone https://github.com/haotian-liu/LLaVA
 cd LLaVA
 # Pin the version so a repeat install matches this one.
-# Pick a release tag or commit from the repository page, check it out, and write it down.
-git checkout [TAG OR COMMIT]
+# v1.2.2.post1 was the newest release tag on 28 Oct 2026. Use a newer tag from the
+# repository page if there is one, and write down which tag you used.
+git checkout v1.2.2.post1
 
 # Install
 pip install -e .
@@ -352,7 +353,7 @@ No working LangChain code is included. To use LLaVA there, wrap the `ask(model, 
 
 ### Gradio App
 
-Note: run the Basic usage code and the helper definitions first, so `model` exists. This snippet is a small sketch of a chat page, not a finished app. It keeps one conversation in memory, so it suits one user at a time. It starts a new conversation when the chat is cleared.
+Note: run the Basic usage code and the helper definitions first, so `model` exists. This snippet is a small sketch of a chat page, not a finished app. It keeps one conversation in memory, so it suits one user at a time. It starts a new conversation when the chat is cleared. The first-question branch depends on `history` being empty, so test one question and one follow-up before you rely on it.
 
 ```python
 import gradio as gr

@@ -16,6 +16,8 @@ license_source: https://github.com/alapha888/agent-skills-en/blob/main/LICENSE
 
 # Meeting Notes
 
+> Licence note from AI Blocks: the `license: MIT` line above is the original author's header (alapha888/agent-skills-en). This copy came through sickn33's collection and is shared under CC BY 4.0, as the LICENSE-CONTENT file in this folder says. Keep the credit to alapha888 and sickn33 if you reuse it.
+
 Turn messy meeting notes into minutes that let someone who missed the meeting catch up in 3 minutes — and let attendees know exactly what they owe.
 
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->

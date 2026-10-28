@@ -46,6 +46,7 @@ output_sample:
     - An AI chat such as Claude, ChatGPT or Gemini
     - Your own YouTube API key, only if you want live channel data (optional)
     - A DataForSEO account, only for live keyword data (optional)
+    - A NanoBanana image server with your own Gemini API key, only if you want finished thumbnails (optional, may be charged per image)
   output:
     - name: Channel type and template
       contains: Your channel sorted into one of nine types, with the matching template loaded.

@@ -16,7 +16,7 @@ Read and write 3-D point cloud data in MATLAB using Lidar Toolbox file I/O funct
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Map data** (yours): the map files, such as GeoJSON or a shapefile, with their coordinate system.
+- **Map data** (yours): the map files, such as GeoJSON, a shapefile, a raster or a point cloud, with their coordinate system.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -325,8 +325,6 @@ ptClouds = readMessages(reader, Time=[tStart tEnd]);
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Point cloud aligner](https://useaiblocks.com/skills/point-cloud-aligner). It takes the map data.
-- The [RoadRunner map scene importer](https://useaiblocks.com/skills/road-scene-importer). It takes the map data.
-- The [Pull request writer](https://useaiblocks.com/skills/pull-request-writer). It takes the code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -32,7 +32,7 @@ you_get:
   - A caption plan in your font, an exported file and a subtitle file
   - A launch check with a verdict, a fix for each mistake and a score out of 100
 how_to_use:
-  - Download the handoff pack from this page. It is a zip with HANDOFF.md and the three skill files this workflow uses. Unzip it and keep them together in one folder.
+  - Download the handoff pack from this page. It is a zip with HANDOFF.md (the run order below) and the three skill files this workflow uses, video-ad-edit-planner, branded-video-captions and pre-launch-ad-checker. Unzip it and keep them together in one folder.
   - Give the folder to Claude, in Claude Code or as files in a Claude Project, and say "Follow HANDOFF.md".
   - List your clips and paste your script. Step 1 needs only these.
   - When it stops after the cut list, edit the video in your own editor and export it.
@@ -101,6 +101,7 @@ test:
   - Watch the captioned ad on a phone with the sound off and read every caption.
   - Check the first and last frames against the cut list.
   - Fix one flagged mistake and run step 3 again. The score should rise.
+next: [ad-results-report-writer, creative-test-reader]
 improve:
   - Save your caption style in your brand file so every ad matches.
   - Keep a list of your most common stop-ship mistakes and watch for them while editing.

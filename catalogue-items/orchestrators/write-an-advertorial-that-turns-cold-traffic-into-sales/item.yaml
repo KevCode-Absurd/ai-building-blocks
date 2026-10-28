@@ -7,7 +7,7 @@ role: orchestrate
 job: page
 level: intermediate
 inputs:
-  - {type: product_data, required: true}
+  - {type: question, required: true}
   - {type: voc_reviews, required: true}
   - {type: competitor_set, required: false}
   - {type: brand_brain, required: false}

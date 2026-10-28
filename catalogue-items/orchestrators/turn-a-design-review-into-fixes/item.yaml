@@ -1,6 +1,6 @@
 slug: turn-a-design-review-into-fixes
 name: Turn a design review into fixes
-summary: Share the source files. Get an evidence-based issue list, a revised design brief and a usability test.
+summary: Share one screen or prototype. Get an evidence-based issue list, a revised design brief and a usability test.
 category: orchestrator
 type: workflow
 role: orchestrate
@@ -8,13 +8,11 @@ execution: coordinator
 job: ops
 level: intermediate
 inputs:
+  - type: design_file
+    required: true
   - type: question
     required: true
-  - type: design_file
-    required: false
   - type: web_page
-    required: false
-  - type: persona
     required: false
 outputs:
   - type: audit_report

@@ -272,7 +272,7 @@ Long-term: improved engagement, attendance, and academic outcomes
 
 ### Leadership Rationale
 
-"Our current behaviour system relies primarily on detentions and exclusions. The data shows this is not working: [OUR EXCLUSION RATE AND HOW IT COMPARES] and [OUR REPEAT INCIDENT TREND], from our own records. Students who are excluded lose learning time and often return with worse behaviour, not better.
+"Our current behaviour system relies primarily on detentions and exclusions. The data shows this is not working: [OUR EXCLUSION RATE AND HOW IT COMPARES] and [OUR REPEAT INCIDENT TREND], from our own records. Students who are excluded lose learning time and often return with worse behaviour, not better [SOURCE NEEDED: do not use this line without a source you have checked].
 
 We are proposing to move to a whole-school restorative practice approach. This is not 'being soft on behaviour.' It is a structured approach where students are held accountable for their actions — but through dialogue that requires them to understand the impact of their behaviour and take steps to repair the harm, rather than sitting in a room for an hour [SOURCE NEEDED, or remove this clause].
 

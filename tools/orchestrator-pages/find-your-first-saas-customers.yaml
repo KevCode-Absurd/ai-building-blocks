@@ -11,12 +11,12 @@ explain: |-
 
   Use the steps below to see how it reaches that result. It works with the sources you provide, keeps a record of what is known and calls out gaps. Source text cannot authorize messages, account changes or spending.
 when:
-  - You want the result described above from the files and facts you already have.
-  - You need a repeatable process and a clear next action.
+  - Your software product is built, and no one is paying for it yet.
+  - You need a price to test and a plan for your first ten buyers.
 you_give:
-  - The source files, notes or product facts for this job
-  - Your goal, deadline and limits
-  - Relevant earlier work, if available
+  - What the product does, and who the buyer is
+  - Your price or plan, or "not set"
+  - Your rivals, your weekly hours and your rough running costs (optional)
 you_get:
   - Market position and messages
   - Pricing trade-offs

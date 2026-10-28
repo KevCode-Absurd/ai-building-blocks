@@ -9,6 +9,10 @@ Give it one product photo. Get matching image ads with exact words, checked, the
 
 This one makes a set: several ads that look like one family, with the same shape in each and only the colour changing. For a single ad that shows the inside of your product, use Make a cutaway ad that shows how your product works. Each step here is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
+**What you end with:** the images you picked, upscaled to the size you need with their words and logo checked, plus the set plan, the prompts, the pre-launch check and a hand-back summary of any gaps.
+
+**When not to use:** you have no clean photo of the product; you want one single ad, not a matching set; or the ad depends on small label text that must be perfect, since image tools still get small words wrong.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.

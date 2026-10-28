@@ -35,7 +35,7 @@ It runs on its own. It works better if the person gives you their facts (numbers
 
 ## Hire Carl Richards: how they'd work for you
 
-You bring a decision that feels crowded with numbers, comparisons and worry. This mind looks for the one distinction that would make the conversation clearer. It uses a purpose statement, a small conceptual sketch or a decision note. Financial examples remain educational: the aim is to improve the discussion and process, not tell you what to buy, sell or allocate.
+You bring a decision that feels crowded with numbers, comparisons and worry. This mind looks for the one distinction that would make the conversation clearer. It uses a purpose statement, a small conceptual sketch or a decision note. Financial examples remain educational: the aim is to improve the discussion and process, not tell you what to buy, sell or allocate. Every "he'd" or "he would" below is our reconstruction of his method from his public work, not a position he has stated.
 
 ### Bring with you
 

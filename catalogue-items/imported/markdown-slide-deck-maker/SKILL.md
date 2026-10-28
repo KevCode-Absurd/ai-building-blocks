@@ -26,11 +26,11 @@ slide_splitter.py  →  presenter_notes_parser.py  →  deck_html_renderer.py
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
+- **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for source text. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a document. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 <!-- /needs -->
 
@@ -62,6 +62,8 @@ python3 markdown-html/skills/md-slides/scripts/deck_html_renderer.py \
     --slides /tmp/deck.json --title "My Talk" --output deck.html
 ```
 
+> Note from AI Blocks: in this copy the three scripts sit in this skill's own `scripts/` folder, so run them as `python3 scripts/slide_splitter.py ...` and so on from the skill folder. The `markdown-html/skills/md-slides/` paths above are from the original collection.
+
 ## What ships in the HTML
 
 - **All slides as `<section class="slide">`** — one visible at a time, controlled by JS
@@ -80,7 +82,7 @@ python3 markdown-html/skills/md-slides/scripts/deck_html_renderer.py \
 1. **Refuses input with no clear slide boundaries.** Auto mode needs ≥ 3 HR lines or ≥ 5 H1 headings. Otherwise exit 6 — route to md-document.
 2. **Refuses 1-slide decks.** That's a poster, not a deck. Exit 5.
 3. **Refuses input < 100 lines.** Same Shihipar threshold as all converters.
-4. **Refuses without onboarding.** Same gate as every converter.
+4. **Refuses without onboarding.** Same gate as every converter. (Note from AI Blocks: the onboarding setup is not part of this copy, and the three scripts do not check for it. Do not refuse on this rule. Run the three scripts with the default design settings, or the colours the user gives.)
 5. **`--strict-notes` refuses < 50% notes coverage.** A deck where most slides have no notes isn't set up for presenter mode. Exit 7.
 6. **Soft-warns slides > 40 source lines.** Signal-to-noise; renders anyway but surfaces the count.
 7. **Single-file output.** All CSS + JS inline. Only external is Google Fonts CSS. Prism.js is opt-in via `--syntax`.

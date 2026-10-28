@@ -5,7 +5,7 @@ name: Video route picker
 summary: "Pick the right way to make your video before you spend anything: AI generation, built from code, or edited footage. Get a locked route and a plan."
 job: make-video-ads
 headline: Video route picker
-subhead: "Describe your video. Get the right way to make it chosen first: generate, compose, or edit your footage. Bring a description of the video you want. Use the result to plan your next step."
+subhead: "Describe your video. Get the right way to make it chosen first: generate, compose, or edit your footage. In a chat you get a written plan, not a finished video."
 explain: |
   Choose how a video will be made before you spend anything: generate it with AI, build it from code and assets, or edit footage you already have. 
   You describe the video. The skill picks one main route, or a combined plan when a brief mixes types. Generation suits new scenes. Composition suits exact text, charts and repeatable layouts. Editing suits cutting, trimming and finishing your own clips. Without production tools, it still returns a full written package: script, timed storyboard, exact on-screen text, audio direction and export target.
@@ -32,7 +32,7 @@ you_get:
   - Notes on assets, rights and export
 how_to_use:
   - "Write down four things: what the video is about, its length and shape, footage you already have, and any tools or budget."
-  - Open Claude, ChatGPT or Gemini. Paste in the full SKILL.md text, or add the skill to your AI. No code, files or paid tools are needed. If the skill mentions stage-plan or stage-assemble, those need a separate video tool, so in a chat you get the written plan only.
+  - Open Claude, ChatGPT or Gemini. Paste in the full SKILL.md text, or add the skill to your AI. No code, files or paid tools are needed for the written plan. The AUTO route and the stage-plan and stage-assemble steps need a separate video tool, and its AI video segments usually cost money. In a chat you get the written plan only.
   - "Add this line, then your four details: Pick the route for this video and lock it. Give me the full plan."
   - If your AI asks for missing details, answer them before the route is locked. A route picked on guesses is the usual cause of a wrong plan.
   - Check the reply. It should name one route (or a mixed plan), give reasons, and list the script, storyboard, on-screen text and export target.

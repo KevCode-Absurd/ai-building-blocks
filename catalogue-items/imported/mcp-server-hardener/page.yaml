@@ -13,7 +13,7 @@ explain: |
 
   Where a fix needs code or config, it points to a sample in the skill, such as an Nginx proxy with TLS, a client certificate for mutual TLS, or a per-role tool allowlist. You adapt the samples. The skill does not test your live server.
 
-  Licence: we share this copy under CC BY 4.0, as the LICENSE-CONTENT file says. The author's own file header (BagelHole) says MIT. Credit goes to BagelHole and sickn33.
+  Licence: the original skill and its sample code are by BagelHole, under the MIT licence. This copy came through sickn33's collection, which shares it under CC BY 4.0 (the LICENSE-CONTENT file in this item). When you reuse the sample code, keep the MIT credit to BagelHole. When you reuse the text, credit BagelHole and sickn33.
 when:
   - You run an MCP server and plan to open it beyond your own laptop.
   - Your agents connect to the server over plain HTTP, or you are not sure.

@@ -9,7 +9,7 @@ role: check
 job: ops
 level: advanced
 inputs:
-  - type: source_text
+  - type: dataset
     required: true
   - type: spreadsheet
     required: false

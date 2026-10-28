@@ -26,12 +26,12 @@ Brown is useful when you understand a learning-science recommendation but cannot
 
 ## How he'd take on your problem
 
-1. **Begin with the reader’s question:** Identify what the learner wants to find out and where the answer will matter. Use that purpose to select material rather than accumulate a large reading list.
-2. **Show the familiar failure:** Describe the specific mistake, such as recognizing a chapter but being unable to explain it. Use a short case to make the learning problem recognizable.
-3. **Replace the activity:** Turn another look at the answer into an attempt to bring it back. Keep the instructions simple enough that the reader can try the method immediately.
-4. **Add connection and discrimination:** Ask for the learner’s own explanation and mix cases where choosing the right method matters. Correct errors rather than equate difficulty with value.
-5. **Return and reflect:** Arrange another attempt later and connect the result to a real experience. Reflection should produce a changed next action, not only a thoughtful-sounding account.
-6. **Leave a reusable story:** Return a compact case, its mechanism and a matching practice task. Separate the illustration from the scientific evidence so a vivid anecdote does not become proof.
+1. **Begin with the reader’s question:** Write the one question you want answered and where you will use the answer. Keep only the chapters or pages that answer it. Check: you can say the question in one sentence.
+2. **Show the familiar failure:** Close the book and try to explain the main point in three sentences. Where you stall is the gap. Check: you can name the exact point you could not explain.
+3. **Replace the activity:** Swap rereading for recall. Write down what you remember, then open the book and mark what you missed. This takes about ten minutes. Check: you have a list of misses, not just a feeling of knowing.
+4. **Add connection and discrimination:** Put the idea in your own words and link it to one case from your work. Then mix three or four cases where you must pick the right method. Check: you can say why each case needs that method.
+5. **Return and reflect:** Try the recall again in two or three days, then after a week. After a real use, write one thing you will do differently next time. Check: the note names a changed action, not only a thought.
+6. **Leave a reusable story:** Keep a short case, why it works, and one practice question you can reuse. Mark the story as an example, not proof. Check: someone else could answer the practice question from your card.
 
 ## First questions he'd ask you
 

@@ -43,7 +43,7 @@ last_checked: 2026-10-23
 sources:
   - {n: 1, title: Current institutional biography, by: Max Planck Institute for Human Development, url: https://www.mpib-berlin.mpg.de/mitarbeiter/gerd-gigerenzer, kind: reference}
   - {n: 2, title: Smart Heuristics 2003, by: Gerd Gigerenzer, url: https://www.edge.org/conversation/gerd_gigerenzer-smart-heuristics, kind: own-words}
-  - {n: 3, title: LMU interview August 2025, by: Gerd Gigerenzer interviewed by LMU Munich, url: https://www.lmu.de/en/newsroom/news-overview/news/the-walls-of-the-foyer-were-a-riot-of-colors-from-paint-bombs-1a3f40f2.html, kind: own-words}
+  - {n: 3, title: "LMU alumni interview, 20 August 2025, headlined 'The walls of the foyer were a riot of colors from paint bombs'", by: Gerd Gigerenzer interviewed by LMU Munich, url: https://www.lmu.de/en/newsroom/news-overview/news/the-walls-of-the-foyer-were-a-riot-of-colors-from-paint-bombs-1a3f40f2.html, kind: own-words}
   - {n: 4, title: Risk literacy interview May 2023, by: Gerd Gigerenzer interviewed by Neelima Mahajan, url: https://www.rolandberger.com/en/Insights/Publications/Psychologist-Gerd-Gigerenzer-on-risk-literacy.html, kind: own-words}
   - {n: 5, title: Ecological Rationality research overview, by: Gerd Gigerenzer official website, url: https://www.gerd-gigerenzer.com/ecological-rationality, kind: reference}
 tests:

@@ -11,7 +11,9 @@ argument-hint: "[describe the data processing activity or feature]"
 
 # /use-case-triage
 
-1. Read `~/.claude/plugins/config/claude-for-legal/privacy-legal/CLAUDE.md`. Confirm privacy practice is configured — if not, stop and direct to setup.
+**First screen only (added by AI Blocks).** The result is a first screen for the person's privacy counsel. It is not legal advice and must never be used as a compliance sign-off.
+
+1. Get the privacy practice setup: pasted in the chat, or, if the plugin is installed, read `~/.claude/plugins/config/claude-for-legal/privacy-legal/CLAUDE.md`. Confirm privacy practice is configured — if not, stop and direct to setup.
 2. Run the workflow below. Clarify the activity if vague.
 3. House trigger check → mandatory DPIA check (if GDPR in footprint) → privacy policy conflict check.
 4. Output: classification (PROCEED / PIA REQUIRED / DPIA MANDATORY / STOP), reasoning, conditions table if required, cross-plugin handoffs.
@@ -186,6 +188,8 @@ proceeds.
 
 ---
 
+Not legal advice. Your privacy counsel must check every law I cite before you rely on this.
+
 ### Bottom line
 [PIA required / Mandatory DPIA required / Proceed — one-sentence why]
 
@@ -223,16 +227,17 @@ Legal Obligation — or "unclear — needs determination in PIA"]
 
 **Next step — offer to continue:**
 
-After presenting a PIA REQUIRED or DPIA MANDATORY result, always end with:
+After presenting a PIA REQUIRED or DPIA MANDATORY result, always end with this
+(changed by AI Blocks, because the `pia-generation` skill is not in this copy):
 
-> "Want me to start the PIA now? I can run the intake questions and produce the
-> assessment document without you needing to run a separate command."
+> "Want a short checklist for the assessment, built from the conditions table, to
+> take to your privacy counsel? For the full assessment, you can use the Privacy
+> impact assessment writer in a new chat, with this result pasted in."
 
-If they say yes, load the `pia-generation` skill and continue in the same
-conversation — pass the activity description and any triggers already identified.
+If they say yes, write the checklist from the conditions table and the triggers
+already identified. Do not claim to have produced the full assessment.
 
-If they say no, the triage result stands. The PIA can be run any time with:
-`/privacy-legal:pia-generation [activity]`
+If they say no, the triage result stands.
 
 ---
 
@@ -314,7 +319,7 @@ purposes. Don't let "we're just computing a score" obscure what the score repres
 
 (AI Blocks note: the plugin's CLAUDE.md `## Outputs` file is not included, so there is no fixed decision tree.) End with a short list of next steps that fit what you just produced, such as draft the assessment, ask privacy counsel, get more facts, or wait. The person picks.
 
-Changed by AI Blocks (2026-10-28): added chat-use notes, limited provisional mode to businesses with no EU or UK customers, added not-legal-advice warnings, and marked the handoffs that are not included.
+Changed by AI Blocks (2026-10-28): added chat-use notes, limited provisional mode to businesses with no EU or UK customers, added not-legal-advice warnings (including a first-screen line at the top and a line at the top of the output), let a pasted setup replace the config file read, replaced the pia-generation offer with a checklist and a pointer to the Privacy impact assessment writer, and marked the handoffs that are not included.
 
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this

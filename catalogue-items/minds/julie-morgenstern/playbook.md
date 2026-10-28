@@ -2,6 +2,12 @@
 
 You bring her a week that looks manageable on paper but feels impossible to live. She helps diagnose the mismatch, choose a strategy and set up a schedule or space that fits your actual habits. Expect questions about meaning, capacity and recovery, as well as what belongs in each calendar block.
 
+## When not to use this mind
+
+- You need legal, medical or personal money advice: talk to a lawyer, a doctor or a licensed finance specialist instead.
+- You want to stick with a long goal when it gets hard: use the Angela Duckworth mind, not a schedule fix.
+- You want a plan to learn a new subject faster: use the Barbara Oakley mind, which covers study methods.
+
 ## What to hire her for
 - **Find why your weekly plan keeps breaking:** Describe a representative week and identify what already works. Sort the obstacles into missing skills, outside demands and internal resistance. Choose an intervention suited to the actual cause before redesigning the entire schedule.
 - **Fit study, work and personal time into one week:** Name the roles and activities that matter in this season. Describe an adequate allocation for each before filling the calendar. Use the larger view to decide which activities can shrink, move, be delegated or be dropped.

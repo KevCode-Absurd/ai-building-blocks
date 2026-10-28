@@ -34,12 +34,11 @@ you_get:
 how_to_use:
   - "This copy was made for a plugin that is not included. Its practice profile, matter workspace, work-product header and /ip-legal: commands do not exist here, and those steps are skipped. What runs is the eight-step check: intake, name problems, similar marks, confusion factors, memo, next steps."
   - Open your AI tool and add the skill folder, or paste the skill's instructions into a chat.
-  - If the plugin config folder and the setup interview are not there, you can still run the check. Just type the name, the goods or services, the countries and the flag list you want checked.
   - "Gather first: the exact spelling of the name, what you will sell under it, the classes if you know them, the countries, and how the name will look. Type these in."
   - It covers the US, EU and UK well. For another country it will say it has no test for it and tell you to ask a local trademark specialist. It will not apply US rules there.
   - Say if your AI can search trademark registers. Some connectors, such as Solve Intelligence, Descrybe and CourtListener, may cost money or need an API key. Without one, the check only covers the name itself and the risk factors, and skips the similar-marks search.
   - Read the flag list. Check each flag and any similar marks it found.
-  - "The skill mentions a setup interview and /ip-legal: commands. You do not need them. Say \"provisional\" to run with US defaults, or use the setup-interview folder inside the skill if you want a tailored run."
+  - "When it asks about setup, say \"provisional\" to run with US defaults. Use the setup-interview folder inside the skill only if you want a tailored run."
   - Take the memo to a trademark lawyer before you buy, print or file anything. The skill names legal tests such as du Pont, Polaroid and Sleekcraft from memory and gives no case citations. Have the lawyer or a legal database confirm each one before you rely on it.
 output_sample:
   input:
@@ -49,7 +48,7 @@ output_sample:
     - How the name will look, such as plain text or a logo (optional)
   prerequisites:
     - A trademark database connected to your AI is optional. Without one, the check skips the similar-marks search and only does the name checks and risk factors.
-    - The skill's setup step needs the Claude plugin setup, which is where its config files are saved.
+    - No setup is needed. The plugin setup step is optional and only tailors the run to your practice.
   output:
     - name: Proposed mark
       contains: The name, the goods or services, the classes, the countries and how the name will look.

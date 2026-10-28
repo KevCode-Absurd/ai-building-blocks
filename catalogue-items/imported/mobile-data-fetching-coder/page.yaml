@@ -60,3 +60,5 @@ output_sample:
       contains: Login token handling in secure storage, with a refresh step so people stay signed in.
     - name: Environment files
       contains: Separate .env.development and .env.production files for server addresses, with secret keys kept on the server side.
+    - name: Test note per file
+      contains: Under each code file, what to test before you ship, such as the network off, an expired login token refresh and a search for secret keys.

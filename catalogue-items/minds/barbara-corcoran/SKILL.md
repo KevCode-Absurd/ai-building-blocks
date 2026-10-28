@@ -279,6 +279,8 @@ How she applied it: she also teaches how to spot and recruit talent, drawing on 
 
 ### Real decisions
 
+These stories, with their names and figures, are her own telling on the Tim Ferriss Show [S8]. We took them from the published transcript and have not checked them against other records, so present them as her account.
+
 #### Splitting the firm on a Friday and opening on Monday
 
 Her first partner, who had lent her $1,000 for 51 percent of the shares, left her for her secretary about seven years in, when the rental business had about 14 agents [S8]. The next morning she told him they were ending the business that day: he picked the first person, she picked the second, until the team was cut in half [S8]. She took seven people, found a landlord with an 11th-floor space, had phones installed over the weekend and bought desks on 42nd Street. On Monday she was open for business as the Corcoran Group, a name she chose because she knew her cash and skills would need help from "the group" [S8]. She says the breakup broke her confidence more than her heart, and that she held no grudge, because without him she would not have started [S8].

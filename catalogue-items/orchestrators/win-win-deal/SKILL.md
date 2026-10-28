@@ -38,18 +38,26 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Set your stance and your no-deal line.** Use the skill `win-win-stance-planner`. Your stance, what a win is for each side and the point where you walk away.
-2. **Add to the trust first.** Use the skill `trust-deposit-planner`. Give it the plan and the question from the steps before. Where trust stands, and two deposits to make before the talk.
-3. **Plan to listen first.** Use the skill `listen-first-talk-planner`. Give it the question from the steps before. A listening plan: what to ask, how to restate, and when to speak.
+1. **Set your stance and your no-deal line.** Use the skill `win-win-stance-planner`. Give it the deal or dispute. It saves `outputs/step-01-win-win-stance-planner.md`: your stance, what a win is for each side and the point where you walk away.
+2. **Add to the trust first.** Use the skill `trust-deposit-planner`. Give it the stance and walk-away line in `outputs/step-01-win-win-stance-planner.md` and the deal. It saves `outputs/step-02-trust-deposit-planner.md`: where trust stands, and two deposits to make before the talk.
+3. **Plan to listen first.** Use the skill `listen-first-talk-planner`. Give it the trust plan in `outputs/step-02-trust-deposit-planner.md` and who you will talk to. It saves `outputs/step-03-listen-first-talk-planner.md`: what to ask, how to restate, and when to speak.
 
-Pause here: Hold the conversation. Listen until they say you have it right, and write down their concerns and yours in two columns.
+Pause here: Hold the conversation. Listen until they say you have it right, and write down their concerns and yours in two columns. Bring those notes back. Without them, step 4 writes `MISSING: talk notes` and stops.
 
-4. **Find a third option.** Use the skill `third-option-finder`. Give it the question from the steps before. At least three options that meet both sides' needs, and a small first step.
-5. **Write the agreement.** Use the skill `results-agreement-writer`. Give it the plan and the question from the steps before. A written agreement both sides can back: results, limits, help, review and consequences.
-6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+4. **Find a third option.** Use the skill `third-option-finder`. Give it the stance in `outputs/step-01-win-win-stance-planner.md` and the two-column concerns from the talk. It saves `outputs/step-04-third-option-finder.md`: at least three options that meet both sides' needs, and a small first step.
+5. **Write the agreement.** Use the skill `results-agreement-writer`. Give it the options in `outputs/step-04-third-option-finder.md`, the option both sides picked, and the stance in `outputs/step-01-win-win-stance-planner.md`. It saves `outputs/step-05-results-agreement-writer.md`: a written agreement both sides can back, with results, limits, help, review and consequences.
+6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, every `MISSING:` line from all steps in one list, and `CHECKS MISSED`: the checks that failed or could not run, or "none".
 
 ## What you hand back
 5 step files and the summary. The last file holds the written agreement, a draft for both sides to review. Not legal advice.
+- Step 1: your stance, a win for each side, your walk-away point.
+- Step 2: where trust stands and two deposits.
+- Step 3: questions to ask, how to restate, when to speak.
+- Step 4: three or more options and a small first step.
+- Step 5: the draft agreement.
+- Summary: each step's file, every `MISSING:` line and the checks missed.
+
+This workflow carries one deal from your stance to a signed draft. To calm one tense moment, use the Difficult conversation repair planner. To win a team over to a proposal, use the Proposal discussion planner.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

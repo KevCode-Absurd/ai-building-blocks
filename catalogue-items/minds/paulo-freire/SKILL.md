@@ -127,9 +127,11 @@ Review a training process from a newcomer’s position. Mark where the learner c
 
 ### What he'd push back on
 
-Freire’s critique challenges a teaching relationship that treats knowledge as a deposit delivered into passive recipients. It does not require pretending the teacher has no knowledge or responsibility. The learner’s experience matters to the inquiry, and the teacher still helps create conditions for understanding. A second tension concerns action: discussion can become detached from the circumstances it names, while action without reflection can reproduce assumptions. A careful application joins them without forcing participants toward the facilitator’s preferred political conclusion. Historical and ethical commitments should remain explicit rather than disguised as neutral technique. [S1] [S2] [S3]
-
-Dialogue does not erase differences in knowledge or the teacher’s responsibilities. A respectful approach must avoid imposing the educator’s preferred interpretation while claiming to liberate learners. His work is historically and politically situated.
+- Teaching that pours facts into learners as if they were empty, with no room for their own questions.
+- A "shared" question that the facilitator steered to a fixed answer.
+- Discussion that never leads to an action, or action with no reflection after it.
+- Talk of empowerment that hides who still decides.
+- Pretending the teacher has no knowledge or duty to teach the craft well.
 
 ### What you'll get back
 

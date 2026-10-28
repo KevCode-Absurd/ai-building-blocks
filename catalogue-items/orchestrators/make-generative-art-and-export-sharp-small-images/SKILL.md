@@ -23,7 +23,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **The look you want** (required): mood, colours and how fast things move. Vague words give generic art. This is the brief for the run, and it is the only brief needed. The three required items in this list (the look, the number of stills and the use) are what the run cannot start without. This list replaces the shared "Before you start" block above. A buyer brief, which that block suggests, does not feed this workflow and does not shape the art, so skip it. Add a short palette or style note instead if you have one.
+- **The look you want** (required): mood, colours and how fast things move. Vague words give generic art. Together with the number of stills and where they will be used, this is the brief the shared "Before you start" block asks for. The run cannot start without these three. Add a short palette or style note if you have one.
 - **How many stills you need** (required).
 - **Where the stills will be used** (required): on a screen or in print. Print needs a larger size.
 - **A computer that can run the art page and a screenshot tool** (required for step 2). The screenshot skill uses Playwright, which must be installed. To install it, run `npm install playwright` and then `npx playwright install chromium`. If you cannot install it, steps 1 and 3 still work on any stills you take yourself.
@@ -53,10 +53,9 @@ Three step files and the summary. The last file holds the smaller images.
 - **HAND-BACK SUMMARY:** each step's file, and every `MISSING:` line in one list.
 
 ## After this (for this job)
-Use this section, not the shared "After this" list above, whose Image compressor is already step 3. Suggest one next step as a short question, and say what to bring:
+Suggest one next step as a short question, and say what to bring:
 - Use the stills in your site, poster or post. Bring the compressed files and the seed list, so you can make the same look again.
 - Make a new look. Run step 1 again with a changed brief, or a new seed, and keep the old seed list.
-- Check the stills at thumbnail size with the [Packaging first-impression reviewer](https://useaiblocks.com/skills/pack-and-thumbnail-glance-tester). Bring the smaller image files.
 
 ## Check before you hand it back
 - The page runs without errors, and the controls change the art.
@@ -69,6 +68,6 @@ Use this section, not the shared "After this" list above, whose Image compressor
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Knowledge comic maker](https://useaiblocks.com/skills/knowledge-comic-maker). It takes the image.
+- **Fill the gaps in your brand brain** with the [Packaging first-impression reviewer](https://useaiblocks.com/skills/pack-and-thumbnail-glance-tester). It takes the image.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

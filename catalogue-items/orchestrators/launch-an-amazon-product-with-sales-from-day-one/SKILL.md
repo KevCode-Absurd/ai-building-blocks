@@ -57,7 +57,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Place the order that step 4 sized with your maker, and confirm their monthly capacity and lead time still hold.
 
-Pause here: Send the stock to Amazon. While it is checked in, post short videos for your wait list and send samples to small creators.
+Pause here: Send the stock to Amazon. While it is checked in, post short videos for your wait list and send samples to small creators. Each creator must say plainly in the post that the product was free (for example "gifted" or "#ad"), as endorsement rules require (in the US, the FTC's). Put that in the creator brief, and never ask for a review or a set star rating in return.
 
 5. **Amazon launch week planner.** Use the skill `amazon-launch-week-planner`. Give it the step 2 file (the listing), the step 3 file (the ads) and the step 4 file (the stock plan). Plans launch day around the live listing, the ads and the stock that has arrived, and saves the week-by-week plan.
 6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then CHECKS MISSED: any check that failed or could not run, or "none".
@@ -71,13 +71,14 @@ Five step files and the summary. The last file holds the launch week plan.
 - **Step 5, launch week:** week-by-week plan, launch-day run sheet, offer and its cost, review plan, stock check.
 - **HAND-BACK SUMMARY:** each step's file, and every `MISSING:` line in one list.
 
-The stock plan from step 4 is the thing to bring to any next step above.
+The stock plan from step 4 is the thing to bring to any next step below.
 
 ## Check before you hand it back
 - Every phrase in the listing came from the step 1 shortlist and is true for the product.
 - The ad budget is tied to unit profit, and every broad or phrase keyword has negatives behind it.
 - The stock order shows how many months of sales it covers and how much cash it ties up.
 - The launch plan buys no reviews and makes no review a condition of a free sample.
+- Any creator brief asks the creator to disclose that the product was free.
 - Fee numbers are marked as dated, with a note to check Seller Central.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line. Nothing was sent, published or paid for without a clear yes.
 

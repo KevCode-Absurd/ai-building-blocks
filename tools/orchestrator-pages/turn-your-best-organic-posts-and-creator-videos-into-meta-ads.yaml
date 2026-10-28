@@ -9,7 +9,7 @@ subhead: Give it your posts with their views and your product facts. It ranks th
 explain: |
   Some of your posts get far more views than usual, and you spend ad money on new ideas instead. A post that already worked is a safer bet than a guess. The trouble is knowing which posts, whether you may run them, and what to change so they sell.
 
-  The steps work through that. First it finds your normal views and ranks the posts above it. Each one is marked run as is, or keep the hook and reshoot. Then it checks the promo half of each script, so the hook leads to the product. It checks the scripts against Meta's ad rules before anyone films. Then it writes a brief a creator can film from. Last it plans a test where the new ads face your current best ad. Nothing in this run waits on you, but you must confirm who owns each post.
+  The steps work through that. First it finds your normal views and ranks the posts above it. Each one is marked run as is, or keep the hook and reshoot. Then it checks the promo half of each script, so the hook leads to the product. It checks the scripts against Meta's ad rules before anyone films. Then it writes a brief a creator can film from. Last it plans a test where the new ads face your current best ad. It waits on you twice: you confirm who owns each post, with the creator's written yes, before any post runs as is. And a person checks each script against Meta's current ad policy before a creator films it.
 when:
   - A few of your posts beat your normal views and you want to run them as ads.
   - You work with creators and need briefs they can film from without a call.
@@ -65,7 +65,7 @@ how_it_works:
   - title: Video script bridge checker
     text: Checks when the product enters each reshoot script and whether the hook leads to the offer. It rewrites the weak spots.
   - title: Meta ads compliance checker
-    text: Checks the scripts against Meta's ad rules before creators film, and rewrites the lines that would be rejected.
+    text: Checks the scripts against Meta's ad rules as the AI knows them, and rewrites the lines that would be rejected. A person then checks each script against Meta's current policy before any creator films it.
   - title: Creator filming brief writer
     text: Turns each approved script into a brief with the idea, a run order for the shoot, must-haves and file names.
   - title: Meta test campaign planner

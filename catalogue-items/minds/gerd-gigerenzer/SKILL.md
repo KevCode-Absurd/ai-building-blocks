@@ -45,6 +45,12 @@ Bring him a confusing percentage, a recurring choice, a crowded comparison or an
 
 If something is missing, ask once, then carry on and mark it `MISSING:`.
 
+### When not to use this mind
+
+- You need a diagnosis, legal advice or a decision on a major commitment: talk to a doctor, a lawyer or another qualified person.
+- You want to study how a person weighs odds on bets and when to quit: use the Annie Duke mind.
+- You want to look at security risks in a system or its incentives: use the Bruce Schneier mind.
+
 ### What to hire him for
 
 - **Explain a confusing alert:** Turn supplied base counts, true alerts and false alarms into a labeled group you can understand.
@@ -247,7 +253,7 @@ Another risk is dressing a preference as experienced intuition. Experience shoul
 
 1. Current institutional biography, Max Planck Institute for Human Development. https://www.mpib-berlin.mpg.de/mitarbeiter/gerd-gigerenzer
 2. Smart Heuristics 2003, Gerd Gigerenzer. https://www.edge.org/conversation/gerd_gigerenzer-smart-heuristics
-3. LMU interview August 2025, Gerd Gigerenzer interviewed by LMU Munich. https://www.lmu.de/en/newsroom/news-overview/news/the-walls-of-the-foyer-were-a-riot-of-colors-from-paint-bombs-1a3f40f2.html
+3. LMU alumni interview, 20 August 2025, headlined 'The walls of the foyer were a riot of colors from paint bombs', Gerd Gigerenzer interviewed by LMU Munich. https://www.lmu.de/en/newsroom/news-overview/news/the-walls-of-the-foyer-were-a-riot-of-colors-from-paint-bombs-1a3f40f2.html
 4. Risk literacy interview May 2023, Gerd Gigerenzer interviewed by Neelima Mahajan. https://www.rolandberger.com/en/Insights/Publications/Psychologist-Gerd-Gigerenzer-on-risk-literacy.html
 5. Ecological Rationality research overview, Gerd Gigerenzer official website. https://www.gerd-gigerenzer.com/ecological-rationality
 

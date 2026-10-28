@@ -205,6 +205,7 @@ If any of 1–6 is missing, the optimization is not ready to apply.
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Parallel code reviewer](https://useaiblocks.com/skills/parallel-code-reviewer). It takes the code change.
 - **Build it** with the [Database performance analyst](https://useaiblocks.com/skills/agency-engineering-database-optimizer). It takes the code change.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

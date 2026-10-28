@@ -5,7 +5,7 @@ name: Noise level code helper
 summary: Add noise to a MATLAB link simulation at the right level. Convert SNR, Eb/No and Es/No with the right code, and get noise variance for soft demodulators.
 job: build-software
 headline: Noise level code helper
-subhead: Noise added at exactly the level you intended in a communications simulation, with SNR, Eb/No and Es/No converted the right way. Mix-ups between these measures are a common source of wrong results.
+subhead: Noise added at exactly the level you intended in a communications simulation, with SNR, Eb/No and Es/No converted the right way. Mix-ups between these measures are a common source of wrong results. For use only with MathWorks products such as MATLAB.
 explain: |
   Noise added at exactly the level you intended in a communications simulation, with SNR, Eb/No and Es/No converted the right way. Mix-ups between these measures are a common source of wrong results.
 
@@ -34,7 +34,7 @@ you_get:
   - Noise variance for demodulators
   - A fix for common mistakes
 how_to_use:
-  - Open a chat with an AI that can read MATLAB code. Paste the skill text from the skill folder.
+  - Open a chat with an AI that can read MATLAB code. Paste the skill text from the skill folder. Its licence (LICENSE.md) applies in any AI tool you load it into, and it allows use only with MathWorks products, so use it only to write MATLAB code.
   - "Say what you want: add noise, convert Eb/No to SNR, or get noise variance."
   - Paste your target level, modulation, coding rate and samples per symbol. Add your code if you have it.
   - Say if the link is OFDM or uses a fading channel. Give the FFT length and active subcarriers for OFDM. Also give your MATLAB release. The OFDM conversion with convertSNR's "snrsc" mode needs R2023b or later. For R2022a to R2023a the skill gives a manual formula instead.

@@ -9,7 +9,7 @@ subhead: Give it your brand and the listings you find. It checks them against yo
 explain: |
   A way to check suspected copies of your online store or unauthorised sellers, and a ready set of letters to act on them. You give your brand name, domain and trademark number, then the listings you found. It does not search the web itself.
 
-  It covers fake stores that copy your site, look-alike domains, unauthorised resellers found by price and image matches, ads and posts that misuse your name, and trademark abuse. Each case gets a risk level with a suggested action, such as sending a takedown notice within 24 hours for active infringement. The 24 hours is a suggested target to act on, not a legal deadline. It includes templates for copyright takedown notices and cease and desist letters. Have a lawyer review anything serious.
+  It covers fake stores that copy your site, look-alike domains, unauthorised resellers found by price and image matches, ads and posts that misuse your name, and trademark abuse. Each case gets a risk level with a suggested action, such as preparing a takedown notice within 24 hours for active infringement. The 24 hours is a suggested target to act on, not a legal deadline. It includes templates for copyright takedown notices and cease and desist letters. Have a lawyer review anything serious.
 when:
   - A customer sent you a link to a store that looks just like yours.
   - Someone is selling your products below your price without approval.
@@ -41,7 +41,8 @@ how_to_use:
   - Read each finding and its risk level. Open every link yourself before you act.
   - Confirm your trademark is registered and active. The letters assume you hold the right. If it is not registered and active, skip the cease and desist letter and ask a lawyer first.
   - "Pick the template that fits: takedown notice, cease and desist, platform report, social report or domain complaint."
-  - Have a lawyer review every letter before you send it. Treat the 24-hour target as a suggestion, not a legal deadline.
+  - "Before you send: send no letter unless your trademark is registered and active and a lawyer has reviewed the letter. This applies to low-risk findings too. Treat the 24-hour target as a suggestion, not a legal deadline."
+  - "The report lists each finding with its risk level and next action, followed by the letter templates that fit your findings."
 output_sample:
   input:
     - Your brand name
@@ -55,7 +56,7 @@ output_sample:
     - name: Brand protection report
       contains: A list of findings such as fake stores and social media misuse, each with a risk level and a next step.
     - name: Risk levels
-      contains: High, medium or low for each finding, with the action to take, such as sending a takedown notice within 24 hours.
+      contains: High, medium or low for each finding, with the action to take, such as preparing a takedown notice (suggested within 24 hours) for a lawyer to review.
     - name: DMCA takedown template
       contains: A copyright notice you can send to a hosting provider to remove copied content.
     - name: Cease and desist letter

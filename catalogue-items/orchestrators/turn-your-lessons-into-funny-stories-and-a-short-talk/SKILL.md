@@ -11,6 +11,8 @@ Use it when: you have to speak for five to ten minutes and want people to rememb
 
 Not for: a written article or sales pitch, polishing a talk you already wrote, or having only a topic and no lessons yet.
 
+This one builds the stories and the talk from your own lessons. If you already have a speech draft and want to sharpen its jokes and timing, use the [Funny speech planner](https://useaiblocks.com/skills/funny-speech-planner) instead.
+
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
@@ -37,7 +39,7 @@ How to start:
 
 ## What you need
 
-A talk needs only your lessons, the audience, your time and, if you have them, true stories. The general "Before you start" list above mentions a brand brain. This job does not use one, so do not look for or read brand brain files. Ignore the brand brain lines, the "Recommended steps before this one" list and "From the brand brain, read" in that box. The run works without one.
+A talk needs only your lessons, the audience, your time and, if you have them, true stories. "Your question" in the list above means your lessons, audience and time below. A talk does not need a brand brain, so do not search for one or ask for it. If the person attaches one anyway, use only its voice notes.
 
 - **Two or three lessons you trust, each in one sentence** (required). Things you learned the hard way.
 - **Who the audience is and how long you have** (required). Five minutes suits two lessons, ten suits three.
@@ -59,7 +61,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 Pause here: Fix the lines marked competing. Then repeat the first two steps for your other lessons, so you have two or three stories.
 
 3. **Build the talk.** Use the skill `lesson-talk-writer`. It takes your lessons, the audience and time, each story from step 1 with the cuts from step 2 applied, any true stories of your own and any outside voices you gave. It saves `outputs/step-03-lesson-talk-writer.md`: the lessons chosen, an opening joke at your own cost, the talk lesson by lesson with its question for the room, a picture about time, the close on one next step, and claims to check.
-4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, every `MISSING:` line from all steps in one list, and `CHECKS MISSED`: the checks that failed or could not run (such as a story still marked competing), or "none".
 
 ## Next steps to offer
 
@@ -73,7 +75,7 @@ Use these instead of the general "After this" list below:
 - Step 1, the story: lesson, scene, story under 150 words, aside to the reader, closing consequence.
 - Step 2, the check: intended effect, paragraphs marked, where attention slips, cuts and fixes, score.
 - Step 3, the talk: lessons chosen, story for each, one-sentence lessons, outside voices, questions for the room, opening joke, close.
-- Hand-back summary: each file, then every `MISSING:` line in one list.
+- Hand-back summary: each file, every `MISSING:` line in one list, then the checks missed.
 
 Before you give the talk, run three checks. Tell one story to a friend and ask what the lesson was. Time the talk aloud against your slot. At the end, ask the audience to say one lesson back.
 

@@ -51,13 +51,14 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Steps
 1. **Objectives and key results writer.** Use the skill `okr-goal-writer`. Give it your team, the period, where you want to go, the level above's goals and last period's results if you have them. A few objectives, each with dated key results that show if you got there. It saves `outputs/step-01-okr-goal-writer.md`: three to five objectives, each with key results that carry a number and a date, a stop list, and the link to the level above.
 2. **One-on-one meeting planner.** Use the skill `one-on-one-meeting-planner`. Give it the goals and key results from `outputs/step-01-okr-goal-writer.md`, plus each person and their job, how experienced they are at the task, and when and where you can meet. A meeting plan with agenda rules, timing and follow-up. Reads the plan from the step before. It saves `outputs/step-02-one-on-one-meeting-planner.md`: how often and how long to meet each person, the outline they write, your meeting rules and how actions are checked.
-3. **Informed captain decision planner.** Use the skill `informed-captain-decisions`. Give it the stuck decision, who is involved and the goals from `outputs/step-01-okr-goal-writer.md`. One named owner, a plan to collect dissent, and a review date. Reads the plan from the step before. It saves `outputs/step-03-informed-captain-decisions.md`: the owner, who to hear from, the strongest case against, a decision date and what everyone does after the call.
-4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+3. **Team decision ownership planner.** Use the skill `informed-captain-decisions`. Give it the stuck decision, who is involved and the goals from `outputs/step-01-okr-goal-writer.md`. One named owner, a plan to collect dissent, and a review date. Reads the plan from the step before. It saves `outputs/step-03-informed-captain-decisions.md`: the owner, who to hear from, the strongest case against, a decision date and what everyone does after the call.
+4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, every `MISSING:` line from all steps in one list, and `CHECKS MISSED`: the checks above that failed or could not run (such as a key result with no start figure), or "none".
 
 ## Next steps to offer
 
-Use these instead of the general "After this" list below:
+This is the one next-step list. When "After this" below names the same skill, offer it once.
 - Write an agreement with each person using the [Work expectations agreement writer](https://useaiblocks.com/skills/results-agreement-writer), so their goals match the key results.
+- If meetings or reports eat the week, cut them with the [Process and meeting cleanup planner](https://useaiblocks.com/skills/process-and-meeting-cull-planner).
 - At the end of the quarter, write each review with the [Employee performance review writer](https://useaiblocks.com/skills/quarterly-performance-review-keeper).
 
 ## What you hand back
@@ -65,7 +66,7 @@ Use these instead of the general "After this" list below:
 - **Step 1, goals and key results:** the period, a few goals, key results with a number and a date, and each goal's link to the level above.
 - **Step 2, one-on-one plan:** for each person, how often, how long and where, the agenda they bring, and the follow-up for actions.
 - **Step 3, decision plan:** the decision, one owner and a date, who to hear from with their strongest case against, and what everyone does after the call.
-- **HAND-BACK SUMMARY:** each step's file, then every `MISSING:` line in one list.
+- **HAND-BACK SUMMARY:** each step's file, every `MISSING:` line in one list, then CHECKS MISSED.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

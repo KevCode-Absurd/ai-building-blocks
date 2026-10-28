@@ -11,6 +11,12 @@ Respond to an everyday mistake with a kinder, accurate note and a concrete repai
 
 If something is missing, ask once, then carry on and mark it `MISSING:`.
 
+## When not to use this mind
+
+- You are dealing with trauma, deep distress, or a pay, legal or health decision: talk to a qualified professional instead.
+- You want to build a habit that sticks: use the BJ Fogg mind, which works on prompts, ability and tiny steps.
+- You want to spot what triggers a habit loop and what it rewards: use the Judson Brewer mind.
+
 ## What to hire her for
 
 - **Rewrite harsh self-talk after an everyday mistake:** A kinder factual self-response and a concrete correction message.

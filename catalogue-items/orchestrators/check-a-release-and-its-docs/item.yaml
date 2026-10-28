@@ -14,7 +14,7 @@ inputs:
   - type: question
     required: true
   - type: codebase
-    required: false
+    required: true
 outputs:
   - type: document
 uses:

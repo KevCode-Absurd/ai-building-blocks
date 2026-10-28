@@ -21,9 +21,9 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **What you need** (use your own material or the linked skill):
 - **The product spec** (yours): what to build and how to tell it's done: a requirements doc or user stories.
-- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 - **Your API spec** (yours): the API's endpoints, data shapes, sign-in method and errors, such as an OpenAPI file.
 
 How to start:
@@ -33,6 +33,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+The spec is the only thing you must bring. "Your question" in the list above is optional here: it means your choices below, such as the stack and sign-in. You do not need an API spec to start: step 4 writes one.
+
 - **A written spec** (required): what the service does, who uses it and what data it keeps.
 - **Your preferred language and database** (optional). If you give none, step 1 picks from what the spec says and tells you why.
 - **How sign-in should work, and who can do what** (optional). Step 2 turns it into checks on each route. Step 3 tests them.
@@ -55,15 +57,15 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 2. **Build the service.** Use the skill `backend-builder`. It takes the project folder from step 1 and the spec. It designs the routes and the database, writes the routes with checks on input and sign-in, adds migrations that can be undone and load tests the busiest route. Fills in the service on the project from step 1, and hands the project with its new routes to step 3. Save `outputs/step-02-backend-builder.md`.
 3. **Test every route.** Use the skill `api-test-suite-builder`. It takes the project with the routes from step 2. It finds the routes step 2 added and tests each one for sign-in, bad input, error codes, paging and uploads, runs the tests, and hands the test results to step 4. Save `outputs/step-03-api-test-suite-builder.md`.
 4. **Write the API spec.** Use the skill `api-spec-writer`. It takes the project with the routes from step 2, the spec, and the test results in `outputs/step-03-api-test-suite-builder.md`. Documents the routes step 2 made and the tests in step 3 now cover: endpoints, data shapes, the sign-in scheme and an example for each response. Save `outputs/step-04-api-spec-writer.md`.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, every `MISSING:` line from all steps in one list, and `CHECKS MISSED`: the checks that failed or could not run (such as a failing test or a route with no test), or "none".
 
 ## What you hand back
-4 step files and the summary. The last file holds the document. The files hold:
+4 step files, the project folder and the summary. The last file holds the API spec. The files hold:
 - Step 1, project: the spec as understood (with the person's corrections), the stack, the file list and setup steps.
 - Step 2, service: routes, database design, sign-in checks, migrations and the load test result.
 - Step 3, route tests: a route map, the tests written, results and gaps.
 - Step 4, API spec: endpoints, data shapes, the sign-in scheme and examples.
-- The hand-back summary: each step's file, any step not run, and every `MISSING:` line in one list.
+- The hand-back summary: each step's file, any step not run, every `MISSING:` line in one list, and the checks missed.
 
 If the person changes the spec later, re-run steps 3 and 4 so the tests and API spec match.
 

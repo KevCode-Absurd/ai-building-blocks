@@ -90,9 +90,7 @@ Choose one versatile ingredient and pair it with familiar food, recording where 
 
 #### Making a team workshop engaging
 
-Use a reliable core structure and one surprising contrast, then remove elements that compete for attention. For a workshop outside cooking, build around a reliable core activity and one contrasting mode of participation. Ask what the contrast contributes before adding it. A quiet individual observation followed by shared discussion might be useful; a theatrical surprise without a purpose may not be. This is a design analogy from combining experiences, not a documented Ottolenghi management method.
-
-Use instead for how a team feels in a workshop: the Brené Brown mind.
+Use a reliable core structure and one surprising contrast, then remove elements that compete for attention. For a workshop outside cooking, build around a reliable core activity and one contrasting mode of participation. Ask what the contrast contributes before adding it. A quiet individual observation followed by shared discussion might be useful; a theatrical surprise without a purpose may not be. This is a design analogy from combining experiences, not a documented Ottolenghi management method. Use instead for how a team feels in a workshop: the Brené Brown mind.
 
 #### Keeping creative work sustainable
 

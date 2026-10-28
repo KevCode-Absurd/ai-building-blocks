@@ -42,6 +42,9 @@ The SNR target or definition you want, and the signal power if it is not unit po
 ## When NOT to Use
 
 - Configuring fading channels (delay profile, Doppler, antenna arrays)
+- The user has no MATLAB with the Communications Toolbox: this skill only writes MATLAB code and its licence limits use to MathWorks products. Say so, and point them to a plain statistics tool or someone who knows their simulation software. (Added by AI Blocks.)
+
+> Licence note from AI Blocks: the LICENSE.md file in this folder governs this copy (BSD 2-Clause, for use only with MathWorks products such as MATLAB). The `license:` link in the front matter points to MathWorks' upstream licence page; where the two differ, follow LICENSE.md.
 
 ## Must-Follow Rules
 

@@ -109,6 +109,8 @@ Data subjects have the following **6 rights**:
 
 ## Article 8 — Penalties
 
+> AI Blocks note: the figures below are the skill author's unchecked summary. Do not quote them to the user. Give violation types only, unless the user pastes the official law text (see the Penalties section in SKILL.md).
+
 | Violation | Organisation | Individual |
 |---|---|---|
 | Buying/selling personal data | 10× the proceeds | 10× the proceeds |

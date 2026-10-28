@@ -115,7 +115,7 @@ Group items into: (a) immediate sprint, (b) next quarter, (c) tracked backlog.
 - [ ] Debt ratio calculated: maintenance work / total engineering capacity (target: < 25%)
 - [ ] Remediation plan fits within capacity (don't promise 40 points of debt reduction in a 2-week sprint)
 
-**Example output — Tech Debt Inventory:**
+**Example output — Tech Debt Inventory** (illustrative rows only, not real data; use the user's own items and estimates):
 ```
 Item                  | Severity | Cost-to-Fix | Blast Radius | Priority Score
 ----------------------|----------|-------------|--------------|---------------
@@ -265,6 +265,7 @@ In a plain chat there are no other roles or files to check against, so do the fo
 - Check your own work: say what each claim is based on and what you assumed.
 - Output format: Bottom Line → What (with confidence) → Why → How to Act → Your Decision
 - Results only. Tag each figure "from your input" or "estimate, check with your lead". Never tag anything "verified" unless the user gave it to you.
+- TCO, cost-to-fix, pay, budget and vendor scores: if the user has not given the figure or the facts behind it, write `MISSING:` with what you need. Never fill these with a made-up number.
 
 ## Context Integration
 

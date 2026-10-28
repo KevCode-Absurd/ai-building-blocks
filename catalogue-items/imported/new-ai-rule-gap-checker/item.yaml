@@ -34,4 +34,4 @@ credits:
   - title: reg-gap-analysis skill
     by: Anthropic
     url: https://github.com/anthropics/claude-for-legal/tree/main/ai-governance-legal/skills/reg-gap-analysis
-    used: Copied under the Apache 2.0 licence. We gave it a plain name and added notes on the missing setup file, a paste-in route without it, and ask-first web search. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the Apache 2.0 licence. We gave it a plain name and added notes on the missing setup file, a paste-in route without it (now the default first step), and ask-first web search. We added Before you start and After this sections that link to other AI Blocks steps.

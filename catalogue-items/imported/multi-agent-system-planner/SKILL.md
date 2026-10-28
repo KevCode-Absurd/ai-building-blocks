@@ -48,17 +48,17 @@ Single agents face inherent ceilings in reasoning capability, context management
 Multi-agent architectures address these limitations by partitioning work across multiple context windows. Each agent operates in a clean context focused on its subtask. Results aggregate at a coordination layer without any single context bearing the full burden.
 
 **The Token Economics Reality**
-Multi-agent systems consume significantly more tokens than single-agent approaches. The figures below are the original author's, taken from the upstream repo, and are not linked to a source here. Treat them as rough and check them before you rely on them:
+Multi-agent systems consume significantly more tokens than single-agent approaches. Token use grows from a plain chat, to a single agent with tools, to a multi-agent system, and the multi-agent case can cost many times the plain chat. (AI Blocks note: the original gave exact multipliers and research figures with no source, so we removed them. Measure token use on your own runs before you plan a budget.)
 
-| Architecture | Token Multiplier | Use Case |
-|--------------|------------------|----------|
-| Single agent chat | 1× baseline | Simple queries |
-| Single agent with tools | ~4× baseline | Tool-using tasks |
-| Multi-agent system | ~15× baseline | Complex research/coordination |
+| Architecture | Token use | Use Case |
+|--------------|-----------|----------|
+| Single agent chat | Lowest (baseline) | Simple queries |
+| Single agent with tools | Higher | Tool-using tasks |
+| Multi-agent system | Highest | Complex research/coordination |
 
-The original author reports, without a source link here, that research on the BrowseComp evaluation found that three factors explain 95% of performance variance: token usage (80% of variance), number of tool calls, and model choice. Treat this as unverified. This validates the multi-agent approach of distributing work across agents with separate context windows to add capacity for parallel reasoning.
+Token usage, the number of tool calls and the choice of model all shape how well agents do. This supports distributing work across agents with separate context windows to add capacity for parallel reasoning.
 
-Critically, upgrading to better models often provides larger performance gains than doubling token budgets. Claude Sonnet 4.5 showed larger gains than doubling tokens on earlier Sonnet versions. GPT-5.2's thinking mode similarly outperforms raw token increases. This suggests model selection and multi-agent architecture are complementary strategies.
+A better model can give larger gains than a bigger token budget, so model selection and multi-agent architecture are complementary strategies. Test both on your own task rather than assuming either.
 
 **The Parallelization Argument**
 Many tasks contain parallelizable subtasks that a single agent must execute sequentially. A research task might require searching multiple independent sources, analyzing different documents, or comparing competing approaches. A single agent processes these sequentially, accumulating context with each step.
@@ -86,7 +86,7 @@ Advantages: Strict control over workflow, easier to implement human-in-the-loop 
 Disadvantages: Supervisor context becomes bottleneck, supervisor failures cascade to all workers, "telephone game" problem where supervisors paraphrase sub-agent responses incorrectly.
 
 **The Telephone Game Problem and Solution**
-The original author reports, without a source link here, that LangGraph benchmarks found supervisor architectures initially performed 50% worse than optimized versions (unverified; do not quote it) due to the "telephone game" problem where supervisors paraphrase sub-agent responses incorrectly, losing fidelity.
+Supervisor architectures can do noticeably worse than they should because of the "telephone game" problem, where supervisors paraphrase sub-agent responses incorrectly, losing fidelity. (AI Blocks note: the original quoted an unsourced benchmark figure here, which we removed.)
 
 The fix: implement a `forward_message` tool allowing sub-agents to pass responses directly to users:
 
@@ -105,7 +105,7 @@ def forward_message(message: str, to_user: bool = True):
     return {"type": "supervisor_input", "content": message}
 ```
 
-With this pattern, swarm architectures slightly outperform supervisors because sub-agents respond directly to users, eliminating translation errors.
+This is also why swarm architectures, where sub-agents respond directly to users, can avoid translation errors that a supervisor adds. (AI Blocks note: the original said swarms outperform supervisors, with no source. Test both on your own task.)
 
 Implementation note: Implement direct pass-through mechanisms allowing sub-agents to pass responses directly to users rather than through supervisor synthesis when appropriate.
 

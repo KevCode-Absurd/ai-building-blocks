@@ -92,6 +92,8 @@ Five step files and the summary. The last file holds the upscaled image.
 - **Step 5, upscale:** settings, change check, score.
 - **HAND-BACK SUMMARY:** each step's file, and every `MISSING:` line in one list.
 
+Next, once the upscaled image is approved: run the ad, or make a second ad from the same idea with the Fact caption image ad maker. Bring the step 2 headline and labels, the step 4 claims that passed, and the approved image.
+
 ## Check before you hand it back
 - The picture shows one moment, not the whole chain as numbered steps.
 - Every link in the chain is marked sourced, common knowledge or unsupported, and no unsupported link is drawn.

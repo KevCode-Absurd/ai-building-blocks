@@ -8,8 +8,10 @@ role: orchestrate
 job: ops
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
+  - type: video_link
+    required: false
   - type: performance_sheet
     required: false
 outputs:
@@ -35,7 +37,7 @@ credits:
   - title: youtube skill
     by: Daniel Agrici
     url: https://github.com/AgriciDaniel/claude-youtube/tree/main/skills/claude-youtube
-    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps, and a cost note in the NanoBanana thumbnail section. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: Daniel Agrici
     url: https://github.com/AgriciDaniel

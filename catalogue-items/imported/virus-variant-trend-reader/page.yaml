@@ -7,6 +7,8 @@ job: track-numbers
 headline: Virus variant trend reader
 subhead: Name a virus and a region. Your AI queries public sequence databases and reports which lineages are common, week by week. It also checks what each lineage name means today and warns where the data is thin.
 explain: |
+  Who this is for: public health and surveillance researchers. For general reporting, use your health agency's own variant reports instead.
+
   A plain summary of which virus lineages are showing up in public sequence data for a region, week by week. It is built for questions like what is circulating now, and it will not answer from memory or old examples.
 
   You name the virus and the place. The skill runs small Python scripts that query open sequence databases, then reports the current lineages, their weekly shares and common mutations. It checks what a lineage name means today. It also keeps reminding you that sequence counts are not case counts, and that a rising share can come from changes in sampling rather than real growth. It needs Python and internet access, but no login.
@@ -33,9 +35,10 @@ you_get:
 how_to_use:
   - Use an AI that can run Python 3.11 or newer and reach the web, such as Claude with code running. No login is needed.
   - Give it the skill and tell it your virus, region and time window. Say where to save the results, such as a folder or a file name.
-  - Ask it to check reporting delay first with the reporting_lag script, so you know which recent weeks to trust.
-  - Ask it to run lineage_prevalence for the top lineages, then resolve_lineage to check what each name means now.
-  - Ask for mutation_profile if you want mutation frequencies for a lineage.
+  - "Step 1, reporting delay: ask it to run the reporting_lag script first. You get the weeks that are still incomplete, so you know which recent weeks to trust."
+  - "Step 2, lineage counts: ask it to run lineage_prevalence. You get a weekly table of the top lineages with their shares."
+  - "Step 3, name check: ask it to run resolve_lineage. You get what each lineage name means today."
+  - "Step 4, mutation profile (optional): ask for mutation_profile. You get how often each site changes in a lineage."
   - Read the flagged weeks and sampling notes before you use the numbers. This suits surveillance research, not general business reporting.
 output_sample:
   input:

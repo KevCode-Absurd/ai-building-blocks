@@ -14,7 +14,7 @@ inputs:
   - type: question
     required: true
   - type: meeting_notes
-    required: false
+    required: true
   - type: plan
     required: false
 outputs:

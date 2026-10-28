@@ -72,6 +72,7 @@ Purpose / Who it covers / The rule / How to follow it / Who to ask / Exceptions 
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Handbook change and cross-reference checker](https://useaiblocks.com/skills/handbook-change-checker). It takes the policy.
 - The [Company policy explainer](https://useaiblocks.com/skills/company-policy-explainer). It takes the policy.
+- The [Nonprofit resale store shift planner](https://useaiblocks.com/skills/nonprofit-retail-coverage-planner). It takes the policy.
 - The [Privacy policy drift checker](https://useaiblocks.com/skills/privacy-policy-drift-checker). It takes the policy.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

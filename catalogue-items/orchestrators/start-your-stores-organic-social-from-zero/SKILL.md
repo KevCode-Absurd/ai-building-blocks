@@ -18,13 +18,12 @@ This workflow chains skills from the library. Each step is its own skill. You ru
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Brand brain** (its products and buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **Your results** (yours): an export of your numbers for set dates, from the tool that holds them: an ad account, your store, analytics or your product.
-- **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
+- **Brand brain** (its products and buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Your data** (yours): the data files, with their format and where they came from.
+- **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
@@ -34,12 +33,12 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your brand brain, your question, your results. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, your brand brain, your data. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
 ## What you need
-The general "Before you start" list above mentions a brand brain. This job does not use one. Use the inputs below.
+You do not need a brand brain. If you have one, steps 2 and 3 can take your product and buyer from it. If not, paste them as below. "Your question" in the list above means your accounts, product and buyer. "Your data" is the post export for step 4. You do not need an ad results export.
 
 **Tool:** you need an AI that keeps files, such as Claude Code or a Claude Project. These can need a paid plan. In a plain chat window, paste each skill file one after another. The four skill files (`brand-social-account-checker`, `short-video-format-picker`, `video-hook-scorer`, `organic-format-tester`) come in the handoff pack with HANDOFF.md.
 
@@ -69,7 +68,7 @@ Pause here: Make the fixes, starting with the biggest. Decide who will be on cam
 Pause here: Post your best 10 to 15 videos by hand over three weeks. Export views and watch time.
 
 4. **Organic format tester.** Use the skill `organic-format-tester`. Reads which of the formats you picked earned views and sets the next round. Give it the export of the posts you filmed from steps 2 and 3 and published over three weeks, with the hooks you posted, not step 3's scores, and your goal this month. It saves `outputs/step-04-organic-format-tester.md`: top posts and flops, a keep, change or drop verdict by format and hook type, and the next test.
-5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, every `MISSING:` line from all steps in one list, and `CHECKS MISSED`: the checks that failed or could not run (such as a setup rule you could not check, or step 4 waiting for posts), or "none".
 
 ## What you hand back
 4 step files and the summary. The last file holds the test report and the plan. Each file has this shape:
@@ -77,7 +76,7 @@ Pause here: Post your best 10 to 15 videos by hand over three weeks. Export view
 - **Step 2, formats:** format picks with why they fit, a script outline for each, ten hooks and a tutorial shot plan.
 - **Step 3, hook scores:** each hook out of 100 with its sum, who it attracts, rewrites, and the ones to film.
 - **Step 4, what worked:** top posts by views, followers and comments, flops, a verdict by format and hook type, and the next test.
-- **HAND-BACK SUMMARY:** each step's file, then every `MISSING:` line in one list.
+- **HAND-BACK SUMMARY:** each step's file, every `MISSING:` line in one list, then CHECKS MISSED.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

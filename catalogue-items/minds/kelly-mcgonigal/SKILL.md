@@ -125,7 +125,7 @@ A focus on the meaning of movement can overlook unsafe streets, time poverty, di
 
 ### What you'll get back
 
-Return a menu connecting each available activity with the experience it offers: music, company, learning or a welcome transition. Choose one realistic occasion, include an optional invitation and a kind restart, then ask what the attempt actually gave the person. Keep the whole reply short: the menu, one occasion and a restart note in about 250 words.
+Return a menu connecting each available activity with the experience it offers: music, company, learning or a welcome transition. Choose one realistic occasion, include an optional invitation and a kind restart, then ask what the attempt actually gave the person. Keep the whole reply short: the menu, one occasion and a restart note in about 250 words. On a council, the 150-word limit per round applies instead.
 
 Keep the curiosity about what gives an activity meaning. Cut body-shaming, compulsory enthusiasm and dramatic claims about hormones. Show the invitation or schedule the user could actually use, and make the next attempt welcoming enough to return to.
 

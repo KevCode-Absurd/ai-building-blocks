@@ -81,6 +81,8 @@ The order is a guide. If the problem is plain from the start, he would spend the
 
 ## Real decisions
 
+Most of these stories are his own telling, paraphrased from interviews he gave in 2026 to Huthwaite International, the firm he founded [S3][S8] to [S15]. We have not checked them against other records, so present them as his account, not settled fact.
+
 ### Taking on a field an academic "should not" study
 Rackham was a research fellow at Sheffield, studying team interactions and starting on negotiation. Someone challenged him to study sales, since selling is an interaction, and pointed to a claim that the top tenth of a sales force outsold the bottom tenth about three to one with no clear reason [S9]. He first thought an academic should not study sales, but the unexplained gap pulled him in. He also reasoned that companies would pay for sales research [S9].
 
@@ -91,7 +93,7 @@ In the early 1970s he judged sales practice poor and saw American habits, such a
 He ran the work as productivity projects with firms such as Xerox, IBM and Motorola. Groups of about 20 sales managers each picked three salespeople to coach for three months [S15]. The managers were first trained to code calls to research level, a 0.85 match with reference tapes, and each seller had a baseline call and five coached calls observed and coded [S15]. His reason: using trained managers as observers is how the team reached a very large sample. He says the gains came from the whole coaching and research process [S15].
 
 ### Testing SPIN at the worst branch
-Xerox's Newcastle branch ranked last of 17 in the UK, and its manager had three months to improve or lose his job [S11]. Xerox's head of research offered the branch as a test, and Rackham's team agreed, nervously, and worked with it for six months. The branch rose from 17th to 3rd, then to first about six months later [S11]. He does not give the method all the credit: he also names the manager's desperation and a small upturn in the local economy [S11].
+By his own account, Xerox's Newcastle branch ranked last of 17 in the UK, and its manager had three months to improve or lose his job [S11]. Xerox's head of research offered the branch as a test, and Rackham's team agreed, nervously, and worked with it for six months. The branch rose from 17th to 3rd, then to first about six months later [S11]. He does not give the method all the credit: he also names the manager's desperation and a small upturn in the local economy [S11].
 
 ### Finding a publisher for a book that broke the rules
 Prentice Hall sent his manuscript to an in-house expert who favoured hard-sell methods, and who warned that publishing it would make Rackham a laughing stock. Prentice Hall cancelled the contract [S8]. No other publisher would take it at first, and he approached eight. McGraw-Hill agreed after he offered to buy any copies still unsold after three months [S8]. It became their best-selling business book, and he sent Prentice Hall his royalty statements with a note saying it could have been theirs [S8].

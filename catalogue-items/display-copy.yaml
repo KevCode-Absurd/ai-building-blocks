@@ -14656,11 +14656,11 @@ prepare-work-examples-for-a-job-interview:
     - Job interview work-example and practice planner
 prepare-your-executive-day:
   name: Executive daily action planner
-  summary: Share your calendar, meeting notes and open tasks. Get meeting briefs,
-    a sourced action list and a dated priorities plan.
-  subhead: It prepares meeting briefs, extracts commitments from actual notes or
-    threads and combines them with the calendar into a daily brief. You get
-    decisions, conflicts and work waiting on others. Owners and deadlines need
+  summary: Share one day's calendar, meeting notes and open tasks. Get a brief per
+    meeting, a sourced action list and that day's plan.
+  subhead: For one date only. It writes a brief for each meeting in calendar
+    order, pulls commitments from real notes or threads and builds a one-page
+    brief for the day. You get decisions, conflicts and work waiting on others. Owners and deadlines need
     source evidence. The workflow does not reschedule meetings, send reminders
     or turn a proposed task into an accepted commitment.
   reason: Uses a short role that matches the stated output.
@@ -14680,9 +14680,9 @@ prepare-your-weekly-executive-review:
   name: Executive priorities and commitment reviewer
   summary: Share the week's notes, tasks and calendar. Get an action review, open
     commitments, decisions due and next-week priorities.
-  subhead: It extracts commitments from real notes and combines them with calendar
-    and task updates. You get a sourced weekly action list and a dated
-    priorities brief. Missing owners, dates and progress stay marked. It does
+  subhead: It covers one seven-day window and carries last week's open
+    commitments forward. You get a sourced weekly action list, what is done or
+    still open, and next week's priorities. Missing owners, dates and progress stay marked. It does
     not infer completion from an elapsed deadline, change your calendar or send
     follow-ups automatically.
   reason: Replace a goal or output list with a scoped job role; preserve the
@@ -14854,8 +14854,8 @@ raise-order-value-with-bundles-and-add-ons-you-can-check:
     bundles, after-sale offers and a profit-focused test plan.
   subhead: It plans thresholds, bundles and add-ons, checks their effect on profit
     per visit and pauses for a real two-to-four-week test. It then reviews
-    actual results against the plan. You get assumptions and a keep, change or
-    stop recommendation when evidence supports it. Higher order value alone does
+    actual results against the plan. You get assumptions and a ship, do not
+    ship, re-test or inconclusive call when evidence supports it. Higher order value alone does
     not prove higher profit, and offers are not launched automatically.
   reason: Uses a natural job title instead of an output list or abstract label.
   aliases:

@@ -5,9 +5,9 @@ name: Training data cleaner
 summary: Clean a large training data set. Remove copies, junk and personal details from text, images or video before you train a language model.
 job: build-software
 headline: Training data cleaner
-subhead: A cleaned training set where duplicates, junk and personal details are gone, ready to feed a language model. Messy web scrapes make models worse, and this fixes that before you spend on training.
+subhead: A plan and code to strip duplicates, junk and personal details from a training set before you spend on training. The code is an outline for NeMo Curator, so it will not run as written until your AI matches it to the version you install.
 explain: |
-  A cleaned training set where duplicates, junk and personal details are gone, ready to feed a language model. Messy web scrapes make models worse, and this fixes that before you spend on training.
+  A cleaned training set where duplicates, junk and personal details are gone, ready to feed a language model. Copies and junk in a web scrape can teach a model bad habits, so it pays to clean them out before you spend on training.
 
   The skill uses NVIDIA's NeMo Curator. It removes exact and near-duplicate documents, filters low-quality or toxic text using over 30 checks, and can remove similar meaning with embeddings. It redacts names, emails and other personal details. It also covers images, video and audio. It is built for large data on GPUs, with a slower CPU mode. It needs Python, a CUDA setup for full speed, and a lot of disk and memory for big sets. The code in the skill was written for NeMo Curator 0.4 and is untested against current releases, so pin a version before you run it.
 
@@ -36,7 +36,7 @@ how_to_use:
   - "Paste the skill text. Tell your AI where your files are and which format they use: Parquet, JSONL or CSV, with a text column that holds the document text. Expect the AI to install a pinned NeMo Curator version first. The code in the skill is an outline, so the AI must check each call against that version."
   - "Install a pinned version first, for example uv pip install \"nemo-curator[text_cuda12]==<VERSION>\", where <VERSION> is the release you chose from the NeMo Curator docs. Then run a tiny test: import each stage you plan to use, and run it on three or four sample documents. Stop if any stage fails to import."
   - Say which quality rules to use and which personal details to remove.
-  - Ask your AI to run the steps one at a time on a small sample first, and show how many documents each step removes. After each step you should have a smaller file and a count of what was dropped.
+  - Ask your AI to run the steps one at a time on a small sample first. For each step the removal report must show documents in, documents dropped and documents out. For the redaction step it must also show how many missed personal details you found in a hand-checked sample. Stop and fix the step if the counts look wrong or any misses turn up.
   - Check a sample of removed and kept documents before you train.
   - Before you train, check a sample of redacted documents for missed personal details. The redaction calls in the skill have not been verified here, so do not trust the redaction step until you have confirmed it on a hand-checked sample from your pinned version. If the check finds misses, tighten the list and rerun. Have the person responsible for privacy law in your organisation, or a lawyer, sign off that the redaction meets your legal duties.
   - Treat the speed and cost figures in the skill as vendor claims. Cloud machines cost money.

@@ -59,18 +59,22 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - You have a vague idea and need a creative brief, not a position or a launch. Use the Creative brief writer (`creative-brief-writer`).
 
 ## Steps
+The three skills are in the AI Blocks library. Add them to your AI, or paste each one into the chat when its step starts. If one is not available, say so, run the steps you can, and mark the missing step not run.
+
 1. **Positioning statement writer.** Use the skill `positioning-statement-writer`. Give it your product, your rivals and what you can truthfully claim. It maps who tops each category in buyers' minds and what each rival owns, finds a true weak spot you can use and picks one attribute to own. It writes the position as one plain line. The step 1 file holds the ladders, the weak spot, your position, the one-line statement and a short brief for your team.
 2. **Brand name stretch checker.** Use the skill `brand-name-stretch-checker`. Give it your brand file, the new product and the step 1 file. It compares what your name means today with what the new product would mean, gives a stretch score out of 100 with its working, and makes a call. The score is a judgement, not a formula or a measured figure: it weighs how close the new product is to what the name means now, whether the same buyers would buy both, and whether the price level fits, and it gives the reason for each. The call is: use the name, make a new one, or skip. It also says what the core product risks if the stretch fails. The step 2 file holds the call.
 3. **Publicity-first launch planner.** Use the skill `publicity-first-launch-planner`. Give it the step 1 file, the step 2 call, your price, benefits and proof, and your budget and dates if you have them. It finds a news angle a reporter would care about, plans press and third-party stories before any ad, and sets the point of trust at which ads begin and how much to spend on them. The step 3 file holds the launch plan.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then `CHECKS MISSED:` with each check below that failed or could not run (or "none").
 
 ## What you hand back
-3 step files and the summary. Before you use the step 3 plan, check the weak spot you plan to claim against a real source. Do not use it in public until you have.
-
-First next step: run the Go or no-go launch checker (`go-or-no-go-launch-checker`) on the step 3 plan. Bring the step 3 file and the HAND-BACK SUMMARY, so it can see which gaps are still open.
+3 step files and the summary:
 - Step 1 file: the ladders of top brands, what each rival owns, the weak spot you can use, your position and the one-line statement.
 - Step 2 file: what your name means now, the stretch score, and the call to use the name, make a new one or skip, with the cost to the core if it fails.
 - Step 3 file: the idea to own, the news angle, the press and third-party plan, and when ads begin. This is the plan.
+
+Before you use the step 3 plan, check the weak spot you plan to claim against a real source. Do not use it in public until you have.
+
+First next step: run the Go or no-go launch checker (`go-or-no-go-launch-checker`) on the step 3 plan. Bring the step 3 file and the HAND-BACK SUMMARY, so it can see which gaps are still open.
 
 ## Check before you hand it back
 - The position is one idea, and the line needs no explaining.

@@ -296,6 +296,8 @@ def reward_function(completions, **kwargs):
     return rewards
 ```
 
+> Warning from AI Blocks: this example only shows the function shape. A reward for length and unique words teaches the model to pad its answers and stuff in rare words, because that raises the score. Replace it with a reward that checks the real task, such as whether the answer is correct, follows the required format or passes a test.
+
 Or use a reward model:
 ```python
 from transformers import pipeline

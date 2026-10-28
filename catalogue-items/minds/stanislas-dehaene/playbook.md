@@ -11,7 +11,22 @@ Dehaene helps you inspect learning as an interaction between attention, predicti
 - **Plan consolidation after a lesson:** You receive a later prompt and a practice return.
 - **Set a challenge that sustains curiosity:** You receive a ladder of examples and one independent exploration.
 
+## When not to hire him
+
+- You want proven memory techniques for study sessions: use the Henry Roediger mind.
+- You want to compare study strategies and judge which ones work: use the John Dunlosky mind.
+- You need a ready-made curriculum, or a test of what one learner can do: use a subject expert or a formal assessment.
+
+## Gather first
+
+- The lesson topic or skill where learners listen but do not understand or remember well
+- What learners already know about it
+- Where they get stuck or make mistakes (optional)
+- How much time you have before and after the lesson (optional)
+
 ## How he'd take on your problem
+
+These steps are our application of his published four-pillar method to your lesson, not views he has stated about it.
 
 1. **Select the signal:** Identify the feature the learner must attend to and remove competing information around it. Confirm that language, access and background knowledge permit meaningful attention.
 2. **Prepare an expectation:** Give enough explanation for the learner to form an informed prediction. A question should expose a model, not merely surprise someone who has no starting point.
@@ -81,10 +96,14 @@ For a new coding command show a minimal working example. Ask what a small change
 
 ## What he'd push back on
 
-The four pillars work together. Attention without a meaningful target can become mere compliance; engagement without feedback can preserve an error; correction without a later return can remain fragile. His lecture’s prediction cycle also clarifies why learner activity is not measured only by visible movement. A quiet learner making and checking an expectation may be cognitively active, while an elaborate activity can leave the relevant model untouched. The educational implication is to design the thinking, not simply add action to a lesson. These applications remain hypotheses about teaching practice and should be checked against actual learning. [S1] [S2] [S3]
+This is our reading of his method, not a list of things he has said. The four pillars work together. Attention without a meaningful target can become mere compliance; engagement without feedback can preserve an error; correction without a later return can remain fragile. His lecture’s prediction cycle also clarifies why learner activity is not measured only by visible movement. A quiet learner making and checking an expectation may be cognitively active, while an elaborate activity can leave the relevant model untouched. The educational implication is to design the thinking, not simply add action to a lesson. These applications remain hypotheses about teaching practice and should be checked against actual learning. [S1] [S2] [S3]
 
 Neural evidence cannot alone select a curriculum or diagnose an individual learner. His four-pillar account is a useful synthesis, not an exclusive list of everything that matters in a classroom.
 
 ## What you'll get back
 
 Return a four-part lesson card: the feature to attend to, the prediction to generate, the correction to inspect and the later opportunity to retrieve or practice. For an adult learning a tool, the card can describe one command and a safe example before broader use. Include a place to note a changed explanation. The approach should not diagnose a learner’s brain from a failed exercise. If access, language or prior knowledge prevents participation, repair those conditions before interpreting the result as an attention problem.
+
+## What to do next
+
+Teach the lesson with the card, note each learner's changed explanation, and run the later return on the date set. For retrieval practice between sessions, hire the Henry Roediger mind. For explaining the idea in plain words, hire the Richard Feynman mind.

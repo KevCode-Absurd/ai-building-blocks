@@ -30,7 +30,7 @@ you_get:
   - The worries and habits holding buyers back, ranked, with two fixes each and one change to test
   - Three to five measures of customer progress, each with a formula, a source and an owner
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md plus one skill file for each step.
+  - Download the handoff pack from this page. It's a zip with HANDOFF.md (the run order) plus one skill file for each step, best-and-worst-customer-profiler, wrong-buyer-review-checker, switch-friction-remover and customer-progress-measure-picker.
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Give it your order export and your reviews, with the discount code on each order if you have it.
   - Add the page copy or ad text that draws buyers in, so the second step can trace a bad review to a claim.

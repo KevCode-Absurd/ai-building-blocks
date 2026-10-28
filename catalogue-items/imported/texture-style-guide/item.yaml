@@ -31,7 +31,7 @@ credits:
   - title: skeumorphism skill
     by: Bergside
     url: https://github.com/bergside/awesome-design-skills/tree/main/skills/skeumorphism
-    used: Used under the MIT licence. We gave it a plain name, added a short section of texture-specific rules, and a contrast note on the placeholder colours.
+    used: Used under the MIT licence. We gave it a plain name, added a short section of texture-specific rules, and darkened the placeholder primary colour (#FA3C00 to #C93100) so white text on it meets 4.5 to 1 contrast.
   - title: Original author
     by: typeui.sh
     url: https://typeui.sh

@@ -22,6 +22,7 @@ you_give:
   - The business, what it sells and who its main rivals are
   - What you know about it and your own background in the field
   - "Any figures, such as returns on the money invested, price history and what managers did with cash (optional)"
+  - The changes to test, such as a cost cut or a better product
   - Your tax rate and your next best choice for the money (optional)
 you_get:
   - The edge and the barrier around it, with the kinds of scale that apply
@@ -35,6 +36,8 @@ how_to_use:
   - Gather the business facts, at least five years of return on invested money, what managers did with cash, your tax rate and your next best choice. Say plainly what you have done in the field.
   - Let it run one step at a time. It saves each result as a file before the next step starts.
   - Read the circle of competence result before the final call. If it says too tough, treat the call with care.
+  - The figures are yours, and the call rests on them. Any figure not checked against the company's annual reports is marked unverified.
+  - The call judges the business, not your money. It does not know your savings, debts or goals, so it is not advice to buy, sell or keep anything.
   - Check the HAND-BACK SUMMARY for MISSING lines. Fill those gaps and rerun the steps that need them.
 output_sample:
   input:

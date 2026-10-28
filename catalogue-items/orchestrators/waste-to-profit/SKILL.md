@@ -9,7 +9,7 @@ Describe how you make or deliver your product. Get a cost for every step and a p
 
 Use it when: you do not know which products earn money once every step is counted, or you throw away scrap, leftovers, returns or idle time and suspect some of it is worth something.
 
-Not for: having no products or steps yet, a tax or accounting report, or cutting a supplier price.
+Not for: having no products or steps yet, a tax or accounting report, or cutting a supplier price. It costs steps and prices waste. To choose what to work on this week, use the [Weekly priorities and delegation planner](https://useaiblocks.com/workflows/weekly-priorities-plan) instead.
 
 The step order is this library's own design. It is inspired by the idea of counting the cost of every step (Andrew Carnegie's autobiography) and of finding a use for waste (John D. Rockefeller's memoir and Henry Ford's writing). The books are not quoted and this does not claim what they teach. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
@@ -48,13 +48,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Steps
 1. **Cost every step.** Use the skill `step-cost-tracker`. It takes how each product is made, step by step, and any figures you have. It saves `outputs/step-01-step-cost-tracker.md`. In it: (a) every step from raw material to sale; (b) one measure per step that a named person can take each week; (c) a monthly cost sheet per product with cost per unit, price and earnings, and the rule used to share common costs (by default, share them by units made, or by labour minutes if you gave labour times, and say which); (d) a comparison of people, shifts or batches, if you gave them; (e) products ranked by what they earn after all steps, with the lines that carry the business and the lines that drain it; (f) the first waste to fix, a weekly count sheet and a next count date.
 2. **Find the waste and price it.** Use the skill `waste-and-by-product-finder`. It takes the cost report and plan in `outputs/step-01-step-cost-tracker.md` and your list of what you throw away or leave idle. It saves `outputs/step-02-waste-and-by-product-finder.md`. In it: (a) each item with its source step, monthly amount and the labour in it; (b) a buyer or reuse for each item, or "no use"; (c) what you already reclaim and what it costs; (d) items ranked by money recovered against effort; (e) the first three actions with an owner and a date, and a re-count date. If a figure is missing it writes `MISSING:` and says how to count it.
-3. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+3. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, every `MISSING:` line from all steps in one list, and `CHECKS MISSED`: the checks that failed or could not run, or "none".
 
 ## What you hand back
 2 step files and the summary.
 - Step 1, step costs: steps and measures, monthly cost sheet, ranking by true earnings, carry and drain lines, first fix, weekly count sheet.
 - Step 2, waste list: each item with source step, monthly amount, labour in it and value; buyer or reuse; ranked list; first three actions; re-count date.
-- Hand-back summary: each file, then every `MISSING:` line in one list.
+- Hand-back summary: each file, every `MISSING:` line in one list, then the checks missed.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

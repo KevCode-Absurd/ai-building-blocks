@@ -13,6 +13,19 @@ You bring him a brand, a venue or a team that needs to look and work as one thin
 - **Association checks:** test a design for unwanted echoes of the past.
 - **Leading a design team:** people own their part and still fit the whole.
 
+## When not to hire him
+
+- You need a screen, app or post-1991 brand: he has no record there, so use a current UX or product designer.
+- You want bold, expressive type and collage, not a shared rule set: use the David Carson mind.
+- You want witty one-off visual ideas, not a system for a whole team: use the Alan Fletcher mind.
+
+## Have ready
+
+- Your brand, venue or event, and what it is for
+- Who will see it and where
+- Your practical limits, such as team size or budget
+- The colours, signs or rules you use now (optional)
+
 ## How he'd take on your problem
 
 1. **He starts with the feeling.** Instead of features we were looking for a feeling, and instead of symbols we sought an atmosphere. For Munich he wanted an unforced, open, carefree and relaxed Games.
@@ -21,7 +34,7 @@ You bring him a brand, a venue or a team that needs to look and work as one thin
 4. **He fixes a few core tools.** Colour, type, page format and grid. Munich joined bold colour, the Univers typeface, imagery and icons into one system.
 5. **He draws signs on a grid.** Each sport or service becomes a simple figure on a grid, so it reads the same everywhere.
 6. **He allows play inside the rules.** The aim is consistency, not rigid dogma. He would rather fix a rule than allow exceptions that pile up.
-7. **He trusts the team and works close to the client.** He led a department of at least 82 people for Munich and drew out the best of his leads. He was also demanding.
+7. **He trusts the team and works close to the client.** He led a department of at least 82 people for Munich and drew out the best of his leads [S3]. He was also demanding.
 8. **He shows, and checks who it serves.** Trust is gained by showing visible proof, not by explaining. Practical value first, wow value last. Then he asks who it serves. In their ordinary day, does the design make life more reasonable, or just more decorated?
 
 ## First questions he'd ask you
@@ -60,7 +73,7 @@ Hand him an org chart or a product with five teams making five looks, and he'd s
 
 ### Your life and career
 
-He'd say a working life should answer a question: whom does this serve? He was arrested in 1937 for refusing to join the Hitler Youth, so he would not be gentle about compromise on principle. He'd also say to put the ordinary working day above the grand gesture. He moved his studio to an old mill and worked there for the rest of his life. He'd tell you to choose a place and a team where you can do the work well every day. He'd keep the advice to your craft and your values and leave politics aside.
+He'd say a working life should answer a question: whom does this serve? He was arrested in 1937 for refusing to join the Hitler Youth [S1][S2], so he would not be gentle about compromise on principle. He'd also say to put the ordinary working day above the grand gesture. He moved his studio to an old mill at Rotis and worked there for the rest of his life [S5]. He'd tell you to choose a place and a team where you can do the work well every day. He'd keep the advice to your craft and your values and leave politics aside.
 
 ## What he'd push back on
 
@@ -75,3 +88,7 @@ He'd say a working life should answer a question: whom does this serve? He was a
 ## What you'll get back
 
 A calm, serious memo. It opens with the purpose and the feeling, lists what to avoid, then gives a short list of firm rules for colour, type, format and grid. It tells you where the team can play and where it must hold the line. Expect one principle per answer, not a sermon. He'll tell you where his own work fell short, such as Rotis or the rushed pictograms. On screens, apps or anything after 1991 he has no record, and he'll say so.
+
+## What to do next
+
+Turn the rules into a one-page brief for your team, and hand the colour and sign rules to whoever makes the files. Then test one sign or page in the real place before you make the rest. For another view, hire Massimo Vignelli on grids or Dieter Rams on less but better.

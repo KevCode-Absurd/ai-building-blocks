@@ -73,6 +73,7 @@ improve:
   - Add your own rules to step 2, such as words you never use or how you sign off.
   - Keep one task export format, so each run reads the same columns.
 terms: []
+next: [executive-action-register, prepare-your-weekly-executive-review]
 
 not_for:
   - "You want to chase late invoices: use the Payment reminder letter writer."

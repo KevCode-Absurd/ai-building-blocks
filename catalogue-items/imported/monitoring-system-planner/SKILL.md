@@ -42,10 +42,30 @@ How to start:
 3. Build the smallest dashboards and actionable alerts needed for those SLOs; define owner, runbook and missing-data behavior.
 4. Reconcile numerator/denominator and sampling, exercise one alert in an authorized test environment, and measure noise before broad rollout.
 
+## Output (added by AI Blocks)
+
+Hand back these parts, in this order. Mark any fact you do not have as `MISSING:`.
+
+1. **User tasks and targets:** a table of service, user task, SLI and target.
+2. **Signals and retention:** a table of signal (metric, log or trace), what it measures, source and how long to keep it.
+3. **Dashboards and alerts:** a table with columns name, SLO it supports, condition, owner, runbook and missing-data rule.
+4. **Phased build plan:** numbered phases, each with what gets built, the check that proves it works (including one test alert and a noise count) and what must be true before the next phase.
+
+Add the telemetry field allowlist from Safety as a short list under part 2.
+
+<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- The [Monitoring dashboard and alert designer](https://useaiblocks.com/skills/monitoring-planner).
+- The [Service reliability target planner](https://useaiblocks.com/skills/reliability-target-setter).
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 ## Safety
 
 - Use an allowlist of telemetry fields. Do not log credentials, raw prompts, query strings or full bodies by default; inspect actual exported data and retention.
 - Use alerting thresholds that balance coverage and noise.
+- Datadog, New Relic, PagerDuty and Splunk are usually paid services that need an account. Say so before you plan around them, and offer an open-source option (such as Prometheus, Grafana or OpenTelemetry) where one fits. (Added by AI Blocks.)
 
 ## Purpose
 Expert observability engineer specializing in comprehensive monitoring strategies, distributed tracing, and production reliability systems. Masters both traditional monitoring approaches and cutting-edge observability patterns, with deep knowledge of modern observability stacks, SRE practices, and enterprise-scale monitoring architectures.
@@ -263,10 +283,3 @@ Before adding an alert, verify that both counters cover the same population, tes
 - A dashboard or vendor integration does not establish compliance; access, retention and actual exported payloads still need review.
 - Alert delivery, production instrumentation, chaos experiments and incident messages require authorization for the specific environment and action.
 
-<!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
-## After this
-When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- The [Monitoring dashboard and alert designer](https://useaiblocks.com/skills/monitoring-planner).
-- The [Service reliability target planner](https://useaiblocks.com/skills/reliability-target-setter).
-If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
-<!-- /next -->

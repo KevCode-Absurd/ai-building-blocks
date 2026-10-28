@@ -10,6 +10,8 @@ explain: |
   You give your point, and the skill drafts a short message, a thread reply or a longer canvas.
 
   It writes in Slack's own formatting, which differs from standard Markdown: single asterisks for bold, angle brackets for links and mentions, and no headers. It keeps messages to one to three short paragraphs and moves long content into a canvas. It also catches common mistakes, like double asterisks that show up as raw symbols. You need Slack connected if you want it to save the draft there.
+
+  How it differs from the Internal update writer: that one works out what a status update should say. This one shapes any message for Slack itself: the first line, the length, the format and where it goes (channel, thread or canvas).
 when:
   - You need to announce a change to your team and want it read.
   - Your Slack posts show stray asterisks and broken links.

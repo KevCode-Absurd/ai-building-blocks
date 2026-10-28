@@ -77,7 +77,6 @@ Give the step 3 file (`outputs/step-03-sales-letter-outline-planner.md`) to the 
 - Every claim in the outline has proof or is flagged as lacking it, and the runner-up theme is named with why it lost.
 - If customer words were given, at least three of every five fit the dominant feeling. If they do not, say so and name the feeling that does fit.
 - The outline carries a claim-to-proof table: every claim in the page plan on one row, with the proof beside it or `MISSING: proof`.
-- The runner-up theme is named, with the reason it lost to the chosen one.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

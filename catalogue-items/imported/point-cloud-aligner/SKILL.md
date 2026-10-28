@@ -16,7 +16,7 @@ Select `pcregistericp` with `Metric="planeToPlane"` as the starting point, evalu
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Map data** (yours): the map files, such as GeoJSON or a shapefile, with their coordinate system.
+- **Map data** (yours): the map files, such as GeoJSON, a shapefile, a raster or a point cloud, with their coordinate system.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.

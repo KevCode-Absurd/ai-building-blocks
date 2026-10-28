@@ -14,10 +14,11 @@ This workflow chains skills from the library. Each step is its own skill. You ru
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **Brand brain** (its products and buyers part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Makes it better (optional):**
+- **Brand brain** (its buyers and products part), made by the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder): your facts, products, buyers, claims and voice, in one folder of eight files.
 - **Competitors** (yours): the brands buyers compare you with.
 - **Ad copy**, made by the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer): the headline and text of the ad.
 - **A design direction**, made by the [Landing page design planner](https://useaiblocks.com/skills/landing-page-design-planner): the page's type, colours and layout rules.
@@ -32,12 +33,12 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
-2. **Check what's missing.** Look for your brand brain, customer words, competitors. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for your question, customer words, your brand brain. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the method with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once and merge steps that give the same thing. In CHECKS MISSED, list checks that failed or could not run. If every required check ran and passed, write “none”.
 <!-- /needs -->
 
 ## What you need
-The general "Before you start" list above mentions a buyer brief and a brand brain. Both are optional here. The five skill files come in the handoff pack with HANDOFF.md. If one is missing, stop at that step.
+The general "Before you start" list above mentions a buyer brief and a brand brain. Both are optional here. "Your question" there means your product facts and where the page will run. The five skill files come in the handoff pack with HANDOFF.md. If one is missing, stop at that step.
 
 **Thin reviews:** if you have fewer than about five real reviews, step 2 writes `MISSING: testimonial` rather than filling the table, and step 4 lists the doubts it could not answer with proof. Ask the person to add real reviews before the page goes live.
 
@@ -45,6 +46,7 @@ The general "Before you start" list above mentions a buyer brief and a brand bra
 
 - **One product's facts: price, variants, ingredients or materials, how it is used, photos by job** (required)
 - **Customer words from reviews, tickets, surveys or calls, with source and date** (required). The page may use only these for testimonials and author names.
+- **Where the page will run: the ad platform and the country** (required for the claim and label checks). Without it, write `MISSING: platform and country` and mark the claim checks as not run.
 - **Competitor profiles and the gaps worth owning** (optional)
 - **The brand's facts, voice, products, offers (with effective dates), claims register, personas and look** (optional)
 - **Headline, primary text, description and CTA within platform limits** (optional)
@@ -66,7 +68,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 3. **Advertorial story and belief checker.** Use the skill `advertorial-story-and-belief-checker`. Give it the landing page and the brief from the steps before. Reads the draft page and flags where the story breaks or a belief is not yet earned. Saves each sentence where the story turns into a pitch with a rewrite, a pass, part or fail on eight checks, and a score out of 100.
 4. **Store social proof placer.** Use the skill `store-social-proof-placer`. Give it step 2's page with step 3's rewrites applied, and your reviews. Places reviews and proof where the checked draft raises a doubt. Saves the proof matched to each doubt, a layout map and a list of proof it dropped. It uses only the reviews you supplied.
 5. **Landing page 30-point checker.** Use the skill `landing-page-30-point-checker`. Give it step 2's page with step 3's rewrites and step 4's proof placements applied. Scores the finished page on 30 points before it goes live. Saves a short verdict, the 30 checks with evidence, the five fixes to make first and a score out of 100.
-6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, every `MISSING:` line from all steps in one list, and `CHECKS MISSED`: the checks that failed or could not run (such as claim checks with no platform named), or "none".
 
 ## What you hand back
 5 step files and the summary. The last file holds the audit report.
@@ -75,7 +77,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - Step 3: each sentence where the story turns into a pitch with a rewrite, eight checks and a score out of 100.
 - Step 4: proof matched to each doubt, a layout map and the proof it dropped.
 - Step 5: a short verdict, 30 checks with evidence, the five fixes to make first and a score.
-- Summary: each step's file and every `MISSING:` line.
+- Summary: each step's file, every `MISSING:` line and the checks missed.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

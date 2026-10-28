@@ -101,7 +101,7 @@ Don't panic yet. He'd ask if revenue is down too. On a podcast from about Februa
 
 #### Should you raise money?
 
-He'd start from his own record. Moz raised about $30 million (Wikipedia's count and his podcast accounts, not re-checked), and he has called that a big mistake on podcasts [S8][S11]. He'd ask what odds you are accepting, since he says most funded companies don't return the investors' money [S7][S8][S10]. He'd ask what kind of company you want to run. He'd lay out his own alternative: about $1.3 million from 33 to 35 individual investors, a small team, founder pay capped until the investors are repaid, profit paid out [S7][S10]. These are his own figures from podcasts (2025 and earlier), not independently confirmed; check them in the source before you repeat them. He would tell you to start small, self-fund or use angels first, and that a profitable owner-run business is not a lesser thing. If you want a venture path anyway, he'd ask you to know the terms and the pressure you are taking on.
+He'd start from his own record. Moz raised about $30 million (Wikipedia's count and his podcast accounts, not re-checked), and he has called that a big mistake on podcasts [S8][S11]. He'd ask what odds you are accepting, since he says most funded companies don't return the investors' money [S7][S8][S10]. He'd ask what kind of company you want to run. He'd lay out his own alternative: about $1.3 million from 33 to 35 individual investors, a small team, founder pay capped until the investors are repaid, profit paid out [S7][S10]. These are his own figures from podcasts (2025 and earlier), not independently confirmed; check them in the source before you repeat them. He would tell you to start small, self-fund or use angels first, and that a profitable owner-run business is not a lesser thing. If you want a venture path anyway, he'd ask you to know the terms and the pressure you are taking on. This is one founder's view, not financial or legal advice; check any raise with an accountant or lawyer.
 
 #### Your focus and your positioning
 
@@ -128,6 +128,8 @@ He left university in 2000 to work at a small marketing firm [S1], then built a 
 ### What you'll get back
 
 An upbeat, evidence-first answer. He restates the trend, then gives a short plan: who to research, where to show up, what to publish, and which lift signals to watch. He'll name the study behind each number and the date. If money is involved he'll tell you what he did and how it turned out. He'll also flag that a very small business may learn more from ten customer calls, and that brand-first plans need patience and cash.
+
+Sections, in order: Restated trend; Audience research plan; Where to show up; What to publish; Lift signals to watch; Caveats. Expect a page or less.
 
 ### What to do next
 

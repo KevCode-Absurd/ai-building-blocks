@@ -31,4 +31,4 @@ credits:
   - title: matlab-share-content skill
     by: MathWorks
     url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/cloud-solutions/matlab-share-content
-    used: Copied under the BSD 2-Clause licence (LICENSE.md), which adds that you may use it only with MathWorks products. The skill file also links MathWorks' own reuse licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the BSD 2-Clause licence (LICENSE.md), which adds that you may use it only with MathWorks products. LICENSE.md governs this copy. The skill file's front matter links a different MathWorks licence page, so we added a note there saying LICENSE.md wins. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.

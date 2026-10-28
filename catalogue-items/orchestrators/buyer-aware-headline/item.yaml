@@ -24,5 +24,5 @@ origin: rebuilt
 version: 1.0.0
 minds: [eugene-schwartz]
 credits:
-  - {title: "Breakthrough Advertising (a book summary)", by: "Eugene Schwartz", used: "The order of the steps: read how aware and how jaded your buyers are, write the headlines for that stage, check each headline promises something worth reading for, plan a small test between very different headlines"}
+  - {title: "Breakthrough Advertising (a book summary)", by: "Eugene Schwartz", used: "The ideas behind steps 1 and 2: buyer awareness and how worn a market's claims are. The promise check, the test and the step order are ours."}
 generated_from: intake/breakthrough-ads-headline/skeleton.yaml

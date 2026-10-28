@@ -36,7 +36,7 @@ how_to_use:
   - Add your privacy practice setup. In a chat that cannot read files, paste it in. Without it the skill stops, or runs on US defaults if you say "provisional". Use provisional mode only if you have no customers in the EU or UK. The skill will not offer it otherwise, because the call may be wrong.
   - "The skill's shared guardrails file, destination check and closing decision tree come from the plugin and are not included. The skill uses a short version of each: it asks who will read the result, and it ends with a plain list of next steps."
   - Where the skill points to /privacy-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.
-  - Other commands it names (pia-generation, ai-governance-legal, product-legal) are not included. Skip those handoffs, or start the full assessment in a separate chat. If the screen says an assessment is needed and you cannot run one, ask your AI for a short checklist from the conditions table and take it to your privacy counsel.
+  - Other commands it names (pia-generation, ai-governance-legal, product-legal) are not included. Skip those handoffs. If the screen says an assessment is needed, the skill offers a short checklist from the conditions table to take to your privacy counsel. For the full assessment, paste the result into a new chat with the Privacy impact assessment writer.
   - It cites laws from the AI's knowledge or search. Have your privacy counsel check every citation before you rely on it.
 output_sample:
   input:

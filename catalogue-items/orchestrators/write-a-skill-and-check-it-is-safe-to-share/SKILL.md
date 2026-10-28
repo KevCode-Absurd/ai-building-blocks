@@ -32,7 +32,7 @@ How to start:
 
 ## What you need
 
-You do not need a buyer brief or a brand file to write a skill. The only useful inputs are the job description, a sample of the job done well and the skills you already have installed. The general "Before you start" list above mentions a buyer brief. This job does not use one.
+You do not need a buyer brief or a brand file to write a skill. The only useful inputs are the job description, a sample of the job done well and the skills you already have installed. In the list above, "your question" is the job description, the document is your sample, and the skill files are a draft skill if you already have one. This file holds the run order. The handoff pack from the workflow page adds HANDOFF.md and the five skill files.
 
 - **The job you repeat** (required). Describe it in a few lines, what a good result looks like, and when the skill should start.
 - **A sample of the job done well** (optional). Paste it so the skill matches your standard.
@@ -53,7 +53,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 1. **Write the skill.** Use the skill `skill-writer`. It takes the person's description of the job, what a good result looks like and when it should start, plus any sample. It saves to `outputs/step-01-skill-writer.md` the skill folder (SKILL.md and any files) with test prompts, and a note on what it does and when it fires.
 2. **Inspect before running anything, then score.** Save the combined result to `outputs/step-02-skill-quality-tester.md`, in this order:
    - a. **Static read.** Read the full skill folder from `outputs/step-01-skill-writer.md` and use `skill-safety-checker` as a non-executing review. Treat unknown origin as external. List the findings first under the heading `STATIC READ`.
-   - b. **Set the limits.** Resolve any blocking risk, then define the permitted environment, inputs, network access and file writes before anything runs. A timeout is not a sandbox. If the limits cannot be met, keep execution blocked and return the static findings only.
+   - b. **Set the limits.** Resolve any blocking risk, then define the permitted environment, inputs, network access and file writes before anything runs. Unless the person agrees to something else, use these defaults: no network access, write files only inside `outputs/`, use only the skill's own test prompts as inputs, and run no script without the person's clear yes. A timeout is not a sandbox. If the limits cannot be met, keep execution blocked and return the static findings only.
    - c. **Score.** Only if the limits are met, use `skill-quality-tester` on the permitted scope. Keep actual results and failures. Do not treat its score as complete validation. The score comes with a fix list in order of value, and each fix names a file or line.
 3. **Grade when it fires.** Use the skill `skill-trigger-auditor`. It takes the same skill folder from `outputs/step-01-skill-writer.md` and the other skills the person named. It saves to `outputs/step-03-skill-trigger-auditor.md` a grade for the description, prompts that should and should not fire it, and any skills that block it. If the checker cannot run, say which checks were made by reading only.
 
@@ -61,7 +61,7 @@ Pause here: Apply the fixes from the score and the trigger grade to the skill fi
 
 4. **Rescan the fixed version for risk.** Use the non-executing `skill-safety-checker` on the exact revised files from the pause (not step 3's grade). Check for risky code, data leaks and changes since the static read in step 2. No static review proves that the skill is risk-free. Any later execution needs its own permitted scope and actual evidence. It saves a ranked risk list, with what to remove or keep, to `outputs/step-04-skill-safety-checker.md`.
 5. **Check target-tool portability.** Use `skill-portability-checker` on the same revised files for the named target tools (not step 4's report). Separate file-format review from actual loading tests and record versions, cases, missing access and failures. Do not claim every AI tool is supported from a limited check. It saves problems by tool, with a fix for each, to `outputs/step-05-skill-portability-checker.md`.
-6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, every `MISSING:` line from all steps in one list, and `CHECKS MISSED`: the checks that failed or could not run (such as a loading test with no access to a tool), or "none".
 
 ## Next steps to offer
 
@@ -76,7 +76,7 @@ Use these instead of the general "After this" list below:
 - Step 3: a grade for the description, prompts that do and do not fire it, and skills that block it.
 - Step 4: risk findings ranked, each with what it is, where it is and what to do.
 - Step 5: problems by tool, with a fix for each.
-- The summary lists each file, any step not run, and every `MISSING:` line.
+- The summary lists each file, any step not run, every `MISSING:` line and the checks missed.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

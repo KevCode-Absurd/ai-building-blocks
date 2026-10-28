@@ -30,7 +30,7 @@ you_get:
   - A risk report on code and data leaks
   - A list of what stops it loading in other tools, with fixes
 how_to_use:
-  - Download the handoff pack. It's a zip with HANDOFF.md and the five skill files, in the order they run: Skill writer, Skill quality tester, Skill trigger auditor, Skill safety checker and Skill portability checker.
+  - "Download the handoff pack from this page. It's a zip with HANDOFF.md and the five skill files, in the order they run: Skill writer, Skill quality tester, Skill trigger auditor, Skill safety checker and Skill portability checker."
   - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
   - Describe the job in a few lines and say when it should start.
   - When it pauses, fix the skill files using the score and the trigger grade. Then tell it to carry on.

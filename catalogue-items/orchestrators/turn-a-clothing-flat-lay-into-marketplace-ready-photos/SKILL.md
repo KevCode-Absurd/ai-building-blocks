@@ -47,7 +47,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 
 Pause here: Pick the retouched photo that looks most like your real garment and save it.
 
-2. **Ghost mannequin photo maker.** Use the skill `ghost-mannequin-photo-maker`. It takes the retouched photo from step 1 that you chose, not every option in `outputs/step-01-product-photo-retoucher.md`. Reads the retouched photo from step 1 that you chose, shapes it as if worn, and hands that worn-shape photo to step 3. Saves a note of what was kept unchanged in `outputs/step-02-ghost-mannequin-photo-maker.md`.
+2. **Ghost mannequin photo maker.** Use the skill `ghost-mannequin-photo-maker`. It takes the retouched photo from step 1 that you chose, not every option in `outputs/step-01-product-photo-retoucher.md`. Reads the retouched photo from step 1 that you chose, shapes it as if worn, and hands that worn-shape photo to step 3. Show the inside of the collar only if the real flat lay shows it. If it does not, leave it out and write `MISSING: inside of collar`. Saves a note of what was kept unchanged in `outputs/step-02-ghost-mannequin-photo-maker.md`.
 
 Pause here: Before you save the worn-shape photo, hold the real garment beside it and compare sleeve length, hem and collar against the real measurements. Redo the picture if any differ. Save the one you like best. The next step zooms into it.
 
@@ -60,7 +60,7 @@ Pause here: Put the retouched photo, the worn-shape photo and the close-ups you 
 Pause here: Redo or retouch any picture the inspector flagged, then save the final set.
 
 5. **Marketplace photo rule checker.** Use the skill `marketplace-photo-rule-checker`. It takes the final set of pictures that passed step 4's check, with `outputs/step-04-ai-product-photo-inspector.md`, and the marketplace the person named. Uses the pictures that passed step 4's check, with step 4's report, and checks them against marketplace rules. Marks each rule pass or reject, with a fix for every reject. The rules come from the marketplace's own seller help pages, which change. The person checks the current page before relying on a pass. Saves `outputs/step-05-marketplace-photo-rule-checker.md`.
-6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+6. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, every `MISSING:` line from all steps in one list, and `CHECKS MISSED`: the checks that failed or could not run (such as a colour or sleeve-length match the person has not made), or "none".
 
 ## What you hand back
 5 step files and the summary. The last file holds the audit report. The files hold:
@@ -69,7 +69,7 @@ Pause here: Redo or retouch any picture the inspector flagged, then save the fin
 - Step 3, fabric close-ups: each close-up, and the area it shows.
 - Step 4, fault report: a risk rating per picture, eight checks (garment shape, face, hands, body shape, garbled text, light and shadow, cut-out edges, marketplace rule risks), a use, retry or retouch call, and fix lines.
 - Step 5, marketplace check: pass or reject for each rule, and a fix for each reject.
-- The hand-back summary: each step's file, any step not run, and every `MISSING:` line in one list.
+- The hand-back summary: each step's file, any step not run, every `MISSING:` line in one list, and the checks missed.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

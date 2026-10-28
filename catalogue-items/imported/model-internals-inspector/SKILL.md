@@ -167,8 +167,21 @@ for layer in range(model.cfg.n_layers):
         results[layer, pos] = metric(patched_logits)
 
 # 5. Visualize results (layer x position heatmap)
-# The code above only fills the `results` grid. To draw the heatmap, add a plotting step,
-# for example with matplotlib: plt.imshow(results.cpu().numpy(), aspect="auto"); plt.colorbar(); plt.show()
+# Plotting code added by AI Blocks (needs `pip install matplotlib`).
+import matplotlib.pyplot as plt
+
+labels = model.to_str_tokens(clean_tokens[0])
+fig, ax = plt.subplots(figsize=(1 + 0.6 * len(labels), 4))
+im = ax.imshow(results.cpu().numpy(), aspect="auto", cmap="RdBu", origin="lower")
+ax.set_xticks(range(len(labels)))
+ax.set_xticklabels(labels, rotation=45, ha="right")
+ax.set_xlabel("Position (clean prompt tokens)")
+ax.set_ylabel("Layer (resid_post)")
+ax.set_title("Logit difference after patching: ' Paris' minus ' Rome'")
+fig.colorbar(im, ax=ax)
+fig.tight_layout()
+fig.savefig("activation_patching.png", dpi=150)
+plt.show()
 ```
 
 ### Checklist

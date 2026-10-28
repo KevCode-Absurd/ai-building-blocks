@@ -24,20 +24,22 @@ uses:
 steps:
   - uses: copilot-acreadiness-assess
     note: 1. Read skills/copilot-acreadiness-assess/SKILL.md. Point it at your repo.
-      Get a dashboard showing what stops coding agents from working well. Save
-      the result with source references. Carry the user's goal and all earlier
+      Get a dashboard showing what stops coding agents from working well. The
+      scan writes only reports/index.html in the repo. Carry the user's goal and all earlier
       findings into this step. If required evidence or tool access is missing,
       mark this step blocked; do not fabricate a result. Hands step 2 the dashboard report, with the score, the nine areas and the fix-first list.
   - uses: copilot-acreadiness-policy
     note: 2. Read skills/copilot-acreadiness-policy/SKILL.md. Share your repo's
       needs. Get scoring rules that fit the project and show which checks
-      matter. Save the result with source references. Carry the user's goal and
+      matter. Show the policy as text and keep it outside the repo until the
+      user approves the step 3 preview. Carry the user's goal and
       all earlier findings into this step. If required evidence or tool access
       is missing, mark this step blocked; do not fabricate a result. Uses your repo and step 1's dashboard to decide which checks matter. Hands step 3 the scoring rules and the weakest areas.
   - uses: copilot-acreadiness-generate-instructions
     note: 3. Read skills/copilot-acreadiness-generate-instructions/SKILL.md. Point
       it at your repo. Get project rules for coding agents, with a preview
-      before files change. Save the result with source references. Carry the
+      before files change. Write nothing to the repo until the user approves
+      the preview. Carry the
       user's goal and all earlier findings into this step. If required evidence
       or tool access is missing, mark this step blocked; do not fabricate a
       result. Uses your repo, plus step 1's gaps in the AI tooling area and step 2's scoring rules.

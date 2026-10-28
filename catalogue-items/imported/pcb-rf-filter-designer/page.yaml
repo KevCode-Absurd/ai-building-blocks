@@ -23,8 +23,8 @@ not_for:
   - "You have no MATLAB or paid RF PCB Toolbox: use a free circuit simulator, or ask a person who has the tools."
 you_give:
   - Centre frequency and bandwidth
-  - Stopband rejection needed
-  - The substrate and metal
+  - Stopband rejection needed, and the frequency where it must apply
+  - "The substrate: relative permittivity, loss tangent and thickness, plus the metal"
   - Size limits (optional)
   - Measured S-parameter data (optional)
 you_get:
@@ -38,6 +38,8 @@ how_to_use:
   - Give your centre frequency, bandwidth, rejection need and substrate. Add size limits or measured data if you have them.
   - Check the recommended filter type and the mesh and memory estimate before you run a full solve.
   - Look at the plotted response. If it misses your target, ask for a change or move on to tuning.
+  - Next, bring the filter object to the MATLAB PCB signal loss analyzer to check the S-parameters with a full EM solve. Then bring it and your target band to the MATLAB RF PCB dimension tuning step to tune its sizes.
+next: [pcb-signal-loss-analyzer, pcb-design-optimizer, pcb-circuit-combiner]
 output_sample:
   input:
     - Your centre frequency and bandwidth

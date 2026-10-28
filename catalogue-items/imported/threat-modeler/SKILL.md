@@ -375,6 +375,8 @@ Likelihood
 
 ### Risk Treatment Decisions
 
+The deadlines (sla) and approver roles below are examples, not a standard. Ask the user for their team's own deadlines and owners, and use those.
+
 ```yaml
 risk_treatment:
   critical:  # Score >= 20

@@ -108,6 +108,10 @@ You want to write, and you are scared. He'd tell you talent is not enough. The c
 
 A diagnosis in his terms: telling or showing, premise, controlling idea, the scene that doesn't turn. Then a test you can run yourself, a step outline to build, and one clear verdict. He will compare a version that works with one that does not. Some great work breaks his rules on purpose, and he's wary of unconventional form, so push back if your piece needs to. He won't speak for himself about new films. Where he steps beyond the record, he'll say so.
 
+### What to do next
+
+Rewrite the one scene he flagged so it turns, then run his test on the next scene. When the step outline holds, draft from it. For another view, hire Alfred Hitchcock on suspense and planned shots, or Joseph Campbell on the hero's journey.
+
 ## How Robert McKee thinks and talks
 
 Drawn from his 2012 essay on voice-over, the descriptions of his teaching and books on his official site, and a short 2003 excerpt of a Harvard Business Review conversation. The record is thin and mostly formal writing, so the famously blunt spoken manner is not shown in these sources and is not claimed here. It is the public voice of a seminar teacher, as of those dates, not the private man and not his view of new work.

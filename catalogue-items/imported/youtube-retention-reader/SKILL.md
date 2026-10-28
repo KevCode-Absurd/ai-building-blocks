@@ -30,7 +30,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A transcript** (yours): the words from a recording, written out, with who said what.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **A transcript** with the [YouTube transcript and channel collector](https://useaiblocks.com/skills/youtube-transcript-reader). Bring your question, a video link (optional). It uses your shortlist.
+1. **A transcript** with the [YouTube transcript and channel collector](https://useaiblocks.com/skills/youtube-transcript-reader). Bring your question, a shortlist (optional), a video link (optional).
 2. This one.
 
 How to start:

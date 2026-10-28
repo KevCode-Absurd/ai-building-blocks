@@ -16,7 +16,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your website** (yours): the link to your site or the page.
 - **A codebase** (yours): a project's code, in a folder or repo the AI can open.
 - **A page speed report** (yours): a PageSpeed Insights or Lighthouse result for the pages to check.
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.

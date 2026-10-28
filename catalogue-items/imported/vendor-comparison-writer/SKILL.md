@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 - **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
-- **A shortlist** (yours): a ranked short list chosen from a larger set, with reasons.
+- **A shortlist** (yours): the selected options, with the reasons and criteria used.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -132,3 +132,5 @@ If **~~procurement** is connected:
 1. **Upload the proposal** — I can extract pricing, terms, and SLAs from vendor documents.
 2. **Compare vendors** — "Compare Vendor A vs Vendor B" gets you a side-by-side analysis.
 3. **Include current spend** — For renewals, knowing what you pay now helps evaluate price changes.
+
+Changed by AI Blocks (2026-10-28): refreshed the generated Before you start and After this guidance from catalogue metadata.

@@ -18,7 +18,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Customer needs** (yours): the problems customers want solved, ranked, each with their own words.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Customer task definition writer** with the [Customer task definition writer](https://useaiblocks.com/skills/job-spec-writer). Bring customer words (optional). It uses your shortlist.
+1. **Customer task definition writer** with the [Customer task definition writer](https://useaiblocks.com/skills/job-spec-writer). Bring a shortlist, customer words (optional).
 2. This one.
 
 How to start:

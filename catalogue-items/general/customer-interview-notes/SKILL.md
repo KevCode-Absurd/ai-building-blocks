@@ -16,7 +16,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A plan** with the [Customer purchase interview script writer](https://useaiblocks.com/skills/buying-story-interview-guide). Bring your question, customer words (optional). It uses your brand brain.

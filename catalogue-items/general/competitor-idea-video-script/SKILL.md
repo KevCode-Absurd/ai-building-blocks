@@ -17,13 +17,12 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Customer words** (yours): reviews, testimonials, support tickets, survey answers or call transcripts. Export them or paste them in.
 
 **Makes it better (optional):**
-- **A buyer brief**, made by the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): who it's for, how much they already know, and what will move them.
+- **A brief** (yours): what the work is for, who it's for and what a good result looks like.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **Brand brain** with the [Brand profile builder](https://useaiblocks.com/skills/website-brand-brain-builder). Bring your website, customer words (optional), your results (optional).
-2. **Ad breakdowns** with the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). Bring reference ads, competitors (optional). It uses your brand brain and shortlist.
-3. **A buyer brief** with the [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer). Bring customer words. It uses your brand brain.
-4. This one.
+2. **Ad breakdowns** with the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). Bring reference ads, competitors (optional), a shortlist (optional). It uses your brand brain.
+3. This one.
 
 **From the brand brain, read:** `00-start-here.md`, `market.md`, `business.md`, `customers.md`. Take the options buyers weigh, the competitor table and the open ground. Source notes and rejected ideas never go into the result.
 

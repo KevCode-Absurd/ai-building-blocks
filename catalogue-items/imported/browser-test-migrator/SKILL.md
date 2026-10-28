@@ -10,6 +10,8 @@ description: >-
 
 Interactive migration from Cypress or Selenium to Playwright with file-by-file conversion.
 
+**AI Blocks route note:** With project and terminal access, convert files and run the checks below. In a normal chat, ask for the source tests, target language and project settings, then return draft conversions, patches and exact checks for the owner to run. Mark them "Not run" until actual results are available. Slash commands and agents are optional host features.
+
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -25,7 +27,7 @@ How to start:
 
 ## Input
 
-`$ARGUMENTS` can be:
+Read the person's message for the migration target and files. A compatible plugin host may supply the same text in `$ARGUMENTS`. The input can be:
 - `"from cypress"` — migrate Cypress test suite
 - `"from selenium"` — migrate Selenium/WebDriver tests
 - A file path: convert a specific test file
@@ -35,7 +37,7 @@ How to start:
 
 ### 1. Detect Source Framework
 
-Use `Explore` subagent to scan:
+Use available project-file tools to scan the following. An `Explore` agent is optional if the host supports it and its use is authorised. In a normal chat, inspect the supplied files and state which parts of the project you could not see; do not invent a full-suite file count:
 - `cypress/` directory or `cypress.config.ts` → Cypress
 - `selenium`, `webdriver` in `package.json` deps → Selenium
 - `.py` test files with `selenium` imports → Selenium (Python)
@@ -55,16 +57,16 @@ Migration Assessment:
 | Size | Files | Approach |
 |---|---|---|
 | Small (1-10) | Convert sequentially | Direct conversion |
-| Medium (11-30) | Batch in groups of 5 | Use sub-agents |
-| Large (31+) | Use `/batch` | Parallel conversion with `/batch` |
+| Medium (11-30) | Batch in groups of 5 | Convert one group at a time; optional helpers depend on the host |
+| Large (31+) | Use reviewed groups of files | Work through groups in order; `/batch` is optional only in a host that provides it |
+
+> **AI Blocks note (before you change any file):** show the user the assessment and the list of files you will change, and wait for a yes. Check the project is under version control with no unsaved changes, and suggest a new branch. If it is not, ask the user to make a backup copy first. Write the Playwright tests as new files and leave the old tests in place until the user has run the new ones and agrees to remove them.
 
 ### 3. Set Up Playwright (If Not Present)
 
-Run `/pw:pw-init` first if Playwright isn't configured.
+Check the project's target language and current test setup first. If the host has the Playwright plugin and `/pw:pw-init` command, that is an optional shortcut. Otherwise follow the official [JavaScript/TypeScript setup](https://playwright.dev/docs/intro) or [Python setup](https://playwright.dev/python/docs/intro) for the agreed target. The mappings below show JavaScript/TypeScript syntax. For Python, use the matching Python API and runner. In a normal chat, provide setup changes for the owner to review and apply; do not claim you installed anything.
 
 ### 4. Convert Files
-
-> **AI Blocks note (before you change any file):** show the user the assessment and the list of files you will change, and wait for a yes. Check the project is under version control with no unsaved changes, and suggest a new branch. If it is not, ask the user to make a backup copy first. Write the Playwright tests as new files and leave the old tests in place until the user has run the new ones and agrees to remove them.
 
 For each file, apply the appropriate mapping:
 
@@ -127,13 +129,13 @@ During conversion, upgrade selectors to Playwright best practices:
 
 ### 7. Verify Each Converted File
 
-After converting each file:
+After converting each file, run the agreed language's test command. For JavaScript/TypeScript, for example:
 
 ```bash
 npx playwright test <converted-file> --reporter=list
 ```
 
-Fix any compilation or runtime errors before moving to the next file.
+Fix actual compilation or runtime errors before marking a file verified. If you cannot run the project, mark the conversion "Not run", provide the check command and ask the owner for the result. Do not remove old tests or invent a passing result.
 
 ### 8. Clean Up
 
@@ -150,7 +152,7 @@ Ask user before deleting anything.
 - Conversion summary: files converted, total tests migrated
 - Any tests that couldn't be auto-converted (manual intervention needed)
 - Updated CI config
-- Before/after comparison of test run results
+- Before/after comparison from actual test runs, or a clear "Not run" status with the commands still needed
 
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this

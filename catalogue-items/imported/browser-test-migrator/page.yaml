@@ -9,7 +9,9 @@ subhead: Move an old Cypress or Selenium test suite to Playwright without rewrit
 explain: |
   Move an old Cypress or Selenium test suite to Playwright without rewriting it all by hand. You get the tests converted one file at a time and can check each step.
 
-  The skill first detects which framework you use by scanning folders and project settings. It counts the test files, custom commands and fixtures, and rates the effort as small, medium or large. Small suites convert in order, medium ones in batches of five, and large ones go in parallel. Each file is changed using a mapping table, for example turning a visit call into a page goto call and a get into a locator. Playwright is set up first if it is missing.
+  The skill first detects which framework you use by scanning folders and project settings. It counts the test files, custom commands and fixtures, and rates the effort as small, medium or large. Small suites convert in order and larger ones use reviewed groups. Parallel helpers are optional host features. Each file is changed using a mapping table, for example turning a visit call into a page goto call and a get into a locator. Playwright is set up first if it is missing.
+
+  A normal chat can prepare draft code and a migration plan from files you paste. It cannot claim to have changed your project or run tests. The output sample below shows a full run for a JavaScript/TypeScript project with terminal access.
 when:
   - Your Cypress tests are slow and you want to move to Playwright.
   - You have old Selenium tests that nobody wants to maintain.
@@ -17,7 +19,7 @@ when:
   - You need an estimate of how big the migration is before you start.
 not_for:
   - Your tests run on Jest, Mocha or Vitest. Keep them there, or ask a developer to port them by hand.
-  - Your project has no Node setup. Set up Node first, or ask a developer to install Playwright for you.
+  - You cannot provide tests or project settings. Gather them first. Running the result also needs the right environment for the chosen language.
   - You want to write new tests, not convert old ones. Write them in Playwright from the start.
 you_give:
   - Your existing Cypress or Selenium test folder
@@ -29,10 +31,10 @@ you_get:
   - Playwright setup if missing
   - Notes on commands that needed manual work
 how_to_use:
-  - Open your AI in a tool that can read your project folder and run commands. Playwright tests need Node installed.
+  - For a full migration, use an AI with project and terminal access. In a normal chat, paste a test file and project settings to get a draft conversion and checks for you to run.
   - Paste this skill into the chat. Say which framework you use, or let it find out.
   - Ask for the size assessment first. Check the file count and effort rating.
-  - Start with one test file. Check the converted version and the test run result.
+  - Start with one test file and agree on the target language. Check the converted version and actual test result. A plain-chat draft stays marked Not run until you test it.
   - Then convert the rest. Small suites go in order. Medium ones go in groups of five.
   - Review the manual work list. Say yes or no before it deletes any old files.
 output_sample:

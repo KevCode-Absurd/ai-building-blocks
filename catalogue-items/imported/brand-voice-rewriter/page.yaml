@@ -31,7 +31,7 @@ you_get:
   - A check against your guidelines
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste your brand voice guidelines first, or attach the file if your AI can read files.
-  - Paste the skill instructions from SKILL.md into the same chat.
+  - Paste the skill instructions from SKILL.md into the same chat. No brand-voice plugin or slash command is needed.
   - Add your draft, or a topic and goal. Say who will read it and what format it is. Add any facts to include.
   - Read the draft, then the brand choices and the check. Ask for changes if a line still feels off.
   - "If your request clashes with your guidelines, pick one of the options it offers: follow the guidelines, adapt them, or override them."

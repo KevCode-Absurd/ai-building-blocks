@@ -16,25 +16,26 @@ description: >
 
 Apply existing brand guidelines to all sales and marketing content generation. Load the user's brand guidelines, apply voice constants and tone flexes to the content request, validate output, and explain brand choices.
 
+**AI Blocks route note:** In a normal chat, paste your approved brand guidelines and a brief or draft. Follow the workflow below in the same conversation. Plugin commands and separate agents are optional host features. Without guidelines, stop and ask for them; do not make up brand rules.
+
 <!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
+- **A brand guide** (yours): a printable brand guide: voice, look, do and don't, with examples.
 - **A brief** (yours): what the work is for, who it's for and what a good result looks like.
 
 **Makes it better (optional):**
-- **A brand guide** (yours): a printable brand guide: voice, look, do and don't, with examples.
-- **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
+- **The post or message** (yours): the post, comment, message or email you're replying to, with who wrote it and where.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A brand guide** with the [Brand voice guide builder](https://useaiblocks.com/skills/brand-voice-guide-builder). Bring source text, customer words (optional), a transcript (optional).
-2. **An audit report** with the [Draft brand voice checker](https://useaiblocks.com/skills/draft-brand-voice-checker). Bring a draft, a brand guide (optional). It uses your brand brain.
-3. This one.
+2. This one.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for a brief, a brand guide, an audit report. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+2. **Check what's missing.** Look for a brand guide, a brief, the post or message. They can attach files, paste the details, or share a file path your assistant can read. Offer the linked skills above when they help prepare that material. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
 3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
 <!-- /needs -->
 
@@ -42,19 +43,15 @@ How to start:
 
 Find the user's brand guidelines using this sequence. Stop as soon as you find them:
 
-1. **Session context** — Check if brand guidelines were generated earlier in this session (via `/brand-voice:generate-guidelines`). If so, they are already in the conversation. Use them directly. Session-generated guidelines are the freshest and reflect the user's most recent intent.
+1. **Session context** — Check for approved brand guidelines already shared in this conversation. Use them directly. If the host has the brand-voice plugin, its `/brand-voice:generate-guidelines` command is one way they may have been created; the command is not needed in a normal chat.
 
 2. **Local guidelines file** — Check for `.claude/brand-voice-guidelines.md` inside the user's working folder. Do NOT use a relative path from the agent's current working directory — in Cowork, the agent runs from a plugin cache directory, not the user's project. Resolve the path relative to the user's working folder. If no working folder is set, skip this step.
 
-3. **Ask the user** — If none of the above found guidelines, tell the user:
-   "I couldn't find your brand guidelines. You can:
-   - Run `/brand-voice:discover-brand` to find brand materials across your platforms
-   - Run `/brand-voice:generate-guidelines` to create guidelines from documents or transcripts
-   - Paste guidelines directly into this chat or point me to a file"
+3. **Ask the user** — If no guidelines were found, ask them to paste approved guidelines, attach a file you can read, or use the [Brand voice guide builder](https://useaiblocks.com/skills/brand-voice-guide-builder) first. In a host with the brand-voice plugin installed, `/brand-voice:discover-brand` and `/brand-voice:generate-guidelines` are optional shortcuts. Do not ask people to run those commands in an ordinary chat.
 
-   Wait for the user to provide guidelines before proceeding.
+   Wait for the user to provide or approve guidelines before proceeding.
 
-Also read `.claude/brand-voice.local.md` for enforcement settings (even if guidelines came from another source):
+If you have project-file access and `.claude/brand-voice.local.md` exists, read its enforcement settings (even if guidelines came from another source). In a normal chat, use the person's stated preferences and ask only about missing settings that change the draft:
 - `strictness`: strict | balanced | flexible
 - `always-explain`: whether to always explain brand choices
 
@@ -94,8 +91,7 @@ Create content that:
 - Uses preferred terminology
 - Mirrors the quality and style of guideline examples
 
-For complex or long-form content, delegate to the content-generation agent (defined in `agents/content-generation.md`).
-For high-stakes content, delegate to the quality-assurance agent (defined in `agents/quality-assurance.md`) for validation.
+Draft and review in the same conversation when separate agents are unavailable. If the host supports agents and their use is authorised, `agents/content-generation.md` and `agents/quality-assurance.md` are optional drafting and review roles. Do not claim that another agent reviewed the work unless it actually did.
 
 ### 5. Validate and Explain
 

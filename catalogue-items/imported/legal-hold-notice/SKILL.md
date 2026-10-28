@@ -6,6 +6,29 @@ argument-hint: "[slug] [--issue | --refresh | --release | --status]"
 
 # /legal-hold
 
+<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
+## Before you start
+Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
+
+**What you need** (use your own material or the linked skill):
+- **Your question** (yours): the decision or problem, and what a good outcome looks like.
+
+How to start:
+1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
+2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
+3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
+<!-- /needs -->
+
+## Choose the route first
+
+**AI Blocks plain-chat route — drafts only.** You can prepare a draft without the claude-for-legal plugin. Ask which task is wanted: first notice, refresh, proposed release, or a status summary. Use only matter facts, records and house instructions the person provides. Ask for the forum, dispute and trigger, scope, custodians, date range, systems, legal contact and signer. For a refresh or proposed release, also ask for the existing notice and counsel's instructions. Mark missing facts with MISSING; never invent a conflict check, legal rule, completed preservation step or approval.
+
+Return the draft as text unless a Word tool is available. Label it DRAFT FOR LEGAL REVIEW. A supplied template's privilege marking needs counsel's approval; do not claim a document is privileged by adding a label. Provide a proposed matter-log entry separately, marked DRAFT / NOT ISSUED. With no matter log, list intake and conflict review as still needed. For status, report only the records supplied and state that coverage.
+
+Use the scoping, jurisdiction research and attorney-review checks below. If current primary sources cannot be checked, say which rules remain unverified and leave them for counsel. A chat draft does not issue, refresh or release a hold, change a retention setting, confirm preservation, update a real log or schedule a reminder. Do not claim any such act occurred. A proposed release does not permit deletion; the authorised legal team must check other holds and retention duties and approve the actual release. Flag urgent preservation questions for that team while the draft is reviewed; do not imply a missing plugin or unfinished draft suspends existing duties.
+
+**Plugin route.** The numbered steps and file paths below apply only when the plugin is installed and the files are accessible. Its matter-intake and conflicts gate still applies before issue, refresh or release. With an unknown user role, use the non-lawyer review gate. Show proposed file/log changes and obtain the required confirmation before writing. The Writes sections describe proposed records: do not mark a hold issued, refreshed or released until the authorised person confirms the real event and its date. No notice is sent by this skill.
+
 1. If `--status` (no slug): read `_log.yaml`, produce portfolio-wide hold report.
 2. Otherwise: load `~/.claude/plugins/config/claude-for-legal/litigation-legal/matters/[slug]/matter.md` + log row.
 3. Load `~/.claude/plugins/config/claude-for-legal/litigation-legal/CLAUDE.md` → privilege markings, hold template pointer, escalation norms.
@@ -19,19 +42,6 @@ argument-hint: "[slug] [--issue | --refresh | --release | --status]"
 ---
 
 # Legal Hold
-
-<!-- needs: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
-## Before you start
-Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
-
-**What you need** (use your own material or the linked skill):
-- **Your question** (yours): the decision or problem, and what a good outcome looks like.
-
-How to start:
-1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
-2. **Check what's missing.** Look for your question. They can attach files, paste the details, or share a file path your assistant can read. Ask only for missing facts that change the result. If they ask you to start with what they have, complete the parts you can and mark the gaps.
-3. **Do the job.** Follow the skill below with the facts and tools you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it.
-<!-- /needs -->
 
 ## Purpose
 
@@ -256,3 +266,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Ad claim sorter](https://useaiblocks.com/prompts/ad-claim-sorter). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+Changed by AI Blocks (2026-10-28): Added a plain-chat draft route; kept intake, conflicts, current-source and attorney-review gates for consequential acts; require confirmed events before issued, refreshed or released log records.
+Changed by AI Blocks (2026-10-28): refreshed the generated Before you start and After this guidance from catalogue metadata.

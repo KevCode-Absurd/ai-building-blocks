@@ -6,39 +6,35 @@ summary: Draft a legal hold notice that tells staff which records to keep when a
 job: check-contracts
 headline: Records preservation notice drafter
 subhead: A notice telling staff which records they must keep when a dispute is likely, written as a first draft for a lawyer to review. Tell it about the matter.
-explain: |
-  A notice telling staff which records they must keep when a dispute is likely, written as a first draft for a lawyer to review. Tell it about the matter. It captures the scope, the people who hold records, the date range and the systems involved, then drafts the notice in your house style.
+explain: |-
+  Draft a notice telling staff which records to keep when a dispute is likely. Give the matter facts, forum, people, date range and systems. In a normal chat, get draft text and a proposed log entry for your legal team. A Word tool can make a file. No plugin is needed for this drafting route.
 
-  It can also write a refreshed notice when scope changes, flag people who have left, and draft the release notice when the hold ends. It checks your matter log first, so a conflicts check has been done before anything goes out. You confirm the draft and log change before anything is saved. It is not legal advice.
+  The plugin route can read an existing matter workspace, after its intake and conflicts checks. Both routes keep attorney review and current-source checks. A draft does not issue or release a hold, preserve records, change retention settings or update a real matter log. Status covers only the records supplied. The example below shows the plugin route with Word and file access.
 when:
   - A customer threatened a lawsuit and you must stop records being deleted.
   - The scope of a case grew and staff need an updated notice.
   - An employee on the hold list has left the company.
   - The matter settled and you need to release the hold.
 not_for:
-  - "You need a records retention policy for the whole company: ask a lawyer or your records manager, since this only covers one matter."
-  - "The matter is not logged yet: add it to your matter log first, because the skill reads the matter before it drafts anything."
-  - "You plan to send the notice without review: have a lawyer check it first, since it is a draft and not legal advice."
+  - "You plan to send a notice or release records without legal review: have the authorised legal team approve the action first."
+  - "You need a company-wide retention policy: ask your lawyer or records manager; this draft covers one matter."
 you_give:
-  - The dispute and key facts, from the matter file
-  - The people and teams who hold records, from your team or HR
-  - The date range and systems involved, such as email or shared drives
-  - The court, country or state whose rules apply (the forum)
-  - Your matter log, from your matter intake step
-  - Your house-style notes file, from your legal setup interview
+  - The dispute, key facts and forum whose rules apply
+  - The people and teams who hold records
+  - The date range, systems, legal contact and proposed signer
+  - Any existing notice, house template and counsel instructions
+  - For plugin operations, a matter logged after intake; for status, the records to review
 you_get:
-  - A draft hold notice
-  - Updated notices when scope changes
-  - A release notice
-  - A log entry for the matter
+  - Draft notice text, or a Word file if your AI has a Word tool
+  - A draft refresh or proposed release for legal review
+  - A proposed log entry marked draft until an authorised person confirms the actual event
+  - A status summary limited to the records supplied
 how_to_use:
-  - "What it needs, and where to get each: the matter-intake step and the portfolio status report come from the same claude-for-legal litigation plugin and are not in this item. The house-style notes file comes from the setup interview, which is in this item's setup-interview folder. Word files need a Word (docx) skill or tool in your AI. Researching the preservation rule needs web access, or a legal research tool."
-  - Download the skill folder and add it to your AI tool. Your AI must be able to read files and make Word files.
-  - Make sure the matter is in your matter log and your house-style notes file is saved.
-  - Tell your AI to issue a hold, and name the matter. Add the facts, people, dates and systems.
-  - Read the draft notice and the log changes. Fix anything wrong before you confirm.
-  - Send the notice to a lawyer to review before it goes to staff. Check every rule and case the draft cites against the official source for your forum first, because they may come from the AI's memory.
-  - Later, ask for a refresh when scope changes, or a release when the matter ends.
+  - In a normal chat, paste this skill and the matter facts. Ask for a draft first notice, refresh, proposed release or status summary. No slash command is needed.
+  - Use the plugin route only if claude-for-legal and its matter workspace are available. Complete its intake and conflicts check before any issue, refresh or release.
+  - Ask the AI to mark missing facts and rules it could not check. Word files need a Word tool; a normal chat can return text.
+  - Read the draft and proposed log entry. Have the legal team confirm scope, custodians, the current rules and any privilege marking.
+  - The authorised legal team handles issuance, preservation and release. A draft alone changes none of these. Record actual dates only after the completed action is confirmed.
 output_sample:
   input:
     - The matter name and the key facts of the dispute

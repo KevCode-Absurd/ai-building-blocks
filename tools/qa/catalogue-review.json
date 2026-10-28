@@ -1,0 +1,388 @@
+{
+  "schema": "abb-source-review/1",
+  "note": "Explicit AI Blocks source reviews. Exact quotes and hashes support review; they do not automatically prove meaning or establish a human approval or a successful run. Older unreviewed coverage is reported separately.",
+  "inputs": {
+    "catalogue-items/imported/article-shaper/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-10-29",
+      "method_sha256": "7b52f75044442337f124bbda27ae29db96b37581a21db8511e66c048c60469d2",
+      "inputs": [
+        {
+          "type": "document",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "document",
+          "quote": "The user has passed (or will pass) a markdown file of raw material.",
+          "rationale": "The method reads the person’s own raw material file. It does not require an outside article as source_text."
+        }
+      ]
+    },
+    "catalogue-items/imported/backwards-unit-planner/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-10-29",
+      "method_sha256": "edcddd71b430aa05eef2602e1f53ebe47232bc7b7719cf766b421a26949fd3f7",
+      "inputs": [
+        {
+          "type": "document",
+          "required": false
+        },
+        {
+          "type": "question",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "document",
+          "quote": "**Curriculum framework:** Specific standards",
+          "rationale": "The optional curriculum framework can arrive as a standards document. The teacher may instead give those facts in the request."
+        },
+        {
+          "type": "question",
+          "quote": "**Desired outcomes:** What students should understand, know, and be able to do.",
+          "rationale": "The request must give learning outcomes, student level and duration. These facts form the required planning question."
+        }
+      ]
+    },
+    "catalogue-items/imported/child-led-project-planner/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-10-29",
+      "method_sha256": "95c012f02b847fa158bf9f9a0cbcbd45a5c8e4658a4cacc5eff6f20f94bed369",
+      "inputs": [
+        {
+          "type": "document",
+          "required": false
+        },
+        {
+          "type": "question",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "document",
+          "quote": "**Teacher observations:** What the teacher has noticed.",
+          "rationale": "Written observation notes can supply this evidence. A separate document is optional because the teacher can put the observations in the request."
+        },
+        {
+          "type": "question",
+          "quote": "**Children's interest:** What has captured their attention.",
+          "rationale": "The teacher’s account of the interest and observations supplies the required planning problem. No finished third-party article is required."
+        }
+      ]
+    },
+    "catalogue-items/imported/class-discussion-format-picker/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-10-29",
+      "method_sha256": "d48821257c1fb05a6bbe3362fc474912987c1aa6081a52d01f523ad675dce2dd",
+      "inputs": [
+        {
+          "type": "question",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "question",
+          "quote": "**Discussion purpose:** What the discussion should achieve.",
+          "rationale": "Discussion purpose, topic and student level are the required request facts. The method does not ask for an external source article."
+        }
+      ]
+    },
+    "catalogue-items/imported/emotional-skills-lesson-sequence/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-10-29",
+      "method_sha256": "fed915f60e4ecd29032be10574605e1b0c777c4a70ee2013e1b336824f5a10a9",
+      "inputs": [
+        {
+          "type": "question",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "question",
+          "quote": "**Emotional context:** The situation prompting this.",
+          "rationale": "The teacher provides the classroom context and student level as a planning request. This is not a clinical assessment input."
+        }
+      ]
+    },
+    "catalogue-items/imported/phenomenon-unit-planner/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-10-29",
+      "method_sha256": "e7eecc442560d4e8f1073870e19e237dea883e67f87dacee2fc188cd5698738f",
+      "inputs": [
+        {
+          "type": "document",
+          "required": false
+        },
+        {
+          "type": "question",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "document",
+          "quote": "**Curriculum links:** Specific objectives to address",
+          "rationale": "Curriculum objectives can come from an optional standards document. The method also supplies a fallback when no curriculum links are given."
+        },
+        {
+          "type": "question",
+          "quote": "**Phenomenon:** The real-world situation.",
+          "rationale": "The phenomenon and subjects define the required unit-planning request. Other facts may be supplied in the same request."
+        }
+      ]
+    },
+    "catalogue-items/imported/note-organizer/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-10-29",
+      "method_sha256": "589debc53e184c707b5deddfe99b404895ba466178220ba155ea040a39827975",
+      "inputs": [
+        {
+          "type": "document",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "document",
+          "quote": "Tell the agent what kind of note to take, and provide the content.",
+          "rationale": "The method creates, updates and reads the person’s own notes. document covers that supplied note content without mislabelling it as somebody else’s article."
+        }
+      ]
+    },
+    "catalogue-items/imported/agent-run-evidence-auditor/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-10-29",
+      "method_sha256": "6655b56d6e49e61540a8bb5e562372b7b79a7872eb8ae83e52836566058affc7",
+      "inputs": [
+        {
+          "type": "dataset",
+          "required": true
+        },
+        {
+          "type": "document",
+          "required": false
+        },
+        {
+          "type": "question",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "dataset",
+          "quote": "Auditing a completed or interrupted agent run from traces and artifacts.",
+          "rationale": "Trace events and recorded artifacts supply the evidence being audited. Missing records remain gaps rather than invented successful events."
+        },
+        {
+          "type": "document",
+          "quote": "immutable code, configuration, model, prompt, tool-schema, and artifact revisions when available;",
+          "rationale": "Available configuration and artifact documents can support the audit. They are optional separate files and do not replace required trace evidence."
+        },
+        {
+          "type": "question",
+          "quote": "declared goal and terminal success criteria;",
+          "rationale": "The audit needs the original goal and success contract. It must not invent a stronger or weaker contract."
+        }
+      ]
+    },
+    "catalogue-items/imported/clinical-report-draft-checker/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-10-29",
+      "method_sha256": "b06858c0dd9a09f4838109171bceeb2fc59952d5042e6ed53f532fe9e3a9aa2b",
+      "inputs": [
+        {
+          "type": "dataset",
+          "required": true
+        },
+        {
+          "type": "document",
+          "required": false
+        },
+        {
+          "type": "question",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "dataset",
+          "quote": "**Data class is allowed**: `synthetic`, `deidentified`, or `aggregate`.",
+          "rationale": "Only the allowed verified source-fact data can populate a draft. The record does not approve patient-data handling or clinical decisions."
+        },
+        {
+          "type": "document",
+          "quote": "Study-design-specific reporting guideline and source protocol/SAP",
+          "rationale": "A protocol or analysis-plan document can supply optional route-specific source material. Its presence does not establish clinical or regulatory compliance."
+        },
+        {
+          "type": "question",
+          "quote": "**Purpose is explicit**: publication draft, diagnostic-report scaffold, trial-results manuscript, protocol reporting review, CSR draft, aggregate safety table, or aggregate research summary.",
+          "rationale": "The requested reporting purpose selects the route. The existing authority, provenance, local handling and qualified-review gates still apply."
+        }
+      ]
+    },
+    "catalogue-items/imported/onboarding-rules-checker/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-10-29",
+      "method_sha256": "21eda8d29efedf1630b331000d09b64e3f4a457b08f729142ef065d0ea8302cf",
+      "inputs": [
+        {
+          "type": "audit_report",
+          "required": false
+        },
+        {
+          "type": "dataset",
+          "required": true
+        },
+        {
+          "type": "document",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "audit_report",
+          "quote": "screening results (sanctions / PEP / adverse media) from whichever screening source the user has.",
+          "rationale": "Existing screening findings can arrive as an optional report. They are source evidence, not a fabricated screening result or automatic acceptance."
+        },
+        {
+          "type": "dataset",
+          "quote": "Inputs: the structured record from `kyc-doc-parse` (the Onboarding document reader)",
+          "rationale": "The checker consumes the extracted structured applicant record. Raw identity images are not the declared input to this step."
+        },
+        {
+          "type": "document",
+          "quote": "the firm's rules grid (a file the user provides)",
+          "rationale": "The firm’s supplied rules grid is required. The method applies that trusted grid to the applicant record without inventing rules."
+        }
+      ]
+    },
+    "catalogue-items/imported/email-backlog-clearer/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-10-29",
+      "method_sha256": "2e4bb5190872bff5125735f2c59a89fc51f8efb1da92b1bb186859fd67808fb7",
+      "inputs": [
+        {
+          "type": "document",
+          "required": false
+        },
+        {
+          "type": "question",
+          "required": false
+        },
+        {
+          "type": "short_text",
+          "required": false
+        },
+        {
+          "type": "tool_connection",
+          "required": false
+        }
+      ],
+      "evidence": [
+        {
+          "type": "document",
+          "quote": "Read [the shared voice profile](../../shared/voice-profile.md) before writing anything in the owner",
+          "rationale": "An available voice-profile document can guide drafts. The method has an un-voiced fallback when no profile or samples are supplied."
+        },
+        {
+          "type": "question",
+          "quote": "In pasted mode, ask one extra question up front: what did you promise anyone in the last two weeks?",
+          "rationale": "The owner can supply missing commitment context as an answer. That extra input is conditional on pasted mode, so it stays optional."
+        },
+        {
+          "type": "short_text",
+          "quote": "The owner forwards a batch or pastes a thread and gets the same triage, the same drafts, the same action items.",
+          "rationale": "Pasted or forwarded email is short_text. It is optional because an authorized connected mailbox can supply the messages instead."
+        },
+        {
+          "type": "tool_connection",
+          "quote": "Read from Gmail or Microsoft 365, whichever is connected",
+          "rationale": "The connected-mailbox route uses the owner’s authorized account. Connection is optional because the method also accepts pasted messages."
+        }
+      ]
+    },
+    "catalogue-items/imported/context-package-cleaner/item.yaml": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-10-29",
+      "method_sha256": "6d38592c1cf0e60a33d73edcfeff39340ee654750799eb587c0c84ddcd4fa006",
+      "inputs": [
+        {
+          "type": "dataset",
+          "required": false
+        },
+        {
+          "type": "document",
+          "required": true
+        },
+        {
+          "type": "question",
+          "required": true
+        }
+      ],
+      "evidence": [
+        {
+          "type": "dataset",
+          "quote": "a list of text chunks with optional metadata and scores",
+          "rationale": "Structured retrieval scores and metadata are optional supporting data. Plain text chunks remain a valid input without them."
+        },
+        {
+          "type": "document",
+          "quote": "Provide the raw context (a list of text chunks with optional metadata and scores)",
+          "rationale": "The source bundle consists of supplied text chunks. document names that material without treating every chunk as an outside article."
+        },
+        {
+          "type": "question",
+          "quote": "the user query, and the target token budget.",
+          "rationale": "The actual query and token budget are required to choose and order context. The method does not invent either one."
+        }
+      ]
+    }
+  },
+  "handoffs": {
+    "catalogue-items/imported/incident-postmortem-writer/page.yaml#next#process-and-sop-writer": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-10-29",
+      "from_sha256": "00f142210424638ee37716f3abbcf8780e035c04543ac3546f424b088b2f9678",
+      "to_sha256": "a596ed0eb4d0e584817aca524dfbb9e4d2077dc547622ee58e81b23ab8fda312",
+      "ports_sha256": "eb0089278ccf9f5da7bd6309fb509664c97a9311044cf789cc7133b64e8b19c5",
+      "type": "document",
+      "output_quote": "Day 5-7: Finalize document, create tickets",
+      "input_quote": "Walk me through the process — describe it, paste existing docs, or just tell me the name",
+      "rationale": "The verified postmortem can be supplied as existing documentation for a remediation procedure. The user still needs to select the process and provide its owner and missing operating details.",
+      "condition": "Use reviewed incident facts and a user-selected remediation process. A postmortem alone is not a complete operating procedure."
+    },
+    "catalogue-items/imported/expo-upgrade-helper/page.yaml#next#app-update-health-checker": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-10-29",
+      "from_sha256": "1550417c445caf27f8e8815f179774ec2a4e97f566ff3f6f9586ef0d86a96de7",
+      "to_sha256": "d092c8f60cd4b94d434231bc21132615407c72ac97227fafbda8bb1046a36c06",
+      "ports_sha256": "e4125b6b0b4c5f6aeae535cc0892133aa560fa70a8860dc3ec2ace421c4f8beb",
+      "from_type": "code_change",
+      "to_type": "codebase",
+      "output_quote": "1. Upgrade Expo and dependencies",
+      "input_quote": "run from an Expo project directory (the command resolves the project ID from `app.json`).",
+      "rationale": "The same Expo project can supply project identity after the approved upgrade changes are applied. Monitoring is a later published-update follow-up; the upgrade does not itself publish or supply metrics.",
+      "adaptation": "Reuse the original project with the reviewed upgrade changes applied. Read its app.json project identity. Do not treat a written migration plan as an updated codebase.",
+      "condition": "Only after an approved EAS update is actually published and authorized EAS access plus a real update/channel identifier are available. Otherwise stop the monitoring step."
+    },
+    "catalogue-items/general/availability-payment-deduction-checker/item.yaml#next#project-cash-available-bridge": {
+      "reviewed_by": "AI Blocks source review (Codex)",
+      "reviewed_on": "2026-10-29",
+      "from_sha256": "e0f48a4ba9348ce323818280674751198dd993d8758ef91ec2597874b21d8381",
+      "to_sha256": "dd5e355174b123a7f89421ba8cf402500bf7a2ea3bd18ba07e25ed37510d8fb4",
+      "ports_sha256": "f503358570d5a8a4fd6c6e2693681b515664ca4c9723de0b83dfc40f46e9bbdc",
+      "type": "spreadsheet",
+      "output_quote": "Run the bundled script or build a workbook only when you have code or file tools and the person wants one.",
+      "input_quote": "Paste operating revenue, operating costs",
+      "rationale": "A requested workbook can carry the verified payment and operating-cash calculation into the bridge. It supplies only part of the financial evidence, not the financing definition, taxes, working capital or a complete model.",
+      "condition": "The person requested a workbook, file tools were available, and the actual workbook was made and reviewed. Match period, units and cash-versus-invoice basis before reusing its figures."
+    }
+  }
+}

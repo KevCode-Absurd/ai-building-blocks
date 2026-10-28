@@ -1,7 +1,7 @@
 {
  "note": "The sitemap URLs and lastmod of the last build pinged by tools/indexnow-ping.mjs. Written after a successful ping.",
- "saved": "2026-10-28T16:35:26.657Z",
- "count": 5805,
+ "saved": "2026-10-28T17:23:38.409Z",
+ "count": 5806,
  "urls": {
   "https://useaiblocks.com/": "",
   "https://useaiblocks.com/about": "2026-10-26",
@@ -2840,6 +2840,7 @@
   "https://useaiblocks.com/skills/headcount-forecast-builder": "2026-10-28",
   "https://useaiblocks.com/skills/headcount-plan-builder": "2026-10-28",
   "https://useaiblocks.com/skills/headcount-scenario-planner": "2026-10-28",
+  "https://useaiblocks.com/skills/headless-store-builder": "2026-10-28",
   "https://useaiblocks.com/skills/headline-cover-test-ranker": "2026-10-28",
   "https://useaiblocks.com/skills/headline-option-writer": "2026-10-28",
   "https://useaiblocks.com/skills/headline-promise-checker": "2026-10-28",

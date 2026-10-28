@@ -20,7 +20,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **An audit report** with the [Employee termination risk reviewer](https://useaiblocks.com/skills/termination-risk-checker). Bring your question, a plan (optional).

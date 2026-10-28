@@ -14,7 +14,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **A document** (yours): a finished document, such as a Word file, a PDF or a page of notes.
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 - **Source text** (yours): a long source in full: an article, a video or talk transcript, or notes from a book, with its title, author and link.
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
@@ -96,3 +96,5 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Scanned PDF text reader](https://useaiblocks.com/skills/scanned-pdf-text-reader). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+Changed by AI Blocks (2026-10-28): refreshed the generated Before you start and After this guidance from catalogue metadata.

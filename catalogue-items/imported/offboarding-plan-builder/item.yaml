@@ -37,7 +37,7 @@ credits:
   - title: hr-offboarding skill
     by: Tuan Duc Tran
     url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-offboarding
-    used: Copied under the MIT licence. We gave it a plain name and reworded the involuntary-exit prompt so it drafts a checklist for a lawyer to check instead of promising legal compliance, reworded the matching supported-task line the same way, and added a short numbered list of steps. We added notes marked "Added by AI Blocks" so it works in this library. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the MIT licence. We gave it a plain name and reworded the involuntary-exit prompt so it drafts a checklist for a lawyer to check instead of promising legal compliance, reworded the matching supported-task line the same way, and added a short numbered list of steps. We added notes marked "Added by AI Blocks" so it works in this library. We added Before you start and After this sections that link to other AI Blocks steps. We refreshed those generated sections from the catalogue inputs and next-step links.
   - title: Original author
     by: Tuan Duc Tran
     url: https://github.com/tuanductran

@@ -14,7 +14,7 @@ A villain who is always cruel is easy to predict. A villain who swings between k
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
 
 **What you need** (use your own material or the linked skill):
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
 1. **A plan** with the [Closed story setting planner](https://useaiblocks.com/skills/closed-setting-planner). Bring your question.

@@ -17,13 +17,16 @@ test('source Markdown cannot create active scripts, executable links or credenti
 test('quarantine propagates through uses and steps, including cycles, while keeping clean workflows',()=>{
   const blocks=[{slug:'bad'},{slug:'direct',uses:['bad']},{slug:'indirect',steps:[{uses:'direct'}]},{slug:'cycle-a',uses:['cycle-b']},{slug:'cycle-b',uses:['cycle-a','bad']},{slug:'clean',uses:['good']},{slug:'good'}];
   assert.deepEqual([...quarantineClosure(blocks,['bad'])].sort(),['bad','cycle-a','cycle-b','direct','indirect']);
+  assert.deepEqual([...quarantineClosure(blocks,[])],[]);
 });
 test('every published block has complete assets and no dependency on withheld skills',()=>{
   const catalogue=JSON.parse(fs.readFileSync('public/data/blocks.json','utf8'));
   const slugs=new Set(catalogue.blocks.map(b=>b.slug));
   // Whatever catalogue-items/quarantine.yaml still holds stays off the site.
-  const held=Object.keys(YAML.parse(fs.readFileSync('../catalogue-items/quarantine.yaml','utf8'))??{});
-  assert.ok(held.length>0);
+  const holds=YAML.parse(fs.readFileSync('../catalogue-items/quarantine.yaml','utf8'))??{};
+  assert.equal(typeof holds,'object');
+  assert.ok(!Array.isArray(holds));
+  const held=Object.keys(holds);
   for(const slug of held){
     assert.ok(!slugs.has(slug),slug);
     assert.ok(!fs.existsSync(`public/skills/${slug}.zip`),slug);

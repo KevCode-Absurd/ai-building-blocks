@@ -47,12 +47,12 @@ export async function readSitemaps(source, { warn = console.warn } = {}) {
 }
 
 /** The URLs to send: new ones, and ones whose lastmod changed. Removed ones are only counted. */
-export function diffSitemaps(previous, next, { site = SITE } = {}) {
+export function diffSitemaps(previous, next, { site = SITE, previousHashes = {}, nextHashes = {} } = {}) {
   const changed = [], added = [];
   for (const [url, lastmod] of next) {
     if (!url.startsWith(`${site}/`) && url !== site) continue;
     if (!previous.has(url)) added.push(url);
-    else if (previous.get(url) !== lastmod) changed.push(url);
+    else if (previousHashes[url] && nextHashes[url] ? previousHashes[url] !== nextHashes[url] : previous.get(url) !== lastmod) changed.push(url);
   }
   const removed = [...previous.keys()].filter((u) => !next.has(u));
   return { added, changed, removed, send: [...added, ...changed] };
@@ -67,8 +67,24 @@ export function findKey(publicDir = path.join(repo, "site/public")) {
 }
 export const payload = (key, urlList, site = SITE) => ({ host: new URL(site).host, key, keyLocation: `${site}/${key}.txt`, urlList });
 
-const readState = (file) => new Map(Object.entries(JSON.parse(fs.readFileSync(file, "utf8")).urls ?? {}));
-const writeState = (file, urls) => fs.writeFileSync(file, JSON.stringify({ note: "The sitemap URLs and lastmod of the last build pinged by tools/indexnow-ping.mjs. Written after a successful ping.", saved: new Date().toISOString(), count: urls.size, urls: Object.fromEntries([...urls].sort(([a], [b]) => a.localeCompare(b))) }, null, 1) + "\n");
+const readState = file => JSON.parse(fs.readFileSync(file, "utf8"));
+export async function readFingerprints(source, urls) {
+  let data;
+  if (/^https?:\/\//.test(source)) {
+    const response = await fetch(new URL("data/content-fingerprints.json", source));
+    if (response.status === 404) return null;
+    if (!response.ok) throw Error(`Content fingerprints HTTP ${response.status}`);
+    data = await response.json();
+  } else {
+    const file = path.join(source, "data/content-fingerprints.json");
+    if (!fs.existsSync(file)) return null;
+    data = JSON.parse(fs.readFileSync(file, "utf8"));
+  }
+  if (data.schema !== "abb-content-fingerprints/1" || typeof data.dirty !== "boolean" || (!data.dirty && !/^[a-f0-9]{40}$/.test(data.source_commit ?? "")) || !data.urls || Object.keys(data.urls).length !== urls.size) throw Error("Invalid content fingerprint manifest");
+  for (const [url, date] of urls) if (!/^[a-f0-9]{64}$/.test(data.urls[url]?.sha256 ?? "") || data.urls[url].lastmod !== date) throw Error("Content fingerprints do not match the sitemaps");
+  return data;
+}
+const writeState = (file, urls, metadata = {}) => fs.writeFileSync(file, JSON.stringify({ ...metadata, note: "The sitemap URLs and lastmod of the last build pinged by tools/indexnow-ping.mjs. Written after a successful ping.", saved: new Date().toISOString(), count: urls.size, urls: Object.fromEntries([...urls].sort(([a], [b]) => a.localeCompare(b))) }, null, 1) + "\n");
 
 export async function main(argv = process.argv.slice(2), { log = console.log, env = process.env, post = fetch } = {}) {
   if (["build", "prebuild", "postbuild", "index", "dev", "predeploy"].includes(env.npm_lifecycle_event)) throw Error("indexnow-ping runs by hand after a deploy, never as part of a build");
@@ -76,16 +92,21 @@ export async function main(argv = process.argv.slice(2), { log = console.log, en
   const dryRun = argv.includes("--dry-run"), all = argv.includes("--all"), baseline = argv.includes("--baseline");
   const state = path.resolve(arg("--state", path.join(repo, "tools/indexnow-state.json")));
   const dist = path.join(repo, "site/dist");
-  const next = await readSitemaps(arg("--new", fs.existsSync(path.join(dist, "sitemap.xml")) ? dist : path.join(repo, "site/public")));
+  const source = arg("--new", fs.existsSync(path.join(dist, "sitemap.xml")) ? dist : path.join(repo, "site/public"));
+  const next = await readSitemaps(source, { warn: message => { throw Error(message); } });
+  const stamps = await readFingerprints(source, next);
+  if (stamps?.dirty && !dryRun) throw Error("Refusing publication state for a build with uncommitted source");
+  const metadata = stamps ? { fingerprints: Object.fromEntries(Object.entries(stamps.urls).map(([url, row]) => [url, row.sha256])), source_commit: stamps.source_commit } : {};
   const oldSource = arg("--old", null);
   // --baseline only ever saves (replacing any earlier record); it never pings.
-  if (baseline) { if (!dryRun) writeState(state, next); log(`baseline: ${next.size} URLs ${dryRun ? "would be" : ""} saved to ${path.relative(repo, state)}; nothing pinged`); return { send: [] }; }
-  let previous;
+  if (baseline) { if (!dryRun) writeState(state, next, metadata); log(`baseline: ${next.size} URLs ${dryRun ? "would be" : ""} saved to ${path.relative(repo, state)}; nothing pinged`); return { send: [] }; }
+  let previous, previousState = {};
   if (oldSource && !oldSource.endsWith(".json")) previous = await readSitemaps(oldSource);
-  else if (fs.existsSync(oldSource ?? state)) previous = readState(oldSource ?? state);
+  else if (fs.existsSync(oldSource ?? state)) { previousState = readState(oldSource ?? state); previous = new Map(Object.entries(previousState.urls ?? {})); }
   else if (all) previous = new Map();
   else throw Error(`no record of the last ping (${path.relative(repo, state)}). Run with --baseline to save this build without pinging, or --all to send every URL.`);
-  const diff = diffSitemaps(previous, next);
+  if (previousState.fingerprints && !stamps) throw Error("Published content hashes exist but this build has no fingerprints; rebuild before publishing");
+  const diff = diffSitemaps(previous, next, { previousHashes: previousState.fingerprints ?? {}, nextHashes: metadata.fingerprints ?? {} });
   const key = findKey(arg("--public", path.join(repo, "site/public")));
   const endpoint = arg("--endpoint", ENDPOINT);
   log(`${next.size} URLs in the new sitemaps: ${diff.added.length} new, ${diff.changed.length} changed, ${diff.removed.length} gone (not sent).`);
@@ -102,7 +123,7 @@ export async function main(argv = process.argv.slice(2), { log = console.log, en
     if (![200, 202].includes(response.status)) throw Error(`IndexNow request ${i + 1}/${groups.length} failed: HTTP ${response.status} ${await response.text().catch(() => "")}`.trim());
     log(`sent ${urlList.length} URLs (request ${i + 1}/${groups.length}): HTTP ${response.status}`);
   }
-  writeState(state, next);
+  writeState(state, next, { ...(previousState.fingerprint_baseline ? { fingerprint_baseline: previousState.fingerprint_baseline } : {}), ...metadata });
   log(`saved this build's sitemap to ${path.relative(repo, state)}`);
   return diff;
 }

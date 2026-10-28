@@ -6,7 +6,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
 
-const git = (dir, args) => execFileSync("git", ["-C", dir, "-c", "core.quotePath=false", ...args], { encoding: "utf8", maxBuffer: 512 * 1024 * 1024, stdio: ["ignore", "pipe", "ignore"] });
+const git = (dir, args) => execFileSync("git", ["-c", "core.longpaths=true", "-C", dir, "-c", "core.quotePath=false", ...args], { encoding: "utf8", maxBuffer: 512 * 1024 * 1024, stdio: ["ignore", "pipe", "ignore"] });
 // git quotes a path with unusual characters ("a\tb"); undo that.
 const unquote = (p) => (p.startsWith('"') && p.endsWith('"') ? p.slice(1, -1).replace(/\\([0-7]{3}|.)/g, (_, c) => (c.length === 3 ? String.fromCharCode(parseInt(c, 8)) : { n: "\n", t: "\t", "\\": "\\", '"': '"' }[c] ?? c)) : p);
 const day = (iso) => (iso ? new Date(iso).toISOString().slice(0, 10) : "");

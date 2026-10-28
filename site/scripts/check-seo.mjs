@@ -18,6 +18,7 @@
 //  * every item page says "Updated <date>" and puts the same day in dateModified; sitemap lastmod values are real past dates
 //  * each job hub opens with its own counts and a "Start with these" list, and the home page links to every hub; the home
 //    page carries Organization and WebSite data with a SearchAction
+import { validLastmod } from "./lib/content-stamps.mjs";
 import fs from "node:fs";
 import path from "node:path";
 import { DESC, TITLE, itemSeo } from "../src/lib/seo-meta.mjs";
@@ -25,6 +26,8 @@ import { TASKS } from "../src/lib/catalogue-taxonomy.mjs";
 const JOB = Object.fromEntries(TASKS.map((t) => [t.id, t.name]));
 
 const DIST = process.env.SEO_DIST || "dist";
+const stampFile = path.join(DIST, "data/content-fingerprints.json");
+const contentStamps = fs.existsSync(stampFile) ? JSON.parse(fs.readFileSync(stampFile, "utf8")).urls : {};
 const SITE = "https://useaiblocks.com";
 const arg = (k) => { const i = process.argv.indexOf(`--${k}`); return i > 0 ? process.argv[i + 1] : null; };
 const KINDS = ["skills", "prompts", "workflows", "agents", "minds"]; // catalogue item pages
@@ -221,8 +224,7 @@ for (const m of smIndex.matchAll(/<loc>([^<]+)<\/loc>/g)) {
   const xml = read(f);
   const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((x) => x[1]);
   if (locs.length > 50000 || Buffer.byteLength(xml) > 50 * 1024 * 1024) bad("a sitemap file is over the 50,000 URL or 50 MB limit", m[1]);
-  const today = new Date().toISOString().slice(0, 10);
-  for (const lm of xml.matchAll(/<lastmod>([^<]*)<\/lastmod>/g)) if (!/^\d{4}-\d{2}-\d{2}$/.test(lm[1]) || lm[1] > today) bad("a sitemap lastmod is not a past date (YYYY-MM-DD)", `${m[1]} ${lm[1]}`);
+  for (const lm of xml.matchAll(/<lastmod>([^<]*)<\/lastmod>/g)) if (!validLastmod(lm[1])) bad("a sitemap lastmod is not a valid past date or ISO timestamp", `${m[1]} ${lm[1]}`);
   for (const loc of locs) {
     const u = loc.replace(SITE, "") || "/";
     if (!loc.startsWith(`${SITE}/`)) bad("sitemap URL is not on useaiblocks.com", loc);
@@ -298,7 +300,8 @@ for (const pg of items) {
   if (page.added) {
     if (!pg.body.includes("Updated ")) bad('page has a last-change date but the body has no "Updated" line', pg.url);
     const ldPage = (() => { try { return JSON.parse(pg.h.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1] ?? "{}")["@graph"]?.find((x) => x["@type"] === "WebPage"); } catch { return null; } })();
-    if (ldPage && ldPage.dateModified !== page.added) bad("JSON-LD dateModified is not the page's last-change date", pg.url);
+    const expectedDate = contentStamps[`${SITE}${pg.url}`]?.lastmod ?? page.added;
+    if (ldPage && (ldPage.dateModified ?? "") !== expectedDate) bad("JSON-LD dateModified differs from the published content date", pg.url);
   }
   const when = (Array.isArray(page.when) ? page.when : page.when ? [page.when] : []).filter((x) => typeof x === "string" && x.trim());
   const notFor = (Array.isArray(page.not_for) ? page.not_for : page.not_for ? [page.not_for] : []).filter((x) => typeof x === "string" && x.trim());

@@ -48,6 +48,7 @@ site/.copyable-build/
 # tools: only what the build, the tests and the content pipeline use. Add a new tool here to keep it in the repo.
 /tools/*
 !/tools/README.md
+!/tools/baseline-content.mjs
 !/tools/package.json
 !/tools/package-lock.json
 !/tools/.gitkeep

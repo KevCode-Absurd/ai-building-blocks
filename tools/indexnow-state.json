@@ -1,6 +1,6 @@
 {
  "note": "The sitemap URLs and lastmod of the last build pinged by tools/indexnow-ping.mjs. Written after a successful ping.",
- "saved": "2026-10-28T15:57:09.638Z",
+ "saved": "2026-10-28T16:35:26.657Z",
  "count": 5805,
  "urls": {
   "https://useaiblocks.com/": "",
@@ -1152,7 +1152,7 @@
   "https://useaiblocks.com/prompts/bonus-idea-matcher": "2026-10-28",
   "https://useaiblocks.com/prompts/brain-dump-sorter": "2026-10-28",
   "https://useaiblocks.com/prompts/brand-enemy-statement-writer": "2026-10-28",
-  "https://useaiblocks.com/prompts/brand-voice-one-pager-writer": "2026-10-27",
+  "https://useaiblocks.com/prompts/brand-voice-one-pager-writer": "2026-10-28",
   "https://useaiblocks.com/prompts/break-even-ad-target-finder": "2026-10-28",
   "https://useaiblocks.com/prompts/bug-evidence-plan-writer": "2026-10-28",
   "https://useaiblocks.com/prompts/build-first-api-endpoint-builder-prompt": "2026-10-28",

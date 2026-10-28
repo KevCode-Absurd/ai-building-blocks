@@ -9,7 +9,7 @@ subhead: "A clear picture across all your projects: which risks cost the most, w
 explain: |
   A clear picture across all your projects: which risks cost the most, where people are overloaded and which projects need attention first. You end with a status report leaders can read in two minutes.
 
-  The skill scores each risk by expected money impact, which is probability times cost, and can model schedule risk with Monte Carlo ranges. It ranks competing projects using methods such as WSJF, RICE or MoSCoW, and checks team capacity against what is planned. Each project gets a health score on several dimensions and a red, amber or green status. A responsibility matrix clarifies who decides what. It suits large, multi-team work.
+  The skill scores each risk by expected money impact, which is probability times cost. For schedule risk it gives best, likely and worst estimates you can feed into a simulation tool; no script here runs the simulation. It ranks competing projects using methods such as WSJF, RICE or MoSCoW, and checks team capacity against what is planned. Each project gets a health score on several dimensions and a red, amber or green status. A responsibility matrix clarifies who decides what. It suits large, multi-team work.
 when:
   - You manage several projects and must decide which gets people first.
   - Leaders ask for a status report and you have a pile of updates.
@@ -53,8 +53,8 @@ output_sample:
       contains: A score for each project on several dimensions, with a red, amber or green status.
     - name: Risk register
       contains: Each risk scored by expected cost, which is the odds times the cost, with the top ones first.
-    - name: Schedule risk ranges
-      contains: Likely finish ranges for projects, built by running many what-if cases on your dates.
+    - name: Schedule risk estimates
+      contains: Best, likely and worst duration estimates for key tasks, ready for a simulation tool. The scripts here do not run the simulation.
     - name: Priority ranking
       contains: Your projects ranked with a method such as WSJF, RICE or MoSCoW.
     - name: Resource capacity check

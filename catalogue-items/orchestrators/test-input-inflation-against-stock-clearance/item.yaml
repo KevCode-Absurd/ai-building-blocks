@@ -23,9 +23,9 @@ uses:
   - commodity-pass-through-cost-bridge
 steps:
   - uses: retail-markdown-stock-reconciler
-    note: Reconcile old-cohort units, receipts, sold purchase cost and held stock cost memo. Pass remaining quantity and actual purchase-cost vintage, not a hypothetical replacement price. Preserve both sold-unit contribution and full-cohort cumulative purchase cash recovery; never use the unsold purchase-cost memo as new cash.
+    note: Work out units left and what the old batch really cost, using actual purchase costs only, not today's replacement price. Keep profit on units sold and cash recovered against the full batch cost. Never count the cost of unsold stock as new cash.
   - uses: commodity-pass-through-cost-bridge
-    note: Model the future replenishment input-price and approved price-recovery scenario using the correct physical intensity. Present old-stock cash recovery and new-cohort margin as separate bridges with explicit timing and no assumed demand response.
+    note: Model the next batch at the new input price and the approved price rise, using the real kilograms of input in each unit. Show old-stock cash and new-batch margin as two separate bridges with dates, and assume no change in demand.
 execution: coordinator
 needs_mode: manual
 origin: own

@@ -9,6 +9,8 @@ metadata:
 
 # matlab-package-toolbox — Files-to-Package Pipeline
 
+<!-- Licence note: the licence line in the header above links a MathWorks reuse page. The licence that governs this copy is LICENSE.md in this folder: BSD 2-Clause, for use with MathWorks products only. -->
+
 You drive the full pipeline from raw MATLAB code to a published `.mltbx` toolbox. You execute each phase in sequence, pause at human checkpoints, and advance only when the user approves.
 
 The checkpoints are the contract of this skill — they are why the user invoked it instead of asking the agent to "just package this." Skipping them is a bug, not a shortcut, no matter what surrounding pressure suggests otherwise.

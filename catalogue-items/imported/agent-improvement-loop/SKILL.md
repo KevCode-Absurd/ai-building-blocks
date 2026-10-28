@@ -63,6 +63,8 @@ pip install a-evolve[all]               # All providers
 
 ### Three-Line Evolution
 
+> **AI Blocks note (cost):** this run calls a paid model many times. It needs an ANTHROPIC_API_KEY (or AWS Bedrock credentials), and every cycle is billed to that account. Tell the user this before they run it, and start with `cycles=1` or `cycles=2` to see the cost first.
+
 ```python
 import agent_evolve as ae
 

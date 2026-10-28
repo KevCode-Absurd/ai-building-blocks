@@ -31,6 +31,7 @@ you_get:
   - A note on the effort needed
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste the skill text into a new chat. No code or paid tool is needed.
+  - Also paste references/ideas-by-category.md, the full list of ideas, or upload the whole skill folder. Without it, the picker can only use the short table in the skill text.
   - Describe your product, your audience and your stage in a few lines.
   - Add your budget, your time and your team size. Say what you have already tried, if anything.
   - Answer any questions it asks. Skip the ones your saved marketing context already covers.

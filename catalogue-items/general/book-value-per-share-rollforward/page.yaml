@@ -28,7 +28,7 @@ you_give:
   - "Your spreadsheet tool, if you want the book value per share roll-forward as a workbook."
 you_get:
   - A common-equity movement table and book-value-per-share bridge.
-  - "An editable workbook of the book value per share roll-forward, with its inputs, formulas and test cases to rerun."
+  - "If you ask for one, an editable workbook of the book value per share roll-forward, with its inputs, formulas and test cases to rerun."
   - "A tie-out of computed closing equity and the balance sheet, the inputs still missing and the checks that ran."
 how_to_use:
   - "Download the pack and give your AI its SKILL.md. Then add the balance sheet, the equity statement and the share counts."

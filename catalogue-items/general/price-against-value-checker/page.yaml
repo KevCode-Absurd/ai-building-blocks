@@ -115,6 +115,7 @@ improve:
   - Keep a record of walk-away prices and what you paid.
   - Add your own typical fees to step seven.
   - Share the sums with someone who will challenge your rate.
+next: [sit-still-rule-writer, price-drop-rules-writer, failure-first-plan-check]
 works_best_with:
   tools:
     - name: Any good chat AI

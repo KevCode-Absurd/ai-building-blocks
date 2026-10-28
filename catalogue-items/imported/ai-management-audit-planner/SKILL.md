@@ -65,7 +65,7 @@ python scripts/aims_audit_scheduler.py path/to/scope.json
 ## Key Questions (ask these first)
 
 - **Does the AIMS scope statement (Clause 4.3) name every AI system, including embedded models and third-party AI services?** If "AI features added by our SaaS vendors" is not in scope, the AIMS is incomplete.
-- **Does the AI policy (Clause 5.2) commit to lawful use AND beneficial purpose AND human oversight AND continual improvement?** Missing any of the four = nonconformity at certification.
+- **Does the AI policy (Clause 5.2) commit to lawful use AND beneficial purpose AND human oversight AND continual improvement?** The author treats a missing element as a likely nonconformity at certification. (AI Blocks note: this is the author's reading, not a quote from the standard. Check the policy against the Clause 5.2 text in your own copy of ISO/IEC 42001 and ask your certification body.)
 - **Has the AI risk assessment (Clause 6.1.2) been re-run since the last material model change?** Concept drift is not a one-time event.
 - **Who signs the AI impact assessment for high-impact systems (Annex A.5.4)?** If no signed accountability, the control is missing.
 - **What's the internal audit cadence (Clause 9.2)?** Clause 9.2 asks for audits at planned intervals. Set the cycle in your own audit programme and check it with your certification body; many programmes cover every clause over a 3-year cycle, and mature ones audit each year.

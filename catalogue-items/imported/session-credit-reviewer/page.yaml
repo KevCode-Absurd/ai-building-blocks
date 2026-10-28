@@ -35,7 +35,7 @@ you_get:
 how_to_use:
   - Open Claude Code in your project folder, at the end of your work session. Do this in the same chat you worked in, so it can see the conversation.
   - Add this skill and say "run collab-proof" or "review this session".
-  - Say yes or no when it asks to read your local Claude Code logs for the token count. The skill skips it unless you say yes. That part is optional. Your past prompts can hold secrets or private text, and short snippets of three of them can reach the chat and the HTML page. Say no for sensitive projects.
+  - Say yes or no when it asks to read your local Claude Code logs for the token count. The skill skips it unless you say yes. That part is optional. Your past prompts can hold secrets or private text, and short snippets of three of them can reach the chat. The skill keeps them out of the HTML page and other files. Say no for sensitive projects.
   - Check the signal rating first. If it says low and you disagree, tell it which decision it missed.
   - Open the decisions log and read each entry. Fix any reason marked "inferred:" before you rely on it.
   - Open the HTML summary in your browser to see the full session on one page.

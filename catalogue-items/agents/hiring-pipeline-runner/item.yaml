@@ -12,8 +12,6 @@ inputs:
   - type: feedback_notes
     required: false
   - type: job_description
-    required: false
-  - type: question
     required: true
 outputs:
   - type: shortlist

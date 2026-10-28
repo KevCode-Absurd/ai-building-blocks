@@ -37,7 +37,7 @@ how_to_use:
   - "Add your brief: what the product does, who the customer is, and your screenshots or feature list."
   - Write out the first-run steps yourself. Your AI cannot use the product, so it only knows what you tell it.
   - Read the score and the failed rows first. Then pick which cuts and fixes you will act on.
-  - The skill's Further Reading links go to Amazon with the original author's affiliate tag. The author may earn a fee if you buy through them. You do not need them to use the review.
+  - The skill's Further Reading links are plain Amazon links to three books. We removed the original author's affiliate tag. You do not need the books to use the review.
   - "Next: after you apply the cuts, run the same review on the cut version to see whether the score rose. For screen-level fixes, use the Usability heuristic reviewer."
 next: [usability-heuristic-reviewer, visual-hierarchy-fixer]
 output_sample:

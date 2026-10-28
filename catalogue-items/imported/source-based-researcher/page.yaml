@@ -32,7 +32,7 @@ you_get:
   - A Markdown file saved in your project
   - The file path in the reply
 how_to_use:
-  - Use an AI that can browse the web and save files, such as Claude Code or Codex. A plain chat can do it if you save the reply yourself.
+  - Use an AI that can browse the web and save files, such as Claude Code or Codex. A plain chat with web search turned on can do it if you save the reply yourself. Without web access, it should stop, not answer from memory.
   - Add this skill to your AI, or paste the instructions into the chat.
   - Type your question, for example "How does Stripe handle webhook retries?" Add any docs links you trust.
   - Open the note. Check the short answer against the links, and read the Gaps list first.

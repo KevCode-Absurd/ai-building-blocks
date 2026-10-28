@@ -26,9 +26,9 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **The task** (required): what learners or staff must produce. Only the task and the goal are required. Everything else makes the result better.
+- **The task** (required): what learners or staff must produce. Only the task and the goal are required. Everything else makes the result better. The "question" in Before you start means the task and its goal.
 - **The goal** (required): what the task shows they can do.
-- **Who it is for** (strongly advised): their age or stage, such as Year 6 or new hires, so the wording fits. The "question" in Before you start means the task and its goal. Without this, write for a general adult reader and say so.
+- **Who it is for** (strongly advised): their age or stage, such as Year 6 or new hires, so the wording fits. Without this, write for a general adult reader and say so.
 - **Levels** (optional): four by default, from beginning to strong. Ask for three for a quick task or five for a major one.
 - **A sample of strong work and your marking standard** (optional, but ask for them): if you have a sample, the top level is written from it. If you have a standard or exam board criteria, the levels follow it. Without either, the top level is written from the goal alone and marked as a guess to check against real work.
 

@@ -61,10 +61,11 @@ Review the DNA/concept plan where decisions remain unresolved. Reuse existing ap
 
 ## 4. Pilot and produce
 Follow these steps in order:
-1. Make one pilot ad when feasible.
-2. Compare its product and style with the real product photos, and note what to fix.
-3. Carry the accepted notes across the set.
-4. Make the rest in small batches, inside the cost the person has approved. Image generation may be paid, so say the cost scope before you start. Never change claims to bypass a generation service's safety decision; revise the legitimate concept or choose a permitted non-generative rendering method.
+1. Check the cost. Image generation may be paid. Before any paid image is made, say which tool you will use, how many images, and the likely cost, and wait for a yes unless the person already approved that amount.
+2. Make one pilot ad when feasible.
+3. Compare its product and style with the real product photos, and note what to fix.
+4. Carry the accepted notes across the set.
+5. Make the rest in small batches, inside the cost the person has approved. Never change claims to bypass a generation service's safety decision; revise the legitimate concept or choose a permitted non-generative rendering method.
 
 Build requested sizes deliberately. Product identity and supported words stay fixed while crops, zones and type scale adapt. Save the exact prompt, real-anchor names, render mode and output version per ad. A generated frame can support style continuity but cannot replace real product evidence.
 

@@ -13,13 +13,15 @@ explain: |
 
   This prompt makes your AI fill those gaps in a fixed order: role, context, task, format, limits. It asks only the questions that change the result, keeps your facts as they are, and lists what it assumed so you can correct it.
 
+  A made-up example: "help me with my newsletter" might come back as "You are an editor for a small shop's monthly email to past customers. Write a 150-word opening and three subject lines in a warm, plain tone. Use only the news I paste below. No discounts unless I list one." Then a line saying the audience and length were assumed.
+
 when:
   - "Your prompt gives answers that are too general."
   - "You want a prompt your team can reuse."
   - "You know what you want but not how to ask for it."
 not_for:
   - "You have a one-off question and will not reuse the prompt: just ask your AI directly."
-  - "You want the full set of checks on a prompt: use the Prompt improver."
+  - "You want the full set of checks on a prompt: use the Prompt editor."
   - "You have no draft prompt yet and only an idea: write one plain sentence about what you want first, then paste it here."
 
 you_give:

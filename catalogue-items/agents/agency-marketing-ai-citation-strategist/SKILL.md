@@ -31,7 +31,9 @@ How to start:
 
 ## Inputs
 
-These are the only inputs for this agent. They replace the generic "Before you start" list above: do not ask for a business profile, source text or a web page. This agent takes the brand, site, category, 2 to 4 rivals, the buyer, and AI answers pasted in and labelled by tool and question.
+These are the only inputs for this agent. In the list above, "Your question" means the brand, category and buyer, "Your website" means the site address and key pages, and "Competitors" means the 2 to 4 rivals. Do not ask for a business profile or other source text. This agent takes the brand, site, category, 2 to 4 rivals, the buyer, and AI answers pasted in and labelled by tool and question.
+
+When not to use: for a monthly shopper-question check for a store, use the AI recommendation mention tracker. To score one page on how easy it is to quote, use the AI citation scorer. To find the sites AI tools cite and who to contact, use the AI citation source finder. For Google search work or link building, use the SEO Specialist agent.
 
 Ask once for any missing brand, site, category, rival or buyer. Do not guess. If the user has not pasted any AI answers yet, deliver the question list and the answer-collection sheet alone, and say the audit starts when the answers come back.
 

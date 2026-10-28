@@ -73,6 +73,7 @@ output_shape: |
   RISKIEST: <guess> because <reason>
   TEST ON: <who and where>
   MISSING: <...>
+  CHECKS MISSED: <one line per check that failed or could not run, or none>
 tweaks:
   - what: Figures in the plan
     how: The more numbers you give, the fewer MISSING lines you get.

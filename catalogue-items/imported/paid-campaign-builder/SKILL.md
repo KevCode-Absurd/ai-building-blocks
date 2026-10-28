@@ -188,6 +188,8 @@ Once you've gathered audience identifiers, here's how to put each kind into the 
 - **Existing customer base** → still feed it for lookalike audiences (see Key Concepts below)
 - **Niche / segment they identify with** → identity-trigger keywords in headline ("for dentists" / "for B2B founders" / "for parents of toddlers")
 
+> Added by AI Blocks: ad platforms limit this. Meta's personal attributes rule, for example, bans ad text that says or implies the viewer's age, race, religion, health, sexual orientation, money troubles or similar ("Over 50?", "Struggling with debt?"). Naming who the product is for ("for dentists") is safer than saying what the viewer is. Check each platform's current ad policy before launch. The percentages and budget rules in this skill (such as 85% watching without sound, or raising budgets about 20% at a time) are the author's rules of thumb, not measured results for your account.
+
 ### Key Concepts (still apply)
 
 - **Lookalikes**: Base on best customers (by LTV), not all customers. Still high-value across platforms.

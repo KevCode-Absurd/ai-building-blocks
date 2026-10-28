@@ -9,7 +9,7 @@ level: intermediate
 inputs:
   - {type: product_spec, required: true}
   - {type: codebase, required: false}
-  - {type: performance_sheet, required: true}
+  - {type: dataset, required: false}
   - {type: question, required: true}
 outputs:
   - {type: plan}

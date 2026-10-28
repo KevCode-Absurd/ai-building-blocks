@@ -33,7 +33,7 @@ you_get:
   - A mapping to ISO 27001, NIST or SOC 2
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Use one that can browse the web, so it can check official sources. If your chat cannot browse, the applicability matrix and every date in it are unverified. Check each one against the official NCA, SDAIA, SAMA or CST text before you use it.
-  - Paste the skill text into the chat. If your AI can read files, also add the two reference files in this download (references/nca-ecc.md and references/nca-cloud-ccc.md). The other three reference files the skill names are not included, so control IDs and dates for the personal data law, SAMA and sector rules must be checked against the official texts.
+  - Paste the skill text into the chat. If your AI can read files, also add the five reference files in this download's references folder. Control IDs should come only from those files. They can still be out of date, so check every ID and date against the official texts before you rely on it.
   - Describe your organisation, sector, licences, data and cloud setup. Add your ISO 27001 or SOC 2 status if you have it (optional).
   - Answer any questions your AI asks. It will not guess missing facts.
   - Check each source link and date in the result before you rely on it.

@@ -68,7 +68,7 @@ output_sample:
 
 how_it_works:
   - title: Checks the offer first
-    text: It tests the offer against your margin and your order value. Under $100 average order value, percent off. Over $100, dollars off.
+    text: It tests the offer against your margin and your order value. As a starting point to test, percent off under $100 average order value and dollars off over $100.
   - title: Writes the headline
     text: The offer in the headline and nothing else competing with it. The button names the benefit in first person.
   - title: Builds the steps
@@ -106,11 +106,13 @@ output_shape: |
 
   FIRST THREE TESTS
   1. <test> | sample <n> | win rule <...>
+
+  CHECKS MISSED: <none, or list>
   MISSING: <margin | order value | tools | regions>
 
 tweaks:
   - what: The offer
-    how: Give your margin. The skill uses percent off for orders under $100 and tests dollars off for orders over $100, and checks the offer against your welcome flow, not signup rate alone.
+    how: Give your margin. The skill starts with percent off for orders under $100 and dollars off over $100, but the $100 line is a starting point and it tests both. It checks the offer against your welcome flow, not signup rate alone.
   - what: Your regions
     how: Say where your customers live. EU and UK stores need a clear consent line, and may need double opt-in.
   - what: Phone numbers
@@ -143,8 +145,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Klaviyo", why: "Its signup forms support multi-step popups, timing and targeting, and it holds the lists the form writes to."}
-    - {name: "Shopify", why: "It supplies the pages, cart and checkout rules for targeting, and the checkout opt-in box."}
+    - {name: "Klaviyo", why: "Paid email tool with a small free tier. Its signup forms support multi-step popups, timing and targeting, and it holds the lists the form writes to. Check your plan covers the form features you need."}
+    - {name: "Shopify", why: "Paid store platform. It supplies the pages, cart and checkout rules for targeting, and the checkout opt-in box."}
   inputs:
     - "Your current popup signup rate and welcome-flow revenue"
     - "Your monthly visitors"

@@ -2,7 +2,7 @@ thinking: low
 thinking_why: It scores against a fixed checklist.
 new_slug: listing-completeness-scorer
 name: Listing completeness scorer
-summary: Score every Shopify product on missing descriptions, images, SEO, weight, barcode and cost. Get a product data completeness report, worst first.
+summary: Score each active Shopify product on missing descriptions, images, SEO, weight, barcode and cost. Get a product data completeness report, worst first.
 job: run-your-store
 headline: Listing completeness scorer
 subhead: Every product in your store scored on how complete its data is, worst first, so you know exactly what to fix. It only reads, and changes nothing in your shop.

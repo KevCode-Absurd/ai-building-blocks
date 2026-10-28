@@ -31,6 +31,13 @@ How to start:
 2. **Actual Results**
    - Actual Price ($P_a$) and Actual Quantity used ($Q_a$).
    - Actual Labor Rate ($R_a$) and Actual Hours worked ($H_a$).
+   - Units actually produced in the period. Ask for this if it is missing.
+
+The standard inputs are per unit, but the actual results are totals. Before the usage and efficiency formulas, turn the standards into totals for the actual output:
+- Standard Quantity allowed = Standard Quantity per unit * units produced.
+- Standard Hours allowed = Standard Hours per unit * units produced.
+
+In the formulas below, "Standard Quantity" and "Standard Hours" mean these allowed totals, not the per-unit figures.
 
 ---
 

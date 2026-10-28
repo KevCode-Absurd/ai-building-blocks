@@ -29,4 +29,4 @@ credits:
   - title: matlab-package-toolbox skill
     by: MathWorks
     url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/matlab-software-development/matlab-package-toolbox
-    used: Copied under the BSD 2-Clause licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the BSD 2-Clause licence (LICENSE.md), which adds that you may use it only with MathWorks products. We added a note that LICENSE.md governs this copy, not the licence link in the skill file header. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.

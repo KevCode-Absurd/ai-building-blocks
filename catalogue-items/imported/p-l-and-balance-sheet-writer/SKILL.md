@@ -187,7 +187,7 @@ Provide:
 2. Key metrics summary
 3. Material variance listing with investigation flags
 4. Suggested follow-up questions for unexplained variances
-5. Offer to drill into any specific variance. Ask the person to name the line, then give the likely drivers and the questions to ask. (The original skill calls this `/flux`. It is not included here, so do it in the same chat.)
+5. Offer to drill into any specific variance. Ask the person to name the line, then list the possible drivers to check and the questions to ask. Mark each driver "unverified: ask the user" unless the user supplied it. (The original skill calls this `/flux`. It is not included here, so do it in the same chat.)
 
 ## GAAP Presentation Requirements
 
@@ -348,6 +348,8 @@ Cash and cash equivalents, end of period
 4. **Discontinued operations:** Reclassify results of discontinued operations to a separate line item
 5. **Equity method adjustments:** Record share of investee income/loss for equity method investments
 6. **Segment reclassifications:** Ensure transactions are properly classified by operating segment
+
+Changed by AI Blocks (2026-10-28): the drill-down step now lists possible drivers marked "unverified: ask the user" instead of giving likely causes.
 
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this

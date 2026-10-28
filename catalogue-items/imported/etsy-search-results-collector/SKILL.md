@@ -44,6 +44,7 @@ Disclosure: I maintain these Actors on Apify Store (publicrecords).
 
 - User has an Apify account and an `APIFY_TOKEN` (or OAuth) available to the agent MCP config.
 - Do not invent or hard-code tokens. Ask for confirmation before spending credits on large page ranges.
+- Before the first run, tell the user two things and wait for a clear yes: Etsy's terms of service may not allow automated collection, so they should check them first; and every run is billed to their Apify account.
 
 ### Step 2: Configure MCP (once)
 

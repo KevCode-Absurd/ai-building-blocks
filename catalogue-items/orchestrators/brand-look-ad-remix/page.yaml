@@ -4,7 +4,7 @@ summary: Share your own ads and real product photos. Get a new set in your brand
 job: make-image-ads
 headline: Own-ad style remix builder
 subhead: Make new ads that still look like your brand.
-explain: Turns your own ads into a written guide to your look (called visual DNA here, meaning type, colours, layouts, photo style, copy habits and devices), then makes new ads in that look. Only your own ads feed the guide. Results are judged separately.
+explain: Turns your own ads into a written guide to your look (called visual DNA here, meaning type, colours, layouts, photo style, copy habits and devices), then makes new ads in that look. Only your own ads feed the guide. Results are judged separately. The final images may need a paid image tool, so your AI states the cost and waits for your yes first.
 when:
   - You want new ads that look consistent with your own existing work.
   - You have a style analysis and want finished variations with a replay record.
@@ -13,9 +13,9 @@ you_give:
   - Exact target product, real photos, approved claims and offer.
   - Requested ad count, sizes and generation budget.
 you_get:
-  - A six-part visual DNA record and archetype map.
+  - A six-part visual DNA record and a map of your layout types (archetype map).
   - New concepts and generated/composited ads where tools permit.
-  - Per-ad prompts, source anchors, QA notes and revision manifest.
+  - Per-ad prompts, source anchors, QA notes and a replay manifest (a per-ad record of prompts and revisions).
 how_to_use:
   - Download the complete pack and give its instructions to your AI.
   - Provide the inputs listed here. Ask the AI to follow the method and return the stated outputs.

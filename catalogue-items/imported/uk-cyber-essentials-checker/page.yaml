@@ -38,7 +38,7 @@ how_to_use:
   - List your devices and operating systems, your cloud services, how staff work remotely and your company size.
   - Ask for the readiness gap table and the scope statement.
   - Fix any auto-fail flags first, then work down the fix list.
-  - Check prices and deadlines on the NCSC or IASME sites before you decide, then book an IASME-licensed assessor.
+  - Check prices and deadlines on the NCSC or IASME sites before you decide, then book an IASME-licensed assessor. The author last checked them on 2026-09-14, and some dates may have passed, such as the Willow window for older accounts (about late October 2026).
 output_sample:
   input:
     - Your device types and operating systems

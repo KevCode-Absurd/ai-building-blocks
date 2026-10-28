@@ -8,7 +8,7 @@ role: render
 job: ops
 level: intermediate
 inputs:
-  - type: performance_sheet
+  - type: dataset
     required: true
 outputs:
   - type: document

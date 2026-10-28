@@ -29,9 +29,9 @@ How to start:
 - **A slide tool such as PowerPoint or Google Slides (optional):** You build the appendix slides there from the outline. This workflow does not make the slide file.
 <!-- /needs -->
 
-## Before you start
+## What you need
 
-Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
+This replaces the shared list above. Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
 
 **You need:**
 - The pitch draft: slides, a document or pasted text.
@@ -56,7 +56,7 @@ Read each component skill in full before you use it: `unsupported-claim-spotter`
 
 1. **Unsupported claim spotter** (`unsupported-claim-spotter`). Read the pitch in order. List each claim a reader could ask "says who?" about: figures, market statements, forecasts, comparisons and words such as first, only or leading. Quote each one. Give each a number. Save `outputs/step-01-unsupported-claim-spotter.md`. **Hands step 2:** the numbered claim list. **Gate:** every claim is a quote from the pitch, and the count in the summary matches the rows.
 
-2. **Source note summariser** (`source-note-summariser`). For each claim, find the supplied exhibit that supports it, or say none does. Record the file, the date, how the figure is defined and the period. Mark each claim `supported`, `partly supported` or `unsupported`. Note where two sources disagree and where a figure has a gap. Do not search the web for support unless the user asks. Save `outputs/step-02-source-note-summariser.md`. **Hands step 3:** the table of checked claims. **Gate:** every `supported` row names a source file and a date.
+2. **Source note summariser** (`source-note-summariser`). For each claim, find the supplied exhibit that supports it, or say none does. Record the file, the date, how the figure is defined and the period. Mark each claim `supported`, `partly supported` or `unsupported`. A figure with a source but no period, or no definition, is `partly supported`, with `MISSING: period` or `MISSING: definition` beside it. Note where two sources disagree and where a figure has a gap. Do not search the web for support unless the user asks. Save `outputs/step-02-source-note-summariser.md`. **Hands step 3:** the table of checked claims. **Gate:** every `supported` row names a source file and a date.
 
 3. **Presentation builder** (`presentation-builder`). Build the appendix outline from the `supported` and `partly supported` claims only. For each appendix slide give the claim it proves, the exhibit to show and a short answer note an investor could ask for. Label every projection as an assumption. Leave out confidential exhibits. Save `outputs/step-03-presentation-builder.md`.
 
@@ -100,9 +100,9 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 Write `MISSING: <what>` next to the affected claim. Carry on with the claims that do not depend on it. If there are no records at all, stop after step 1 and give the list of records to gather.
 
-## After this
+## After this (for this job)
 
-Suggest one next step as a short question, and say the user can type their own:
+Offer these first; the shared list above is extra. Suggest one next step as a short question, and say the user can type their own:
 - **Fix the weak lines.** Reword or cut each unsupported claim, then run step 1 again.
 - **Check the deck shape.** Use the [Pitch deck presentation reviewer](https://useaiblocks.com/skills/pitch-deck-checker-10-20-30) on the slides.
 - **Practise the questions.** Use the [Short pitch feedback planner](https://useaiblocks.com/workflows/write-a-short-pitch-and-fix-it-after-every-no) workflow.

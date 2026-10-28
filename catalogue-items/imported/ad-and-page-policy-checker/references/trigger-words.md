@@ -2,6 +2,8 @@
 
 Quick reference for compliance checking. Organized by category.
 
+> **AI Blocks note (read first):** these swaps are the original author's. They carry no date and AI Blocks has not checked them. A softer word does not make a claim true or allowed. If the claim underneath is a medical, disease or income claim you cannot support, remove it. Never use a swap or a "workaround" to hide a claim from a reviewer. Check the platform's current policy and get a compliance review for health, supplement or income claims.
+
 ## Weight & Body
 
 | Trigger Word/Phrase | Compliant Substitution |
@@ -38,7 +40,7 @@ Quick reference for compliance checking. Organized by category.
 | Trigger Word/Phrase | Compliant Substitution |
 |---|---|
 | Alzheimer's / dementia, cancer, heart disease, arthritis | Platforms flag disease names and disease hints. Do not rename the condition to get past a review. Remove any claim you cannot support, check the platform's current policy and get a compliance review. |
-| Cure / treat / diagnose | Help support, may help, can promote |
+| Cure / treat / diagnose | Do not claim a product cures, treats or diagnoses anything. Remove the claim. A softer verb does not fix it. |
 | Grow hair | Help support hair growth |
 | Better digestion | Good digestion, digestive wellness |
 
@@ -113,6 +115,8 @@ Quick reference for compliance checking. Organized by category.
 Support, maintain, inspire, aid, complement, augment, balance, continue, tackle, suggest, companion, helper, favorite
 
 ## Creative Workarounds for Health/Supplement Copy
+
+> **AI Blocks note:** these are the author's wording tips, not a way round the rules. Use them only for claims that are true and supportable. Do not use them to hint at a disease or a result you cannot prove.
 
 - "Almost..." (hedging)
 - Weight woes, size struggles, waist worries

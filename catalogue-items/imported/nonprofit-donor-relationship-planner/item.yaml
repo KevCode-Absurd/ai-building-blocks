@@ -35,7 +35,7 @@ credits:
   - title: nonprofit-donor-pipeline skill
     by: Nonprofit Skills
     url: https://github.com/sector-skills/nonprofit-skills/tree/7d8a2ca9d471fc975d0e9ccd02fcdd66520fd1c8/nonprofit-skills-library/skills/fundraising-development/nonprofit-donor-pipeline
-    used: Copied under the MIT licence. We gave it a plain name. We added notes marked "Added by AI Blocks" so it works in this library. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the MIT licence. We gave it a plain name. We added notes marked "Added by AI Blocks" so it works in this library, including one that asks for donor names and contact details to be swapped for IDs before records are pasted. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: Brendon Connelly
     url: https://brendonconnelly.com

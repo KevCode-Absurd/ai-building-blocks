@@ -71,6 +71,8 @@ python scripts/ai_cost_economics.py path/to/workload.json
 
 The decision is not "use AI or not" — it's **API vs fine-tune vs in-house** for each use case. Each path has a different TCO curve, latency profile, and capability ceiling.
 
+*AI Blocks note: the thresholds and comparisons below (such as "10-100x more capable", "lags within 6-12 months", the QPS, latency and dollar limits) are the original author's rough guesses, with no source or date. Treat them as ideas to test, not facts. Do not quote them in a budget or board decision.*
+
 **Default path: API (frontier model)**
 - Use when: well-served by frontier (Claude, GPT, Gemini), QPS < 100, latency budget > 1s, cost < $50K/month
 - Why: frontier APIs are 10-100x more capable than what most teams can fine-tune in-house

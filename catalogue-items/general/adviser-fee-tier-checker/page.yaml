@@ -85,10 +85,10 @@ terms:
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.
 not_for:
-  - "You want to check an adviser's fee as part of seller closing proceeds: use Check adviser fees in seller proceeds."
+  - "You want to check an adviser's fee as part of seller closing proceeds: use the Seller adviser fee and proceeds checker."
   - "You need a private fund's management fee or fee credits worked out: use Fund fee and credit reviewer."
   - "Your letter has a tail period, expense refunds or tax on the fee. This checker leaves those out."
-  - "You are checking a private fund's management fee offsets, not an adviser's success fee: use the Transaction fee offset checker instead."
+  - "You are checking a private fund's management fee offsets, not an adviser's success fee: use the Fund management fee offset checker instead."
 output_sample:
   input:
     - Your signed engagement letter

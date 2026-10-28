@@ -151,3 +151,4 @@ works_best_with:
   inputs:
     - A list of contracts signed or hires started last month, so step changes are explained
     - Last year's monthly spend, so seasonal patterns are known from the first run
+next: [variance-commentary, close-the-month-and-explain-every-line-that-moved, trend-and-forecast-analyst]

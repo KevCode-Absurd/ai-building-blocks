@@ -26,6 +26,7 @@ you_give:
   - Monthly ad spend by channel for the last 3 to 6 months
   - Total revenue over the same months, including wholesale, Amazon and other countries
   - Your gross margin after shipping and fees
+  - The lowest blended result you accept (total revenue divided by total marketing spend)
   - Brand search volume against category search volume (optional)
   - Your split of new and returning customers (optional)
 you_get:
@@ -154,3 +155,4 @@ terms:
     meaning: The idea that you keep adding to a channel until the next dollar does better somewhere else.
   - term: Upper-funnel
     meaning: Ads aimed at views, product page visits or add to cart instead of purchase.
+next: [next-dollar-budget-allocator, holdout-test-planner]

@@ -29,4 +29,4 @@ credits:
   - title: cloud-security skill
     by: Alireza Rezvani
     url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/cloud-security
-    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps. We fixed the quick S3 check so the script reads the bucket policy and public access block, and said to check bucket ACLs by hand.

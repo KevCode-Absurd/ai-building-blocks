@@ -110,7 +110,7 @@ Send test events and verify receipt in Events Manager.
 Run: scripts/capi-test.sh <pixel_id> <test_event_code>
 ```
 
-**Warning first:** this script sends a fake PageView and a fake Purchase (made-up customer details) to your live pixel. The test event code from Events Manager > Test Events is required. Copy it before you run anything. Only that code tells Meta to treat the events as tests, so they show in the Test Events tab and stay out of your reports and ad optimisation. Do not send them without it: they could be counted as real activity. The script now stops if you give no code.
+**Warning first:** this script sends a fake PageView and a fake Purchase (made-up customer details) to your live pixel. The test event code from Events Manager > Test Events is required. Copy it before you run anything. That code makes the events show in the Test Events tab, but Meta does not promise to keep test events out of your data, so they may still count in reports and ad optimisation. Use a separate test pixel if you have one. On a live pixel, expect one 1 USD test purchase that may show in your numbers. Ask the user to confirm the pixel ID and the code before you run the script, and never send the events without a code. The script stops if you give no code.
 
 After running: **Check Events Manager > Data Sources > [Pixel] > Test Events** to confirm receipt.
 

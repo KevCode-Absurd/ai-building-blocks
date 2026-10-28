@@ -19,8 +19,8 @@ when:
   - "You are about to spend more and want it to reach people who have not seen the ad."
 not_for:
   - Only a narrow group could ever buy your product. Name that group and reach them directly, or ask a person who knows the trade.
-  - The ad is not remembered or does not pull. Use the Ad distraction checker or the Selling proposition finder first.
-  - You want to know if a running campaign should change. Use the Campaign keep-or-change checker.
+  - The ad is not remembered or does not pull. Use the Ad distraction checker or the Product promise finder first.
+  - You want to know if a running campaign should change. Use the Ad change decision checker.
 
 you_give:
   - "Your channels and what you spend on each"
@@ -133,7 +133,7 @@ improve:
   - "Keep a sheet of unique reach by channel by month."
   - "Add the cost of making a new version of the ad for a new channel."
   - "Test one placement at a time."
-  - "Pair it with the Campaign keep-or-change checker."
+  - "Pair it with the Ad change decision checker."
 
 before: []
 next: []
@@ -142,7 +142,7 @@ works_best_with:
     - {name: "Any good chat AI", why: "Ranking and sums are work any strong chat AI does well with this skill."}
     - {name: "Your ad platform's reach report", why: "Shows unique people reached rather than impressions."}
   inputs:
-    - "The plan from the Campaign keep-or-change checker"
+    - "The plan from the Ad change decision checker"
     - "Unique reach by channel for a month"
     - "An estimate of how many people could buy"
 
@@ -151,3 +151,7 @@ terms:
     meaning: "The number of different people who saw the ad at least once."
   - term: Frequency
     meaning: "How many times the average person who saw the ad saw it."
+  - term: Recall
+    meaning: "The share of people who, shown the ad, can say back its main claim."
+  - term: Pull
+    meaning: "How much more often people who recall the ad buy than people who do not."

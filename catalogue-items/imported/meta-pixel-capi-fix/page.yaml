@@ -34,7 +34,7 @@ how_to_use:
   - Give your AI the skill folder. Tell it your platform and your pixel ID or ad account ID. Set your token on your own computer as an environment variable named META_TOKEN. Do not paste the token into the chat.
   - "Step 1, audit: ask it to run the pixel audit script (pixel-audit.sh). Read the scorecard and the fix list."
   - "Step 2, setup: ask for the setup steps for your platform (pixel-setup.sh), and make the fixes."
-  - "Step 3, test: first copy the test event code from the Test Events tab in Events Manager. The test script (capi-test.sh) sends a fake purchase and page view to your live pixel. Without that code the events can reach your real reports, so the script will not run without it. Then check the Test Events tab."
+  - "Step 3, test: first copy the test event code from the Test Events tab in Events Manager. The test script (capi-test.sh) sends a fake purchase and page view to your pixel, and will not run without the code. Even with it, Meta does not promise to keep test events out of your data, so use a test pixel if you have one, or expect one 1 USD test purchase in your numbers. Confirm the pixel ID before it runs. Then check the Test Events tab."
   - "Step 4, match quality: ask it to run the match quality check (emq-check.sh). The score it gives is only an estimate, so check your real match quality in Events Manager."
 output_sample:
   input:
@@ -52,7 +52,7 @@ output_sample:
     - name: Platform setup guide
       contains: Pixel base code, standard events, matching settings, server events setup and shared event IDs for your platform, with known traps.
     - name: CAPI test result
-      contains: A test page view and test purchase sent to your real pixel with made-up customer details and your test code, so they show in the Test Events tab and stay out of your reports. Confirm them there.
+      contains: A test page view and test purchase sent to your real pixel with made-up customer details and your test code, so they show in the Test Events tab. They may still count in your data, so use a test pixel if you can. Confirm them there.
     - name: Match quality check
       contains: Each matching field scored, with the target for purchases and leads and fixes sorted by impact.
     - name: Custom server event

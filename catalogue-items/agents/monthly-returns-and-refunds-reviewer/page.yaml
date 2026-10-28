@@ -123,3 +123,4 @@ works_best_with:
   inputs:
     - Product costs for your top sellers
     - A note of listing, supplier or packaging changes last month
+next: [product-description-writer, packaging-brief-writer, monthly-catalogue-clean-up-keeper]

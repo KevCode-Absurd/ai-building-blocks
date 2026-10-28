@@ -19,7 +19,7 @@ when:
   - "A decision keeps being reopened after the meeting."
 not_for:
   - "You are deciding a small choice you can easily undo: just make the call and tell the team."
-  - "You are arguing about whether you know enough yet: use the Decision evidence bar setter."
+  - "You are arguing about whether you know enough yet: use the Decision evidence planner."
   - "You want a vote or a group consensus: this plan gives one owner the final say, so pick another method."
 
 you_give:
@@ -146,7 +146,7 @@ improve:
   - "Add the roles in your team with what each knows, so step 2 is faster."
   - "Add your usual decision sizes and who owns what."
   - "Keep a log of decisions, captains and results."
-  - "Pair it with Bold bet downside checker when the decision is risky."
+  - "Pair it with the Business plan risk reviewer when the decision is risky."
 
 works_best_with:
   tools:

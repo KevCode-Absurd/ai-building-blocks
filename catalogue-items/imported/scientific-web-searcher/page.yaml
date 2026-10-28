@@ -34,7 +34,7 @@ how_to_use:
   - Get an Exa API key at dashboard.exa.ai. Exa is a paid service. Each search and each page fetch is billed to your account, so check its pricing and your usage limit before you run a big batch.
   - Use an AI that can run code, with Python 3.11 or newer. Add the skill folder and set your key as EXA_API_KEY.
   - "Read SKILL.md first, then references/web-search.md. Then tell your AI: \"Search Exa for [your topic], using the publication category and the two-pass academic search, and give me the ranked list with the text.\""
-  - If you have links, ask it to fetch the text from all of them in one batch.
+  - If you have links, ask it to fetch the text from all of them in one batch. This copies text from other people's sites, so check each site's terms before you reuse or share that text.
   - Check each source's type and date before you rely on it. Peer-reviewed work is stronger than preprints or blogs.
   - Next, keep the sources you trust and ask your AI to pull the full text for those. Read them before you cite anything.
   - The scripts tag every request to Exa with a header that names the K-Dense skills repo, so Exa can count usage from it. Your key and your queries still go to Exa.
@@ -58,4 +58,4 @@ output_sample:
     - name: Extracted page text
       contains: The full text of pages and PDFs from the links you give, fetched in one batch of up to 100.
     - name: Source notes
-      contains: Each source is flagged as peer-reviewed, preprint, government or university page, or other, so you can check its type.
+      contains: Your AI's best guess at each source's type (peer-reviewed, preprint, government or university page, or other). The scripts do not check this, so confirm the type on the source itself.

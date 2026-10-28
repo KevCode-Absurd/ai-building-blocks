@@ -35,7 +35,7 @@ how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill instructions.
   - Paste your reviews, or attach an export file. This is the safest route.
   - Add complaints, tickets, your writing samples and a time period if you have them. It uses the last 90 days if you say nothing.
-  - Fetching review pages from the web needs web access. Fetching is limited to public pages whose terms allow it. It may break a site's terms, so use pasted or exported files when you can.
+  - Fetching review pages from the web needs web access. Many review sites, such as Google and Yelp, do not allow automated copying in their terms. Only fetch a public page if you have checked that its terms allow it. Otherwise, paste the reviews or use an export.
   - Read each drafted reply next to its review. Nothing should be posted or sent until you approve it.
   - Pick the three actions at the end and do them this week.
 output_sample:

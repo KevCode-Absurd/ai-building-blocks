@@ -96,9 +96,15 @@ def calculate_emv(risks):
         score = risk["probability"] * risk["impact"] * category_weights[risk["category"]]
         # EMV = chance (0 to 1) x financial impact in money. The 1-5 probability
         # rating above is not a chance. Ask the user for one, or mark EMV unknown.
-        emv = risk["probability_pct"] * risk["financial_impact"]
-        total_emv += emv
+        # The sample data file has neither field, so EMV stays unknown there.
         risk["score"] = score
+        chance = risk.get("probability_pct")      # 0 to 1, from the user
+        cost = risk.get("financial_impact")       # money, from the user
+        if chance is None or cost is None:
+            risk["emv"] = None                    # report as "EMV unknown"
+            continue
+        risk["emv"] = chance * cost
+        total_emv += risk["emv"]
     return total_emv
 
 def risk_adjusted_budget(base_budget, portfolio_risk_score, risk_tolerance_factor):

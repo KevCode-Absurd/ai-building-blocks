@@ -27,7 +27,7 @@ How to start:
 
 ## Purpose
 
-A typical mid-stage company has:
+A mid-stage company might see problems like these (illustrative examples, not measured figures):
 - Software spend up 40% YoY with no single owner who can name the top growth categories.
 - 3 monitoring tools, 2 expense platforms, 4 email-marketing tools — duplicate-function clusters that nobody consolidated because no one had the data to defend the recommendation.
 - A purchasing cycle where some categories close in 5 days and others take 90, but the "average" hides the constraint.

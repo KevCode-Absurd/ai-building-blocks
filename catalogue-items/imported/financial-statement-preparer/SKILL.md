@@ -84,6 +84,10 @@ How to start:
 - Explanation of major line item variances or unusual items.
 - Keep the notes to about one short paragraph or five bullets in total.
 
+**5. Draft status**
+- Label the whole package as a DRAFT that a qualified accountant must review before anyone files, publishes or relies on it.
+- Never invent a figure. Where a balance, an adjustment or the framework choice is unknown, write `MISSING:` and what is needed. This applies to the cash flow statement and the notes too.
+
 ---
 
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->

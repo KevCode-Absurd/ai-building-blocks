@@ -85,6 +85,8 @@ Before implementing carbon tracking, understand:
 
 ### Emission Categories Priority
 
+Note: the shares below are rough, unsourced ranges. They vary widely by industry. Use them only to decide where to look first, never as figures to report.
+
 | Category | Typical % of Total | Measurement Complexity | Priority |
 |----------|-------------------|----------------------|----------|
 | Scope 3: Purchased Goods | 40-70% | High | Critical |

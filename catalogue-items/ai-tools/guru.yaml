@@ -54,7 +54,7 @@ needs:
 example:
   task: "A new support hire asks in Slack: what is our refund window for damaged items?"
   cost: "No public price. It is set after a call with Guru."
-  reply: "Not shown on the pages we read. We expect a short answer with a link to the source page and an expert check. We did not confirm this. Ask Guru to show it on your own content in the demo."
+  reply: "Not confirmed. The pages we read show no sample answer, so we cannot say how long it is or what it links to. Ask Guru to answer this question on your own content in the demo, and check that the answer names its source and the expert who checked it."
 not_verified:
   - "That answers show citations, and what they look like. The pricing page does not say."
   - "That it flags out-of-date content, beyond the knowledge quality automation it lists."

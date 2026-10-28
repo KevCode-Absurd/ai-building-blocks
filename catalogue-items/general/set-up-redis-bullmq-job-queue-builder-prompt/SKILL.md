@@ -82,7 +82,11 @@ Do these things:
    - What happens if a job fails (retries with exponential backoff)
    - What "concurrency: 3" means (3 jobs processed simultaneously)
 
-7. When you finish, report back: the files you created, whether you ran the test and what it printed, and anything missing (such as REDIS_URL not set).
+7. When you finish, report back under these four headings, in this order:
+   - FILES CREATED: each path, one line each
+   - TEST RUN: whether you ran scripts/test-queue.ts, and what it printed (or "not run" and the command for me to run)
+   - MISSING: anything not set up, such as REDIS_URL not set, or "none"
+   - NEXT STEP: one line on what to do next
 
 Keep explanations simple. I'm a business owner learning to build.
 ```

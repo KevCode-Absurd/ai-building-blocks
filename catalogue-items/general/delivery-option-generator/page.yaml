@@ -23,8 +23,8 @@ when:
 
 not_for:
   - "You have no list of buyer problems yet. Build it first with the Buyer problem list builder."
-  - "You already have your options and need to cut and bundle them. Use the Offer trim and stack builder."
-  - "You want extras to answer doubts at the point of sale. Use the Bonus stack builder."
+  - "You already have your options and need to cut and bundle them. Use the Offer package planner."
+  - "You want extras to answer doubts at the point of sale. Use the Offer bonus package builder."
   - "You want to lay out a free first step and rising paid steps. Use the Value ladder planner."
 
 you_give:
@@ -46,7 +46,7 @@ how_to_use:
   - "Say how many hours a week you could give, and what tools and assets you already have."
   - "Skim the stretch options. Keep any that make you think, even if you would not do them."
   - "Check the ratings. If a build or hour figure looks wrong, correct it and ask it to redo the candidates."
-  - "Take the shortlist to the Offer trim and stack builder."
+  - "Take the shortlist to the Offer package planner."
 
 how_it_works:
   - title: Groups by audience size

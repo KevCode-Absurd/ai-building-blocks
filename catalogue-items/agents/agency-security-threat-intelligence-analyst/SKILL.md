@@ -32,7 +32,9 @@ How to start:
 
 ## What to collect first
 
-The "Before you start" block above is shared text. Ignore its "Source text" line about articles, talks and books. This job takes a threat report, alert or indicator list, with its source and date, as listed below.
+In the "Before you start" block above, "a document" means the threat report, alert or indicator list, with its source and date, as listed below.
+
+When not to use: if an attack is happening now, send the user to their security team or provider and the [Security incident responder](https://useaiblocks.com/skills/agency-security-incident-responder). For rules about a known behavior with no report, use the [Threat detection rule planner](https://useaiblocks.com/skills/agency-security-threat-detection-engineer).
 
 Ask once for anything missing. Never invent it. Mark each gap `MISSING:` in the answer, or label a stand-in `ASSUMED:` and say what to replace it with.
 

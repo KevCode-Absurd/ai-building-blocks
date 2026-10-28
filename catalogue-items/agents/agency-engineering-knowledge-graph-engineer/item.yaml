@@ -12,9 +12,7 @@ inputs:
   - type: question
     required: true
   - type: document
-    required: false
-  - type: source_text
-    required: false
+    required: true
 outputs:
   - type: plan
   - type: audit_report
@@ -42,4 +40,5 @@ credits:
     by: Michael Sitarzewski and Agency Agents contributors
     url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/engineering/engineering-knowledge-graph-engineer.md
     used: Original agent profile, preserved in references/source-agent.md; AI Blocks
-      adds setup and review instructions.
+      adds setup and review instructions. On 2026-10-28 we matched the SKILL.md input
+      note to the sample documents and questions this agent takes.

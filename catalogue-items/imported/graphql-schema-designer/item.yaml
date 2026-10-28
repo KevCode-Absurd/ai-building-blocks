@@ -33,7 +33,7 @@ credits:
   - title: graphql-api-design skill
     by: Burhan Sebin
     url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/api-and-integration/graphql-api-design
-    used: Copied under the MIT licence. We gave it a plain name, made the paging helper check table and column names against a fixed list, and made totalCount count every matching row rather than only the rows after the cursor. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the MIT licence. We gave it a plain name, made the paging helper check table and column names against a fixed list, and made totalCount count every matching row rather than only the rows after the cursor. We also made the commentAdded subscription check that the caller can see the post. We added Before you start and After this sections that link to other AI Blocks steps.
   - title: Original author
     by: Burhan Sebin
     url: https://github.com/seb1n

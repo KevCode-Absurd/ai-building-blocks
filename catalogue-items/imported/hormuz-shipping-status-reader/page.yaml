@@ -11,7 +11,7 @@ explain: |
 
   A general question gets a full briefing: the current status and how long it has lasted, tanker crossings against normal, ships stranded, Brent oil price movement, war-risk insurance rates, cargo volume and the diplomatic situation. A narrower question, like how many ships are stuck, gets just that section. It also adds a short risk read. It uses the web to fetch data and cannot change anything. If the dashboard is down, it tells you.
 
-  It fetches its data from a third-party website, hormuzstraitmonitor.com. It reads one public page and changes nothing. Neither we nor the author run that site, so check the numbers there if they matter.
+  It fetches its data from a third-party website, hormuzstraitmonitor.com. It sends an automated request to the site's data feed and changes nothing. Neither we nor the author run that site, and we have not checked its terms of use. Read them before you run this often or build on it, and check the numbers there if they matter.
 when:
   - You need to know today whether the Strait of Hormuz is open.
   - You are tracking shipping delays that could affect your supply chain.

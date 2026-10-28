@@ -7,7 +7,7 @@ job: money-and-investing
 headline: Investor statement NAV checker
 subhead: Checks that an investor's capital statement matches the fund's books. Give it the statement and the period's NAV pack. You get a pass or fail for each line.
 explain: |
-  Proof that an investor's capital statement matches the fund's books. Give it the generated statement and the period's NAV pack from the fund admin system. The statement is the thing under test and the pack is the source of truth.
+  An AI check of whether an investor's capital statement matches the fund's books. It is only as good as the files you give it, so a person still signs off. Give it the generated statement and the period's NAV pack from the fund admin system. The statement is the thing under test and the pack is the source of truth.
 
   The skill rebuilds the capital account line by line: beginning capital, plus contributions, minus distributions, plus the investor's share of profit after fees and expenses, minus any carry. It compares each line to the statement within one cent. It also checks that ending capital matches next period's opening, that all investors' ending capitals add up to fund value, and that commitments agree with the register. It reports pass or fail and never edits the statement.
 when:
@@ -35,6 +35,7 @@ how_to_use:
   - Ask your AI to run the NAV tie-out. It needs the files pasted or uploaded, and no code.
   - Read the flags. Each one names the input behind the mismatch.
   - "Next step: fix the flagged input in your fund admin system, then run the check again before statements go out."
+  - A pass here is not a sign-off. Have your fund accountant review the result before any statement goes to an investor.
 output_sample:
   input:
     - The generated investor statement

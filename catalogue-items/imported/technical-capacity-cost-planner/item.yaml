@@ -10,7 +10,7 @@ level: intermediate
 inputs:
   - type: question
     required: true
-  - type: performance_sheet
+  - type: dataset
     required: true
 outputs:
   - type: plan

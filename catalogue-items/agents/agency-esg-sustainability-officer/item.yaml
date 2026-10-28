@@ -12,7 +12,7 @@ inputs:
     required: true
   - type: spreadsheet
     required: false
-  - type: source_text
+  - type: document
     required: false
 outputs:
   - type: plan
@@ -41,4 +41,5 @@ credits:
     by: Michael Sitarzewski and Agency Agents contributors
     url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/specialized/esg-sustainability-officer.md
     used: Original agent profile, preserved in references/source-agent.md; AI Blocks
-      adds setup and review instructions.
+      adds setup and review instructions. On 2026-10-28 we matched the SKILL.md input
+      note to the company, data and policy inputs this agent takes.

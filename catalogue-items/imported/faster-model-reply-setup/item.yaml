@@ -1,6 +1,6 @@
 slug: faster-model-reply-setup
 name: Faster model reply setup
-summary: Name your model. Get a setup that makes replies 1.5 to 3.6 times faster without changing the answers.
+summary: Name your model and GPU. Get a speed-up setup, with a test that answers stay the same.
 category: general
 boards: []
 type: skill

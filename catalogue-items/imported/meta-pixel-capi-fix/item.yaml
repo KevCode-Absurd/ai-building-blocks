@@ -38,7 +38,7 @@ credits:
   - title: pixel-capi skill
     by: Matt Berman
     url: https://github.com/TheMattBerman/meta-ads-kit/tree/main/skills/pixel-capi
-    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps. We added a warning that test events can still count on a live pixel and must be confirmed before the test script runs.
   - title: Original author
     by: Matt Berman
     url: https://github.com/TheMattBerman

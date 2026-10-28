@@ -116,3 +116,7 @@ terms:
     meaning: The person named to take a task. A deputy is not ready until there is evidence they can do it.
   - term: Handoff
     meaning: The checked file one step passes to the next.
+next:
+  - plan-coverage-for-a-critical-role
+  - prepare-a-team-absence-handover
+  - handover-note-writer

@@ -49,7 +49,7 @@ you_get:
   - A table of indicators, each with a source rating, a confidence level and a suggested action
   - Facts from the report kept apart from the AI's own assessments
   - Behaviors matched to MITRE ATT&CK, each with its evidence
-  - Draft Sigma or YARA detection rules, marked not tested (when the report supports them)
+  - Draft Sigma, YARA or Snort detection rules, marked not tested (when the report supports them)
   - A list of gaps and checks to run before you block or share anything
 how_to_use:
   - Download the pack and add it to your AI as a skill. Or paste SKILL.md into a new chat, then paste references/source-agent.md after it.
@@ -70,7 +70,7 @@ how_it_works:
   - title: Set the confidence
     text: It gives low, medium or high confidence for each judgment and does not name a group from one indicator.
   - title: Draft actions and rules
-    text: It suggests blocks, hunts and Sigma or YARA rules, matched to the reader, and marks every rule as not tested.
+    text: It suggests blocks, hunts and Sigma, YARA or Snort rules, matched to the reader, and marks every rule as not tested.
   - title: List gaps and checks
     text: It names the missing facts and the lookups you must run before you act or share.
 output_shape: |-
@@ -90,7 +90,7 @@ output_shape: |-
     <behavior> | technique <ID and name> | evidence <quote or detail from the source>
 
   DRAFT DETECTION RULES
-    <Sigma or YARA rule> | NOT TESTED | likely false positives <list>
+    <Sigma, YARA or Snort rule> | NOT TESTED | likely false positives <list>
 
   GAPS AND CHECKS
     MISSING <list> | checks to run before you act <list> | sharing label and what to remove before you share
@@ -115,7 +115,7 @@ output_sample:
     - name: ATT&CK mapping
       contains: Each behavior matched to a technique, with the evidence for the match.
     - name: Draft detection rules
-      contains: Sigma or YARA rules built from the report, marked not tested, with likely false positives.
+      contains: Sigma, YARA or Snort rules built from the report, marked not tested, with likely false positives.
     - name: Gaps and checks
       contains: What is missing, which lookups to run before you act, and what to remove before you share.
 works_best_with:

@@ -8,7 +8,7 @@ role: make
 job: ops
 level: beginner
 inputs:
-  - type: source_text
+  - type: document
     required: true
 outputs:
   - type: document

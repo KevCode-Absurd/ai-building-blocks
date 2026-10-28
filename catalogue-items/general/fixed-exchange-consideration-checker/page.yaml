@@ -19,7 +19,7 @@ not_for:
   - "The deal has a floating or collared ratio, proration or fractional-share settlement: ask a deal adviser or use a dedicated valuation tool."
   - "You need merger EPS or purchase accounting: ask your accountant, because this only sums stock plus cash."
   - "The deal is all cash: multiply cash per share by eligible target shares in a simple spreadsheet step."
-  - "Holders can choose cash or stock and cash elections exceed the pool: use the Cash stock election checker instead."
+  - "Holders can choose cash or stock and cash elections exceed the pool: use the Merger cash and share payout checker instead."
 you_give:
   - Signed fixed ratio, eligible target shares, cash per target share and dated acquirer market price.
   - "The acquirer price date, plus the currency and scale used for the merger consideration."

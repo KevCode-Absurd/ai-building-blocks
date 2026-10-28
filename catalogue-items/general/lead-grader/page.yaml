@@ -16,7 +16,7 @@ when:
   - You want a weekly routine for who to call first.
 not_for:
   - "Your sales run long and no prospect has a date or event behind it: do a pipeline review with your team instead."
-  - "You need the follow-up messages written: use a follow-up message writer after you grade the list."
+  - "You need the follow-up messages written: use the Follow-up email sequence writer after you grade the list."
   - "You have only a few prospects and know each one well: just call them, no grading needed."
 you_give:
   - Your prospects, one per line, with what you know about each

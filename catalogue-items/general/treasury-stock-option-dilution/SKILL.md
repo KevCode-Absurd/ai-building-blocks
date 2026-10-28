@@ -7,7 +7,7 @@ description: "Use option terms and average share prices to reconcile incremental
 
 Shows how many extra shares in-the-money options add to a diluted share count, and whether they lower earnings per share.
 
-It works out the extra shares that in-the-money options add to a diluted share count, using the treasury stock method (assume the option proceeds buy back shares at the average price). It handles one option class. For dilution from a convertible, use the Convertible EPS inclusion test. For restating EPS after a split, use the Stock split EPS restatement.
+It works out the extra shares that in-the-money options add to a diluted share count, using the treasury stock method (assume the option proceeds buy back shares at the average price). It handles one option class. For dilution from a convertible, use the Convertible earnings per share checker. For restating EPS after a split, use the Stock split earnings adjustment calculator.
 
 ## Before you start
 
@@ -44,7 +44,7 @@ Build a workbook only if one is asked for and you have a spreadsheet tool. Give 
 
 The included `examples/model.xlsx` is a focused editable example using illustrative figures only. `references/model.json` defines its inputs, calculations, units and expected fixtures. It demonstrates the calculation specified below; it is not a substitute for the complete source-driven work above.
 
-Illustrative figures. Ten million options × $6 yields $60 million proceeds, buying six million shares at $10. Four million incremental shares produce 208 / 104 = $2 EPS. At $10 exercise price there is no incremental dilution.
+Illustrative figures. Basic weighted shares are 100 million and continuing ordinary earnings are $208 million, so basic EPS is $2.08. Ten million options × $6 yields $60 million proceeds, buying six million shares at $10. Four million incremental shares give 104 million diluted shares, so diluted EPS is 208 / 104 = $2. At $10 exercise price there is no incremental dilution.
 
 Run `node scripts/run-model.mjs references/model.json` for the illustrative baseline. For actual numbers, provide a complete numeric input object: `node scripts/run-model.mjs references/model.json inputs.json`. Every input is required; rates use decimal fractions and units must match the schema. The script performs local arithmetic and rejects missing or invalid inputs. It does not fetch data, inspect contracts or validate source truth. Save its output and the actual workbook check results separately.
 

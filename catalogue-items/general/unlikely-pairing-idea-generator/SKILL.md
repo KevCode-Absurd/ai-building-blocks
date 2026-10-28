@@ -7,6 +7,8 @@ description: Use when your ideas look like everyone else's and you want a fresh 
 
 Fresh ideas often come from crossing things that do not usually meet. Most crossings fail, so you need many, plus a rule to stop them drifting into the usual. This skill makes the pairings, applies a limit, and keeps the ones that hold together. Unlike a plain brainstorm, it forces at least ten crossings, adds one hard limit and one accident, and drops any idea that feels comfortable. It works for naming, design, writing, products and campaigns. The method is inspired by public talks and advice from David Bowie. These are our own paraphrases of the ideas, not his words, and he has not endorsed this skill.
 
+**Not for:** legal, medical or compliance copy (odd ideas can cause harm there; ask a subject expert), or an audience that wants the familiar (stay with the proven format).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.
@@ -45,7 +47,7 @@ How to start:
 
 The audience and anything dropped. The sources. All pairings with verdicts. The limit and how it applies. The accident and what it changed. The shortlist, each with what it borrows from each field, its comfort result and a first test. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
-What next: turn the pairing you pick into a short brief or first draft and show it to two people from the audience. The XR interface architect link under "After this" only fits if your pairing is a spatial or XR product. For anything else, skip it.
+What next: turn the pairing you pick into a short brief or first draft and show it to two people from the audience.
 
 ## Check before you hand it back
 

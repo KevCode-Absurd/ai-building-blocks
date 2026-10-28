@@ -8,7 +8,7 @@ role: compress
 job: ops
 level: intermediate
 inputs:
-  - type: source_text
+  - type: document
     required: true
 outputs:
   - type: skill_files

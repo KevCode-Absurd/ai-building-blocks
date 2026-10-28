@@ -39,6 +39,7 @@ how_to_use:
   - Check the route it picks. AI clip and avatar tools need a paid account. Coded video needs an AI that can run code.
   - Read the script and shot plan, then fix anything that is off before you make the video.
   - Paste the prompts into your video tool one shot at a time.
+  - "To copy the editing style of someone else's video, the skill names fetch tools (watch-video, social-fetch) that are not in this item. Pulling posts or media from social sites can break their terms, so watch the video yourself and describe it instead. Copy only the editing style, never their footage, script or music."
 output_shape: |
   ROUTE AND TOOL
   <AI clips / talking avatar / coded video> because <reason> | tool: <name> | cost: <check provider's page>

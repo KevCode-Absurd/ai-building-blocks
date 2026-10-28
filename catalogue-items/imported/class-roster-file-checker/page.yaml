@@ -37,7 +37,8 @@ you_get:
 how_to_use:
   - Unzip your roster to a folder. Check that manifest.csv is at the top and not inside a subfolder.
   - Note the OneRoster version in the manifest and whether the bundle is full or changes only.
-  - Open your AI and paste this skill. Add your CSV files, the version, the bundle type and any error message. These files hold student data, so only use an AI your school allows for that.
+  - Open your AI and paste this skill. Add your CSV files, the version, the bundle type and any error message.
+  - "These files hold student records, and the skill says not to send them to outside services. Best: use an AI that runs on your own computer, such as Claude Code or Codex, so the files stay local. A web chat is an outside service: use one only if your school approves it for student data, or swap names, emails and birth dates for placeholders first."
   - Ask for the line-numbered report. Check that it names each file and row.
   - Fix the rows it lists and zip the files again. Run the check on the new zip.
   - Keep this check before each nightly sync. It works best when your AI can run code and read files. If yours cannot, paste the files in small parts and ask it to check them by eye.

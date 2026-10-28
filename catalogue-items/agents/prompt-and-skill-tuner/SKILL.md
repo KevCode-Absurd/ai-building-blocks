@@ -56,7 +56,7 @@ Keep one folder, `tuner/<name>/`. It holds `test-cases.md`, `baseline.md`, `log.
    - Test again with the same cases and the same checks.
    - **Keep** the change only if the score went up and no case that passed before now fails. Otherwise **undo** it, write why in `log.md`, and try a different change next round.
    - Stop the loop as soon as the pass line is met.
-6. **Check the skill for safety.** If it is a skill, run `skill-safety-checker` once on the final version. A critical finding ends the run with "do not use" until the owner has seen it.
+6. **Check the skill for safety.** If it is a skill, run `skill-safety-checker` once on the final version. A critical finding ends the run with "do not use" until the owner has seen it. A clean result is one input to the owner's decision. It does not prove the skill is safe, so say so in the SAFETY line.
 7. **Hand back** (see below), then stop. If the pass line was not met after 4 rounds, say so, name what still fails, and say what you would try next. Do not run a fifth round.
 
 ## Stop and ask before

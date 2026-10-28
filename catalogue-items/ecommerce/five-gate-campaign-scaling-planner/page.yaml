@@ -52,7 +52,7 @@ output_sample:
     - name: Saturation Watchlist
       contains: Signals such as frequency, cost per thousand views and click rate to watch, with the stop rules.
     - name: 30-Day Projection
-      contains: Expected spend and revenue for the next 30 days based on the plan.
+      contains: Spend and revenue for the next 30 days if results hold, worked out from your numbers. An illustration, not a forecast.
 how_it_works:
   - title: Collects your data
     text: Asks for 14 to 30 days of results per campaign, plus your targets, budget cap and growth goal. It marks anything missing.

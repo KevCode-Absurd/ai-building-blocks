@@ -19,8 +19,8 @@ when:
   - A lender or reviewer asks you to trace the net payment back to the contract.
 not_for:
   - Your contract states no deduction cap. This skill will not guess one. Read the contract first, or ask the payer.
-  - You need the order in which the money goes to lenders and others. Use the Project payment waterfall builder.
-  - You need cash available for debt service built from revenue and costs. Use the Project cash available bridge.
+  - You need the order in which the money goes to lenders and others. Use the Project payment priority planner.
+  - You need cash available for debt service built from revenue and costs. Use the Project cash for debt checker.
   - You want a legal view on whether a deduction is valid or a penalty can be enforced. It does not give one.
 you_give:
   - The certified gross payment for the period (from the payment certificate or invoice)
@@ -54,7 +54,7 @@ how_it_works:
   - title: Works out the net payment
     text: Takes the applied deduction and other approved charges off the gross payment. Keeps invoice and cash timing differences apart.
   - title: Finds the operating cash
-    text: Takes operating costs off the net payment. This is the cash passed on to the project cash bridge.
+    text: Takes operating costs off the net payment. This is the cash passed on to the Project cash for debt checker.
   - title: Marks the gaps
     text: Writes MISSING for any figure it was not given and lists checks it could not run. It never fills a gap with zero.
 output_shape: |-

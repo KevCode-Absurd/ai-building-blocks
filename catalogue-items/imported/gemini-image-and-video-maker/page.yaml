@@ -36,6 +36,7 @@ how_to_use:
   - Use an AI that can run code and save files, such as Claude Code or Gemini in a coding tool. Chat-only windows will not work.
   - Give your AI this skill. Let it install the google-genai package if it is missing, and set GEMINI_API_KEY in a .env file.
   - Describe the image or video. Name your reference images or reference set if you want an on-brand look.
+  - Use a real person's face only with their permission. Never show a real person doing or saying something they did not do, and label AI-made images where your platform or the law requires it.
   - Read the price your AI quotes and approve it. Each run needs its own approval.
   - Check the saved image or video and its .json log in the generations folder. Ask for changes to one thing at a time.
   - Next, check the result against your brand guide before you publish it, and save the approved version in your asset folder.

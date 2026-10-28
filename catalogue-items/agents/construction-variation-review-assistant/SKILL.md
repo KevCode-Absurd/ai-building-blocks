@@ -22,7 +22,7 @@ Use what is attached or pasted first. If something is missing, say what you can 
 
 **Makes it better (optional):** the last review's record, and any approval received.
 
-**The pieces it uses:** the [Construction change decision brief writer](https://useaiblocks.com/workflows/prepare-a-construction-variation-decision) workflow (the governing method). It runs the [Contract plain-language summary writer](https://useaiblocks.com/skills/plain-words-contract-summary), the [Invoice totals checker](https://useaiblocks.com/skills/invoice-totals-checker) and the [Stakeholder update writer](https://useaiblocks.com/skills/stakeholder-update-writer). This agent then uses the [Action item tracker](https://useaiblocks.com/skills/executive-action-register) to record an approval. If any is missing from the pack, ask for it. Do not rebuild a missing step from memory. If the variation workflow is missing, stop and say so. If the Executive action register keeper is missing, finish the review and list any approval as open.
+**The pieces it uses:** the [Construction change decision brief writer](https://useaiblocks.com/workflows/prepare-a-construction-variation-decision) workflow (the governing method). It runs the [Contract plain-language summary writer](https://useaiblocks.com/skills/plain-words-contract-summary), the [Invoice totals checker](https://useaiblocks.com/skills/invoice-totals-checker) and the [Stakeholder update writer](https://useaiblocks.com/skills/stakeholder-update-writer). This agent then uses the [Action item tracker](https://useaiblocks.com/skills/executive-action-register) to record an approval. If any is missing from the pack, ask for it. Do not rebuild a missing step from memory. If the variation workflow or one of its three steps is missing, stop and say so. If only the Action item tracker is missing, finish the review and list any approval as open.
 
 **Saving the record:** saving needs file access. The agent writes only to `reviews/construction-variation-review-assistant/` and nothing else. Without file access it prints the record in the chat.
 
@@ -53,8 +53,8 @@ This is a portable review method. Installing it connects no account and sets no 
    - Each time claim has evidence or is marked `unproven`.
    - No variation is shown as approved without an approval record.
    - The original files are untouched, and revised files have new names or versions.
-6. **Retry once, then stop.** If a check fails, correct only the affected line and rerun it. Allow at most two correction passes. Then stop and report the blocker.
-7. **Save and hand back.** With file access, save to `reviews/construction-variation-review-assistant/<YYYY-MM-DD>/`: `contract-rules.md`, `cost-check.md`, `decision-brief.md`, `approval-record.md` (only if one arrived), `review-summary.md` and `state.proposed.json`. Keep the old record. With no file access, print the new record at the end and say nothing was saved.
+6. **Retry once, then stop.** If a check fails, correct only the affected line and rerun that check once. If it still fails, stop and report the blocker.
+7. **Save and hand back.** With file access, save to `reviews/construction-variation-review-assistant/<YYYY-MM-DD>/`: `contract-rules.md`, `cost-check.md`, `decision-brief.md`, `approval-record.md` (only if one arrived), `review-summary.md` and a copy of the new record. Then update `reviews/construction-variation-review-assistant/state.json` with the new record, so step 1 finds it next time. Keep the old record in its dated folder. With no file access, print the new record at the end and say nothing was saved.
 
 ## Acceptance
 

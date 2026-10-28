@@ -45,7 +45,7 @@ A job description defines **what the company needs**. A persona defines **who th
 - **Years of experience** - Range, not a hard number
 - **Education patterns** - CS degree? Bootcamp? Self-taught? PhD?
 - **Industry background** - Which sectors have they worked in?
-- **Company type history** - Startups? Enterprise? FAANG? Consulting?
+- **Company type history** - Startups? Enterprise? FAANG? Consulting? (Use this only to choose where to look. Never use it to rate or screen a person.)
 
 ### 2. Technical Identity
 
@@ -112,7 +112,7 @@ How this persona evaluates opportunities:
 - **Key decision factors** - Top 3 things that determine a yes/no
 - **Red flags** - What immediately turns them off?
 - **Influencers** - Who do they consult? (Partner, mentors, peers, online communities)
-- **Counter-offer vulnerability** - How likely is their current employer to counter?
+- **Counter-offer questions** - What to ask every candidate about their notice period and what would make them stay. Do not guess this from their employer, age or background.
 
 ### 6. Transition Readiness
 

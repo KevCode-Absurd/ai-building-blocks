@@ -58,7 +58,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 Pause here: Write the script or draft from the scene list.
 
 3. **Voice-over stripping test.** Use the skill `voice-over-stripping-test`. Give it the script you wrote from the scene list, and the scene list from `outputs/step-02-scene-turn-checker.md` for what each scene should do. A verdict on each line: does the story work without it? It saves `outputs/step-03-voice-over-stripping-test.md`: each narration line sorted as telling or adding something new, and a shorter script.
-4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
+4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list, then `CHECKS MISSED:` (the checks that failed or could not run, or "none").
 
 ## Next steps to offer
 
@@ -72,7 +72,7 @@ Use these instead of the general "After this" list below:
 - **STEP 1, idea test:** the story in one sentence, the idea it proves, the idea that argues back, whether it can grow to the end, the main turns, and a verdict of go, rework or drop.
 - **STEP 2, scene check:** for each scene, what changes, the choice that changes it and the cost to the character. Then the flagged scenes with a fix (cut, merge or sharper turn) and any set-ups without pay-offs.
 - **STEP 3, voice-over test:** whether the story works with all narration removed, and each line sorted as telling (cut or turn into a scene) or adding something new (keep).
-- **HAND-BACK SUMMARY:** each step's file, then every `MISSING:` line in one list.
+- **HAND-BACK SUMMARY:** each step's file, then every `MISSING:` line in one list, then `CHECKS MISSED:` with each check that failed or could not run, or "none".
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

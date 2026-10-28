@@ -145,11 +145,11 @@ On [DATE], the [SERVICE] experienced a [DURATION] outage affecting approximately
 ### System Diagram
 
 ```
-[Client] → [Load Balancer] → [Payment Service] → [Database]
+[Client] → [Load Balancer] → [SERVICE] → [DATABASE]
                                     ↓
-                            Connection Pool (broken)
+                            [FAILED COMPONENT]
                                     ↓
-                            Direct connections (cause)
+                            [CAUSE, from your records]
 ```
 
 ## Detection

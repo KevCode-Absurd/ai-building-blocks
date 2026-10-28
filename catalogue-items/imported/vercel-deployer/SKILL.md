@@ -183,7 +183,7 @@ The Vercel CLI isn't set up at all.
 
 **When to use:** Last resort when the CLI can't be installed or authenticated in the claude.ai sandbox. This requires no authentication — it returns a **Preview URL** (live site) and a **Claim URL** (transfer to your Vercel account).
 
-**Warn the user before you run it:** the project files are uploaded to Vercel, and the preview link is public until the user claims it. `node_modules`, `.git` and `.env` are left out, but every other file in the folder is uploaded, so check for secrets first and wait for a yes.
+**Warn the user before you run it:** the project files are uploaded to Vercel, and the preview link is public until the user claims it. `node_modules`, `.git` and `.env` are left out, but every other file in the folder is uploaded. List those files for the user first (for example `find <path> -type f -not -path '*/node_modules/*' -not -path '*/.git/*' -not -name '.env*'`), point out anything that looks like a key, token or private data, and wait for a yes.
 
 ```bash
 bash /mnt/skills/user/deploy-to-vercel/resources/deploy.sh [path]
@@ -214,7 +214,7 @@ The script auto-detects the framework from `package.json`, packages the project 
 
 **When to use:** In the Codex sandbox where the CLI may not be authenticated. Codex runs in a sandboxed environment by default — try the CLI first, and fall back to the deploy script if auth fails.
 
-**Warn the user before you run the script:** the project files are uploaded to Vercel, and the preview link is public until the user claims it. Check for secrets first and wait for a yes.
+**Warn the user before you run the script:** the project files are uploaded to Vercel, and the preview link is public until the user claims it. List the files that will be uploaded (everything except `node_modules`, `.git` and `.env` files), point out anything that looks like a key, token or private data, and wait for a yes.
 
 1. **Check whether the Vercel CLI is installed** (no escalation needed for this check):
    ```bash

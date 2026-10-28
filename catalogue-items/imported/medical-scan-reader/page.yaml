@@ -39,7 +39,7 @@ how_to_use:
   - Run the MATLAB code it writes. Check the size, spacing and orientation it prints against what you expect.
   - If you share DICOM files, ask for anonymising. It removes common patient details but may miss some, so open the copy and check it before you share.
   - You get a block of MATLAB code, then a printout of the voxel size and orientation. The library has no volume viewer skill yet. To view the volume now, ask your AI to use MATLAB's own viewers, volumeViewer or volshow. Next, pass the volume or slice to that viewer, or save the slice for your report.
-  - This reads scan data for work, research and learning. It does not diagnose anything. Scans hold patient details, so only use files you are allowed to use, and keep them on your own computer.
+  - This reads scan data for work, research and learning. It does not diagnose anything. Scans hold patient details, so only use files you are allowed to use, and keep them on your own computer. Anything your AI reads or prints, such as DICOM header fields, goes to your AI service. Use anonymised copies where you can, and follow your organisation's rules and the patients' consent before you use real scans.
 output_sample:
   input:
     - The path to your DICOM folder, NIfTI file or NRRD file

@@ -7,7 +7,7 @@ description: "Paste this when a prompt gives vague or uneven answers and you wan
 
 Turns a rough request into one clear prompt you can paste into any AI. You get one copy-ready block with a role, context, task, format and limits, plus up to three lines on what was added or assumed. This is a paste-only prompt: the only input is the rough prompt and the optional audience line. Do not look through project files or ask for attachments. Where the "Before you start" text below says to look in files or about-me notes, this paragraph wins.
 
-**Not for:** a one-off question you will not reuse (just ask your AI directly), or a full check of a prompt (use "Prompt improver").
+**Not for:** a one-off question you will not reuse (just ask your AI directly), or a full check of a prompt (use the Prompt editor, linked at the end).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

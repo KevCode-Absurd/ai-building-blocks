@@ -9,6 +9,8 @@ Pull key facts out of a scanned document and check them against the page. Get th
 
 This workflow chains three skills from the library. Run them in order. Save each result and pass it to the next step. Never guess a digit. A reading you cannot confirm stays marked uncertain.
 
+**When not to use:** the PDF already has text you can select and copy (use the PDF maker and reader), the person wants a summary rather than exact facts, or the document is handwritten (OCR is weak there, so treat this as a first reading and have the person check each fact). If the file must not be uploaded anywhere, say so before step 1 and keep the work on their computer.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.

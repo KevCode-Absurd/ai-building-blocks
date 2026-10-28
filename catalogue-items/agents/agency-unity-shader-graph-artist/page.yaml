@@ -39,7 +39,8 @@ how_to_use:
   - Add the look you want and any budget. Say "Plan the shader. Mark any limit you cannot tie to my budget."
   - Check the cost table against your slowest device. If it is over, ask for a cheaper version.
   - Build the Sub-Graphs first in Unity, then the main graph. Treat any code as an untested sketch.
-  - Open the Frame Debugger and GPU profiler on a real scene. Paste what you see for a second look.
+  - Open the Frame Debugger and GPU profiler on a real scene. For a second look, paste the passes the material draws in, the draw call count and the fragment time on your slowest device.
+  - This agent works as a chat plan. It does not open Unity, run checks on its own or run on a schedule.
 how_it_works:
   - title: Fix the target
     text: It confirms Unity version, pipeline, platform and the look you want. It asks once, then marks gaps MISSING.
@@ -127,3 +128,4 @@ works_best_with:
     - A screenshot of your current graph or Blackboard
     - Frame Debugger or GPU profiler results
     - A reference image or short clip of the look you want
+next: [agency-technical-artist]

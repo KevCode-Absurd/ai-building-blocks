@@ -12,6 +12,8 @@ explain: |
   The skill loads your Touchstone S-parameter files, checks they are sound, and plots them on Smith charts. It cascades the parts and can remove test fixtures. It runs the chain through a budget that gives total gain, noise figure and third-order intercept. It tests amplifier stability and designs matching networks. Many MATLAB RF rules are built in, such as the argument order that trips up first-time users.
 
   The code runs in MATLAB with RF Toolbox. Time-domain runs also need Simulink and RF Blockset. All are paid products.
+
+  Licence: BSD 2-Clause plus one MathWorks term (clause 3 in LICENSE.md). You may use this skill only with MathWorks products and services.
 when:
   - You have S-parameter files and need to see how the parts behave together.
   - You are checking whether a receiver chain meets its noise target.

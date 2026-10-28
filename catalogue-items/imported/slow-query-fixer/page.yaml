@@ -31,7 +31,7 @@ you_get:
   - A before and after plan comparison
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
-  - Paste your slow query, your database type and, if you have it, the EXPLAIN ANALYZE result.
+  - Paste your slow query, your database type and, if you have it, the EXPLAIN ANALYZE result. EXPLAIN ANALYZE really runs the query. For an UPDATE or DELETE, run it on a copy, or between BEGIN and ROLLBACK so nothing changes.
   - Add table sizes and how often the query runs, if you know them.
   - Read the cause first, then try each change on a copy of your database, one at a time.
   - Run EXPLAIN ANALYZE again and paste the new plan back so your AI can compare the two.

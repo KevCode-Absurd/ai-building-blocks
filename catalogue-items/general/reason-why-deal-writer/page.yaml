@@ -18,9 +18,9 @@ when:
   - "Your offer is fair but readers ignore it."
   - "You are testing different reasons for the same deal."
 not_for:
-  - "You have no real saving or no reason you can prove: run a plain price cut, or use the Commodity trap checker to make the offer itself stronger."
-  - "You need to pick who the deal is for: use the Hungry audience ranker first, then bring its group here."
-  - "You want to polish copy you already wrote: use the Anti-AI-slop copy editor or the Sales copy editor."
+  - "You have no real saving or no reason you can prove: run a plain price cut, or use the Offer price-comparison reviewer to make the offer itself stronger."
+  - "You need to pick who the deal is for: use the Market demand reviewer first, then bring its group here."
+  - "You want to polish copy you already wrote: use the AI-style wording editor or the Sales copy editor."
 
 you_give:
   - "The deal you want to run, with real numbers"
@@ -143,6 +143,8 @@ improve:
   - "Add words you never use in a deal to the avoid list."
   - "Save the winning reason to your brand file. Pair it with Small test and rollout planner."
 
+before: [website-brand-brain-builder, hungry-audience-ranker]
+
 works_best_with:
   tools:
     - {name: "Any good chat AI", why: "Drafting several versions from your facts is text work any strong chat AI does well with this skill."}
@@ -151,7 +153,7 @@ works_best_with:
     - "Your exact stock levels, dates and costs"
     - "A customer quote about your fair price"
     - "Past deals and how they did"
-    - "The group chosen by Hungry audience ranker"
+    - "The group chosen by Market demand reviewer"
 
 terms:
   - term: "Proposition"

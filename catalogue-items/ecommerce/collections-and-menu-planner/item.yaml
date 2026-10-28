@@ -7,7 +7,7 @@ role: make
 job: page
 level: beginner
 inputs:
-  - {type: product_data, required: true}
+  - {type: spreadsheet, required: true}
   - {type: competitor_set, required: false}
 outputs:
   - {type: plan}

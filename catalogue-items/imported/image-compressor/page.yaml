@@ -17,7 +17,7 @@ when:
   - You need the same quality settings every time.
 not_for:
   - "You have vector art like SVG logos: keep the original file, since compressing it only makes sense for photos and bitmaps."
-  - "You need a file with no quality loss at all: run it with the PNG format and the keep option, or keep your original."
+  - "You need a file with no quality loss at all: keep your original, since this tool can lower quality even when it saves as PNG."
   - "Your AI cannot run code or save files: use a free web image compressor in your browser instead."
 you_give:
   - An image file or folder

@@ -236,7 +236,8 @@ class EOQModel:
 
             results.append({
                 'multiplier': mult,
-                f'{param_name}_value': getattr(self, param_name.split('_')[0][0].upper()),
+                f'{param_name}_value': getattr(self, {'demand': 'D', 'ordering_cost': 'S',
+                                                      'holding_rate': 'r', 'unit_cost': 'C'}[param_name]),
                 'eoq': metrics['eoq'],
                 'total_cost': metrics['total_annual_cost'],
                 'relevant_cost': metrics['relevant_cost'],

@@ -47,7 +47,7 @@ How to start:
 !`python3 -c "exec('try:\n import yfinance, pandas, numpy\n print(f\'yfinance={yfinance.__version__} pandas={pandas.__version__} numpy={numpy.__version__}\')\nexcept Exception:\n print(\'DEPS_MISSING\')')"`
 ```
 
-If `DEPS_MISSING`, install required packages:
+If `DEPS_MISSING`, ask the user before you install anything, because this runs `pip install` on their computer. They can run `pip install yfinance pandas numpy` by hand instead. If they decline, stop and say the skill cannot run without these packages. Once they agree, install the required packages:
 
 ```python
 import subprocess, sys

@@ -9,7 +9,6 @@ level: intermediate
 inputs:
   - {type: tool_connection, required: true}
   - {type: spreadsheet, required: false}
-  - {type: product_data, required: false}
 outputs:
   - {type: audit_report}
   - {type: plan}

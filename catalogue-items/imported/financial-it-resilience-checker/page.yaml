@@ -5,9 +5,9 @@ name: Financial IT resilience checker
 summary: Check your finance firm against DORA. Give it your firm and IT suppliers. You get gaps, incident reporting steps and supplier contract checks.
 job: check-contracts
 headline: Financial IT resilience checker
-subhead: Tell your AI about your finance firm and its IT suppliers. It checks current DORA sources and lists your gaps. It also shows what evidence and incident facts you still need.
+subhead: Tell your AI about your finance firm and its IT suppliers. With web access, it checks current DORA sources and lists your gaps. It also shows what evidence and incident facts you still need.
 explain: |
-  Share your firm, systems and supplier details. The skill checks current DORA sources, maps evidence and lists missing incident facts.
+  Share your firm, systems and supplier details. With web access, the skill checks current DORA sources, maps evidence and lists missing incident facts.
 
   You describe your firm and the IT suppliers you use. The skill checks current DORA texts and standards, separates DORA from NIS2, and records source links and dates. Incident classification stays open when required facts are missing.
 

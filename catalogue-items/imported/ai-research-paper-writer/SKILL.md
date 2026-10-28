@@ -347,7 +347,7 @@ Organize methodologically, not paper-by-paper:
 
 **Bad:** "Snap et al. introduced X while Crackle et al. introduced Y."
 
-Cite generously—reviewers likely authored relevant papers.
+Cite generously—reviewers likely authored relevant papers. (AI Blocks note: cite only work that is truly relevant and that you have read. Never add citations just to please likely reviewers.)
 
 **Step 8: Limitations Section (REQUIRED)**
 

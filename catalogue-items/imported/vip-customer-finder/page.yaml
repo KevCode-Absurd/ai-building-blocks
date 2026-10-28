@@ -36,7 +36,8 @@ how_to_use:
   - Paste in this skill and give your store address, how to rank and the size of the top group.
   - Run the preview first. Nothing changes in your store at this stage.
   - Check the cutoff spend and the top 10 names. Change the top group or minimums if they look wrong.
-  - To add VIP tags, ask for it clearly and turn the preview off. Tags stay until you remove them.
+  - To add VIP tags, ask for it clearly and turn the preview off. Only then log in again with permission to edit customers. Tags stay until you remove them.
+  - The CSV holds names and emails, which is personal data. Keep it private, delete it when you are done, and only email people who agreed to hear from you.
 output_sample:
   input:
     - Your Shopify store address

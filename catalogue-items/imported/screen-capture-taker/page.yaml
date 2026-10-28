@@ -36,7 +36,7 @@ how_to_use:
   - Use an AI that can run commands on your computer, such as Claude Code or Codex. A chat that cannot run commands cannot take screenshots.
   - Close or hide anything private on your screen. Say what to capture, such as "the Slack window" or "the top left 800 by 600 pixels".
   - On a Mac, allow Screen Recording when asked. The skill has a helper that asks once, before the first capture.
-  - On Linux, make sure one of scrot, gnome-screenshot or ImageMagick is installed. On Windows, the skill runs its PowerShell script with the execution policy bypassed. Read take_screenshot.ps1 first if you are unsure.
+  - On Linux, make sure one of scrot, gnome-screenshot or ImageMagick is installed. On Windows, the skill runs its PowerShell script with the execution policy bypassed, which skips Windows' script check for that one run. Read take_screenshot.ps1 first, and only run the copy from this download.
   - Open each file path it prints. Check the picture shows what you meant and nothing private.
   - Use the capture in your next step, such as asking your AI to review the layout or to compare it with a design.
   - Before you post or send a capture, run it through the screenshot privacy masker to cover emails, keys and IDs.

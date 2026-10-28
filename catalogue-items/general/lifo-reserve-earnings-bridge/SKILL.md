@@ -91,7 +91,9 @@ These links identify public methods and definitions. All instructions and practi
 
 ## Hand back
 
-Return the actual native files, source index, dated assumptions, reconciliations, supported conclusions and unresolved MISSING: lines. State which checks ran and end with CHECKS MISSED: none or the exact outstanding checks. Keep unsupported financial or legal conclusions unresolved.
+Lead with the bridge table. Columns: Reported (LIFO) | Adjustment | FIFO | Source. Rows, in this order: inventory, reserve movement (opening, closing, operating increase), COGS, gross profit and margin, after-tax earnings (with the tax rate and its source). Put any reserve fall from used-up layers on its own row.
+
+Then return the actual native files, source index, dated assumptions, reconciliations, supported conclusions and unresolved MISSING: lines. State which checks ran and end with CHECKS MISSED: none or the exact outstanding checks. Keep unsupported financial or legal conclusions unresolved.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

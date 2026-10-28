@@ -9,7 +9,7 @@ subhead: Store credit in your customers' hands, issued from one request. Name th
 explain: |
   Store credit in your customers' hands, issued from one request. Name the customers and amounts, and it creates Shopify gift cards for goodwill after a late order, credit in place of a refund, or loyalty rewards.
 
-  You can look up each customer by email or customer ID, add an internal reason, set an expiry date and tag the customer. A dry run shows what would be created before anything happens. This skill creates live gift cards that hold real value, so check the list first. It needs a signed-in Shopify session, write access to gift cards, and gift cards turned on in your store settings.
+  You can look up each customer by email or customer ID, add an internal reason, set an expiry date and tag the customer. A dry run shows what would be created before anything happens. This skill creates live gift cards that hold real value, so check the list first. It needs a signed-in Shopify session, write access to gift cards (and to customers, if you add a tag), and gift cards turned on in your store settings.
 when:
   - An order shipped late and you want to send a goodwill credit.
   - A customer returned an item and you prefer store credit to a cash refund.

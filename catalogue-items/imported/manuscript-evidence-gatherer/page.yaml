@@ -32,7 +32,8 @@ you_get:
   - Research gaps
 how_to_use:
   - Open an AI that can run code and reach the web. Set up the skill from its folder.
-  - Add your search service key or log in. Your search text is sent to that paid service, so leave out unpublished work.
+  - "Set up the search service, Parallel, which is paid. Your AI checks for its command line tool and, with your OK, installs the pinned version (parallel-web-tools 0.9.3). Then run parallel-cli login, or add your own PARALLEL_API_KEY. The searches are billed to that account. Your search text is sent to Parallel, so leave out unpublished work."
+  - Perplexity is an option you must turn on. If you pick it, or allow it as a fallback, your search text also goes to OpenRouter, a second paid service that needs its own key. Leave it off to keep your text with one service.
   - Tell your AI your topic, your main claims and your field. Add date or journal limits if you have them.
   - Ask it to follow this skill and build the research packet.
   - Open the packet and the claim-to-source map. Verified here only means an excerpt was retrieved.

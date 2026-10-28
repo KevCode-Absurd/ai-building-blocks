@@ -83,6 +83,7 @@ TESTS FOR THE BOTTLENECK
 
 ROUTE TO: <next skill>
 NOT RUN: <part, and what is needed>
+CHECKS MISSED: <none | checks that failed or could not run>
 MISSING: <what you did not give>
 ```
 

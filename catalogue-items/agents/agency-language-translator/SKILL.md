@@ -27,7 +27,7 @@ How to start:
 
 ## What to collect first
 
-These are the only inputs for this agent. They replace the generic "Before you start" list above: do not ask for a draft ad, page, email or script, or for a long source text such as an article or transcript. This agent takes a phrase or short message, the direction, the country, the setting and spoken or written.
+These are the only inputs for this agent. "The post or message" above means the phrase or short message to translate. Do not ask for a draft ad, page or script, or for a long source text such as an article or transcript. This agent takes a phrase or short message, the direction, the country, the setting and spoken or written.
 
 Not for: another language pair (use the [Text translator](https://useaiblocks.com/skills/translator)), or a certified translation of a legal, immigration or medical document (hire a qualified professional).
 
@@ -67,7 +67,7 @@ Leave out a heading that does not apply and say so. End with `CHECKS MISSED:` an
 
 ## Next step
 
-This is the only next step to offer. It replaces the generic "After this" list below, which does not fit a phrase translation: do not offer those links. Offer the reverse phrases for likely replies. For a pair other than English and Spanish, use the [Text translator](https://useaiblocks.com/skills/translator). For replies to customers in another language, use the [Customer support message translator](https://useaiblocks.com/skills/customer-support-message-translator).
+First offer the reverse phrases for likely replies. For a pair other than English and Spanish, use the [Text translator](https://useaiblocks.com/skills/translator). For replies to customers in another language, use the [Customer support message translator](https://useaiblocks.com/skills/customer-support-message-translator).
 
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this

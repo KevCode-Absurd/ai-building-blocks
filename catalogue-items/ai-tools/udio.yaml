@@ -19,12 +19,12 @@ best_for:
   - Creators who want to try music styles for a video.
   - "People comparing song ideas across music tools, such as Suno."
 not_for:
-  - "Songs for ads, client work or anything you sell. We could not confirm that Udio gives you commercial rights. Read its terms first."
+  - "Songs for ads, client work or anything you sell. We could not confirm that Udio gives you commercial rights. Read its terms at udio.com/terms-of-service first."
   - "Saving songs as files. We could not confirm what Udio allows for downloads, and third-party reviews disagree."
 pricing:
   model: freemium
   from: "Not confirmed (checked 26 Oct 2026)"
-  note: "Check before you pay: the prices below are a third party's, not Udio's. Udio has a free plan and paid plans. Udio's own pricing and terms pages showed only their titles to our check on 26 Oct 2026, so we could not read plan prices, credit amounts, download rules or commercial rights from the vendor. A third-party review dated 18 Oct 2026 lists Standard at US$8 a month and Pro at US$24 a month, both billed yearly, and says neither allows commercial use. Treat that as unconfirmed. Read Udio's terms before you pay or publish a song."
+  note: "Check before you pay. Udio has a free plan and paid plans. Udio's own pricing and terms pages showed only their titles to our check on 26 Oct 2026, so we could not read plan prices, credit amounts, download rules or commercial rights from the vendor. A third-party review dated 18 Oct 2026 says no plan allows commercial use. Treat that as unconfirmed. Read the prices on Udio's pricing page and the rights in its terms before you pay or publish a song."
 works_with:
   - capcut
 runs_in: [web]

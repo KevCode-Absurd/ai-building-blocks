@@ -9,16 +9,16 @@ explain: |-
 
   This skill starts from a small working starter: a job queue, a Slack command router, a repeating heartbeat and two example agents, one that echoes and one that posts a test alert. It does not trust the starter. It lists the gaps. The README points to an environment file that is not there. Jobs have no client field. Any user in any channel can run a command. Shutdown does not wait for running jobs. Then it plans the fix for each gap that applies to your project.
 
-  It also adapts a Docker file for a local Redis and Postgres, and works through a 30-point readiness review. A check counts as passed only when it can point to evidence in your files. The result is a plan and draft code. It does not run Docker, connect to Slack or deploy. To put the worker online, use the Deploy Worker to Render coding prompt.
+  It also adapts a Docker file for a local Redis and Postgres, and works through a 30-point readiness review. A check counts as passed only when it can point to evidence in your files. The result is a plan and draft code. It does not run Docker, connect to Slack or deploy. To put the worker online, use the Render worker deployment planner.
 when:
   - You want an AI agent to run all day, taking jobs from a queue and replying in Slack.
   - You have a starter worker and need to know what it is missing before you rely on it.
   - You want Redis and a database running on your laptop so you can test the worker before it goes online.
   - Your agents will work for more than one client and you need each job to carry its scope.
 not_for:
-  - You want to put the worker online. Use the Deploy Worker to Render coding prompt, after this.
-  - You only need the job queue, with retries and failed-job handling. Use the Redis + BullMQ Job Queue coding prompt or the Recoverable agent job queue builder.
-  - You only want a Slack bot that answers commands. Use the First Slack Bot coding prompt.
+  - You want to put the worker online. Use the Render worker deployment planner, after this.
+  - You only need the job queue, with retries and failed-job handling. Use the Redis BullMQ job queue code planner or the Recoverable agent job queue builder.
+  - You only want a Slack bot that answers commands. Use the Slack bot build brief writer.
   - You don't write TypeScript or run a Slack workspace. The starter needs both, so it will not fit.
 you_give:
   - Your project folder, or its package file and main folders

@@ -5,7 +5,7 @@ job: plan-strategy
 thinking: high
 thinking_why: It weighs buyer evidence, channel fit and test economics. Use your strongest model.
 headline: Traction business profile builder
-subhead: Paste your product link and add your goal, budget and time limits if you have them. Get advice tied to your business, a small test with clear limits, and the facts still needed before you act.
+subhead: Paste your product link and add your goal, budget and time limits if you have them. Get a saved profile of your buyer, offer, goal and limits, ready for the channel ranker, and the facts still needed before you act.
 explain: Turn a public product link into a reusable business profile. It separates observed product facts from the private numbers and limits that only you know.
 when:
   - You want one saved profile of your software business before you compare growth channels.
@@ -22,13 +22,13 @@ you_give:
 you_get:
   - A business-profile.md with your buyer, offer, goal, limits and the evidence behind each fact
   - A list of the private facts still missing
-  - One small test idea with a cost cap and decision rule, ready for the channel ranker
+  - The limits a later test needs (cash cap, hours, owner, tracking), ready for the channel ranker to design the test
 how_to_use:
   - Open Claude, ChatGPT or Gemini. Paste the skill. Pick a model that can browse the web, or have your product page text ready.
   - Paste your product link. Add your goal, budget, hours and past tests if you know them.
-  - "Say: build my business profile and propose one small test. Cite what you could check."
+  - "Say: build my business profile. Cite what you could check."
   - Read the MISSING list and fill in what you know. Ask it to update the profile.
-  - Check the cash cap and the go, revise or stop rules. Approve any spending or sending yourself.
+  - Check the cash cap and hours it recorded. The channel ranker sets the test and its rules; approve any spending or sending yourself.
   - Save business-profile.md and hand it to the next step when you rank channels.
 output_sample:
   input:

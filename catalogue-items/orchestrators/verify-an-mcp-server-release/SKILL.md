@@ -25,7 +25,11 @@ How to start:
 
 Share your MCP server and settings. Get code risks, access risks and a real protocol test report.
 
+**When not to use:** you want to build a server rather than check one, you only need its tools tested (use the MCP server test runner), or you only want to harden it (use the MCP server security reviewer).
+
 ## Gather first
+
+Before you share anything, remove or mask API keys, tokens and passwords in the settings file and the server code (for example, replace each value with `<REDACTED>`). Keep the setting names so the checks still work. If you see a live secret in what was shared, stop, tell the user to rotate it, and do not repeat it in any output.
 
 - The MCP server code.
 - The settings file, such as `.mcp.json`.

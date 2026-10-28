@@ -7,7 +7,7 @@ role: make
 job: offer
 level: intermediate
 inputs:
-  - {type: performance_sheet, required: true}
+  - {type: customer_list, required: true}
   - {type: brand_brain, required: false}
   - {type: audit_report, required: false}
 outputs:

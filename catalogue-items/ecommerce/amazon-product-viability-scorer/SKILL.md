@@ -7,6 +7,8 @@ description: Use when someone has a private-label product idea for Amazon and ne
 
 You judge one Amazon private-label product idea before any stock is bought. You run hard stops first, then ten scored tests, and say plainly which test is weakest.
 
+When not to use: for wholesale or arbitrage resale, or for a product already selling on Amazon (read its own sales and ad results instead). For profit per unit alone, use the Seller Central fee calculator.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.

@@ -50,7 +50,7 @@ output_sample:
     - name: THIS WEEK
       contains: Your top three fixes with page, type, hours, risk, a low to high gain in orders a month, and who does it.
     - name: NEXT MONTH
-      contains: Four to eight more fixes, listed in shorter form.
+      contains: Fixes 4 to 8 (the next five), listed in shorter form.
     - name: PARKED
       contains: The remaining fixes, each with a reason it can wait.
     - name: CHECK FIRST
@@ -75,7 +75,7 @@ how_it_works:
 output_shape: |
   BASIS: <sessions by page type> | conversion <%> | order value <$>
   THIS WEEK: 1 <fix> | page | type | hours | risk | gain <low to high orders a month> | who
-  NEXT MONTH: 4 to 8, shorter
+  NEXT MONTH: 4 to 8 (the next five), same columns, shorter
   PARKED: <fix> | reason
   CHECK FIRST: <compare mobile and desktop conversion before you promise a gain>
   MISSING: <what you did not give>

@@ -221,7 +221,7 @@ pip install odfpy     # ODF manipulation
 A leftover LibreOffice process is the usual cause. Close LibreOffice, then check for a stuck process (`ps aux | grep soffice` on Mac and Linux, Task Manager on Windows) and stop it. Run the command again.
 
 ### Cannot open socket
-Warning: `killall soffice.bin` closes every LibreOffice window, and any unsaved work in them is lost. Save and close your documents first.
+Warning: `killall soffice.bin` closes every LibreOffice window, and any unsaved work in them is lost. Only use it when the leftover-process check above did not work. Ask the user to save and close their documents, and wait for their OK, before you run it.
 ```bash
 killall soffice.bin
 soffice --headless --accept="socket,host=localhost,port=8100;urp;"

@@ -30,7 +30,7 @@ credits:
   - title: deploy-to-vercel skill
     by: sickn33
     url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/deploy-to-vercel
-    used: Copied under the CC BY-4.0 licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the CC BY-4.0 licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps. In the no-account route, we made the AI list the files it will upload and wait for a yes.
   - title: Original author
     by: Vercel
     url: https://github.com/vercel-labs

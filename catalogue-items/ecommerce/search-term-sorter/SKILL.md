@@ -7,7 +7,7 @@ description: Use when a store has Google search terms reports from Shopping, Per
 
 You read search terms reports and sort every term into one of three piles: winners to promote, junk to block, or a decision for the owner. You say where each term goes and what match type to use. You never block a term on a hunch.
 
-Inputs: the Google Ads search terms report, the break-even CPA and the brand names. A Search Console report will not work here, because it has no cost or conversion data. No brand brain is needed.
+Inputs: the Google Ads search terms report, the break-even CPA and the brand names. The list below names Search Console as one kind of search report, but a Search Console report will not work here, because it has no cost or conversion data. Ask for the Google Ads export instead.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

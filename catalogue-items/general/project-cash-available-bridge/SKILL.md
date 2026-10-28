@@ -62,7 +62,7 @@ Order of the sum on the accrual route: operating revenue, less operating cost pr
 
 2. **Accrual route.** From operating revenue, take off the operating costs (without depreciation and other non-cash costs), the contract exclusions, cash taxes, allowed maintenance capital and the signed working-capital investment. Match the exclusions to the working-capital lines so no revenue is taken off twice.
 
-3. **Cash route.** Actual cash receipts and payments already include the settling of what customers owe and what you owe suppliers, so leave the working-capital line out. Enter zero for it only when you have checked the source and recorded that working capital is already inside it. If you are not sure, mark the line `MISSING: working-capital treatment` and stop the bridge there.
+3. **Cash route.** Actual cash receipts and payments already include the settling of what customers owe and what you owe suppliers, so leave the working-capital line out. Enter zero for it only when you have checked the source and recorded that working capital is already inside it: that is a verified zero, not a stand-in for a missing input. If you are not sure, mark the line `MISSING: working-capital treatment` and stop the bridge there.
 
 4. **Tie it out.** Check the result against the source cash and the agreement's definition. Never mix accrual revenue with cash costs, never take working capital off twice, keep debt service below the line, and give a source for every other adjustment.
 

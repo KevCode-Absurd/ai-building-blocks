@@ -37,7 +37,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-The "Before you start" list above is general. It mentions Meta Ads Manager, but this workflow uses Google Ads. Bring:
+The "Before you start" list above is general. This workflow uses Google Ads search terms reports only (a Search Console report has no cost or conversion data, so it will not work). Bring:
 - **Search terms reports** (required): from Google Ads, for Shopping, Performance Max and Search, with clicks, conversions and cost, over 90 days or more.
 - **Your break-even cost per sale** (required), or your order value and margin so it can be worked out.
 - **Your product list with key benefits** (required): price, variants and how each is used.
@@ -53,7 +53,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Search term sorter.** Use the skill `search-term-sorter`. Sorts the terms that already convert from the waste. Hands step 2 the winners list with match types, and the negatives to add.
+1. **Search term sorter.** Use the skill `search-term-sorter`. Sorts the terms that already convert from the waste. Hands step 2 the winners list with match types, and the negatives to add. A winner is a term with at least one conversion at or under your break-even cost per sale over the report window. Under about 30 conversions a month, every verdict is labelled an early read. Save the winners as rows of: term | conversions | cost per sale | match type (exact or phrase). Saves `outputs/step-01-search-term-sorter.md`.
 
 Pause here: Add the negatives in Google Ads and save the winning terms in a sheet with your products and offer.
 

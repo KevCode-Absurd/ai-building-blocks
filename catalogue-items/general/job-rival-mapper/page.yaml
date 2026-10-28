@@ -16,8 +16,8 @@ when:
   - You want to know what a customer gives up to switch to you.
 not_for:
   - "You want to compare one known competitor on price or features: read that competitor's site and pricing page, or ask a person who has bought from them."
-  - "You do not have a job spec yet: use the Job spec writer first, then come back here."
-  - "You want to find where no rival is strong: use the Competitor white space mapper after this one."
+  - "You do not have a job spec yet: use the Customer task definition writer first, then come back here."
+  - "You want to find where no rival is strong: use the Market opportunity finder after this one."
 you_give:
   - A job spec for one circumstance
   - Your known rivals (optional)
@@ -32,14 +32,14 @@ how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Paste the job spec. Add any rivals and customer words you have.
   - Check the rival list against what customers really said.
-  - Take the table to "Competitor white space mapper" to find where nobody is strong.
+  - Take the table to the Market opportunity finder to find where nobody is strong.
 output_sample:
   input:
     - Your job spec for one customer moment
     - Your known rivals (optional)
     - Customer reviews or notes that mention what else people tried (optional)
   prerequisites:
-    - A job spec, for example one made by the Job spec writer
+    - A job spec, for example one made by the Customer task definition writer
   output:
     - name: Job
       contains: The circumstance and the job in one line.
@@ -116,7 +116,7 @@ improve:
   - Add new customer quotes about what else they tried and run it again.
   - Redo it each year. Odd rivals move fast.
   - Run it once per job spec, not once for the whole business.
-  - Pair it with "Job experience mapper" to see which moments rivals could copy.
+  - Pair it with the Customer experience journey mapper to see which moments rivals could copy.
 works_best_with:
   tools:
     - name: Any good chat AI
@@ -124,7 +124,7 @@ works_best_with:
     - name: A spreadsheet
       why: The rival table is easier to sort and share in a spreadsheet.
   inputs:
-    - A job spec from the Job spec writer
+    - A job spec from the Customer task definition writer
     - Reviews that name other things people used
     - Your price list and feature list
 terms:

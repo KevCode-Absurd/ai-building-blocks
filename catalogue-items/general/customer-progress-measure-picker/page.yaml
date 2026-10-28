@@ -123,7 +123,7 @@ works_best_with:
       why: Optional. Some measures of progress, such as would do it again, can only come from asking. Free survey tools exist, such as Google Forms. Paid ones add features you do not need to start.
   inputs:
     - Your current dashboard or weekly report
-    - A job spec from the Job spec writer
+    - A job spec from the Customer task definition writer
     - Support and returns data
 terms:
   - term: Customer progress measure

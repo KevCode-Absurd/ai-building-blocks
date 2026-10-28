@@ -23,6 +23,7 @@ you_give:
   - Standard price and quantity per unit
   - Actual price paid and quantity used
   - Standard and actual labour rate and hours
+  - How many units you produced in the period
   - Overhead budget and actual spend (optional)
 you_get:
   - Total variance, favourable or unfavourable
@@ -32,7 +33,7 @@ you_get:
   - Suggested root causes to check
 how_to_use:
   - Open Claude, ChatGPT or Gemini and paste in the skill text from this page.
-  - "Gather these from your spreadsheet first, in this order. Material: standard price and quantity per unit, then actual price and quantity used. Labour: standard and actual rate, then standard and actual hours. Overhead: budgeted and actual fixed overhead, standard hours allowed and the overhead rate."
+  - "Gather these from your spreadsheet first, in this order. Material: standard price and quantity per unit, then actual price and quantity used. Labour: standard and actual rate, then standard and actual hours. Units produced in the period, so the per-unit standards can be multiplied up to totals. Overhead: budgeted and actual fixed overhead, standard hours allowed and the overhead rate."
   - Paste those figures into the chat. Overhead is optional.
   - Ask your AI to run the variance report. If it can run code, upload scripts/calculate.py from the download and it will use it for the sums. If not, it works from the formulas in the skill text. Ask it to show each sum so you can check it.
   - Read the Summary Dashboard first, then check each unfavourable line against the suggested root causes.

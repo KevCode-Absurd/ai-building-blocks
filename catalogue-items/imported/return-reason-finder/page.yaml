@@ -25,8 +25,8 @@ you_give:
   - Minimum returns per product to show (optional)
 you_get:
   - Return reasons ranked by count
-  - Return rate by product and SKU
-  - Share of returns per product
+  - Your overall return rate for the window
+  - Each product's and SKU's share of all returns
   - Clues pointing to quality or listing problems
 how_to_use:
   - Open an AI tool that can run commands, such as Claude Code, Cursor, Codex or Gemini CLI. A plain chat can't read your store.

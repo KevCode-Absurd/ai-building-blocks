@@ -94,6 +94,8 @@ UGC 风格 ≠ 伪造评价。生成的内容**不能声称是真实买家的真
 | 宝妈 | 「带娃根本没时间收拾自己，所以……」 |
 | 健身人群 | 「练完一身汗，这件……」 |
 
+开场白只交代人设的处境。后面不能接「我穿了/用了多久」这类真实使用经历，只说可核实的产品事实。(These openers only set the scene. Never follow them with a claim that the speaker has used the product; state only product facts you have checked.)
+
 **脚本骨架（15 秒）**
 
 ```

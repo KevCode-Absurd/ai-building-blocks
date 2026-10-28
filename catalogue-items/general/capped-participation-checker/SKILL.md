@@ -1,15 +1,15 @@
 ---
 name: capped-participation-checker
-description: "Check one preferred class participation cap against its optional conversion payout. Preference, capped participation, conversion and common residual payouts."
+description: "In a company sale, work out what one preferred class with capped participation is paid, where the cap includes the money back, and whether converting to common pays more. Shows the larger payout and what is left for common holders."
 ---
 
 # Capped participation checker
 
-Preference, capped participation, conversion and common residual payouts.
+For one preferred class in a sale: the capped payout (the cap includes the money back) against converting to common, and which one the investor takes.
 
 It works out what one investor with capped participation is paid in a sale, compares that with converting to common, and shows what is left for the other owners. The cap includes the money back.
 
-This is a sale payout for one class of preferred stock. It is not a SAFE conversion: for that, use the Post-money SAFE ownership checker.
+This is a sale payout for one class of preferred stock. It is not a SAFE conversion: for that, use the Post-money SAFE ownership calculator.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

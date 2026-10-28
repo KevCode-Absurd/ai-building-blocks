@@ -63,3 +63,4 @@ output_sample:
       contains: Numbered fixes with priority, owner, due date and ticket link.
     - name: Review meeting plan
       contains: A 60-minute agenda for a blameless review, with tips for the person leading it.
+next: [process-and-sop-writer, on-call-runbook-writer, failure-drill-planner]

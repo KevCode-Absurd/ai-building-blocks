@@ -66,6 +66,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+- Step 1: every ad has its role and one written idea behind it.
+- Step 2: the report counts distinct ideas against ads and gives the sameness score.
+- Step 3: every verdict is judged against the target, or says it used the account average because the target is missing. False winners are flagged.
+- Step 4: the next round tests different ideas, not small changes to one idea, and states its minimum spend.
+- Step 5: the budget amount came from the person, or is a `MISSING:` line.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

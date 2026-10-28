@@ -40,7 +40,7 @@ In the box above, "Store capture" means the product graphs (7, 30 and 180 day), 
 
 This skill runs on its own. All it needs to start is the product data. Attach screenshots or exports, because you can read images directly. If something is missing, ask once in one short message, then carry on and mark each gap `MISSING:`.
 
-- **Product data** (required): for each product, the name, price, 30 day revenue, and the 7, 30 and 180 day graphs.
+- **Product data** (required): for each product, the name, price, 30 day revenue, and the 7, 30 and 180 day graphs. This comes from a TikTok Shop research tool, which is usually a paid subscription the person must already have.
 - **Top videos for each product** (required for the video checks): posting dates and revenue.
 - **Where the revenue came from** (required): video or live stream.
 - **Your niche and your test results so far** (advised).

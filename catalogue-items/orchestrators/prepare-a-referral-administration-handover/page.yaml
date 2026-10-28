@@ -18,7 +18,7 @@ when:
   - A receiving service has gone quiet, and you want follow-ups ready to send.
   - A clinic manager wants a status report with proof for each referral.
 not_for:
-  - "You want to check records over time, with closure proof: use the Referral administration evidence review assistant."
+  - "You want to check records over time, with closure proof: use the Clinic referral handover reviewer."
   - "You want customers to refer friends to your business: use the Referral program designer."
   - You want to decide who is seen first, or how urgent a case is. That is for clinicians.
   - You want letters or messages sent. You get drafts only, and you send them.

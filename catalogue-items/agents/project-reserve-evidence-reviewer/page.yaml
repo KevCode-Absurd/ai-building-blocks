@@ -21,7 +21,7 @@ when:
   - A contract change alters who is paid first.
 
 not_for:
-  - You only need to test a signed covenant, such as cash cover each period. Use the Debt service covenant evidence reviewer. This agent runs that test only when a distribution is requested.
+  - You only need to test a signed covenant, such as cash cover each period. Use the Loan covenant cash cover reviewer. This agent runs that test only when a distribution is requested.
   - You need to build the loan schedule and the cover ratios first. Use the Project debt cash evidence reviewer.
   - Your reserve is a plain cash balance with no payment priority. A simple balance check is enough, and the Treasury settlement evidence reviewer covers daily cash.
   - You want to know if a payout is legally allowed. It reads the order and gates you supply. It gives no legal opinion.
@@ -43,7 +43,7 @@ you_get:
   - What changed since the last review, a record for the next one, MISSING lines and any checks that could not run
 
 how_to_use:
-  - Add this agent to Claude, ChatGPT or Gemini, with the two pieces it uses. They are the Reconcile project reserves and payment priority workflow and the Debt service covenant headroom checker skill. An AI that reads files works best. In plain chat it still works, but it cannot save files.
+  - Add this agent to Claude, ChatGPT or Gemini, with the two pieces it uses. They are the Project debt reserve payment checker workflow and the Loan covenant cash coverage checker skill. An AI that reads files works best. In plain chat it still works, but it cannot save files.
   - Say if this is the first run. If not, paste last time's record. Then attach the debt schedule, the reserve statement, the payment priority clause and the cash records for the period.
   - Name the payment order once, in your own words. Check that the waterfall follows it and that existing reserve cash is not counted as new cash.
   - Check that the reserve top-up appears once, and that the waterfall's reserve deposit matches the roll-forward. Any unpaid senior, reserve or junior amount should show on its own line.
@@ -57,7 +57,7 @@ how_it_works:
   - title: Runs the payment waterfall
     text: Runs the Project payment waterfall builder step. It allocates the same cash to senior payments, the reserve and junior payments in the order the contract sets, capping each at the cash left and the amount due. It ties the reserve deposit to the roll-forward and records any difference.
   - title: Tests a distribution gate only if needed
-    text: If owners request a distribution and a signed debt-service test applies, it runs the Debt service covenant headroom checker on the contract's own definition and periods. It shows signed cash headroom for each period and keeps any weak period visible.
+    text: If owners request a distribution and a signed debt-service test applies, it runs the Loan covenant cash coverage checker on the contract's own definition and periods. It shows signed cash headroom for each period and keeps any weak period visible.
   - title: Checks and saves
     text: Tests the result against the acceptance rules, retries the affected calculation at most twice, then writes the dated files, which steps ran or were skipped, and the new record. It keeps the old record.
 
@@ -86,7 +86,7 @@ output_sample:
     - The last review's record (optional)
   prerequisites:
     - An AI that can read files and build a spreadsheet
-    - The Reconcile project reserves and payment priority workflow and the Debt service covenant headroom checker skill, added with the agent
+    - The Project debt reserve payment checker workflow and the Loan covenant cash coverage checker skill, added with the agent
   output:
     - name: Changed since last review
       contains: Each requirement, draw, payment or priority term that moved, with old and new value and source date.

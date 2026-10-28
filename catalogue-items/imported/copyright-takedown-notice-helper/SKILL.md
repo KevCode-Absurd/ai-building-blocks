@@ -193,8 +193,7 @@ Most service providers publish a preferred form or a web intake (YouTube Content
 │    and have lost, for bad-faith takedowns — *Lenz v.        │
 │    Universal*, 801 F.3d 1126 (9th Cir. 2015); *Online       │
 │    Policy Group v. Diebold*, 337 F. Supp. 2d 1195 (N.D.     │
-│    Cal. 2004); *Stephens v. Clash*, 796 F.3d 281 (3d        │
-│    Cir. 2015).                                              │
+│    Cal. 2004).                                              │
 │                                                             │
 │  • The accuracy and authority statement is sworn under      │
 │    penalty of perjury. That is a real statement, not a      │
@@ -468,3 +467,5 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Ad claim sorter](https://useaiblocks.com/prompts/ad-claim-sorter). It takes the draft.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
+
+Changed by AI Blocks (2026-10-28): removed the Stephens v. Clash citation from the sworn-statement warning, because that case is not about bad-faith takedowns.

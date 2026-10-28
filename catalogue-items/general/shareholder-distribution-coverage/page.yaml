@@ -60,18 +60,18 @@ output_sample:
     - name: MISSING and CHECKS MISSED
       contains: Inputs not supplied and any checks that failed or could not run.
 how_it_works:
-  - title: 1. Identify distributions and equity issuance separately in the cash-flow statement; exclude announced but unexecuted buybacks
-    text: Identify distributions and equity issuance separately in the cash-flow statement; exclude announced but unexecuted buybacks.
-  - title: 2. Net issuance cash against executed repurchases, add ordinary cash dividends and compare with independently defined equity free cash flow
-    text: Net issuance cash against executed repurchases, add ordinary cash dividends and compare with independently defined equity free cash flow.
-  - title: 3. Show cash retained or external funding required; reconcile debt movements and cash-balance changes before interpreting the shortfall
-    text: Show cash retained or external funding required; reconcile debt movements and cash-balance changes before interpreting the shortfall.
+  - title: Finds the payouts
+    text: Takes dividends paid, shares bought back and cash raised from new shares from the financing section of the cash-flow statement. Announced but unexecuted buybacks are left out.
+  - title: Compares with FCFE
+    text: Dividends plus buybacks, less new-share cash, compared with equity free cash flow for the same period, giving the surplus or shortfall.
+  - title: Ties out the cash
+    text: Checks the change in cash with the formula for your FCFE definition, and names any gap before it reads a shortfall.
 output_shape: |-
   SCOPE AND DATED SOURCES
   INPUTS AND ASSUMPTIONS (FCFE definition, periods)
   NET DISTRIBUTIONS: dividends, repurchases, issuance
   FCFE and the surplus or shortfall
-  CASH TIE-OUT: change in cash = FCFE - net distributions (plus net debt issued if FCFE excludes it)
+  CASH TIE-OUT: FCFE after net borrowing: change in cash = FCFE - net distributions. FCFE before net borrowing: change in cash = FCFE - net distributions + net debt issued
   FILE CHECKS: what ran
   MISSING:
   CHECKS MISSED:

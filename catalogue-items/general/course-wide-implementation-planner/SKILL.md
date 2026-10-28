@@ -119,6 +119,8 @@ If the owner allows it, add `DRAFT CHANGES` after FILE PLAN with the code for th
 
 Before you send the result, confirm: no secret or token appears; no check is marked `pass` without evidence; every proposed change names the file it touches; nothing says a command ran or a test passed unless it did; NEXT STEP is one step the owner can do today; CHECKS MISSED lists each check that failed or could not run, or says none.
 
+When the plan is built and the tests pass on the owner's laptop, the deploy step comes next: the [Render worker deployment planner](https://useaiblocks.com/skills/deploy-worker-to-render-builder-prompt) puts the worker online.
+
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:

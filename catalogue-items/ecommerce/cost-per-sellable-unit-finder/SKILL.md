@@ -51,7 +51,7 @@ VERDICT: GO | HOLD | NO-GO, because <reason>
 MISSING: <what you did not give>
 ```
 
-GO means margin meets target and holds in the stress test. HOLD means a layer is still an estimate that could change the answer. NO-GO means margin is zero or below.
+GO means margin meets target and holds in the stress test. HOLD means a layer is still an estimate that could change the answer. A missing duty rate, or a test rate the person named, always caps the verdict at HOLD. NO-GO means margin is zero or below, even at 0% duty.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

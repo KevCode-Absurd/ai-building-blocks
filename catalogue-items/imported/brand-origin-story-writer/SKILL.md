@@ -73,7 +73,7 @@ Generate 3 versions at different lengths. Each should feel human, not corporate.
 
 600–900 words. Full narrative arc:
 
-**Opening hook** — Drop into a scene, a moment, or a question. Don't start with "We were founded in..."
+**Opening hook** — Drop into a scene, a moment, or a question. Don't start with "We were founded in..." (AI Blocks note: use only a scene or moment the user actually told you. Never invent founder history. If you have no real scene, open with a question or write `[REAL MOMENT FROM THE FOUNDER]` for the user to fill.)
 
 **The problem** — Describe the frustration or gap with specificity. Name the thing that was wrong with how things worked.
 

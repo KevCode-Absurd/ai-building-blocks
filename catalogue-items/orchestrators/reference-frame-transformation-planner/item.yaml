@@ -7,7 +7,7 @@ role: orchestrate
 job: video
 level: intermediate
 inputs:
-  - type: brief
+  - type: question
     required: true
   - type: approved_image
     required: false

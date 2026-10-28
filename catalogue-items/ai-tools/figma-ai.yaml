@@ -51,7 +51,7 @@ alternatives: [canva, lovable, v0, bolt]
 last_checked: 2026-10-26
 checked: 26 Oct 2026
 first_result:
-  - "Sign up at figma.com. Starter is free. Figma Make needs a Full seat, and we could not confirm that Starter gives you one. If Make will not open on Starter, you need a Professional Full seat (US$16 a month)."
+  - "Plan on a paid seat. Figma Make needs a Full seat, and we could not confirm that the free Starter plan gives you one. Sign up at figma.com and try Make on Starter. If it will not open, you need a Professional Full seat (US$16 a month)."
   - "Open Figma Make from figma.com/make and start from scratch, or attach a design and files to your first prompt."
   - "Write what the screen or app should do and who uses it. Name the first screen and the one action a person takes on it."
   - "Click through the result. Ask for changes in the chat, then edit the code or the canvas by hand."

@@ -9,7 +9,7 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - type: source_text
+  - type: document
     required: true
   - type: question
     required: false
@@ -39,4 +39,5 @@ credits:
     by: Michael Sitarzewski and Agency Agents contributors
     url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/security/security-threat-intelligence-analyst.md
     used: Original agent profile, preserved in references/source-agent.md; AI Blocks
-      adds setup and review instructions.
+      adds setup and review instructions. On 2026-10-28 we matched the SKILL.md input
+      note to the threat report input and added a when-not-to-use line.

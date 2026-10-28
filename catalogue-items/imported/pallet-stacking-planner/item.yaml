@@ -1,6 +1,6 @@
 slug: pallet-stacking-planner
 name: Pallet stacking planner
-summary: Give it your box sizes and pallet size. Get a stacking pattern that fits the most boxes safely.
+summary: Give it your box sizes and pallet size. Get a stacking pattern that fits the most boxes, with rough load checks.
 category: general
 boards: []
 type: skill

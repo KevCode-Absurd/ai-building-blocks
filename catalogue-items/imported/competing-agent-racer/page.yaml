@@ -38,7 +38,7 @@ how_to_use:
   - Check the ranked comparison. Each agent is a separate paid run, so more agents cost more.
   - Before you merge, read the winning branch's changes and run your tests on it. The merge goes straight into your base branch with no review step.
   - Merge the winner. The other attempts are kept as tags in case you want them.
-  - Next, push the merged branch, delete the archive tags you do not need, and ask it to clean up any leftover worktrees with session_manager.py --cleanup.
+  - Next, push the merged branch once your tests pass. Delete an archive tag only when you are sure you will not want that attempt, since the tag is the last thing keeping it. Ask your AI to show each push or delete command and wait for your yes. Then ask it to clean up any leftover worktrees with session_manager.py --cleanup.
 output_sample:
   input:
     - The task in one sentence

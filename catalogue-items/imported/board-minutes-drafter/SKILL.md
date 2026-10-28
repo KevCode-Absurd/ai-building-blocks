@@ -111,7 +111,7 @@ Ask for the attendee list, or offer to pull from the calendar invite if the conn
 
 **Quorum:**
 
-- Check the charter and bylaws for the quorum requirement. If the charter is silent, research the applicable state corporate law for the default rule for this entity type. Record what you confirmed (source and pinpoint) in the drafting notes.
+- Check the charter and bylaws for the quorum requirement. If the charter is silent, do not research or state the state-law default yourself. Write it as a question for the lawyer in the drafting notes: "[LAWYER TO CONFIRM: default quorum rule under the state corporate law for this entity type, with source]".
 - Confirm quorum was present. If not: stop and flag before drafting. Do not produce minutes that imply a valid meeting occurred. Surface the question to outside counsel — the remediation path (ratification, re-meeting, written consent, other) depends on the state of incorporation and the nature of the action.
 
 ---
@@ -270,7 +270,7 @@ For drafting written consents in lieu of a meeting, use `/corporate-legal:writte
 - It does not finalize minutes — the draft requires attorney review before circulation.
 - It does not distribute minutes — output is for the attorney to review, edit, and circulate via their own process.
 
-Changed by AI Blocks (2026-10-28): added a plain-chat note at the top that replaces the plugin settings file, calendar, matter workspace and slash commands, and keeps state-law questions for the lawyer.
+Changed by AI Blocks (2026-10-28): added a plain-chat note at the top that replaces the plugin settings file, calendar, matter workspace and slash commands, and keeps state-law questions for the lawyer, including the quorum default rule.
 
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this

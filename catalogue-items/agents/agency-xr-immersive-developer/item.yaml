@@ -39,4 +39,5 @@ credits:
     by: Michael Sitarzewski and Agency Agents contributors
     url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/spatial-computing/xr-immersive-developer.md
     used: Original agent profile, preserved in references/source-agent.md; AI Blocks
-      adds setup and review instructions.
+      adds setup and review instructions. On 2026-10-28 we matched the SKILL.md input
+      and next-step notes to the generated sections and the reviewed next step.

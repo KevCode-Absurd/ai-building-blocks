@@ -48,7 +48,7 @@ The 4 Principles of Chaos Engineering (Netflix, 2016):
 
 1. **Build a hypothesis around steady-state behavior.** Not "what breaks?" but "X holds; will it still hold under fault Y?"
 2. **Vary real-world events.** Inject realistic failures: kill nodes, slow networks, lose cache, throttle dependencies.
-3. **Run experiments in production.** Staging never has the same failure modes. Start small.
+3. **Run experiments in production.** Staging never has the same failure modes. Start small. Before you plan any production run, ask for a named approver, a named on-call person and a named rollback owner. If any of the three is missing, plan the experiment for staging only and say why.
 4. **Automate experiments to run continuously.** One-off chaos is a press release; continuous chaos is engineering.
 
 Add a fifth: **Define abort criteria up front.** A chaos experiment with no abort criteria is an outage by another name.

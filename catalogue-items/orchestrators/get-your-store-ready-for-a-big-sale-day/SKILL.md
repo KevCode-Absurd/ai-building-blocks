@@ -43,8 +43,8 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Heavy feature trimmer.** Use the skill `heavy-feature-trimmer`. Give it the page links or screenshots and any click data. It judges each feature (sliders, quick view, autoplay video, popups, animations) keep, change or remove, suggests a lighter replacement and scores how light the pages are out of 100. The verdict table has one row per feature: page | feature | verdict | reason | lighter replacement. Save it as `outputs/step-01-heavy-feature-trimmer.md`.
-2. **App script auditor.** Use the skill `app-script-auditor`. Give it your app list, the theme name and `outputs/step-01-heavy-feature-trimmer.md`. It marks every app keep, remove, delay or one-page-only with a reason, ranks apps by blocking time, leaves tracking tags alone and scores the app stack out of 100, now and after the changes. Save it as `outputs/step-02-app-script-auditor.md`.
+1. **Heavy feature trimmer.** Use the skill `heavy-feature-trimmer`. Give it the page links or screenshots and any click data. It judges each feature (sliders, quick view, autoplay video, popups, animations) keep, change or remove, suggests a lighter replacement and scores how light the pages are out of 100 (the lightness score: the skill's own measure, higher is lighter, not a Google score). The verdict table has one row per feature: page | feature | verdict | reason | lighter replacement. Save it as `outputs/step-01-heavy-feature-trimmer.md`.
+2. **App script auditor.** Use the skill `app-script-auditor`. Give it your app list, the theme name and `outputs/step-01-heavy-feature-trimmer.md`. It marks every app keep, remove, delay or one-page-only with a reason, ranks apps by blocking time (in milliseconds, how long a script holds up the page before a visitor can tap; lower is better), leaves tracking tags alone and scores the app stack out of 100, now and after the changes. Save it as `outputs/step-02-app-script-auditor.md`.
 
 Pause here: Make the cuts on a copy of your theme first, then run the key pages through PageSpeed and note the results.
 
@@ -55,15 +55,15 @@ Pause here: Make the cuts on a copy of your theme first, then run the key pages 
 3 step files and the summary. The last file holds the plan.
 
 ## After this (for this job)
-Use this first, because the suggestions above are not about sale-day readiness. Suggest one next step as a short question:
-- Keep to the freeze date from step 3, and re-test the key pages in PageSpeed the day before the sale.
-- After the sale, run the same PageSpeed check again and compare it with the speed budget.
+Ask one short question: "Do you want a reminder to re-test your key pages in PageSpeed the day before the sale, after the freeze date from step 3?" After the sale, they can run the same check again and compare it with the speed budget. The shared list below is extra.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+- The plan names a freeze date before the sale and a PageSpeed re-test before the sale day.
+- Tracking tags were left alone, and every score after changes is labelled projected, not measured.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

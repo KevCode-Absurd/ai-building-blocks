@@ -50,6 +50,8 @@ Every section follows: **Headline → Data → Narrative → Ask/Next**
 - Sentence 2: Biggest thing that happened this period
 - Sentence 3: Where we're going next quarter
 
+*AI Blocks note: every figure in the example below, in the metrics table and in references/deck-frameworks.md is made up to show the format. Never copy them into a real deck. Use only the user's own numbers, and mark any that are missing.*
+
 *Bad:* "We had a good quarter with lots of progress across all areas."
 *Good:* "We closed Q3 at $2.4M ARR (+22% QoQ), signed our largest enterprise contract, and enter Q4 with 14-month runway. The strategic shift to mid-market is working — ACV up 40% and sales cycle down 3 weeks. Q4 priority: close the $3M Series A and hit $2.8M ARR."
 

@@ -589,6 +589,8 @@ async function queryWithRetry(admin, query, variables, maxRetries = 3) {
       if (attempt === maxRetries - 1) throw error;
     }
   }
+  // Still throttled after the last try: fail loudly instead of returning nothing.
+  throw new Error(`Shopify API still throttled after ${maxRetries} tries`);
 }
 ```
 

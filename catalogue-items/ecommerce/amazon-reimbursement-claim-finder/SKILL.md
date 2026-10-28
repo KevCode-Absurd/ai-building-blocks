@@ -70,6 +70,7 @@ CLAIM READINESS SCORE <n>/100
 Measures: how much of the six-part check was run, and how many findings have proof ready.
 Sum: <a + b + c + d + e + f = n>
 Money found: <amount> (<% of 90-day Amazon sales, if given>)
+Money found is not what Amazon owes. It covers only the reports given. Check each claim in Seller Central before you file it.
 
 CLAIMS TO FILE (largest first)
 1. <type> | <shipment or product> | amount: <...> | proof: <receipt, bill of lading, packing list, report line> | deadline: <check current limit>

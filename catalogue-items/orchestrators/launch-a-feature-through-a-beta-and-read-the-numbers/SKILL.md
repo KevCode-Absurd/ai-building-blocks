@@ -33,7 +33,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-This list replaces the shared "Before you start" block above. Where that block asks for "Your results" (it names Meta Ads Manager, Google Ads and store exports), give your product's own numbers for the feature, as described below. No ad export is used.
+This list replaces the shared "Before you start" block above. Where that block asks for data or results, give your product's own numbers for the feature from your analytics tool, as described below. They are needed only at step 5. No ad export is used.
 
 - **The feature** (required): what it does and who it is for.
 - **What the business needs from it** (required), for example fewer cancels or more sign-ups. Step 3 sets the metrics from this.
@@ -75,7 +75,7 @@ Five step files and the summary. The third file holds the metrics decided before
 - **Step 5, results:** for each metric, the target, the actual number, what it means, what it cannot yet say, and keep, change or pull.
 - **HAND-BACK SUMMARY:** each step's file, and every `MISSING:` line in one list.
 
-Of the shared "After this" links below, offer the Feature request screener only for your next feature, not as a follow-up to this run: it decides whether to build something, which comes before this workflow. The Product feature review planner fits this run best.
+Of the shared "After this" links below, offer the Feature request screener only for your next feature, not as a follow-up to this run: it decides whether to build something, which comes before this workflow. The [Product feature review planner](https://useaiblocks.com/skills/review-a-feature-and-plan-its-future) fits this run best: give it the step 5 results and the beta feedback.
 
 ## Check before you hand it back
 - Each step passed its own checks, or the run stopped at the step that failed and says why.

@@ -31,6 +31,8 @@ How to start:
 - **A chat AI that can read your files:** The skill works from records and drafts you provide. Research tasks also need current, checked public sources.
 <!-- /needs -->
 
+> Added by AI Blocks: donor records hold personal information. Before the person pastes any records, ask them to replace names, emails, phone numbers and addresses with IDs, and to check their organisation's data policy. If records arrive with names or contact details, do not repeat them in your answer. Use the IDs or row numbers instead.
+
 ## When to Use This Skill
 
 Use this skill to build, run, or audit the system that moves individual donors and prospects

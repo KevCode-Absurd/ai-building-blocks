@@ -32,7 +32,7 @@ you_get:
   - A deadline calendar and compliance plan
 how_to_use:
   - Before you start, gather the subpoena file, your litigation setup notes (CLAUDE.md) and your matter log (_log.yaml).
-  - Open the skill in an AI that can read files and look things up online. Paste the subpoena or give its file path.
+  - Open the skill in an AI that can read files and look things up online. Paste the subpoena or give its file path. A legal research tool such as Westlaw (paid) is optional. Free CourtListener or web search also work, and those results are tagged for you to check.
   - Say where the subpoena was issued. Add your other open matters and your systems list if you have them.
   - Read the result. Check the deadlines and the rule it found before you rely on them.
   - If the subpoena is from a grand jury, the skill stops. Call criminal counsel at once.

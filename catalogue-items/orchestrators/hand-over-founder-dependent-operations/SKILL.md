@@ -28,9 +28,9 @@ How to start:
 - **A chat AI that reads files:** It reads your task list and the pack together. Nothing is sent or changed for you.
 <!-- /needs -->
 
-## Before you start
+## What you need
 
-Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
+This replaces the shared list above. Use what is attached or pasted first. Ask once, in one short message, for only what you cannot work without.
 
 **You need:**
 - The founder's recurring tasks: what, how often, when last done, where the steps are written.
@@ -63,7 +63,7 @@ If a component skill is missing, tell the user which one and ask them to add it 
 2. **Handover note writer** (`handover-note-writer`). Run it once per deputy. Give it that deputy's rows from step 1, the dates, and the founder's notes on those tasks. Ask for what breaks first at the top, then what is due, live work, where things live, the people, what to leave alone and how to reach the founder. List the access that deputy would need as proposed requests. Save `outputs/step-02-handover-note-writer.md` (one section per deputy).
    **Gate before the hand back:** each note covers every task in that deputy's rows, each deadline has a date or `MISSING`, and no access is shown as granted.
 
-3. **Check and hand back.** Build the result below from the step files.
+3. **Check and hand back.** Build the result below from the two step files. Take the map rows and readiness levels from step 1. Turn each gap from step 1 into a READINESS GAPS row with an owner and a date, or `MISSING`. Place each deputy's note from step 2 under their name, and collect every proposed access request from step 2 into one list.
 
 ## What you hand back
 
@@ -102,13 +102,6 @@ When you've handed it back, suggest what they could do next in one short questio
 - The [Nonprofit leadership handover planner](https://useaiblocks.com/skills/nonprofit-leadership-handover-planner). It takes the document.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
-
-## After this
-
-Offer one next step in a short question, and say the user can type their own:
-- **Build backups for the biggest gaps** with the [Critical role backup and training planner](https://useaiblocks.com/workflows/plan-coverage-for-a-critical-role) workflow.
-- **Plan cover for a planned absence** with the [Team absence handover planner](https://useaiblocks.com/workflows/prepare-a-team-absence-handover) workflow.
-- **Update a note later** with the [Handover note writer](https://useaiblocks.com/prompts/handover-note-writer).
 
 ## Avoid
 

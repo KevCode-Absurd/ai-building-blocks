@@ -9,7 +9,9 @@ subhead: Give it a tag name or description. Get the matching PI data points foun
 explain: |
   Find the right data point in a PI system and pull its history into MATLAB, starting from just a tag name, a description or an asset name. It spares you from raw .NET code.
 
-  The skill decides the route from what you give. A tag name or description goes to the PI Data Archive, using the client to look up tags and read values. An element name or template goes through Asset Framework, which finds elements and attributes and reads their history. For example, you can list every generation unit by template. It reads only, so it does not change assets or write data. It needs MATLAB with the Industrial Communication Toolbox and access to a PI server.
+  The skill decides the route from what you give. A tag name or description goes to the PI Data Archive, using the client to look up tags and read values. An element name or template goes through Asset Framework, which finds elements and attributes and reads their history. For example, you can list every generation unit by template. It reads only, so it does not change assets or write data. It needs MATLAB with the Industrial Communication Toolbox, which are paid MathWorks products, and access to a PI server.
+
+  Licence: this is a copy of MathWorks' skill, shared under the BSD 2-Clause licence in the LICENSE.md file. That licence adds that you may use it only with MathWorks products such as MATLAB.
 when:
   - You have a tag name and need last month's values.
   - You only know part of a tag's description.

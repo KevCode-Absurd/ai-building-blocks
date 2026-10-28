@@ -10,7 +10,7 @@ inputs:
   - {type: spreadsheet, required: true}
   - {type: plan, required: false}
   - {type: performance_sheet, required: false}
-  - {type: financial_statements, required: true}
+  - {type: financial_statements, required: false}
 outputs:
   - {type: audit_report}
   - {type: spreadsheet}

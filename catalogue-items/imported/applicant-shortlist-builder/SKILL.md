@@ -84,6 +84,8 @@ Score each criterion, weight per the rubric, and sort. Then band into four group
 
 Show the owner the top candidates with the evidence attached, and one line on anyone whose rubric score is depressed by a missing fact rather than by a missing skill. The owner is the decision-maker; this skill produces the ordered, evidenced list they decide from.
 
+> **AI Blocks note (hiring rules):** in some places, using software to rank job applicants is regulated, for example New York City's rules on automated hiring tools and the EU's AI rules for hiring. They can require a bias audit, a notice to applicants, or a person reviewing every decision. Tell the owner this when you hand over the ranking, and ask them to check the rules where they hire before they rely on it. A person must review each candidate; never reject anyone on the score alone. This is not legal advice.
+
 ## Step 5 — Draft the replies
 
 Everyone who applied hears back. That is the standard, and for an SMB it is also reputation management in a town where word travels.
@@ -163,3 +165,5 @@ Close with one line on what happened — how many screened, how many in the inte
 ## Using a tool that isn't listed
 
 The connectors named in this skill are the tested paths, not a wall. If the owner wants this flow to use a tool that isn't connected or listed, offer `build-connector` — it checks the connector directory first and connects through Zapier otherwise, never hand-building against a raw API. Once the connection exists, the tool joins this skill like any other optional connector, under the same approval gates.
+
+Changed by AI Blocks (2026-10-28): gave it a plain name, added Before you start and After this sections that link to other AI Blocks steps, and added a note on hiring rules (bias audits, applicant notices, human review) after the ranking step.

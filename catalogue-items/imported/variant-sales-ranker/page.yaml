@@ -31,7 +31,7 @@ you_get:
   - Lists of top performers and dead weight
 how_to_use:
   - Use an AI tool that can run commands and save files, like Claude Code, Cursor, Codex or Gemini CLI. A plain chat window cannot reach your store.
-  - Log in to your store with the Shopify CLI, using an account that can read orders and products.
+  - Log in to your store with the Shopify CLI, using an account that can read orders and products. For dates more than 60 days back, it also needs access to all orders, or older sales are left out.
   - Paste the skill into your AI. Give it your store domain and a start and end date. A 30 to 90 day range works best.
   - "Pick how to rank: revenue, units or refund rate. Set a minimum units sold, such as 5, to skip variants with very few sales."
   - Open the CSV and the two tables. Check any variant with a high refund rate before you reorder it.

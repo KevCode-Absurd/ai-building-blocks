@@ -7,8 +7,7 @@ role: make
 job: ops
 level: intermediate
 inputs:
-  - {type: product_data, required: true}
-  - {type: spreadsheet, required: false}
+  - {type: spreadsheet, required: true}
 outputs:
   - {type: plan}
   - {type: document}

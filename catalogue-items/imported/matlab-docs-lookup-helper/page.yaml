@@ -29,7 +29,7 @@ you_get:
   - Links to the pages used
   - Notes on release changes
 how_to_use:
-  - Check that you have MATLAB with a licence. Your AI tool must be able to run MATLAB code and read web pages from it.
+  - Check that you have MATLAB with a licence. MATLAB is paid software from MathWorks. Your AI tool must be able to run MATLAB code and read web pages from it.
   - Add the skill to your AI tool, or paste its text into the chat.
   - Ask your question. Name the function or the task, and say which MATLAB release you use.
   - Read the answer and open the links it lists to check the syntax.
@@ -40,7 +40,7 @@ output_sample:
     - Your MATLAB release
     - The toolbox you are using (optional)
   prerequisites:
-    - MATLAB with a licence
+    - MATLAB with a licence (paid software from MathWorks)
     - An AI tool that can run MATLAB code and read web pages from MATLAB
   output:
     - name: Syntax

@@ -31,6 +31,7 @@ you_get:
 how_to_use:
   - Before you start, check you have Claude Code v2.1.32 or later with auto-memory turned on. Open Claude Code in your project and run the two plugin commands in the skill's Installation section (/plugin marketplace add, then /plugin install). They pull from the original alirezarezvani/claude-skills repo on GitHub, not from this copy. There is no Codex install script in this copy, so the Codex route is not available here. In Codex you can copy the skill folder in by hand.
   - Run /si:memory-review. Read the keep, merge and delete lists.
+  - Save a copy of MEMORY.md before you promote or delete anything, since a promote removes the note from that file.
   - Run /si:promote on a note you want as a firm rule. Say yes before it writes anything. Then open CLAUDE.md or the rules file and check the new rule reads right.
   - Run /si:extract on a fix you keep repeating to turn it into a skill.
   - Run /si:memory-status to check line counts. Only the first 200 lines of the memory file load each session. After a promote, run it again to confirm the memory file got shorter.

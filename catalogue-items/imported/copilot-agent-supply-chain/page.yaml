@@ -17,6 +17,7 @@ how_to_use:
   - Ask it to make a manifest first. If you already have an INTEGRITY.json, ask it to verify the folder instead.
   - Read the result. Check every MODIFIED, MISSING and UNTRACKED line before you trust the plugin.
   - Ask for the dependency audit and the promotion check. Save INTEGRITY.json with the plugin after review.
+  - "Know its limit: the manifest is not signed. Anyone who can change the plugin files can also replace INTEGRITY.json. Keep a copy where they cannot edit it, such as a reviewed commit or your CI settings, and check against that copy. A ready answer means the files match the review, not that the plugin is safe."
 output_sample:
   input:
     - Your plugin folder (or its path)

@@ -32,7 +32,7 @@ How to start:
 
 ## What you need
 
-These replace the generic "Your lesson plan" line above. This is not a lesson plan, so do not ask for an age group, subject or class task. The inputs are the rubric, the team's availability and the meeting notes.
+In the generic list above, "A document" is the assignment brief and rubric. This is not a lesson plan, so do not ask for an age group, subject or class task. The inputs are the rubric, the team's availability and the meeting notes.
 
 - The assignment brief and marking rubric, or the list of deliverables, with the deadline.
 - When each person can work, such as class times, jobs and busy weeks. Ask the team for this. Do not guess it.

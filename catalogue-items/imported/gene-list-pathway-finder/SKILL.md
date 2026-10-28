@@ -83,6 +83,8 @@ print([n for n in names if "Reactome" in n or "KEGG" in n or "Hallmark" in n])
 
 ## Quick Start
 
+Before any online call (Enrichr, g:Profiler, MyGene), tell the user their gene list will be sent to that outside service and wait for a yes. If the data is confidential or unpublished, use the offline route instead: a local GMT file with `gp.enrich()`.
+
 ### ORA on a hit list (gseapy + Enrichr)
 
 ```python

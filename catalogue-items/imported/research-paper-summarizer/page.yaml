@@ -31,7 +31,7 @@ you_get:
   - A side-by-side comparison of two or more sources
   - Citations in the style you ask for, APA 7 if you do not say
 how_to_use:
-  - Open your AI chat and paste the skill text in first. The core summary and citations work by pasting text into any AI chat. The scripts and the install commands in the skill file are optional and are not included in this copy.
+  - Open your AI chat and paste the skill text in first. The core summary and citations work by pasting text into any AI chat. The two scripts are in the download and are optional; upload them only if your AI can run code. The install commands in the skill file are not part of this copy, so skip them.
   - Paste each source as text, or attach the file. Say what question you want answered.
   - Add your citation style and who the summary is for, if you have them.
   - For a comparison, give at least two sources.

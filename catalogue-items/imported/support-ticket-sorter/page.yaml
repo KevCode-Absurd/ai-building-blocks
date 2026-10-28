@@ -37,6 +37,7 @@ how_to_use:
   - "P0 to P3 are severity levels, where P0 is the most urgent (an outage) and P3 the least (a general question). SLA means the reply time you promise customers. SRE means the engineers who keep your service running."
   - Ask your AI to sort the tickets into a table with category, priority, team and a draft reply.
   - Replace the reply times and refund promises with your own policy. The sample ones are placeholders.
+  - Read every draft before it goes to a customer. Cut any line that says something was done, such as "I've escalated this", unless someone really did it.
   - Paste the table into your helpdesk or a spreadsheet. Handle the P0 and P1 rows first and hand them to the right team.
   - For one ticket that needs a closer look, use the support inbox priority sorter. If several tickets share one cause, use the support issue cause investigator.
 next: [support-inbox-priority-sorter, support-issue-cause-investigator]

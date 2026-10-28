@@ -101,6 +101,7 @@ LABELLED IDEA  <your brand name> + <the idea>, to repeat across channels
 
 FACTS THAT STILL NEED A SOURCE OR NUMBER
 1. <claim> | needs: <number or source>
+(made-up example of the format: "Most buyers see a change in a week" | needs: how many buyers, and where that count came from)
 
 CHECKS MISSED: <none or list>
 MISSING: <what was not given>

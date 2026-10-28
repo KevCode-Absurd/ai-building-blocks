@@ -36,7 +36,7 @@ This method produces plan, image prompt, video prompt from the supplied brief. R
 
 Two terms used below. A scene lock is something that must stay the same in both frames, such as the camera crop, lighting, scale or text. An approved frame is an image you have looked at and accepted as the start or end of the clip.
 
-Gather first: the before image (or a description of it), the after idea in a few lines, and which change applies, illustration-to-3D or mechanical-object-to-toy. These three replace the buyer brief in the generic list above. A buyer brief is not needed for this job. If any of the three is missing, ask once. If it is still missing, write `MISSING: <which>` and stop before step 2, because the lock table cannot be built without it.
+Gather first: the before image (or a description of it), the after idea in a few lines, and which change applies, illustration-to-3D or mechanical-object-to-toy. These three are the only required inputs. In the generic list above, "Your question" (or a brief) means these three. A buyer brief is not needed for this job. If any of the three is missing, ask once. If it is still missing, write `MISSING: <which>` and stop before step 2, because the lock table cannot be built without it.
 
 ## Method
 

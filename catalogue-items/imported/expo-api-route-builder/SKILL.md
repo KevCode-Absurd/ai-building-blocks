@@ -389,7 +389,13 @@ export async function GET(request: Request) {
 
 ```ts
 // app/api/weather+api.ts
+import { requireAuth } from "../../utils/auth"; // see Authentication Middleware above
+
 export async function GET(request: Request) {
+  // This route spends your provider key, so never leave it open: check the caller first,
+  // then apply a per-user limit (see "Rate limit per user" below) before calling the provider.
+  const { userId } = await requireAuth(request);
+  // await limitPerUser(store, userId, 60, 3600);
   const url = new URL(request.url);
   const city = url.searchParams.get("city");
   // Validate the input before you use it

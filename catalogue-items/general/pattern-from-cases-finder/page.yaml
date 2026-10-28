@@ -19,7 +19,7 @@ when:
   - You need a forecast rule that is simple enough to explain and check.
 not_for:
   - You have fewer than ten cases. Collect more first, or ask a person who knows the field to judge them.
-  - You want to check the words in your claim. Use the Definition tester.
+  - You want to check the words in your claim. Use the Term definition checker.
   - Your data is one-off events with no order. Look at each event on its own, or ask a person who was there.
 
 you_give:
@@ -130,7 +130,7 @@ improve:
   - Add the rules that already hold in your field so the skill can mark them as known.
   - Add a list of events that distort your data, such as sales or outages.
   - Keep a log of past rules and how they held up, and paste it in.
-  - Pair it with a person who checks claims, or "Definition tester" for the words you use.
+  - Pair it with a person who checks claims, or the Term definition checker for the words you use.
 
 works_best_with:
   tools:

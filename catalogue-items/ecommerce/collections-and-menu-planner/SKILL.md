@@ -36,7 +36,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-This skill needs only the product list, the platform, the search words and, if you have them, competitor menus. It does not need a brand brain or a Brand profile builder run, so ignore the brand brain line in "Before you start" above. Shopify is a paid service. Which tools your plan includes, and what the Search & Discovery app costs, can change. Check your plan and the app's page in the Shopify app store before you plan around them.
+This skill needs only the product list, the platform, the search words and, if you have them, competitor menus. The spreadsheet in "Before you start" means the product list. It does not need a brand brain. Shopify is a paid service. Which tools your plan includes, and what the Search & Discovery app costs, can change. Check your plan and the app's page in the Shopify app store before you plan around them.
 
 - **Products** (required): a list with type and audience, plus material, colour, size and price where they matter.
 - **Catalogue size and platform** (required).
@@ -56,7 +56,7 @@ Limits: this is written for Shopify. The logic carries to other platforms, but t
 ## Steps
 1. **Fix the names first.** Pick product type names and use one spelling for each. "Legging" on one product and "leggings" on another makes two filter values. Use plain names: "Women's apparel" tells a buyer more than a clever brand name.
 2. **Use tags as the collection engine.** Tag each product with the collection you want it in, then make a smart collection with the rule "tag equals X". This is the least error-prone setup. Every product can sit in several collections.
-3. **Decide manual or smart first.** One course speaker says you cannot convert a collection from one to the other after saving. That claim is unconfirmed and comes from one speaker. Tell the owner to check Shopify's current help pages and the admin, and decide before creating.
+3. **Decide manual or smart first.** Changing type after saving may not be possible, so treat the choice as fixed. Tell the owner to check Shopify's current help pages on collections before creating, and decide first.
 4. **Use other rules where they fit.** Vendor for brand pages, price for a gift guide (for example, under 50), inventory for a low-stock sale, product type, or category. Combine rules with "any condition" to build a parent collection (for example all active wear from the tags for leggings, bras and overalls).
 5. **Best sellers.** Always build a best sellers collection and show it on the homepage. Best sellers sell for a reason.
 6. **Use the category field.** Shopify's category field opens extra attributes (colour, fabric, fit) that you can reuse as filters.

@@ -14,7 +14,7 @@ description: >
 
 # Options Payoff Curve Skill
 
-The live-quote probe below is optional. If your host has not already executed it (for example, in Codex), run it only when the user wants a live price, and use the actual output; if shell access is unavailable, report that limitation and ask for the spot price. This skill is for learning, not for live trading decisions.
+The live-quote probe below is optional. Run it only when the user wants a live price, and use the actual output; if shell access is unavailable, report that limitation and ask for the spot price. This skill is for learning, not for live trading decisions.
 
 Generates an interactive HTML chart using the host's available visualization tool, or a standalone HTML file in Codex, showing:
 - **Expiry payoff curve** (dashed gray line) — intrinsic value at expiration
@@ -59,9 +59,11 @@ When the user provides a screenshot or text, extract:
 **Spot for screenshots**: spot is the underlying's current price, and broker screenshots often omit it or show it far from the strikes — don't read it off the strike labels. Use the price shown, else a live quote (the SPX probe below, or yfinance for other underlyings). Fall back to the middle strike only when no quote is available, and tell the user you did.
 
 **Current SPX reference price** (run this probe ONLY when the user has named SPX as the underlying. For any other ticker, do not run it: ask the user for the spot price, or run the same yfinance call with their ticker only if they ask for a live quote) (optional; this needs Python with yfinance, which reads an unofficial Yahoo data feed that may change or block requests. If it fails, ask the user for the spot price):
+```bash
+python3 -c "import yfinance as yf; print('SPX about', round(yf.Ticker('^GSPC').fast_info['lastPrice']))"
 ```
-!`python3 -c "exec('try:\n import yfinance as yf\n p=yf.Ticker(\'^GSPC\').fast_info[\'lastPrice\']\n print(f\'SPX ≈ {p:.0f}\')\nexcept Exception:\n print(\'SPX price unavailable — check market data\')')"`
-```
+
+Show the user this command and run it only after they agree. If it prints an error, say the SPX price is unavailable and ask the user for the spot price.
 
 ---
 

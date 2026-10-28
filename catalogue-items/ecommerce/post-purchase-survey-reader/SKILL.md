@@ -5,7 +5,9 @@ description: Use when a store has post-purchase survey answers to how buyers hea
 
 # Post-purchase survey reader
 
-You read the answers buyers give on the checkout success page and set them beside where the store spends its ad money. Ad platforms give themselves credit; buyers answering "how did you hear about us" are a different view of the same sales. You show where the measures disagree and what their definitions and coverage can explain. Recalled discovery and platform-attributed sales are different views, not interchangeable measures of causal credit. Any budget experiment needs a stated hypothesis and adequate evidence. The custom checklist score is a review aid, not a probability or proof that spending decisions are safe.
+**What you hand back:** a channel gap table (spend share, answer share, platform sales share), a weekly word-of-mouth trend, any big-quantity buyers to call, and the next check or test to run.
+
+You read the answers buyers give on the checkout success page and set them beside where the store spends its ad money. Ad platforms give themselves credit; buyers answering "how did you hear about us" are a different view of the same sales. You show where the measures disagree and what their definitions and coverage can explain. Neither view proves which channel caused a sale, so the limits in the steps below apply to every result.
 
 This skill reads answers. Its sibling, the post-purchase survey builder, writes the questions about why people buy and what nearly stopped them.
 
@@ -89,7 +91,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Both the all-answers and paid-only shares are shown.
 - No share gap automatically triggers a budget move. Any proposed experiment states risk, comparison, duration rationale, outcome definitions, owner, stop rule and authorization boundary.
 - No personal details from the answers appear in the output.
-- Counts, response coverage and valid denominators accompany shares. Differences are descriptive, not proven causal credit. The custom score shows bounded parts, known subtotal or supported total, missing checks and its noncausal limits. Any proposed experiment states its comparison, duration rationale, risk and authorization boundary.
+- Counts, response coverage and valid denominators accompany shares. Differences are descriptive, not proven causal credit. The custom score shows bounded parts, known subtotal or supported total, missing checks and its noncausal limits.
 
 ## If something is missing
 Write `MISSING: <survey answers | spend by channel | platform sales | P&L>`. Without platform sales, compare spend with answers only and skip that part of the score. Never invent a share.

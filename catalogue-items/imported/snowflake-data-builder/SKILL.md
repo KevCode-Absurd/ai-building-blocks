@@ -45,7 +45,7 @@ How to start:
 
 - Use `snake_case` for all identifiers. Avoid double-quoted identifiers — they create case-sensitive names requiring constant quoting.
 - Use CTEs (`WITH` clauses) over nested subqueries.
-- Use `CREATE OR REPLACE` for idempotent DDL.
+- Use `CREATE OR REPLACE` for idempotent DDL in dev schemas. Warning: on a table it drops the old table and its data with no prompt. In production, use `CREATE ... IF NOT EXISTS` or `ALTER`, and only replace a table after checking it is safe to lose.
 - Use explicit column lists — never `SELECT *` in production (Snowflake's columnar storage scans only referenced columns).
 
 ### Stored Procedures — Colon Prefix Rule

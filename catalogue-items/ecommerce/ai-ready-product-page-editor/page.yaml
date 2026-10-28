@@ -152,3 +152,4 @@ terms:
     meaning: Code that tells machines a page's product name, price, availability and reviews.
   - term: Shoppable card
     meaning: A box in an AI answer that shows a product, seller, price and rating a shopper can click.
+next: [schema-markup-writer, answer-first-page-rewriter, ai-answer-visibility-tracker]

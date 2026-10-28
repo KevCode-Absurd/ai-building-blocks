@@ -35,7 +35,7 @@ how_to_use:
   - "Gather your facts: what is done, what is next and what is stuck. Add dates and owners if you have them."
   - Open Claude, ChatGPT or Gemini. Give it the skill and the examples folder, because the format guides live there. In Claude you can add the whole folder as a skill (zipped). In other tools, upload the guide files one by one, or paste the guide you need after the skill text. If your company has its own templates, paste those instead, since these guides are only defaults. The four guides are 3p-updates, company-newsletter, faq-answers and general-comms. Pasting only the skill text leaves them out.
   - Say what kind of message you need and who will read it. Paste your facts.
-  - "For a status report, ask for these sections: headline, what changed, impact, next action, owner and date. For an incident note, ask for: headline, what happened and when, who or what was affected, what was done, next action, owner and date. Use only facts you gave, and mark anything missing as [MISSING]."
+  - "For a status report, ask for these sections: headline, what changed, impact, next action, owner and date. For an incident note, ask for: headline, what happened and when, who or what was affected, what was done, next action, owner and date. Use only facts you gave, and mark anything missing with MISSING:, as the skill does."
   - Read the draft. Check every date, name and claim against your facts, and fix anything that is off.
   - Send it where your readers look. Updates go to your team channel, leadership notes by email, incident notes to the incident log. Reuse the same format next time. For an incident note, also log it in your incident record. To go further, pair a status report with a leadership update.
 output_sample:

@@ -14,7 +14,7 @@ when:
 not_for:
   - "You are in a dispute or have court papers: see a lawyer, because a summary cannot judge your case."
   - "You are signing a large or high-risk deal: have a qualified lawyer read it, and use this only to prepare your questions."
-  - "You need every check, amendments included: use the Contract plain-words summary writer."
+  - "You need every check, amendments included: use the Contract summary writer."
 you_give:
   - The full contract text
   - Which party you are

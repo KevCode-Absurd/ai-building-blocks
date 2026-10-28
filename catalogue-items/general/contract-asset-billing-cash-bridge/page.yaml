@@ -20,8 +20,8 @@ not_for:
   - You have no conditional payment terms, so nothing sits as a contract asset. Use a simple receivables roll-forward in a spreadsheet.
   - You want to forecast future cash. Use a cash-flow forecast, because this bridge only looks back at past periods.
   - You need to decide if revenue was recognized correctly. Ask your accountant or auditor, because this tool does not test contract recognition.
-  - "You are tracking customer advances and deferred revenue, not unbilled revenue: use the Contract-liability release bridge instead."
-  - "You want a trailing-year flow built from annual and year-to-date statements: use the Trailing-period financial bridge instead."
+  - "You are tracking customer advances and deferred revenue, not unbilled revenue: use the Customer advance revenue tracker instead."
+  - "You want a trailing-year flow built from annual and year-to-date statements: use the Trailing year financial calculator instead."
 you_give:
   - Contract-asset and receivable opening/closing balances, new unbilled revenue, direct invoices and all noncash adjustments.
   - "The period end, plus the currency and scale used for the contract asset to cash bridge."
@@ -78,8 +78,8 @@ tweaks:
     how: "Take the period end from the opening and closing balances and the billing records. Use one currency and scale on every line."
   - what: "Noncash adjustments"
     how: "Change the noncash adjustments and have your AI recalculate. Keep the actual figures you supplied."
-  - what: Acceptance
-    how: Transferring a contract asset to receivables is not treated as a new revenue event.
+  - what: "Closing contract assets"
+    how: "Change the closing contract-asset balance and rerun. Transfers and collections should both move by the same amount, in the opposite direction."
 judge:
   - Transferring a contract asset to receivables is not treated as a new revenue event.
   - Cash collections are inferred only after complete noncash and perimeter adjustments.

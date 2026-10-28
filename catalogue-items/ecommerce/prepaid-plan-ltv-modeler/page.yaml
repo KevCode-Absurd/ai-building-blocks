@@ -128,9 +128,9 @@ works_best_with:
     - name: Any good chat AI
       why: Any chat AI can do the sums. Check one group by hand.
     - name: Shopify
-      why: Its cohort report shows how often one-time buyers come back.
+      why: "Paid store platform. Its cohort report shows how often one-time buyers come back. Check your plan includes it."
     - name: A subscription app for your store
-      why: Runs the prepaid plan and reports re-enrol and cancel rates once you test.
+      why: Usually a paid app with a monthly fee. Runs the prepaid plan and reports re-enrol and cancel rates once you test.
   inputs:
     - A cohort report for the last 12 months
     - Your current cost per order from your 3PL or packer
@@ -145,3 +145,7 @@ terms:
     meaning: When a buyer signs up for another round of the plan once the first one ends.
   - term: Working capital
     meaning: The cash you need to run the business day to day, including the cash tied up in stock.
+  - term: Custom points
+    meaning: Our own score out of 100 for how well the plan fits. A planning aid, not a profit forecast.
+  - term: Financial gate
+    meaning: The basic money test. Each plan order must still make a profit after costs, or the plan fails whatever its points.

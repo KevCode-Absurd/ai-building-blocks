@@ -46,6 +46,8 @@ How to start:
 
 1. **Get the document.** URL, local file path (PDF, DOCX, TXT, MD), or raw text via `--text`.
 
+   Before you send anything, ask the user two things and wait for a yes: do they have the writer's consent to send this document to Stipple, an outside service, and have they read Stipple's terms and privacy rules? If not, stop. Suggest they remove private details the check does not need.
+
 2. **Run detection.**
 
    ```bash
@@ -116,4 +118,4 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Can false-flag templated/coached or non-native-English writing — always present as one signal alongside human review
 - Verify current authentication/allowance on https://www.stipple.sh; do not guarantee a free anonymous tier or publish the submitted document.
 
-Changed by AI Blocks (2026-10-28): gave it a plain name and added Before you start and After this sections that link to other AI Blocks steps.
+Changed by AI Blocks (2026-10-28): gave it a plain name, added Before you start and After this sections that link to other AI Blocks steps, and added a consent check before the document is sent to Stipple.

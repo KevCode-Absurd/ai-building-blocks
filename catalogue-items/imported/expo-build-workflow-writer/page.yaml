@@ -42,7 +42,7 @@ how_to_use:
   - Say what you want, for example "build iOS and Android on every push to main, then submit". Add your existing workflow file if you have one.
   - Make sure you have Node installed and an internet connection. The skill needs both to download Expo's rules. It also runs npm install for its helper scripts. Those scripts download files from the internet and run on your machine, so read scripts/fetch.js and scripts/validate.js first, and run it in a copy of your project or a sandbox, not in your real project.
   - "The helper scripts use three npm packages, pinned in this copy to exact versions: ajv 8.17.1, ajv-formats 3.0.1 and js-yaml 4.1.0. Check them in scripts/package.json before you run anything. Never run a store submission job against your real App Store or Google Play account without your own clear yes."
-  - Read the note on each job. Check that the file passes the check, and commit it to your project in .eas/workflows.
+  - Read the note on each job and say yes to the job list. Check that the file passes the check. Only then commit it to your project in .eas/workflows.
   - Next, run the first workflow on a test branch and read the job logs in EAS. Fix anything that fails, then merge it into your main workflow.
   - You need an Expo account to run the workflow. EAS builds can have limits or costs on your Expo plan, so check your plan first.
 how_it_works:

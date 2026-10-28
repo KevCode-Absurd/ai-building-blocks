@@ -8,7 +8,7 @@ job: strategy
 level: intermediate
 inputs:
   - {type: brief, required: true}
-  - {type: copy_draft, required: false}
+  - {type: copy_draft, required: true}
   - {type: plan, required: false}
 outputs:
   - {type: plan}

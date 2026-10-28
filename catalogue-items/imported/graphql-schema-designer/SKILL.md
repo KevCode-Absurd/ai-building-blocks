@@ -302,8 +302,16 @@ const resolvers = {
   // Redis or Kafka for production). The addComment resolver above publishes to the same
   // COMMENT_ADDED_<postId> channel that commentAdded listens on, after it saves a comment.
   Subscription: {
+    // Guarded: a caller may only follow comments on a post they can see (published,
+    // or their own draft, or any post for an admin).
     commentAdded: {
-      subscribe: (_, { postId }, { pubsub }) => pubsub.asyncIterator(`COMMENT_ADDED_${postId}`),
+      subscribe: async (_, { postId }, { currentUser, db, pubsub }) => {
+        const post = await db.posts.findById(postId);
+        const canSee = post && (post.status === "PUBLISHED" ||
+          (currentUser && (post.authorId === currentUser.id || currentUser.isAdmin)));
+        if (!canSee) throw new Error("Not allowed");
+        return pubsub.asyncIterator(`COMMENT_ADDED_${postId}`);
+      },
     },
     postPublished: {
       subscribe: (_, __, { pubsub }) => pubsub.asyncIterator("POST_PUBLISHED"),

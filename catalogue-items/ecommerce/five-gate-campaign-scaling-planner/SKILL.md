@@ -83,7 +83,7 @@ Also ask: Target CPA, Target ROAS, Monthly budget cap, Growth goal.
 
 ## STEP 2: The five gates (scale-readiness checklist)
 
-ALL 5 gates must pass before recommending a scale.
+ALL 5 gates must pass before recommending a scale. The numbers in this table (50+ conversions a week, 30+ a month, frequency 3.0, 14 days) are unverified defaults, not Meta or Google guidance. Say so in the answer, and use the owner's own targets and account history where they have them.
 
 | # | Check | PASS | FAIL |
 |---|-------|------|------|
@@ -186,7 +186,7 @@ These are unsourced starting points. Propose them to the owner as rules to set f
 3. Scaling Recommendations (per-campaign)
 4. Budget Reallocation (source → destination)
 5. Saturation Watchlist
-6. 30-Day Projection (spend + revenue)
+6. 30-Day Projection (spend + revenue): an illustrative sum from the numbers supplied, if results hold. Label it that way. It is not a forecast of results.
 7. Next step: re-run this review with fresh data after the 7-day cycle wait. If no campaign passes, say so and point to a creative test (for example the Meta concept diversity test planner) before any scaling.
 
 ## Rules

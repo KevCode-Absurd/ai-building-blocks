@@ -74,7 +74,7 @@ how_it_works:
   - title: Sets the formulas
     text: Revenue per visitor is conversion rate times order value. Gross profit per visitor is that times your margin.
   - title: Fixes the Shopify numbers
-    text: Net sales instead of total sales, shipping collected added back, and sessions from GA4 to avoid bots.
+    text: Net sales instead of total sales, shipping collected added back if your order value leaves it out, and sessions from GA4 when Shopify's count looks high from bots.
   - title: Works out both views
     text: The figures as the dashboard gives them and the corrected ones, with the working shown.
   - title: Shows the cold traffic effect
@@ -110,7 +110,7 @@ tweaks:
   - what: Gross margin
     how: Use the margin after cost of goods. Without it you only get revenue per visitor.
   - what: Sessions source
-    how: Use GA4 sessions. Shopify's include bots and make your rates look lower than they are.
+    how: Use GA4 sessions where you can. Shopify's count can include bots, which makes your rates look lower. Compare both for the same dates to see if yours does.
 
 judge:
   - Both the dashboard figures and the corrected ones are shown, with the working.

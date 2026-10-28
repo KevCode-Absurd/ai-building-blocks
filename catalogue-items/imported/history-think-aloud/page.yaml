@@ -11,7 +11,7 @@ explain: |
 
   You give the document and the thinking moves you want to model. The skill writes a short spoken script with pauses where you ask yourself who wrote this, when, why and for whom, what words stand out and what is missing. It labels each move so you know what you are showing. It lists pitfalls, like talking too long or giving away the answer, and ends with a handoff so learners try the same moves on their own source.
 
-  Credit: Gareth Manning, education-agent-skills. The skill file also names Sean Hu as contributor. Licence: CC BY-SA 4.0. We renamed it and rewrote the page text. The prompt itself is unchanged.
+  Credit: Gareth Manning, education-agent-skills. The skill file also names Sean Hu as contributor. Licence: CC BY-SA 4.0. We renamed it, rewrote the page text and changed the model script so Smith's motives read as a guess, not a fact. The rest of the prompt is unchanged.
 when:
   - Students follow your checklist but do not know why each step matters.
   - You want to show historical reading before students try it alone.

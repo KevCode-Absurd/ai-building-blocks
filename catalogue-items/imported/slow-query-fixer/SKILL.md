@@ -31,7 +31,7 @@ How to start:
 
 1. **Identify the slow query:** Collect the problematic query from slow query logs, application performance monitoring (APM) tools, or user reports. Note the current execution time, the table sizes involved, and how frequently the query runs. High-frequency slow queries should be prioritized over rare ones.
 
-2. **Analyze the execution plan:** Run `EXPLAIN ANALYZE` (PostgreSQL) or `EXPLAIN FORMAT=JSON` (MySQL) on the query to obtain the actual execution plan. Look for sequential scans on large tables, nested loop joins with high row estimates, sort operations on unindexed columns, and large gaps between estimated and actual row counts.
+2. **Analyze the execution plan:** Run `EXPLAIN ANALYZE` (PostgreSQL) or `EXPLAIN FORMAT=JSON` (MySQL) on the query to obtain the actual execution plan. Warning: `EXPLAIN ANALYZE` really runs the statement. For an UPDATE, INSERT or DELETE, run it on a copy or replica, or inside `BEGIN; ... ROLLBACK;` so no data changes. Avoid running heavy queries this way on a busy live database. Look for sequential scans on large tables, nested loop joins with high row estimates, sort operations on unindexed columns, and large gaps between estimated and actual row counts.
 
 3. **Identify optimization opportunities:** Based on the plan, identify concrete fixes: add indexes for columns in WHERE, JOIN, and ORDER BY clauses; rewrite subqueries as JOINs; replace `SELECT *` with specific columns; add LIMIT clauses where appropriate; use covering indexes to avoid table lookups; eliminate redundant or duplicate conditions.
 
@@ -173,7 +173,7 @@ def order_list(request):
 
 ## Best Practices
 
-- **Always use EXPLAIN ANALYZE, not just EXPLAIN** — the `ANALYZE` variant runs the query and shows actual row counts and timings, which often differ significantly from estimates and reveal the real bottleneck.
+- **Always use EXPLAIN ANALYZE, not just EXPLAIN** — the `ANALYZE` variant runs the query and shows actual row counts and timings, which often differ significantly from estimates and reveal the real bottleneck. Because it runs the query, wrap data-changing statements in a transaction you roll back, or use a copy of the database.
 - **Create composite indexes matching your WHERE + ORDER BY pattern** — a composite index on `(status, ordered_at)` is far more effective than separate indexes on each column, because the database can use a single index range scan.
 - **Avoid SELECT * in production queries** — selecting all columns forces the database to read wider rows, increases I/O, and prevents the use of covering indexes. Always specify only the columns you need.
 - **Fix N+1 problems at the ORM level** — use `select_related` (Django), `joinedload` (SQLAlchemy), `include` (Prisma), or `includes` (ActiveRecord) to batch related-object loading into one or two queries instead of hundreds.

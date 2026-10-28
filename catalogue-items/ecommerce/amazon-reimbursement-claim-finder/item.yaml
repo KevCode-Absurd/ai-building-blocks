@@ -9,7 +9,6 @@ level: intermediate
 inputs:
   - {type: spreadsheet, required: true}
   - {type: document, required: false}
-  - {type: product_data, required: false}
 outputs:
   - {type: audit_report}
 uses: []

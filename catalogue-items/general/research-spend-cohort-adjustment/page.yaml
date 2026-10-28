@@ -59,12 +59,12 @@ output_sample:
     - name: "MISSING: and CHECKS MISSED"
       contains: Inputs that could not be found and any check that failed or did not run.
 how_it_works:
-  - title: 1. Choose and justify an economic life; retain statutory R&D treatment and previously capitalized development costs separately
-    text: Choose and justify an economic life; retain statutory R&D treatment and previously capitalized development costs separately.
-  - title: 2. For each historical expense cohort, calculate unamortized cost and current amortization under one stated convention; remove abandoned projects using evidence
-    text: For each historical expense cohort, calculate unamortized cost and current amortization under one stated convention; remove abandoned projects using evidence.
-  - title: 3. Add current expensed research back to EBIT and deduct cohort amortization; carry the research asset consistently into any adjusted capital-return calculation without changing cash taxes automatically
-    text: Add current expensed research back to EBIT and deduct cohort amortization; carry the research asset consistently into any adjusted capital-return calculation without changing cash taxes automatically.
+  - title: Sets the life
+    text: You choose and justify how many years research spend stays useful. Development costs already capitalized stay separate.
+  - title: Builds the cohorts
+    text: For each year of spend, works out what is still on the books and this year's amortization, under one stated rule. Stopped projects come out, with evidence.
+  - title: Adjusts profit and return
+    text: Adds this year's research expense back to EBIT and takes off the amortization. For an adjusted return, it adds the research asset to the capital measure you name, or marks it MISSING. Cash taxes are not changed.
 output_shape: |-
   SCOPE AND DATED SOURCES
   INPUTS AND ASSUMPTIONS (life, convention, evidence)

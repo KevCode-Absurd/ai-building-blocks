@@ -64,6 +64,10 @@ Issues Shopify native gift cards to customers programmatically — as goodwill f
    **Inputs:** `input.initialValue`, `input.customerId`, `input.expiresOn` (optional), `input.note` (reason)
    **Expected output:** `giftCard.id`, `giftCard.code`, `giftCard.balance`, `giftCard.expiresOn`, `userErrors`
 
+3. **OPERATION:** `tagsAdd` — mutation (only when `tag_customer` is set)
+   **Inputs:** `id` = the customer GID from step 1, `tags` = `[tag_customer]`. Needs write access to customers. In a dry run, list the tag in the preview and do not run this step.
+   **Expected output:** `node.id`, `userErrors`. If it fails, say the gift card was still issued but the tag was not added.
+
 ## GraphQL Operations
 
 ```graphql
@@ -101,6 +105,21 @@ mutation GiftCardCreate($input: GiftCardCreateInput!) {
       customer {
         id
       }
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}
+```
+
+```graphql
+# tagsAdd:mutation — added by AI Blocks, not validated by the original author
+mutation TagCustomer($id: ID!, $tags: [String!]!) {
+  tagsAdd(id: $id, tags: $tags) {
+    node {
+      id
     }
     userErrors {
       field

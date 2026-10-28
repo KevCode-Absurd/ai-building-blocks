@@ -17,7 +17,7 @@ when:
   - You want to set a carbon target and need to check it has a believable path.
   - Your marketing says "carbon neutral" or "eco-friendly" and you want to know if you can back it up.
 not_for:
-  - You have the data and want a draft report written. Use the ESG report preparer.
+  - You have the data and want a draft report written. Use the Sustainability reporting reviewer.
   - You want to know if EU sustainability reporting rules apply to you. Use the EU sustainability report checker.
   - You want emissions worked out from shipping, energy and supplier data. Use the Supply chain carbon tracker.
 you_give:
@@ -127,3 +127,4 @@ judge:
 test:
   - Try a small task whose result you can check yourself.
   - Omit one important fact and check whether the agent names the gap.
+next: [esg-report-preparer, supply-chain-carbon-tracker, eu-sustainability-report-checker]

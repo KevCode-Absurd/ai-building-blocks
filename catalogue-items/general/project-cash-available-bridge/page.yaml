@@ -58,13 +58,13 @@ output_sample:
     - name: MISSING and CHECKS MISSED
       contains: Inputs that could not be found and checks that failed or did not run, or the word none.
 how_it_works:
-  - title: 1. Declare the source basis before calculating
+  - title: States the basis first
     text: Declare the source basis before calculating. The included model uses accrual operating revenue and an operating cost proxy excluding depreciation and other noncash expenses, both before working-capital settlement movements. Source the financing CFADS definition and matching periods.
-  - title: 2. For the pre-working-capital accrual route, subtract contract exclusions, the operating cost proxy, cash taxes, permitted maintenance capital and signed working-capital investment
+  - title: Builds the accrual route
     text: For the pre-working-capital accrual route, subtract contract exclusions, the operating cost proxy, cash taxes, permitted maintenance capital and signed working-capital investment. Match exclusions to the working-capital perimeter to avoid adjusting excluded revenue twice.
-  - title: 3. If actual cash receipts and actual cash operating payments are used instead, those already reflect receivable/payable settlement
-    text: If actual cash receipts and actual cash operating payments are used instead, those already reflect receivable/payable settlement. Build a cash-basis bridge and explicitly omit the working-capital adjustment; use zero in that model field only after verifying and recording that it is already embedded, never because evidence is missing.
-  - title: 4. Reconcile the chosen route to source cash and the contract definition
+  - title: Or builds the cash route
+    text: If actual cash receipts and actual cash operating payments are used instead, those already reflect receivable/payable settlement. Build a cash-basis bridge and explicitly omit the working-capital adjustment; use zero in that model field only after verifying and recording that it is already embedded. If the treatment is not verified, the line stays MISSING and the bridge stops there.
+  - title: Ties it out
     text: Reconcile the chosen route to source cash and the contract definition. Do not mix accrual revenues with cash-paid operating costs or deduct working-capital movements twice. Keep debt service below the bridge and source every other cash/noncash adjustment.
 output_shape: |-
   SCOPE AND DATED SOURCES

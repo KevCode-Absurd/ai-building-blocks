@@ -16,7 +16,7 @@ Every promise in an offer has to be delivered somehow, and the first idea is rar
 
 ## Never return an empty table
 
-This rule beats the "go ahead" step in Before you start. The problems and promises are required. If the person gave none, ask for them once, in one short message. If they pasted product facts instead, draft three to five problems and promises from those facts, mark each `[drafted from your facts]`, and carry on. If they gave neither, stop after asking.
+This rule comes before the line in "Before you start" that says to start with what they have. The problems and promises are required. If the person gave none, ask for them once, in one short message. If they pasted product facts instead, draft three to five problems and promises from those facts, mark each `[drafted from your facts]`, and carry on. If they gave neither, stop after asking.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

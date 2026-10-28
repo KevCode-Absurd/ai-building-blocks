@@ -51,7 +51,7 @@ priority, assigned team, and a draft first response for each.
 
 ### Example 1: Batch triage of 5 tickets
 
-The replies in these examples show the shape only. Every time, refund period and link in them is a placeholder. Write your own, for example [your reply time] and [your refund policy], and never send them unchanged.
+The replies in these examples show the shape only. Every time, refund period and link in them is a placeholder. Write your own, for example [your reply time] and [your refund policy], and never send them unchanged. Lines such as "I've escalated this", "I've flagged your account" or "I've added your vote" are only true once a person has done that step, and "auto-notify" means a rule your helpdesk must already have. In your own drafts, do not claim an action was taken. Write it as a step for the agent, and have a person read and edit every draft before it goes to a customer.
 
 **Input:** 5 support tickets from the past hour.
 

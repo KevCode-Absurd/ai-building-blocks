@@ -91,9 +91,9 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 Write MISSING: <what> next to the affected result. Continue independent work that does not depend on it. Stop the affected step when a required source, tool or check is absent; return the partial files and the exact input or action needed to resume. Do not turn an unknown fact into an assumption merely to finish.
 
-## After this
+## After this (for this job)
 
-If an eligibility question is unresolved, offer this next step: a draft message to the fund owner that asks the question, quotes the award clause and lists the transactions it affects. Leave it as a draft for the user to send. If none is unresolved, offer one next step based on the result and the user's goal. When that step changes something outside the working files, state the concrete action and use only the authorization already given for it.
+Use this before the shared list above. If an eligibility question is unresolved, offer this next step: a draft message to the fund owner that asks the question, quotes the award clause and lists the transactions it affects. Leave it as a draft for the user to send. If none is unresolved, offer one next step based on the result and the user's goal. When that step changes something outside the working files, state the concrete action and use only the authorization already given for it.
 
 ## Avoid
 

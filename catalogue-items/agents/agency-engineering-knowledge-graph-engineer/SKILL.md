@@ -30,7 +30,7 @@ How to start:
 
 ## What you need
 
-These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part: this agent takes sample documents, the questions the graph must answer, optional types to track, the database and known disagreements.
+These are the inputs that count. "Your question" above means the questions the graph must answer, and "a document" means the sample documents. Do not ask for anything else: this agent takes sample documents, the questions the graph must answer, optional types to track, the database and known disagreements.
 
 - Sample documents, pasted or attached
 - The questions the graph must answer

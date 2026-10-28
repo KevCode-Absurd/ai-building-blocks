@@ -18,7 +18,7 @@ when:
   - A business looks strong but the managers keep doing large deals.
   - You hire or promote a leader who will run money that is not their own.
 not_for:
-  - "You want to know if the business itself is strong: first run the Business power tester, then bring its report here."
+  - "You want to know if the business itself is strong: first run the Competitive advantage tester, then bring its report here."
   - "You have no records on how managers used cash or what they were paid: gather the letters to owners and the pay table first, or ask a person who knows the firm."
   - "You want a buy or sell view on a named security: ask a licensed financial adviser, as this gives no such advice."
 
@@ -46,7 +46,7 @@ output_sample:
     - Pay tables and letters to owners (optional)
     - The stake or decision you are weighing (optional)
   prerequisites:
-    - A report on the business, for example from the Business power tester
+    - A report on the business, for example from the Competitive advantage tester
   output:
     - name: Weight
       contains: How much management matters here, with the business placed first.
@@ -147,7 +147,7 @@ works_best_with:
     - {name: "Any good chat AI", why: "Reading a record of choices and rating them against fixed rules is text work any strong chat AI does well."}
     - {name: "A spreadsheet", why: "Lets you tabulate years of deals and payouts to see a pattern."}
   inputs:
-    - "A report from the Business power tester"
+    - "A report from the Competitive advantage tester"
     - "Several years of letters to owners"
     - "The pay table and a list of major deals"
 

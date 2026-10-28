@@ -30,6 +30,7 @@ Goes beyond product-level revenue by ranking every individual variant (size, col
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify auth login --store <domain>`
 - API scopes: `read_orders`, `read_products` (validator-confirmed: orders query traverses variant→product graph)
+- For a date range that starts more than 60 days ago, also `read_all_orders`. Without it Shopify returns only the last 60 days of orders, so tell the user the totals are incomplete.
 
 ## Parameters
 

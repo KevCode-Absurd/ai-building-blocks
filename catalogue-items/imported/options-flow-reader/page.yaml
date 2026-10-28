@@ -5,11 +5,11 @@ name: Options flow reader
 summary: Read an options flow report that splits real bets from cheap lottery calls, so your put-call ratio is not misleading. Needs a Polygon.io key.
 job: money-and-investing
 headline: Options flow reader
-subhead: A put-call ratio that tells the truth. Raw ratios can look bullish only because of thousands of nearly worthless far out-of-the-money calls. This skill splits those out so you see where real money went.
+subhead: A put-call ratio that tells the truth. Raw ratios can look bullish only because of thousands of nearly worthless far out-of-the-money calls. This skill splits those out so you see where the premium went.
 explain: |
-  A put-call ratio that tells the truth. Raw ratios can look bullish only because of thousands of nearly worthless far out-of-the-money calls. This skill splits those out so you see where real money went.
+  A put-call ratio that tells the truth. Raw ratios can look bullish only because of thousands of nearly worthless far out-of-the-money calls. This skill splits those out so you see where the premium went.
 
-  For each ticker it sorts contracts into real calls, lottery calls, real puts and lottery puts. Real means a strike within 5 percent of the stock price and meaningful premium. You get a corrected ratio, the share of volume that is lottery tickets and a breakdown by expiry. It flags shifts such as a ratio change above 0.3, open interest jumps above 30 percent or volatility spikes above 20 percent against a recent baseline. Needs a Polygon.io API key. This is analysis, not financial advice.
+  For each ticker it sorts contracts into real calls, lottery calls, real puts and lottery puts. Real means a strike within 5 percent of the stock price and meaningful premium. You get a corrected ratio, the share of volume that is lottery tickets and a breakdown by expiry. It flags shifts such as a ratio change above 0.3, open interest jumps above 30 percent or volatility spikes above 20 percent against a recent baseline. Needs a Polygon.io API key. It shows what traded, not who traded or why. This is analysis, not financial advice.
 when:
   - A stock's put-call ratio looks extremely bullish and you doubt it.
   - You want to see how much volume is cheap far out-of-the-money contracts.

@@ -9,7 +9,7 @@ subhead: Give it the number of options, the exercise price, the average share pr
 explain: |-
   Employee options can add shares to a company’s count if they are exercised. The treasury stock method estimates how many: it assumes the money paid to exercise buys back shares at the average price, and only the net new shares count.
 
-  This skill works that out for one option class, counts out-of-the-money options as zero, and checks that including them really lowers earnings per share. Practice figures: Ten million options × $6 yields $60 million proceeds, buying six million shares at $10. Four million incremental shares produce 208 / 104 = $2 EPS. At $10 exercise price there is no incremental dilution.
+  This skill works that out for one option class, counts out-of-the-money options as zero, and checks that including them really lowers earnings per share. Practice figures: basic weighted shares are 100 million and earnings for ordinary shareholders are $208 million, so basic EPS is $2.08. Ten million options × $6 yields $60 million proceeds, buying six million shares at $10. Four million extra shares give 104 million diluted shares, so diluted EPS is 208 / 104 = $2. At $10 exercise price there is no incremental dilution.
 when:
   - You need to find the extra shares that stock options add to a diluted share count.
   - You must show a reviewer how diluted EPS was reached, from the option terms to the result.
@@ -18,7 +18,7 @@ not_for:
   - "You have several option classes, restricted units or tax-affected awards: this schedule covers one option class, so use a full diluted-EPS model built by your accountant."
   - "You need a legal reading of the option contract or a view on whether to invest: ask a qualified adviser, because this only does the arithmetic."
   - "You only need basic EPS with no options or other dilutive items: divide earnings by basic weighted shares in a simple spreadsheet."
-  - "Your dilution comes from a convertible, not options: use the Convertible EPS inclusion test instead."
+  - "Your dilution comes from a convertible, not options: use the Convertible earnings per share checker instead."
 you_give:
   - Number of options (weighted for the period) and the exercise price
   - Average share price for the period
@@ -107,3 +107,7 @@ terms:
     meaning: Practice inputs showing calculation behavior, with no claim about an actual company or investment.
   - term: Reconciliation
     meaning: An independent comparison that explains a difference between matching records or financial schedules.
+  - term: Continuing ordinary earnings
+    meaning: Profit from the business the company keeps running, that belongs to ordinary shareholders.
+  - term: Scale
+    meaning: The unit the figures are in, such as thousands or millions.

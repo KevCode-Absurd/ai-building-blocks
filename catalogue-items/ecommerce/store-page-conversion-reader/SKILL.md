@@ -9,7 +9,7 @@ You read GA4 reports for an online store in a set order and say which traffic an
 
 When not to use: if your GA4 store events may not be set up right or are unverified, check them first with the [GA4 store setup checker](https://useaiblocks.com/skills/ga4-store-setup-checker). If you want ad creative reviewed, ask a designer, as this only reads numbers. Next, pair the findings with the Store funnel benchmark checker or the Store friction checker.
 
-Inputs: only the GA4 reports listed under "What you need". Read the traffic acquisition table and the landing page report first. The generic note below asks for an ad-platform or store export and mentions Meta Ads Manager. Ignore that: it is not needed here.
+Inputs: only the GA4 reports listed under "What you need". Read the traffic acquisition table and the landing page report first. Where the list below says "your results", that means these GA4 reports. No ad-platform export is needed.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -29,7 +29,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-This skill runs on its own. Ask once, in one short message, for anything you can't work without, then carry on and mark each gap `MISSING:`. It needs e-commerce events flowing (the GA4 store setup checker covers that) and at least 300 sessions per row to say anything firm (this skill's own starting rule). The only inputs are the GA4 reports listed below. Where the box above says CHECKS MISSED, use the CHECKS NOT RUN line in the hand-back. GA4 is free.
+This skill runs on its own. Ask once, in one short message, for anything you can't work without, then carry on and mark each gap `MISSING:`. It needs e-commerce events flowing (the GA4 store setup checker covers that) and at least 300 sessions per row to say anything firm (this skill's own starting rule). The only inputs are the GA4 reports listed below. GA4 is free.
 
 - **GA4 exports** (required): paste each report as a table, as CSV or copied rows, with the column headings.
 - **Traffic acquisition table** (required) with session key event rate filtered to purchase, by session primary channel group, with medium or source / medium for paid, email and organic detail.
@@ -84,7 +84,7 @@ CHECK NEXT
 1. <check, where to look>
 
 SCORE  <n>/100  (<checks passed> of 7, <points>)
-CHECKS NOT RUN
+CHECKS MISSED: <none | checks not run or failed>
 MISSING: <what>
 ```
 

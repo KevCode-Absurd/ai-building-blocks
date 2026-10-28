@@ -58,6 +58,8 @@ Steps:
 1. Check current `playwright.config.ts`
 2. Add BrowserStack connect options:
 
+> **AI Blocks note (keep the key secret):** the config below reads the key from an environment variable, but the finished `wsEndpoint` web address holds it. Never print or log that address or the resolved config, never paste the key into the file or the chat, and never commit a `.env` file that holds it.
+
 ```typescript
 // Add to playwright.config.ts
 import { defineConfig } from '@playwright/test';

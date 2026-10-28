@@ -34,7 +34,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-- **The business, in a few lines** (required): what it sells, to whom and how the money comes in. Add what you know of its two or three main rivals (optional, and the edge and return tests use them).
+- **The business, in a few lines** (required): what it sells, to whom and how the money comes in. Add what you know of its two or three main rivals (optional, and the edge and return tests use them). Without rivals, the rival comparisons in those tests are marked unknown, not guessed.
 - **Four or five years of its accounts** (required): profit, equity, debt, sales, spending and working capital. If the business changed a lot earlier, start from the year it became the business it is now.
 - **The company's market value at the start and end of that period** (optional). Without it the one-dollar test is marked unknown.
 - **Notes on its managers,** such as past letters to owners, and news of big deals or new bosses (optional).
@@ -59,7 +59,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 4. **Check the people running it.** Use the skill `owner-minded-management-checker`. Give it the findings so far, what managers did with cash, and any letters to owners or pay tables. It returns a cash log and ratings for able, honest and owner-minded, each with evidence. Save as `outputs/step-04-owner-minded-management-checker.md`.
 5. **Check returns and margins.** Use the skill `roe-margin-check`. Give it the accounts by year, the market values and any rival figures. It returns return on equity, return on total capital, a margin comparison and the one-dollar test, each marked pass, fail or unknown. Save as `outputs/step-05-roe-margin-check.md`.
 6. **Work out owner earnings.** Use the skill `owner-earnings-calculator`. Give it the accounts, including capital spending and working capital. It returns cleaned profit and a low, middle and high owner earnings figure. If capital spending is missing it stops and asks for it. Save as `outputs/step-06-owner-earnings-calculator.md`.
-7. **Score the tests.** Use the skill `business-tenet-scorecard-writer`. Give it the findings from steps 1 to 6 as they are. It returns ten tests marked pass, fail or unknown with evidence, a verdict, red flags, and what to read or ask next. Save as `outputs/step-07-business-tenet-scorecard-writer.md`. A gap is unknown, never a pass.
+7. **Score the tests.** Use the skill `business-tenet-scorecard-writer`. Give it the findings from steps 1 to 6 as they are. It returns ten tests marked pass, fail or unknown with evidence, a verdict, red flags, and what to read or ask next. Save as `outputs/step-07-business-tenet-scorecard-writer.md`. A gap is unknown, never a pass. The ladder, first rung that fits: TOO HARD if a must-pass test (understand it, lasting edge, owner earnings) failed or is unknown; NOT WORTH A PRICE CHECK if three or more of the other seven fail; DIG MORE if exactly two fail, or three or more are unknown; WORTH A PRICE CHECK if at most one fails and at most two are unknown. These cut-offs are a working rule the person may move.
 8. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

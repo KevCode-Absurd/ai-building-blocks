@@ -8,10 +8,9 @@ job: ops
 level: intermediate
 inputs:
   - {type: spreadsheet, required: true}
-  - {type: product_data, required: true}
   - {type: performance_sheet, required: false}
   - {type: competitor_set, required: false}
-  - {type: keyword_list, required: true}
+  - {type: keyword_list, required: false}
 outputs:
   - {type: audit_report}
   - {type: plan}

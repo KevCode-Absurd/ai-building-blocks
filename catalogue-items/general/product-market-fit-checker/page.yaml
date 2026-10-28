@@ -102,7 +102,7 @@ output_shape: |
 
 tweaks:
   - what: Market size figure
-    how: Give a count of possible buyers and a growth rate. A guess marked as a guess works, a blank leaves that part unscored.
+    how: Give a count of possible buyers and a growth rate. A blank is marked MISSING and that part scores 0. A guess must be labelled as a guess, and it lowers the evidence-quality score.
   - what: Customer behaviour, not opinion
     how: Report what customers did, such as reorders and referrals, not what they said they liked.
   - what: Time window
@@ -127,7 +127,7 @@ improve:
   - Edit the score weights if your business sells on repeat orders or on one-off sales.
   - Add the signs of pull that are normal in your field, such as waiting lists or demo requests.
   - Save each verdict with its date so you can see if the score moves after changes.
-  - Pair it with "Startup idea tester" before you have any customers.
+  - Pair it with the Seven-question startup scorer before you have any customers.
 
 works_best_with:
   tools:

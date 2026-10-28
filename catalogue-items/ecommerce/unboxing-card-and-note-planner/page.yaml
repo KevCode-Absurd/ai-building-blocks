@@ -78,6 +78,7 @@ output_shape: |
   Monthly: <cost per order> x <orders> = <amount>
   Payback: 100 x <plan cost> / <gross profit per repeat order> = <repeat orders per 100 customers>
   WHAT TO MEASURE: <...>
+  CHECKS MISSED: <none, or checks that failed or could not run>
   MISSING: <...>
 
 tweaks:

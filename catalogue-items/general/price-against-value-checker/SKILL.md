@@ -5,7 +5,7 @@ description: Use when you must set a price for a business, contract, purchase or
 
 # Price against value checker
 
-Value and price are different things, and the gap between them is where good and bad deals live. This skill estimates dated value in three cases when inputs allow, gives an ordered range and maximum-price scenario only after the required checks pass, compares the stated alternative, and adds the costs that eat the gain. Missing or crossed cases remain unresolved; a discount from estimated value does not prove safety. It is the fourth of four filters, after "People trust checker". It is a method of analysis, not personal financial advice. It never tells you to buy or sell a named security.
+Value and price are different things, and the gap between them is where good and bad deals live. This skill estimates dated value in three cases when inputs allow, gives an ordered range and maximum-price scenario only after the required checks pass, compares the stated alternative, and adds the costs that eat the gain. Missing or crossed cases remain unresolved; a discount from estimated value does not prove safety. In plain words: the three cases should sit in order, bad no higher than ordinary and ordinary no higher than good. If they do not, they are "crossed", and the skill writes NO VALID ORDERED RANGE instead of a range or a price limit. It is the fourth of four filters, after "People trust checker". It is a method of analysis, not personal financial advice. It never tells you to buy or sell a named security.
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -52,7 +52,7 @@ Not for: a decision on named shares or funds, or on money you cannot afford to l
 
 ## What you hand back
 
-The three cases and the sums. The supported ordered value range, or separate unresolved/crossed candidates. A maximum-price scenario only when its value and order checks pass, with the stated rule and limits. The quality-over-time sum. The best alternative. The friction table. The before-you-commit list. The verdict and next action. A note that this is not financial advice. `MISSING:` lines. Next step: take the plan to a rule writer such as the Investment holding rule writer or the Price drop rules writer. The Guarantee and refund plan writer under After this is for sellers and does not fit an investment price check. Last, CHECKS MISSED: one line per check missed, or "none".
+The three cases and the sums. The supported ordered value range, or separate unresolved/crossed candidates. A maximum-price scenario only when its value and order checks pass, with the stated rule and limits. The quality-over-time sum. The best alternative. The friction table. The before-you-commit list. The verdict and next action. A note that this is not financial advice. `MISSING:` lines. Next step: take the plan to the [Investment holding rule writer](https://useaiblocks.com/skills/sit-still-rule-writer) or the [Price drop rules writer](https://useaiblocks.com/skills/price-drop-rules-writer). Do not offer a seller's tool such as the Guarantee and refund plan writer: it does not fit an investment price check. Last, CHECKS MISSED: one line per check missed, or "none".
 
 ## Check before you hand it back
 

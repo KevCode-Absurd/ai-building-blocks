@@ -61,7 +61,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
-4 step files and the summary. The last file holds the audit report.
+4 step files and the summary. The last file holds the audit report. Tell them the next move: make the top-ranked fixes from step 4, then run step 4 again on the updated page before it goes live.
 
 ## Check before you hand it back
 - Step 1 names one free offer with its page and emails. Step 2 names each stage from signup to sale. Step 3 has the consent and unsubscribe wording before the button. Step 4 ranks the fixes. If one is missing, the run stopped at that step and says why.

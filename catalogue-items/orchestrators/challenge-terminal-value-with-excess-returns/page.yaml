@@ -30,7 +30,7 @@ you_give:
   - The terminal value you propose, or the exit multiple behind it
   - The reporting date, currency and scale
 you_get:
-  - "A fade case: excess returns for two years, then none"
+  - "A fade case: excess returns for two years by default, then none, labelled as an assumption to test"
   - A stable-growth case with its reinvestment rate and return on capital
   - The reinvestment rate and return on capital your terminal value implies
   - A note on where the three cases differ and why
@@ -44,7 +44,7 @@ how_to_use:
   - After step 3, read how the three cases differ. Fill every MISSING line before using the result in a valuation.
 how_it_works:
   - title: Economic profit fade schedule
-    text: Builds a case where excess returns last for two years, then fall to zero. Needs evidence that capital stays constant and no later excess return follows. Widen the case if capital changes. Hands step 2 the invested capital and NOPAT.
+    text: Builds a case where excess returns last for two years by default, then fall to zero. The two years, constant capital and no later excess return are assumptions to test, so each is backed by evidence or labelled hypothetical. Widen the case if capital changes. Hands step 2 the invested capital and NOPAT.
   - title: Terminal growth reinvestment check
     text: Builds a separate stable case with its reinvestment and return on capital. Says whether it assumes returns above the cost of capital forever. Is not blended with the fade case.
   - title: Implied terminal reinvestment schedule

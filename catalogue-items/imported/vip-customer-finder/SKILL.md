@@ -29,8 +29,10 @@ How to start:
 Ranks customers by lifetime spend and order frequency, identifies the top N% (by value, frequency, or both), and outputs a CSV of VIP candidates. Optionally applies a VIP tag to qualified customers via `customerUpdate`. Used to build loyalty segments, prioritize white-glove support, or seed exclusive-access campaigns. The lifetime spend and order count are pulled directly from Shopify customer aggregates — no external CRM required.
 
 ## Prerequisites
-- Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_customers,read_orders,write_customers`
+- Authenticated Shopify CLI session for the preview: `shopify store auth --store <domain> --scopes read_customers,read_orders`
+- Add `write_customers` to the scopes only when the user has asked for tags (`tag_customers: true`)
 - API scopes: `read_customers`, `read_orders`, `write_customers` (only if `tag_customers: true`)
+- The CSV holds customer names and emails, which is personal data. Tell the user to keep it private, share it only with people who need it, delete it when done, and only email these customers in line with their marketing consent.
 
 ## Parameters
 

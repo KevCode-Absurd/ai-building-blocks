@@ -28,7 +28,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-This skill runs on its own. If something is missing, ask once in one short message for what you can't work without, then carry on and mark each gap `MISSING:`.
+In the list above, "your question" means the store facts below, and "your results" means only your monthly revenue and margin. No ad or analytics export is needed. This skill runs on its own. If something is missing, ask once in one short message for what you can't work without, then carry on and mark each gap `MISSING:`.
 
 - **Monthly revenue and gross margin** (required).
 - **Current people and freelancers, with hours** (required).

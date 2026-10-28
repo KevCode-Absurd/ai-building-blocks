@@ -12,7 +12,7 @@ when:
   - You feel sure but cannot say why.
   - You want a quick check before you do deeper work.
 not_for:
-  - "You want the full check with every test: use the Circle of competence sorter."
+  - "You want the full check with every test: use the Business expertise reviewer."
   - "You want to know if a business can survive a bad year: use the Bad-year break-even tester."
   - "You want to test a startup idea with real people: use the Seven-question startup scorer."
 you_give:

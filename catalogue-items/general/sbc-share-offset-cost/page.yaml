@@ -64,12 +64,12 @@ output_sample:
     - name: CHECKS MISSED
       contains: Either none, or the exact checks that failed or could not run.
 how_it_works:
-  - title: 1. Reconcile vested/issued employee shares, forfeitures and net settlements to the share ledger; distinguish actual issuance from accounting diluted shares
-    text: Reconcile vested/issued employee shares, forfeitures and net settlements to the share ledger; distinguish actual issuance from accounting diluted shares.
-  - title: 2. Multiply actual net shares by a stated repurchase execution-price scenario and subtract employee exercise proceeds once
-    text: Multiply actual net shares by a stated repurchase execution-price scenario and subtract employee exercise proceeds once.
-  - title: 3. Compare cash offset cost with reported compensation expense while retaining both; explain timing and valuation differences rather than replacing accounting expense automatically
-    text: Compare cash offset cost with reported compensation expense while retaining both; explain timing and valuation differences rather than replacing accounting expense automatically.
+  - title: Ties the share ledger
+    text: "Opening shares, plus awards vested or exercised, less forfeitures and shares withheld for tax, must equal closing shares. Actual shares issued are kept apart from accounting diluted shares."
+  - title: Prices the offset
+    text: Multiplies the net shares issued by the repurchase price you chose, then takes off the cash employees paid, once.
+  - title: Compares with the expense
+    text: Puts the cash cost beside the reported share compensation expense, keeps both, and explains the gap in one line.
 output_shape: |-
   SCOPE AND DATED SOURCES
   INPUTS AND ASSUMPTIONS

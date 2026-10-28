@@ -30,7 +30,7 @@ credits:
   - title: product-research skill
     by: Alireza Rezvani
     url: https://github.com/alirezarezvani/claude-skills/tree/main/research-ops/skills/product-research
-    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps. We added a note that the optional loop needs a separate skill and that its higher counts must be checked against the raw quotes.
   - title: Original author
     by: claude-code-skills
     url: ""

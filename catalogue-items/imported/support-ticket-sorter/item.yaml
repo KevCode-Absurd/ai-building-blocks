@@ -31,7 +31,7 @@ credits:
   - title: ticket-triage skill
     by: Burhan Sebin
     url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/customer-success/ticket-triage
-    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the MIT licence. We gave it a plain name. We added Before you start and After this sections that link to other AI Blocks steps. We added a note that draft replies must not claim actions nobody took, and that a person checks each draft before sending.
   - title: Original author
     by: Burhan Sebin
     url: https://github.com/seb1n

@@ -64,7 +64,7 @@ how_it_works:
   - title: "List every layer"
     text: "Freight, duty, insurance, packaging, pick and pack, fees, courier. Label each real quote, looked up or estimate."
   - title: "Handle duty with care"
-    text: "Never supply a duty rate. If you gave none, show margin at 0% and at a test rate you pick, both marked estimate."
+    text: "Never supply a duty rate. If you gave none, it shows margin at 0% duty only, marked as a lower bound. If you name a test rate, it shows that too, marked estimate. Either way the call can be no better than HOLD."
   - title: "Divide by units that pass"
     text: "Cost per sellable unit = total landed spend divided by units passing inspection. With no defect share, show a 3% case and a 10% spare-unit case."
   - title: "Find margin and ad room"

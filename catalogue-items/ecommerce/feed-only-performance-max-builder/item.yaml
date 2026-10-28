@@ -8,8 +8,6 @@ job: ads
 level: advanced
 inputs:
   - {type: performance_sheet, required: true}
-  - {type: brand_brain, required: false}
-  - {type: product_data, required: false}
 outputs:
   - {type: plan}
 uses: []

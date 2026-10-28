@@ -10,6 +10,8 @@ explain: |
   A folder of MATLAB code turned into a toolbox file that others can install in one click. Instead of guessing what a clean release needs, you move through checked stages and approve each before the next begins.
 
   First it defines the public functions you offer. It then maps dependencies, optionally sets up a MATLAB project, and writes documentation: a readme, function hints, a getting-started guide and examples. Next comes a build plan with code checks, tests and coverage, followed by a readiness check that ends in a go or no-go list. Only then does it build the .mltbx file. It does not compile standalone apps or package a single script.
+
+  This is MathWorks' skill. The licence that applies is the LICENSE.md file in this item: BSD 2-Clause plus a rule that you may use it only with MathWorks products such as MATLAB. A web link inside the skill file points to a different MathWorks licence page. Follow the LICENSE.md file.
 when:
   - You want to share your MATLAB code as an installable toolbox.
   - Colleagues keep asking for your scripts and you are tired of emailing folders.

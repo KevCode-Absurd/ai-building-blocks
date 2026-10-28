@@ -128,9 +128,9 @@ works_best_with:
     - name: Any good chat AI
       why: It does the splitting and the comparison. Paste your numbers as a table.
     - name: Google Analytics 4
-      why: Shows funnel drop-off by step, so the skill can find where visitors leave.
+      why: Free. Shows funnel drop-off by step, so the skill can find where visitors leave.
     - name: Shopify
-      why: Order and margin data to check your ad numbers against real profit.
+      why: Paid subscription. Order and margin data to check your ad numbers against real profit.
   inputs:
     - An export of last quarter's orders with product cost, so margin is real
     - A screenshot of your checkout funnel report
@@ -144,3 +144,4 @@ terms:
     meaning: Total revenue divided by total marketing spend across all channels.
   - term: CPM
     meaning: What you pay per 1, 000 ad views.
+next: [online-store-bottleneck-finder, platform-roas-reality-check]

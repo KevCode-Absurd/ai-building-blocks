@@ -5,7 +5,7 @@ description: Use when you have a list of ten or more cases in order, such as ord
 
 # Pattern from cases finder
 
-A story fits the cases you have seen and fails on the next one. A rule you can test says what should happen next and whether it did. This skill works from cases up to a rule, the way a person does with pencil and paper: write them out, look at the differences, guess, then test on cases the rule has not seen. It does not claim a rule is proven. For checking the words in your claim, use "Definition tester".
+A story fits the cases you have seen and fails on the next one. A rule you can test says what should happen next and whether it did. This skill works from cases up to a rule, the way a person does with pencil and paper: write them out, look at the differences, guess, then test on cases the rule has not seen. It does not claim a rule is proven. A rule that passes is a tested guess, not proof of cause, so have a person check any forecast before it drives spending or staffing. For checking the words in your claim, use the [Term definition checker](https://useaiblocks.com/skills/definition-tester).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
@@ -26,7 +26,7 @@ How to start:
 
 ## What you need
 
-- **Your cases** (required): at least ten, in order, one per line, with the value you care about. Twenty is better.
+- **Your cases** (required): at least ten, in order, one per line, with the value you care about. Twenty is better. This is the "your results" input in Before you start: an export from your store, ad account or analytics works, and so does any ordered list you paste or attach.
 - **Cases to hold back** (required): three or more that the rule will not see. If none are given, hold back the last three yourself and say so.
 - **What each column means** (optional).
 - **The pattern you think you see** (optional).

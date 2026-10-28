@@ -61,9 +61,13 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 5. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back
-4 step files and the summary. The last file holds the brand guide.
+4 step files and the summary. The last file holds the brand guide. Tell them what to do with it next: fix the top-ranked gaps from step 2 first, then give the guide to any new writer or designer before their first piece of work.
 
 ## Check before you hand it back
+- Step 1: every voice rule, promise and claim names the page it came from.
+- Step 2: every touchpoint has a score, and each ranked gap quotes the line that causes it.
+- Step 3: every rewrite uses only facts from the brand file.
+- Step 4: the guide has voice rules, look notes, do and don't lists, and before and after lines.
 - Each step passed its own checks, or the run stopped at the step that failed and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.

@@ -38,7 +38,7 @@ how_to_use:
   - Open the skill in your AI tool, or paste its text into the chat.
   - Tell it your operating system, MATLAB release, install folder and products.
   - Read the plan it shows. Say yes only if it is right.
-  - "On Windows, the install runs with admin rights (a Windows approval prompt appears) and the scripts run with PowerShell ExecutionPolicy Bypass, so they run even though your policy normally blocks scripts. Only approve it on a machine you manage."
+  - "On Windows, the install runs with admin rights (a Windows approval prompt appears) and the scripts run with PowerShell ExecutionPolicy Bypass, so they run even though your policy normally blocks scripts. Only approve it on a machine you manage. On a work or school computer, ask your IT team before you say yes."
   - "The install file the AI edits gets two extra lines: noJRE=true (no bundled Java) and caller=agent (tells MathWorks an AI started the install)."
   - "On Linux or macOS the skill points to its own steps file (reference/linux-macos-steps.md). Paste that file in too. No admin prompt is needed."
   - When it finishes, check the list of installed products and the install path.

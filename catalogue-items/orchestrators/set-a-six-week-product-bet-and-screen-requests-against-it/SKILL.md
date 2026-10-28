@@ -9,7 +9,7 @@ Give it your plan and requests. Get a six-week bet, a no list and a yes, later o
 
 Use it when: your plan keeps growing and the date keeps slipping, requests arrive faster than you can judge them, or you want to say no kindly with the reason ready.
 
-Not for: one big request with no plan to shape (use the Feature request screener), a plan that is already set and must shrink to hit a launch date, cutting a live product down, or a task list for a sprint.
+Not for: one big request with no plan to shape (use the Feature request screener), a plan that is already set and must shrink to hit a launch date, cutting a live product down, or a task list for a sprint. If you have no request list yet, set the bet with the Lean product shaping coach on its own, then come back when requests arrive.
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
@@ -33,7 +33,7 @@ How to start:
 
 ## What you need
 
-This is a product job. No buyer brief is used. The generic "Document" line above means your request list here, and the generic "Your question" line does not apply. This workflow needs your plan and your request list. Do not ask for anything else before step 1.
+This is a product job. No buyer brief is used. In the generic list above, "A plan" is your product plan, "A document" is your request list, and "Your question" is your team size, any fixed date, and what the product is for and not for. Those are all the inputs. Do not ask for anything else before step 1.
 
 - **Your product plan** (required): the goal and who it is for.
 - **Your team size and any fixed date** (required): the bet is sized to them.

@@ -34,7 +34,11 @@ How to start:
 
 In "Before you start", "your question" is the period you are rolling forward, and "financial statements" means the company's filings or its statement of changes in equity.
 
-Gather these first: opening parent common equity, and the opening and closing ordinary share counts. Without them nothing can be worked out. Then, for the same period:
+Gather these first: opening parent common equity, and the opening and closing ordinary share counts. Without them nothing can be worked out. Where to find them in a filing:
+- **Parent common equity:** the statement of changes in equity, in the column for equity attributable to owners of the parent (or to common shareholders). Leave out non-controlling (minority) interests, and take off any preference shares shown inside that column.
+- **Share counts:** ordinary shares outstanding at the start and end of the period, from the share capital note or the cover page. Leave out treasury shares the company holds.
+
+Then, for the same period:
 - Opening common equity (parent owners only).
 - Ordinary profit and other comprehensive income (OCI) for the same owners.
 - Common dividends paid.

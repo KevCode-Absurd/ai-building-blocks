@@ -71,3 +71,4 @@ output_sample:
       contains: Settings and config files you can delete or trim, such as sdkVersion, babel and metro defaults.
     - name: Code migrations
       contains: Updated code for React 19, the New Architecture, Expo Router, and the move from expo-av to expo-audio and expo-video.
+next: [app-update-health-checker, expo-build-workflow-writer, deploy-verifier]

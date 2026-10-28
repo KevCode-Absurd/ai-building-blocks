@@ -11,7 +11,7 @@ subhead: Tell it your review counts, review app, page speed, images, shipping, r
 explain: |
   Stars under a Shopping ad and a trusted store badge help shoppers pick you over a lookalike. Both depend on real reviews and on how your store compares with others in your country. Many stores never apply, or apply and wait without knowing what Google needs.
 
-  This skill checks eligibility for product ratings first: one course says at least 50 reviews in total and at least 3 on any product that should show stars. It then picks a route for sending reviews, and checks your store against five quality areas: browsing, purchase, shipping, returns and store ratings. It lists the easy fixes first. It only works with real reviews from real customers. These numbers come from one course, so check them on Google's current help page.
+  This skill checks eligibility for product ratings first: Google's help page says at least 50 reviews across your products, and one course adds at least 3 on any product that should show stars. It then picks a route for sending reviews, and checks your store against five quality areas: browsing, purchase, shipping, returns and store ratings. It lists the easy fixes first. It only works with real reviews from real customers. Google changes these limits, so check them on its current help page.
 
 when:
   - You want star ratings on your Google Shopping ads and don't know where to start.
@@ -65,7 +65,7 @@ how_it_works:
   - title: Checks eligibility
     text: At least 50 reviews in total, and at least 3 on any product that should show stars.
   - title: Starts the interest form
-    text: Submit Google's product ratings interest form first. Expect 2 to 4 weeks from the form to stars showing.
+    text: Submit Google's product ratings interest form first. Google says ratings can take up to 2 weeks to appear after onboarding; one course says 2 to 4 weeks.
   - title: Picks a route
     text: Google's own customer reviews, an official aggregator partner, or a non-official app that needs a manual upload through Shopify.
   - title: Checks browsing

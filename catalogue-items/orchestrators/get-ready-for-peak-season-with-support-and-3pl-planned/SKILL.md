@@ -71,7 +71,7 @@ One file for each step, plus the summary. Step 1 saves the peak forecast and ste
 Keep the forecast and your real peak result together. Next year they show how far off the method was.
 
 ## After this (for this job)
-Use this list, not the shared "After this" list above. Suggest one next step as a short question:
+Use this list first. The shared "After this" list below is extra. Suggest one next step as a short question:
 - Run the 3PL bill audit again every month after peak, with the new invoice and orders.
 - Save the step 1 forecast next to the real peak result, so next year you can see how far off the method was.
 

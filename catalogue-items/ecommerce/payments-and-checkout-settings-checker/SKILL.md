@@ -35,6 +35,7 @@ How to start:
 - **Business type** (required): individual or registered business, and the ID name as printed.
 - **Current settings** (required): payments, wallets, checkout fields and consent boxes.
 - **Regions you sell to** (advised).
+- **Payout currency** (advised): the currency your bank account receives. Never the account number.
 - **Other tools** (advised): a separate email tool, cash on delivery.
 - **Reports** (optional): checkout and abandonment reports.
 - **A go-live check report** (optional): the blockers and warnings it found. Use it to see which of these items it flagged and to start with those.
@@ -48,9 +49,9 @@ Limits: rules differ by country, and Shopify setting names move often, so re-che
 
    Official starting points (read the current page at the time of use; none has been checked for you): Shopify Payments account setup, https://help.shopify.com/en/manual/payments/shopify-payments/onboarding/account-setup ; bank requirements, https://help.shopify.com/en/manual/payments/shopify-payments/onboarding/bank-account-requirements/ ; checkout form and regional consent settings, https://help.shopify.com/en/manual/checkout-settings/checkout-form-options . These platform pages do not establish full legal compliance; add current jurisdiction-specific primary guidance where a legal rule matters.
 
-1. **Two-step sign-in.** Turn it on first. Some sources say Shopify has asked for it on accounts that use Shopify Payments. That is unverified until you read the current Shopify help page from step 0 and note the date you checked. If you cannot check it, mark it NOT CHECKED. Confirmed missing is a blocker.
+1. **Two-step sign-in.** Advise turning it on first. Whether Shopify requires it for Shopify Payments must be confirmed on the current Shopify help page from step 0, with the date checked. Until then, mark the requirement NOT CHECKED. If the help page confirms it is required and it is off, that is a blocker.
 2. **Business type.** Use the actual legal business type and the provider’s current country-specific categories. Do not classify a business solely by whether it has a registration number. Verify which account representative and ownership details that category requires; if unclear, leave it unresolved for the owner or provider to confirm.
-3. **Names.** Names and details must match the government ID exactly, for example Robert not Rob. A mismatch can hold up verification. One source says review can take hours or days. That time is unverified until the owner checks the Shopify help page from step 0, so say so and mark it NOT CHECKED if you cannot check it. The owner can keep building meanwhile. A mismatch is a blocker.
+3. **Names.** Names and details must match the government ID exactly, for example Robert not Rob. A mismatch can hold up verification. Do not give a review time. Point the owner to the Shopify help page from step 0 for the current timing, and mark it NOT CHECKED until they confirm it. The owner can keep building meanwhile. A mismatch is a blocker.
 4. **Bank account type.** Check the provider’s requirements for the exact business country, payout currency, account type and supported transfer network. Do not infer a transfer network from a continent. Say only which type or requirement the owner must confirm, never request or repeat an account number. Unverified eligibility stays NOT CHECKED.
 5. **Capture.** Set payment capture to automatic at checkout. Switch to manual only if the owner wants to review orders before charging.
 6. **Wallets and methods.** Keep wallets on (Shop Pay, Apple Pay, Google Pay). Extra methods such as PayPal can run beside Shopify Payments without interfering. Add a short note on which gateways to run together.

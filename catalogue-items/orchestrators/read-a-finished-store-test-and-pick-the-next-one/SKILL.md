@@ -9,6 +9,8 @@ Give it your test numbers and dates. Get a ship call, a ranked list of ideas and
 
 This workflow chains skills from the library. Each step is its own skill. You run them one after another, and each skill's result is saved and passed to the next.
 
+**When not to use:** the test is still running or has run under two full weeks (wait until it ends), or you only want the ship call on one test (use the `store-test-verdict-maker` skill on its own).
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.

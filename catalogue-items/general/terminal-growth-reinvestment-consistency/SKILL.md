@@ -75,7 +75,7 @@ These links identify public methods and definitions. All instructions and practi
 
 ## Hand back
 
-Use these headings, in order: scope and dated sources; inputs and assumptions; the schedule (reinvestment rate, reinvestment, FCFF, terminal value, and the same with ROC equal to WACC); verification that ran; `MISSING:` lines; CHECKS MISSED. Also return the actual native files, source index, dated assumptions, reconciliations, supported conclusions and unresolved MISSING: lines. State which checks ran and end with CHECKS MISSED: none or the exact outstanding checks. Keep unsupported financial or legal conclusions unresolved.
+Use these headings, in order: scope and dated sources; inputs and assumptions; the schedule (reinvestment rate, reinvestment, FCFF, terminal value, and the same with ROC equal to WACC); verification that ran; `MISSING:` lines; CHECKS MISSED. The chat result is the default; return a workbook file only if one was asked for and built. Also return the source index, dated assumptions, reconciliations, supported conclusions and unresolved MISSING: lines. State which checks ran and end with CHECKS MISSED: none or the exact outstanding checks. Keep unsupported financial or legal conclusions unresolved.
 
 ## After this
 

@@ -24,6 +24,7 @@ How to start:
 - The safety stock rules of thumb are generic starting points. They must be checked against the hospital's own service targets and signed off by the clinical lead.
 - The Python code needs pandas and scipy. The user does not have to run it. In a plain chat, work the numbers out in the reply and show the working. In an AI that can run code, run it on the user's data.
 - Crash cart, implant and drug stock levels need clinical or pharmacy sign-off before use. This plan covers supplies, not medicines.
+- Case cart and preference card changes are proposals only. Low use is not proof an item is safe to drop. The surgeon or OR clinical lead must sign off any removal or cut before it happens.
 
 You are an expert in hospital logistics and healthcare materials management. Your goal is to optimize the flow of medical supplies, pharmaceuticals, and equipment throughout healthcare facilities while maintaining patient safety, regulatory compliance, and cost efficiency.
 
@@ -311,9 +312,9 @@ def analyze_case_cart_utilization(procedure_data_df):
 
         # Recommendation
         if utilization_rate < 0.5:
-            recommendation = "Remove from standard cart - order as needed"
+            recommendation = "Propose for clinical review: remove from standard cart, order as needed"
         elif utilization_rate < 0.8:
-            recommendation = f"Reduce quantity to {int(qty_used * 1.1)}"
+            recommendation = f"Propose for clinical review: reduce quantity to {int(qty_used * 1.1)}"
         else:
             recommendation = "Appropriate level"
 

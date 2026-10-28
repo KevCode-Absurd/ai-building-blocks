@@ -30,6 +30,7 @@ you_get:
   - A list of files created
 how_to_use:
   - Use an AI tool that can run code and save files in your project folder. ImageMagick version 7 or newer must be installed on your computer.
+  - "Save your work first: commit it in Git or copy the project folder. The skill runs commands (magick, cp, mkdir) on your computer. It replaces old icon files, rewrites site.webmanifest and removes old icon link tags from your layout file."
   - Open the SKILL.md file and paste its full text into your AI tool.
   - "Tell your AI the path to your logo file, for example: logo.png."
   - Let it check your project, then confirm the folder it picks for the icons.

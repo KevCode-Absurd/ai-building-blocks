@@ -100,6 +100,7 @@ output_shape: |
 
   ROUTE TO: <next skill>
   NOT RUN: <part, and what is needed>
+  CHECKS MISSED: <none | checks that failed or could not run>
   MISSING: <what you did not give>
 
 tweaks:
@@ -133,8 +134,8 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "Shopify", why: "Its order export gives customer ids, dates, values, discounts and refunds."}
-    - {name: "Klaviyo", why: "It gives flow and campaign revenue so you can see the email and SMS share."}
+    - {name: "Shopify", why: "Paid store platform. Its order export gives customer ids, dates, values, discounts and refunds."}
+    - {name: "Klaviyo", why: "Paid email tool with a small free tier. It gives flow and campaign revenue so you can see the email and SMS share."}
     - {name: "Any good chat AI", why: "Any current chat AI that reads a spreadsheet can build the cohorts."}
   inputs:
     - "Cost of goods per product"

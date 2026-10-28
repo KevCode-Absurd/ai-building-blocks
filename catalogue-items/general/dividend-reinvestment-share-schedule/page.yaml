@@ -22,7 +22,7 @@ not_for:
   - "Your plan fees or withholding are unknown: get the plan statement from your broker first, then run this."
   - "You want a forecast of future dividends or prices: ask a licensed adviser, because this schedule only uses prices you supply."
   - "You want to know if the company can afford its dividend and buybacks: use the Shareholder payout cash checker instead."
-  - "You need EPS and share counts restated after a stock split: use the Stock-split EPS restatement instead."
+  - "You need EPS and share counts restated after a stock split: use the Stock split earnings adjustment calculator instead."
 you_give:
   - Shares you held before the dividend.
   - Dividend per share.

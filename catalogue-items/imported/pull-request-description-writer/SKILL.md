@@ -105,6 +105,8 @@ State a reason or an alternative only if the commits or the linked issue give it
 
 ### Step 4: Create the PR
 
+Show the user the final title and body first. Run `gh pr create` only after they say yes, because it opens a pull request on their GitHub account. The same goes for the `gh api` edits below.
+
 ```bash
 gh pr create --draft --title "<type>(<scope>): <description>" --body "$(cat <<'EOF'
 <description body here>

@@ -33,12 +33,13 @@ you_get:
   - "One GitHub issue per finding, with the fix, a command line fallback and a checklist"
   - "One tracking issue with a table of findings by pillar and a ranked checklist"
 how_to_use:
-  - Use an AI that can run code, read your files and use the AWS CLI. Set up the GitHub MCP server too, with permission to write issues.
+  - Use an AI that can run code, read your files and use the AWS CLI with a read-only AWS role, never an admin one. Set up the GitHub MCP server too, with permission to write issues.
   - Add the skill to your AI, or paste it into a chat.
   - Tell it the folder that holds your infrastructure code. Name the workload type if you know it.
   - Read the review summary. It shows the counts and top High risk findings, and nothing is created yet.
   - Say yes to create the GitHub issues. If issue creation fails, you get the findings as text instead.
   - Start with the High risk issues. Each one has a fix you can put into your code.
+  - Some issues also show an AWS CLI command as a fallback. That command changes your live AWS account. Prefer the code fix, and run a CLI command only after you have read it and tested it outside production.
 output_sample:
   input:
     - The folder with your infrastructure code (Terraform, CloudFormation, CDK or SAM)

@@ -18,7 +18,7 @@ not_for:
   - "Your capital, tax or write-offs change each year: build a larger schedule with a finance person, since this one holds capital flat."
   - "Excess returns last longer than two years: use a longer multi-year valuation model in your own spreadsheet instead."
   - "You need a full investment view or advice: ask a qualified analyst, because this only shows one narrow calculation."
-  - "You are valuing a stable-growth terminal value, not a two-year fade: use the Terminal growth reinvestment check instead."
+  - "You are valuing a stable-growth terminal value, not a two-year fade: use the Terminal growth reinvestment checker instead."
 you_give:
   - Opening invested capital, two annual NOPAT forecasts, WACC and evidence supporting constant capital and zero later excess returns.
   - "The valuation date, plus the currency and scale used for the economic profit schedule."

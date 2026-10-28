@@ -34,6 +34,7 @@ how_to_use:
   - Use an AI that can run code, and save the key as SCRAPECREATORS_API_KEY. This tool reads public comments, so check each platform's terms first.
   - Paste the skill into your AI, then add your post links. Say how many comments you want and what your product is (optional).
   - Check the sample size and confidence line first. Then read the Top Themes table and the exact quotes.
+  - The report can keep commenters' names and post times. Remove names and handles before you share it or reuse a quote. The words are enough.
   - Use the questions, objections and phrases in your ads, FAQ and content.
 output_sample:
   input:

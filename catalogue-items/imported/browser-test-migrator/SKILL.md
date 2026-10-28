@@ -64,6 +64,8 @@ Run `/pw:pw-init` first if Playwright isn't configured.
 
 ### 4. Convert Files
 
+> **AI Blocks note (before you change any file):** show the user the assessment and the list of files you will change, and wait for a yes. Check the project is under version control with no unsaved changes, and suggest a new branch. If it is not, ask the user to make a backup copy first. Write the Playwright tests as new files and leave the old tests in place until the user has run the new ones and agrees to remove them.
+
 For each file, apply the appropriate mapping:
 
 #### Cypress → Playwright

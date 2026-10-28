@@ -71,6 +71,8 @@ output_shape: |
   <what to avoid for this product>
   MISSING
   <...>
+  CHECKS MISSED
+  <checks that could not run, or none>
 
 tweaks:
   - what: "Where it runs"

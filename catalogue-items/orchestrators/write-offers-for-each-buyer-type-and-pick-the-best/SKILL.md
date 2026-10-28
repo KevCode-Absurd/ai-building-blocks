@@ -48,9 +48,11 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Hero product repositioner.** Use the skill `hero-product-repositioner`. Starts the chain: one angle and one offer per buyer type.
-2. **Offer checklist reviewer.** Use the skill `offer-checklist-reviewer`. Give it the angle library and the offer from the steps before. Reads the angles and offers from the step before and returns a stronger offer with its three best changes.
+1. **Hero product repositioner.** Use the skill `hero-product-repositioner`. Starts the chain: one angle and one offer per buyer type. Saves the angle library as `outputs/step-01-hero-product-repositioner.md`.
+2. **Offer checklist reviewer.** Use the skill `offer-checklist-reviewer`. Give it the angle library and the offer from `outputs/step-01-hero-product-repositioner.md`. Reads the angles and offers from the step before and returns a stronger offer with its three best changes.
 3. **Offer profit-per-session checker.** Use the skill `offer-profit-per-session-checker`. Give it the offer from the steps before. Checks the revised offers from the step before against your costs and visit numbers.
+
+Before the pause, list every health, beauty or money claim in the offers (for example "clears skin" or "saves you $50"). Tell the person to confirm each one with a qualified person and the ad platform's policy before any offer runs. Mark each unconfirmed claim `MISSING: claim check` and keep it off the pages until it is confirmed.
 
 Pause here: Run each offer on its own page for the same dates and traffic. Then export visits and orders for each one.
 
@@ -65,6 +67,7 @@ Pause here: Run each offer on its own page for the same dates and traffic. Then 
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.
+- Every health, beauty or money claim is listed for checking, and no unconfirmed claim is in a live offer.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

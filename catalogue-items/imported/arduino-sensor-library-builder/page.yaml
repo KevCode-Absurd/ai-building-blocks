@@ -28,7 +28,7 @@ you_give:
   - How the part connects to the board, such as I2C, SPI or plain pins (GPIO), because that choice sets the library dependencies
   - Your Arduino board model
   - The existing Arduino C++ library (optional)
-  - MATLAB and an Arduino to test
+  - MATLAB (a paid MathWorks product) and an Arduino to test
 you_get:
   - A native support check
   - A custom add-on if none exists

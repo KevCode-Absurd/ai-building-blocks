@@ -29,4 +29,4 @@ credits:
   - title: board-minutes skill
     by: Anthropic
     url: https://github.com/anthropics/claude-for-legal/tree/main/corporate-legal/skills/board-minutes
-    used: Copied under the Apache 2.0 licence. We gave it a plain name and added a plain-chat note that replaces the plugin's settings file, calendar and slash commands. We added Before you start and After this sections that link to other AI Blocks steps.
+    used: Copied under the Apache 2.0 licence. We gave it a plain name and added a plain-chat note that replaces the plugin's settings file, calendar and slash commands, and changed the quorum step to leave the state-law default rule as a question for the lawyer. We added Before you start and After this sections that link to other AI Blocks steps.

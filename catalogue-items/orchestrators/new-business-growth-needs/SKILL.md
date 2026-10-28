@@ -28,7 +28,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-This list replaces the shared "Before you start" block above. This run needs the business, the target size and the year. Skip the block's "question" and "council brief" lines. Report failed or skipped checks in the HAND-BACK SUMMARY as `MISSING:` lines and a `CHECKS MISSED:` line (or "none").
+This list replaces the shared "Before you start" block above. This run needs the business, the target size and the year. Read the block's "Your question" line as those three things. Its "council brief" line is optional: use one only if you already have it. Report failed or skipped checks in the HAND-BACK SUMMARY as `MISSING:` lines and a `CHECKS MISSED:` line (or "none").
 
 Required (step 1 stops without these):
 - **The business, what it sells and to whom.** Name the exact group of buyers. A narrow, real group gives a firm sum in step 2.

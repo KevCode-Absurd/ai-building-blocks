@@ -18,7 +18,7 @@ when:
   - "You have never rolled back and do not know how."
   - "A release involves a database change."
 not_for:
-  - "You want the full version with every check: use the Safe release planner."
+  - "You want the full version with every check: use the Release safety planner."
   - "You are doing a first-time setup of a new site or app: ask whoever hosts it, or follow your host's own setup guide."
   - "The change is not live and touches no customers, such as a test copy: skip the plan and just make the change."
 
@@ -26,6 +26,7 @@ you_give:
   - "What you are releasing"
   - "Where it runs"
   - "Who is hurt if it breaks"
+  - "Who approves the release and who can call the undo"
   - "Your usual release method (optional)"
 you_get:
   - "A risk rating with the reason"

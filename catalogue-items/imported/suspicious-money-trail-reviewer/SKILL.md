@@ -83,7 +83,7 @@ Forensic evidence must be provided as static files (CSV exports, PDF statements)
 
 **Executive Summary**
 - Summary of the suspected pattern (not a finding of fraud).
-- Quantified loss (Total amount of fraud detected).
+- Amount at risk (total value of the flagged transactions, marked as unconfirmed until a qualified examiner checks it; not a proven loss).
 
 **Evidence Chain**
 - **The Pattern**: Step-by-step description of what the records suggest may have happened, marked as unconfirmed.

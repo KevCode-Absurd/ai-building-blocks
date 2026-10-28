@@ -94,6 +94,9 @@ else:
 
 **Common jailbreak patterns detected**:
 ```python
+# Illustrative scores from the original author's examples (added by AI Blocks).
+# Not a benchmark: run the model on your own inputs to get real scores.
+
 # Direct override
 "Ignore all previous instructions"                    # Score: 0.9999
 

@@ -9,12 +9,12 @@ headline: "Tracker chart image ad maker"
 subhead: Paste your story ad and the claims you can back. It checks the chart, calendar or test strip is one your buyer reads at home, then briefs a phone photo with one rough mark. You get the image prompt, the line under it and how to add the mark by hand.
 
 explain: |
-  People who track something stare at the same screens: a sleep chart, a habit calendar, a test strip held to its colour card. A photo of that reading, with one rough mark on the part that matters, makes them look twice. They have seen that exact gap or dip on their own phone.
+  People who track something stare at the same screens: a step count, a habit calendar, a water-test strip held to its colour card. A photo of that reading, with one rough mark on the part that matters, makes them look twice. They have seen that exact gap or dip on their own phone.
 
   This skill starts with a gate. The reading must be one the buyer takes themselves, the brand must be able to back what the story says about it, and it must look ordinary, with no condition named and no clinic paperwork. Then it picks the one part that tells the story, marks it once in the colour least present in the photo, and keeps every readable number to the ones in your story. It never shows scans or doctors' files, because those invite a diagnosis the brand can't make.
 
 when:
-  - Your story mentions something the buyer measures or counts, like sleep, a streak or a test strip.
+  - Your story mentions something the buyer counts, like hours slept as a plain number, steps, a streak or a water-test strip.
   - You have claims with sources that cover what the story says about that reading.
   - You want a picture that sorts trackers from everyone else at a glance.
 not_for:
@@ -37,7 +37,7 @@ how_to_use:
   - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
   - Know that Claude can't draw images. To get the picture, paste the image prompt into ChatGPT or Gemini later.
   - Paste your story ad and your claims list. If a claim has no source, it asks once, then hands back only the gate and what is missing.
-  - Use an everyday reading such as a sleep chart, habit calendar or test strip. Skip blood pressure, glucose or other medical readings.
+  - Use an everyday reading such as a step count, habit calendar or water-test strip. Skip sleep scores, blood pressure, glucose, body test strips or other health readings.
   - If you can, build the real chart from the story's numbers and photograph it on a second phone. Otherwise make the photo from the prompt and draw the mark in your phone's photo editor.
   - Have a person check the claims, the numbers and the mark before the ad runs.
 output_sample:
@@ -78,7 +78,7 @@ how_it_works:
   - title: Runs the gate
     text: The buyer takes this reading at home, the brand can back what the story says about it, and it can stay ordinary.
   - title: Picks one part
-    text: The empty week, the dip at 3am, the square that changed colour. One part only.
+    text: The empty week, the dip in a week of step counts, the square that changed colour. One part only.
   - title: Marks it once
     text: A rough circle or a short arrow, in the colour least present in the photo, best drawn by hand afterwards.
   - title: Keeps numbers true
@@ -162,7 +162,7 @@ tweaks:
   - what: Build the real chart
     how: Make the calendar or chart yourself in a habit app or a spreadsheet using the story's numbers, then photograph it on another phone. Every number in it is then true.
   - what: Circle or arrow
-    how: A circle suits an area, like an empty week. An arrow suits a line on a chart, like a dip at 3am. Ask for the one that fits, never both.
+    how: A circle suits an area, like an empty week. An arrow suits a line on a chart, like a dip in a step count. Ask for the one that fits, never both.
   - what: Paper or screen
     how: Ask for a log on paper (a fridge chart, a notebook) if your buyers track by hand. It looks even less like an ad.
   - what: How much shows
@@ -199,7 +199,7 @@ works_best_with:
 
 terms:
   - term: Reading
-    meaning: A chart, count or result the buyer checks for themselves, like a sleep chart or a test strip.
+    meaning: A chart, count or result the buyer checks for themselves, like a habit calendar or a water-test strip.
   - term: Gate
     meaning: Three questions the idea must pass before the picture is briefed.
   - term: Line under the image

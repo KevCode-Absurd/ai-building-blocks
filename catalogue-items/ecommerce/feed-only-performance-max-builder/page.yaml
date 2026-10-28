@@ -69,7 +69,7 @@ output_sample:
 
 how_it_works:
   - title: Checks readiness
-    text: Needs sales coming in, at least 15 live products and a clean feed. Not for stores under about 30 sales a month.
+    text: Needs sales coming in, at least 15 live products and a clean feed. Not for stores under about 30 sales a month. These bars are the source course's rule of thumb, not Google's.
   - title: Picks one role
     text: Remarketing under Shopping, or the main engine. The sources differ, so it picks one and says why.
   - title: Sets up the campaign

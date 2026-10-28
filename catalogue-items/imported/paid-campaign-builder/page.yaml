@@ -36,6 +36,7 @@ how_to_use:
   - The skill points to playbook files for deeper steps. In a plain chat the plan uses the core skill text only. In Claude Code, or if you can upload files, add the skill's reference folder too.
   - Answer any questions it asks. If you do not know something, say so and it will mark it MISSING.
   - Read the plan. Check that the budget split and the scale or stop numbers match your real limits.
+  - "Before launch, check each ad against the platform's ad policy. Headlines must not say or imply the viewer's age, health, money troubles or similar traits. The skill's percentages are the author's rules of thumb, not tested benchmarks."
   - Launch the first test only. Come back with results before you scale.
 output_sample:
   input:

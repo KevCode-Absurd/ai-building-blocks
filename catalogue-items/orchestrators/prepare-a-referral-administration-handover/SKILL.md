@@ -62,13 +62,15 @@ If a component skill is missing, tell the user which one and ask them to add it 
 
 ## Steps
 
+0. **Data-protection check (required).** Before you read any record, ask: "Do your clinic's rules allow you to share these records with this AI tool, and is the tool approved for health data? Yes or no?" Read no record until the answer is a clear yes. If the answer is no or unsure, stop, ask them to check with the clinic's data lead, and hand back only the list of what to gather. If records were already pasted before the answer, do not use them until the answer is yes.
+
 1. **Source note summariser** (`source-note-summariser`). Give it the referral records. Ask it to pull only the administrative status and the confirmation proof for each referral, with the record reference and date, and to drop patient detail the handover does not need. Save `outputs/step-01-source-note-summariser.md`.
    **Gate before step 2:** each referral has a reference, a state (sent, received, booked or completed) and the source of that state. No clinical detail remains.
 
 2. **Handover note writer** (`handover-note-writer`). Give it the step 1 file, the clinic's follow-up rules and the contacts. Ask for pending confirmations first, then each referral's next step, authorised contacts, the deadline evidence and the clinician escalation points. For each unconfirmed referral, add a short follow-up draft marked `DRAFT, NOT SENT`. Save `outputs/step-02-handover-note-writer.md`.
    **Gate before step 3:** no line reorders clinical care, and every draft uses only facts from the records.
 
-3. **Check and hand back.** Check that each state matches its proof, that no clinical content is left, that every follow-up is marked `DRAFT, NOT SENT` and that every referral appears once. Then build the result below.
+3. **Check and hand back.** Check that each state matches its proof, that no clinical content is left, that no patient identifier remains beyond what the clinic's rules allow (list any you find under MISSING or CHECKS MISSED), that every follow-up is marked `DRAFT, NOT SENT` and that every referral appears once. Then build the result below.
 
 ## What you hand back
 
@@ -103,7 +105,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 ## What to do with the result
 
 Offer one next step in a short question, and say the user can type their own:
-- **Keep checking the records over time** with the Referral administration evidence review assistant.
+- **Keep checking the records over time** with the Clinic referral handover reviewer.
 - **Edit and send a follow-up** yourself, once a person at the clinic has read the draft.
 - **Run this again** at the next handover with the updated records.
 

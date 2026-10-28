@@ -30,7 +30,7 @@ credits:
   - title: batch-image skill
     by: dLazy
     url: https://github.com/dlazy-ai/ecommerce-skills/tree/main/skills/batch-image
-    used: Used under the MIT licence. We gave it a plain name and added English notes, an English batch loop that skips the CSV header, a spending-cap warning, and a manual check in place of a missing skill.
+    used: Used under the MIT licence. We gave it a plain name and added English notes, an English batch loop that skips the CSV header, made the original Chinese loops skip the header row too so it is not sent as a paid image job, a spending-cap warning, and a manual check in place of a missing skill.
   - title: Original author
     by: dLazy
     url: https://github.com/dlazy-ai

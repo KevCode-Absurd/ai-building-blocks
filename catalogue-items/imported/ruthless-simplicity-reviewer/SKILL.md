@@ -278,7 +278,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## Further Reading
 
-This skill is based on documented accounts of Steve Jobs' product and design review practices. Note: the three book links below carry the original author's Amazon affiliate tag (tag=wondelai00-20), so the author may earn a fee if you buy through them. Tell the user this if you share them.
+This skill is based on documented accounts of Steve Jobs' product and design review practices. The three book links below are plain Amazon links. The original author's affiliate tag was removed from this copy.
 
 - [*"Steve Jobs"*](https://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537) by Walter Isaacson
 - [*"Insanely Simple: The Obsession That Drives Apple's Success"*](https://www.amazon.com/Insanely-Simple-Obsession-Drives-Success/dp/1591846218) by Ken Segall

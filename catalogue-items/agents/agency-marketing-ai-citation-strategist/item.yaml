@@ -8,14 +8,12 @@ role: make
 job: organic
 level: intermediate
 inputs:
-  - type: business_profile
+  - type: question
+    required: true
+  - type: web_page
     required: true
   - type: competitor_set
-    required: false
-  - type: source_text
-    required: false
-  - type: web_page
-    required: false
+    required: true
   - type: audit_report
     required: false
 outputs:
@@ -46,4 +44,5 @@ credits:
     by: Michael Sitarzewski and Agency Agents contributors
     url: https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/marketing/marketing-ai-citation-strategist.md
     used: Original agent profile, preserved in references/source-agent.md; AI Blocks
-      adds setup and review instructions.
+      adds setup and review instructions. On 2026-10-28 we matched the SKILL.md input
+      note to the brand, site and rival inputs and added a when-not-to-use line.

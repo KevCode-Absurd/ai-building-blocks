@@ -35,7 +35,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-The "Before you start" block above is shared text. This job reads refunds and returns, so it needs no brand voice or brand facts. Skip its brand brain steps and its "From the brand brain, read" line. The run starts when the owner starts it (the schedule says the 3rd of each month, but nothing starts on a timer unless a scheduler is connected).
+In the "Before you start" block above, the tool connection is the store connection below, and the spreadsheet is your product costs. This job reads refunds and returns, so it needs no brand voice or brand facts. The run starts when the owner starts it (the schedule says the 3rd of each month, but nothing starts on a timer unless a scheduler is connected).
 
 - **A store connection** (required): read access to orders, refunds and returns, through the Shopify tools the skills below use. Your store admin has to grant this access, for example through an app or connector with read permission, and your Shopify plan or the connector may limit or charge for it, so check first. Without a connection, ask for exports of refunds and returns with product, reason, dates and amounts.
 - **Product costs** (strongly advised): so the cost of returns includes written-off stock. Missing costs are marked `MISSING:`.
@@ -80,7 +80,7 @@ If the owner approves a change in clear words, make only that change and write w
 - **Watch next month:** the 1 to 3 products or numbers that decide the next run.
 - **Files:** each step's file. Then every `MISSING:` line in one list.
 
-Next steps that follow from the fix: if the listing misleads, rewrite the photos or copy for that product. If the cause is fit, add a size guide. If it is damage, check packaging or ask the supplier. The pick-pack, order hold and bulk edit links in "After this" are shared suggestions and fit only the packaging case or a bulk listing fix, so offer one only then.
+Next steps that follow from the fix: if the listing misleads, rewrite the photos or copy for that product. If the cause is fit, add a size guide. If it is damage, check packaging or ask the supplier. Offer the link in "After this" that matches the fix: the Product description writer for a listing that misleads or needs a sizing note, the Packaging brief writer for damage, and the catalogue review for gaps across many listings.
 
 ## Checks before you hand it back
 - Rates are set against the store's overall rate, with the sums shown.

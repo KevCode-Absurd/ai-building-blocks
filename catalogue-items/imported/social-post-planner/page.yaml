@@ -35,7 +35,7 @@ how_to_use:
   - Share your story, your offers and a few topics. Say how often you can post (optional).
   - Ask for a content calendar first. Check that the mix of topics fits you.
   - Ask for drafts for each platform. Edit them so they sound like you before you post.
-  - "For listening, the Reddit, Hacker News and Bluesky recipes fetch live pages. That may break each site's rules, so use the official API or skip it. Some tools also need a paid plan or a key, so check before you start."
+  - "For listening, the Reddit, Hacker News and Bluesky recipes fetch live pages. That may break each site's rules, so use the official API or skip it. Some tools also need a paid plan or a key, so check before you start. Posting straight from your AI needs your own scheduling tool (such as Buffer or Typefully) linked by an MCP server or API, which may be paid."
   - "You end with a 4-week calendar (posts per platform per week), then a draft for each post."
   - "The skill text is long. If your AI cuts it off, paste the sections on pillars, hooks and the content calendar first, then the rest."
   - "Next: plan the bigger picture with Content strategy planner. Before you schedule, read each draft once and cut any line that sounds like a stock AI phrase."

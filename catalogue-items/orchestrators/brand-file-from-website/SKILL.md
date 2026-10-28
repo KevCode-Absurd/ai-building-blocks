@@ -48,12 +48,12 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 - **A stop** (a required input is missing or a check fails): stop at that step and go to the hand-back summary.
 
 ## Steps
-1. **Build the brand file.** Use the skill `website-brand-brain-builder`. Turns your site into a brand file with every gap marked unknown, disputed or inferred.
-2. **Plan the founder interview.** Use the skill `founder-interview-planner`. Give it the brand brain from the steps before. Reads the gaps in the brand file and turns them into a short ranked interview plan.
+1. **Build the brand file.** Use the skill `website-brand-brain-builder`. Give it your site link, plus any customer words, results export and product facts. Turns your site into a brand file with every gap marked unknown, disputed or inferred. Out: eight brand files.
+2. **Plan the founder interview.** Use the skill `founder-interview-planner`. Give it the brand brain from the steps before. Reads the gaps in the brand file and turns them into a short ranked interview plan. Out: about 10 ranked questions, each tied to the gap it fills, and a written form for facts and files.
 
 Pause here: Hold the founder call, send the written questions, and file each answer in the brand file.
 
-3. **Build the brand guide.** Use the skill `brand-guide-builder`. Give it the brand brain from the steps before. Uses the finished brand file, now with the founder's answers, to build a guide and a tokens file.
+3. **Build the brand guide.** Use the skill `brand-guide-builder`. Give it the brand brain from the steps before. Uses the finished brand file, now with the founder's answers, to build a guide and a tokens file. Out: a printable HTML brand guide, a colour contrast table and a tokens file.
 4. **Hand back.** End with a section headed `HAND-BACK SUMMARY`: each step's file, any step not run and why, then every `MISSING:` line from all steps in one list.
 
 ## What you hand back

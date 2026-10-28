@@ -44,7 +44,7 @@ output_sample:
     - Your domain name for HTTPS (optional)
     - Your target cluster and namespace
   prerequisites:
-    - kubectl set up with access to a real cluster
+    - kubectl set up with access to a real cluster. Managed clusters such as EKS, GKE and AKS are paid cloud services and need your own account and sign-in.
     - An AI that can run commands on your computer
     - Helm installed, only if you want a Helm chart
   output:

@@ -54,7 +54,7 @@ Save each step's result as `outputs/step-NN-<skill>.md` before the next step sta
 ## Steps
 1. **Subscription offer designer.** Use the skill `subscription-offer-designer`. Designs the subscription offer from your products and order data. Hands the offer to steps 2 and 3. Saved as `outputs/step-01-subscription-offer-designer.md`: the plans, prices and what each includes.
 2. **Subscription payback checker.** Use the skill `subscription-payback-checker`. Give it the offer from the steps before. Tests the designed offer against cost and payback before launch. It gives a score out of 100 and a call of go, slow down or switch to bundles. If the call is switch to bundles, stop here and hand back. Saved as `outputs/step-02-subscription-payback-checker.md`.
-3. **Subscription cancel flow builder.** Use the skill `subscription-cancel-flow-builder`. Give it your own cancel reasons, the offer from step 1 and the payback check from step 2. Builds the cancel flow with save offers kept inside the payback limit. Saved as `outputs/step-03-subscription-cancel-flow-builder.md`. Check: no save offer goes past the limit from step 2.
+3. **Subscription cancel flow builder.** Use the skill `subscription-cancel-flow-builder`. Give it your own cancel reasons, the offer from step 1 and the payback check from step 2. Builds the cancel flow with save offers kept inside the payback limit. Saved as `outputs/step-03-subscription-cancel-flow-builder.md`. Check: no save offer goes past the limit from step 2. Also check, for each market you sell in, that cancelling is as easy as signing up and that the flow meets that market's auto-renewal and online cancel rules (for example, a save offer or pause can be shown but never blocks the cancel). List each market and its rule as checked, or `MISSING: <market> cancel rules`. This is not legal advice: have a person who knows those rules confirm the flow before it goes live.
 4. **Billing reminder and confirmation writer.** Use the skill `billing-reminder-and-confirmation-writer`. Give it the cancel flow from step 3. Writes the billing and reminder emails to sit beside it. Hands the emails to step 5. Saved as `outputs/step-04-billing-reminder-and-confirmation-writer.md`. Check: every email states the price and the cancel route plainly.
 
 Pause here: Put the subscription live and let it run for about 60 days, then export subscriber and cancel data.
@@ -70,7 +70,7 @@ Pause here: Pick the lapse points the audit flagged and export the orders of sub
 6 step files and the summary. The last file holds the plan.
 
 ## Check before you hand it back
-- The payback call is on file, and the run stopped there if it said switch to bundles. No save offer is more generous than the payback limit. Steps 5 and 6 used real exports, not estimates. If one is missing, the run stopped at that step and says why.
+- The payback call is on file, and the run stopped there if it said switch to bundles. No save offer is more generous than the payback limit. The cancel flow was checked against each market's auto-renewal and cancel rules, or each gap is a `MISSING:` line. Steps 5 and 6 used real exports, not estimates. If one is missing, the run stopped at that step and says why.
 - The steps ran in order, and each one used the result of the one before.
 - Nothing was invented to fill a gap. Every gap is a `MISSING:` line.
 - Nothing was sent, published or paid for without a clear yes.

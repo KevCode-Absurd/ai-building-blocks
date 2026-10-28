@@ -18,7 +18,7 @@ when:
   - A vendor or extension you rely on was sold, or changed hands, and you want to know if it is still safe.
   - You are about to hire a developer for custom code and want a clean starting list.
 not_for:
-  - "You only want a quarterly review of app permissions: use the Store security checkup."
+  - "You only want a quarterly review of app permissions: use the Store security reviewer."
   - "You want to check a live site yourself or have a fix applied: ask a developer, because this skill only reads the lists you paste."
   - "You want to know if your ad copy will be accepted: this checks store code, so use an ad review step instead."
 
@@ -63,7 +63,7 @@ how_it_works:
   - title: Removes the unused
     text: Marks duplicates and unused items for removal and names one owner for the tag manager.
   - title: Flags high risk
-    text: Looks for plain http loading, unknown or expired domains, no recent updates and no security contact.
+    text: Rates plain http loading and unknown or expired domains High. No recent updates or no security contact is Medium, or High for old code on checkout and account pages.
   - title: Watches ownership
     text: Notes when a vendor, extension or package changed hands, since new owners can add hidden code.
   - title: Checks names and versions
@@ -121,7 +121,7 @@ improve:
   - Add a rule such as "no chat widget on checkout" and have it flag breaches.
   - Add your last audit date and results so it shows what changed.
   - Save the final list to your brand file and refresh it each quarter.
-  - Pair it with the Store security checkup, which owns the quarterly app review.
+  - Pair it with the Store security reviewer, which owns the quarterly app review.
 
 works_best_with:
   tools:

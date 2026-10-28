@@ -9,7 +9,7 @@ description: "Paste your product link. Get the buyer, offer, growth goal and mis
 
 **Gather first:** your product link (or its page text), your growth goal and deadline, your cash cap, your hours a week and any past tests. Only the product link or page text is required. Without the rest, those headings are marked MISSING.
 
-Needs no account, API key or paid tool, and no scraping. Paste your product URL or page text, then add your goal, cash cap and weekly hours if you know them. If your AI cannot browse, paste your page text. It saves business-profile.md, which the Growth channel test picker reads next.
+Needs no account, API key or paid tool, and no scraping. Paste your product URL or page text, then add your goal, cash cap and weekly hours if you know them. If your AI cannot browse, paste your page text. It saves business-profile.md, which the Growth channel shortlist planner reads next.
 
 When not to use: if you have no public product page and no text to paste, write a short sales plan with someone who knows your buyers first. If you already have a profile and want channels ranked, use the Growth channel shortlist planner (traction-channel-ranker).
 
@@ -58,13 +58,13 @@ Save business-profile.md with these headings, in this order:
 
 Separate public price from revenue per acquired account. A blocked URL produces a provisional profile with explicit MISSING fields, not an invented company description.
 
-Use one dated quantitative growth goal and work backwards to the next bottleneck. If retention is poor, propose a bounded learning test and identify the product issue before recommending larger acquisition spend. If browsing fails, ask only for whichever of these are still missing, and nothing else, before you go on:
+Use one dated quantitative growth goal and work backwards to the next bottleneck. If retention is poor, record it as the first bottleneck, name the likely product issue, and note that a small learning test should come before larger acquisition spend. The channel pickers design that test; do not design it here. If browsing fails, ask only for whichever of these are still missing, and nothing else, before you go on:
 1. The page text for your product, pricing and who it is for.
 2. Your growth goal and deadline.
 3. Your cash cap and hours per week.
 4. Any past tests and their results.
 
-Mark anything not supplied as MISSING. Hand the saved profile to the ranker.
+Mark anything not supplied as MISSING. Hand the saved profile to the ranker. Last, under CHECKS MISSED, list any page you could not read and any fact you could not verify, one line each, or write "none".
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this

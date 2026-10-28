@@ -24,7 +24,7 @@ How to start:
 <!-- /needs -->
 
 ## Purpose
-Scans all customer records and reports the breakdown of email and SMS marketing consent status (subscribed, unsubscribed, pending, never asked). Used for compliance audits, GDPR/CAN-SPAM reviews, and understanding the addressable marketing audience. Read-only — no mutations.
+Scans all customer records and reports the breakdown of email and SMS marketing consent status (subscribed, unsubscribed, pending, no opt-in recorded). Used for compliance audits, GDPR/CAN-SPAM reviews, and understanding the addressable marketing audience. Read-only — no mutations.
 
 ## Prerequisites
 - Authenticated Shopify CLI session: `shopify store auth --store <domain> --scopes read_customers`
@@ -50,7 +50,7 @@ Scans all customer records and reports the breakdown of email and SMS marketing 
 
 2. Count customers by consent state for each channel
 
-3. Calculate: addressable audience (subscribed), at-risk (pending), unreachable (unsubscribed/not asked)
+3. Calculate: addressable audience (subscribed), at-risk (pending), unreachable (unsubscribed/no opt-in recorded)
 
 4. Write the CSV file `consent_audit_<YYYY-MM-DD>.csv` (columns under Output Format) to the working folder and tell the user where it is saved. The SMS summary has no pending count, so an SMS customer in any other state is not shown in those counts.
 
@@ -118,12 +118,12 @@ MARKETING CONSENT REPORT
     Subscribed:    <n>  (<pct>%)  ← addressable
     Unsubscribed:  <n>  (<pct>%)
     Pending:       <n>  (<pct>%)
-    Not asked:     <n>  (<pct>%)
+    No opt-in:     <n>  (<pct>%)
 
   SMS Marketing:
     Subscribed:    <n>  (<pct>%)
     Unsubscribed:  <n>  (<pct>%)
-    Not asked:     <n>  (<pct>%)
+    No opt-in:     <n>  (<pct>%)
   Output: consent_audit_<date>.csv
 ══════════════════════════════════════════════
 ```
@@ -161,5 +161,6 @@ If they pick one and that skill is added here, carry straight on with what you j
 ## Best Practices
 - "Subscribed" is your addressable marketing audience — a low subscription rate may indicate checkout opt-in is not prominent enough.
 - "Pending" means a customer provided their email but has not confirmed consent — this is common for double opt-in flows.
+- "No opt-in" (Shopify's `NOT_SUBSCRIBED` state, counted as `not_asked` in the JSON) means no opt-in is recorded. It does not show whether the customer was ever asked, so do not report it as "never asked" in a consent review.
 - Run before major campaigns to get an accurate count of the addressable audience; your ESP will show a different number if it has additional unsubscribes not synced back to Shopify.
 - GDPR compliance note: customers in the EU with `marketingOptInLevel: SINGLE_OPT_IN` may require a re-consent campaign depending on your legal basis for processing.

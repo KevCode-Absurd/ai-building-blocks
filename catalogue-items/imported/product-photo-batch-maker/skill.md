@@ -149,7 +149,7 @@ while IFS=, read -r SKU IMG DESC; do
     --prompt "电商商拍图。图1 是商品：${DESC}。商品的颜色、材质纹理、款式细节必须与图1完全一致。${SPEC}" \
     --images "$IMG" --size 1:1 --resolution 2k \
     --save "docs/batch-image/out/${SKU}.jpg"
-done < manifest.csv
+done < <(tail -n +2 manifest.csv)   # skip the sku,image,desc header row (AI Blocks fix)
 ```
 
 **规范段一旦改动就必须整批重跑**——否则同一批里会出现两种视觉。
@@ -235,6 +235,7 @@ dlazy seedream-5.0 \
 
 # complex call: 完整流水线（清单驱动 + 5 路并发 + 3 次重试 + 汇总报告）
 cat > manifest.csv <<'CSV'
+sku,image,desc
 SKU001,docs/batch-image/sku-a-sweater.jpg,军绿色麻花针织圆领毛衣，落肩宽松版型
 SKU002,docs/batch-image/sku-b-shoes.jpg,黑色亮面皮革布洛克德比鞋，厚底系带
 CSV
@@ -255,7 +256,7 @@ run_one() {
 }
 export -f run_one; export SPEC
 
-xargs -P 5 -I{} bash -c 'run_one "{}"' < manifest.csv | tee docs/batch-image/report.csv
+tail -n +2 manifest.csv | xargs -P 5 -I{} bash -c 'run_one "{}"' | tee docs/batch-image/report.csv   # skips the header row (AI Blocks fix)
 awk -F, '{c[$2]++} END{printf "\n=== 汇总 ===\n"; for(k in c) printf "%s: %d\n", k, c[k]}' docs/batch-image/report.csv
 
 # 先估价：单价 × SKU 数

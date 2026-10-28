@@ -15,10 +15,11 @@ when:
   - The relevant facts are spread across files or notes and need one consistent review.
   - You want the work and its checks saved so another person can review it.
 you_give:
-  - The award agreement, fund restrictions, approved budget, transaction records, reporting period and actual receipts.
+  - "Start here: the award agreement and your transaction records for the reporting period."
+  - The approved budget, the fund restrictions and the actual receipts.
   - The reporting period as start and end dates, the currency, and the fund or award identifier that appears on each transaction row.
-  - The intended reader, deadline and limits on what may be changed.
-  - Earlier work and approved examples, if available.
+  - The intended reader, deadline and limits on what may be changed (optional).
+  - Earlier work and approved examples (optional).
   - "Available tools for the finished output: A compatible spreadsheet engine."
 you_get:
   - A reconciled grant spending table, variance brief and evidence gaps.

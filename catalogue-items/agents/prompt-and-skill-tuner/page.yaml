@@ -23,6 +23,7 @@ you_give:
   - 10 to 20 real test cases, each with what a good answer looks like
   - Your pass line, if you have one (optional)
   - Examples of answers you did not like (optional)
+  - A paid model or API key only if you choose to test that way. By default it tests by hand in the chat, and it runs no script that comes with a skill without your yes
 you_get:
   - Scores before and after, with the rounds used out of four
   - The new version as a copy beside your original
@@ -92,6 +93,9 @@ output_shape: |-
 
   FILES AND MISSING
     <each round's file> | MISSING: <every line>
+
+  IF THE BASELINE ALREADY PASSES
+    RESULT says passed | rounds 0 of 4 | the baseline score. NEW VERSION, WHAT CHANGED and UNDONE each say "none: no change made". STILL FAILING lists any check below the pass line, or "none".
 tweaks:
   - what: Your test cases
     how: Use real inputs, including ones that went wrong. Ten varied cases beat thirty that look alike.

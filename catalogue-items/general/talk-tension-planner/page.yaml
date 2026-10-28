@@ -19,7 +19,7 @@ when:
   - You want people to follow a talk with no briefing before it.
 not_for:
   - "You only need to show data with no decision to make: send a plain summary or a simple chart instead."
-  - "You want a final check on slide count and text size: use the Pitch deck 10/20/30 checker."
+  - "You want a final check on slide count and text size: use the Pitch deck presentation reviewer."
   - "You have no outline yet: write a rough list of your points first, then come back."
 
 you_give:

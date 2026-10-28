@@ -27,7 +27,7 @@ you_get:
 how_to_use:
   - Download the complete pack and give its instructions to your AI.
   - Give it your before image, your after idea and the change you want.
-  - Check the lock table against your before image before you use anything.
+  - Check the lock table against your before image before you use anything. The transition prompt is a short timeline in seconds, such as six seconds, ending in a brief hold on the final frame.
   - Make the after frame in an image tool, approve it against the lock table, then run the transition prompt in a video tool. If the endpoints do not match, fix the after frame first. More motion words will not repair it.
   - Image and video tools may need a paid plan or credits. This workflow makes prompts and checks only.
 how_it_works:

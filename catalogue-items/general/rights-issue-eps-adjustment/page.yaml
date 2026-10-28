@@ -7,9 +7,9 @@ thinking: high
 thinking_why: "The factor only applies to a pro-rata offer, so the terms must be confirmed before past EPS is restated."
 subhead: A theoretical ex-rights price and retrospective bonus-factor workpaper. Share pre-rights market price, subscription price, existing and rights shares, issue timetable and historical EPS.
 explain: |-
-  A theoretical ex-rights price and retrospective bonus-factor workpaper.
+  When a company sells new shares to its own holders below the market price, part of the issue works like free bonus shares. Past earnings per share must then be restated so the years compare fairly. This works out the theoretical price after the issue and the bonus factor, and restates past EPS.
 
-  Public equity and share counts. Illustrative figures. (4 × $10 + 1 × $5) / 5 = $9 theoretical price. Bonus factor 10/9 restates $2 comparative EPS to $1.80. A $10 subscription yields no bonus adjustment.
+  Illustrative figures. (4 × $10 + 1 × $5) / 5 = $9 theoretical price. Bonus factor 10/9 restates $2 comparative EPS to $1.80. A $10 subscription yields no bonus adjustment.
 when:
   - You need a theoretical ex-rights price and retrospective bonus-factor workpaper.
   - You work on public equity and share counts and need traceable calculations.
@@ -58,12 +58,12 @@ output_sample:
     - name: CHECKS MISSED
       contains: Checks that failed or could not run, or the word none.
 how_it_works:
-  - title: 1. Confirm the issue is a pro-rata rights offer and identify the cum-rights price immediately before exercise
-    text: Confirm the issue is a pro-rata rights offer and identify the cum-rights price immediately before exercise.
-  - title: 2. Divide pre-issue market value plus subscription proceeds by total shares to obtain theoretical ex-rights price; calculate the bonus factor as pre-rights price divided by theoretical price
-    text: Divide pre-issue market value plus subscription proceeds by total shares to obtain theoretical ex-rights price; calculate the bonus factor as pre-rights price divided by theoretical price.
-  - title: 3. Apply a bonus factor of at least one to comparative EPS and pre-rights weighted shares; time-weight actual new shares separately in the current-period EPS ledger
-    text: Apply a bonus factor of at least one to comparative EPS and pre-rights weighted shares; time-weight actual new shares separately in the current-period EPS ledger.
+  - title: Confirms the offer
+    text: Checks that every holder was offered new shares in proportion to their holding, and finds the last share price before the rights traded separately.
+  - title: Works out the price and factor
+    text: Market value before the issue plus the cash raised, divided by all shares, gives the theoretical price. The price before the issue divided by that gives the bonus factor.
+  - title: Restates past EPS
+    text: Divides each earlier period's EPS by the bonus factor, one row per period. New shares in the current period are time-weighted separately.
 output_shape: |-
   A theoretical ex-rights price and retrospective bonus-factor workpaper.
   Scope and dated sources

@@ -99,7 +99,7 @@ output_shape: |
   1. <check, where to look>
 
   SCORE  <n>/100  (<checks passed> of 7, <points>)
-  CHECKS NOT RUN
+  CHECKS MISSED: <none | checks not run or failed>
   MISSING: <what>
 
 tweaks:

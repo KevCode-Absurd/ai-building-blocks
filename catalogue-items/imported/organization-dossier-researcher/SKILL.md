@@ -116,6 +116,8 @@ Forcing choice.
 
 Skip for sales/investment/acquisition/competitive intel (low sensitivity); ask for journalism/personal vetting (high sensitivity).
 
+Whatever the answer to Q6, and for every purpose, leave out of the dossier a person's home address, family members, health, sex life, religion, and personal phone or email, unless they made it public in their professional role and it bears on the hypothesis. (Added by AI Blocks.)
+
 **Stop condition:** After Q6 (or earlier with dependency skips), commit and start Phase 2. Never re-open intake after Phase 2 begins.
 
 ## Phase 2: Subject Disambiguation
@@ -135,9 +137,9 @@ Routed by Q2 subject type. See [`references/subject_type_source_matrix.md`](refe
 
 ### Person
 
-- LinkedIn (manual fetch or LinkedIn MCP if BYOK)
+- LinkedIn (the user opens the page and pastes what it shows, or a LinkedIn MCP if BYOK. LinkedIn's terms forbid automated collection, so do not fetch or scrape its pages)
 - Personal website
-- Twitter/X (rate-limited; if blocked, skip it and say so)
+- Twitter/X (check the site's terms first; if automated access is blocked or forbidden, skip it and say so)
 - GitHub (if technical subject)
 - Google Scholar (if academic)
 - News (WebSearch + WebFetch)
@@ -151,7 +153,7 @@ Routed by Q2 subject type. See [`references/subject_type_source_matrix.md`](refe
 - News (WebSearch + WebFetch)
 - GitHub (for tech orgs)
 - Glassdoor + Comparably (sentiment; check each site's terms first. If automated access is blocked or forbidden, do not work around it: use web search results instead and say so)
-- LinkedIn company page
+- LinkedIn company page (the user pastes it, or a LinkedIn MCP if BYOK; do not scrape it)
 
 ### Nonprofit
 
@@ -300,7 +302,7 @@ new ExternalHyperlink({
 | Subject name ambiguous | Refuse to proceed. Re-ask Q1 with disambiguating identifier. |
 | User refuses to state hypothesis | Push back once. If still refused, fall back to "what's the most surprising thing I could find?" implicit hypothesis. Flag in audit. |
 | Subject has zero public footprint | Surface explicitly. Suggest different name or early-stage. Don't fabricate. |
-| LinkedIn scrape blocked | Note in audit; fall back to WebSearch; suggest user verify manually. |
+| LinkedIn not available | Do not scrape it. Note in audit; fall back to WebSearch; ask the user to check the page by hand. |
 | SEC EDGAR fails | Retry once. If still failing, note "public filings not retrieved" and continue. |
 | Sentiment data sparse | Mark reputation section as "limited public signal"; don't infer from training. |
 | Sensitive topic surfaces (Q6 exclusion) | Exclude from DOCX. Note in chat (not in DOCX) so user knows the exclusion was honored. |

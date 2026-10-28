@@ -9,7 +9,7 @@ subhead: A count of how many of your Shopify customers agreed to email and SMS m
 explain: |
   A count of how many of your Shopify customers agreed to email and SMS marketing, and how many did not. It is useful for privacy reviews and for knowing your real reachable audience.
 
-  It reads every customer record, 250 at a time, and sorts each into subscribed, unsubscribed, pending or never asked, separately for email and text. Then it works out three numbers: customers with a recorded yes, people at risk because consent is pending, and people you cannot reach. You can check email, SMS or both. The counts show what Shopify has recorded. They are not a legal ruling on who you may contact. It only reads data and changes nothing, so it is safe to run any time. It needs a signed-in Shopify CLI with permission to read customers.
+  It reads every customer record, 250 at a time, and sorts each into subscribed, unsubscribed, pending or no opt-in recorded, separately for email and text. Then it works out three numbers: customers with a recorded yes, people at risk because consent is pending, and people you cannot reach. You can check email, SMS or both. The counts show what Shopify has recorded. They are not a legal ruling on who you may contact. It only reads data and changes nothing, so it is safe to run any time. It needs a signed-in Shopify CLI with permission to read customers.
 when:
   - You are preparing for a GDPR or email-law review.
   - You want to know how many customers have a recorded email yes in Shopify.
@@ -48,8 +48,8 @@ output_sample:
     - name: Step log
       contains: One line per step with what was asked and how many results came back.
     - name: Email marketing counts
-      contains: Subscribed, unsubscribed, pending and never asked, each as a number and a percentage.
+      contains: Subscribed, unsubscribed, pending and no opt-in recorded, each as a number and a percentage.
     - name: SMS marketing counts
-      contains: Subscribed, unsubscribed and never asked, each as a number and a percentage.
+      contains: Subscribed, unsubscribed and no opt-in recorded, each as a number and a percentage.
     - name: consent_audit_<date>.csv
       contains: One row per customer with email, SMS consent state and the date consent last changed.

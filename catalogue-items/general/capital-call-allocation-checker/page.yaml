@@ -15,7 +15,7 @@ explain: |-
 when:
   - You have an approved call and need one investor's share of it.
   - Some investors are excused or in default and you doubt the divisor.
-  - An investor's remaining commitment looks too low for the call.
+  - An investor's unfunded balance looks too low for the call.
   - Your fund administrator sent an allocation and you want to check it.
 you_give:
   - The approved call amount
@@ -33,7 +33,7 @@ how_to_use:
   - Open the skill in Claude, ChatGPT or Gemini, or paste it in.
   - Attach the fund agreement and the call notice. Give the amounts and the date.
   - Ask it to list who is in the divisor and why anyone is left out.
-  - Check that the share is cut back to the investor's remaining balance and the rest is shown as a shortfall.
+  - Check that the share is cut back to the investor's unfunded balance and the rest is shown as a shortfall.
   - Read MISSING and CHECKS MISSED before you rely on the result.
   - The bundled check script needs Node.js 20 or later. Without it, the AI does the sums in the chat.
 how_it_works:
@@ -83,7 +83,7 @@ terms:
     meaning: An independent comparison that explains a difference between matching records or financial schedules.
 not_for:
   - "You need to find out how much one investor can still be called after a change or payout: use the Remaining fund commitment checker."
-  - "You want one pack that checks the remaining balance and the call split together: use Reconcile a private fund capital call."
+  - "You want one pack that checks the unfunded balance and the call split together: use the Private fund commitment and capital call checker."
   - "You want to move a shortfall to other investors or send notices. This checker does neither; fund counsel decides."
 output_sample:
   input:

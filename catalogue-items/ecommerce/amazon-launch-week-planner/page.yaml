@@ -149,3 +149,4 @@ terms:
     meaning: The day the listing goes live. Set it to your launch day.
   - term: Rank
     meaning: Where your listing shows in Amazon search results.
+next: [amazon-ppc-launch-builder, amazon-inbound-stock-planner, amazon-monthly-account-keeper]

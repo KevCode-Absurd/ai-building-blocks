@@ -39,6 +39,7 @@ how_to_use:
   - Add your competitor audit if you have one, plus the size of your catalogue or menu. No audit? Name your type of site and say you have no audit. It then works from its notes for each type of site. The Competitor site experience auditor and the Page design standards checker are in this library. The companion skills information-architecture and frontend-component-build are not. If you do not have an audit, use the matching references/shape-*.md file, such as shape-ecommerce-catalog.md, as your audit substitute. The checklist you get is then general, so check it against two or three real competitor sites before you build.
   - "It writes a notes file named composition-[site-shape]-[brand-slug].md, or gives the notes in the chat. Check its five sections: the site shape, the build decisions, the conventions checklist, the wedge and the hand-off list. Add every convention marked absent to your plan."
   - Pass the hand-off list to your designer, or to the design and component skills, to build the pages.
+  - "Trust signals must be real. Show only reviews, certifications, client logos, licences and insurance you can prove. In a demo, label any placeholder as a sample so no one reads it as real."
 output_sample:
   input:
     - Your industry or type of site, such as store, restaurant or maker

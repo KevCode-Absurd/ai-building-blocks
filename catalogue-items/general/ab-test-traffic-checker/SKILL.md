@@ -7,6 +7,8 @@ description: Use when someone quotes a conversion rate, wants to know whether a 
 
 A test only tells you something if it reaches a sample big enough to see the change you care about. Small stores often can't reach that sample in a sensible time, and that's fine to know before anyone redesigns anything. This skill reads the numbers you have, picks the number to judge the page by, and does the sum.
 
+**When not to use:** with only a few hundred visits a week, skip testing: ship the obvious fixes and compare revenue per visitor before and after. For a full review of what is wrong on the page, use the Landing page auditor. With no analytics or order numbers yet, set up tracking first.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 Use the material below to do this job. If facts or tool access are missing, explain what you can finish and what must wait.

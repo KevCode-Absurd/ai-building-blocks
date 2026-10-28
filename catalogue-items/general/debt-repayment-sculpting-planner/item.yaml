@@ -8,7 +8,7 @@ job: ops
 level: advanced
 inputs:
   - type: document
-    required: true
+    required: false
   - type: spreadsheet
     required: false
   - type: contract

@@ -35,6 +35,7 @@ you_get:
 how_to_use:
   - Use an AI that can read your project files and run commands, like a coding assistant in your terminal or editor. A plain chat window cannot run your tests.
   - Gather your project folder path, your test command, any error logs and the recent commit range if you know it.
+  - Keep secrets out of the chat. The skill checks your .env file and service keys. Ask it to confirm each key is set without printing the value, and to test keys against test accounts, never your live production services.
   - Paste the skill into your AI, then name the feature and describe what is broken. The skill mentions three companion skills (systematic debugging, verification before completion and scope). You do not need them. Your AI can follow the five phases without them.
   - Read the diagnosis report before you let it change anything. Check that the causes make sense.
   - Let it fix one issue at a time. If three fixes in a row cause new problems, it stops and asks you whether to rethink the design.

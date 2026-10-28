@@ -45,7 +45,7 @@ How to start:
 
 ## What you need
 
-This list is the inputs for this workflow. The "Before you start" block above is shared text: skip its lines for a buyer brief, ad copy, an objection map, a spreadsheet and a question. You start with your offer, price, buyer and success action. The counts sheet is not needed at the start: it arrives at the second pause.
+This list is the inputs for this workflow. The "Before you start" block above is shared text. Read its "Your question" line as your offer, price, buyer and success action, which is all you need to start. A buyer brief, ad copy and an objection map are optional. The spreadsheet is the counts sheet, which is not needed at the start: it arrives at the second pause.
 
 - **Your offer, price and buyer** (required): what you sell, what it costs and who it is for.
 - **What counts as success on the page** (required): a sale, a signup or a call.

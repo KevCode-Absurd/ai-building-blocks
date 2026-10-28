@@ -44,7 +44,7 @@ The check below only tests whether yfinance is installed. It changes nothing. Th
 !`python3 -c "exec('try:\n import yfinance\n print(\'yfinance \' + yfinance.__version__ + \' installed\')\nexcept Exception:\n print(\'YFINANCE_NOT_INSTALLED\')')"`
 ```
 
-If `YFINANCE_NOT_INSTALLED`, install it:
+If `YFINANCE_NOT_INSTALLED`, ask the user first, because this runs `pip install` on their computer. Once they agree, install it:
 
 ```python
 import subprocess, sys

@@ -136,7 +136,7 @@ See [references/review-response-templates.md](references/review-response-templat
 
 ## Mode 2: Service Area Pages
 
-AI Blocks note: every landmark, cross-street, zip code and neighborhood problem on these pages must come from the user or be marked [VERIFY] until the user checks it. Never invent a local fact.
+AI Blocks note: every landmark, cross-street, zip code, neighborhood problem and brand the business services on these pages must come from the user or be marked [VERIFY] until the user checks it. Never invent a local fact or a brand list.
 
 Service area pages rank for "[service] in [neighborhood]" searches — the highest-intent local queries.
 

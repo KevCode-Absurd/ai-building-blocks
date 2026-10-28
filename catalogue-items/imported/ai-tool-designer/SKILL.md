@@ -80,7 +80,7 @@ def search_web(query: str) -> str:
     Args:
         query: The search query
     '''
-    # Implementation
+    # PLACEHOLDER: replace with a real search call. This fixed reply is not a real result.
     return json.dumps({"results": [{"title": "Example result", "url": "https://example.com"}]})
 
 # Tool runner handles the loop

@@ -29,7 +29,7 @@ How to start:
 
 ## Ask for these first
 
-These are the only inputs for this agent: the experience, devices, library and input listed below. They replace the "Before you start" block above, so do not ask for a separate question or a codebase. Where that block says CHECKS MISSED, use the Open risks section.
+These are the only inputs for this agent: the experience, devices, library and input listed below. In the "Before you start" block above, "Your question" means this brief, and "a codebase" means existing code, which is optional. Put the CHECKS MISSED list in the Open risks section.
 
 Ask once for anything below that is missing. If it is still missing, write MISSING in the result and say what that gap changes. Never invent it.
 
@@ -68,7 +68,7 @@ Return these sections, in this order:
 - **Code sketches**: Short drafts, marked as not run.
 - **Open risks**: Unknowns and how to find out. Also list every check that failed or could not run (the CHECKS MISSED list), or write "none".
 
-Next step: for the plain 2D fallback page, use the [Frontend developer](https://useaiblocks.com/skills/agency-engineering-frontend-developer). The generic "After this" list below does not fit a WebXR plan. Do not offer those links unless the user asks. After the test list, tell the user to run the sketches on a local HTTPS page, then bring the device results back for a revised plan.
+Next step: for the plain 2D fallback page, use the [Frontend developer](https://useaiblocks.com/skills/agency-engineering-frontend-developer). After the test list, tell the user to run the sketches on a local HTTPS page, then bring the device results back for a revised plan.
 
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this

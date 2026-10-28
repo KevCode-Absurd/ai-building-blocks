@@ -5,9 +5,11 @@ description: "Separate operating cash investment from acquisition, currency and 
 
 # Noncash working-capital bridge
 
-Find how much cash a business put into operating working capital in one period, after taking out the balance changes that were not cash: acquisitions, currency moves and write-offs. This looks at one period's balance movement and splits it into operating cash investment and noncash items. The "Trailing-period financial bridge" follows a series of periods and does not split out the noncash items for a single period.
+Find how much cash a business put into operating working capital in one period, after taking out the balance changes that were not cash: acquisitions, currency moves and write-offs. This looks at one period's balance movement and splits it into operating cash investment and noncash items. The "Trailing year financial calculator" adds up a series of quarters and does not split out the noncash items for a single period.
 
-Have ready: opening and closing operating working capital, the signed acquisition, currency and write-off movements from the notes, the period end, and the currency and scale. For a wider look across a trailing period, use "Trailing-period financial bridge". For cash that came early from selling invoices to a factor, use "Factoring cash-flow timing bridge".
+Have ready: opening and closing operating working capital, the signed acquisition, currency and write-off movements from the notes, the period end, and the currency and scale.
+
+**When not to use:** for factoring, supplier finance or discontinued operations (split them into their own schedules first or ask your accountant; for invoices sold to a factor, use the "Invoice financing cash flow checker"); when you only have two balances and no notes on acquisitions, currency or write-offs (get the notes first, as this cannot guess them); for a trailing twelve-month total (use the "Trailing year financial calculator"); or for a full cash-flow statement or valuation (build a full model with your finance team).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

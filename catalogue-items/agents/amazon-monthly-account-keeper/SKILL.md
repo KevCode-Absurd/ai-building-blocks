@@ -39,7 +39,7 @@ How to start:
 <!-- /needs -->
 
 ## What you need
-These are the only inputs for this agent. They replace the "Before you start" block above, which asks for a brand brain. The Amazon steps below never use brand facts, voice or buyer quotes, so do not ask for a brand brain, its "Recommended steps" or its "From the brand brain, read" line. The product facts below are the only product input.
+These are the only inputs for this agent. The spreadsheet in "Before you start" means the product facts and the month's Amazon reports below. The Amazon steps never use brand facts, voice or buyer quotes, so do not ask for a brand brain. The product facts below are the only product input.
 
 - **Product facts** (required the first time): price, landed cost, size and weight of the packed unit, category. Saved after the first run as `amazon/products.md`.
 - **Fee and sales reports for the month** (required): fees by product, units sold, ad spend and ad sales, returns.

@@ -19,7 +19,7 @@ when:
   - Your supervisor asks for a team contract or a plan before the project starts.
 not_for:
   - "You work alone, or your course already sets the team rules: follow the course rules as they are."
-  - "You only need the action items from one meeting: use the Executive action register keeper."
+  - "You only need the action items from one meeting: use the Action item tracker."
   - "You are starting a project for a paying client: use the Prepare a clear client project kickoff workflow."
 you_give:
   - The assignment brief and marking rubric, or the list of deliverables (from your course page)
@@ -41,7 +41,7 @@ how_to_use:
 how_it_works:
   - title: Process and SOP writer
     text: "Writes the agreement from your rubric and each person's hours: roles, file rules, review rules, how to raise a blocker and handover rules. Hands step 2 the roles and the deliverables with their dates. Check before moving on: every deliverable has an owner or a MISSING line."
-  - title: Executive action register keeper
+  - title: Action item tracker
     text: "Reads your meeting notes and lists each commitment as one row. A person is the owner only if the notes show they agreed. Others are marked suggested, and missing dates are marked MISSING. Check at the end: every task points to a note or a rubric line."
 output_shape: |-
   TEAM AGREEMENT

@@ -55,12 +55,13 @@ you_get:
   - An order split across a main supplier and backups, with the reasons
   - A risk register, with a response for each risk and a continuity check
   - A savings plan in short, middle and long term steps, and an action list
+  - "One report under nine headings, in order: diagnosis, buying groups, supplier checks, total cost, order split, risk register, savings plan, actions, and open questions"
 how_to_use:
   - Download the pack from this page and add it to your AI as a skill. If you cannot, paste SKILL.md into a new chat, then paste references/source-agent.md after it.
   - Write a short brief. Cover what you buy, your volume, your current suppliers and what worries you most. Paste a spreadsheet of suppliers and spend if you have one.
   - Type "Make a sourcing plan", "Compare total cost for these options" or "Write this period's supply chain report", and paste the numbers.
   - Check the risk register first. Then check each sum against your own sheet. In a plain chat the AI does the arithmetic by hand and cannot run code.
-  - Verify every supplier you pick through a business record check, a sample order and a factory audit. The AI contacts no one and signs nothing, and it names no real supplier.
+  - Verify every supplier you pick through a business record check, a sample order and a factory audit. The AI contacts no one and signs nothing, and it names no real supplier. The marketplaces (such as 1688 and Alibaba) and business-record sites it points to may need an account, a login or a fee. You sign up and pay for them yourself.
   - Next, turn the plan into factory messages with the Supplier quote request writer, then compare the answers with the Supplier quote comparer.
 how_it_works:
   - title: Diagnose the position

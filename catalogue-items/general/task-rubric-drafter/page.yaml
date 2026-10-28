@@ -25,7 +25,8 @@ not_for:
 you_give:
   - "The task"
   - "The goal it shows"
-  - "Who it is for, such as their age or stage (optional)"
+  - "Who it is for, such as their age or stage (strongly advised)"
+  - "A sample of strong work or your marking standard (optional, but it grounds the top level)"
   - "Number of levels (optional)"
 
 you_get:

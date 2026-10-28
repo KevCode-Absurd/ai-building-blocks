@@ -29,7 +29,7 @@ How to start:
 
 ## What to get from the user
 
-These are the inputs that count. If the generic "Before you start" list above asks for something else, such as a question or source text, ignore that part.
+These are the inputs that count. "Your question" above means the company and the purpose below, the spreadsheet is the data it holds, and the document is its policies or last report. Do not ask for anything else.
 
 Not for: a drafted report from data you already have (use the [Sustainability reporting reviewer](https://useaiblocks.com/skills/esg-report-preparer)), whether EU sustainability rules apply to you (use the [EU sustainability report checker](https://useaiblocks.com/skills/eu-sustainability-report-checker)), or emissions worked out from shipping, energy and supplier data (use the [Supply chain carbon tracker](https://useaiblocks.com/skills/supply-chain-carbon-tracker)).
 

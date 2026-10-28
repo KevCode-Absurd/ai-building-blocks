@@ -30,7 +30,7 @@ credits:
   - title: item-repair skill
     by: dLazy
     url: https://github.com/dlazy-ai/ecommerce-skills/tree/main/skills/item-repair
-    used: Used under the MIT licence. We gave it a plain name and added English notes on the free route, the missing files and the author's example picture.
+    used: Used under the MIT licence. We gave it a plain name and added English notes on the free route, the missing files and the author's example picture, plus a line for every prompt that keeps the item's real cut and shape.
   - title: Original author
     by: dLazy
     url: https://github.com/dlazy-ai

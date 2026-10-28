@@ -91,6 +91,8 @@ This skill ships an **isolated, opt-in** bridge to `engineering/autoresearch-age
 
 Isolated: no hard dependency — autoresearch runs only on demand, and the loop edits `observations.json`, never the evaluator.
 
+Note from AI Blocks: the `/ar:` commands need the separate autoresearch-agent skill, which is not in this item. A higher `validated_insights` count is not always better: the loop can merge codes too broadly, so a pattern looks shared by more people than it really is. Have a person check each new or grown cluster against the raw quotes before you report it.
+
 ## References
 
 - `references/research_methods_canon.md` — Portigal *Interviewing Users*; Christensen/Ulwick JTBD; Rohrer's UX-research methods landscape (NN/g); Sauro & Lewis *Quantifying the User Experience*; Goodman/Kuniavsky.

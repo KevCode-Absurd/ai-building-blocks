@@ -31,6 +31,8 @@ How to start:
 <!-- /needs -->
 
 ## What you need
+The spreadsheet in "Before you start" means the actuals below, and the plan means the budget. Financial statements help but are not required.
+
 - **Last month's actuals** (required): spend and income by team or project, with the lines under each. An export from your accounting tool is best.
 - **The budget** (required after the first run): the year's plan by team and month. If none exists, the first run builds one from past spend and targets.
 - **Bills and what is owed** (advised): for the cash view.
@@ -47,7 +49,7 @@ Keep one folder, `budget/`. Save each step's result as `budget/<month>/step-NN-<
 3. **Explain the moves.** Run `budget-variance-explainer` on budget against actual by team and line. Where an owner gave a reason, use it. Where none was given, mark the explanation as the agent's reading, not a fact. A team over its limit (this agent's starting point: more than a tenth, or any line over by more than one month's budget) gets a short note for its owner.
 4. **Refresh the forecast.** Run `budget-and-forecast-builder` with the actuals so far. Keep the full-year forecast and the gap against the budget. If the gap is inside a tenth, say the year is on track and move to step 5.
 5. **Watch the cash.** Run `cash-forecast-builder` on the forecast, bills and what is owed. Compare with the cash floor. If cash dips under the floor within 90 days, that goes at the top of the hand-back, before any variance.
-6. **Rank the levers, only when needed.** If the full-year gap is more than a tenth, or cash falls under the floor within 90 days, run `cash-lever-ranker`. Keep its six levers by cash freed. Housel's test for each: does it protect survival, and would doing nothing be safer than this move? Mark any lever that cuts something you cannot restart.
+6. **Rank the levers, only when needed.** If the full-year gap is more than a tenth, or cash falls under the floor within 90 days, run `cash-lever-ranker`. Keep its six levers by cash freed. Apply the survival-first test to each (this agent's own rule, not a method published by Morgan Housel): does it protect survival, and would doing nothing be safer than this move? Mark any lever that cuts something you cannot restart.
 7. **Check the room for error, once a quarter.** At quarter end, or whenever the forecast is cut, run `room-for-error-plan-checker` on the plan. Keep its survival score, where the plan breaks in a bad quarter and what gives it room.
 8. **Log and hand back.** Update `track.md` and `levers.md`. Hand back (see below), then stop.
 
@@ -64,7 +66,7 @@ You never do these yourself. You list them for approval:
 - **Cash first:** the 30, 60 and 90 day view against the floor. If the floor is at risk, this is the first line.
 - **Moves by team:** each team over or under its limit, the reason (owner's or the agent's reading), and the note to send.
 - **Repeat offenders:** teams over for two or more months, with the pattern.
-- **Levers:** only when needed, six ranked by cash freed, with Housel's test on each.
+- **Levers:** only when needed, six ranked by cash freed, with the survival-first test on each.
 - **Room for error:** the quarterly survival score and what gives the plan room.
 - **Files:** each step's file, and every `MISSING:` line.
 

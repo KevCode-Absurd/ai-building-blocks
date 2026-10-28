@@ -37,6 +37,7 @@ how_to_use:
   - Read the merit rating and every cited law as a first read, and check each cite yourself.
   - Pick a reply option, then take the triage note to your lawyer.
   - If the skill mentions the setup interview, use the setup-interview folder inside this one.
+  - "The skill names folders and commands from Anthropic's legal plugin, such as the matter log, /matter-intake and /legal-hold. Without that plugin, skip the matter log check and do the hand-offs yourself: save the triage note where you keep case files, and ask your lawyer now whether to put a legal hold on related records."
 output_sample:
   input:
     - The demand letter file

@@ -11,7 +11,7 @@ subhead: Attach screenshots or exports from a TikTok Shop research tool. It read
 explain: |
   TikTok Shop research tools show hundreds of products. Most are already dead, carried by one old video or live streams, or too crowded to test. Picking by revenue alone sends you to the products everyone else found first.
 
-  This skill uses one creator's step-by-step method. It looks for early breakouts in a revenue band of $33,000 to $97,000 over 30 days, checks the 30 and 180 day graphs, wants sales from video and not live streams, and wants the best video to be 7 to 14 days old with revenue spread over 3 to 5 videos. It drops items priced near $9.99 and ads in Spanish. These are one person's rules, and he bends them when the revenue is high. A TikTok win is a lead, not proof it will sell on Meta.
+  This skill uses one creator's step-by-step method. It looks for early breakouts in a revenue band of $33,000 to $97,000 over 30 days, checks the 30 and 180 day graphs, wants sales from video and not live streams, and wants the best video to be 7 to 14 days old with revenue spread over 3 to 5 videos. It drops items priced near $9.99 and ads in Spanish. These are one person's rules. He bends them when the revenue is high, but this skill keeps its hard drops. A TikTok win is a lead, not proof it will sell on Meta.
 
 when:
   - You pulled a list of products from a TikTok Shop research tool and need to cut it to one to test.
@@ -103,7 +103,7 @@ tweaks:
   - what: Your market and language
     how: Say who you sell to. Ads in Spanish are dropped for an English market and kept if you sell to Spanish speakers.
   - what: Strong conviction
-    how: Tell the skill why you lean on one strong video. It marks that check warn and states the revenue, and it never excuses a falling graph.
+    how: Tell the skill why you like a product. It can add a note to look at it again later, but one video carrying 90% or more of the revenue is still a drop, and it never excuses a falling graph.
 
 judge:
   - Each product has ten marks, a score and a verdict with the deciding number.
@@ -126,7 +126,7 @@ improve:
 
 works_best_with:
   tools:
-    - {name: "A TikTok Shop research tool", why: "Needed for the product graphs, revenue source and top videos. Any tool that shows 30 and 180 day graphs works."}
+    - {name: "A TikTok Shop research tool", why: "Usually a paid subscription you must already have. Needed for the product graphs, revenue source and top videos. Any tool that shows 30 and 180 day graphs works."}
     - {name: "Google Trends", why: "Free. Search the exact sub-niche over 12 months to see if it is rising now."}
     - {name: "Meta Ad Library", why: "Free. Search the exact product to see who already runs ads for it."}
   inputs:

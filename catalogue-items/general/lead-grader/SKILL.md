@@ -5,7 +5,9 @@ description: Use when you have a list of prospects or leads and cannot follow up
 
 # Lead grader
 
-Time spent on prospects who are not ready is time taken from those who are. This skill grades the list by one thing, when each person needs to act, and plans follow-up to match. The idea of grading by timing is adapted from a podcast conversation with Barbara Corcoran; the steps here are our own. To write the follow-up messages once the list is graded, use "Follow-up email sequence writer".
+Time spent on prospects who are not ready is time taken from those who are. This skill grades the list by one thing, when each person needs to act, and plans follow-up to match. The idea of grading by timing is adapted from Barbara Corcoran's interview on The Tim Ferriss Show (episode 725, March 2024); the steps here are our own and no endorsement is implied. To write the follow-up messages once the list is graded, use the [Follow-up email sequence writer](https://useaiblocks.com/skills/follow-up-email-sequence-writer).
+
+**When not to use:** your sales run long and no prospect has a date or event behind it (do a pipeline review with your team instead), or you have only a few prospects and know each one well (just call them).
 
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start

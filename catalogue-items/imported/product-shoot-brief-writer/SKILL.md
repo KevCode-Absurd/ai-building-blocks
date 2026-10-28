@@ -36,15 +36,15 @@ Have ready: a product photo or spec sheet, the sales channels (product page, ads
 
 Run in this order: (a) collect the Inputs, (b) classify the product as hedonic or utilitarian, (c) work through steps 1 to 10 in number order, format first, then the composition rules.
 
-Every effect size below (for example +79%, +22%, +30%) is a result from one study, and the studies are listed in reference.md. Figures marked † have no study behind them. Treat all of them as a guide, not a promise.
+Every effect size below (for example +79%, +16%, +30%) is a result from one study, and the studies are listed in reference.md. Rules marked † have no study behind them, so they carry no number. Treat all of them as a guide, not a promise.
 
-1. **Format.** Hedonic → video, GIF, or slideshow is recommended (willingness to pay 79% higher in the study, Roggeveen et al., 2015). Utilitarian → stills are enough. Premium hedonic → add a slow-motion action shot (+22% sales) †. Video should feel personal and human, not corporate. †
+1. **Format.** Hedonic → video, GIF, or slideshow is recommended (willingness to pay 79% higher in the study, Roggeveen et al., 2015). Utilitarian → stills are enough. Premium hedonic → add a slow-motion action shot †. Video should feel personal and human, not corporate. †
 2. **Gaze.** Hedonic → model looks away from the camera (sun hat: +30% sales in one A/B test, To & Patrick, 2021). Informational or negative-emotion messages → model looks at the camera.
 3. **Touch.** A first-person hand touching, holding, or using the product (+16% purchase likelihood across 15 experiments, Luangrath et al., 2022).
 4. **Side.** Graspable product toward the right of the frame, angled for a right hand (Maille et al., 2019). If it can't be held, add a graspable object beside it (handedness doesn't change with reading direction — don't flip this). Future-oriented products right, vintage left; flip *that* for right-to-left readers.
 5. **Shine.** Light or polish for a visible reflection; a digital reflection is fine only if it stays representative of the real finish (a matte product shown glossy misleads buyers). Never brief "no reflections" (+23% attractiveness, +32% purchase likelihood, Sharma & Kumar, 2022).
 6. **Spacing.** Clear empty space between products in multi-product shots and grids (liking +11.4%, sales nearly doubled, Sevilla & Townsend, 2016). In ads, wide margins with related products clustered in the center. †
-7. **Multiples.** Product bought for one specific function (an energy drink for energy, a stain remover) → several copies together (+10.7% perceived effectiveness) †. Not a rule for treats or decor.
+7. **Multiples.** Product bought for one specific function (an energy drink for energy, a stain remover) → several copies together †. Not a rule for treats or decor.
 8. **Props.** Complementary items around the focal product, varied in shape and color; the props' own sales are unaffected (Radon et al., 2021).
 9. **Context.** Womenswear → a fitting setting, not white background. Menswear → irrelevant.
 10. **Saturation.** High to look bigger, low to look smaller (Hagtvedt & Brasel, 2017). Pretest candidates with a poll where cheap. †

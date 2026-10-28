@@ -9,7 +9,7 @@ subhead: Give it a YouTube channel as an @handle, link or ID. It lists the newes
 explain: |
   Point it at a YouTube channel and see its newest uploads with view counts, or search inside that channel's videos for a topic.
 
-  You can name a channel by its @handle, its link or its ID. The skill turns that into a channel ID, then lists the latest 15 uploads straight from the channel feed, which costs nothing. It can also page through every video and search within one channel's library. You need a TranscriptAPI key. A free key covers a starter set of credits, and some calls use one credit per page. The skill sends a clear user agent header with each request, since the service blocks requests without one.
+  You can name a channel by its @handle, its link or its ID. The skill turns that into a channel ID, then lists the latest 15 uploads straight from the channel feed, which costs nothing. It can also page through every video and search within one channel's library. The data comes from TranscriptAPI, an outside service that collects it from YouTube. It is not YouTube's own API, so check YouTube's terms before heavy use. You need a TranscriptAPI key. A free key covers a starter set of credits, and some calls use one credit per page. The skill sends a clear user agent header with each request, since the service blocks requests without one.
 when:
   - You follow a creator and want a quick list of what they posted lately.
   - You need to find which video in a big channel covers a specific topic.
@@ -29,7 +29,7 @@ you_get:
   - Search hits inside the channel
   - A full video list if you ask for it
 how_to_use:
-  - Get a free TranscriptAPI key at transcriptapi.com. It needs no card and comes with 100 credits.
+  - Get a free TranscriptAPI key at transcriptapi.com. It needs no card and comes with 100 credits. If you have no key, your AI may offer to sign you up with your email and save the key on your computer for later sessions. Say no if you would rather sign up and store the key yourself.
   - Open an AI that can run code and reach the web, such as Claude with code tools on.
   - Paste the skill text into the chat and add your key when asked.
   - Give it a channel @handle, link or ID. Your first call should be the free latest-uploads lookup with the @handle. Avoid the calls that cost credits (search, full video list, channel profile, playlists and posts) until you need them.

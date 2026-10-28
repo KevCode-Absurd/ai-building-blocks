@@ -33,7 +33,7 @@ how_to_use:
   - Add the error text and your PowerShell version if you have them.
   - Ask for the findings list first, and read it.
   - Then ask for the corrected script with a reason for each fix.
-  - Test the new script in a test folder before you use it. No code running is needed.
+  - Your AI does not need to run any code for this. Test the new script yourself in a test folder before you use it on real files.
   - Next, paste the fixed script back in. The findings list should now be empty. For a second check, run the free PSScriptAnalyzer tool.
 output_sample:
   input:

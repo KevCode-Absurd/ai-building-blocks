@@ -18,7 +18,7 @@ not_for:
   - You have factoring, supplier finance or discontinued operations. These need their own schedules, so split them out first or ask your accountant.
   - You only have two balances and no notes on acquisitions, currency or write-offs. Get the notes from the filing first, as this skill cannot guess them.
   - You want a full cash-flow statement or a company valuation. Use a full model built with your finance team.
-  - "Part of your operating cash came early from selling invoices to a factor: use the Factoring cash-flow timing bridge instead."
+  - "Part of your operating cash came early from selling invoices to a factor: use the Invoice financing cash flow checker instead."
 you_give:
   - Opening and closing operating working capital, plus the signed acquisition, currency and other noncash movements for the same set of businesses.
   - "The period end, plus the currency and scale used for the working capital investment."

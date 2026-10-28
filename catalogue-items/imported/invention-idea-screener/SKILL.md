@@ -179,7 +179,7 @@ a template, extract these fields from the form and only ask for what's missing.
 
 ### Step 2: Screen against the checklist
 
-Walk the five screens in order. Each produces a per-screen verdict:
+Walk the six screens in order. Each produces a per-screen verdict:
 `✓ clear`, `🟡 flagged — needs further look`, or `🔴 red flag`. Explain the
 reasoning briefly; do not pad.
 
@@ -489,6 +489,8 @@ memo with:
 > underlying disclosure) with patent counsel. If there is no counsel engaged
 > yet, [contact from profile / "your professional regulator's IP referral service — state bar in the US, SRA/Bar Standards Board in England & Wales, Law Society in Scotland/NI/Ireland/Canada/Australia, or your jurisdiction's equivalent"] is the
 > starting point.**
+
+Changed by AI Blocks (2026-10-28): Step 2 now says six screens, to match the six screens listed below it.
 
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this

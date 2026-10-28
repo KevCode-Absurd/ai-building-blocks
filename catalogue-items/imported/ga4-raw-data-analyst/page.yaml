@@ -34,7 +34,7 @@ you_get:
   - A note explaining gaps against the GA4 screen
 how_to_use:
   - Check that your GA4 daily export is running into BigQuery and that you can run queries on it.
-  - Know that BigQuery bills the queries to your billing project. The cost estimate shown is a real BigQuery charge.
+  - Know that BigQuery bills the queries to your billing project, so running them costs real money. The cost estimate shown is a best guess and can be too low for a multi-step script, so keep the byte cap on.
   - Open your AI tool with the skill files and code running turned on. Give it your dataset, billing project, location and dates.
   - Ask it to render all the queries first without running them. Read them and the cost estimate.
   - Approve the run. Then check the results and the note on late events, since daily tables can change for up to three days.

@@ -277,10 +277,15 @@ aws iam get-policy-version --policy-arn ARN --version-id v1 | \
   jq '.PolicyVersion.Document' > policy.json
 python3 scripts/cloud_posture_check.py policy.json --check iam --json
 
-# 2. Check S3 bucket configuration
-aws s3api get-bucket-acl --bucket my-bucket > acl.json
-aws s3api get-public-access-block --bucket my-bucket >> bucket.json
+# 2. Check S3 bucket configuration (bucket policy + public access block in one file)
+#    If the bucket has no policy, write {} to bucket-policy.json instead.
+aws s3api get-bucket-policy --bucket my-bucket --query Policy --output text > bucket-policy.json
+aws s3api get-public-access-block --bucket my-bucket --query PublicAccessBlockConfiguration > public-access.json
+jq -s '.[0] * .[1]' bucket-policy.json public-access.json > bucket.json
 python3 scripts/cloud_posture_check.py bucket.json --check s3 --json
+#    The script does not read bucket ACLs. Check them by hand: a grant to
+#    AllUsers or AuthenticatedUsers makes the bucket public.
+aws s3api get-bucket-acl --bucket my-bucket > acl.json
 
 # 3. Review security groups for open admin ports
 aws ec2 describe-security-groups --group-ids sg-123456 | \

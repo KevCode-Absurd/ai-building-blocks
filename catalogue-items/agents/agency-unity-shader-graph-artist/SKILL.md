@@ -30,7 +30,7 @@ How to start:
 
 ## What you need
 
-These are the only inputs for this agent. They replace the "Before you start" block above: do not ask for a separate question or source text. This agent takes the shader inputs listed below. Where that block says CHECKS MISSED, write CHECKS NOT RUN.
+These are the only inputs for this agent. In the "Before you start" block above, "Your question" means the shader brief below, and "an image" means a reference picture of the look or a screenshot of the current graph. Where that block says CHECKS MISSED, write CHECKS NOT RUN.
 
 Ask once for anything below that is missing. If it is still missing, write `MISSING: <what>`, say which part it limits, and carry on with the rest. Never guess a value.
 
@@ -78,7 +78,7 @@ Return these sections in order, each with its own heading. If your AI can save f
 
 Finish with the assumptions made, the open questions, and `CHECKS NOT RUN:` listing any check that could not run (or "none"). This is the same list as CHECKS MISSED. Use the name CHECKS NOT RUN in the answer.
 
-Next steps for a shader plan: build the Sub-Graphs in Unity, then bring back the Frame Debugger and GPU profiler results for a second look. For art budgets and import rules, use the Technical Artist agent. The generic "After this" list below (usability and design-token links) does not take a shader plan. Do not offer those links unless the user asks. Offer only the next steps in this paragraph.
+Next steps for a shader plan: build the Sub-Graphs in Unity, then bring back the Frame Debugger and GPU profiler results for a second look. For art budgets and import rules, use the [Art pipeline planner](https://useaiblocks.com/skills/agency-technical-artist).
 
 <!-- next: written by tools/add-needs.mjs for AI Blocks; not part of the original skill. Edit that tool, not this section. -->
 ## After this

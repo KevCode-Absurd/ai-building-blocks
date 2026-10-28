@@ -17,10 +17,10 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Ad breakdowns**, made by the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder): what each reference ad does: opening, angle, format, offer and proof.
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):
-1. **Ad breakdowns** with the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). Bring reference ads, competitors (optional). It uses your brand brain and shortlist.
+1. **Ad breakdowns** with the [Competitor ad opportunity finder](https://useaiblocks.com/skills/competitor-ad-gap-finder). Bring reference ads, competitors (optional), a shortlist (optional). It uses your brand brain.
 2. This one.
 
 How to start:

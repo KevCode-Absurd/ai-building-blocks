@@ -409,7 +409,7 @@ export class PublicCatalogueService {
     if (format !== "concise" && format !== "detailed") fail(400, "invalid_arguments", "response_format must be concise or detailed.");
     const detailed = format === "detailed";
     const c = await this.catalogue(), lib = this.steps(c);
-    const notice = "Step map from typed inputs and outputs and the reviewed workflows. Plain code; no model was called. Load full instructions only for the items you choose, and cite their url.";
+    const notice = "Step map from typed inputs and outputs and the reviewed workflows. Plain code; no model was called. These are candidate steps, not a complete context-validated plan. In the host AI, first form a task brief from the request, available files and authorized me.md (get_me when available), including outcomes, formats, constraints, supplied inputs and checks. Keep private context out of search queries. Load chosen full methods and required resources at their pinned revisions, compose specific notes and handoffs, then call prepare_workflow. Reuse supplied inputs after checking them; review suggestions against the actual context. Cite each chosen item URL.";
     const flowRow = (w: Part) => ({ ...this.stepRow(w, detailed), steps: (w.steps ?? []).map(s => s.uses) });
     if (name) {
       this.entry(c, name);
@@ -431,7 +431,7 @@ export class PublicCatalogueService {
       first_steps: first.steps.map(p => this.stepRow(lib.bySlug[p.slug], detailed, p.why)),
       anchor: best ? { id: best.slug, ...this.mapRows(lib, best.slug, detailed ? 5 : 3) } : null,
       ...(first.workflows[0] || best ? this.planDiagram(lib, first.workflows[0] ? lib.bySlug[first.workflows[0].slug] : null, best?.slug ?? "", request, detailed) : {}),
-      next_action: first.workflows.length ? "A ready workflow fits: review it with get_workflow before assembling parts." : best ? "Pick the anchor that makes the result the user wants, then add before and after steps so each required input is made earlier or asked from the user." : "Nothing matched. Rephrase the request as the result wanted, or use search_library.",
+      next_action: first.workflows.length ? "A ready workflow may fit: load its full method with get_workflow and check every requested deliverable against the task brief before using it." : best ? "Pick the anchor that makes the result the user wants, then add before and after steps so each required input is made earlier or asked from the user." : "Nothing matched. Rephrase the request as the result wanted, or use search_library.",
       notice,
     };
   }

@@ -3,6 +3,8 @@ import type { Catalogue } from "./lib/data";
 import type { Flow } from "./lib/store";
 import { finalize, LIMITS, requestError } from "./lib/composer-core";
 import { compositionFlow } from "./lib/composer-flow";
+import { workflowPlanningContext } from "./lib/composer-context";
+import { businessText, getBusiness } from "./lib/business";
 import { useComposerAccount } from "./lib/composer-account";
 import { protectedHeaders } from "./lib/turnstile";
 import { Link } from "./lib/router";
@@ -17,6 +19,7 @@ export default function BuilderAiAssist({ c, onPlan, toast, initialGoal = "" }: 
   const account = useComposerAccount(true);
   const [goal, setGoal] = useState(initialGoal);
   const [context, setContext] = useState("");
+  const [useContext, setUseContext] = useState(true);
   const [model, setModel] = useState("gpt-6-luna");
   const [assignMinds, setAssignMinds] = useState(true);
   const [models, setModels] = useState<PlannerModel[]>(MODELS.map(value => ({ ...value, available: false })));
@@ -62,7 +65,7 @@ export default function BuilderAiAssist({ c, onPlan, toast, initialGoal = "" }: 
     if (account.state === "loading") return;
     if (previousUser.current && previousUser.current !== account.userId) {
       request.current++; abort.current?.abort(); window.clearTimeout(timer.current); locked.current = false;
-      setBusy(false); setGoal(""); setContext(""); setAssignMinds(true); setStatus(""); setError("Your account changed. Add a new request to continue.");
+      setBusy(false); setGoal(""); setContext(""); setUseContext(true); setAssignMinds(true); setStatus(""); setError("Your account changed. Add a new request to continue.");
       try { sessionStorage.removeItem(DRAFT_KEY); } catch { /* Storage is optional. */ }
     }
     previousUser.current = account.userId;
@@ -72,7 +75,7 @@ export default function BuilderAiAssist({ c, onPlan, toast, initialGoal = "" }: 
       const saved = JSON.parse(sessionStorage.getItem(DRAFT_KEY) ?? "null");
       sessionStorage.removeItem(DRAFT_KEY);
       if (saved && typeof saved.goal === "string" && typeof saved.context === "string" && typeof saved.savedAt === "number" && Date.now() - saved.savedAt < 86400000 && Date.now() >= saved.savedAt && (!saved.userId || saved.userId === account.userId)) {
-        setGoal(saved.goal); setContext(saved.context);
+        setGoal(saved.goal); setContext(saved.context); setUseContext(saved.useContext === true);
         setAssignMinds(saved.assignMinds !== false);
         if (MODELS.some(value => value.id === saved.model)) setModel(saved.model);
         setStatus("Your request is ready. Review it, then choose Create workflow.");
@@ -84,7 +87,7 @@ export default function BuilderAiAssist({ c, onPlan, toast, initialGoal = "" }: 
     if (signingIn || locked.current) return;
     setError(""); setSigningIn(true);
     try {
-      sessionStorage.setItem(DRAFT_KEY, JSON.stringify({ goal, context, model, assignMinds, userId: account.userId, savedAt: Date.now() }));
+      sessionStorage.setItem(DRAFT_KEY, JSON.stringify({ goal, context, useContext, model, assignMinds, userId: account.userId, savedAt: Date.now() }));
       await account.signIn(signUp, "/#build");
     } catch { if (mounted.current) setError("Sign-in could not open. Your request is still here. Please try again."); }
     finally { if (mounted.current) setSigningIn(false); }
@@ -105,7 +108,7 @@ export default function BuilderAiAssist({ c, onPlan, toast, initialGoal = "" }: 
     if (goal.length > GOAL_LIMIT) { setError("Keep your request under 3,000 characters. Your full draft is still here so you can shorten it."); return; }
     const invalid = requestError(goal);
     if (invalid) { setError(invalid); return; }
-    if (context.length > LIMITS.context) { setError("Keep added context under 4,000 characters."); return; }
+
     if (service !== "ready") { setError("AI assist is unavailable right now. Please try again shortly. Your request is kept here."); return; }
     if (!selectedAvailable) { setError("Choose an available AI model to continue."); return; }
     const expectedUser = account.userId;
@@ -120,11 +123,12 @@ export default function BuilderAiAssist({ c, onPlan, toast, initialGoal = "" }: 
       setError("Planning timed out. Your request and current workflow are still here. Try again when you are ready.");
     }, 120000);
     try {
+      const combined = workflowPlanningContext(context, useContext ? businessText(getBusiness()) : "", goal, useContext);
       const verification = await protectedHeaders("compose");
       if (!current() || controller.signal.aborted) return;
       const token = await account.token(expectedUser);
       if (!current() || controller.signal.aborted) return;
-      const response = await fetch("/api/compose", { method: "POST", signal: controller.signal, headers: { "content-type": "application/json", "idempotency-key": crypto.randomUUID(), authorization: `Bearer ${token}`, ...verification }, body: JSON.stringify({ goal, context, choices: {}, model, assignMinds }) });
+      const response = await fetch("/api/compose", { method: "POST", signal: controller.signal, headers: { "content-type": "application/json", "idempotency-key": crypto.randomUUID(), authorization: `Bearer ${token}`, ...verification }, body: JSON.stringify({ goal, context: combined, choices: {}, model, assignMinds }) });
       if (!current()) return;
       if (response.status === 401) {
         setError("Your sign-in expired. Sign in again to continue. Your request is still here.");
@@ -156,7 +160,7 @@ export default function BuilderAiAssist({ c, onPlan, toast, initialGoal = "" }: 
       <p className="small builder-ai-count" id="builder-ai-count">{goal.length.toLocaleString()} / 3,000 characters{goal.length > GOAL_LIMIT ? " · Shorten this draft before creating a workflow." : ""}</p>
       <label htmlFor="builder-ai-model">AI model<select id="builder-ai-model" data-testid="builder-ai-model" value={model} disabled={busy || signingIn || service === "loading"} onChange={event => setModel(event.currentTarget.value)}>{models.map(value => <option key={value.id} value={value.id} disabled={!value.available}>{value.label}{!value.available ? service === "loading" ? " — checking…" : " — unavailable" : ""}</option>)}</select></label>
       <div><label><input type="checkbox" data-testid="builder-ai-assign-minds" checked={assignMinds} disabled={busy || signingIn} onChange={event => setAssignMinds(event.currentTarget.checked)} aria-describedby="builder-ai-minds-help" /> Assign minds to tasks</label><p className="small" id="builder-ai-minds-help">Uses a suggested perspective for each step. Complex decisions may use a small group. You can change or remove them.</p></div>
-      <details className="builder-ai-context"><summary>Add context (optional)</summary><label htmlFor="builder-ai-context">Audience, available material or limits</label><textarea id="builder-ai-context" rows={3} maxLength={LIMITS.context} value={context} disabled={busy || signingIn} onChange={event => { setContext(event.currentTarget.value); setError(""); }} /><p className="small">Up to 4,000 characters. Leave out private information you do not need to share.</p></details>
+      <details className="builder-ai-context"><summary>Add context (optional)</summary><label htmlFor="builder-ai-context">Audience, available material or limits</label><textarea id="builder-ai-context" rows={3} maxLength={LIMITS.context} value={context} disabled={busy || signingIn} onChange={event => { setContext(event.currentTarget.value); setError(""); }} /><label><input type="checkbox" checked={useContext} disabled={busy || signingIn} onChange={event => { setUseContext(event.currentTarget.checked); setError(""); }} /> Use relevant parts of my saved me.md</label><p className="small">Up to {LIMITS.context.toLocaleString()} characters, including saved context. Leave out private information you do not need to share.</p></details>
       <div className="builder-ai-account" data-testid="builder-ai-account">
         {account.state === "loading" && <p className="small" role="status">Checking sign-in…</p>}
         {account.state === "signed-out" && <><p className="small">Get up to 5 free AI workflows each day.</p><div className="builder-ai-actions"><button className="btn btn-primary" type="button" disabled={signingIn} onClick={() => void signIn(true)}>Sign up free</button><button className="btn btn-dark" type="button" disabled={signingIn} onClick={() => void signIn(false)}>Sign in</button></div></>}
@@ -172,7 +176,7 @@ export default function BuilderAiAssist({ c, onPlan, toast, initialGoal = "" }: 
     <details className="builder-ai-help"><summary>Usage and privacy</summary><p className="small">{unlimited ? `Service spending and safety limits still apply.${networkNote}` : "Failed attempts count toward the daily allowance. It resets at 00:00 UTC (5:30 a.m. India time). No payment details needed."}</p><p className="small">Your request, context and relevant skill descriptions go to our AI provider. When Assign minds is on, public mind profiles go too. The service stores generated results and usage records. For adults aged 18 or older. Read our <Link to="/terms">Terms</Link> and <Link to="/privacy#server">Privacy policy</Link>.</p></details>
     <Link to="/compose" className="builder-ai-advanced" onClick={event => {
       if (busy || signingIn) { event.preventDefault(); return; }
-      try { sessionStorage.setItem("abb:composer-signin", JSON.stringify({ goal, context, choices: {}, useContext: false, customSkills: [], assignMinds })); }
+      try { sessionStorage.setItem("abb:composer-signin", JSON.stringify({ goal, context, choices: {}, useContext, customSkills: [], assignMinds })); }
       catch { event.preventDefault(); setError("Your request could not be carried over. Copy it before opening advanced options."); }
     }}>More planning options</Link>
   </section>;

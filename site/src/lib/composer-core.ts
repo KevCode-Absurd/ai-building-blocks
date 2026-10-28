@@ -22,7 +22,7 @@ export const QUESTIONS = {
   automation: { text: "How should this run?", options: [["once", "Run once"], ["recurring", "Repeat with an agent"]] },
 } as const;
 export const LEGACY_REQUEST_LIMIT = 10000;
-export const LIMITS = { request: 3000, context: 4000, steps: 16, candidates: 64, output: 5000 };
+export const LIMITS = { request: 3000, context: 12000, steps: 16, candidates: 64, output: 5000 };
 const STOP = new Set("a an the for my our your of to from and i we want need get make me with that this in on into it some new can do how help please hi hello hey you are is be as have using then also would like just something".split(" "));
 const GENERIC = new Set("build create write plan check improve fix find work use output result workflow skill prompt tool agent".split(" "));
 const SYNONYMS: [RegExp, string][] = [

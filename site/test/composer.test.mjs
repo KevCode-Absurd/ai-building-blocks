@@ -128,7 +128,7 @@ const request = (patch = {}, id = crypto.randomUUID(), headers = {}) => new Requ
 const runner = async (_m, _k, _prompt, schema) => ({ text: JSON.stringify(schema?.properties?.intents ? { intents: [{ query: body.goal, kind: "create" }] } : freeSelection(c, body.goal)), usage: { input: 100, output: 500, cached: 0, cacheWrite: 0 }, cost: .00026, latencyMs: 10, finish: "completed", actualModel: "claude-haiku-5-5" });
 test("API rejects greetings, foreign origins, oversized inputs and unsupported models before spending", async () => {
   let calls = 0; const run = async (...args) => { calls++; return runner(...args); };
-  for (const req of [request({ goal: "How are you?" }), request({ goal: "x".repeat(10001) }), request({ context: "x".repeat(4001) }), request({ model: "unknown" }), request({}, crypto.randomUUID(), { origin: "https://evil.test" })]) assert.ok((await handleComposer(req, c, env, memoryComposer(), "ip", run)).status >= 400);
+  for (const req of [request({ goal: "How are you?" }), request({ goal: "x".repeat(10001) }), request({ context: "x".repeat(LIMITS.context + 1) }), request({ model: "unknown" }), request({}, crypto.randomUUID(), { origin: "https://evil.test" })]) assert.ok((await handleComposer(req, c, env, memoryComposer(), "ip", run)).status >= 400);
   assert.equal(calls, 0);
   const disabled = await handleComposer(request(), c, {}, null, "ip", run); assert.equal(disabled.status, 503); assert.equal(calls, 0);
 });

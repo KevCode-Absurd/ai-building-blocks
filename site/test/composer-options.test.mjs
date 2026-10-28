@@ -55,10 +55,11 @@ test('model is part of account-scoped idempotency and omitted model stays Luna',
   assert.equal((await handleComposer(req({ model: 'gpt-6.1-sol' }, id), c, env, store, 'ip', run, 'user_other')).status, 409);
   assert.equal(calls, 3);
 });
-test('new submissions are limited to3000 with4000 context while legacy capacity remains10000', async () => {
-  assert.equal(LIMITS.request, 3000); assert.equal(LEGACY_REQUEST_LIMIT, 10000);
+test('new submissions enforce request and context bounds before catalogue access while preserving legacy request capacity', async () => {
+  assert.equal(LIMITS.request, 3000); assert.equal(LIMITS.context, 12000); assert.equal(LEGACY_REQUEST_LIMIT, 10000);
   let calls = 0;
   for (const length of [3001, 10000]) assert.equal((await handleComposer(req({ goal: goal.padEnd(length, 'x') }), () => { throw Error('No catalogue'); }, env, memoryComposer(), 'ip', async () => { calls++; }, 'user_owner')).status, 400);
+  assert.equal((await handleComposer(req({ context: 'x'.repeat(LIMITS.context + 1) }), () => { throw Error('No catalogue'); }, env, memoryComposer(), 'ip', async () => { calls++; }, 'user_owner')).status, 400);
   assert.equal(calls, 0);
 });
 test('owner policy is exact, fail-closed and cannot be requested by another subject', () => {

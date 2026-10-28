@@ -57,7 +57,7 @@ export async function handleComposer(req: Request, library: Library | (() => Pro
   if (req.headers.get("origin") && req.headers.get("origin") !== new URL(req.url).origin) return json(403, { error: "Open the composer on this site." });
   if (!req.headers.get("content-type")?.includes("application/json")) return json(415, { error: "Send a JSON request." });
   let body: any; try { body = await bodyOf(req); } catch { return json(400, { error: "The request is invalid or too large." }); }
-  if (!body || typeof body !== "object" || Array.isArray(body) || typeof body.goal !== "string" || typeof body.context !== "string" || body.context.length > LIMITS.context) return json(400, { error: "Provide a request and keep context under 4,000 characters." });
+  if (!body || typeof body !== "object" || Array.isArray(body) || typeof body.goal !== "string" || typeof body.context !== "string" || body.context.length > LIMITS.context) return json(400, { error: `Provide a request and keep context within ${LIMITS.context.toLocaleString("en-US")} characters.` });
   const error = requestError(body.goal); if (error) return json(400, { error });
   if (body.model !== undefined && (typeof body.model !== "string" || !approved.has(body.model))) return json(400, { error: "Choose one of the available workflow models." });
   if (body.assignMinds !== undefined && typeof body.assignMinds !== "boolean") return json(400, { error: "Choose whether to assign mind perspectives." });

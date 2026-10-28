@@ -10,7 +10,7 @@ import MyMinds from "./MyMinds";
 import { compositionFlow } from "./lib/composer-flow";
 import { buildHandoffZip, download } from "./lib/handoff";
 import { businessText, getBusiness } from "./lib/business";
-import { meCore } from "./lib/me-file";
+import { captureCompositionContext, planningMeContext, restoreCompositionContext, workflowPlanningContext } from "./lib/composer-context";
 import { flows, type Flow } from "./lib/store";
 import { Link, navigate } from "./lib/router";
 import "./compose.css";
@@ -34,8 +34,9 @@ export default function ComposePage({ c: loaded, toast }: { c: Catalogue | null;
   const [review, setReview] = useState(false);
   const abortRef = useRef<AbortController | null>(null);
   const [context, setContext] = useState("");
-  const [useContext, setUseContext] = useState(false);
+  const [contextChoice, setUseContext] = useState<boolean | null>(null);
   const [mode, setMode] = useState<"free" | "ai">("ai");
+  const useContext = contextChoice ?? (mode === "ai");
   const [assignMinds, setAssignMinds] = useState(true);
   const account = useComposerAccount(mode === "ai");
   const networkLimit = account.usage && "dailyIpAttemptLimit" in account.usage ? account.usage.dailyIpAttemptLimit : undefined;
@@ -63,7 +64,7 @@ export default function ComposePage({ c: loaded, toast }: { c: Catalogue | null;
     document.title = "Build a custom workflow | AI Blocks";
     let live = true;
     fetch("/api/compose").then(r => { if (!r.ok) throw Error(); return r.json(); }).then(d => { if (live) setAvailable(d.enabled === true); }).catch(() => {}).finally(() => { if (live) setConnecting(false); });
-    if (loaded) try { const saved = JSON.parse(libraryStorage.getItem("abb:composer") ?? "null"); if (saved?.format === "ai-blocks-composition/1") { remoteApplying.current = true; const custom = validateCustomSkills(saved.customSkills); const plan = finalize(withCustomSkills(baseCatalogue, custom), saved.plan, saved.plan.source); const restoredFlow = typeof saved.flowCode === "string" ? unpackFlow(baseCatalogue, saved.flowCode) : null; if (saved.flowCode !== undefined && !restoredFlow) throw Error("Saved workflow is incomplete."); setCustomSkills(custom); setGoal(saved.goal); setAssignMinds(saved.assignMinds !== false); setChoices(validateChoices(saved.choices ?? {})); setContext(saved.context ?? ""); setResult({ plan, model: saved.model || "free", cost: saved.cost || 0, latencyMs: saved.latencyMs || 0 }); setGraphFlow(restoredFlow); setRestored(true); setReview(true); } } catch { setError("The saved workflow could not be restored without changing its steps. Import a complete copy or create a new workflow."); }
+    if (loaded) try { const saved = JSON.parse(libraryStorage.getItem("abb:composer") ?? "null"); if (saved?.format === "ai-blocks-composition/1") { remoteApplying.current = true; const savedContext = restoreCompositionContext(saved); const custom = validateCustomSkills(saved.customSkills); const plan = finalize(withCustomSkills(baseCatalogue, custom), saved.plan, saved.plan.source); const restoredFlow = typeof saved.flowCode === "string" ? unpackFlow(baseCatalogue, saved.flowCode) : null; if (saved.flowCode !== undefined && !restoredFlow) throw Error("Saved workflow is incomplete."); setCustomSkills(custom); setGoal(saved.goal); setAssignMinds(saved.assignMinds !== false); setChoices(validateChoices(saved.choices ?? {})); setContext(savedContext.context); setUseContext(savedContext.useContext); setResult({ plan, context: savedContext.planningContext, model: saved.model || "free", cost: saved.cost || 0, latencyMs: saved.latencyMs || 0 }); setGraphFlow(restoredFlow); setRestored(true); setReview(true); } } catch { setError("The saved workflow could not be restored without changing its steps. Import a complete copy or create a new workflow."); }
     try {
       const pending = JSON.parse(sessionStorage.getItem("abb:composer-signin") ?? "null");
       sessionStorage.removeItem("abb:composer-signin");
@@ -76,16 +77,16 @@ export default function ComposePage({ c: loaded, toast }: { c: Catalogue | null;
     } catch { /* Invalid local drafts never block sign-in. */ }
     return () => { live = false; requestRef.current++; abortRef.current?.abort(); };
   }, [baseCatalogue]);
-  const initialGraph = useMemo(() => result ? graphFlow ?? { ...compositionFlow(c, result.plan, goal, result.context ?? context), customSkills } : null, [result?.plan]);
+  const initialGraph = useMemo(() => result ? graphFlow ?? { ...compositionFlow(c, result.plan, goal, context), customSkills } : null, [result?.plan]);
   const envelope = () => {
     const flow = graphFlow ?? initialGraph;
-    return { format: "ai-blocks-composition/1", goal, context: result?.context ?? context, choices, assignMinds, customSkills: flow?.customSkills ?? customSkills, flowCode: flow ? packFlow(flow) : undefined, plan: result?.plan, model: result?.model, cost: result?.cost, latencyMs: result?.latencyMs };
+    return { format: "ai-blocks-composition/1", goal, ...captureCompositionContext(context, result?.context ?? context, useContext), choices, assignMinds, customSkills: flow?.customSkills ?? customSkills, flowCode: flow ? packFlow(flow) : undefined, plan: result?.plan, model: result?.model, cost: result?.cost, latencyMs: result?.latencyMs };
   };
   useEffect(() => { if (result) try {
     const raw = JSON.stringify(envelope());
     if (remoteApplying.current) { remoteApplying.current = false; lastPersisted.current = raw; return; }
     if (raw !== lastPersisted.current) { libraryStorage.setItem("abb:composer", raw); lastPersisted.current = raw; }
-  } catch { /* storage can be unavailable */ } }, [result, goal, context, choices, assignMinds, customSkills, graphFlow]);
+  } catch { /* storage can be unavailable */ } }, [result, goal, context, useContext, choices, assignMinds, customSkills, graphFlow]);
   useEffect(() => {
     const received = (event: Event) => {
       if (!loaded || !(event as CustomEvent<string[]>).detail.includes("abb:composer")) return;
@@ -93,10 +94,10 @@ export default function ComposePage({ c: loaded, toast }: { c: Catalogue | null;
       try {
         const saved = JSON.parse(libraryStorage.getItem("abb:composer") ?? "null");
         if (saved?.format === "ai-blocks-composition/1") {
-          const custom = validateCustomSkills(saved.customSkills), plan = finalize(withCustomSkills(baseCatalogue, custom), saved.plan, saved.plan.source);
+          const savedContext = restoreCompositionContext(saved); const custom = validateCustomSkills(saved.customSkills), plan = finalize(withCustomSkills(baseCatalogue, custom), saved.plan, saved.plan.source);
           const restoredFlow = typeof saved.flowCode === "string" ? unpackFlow(baseCatalogue, saved.flowCode) : null;
           if (saved.flowCode !== undefined && !restoredFlow) throw Error();
-          remoteApplying.current = true; setPreparedZip(null); setCustomSkills(custom); setGoal(saved.goal); setAssignMinds(saved.assignMinds !== false); setChoices(validateChoices(saved.choices ?? {})); setContext(saved.context ?? ""); setResult({ plan, model: saved.model || "free", cost: saved.cost || 0, latencyMs: saved.latencyMs || 0 }); setGraphFlow(restoredFlow); setRestored(true); setReview(true);
+          remoteApplying.current = true; setPreparedZip(null); setCustomSkills(custom); setGoal(saved.goal); setAssignMinds(saved.assignMinds !== false); setChoices(validateChoices(saved.choices ?? {})); setContext(savedContext.context); setUseContext(savedContext.useContext); setResult({ plan, context: savedContext.planningContext, model: saved.model || "free", cost: saved.cost || 0, latencyMs: saved.latencyMs || 0 }); setGraphFlow(restoredFlow); setRestored(true); setReview(true);
         } else if (!saved) { remoteApplying.current = false; lastPersisted.current = null; setResult(null); setGraphFlow(null); setPreparedZip(null); }
       } catch { setError("The updated workflow could not be opened. Your saved account copy is intact."); }
     };
@@ -120,10 +121,9 @@ export default function ComposePage({ c: loaded, toast }: { c: Catalogue | null;
     const timeout = window.setTimeout(() => { controller.abort(); if (requestRef.current === id) { requestRef.current++; setBusy(false); setError("Planning timed out. Your request and earlier plan are still here. Try again when you are ready."); } }, 120000);
     setBusy(true); setRestored(false);
     try {
-      const combined = [context, useContext && meCore(businessText(getBusiness()))].filter(Boolean).join("\n\n");
-      if (combined.length > LIMITS.context) throw Error("Keep added context, including saved context, under 4,000 characters.");
       if (mode === "free") { setPreparedZip(null); setGraphFlow(null); setResult(null); setPicks(startPicks(baseCatalogue, goal, 6)); }
       else {
+        const combined = workflowPlanningContext(context, useContext ? businessText(getBusiness()) : "", goal, useContext);
         const verification = await protectedHeaders("compose");
         // Human verification can outlast a session JWT; acquire it immediately before sending.
         const token = await account.token();
@@ -156,10 +156,10 @@ export default function ComposePage({ c: loaded, toast }: { c: Catalogue | null;
   const importPack = async (file?: File) => {
     if (!file) return; setError("");
     if (!loaded) { setError("The task library is still loading. Try again in a moment."); return; }
-    try { if (file.size > 1000000) throw Error("Keep the workflow file under 1 MB."); const data = JSON.parse(await file.text()); if (data.format !== "ai-blocks-composition/1" || typeof data.goal !== "string" || data.goal.length > LEGACY_REQUEST_LIMIT || typeof data.context !== "string" || data.context.length > LIMITS.context) throw Error("Choose a workflow.edit.json exported from this composer."); const importedFlow = typeof data.flowCode === "string" ? unpackFlow(baseCatalogue, data.flowCode) : null; if (data.flowCode !== undefined && !importedFlow) throw Error("This workflow is incomplete or invalid. No steps were imported. Supply a complete workflow."); const custom = validateCustomSkills(data.customSkills); const plan = finalize(withCustomSkills(baseCatalogue, custom), data.plan, data.plan.source === "ai" ? "ai" : "free"); setCustomSkills(custom); setGoal(data.goal); setAssignMinds(data.assignMinds !== false); setContext(data.context); setChoices(validateChoices(data.choices ?? {})); setResult({ plan, model: typeof data.model === "string" ? data.model : "free", cost: Number.isFinite(data.cost) && data.cost >= 0 ? data.cost : 0, latencyMs: 0 }); setGraphFlow(importedFlow); setPreparedZip(null); setRestored(true); setReview(true); toast("Your workflow is ready to edit"); } catch (e) { setError(e instanceof SyntaxError ? "This file could not be read. Choose workflow.edit.json from a previous download. Your current workflow is kept." : (e as Error).message); } finally { if (importRef.current) importRef.current.value = ""; }
+    try { if (file.size > 1000000) throw Error("Keep the workflow file under 1 MB."); const data = JSON.parse(await file.text()); if (data.format !== "ai-blocks-composition/1" || typeof data.goal !== "string" || data.goal.length > LEGACY_REQUEST_LIMIT) throw Error("Choose a workflow.edit.json exported from this composer."); const savedContext = restoreCompositionContext(data); const importedFlow = typeof data.flowCode === "string" ? unpackFlow(baseCatalogue, data.flowCode) : null; if (data.flowCode !== undefined && !importedFlow) throw Error("This workflow is incomplete or invalid. No steps were imported. Supply a complete workflow."); const custom = validateCustomSkills(data.customSkills); const plan = finalize(withCustomSkills(baseCatalogue, custom), data.plan, data.plan.source === "ai" ? "ai" : "free"); setCustomSkills(custom); setGoal(data.goal); setAssignMinds(data.assignMinds !== false); setContext(savedContext.context); setUseContext(savedContext.useContext); setChoices(validateChoices(data.choices ?? {})); setResult({ plan, context: savedContext.planningContext, model: typeof data.model === "string" ? data.model : "free", cost: Number.isFinite(data.cost) && data.cost >= 0 ? data.cost : 0, latencyMs: 0 }); setGraphFlow(importedFlow); setPreparedZip(null); setRestored(true); setReview(true); toast("Your workflow is ready to edit"); } catch (e) { setError(e instanceof SyntaxError ? "This file could not be read. Choose workflow.edit.json from a previous download. Your current workflow is kept." : (e as Error).message); } finally { if (importRef.current) importRef.current.value = ""; }
   };
 
-  const questions = questionsFor([goal, context, useContext && meCore(businessText(getBusiness()))].filter(Boolean).join("\n"), choices);
+  const questions = questionsFor([goal, context, useContext && planningMeContext(businessText(getBusiness()), goal)].filter(Boolean).join("\n"), choices);
   const hasGeneralTemplate = result?.plan.source === "free" && result.plan.steps.some(s => s.slug === "request-deliverable-drafter");
   const hasSpecialist = result?.plan.steps.some(s => !["request-acceptance-brief", "request-deliverable-drafter", "request-acceptance-checker"].includes(s.slug));
   const usableResult = !(hasGeneralTemplate && !hasSpecialist);
@@ -179,7 +179,7 @@ export default function ComposePage({ c: loaded, toast }: { c: Catalogue | null;
           {mode === "ai" && <div><label className="compose-check"><input type="checkbox" data-testid="compose-assign-minds" checked={assignMinds} disabled={busy || dictating} onChange={event => setAssignMinds(event.currentTarget.checked)} aria-describedby="compose-minds-help" /> Assign minds to tasks</label><p className="small" id="compose-minds-help">Uses a suggested perspective for each step. Complex decisions may use a small group. You can change or remove them.</p></div>}
           </div>{review && <details className="compose-settings-pane workflow-options"><summary>Customize the plan (optional)</summary>
           {possibleQuestions.length > 0 && <fieldset><legend>Choices that shape the workflow</legend>{possibleQuestions.map(id => { const q = QUESTIONS[id as keyof typeof QUESTIONS]; return <label key={id} className="compose-choice">{q.text}<select aria-label={q.text} value={choices[id as keyof Choices] ?? ""} disabled={busy} onChange={e => { const value = e.currentTarget.value; reset(); setChoices(v => { const next = { ...v }; if (value) next[id as keyof Choices] = value; else delete next[id as keyof Choices]; return next; }); }}><option value="">Starting point: {defaultChoice(id)}</option>{q.options.map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label>; })}</fieldset>}
-          <details className="compose-context"><summary>Add context and constraints</summary><label htmlFor="compose-context">Audience, offer, available inputs and limits</label><textarea id="compose-context" rows={4} value={context} maxLength={LIMITS.context} onChange={e => { reset(); setContext(e.currentTarget.value); }} disabled={busy} /><label className="compose-check"><input type="checkbox" checked={useContext} onChange={e => { reset(); setUseContext(e.currentTarget.checked); }} disabled={busy} /> Include my saved context</label></details>
+          <details className="compose-context"><summary>Add context and constraints</summary><label htmlFor="compose-context">Audience, offer, available inputs and limits</label><textarea id="compose-context" rows={4} value={context} maxLength={LIMITS.context} onChange={e => { reset(); setContext(e.currentTarget.value); }} disabled={busy} /><label className="compose-check"><input type="checkbox" checked={useContext} onChange={e => { reset(); setUseContext(e.currentTarget.checked); }} disabled={busy} /> Use relevant parts of my saved me.md</label><p className="small">AI planning uses your work, projects and limits when saved. Turn this off to use only your notes.</p></details>
           {mode === "ai" && <p className="small">{connecting ? "Checking service availability…" : "Your request, added context and relevant skill descriptions go to our AI provider. When Assign minds is on, public mind profiles go too. The service selects the model and enforces usage limits."}</p>}
           {mode === "ai" && <p className="small compose-policy-note">Generated results and usage records are stored by the service. Share only information you are authorised to provide. <Link to="/privacy#server">How your data is handled</Link>.</p>}
           </details>}<div className="compose-submit-pane">

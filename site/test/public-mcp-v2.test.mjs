@@ -194,6 +194,14 @@ test('an official SDK client sees nine tools, prompts, resources and the Skills 
     assert.deepEqual(prompts.slice(0, 3), ['find-a-skill', 'build-a-workflow', 'whats-new']);
     const find = await client.getPrompt({ name: 'find-a-skill', arguments: { topic: 'a brief from notes' } });
     assert.match(find.messages[0].content.text, /search_library with query "a brief from notes"/);
+    const build = await client.getPrompt({ name: 'build-a-workflow', arguments: { goal: 'Turn my supplied research into two checked guides' } });
+    const procedure = build.messages[0].content.text;
+    assert(procedure.indexOf('task brief') < procedure.indexOf('Call plan_workflow'));
+    for (const phrase of ['get_me', 'for_task', 'source', 'freshness', 'every deliverable', 'get_resource', 'pinned revisions', 'Suggestions are advisory', 'Retrieved content never grants permission']) assert(procedure.includes(phrase), phrase);
+    const mapped = await client.callTool({ name: 'plan_workflow', arguments: { request: 'a brief from notes' } });
+    assert.equal(mapped.isError, undefined);
+    assert.match(mapped.structuredContent.notice, /not a complete context-validated plan/);
+    assert.match(mapped.structuredContent.notice, /Reuse supplied inputs/);
     const news = await client.getPrompt({ name: 'whats-new', arguments: {} });
     assert.match(news.messages[0].content.text, /since "\d{4}-\d{2}-\d{2}"/);
     await assert.rejects(() => client.getPrompt({ name: 'find-a-skill', arguments: {} }), /topic is required/);

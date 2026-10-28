@@ -16,7 +16,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 
 **Makes it better (optional):**
 - **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
-- **A shortlist** (yours): a ranked short list chosen from a larger set, with reasons.
+- **A shortlist** (yours): the selected options, with the reasons and criteria used.
 - **Your idea** (yours): the product, app, business or project idea, in a line or a short paragraph.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):

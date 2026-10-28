@@ -15,7 +15,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 - **Your question** (yours): the decision or problem, and what a good outcome looks like.
 
 **Makes it better (optional):**
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In a coding assistant with file access, look in the project too for these by name.
@@ -65,8 +65,8 @@ Who wins now. The pay check. Levels with goals and prizes. Public moments. Prais
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - The [Employee performance review writer](https://useaiblocks.com/skills/quarterly-performance-review-keeper). It takes the plan.
 - The [Policy removal test planner](https://useaiblocks.com/skills/policy-removal-test-planner). It takes the plan.
-- The [Problem response planner](https://useaiblocks.com/skills/proportional-fix-planner). It takes the plan.
 - **Grow on social** with the [Community question and update writer](https://useaiblocks.com/skills/weekly-community-keeper).
+- The [Problem response planner](https://useaiblocks.com/skills/proportional-fix-planner). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

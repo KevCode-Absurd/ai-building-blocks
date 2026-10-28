@@ -17,7 +17,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **Reference ads** (yours): ads you like and want to learn from, as screenshots or links.
 - **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
-- **A plan** (yours): a dated plan: what to do, in what order, with a decision rule for each step.
+- **A plan** (yours): the goals, steps, constraints and dates for this work.
 - **A page layout spec** (yours): a section-by-section layout for a page, with what each section holds.
 
 **Recommended steps before this one** (optional; do each once, then reuse what it makes):

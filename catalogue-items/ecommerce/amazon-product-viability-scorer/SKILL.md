@@ -19,7 +19,7 @@ Use the material below to do this job. If facts or tool access are missing, expl
 **Makes it better (optional):**
 - **A store capture** (yours): saved evidence from a storefront visit: screenshots, page text and what was observed, with dates.
 - **A spreadsheet** (yours): a spreadsheet with its data, formulas and charts.
-- **A shortlist** (yours): a ranked short list chosen from a larger set, with reasons.
+- **A shortlist** (yours): the selected options, with the reasons and criteria used.
 - **An audit report** (yours): findings with evidence, severity, missing inputs and next actions.
 - **Your idea** (yours): the product, app, business or project idea, in a line or a short paragraph.
 
